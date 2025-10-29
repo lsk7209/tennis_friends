@@ -9,7 +9,6 @@ import { Badge } from '@/components/ui/badge';
 import { 
   Trophy, 
   Share2, 
-  BarChart3, 
   RotateCcw, 
   Star, 
   TrendingUp, 
@@ -19,7 +18,6 @@ import {
   Zap,
   Heart,
   MessageCircle,
-  Download,
   Instagram,
   Twitter,
   Facebook,
@@ -34,8 +32,6 @@ import {
   Shield
 } from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
-import { getDeviceId } from '@/lib/device';
-import { supabase, isSupabaseConfigured } from '@/lib/supabaseClient';
 
 function ResultContent() {
   const searchParams = useSearchParams();
@@ -45,8 +41,6 @@ function ResultContent() {
   
   const { level, desc } = getNTRPLevel(score);
   const character = charMap[q13] || '올라운더';
-  const [recent, setRecent] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [copied, setCopied] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
 
@@ -163,77 +157,6 @@ function ResultContent() {
 
   const levelDetails = getLevelDetails(level);
 
-  useEffect(() => {
-    const saveResult = async () => {
-      try {
-        const device_id = getDeviceId();
-        
-        // Supabase가 설정된 경우에만 저장
-        if (isSupabaseConfigured()) {
-          // 결과 저장
-          await supabase.from('ntrp_results').insert({
-            device_id,
-            score,
-            level,
-            character
-          });
-
-          // 최근 3개 결과 가져오기
-          const { data } = await supabase
-            .from('ntrp_results')
-            .select('created_at, score, level, character')
-            .eq('device_id', device_id)
-            .order('created_at', { ascending: false })
-            .limit(3);
-
-          setRecent(data || []);
-        } else {
-          // Supabase가 설정되지 않은 경우 로컬 스토리지에 저장
-          const localResults = JSON.parse(localStorage.getItem('ntrp_results') || '[]');
-          const newResult = {
-            id: Date.now().toString(),
-            device_id,
-            score,
-            level,
-            character,
-            created_at: new Date().toISOString()
-          };
-          
-          localResults.unshift(newResult);
-          localStorage.setItem('ntrp_results', JSON.stringify(localResults.slice(0, 10))); // 최근 10개만 유지
-          
-          setRecent(localResults.slice(0, 3));
-        }
-      } catch (error) {
-        console.error('결과 저장 중 오류:', error);
-        // 오류 발생 시에도 로컬 스토리지에 저장 시도
-        try {
-          const localResults = JSON.parse(localStorage.getItem('ntrp_results') || '[]');
-          const newResult = {
-            id: Date.now().toString(),
-            device_id: getDeviceId(),
-            score,
-            level,
-            character,
-            created_at: new Date().toISOString()
-          };
-          
-          localResults.unshift(newResult);
-          localStorage.setItem('ntrp_results', JSON.stringify(localResults.slice(0, 10)));
-          setRecent(localResults.slice(0, 3));
-        } catch (localError) {
-          console.error('로컬 저장 중 오류:', localError);
-        }
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (score > 0) {
-      saveResult();
-    }
-  }, [score, level, character]);
-
   const copyToClipboard = () => {
     const url = `${window.location.origin}/utility/ntrp-test/result?score=${score}&q13=${encodeURIComponent(q13)}`;
     navigator.clipboard.writeText(url);
@@ -259,34 +182,6 @@ function ResultContent() {
       window.open(shareUrls[platform as keyof typeof shareUrls], '_blank');
     }
   };
-
-  const downloadResult = () => {
-    // 결과를 이미지로 다운로드하는 기능 (html2canvas 사용)
-    const element = document.getElementById('result-card');
-    if (element) {
-      // html2canvas 라이브러리가 필요하지만, 일단 텍스트로 대체
-      const text = `🎾 TennisFriends NTRP 테스트 결과\n\n레벨: ${level}\n스타일: ${character}\n점수: ${score}점\n\n더 많은 테니스 도구를 확인해보세요!\n${window.location.origin}/utility`;
-      
-      const blob = new Blob([text], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `tennis-ntrp-result-${level}.txt`;
-      a.click();
-      URL.revokeObjectURL(url);
-    }
-  };
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">결과를 처리하고 있습니다...</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-12">
@@ -377,14 +272,6 @@ function ResultContent() {
                 >
                   <Share2 className="h-5 w-5 mr-2" />
                   결과 공유하기
-                </Button>
-                <Button 
-                  onClick={downloadResult}
-                  variant="outline" 
-                  className="bg-white border-2 border-gray-300 hover:border-blue-500 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Download className="h-5 w-5 mr-2" />
-                  결과 저장하기
                 </Button>
               </div>
             </div>
@@ -506,52 +393,6 @@ function ResultContent() {
               </CardContent>
             </Card>
           </div>
-        )}
-
-        {/* 최근 결과 히스토리 */}
-        {recent.length > 0 && (
-          <Card className="bg-white border-2 border-gray-200 shadow-lg mb-8">
-            <CardContent className="p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                  <BarChart3 className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">내 최근 결과</h3>
-              </div>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="p-4 text-left text-gray-700 font-bold">날짜</th>
-                      <th className="p-4 text-right text-gray-700 font-bold">점수</th>
-                      <th className="p-4 text-center text-gray-700 font-bold">레벨</th>
-                      <th className="p-4 text-center text-gray-700 font-bold">스타일</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {recent.map((result, index) => (
-                      <tr key={index} className="border-t border-gray-200 hover:bg-gray-50">
-                        <td className="p-4 text-gray-600">
-                          {new Date(result.created_at).toLocaleString('ko-KR')}
-                        </td>
-                        <td className="p-4 text-right font-semibold text-gray-900">
-                          {result.score}점
-                        </td>
-                        <td className="p-4 text-center">
-                          <Badge className="bg-green-100 text-green-800 px-3 py-1">
-                            {result.level}
-                          </Badge>
-                        </td>
-                        <td className="p-4 text-center text-gray-600">
-                          {result.character}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </CardContent>
-          </Card>
         )}
 
         {/* 추천 콘텐츠 섹션 */}

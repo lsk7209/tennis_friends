@@ -51,7 +51,7 @@ export default function UtilityPage() {
       icon: Settings,
       href: '/utility/string-tension',
       status: '완료',
-      features: ['맞춤형 계산', '장비별 조정', '전문가 추천', '결과 저장'],
+      features: ['맞춤형 계산', '장비별 조정', '전문가 추천'],
       color: 'bg-green-100 text-green-800',
       iconColor: 'text-green-600',
       category: '장비 설정'

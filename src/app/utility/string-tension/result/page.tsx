@@ -10,17 +10,14 @@ import { Progress } from '@/components/ui/progress';
 import { 
   Calculator, 
   Share2, 
-  Download, 
   RotateCcw, 
   Target, 
   Settings, 
   TrendingUp,
-  CheckCircle,
   AlertCircle,
   Info
 } from 'lucide-react';
 import { calculateTension, getTensionComparison, TensionInput, TensionResult } from '@/lib/tensionCalc';
-import { getDeviceId } from '@/lib/device';
 
 function StringTensionResultContent() {
   const searchParams = useSearchParams();
@@ -28,7 +25,6 @@ function StringTensionResultContent() {
   const [result, setResult] = useState<TensionResult | null>(null);
   const [inputData, setInputData] = useState<TensionInput | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [isSaved, setIsSaved] = useState(false);
 
   useEffect(() => {
     // URL 파라미터에서 입력 데이터 추출
@@ -46,43 +42,9 @@ function StringTensionResultContent() {
       setInputData(params as TensionInput);
       const calculatedResult = calculateTension(params as TensionInput);
       setResult(calculatedResult);
-      
-      // 결과를 Supabase에 저장
-      saveTensionResult(params as TensionInput, calculatedResult);
     }
     setIsLoading(false);
   }, [searchParams]);
-
-  const saveTensionResult = async (inputData: TensionInput, result: TensionResult) => {
-    try {
-      const deviceId = getDeviceId();
-      
-      const response = await fetch('/api/tension', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          device_id: deviceId,
-          head_size: inputData.headSize,
-          string_type: inputData.stringType,
-          play_style: inputData.playStyle,
-          environment: inputData.environment,
-          feel_preference: inputData.feelPreference,
-          ntrp_level: inputData.ntrpLevel,
-          tension_lb: result.tensionLb,
-          tension_kg: result.tensionKg,
-          tension_range: result.range
-        })
-      });
-
-      if (response.ok) {
-        setIsSaved(true);
-      }
-    } catch (error) {
-      console.error('Failed to save tension result:', error);
-    }
-  };
 
   const getStyleColor = (style: string) => {
     const colors = {
@@ -105,11 +67,6 @@ function StringTensionResultContent() {
       navigator.clipboard.writeText(text);
       alert('결과가 클립보드에 복사되었습니다! 📋');
     }
-  };
-
-  const downloadAsImage = () => {
-    // TODO: html2canvas를 사용한 이미지 생성
-    alert('이미지 다운로드 기능은 준비 중입니다! 📸');
   };
 
   if (isLoading) {
@@ -152,12 +109,6 @@ function StringTensionResultContent() {
               <Badge className="bg-blue-100 text-blue-800 px-4 py-2 text-sm font-semibold">
                 🎾 텐션 계산 완료
               </Badge>
-              {isSaved && (
-                <Badge className="bg-green-100 text-green-800 px-4 py-2 text-sm font-semibold">
-                  <CheckCircle className="h-4 w-4 mr-1" />
-                  저장됨
-                </Badge>
-              )}
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -185,14 +136,6 @@ function StringTensionResultContent() {
               >
                 <Share2 className="h-5 w-5 mr-2" />
                 결과 공유하기
-              </Button>
-              <Button 
-                onClick={downloadAsImage}
-                variant="outline" 
-                className="bg-white border-gray-300 hover:border-blue-500 px-6 py-3 text-lg font-semibold"
-              >
-                <Download className="h-5 w-5 mr-2" />
-                이미지 저장
               </Button>
               <Link href="/utility/string-tension/test">
                 <Button variant="outline" className="bg-white border-gray-300 hover:border-blue-500 px-6 py-3 text-lg font-semibold">

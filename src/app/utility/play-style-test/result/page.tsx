@@ -9,7 +9,6 @@ import { Badge } from '@/components/ui/badge';
 import { 
   ArrowLeft, 
   Share2, 
-  Download, 
   Trophy, 
   Target, 
   Zap,
@@ -114,10 +113,6 @@ function PlayStyleResultContent() {
             <Button variant="outline" onClick={handleShare}>
               <Share2 className="h-4 w-4 mr-2" />
               공유하기
-            </Button>
-            <Button variant="outline">
-              <Download className="h-4 w-4 mr-2" />
-              저장하기
             </Button>
           </div>
         </div>
