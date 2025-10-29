@@ -11,7 +11,7 @@ export default function BackhandSwingCorrection() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-50 to-green-50 py-12">
+      <div className="bg-gray-50 py-12">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="flex items-center gap-4 mb-6">
             <Link href="/blog">
@@ -45,6 +45,33 @@ export default function BackhandSwingCorrection() {
         </div>
       </div>
 
+      {/* Table of Contents */}
+      <div className="container mx-auto max-w-4xl px-4 py-8">
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">📋 목차</h2>
+          <div className="space-y-2">
+            <a href="#foot-position" className="block text-gray-700 hover:text-blue-600 transition-colors">
+              1. 발의 위치가 틀리면 스윙도 틀어진다
+            </a>
+            <a href="#rotation-timing" className="block text-gray-700 hover:text-blue-600 transition-colors">
+              2. 몸의 회전 타이밍을 맞춰라
+            </a>
+            <a href="#grip-pressure" className="block text-gray-700 hover:text-blue-600 transition-colors">
+              3. 그립 압력이 스윙을 망친다
+            </a>
+            <a href="#practice-routine" className="block text-gray-700 hover:text-blue-600 transition-colors">
+              4. 백핸드 안정화 훈련 루틴
+            </a>
+            <a href="#faq" className="block text-gray-700 hover:text-blue-600 transition-colors">
+              5. 자주 묻는 질문
+            </a>
+            <a href="#coach-story" className="block text-gray-700 hover:text-blue-600 transition-colors">
+              6. 코치의 이야기
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Content */}
       <div className="container mx-auto max-w-4xl px-4 py-12">
         <div className="prose prose-lg max-w-none">
@@ -61,7 +88,7 @@ export default function BackhandSwingCorrection() {
           </div>
 
           <div className="space-y-8">
-            <section>
+            <section id="foot-position">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">🦵 1. 발의 위치가 틀리면 스윙도 틀어진다</h2>
               <p className="text-gray-700 mb-4">
                 백핸드에서 가장 중요한 것은 <strong className="text-gray-900">발의 위치</strong>입니다.<br />
@@ -69,7 +96,7 @@ export default function BackhandSwingCorrection() {
                 <strong className="text-gray-900">오른발이 앞으로, 왼발이 뒤로</strong> 위치해야 몸이 닫혀서 안정적인 스윙이 가능합니다.
               </p>
               
-              <div className="bg-blue-50 p-6 rounded-lg mb-4">
+              <div className="bg-white border border-gray-300 p-6 rounded-lg mb-4">
                 <h3 className="font-semibold text-blue-900 mb-3">💡 교정 루틴:</h3>
                 <ol className="list-decimal list-inside space-y-2 text-blue-800">
                   <li>오른발을 앞으로 내밀고 2초간 버티기</li>
@@ -85,7 +112,7 @@ export default function BackhandSwingCorrection() {
               </div>
             </section>
 
-            <section>
+            <section id="rotation-timing">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">🔄 2. 몸의 회전 타이밍을 맞춰라</h2>
               <p className="text-gray-700 mb-4">
                 초보자의 흔한 실수는 팔이 먼저 나가는 것입니다.<br />
@@ -93,7 +120,7 @@ export default function BackhandSwingCorrection() {
                 스윙은 <strong className="text-gray-900">몸의 회전이 먼저, 팔의 스윙이 나중에</strong> 와야 합니다.
               </p>
               
-              <div className="bg-yellow-50 p-6 rounded-lg mb-4">
+              <div className="bg-white border border-gray-300 p-6 rounded-lg mb-4">
                 <blockquote className="text-yellow-800">
                   🎯 <strong>포인트:</strong> 몸이 30도 회전했을 때 라켓이 따라와야 합니다.
                 </blockquote>
@@ -107,14 +134,14 @@ export default function BackhandSwingCorrection() {
               </div>
             </section>
 
-            <section>
+            <section id="grip-pressure">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">👁️ 3. 시선이 흔들리면 타점이 사라진다</h2>
               <p className="text-gray-700 mb-4">
                 공을 끝까지 보지 않으면 타점이 앞뒤로 밀립니다.<br />
                 하체가 흔들리면 시선이 흔들리고, 결국 <strong className="text-gray-900">타점 감각이 무너집니다.</strong>
               </p>
               
-              <div className="bg-green-50 p-6 rounded-lg mb-4">
+              <div className="bg-white border border-gray-300 p-6 rounded-lg mb-4">
                 <h3 className="font-semibold text-green-900 mb-3">🧩 훈련법:</h3>
                 <ul className="list-disc list-inside space-y-2 text-green-800">
                   <li>공이 바닥에 튀는 순간 → 라켓 준비</li>
@@ -130,14 +157,14 @@ export default function BackhandSwingCorrection() {
               </div>
             </section>
 
-            <section>
+            <section id="practice-routine">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">🏋️ 4. 코어 강화가 백핸드 안정성의 핵심</h2>
               <p className="text-gray-700 mb-4">
                 백핸드가 불안하면 근육이 아니라 코어 밸런스를 점검하세요.<br />
                 매일 10분 루틴으로도 충분합니다.
               </p>
               
-              <div className="bg-purple-50 p-6 rounded-lg mb-4">
+              <div className="bg-white border border-gray-300 p-6 rounded-lg mb-4">
                 <h3 className="font-semibold text-purple-900 mb-3">💪 추천 루틴:</h3>
                 <ol className="list-decimal list-inside space-y-2 text-purple-800">
                   <li>사이드 플랭크 30초 × 3세트</li>
@@ -146,14 +173,14 @@ export default function BackhandSwingCorrection() {
                 </ol>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg">
+              <div className="bg-white border border-gray-300 p-6 rounded-lg">
                 <p className="text-blue-800">
                   📍 <strong className="text-blue-900">지역별 팁:</strong> 실내 테니스장(서울·용인·부산 기준)은 겨울철 체온이 낮아 복근 긴장이 약해지므로, 워밍업에 5분 추가하세요.
                 </p>
               </div>
             </section>
 
-            <section>
+            <section id="faq">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">❓ 자주 묻는 질문</h2>
               <div className="space-y-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -167,7 +194,7 @@ export default function BackhandSwingCorrection() {
               </div>
             </section>
 
-            <section>
+            <section id="coach-story">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">💬 코치의 이야기 — "백핸드는 몸이 기억하는 리듬이다"</h2>
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-gray-700 italic">
@@ -180,13 +207,13 @@ export default function BackhandSwingCorrection() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">🧩 함께 보면 좋은 콘텐츠</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link href="/blog/forehand-body-balance" className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                  <p className="font-semibold text-blue-900">포핸드 스윙이 흔들릴 때, 라켓보다 몸을 먼저 봐라 💪</p>
+                <Link href="/blog/forehand-body-balance" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                  <p className="font-semibold text-gray-900">포핸드 스윙이 흔들릴 때, 라켓보다 몸을 먼저 봐라 💪</p>
                 </Link>
-                <Link href="/blog/string-tension-feel-guide" className="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                <Link href="/blog/string-tension-feel-guide" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                   <p className="font-semibold text-green-900">스트링 텐션, 숫자보다 감각이 중요하다 🎾</p>
                 </Link>
-                <Link href="/utility/ntrp-test" className="block p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
+                <Link href="/utility/ntrp-test" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                   <p className="font-semibold text-purple-900">NTRP 자가 진단 테스트</p>
                 </Link>
               </div>

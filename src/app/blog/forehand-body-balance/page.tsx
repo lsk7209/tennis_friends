@@ -10,7 +10,7 @@ export default function ForehandBodyBalance() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
+      <section className="section-padding bg-gray-50">
         <div className="container-padding">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-4 bg-green-100 text-green-800">
@@ -47,29 +47,25 @@ export default function ForehandBodyBalance() {
             <Card className="bg-gray-50 border border-gray-200">
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">📋 목차</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <a href="#center-balance" className="block text-gray-700 hover:text-green-600 transition-colors">
-                      1. 중심이 무너지면 스윙도 무너진다
-                    </a>
-                    <a href="#rotation-timing" className="block text-gray-700 hover:text-green-600 transition-colors">
-                      2. 팔 스윙보다 회전 타이밍을 맞춰라
-                    </a>
-                    <a href="#gaze-stability" className="block text-gray-700 hover:text-green-600 transition-colors">
-                      3. 시선이 흔들리면 타점이 사라진다
-                    </a>
-                  </div>
-                  <div className="space-y-2">
-                    <a href="#core-strength" className="block text-gray-700 hover:text-green-600 transition-colors">
-                      4. 코어 강화가 포핸드 안정성의 핵심
-                    </a>
-                    <a href="#faq" className="block text-gray-700 hover:text-green-600 transition-colors">
-                      5. 자주 묻는 질문
-                    </a>
-                    <a href="#coach-story" className="block text-gray-700 hover:text-green-600 transition-colors">
-                      6. 코치의 이야기
-                    </a>
-                  </div>
+                <div className="space-y-2">
+                  <a href="#center-balance" className="block text-gray-700 hover:text-green-600 transition-colors">
+                    1. 중심이 무너지면 스윙도 무너진다
+                  </a>
+                  <a href="#rotation-timing" className="block text-gray-700 hover:text-green-600 transition-colors">
+                    2. 팔 스윙보다 회전 타이밍을 맞춰라
+                  </a>
+                  <a href="#gaze-stability" className="block text-gray-700 hover:text-green-600 transition-colors">
+                    3. 시선이 흔들리면 타점이 사라진다
+                  </a>
+                  <a href="#core-strength" className="block text-gray-700 hover:text-green-600 transition-colors">
+                    4. 코어 강화가 포핸드 안정성의 핵심
+                  </a>
+                  <a href="#faq" className="block text-gray-700 hover:text-green-600 transition-colors">
+                    5. 자주 묻는 질문
+                  </a>
+                  <a href="#coach-story" className="block text-gray-700 hover:text-green-600 transition-colors">
+                    6. 코치의 이야기
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -92,13 +88,13 @@ export default function ForehandBodyBalance() {
                 <strong>하체 → 코어 → 어깨 → 팔 → 라켓</strong> 순서가 기본이에요.
               </p>
               
-              <Card className="bg-green-50 border-green-200 mb-6">
+              <Card className="bg-white border-gray-300 mb-6">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-green-800 mb-4 flex items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                     <Target className="w-5 h-5 mr-2" />
                     교정 루틴
                   </h3>
-                  <ol className="space-y-3 text-green-700">
+                  <ol className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</span>
                       <span>왼발(오른손잡이 기준)을 고정하고, 2초간 버티기</span>
