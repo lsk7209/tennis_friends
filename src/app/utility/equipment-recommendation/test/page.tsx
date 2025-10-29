@@ -8,9 +8,8 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { ArrowRight, ArrowLeft, Target, CheckCircle } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { EquipmentInput, calculateEquipmentRecommendations } from '@/lib/equipmentRecommendation';
-import { FadeIn, SlideUp } from '@/components/ScrollAnimation';
 
 export default function EquipmentRecommendationTest() {
   const router = useRouter();
@@ -194,83 +193,82 @@ export default function EquipmentRecommendationTest() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center mb-8">
-            <Badge className="bg-blue-100 text-blue-800 px-4 py-2 mb-4 text-sm font-semibold">
+      {/* Compact Header */}
+      <section className="py-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="text-center mb-4">
+            <Badge className="bg-blue-100 text-blue-800 px-3 py-1 mb-2 text-sm font-semibold">
               🎾 장비 추천 시스템
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               나에게 맞는 장비 찾기
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-sm">
               {steps[currentStep].title}: {steps[currentStep].description}
             </p>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-medium text-gray-700">
+          {/* Compact Progress Bar */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs font-medium text-gray-700">
                 단계 {currentStep + 1} / {steps.length}
               </span>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-xs font-medium text-gray-700">
                 {Math.round(progress)}% 완료
               </span>
             </div>
-            <Progress value={progress} className="h-2" />
+            <Progress value={progress} className="h-1" />
           </div>
         </div>
       </section>
 
-      {/* Question Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <FadeIn>
-            <Card className="bg-white border-gray-200 shadow-lg">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed">
-                  {currentQuestion.question}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent className="pt-0">
-                <RadioGroup
-                  value={formData[currentQuestion.id as keyof EquipmentInput] as string}
-                  onValueChange={handleAnswer}
-                  className="space-y-3"
-                >
-                  {currentQuestion.options.map((option) => (
-                    <div key={String(option.value)} className="flex items-center space-x-3">
-                      <RadioGroupItem value={String(option.value)} id={String(option.value)} />
-                      <Label 
-                        htmlFor={String(option.value)} 
-                        className="text-gray-700 cursor-pointer flex-1 py-2 hover:text-blue-600 transition-colors"
-                      >
-                        {option.label}
-                      </Label>
-                    </div>
-                  ))}
-                </RadioGroup>
+      {/* Compact Question Section */}
+      <section className="py-2 bg-white">
+        <div className="container mx-auto max-w-4xl px-4">
+          <Card className="bg-white border-gray-200 shadow-sm">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg md:text-xl font-bold text-gray-900 leading-tight">
+                {currentQuestion.question}
+              </CardTitle>
+            </CardHeader>
+            
+            <CardContent className="pt-0">
+              <RadioGroup
+                value={formData[currentQuestion.id as keyof EquipmentInput] as string}
+                onValueChange={handleAnswer}
+                className="space-y-2"
+              >
+                {currentQuestion.options.map((option) => (
+                  <div key={String(option.value)} className="flex items-center space-x-2">
+                    <RadioGroupItem value={String(option.value)} id={String(option.value)} />
+                    <Label 
+                      htmlFor={String(option.value)} 
+                      className="text-gray-700 cursor-pointer flex-1 py-1 text-sm hover:text-blue-600 transition-colors"
+                    >
+                      {option.label}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
 
-                {/* Navigation */}
-                <div className="flex justify-between items-center mt-8">
+              {/* Compact Navigation */}
+              <div className="flex justify-between items-center mt-4">
                   <Button
                     variant="outline"
                     onClick={handlePrevious}
                     disabled={currentStep === 0}
-                    className="bg-white border-gray-300 hover:border-blue-500 px-6 py-3"
+                    className="bg-white border-gray-300 hover:border-blue-500 px-3 py-2 text-sm"
                   >
-                    <ArrowLeft className="h-4 w-4 mr-2" />
+                    <ArrowLeft className="h-3 w-3 mr-1" />
                     이전
                   </Button>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1">
                     {steps.map((_, index) => (
                       <div
                         key={index}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
                           index <= currentStep ? 'bg-blue-500' : 'bg-gray-300'
                         }`}
                       />
@@ -280,36 +278,14 @@ export default function EquipmentRecommendationTest() {
                   <Button
                     onClick={handleNext}
                     disabled={!isAnswerSelected()}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 text-sm"
                   >
                     {currentStep === questions.length - 1 ? '추천 받기' : '다음'}
-                    <ArrowRight className="h-4 w-4 ml-2" />
+                    <ArrowRight className="h-3 w-3 ml-1" />
                   </Button>
                 </div>
               </CardContent>
             </Card>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Help Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              장비 추천 안내
-            </h3>
-            <p className="text-gray-600 mb-6">
-              정확한 정보를 입력하시면 더 정확한 장비 추천을 받을 수 있습니다.
-            </p>
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-              <h4 className="font-semibold text-blue-900 mb-2">🎾 중요 안내</h4>
-              <p className="text-blue-800 text-sm leading-relaxed">
-                이 추천은 일반적인 가이드라인입니다. 실제 구매 전에는 전문가와 상담하거나 
-                직접 테스트해보시는 것을 권장합니다.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
     </div>
