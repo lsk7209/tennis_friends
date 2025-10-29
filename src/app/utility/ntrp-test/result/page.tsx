@@ -29,7 +29,8 @@ import {
   Play,
   BookOpen,
   Calendar,
-  Clock
+  Clock,
+  Settings
 } from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
 import { getDeviceId } from '@/lib/device';
