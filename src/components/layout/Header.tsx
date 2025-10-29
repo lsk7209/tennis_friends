@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 
@@ -9,6 +10,7 @@ const Header: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     // 다크모드 상태 초기화
@@ -40,9 +42,20 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
-    { href: '/utility', label: '유틸리티', active: false },
-    { href: '/blog', label: '블로그', active: true },
+    { href: '/utility', label: '유틸리티' },
+    { href: '/blog', label: '블로그' },
   ];
+
+  // 현재 경로에 따라 활성 상태 결정
+  const isActive = (href: string) => {
+    if (href === '/utility') {
+      return pathname.startsWith('/utility') || pathname === '/';
+    }
+    if (href === '/blog') {
+      return pathname.startsWith('/blog');
+    }
+    return false;
+  };
 
   return (
     <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
@@ -73,23 +86,26 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 text-sm md:flex">
-          {navItems.map((item) => (
-            <div key={item.href} className="relative">
-              <Link 
-                href={item.href} 
-                className={`font-medium transition-colors hover:text-text-light ${
-                  item.active 
-                    ? 'text-primary' 
-                    : 'text-text-muted'
-                }`}
-              >
-                {item.label}
-              </Link>
-              {item.active && (
-                <div className="absolute -bottom-2 left-0 h-0.5 w-full bg-primary rounded-full"></div>
-              )}
-            </div>
-          ))}
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <div key={item.href} className="relative">
+                <Link 
+                  href={item.href} 
+                  className={`font-medium transition-colors hover:text-text-light ${
+                    active 
+                      ? 'text-primary' 
+                      : 'text-text-muted'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+                {active && (
+                  <div className="absolute -bottom-2 left-0 h-0.5 w-full bg-primary rounded-full"></div>
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         {/* Right side buttons */}
@@ -123,20 +139,23 @@ const Header: React.FC = () => {
         <div className="border-t border-white/10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md md:hidden">
           <nav className="container mx-auto px-4 py-6">
             <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <Link 
-                  key={item.href}
-                  href={item.href} 
-                  className={`font-medium transition-colors hover:text-text-light py-2 px-3 rounded-lg hover:bg-white/5 ${
-                    item.active 
-                      ? 'text-primary bg-primary/10' 
-                      : 'text-text-muted'
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <Link 
+                    key={item.href}
+                    href={item.href} 
+                    className={`font-medium transition-colors hover:text-text-light py-2 px-3 rounded-lg hover:bg-white/5 ${
+                      active 
+                        ? 'text-primary bg-primary/10' 
+                        : 'text-text-muted'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
           </nav>
         </div>
