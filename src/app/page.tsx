@@ -158,9 +158,9 @@ export default function Home() {
             </SlideUp>
             <SlideUp delay={0.6}>
               <div className="flex items-center justify-center mb-12">
-                <Link href="/utility/ntrp-test">
+                <Link href="/utility">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-xl font-bold rounded-2xl focus-ring shadow-lg hover:shadow-xl transition-all duration-300">
-                    🎾 실력 테스트 시작하기
+                    🎾 유틸리티 시작하기
                   </Button>
                 </Link>
               </div>
