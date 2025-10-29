@@ -45,69 +45,69 @@ export default function NtrpTestPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center mb-8">
-            <Badge className="bg-green-100 text-green-800 px-4 py-2 mb-4 text-sm font-semibold">
+      {/* Header - 컴팩트하게 */}
+      <section className="py-4 md:py-6 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="text-center mb-4">
+            <Badge className="bg-green-100 text-green-800 px-3 py-1 mb-2 text-xs font-semibold">
               🎾 NTRP 실력 테스트 v2
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
               나의 테니스 실력은?
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-sm">
               15개 질문에 답하고 당신의 NTRP 등급을 확인해보세요
             </p>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-medium text-gray-700">
+          {/* Progress Bar - 컴팩트하게 */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs font-medium text-gray-700">
                 질문 {currentQuestionIndex + 1} / {questions.length}
               </span>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-xs font-medium text-gray-700">
                 {progress}% 완료
               </span>
             </div>
-            <Progress value={progress} className="h-2" />
+            <Progress value={progress} className="h-1.5" />
           </div>
         </div>
       </section>
 
-      {/* Question Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <Card className="bg-white border-gray-200 shadow-lg">
-            <CardContent className="p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+      {/* Question Section - 컴팩트하게 */}
+      <section className="py-4 md:py-6 bg-white">
+        <div className="container mx-auto max-w-4xl px-4">
+          <Card className="bg-white border-gray-200 shadow-sm">
+            <CardContent className="p-4 md:p-6">
+              <div className="text-center mb-4">
+                <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
                   {currentQuestion.question}
                 </h2>
               </div>
 
-              {/* Options */}
-              <div className="grid gap-3 mb-8">
+              {/* Options - 컴팩트하게 */}
+              <div className="grid gap-2 mb-4">
                 {currentQuestion.options.map((option, index) => {
                   const isSelected = answers[currentQuestionIndex] === index + 1;
                   return (
                     <Button
                       key={index}
                       onClick={() => handleAnswer(index + 1)}
-                      className={`w-full p-4 h-auto text-left justify-start transition-all duration-300 transform ${
+                      className={`w-full p-3 h-auto text-left justify-start transition-all duration-300 transform ${
                         isSelected
-                          ? 'bg-green-50 border-green-500 text-green-900 shadow-lg scale-[1.02]'
-                          : 'bg-white border-gray-300 hover:border-green-500 hover:bg-green-50 hover:scale-[1.01] text-gray-900'
+                          ? 'bg-green-50 border-green-500 text-green-900 shadow-md scale-[1.01]'
+                          : 'bg-white border-gray-300 hover:border-green-500 hover:bg-green-50 hover:scale-[1.005] text-gray-900'
                       }`}
                       variant="outline"
                     >
-                      <div className="flex items-center gap-3">
-                        <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold transition-all duration-300 ${
+                      <div className="flex items-center gap-2">
+                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center text-xs font-semibold transition-all duration-300 ${
                           isSelected
-                            ? 'border-green-500 bg-green-500 text-white animate-pulse'
+                            ? 'border-green-500 bg-green-500 text-white'
                             : 'border-gray-300'
                         }`}>
-                          {isSelected ? <Check className="h-4 w-4 animate-bounce" /> : index + 1}
+                          {isSelected ? <Check className="h-3 w-3" /> : index + 1}
                         </div>
                         <span className="text-sm leading-relaxed">{option}</span>
                       </div>
@@ -116,30 +116,30 @@ export default function NtrpTestPage() {
                 })}
               </div>
 
-              {/* Navigation */}
+              {/* Navigation - 컴팩트하게 */}
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
                   onClick={handlePrevious}
                   disabled={currentQuestionIndex === 0}
-                  className="bg-white border-gray-300 hover:border-green-500 px-6 py-3"
+                  className="bg-white border-gray-300 hover:border-green-500 px-4 py-2 text-sm"
                 >
-                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  <ArrowLeft className="h-3 w-3 mr-1" />
                   이전
                 </Button>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1">
                   {questions.map((_, index) => (
                     <div
                       key={index}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
                         index <= currentQuestionIndex ? 'bg-green-500' : 'bg-gray-300'
                       }`}
                     />
                   ))}
                 </div>
 
-                <div className="text-sm text-gray-500">
+                <div className="text-xs text-gray-500">
                   {currentQuestionIndex + 1} / {questions.length}
                 </div>
               </div>
@@ -148,19 +148,13 @@ export default function NtrpTestPage() {
         </div>
       </section>
 
-      {/* Help Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
+      {/* Help Section - 모바일에서는 숨김 */}
+      <section className="hidden md:block py-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              테스트 안내
-            </h3>
-            <p className="text-gray-600 mb-6">
-              솔직하게 답변해주세요. 정확한 결과를 위해 현재 실력을 기준으로 답변하시면 됩니다.
-            </p>
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-              <h4 className="font-semibold text-blue-900 mb-2">💡 중요 안내</h4>
-              <p className="text-blue-800 text-sm leading-relaxed">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h4 className="font-semibold text-blue-900 mb-1 text-sm">💡 중요 안내</h4>
+              <p className="text-blue-800 text-xs leading-relaxed">
                 결과는 익명으로 저장되며, 통계 분석에 활용됩니다. 
                 각 질문에 대해 가장 정확하다고 생각하는 답변을 선택해주세요.
               </p>

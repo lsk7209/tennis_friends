@@ -133,81 +133,81 @@ export default function StringTensionTest() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center mb-8">
-            <Badge className="bg-blue-100 text-blue-800 px-4 py-2 mb-4 text-sm font-semibold">
+      {/* Header - 컴팩트하게 */}
+      <section className="py-4 md:py-6 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="text-center mb-4">
+            <Badge className="bg-blue-100 text-blue-800 px-3 py-1 mb-2 text-xs font-semibold">
               🎾 스트링 텐션 계산기
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
               나에게 맞는 텐션 찾기
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-sm">
               간단한 질문에 답하면 최적의 텐션을 추천해드립니다
             </p>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-medium text-gray-700">
+          {/* Progress Bar - 컴팩트하게 */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs font-medium text-gray-700">
                 단계 {currentStep + 1} / {steps.length}
               </span>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-xs font-medium text-gray-700">
                 {Math.round(progress)}% 완료
               </span>
             </div>
-            <Progress value={progress} className="h-2" />
+            <Progress value={progress} className="h-1.5" />
           </div>
         </div>
       </section>
 
-      {/* Question Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <Card className="bg-white border-gray-200 shadow-lg">
-            <CardContent className="p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+      {/* Question Section - 컴팩트하게 */}
+      <section className="py-4 md:py-6 bg-white">
+        <div className="container mx-auto max-w-4xl px-4">
+          <Card className="bg-white border-gray-200 shadow-sm">
+            <CardContent className="p-4 md:p-6">
+              <div className="text-center mb-4">
+                <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                   {currentStepData.title}
                 </h2>
-                <p className="text-gray-600 text-lg">
+                <p className="text-gray-600 text-sm">
                   {currentStepData.description}
                 </p>
               </div>
 
-              {/* Options */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              {/* Options - 컴팩트하게 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
                 {currentStepData.options.map((option, index) => {
                   const isSelected = formData[currentStepData.id as keyof TensionInput] === option.value;
                   return (
                     <button
                       key={index}
                       onClick={() => handleOptionSelect(option.value)}
-                      className={`p-6 text-left border-2 rounded-xl transition-all duration-300 transform ${
+                      className={`p-3 text-left border-2 rounded-lg transition-all duration-300 transform ${
                         isSelected
-                          ? 'border-blue-500 bg-blue-50 shadow-lg scale-[1.02]'
-                          : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50 hover:scale-[1.01]'
+                          ? 'border-blue-500 bg-blue-50 shadow-md scale-[1.01]'
+                          : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50 hover:scale-[1.005]'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-grow">
-                          <h3 className={`font-semibold text-lg mb-2 ${
+                          <h3 className={`font-semibold text-sm mb-1 ${
                             isSelected ? 'text-blue-900' : 'text-gray-900'
                           }`}>
                             {option.label}
                           </h3>
-                          <p className={`text-sm ${
+                          <p className={`text-xs ${
                             isSelected ? 'text-blue-700' : 'text-gray-600'
                           }`}>
                             {option.description}
                           </p>
                         </div>
                         {isSelected && (
-                          <div className="flex-shrink-0 ml-4">
-                            <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
-                              <Check className="h-4 w-4 text-white animate-bounce" />
+                          <div className="flex-shrink-0 ml-2">
+                            <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
+                              <Check className="h-3 w-3 text-white" />
                             </div>
                           </div>
                         )}
@@ -217,23 +217,23 @@ export default function StringTensionTest() {
                 })}
               </div>
 
-              {/* Navigation */}
+              {/* Navigation - 컴팩트하게 */}
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
                   onClick={handlePrevious}
                   disabled={currentStep === 0}
-                  className="bg-white border-gray-300 hover:border-blue-500 px-6 py-3"
+                  className="bg-white border-gray-300 hover:border-blue-500 px-4 py-2 text-sm"
                 >
-                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  <ArrowLeft className="h-3 w-3 mr-1" />
                   이전
                 </Button>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1">
                   {steps.map((_, index) => (
                     <div
                       key={index}
-                      className={`w-3 h-3 rounded-full ${
+                      className={`w-2 h-2 rounded-full ${
                         index <= currentStep ? 'bg-blue-500' : 'bg-gray-300'
                       }`}
                     />
@@ -243,17 +243,17 @@ export default function StringTensionTest() {
                 <Button
                   onClick={handleNext}
                   disabled={!isStepComplete}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm"
                 >
                   {currentStep === steps.length - 1 ? (
                     <>
-                      <Check className="h-4 w-4 mr-2" />
+                      <Check className="h-3 w-3 mr-1" />
                       결과 보기
                     </>
                   ) : (
                     <>
                       다음
-                      <ArrowRight className="h-4 w-4 ml-2" />
+                      <ArrowRight className="h-3 w-3 ml-1" />
                     </>
                   )}
                 </Button>
@@ -263,23 +263,15 @@ export default function StringTensionTest() {
         </div>
       </section>
 
-      {/* Help Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
+      {/* Help Section - 모바일에서는 숨김 */}
+      <section className="hidden md:block py-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              질문이 있으신가요?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              각 질문에 대한 자세한 설명이 필요하시면 도움말을 확인해보세요
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" className="bg-white border-gray-300 hover:border-blue-500">
-                도움말 보기
-              </Button>
-              <Button variant="outline" className="bg-white border-gray-300 hover:border-blue-500">
-                처음부터 다시
-              </Button>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h4 className="font-semibold text-blue-900 mb-1 text-sm">💡 도움말</h4>
+              <p className="text-blue-800 text-xs leading-relaxed">
+                각 질문에 대한 자세한 설명이 필요하시면 도움말을 확인해보세요
+              </p>
             </div>
           </div>
         </div>

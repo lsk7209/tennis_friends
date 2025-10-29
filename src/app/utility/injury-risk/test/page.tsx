@@ -204,43 +204,43 @@ export default function InjuryRiskTest() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center mb-8">
-            <Badge className="bg-red-100 text-red-800 px-4 py-2 mb-4 text-sm font-semibold">
+      {/* Header - 컴팩트하게 */}
+      <section className="py-4 md:py-6 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="text-center mb-4">
+            <Badge className="bg-red-100 text-red-800 px-3 py-1 mb-2 text-xs font-semibold">
               🛡️ 부상 위험 예측
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
               안전한 테니스를 위한 체크
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-sm">
               {steps[currentStep].title}: {steps[currentStep].description}
             </p>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-medium text-gray-700">
+          {/* Progress Bar - 컴팩트하게 */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs font-medium text-gray-700">
                 단계 {currentStep + 1} / {steps.length}
               </span>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-xs font-medium text-gray-700">
                 {Math.round(progress)}% 완료
               </span>
             </div>
-            <Progress value={progress} className="h-2" />
+            <Progress value={progress} className="h-1.5" />
           </div>
         </div>
       </section>
 
-      {/* Question Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto max-w-4xl container-padding">
+      {/* Question Section - 컴팩트하게 */}
+      <section className="py-4 md:py-6 bg-white">
+        <div className="container mx-auto max-w-4xl px-4">
           <FadeIn>
-            <Card className="bg-white border-gray-200 shadow-lg">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed">
+            <Card className="bg-white border-gray-200 shadow-sm">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-lg md:text-xl font-bold text-gray-900 leading-relaxed">
                   {currentQuestion.question}
                 </CardTitle>
               </CardHeader>
@@ -249,14 +249,14 @@ export default function InjuryRiskTest() {
                 <RadioGroup
                   value={formData[currentQuestion.id as keyof InjuryRiskInput] as string}
                   onValueChange={handleAnswer}
-                  className="space-y-3"
+                  className="space-y-2"
                 >
                   {currentQuestion.options.map((option) => (
-                    <div key={String(option.value)} className="flex items-center space-x-3">
+                    <div key={String(option.value)} className="flex items-center space-x-2 p-2 border border-gray-200 rounded-lg hover:border-red-300 hover:bg-red-50 transition-all duration-200">
                       <RadioGroupItem value={String(option.value)} id={String(option.value)} />
                       <Label 
                         htmlFor={String(option.value)} 
-                        className="text-gray-700 cursor-pointer flex-1 py-2 hover:text-red-600 transition-colors"
+                        className="text-gray-700 cursor-pointer flex-1 text-sm hover:text-red-600 transition-colors"
                       >
                         {option.label}
                       </Label>
@@ -264,23 +264,23 @@ export default function InjuryRiskTest() {
                   ))}
                 </RadioGroup>
 
-                {/* Navigation */}
-                <div className="flex justify-between items-center mt-8">
+                {/* Navigation - 컴팩트하게 */}
+                <div className="flex justify-between items-center mt-4">
                   <Button
                     variant="outline"
                     onClick={handlePrevious}
                     disabled={currentStep === 0}
-                    className="bg-white border-gray-300 hover:border-red-500 px-6 py-3"
+                    className="bg-white border-gray-300 hover:border-red-500 px-4 py-2 text-sm"
                   >
-                    <ArrowLeft className="h-4 w-4 mr-2" />
+                    <ArrowLeft className="h-3 w-3 mr-1" />
                     이전
                   </Button>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1">
                     {steps.map((_, index) => (
                       <div
                         key={index}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
                           index <= currentStep ? 'bg-red-500' : 'bg-gray-300'
                         }`}
                       />
@@ -290,10 +290,10 @@ export default function InjuryRiskTest() {
                   <Button
                     onClick={handleNext}
                     disabled={!isAnswerSelected()}
-                    className="bg-red-600 hover:bg-red-700 text-white px-6 py-3"
+                    className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 text-sm"
                   >
                     {currentStep === questions.length - 1 ? '결과 확인' : '다음'}
-                    <ArrowRight className="h-4 w-4 ml-2" />
+                    <ArrowRight className="h-3 w-3 ml-1" />
                   </Button>
                 </div>
               </CardContent>
