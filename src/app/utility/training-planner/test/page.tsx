@@ -8,9 +8,8 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { ArrowRight, ArrowLeft, Calculator, CheckCircle } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { TrainingPlanInput, generateTrainingPlan } from '@/lib/trainingPlanner';
-import { FadeIn, SlideUp } from '@/components/ScrollAnimation';
 
 export default function TrainingPlannerTest() {
   const router = useRouter();
@@ -99,12 +98,12 @@ export default function TrainingPlannerTest() {
     switch (currentStep) {
       case 0:
         return (
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div>
-              <Label className="text-sm font-medium text-gray-700 mb-4 block">
+              <Label className="text-xs font-medium text-gray-700 mb-2 block">
                 현재 테니스 실력
               </Label>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-2">
                 {[
                   { value: 'beginner', label: '초보자', desc: '테니스를 처음 시작하는 단계' },
                   { value: 'intermediate', label: '중급자', desc: '기본기를 익힌 단계' },
@@ -120,13 +119,13 @@ export default function TrainingPlannerTest() {
                       onChange={(e) => handleInputChange('currentLevel', e.target.value)}
                       className="sr-only"
                     />
-                    <div className={`p-4 border-2 rounded-lg transition-all duration-300 ${
+                    <div className={`p-2 border-2 rounded-lg transition-all duration-200 ${
                       formData.currentLevel === level.value
                         ? 'border-indigo-500 bg-indigo-50'
                         : 'border-gray-200 hover:border-indigo-300'
                     }`}>
-                      <div className="font-semibold text-gray-900">{level.label}</div>
-                      <div className="text-sm text-gray-600">{level.desc}</div>
+                      <div className="font-semibold text-gray-900 text-sm">{level.label}</div>
+                      <div className="text-xs text-gray-600">{level.desc}</div>
                     </div>
                   </label>
                 ))}
@@ -134,7 +133,7 @@ export default function TrainingPlannerTest() {
             </div>
             
             <div>
-              <Label htmlFor="experience" className="text-sm font-medium text-gray-700 mb-2 block">
+              <Label htmlFor="experience" className="text-xs font-medium text-gray-700 mb-1 block">
                 테니스 경험 (년)
               </Label>
               <Input
@@ -142,16 +141,16 @@ export default function TrainingPlannerTest() {
                 type="number"
                 value={formData.experience || ''}
                 onChange={(e) => handleInputChange('experience', parseInt(e.target.value) || 0)}
-                placeholder="예: 2"
-                className="w-full"
+                placeholder="2"
+                className="w-full text-sm"
               />
             </div>
             
             <div>
-              <Label className="text-sm font-medium text-gray-700 mb-4 block">
+              <Label className="text-xs font-medium text-gray-700 mb-2 block">
                 현재 체력 상태
               </Label>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-2">
                 {[
                   { value: 'excellent', label: '우수', desc: '매우 좋은 체력 상태' },
                   { value: 'good', label: '양호', desc: '좋은 체력 상태' },
@@ -167,13 +166,13 @@ export default function TrainingPlannerTest() {
                       onChange={(e) => handleInputChange('physicalCondition', e.target.value)}
                       className="sr-only"
                     />
-                    <div className={`p-4 border-2 rounded-lg transition-all duration-300 ${
+                    <div className={`p-2 border-2 rounded-lg transition-all duration-200 ${
                       formData.physicalCondition === condition.value
                         ? 'border-indigo-500 bg-indigo-50'
                         : 'border-gray-200 hover:border-indigo-300'
                     }`}>
-                      <div className="font-semibold text-gray-900">{condition.label}</div>
-                      <div className="text-sm text-gray-600">{condition.desc}</div>
+                      <div className="font-semibold text-gray-900 text-sm">{condition.label}</div>
+                      <div className="text-xs text-gray-600">{condition.desc}</div>
                     </div>
                   </label>
                 ))}
@@ -184,12 +183,12 @@ export default function TrainingPlannerTest() {
         
       case 1:
         return (
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div>
-              <Label className="text-sm font-medium text-gray-700 mb-4 block">
+              <Label className="text-xs font-medium text-gray-700 mb-2 block">
                 플레이 스타일
               </Label>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-2">
                 {[
                   { value: 'aggressive', label: '공격형', desc: '강한 샷과 빠른 템포로 상대를 압박하는 스타일' },
                   { value: 'defensive', label: '수비형', desc: '안정적인 플레이로 상대의 실수를 유도하는 스타일' },
@@ -206,13 +205,13 @@ export default function TrainingPlannerTest() {
                       onChange={(e) => handleInputChange('playStyle', e.target.value)}
                       className="sr-only"
                     />
-                    <div className={`p-4 border-2 rounded-lg transition-all duration-300 ${
+                    <div className={`p-2 border-2 rounded-lg transition-all duration-200 ${
                       formData.playStyle === style.value
                         ? 'border-indigo-500 bg-indigo-50'
                         : 'border-gray-200 hover:border-indigo-300'
                     }`}>
-                      <div className="font-semibold text-gray-900">{style.label}</div>
-                      <div className="text-sm text-gray-600">{style.desc}</div>
+                      <div className="font-semibold text-gray-900 text-sm">{style.label}</div>
+                      <div className="text-xs text-gray-600">{style.desc}</div>
                     </div>
                   </label>
                 ))}
@@ -223,12 +222,12 @@ export default function TrainingPlannerTest() {
         
       case 2:
         return (
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div>
-              <Label className="text-sm font-medium text-gray-700 mb-4 block">
+              <Label className="text-xs font-medium text-gray-700 mb-2 block">
                 달성하고 싶은 목표 (복수 선택 가능)
               </Label>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-2 gap-2">
                 {[
                   '기본기 향상',
                   '서브 정확도 개선',
@@ -248,12 +247,12 @@ export default function TrainingPlannerTest() {
                       onChange={(e) => handleArrayChange('goals', goal, e.target.checked)}
                       className="sr-only"
                     />
-                    <div className={`p-4 border-2 rounded-lg transition-all duration-300 ${
+                    <div className={`p-2 border-2 rounded-lg transition-all duration-200 ${
                       (formData.goals || []).includes(goal)
                         ? 'border-indigo-500 bg-indigo-50'
                         : 'border-gray-200 hover:border-indigo-300'
                     }`}>
-                      <div className="font-semibold text-gray-900">{goal}</div>
+                      <div className="font-semibold text-gray-900 text-sm">{goal}</div>
                     </div>
                   </label>
                 ))}
@@ -264,9 +263,9 @@ export default function TrainingPlannerTest() {
         
       case 3:
         return (
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div>
-              <Label htmlFor="weekly" className="text-sm font-medium text-gray-700 mb-2 block">
+              <Label htmlFor="weekly" className="text-xs font-medium text-gray-700 mb-1 block">
                 주당 훈련 시간 (시간)
               </Label>
               <Input
@@ -274,13 +273,13 @@ export default function TrainingPlannerTest() {
                 type="number"
                 value={formData.availableTime?.weekly || ''}
                 onChange={(e) => handleInputChange('availableTime.weekly', parseInt(e.target.value) || 0)}
-                placeholder="예: 6"
-                className="w-full"
+                placeholder="6"
+                className="w-full text-sm"
               />
             </div>
             
             <div>
-              <Label htmlFor="sessionLength" className="text-sm font-medium text-gray-700 mb-2 block">
+              <Label htmlFor="sessionLength" className="text-xs font-medium text-gray-700 mb-1 block">
                 세션당 훈련 시간 (시간)
               </Label>
               <Input
@@ -288,8 +287,8 @@ export default function TrainingPlannerTest() {
                 type="number"
                 value={formData.availableTime?.sessionLength || ''}
                 onChange={(e) => handleInputChange('availableTime.sessionLength', parseInt(e.target.value) || 0)}
-                placeholder="예: 1.5"
-                className="w-full"
+                placeholder="1.5"
+                className="w-full text-sm"
               />
             </div>
           </div>
@@ -297,12 +296,12 @@ export default function TrainingPlannerTest() {
         
       case 4:
         return (
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div>
-              <Label className="text-sm font-medium text-gray-700 mb-4 block">
+              <Label className="text-xs font-medium text-gray-700 mb-2 block">
                 중점적으로 연습하고 싶은 영역 (복수 선택 가능)
               </Label>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-2 gap-2">
                 {[
                   '기본 스트로크',
                   '서브',
@@ -320,12 +319,12 @@ export default function TrainingPlannerTest() {
                       onChange={(e) => handleArrayChange('focusAreas', area, e.target.checked)}
                       className="sr-only"
                     />
-                    <div className={`p-4 border-2 rounded-lg transition-all duration-300 ${
+                    <div className={`p-2 border-2 rounded-lg transition-all duration-200 ${
                       (formData.focusAreas || []).includes(area)
                         ? 'border-indigo-500 bg-indigo-50'
                         : 'border-gray-200 hover:border-indigo-300'
                     }`}>
-                      <div className="font-semibold text-gray-900">{area}</div>
+                      <div className="font-semibold text-gray-900 text-sm">{area}</div>
                     </div>
                   </label>
                 ))}
@@ -341,67 +340,66 @@ export default function TrainingPlannerTest() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center mb-8">
-            <Badge className="bg-indigo-100 text-indigo-800 px-4 py-2 mb-4 text-sm font-semibold">
+      {/* Compact Header */}
+      <section className="py-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="text-center mb-4">
+            <Badge className="bg-indigo-100 text-indigo-800 px-3 py-1 mb-2 text-sm font-semibold">
               📅 훈련 계획 수립
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               맞춤형 훈련 계획 생성
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-sm">
               {steps[currentStep].title}: {steps[currentStep].description}
             </p>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-medium text-gray-700">
+          {/* Compact Progress Bar */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs font-medium text-gray-700">
                 단계 {currentStep + 1} / {steps.length}
               </span>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-xs font-medium text-gray-700">
                 {Math.round(progress)}% 완료
               </span>
             </div>
-            <Progress value={progress} className="h-2" />
+            <Progress value={progress} className="h-1" />
           </div>
         </div>
       </section>
 
-      {/* Form Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <FadeIn>
-            <Card className="bg-white border-gray-200 shadow-lg">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed">
-                  {steps[currentStep].title}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent className="pt-0">
-                {renderStepContent()}
+      {/* Compact Form Section */}
+      <section className="py-2 bg-white">
+        <div className="container mx-auto max-w-4xl px-4">
+          <Card className="bg-white border-gray-200 shadow-sm">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg md:text-xl font-bold text-gray-900 leading-tight">
+                {steps[currentStep].title}
+              </CardTitle>
+            </CardHeader>
+            
+            <CardContent className="pt-0">
+              {renderStepContent()}
 
-                {/* Navigation */}
-                <div className="flex justify-between items-center mt-8">
+              {/* Compact Navigation */}
+              <div className="flex justify-between items-center mt-4">
                   <Button
                     variant="outline"
                     onClick={handlePrevious}
                     disabled={currentStep === 0}
-                    className="bg-white border-gray-300 hover:border-indigo-500 px-6 py-3"
+                    className="bg-white border-gray-300 hover:border-indigo-500 px-3 py-2 text-sm"
                   >
-                    <ArrowLeft className="h-4 w-4 mr-2" />
+                    <ArrowLeft className="h-3 w-3 mr-1" />
                     이전
                   </Button>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1">
                     {steps.map((_, index) => (
                       <div
                         key={index}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
                           index <= currentStep ? 'bg-indigo-500' : 'bg-gray-300'
                         }`}
                       />
@@ -410,36 +408,14 @@ export default function TrainingPlannerTest() {
 
                   <Button
                     onClick={handleNext}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3"
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 text-sm"
                   >
                     {currentStep === steps.length - 1 ? '계획 생성' : '다음'}
-                    <ArrowRight className="h-4 w-4 ml-2" />
+                    <ArrowRight className="h-3 w-3 ml-1" />
                   </Button>
                 </div>
               </CardContent>
             </Card>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Help Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              훈련 계획 안내
-            </h3>
-            <p className="text-gray-600 mb-6">
-              정확한 정보를 입력하시면 더 효과적인 훈련 계획을 받을 수 있습니다.
-            </p>
-            <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-6">
-              <h4 className="font-semibold text-indigo-900 mb-2">📅 중요 안내</h4>
-              <p className="text-indigo-800 text-sm leading-relaxed">
-                입력하신 정보를 바탕으로 개인에 맞는 맞춤형 훈련 계획을 생성합니다. 
-                계획은 주간별로 세분화되어 있으며, 각 세션의 목표와 내용이 상세히 제시됩니다.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
     </div>
