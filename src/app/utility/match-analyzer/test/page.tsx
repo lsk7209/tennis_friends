@@ -8,9 +8,8 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { ArrowRight, ArrowLeft, BarChart3, CheckCircle } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { MatchAnalysisInput, analyzeMatch } from '@/lib/matchAnalyzer';
-import { FadeIn, SlideUp } from '@/components/ScrollAnimation';
 
 export default function MatchAnalyzerTest() {
   const router = useRouter();
@@ -89,16 +88,16 @@ export default function MatchAnalyzerTest() {
     switch (currentStep) {
       case 0:
         return (
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div>
-              <Label htmlFor="matchType" className="text-sm font-medium text-gray-700 mb-2 block">
+              <Label htmlFor="matchType" className="text-xs font-medium text-gray-700 mb-1 block">
                 경기 유형
               </Label>
               <select
                 id="matchType"
                 value={formData.matchType || 'singles'}
                 onChange={(e) => handleInputChange('matchType', e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="singles">싱글스</option>
                 <option value="doubles">더블스</option>
@@ -106,7 +105,7 @@ export default function MatchAnalyzerTest() {
             </div>
             
             <div>
-              <Label htmlFor="duration" className="text-sm font-medium text-gray-700 mb-2 block">
+              <Label htmlFor="duration" className="text-xs font-medium text-gray-700 mb-1 block">
                 경기 시간 (분)
               </Label>
               <Input
@@ -115,12 +114,12 @@ export default function MatchAnalyzerTest() {
                 value={formData.duration || ''}
                 onChange={(e) => handleInputChange('duration', parseInt(e.target.value) || 0)}
                 placeholder="예: 90"
-                className="w-full"
+                className="w-full text-sm"
               />
             </div>
             
             <div>
-              <Label htmlFor="sets" className="text-sm font-medium text-gray-700 mb-2 block">
+              <Label htmlFor="sets" className="text-xs font-medium text-gray-700 mb-1 block">
                 세트 수
               </Label>
               <Input
@@ -129,7 +128,7 @@ export default function MatchAnalyzerTest() {
                 value={formData.sets || ''}
                 onChange={(e) => handleInputChange('sets', parseInt(e.target.value) || 0)}
                 placeholder="예: 3"
-                className="w-full"
+                className="w-full text-sm"
               />
             </div>
           </div>
@@ -137,23 +136,23 @@ export default function MatchAnalyzerTest() {
         
       case 1:
         return (
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-2">
               <div>
-                <Label htmlFor="firstServeIn" className="text-sm font-medium text-gray-700 mb-2 block">
-                  첫 서브 성공 개수
+                <Label htmlFor="firstServeIn" className="text-xs font-medium text-gray-700 mb-1 block">
+                  첫 서브 성공
                 </Label>
                 <Input
                   id="firstServeIn"
                   type="number"
                   value={formData.serves?.firstServeIn || ''}
                   onChange={(e) => handleInputChange('serves.firstServeIn', parseInt(e.target.value) || 0)}
-                  placeholder="예: 45"
-                  className="w-full"
+                  placeholder="45"
+                  className="w-full text-sm"
                 />
               </div>
               <div>
-                <Label htmlFor="firstServeTotal" className="text-sm font-medium text-gray-700 mb-2 block">
+                <Label htmlFor="firstServeTotal" className="text-xs font-medium text-gray-700 mb-1 block">
                   첫 서브 총 개수
                 </Label>
                 <Input
@@ -161,37 +160,37 @@ export default function MatchAnalyzerTest() {
                   type="number"
                   value={formData.serves?.firstServeTotal || ''}
                   onChange={(e) => handleInputChange('serves.firstServeTotal', parseInt(e.target.value) || 0)}
-                  placeholder="예: 60"
-                  className="w-full"
+                  placeholder="60"
+                  className="w-full text-sm"
                 />
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2">
               <div>
-                <Label htmlFor="aces" className="text-sm font-medium text-gray-700 mb-2 block">
-                  에이스 개수
+                <Label htmlFor="aces" className="text-xs font-medium text-gray-700 mb-1 block">
+                  에이스
                 </Label>
                 <Input
                   id="aces"
                   type="number"
                   value={formData.serves?.aces || ''}
                   onChange={(e) => handleInputChange('serves.aces', parseInt(e.target.value) || 0)}
-                  placeholder="예: 8"
-                  className="w-full"
+                  placeholder="8"
+                  className="w-full text-sm"
                 />
               </div>
               <div>
-                <Label htmlFor="doubleFaults" className="text-sm font-medium text-gray-700 mb-2 block">
-                  더블폴트 개수
+                <Label htmlFor="doubleFaults" className="text-xs font-medium text-gray-700 mb-1 block">
+                  더블폴트
                 </Label>
                 <Input
                   id="doubleFaults"
                   type="number"
                   value={formData.serves?.doubleFaults || ''}
                   onChange={(e) => handleInputChange('serves.doubleFaults', parseInt(e.target.value) || 0)}
-                  placeholder="예: 3"
-                  className="w-full"
+                  placeholder="3"
+                  className="w-full text-sm"
                 />
               </div>
             </div>
@@ -200,23 +199,23 @@ export default function MatchAnalyzerTest() {
         
       case 2:
         return (
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-2">
               <div>
-                <Label htmlFor="firstServeReturnWon" className="text-sm font-medium text-gray-700 mb-2 block">
-                  첫 서브 리턴 성공 개수
+                <Label htmlFor="firstServeReturnWon" className="text-xs font-medium text-gray-700 mb-1 block">
+                  첫 서브 리턴 성공
                 </Label>
                 <Input
                   id="firstServeReturnWon"
                   type="number"
                   value={formData.returns?.firstServeReturnWon || ''}
                   onChange={(e) => handleInputChange('returns.firstServeReturnWon', parseInt(e.target.value) || 0)}
-                  placeholder="예: 20"
-                  className="w-full"
+                  placeholder="20"
+                  className="w-full text-sm"
                 />
               </div>
               <div>
-                <Label htmlFor="firstServeReturnTotal" className="text-sm font-medium text-gray-700 mb-2 block">
+                <Label htmlFor="firstServeReturnTotal" className="text-xs font-medium text-gray-700 mb-1 block">
                   첫 서브 리턴 총 개수
                 </Label>
                 <Input
@@ -224,8 +223,8 @@ export default function MatchAnalyzerTest() {
                   type="number"
                   value={formData.returns?.firstServeReturnTotal || ''}
                   onChange={(e) => handleInputChange('returns.firstServeReturnTotal', parseInt(e.target.value) || 0)}
-                  placeholder="예: 30"
-                  className="w-full"
+                  placeholder="30"
+                  className="w-full text-sm"
                 />
               </div>
             </div>
@@ -234,12 +233,12 @@ export default function MatchAnalyzerTest() {
         
       case 3:
         return (
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">위너 개수</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <h3 className="text-sm font-semibold text-gray-900 mb-2">위너 개수</h3>
+              <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <Label htmlFor="forehandWinner" className="text-sm font-medium text-gray-700 mb-2 block">
+                  <Label htmlFor="forehandWinner" className="text-xs font-medium text-gray-700 mb-1 block">
                     포핸드 위너
                   </Label>
                   <Input
@@ -247,12 +246,12 @@ export default function MatchAnalyzerTest() {
                     type="number"
                     value={formData.winners?.forehand || ''}
                     onChange={(e) => handleInputChange('winners.forehand', parseInt(e.target.value) || 0)}
-                    placeholder="예: 15"
-                    className="w-full"
+                    placeholder="15"
+                    className="w-full text-sm"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="backhandWinner" className="text-sm font-medium text-gray-700 mb-2 block">
+                  <Label htmlFor="backhandWinner" className="text-xs font-medium text-gray-700 mb-1 block">
                     백핸드 위너
                   </Label>
                   <Input
@@ -260,18 +259,18 @@ export default function MatchAnalyzerTest() {
                     type="number"
                     value={formData.winners?.backhand || ''}
                     onChange={(e) => handleInputChange('winners.backhand', parseInt(e.target.value) || 0)}
-                    placeholder="예: 8"
-                    className="w-full"
+                    placeholder="8"
+                    className="w-full text-sm"
                   />
                 </div>
               </div>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">에러 개수</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <h3 className="text-sm font-semibold text-gray-900 mb-2">에러 개수</h3>
+              <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <Label htmlFor="forehandError" className="text-sm font-medium text-gray-700 mb-2 block">
+                  <Label htmlFor="forehandError" className="text-xs font-medium text-gray-700 mb-1 block">
                     포핸드 에러
                   </Label>
                   <Input
@@ -279,12 +278,12 @@ export default function MatchAnalyzerTest() {
                     type="number"
                     value={formData.errors?.forehand || ''}
                     onChange={(e) => handleInputChange('errors.forehand', parseInt(e.target.value) || 0)}
-                    placeholder="예: 12"
-                    className="w-full"
+                    placeholder="12"
+                    className="w-full text-sm"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="backhandError" className="text-sm font-medium text-gray-700 mb-2 block">
+                  <Label htmlFor="backhandError" className="text-xs font-medium text-gray-700 mb-1 block">
                     백핸드 에러
                   </Label>
                   <Input
@@ -292,8 +291,8 @@ export default function MatchAnalyzerTest() {
                     type="number"
                     value={formData.errors?.backhand || ''}
                     onChange={(e) => handleInputChange('errors.backhand', parseInt(e.target.value) || 0)}
-                    placeholder="예: 10"
-                    className="w-full"
+                    placeholder="10"
+                    className="w-full text-sm"
                   />
                 </div>
               </div>
@@ -303,32 +302,32 @@ export default function MatchAnalyzerTest() {
         
       case 4:
         return (
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-2">
               <div>
-                <Label htmlFor="approaches" className="text-sm font-medium text-gray-700 mb-2 block">
-                  네트 어프로치 개수
+                <Label htmlFor="approaches" className="text-xs font-medium text-gray-700 mb-1 block">
+                  네트 어프로치
                 </Label>
                 <Input
                   id="approaches"
                   type="number"
                   value={formData.netPlay?.approaches || ''}
                   onChange={(e) => handleInputChange('netPlay.approaches', parseInt(e.target.value) || 0)}
-                  placeholder="예: 10"
-                  className="w-full"
+                  placeholder="10"
+                  className="w-full text-sm"
                 />
               </div>
               <div>
-                <Label htmlFor="volleysWon" className="text-sm font-medium text-gray-700 mb-2 block">
-                  발리 성공 개수
+                <Label htmlFor="volleysWon" className="text-xs font-medium text-gray-700 mb-1 block">
+                  발리 성공
                 </Label>
                 <Input
                   id="volleysWon"
                   type="number"
                   value={formData.netPlay?.volleysWon || ''}
                   onChange={(e) => handleInputChange('netPlay.volleysWon', parseInt(e.target.value) || 0)}
-                  placeholder="예: 8"
-                  className="w-full"
+                  placeholder="8"
+                  className="w-full text-sm"
                 />
               </div>
             </div>
@@ -337,23 +336,23 @@ export default function MatchAnalyzerTest() {
         
       case 5:
         return (
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-2">
               <div>
-                <Label htmlFor="breakPointsWon" className="text-sm font-medium text-gray-700 mb-2 block">
-                  브레이크 포인트 성공 개수
+                <Label htmlFor="breakPointsWon" className="text-xs font-medium text-gray-700 mb-1 block">
+                  브레이크 포인트 성공
                 </Label>
                 <Input
                   id="breakPointsWon"
                   type="number"
                   value={formData.mental?.breakPointsWon || ''}
                   onChange={(e) => handleInputChange('mental.breakPointsWon', parseInt(e.target.value) || 0)}
-                  placeholder="예: 3"
-                  className="w-full"
+                  placeholder="3"
+                  className="w-full text-sm"
                 />
               </div>
               <div>
-                <Label htmlFor="breakPointsFaced" className="text-sm font-medium text-gray-700 mb-2 block">
+                <Label htmlFor="breakPointsFaced" className="text-xs font-medium text-gray-700 mb-1 block">
                   브레이크 포인트 총 개수
                 </Label>
                 <Input
@@ -361,8 +360,8 @@ export default function MatchAnalyzerTest() {
                   type="number"
                   value={formData.mental?.breakPointsFaced || ''}
                   onChange={(e) => handleInputChange('mental.breakPointsFaced', parseInt(e.target.value) || 0)}
-                  placeholder="예: 5"
-                  className="w-full"
+                  placeholder="5"
+                  className="w-full text-sm"
                 />
               </div>
             </div>
@@ -376,67 +375,66 @@ export default function MatchAnalyzerTest() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center mb-8">
-            <Badge className="bg-blue-100 text-blue-800 px-4 py-2 mb-4 text-sm font-semibold">
+      {/* Compact Header */}
+      <section className="py-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="text-center mb-4">
+            <Badge className="bg-blue-100 text-blue-800 px-3 py-1 mb-2 text-sm font-semibold">
               📊 경기 분석 도구
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               경기 데이터 입력
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-sm">
               {steps[currentStep].title}: {steps[currentStep].description}
             </p>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-medium text-gray-700">
+          {/* Compact Progress Bar */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs font-medium text-gray-700">
                 단계 {currentStep + 1} / {steps.length}
               </span>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-xs font-medium text-gray-700">
                 {Math.round(progress)}% 완료
               </span>
             </div>
-            <Progress value={progress} className="h-2" />
+            <Progress value={progress} className="h-1" />
           </div>
         </div>
       </section>
 
-      {/* Form Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <FadeIn>
-            <Card className="bg-white border-gray-200 shadow-lg">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed">
-                  {steps[currentStep].title}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent className="pt-0">
-                {renderStepContent()}
+      {/* Compact Form Section */}
+      <section className="py-2 bg-white">
+        <div className="container mx-auto max-w-4xl px-4">
+          <Card className="bg-white border-gray-200 shadow-sm">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg md:text-xl font-bold text-gray-900 leading-tight">
+                {steps[currentStep].title}
+              </CardTitle>
+            </CardHeader>
+            
+            <CardContent className="pt-0">
+              {renderStepContent()}
 
-                {/* Navigation */}
-                <div className="flex justify-between items-center mt-8">
+              {/* Compact Navigation */}
+              <div className="flex justify-between items-center mt-4">
                   <Button
                     variant="outline"
                     onClick={handlePrevious}
                     disabled={currentStep === 0}
-                    className="bg-white border-gray-300 hover:border-blue-500 px-6 py-3"
+                    className="bg-white border-gray-300 hover:border-blue-500 px-3 py-2 text-sm"
                   >
-                    <ArrowLeft className="h-4 w-4 mr-2" />
+                    <ArrowLeft className="h-3 w-3 mr-1" />
                     이전
                   </Button>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1">
                     {steps.map((_, index) => (
                       <div
                         key={index}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
                           index <= currentStep ? 'bg-blue-500' : 'bg-gray-300'
                         }`}
                       />
@@ -445,36 +443,14 @@ export default function MatchAnalyzerTest() {
 
                   <Button
                     onClick={handleNext}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 text-sm"
                   >
                     {currentStep === steps.length - 1 ? '분석 시작' : '다음'}
-                    <ArrowRight className="h-4 w-4 ml-2" />
+                    <ArrowRight className="h-3 w-3 ml-1" />
                   </Button>
                 </div>
               </CardContent>
             </Card>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Help Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              경기 분석 안내
-            </h3>
-            <p className="text-gray-600 mb-6">
-              정확한 데이터를 입력하시면 더 정확한 분석 결과를 받을 수 있습니다.
-            </p>
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-              <h4 className="font-semibold text-blue-900 mb-2">📊 중요 안내</h4>
-              <p className="text-blue-800 text-sm leading-relaxed">
-                경기 중 기록한 통계를 바탕으로 입력해주세요. 정확하지 않은 경우 대략적인 수치로도 
-                분석이 가능하지만, 더 정확한 결과를 위해서는 세밀한 기록을 권장합니다.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
     </div>
