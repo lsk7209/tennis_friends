@@ -25,7 +25,7 @@ export default function RacketWeightStyles() {
       title: "빠르고 가벼운 '스피드형' 플레이어",
       emoji: "🪶",
       icon: Zap,
-      color: "bg-blue-50 border-blue-200",
+      color: "bg-white border-gray-300",
       features: [
         "빠른 스윙과 리턴에 유리",
         "타점이 흔들릴 수 있음", 
@@ -38,7 +38,7 @@ export default function RacketWeightStyles() {
       title: "밸런스 중심의 '올라운드형'",
       emoji: "⚙️",
       icon: Target,
-      color: "bg-green-50 border-green-200",
+      color: "bg-white border-gray-300",
       features: [
         "파워형이 아닌 정확성 중심 플레이어에게 적합",
         "하드코트·실내코트 모두 대응 가능",
@@ -51,7 +51,7 @@ export default function RacketWeightStyles() {
       title: "묵직한 파워의 '공격형' 플레이어",
       emoji: "🧱",
       icon: Shield,
-      color: "bg-orange-50 border-orange-200",
+      color: "bg-white border-gray-300",
       features: [
         "무게감으로 공을 눌러치는 느낌",
         "플랫·하드히터에게 유리",
@@ -84,12 +84,20 @@ export default function RacketWeightStyles() {
 
   const faqs = [
     {
-      question: "무거운 라켓을 쓰면 공이 더 잘 나가나요?",
-      answer: "초반엔 그렇지만, 컨트롤이 어렵습니다. 본인 체력에 맞는 무게가 최선입니다."
+      question: "라켓 무게는 어떻게 선택해야 하나요?",
+      answer: "체중의 1/1000 정도가 적당합니다. 예를 들어 70kg 체중이라면 280-300g 라켓을 추천합니다. 서울의 실내 코트에서는 공기 저항이 적어 조금 더 무거운 라켓도 괜찮습니다. 정확한 무게를 찾으려면 NTRP 테스트로 자신의 스타일을 먼저 파악해보세요."
     },
     {
-      question: "초보도 300g 이상 라켓을 써도 되나요?",
-      answer: "가능은 하지만, 스윙 리듬이 무너질 수 있습니다. 285~295g부터 시작하세요."
+      question: "초보자와 중급자 라켓의 차이점은 무엇인가요?",
+      answer: "초보자는 헤드 사이즈가 큰 라켓(100+ sq in)을, 중급자는 컨트롤이 좋은 라켓(95-98 sq in)을 선택하는 것이 좋습니다. 부산의 바람이 강한 야외 코트에서는 컨트롤이 더욱 중요합니다. 라켓 추천 도구로 맞춤형 추천을 받아보세요."
+    },
+    {
+      question: "무거운 라켓을 쓰면 공이 더 잘 나가나요?",
+      answer: "초반엔 그렇지만, 컨트롤이 어렵습니다. 본인 체력에 맞는 무게가 최선입니다. 제주도의 습한 기후에서는 특히 그립 관리가 중요하니 무게보다는 그립감을 우선 고려하세요."
+    },
+    {
+      question: "라켓 무게로 인한 부상을 예방하려면?",
+      answer: "무거운 라켓은 손목과 어깨에 부담을 줍니다. 특히 겨울철 실내 코트에서는 근육이 경직되어 있으니 충분한 워밍업이 필수입니다. 부상 예방 체크로 자신의 상태를 확인해보세요."
     }
   ];
 
@@ -275,16 +283,16 @@ export default function RacketWeightStyles() {
           <Card className="bg-white border-gray-200 shadow-lg mb-12">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                ❓ 자주 묻는 질문
+                ❓ 자주 묻는 질문 (FAQ)
               </h3>
               <div className="space-y-6">
                 {faqs.map((faq, index) => (
                   <div key={index} className="border-b border-gray-100 pb-6 last:border-b-0">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                      Q. {faq.question}
+                      Q{index + 1}. {faq.question}
                     </h4>
                     <p className="text-gray-700 leading-relaxed">
-                      A. {faq.answer}
+                      <strong className="text-gray-900">A.</strong> {faq.answer}
                     </p>
                   </div>
                 ))}
