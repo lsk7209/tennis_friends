@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Trophy, Share2, Download, RotateCcw, Target, BookOpen, CheckCircle, XCircle, Clock, ArrowRight } from 'lucide-react';
-import { getGradeInfo, getTopWeakAreas, CATEGORY_LABELS, CATEGORY_COLORS, QuizAnswer } from '@/lib/tennisQuiz';
+import { getGradeInfo, getTopWeakAreas, CATEGORY_LABELS, CATEGORY_COLORS, QuizAnswer, Question } from '@/lib/tennisQuiz';
 import { FadeIn, SlideUp, SlideDown, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -23,6 +23,7 @@ function TennisRulesQuizResultContent() {
   const timeSpent = Number(searchParams.get('timeSpent') || 0);
   const wrongByCat = JSON.parse(searchParams.get('wrongByCat') || '{}');
   const answers = JSON.parse(searchParams.get('answers') || '[]') as QuizAnswer[];
+  const questions = JSON.parse(searchParams.get('questions') || '[]') as Question[];
   
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
@@ -216,42 +217,90 @@ function TennisRulesQuizResultContent() {
             
             <StaggeredAnimation staggerDelay={0.1}>
               <div className="space-y-6">
-                {wrongAnswers.map((answer, index) => (
-                  <StaggeredItem key={answer.id}>
-                    <Card className="bg-white border-gray-200 hover:border-red-300 transition-all duration-300">
-                      <CardContent className="p-6">
-                        <div className="flex items-center justify-between mb-4">
-                          <Badge className={`px-3 py-1 text-sm font-semibold ${getCategoryColor(answer.cat)}`}>
-                            {CATEGORY_LABELS[answer.cat]}
-                          </Badge>
-                          <Badge variant="outline" className="text-gray-600">
-                            난이도 {answer.diff}
-                          </Badge>
-                        </div>
-                        
-                        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
-                          <div className="flex items-center gap-2 mb-2">
-                            <XCircle className="h-5 w-5 text-red-600" />
-                            <span className="font-semibold text-red-800">틀린 답변</span>
+                {wrongAnswers.map((answer, index) => {
+                  const question = questions.find(q => q.id === answer.id);
+                  if (!question) return null;
+                  
+                  return (
+                    <StaggeredItem key={answer.id}>
+                      <Card className="bg-white border-gray-200 hover:border-red-300 transition-all duration-300">
+                        <CardContent className="p-6">
+                          <div className="flex items-center justify-between mb-4">
+                            <Badge className={`px-3 py-1 text-sm font-semibold ${getCategoryColor(answer.cat)}`}>
+                              {CATEGORY_LABELS[answer.cat]}
+                            </Badge>
+                            <Badge variant="outline" className="text-gray-600">
+                              난이도 {answer.diff}
+                            </Badge>
                           </div>
-                          <p className="text-red-700 text-sm">
-                            선택한 답: {answer.selectedAnswer + 1}번
-                          </p>
-                        </div>
-                        
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                          <div className="flex items-center gap-2 mb-2">
-                            <CheckCircle className="h-5 w-5 text-green-600" />
-                            <span className="font-semibold text-green-800">정답 및 해설</span>
+                          
+                          <h3 className="text-lg font-bold text-gray-900 mb-4">
+                            {question.q}
+                          </h3>
+                          
+                          <div className="grid gap-3 mb-6">
+                            {question.options.map((option, optionIndex) => {
+                              const isSelected = answer.selectedAnswer === optionIndex;
+                              const isCorrect = optionIndex === question.a;
+                              
+                              return (
+                                <div
+                                  key={optionIndex}
+                                  className={`p-3 rounded-lg border-2 ${
+                                    isCorrect
+                                      ? 'bg-green-50 border-green-500 text-green-900'
+                                      : isSelected
+                                      ? 'bg-red-50 border-red-500 text-red-900'
+                                      : 'bg-gray-50 border-gray-300 text-gray-600'
+                                  }`}
+                                >
+                                  <div className="flex items-center gap-3">
+                                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold ${
+                                      isCorrect
+                                        ? 'border-green-500 bg-green-500 text-white'
+                                        : isSelected
+                                        ? 'border-red-500 bg-red-500 text-white'
+                                        : 'border-gray-300'
+                                    }`}>
+                                      {isCorrect ? (
+                                        <CheckCircle className="h-4 w-4" />
+                                      ) : isSelected ? (
+                                        <XCircle className="h-4 w-4" />
+                                      ) : (
+                                        optionIndex + 1
+                                      )}
+                                    </div>
+                                    <span className="text-sm leading-relaxed">{option}</span>
+                                    {isCorrect && (
+                                      <Badge className="ml-auto bg-green-100 text-green-800 text-xs">
+                                        정답
+                                      </Badge>
+                                    )}
+                                    {isSelected && !isCorrect && (
+                                      <Badge className="ml-auto bg-red-100 text-red-800 text-xs">
+                                        선택
+                                      </Badge>
+                                    )}
+                                  </div>
+                                </div>
+                              );
+                            })}
                           </div>
-                          <p className="text-green-700 text-sm">
-                            정답: {answer.cat} | 해설: {answer.cat} 관련 규칙을 다시 확인해보세요.
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </StaggeredItem>
-                ))}
+                          
+                          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div className="flex items-center gap-2 mb-2">
+                              <BookOpen className="h-5 w-5 text-blue-600" />
+                              <span className="font-semibold text-blue-800">해설</span>
+                            </div>
+                            <p className="text-blue-700 text-sm leading-relaxed">
+                              {question.exp}
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </StaggeredItem>
+                  );
+                })}
               </div>
             </StaggeredAnimation>
           </div>

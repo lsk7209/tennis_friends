@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { CheckCircle, XCircle, ArrowRight, ArrowLeft, Clock } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Clock } from 'lucide-react';
 import { QUESTION_BANK, CATEGORY_COLORS, CATEGORY_LABELS, pickQuestions, gradeQuiz, QuizAnswer, Question } from '@/lib/tennisQuiz';
 import { FadeIn, SlideUp } from '@/components/ScrollAnimation';
 
@@ -17,7 +17,6 @@ export default function TennisRulesQuiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [showExplanation, setShowExplanation] = useState(false);
   const [questionStartTime, setQuestionStartTime] = useState<number>(Date.now());
   const [timeSpent, setTimeSpent] = useState(0);
 
@@ -42,7 +41,7 @@ export default function TennisRulesQuiz() {
   const isLastQuestion = currentQuestionIndex === questions.length - 1;
 
   const handleAnswerSelect = (answerIndex: number) => {
-    if (showExplanation) return;
+    if (selectedAnswer !== null) return; // 이미 답변을 선택한 경우
     
     setSelectedAnswer(answerIndex);
     const isCorrect = answerIndex === currentQuestion.a;
@@ -58,7 +57,15 @@ export default function TennisRulesQuiz() {
     };
     
     setAnswers(prev => [...prev, newAnswer]);
-    setShowExplanation(true);
+    
+    // 답변 선택 후 자동으로 다음 문항으로 이동 (마지막 문항이 아닌 경우)
+    if (!isLastQuestion) {
+      setTimeout(() => {
+        setCurrentQuestionIndex(prev => prev + 1);
+        setSelectedAnswer(null);
+        setQuestionStartTime(Date.now());
+      }, 500); // 0.5초 후 자동 이동
+    }
   };
 
   const handleNext = () => {
@@ -71,14 +78,9 @@ export default function TennisRulesQuiz() {
       params.append('timeSpent', result.timeSpent.toString());
       params.append('wrongByCat', JSON.stringify(result.wrongByCat));
       params.append('answers', JSON.stringify(result.answers));
+      params.append('questions', JSON.stringify(questions));
       
       router.push(`/tennis-rules-quiz/result?${params.toString()}`);
-    } else {
-      // 다음 문항으로 이동
-      setCurrentQuestionIndex(prev => prev + 1);
-      setSelectedAnswer(null);
-      setShowExplanation(false);
-      setQuestionStartTime(Date.now());
     }
   };
 
@@ -86,7 +88,6 @@ export default function TennisRulesQuiz() {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(prev => prev - 1);
       setSelectedAnswer(null);
-      setShowExplanation(false);
       setQuestionStartTime(Date.now());
     }
   };
@@ -176,22 +177,14 @@ export default function TennisRulesQuiz() {
                 <div className="grid gap-3 mb-8">
                   {currentQuestion.options.map((option, index) => {
                     const isSelected = selectedAnswer === index;
-                    const isCorrect = index === currentQuestion.a;
-                    const isWrong = isSelected && !isCorrect;
                     
                     return (
                       <Button
                         key={index}
                         onClick={() => handleAnswerSelect(index)}
-                        disabled={showExplanation}
+                        disabled={selectedAnswer !== null}
                         className={`w-full p-4 h-auto text-left justify-start transition-all duration-300 transform ${
-                          showExplanation
-                            ? isCorrect
-                              ? 'bg-green-50 border-green-500 text-green-900'
-                              : isWrong
-                              ? 'bg-red-50 border-red-500 text-red-900'
-                              : 'bg-gray-50 border-gray-300 text-gray-600'
-                            : isSelected
+                          isSelected
                             ? 'bg-emerald-50 border-emerald-500 text-emerald-900 shadow-lg scale-[1.02]'
                             : 'bg-white border-gray-300 hover:border-emerald-500 hover:bg-emerald-50 hover:scale-[1.01] text-gray-900'
                         }`}
@@ -199,23 +192,11 @@ export default function TennisRulesQuiz() {
                       >
                         <div className="flex items-center gap-3">
                           <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold transition-all duration-300 ${
-                            showExplanation
-                              ? isCorrect
-                                ? 'border-green-500 bg-green-500 text-white'
-                                : isWrong
-                                ? 'border-red-500 bg-red-500 text-white'
-                                : 'border-gray-300'
-                              : isSelected
+                            isSelected
                               ? 'border-emerald-500 bg-emerald-500 text-white'
                               : 'border-gray-300'
                           }`}>
-                            {showExplanation && isCorrect ? (
-                              <CheckCircle className="h-4 w-4" />
-                            ) : showExplanation && isWrong ? (
-                              <XCircle className="h-4 w-4" />
-                            ) : (
-                              index + 1
-                            )}
+                            {index + 1}
                           </div>
                           <span className="text-sm leading-relaxed">{option}</span>
                         </div>
@@ -224,35 +205,6 @@ export default function TennisRulesQuiz() {
                   })}
                 </div>
 
-                {/* Explanation */}
-                {showExplanation && (
-                  <SlideUp>
-                    <Alert className={`mb-6 ${
-                      selectedAnswer === currentQuestion.a 
-                        ? 'bg-green-50 border-green-200' 
-                        : 'bg-red-50 border-red-200'
-                    }`}>
-                      <div className={`h-5 w-5 ${
-                        selectedAnswer === currentQuestion.a ? 'text-green-600' : 'text-red-600'
-                      }`}>
-                        {selectedAnswer === currentQuestion.a ? (
-                          <CheckCircle className="h-5 w-5" />
-                        ) : (
-                          <XCircle className="h-5 w-5" />
-                        )}
-                      </div>
-                      <AlertDescription className={`${
-                        selectedAnswer === currentQuestion.a ? 'text-green-800' : 'text-red-800'
-                      }`}>
-                        <strong>
-                          {selectedAnswer === currentQuestion.a ? '정답입니다!' : '틀렸습니다.'}
-                        </strong>
-                        <br />
-                        {currentQuestion.exp}
-                      </AlertDescription>
-                    </Alert>
-                  </SlideUp>
-                )}
 
                 {/* Navigation */}
                 <div className="flex justify-between items-center">
@@ -271,20 +223,22 @@ export default function TennisRulesQuiz() {
                       <div
                         key={index}
                         className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                          index <= currentQuestionIndex ? 'bg-emerald-500' : 'bg-gray-300'
+                          index < currentQuestionIndex ? 'bg-emerald-500' : 
+                          index === currentQuestionIndex ? 'bg-emerald-300' : 'bg-gray-300'
                         }`}
                       />
                     ))}
                   </div>
 
-                  <Button
-                    onClick={handleNext}
-                    disabled={!showExplanation}
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3"
-                  >
-                    {isLastQuestion ? '결과 확인' : '다음'}
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Button>
+                  {isLastQuestion && selectedAnswer !== null && (
+                    <Button
+                      onClick={handleNext}
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3"
+                    >
+                      결과 확인
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
