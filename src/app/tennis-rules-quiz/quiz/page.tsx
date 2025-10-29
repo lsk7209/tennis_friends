@@ -6,10 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { Alert, AlertDescription } from '@/components/ui/alert';
 import { ArrowRight, ArrowLeft, Clock } from 'lucide-react';
 import { QUESTION_BANK, CATEGORY_COLORS, CATEGORY_LABELS, pickQuestions, gradeQuiz, QuizAnswer, Question } from '@/lib/tennisQuiz';
-import { FadeIn, SlideUp } from '@/components/ScrollAnimation';
 
 export default function TennisRulesQuiz() {
   const router = useRouter();
@@ -120,61 +118,60 @@ export default function TennisRulesQuiz() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center mb-8">
-            <Badge className="bg-emerald-100 text-emerald-800 px-4 py-2 mb-4 text-sm font-semibold">
+      {/* Compact Header */}
+      <section className="py-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="text-center mb-4">
+            <Badge className="bg-emerald-100 text-emerald-800 px-3 py-1 mb-2 text-sm font-semibold">
               🎾 테니스 규칙 퀴즈
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               규칙 실력 점검
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-sm">
               12문항에 답하고 당신의 규칙 지식을 확인해보세요
             </p>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-medium text-gray-700">
+          {/* Compact Progress Bar */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs font-medium text-gray-700">
                 문항 {currentQuestionIndex + 1} / {questions.length}
               </span>
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-gray-500" />
-                <span className="text-sm font-medium text-gray-700">
+              <div className="flex items-center gap-1">
+                <Clock className="h-3 w-3 text-gray-500" />
+                <span className="text-xs font-medium text-gray-700">
                   {Math.floor(timeSpent / 60)}:{(timeSpent % 60).toString().padStart(2, '0')}
                 </span>
               </div>
             </div>
-            <Progress value={progress} className="h-2" />
+            <Progress value={progress} className="h-1" />
           </div>
         </div>
       </section>
 
-      {/* Question Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <FadeIn>
-            <Card className="bg-white border-gray-200 shadow-lg">
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <Badge className={`px-3 py-1 text-sm font-semibold ${getCategoryColor(currentQuestion.cat)}`}>
-                    {CATEGORY_LABELS[currentQuestion.cat]}
-                  </Badge>
-                  <Badge variant="outline" className="text-gray-600">
-                    난이도 {currentQuestion.diff}
-                  </Badge>
-                </div>
-                <CardTitle className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed">
-                  {currentQuestion.q}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent className="pt-0">
-                {/* Options */}
-                <div className="grid gap-3 mb-8">
+      {/* Compact Question Section */}
+      <section className="py-2 bg-white">
+        <div className="container mx-auto max-w-4xl px-4">
+          <Card className="bg-white border-gray-200 shadow-sm">
+            <CardHeader className="pb-2">
+              <div className="flex items-center justify-between mb-2">
+                <Badge className={`px-2 py-1 text-xs font-semibold ${getCategoryColor(currentQuestion.cat)}`}>
+                  {CATEGORY_LABELS[currentQuestion.cat]}
+                </Badge>
+                <Badge variant="outline" className="text-gray-600 text-xs">
+                  난이도 {currentQuestion.diff}
+                </Badge>
+              </div>
+              <CardTitle className="text-lg md:text-xl font-bold text-gray-900 leading-tight">
+                {currentQuestion.q}
+              </CardTitle>
+            </CardHeader>
+            
+            <CardContent className="pt-0">
+              {/* Compact Options */}
+              <div className="grid gap-2 mb-4">
                   {currentQuestion.options.map((option, index) => {
                     const isSelected = selectedAnswer === index;
                     
@@ -183,22 +180,22 @@ export default function TennisRulesQuiz() {
                         key={index}
                         onClick={() => handleAnswerSelect(index)}
                         disabled={selectedAnswer !== null}
-                        className={`w-full p-4 h-auto text-left justify-start transition-all duration-300 transform ${
+                        className={`w-full p-2 h-auto text-left justify-start transition-all duration-200 ${
                           isSelected
-                            ? 'bg-emerald-50 border-emerald-500 text-emerald-900 shadow-lg scale-[1.02]'
-                            : 'bg-white border-gray-300 hover:border-emerald-500 hover:bg-emerald-50 hover:scale-[1.01] text-gray-900'
+                            ? 'bg-emerald-50 border-emerald-500 text-emerald-900 shadow-md'
+                            : 'bg-white border-gray-300 hover:border-emerald-500 hover:bg-emerald-50 text-gray-900'
                         }`}
                         variant="outline"
                       >
-                        <div className="flex items-center gap-3">
-                          <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold transition-all duration-300 ${
+                        <div className="flex items-center gap-2">
+                          <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center text-xs font-semibold transition-all duration-200 ${
                             isSelected
                               ? 'border-emerald-500 bg-emerald-500 text-white'
                               : 'border-gray-300'
                           }`}>
                             {index + 1}
                           </div>
-                          <span className="text-sm leading-relaxed">{option}</span>
+                          <span className="text-xs leading-tight">{option}</span>
                         </div>
                       </Button>
                     );
@@ -206,23 +203,23 @@ export default function TennisRulesQuiz() {
                 </div>
 
 
-                {/* Navigation */}
+                {/* Compact Navigation */}
                 <div className="flex justify-between items-center">
                   <Button
                     variant="outline"
                     onClick={handlePrevious}
                     disabled={currentQuestionIndex === 0}
-                    className="bg-white border-gray-300 hover:border-emerald-500 px-6 py-3"
+                    className="bg-white border-gray-300 hover:border-emerald-500 px-3 py-2 text-sm"
                   >
-                    <ArrowLeft className="h-4 w-4 mr-2" />
+                    <ArrowLeft className="h-3 w-3 mr-1" />
                     이전
                   </Button>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1">
                     {questions.map((_, index) => (
                       <div
                         key={index}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
                           index < currentQuestionIndex ? 'bg-emerald-500' : 
                           index === currentQuestionIndex ? 'bg-emerald-300' : 'bg-gray-300'
                         }`}
@@ -233,55 +230,15 @@ export default function TennisRulesQuiz() {
                   {isLastQuestion && selectedAnswer !== null && (
                     <Button
                       onClick={handleNext}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3"
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 text-sm"
                     >
                       결과 확인
-                      <ArrowRight className="h-4 w-4 ml-2" />
+                      <ArrowRight className="h-3 w-3 ml-1" />
                     </Button>
                   )}
                 </div>
               </CardContent>
             </Card>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Motivation Section */}
-      {currentQuestionIndex === 5 && (
-        <section className="section-padding bg-emerald-50">
-          <div className="container mx-auto max-w-4xl container-padding">
-            <FadeIn>
-              <Alert className="bg-emerald-100 border-emerald-300">
-                <CheckCircle className="h-5 w-5 text-emerald-600" />
-                <AlertDescription className="text-emerald-800">
-                  <strong>잘하고 있습니다!</strong> 남은 6문항을 완료하면 결과 카드가 생성됩니다. 
-                  계속해서 최선을 다해주세요! 💪
-                </AlertDescription>
-              </Alert>
-            </FadeIn>
-          </div>
-        </section>
-      )}
-
-      {/* Help Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto max-w-4xl container-padding">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              퀴즈 안내
-            </h3>
-            <p className="text-gray-600 mb-6">
-              각 문항에 대해 가장 정확하다고 생각하는 답변을 선택해주세요. 
-              정답을 선택하면 즉시 해설을 확인할 수 있습니다.
-            </p>
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-              <h4 className="font-semibold text-blue-900 mb-2">💡 중요 안내</h4>
-              <p className="text-blue-800 text-sm leading-relaxed">
-                모든 문항은 실제 경기에서 자주 발생하는 상황을 바탕으로 출제되었습니다. 
-                솔직하게 답변하시면 더 정확한 약점 분석을 받을 수 있습니다.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
     </div>
