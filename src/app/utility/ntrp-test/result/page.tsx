@@ -30,7 +30,8 @@ import {
   BookOpen,
   Calendar,
   Clock,
-  Settings
+  Settings,
+  Shield
 } from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
 import { getDeviceId } from '@/lib/device';
