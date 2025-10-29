@@ -1,9 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface BlogPost {
   id: string;
@@ -205,6 +207,19 @@ const categories = [
 ];
 
 export default function BlogPage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 12;
+  
+  // 페이지네이션 계산
+  const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  const currentPosts = blogPosts.slice(startIndex, endIndex);
+  
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <div className="container mx-auto max-w-6xl px-4 py-12">
       {/* Header */}
@@ -231,7 +246,7 @@ export default function BlogPage() {
 
       {/* Blog Posts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogPosts.map((post) => (
+        {currentPosts.map((post) => (
           <Link key={post.id} href={`/blog/${post.slug}`}>
             <Card className="h-full bg-content-dark border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group cursor-pointer">
               <CardContent className="p-6 flex flex-col h-full">
@@ -275,6 +290,56 @@ export default function BlogPage() {
             </Card>
           </Link>
         ))}
+      </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center gap-2 mt-12">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="bg-content-dark border-white/10 hover:border-primary/50"
+          >
+            <ChevronLeft className="w-4 h-4 mr-1" />
+            이전
+          </Button>
+          
+          <div className="flex gap-1">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <Button
+                key={page}
+                variant={page === currentPage ? "default" : "outline"}
+                size="sm"
+                onClick={() => handlePageChange(page)}
+                className={
+                  page === currentPage
+                    ? "bg-primary text-background-dark"
+                    : "bg-content-dark border-white/10 hover:border-primary/50"
+                }
+              >
+                {page}
+              </Button>
+            ))}
+          </div>
+          
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="bg-content-dark border-white/10 hover:border-primary/50"
+          >
+            다음
+            <ChevronRight className="w-4 h-4 ml-1" />
+          </Button>
+        </div>
+      )}
+
+      {/* Page Info */}
+      <div className="text-center mt-6 text-text-muted text-sm">
+        {startIndex + 1}-{Math.min(endIndex, blogPosts.length)} / {blogPosts.length} 개의 글
       </div>
 
       {/* Newsletter Signup */}
