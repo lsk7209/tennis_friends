@@ -161,11 +161,13 @@ export default function PlayStyleTest() {
                       key={index}
                       onClick={() => handleAnswerSelect(index)}
                       disabled={isTransitioning}
-                      className={`w-full p-5 rounded-2xl border-2 transition-all duration-300 transform text-left group ${
+                      className={`w-full p-5 rounded-2xl border-2 transition-all duration-300 transform text-left group focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${
                         isSelected
                           ? `bg-gradient-to-r ${getQuestionGradient(question.id)} border-transparent text-white shadow-xl scale-[1.02]`
                           : 'bg-white border-gray-200 hover:border-purple-400 hover:bg-purple-50 hover:scale-[1.01] hover:shadow-lg text-gray-900'
                       } ${isTransitioning && isSelected ? 'animate-pulse' : ''}`}
+                      aria-pressed={isSelected}
+                      aria-label={`옵션 ${index + 1}: ${option.text}`}
                     >
                       <div className="flex items-center gap-4">
                         <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-base font-bold transition-all duration-300 shadow-md ${

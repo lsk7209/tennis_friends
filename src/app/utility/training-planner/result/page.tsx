@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Calculator, Calendar, Target, ArrowRight, RotateCcw, Share2, CheckCircle, Clock, Users } from 'lucide-react';
+import { Calculator, Calendar, Target, ArrowRight, RotateCcw, Share2, CheckCircle, Clock, Users, ArrowLeft } from 'lucide-react';
 import { TrainingPlanResult, WeeklySchedule, TrainingSession, FocusArea, Milestone } from '@/lib/trainingPlanner';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
@@ -94,11 +94,11 @@ function TrainingPlannerResultContent() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-indigo-600 mx-auto mb-6"></div>
+          <div className="animate-spin rounded-full h-20 w-20 border-b-2 border-indigo-600 mx-auto mb-6"></div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">계획 생성 중입니다...</h2>
-          <p className="text-gray-600">맞춤형 훈련 계획을 만들고 있습니다.</p>
+          <p className="text-gray-600 text-lg">맞춤형 훈련 계획을 만들고 있습니다.</p>
         </div>
       </div>
     );
@@ -106,11 +106,13 @@ function TrainingPlannerResultContent() {
 
   if (!result) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">오류가 발생했습니다</h2>
           <p className="text-gray-600 mb-4">계획을 불러올 수 없습니다.</p>
-          <Button onClick={handleRetake}>다시 시도하기</Button>
+          <Button onClick={handleRetake} className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
+            다시 시도하기
+          </Button>
         </div>
       </div>
     );
@@ -119,18 +121,42 @@ function TrainingPlannerResultContent() {
   const currentWeekData = result.weeklySchedule.find(week => week.week === selectedWeek);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       {/* Header */}
-      <section className="section-padding bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-        <div className="container mx-auto max-w-6xl container-padding">
+      <section className="relative overflow-hidden py-8 md:py-12 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto max-w-7xl px-4 relative z-10">
+          <div className="flex items-center justify-between mb-8">
+            <Button 
+              variant="outline" 
+              onClick={() => router.back()}
+              className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/30"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              돌아가기
+            </Button>
+            <Button 
+              variant="outline" 
+              onClick={handleShare}
+              className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/30"
+            >
+              <Share2 className="h-4 w-4 mr-2" />
+              공유하기
+            </Button>
+          </div>
+          
           <div className="text-center mb-8">
-            <Badge className="bg-indigo-100 text-indigo-800 px-4 py-2 mb-4 text-sm font-semibold">
-              📅 훈련 계획 완성
+            <Badge className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-2 mb-6 text-sm font-semibold shadow-lg">
+              <Calendar className="h-4 w-4 mr-2 inline" />
+              훈련 계획 완성
             </Badge>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
               {result.planName}
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-white/90 text-lg md:text-xl font-medium">
               {result.duration}주간 체계적인 훈련 계획이 완성되었습니다
             </p>
           </div>
@@ -497,33 +523,33 @@ function TrainingPlannerResultContent() {
       </section>
 
       {/* Action Buttons Section */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto max-w-6xl container-padding">
+      <section className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto max-w-7xl px-4">
           <FadeIn>
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">
                 다음 단계
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Button
                   onClick={handleRetake}
                   variant="outline"
-                  className="bg-white border-gray-300 hover:border-indigo-500 px-6 py-3"
+                  className="bg-white border-2 border-gray-300 hover:border-indigo-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <RotateCcw className="h-4 w-4 mr-2" />
+                  <RotateCcw className="h-5 w-5 mr-2" />
                   다시 계획하기
                 </Button>
                 <Button
                   onClick={handleShare}
                   variant="outline"
-                  className="bg-white border-gray-300 hover:border-indigo-500 px-6 py-3"
+                  className="bg-white border-2 border-gray-300 hover:border-indigo-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <Share2 className="h-4 w-4 mr-2" />
+                  <Share2 className="h-5 w-5 mr-2" />
                   계획 공유하기
                 </Button>
                 <Link href="/utility/ntrp-test">
-                  <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3">
-                    <ArrowRight className="h-4 w-4 mr-2" />
+                  <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <ArrowRight className="h-5 w-5 mr-2" />
                     실력 테스트 하기
                   </Button>
                 </Link>
@@ -600,7 +626,14 @@ function TrainingPlannerResultContent() {
 
 export default function TrainingPlannerResult() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-20 w-20 border-b-2 border-indigo-600 mx-auto mb-6"></div>
+          <p className="text-gray-600 text-lg font-medium">결과를 로딩 중입니다...</p>
+        </div>
+      </div>
+    }>
       <TrainingPlannerResultContent />
     </Suspense>
   );

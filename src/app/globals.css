@@ -3,6 +3,197 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Pretendard Variable (CDN, 가변 폰트) */
+@font-face {
+  font-family: 'Pretendard Variable';
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/woff2/PretendardVariable.woff2') format('woff2-variations');
+  font-weight: 45 920;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* 색상 토큰: 심플/고대비, 다크모드 대응 */
+:root {
+  --bg: #ffffff;
+  --fg: #0f172a;         /* slate-900 */
+  --muted: #475569;      /* slate-600 */
+  --border: #e2e8f0;     /* slate-200 */
+  --accent: #0ea5e9;     /* sky-500(링크 포커스) */
+  --code-bg: #0b1020;    /* 딥 네이비 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f19;
+    --fg: #e5e7eb;       /* slate-200 */
+    --muted: #94a3b8;    /* slate-400 */
+    --border: #1f2937;   /* gray-800 */
+    --accent: #38bdf8;   /* sky-400 */
+    --code-bg: #0b1020;
+  }
+}
+
+html { 
+  font-feature-settings: "ss01","cv01","cv02"; 
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Pretendard Variable', system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* 링크/포커스 접근성 */
+a { 
+  color: var(--accent); 
+  text-underline-offset: 2px; 
+}
+
+a:focus-visible { 
+  outline: 2px solid var(--accent); 
+  outline-offset: 2px; 
+  border-radius: 2px; 
+}
+
+/* 본문 타이포(리듬) */
+.prose {
+  max-width: 72ch;
+  line-height: 1.8;
+  font-size: 1.0625rem; /* 17px */
+  letter-spacing: 0.003em;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  scroll-margin-top: 88px; /* 고정 헤더 대비 앵커 여유 */
+}
+
+.prose h1 { 
+  font-size: clamp(1.875rem, 2vw + 1.2rem, 2.25rem); 
+  font-weight: 800; 
+}
+
+.prose h2 { 
+  font-size: clamp(1.375rem, 1.2vw + 1rem, 1.625rem); 
+  font-weight: 700; 
+  margin-top: 2.5rem; 
+}
+
+.prose h3 { 
+  font-size: 1.125rem; 
+  font-weight: 700; 
+  margin-top: 1.75rem; 
+}
+
+.prose p, .prose ul, .prose ol, .prose blockquote { 
+  color: var(--fg); 
+}
+
+.prose p { 
+  margin: 1em 0; 
+}
+
+.prose strong { 
+  font-weight: 700; 
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--border);
+  margin: 1.25rem 0; 
+  padding: .75rem 1rem; 
+  color: var(--muted); 
+  background: color-mix(in oklab, var(--border) 20%, transparent);
+}
+
+.prose hr { 
+  border: 0; 
+  height: 1px; 
+  background: var(--border); 
+  margin: 2rem 0; 
+}
+
+.prose code { 
+  background: color-mix(in oklab, var(--border) 35%, transparent); 
+  border-radius: 4px; 
+  padding: .15em .35em; 
+}
+
+.prose pre {
+  background: var(--code-bg); 
+  color: #e6edf3;
+  border-radius: 8px; 
+  padding: 1rem 1.25rem; 
+  overflow: auto;
+}
+
+/* 표/리스트 */
+.prose table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-size: .95rem; 
+}
+
+.prose th, .prose td { 
+  border: 1px solid var(--border); 
+  padding: .6rem .7rem; 
+}
+
+.prose thead th { 
+  background: color-mix(in oklab, var(--border) 60%, transparent); 
+  text-align: left; 
+}
+
+/* 목차 컴팩트 */
+.toc {
+  border: 1px solid var(--border);
+  border-radius: 10px; 
+  padding: .75rem 1rem; 
+  margin: 1rem 0 1.5rem;
+  background: color-mix(in oklab, var(--border) 15%, transparent);
+}
+
+.toc a { 
+  text-decoration: none; 
+}
+
+.toc ol { 
+  margin: 0; 
+  padding-left: 1.1rem; 
+}
+
+/* FAQ 아코디언: 가독/크롤러 친화 */
+.faq {
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+.faq details { 
+  border-bottom: 1px solid var(--border); 
+  padding: .5rem 0; 
+}
+
+.faq summary {
+  cursor: pointer; 
+  list-style: none; 
+  font-weight: 700;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: .5rem 0;
+}
+
+.faq summary::-webkit-details-marker { 
+  display: none; 
+}
+
+.faq .answer { 
+  color: var(--muted); 
+  padding: .25rem 0 .75rem 0; 
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -92,71 +283,73 @@
     font-weight: 600;
   }
   
-  /* Improved prose styling */
+  /* Improved prose styling - 심플한 스타일로 통합 */
   .prose {
-    color: #9CA3AF;
-    max-width: none;
+    color: var(--fg);
+    max-width: 72ch;
   }
   
   .prose h1, .prose h2, .prose h3, .prose h4 {
-    color: #F3F4F6;
+    color: var(--fg);
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
   
   .prose h1 {
     margin-bottom: 0;
-    font-size: clamp(2rem, 5vw, 3rem);
   }
   
   .prose h2 {
     margin-top: 3em;
     margin-bottom: 1.5em;
-    font-size: clamp(1.5rem, 4vw, 2rem);
   }
   
   .prose h3 {
     margin-top: 2.5em;
     margin-bottom: 1.25em;
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
   }
   
   .prose p {
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
+    margin-bottom: 1em;
+    line-height: 1.8;
   }
   
   .prose a {
-    color: #34D399;
+    color: var(--accent);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.2s ease;
-  }
-  
-  .prose a:hover {
-    color: #10B981;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
     text-underline-offset: 2px;
   }
   
+  .prose a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+  
+  .prose a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  
   .prose strong {
-    color: #F3F4F6;
-    font-weight: 600;
+    color: var(--fg);
+    font-weight: 700;
   }
   
   .prose ul, .prose ol {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1em;
     padding-left: 1.5rem;
   }
   
   .prose li {
     margin-bottom: 0.5rem;
-    line-height: 1.6;
+    line-height: 1.8;
   }
   
   .prose ul > li::before {
-    background-color: #34D399;
+    background-color: var(--accent);
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -164,13 +357,11 @@
   }
   
   .prose blockquote {
-    border-left: 4px solid #34D399;
-    background: rgba(52, 211, 153, 0.05);
-    padding: 1.5rem;
-    margin: 2rem 0;
-    border-radius: 0 8px 8px 0;
-    color: #F3F4F6;
-    font-style: italic;
+    border-left: 3px solid var(--border);
+    background: color-mix(in oklab, var(--border) 20%, transparent);
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+    color: var(--muted);
   }
   
   /* Improved card styling */

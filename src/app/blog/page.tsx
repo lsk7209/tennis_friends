@@ -191,20 +191,33 @@ const blogPosts: BlogPost[] = [
   }
 ];
 
-const categories = [
-  { name: '전체', count: blogPosts.length },
-  { name: '지역 정보', count: blogPosts.filter(post => post.category === '지역 정보').length },
-  { name: '멘탈 트레이닝', count: blogPosts.filter(post => post.category === '멘탈 트레이닝').length },
-  { name: '장비 관리', count: blogPosts.filter(post => post.category === '장비 관리').length },
-  { name: '테니스 레슨', count: blogPosts.filter(post => post.category === '테니스 레슨').length },
-  { name: '장비 가이드', count: blogPosts.filter(post => post.category === '장비 가이드').length },
-  { name: '경기 분석', count: blogPosts.filter(post => post.category === '경기 분석').length },
-  { name: '장비 리뷰', count: blogPosts.filter(post => post.category === '장비 리뷰').length },
-  { name: '건강 & 피트니스', count: blogPosts.filter(post => post.category === '건강 & 피트니스').length },
-  { name: '가이드', count: blogPosts.filter(post => post.category === '가이드').length },
-  { name: '연습법', count: blogPosts.filter(post => post.category === '연습법').length },
-  { name: '전략', count: blogPosts.filter(post => post.category === '전략').length }
-];
+// 카테고리 통합 매핑 (4~5개로 축소)
+const mapCategory = (cat: string): '레슨/전략' | '장비' | '건강' | '분석' | '지역' => {
+  const c = cat.toLowerCase();
+  if (c.includes('레슨') || c.includes('연습') || c.includes('전략') || c.includes('멘탈')) return '레슨/전략';
+  if (c.includes('장비') || c.includes('리뷰') || c.includes('가이드')) return '장비';
+  if (c.includes('건강')) return '건강';
+  if (c.includes('분석')) return '분석';
+  if (c.includes('지역')) return '지역';
+  return '레슨/전략';
+};
+
+const categories = (() => {
+  const groups: { name: string; count: number }[] = [
+    { name: '전체', count: blogPosts.length },
+    { name: '레슨/전략', count: 0 },
+    { name: '장비', count: 0 },
+    { name: '건강', count: 0 },
+    { name: '분석', count: 0 },
+    { name: '지역', count: 0 }
+  ];
+  blogPosts.forEach(p => {
+    const k = mapCategory(p.category);
+    const idx = groups.findIndex(g => g.name === k);
+    if (idx > -1) groups[idx].count += 1;
+  });
+  return groups;
+})();
 
 export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -252,7 +265,7 @@ export default function BlogPage() {
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex items-center justify-between mb-3">
                   <Badge className="bg-primary/20 text-primary">
-                    {post.category}
+                    {mapCategory(post.category)}
                   </Badge>
                   <div className="flex items-center gap-2 text-text-muted text-sm">
                     <Calendar className="w-4 h-4" />

@@ -134,11 +134,13 @@ export default function NtrpTestPage() {
                     <button
                       key={index}
                       onClick={() => handleAnswer(index + 1)}
-                      className={`w-full p-5 rounded-2xl border-2 transition-all duration-300 transform text-left group ${
+                      className={`w-full p-5 rounded-2xl border-2 transition-all duration-300 transform text-left group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${
                         isSelected
                           ? 'bg-gradient-to-r from-green-500 to-emerald-500 border-green-600 text-white shadow-xl scale-[1.02]'
                           : 'bg-white border-gray-200 hover:border-green-400 hover:bg-green-50 hover:scale-[1.01] hover:shadow-lg text-gray-900'
                       }`}
+                      aria-pressed={isSelected}
+                      aria-label={`옵션 ${index + 1}: ${option}`}
                     >
                       <div className="flex items-center gap-4">
                         <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-base font-bold transition-all duration-300 shadow-md ${
@@ -165,11 +167,12 @@ export default function NtrpTestPage() {
                   variant="outline"
                   onClick={handlePrevious}
                   disabled={currentQuestionIndex === 0}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${
                     currentQuestionIndex === 0
                       ? 'opacity-50 cursor-not-allowed'
                       : 'hover:bg-gray-100 hover:scale-105 border-2'
                   }`}
+                  aria-label="이전 질문으로 이동"
                 >
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   이전

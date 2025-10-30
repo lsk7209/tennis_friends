@@ -29,7 +29,8 @@ import {
   Calendar,
   Clock,
   Settings,
-  Shield
+  Shield,
+  BarChart3
 } from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
 

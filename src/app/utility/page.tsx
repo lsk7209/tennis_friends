@@ -212,25 +212,27 @@ export default function UtilityPage() {
       </section>
 
       {/* Categories Filter */}
-      <section className="py-12 bg-white/50 backdrop-blur-sm border-y border-gray-200/50">
+      <section className="py-12 md:py-16 bg-white/50 backdrop-blur-sm border-y border-gray-200/50 sticky top-0 z-40">
         <div className="container mx-auto max-w-7xl px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">카테고리별 탐색</h2>
-            <p className="text-gray-600 text-lg">원하는 분야의 도구를 빠르게 찾아보세요</p>
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">카테고리별 탐색</h2>
+            <p className="text-gray-600 text-base md:text-lg">원하는 분야의 도구를 빠르게 찾아보세요</p>
           </div>
           
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
             {categories.map((category, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedCategory(category.name)}
-                className={`px-6 py-3 text-sm font-semibold rounded-full transition-all duration-300 ${
+                className={`px-5 md:px-6 py-2.5 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                   selectedCategory === category.name
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105'
-                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-400 hover:shadow-md'
+                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-400 hover:shadow-md active:scale-95'
                 }`}
+                aria-pressed={selectedCategory === category.name}
+                aria-label={`${category.name} 카테고리 필터 (${category.count}개)`}
               >
-                {category.name} ({category.count})
+                {category.name} <span className="opacity-80">({category.count})</span>
               </button>
             ))}
           </div>
@@ -257,12 +259,12 @@ export default function UtilityPage() {
               {completedUtilities.map((utility, index) => {
                 const IconComponent = utility.icon;
                 return (
-                  <Link key={utility.id} href={utility.href}>
+                  <Link key={utility.id} href={utility.href} className="block h-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-xl">
                     <Card className="h-full bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group cursor-pointer overflow-hidden relative">
                       {/* Gradient Background */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${utility.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                       
-                      <CardContent className="p-8 flex flex-col h-full relative z-10">
+                      <CardContent className="p-6 md:p-8 flex flex-col h-full relative z-10">
                         {/* Header */}
                         <div className="flex items-center justify-between mb-6">
                           <Badge className={`px-4 py-1.5 text-xs font-bold text-white shadow-md ${utility.iconBg}`}>
@@ -300,9 +302,11 @@ export default function UtilityPage() {
                         </div>
                         
                         {/* CTA */}
-                        <div className="mt-8 pt-6 border-t border-gray-100">
+                        <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-gray-100">
                           <div className="flex items-center justify-between">
-                            <span className="text-sm text-gray-500 font-medium">무료 사용</span>
+                            <Badge variant="outline" className="text-xs text-gray-500 font-medium border-gray-200 bg-gray-50">
+                              무료 사용
+                            </Badge>
                             <div className="flex items-center gap-2 text-blue-600 font-bold text-sm group-hover:gap-3 transition-all duration-300">
                               <span>시작하기</span>
                               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -340,7 +344,7 @@ export default function UtilityPage() {
                 const IconComponent = utility.icon;
                 return (
                   <Card key={utility.id} className="h-full bg-white/60 backdrop-blur-sm border-2 border-gray-200 shadow-lg opacity-90">
-                    <CardContent className="p-8 flex flex-col h-full">
+                    <CardContent className="p-6 md:p-8 flex flex-col h-full">
                       {/* Header */}
                       <div className="flex items-center justify-between mb-6">
                         <Badge className={`px-4 py-1.5 text-xs font-bold text-white shadow-md ${utility.iconBg}`}>
@@ -376,14 +380,14 @@ export default function UtilityPage() {
                         </div>
                       </div>
                       
-                      {/* Coming Soon */}
-                      <div className="mt-8 pt-6 border-t border-gray-200">
-                        <div className="text-center">
-                          <span className="text-sm text-gray-500 font-semibold">
-                            곧 출시 예정
-                          </span>
+                        {/* Coming Soon */}
+                        <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-gray-200">
+                          <div className="text-center">
+                            <Badge variant="outline" className="text-xs text-gray-500 font-semibold border-gray-300 bg-gray-100/50">
+                              곧 출시 예정
+                            </Badge>
+                          </div>
                         </div>
-                      </div>
                     </CardContent>
                   </Card>
                 );
@@ -416,19 +420,19 @@ export default function UtilityPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/utility/ntrp-test">
-                    <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                       <BarChart3 className="h-5 w-5 mr-2" />
                       NTRP 실력 테스트
                     </Button>
                   </Link>
                   <Link href="/utility/injury-risk">
-                    <Button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <Button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
                       <Shield className="h-5 w-5 mr-2" />
                       부상 위험 체크
                     </Button>
                   </Link>
                   <Link href="/utility/equipment-recommendation">
-                    <Button variant="outline" className="bg-white border-2 border-gray-300 hover:border-blue-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <Button variant="outline" className="bg-white border-2 border-gray-300 hover:border-blue-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                       <Target className="h-5 w-5 mr-2" />
                       장비 추천 받기
                     </Button>

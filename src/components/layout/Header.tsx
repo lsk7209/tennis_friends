@@ -42,13 +42,13 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
-    { href: '/utility', label: '유틸리티' },
+    { href: '/utility/', label: '유틸리티' },
     { href: '/blog', label: '블로그' },
   ];
 
   // 현재 경로에 따라 활성 상태 결정
   const isActive = (href: string) => {
-    if (href === '/utility') {
+    if (href === '/utility/') {
       return pathname.startsWith('/utility') || pathname === '/';
     }
     if (href === '/blog') {

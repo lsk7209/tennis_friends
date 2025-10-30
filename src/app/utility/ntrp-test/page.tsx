@@ -127,14 +127,14 @@ export default function NtrpTestIntro() {
             <SlideUp delay={0.8}>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                 <Link href="/utility/ntrp-test/test">
-                  <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white w-full sm:w-auto px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white w-full sm:w-auto px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
                     <BarChart3 className="h-5 w-5 mr-2" />
                     실력 테스트 시작하기
                     <ArrowRight className="h-5 w-5 ml-2" />
                   </Button>
                 </Link>
                 <Link href="/utility/string-tension">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/80 backdrop-blur-sm text-gray-900 font-bold rounded-xl hover:bg-white transition-all duration-300 border-2 border-gray-300 hover:border-green-500 px-10 py-6 text-lg shadow-lg hover:shadow-xl">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/80 backdrop-blur-sm text-gray-900 font-bold rounded-xl hover:bg-white transition-all duration-300 border-2 border-gray-300 hover:border-green-500 px-10 py-6 text-lg shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
                     <Target className="h-5 w-5 mr-2" />
                     스트링 텐션 계산기
                   </Button>
