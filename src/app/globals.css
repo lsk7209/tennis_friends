@@ -464,6 +464,12 @@ a:focus-visible {
     background: linear-gradient(90deg, #374151 25%, #4B5563 50%, #374151 75%);
     background-size: 200% 100%;
   }
+
+  /* Header/Footer scoped text color fix (force black regardless of dark mode) */
+  .tf-text-black,
+  .tf-text-black * { color: #0f172a !important; }
+  .tf-text-black a { color: #0f172a !important; }
+  .tf-text-black svg { color: #0f172a !important; fill: currentColor; }
   
   /* Improved spacing */
   .section-padding {
