@@ -58,7 +58,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 text-black ${
+    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 text-black dark:text-black ${
       isScrolled 
         ? 'bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-white/20' 
         : 'bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-white/10'
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
               </svg>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             </div>
-            <h2 className="text-xl font-bold leading-tight tracking-[-0.015em] text-black transition-colors">
+            <h2 className="text-xl font-bold leading-tight tracking-[-0.015em] text-black dark:text-black transition-colors">
               TennisFriends
             </h2>
           </Link>
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
               <div key={item.href} className="relative">
                 <Link 
                   href={item.href} 
-                  className={`font-medium transition-colors text-black hover:text-black`}
+                  className={`font-medium transition-colors text-black dark:text-black hover:text-black dark:hover:text-black`}
                 >
                   {item.label}
                 </Link>
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="h-10 w-10 text-black hover:text-black hover:bg-white/10 transition-all duration-200 focus-ring"
+            className="h-10 w-10 text-black dark:text-black hover:text-black dark:hover:text-black hover:bg-white/10 transition-all duration-200 focus-ring"
             aria-label={isDark ? '라이트 모드로 전환' : '다크 모드로 전환'}
           >
             {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
@@ -122,7 +122,7 @@ const Header: React.FC = () => {
             variant="ghost"
             size="icon"
             onClick={toggleMobileMenu}
-            className="h-10 w-10 text-black hover:text-black hover:bg-white/10 transition-all duration-200 md:hidden focus-ring"
+            className="h-10 w-10 text-black dark:text-black hover:text-black dark:hover:text-black hover:bg-white/10 transition-all duration-200 md:hidden focus-ring"
             aria-label="메뉴 열기"
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
