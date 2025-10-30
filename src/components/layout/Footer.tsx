@@ -13,13 +13,13 @@ const Footer: React.FC = () => {
         {/* Footer content */}
         <div className="flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
           {/* Copyright */}
-          <p className="text-sm text-text-muted">© 2024 TennisFriends. All Rights Reserved.</p>
+          <p className="text-sm text-black">© 2024 TennisFriends. All Rights Reserved.</p>
           
           {/* Social links */}
           <div className="flex items-center gap-6">
             <a 
               href="#" 
-              className="text-text-muted transition-colors hover:text-text-light"
+              className="text-black transition-colors hover:text-black"
               aria-label="Twitter"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             </a>
             <a 
               href="#" 
-              className="text-text-muted transition-colors hover:text-text-light"
+              className="text-black transition-colors hover:text-black"
               aria-label="Facebook"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
             </a>
             <a 
               href="#" 
-              className="text-text-muted transition-colors hover:text-text-light"
+              className="text-black transition-colors hover:text-black"
               aria-label="Instagram"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -48,10 +48,10 @@ const Footer: React.FC = () => {
           
           {/* Policy links */}
           <div className="flex gap-x-6 gap-y-2 flex-wrap justify-center">
-            <Link href="/terms" className="text-sm text-text-muted hover:text-text-light transition-colors">
+            <Link href="/terms" className="text-sm text-black hover:text-black transition-colors">
               이용 약관
             </Link>
-            <Link href="/privacy" className="text-sm text-text-muted hover:text-text-light transition-colors">
+            <Link href="/privacy" className="text-sm text-black hover:text-black transition-colors">
               개인정보 처리방침
             </Link>
           </div>
