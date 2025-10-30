@@ -92,11 +92,7 @@ const Header: React.FC = () => {
               <div key={item.href} className="relative">
                 <Link 
                   href={item.href} 
-                  className={`font-medium transition-colors hover:text-text-light ${
-                    active 
-                      ? 'text-primary' 
-                      : 'text-text-muted'
-                  }`}
+                  className={`font-medium transition-colors text-black hover:text-black`}
                 >
                   {item.label}
                 </Link>
@@ -145,11 +141,7 @@ const Header: React.FC = () => {
                   <Link 
                     key={item.href}
                     href={item.href} 
-                    className={`font-medium transition-colors hover:text-text-light py-2 px-3 rounded-lg hover:bg-white/5 ${
-                      active 
-                        ? 'text-primary bg-primary/10' 
-                        : 'text-text-muted'
-                    }`}
+                    className={`font-medium transition-colors text-black py-2 px-3 rounded-lg hover:text-black hover:bg-white/5`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
