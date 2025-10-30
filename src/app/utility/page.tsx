@@ -259,8 +259,7 @@ export default function UtilityPage() {
               {completedUtilities.map((utility, index) => {
                 const IconComponent = utility.icon;
                 return (
-                  <Link key={utility.id} href={utility.href} className="block h-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-xl">
-                    <Card className="h-full bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group cursor-pointer overflow-hidden relative">
+                  <Card key={utility.id} className="h-full bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group overflow-hidden relative">
                       {/* Gradient Background */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${utility.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                       
@@ -303,19 +302,20 @@ export default function UtilityPage() {
                         
                         {/* CTA */}
                         <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-gray-100">
-                          <div className="flex items-center justify-between">
+                          <div className="mb-3">
                             <Badge variant="outline" className="text-xs text-gray-500 font-medium border-gray-200 bg-gray-50">
                               무료 사용
                             </Badge>
-                            <div className="flex items-center gap-2 text-blue-600 font-bold text-sm group-hover:gap-3 transition-all duration-300">
-                              <span>시작하기</span>
-                              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                            </div>
                           </div>
+                          <Link href={utility.href} className="block">
+                            <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-base md:text-lg font-bold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                              <span className="mr-2">시작하기</span>
+                              <ArrowRight className="h-5 w-5" />
+                            </Button>
+                          </Link>
                         </div>
                       </CardContent>
                     </Card>
-                  </Link>
                 );
               })}
             </div>
