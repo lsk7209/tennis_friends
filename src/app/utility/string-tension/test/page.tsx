@@ -96,9 +96,7 @@ export default function StringTensionTest() {
 
   const progress = ((currentStep + 1) / steps.length) * 100;
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentStep]);
+  // 자동 스크롤 제거: 단계 변경 시 화면 위치를 유지하여 질문과 답변이 함께 보이도록 함
 
   const handleOptionSelect = (value: string) => {
     const stepId = steps[currentStep].id as keyof TensionInput;
@@ -125,7 +123,6 @@ export default function StringTensionTest() {
   const handlePrevious = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 

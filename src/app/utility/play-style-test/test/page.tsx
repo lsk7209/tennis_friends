@@ -19,9 +19,7 @@ export default function PlayStyleTest() {
   const question = playStyleQuestions[currentQuestion];
   const progress = ((currentQuestion + 1) / playStyleQuestions.length) * 100;
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentQuestion]);
+  // 자동 스크롤을 제거하여 질문과 답변이 한 화면에 유지되도록 함
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (isTransitioning) return;

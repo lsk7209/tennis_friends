@@ -26,7 +26,6 @@ export default function NtrpTestPage() {
     if (currentQuestionIndex < questions.length - 1) {
       setTimeout(() => {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
       }, 400);
     } else {
       // 테스트 완료 - 결과 페이지로 이동
@@ -41,7 +40,6 @@ export default function NtrpTestPage() {
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
