@@ -58,7 +58,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
+    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 text-black ${
       isScrolled 
         ? 'bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-white/20' 
         : 'bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-white/10'

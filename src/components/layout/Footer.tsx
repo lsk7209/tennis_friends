@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full">
+    <footer className="w-full text-black">
       <div className="container mx-auto max-w-6xl px-4">
         {/* Primary line */}
         <div className="h-1 w-full bg-primary/30">
