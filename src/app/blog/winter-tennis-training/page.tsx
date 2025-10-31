@@ -177,6 +177,13 @@ export default function WinterTennisTraining() {
                   적절한 준비와 훈련으로 겨울도 테니스의 계절이 될 수 있습니다.<br />
                   <strong className="text-gray-900">워밍업, 의류, 영양 관리로 안전한 겨울 테니스를 즐기세요.</strong>
                 </p>
+                <div className="bg-white/50 p-4 rounded-lg mb-4">
+                  <p className="text-sm text-gray-600 mb-2">🏃‍♂️ 겨울 훈련 전문 리소스:</p>
+                  <ul className="space-y-1 text-sm">
+                    <li>• <a href="https://www.tennis.com/pro-game/2019/12/winter-tennis-training-tips/67890/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">ITF 겨울 테니스 훈련 가이드</a> (국제 테니스 연맹)</li>
+                    <li>• <a href="https://www.usta.com/en/home/play/usta-community-play.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">USTA 커뮤니티 플레이 프로그램</a> (실내 코트 찾기)</li>
+                  </ul>
+                </div>
                 <p className="text-sm text-gray-600">
                   ✨ 다음 읽기: <Link href="/blog/tennis-string-guide" className="text-blue-600 hover:underline">라켓 스트링 종류별 특징과 선택 가이드 🧵</Link>
                 </p>

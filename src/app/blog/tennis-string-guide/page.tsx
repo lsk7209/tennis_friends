@@ -171,6 +171,13 @@ export default function TennisStringGuide() {
                   플레이어의 성격과 스타일을 반영하는 중요한 요소입니다.<br />
                   <strong className="text-gray-900">자신의 플레이 스타일에 맞는 스트링을 선택하세요.</strong>
                 </p>
+                <div className="bg-white/50 p-4 rounded-lg mb-4">
+                  <p className="text-sm text-gray-600 mb-2">📖 참고 자료:</p>
+                  <ul className="space-y-1 text-sm">
+                    <li>• <a href="https://www.wilson.com/en-us/tennis/stringing-guide" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Wilson 스트링 가이드</a> (공식 브랜드 가이드)</li>
+                    <li>• <a href="https://www.tennis-warehouse.com/Learn/stringselection.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tennis Warehouse 스트링 선택 가이드</a> (전문 쇼핑몰)</li>
+                  </ul>
+                </div>
                 <p className="text-sm text-gray-600">
                   ✨ 다음 읽기: <Link href="/blog/seoul-best-tennis-courts" className="text-blue-600 hover:underline">서울 최고의 테니스장 TOP 7 추천 🏟️</Link>
                 </p>

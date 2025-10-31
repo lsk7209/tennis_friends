@@ -1,12 +1,38 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calculator, Target, Settings, Zap, Shield, TrendingUp, ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+
+// 메타데이터
+export const metadata: Metadata = {
+  title: '스트링 텐션 계산기 - 최적 텐션 추천 | TennisFriends',
+  description: '스트링 텐션 계산기로 당신에게 맞는 최적 텐션을 찾아보세요. 라켓 무게, 플레이 스타일, 실력을 고려한 과학적 텐션 추천.',
+  keywords: ['스트링 텐션', '텐션 계산기', '테니스 스트링', '라켓 텐션', '스트링 장력'],
+  alternates: {
+    canonical: 'https://tennisfriends.co.kr/utility/string-tension',
+  },
+  openGraph: {
+    title: '스트링 텐션 계산기 - 최적 텐션 추천 | TennisFriends',
+    description: '스트링 텐션 계산기로 당신에게 맞는 최적 텐션을 찾아보세요. 라켓 무게, 플레이 스타일, 실력을 고려한 과학적 텐션 추천.',
+    url: 'https://tennisfriends.co.kr/utility/string-tension',
+    siteName: 'TennisFriends',
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '스트링 텐션 계산기 - 최적 텐션 추천 | TennisFriends',
+    description: '스트링 텐션 계산기로 당신에게 맞는 최적 텐션을 찾아보세요.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function StringTensionIntro() {
   const features = [

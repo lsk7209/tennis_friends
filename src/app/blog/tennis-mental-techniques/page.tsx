@@ -169,6 +169,13 @@ export default function TennisMentalTechniques() {
                   긴장감은 자연스러운 것이지만, 제어할 수 있습니다.<br />
                   <strong className="text-gray-900">호흡, 집중, 긍정적 사고로 멘탈을 강화하세요.</strong>
                 </p>
+                <div className="bg-white/50 p-4 rounded-lg mb-4">
+                  <p className="text-sm text-gray-600 mb-2">📚 더 깊이 공부해보세요:</p>
+                  <ul className="space-y-1 text-sm">
+                    <li>• <a href="https://www.tennis.com/pro-game/2021/01/mental-toughness-tennis-players/123456/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">ITF 테니스 멘탈 트레이닝 가이드</a> (공식 사이트)</li>
+                    <li>• <a href="https://www.usta.com/en/home/improve/rankings/ntrp.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">USTA NTRP 등급 설명</a> (미국 테니스 협회)</li>
+                  </ul>
+                </div>
                 <p className="text-sm text-gray-600">
                   ✨ 다음 읽기: <Link href="/blog/winter-tennis-training" className="text-blue-600 hover:underline">테니스 부상 없는 겨울 훈련법 ❄️</Link>
                 </p>

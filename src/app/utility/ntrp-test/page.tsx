@@ -1,12 +1,38 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BarChart3, Target, TrendingUp, Clock, Users, Award, CheckCircle, ArrowRight, Sparkles, Zap, Shield } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+
+// 메타데이터
+export const metadata: Metadata = {
+  title: 'NTRP 실력 테스트 - 테니스 실력 측정 | TennisFriends',
+  description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요. 15개 질문으로 당신의 실제 NTRP 등급을 알아보세요. 실력 향상을 위한 맞춤형 가이드 제공.',
+  keywords: ['NTRP', '테니스 실력 테스트', '실력 측정', '테니스 등급', '실력 향상'],
+  alternates: {
+    canonical: 'https://tennisfriends.co.kr/utility/ntrp-test',
+  },
+  openGraph: {
+    title: 'NTRP 실력 테스트 - 테니스 실력 측정 | TennisFriends',
+    description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요. 15개 질문으로 당신의 실제 NTRP 등급을 알아보세요.',
+    url: 'https://tennisfriends.co.kr/utility/ntrp-test',
+    siteName: 'TennisFriends',
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NTRP 실력 테스트 - 테니스 실력 측정 | TennisFriends',
+    description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function NtrpTestIntro() {
   const features = [
