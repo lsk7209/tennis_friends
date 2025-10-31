@@ -60,7 +60,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;700;900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </head>
-      <body className={`bg-white font-display text-gray-900 antialiased`}>
+      <body className={`bg-white dark:bg-gray-900 font-display text-gray-900 dark:text-gray-100 antialiased`}>
         <div className="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
           <div className="layout-container flex h-full grow flex-col">
             <Header />
