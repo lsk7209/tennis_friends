@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import { Metadata } from 'next';
 import { Activity, Target, Zap, TrendingUp, Award, Clock, Play, CheckCircle, AlertCircle, BarChart3 } from 'lucide-react';

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import { Metadata } from 'next';
 import { Target, TrendingUp, Shield, Zap, Users, BarChart3, CheckCircle, AlertTriangle, Brain, Swords } from 'lucide-react';

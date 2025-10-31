@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useMemo } from 'react';
 import { Metadata } from 'next';
 import { Apple, Calculator, Target, Activity, Utensils, TrendingUp, Clock, Zap } from 'lucide-react';

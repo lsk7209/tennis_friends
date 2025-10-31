@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import { Metadata } from 'next';
 import { Search, BookOpen, Volume2, Star, StarOff } from 'lucide-react';

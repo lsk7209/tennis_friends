@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useMemo } from 'react';
 import { Metadata } from 'next';
 import { Target, Plus, Calendar, TrendingUp, Award, CheckCircle, Clock, Star, Edit, Trash2, BarChart3 } from 'lucide-react';
