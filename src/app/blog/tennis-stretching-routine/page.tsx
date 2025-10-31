@@ -233,6 +233,66 @@ export default function TennisStretchingRoutine() {
                 </p>
               </div>
             </section>
+
+            <section className="mt-12 pt-8 border-t border-gray-200">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">🧩 함께 보면 좋은 콘텐츠</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link href="/blog/tennis-injury-prevention-exercises" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">💪</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 부상 예방을 위한 8가지 필수 운동</p>
+                      <p className="text-sm text-gray-600 mt-1">코어 강화, 어깨 안정화, 손목 유연성 등</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/tennis-elbow-prevention" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">💪</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 엘보우 예방법</p>
+                      <p className="text-sm text-gray-600 mt-1">원인 분석과 예방 운동, 생활 습관 개선</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/winter-tennis-training" className="block p-6 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">❄️</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 부상 없는 겨울 훈련법</p>
+                      <p className="text-sm text-gray-600 mt-1">실내 코트 적응, 부상 예방, 컨디션 유지</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/utility/injury-check" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🏥</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 부상 리스크 계산기</p>
+                      <p className="text-sm text-gray-600 mt-1">나의 부상 위험도를 파악하고 예방하세요</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/forehand-body-balance" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">💪</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">포핸드 스윙 교정법</p>
+                      <p className="text-sm text-gray-600 mt-1">몸 밸런스, 스윙 궤적, 임팩트 포인트</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/tennis-shoes-selection-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">👟</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 신발 선택 가이드</p>
+                      <p className="text-sm text-gray-600 mt-1">코트별 선택, 쿠셔닝, 안정성 등 모든 것</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </section>
           </div>
 
           {/* Share Button */}

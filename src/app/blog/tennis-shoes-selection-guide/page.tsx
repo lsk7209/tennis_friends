@@ -251,17 +251,62 @@ export default function TennisShoesSelectionGuide() {
               </div>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">🧩 함께 보면 좋은 콘텐츠</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link href="/blog/best-tennis-rackets-2024" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-gray-900">2024년 최고의 테니스 라켓 TOP 5</p>
+            <section className="mt-12 pt-8 border-t border-gray-200">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">🧩 함께 보면 좋은 콘텐츠</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link href="/blog/best-tennis-rackets-2024" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">2024년 최고의 테니스 라켓 TOP 5</p>
+                      <p className="text-sm text-gray-600 mt-1">최신 라켓 트렌드와 추천 모델 분석</p>
+                    </div>
+                  </div>
                 </Link>
-                <Link href="/blog/tennis-string-guide" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-green-900">라켓 스트링 종류별 특징과 선택 가이드 🧵</p>
+                <Link href="/blog/tennis-string-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🧵</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">라켓 스트링 종류별 특징과 선택 가이드</p>
+                      <p className="text-sm text-gray-600 mt-1">스트링 재질, 텐션, 유지보수 완전 가이드</p>
+                    </div>
+                  </div>
                 </Link>
-                <Link href="/utility/equipment-recommendation" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-purple-900">테니스 장비 추천 시스템</p>
+                <Link href="/utility/equipment-recommendation" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 장비 추천 시스템</p>
+                      <p className="text-sm text-gray-600 mt-1">실력과 스타일에 맞는 라켓, 스트링 추천</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/tennis-injury-prevention-exercises" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">💪</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 부상 예방을 위한 8가지 필수 운동</p>
+                      <p className="text-sm text-gray-600 mt-1">코어 강화, 어깨 안정화, 손목 유연성 등</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/tennis-stretching-routine" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🧘</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 전후 스트레칭 루틴 완벽 가이드</p>
+                      <p className="text-sm text-gray-600 mt-1">워밍업, 쿨다운, 일상 루틴 등 완벽 가이드</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/utility/injury-check" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🏥</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 부상 리스크 계산기</p>
+                      <p className="text-sm text-gray-600 mt-1">나의 부상 위험도를 파악하고 예방하세요</p>
+                    </div>
+                  </div>
                 </Link>
               </div>
             </section>

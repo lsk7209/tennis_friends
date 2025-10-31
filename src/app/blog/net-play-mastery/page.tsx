@@ -277,17 +277,62 @@ export default function NetPlayMastery() {
               </div>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">🧩 함께 보면 좋은 콘텐츠</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link href="/blog/serve-technique-improvement" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-gray-900">서브가 흔들릴 때, 이 5가지 포인트를 점검하라 🎾</p>
+            <section className="mt-12 pt-8 border-t border-gray-200">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">🧩 함께 보면 좋은 콘텐츠</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link href="/blog/volley-technique-perfection" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎯</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">발리 기술 완성하기</p>
+                      <p className="text-sm text-gray-600 mt-1">손목 스냅, 라켓 각도, 타이밍 등 발리 마스터하기</p>
+                    </div>
+                  </div>
                 </Link>
-                <Link href="/blog/volley-technique-perfection" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-green-900">발리 기술 완성하기 🎯</p>
+                <Link href="/blog/serve-technique-improvement" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">서브 기술 향상법</p>
+                      <p className="text-sm text-gray-600 mt-1">공 던지기, 스탠스, 라켓 궤적 등 서브 완전 가이드</p>
+                    </div>
+                  </div>
                 </Link>
-                <Link href="/utility/play-style-test" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-purple-900">플레이 스타일 테스트</p>
+                <Link href="/blog/drop-shot-lob-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">드롭샷과 로브 활용법</p>
+                      <p className="text-sm text-gray-600 mt-1">드롭샷 타이밍, 로브 기술, 전략적 활용</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/concentration-during-matches" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🧠</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">경기 중 집중력 향상법</p>
+                      <p className="text-sm text-gray-600 mt-1">호흡, 루틴, 멘탈 컨트롤로 집중력 유지하기</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/opponent-analysis-strategy" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎯</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">상대 분석 전략</p>
+                      <p className="text-sm text-gray-600 mt-1">스트로크 패턴, 약점 포인트, 멘탈 파악하기</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/utility/play-style-test" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">플레이 스타일 테스트</p>
+                      <p className="text-sm text-gray-600 mt-1">나의 테니스 스타일과 특징 분석하기</p>
+                    </div>
+                  </div>
                 </Link>
               </div>
             </section>

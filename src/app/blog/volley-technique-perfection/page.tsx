@@ -297,17 +297,62 @@ export default function VolleyTechniquePerfection() {
               </div>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">🧩 함께 보면 좋은 콘텐츠</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link href="/blog/net-play-mastery" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-gray-900">네트 플레이의 달인이 되는 6가지 전략 🏓</p>
+            <section className="mt-12 pt-8 border-t border-gray-200">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">🧩 함께 보면 좋은 콘텐츠</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link href="/blog/net-play-mastery" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🏓</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">네트 플레이의 달인이 되는 6가지 전략</p>
+                      <p className="text-sm text-gray-600 mt-1">발리, 포지셔닝, 타이밍 등 네트 플레이 완전 가이드</p>
+                    </div>
+                  </div>
                 </Link>
-                <Link href="/blog/drop-shot-lob-guide" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-green-900">드롭샷과 로브 활용법 🎾</p>
+                <Link href="/blog/serve-technique-improvement" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">서브 기술 향상법</p>
+                      <p className="text-sm text-gray-600 mt-1">공 던지기, 스탠스, 라켓 궤적 등 서브 완전 가이드</p>
+                    </div>
+                  </div>
                 </Link>
-                <Link href="/utility/equipment-recommendation" className="block p-4 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                  <p className="font-semibold text-purple-900">테니스 장비 추천 시스템</p>
+                <Link href="/blog/drop-shot-lob-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">드롭샷과 로브 활용법</p>
+                      <p className="text-sm text-gray-600 mt-1">드롭샷 타이밍, 로브 기술, 전략적 활용</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/backhand-swing-correction" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">백핸드 스윙 교정법</p>
+                      <p className="text-sm text-gray-600 mt-1">발 위치, 몸 회전, 타점 등 백핸드 불안정 해결</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/blog/concentration-during-matches" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🧠</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">경기 중 집중력 향상법</p>
+                      <p className="text-sm text-gray-600 mt-1">호흡, 루틴, 멘탈 컨트롤로 집중력 유지하기</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="/utility/equipment-recommendation" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎾</span>
+                    <div>
+                      <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 장비 추천 시스템</p>
+                      <p className="text-sm text-gray-600 mt-1">실력과 스타일에 맞는 라켓, 스트링 추천</p>
+                    </div>
+                  </div>
                 </Link>
               </div>
             </section>
