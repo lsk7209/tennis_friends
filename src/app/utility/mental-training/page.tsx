@@ -1,5 +1,6 @@
+"use client"
+
 import React, { useState } from 'react';
-import { Metadata } from 'next';
 import { Brain, Target, Heart, Eye, Wind, Zap, Clock, Play, Pause, RotateCcw, Star, CheckCircle, AlertTriangle, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,32 +8,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '테니스 멘탈 트레이닝 - 정신력 향상 프로그램 | TennisFriends',
-  description: '테니스 선수를 위한 종합 멘탈 트레이닝 프로그램. 집중력 향상, 스트레스 관리, 시각화 훈련, 호흡법 등 정신력 강화를 위한 과학적 방법 제공.',
-  keywords: ['테니스 멘탈', '멘탈 트레이닝', '집중력 향상', '스트레스 관리', '시각화 훈련', '호흡법', '정신력 강화'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/mental-training',
-  },
-  openGraph: {
-    title: '테니스 멘탈 트레이닝 - 정신력 향상 프로그램 | TennisFriends',
-    description: '테니스 선수를 위한 종합 멘탈 트레이닝 프로그램. 집중력 향상, 스트레스 관리, 시각화 훈련, 호흡법 등 정신력 강화를 위한 과학적 방법 제공.',
-    url: 'https://tennisfriends.co.kr/utility/mental-training',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '테니스 멘탈 트레이닝 - 정신력 향상 프로그램 | TennisFriends',
-    description: '테니스 선수를 위한 종합 멘탈 트레이닝 프로그램.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// 메타데이터는 layout.tsx에서 처리
 
 interface Exercise {
   id: string;

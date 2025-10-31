@@ -15,8 +15,8 @@ export default function TennisEquipmentGuidePage() {
     { id: "accessories", text: "액세서리와 용품", depth: 2 as const },
     { id: "maintenance", text: "장비 유지관리", depth: 2 as const },
     { id: "budget-planning", text: "예산 계획", depth: 2 as const },
-    { id="beginner-tips", text: "초보자 팁", depth: 2 as const },
-    { id="pro-recommendations", text: "프로 선수 추천", depth: 2 as const },
+    { id: "beginner-tips", text: "초보자 팁", depth: 2 as const },
+    { id: "pro-recommendations", text: "프로 선수 추천", depth: 2 as const },
   ];
 
   const faqs = [

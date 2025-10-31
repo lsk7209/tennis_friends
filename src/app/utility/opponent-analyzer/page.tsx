@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from 'react';
-import { Metadata } from 'next';
 import { Target, TrendingUp, Shield, Zap, Users, BarChart3, CheckCircle, AlertTriangle, Brain, Swords } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,31 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Slider } from '@/components/ui/slider';
 
 // 메타데이터
-export const metadata: Metadata = {
-  title: '상대 분석 도구 - 테니스 상대 전략 분석 | TennisFriends',
-  description: '테니스 상대의 플레이 스타일을 분석하고 맞춤 전략을 제시합니다. 강점/약점 파악, 카운터 전략, 전술 조언을 통해 승률을 높이세요.',
-  keywords: ['테니스 상대 분석', '플레이 스타일 분석', '테니스 전략', '상대 약점', '카운터 전략', '테니스 전술'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/opponent-analyzer',
-  },
-  openGraph: {
-    title: '상대 분석 도구 - 테니스 상대 전략 분석 | TennisFriends',
-    description: '테니스 상대의 플레이 스타일을 분석하고 맞춤 전략을 제시합니다.',
-    url: 'https://tennisfriends.co.kr/utility/opponent-analyzer',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '상대 분석 도구 - 테니스 상대 전략 분석 | TennisFriends',
-    description: '테니스 상대의 플레이 스타일을 분석하고 맞춤 전략을 제시합니다.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// 메타데이터는 layout.tsx에서 처리
 
 interface OpponentProfile {
   name: string;

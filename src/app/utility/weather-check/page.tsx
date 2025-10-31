@@ -1,40 +1,16 @@
+"use client"
+
 import React, { useState, useMemo } from 'react';
-import { Metadata } from 'next';
 import { Cloud, Sun, CloudRain, Wind, Thermometer, Droplets, Eye, Clock, MapPin, CheckCircle, AlertTriangle, XCircle, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/Select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '날씨 적합성 체크 - 테니스 경기 날씨 분석 | TennisFriends',
-  description: '테니스 경기를 위한 날씨 조건을 분석하고 최적의 경기 시간을 추천합니다. 온도, 습도, 풍속, 강수 확률을 고려한 과학적 분석으로 안전하고 쾌적한 테니스 환경을 안내합니다.',
-  keywords: ['테니스 날씨', '경기 날씨', '날씨 적합성', '테니스 환경', '강수 확률', '풍속 분석', '최적 경기 시간'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/weather-check',
-  },
-  openGraph: {
-    title: '날씨 적합성 체크 - 테니스 경기 날씨 분석 | TennisFriends',
-    description: '테니스 경기를 위한 날씨 조건을 분석하고 최적의 경기 시간을 추천합니다.',
-    url: 'https://tennisfriends.co.kr/utility/weather-check',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '날씨 적합성 체크 - 테니스 경기 날씨 분석 | TennisFriends',
-    description: '테니스 경기를 위한 날씨 조건을 분석합니다.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// 메타데이터는 layout.tsx에서 처리
 
 interface WeatherData {
   location: string;

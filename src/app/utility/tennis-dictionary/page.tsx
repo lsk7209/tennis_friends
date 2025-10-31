@@ -1,39 +1,13 @@
 "use client"
 
 import React, { useState } from 'react';
-import { Metadata } from 'next';
 import { Search, BookOpen, Volume2, Star, StarOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '테니스 용어 사전 - 전문 용어 해설 | TennisFriends',
-  description: '200개 이상의 테니스 용어 사전으로 초보자도 쉽게 이해하는 전문 용어 해설. 검색, 카테고리 분류, 예시 문장, 발음 가이드 제공.',
-  keywords: ['테니스 용어', '테니스 사전', '에이스', '백핸드', '포핸드', '발리', '서브', '테니스 용어 해설'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/tennis-dictionary',
-  },
-  openGraph: {
-    title: '테니스 용어 사전 - 전문 용어 해설 | TennisFriends',
-    description: '200개 이상의 테니스 용어 사전으로 초보자도 쉽게 이해하는 전문 용어 해설.',
-    url: 'https://tennisfriends.co.kr/utility/tennis-dictionary',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '테니스 용어 사전 - 전문 용어 해설 | TennisFriends',
-    description: '200개 이상의 테니스 용어 사전으로 초보자도 쉽게 이해하는 전문 용어 해설.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// 메타데이터는 layout.tsx에서 처리
 
 interface Term {
   id: string;

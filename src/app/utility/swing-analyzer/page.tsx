@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export default function SwingAnalyzerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState(null);
+  const [analysisResult, setAnalysisResult] = useState<any>(null);
 
   const handleStartAnalysis = () => {
     setIsAnalyzing(true);
@@ -114,7 +114,7 @@ export default function SwingAnalyzerPage() {
                   개선 권장사항
                 </h3>
                 <ul className="space-y-3">
-                  {analysisResult.recommendations.map((rec, index) => (
+                  {analysisResult.recommendations.map((rec: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-xs font-semibold text-purple-600">{index + 1}</span>

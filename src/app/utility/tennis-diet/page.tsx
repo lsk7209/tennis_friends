@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useMemo } from 'react';
-import { Metadata } from 'next';
 import { Apple, Calculator, Target, Activity, Utensils, TrendingUp, Clock, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,31 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Slider } from '@/components/ui/slider';
 
 // 메타데이터
-export const metadata: Metadata = {
-  title: '테니스 다이어트 계산기 - 영양 섭취량 계산 | TennisFriends',
-  description: '테니스 선수를 위한 맞춤 다이어트 계산기. 신장, 체중, 운동 강도를 고려한 칼로리와 영양소 섭취량을 계산하고 식단을 추천합니다.',
-  keywords: ['테니스 다이어트', '칼로리 계산기', '영양 섭취량', '테니스 식단', '운동 영양', '체력 관리'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/tennis-diet',
-  },
-  openGraph: {
-    title: '테니스 다이어트 계산기 - 영양 섭취량 계산 | TennisFriends',
-    description: '테니스 선수를 위한 맞춥 다이어트 계산기. 신장, 체중, 운동 강도를 고려한 칼로리와 영양소 섭취량을 계산합니다.',
-    url: 'https://tennisfriends.co.kr/utility/tennis-diet',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '테니스 다이어트 계산기 - 영양 섭취량 계산 | TennisFriends',
-    description: '테니스 선수를 위한 맞춤 다이어트 계산기.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// 메타데이터는 layout.tsx에서 처리
 
 interface NutritionPlan {
   calories: number;

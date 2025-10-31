@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useMemo } from 'react';
-import { Metadata } from 'next';
 import { Target, Plus, Calendar, TrendingUp, Award, CheckCircle, Clock, Star, Edit, Trash2, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,32 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '목표 설정 도구 - 테니스 목표 관리 | TennisFriends',
-  description: '테니스 목표 설정과 달성도 추적 도구. SMART 목표 설정 방식으로 단기/장기 목표를 설정하고 진척도를 시각적으로 관리하세요.',
-  keywords: ['테니스 목표 설정', 'SMART 목표', '달성도 추적', '훈련 목표', '테니스 계획', '목표 관리'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/goal-setting',
-  },
-  openGraph: {
-    title: '목표 설정 도구 - 테니스 목표 관리 | TennisFriends',
-    description: '테니스 목표 설정과 달성도 추적 도구. SMART 목표 설정 방식으로 단기/장기 목표를 설정하고 진척도를 시각적으로 관리하세요.',
-    url: 'https://tennisfriends.co.kr/utility/goal-setting',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '목표 설정 도구 - 테니스 목표 관리 | TennisFriends',
-    description: '테니스 목표 설정과 달성도 추적 도구.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// 메타데이터는 layout.tsx에서 처리
 
 interface Goal {
   id: string;

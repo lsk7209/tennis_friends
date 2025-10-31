@@ -1,5 +1,6 @@
+"use client"
+
 import React, { useState, useMemo } from 'react';
-import { Metadata } from 'next';
 import { MapPin, Cloud, Sun, CloudRain, Wind, Eye, Thermometer, Droplets, Zap, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,32 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Slider } from '@/components/ui/slider';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '코트 상태 확인 도구 - 플레이 환경 분석 | TennisFriends',
-  description: '테니스 코트의 상태, 날씨 조건, 조명 등을 종합적으로 분석하여 최적의 플레이 환경을 평가합니다. 안전하고 효과적인 경기 진행을 위한 과학적 분석 제공.',
-  keywords: ['테니스 코트', '코트 상태', '날씨 조건', '플레이 환경', '코트 분석', '안전 플레이', '코트 컨디션'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/court-conditions',
-  },
-  openGraph: {
-    title: '코트 상태 확인 도구 - 플레이 환경 분석 | TennisFriends',
-    description: '테니스 코트의 상태, 날씨 조건, 조명 등을 종합적으로 분석하여 최적의 플레이 환경을 평가합니다.',
-    url: 'https://tennisfriends.co.kr/utility/court-conditions',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '코트 상태 확인 도구 - 플레이 환경 분석 | TennisFriends',
-    description: '테니스 코트의 상태, 날씨 조건, 조명 등을 종합적으로 분석합니다.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// 메타데이터는 layout.tsx에서 처리
 
 interface CourtCondition {
   surface: 'hard' | 'clay' | 'grass' | 'carpet';

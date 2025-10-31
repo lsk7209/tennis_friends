@@ -20,6 +20,48 @@ import {
   CheckCircle,
   Star,
   Calendar,
+  RotateCcw,
+  AlertTriangle,
+  Lightbulb,
+  Eye,
+  FileText,
+  Smartphone,
+  Crosshair,
+  Mic,
+  Video,
+  Camera,
+  BarChart,
+  PieChart,
+  Gauge,
+  Waves,
+  Hand,
+  PlayCircle,
+  PauseCircle,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  Settings2,
+  Battery,
+  Thermometer,
+  Wind,
+  Cloud,
+  Sun,
+  Moon,
+  Castle,
+  Diamond,
+  Gem,
+  Crown,
+  Medal,
+  Ribbon,
+  Cpu,
+  School,
+  BookOpen,
+  Monitor,
+  MousePointer,
+  Keyboard,
+  HardDrive,
+  Wifi,
+  Laugh,
   Users,
   MapPin,
   Book,
@@ -30,7 +72,8 @@ import {
   Clock,
   Award,
   Globe,
-  Gamepad2
+  Gamepad2,
+  type LucideIcon
 } from 'lucide-react';
 
 // ============================================
@@ -269,11 +312,11 @@ const utilitiesMetadata = [
   },
   {
     id: 'apparel-recommendation',
-    title: '복장 추천 시스템',
-    description: '날씨, 코트 타입, 플레이 스타일에 따라 최적의 테니스 복장을 추천해드립니다.',
+    title: '테니스 의류 추천',
+    description: '플레이 스타일, 날씨, 예산에 맞는 최적의 테니스 의류를 추천해드립니다.',
     icon: Award,
-    status: '개발 예정',
-    features: ['날씨 기반 추천', '코트별 최적화', '브랜드 비교', '가격 정보'],
+    status: '완료',
+    features: ['맞춤 추천', '날씨 기반', '브랜드 비교', '가격 정보'],
     gradient: 'from-fuchsia-500 via-pink-500 to-rose-500',
     bgColor: 'bg-gradient-to-br from-fuchsia-50 via-pink-50 to-rose-50',
     iconBg: 'bg-gradient-to-br from-fuchsia-500 to-pink-500',
@@ -282,9 +325,9 @@ const utilitiesMetadata = [
   {
     id: 'price-comparison',
     title: '테니스 용품 가격 비교',
-    description: '전국 온라인 스토어의 테니스 용품 가격을 비교하세요. 라켓, 스트링, 신발 등 모든 용품의 최저가를 찾아드립니다.',
+    description: '다양한 온라인 스토어의 테니스 용품 가격을 비교하고 최저가로 구매하세요.',
     icon: TrendingIcon,
-    status: '개발 예정',
+    status: '완료',
     features: ['가격 비교', '스토어 연동', '할인 정보', '배송비 계산'],
     gradient: 'from-emerald-500 via-green-500 to-lime-500',
     bgColor: 'bg-gradient-to-br from-emerald-50 via-green-50 to-lime-50',
@@ -293,10 +336,10 @@ const utilitiesMetadata = [
   },
   {
     id: 'coaching-match',
-    title: '코칭 매칭 시스템',
-    description: '실력과 목표에 맞는 테니스 코치를 찾아드립니다. 전문 코치의 프로필, 리뷰, 가격 정보를 제공합니다.',
+    title: '테니스 코칭 매칭',
+    description: '당신의 목표와 스타일에 맞는 최고의 테니스 코치를 찾아보세요. 전문 코치들과의 1:1 매칭 서비스입니다.',
     icon: Users,
-    status: '개발 예정',
+    status: '완료',
     features: ['코치 매칭', '프로필 정보', '리뷰 시스템', '예약 연동'],
     gradient: 'from-violet-500 via-purple-500 to-indigo-500',
     bgColor: 'bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50',
@@ -314,6 +357,42 @@ const utilitiesMetadata = [
     bgColor: 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50',
     iconBg: 'bg-gradient-to-br from-amber-500 to-yellow-500',
     category: '경기 분석'
+  },
+  {
+    id: 'string-pattern-analyzer',
+    title: '스트링 패턴 분석기',
+    description: '라켓의 스트링 패턴(16x19, 18x20 등)을 분석하고 플레이 스타일에 맞는 최적의 선택을 도와드립니다.',
+    icon: Target,
+    status: '완료',
+    features: ['패턴 분석', '플레이 스타일 추천', '장단점 비교', '장력 가이드'],
+    gradient: 'from-indigo-500 via-blue-500 to-cyan-500',
+    bgColor: 'bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50',
+    iconBg: 'bg-gradient-to-br from-indigo-500 to-blue-500',
+    category: '장비 분석'
+  },
+  {
+    id: 'tournament-schedule',
+    title: '대회 일정 관리',
+    description: '전국 테니스 대회 일정을 확인하고 참가 신청하세요. 실력과 지역에 맞는 대회를 찾아보세요.',
+    icon: Calendar,
+    status: '완료',
+    features: ['대회 일정', '참가 신청', '필터 검색', '상세 정보'],
+    gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
+    bgColor: 'bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50',
+    iconBg: 'bg-gradient-to-br from-emerald-500 to-teal-500',
+    category: '대회 관리'
+  },
+  {
+    id: 'ranking-calculator',
+    title: '랭킹 계산기',
+    description: '경기 결과를 입력하여 랭킹 변화를 예측하고 목표 달성을 위한 전략을 세워보세요.',
+    icon: TrendingUp,
+    status: '완료',
+    features: ['랭킹 예측', '포인트 계산', '전략 제안', '목표 설정'],
+    gradient: 'from-purple-500 via-violet-500 to-indigo-500',
+    bgColor: 'bg-gradient-to-br from-purple-50 via-violet-50 to-indigo-50',
+    iconBg: 'bg-gradient-to-br from-purple-500 to-violet-500',
+    category: '랭킹 관리'
   },
   {
     id: 'video-analyzer',
@@ -404,7 +483,7 @@ const utilitiesMetadata = [
     title: '스윙 분석 도구',
     description: '라켓 스윙 궤적을 분석하여 최적의 타격 포인트와 스윙 경로를 찾아드립니다. 비디오 분석으로 자세 교정을 지원합니다.',
     icon: TrendingUp,
-    status: '개발 예정',
+    status: '완료',
     features: ['스윙 궤적 분석', '타격 포인트 측정', '자세 교정', '비교 분석'],
     gradient: 'from-purple-500 via-violet-500 to-indigo-500',
     bgColor: 'bg-gradient-to-br from-purple-50 via-violet-50 to-indigo-50',
@@ -416,7 +495,7 @@ const utilitiesMetadata = [
     title: '서브 속도 계산기',
     description: '서브 속도를 측정하고 개선 방법을 제시합니다. 공의 궤적, 회전, 속도를 분석하여 서브 기술을 향상시키세요.',
     icon: Zap,
-    status: '개발 예정',
+    status: '완료',
     features: ['속도 측정', '궤적 분석', '회전 분석', '개선 가이드'],
     gradient: 'from-orange-500 via-red-500 to-rose-500',
     bgColor: 'bg-gradient-to-br from-orange-50 via-red-50 to-rose-50',
@@ -428,7 +507,7 @@ const utilitiesMetadata = [
     title: '포핸드 안정성 테스트',
     description: '포핸드 타격의 일관성과 정확도를 측정합니다. 다양한 상황에서의 타격 성공률을 분석하여 약점을 찾아드립니다.',
     icon: Target,
-    status: '개발 예정',
+    status: '완료',
     features: ['안정성 측정', '정확도 분석', '약점 파악', '개선 전략'],
     gradient: 'from-green-500 via-emerald-500 to-teal-500',
     bgColor: 'bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50',
@@ -631,7 +710,7 @@ const utilitiesMetadata = [
     id: 'skill-progress-predictor',
     title: '기술 향상 예측기',
     description: '현재 실력과 훈련량을 바탕으로 미래 실력 향상을 예측합니다. 목표 달성까지 필요한 시간과 방법을 과학적으로 계산합니다.',
-    icon: Crystal,
+    icon: Castle,
     status: '개발 예정',
     features: ['실력 예측', '훈련량 분석', '목표 달성 계산', '과학적 접근'],
     gradient: 'from-violet-500 via-purple-500 to-fuchsia-500',
@@ -703,7 +782,7 @@ const utilitiesMetadata = [
     id: 'performance-heatmap',
     title: '퍼포먼스 히트맵',
     description: '코트 위에서의 타격 위치와 성공률을 시각화합니다. 강점과 약점을 한눈에 파악하여 전략적 개선을 할 수 있습니다.',
-    icon: Map,
+    icon: Globe,
     status: '개발 예정',
     features: ['타격 위치 시각화', '성공률 분석', '강점/약점 파악', '전략 개선'],
     gradient: 'from-red-500 via-orange-500 to-yellow-500',
@@ -919,7 +998,7 @@ export default function UtilityPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {completedUtilities.map((utility, index) => {
-                const IconComponent = utility.icon;
+                const IconComponent = utility.icon as any;
                 return (
                   <Card key={utility.id} className="h-full bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group overflow-hidden relative">
                       {/* Gradient Background */}
@@ -1003,7 +1082,7 @@ export default function UtilityPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {plannedUtilities.map((utility, index) => {
-                const IconComponent = utility.icon;
+                const IconComponent = utility.icon as any;
                 return (
                   <Card key={utility.id} className="h-full bg-white/60 backdrop-blur-sm border-2 border-gray-200 shadow-lg opacity-90">
                     <CardContent className="p-6 md:p-8 flex flex-col h-full">

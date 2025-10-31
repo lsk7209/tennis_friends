@@ -76,6 +76,39 @@
 
 ---
 
+## ✅ 추가로 작성된 블로그 포스트 (총 10개) - 2차
+
+### 테니스 기초 기술 (5개)
+35. **테니스 풋워크 기초: 코트 지배의 핵심 이동 기술** (tennis-footwork-basics)
+36. **코트별 테니스 전략 완벽 가이드: 클레이 vs 하드 vs 잔디** (tennis-court-strategies)
+37. **테니스 스트링 장력 완벽 가이드: 파워 vs 컨트롤의 균형** (tennis-string-tension)
+38. **테니스 초보자 완벽 가이드: 30일 만에 즐기는 테니스** (tennis-beginner-guide)
+39. **테니스 실수 피하기: 초보자의 80% 실수를 바로잡는 방법** (tennis-common-mistakes)
+
+### 체력 & 멘탈 (4개)
+40. **테니스 코어 강화 가이드: 안정된 타격의 기반** (tennis-core-strength)
+41. **테니스 유연성 트레이닝: 부상 예방과 타격 향상의 핵심** (tennis-flexibility-training)
+42. **테니스 워밍업 완벽 가이드: 부상 예방과 경기력 향상** (tennis-warmup-routine)
+43. **테니스 압박 상황 멘탈 전략: 승리의 20%를 차지하는 정신력** (tennis-pressure-situations)
+
+### 경기 운영 (1개)
+44. **테니스 심판 규칙 완벽 가이드: 공정하고 즐거운 경기를 위해** (tennis-umpire-rules)
+
+---
+
+## ✅ 추가로 작성된 블로그 포스트 (총 5개) - 최종
+
+### 테니스 기술 마스터 시리즈 (5개)
+45. **테니스 포핸드 마스터 가이드: 포핸드 기술 완벽 정복** (tennis-forehand-master-guide)
+46. **테니스 백핸드 마스터 가이드: 약점을 강점으로 전환** (tennis-backhand-master-guide)
+47. **테니스 서브 마스터 가이드: 서브 기술 완벽 정복** (tennis-serve-master-guide)
+48. **테니스 발리 마스터클래스: 발리 기술 완성** (tennis-volley-masterclass)
+49. **테니스 체력 컨디셔닝: 경기력 유지의 핵심** (tennis-fitness-conditioning-final)
+50. **테니스 전략 기초: 승리의 80%를 차지하는 전략** (tennis-strategy-basics)
+51. **테니스 장비 유지보수 완벽 가이드: 장비 수명 연장과 성능 유지** (tennis-equipment-maintenance)
+
+---
+
 ## 🎯 작성 가능한 새로운 주제들
 
 ### 테니스 기술

@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'out',
+
+  // GitHub Pages 배포용 설정
+  ...(process.env.GITHUB_ACTIONS && {
+    basePath: '/tennis_friends',
+    assetPrefix: '/tennis_friends',
+  }),
   
   // 성능 최적화
   experimental: {

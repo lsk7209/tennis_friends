@@ -14,7 +14,7 @@ export default function ServeVelocityCalculatorPage() {
     launchSpeed: 40, // m/s
   });
 
-  const [calculatedResult, setCalculatedResult] = useState(null);
+  const [calculatedResult, setCalculatedResult] = useState<any>(null);
 
   const calculateTrajectory = () => {
     // 간단한 물리학 계산 시뮬레이션
@@ -50,7 +50,6 @@ export default function ServeVelocityCalculatorPage() {
     }
 
     setCalculatedResult({
-      distance: x,
       maxHeight: maxHeight,
       landingTime: landingTime,
       finalSpeed: Math.sqrt(vx * vx + vy * vy),
@@ -194,7 +193,7 @@ export default function ServeVelocityCalculatorPage() {
                     개선 권장사항
                   </h3>
                   <ul className="space-y-3">
-                    {calculatedResult.recommendations.map((rec, index) => (
+                    {calculatedResult.recommendations.map((rec: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
                         <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                           <span className="text-xs font-semibold text-orange-600">{index + 1}</span>

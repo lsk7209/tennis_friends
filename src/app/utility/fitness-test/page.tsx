@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from 'react';
-import { Metadata } from 'next';
 import { Activity, Target, Zap, TrendingUp, Award, Clock, Play, CheckCircle, AlertCircle, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -11,32 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '테니스 체력 테스트 - 종합 체력 평가 | TennisFriends',
-  description: '테니스 선수를 위한 종합 체력 테스트 도구. 순발력, 민첩성, 근력, 지구력 등 테니스에 필요한 모든 체력 요소를 측정하고 평가합니다.',
-  keywords: ['테니스 체력 테스트', '순발력 테스트', '민첩성 테스트', '근력 테스트', '지구력 테스트', '테니스 체력 평가'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/fitness-test',
-  },
-  openGraph: {
-    title: '테니스 체력 테스트 - 종합 체력 평가 | TennisFriends',
-    description: '테니스 선수를 위한 종합 체력 테스트 도구. 순발력, 민첩성, 근력, 지구력 등 테니스에 필요한 모든 체력 요소를 측정합니다.',
-    url: 'https://tennisfriends.co.kr/utility/fitness-test',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '테니스 체력 테스트 - 종합 체력 평가 | TennisFriends',
-    description: '테니스 선수를 위한 종합 체력 테스트 도구.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// 메타데이터는 layout.tsx에서 처리
 
 interface TestResult {
   agility: number;
