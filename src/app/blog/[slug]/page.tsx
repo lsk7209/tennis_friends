@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -18,6 +19,69 @@ interface BlogPost {
   author: string;
   summary: string;
   highlight: string;
+}
+
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+// 메타데이터 생성 함수
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  // 해당 슬러그의 블로그 포스트 찾기
+  const post = blogPosts.find(p => p.slug === slug);
+
+  if (!post) {
+    return {
+      title: '블로그를 찾을 수 없습니다 | TennisFriends',
+      description: '요청하신 블로그 글을 찾을 수 없습니다.',
+    };
+  }
+
+  return {
+    title: `${post.title} | TennisFriends`,
+    description: post.description,
+    keywords: [...post.tags, '테니스', '블로그', '테니스 정보'],
+    authors: [{ name: post.author || 'TennisFriends' }],
+    creator: post.author || 'TennisFriends',
+    publisher: 'TennisFriends',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    alternates: {
+      canonical: `https://tennisfriends.co.kr/blog/${slug}`,
+    },
+    openGraph: {
+      title: `${post.title} | TennisFriends`,
+      description: post.description,
+      url: `https://tennisfriends.co.kr/blog/${slug}`,
+      siteName: 'TennisFriends',
+      locale: 'ko_KR',
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author || 'TennisFriends'],
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${post.title} | TennisFriends`,
+      description: post.description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
 }
 
 const blogPosts: BlogPost[] = [
