@@ -1,12 +1,38 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Zap, Apple, Droplets, Clock, CheckCircle, ArrowRight, Users, Award, TrendingUp } from 'lucide-react';
 import { FadeIn, SlideUp, SlideDown, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+
+// 메타데이터
+export const metadata: Metadata = {
+  title: '테니스 영양 가이드 - 경기력 향상 영양 전략 | TennisFriends',
+  description: '테니스 선수를 위한 종합 영양 가이드. 경기 전후 영양 섭취, 수분 보충, 에너지 관리, 회복 전략을 과학적으로 안내합니다.',
+  keywords: ['테니스 영양', '테니스 식단', '경기 영양', '수분 보충', '에너지 관리', '영양 전략'],
+  alternates: {
+    canonical: 'https://tennisfriends.co.kr/utility/nutrition-guide',
+  },
+  openGraph: {
+    title: '테니스 영양 가이드 - 경기력 향상 영양 전략 | TennisFriends',
+    description: '테니스 선수를 위한 종합 영양 가이드. 경기 전후 영양 섭취, 수분 보충, 에너지 관리, 회복 전략을 과학적으로 안내합니다.',
+    url: 'https://tennisfriends.co.kr/utility/nutrition-guide',
+    siteName: 'TennisFriends',
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '테니스 영양 가이드 - 경기력 향상 영양 전략 | TennisFriends',
+    description: '테니스 선수를 위한 종합 영양 가이드.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function NutritionGuideIntro() {
   const features = [
