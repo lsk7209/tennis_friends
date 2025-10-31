@@ -178,9 +178,72 @@ export default function TennisStringGuide() {
             </section>
           </div>
 
+          {/* Related Content */}
+          <section className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              📚 함께 보면 좋은 콘텐츠
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/string-tension-feel-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🎾</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">스트링 텐션, 숫자보다 감각이 중요하다</p>
+                    <p className="text-sm text-gray-600 mt-1">55lbs의 함정과 텐션 선택 가이드</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/string-replacement-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🔧</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">처음 라켓 줄을 자를 때 꼭 알아야 할 3가지</p>
+                    <p className="text-sm text-gray-600 mt-1">스트링 교체의 기본과 주의사항</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/racket-weight-styles" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">⚖️</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">라켓 무게 하나로 달라지는 경기 스타일 3가지</p>
+                    <p className="text-sm text-gray-600 mt-1">라켓 무게와 플레이 스타일의 관계</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/utility/equipment-recommendation" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🎯</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">장비 추천 시스템</p>
+                    <p className="text-sm text-gray-600 mt-1">실력과 스타일에 맞는 라켓, 스트링 추천</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/utility/string-tension" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">⚙️</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">스트링 텐션 계산기</p>
+                    <p className="text-sm text-gray-600 mt-1">플레이 스타일에 따른 최적 텐션 계산</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/best-tennis-rackets-2024" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🏆</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">2024년 최고의 테니스 라켓 TOP 5</p>
+                    <p className="text-sm text-gray-600 mt-1">최신 라켓 리뷰와 추천</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </section>
+
           <div className="mt-12 pt-8 border-t border-gray-200">
             <div className="flex items-center justify-center">
-              <Button 
+              <Button
                 onClick={() => {
                   navigator.clipboard.writeText('https://tennisfriends.kr/blog/tennis-string-guide');
                   alert('공유 링크가 복사되었습니다 📎');
