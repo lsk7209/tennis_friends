@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  BarChart3, 
-  Settings, 
-  Shield, 
-  Trophy, 
+import {
+  BarChart3,
+  Settings,
+  Shield,
+  Trophy,
   Calculator,
   Target,
   TrendingUp,
@@ -18,143 +18,409 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle,
-  Star
+  Star,
+  Calendar,
+  Users,
+  MapPin,
+  Book,
+  Activity,
+  Heart,
+  Dumbbell,
+  TrendingUp as TrendingIcon,
+  Clock,
+  Award,
+  Globe,
+  Gamepad2
 } from 'lucide-react';
+
+// ============================================
+// 유틸리티 메타데이터 관리 시스템
+// ============================================
+// 새로운 유틸리티를 추가하려면 아래 템플릿을 복사해서
+// utilitiesMetadata 배열에 추가하세요.
+//
+// 📝 추가 방법:
+// 1. 아래 템플릿을 복사
+// 2. 필요한 정보 입력
+// 3. 저장하면 자동으로 페이지에 반영됩니다
+//
+// 📋 템플릿:
+/*
+{
+  id: 'utility-slug',           // URL slug (케밥케이스)
+  title: '유틸리티 제목',         // 표시될 제목
+  description: '유틸리티 설명',   // 상세 설명 (100자 이내 권장)
+  icon: IconName,               // Lucide 아이콘 컴포넌트
+  status: '완료' | '개발 예정',   // 개발 상태
+  features: ['기능1', '기능2'],  // 주요 기능 목록
+  gradient: 'from-color1 via-color2 to-color3', // Tailwind 그라데이션
+  bgColor: 'bg-gradient-to-br from-color1 via-color2 to-color3',
+  iconBg: 'bg-gradient-to-br from-color1 to-color2',
+  category: '카테고리명'         // 카테고리 분류
+}
+*/
+//
+// ============================================
+
+const utilitiesMetadata = [
+  {
+    id: 'play-style-test',
+    title: '테니스 플레이 스타일 진단',
+    description: '7가지 플레이 스타일 중 당신의 고유한 테니스 성향을 발견하고 맞춤형 조언을 받으세요.',
+    icon: Sparkles,
+    status: '완료',
+    features: ['7가지 스타일', '맞춤형 조언', '프로 선수 비교', '훈련 루틴 추천'],
+    gradient: 'from-purple-500 via-pink-500 to-red-500',
+    bgColor: 'bg-gradient-to-br from-purple-50 via-pink-50 to-red-50',
+    iconBg: 'bg-gradient-to-br from-purple-500 to-pink-500',
+    category: '성향 분석'
+  },
+  {
+    id: 'ntrp-test',
+    title: 'NTRP 실력 테스트',
+    description: '15개 질문으로 정확한 테니스 실력을 측정하고 개선 방향을 제시받으세요.',
+    icon: BarChart3,
+    status: '완료',
+    features: ['15개 질문', '정확한 분석', '개선 방향 제시', '통계 대시보드'],
+    gradient: 'from-blue-500 via-cyan-500 to-teal-500',
+    bgColor: 'bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50',
+    iconBg: 'bg-gradient-to-br from-blue-500 to-cyan-500',
+    category: '실력 측정'
+  },
+  {
+    id: 'string-tension',
+    title: '스트링 텐션 계산기',
+    description: '라켓, 스트링, 플레이 스타일에 따라 최적의 텐션을 계산해드립니다.',
+    icon: Settings,
+    status: '완료',
+    features: ['맞춤형 계산', '장비별 조정', '전문가 추천'],
+    gradient: 'from-green-500 via-emerald-500 to-teal-500',
+    bgColor: 'bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50',
+    iconBg: 'bg-gradient-to-br from-green-500 to-emerald-500',
+    category: '장비 설정'
+  },
+  {
+    id: 'injury-risk',
+    title: '부상 위험 예측',
+    description: '데이터 기반 분석으로 부상 위험도를 체크하고 안전한 플레이를 위한 조언을 받으세요.',
+    icon: Shield,
+    status: '완료',
+    features: ['위험도 평가', '예방 가이드', '안전한 플레이', '개인별 맞춤'],
+    gradient: 'from-red-500 via-orange-500 to-amber-500',
+    bgColor: 'bg-gradient-to-br from-red-50 via-orange-50 to-amber-50',
+    iconBg: 'bg-gradient-to-br from-red-500 to-orange-500',
+    category: '건강 관리'
+  },
+  {
+    id: 'equipment-recommendation',
+    title: '장비 추천 시스템',
+    description: '플레이 스타일과 실력에 맞는 최적의 라켓과 스트링을 추천해드립니다.',
+    icon: Target,
+    status: '완료',
+    features: ['맞춤 추천', '브랜드별 비교', '가격대별 옵션', '리뷰 연동'],
+    gradient: 'from-indigo-500 via-purple-500 to-pink-500',
+    bgColor: 'bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50',
+    iconBg: 'bg-gradient-to-br from-indigo-500 to-purple-500',
+    category: '장비 추천'
+  },
+  {
+    id: 'match-analyzer',
+    title: '경기 분석 도구',
+    description: '경기 데이터를 분석하여 전술적 개선점을 찾아보세요. 서브, 리턴, 네트 플레이 등 세부 통계를 분석하여 경기력을 객관적으로 평가합니다.',
+    icon: TrendingUp,
+    status: '완료',
+    features: ['경기 분석', '전술 개선', '통계 시각화', '성과 추적'],
+    gradient: 'from-blue-500 via-indigo-500 to-purple-500',
+    bgColor: 'bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50',
+    iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-500',
+    category: '경기 분석'
+  },
+  {
+    id: 'training-planner',
+    title: '훈련 계획 수립',
+    description: '개인 실력과 목표에 맞는 체계적인 훈련 계획을 세워보세요. 주간별 상세 계획과 진도 체크로 체계적이고 지속 가능한 실력 향상을 경험하세요.',
+    icon: Calculator,
+    status: '완료',
+    features: ['개인별 계획', '목표 설정', '진도 추적', '조정 가이드'],
+    gradient: 'from-violet-500 via-purple-500 to-fuchsia-500',
+    bgColor: 'bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50',
+    iconBg: 'bg-gradient-to-br from-violet-500 to-purple-500',
+    category: '훈련 계획'
+  },
+  {
+    id: 'court-booking',
+    title: '코트 예약 시스템',
+    description: '전국 테니스 코트를 실시간으로 예약하세요. 실내외 코트, 시간대별 예약, 편리한 결제 시스템으로 언제 어디서나 테니스를 즐기세요.',
+    icon: Calendar,
+    status: '완료',
+    features: ['실시간 예약', '전국 코트', '편리한 결제', '예약 관리'],
+    gradient: 'from-cyan-500 via-blue-500 to-indigo-500',
+    bgColor: 'bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50',
+    iconBg: 'bg-gradient-to-br from-cyan-500 to-blue-500',
+    category: '코트 예약'
+  },
+  {
+    id: 'tennis-dictionary',
+    title: '테니스 용어 사전',
+    description: '200개 이상의 테니스 용어를 검색하고 자세한 설명을 확인하세요. 초보자도 쉽게 이해할 수 있는 쉬운 설명과 예시를 제공합니다.',
+    icon: Book,
+    status: '개발 예정',
+    features: ['용어 검색', '상세 설명', '예시 제공', '즐겨찾기'],
+    gradient: 'from-emerald-500 via-green-500 to-teal-500',
+    bgColor: 'bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50',
+    iconBg: 'bg-gradient-to-br from-emerald-500 to-green-500',
+    category: '교육 도구'
+  },
+  {
+    id: 'opponent-analyzer',
+    title: '상대 분석 도구',
+    description: '상대의 플레이 스타일을 분석하고 약점을 파악하세요. 경기 데이터를 기반으로 한 전략적 분석으로 승률을 높이세요.',
+    icon: Users,
+    status: '개발 예정',
+    features: ['스타일 분석', '약점 파악', '전략 추천', '경기 기록'],
+    gradient: 'from-orange-500 via-red-500 to-pink-500',
+    bgColor: 'bg-gradient-to-br from-orange-50 via-red-50 to-pink-50',
+    iconBg: 'bg-gradient-to-br from-orange-500 to-red-500',
+    category: '경기 분석'
+  },
+  {
+    id: 'tennis-diet',
+    title: '테니스 다이어트 계산기',
+    description: '테니스 선수 맞춤 영양 계산과 식단 추천을 받아보세요. 경기력 향상과 체중 관리를 위한 과학적 접근입니다.',
+    icon: Heart,
+    status: '개발 예정',
+    features: ['영양 계산', '식단 추천', '칼로리 관리', '체중 목표'],
+    gradient: 'from-rose-500 via-pink-500 to-fuchsia-500',
+    bgColor: 'bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50',
+    iconBg: 'bg-gradient-to-br from-rose-500 to-pink-500',
+    category: '영양 관리'
+  },
+  {
+    id: 'fitness-test',
+    title: '체력 테스트',
+    description: '테니스에 필요한 체력 요소들을 종합적으로 측정하세요. 순발력, 지구력, 근력 등 세부 체력 데이터를 분석합니다.',
+    icon: Activity,
+    status: '개발 예정',
+    features: ['종합 체력 측정', '세부 데이터 분석', '개선 방향 제시', '진척도 추적'],
+    gradient: 'from-amber-500 via-yellow-500 to-orange-500',
+    bgColor: 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50',
+    iconBg: 'bg-gradient-to-br from-amber-500 to-yellow-500',
+    category: '체력 관리'
+  },
+  {
+    id: 'goal-setting',
+    title: '목표 설정 도구',
+    description: '단기 및 장기 목표를 설정하고 달성 계획을 세워보세요. SMART 목표 설정과 진척도 관리를 지원합니다.',
+    icon: Award,
+    status: '개발 예정',
+    features: ['SMART 목표', '진척도 관리', '동기 부여', '성과 분석'],
+    gradient: 'from-lime-500 via-green-500 to-emerald-500',
+    bgColor: 'bg-gradient-to-br from-lime-50 via-green-50 to-emerald-50',
+    iconBg: 'bg-gradient-to-br from-lime-500 to-green-500',
+    category: '목표 관리'
+  },
+  {
+    id: 'nutrition-guide',
+    title: '테니스 영양 가이드',
+    description: '경기 전후와 훈련에 최적화된 영양 섭취 가이드를 제공합니다.',
+    icon: Zap,
+    status: '개발 예정',
+    features: ['영양 계획', '수분 보충', '에너지 관리', '회복 가이드'],
+    gradient: 'from-yellow-400 via-orange-400 to-amber-400',
+    bgColor: 'bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50',
+    iconBg: 'bg-gradient-to-br from-yellow-400 to-orange-400',
+    category: '영양 관리'
+  },
+  {
+    id: 'mental-training',
+    title: '멘탈 트레이닝',
+    description: '경기 중 집중력과 멘탈 강화를 위한 심리적 훈련 프로그램입니다.',
+    icon: Brain,
+    status: '개발 예정',
+    features: ['집중력 향상', '스트레스 관리', '자신감 증진', '멘탈 강화'],
+    gradient: 'from-pink-400 via-rose-400 to-red-400',
+    bgColor: 'bg-gradient-to-br from-pink-50 via-rose-50 to-red-50',
+    iconBg: 'bg-gradient-to-br from-pink-400 to-rose-400',
+    category: '멘탈 관리'
+  },
+  {
+    id: 'court-conditions',
+    title: '코트 상태 확인',
+    description: '전국 테니스 코트의 실시간 상태를 확인하세요. 날씨, 예약 현황, 시설 상태를 한눈에 파악할 수 있습니다.',
+    icon: MapPin,
+    status: '개발 예정',
+    features: ['실시간 상태', '날씨 정보', '예약 현황', '시설 정보'],
+    gradient: 'from-sky-500 via-blue-500 to-indigo-500',
+    bgColor: 'bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50',
+    iconBg: 'bg-gradient-to-br from-sky-500 to-blue-500',
+    category: '코트 정보'
+  },
+  {
+    id: 'weather-check',
+    title: '날씨 적합성 체크',
+    description: '테니스 플레이에 최적화된 날씨 조건을 분석합니다. 바람, 온도, 습도 등 경기력에 영향을 미치는 요소들을 평가합니다.',
+    icon: Globe,
+    status: '개발 예정',
+    features: ['날씨 분석', '플레이 적합도', '예상 영향', '대안 추천'],
+    gradient: 'from-cyan-500 via-teal-500 to-green-500',
+    bgColor: 'bg-gradient-to-br from-cyan-50 via-teal-50 to-green-50',
+    iconBg: 'bg-gradient-to-br from-cyan-500 to-teal-500',
+    category: '환경 분석'
+  },
+  {
+    id: 'apparel-recommendation',
+    title: '복장 추천 시스템',
+    description: '날씨, 코트 타입, 플레이 스타일에 따라 최적의 테니스 복장을 추천해드립니다.',
+    icon: Award,
+    status: '개발 예정',
+    features: ['날씨 기반 추천', '코트별 최적화', '브랜드 비교', '가격 정보'],
+    gradient: 'from-fuchsia-500 via-pink-500 to-rose-500',
+    bgColor: 'bg-gradient-to-br from-fuchsia-50 via-pink-50 to-rose-50',
+    iconBg: 'bg-gradient-to-br from-fuchsia-500 to-pink-500',
+    category: '장비 추천'
+  },
+  {
+    id: 'price-comparison',
+    title: '테니스 용품 가격 비교',
+    description: '전국 온라인 스토어의 테니스 용품 가격을 비교하세요. 라켓, 스트링, 신발 등 모든 용품의 최저가를 찾아드립니다.',
+    icon: TrendingIcon,
+    status: '개발 예정',
+    features: ['가격 비교', '스토어 연동', '할인 정보', '배송비 계산'],
+    gradient: 'from-emerald-500 via-green-500 to-lime-500',
+    bgColor: 'bg-gradient-to-br from-emerald-50 via-green-50 to-lime-50',
+    iconBg: 'bg-gradient-to-br from-emerald-500 to-green-500',
+    category: '쇼핑 도우미'
+  },
+  {
+    id: 'coaching-match',
+    title: '코칭 매칭 시스템',
+    description: '실력과 목표에 맞는 테니스 코치를 찾아드립니다. 전문 코치의 프로필, 리뷰, 가격 정보를 제공합니다.',
+    icon: Users,
+    status: '개발 예정',
+    features: ['코치 매칭', '프로필 정보', '리뷰 시스템', '예약 연동'],
+    gradient: 'from-violet-500 via-purple-500 to-indigo-500',
+    bgColor: 'bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50',
+    iconBg: 'bg-gradient-to-br from-violet-500 to-purple-500',
+    category: '코칭 서비스'
+  },
+  {
+    id: 'match-recorder',
+    title: '경기 기록 시스템',
+    description: '개인 경기 결과를 기록하고 분석하세요. 승패 기록, 주요 플레이, 개선 포인트를 체계적으로 관리합니다.',
+    icon: Trophy,
+    status: '개발 예정',
+    features: ['경기 기록', '통계 분석', '성과 추적', '개선 포인트'],
+    gradient: 'from-amber-500 via-yellow-500 to-orange-500',
+    bgColor: 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50',
+    iconBg: 'bg-gradient-to-br from-amber-500 to-yellow-500',
+    category: '경기 분석'
+  },
+  {
+    id: 'video-analyzer',
+    title: '테니스 동영상 분석',
+    description: '플레이 동영상을 업로드하여 AI가 자동으로 분석합니다. 자세 교정, 기술 개선 포인트를 찾아드립니다.',
+    icon: Gamepad2,
+    status: '개발 예정',
+    features: ['동영상 분석', '자세 교정', '기술 개선', '비교 분석'],
+    gradient: 'from-red-500 via-rose-500 to-pink-500',
+    bgColor: 'bg-gradient-to-br from-red-50 via-rose-50 to-pink-50',
+    iconBg: 'bg-gradient-to-br from-red-500 to-rose-500',
+    category: '기술 분석'
+  },
+  {
+    id: 'flexibility-test',
+    title: '유연성 테스트',
+    description: '테니스에 필요한 관절 가동범위를 측정하고 개선 방법을 제시합니다. 부상 예방과 퍼포먼스 향상을 위한 필수 테스트입니다.',
+    icon: Activity,
+    status: '개발 예정',
+    features: ['관절 가동범위 측정', '개선 운동 추천', '진척도 추적', '부상 리스크 평가'],
+    gradient: 'from-teal-500 via-cyan-500 to-blue-500',
+    bgColor: 'bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50',
+    iconBg: 'bg-gradient-to-br from-teal-500 to-cyan-500',
+    category: '체력 관리'
+  },
+  {
+    id: 'reaction-test',
+    title: '반응 속도 테스트',
+    description: '테니스 공에 대한 반응 속도를 측정합니다. 순발력 향상을 위한 게임형 테스트로 재미있게 훈련할 수 있습니다.',
+    icon: Zap,
+    status: '개발 예정',
+    features: ['반응 속도 측정', '순발력 훈련', '게임형 테스트', '개선 추적'],
+    gradient: 'from-orange-500 via-red-500 to-rose-500',
+    bgColor: 'bg-gradient-to-br from-orange-50 via-red-50 to-rose-50',
+    iconBg: 'bg-gradient-to-br from-orange-500 to-red-500',
+    category: '체력 관리'
+  },
+  {
+    id: 'focus-training',
+    title: '집중력 훈련',
+    description: '테니스 경기 중 필요한 집중력을 향상시키는 다양한 훈련 프로그램입니다. 명상, 호흡법, 시각화 기법을 활용합니다.',
+    icon: Target,
+    status: '개발 예정',
+    features: ['명상 훈련', '호흡법', '시각화', '집중력 측정'],
+    gradient: 'from-purple-500 via-violet-500 to-indigo-500',
+    bgColor: 'bg-gradient-to-br from-purple-50 via-violet-50 to-indigo-50',
+    iconBg: 'bg-gradient-to-br from-purple-500 to-violet-500',
+    category: '멘탈 관리'
+  },
+  {
+    id: 'stress-manager',
+    title: '스트레스 관리',
+    description: '경기 전후 스트레스 수준을 측정하고 관리 방법을 제시합니다. 심박수 변이, 호흡 패턴 분석으로 최적의 스트레스 관리를 돕습니다.',
+    icon: Heart,
+    status: '개발 예정',
+    features: ['스트레스 측정', '심박수 분석', '호흡 가이드', '릴렉스 기법'],
+    gradient: 'from-rose-500 via-pink-500 to-fuchsia-500',
+    bgColor: 'bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50',
+    iconBg: 'bg-gradient-to-br from-rose-500 to-pink-500',
+    category: '멘탈 관리'
+  },
+  {
+    id: 'progress-tracker',
+    title: '진척도 추적',
+    description: '테니스 실력 향상의 진척도를 시각적으로 추적합니다. 목표 달성률, 기술 향상 그래프, 경기 결과 분석을 제공합니다.',
+    icon: TrendingIcon,
+    status: '개발 예정',
+    features: ['진척도 그래프', '목표 달성률', '기술 향상 분석', '성과 리포트'],
+    gradient: 'from-green-500 via-emerald-500 to-teal-500',
+    bgColor: 'bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50',
+    iconBg: 'bg-gradient-to-br from-green-500 to-emerald-500',
+    category: '목표 관리'
+  },
+  {
+    id: 'schedule-manager',
+    title: '테니스 일정 관리',
+    description: '훈련, 경기, 휴식 일정을 최적화하여 관리합니다. 피로도 분석을 통한 과학적인 일정 배치를 추천합니다.',
+    icon: Calendar,
+    status: '개발 예정',
+    features: ['일정 최적화', '피로도 분석', '휴식 추천', '알림 시스템'],
+    gradient: 'from-blue-500 via-indigo-500 to-purple-500',
+    bgColor: 'bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50',
+    iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-500',
+    category: '일정 관리'
+  }
+];
+
+// 자동으로 href 경로를 생성하는 헬퍼 함수
+const generateUtilityHref = (id: string) => `/utility/${id}`;
 
 export default function UtilityPage() {
   const [selectedCategory, setSelectedCategory] = useState('전체');
 
-  const utilities = [
-    {
-      id: 'play-style-test',
-      title: '테니스 플레이 스타일 진단',
-      description: '7가지 플레이 스타일 중 당신의 고유한 테니스 성향을 발견하고 맞춤형 조언을 받으세요.',
-      icon: Sparkles,
-      href: '/utility/play-style-test',
-      status: '완료',
-      features: ['7가지 스타일', '맞춤형 조언', '프로 선수 비교', '훈련 루틴 추천'],
-      gradient: 'from-purple-500 via-pink-500 to-red-500',
-      bgColor: 'bg-gradient-to-br from-purple-50 via-pink-50 to-red-50',
-      iconBg: 'bg-gradient-to-br from-purple-500 to-pink-500',
-      category: '성향 분석'
-    },
-    {
-      id: 'ntrp-test',
-      title: 'NTRP 실력 테스트',
-      description: '15개 질문으로 정확한 테니스 실력을 측정하고 개선 방향을 제시받으세요.',
-      icon: BarChart3,
-      href: '/utility/ntrp-test',
-      status: '완료',
-      features: ['15개 질문', '정확한 분석', '개선 방향 제시', '통계 대시보드'],
-      gradient: 'from-blue-500 via-cyan-500 to-teal-500',
-      bgColor: 'bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50',
-      iconBg: 'bg-gradient-to-br from-blue-500 to-cyan-500',
-      category: '실력 측정'
-    },
-    {
-      id: 'string-tension',
-      title: '스트링 텐션 계산기',
-      description: '라켓, 스트링, 플레이 스타일에 따라 최적의 텐션을 계산해드립니다.',
-      icon: Settings,
-      href: '/utility/string-tension',
-      status: '완료',
-      features: ['맞춤형 계산', '장비별 조정', '전문가 추천'],
-      gradient: 'from-green-500 via-emerald-500 to-teal-500',
-      bgColor: 'bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50',
-      iconBg: 'bg-gradient-to-br from-green-500 to-emerald-500',
-      category: '장비 설정'
-    },
-    {
-      id: 'injury-risk',
-      title: '부상 위험 예측',
-      description: '데이터 기반 분석으로 부상 위험도를 체크하고 안전한 플레이를 위한 조언을 받으세요.',
-      icon: Shield,
-      href: '/utility/injury-risk',
-      status: '완료',
-      features: ['위험도 평가', '예방 가이드', '안전한 플레이', '개인별 맞춤'],
-      gradient: 'from-red-500 via-orange-500 to-amber-500',
-      bgColor: 'bg-gradient-to-br from-red-50 via-orange-50 to-amber-50',
-      iconBg: 'bg-gradient-to-br from-red-500 to-orange-500',
-      category: '건강 관리'
-    },
-    {
-      id: 'equipment-recommendation',
-      title: '장비 추천 시스템',
-      description: '플레이 스타일과 실력에 맞는 최적의 라켓과 스트링을 추천해드립니다.',
-      icon: Target,
-      href: '/utility/equipment-recommendation',
-      status: '완료',
-      features: ['맞춤 추천', '브랜드별 비교', '가격대별 옵션', '리뷰 연동'],
-      gradient: 'from-indigo-500 via-purple-500 to-pink-500',
-      bgColor: 'bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50',
-      iconBg: 'bg-gradient-to-br from-indigo-500 to-purple-500',
-      category: '장비 추천'
-    },
-    {
-      id: 'match-analyzer',
-      title: '경기 분석 도구',
-      description: '경기 데이터를 분석하여 전술적 개선점을 찾아보세요. 서브, 리턴, 네트 플레이 등 세부 통계를 분석하여 경기력을 객관적으로 평가합니다.',
-      icon: TrendingUp,
-      href: '/utility/match-analyzer',
-      status: '완료',
-      features: ['경기 분석', '전술 개선', '통계 시각화', '성과 추적'],
-      gradient: 'from-blue-500 via-indigo-500 to-purple-500',
-      bgColor: 'bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50',
-      iconBg: 'bg-gradient-to-br from-blue-500 to-indigo-500',
-      category: '경기 분석'
-    },
-    {
-      id: 'training-planner',
-      title: '훈련 계획 수립',
-      description: '개인 실력과 목표에 맞는 체계적인 훈련 계획을 세워보세요. 주간별 상세 계획과 진도 체크로 체계적이고 지속 가능한 실력 향상을 경험하세요.',
-      icon: Calculator,
-      href: '/utility/training-planner',
-      status: '완료',
-      features: ['개인별 계획', '목표 설정', '진도 추적', '조정 가이드'],
-      gradient: 'from-violet-500 via-purple-500 to-fuchsia-500',
-      bgColor: 'bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50',
-      iconBg: 'bg-gradient-to-br from-violet-500 to-purple-500',
-      category: '훈련 계획'
-    },
-    {
-      id: 'nutrition-guide',
-      title: '테니스 영양 가이드',
-      description: '경기 전후와 훈련에 최적화된 영양 섭취 가이드를 제공합니다.',
-      icon: Zap,
-      href: '/utility/nutrition-guide',
-      status: '개발 예정',
-      features: ['영양 계획', '수분 보충', '에너지 관리', '회복 가이드'],
-      gradient: 'from-yellow-400 via-orange-400 to-amber-400',
-      bgColor: 'bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50',
-      iconBg: 'bg-gradient-to-br from-yellow-400 to-orange-400',
-      category: '영양 관리'
-    },
-    {
-      id: 'mental-training',
-      title: '멘탈 트레이닝',
-      description: '경기 중 집중력과 멘탈 강화를 위한 심리적 훈련 프로그램입니다.',
-      icon: Brain,
-      href: '/utility/mental-training',
-      status: '개발 예정',
-      features: ['집중력 향상', '스트레스 관리', '자신감 증진', '멘탈 강화'],
-      gradient: 'from-pink-400 via-rose-400 to-red-400',
-      bgColor: 'bg-gradient-to-br from-pink-50 via-rose-50 to-red-50',
-      iconBg: 'bg-gradient-to-br from-pink-400 to-rose-400',
-      category: '멘탈 관리'
-    },
-  ];
+  // 메타데이터에 href 자동 추가
+  const utilities = utilitiesMetadata.map(utility => ({
+    ...utility,
+    href: generateUtilityHref(utility.id)
+  }));
 
+  // 카테고리를 자동으로 계산
+  const allCategories = [...new Set(utilities.map(u => u.category))];
   const categories = [
     { name: '전체', count: utilities.length },
-    { name: '성향 분석', count: utilities.filter(u => u.category === '성향 분석').length },
-    { name: '실력 측정', count: utilities.filter(u => u.category === '실력 측정').length },
-    { name: '장비 설정', count: utilities.filter(u => u.category === '장비 설정').length },
-    { name: '건강 관리', count: utilities.filter(u => u.category === '건강 관리').length },
-    { name: '장비 추천', count: utilities.filter(u => u.category === '장비 추천').length },
-    { name: '경기 분석', count: utilities.filter(u => u.category === '경기 분석').length },
-    { name: '훈련 계획', count: utilities.filter(u => u.category === '훈련 계획').length },
-    { name: '영양 관리', count: utilities.filter(u => u.category === '영양 관리').length },
-    { name: '멘탈 관리', count: utilities.filter(u => u.category === '멘탈 관리').length },
+    ...allCategories.map(categoryName => ({
+      name: categoryName,
+      count: utilities.filter(u => u.category === categoryName).length
+    }))
   ];
 
   const filteredUtilities = selectedCategory === '전체' 
@@ -165,7 +431,7 @@ export default function UtilityPage() {
   const plannedUtilities = filteredUtilities.filter(u => u.status === '개발 예정');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen utility-page">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-32">
         {/* Background Decoration */}

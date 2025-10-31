@@ -496,79 +496,182 @@ a:focus-visible {
     color: var(--fg) !important;
   }
 
-  /* Enhanced Dark Mode - Modern & Trendy Colors */
+  /* Modern Dark Mode - Clean & Sophisticated */
   .dark {
-    --bg-primary: #0f172a; /* slate-900 */
-    --bg-secondary: #1e293b; /* slate-800 */
-    --bg-tertiary: #334155; /* slate-700 */
-    --text-primary: #f1f5f9; /* slate-100 */
-    --text-secondary: #cbd5e1; /* slate-300 */
-    --text-muted: #94a3b8; /* slate-400 */
-    --border-color: #475569; /* slate-600 */
-    --accent-color: #3b82f6; /* blue-500 */
-    --success-color: #10b981; /* emerald-500 */
-    --warning-color: #f59e0b; /* amber-500 */
-    --error-color: #ef4444; /* red-500 */
+    /* Base colors - subtle and elegant */
+    --bg-primary: #0a0a0a;    /* near-black for main background */
+    --bg-secondary: #111111;  /* slightly lighter for cards */
+    --bg-tertiary: #1a1a1a;   /* for elevated elements */
+    --bg-accent: #262626;     /* for subtle accents */
+
+    /* Text colors - high contrast and readable */
+    --text-primary: #fafafa;   /* off-white for primary text */
+    --text-secondary: #d4d4d8; /* zinc-300 for secondary text */
+    --text-muted: #a1a1aa;     /* zinc-400 for muted text */
+    --text-subtle: #71717a;    /* zinc-500 for subtle hints */
+
+    /* Accent colors - modern and vibrant */
+    --accent-blue: #3b82f6;    /* blue-500 */
+    --accent-emerald: #10b981;  /* emerald-500 */
+    --accent-purple: #8b5cf6;   /* violet-500 */
+    --accent-rose: #f43f5e;     /* rose-500 */
+
+    /* Border and dividers */
+    --border-subtle: #27272a;  /* zinc-800 */
+    --border-medium: #3f3f46;   /* zinc-700 */
   }
 
-  /* Dark mode card styling */
-  .dark .bg-white {
-    background-color: var(--bg-secondary) !important;
-    border-color: var(--border-color) !important;
+  /* Body background - subtle gradient for depth */
+  .dark body {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
   }
 
-  .dark .text-gray-900 {
-    color: var(--text-primary) !important;
+  /* Card backgrounds - layered depth */
+  .dark .bg-white,
+  .dark .bg-gray-50 {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-subtle);
+    color: var(--text-primary);
   }
 
-  .dark .text-gray-700 {
-    color: var(--text-secondary) !important;
+  /* Text color hierarchy */
+  .dark .text-gray-900,
+  .dark .text-gray-800 {
+    color: var(--text-primary);
   }
 
+  .dark .text-gray-700,
   .dark .text-gray-600 {
-    color: var(--text-muted) !important;
+    color: var(--text-secondary);
   }
 
-  /* Dark mode button improvements */
-  .dark .bg-blue-600 {
-    background-color: var(--accent-color) !important;
+  .dark .text-gray-500,
+  .dark .text-gray-400 {
+    color: var(--text-muted);
   }
 
-  .dark .bg-green-600 {
-    background-color: var(--success-color) !important;
-  }
-
-  .dark .hover\:bg-blue-700:hover {
-    background-color: #2563eb !important; /* blue-600 */
-  }
-
-  .dark .hover\:bg-green-700:hover {
-    background-color: #059669 !important; /* emerald-600 */
-  }
-
-  /* Dark mode link styling */
+  /* Interactive elements */
+  .dark button:hover,
   .dark a:hover {
-    color: var(--accent-color) !important;
+    color: var(--accent-blue);
   }
 
-  /* Dark mode border improvements */
-  .dark .border-gray-200 {
-    border-color: var(--border-color) !important;
+  /* Form elements */
+  .dark input,
+  .dark textarea,
+  .dark select {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-medium);
+    color: var(--text-primary);
   }
 
+  .dark input:focus,
+  .dark textarea:focus,
+  .dark select:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+
+  /* Navigation and headers */
+  .dark nav,
+  .dark header {
+    background-color: var(--bg-primary);
+    border-color: var(--border-subtle);
+  }
+
+  /* Footer */
+  .dark footer {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-subtle);
+  }
+
+  /* Links with subtle hover effects */
+  .dark a {
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+  }
+
+  .dark a:hover {
+    color: var(--accent-blue);
+  }
+
+  /* Borders - subtle and refined */
+  .dark .border-gray-200,
   .dark .border-gray-300 {
-    border-color: var(--bg-tertiary) !important;
+    border-color: var(--border-subtle);
   }
 
-  /* Dark mode shadow improvements */
+  /* Shadows - softer for dark mode */
   .dark .shadow-md {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
   }
   blockquote.text-gray-600 {
     color: var(--fg) !important;
   }
   
-  /* Improved spacing */
+  /* Page-specific backgrounds */
+  .blog-page {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f0f9ff 100%);
+  }
+
+  .dark .blog-page {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%);
+  }
+
+  .utility-page {
+    background: linear-gradient(135deg, rgba(239, 246, 255, 0.8) 0%, rgba(238, 242, 255, 0.6) 50%, rgba(245, 243, 255, 0.8) 100%);
+  }
+
+  .dark .utility-page {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  }
+
+  /* Enhanced card styling for better readability */
+  .dark .prose {
+    color: var(--text-primary);
+  }
+
+  .dark .prose h1,
+  .dark .prose h2,
+  .dark .prose h3,
+  .dark .prose h4 {
+    color: var(--text-primary);
+  }
+
+  .dark .prose p,
+  .dark .prose li {
+    color: var(--text-secondary);
+  }
+
+  .dark .prose blockquote {
+    color: var(--text-muted);
+    border-left-color: var(--accent-blue);
+  }
+
+  /* Button improvements */
+  .dark button {
+    transition: all 0.2s ease;
+  }
+
+  .dark button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Input focus states */
+  .dark input:focus,
+  .dark textarea:focus,
+  .dark select:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: var(--accent-blue);
+    ring-offset-color: var(--bg-primary);
+  }
   .section-padding {
     padding: clamp(3rem, 8vw, 6rem) 0;
   }
