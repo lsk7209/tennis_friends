@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-white border-t border-gray-200" style={{ backgroundColor: '#ffffff', color: '#111827' }}>
+    <footer className="w-full bg-white border-t border-gray-200 tf-text-black">
       <div className="container mx-auto max-w-6xl px-4">
         {/* Primary line */}
         <div className="h-1 w-full bg-primary/30">

@@ -466,27 +466,27 @@ a:focus-visible {
   }
 
   /* Header/Footer scoped styling fix (force light background and dark text regardless of dark mode) */
-  body.tf-text-black,
-  body.tf-text-black * {
+  .tf-text-black,
+  .tf-text-black * {
     background-color: #ffffff !important; /* force white background */
     color: #111827 !important; /* force dark text */
   }
-  body.tf-text-black a,
-  body.tf-text-black a:hover,
-  body.tf-text-black a:focus,
-  body.tf-text-black a:active {
+  .tf-text-black a,
+  .tf-text-black a:hover,
+  .tf-text-black a:focus,
+  .tf-text-black a:active {
     color: #111827 !important; /* force links to dark text */
   }
-  body.tf-text-black svg {
+  .tf-text-black svg {
     color: #111827 !important; /* force icons to dark color */
     fill: currentColor !important;
   }
 
   /* Additional override for any dark mode classes */
-  .dark body.tf-text-black,
-  .dark body.tf-text-black *,
-  .dark body.tf-text-black a,
-  .dark body.tf-text-black svg {
+  .dark .tf-text-black,
+  .dark .tf-text-black *,
+  .dark .tf-text-black a,
+  .dark .tf-text-black svg {
     background-color: #ffffff !important;
     color: #111827 !important;
   }
@@ -494,6 +494,75 @@ a:focus-visible {
   /* Blockquote readability fix - ensure text is dark enough */
   blockquote {
     color: var(--fg) !important;
+  }
+
+  /* Enhanced Dark Mode - Modern & Trendy Colors */
+  .dark {
+    --bg-primary: #0f172a; /* slate-900 */
+    --bg-secondary: #1e293b; /* slate-800 */
+    --bg-tertiary: #334155; /* slate-700 */
+    --text-primary: #f1f5f9; /* slate-100 */
+    --text-secondary: #cbd5e1; /* slate-300 */
+    --text-muted: #94a3b8; /* slate-400 */
+    --border-color: #475569; /* slate-600 */
+    --accent-color: #3b82f6; /* blue-500 */
+    --success-color: #10b981; /* emerald-500 */
+    --warning-color: #f59e0b; /* amber-500 */
+    --error-color: #ef4444; /* red-500 */
+  }
+
+  /* Dark mode card styling */
+  .dark .bg-white {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--border-color) !important;
+  }
+
+  .dark .text-gray-900 {
+    color: var(--text-primary) !important;
+  }
+
+  .dark .text-gray-700 {
+    color: var(--text-secondary) !important;
+  }
+
+  .dark .text-gray-600 {
+    color: var(--text-muted) !important;
+  }
+
+  /* Dark mode button improvements */
+  .dark .bg-blue-600 {
+    background-color: var(--accent-color) !important;
+  }
+
+  .dark .bg-green-600 {
+    background-color: var(--success-color) !important;
+  }
+
+  .dark .hover\:bg-blue-700:hover {
+    background-color: #2563eb !important; /* blue-600 */
+  }
+
+  .dark .hover\:bg-green-700:hover {
+    background-color: #059669 !important; /* emerald-600 */
+  }
+
+  /* Dark mode link styling */
+  .dark a:hover {
+    color: var(--accent-color) !important;
+  }
+
+  /* Dark mode border improvements */
+  .dark .border-gray-200 {
+    border-color: var(--border-color) !important;
+  }
+
+  .dark .border-gray-300 {
+    border-color: var(--bg-tertiary) !important;
+  }
+
+  /* Dark mode shadow improvements */
+  .dark .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
   }
   blockquote.text-gray-600 {
     color: var(--fg) !important;
