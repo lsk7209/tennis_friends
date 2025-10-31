@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   distDir: 'out',
 
   // GitHub Pages 배포용 설정
-  ...(process.env.GITHUB_ACTIONS && {
+  ...(process.env.GITHUB_ACTIONS && process.env.GITHUB_PAGES === 'true' && {
     basePath: '/tennis_friends',
     assetPrefix: '/tennis_friends',
   }),

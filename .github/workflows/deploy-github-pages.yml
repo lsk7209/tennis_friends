@@ -34,6 +34,7 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://lsk7209.github.io
+          GITHUB_PAGES: true
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
