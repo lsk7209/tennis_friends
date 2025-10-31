@@ -184,9 +184,72 @@ export default function WinterTennisTraining() {
             </section>
           </div>
 
+          {/* Related Content */}
+          <section className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              📚 함께 보면 좋은 콘텐츠
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/tennis-injury-prevention-exercises" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">💪</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 부상 예방을 위한 8가지 필수 운동</p>
+                    <p className="text-sm text-gray-600 mt-1">부상 예방 운동과 스트레칭 루틴</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/tennis-stretching-routine" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🧘</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 전후 스트레칭 루틴 완벽 가이드</p>
+                    <p className="text-sm text-gray-600 mt-1">동적/정적 스트레칭과 워밍업</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/tennis-elbow-prevention" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🦴</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 엘보우, 예방이 최선입니다</p>
+                    <p className="text-sm text-gray-600 mt-1">팔꿈치 통증 예방과 치료</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/utility/injury-risk" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🛡️</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">부상 위험 예측</p>
+                    <p className="text-sm text-gray-600 mt-1">플레이 습관 기반 부상 위험도 분석</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/tennis-diet-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🥗</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 선수를 위한 완벽한 다이어트 가이드</p>
+                    <p className="text-sm text-gray-600 mt-1">경기력 향상과 영양 관리</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/tennis-apparel-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">👕</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 선수를 위한 완벽한 의류 가이드</p>
+                    <p className="text-sm text-gray-600 mt-1">기능성 의류와 계절별 선택</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </section>
+
           <div className="mt-12 pt-8 border-t border-gray-200">
             <div className="flex items-center justify-center">
-              <Button 
+              <Button
                 onClick={() => {
                   navigator.clipboard.writeText('https://tennisfriends.kr/blog/winter-tennis-training');
                   alert('공유 링크가 복사되었습니다 📎');

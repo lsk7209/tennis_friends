@@ -352,6 +352,73 @@ export default function TennisGripReplacement() {
         </div>
       </section>
 
+      {/* Related Content */}
+      <section className="section-padding bg-white">
+        <div className="container-padding">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              📚 함께 보면 좋은 콘텐츠
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/racket-care-mistakes" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">😬</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 초보가 라켓을 망치는 5가지 관리 습관</p>
+                    <p className="text-sm text-gray-600 mt-1">라켓 관리의 기본과 실수 방지</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/string-tension-feel-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🎾</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">스트링 텐션, 숫자보다 감각이 중요하다</p>
+                    <p className="text-sm text-gray-600 mt-1">55lbs의 함정과 텐션 선택 가이드</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/racket-weight-styles" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">⚖️</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">라켓 무게 하나로 달라지는 경기 스타일 3가지</p>
+                    <p className="text-sm text-gray-600 mt-1">라켓 무게와 플레이 스타일의 관계</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/utility/equipment-recommendation" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🎯</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">장비 추천 시스템</p>
+                    <p className="text-sm text-gray-600 mt-1">실력과 스타일에 맞는 라켓, 스트링 추천</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/utility/injury-risk" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🛡️</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">부상 위험 예측</p>
+                    <p className="text-sm text-gray-600 mt-1">플레이 습관 기반 부상 위험도 분석</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/string-replacement-guide" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🔧</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">처음 라켓 줄을 자를 때 꼭 알아야 할 3가지</p>
+                    <p className="text-sm text-gray-600 mt-1">스트링 교체의 기본과 주의사항</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer CTA */}
       <section className="section-padding bg-gray-50">
         <div className="container-padding">

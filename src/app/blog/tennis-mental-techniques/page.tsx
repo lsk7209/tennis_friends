@@ -176,9 +176,72 @@ export default function TennisMentalTechniques() {
             </section>
           </div>
 
+          {/* Related Content */}
+          <section className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              📚 함께 보면 좋은 콘텐츠
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/concentration-during-matches" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🧠</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">경기 중 흔들리는 집중력을 되찾는 6가지 방법</p>
+                    <p className="text-sm text-gray-600 mt-1">집중력 회복과 유지 전략</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/opponent-analysis-strategy" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🎯</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">상대를 읽는 5가지 전략적 분석법</p>
+                    <p className="text-sm text-gray-600 mt-1">상대 플레이 패턴 분석과 전략 수립</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/mid-match-tactical-changes" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🔄</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">경기 중 전술 변화의 타이밍과 방법</p>
+                    <p className="text-sm text-gray-600 mt-1">상황별 전략적 판단과 전술 변경</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/utility/mental-training" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🧘</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">멘탈 트레이닝</p>
+                    <p className="text-sm text-gray-600 mt-1">정신력 강화와 경기력 향상</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/blog/tennis-elbow-prevention" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">💪</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 엘보우, 예방이 최선입니다</p>
+                    <p className="text-sm text-gray-600 mt-1">팔꿈치 통증 예방과 관리</p>
+                  </div>
+                </div>
+              </Link>
+              <Link href="/utility/play-style-test" className="block p-6 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 hover:shadow-md transition-all duration-200 group">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">✨</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">테니스 플레이 스타일 진단</p>
+                    <p className="text-sm text-gray-600 mt-1">7가지 스타일 중 당신의 성향 발견</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </section>
+
           <div className="mt-12 pt-8 border-t border-gray-200">
             <div className="flex items-center justify-center">
-              <Button 
+              <Button
                 onClick={() => {
                   navigator.clipboard.writeText('https://tennisfriends.kr/blog/tennis-mental-techniques');
                   alert('공유 링크가 복사되었습니다 📎');
