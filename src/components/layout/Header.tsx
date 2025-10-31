@@ -58,9 +58,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition-all duration-300 ${
+    <header className={`sticky top-0 z-50 w-full border-b border-gray-200 bg-white transition-all duration-300 ${
       isScrolled
-        ? 'shadow-md dark:shadow-gray-800'
+        ? 'shadow-md'
         : ''
     }`}>
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 md:hidden">
+        <div className="border-t border-gray-200 bg-white md:hidden">
           <nav className="container mx-auto px-4 py-6">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => {

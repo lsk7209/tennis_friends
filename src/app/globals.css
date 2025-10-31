@@ -465,21 +465,19 @@ a:focus-visible {
     background-size: 200% 100%;
   }
 
-  /* Header/Footer scoped text color fix (force appropriate colors for light/dark mode) */
+  /* Header/Footer scoped styling fix (force light background and dark text regardless of dark mode) */
   .tf-text-black {
-    color: #111827; /* gray-900 for light mode */
-  }
-  .dark .tf-text-black {
-    color: #f9fafb; /* gray-50 for dark mode */
+    background-color: #ffffff !important; /* force white background */
+    color: #111827 !important; /* force dark text */
   }
   .tf-text-black * {
-    color: inherit;
+    color: #111827 !important; /* force all child elements to dark text */
   }
   .tf-text-black a {
-    color: inherit;
+    color: #111827 !important; /* force links to dark text */
   }
   .tf-text-black svg {
-    color: inherit;
+    color: #111827 !important; /* force icons to dark color */
     fill: currentColor;
   }
   
