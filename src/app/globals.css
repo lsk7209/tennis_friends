@@ -466,19 +466,29 @@ a:focus-visible {
   }
 
   /* Header/Footer scoped styling fix (force light background and dark text regardless of dark mode) */
-  .tf-text-black {
+  body.tf-text-black,
+  body.tf-text-black * {
     background-color: #ffffff !important; /* force white background */
     color: #111827 !important; /* force dark text */
   }
-  .tf-text-black * {
-    color: #111827 !important; /* force all child elements to dark text */
-  }
-  .tf-text-black a {
+  body.tf-text-black a,
+  body.tf-text-black a:hover,
+  body.tf-text-black a:focus,
+  body.tf-text-black a:active {
     color: #111827 !important; /* force links to dark text */
   }
-  .tf-text-black svg {
+  body.tf-text-black svg {
     color: #111827 !important; /* force icons to dark color */
-    fill: currentColor;
+    fill: currentColor !important;
+  }
+
+  /* Additional override for any dark mode classes */
+  .dark body.tf-text-black,
+  .dark body.tf-text-black *,
+  .dark body.tf-text-black a,
+  .dark body.tf-text-black svg {
+    background-color: #ffffff !important;
+    color: #111827 !important;
   }
   
   /* Blockquote readability fix - ensure text is dark enough */
