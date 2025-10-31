@@ -881,6 +881,8 @@ const generateUtilityHref = (id: string) => `/utility/${id}`;
 
 export default function UtilityPage() {
   const [selectedCategory, setSelectedCategory] = useState('전체');
+  const [currentPage, setCurrentPage] = useState(1);
+  const utilitiesPerPage = 12;
 
   // 메타데이터에 href 자동 추가
   const utilities = utilitiesMetadata.map(utility => ({
@@ -898,12 +900,29 @@ export default function UtilityPage() {
     }))
   ];
 
-  const filteredUtilities = selectedCategory === '전체' 
-    ? utilities 
+  const filteredUtilities = selectedCategory === '전체'
+    ? utilities
     : utilities.filter(u => u.category === selectedCategory);
 
-  const completedUtilities = filteredUtilities.filter(u => u.status === '완료');
-  const plannedUtilities = filteredUtilities.filter(u => u.status === '개발 예정');
+  // 페이지네이션 계산
+  const totalPages = Math.ceil(filteredUtilities.length / utilitiesPerPage);
+  const startIndex = (currentPage - 1) * utilitiesPerPage;
+  const endIndex = startIndex + utilitiesPerPage;
+  const currentUtilities = filteredUtilities.slice(startIndex, endIndex);
+
+  const completedUtilities = currentUtilities.filter(u => u.status === '완료');
+  const plannedUtilities = currentUtilities.filter(u => u.status === '개발 예정');
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    setSelectedCategory('전체'); // 카테고리 변경 시 첫 페이지로 이동
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1); // 카테고리 변경 시 첫 페이지로 이동
+  };
 
   return (
     <div className="min-h-screen utility-page">
@@ -964,7 +983,7 @@ export default function UtilityPage() {
             {categories.map((category, index) => (
               <button
                 key={index}
-                onClick={() => setSelectedCategory(category.name)}
+                onClick={() => handleCategoryChange(category.name)}
                 className={`px-5 md:px-6 py-2.5 md:py-3 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                   selectedCategory === category.name
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105'
@@ -1184,6 +1203,60 @@ export default function UtilityPage() {
           </Card>
         </div>
       </section>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="py-12 bg-white/50 backdrop-blur-sm border-t border-gray-200/50">
+          <div className="container mx-auto max-w-7xl px-4">
+            <div className="flex justify-center items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="bg-white border-white/20 hover:border-blue-400"
+              >
+                <ChevronLeft className="w-4 h-4 mr-1" />
+                이전
+              </Button>
+
+              <div className="flex gap-1">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <Button
+                    key={page}
+                    variant={page === currentPage ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => handlePageChange(page)}
+                    className={
+                      page === currentPage
+                        ? "bg-blue-600 text-white"
+                        : "bg-white border-white/20 hover:border-blue-400"
+                    }
+                  >
+                    {page}
+                  </Button>
+                ))}
+              </div>
+
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="bg-white border-white/20 hover:border-blue-400"
+              >
+                다음
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </div>
+
+            {/* Page Info */}
+            <div className="text-center mt-4 text-gray-600 text-sm">
+              {startIndex + 1}-{Math.min(endIndex, filteredUtilities.length)} / {filteredUtilities.length} 개의 도구
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
