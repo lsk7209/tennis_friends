@@ -29,40 +29,76 @@ export default function BlogPage() {
           </p>
         </div>
 
-        {/* Latest Blog Post */}
-        <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
-          <CardContent className="p-8">
-            <div className="flex items-center gap-2 mb-4">
-              <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
-                최신 글
-              </Badge>
-              <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
-                가을 시즌
-              </Badge>
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              가을 테니스, 리듬을 되찾는 순간 실력이 달라진다
-            </h3>
-
-            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              가을 바람이 불면 공의 감각도 달라진다. 테니스 실력은 힘이 아니라 리듬에서 나온다. 지금, 당신의 스윙과 풋워크를 조율할 완벽한 계절이다.
-            </p>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                <span>2025-11-01</span>
-                <span>•</span>
-                <span>8분</span>
+        {/* Latest Blog Posts */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">
+                  겨울 시즌
+                </Badge>
               </div>
-              <Link href="/blog/autumn-tennis-rhythm-guide">
-                <Button className="bg-blue-500 hover:bg-blue-600">
-                  자세히 보기
-                </Button>
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                겨울 테니스, 실내 코트에서 실력을 올리는 7가지 루틴
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                겨울엔 테니스 감이 떨어진다고요? 실내 코트에서도 스피드와 감각을 유지할 수 있는 루틴이 있습니다. 시즌 오프를 성장기로 만드는 법.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-11-01</span>
+                  <span>•</span>
+                  <span>8분</span>
+                </div>
+                <Link href="/blog/winter-indoor-tennis-training-routine">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
+                  추천 글
+                </Badge>
+                <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
+                  가을 시즌
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                가을 테니스, 리듬을 되찾는 순간 실력이 달라진다
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                가을 바람이 불면 공의 감각도 달라진다. 테니스 실력은 힘이 아니라 리듬에서 나온다. 지금, 당신의 스윙과 풋워크를 조율할 완벽한 계절이다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-11-01</span>
+                  <span>•</span>
+                  <span>8분</span>
+                </div>
+                <Link href="/blog/autumn-tennis-rhythm-guide">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
 
         {/* Coming Soon Section */}
         <div className="mt-16 text-center">
