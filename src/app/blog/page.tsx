@@ -31,12 +31,46 @@ export default function BlogPage() {
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Newest Post: 테니스 중급자 경기 운영법 */}
+          {/* Newest Post: 테니스 상급자 경기 읽기 */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                  상급자 전략
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 상급자의 경기 읽기 — 상대 패턴 분석과 카운터 전략
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                상급자는 공을 치지 않는다, 상대를 읽는다. 패턴 분석과 카운터 전략이 진짜 승부의 기술이다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-08-18</span>
+                  <span>•</span>
+                  <span>13분</span>
+                </div>
+                <Link href="/blog/tennis-advanced-pattern-analysis">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">
                   전략 가이드
