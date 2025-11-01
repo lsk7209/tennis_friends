@@ -31,12 +31,46 @@ export default function BlogPage() {
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Newest Post: 테니스 코트 예절과 매너 */}
+          {/* Newest Post: 테니스 초보자 30일 성장 루틴 */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+                  초보자 가이드
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 초보자의 30일 성장 루틴 — 실전 감각을 만드는 훈련 플랜
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                초보자도 30일이면 실전 감각을 만들 수 있다. 일일 루틴과 훈련 플랜으로 '처음'을 '자신감'으로 바꾼다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-08-28</span>
+                  <span>•</span>
+                  <span>13분</span>
+                </div>
+                <Link href="/blog/tennis-beginner-30day-growth-plan">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-stone-100 text-stone-800 dark:bg-stone-900 dark:text-stone-300">
                   스포츠맨십
