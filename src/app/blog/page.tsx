@@ -102,11 +102,16 @@ export default function BlogPage() {
     },
   ];
 
+  // 작성일자 기준으로 최신순 정렬
+  const sortedBlogPosts = [...blogPosts].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+
   // Pagination 계산
-  const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+  const totalPages = Math.ceil(sortedBlogPosts.length / postsPerPage);
   const startIndex = (currentPage - 1) * postsPerPage;
   const endIndex = startIndex + postsPerPage;
-  const currentPosts = blogPosts.slice(startIndex, endIndex);
+  const currentPosts = sortedBlogPosts.slice(startIndex, endIndex);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
