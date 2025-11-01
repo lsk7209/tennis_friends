@@ -30,12 +30,46 @@ export default function BlogPage() {
         </div>
 
         {/* Latest Blog Posts */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
+                  서브 마스터
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 서브 완전 정복, 힘이 아닌 타이밍으로 승부하라
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                강한 서브는 팔힘이 아니라 리듬에서 나온다. 아마추어가 프로처럼 보이게 만드는 서브 타이밍과 스핀 컨트롤의 모든 것을 정리했다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-11-01</span>
+                  <span>•</span>
+                  <span>9분</span>
+                </div>
+                <Link href="/blog/tennis-serve-timing-and-spin-guide">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">
                   겨울 시즌
