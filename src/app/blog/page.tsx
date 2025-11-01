@@ -31,12 +31,46 @@ export default function BlogPage() {
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Newest Post: 테니스 상급자 경기 읽기 */}
+          {/* Newest Post: 테니스 경기 중 컨디션 유지법 */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
+                  컨디션 관리
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 경기 중 컨디션 유지법 — 체력과 집중력을 끝까지 지키는 루틴
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                테니스는 체력보다 '에너지 분배'의 싸움이다. 집중력과 리듬을 끝까지 유지하는 루틴이 승부를 결정한다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-08-12</span>
+                  <span>•</span>
+                  <span>13분</span>
+                </div>
+                <Link href="/blog/tennis-inmatch-condition-management">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300">
                   상급자 전략
