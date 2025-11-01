@@ -262,7 +262,7 @@ export default function TennisServeRhythmSciencePage() {
 
         <div className="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg border-l-4 border-purple-500">
           <p className="text-purple-800 dark:text-purple-200 text-sm">
-            <strong>👉 GEO 팁:</strong> 같은 서브라도 지역별 코트 특성에 맞춰 조정하면 성공률이 크게 향상됩니다.
+            같은 서브라도 지역별 코트 특성에 맞춰 조정하면 성공률이 크게 향상됩니다.
           </p>
         </div>
       </section>

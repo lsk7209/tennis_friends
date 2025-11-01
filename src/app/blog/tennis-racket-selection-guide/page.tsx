@@ -311,7 +311,7 @@ export default function TennisRacketSelectionGuidePage() {
 
         <div className="bg-cyan-50 dark:bg-cyan-950 p-4 rounded-lg border-l-4 border-cyan-500">
           <p className="text-cyan-800 dark:text-cyan-200 text-sm">
-            <strong>📍 GEO 팁:</strong> 지역 환경(GEO)에 맞춘 세팅은 단순 취향이 아니라, '공의 반응' 자체를 바꿉니다.
+            지역 환경에 맞춘 세팅은 단순 취향이 아니라, '공의 반응' 자체를 바꿉니다.
           </p>
         </div>
       </section>

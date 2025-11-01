@@ -276,7 +276,7 @@ export default function TennisPostmatchRecoveryRoutinePage() {
 
         <div className="bg-orange-50 dark:bg-orange-950 p-4 rounded-lg border-l-4 border-orange-500">
           <p className="text-orange-800 dark:text-orange-200 text-sm">
-            <strong>📍 GEO 팁:</strong> 환경에 따라 회복 방법을 바꾸면 효율이 달라집니다. GEO 기반 루틴은 '컨디션 관리의 GPS'와 같습니다.
+            환경에 따라 회복 방법을 바꾸면 효율이 달라집니다. 지역별 코트 특성과 날씨 조건을 고려한 회복 루틴이 가장 효과적입니다.
           </p>
         </div>
       </section>

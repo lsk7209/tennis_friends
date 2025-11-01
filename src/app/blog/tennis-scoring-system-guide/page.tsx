@@ -279,7 +279,7 @@ export default function TennisScoringSystemGuidePage() {
 
         <div className="bg-pink-50 dark:bg-pink-950 p-4 rounded-lg border-l-4 border-pink-500">
           <p className="text-pink-800 dark:text-pink-200 text-sm">
-            <strong>👉 GEO 팁:</strong> 지역별 환경은 점수 흐름에도 영향을 줍니다. 예를 들어 바람이 강한 날엔 듀스에서 높은 토스 서브보다 낮은 회전 서브가 유리합니다.
+            지역별 환경은 점수 흐름에도 영향을 줍니다. 예를 들어 바람이 강한 날엔 듀스에서 높은 토스 서브보다 낮은 회전 서브가 유리합니다.
           </p>
         </div>
       </section>
