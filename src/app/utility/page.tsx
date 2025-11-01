@@ -73,6 +73,8 @@ import {
   Award,
   Globe,
   Gamepad2,
+  ChevronLeft,
+  ChevronRight,
   type LucideIcon
 } from 'lucide-react';
 
