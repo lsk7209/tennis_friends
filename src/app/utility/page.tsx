@@ -1222,7 +1222,7 @@ export default function UtilityPage() {
                   지금 바로 시작해보세요!
                 </h2>
                 <p className="text-xl text-gray-700 mb-10 leading-relaxed font-medium">
-                  완료된 유틸리티들을 활용하여 당신의 테니스 실력을 한 단계 올려보세요.<br />
+                  테니스 유틸리티들을 활용하여 당신의 테니스 실력을 한 단계 올려보세요.<br />
                   <span className="text-gray-600">과학적 분석과 전문가의 조언이 기다립니다.</span>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
