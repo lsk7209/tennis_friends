@@ -36,7 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'volley-essence-hit-not-block', text: '1. 발리의 본질 — \'치지 말고 막는다\'', depth: 2 },
   { id: 'volley-positioning-net-1-5m-golden-zone', text: '2. 발리 포지셔닝 — 네트와 1.5m 거리의 황금존', depth: 2 },
   { id: 'forehand-vs-backhand-volley-comparison', text: '3. 포핸드 발리 vs 백핸드 발리 비교', depth: 2 },
-  { id: 'geo-volley-position-adjustment', text: '4. GEO별 발리 포지션 조정법', depth: 2 },
+  { id: 'regional-volley-position-adjustment', text: '4. 지역별 발리 포지션 조정법', depth: 2 },
   { id: 'volley-sensory-training-routine-15min', text: '5. 발리 감각 훈련 루틴 (15분)', depth: 2 },
   { id: 'mistake-correction-common-volley-errors', text: '6. 실수 교정 — 초보가 자주 하는 발리 오류', depth: 2 },
   { id: 'volley-role-in-doubles-space-pressure', text: '7. 복식에서의 발리 역할 — 공간 압박의 기술', depth: 2 },
@@ -224,10 +224,10 @@ export default function TennisVolleyTechniqueGuidePage() {
         </div>
       </section>
 
-      <section id="geo-volley-position-adjustment" className="mb-12">
+      <section id="regional-volley-position-adjustment" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-cyan-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
-          GEO별 발리 포지션 조정법
+          지역별 발리 포지션 조정법
         </h2>
 
         <div className="space-y-4 mb-6">
@@ -251,7 +251,7 @@ export default function TennisVolleyTechniqueGuidePage() {
 
         <div className="bg-cyan-50 dark:bg-cyan-950 p-4 rounded-lg border-l-4 border-cyan-500">
           <p className="text-cyan-800 dark:text-cyan-200 text-sm">
-            GEO 환경을 고려하면 반응 속도보다 '공의 방향 예측'이 정확해집니다.
+            코트 환경을 고려하면 반응 속도보다 '공의 방향 예측'이 더 중요해집니다.
           </p>
         </div>
       </section>
@@ -406,7 +406,7 @@ export default function TennisVolleyTechniqueGuidePage() {
                   테니스 경기 중 멘탈 붕괴 방지법 — 실수 후 3초 회복 루틴의 힘
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  실수 후 3초 회복 루틴으로 멘탈을 회복하고 경기 흐름을 되찾는 법. 감정 제어·집중 루틴·GEO별 멘탈 관리 전략.
+                  실수 후 3초 회복 루틴으로 멘탈을 회복하고 경기 흐름을 되찾는 법. 감정 제어·집중 루틴·효과적인 멘탈 관리 전략.
                 </p>
               </CardContent>
             </Card>

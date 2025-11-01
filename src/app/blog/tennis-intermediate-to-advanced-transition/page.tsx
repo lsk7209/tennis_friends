@@ -35,7 +35,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'swing-consistency', text: '1. 스윙의 일관성 — 10번 중 8번 같은 스윙을 만드는 법', depth: 2 },
   { id: 'point-design', text: '2. 포인트 설계 — 감이 아닌 시나리오로 경기하기', depth: 2 },
   { id: 'mental-routine', text: '3. 멘탈 루틴 — 감정이 아니라 호흡으로 경기하기', depth: 2 },
-  { id: 'geo-strategy', text: '4. GEO 기반 경기 운영력 — 환경을 전략으로 활용하기', depth: 2 },
+  { id: 'environmental-strategy', text: '4. 환경 기반 경기 운영력 — 코트를 전략으로 활용하기', depth: 2 },
   { id: 'match-analysis', text: '5. 경기 내 분석력 — 패턴을 읽는 눈을 훈련하라', depth: 2 },
   { id: 'conclusion-transition', text: '결론 — 일관성과 판단의 속도를 높여라', depth: 2 },
 ];
@@ -54,7 +54,7 @@ const faqs = [
     a: '네. 패턴을 보는 습관은 모든 레벨에 유용합니다. 단, 복잡하게 분석하지 말고 2~3가지만 기억하세요.'
   },
   {
-    q: 'GEO 전략은 왜 중요한가요?',
+    q: '코트 환경 전략은 왜 중요한가요?',
     a: '지역별 기후가 공의 반발력과 스피드에 큰 영향을 줍니다. 환경 이해는 실전 적응력을 높입니다.'
   },
   {
@@ -177,10 +177,10 @@ export default function TennisIntermediateToAdvancedTransitionPage() {
         </div>
       </section>
 
-      <section id="geo-strategy" className="mb-12">
+      <section id="environmental-strategy" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-yellow-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
-          GEO 기반 경기 운영력 — 환경을 전략으로 활용하기
+          환경 기반 경기 운영력 — 코트를 전략으로 활용하기
         </h2>
 
         <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
@@ -204,7 +204,7 @@ export default function TennisIntermediateToAdvancedTransitionPage() {
 
         <div className="bg-yellow-50 dark:bg-yellow-950 p-4 rounded-lg border-l-4 border-yellow-500">
           <p className="text-yellow-800 dark:text-yellow-200 text-sm">
-            <strong>👉 GEO 팁:</strong> 이 GEO 전략은 단순한 현지 적응이 아니라 '상황 예측력'을 키웁니다. 환경에 따라 전술을 미리 세우는 습관은 상급자의 특징입니다.
+            <strong>💡 전략 팁:</strong> 이 환경 전략은 단순한 현지 적응이 아니라 '상황 예측력'을 키웁니다. 코트 조건에 따라 전술을 미리 세우는 습관은 상급자의 특징입니다.
           </p>
         </div>
       </section>

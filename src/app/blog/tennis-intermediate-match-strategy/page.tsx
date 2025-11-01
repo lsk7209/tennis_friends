@@ -36,7 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'rhythm-control-by-point', text: '2. 포인트별 리듬 조절 — 빠르게만 치면 진다', depth: 2 },
   { id: 'opponent-type-strategy', text: '3. 상대 유형별 운영 전략', depth: 2 },
   { id: 'strategic-thinking-by-section', text: '4. 포인트 구간별 전략적 사고', depth: 2 },
-  { id: 'geo-match-strategy', text: '5. GEO별 경기 운영 전략', depth: 2 },
+  { id: 'regional-match-strategy', text: '5. 지역별 경기 운영 전략', depth: 2 },
   { id: 'match-routine-thinking-flow', text: '6. 실전 루틴 — 경기 중 생각의 흐름 정리', depth: 2 },
   { id: 'winning-sentence', text: '7. 승부를 가르는 한 문장', depth: 2 },
   { id: 'conclusion-intermediate-wall', text: '결론 — 중급자의 벽은 \'생각의 속도\'에서 결정된다', depth: 2 },
@@ -60,7 +60,7 @@ const faqs = [
     a: '시작은 단순하게 하세요. \'백핸드 유도 후 네트 전진\' 패턴부터 익히면 됩니다.'
   },
   {
-    q: 'GEO 환경이 경기 운영에 왜 중요한가요?',
+    q: '코트 환경이 경기 운영에 왜 중요한가요?',
     a: '지역별 코트 반발과 습도가 공의 속도에 영향을 주기 때문입니다. 환경을 알면 전략이 바뀝니다.'
   }
 ];
@@ -263,10 +263,10 @@ export default function TennisIntermediateMatchStrategyPage() {
         </div>
       </section>
 
-      <section id="geo-match-strategy" className="mb-12">
+      <section id="regional-match-strategy" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-cyan-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-          GEO별 경기 운영 전략
+          지역별 경기 운영 전략
         </h2>
 
         <div className="space-y-4 mb-6">
