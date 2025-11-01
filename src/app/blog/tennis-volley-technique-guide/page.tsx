@@ -250,7 +250,7 @@ export default function TennisVolleyTechniqueGuidePage() {
 
         <div className="bg-cyan-50 dark:bg-cyan-950 p-4 rounded-lg border-l-4 border-cyan-500">
           <p className="text-cyan-800 dark:text-cyan-200 text-sm">
-            <strong>📍 GEO 팁:</strong> GEO 환경을 고려하면 반응 속도보다 '공의 방향 예측'이 정확해집니다.
+            GEO 환경을 고려하면 반응 속도보다 '공의 방향 예측'이 정확해집니다.
           </p>
         </div>
       </section>

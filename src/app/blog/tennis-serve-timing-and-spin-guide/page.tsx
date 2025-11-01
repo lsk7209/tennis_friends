@@ -221,7 +221,7 @@ export default function TennisServeTimingAndSpinGuidePage() {
 
         <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg border-l-4 border-green-500">
           <p className="text-green-800 dark:text-green-200 text-sm">
-            <strong>👉 GEO 팁:</strong> "부산 테니스 서브 궤적", "서울 하드코트 서브 리듬" 등 지역 키워드 검색은 로컬 유입에 강력하다.
+            "부산 테니스 서브 궤적", "서울 하드코트 서브 리듬" 등 지역 키워드 검색은 로컬 유입에 강력하다.
           </p>
         </div>
       </section>

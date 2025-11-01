@@ -264,7 +264,7 @@ export default function TennisServeSpeedSciencePage() {
 
         <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500">
           <p className="text-indigo-800 dark:text-indigo-200 text-sm">
-            <strong>📍 GEO 팁:</strong> 환경에 따라 서브 리듬을 조정하면 일관된 속도를 유지할 수 있습니다.
+            환경에 따라 서브 리듬을 조정하면 일관된 속도를 유지할 수 있습니다.
           </p>
         </div>
       </section>

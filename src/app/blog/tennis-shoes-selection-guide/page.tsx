@@ -314,7 +314,7 @@ export default function TennisShoesSelectionGuidePage() {
 
         <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500">
           <p className="text-indigo-800 dark:text-indigo-200 text-sm">
-            <strong>📍 GEO 팁:</strong> 신발도 GEO에 맞게 관리하면 수명이 1.5배 늘어납니다.
+            신발도 GEO에 맞게 관리하면 수명이 1.5배 늘어납니다.
           </p>
         </div>
       </section>
