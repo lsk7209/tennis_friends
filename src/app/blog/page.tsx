@@ -31,12 +31,46 @@ export default function BlogPage() {
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Newest Post: 테니스화 선택법 */}
+          {/* Newest Post: 테니스 코트 예절과 매너 */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-stone-100 text-stone-800 dark:bg-stone-900 dark:text-stone-300">
+                  스포츠맨십
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 코트 예절과 매너 — 진짜 실력자는 태도에서 드러난다
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                테니스의 품격은 스윙보다 태도에서 드러난다. 매너 있는 플레이가 실력을 완성한다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-09-03</span>
+                  <span>•</span>
+                  <span>12분</span>
+                </div>
+                <Link href="/blog/tennis-etiquette-and-manners">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">
                   신발 가이드
