@@ -16,7 +16,17 @@ const Header: React.FC = () => {
     // 다크모드 상태 초기화
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+    
+    // 명시적으로 저장된 테마 우선, 없으면 시스템 설정 따름
+    let shouldBeDark;
+    if (savedTheme === 'dark') {
+      shouldBeDark = true;
+    } else if (savedTheme === 'light') {
+      shouldBeDark = false;
+    } else {
+      // 저장된 테마가 없을 때만 시스템 설정 따름
+      shouldBeDark = prefersDark;
+    }
     
     setIsDark(shouldBeDark);
     document.documentElement.classList.toggle('dark', shouldBeDark);

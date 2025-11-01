@@ -11,8 +11,8 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950 dark:via-indigo-950 dark:to-purple-950">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
+      {/* Header */}
+      <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium mb-6">
             <FileText className="w-4 h-4" />
             테니스 블로그
@@ -26,8 +26,8 @@ export default function BlogPage() {
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             테니스 실력 향상을 위한 전문적인 가이드와 최신 정보를 제공합니다.
             초보자부터 프로 선수까지 모두가 즐길 수 있는 콘텐츠를 준비하고 있습니다.
-          </p>
-        </div>
+        </p>
+      </div>
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -39,8 +39,8 @@ export default function BlogPage() {
                 </Badge>
                 <Badge className="bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300">
                   풋워크 마스터
-                </Badge>
-              </div>
+          </Badge>
+      </div>
 
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 테니스 풋워크 밸런스, 빠름보다 '안정'이 먼저다
@@ -73,8 +73,8 @@ export default function BlogPage() {
                 </Badge>
                 <Badge className="bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300">
                   멘탈 마스터
-                </Badge>
-              </div>
+                  </Badge>
+                  </div>
 
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 테니스 멘탈 루틴, 승부를 결정짓는 건 결국 마음이다
@@ -108,22 +108,22 @@ export default function BlogPage() {
                 <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300">
                   포핸드 마스터
                 </Badge>
-              </div>
-
+                </div>
+                
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 포핸드 임팩트, 0.1초가 승부를 가른다
-              </h3>
-
+                </h3>
+                
               <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 포핸드는 테니스의 심장이다. 스윙 속도보다 중요한 건 임팩트 타이밍과 몸의 회전 리듬. 이 0.1초의 차이가 경기 전체를 바꾼다.
-              </p>
-
-              <div className="flex items-center justify-between">
+                </p>
+                
+                <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                   <span>2025-11-01</span>
                   <span>•</span>
                   <span>8분</span>
-                </div>
+                  </div>
                 <Link href="/blog/tennis-forehand-impact-timing-guide">
                   <Button className="bg-blue-500 hover:bg-blue-600">
                     자세히 보기
@@ -142,7 +142,7 @@ export default function BlogPage() {
                 <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
                   서브 마스터
                 </Badge>
-              </div>
+                  </div>
 
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 테니스 서브 완전 정복, 힘이 아닌 타이밍으로 승부하라
@@ -175,7 +175,7 @@ export default function BlogPage() {
                 </Badge>
                 <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">
                   겨울 시즌
-                </Badge>
+                    </Badge>
               </div>
 
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -197,9 +197,9 @@ export default function BlogPage() {
                     자세히 보기
                   </Button>
                 </Link>
-              </div>
-            </CardContent>
-          </Card>
+                </div>
+              </CardContent>
+            </Card>
 
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
@@ -210,7 +210,7 @@ export default function BlogPage() {
                 <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
                   부상 예방
                 </Badge>
-              </div>
+      </div>
 
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 부상 예방은 워밍업이 끝이 아니다
@@ -229,7 +229,7 @@ export default function BlogPage() {
                 <Link href="/blog/tennis-injury-prevention-full-guide">
                   <Button className="bg-blue-500 hover:bg-blue-600">
                     자세히 보기
-                  </Button>
+          </Button>
                 </Link>
               </div>
             </CardContent>

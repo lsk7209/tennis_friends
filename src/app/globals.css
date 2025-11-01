@@ -22,15 +22,14 @@
   --code-bg: #0b1020;    /* 딥 네이비 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b0f19;
-    --fg: #e5e7eb;       /* slate-200 */
-    --muted: #94a3b8;    /* slate-400 */
-    --border: #1f2937;   /* gray-800 */
-    --accent: #38bdf8;   /* sky-400 */
-    --code-bg: #0b1020;
-  }
+/* 다크모드는 JavaScript에서 .dark 클래스로 제어 */
+.dark {
+  --bg: #0b0f19;
+  --fg: #e5e7eb;       /* slate-200 */
+  --muted: #94a3b8;    /* slate-400 */
+  --border: #1f2937;   /* gray-800 */
+  --accent: #38bdf8;   /* sky-400 */
+  --code-bg: #0b1020;
 }
 
 html { 
