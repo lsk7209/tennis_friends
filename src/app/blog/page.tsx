@@ -31,11 +31,46 @@ export default function BlogPage() {
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Newest Post: 서브 리듬의 과학 */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
+                  서브 마스터
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                서브는 힘이 아니라 리듬의 예술이다. 토스의 높이, 체중이동, 회전축이 일치하면 첫 서브 성공률이 두 배로 오른다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-10-02</span>
+                  <span>•</span>
+                  <span>11분</span>
+                </div>
+                <Link href="/blog/tennis-serve-rhythm-science">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300">
                   풋워크 마스터
