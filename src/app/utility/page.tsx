@@ -892,19 +892,64 @@ export default function UtilityPage() {
     href: generateUtilityHref(utility.id)
   }));
 
-  // 카테고리를 자동으로 계산
-  const allCategories = [...new Set(utilities.map(u => u.category))];
+  // 주요 카테고리 5개로 제한
   const categories = [
     { name: '전체', count: utilities.length },
-    ...allCategories.map(categoryName => ({
-      name: categoryName,
-      count: utilities.filter(u => u.category === categoryName).length
-    }))
+    {
+      name: '실력 평가',
+      count: utilities.filter(u =>
+        ['실력 측정', '성향 분석', '기술 분석', '기술 향상', '멘탈 강화'].includes(u.category)
+      ).length
+    },
+    {
+      name: '장비 추천',
+      count: utilities.filter(u =>
+        ['장비 추천', '장비 설정', '장비 최적화', '장비 분석', '쇼핑 도우미'].includes(u.category)
+      ).length
+    },
+    {
+      name: '훈련 계획',
+      count: utilities.filter(u =>
+        ['훈련 계획', '체력 관리', '목표 관리', '훈련 최적화'].includes(u.category)
+      ).length
+    },
+    {
+      name: '건강 관리',
+      count: utilities.filter(u =>
+        ['건강 관리', '건강 모니터링', '영양 관리', '멘탈 관리'].includes(u.category)
+      ).length
+    },
+    {
+      name: '경기 분석',
+      count: utilities.filter(u =>
+        ['경기 분석', '전술 분석', '데이터 분석', '코칭 서비스'].includes(u.category)
+      ).length
+    }
   ];
 
   const filteredUtilities = selectedCategory === '전체'
     ? utilities
-    : utilities.filter(u => u.category === selectedCategory);
+    : selectedCategory === '실력 평가'
+    ? utilities.filter(u =>
+        ['실력 측정', '성향 분석', '기술 분석', '기술 향상', '멘탈 강화'].includes(u.category)
+      )
+    : selectedCategory === '장비 추천'
+    ? utilities.filter(u =>
+        ['장비 추천', '장비 설정', '장비 최적화', '장비 분석', '쇼핑 도우미'].includes(u.category)
+      )
+    : selectedCategory === '훈련 계획'
+    ? utilities.filter(u =>
+        ['훈련 계획', '체력 관리', '목표 관리', '훈련 최적화'].includes(u.category)
+      )
+    : selectedCategory === '건강 관리'
+    ? utilities.filter(u =>
+        ['건강 관리', '건강 모니터링', '영양 관리', '멘탈 관리'].includes(u.category)
+      )
+    : selectedCategory === '경기 분석'
+    ? utilities.filter(u =>
+        ['경기 분석', '전술 분석', '데이터 분석', '코칭 서비스'].includes(u.category)
+      )
+    : utilities;
 
   // 페이지네이션 계산
   const totalPages = Math.ceil(filteredUtilities.length / utilitiesPerPage);
