@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, ArrowRight, Sparkles, Zap, Brain, Shield, RotateCcw, Target, Flame } from 'lucide-react';
+import { toast } from 'sonner';
 import { playStyleQuestions, calculatePlayStyle } from '@/lib/playStyleTest';
 
 export default function PlayStyleTest() {
@@ -15,6 +16,7 @@ export default function PlayStyleTest() {
   const [answers, setAnswers] = useState<number[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isCompleting, setIsCompleting] = useState(false);
 
   const question = playStyleQuestions[currentQuestion];
   const progress = ((currentQuestion + 1) / playStyleQuestions.length) * 100;
@@ -23,23 +25,36 @@ export default function PlayStyleTest() {
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (isTransitioning) return;
-    
+
     setSelectedAnswer(answerIndex);
     setIsTransitioning(true);
 
+    // 선택된 답변 강조 표시 시간 증가
     setTimeout(() => {
       const newAnswers = [...answers, answerIndex];
       setAnswers(newAnswers);
-      
+
       if (currentQuestion < playStyleQuestions.length - 1) {
-        setCurrentQuestion(currentQuestion + 1);
-        setSelectedAnswer(null);
-        setIsTransitioning(false);
+        // 다음 질문으로 전환 전 짧은 딜레이
+        setTimeout(() => {
+          setCurrentQuestion(currentQuestion + 1);
+          setSelectedAnswer(null);
+          setIsTransitioning(false);
+
+          // 다음 질문으로 이동 피드백
+          toast.success(`질문 ${currentQuestion + 2}로 이동합니다`, {
+            duration: 2000,
+          });
+        }, 300);
       } else {
-        const result = calculatePlayStyle(newAnswers);
-        router.push(`/utility/play-style-test/result?style=${result.id}`);
+        // 테스트 완료 - 특별한 완료 애니메이션 후 결과 페이지로 이동
+        setIsCompleting(true);
+        setTimeout(() => {
+          const result = calculatePlayStyle(newAnswers);
+          router.push(`/utility/play-style-test/result?style=${result.id}`);
+        }, 1500); // 완료 애니메이션 시간 증가
       }
-    }, 500);
+    }, 700); // 답변 선택 후 700ms 대기 (NTRP보다 조금 더 길게)
   };
 
   const getQuestionEmoji = (questionId: number) => {
@@ -68,7 +83,26 @@ export default function PlayStyleTest() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 relative">
+      {/* Completion Overlay */}
+      {isCompleting && (
+        <div className="fixed inset-0 bg-gradient-to-br from-purple-500/95 via-pink-500/95 to-rose-500/95 backdrop-blur-sm z-50 flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-24 h-24 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-2xl animate-bounce">
+              <CheckCircle className="w-12 h-12 text-purple-600" />
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4 animate-pulse">
+              테스트 완료!
+            </h2>
+            <p className="text-xl text-white/90 animate-pulse">
+              플레이 스타일을 분석하고 있습니다...
+            </p>
+            <div className="mt-8 flex justify-center">
+              <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Header Section */}
       <section className="relative overflow-hidden py-8 md:py-12 bg-gradient-to-br from-purple-600 via-pink-600 to-indigo-600">
         {/* Background Decoration */}
@@ -154,32 +188,59 @@ export default function PlayStyleTest() {
               <div className="space-y-3 mb-8">
                 {question.options.map((option, index) => {
                   const isSelected = selectedAnswer === index;
+                  const isDisabled = isTransitioning && !isSelected;
+
                   return (
                     <button
                       key={index}
                       onClick={() => handleAnswerSelect(index)}
-                      disabled={isTransitioning}
+                      disabled={isDisabled}
                       className={`w-full p-5 rounded-2xl border-2 transition-all duration-300 transform text-left group focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${
-                        isSelected
+                        isSelected && isTransitioning
+                          ? `bg-gradient-to-r ${getQuestionGradient(question.id)} border-transparent text-white shadow-xl scale-[1.05] animate-pulse`
+                          : isSelected
                           ? `bg-gradient-to-r ${getQuestionGradient(question.id)} border-transparent text-white shadow-xl scale-[1.02]`
+                          : isDisabled
+                          ? 'bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed'
                           : 'bg-white border-gray-200 hover:border-purple-400 hover:bg-purple-50 hover:scale-[1.01] hover:shadow-lg text-gray-900'
-                      } ${isTransitioning && isSelected ? 'animate-pulse' : ''}`}
+                      }`}
                       aria-pressed={isSelected}
                       aria-label={`옵션 ${index + 1}: ${option.text}`}
                     >
                       <div className="flex items-center gap-4">
                         <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-base font-bold transition-all duration-300 shadow-md ${
-                          isSelected
+                          isSelected && isTransitioning
+                            ? 'bg-white/30 text-white border-2 border-white/50 animate-bounce'
+                            : isSelected
                             ? 'bg-white/20 text-white border-2 border-white/30'
+                            : isDisabled
+                            ? 'bg-gray-200 text-gray-400'
                             : 'bg-gradient-to-br from-gray-100 to-gray-200 text-gray-700 group-hover:from-purple-100 group-hover:to-pink-100'
                         }`}>
-                          {isSelected ? <CheckCircle className="h-5 w-5" /> : index + 1}
+                          {isSelected && isTransitioning ? (
+                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          ) : isSelected ? (
+                            <CheckCircle className="h-5 w-5" />
+                          ) : (
+                            index + 1
+                          )}
                         </div>
                         <span className={`text-base md:text-lg font-semibold leading-relaxed flex-1 ${
-                          isSelected ? 'text-white' : 'text-gray-900'
+                          isSelected && isTransitioning
+                            ? 'text-white animate-pulse'
+                            : isSelected
+                            ? 'text-white'
+                            : isDisabled
+                            ? 'text-gray-400'
+                            : 'text-gray-900'
                         }`}>
                           {option.text}
                         </span>
+                        {isSelected && isTransitioning && (
+                          <div className="text-white text-sm font-medium animate-pulse">
+                            선택됨
+                          </div>
+                        )}
                       </div>
                     </button>
                   );
