@@ -115,18 +115,20 @@ a:focus-visible {
   margin: 2rem 0; 
 }
 
-.prose code { 
-  background: color-mix(in oklab, var(--border) 35%, transparent); 
-  border-radius: 4px; 
-  padding: .15em .35em; 
+.prose code {
+  background: color-mix(in oklab, var(--border) 35%, transparent);
+  color: var(--fg);
+  border-radius: 4px;
+  padding: .15em .35em;
 }
 
 .prose pre {
-  background: var(--code-bg); 
+  background: var(--code-bg);
   color: #e6edf3;
-  border-radius: 8px; 
-  padding: 1rem 1.25rem; 
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
   overflow: auto;
+  border: 1px solid var(--border);
 }
 
 /* 표/리스트 */
@@ -155,8 +157,13 @@ a:focus-visible {
   background: color-mix(in oklab, var(--border) 15%, transparent);
 }
 
-.toc a { 
-  text-decoration: none; 
+.toc a {
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.toc a:hover {
+  color: var(--accent);
 }
 
 .toc ol { 
@@ -287,6 +294,21 @@ a:focus-visible {
   .prose {
     color: var(--fg);
     max-width: 72ch;
+  }
+
+  /* Code blocks - better contrast */
+  .prose pre {
+    background: #0b1020;
+    color: #e6edf3;
+    border: 1px solid #1f2937;
+  }
+
+  .prose code:not(pre code) {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--fg);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
   }
   
   .prose h1, .prose h2, .prose h3, .prose h4 {
@@ -651,6 +673,18 @@ a:focus-visible {
   .dark .prose blockquote {
     color: var(--text-muted);
     border-left-color: var(--accent-blue);
+  }
+
+  /* Dark mode code improvements */
+  .dark .prose pre {
+    background: #0b1020;
+    color: #e6edf3;
+    border: 1px solid #374151;
+  }
+
+  .dark .prose code:not(pre code) {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e6edf3;
   }
 
   /* Button improvements */

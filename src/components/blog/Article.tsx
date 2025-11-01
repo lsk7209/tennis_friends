@@ -11,7 +11,7 @@ export default function Article({ title, excerpt, children }: ArticleProps) {
     <article className="prose mx-auto px-4 sm:px-6 py-8">
       <header>
         <h1>{title}</h1>
-        {excerpt ? <p style={{ color: "var(--muted)" }}>{excerpt}</p> : null}
+        {excerpt ? <p className="text-gray-600 dark:text-gray-400">{excerpt}</p> : null}
       </header>
       {children}
     </article>
