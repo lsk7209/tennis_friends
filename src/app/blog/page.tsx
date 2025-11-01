@@ -31,12 +31,46 @@ export default function BlogPage() {
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Newest Post: 테니스 발리의 기술 */}
+          {/* Newest Post: 테니스 풋워크의 과학 */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300">
+                  풋워크 과학
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 풋워크의 과학 — 발의 리듬이 경기의 리듬을 만든다
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                풋워크는 테니스의 심장이다. 발의 리듬이 곧 경기의 리듬이며, 좋은 스윙은 좋은 발에서 시작된다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-07-03</span>
+                  <span>•</span>
+                  <span>13분</span>
+                </div>
+                <Link href="/blog/tennis-footwork-science">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">
                   발리 기술
