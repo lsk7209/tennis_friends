@@ -30,12 +30,46 @@ export default function BlogPage() {
         </div>
 
         {/* Latest Blog Posts */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300">
+                  멘탈 마스터
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 멘탈 루틴, 승부를 결정짓는 건 결국 마음이다
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                포핸드보다 어려운 게 멘탈이다. 경기 중 흔들리지 않고 집중력을 유지하는 루틴 5단계, 프로 선수들의 심리 컨트롤법을 해석한다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-11-01</span>
+                  <span>•</span>
+                  <span>8분</span>
+                </div>
+                <Link href="/blog/tennis-mental-routine-control-guide">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300">
                   포핸드 마스터
@@ -69,7 +103,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">
-                  인기 글
+                  추천 글
                 </Badge>
                 <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
                   서브 마스터
@@ -103,7 +137,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                  추천 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">
                   겨울 시즌
@@ -137,7 +171,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
-                  인기 글
+                  추천 글
                 </Badge>
                 <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
                   가을 시즌
