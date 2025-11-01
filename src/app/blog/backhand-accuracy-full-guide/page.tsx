@@ -35,7 +35,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'backhand-linear-swing', text: '백핸드의 본질은 \'선형 스윙\'이다', depth: 2 },
   { id: 'racket-face-angle-wrist', text: '라켓면의 각도와 손목 고정', depth: 2 },
   { id: 'lower-body-rhythm-balance', text: '하체 리듬과 중심 이동', depth: 2 },
-  { id: 'regional-backhand-strategy', text: '지역별 백핸드 전략 (SEO·GEO 대응)', depth: 2 },
+  { id: 'regional-backhand-strategy', text: '지역별 백핸드 전략', depth: 2 },
   { id: 'accuracy-recovery-routine', text: '20분 정확도 회복 루틴', depth: 2 },
   { id: 'common-errors-correction', text: '흔한 오류 3가지와 교정법', depth: 2 },
   { id: 'backhand-angle-art', text: '결론 — 백핸드는 각도의 언어다', depth: 2 },
@@ -173,7 +173,7 @@ export default function BackhandAccuracyFullGuidePage() {
       <section id="regional-backhand-strategy" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
-          지역별 백핸드 전략 (SEO·GEO 대응)
+          지역별 백핸드 전략
         </h2>
 
         <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
@@ -201,7 +201,7 @@ export default function BackhandAccuracyFullGuidePage() {
 
         <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500">
           <p className="text-indigo-800 dark:text-indigo-200 text-sm">
-            <strong>👉 GEO 팁:</strong> 이렇게 지역별로 코트 특성에 맞춰 각도를 미세 조정하면 SEO 최적화뿐 아니라 실제 경기력에도 큰 차이를 만듭니다.
+            <strong>💡 테니스 팁:</strong> 이렇게 지역별로 코트 특성에 맞춰 각도를 미세 조정하면 실제 경기력에 큰 차이를 만듭니다. 코트 환경을 고려한 전략적 접근이 승리의 핵심입니다.
           </p>
         </div>
       </section>

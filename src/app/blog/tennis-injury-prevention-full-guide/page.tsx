@@ -236,7 +236,7 @@ export default function TennisInjuryPreventionFullGuidePage() {
 
         <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500">
           <p className="text-indigo-800 dark:text-indigo-200 text-sm">
-            <strong>👉 GEO 팁:</strong> 이처럼 지역별 환경에 맞춰 루틴을 조정하면 '날씨 피로'까지 줄일 수 있습니다. GEO 기반 루틴은 단순한 SEO가 아니라, 실제 생리학적 적응 전략이기도 합니다.
+            <strong>💡 건강 팁:</strong> 이렇게 계절별 환경에 맞춰 루틴을 조정하면 '날씨 피로'까지 줄일 수 있습니다. 환경에 맞는 적응은 부상을 예방하는 가장 효과적인 방법입니다.
           </p>
         </div>
       </section>

@@ -34,7 +34,7 @@ export const metadata = {
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'court-surface-outsole-structure', text: '하드·클레이·올코트 — 표면별 아웃솔 구조 이해', depth: 2 },
   { id: 'foot-type-custom-selection', text: '발형(평발·요족)에 따른 맞춤 선택', depth: 2 },
-  { id: 'regional-environment-optimization', text: 'GEO 최적화 — 지역별 환경에 따른 선택', depth: 2 },
+  { id: 'regional-environment-optimization', text: '지역별 환경에 따른 선택', depth: 2 },
   { id: 'sizing-fitting-tips', text: '사이징과 착화 팁', depth: 2 },
   { id: 'replacement-cycle-maintenance', text: '교체 주기와 관리 루틴', depth: 2 },
   { id: 'conclusion-shoe-science', text: '결론 — \'신발의 과학\'이 경기력을 결정한다', depth: 2 },
@@ -170,11 +170,11 @@ export default function TennisShoesBalanceGuidePage() {
       <section id="regional-environment-optimization" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">3</span>
-          GEO 최적화 — 지역별 환경에 따른 선택
+          지역별 환경에 따른 선택
         </h2>
 
         <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          한국의 지역별 기후와 코트 조건에 따라 신발의 성능이 달라집니다. GEO 최적화된 선택이 중요합니다.
+          한국의 지역별 기후와 코트 조건에 따라 신발의 성능이 달라집니다. 지역 환경에 맞춰 신발을 선택하는 것이 중요합니다.
         </p>
 
         <div className="space-y-4 mb-6">

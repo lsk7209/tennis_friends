@@ -36,7 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'court-specific-selection', text: '2. 코트별 테니스화 선택 기준', depth: 2 },
   { id: 'cushion-stability-balance', text: '3. 쿠션과 안정성의 균형', depth: 2 },
   { id: 'foot-shape-customization', text: '4. 발 형태별 맞춤 선택법', depth: 2 },
-  { id: 'geo-court-management', text: '5. GEO별 코트 환경과 신발 관리법', depth: 2 },
+  { id: 'regional-court-management', text: '5. 지역별 코트 환경과 신발 관리법', depth: 2 },
   { id: 'replacement-cycle-routine', text: '6. 교체 주기와 관리 루틴', depth: 2 },
   { id: 'conclusion-shoes-balance-device', text: '결론 — 테니스화는 \'몸의 밸런스 장치\'다', depth: 2 },
 ];
@@ -287,10 +287,10 @@ export default function TennisShoesSelectionGuidePage() {
         </div>
       </section>
 
-      <section id="geo-court-management" className="mb-12">
+      <section id="regional-court-management" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-          GEO별 코트 환경과 신발 관리법
+          지역별 코트 환경과 신발 관리법
         </h2>
 
         <div className="space-y-4 mb-6">
@@ -314,7 +314,7 @@ export default function TennisShoesSelectionGuidePage() {
 
         <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500">
           <p className="text-indigo-800 dark:text-indigo-200 text-sm">
-            신발도 GEO에 맞게 관리하면 수명이 1.5배 늘어납니다.
+            이렇게 지역별 환경에 맞춰 신발을 관리하면 수명이 크게 늘어납니다. 특히 습도가 높은 지역에서는 통풍 관리가 중요합니다.
           </p>
         </div>
       </section>
