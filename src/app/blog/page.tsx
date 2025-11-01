@@ -30,12 +30,46 @@ export default function BlogPage() {
         </div>
 
         {/* Latest Blog Posts */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300">
+                  포핸드 마스터
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                포핸드 임팩트, 0.1초가 승부를 가른다
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                포핸드는 테니스의 심장이다. 스윙 속도보다 중요한 건 임팩트 타이밍과 몸의 회전 리듬. 이 0.1초의 차이가 경기 전체를 바꾼다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-11-01</span>
+                  <span>•</span>
+                  <span>8분</span>
+                </div>
+                <Link href="/blog/tennis-forehand-impact-timing-guide">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
                   서브 마스터
@@ -69,7 +103,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                  인기 글
+                  추천 글
                 </Badge>
                 <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">
                   겨울 시즌
@@ -103,7 +137,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
-                  추천 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
                   가을 시즌
