@@ -31,12 +31,46 @@ export default function BlogPage() {
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Newest Post: 테니스 라켓 선택 가이드 */}
+          {/* Newest Post: 테니스화 선택법 */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">
+                  신발 가이드
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스화 선택법 — 코트별 접지력·쿠션·안정성으로 완성하는 발의 밸런스
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                테니스화는 단순한 운동화가 아니다. 코트 종류, 발의 형태, 체중 이동에 따라 신발의 성능이 달라진다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-09-07</span>
+                  <span>•</span>
+                  <span>13분</span>
+                </div>
+                <Link href="/blog/tennis-shoes-selection-guide">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
                   장비 가이드
