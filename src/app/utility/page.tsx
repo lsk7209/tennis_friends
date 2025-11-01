@@ -1126,6 +1126,54 @@ export default function UtilityPage() {
                 );
               })}
             </div>
+
+            {/* Pagination */}
+            <div className="flex items-center justify-center gap-4 mt-16">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="bg-white border-white/20 hover:border-blue-400"
+              >
+                <ChevronLeft className="w-4 h-4 mr-1" />
+                이전
+              </Button>
+
+              <div className="flex gap-1">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <Button
+                    key={page}
+                    variant={page === currentPage ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => handlePageChange(page)}
+                    className={
+                      page === currentPage
+                        ? "bg-blue-600 text-white"
+                        : "bg-white border-white/20 hover:border-blue-400"
+                    }
+                  >
+                    {page}
+                  </Button>
+                ))}
+              </div>
+
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="bg-white border-white/20 hover:border-blue-400"
+              >
+                다음
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </div>
+
+            {/* Page Info */}
+            <div className="text-center mt-4 text-gray-600 text-sm">
+              {startIndex + 1}-{Math.min(endIndex, filteredUtilities.length)} / {filteredUtilities.length} 개의 도구
+            </div>
           </div>
         </section>
       )}
@@ -1251,59 +1299,6 @@ export default function UtilityPage() {
         </div>
       </section>
 
-      {/* Pagination */}
-      {totalPages > 1 && (
-        <div className="py-12 bg-white/50 backdrop-blur-sm border-t border-gray-200/50">
-          <div className="container mx-auto max-w-7xl px-4">
-            <div className="flex justify-center items-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className="bg-white border-white/20 hover:border-blue-400"
-              >
-                <ChevronLeft className="w-4 h-4 mr-1" />
-                이전
-              </Button>
-
-              <div className="flex gap-1">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={page === currentPage ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => handlePageChange(page)}
-                    className={
-                      page === currentPage
-                        ? "bg-blue-600 text-white"
-                        : "bg-white border-white/20 hover:border-blue-400"
-                    }
-                  >
-                    {page}
-                  </Button>
-                ))}
-              </div>
-
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className="bg-white border-white/20 hover:border-blue-400"
-              >
-                다음
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            </div>
-
-            {/* Page Info */}
-            <div className="text-center mt-4 text-gray-600 text-sm">
-              {startIndex + 1}-{Math.min(endIndex, filteredUtilities.length)} / {filteredUtilities.length} 개의 도구
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
