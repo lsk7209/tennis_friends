@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -23,15 +22,6 @@ import {
   Timer
 } from 'lucide-react';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '반응 속도 테스트하기 - 테니스 반응 속도 게임 | TennisFriends',
-  description: '테니스 반응 속도를 게임처럼 재미있게 테스트하세요. 순발력 향상을 위한 인터랙티브한 훈련 도구입니다.',
-  keywords: ['반응 속도 테스트', '테니스 게임', '순발력 훈련', '반응 시간 측정'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/reaction-test/test',
-  },
-};
 
 type GameState = 'waiting' | 'ready' | 'active' | 'clicked' | 'result' | 'finished';
 

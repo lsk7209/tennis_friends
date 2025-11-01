@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -22,15 +21,6 @@ import {
   RefreshCw
 } from 'lucide-react';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '유연성 테스트하기 - 테니스 유연성 측정 | TennisFriends',
-  description: '테니스에 필요한 관절 가동범위를 측정하세요. 개인 맞춤형 개선 방법을 확인하세요.',
-  keywords: ['유연성 테스트', '관절 가동범위', '테니스 유연성', '스트레칭'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/flexibility-test/test',
-  },
-};
 
 interface FlexibilityData {
   shoulderRotation: number;

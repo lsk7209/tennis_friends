@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -26,15 +25,6 @@ import {
   AlertCircle
 } from 'lucide-react';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '경기 기록하기 - 테니스 경기 기록 | TennisFriends',
-  description: '테니스 경기를 기록하세요. 상대, 점수, 코트 정보, 개선 포인트를 체계적으로 관리합니다.',
-  keywords: ['경기 기록', '테니스 기록', '경기 분석', '점수 기록'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/match-recorder/test',
-  },
-};
 
 interface MatchData {
   date: string;

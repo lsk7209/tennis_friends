@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -24,15 +23,6 @@ import {
   Sparkles
 } from 'lucide-react';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '집중력 훈련 세션 - 테니스 멘탈 트레이닝 | TennisFriends',
-  description: '테니스 경기 중 필요한 집중력을 향상시키는 인터랙티브한 훈련 세션입니다.',
-  keywords: ['집중력 훈련', '테니스 명상', '호흡법', '시각화', '멘탈 트레이닝'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/focus-training/test',
-  },
-};
 
 type TrainingType = 'breathing' | 'meditation' | 'visualization';
 type TrainingPhase = 'selection' | 'preparation' | 'active' | 'completed';

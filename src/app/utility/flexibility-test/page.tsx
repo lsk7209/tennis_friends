@@ -2,39 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Activity, Target, TrendingUp, CheckCircle, ArrowRight, Sparkles, RotateCcw, Zap, Heart, Dumbbell } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
-
-// 메타데이터
-export const metadata: Metadata = {
-  title: '유연성 테스트 - 테니스 유연성 측정 | TennisFriends',
-  description: '테니스에 필요한 관절 가동범위를 측정하고 개선 방법을 제시합니다. 부상 예방과 퍼포먼스 향상을 위한 필수 테스트입니다.',
-  keywords: ['유연성 테스트', '관절 가동범위', '테니스 유연성', '스트레칭', '부상 예방'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/flexibility-test',
-  },
-  openGraph: {
-    title: '유연성 테스트 - 테니스 유연성 측정 | TennisFriends',
-    description: '테니스에 필요한 관절 가동범위를 측정하고 개선 방법을 제시합니다.',
-    url: 'https://tennisfriends.co.kr/utility/flexibility-test',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '유연성 테스트 - 테니스 유연성 측정 | TennisFriends',
-    description: '테니스에 필요한 관절 가동범위를 측정하고 개선 방법을 제시합니다.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function FlexibilityTestIntro() {
   const features = [

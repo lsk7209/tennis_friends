@@ -2,39 +2,11 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Plus, Trophy, Target, TrendingUp, Calendar, Users, Clock, MapPin, BarChart3, ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
-
-// 메타데이터
-export const metadata: Metadata = {
-  title: '경기 기록 시스템 - 테니스 경기 기록 및 분석 | TennisFriends',
-  description: '테니스 경기 결과를 체계적으로 기록하고 분석하세요. 승패 기록, 세트별 점수, 주요 플레이를 관리하여 실력 향상을 추적합니다.',
-  keywords: ['경기 기록', '테니스 기록', '경기 분석', '승패 기록', '테니스 통계'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/match-recorder',
-  },
-  openGraph: {
-    title: '경기 기록 시스템 - 테니스 경기 기록 및 분석 | TennisFriends',
-    description: '테니스 경기 결과를 체계적으로 기록하고 분석하세요. 승패 기록, 세트별 점수, 주요 플레이를 관리하여 실력 향상을 추적합니다.',
-    url: 'https://tennisfriends.co.kr/utility/match-recorder',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '경기 기록 시스템 - 테니스 경기 기록 및 분석 | TennisFriends',
-    description: '테니스 경기 결과를 체계적으로 기록하고 분석하세요.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function MatchRecorderIntro() {
   const features = [
