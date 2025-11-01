@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import Tracking from "@/components/Tracking";
 
 export const metadata: Metadata = {
   title: "TennisFriends - 당신의 테니스 파트너",
@@ -74,6 +75,7 @@ export default function RootLayout({
           </div>
         </div>
         <Toaster />
+        <Tracking />
       </body>
     </html>
   );
