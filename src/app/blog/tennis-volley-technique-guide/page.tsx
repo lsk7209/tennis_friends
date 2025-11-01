@@ -10,12 +10,12 @@ export const metadata = {
   description: '발리는 힘이 아니라 반응의 기술이다. 네트 앞 1초 안에 리듬을 잡는 순간, 승부는 이미 결정된다.',
   keywords: ['테니스 발리', '네트 플레이', '반응 속도', '기술', '포지셔닝', '복식'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-volley-technique-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-volley-technique-guide',
   },
   openGraph: {
     title: '테니스 발리의 기술 — 네트 앞 1초 반응으로 결정되는 승부 | 감각·타이밍·밸런스로 완성하는 공격의 예술',
     description: '발리는 힘이 아니라 반응의 기술이다. 네트 앞 1초 안에 리듬을 잡는 순간, 승부는 이미 결정된다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-volley-technique-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-volley-technique-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

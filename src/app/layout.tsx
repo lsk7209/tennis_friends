@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://tennisfriends.co.kr"),
+  metadataBase: new URL("https://www.tennisfrens.com"),
   alternates: {
     canonical: "/",
   },

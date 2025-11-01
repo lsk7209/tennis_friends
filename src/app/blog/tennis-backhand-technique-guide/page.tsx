@@ -10,12 +10,12 @@ export const metadata = {
   description: '백핸드는 힘이 아니라 밸런스의 기술이다. 왼손이 리드하고 오른손이 따라올 때 정확도와 파워가 동시에 완성된다.',
   keywords: ['테니스 백핸드', '양손 백핸드', '스윙 기술', '임팩트', '타점', '기술'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-backhand-technique-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-backhand-technique-guide',
   },
   openGraph: {
     title: '테니스 백핸드의 기술 — 왼손의 리드로 완성하는 정확한 임팩트 | 흔들림 없는 스윙을 만드는 양손 백핸드의 비밀',
     description: '백핸드는 힘이 아니라 밸런스의 기술이다. 왼손이 리드하고 오른손이 따라올 때 정확도와 파워가 동시에 완성된다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-backhand-technique-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-backhand-technique-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

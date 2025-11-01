@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스 서브를 강하게 만드는 핵심은 타이밍과 리듬이다. 플랫·슬라이스·킥서브까지, 아마추어도 즉시 실력 향상 가능한 서브 완전 가이드.',
   keywords: ['테니스 서브', '서브 타이밍', '스핀 서브', '플랫 서브', '슬라이스 서브', '킥 서브', '리듬'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-serve-timing-and-spin-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-serve-timing-and-spin-guide',
   },
   openGraph: {
     title: '테니스 서브 타이밍과 스핀 컨트롤 완전 가이드 | 리듬으로 서브 완성하기',
     description: '테니스 서브를 강하게 만드는 핵심은 타이밍과 리듬이다. 플랫·슬라이스·킥서브까지, 아마추어도 즉시 실력 향상 가능한 서브 완전 가이드.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-serve-timing-and-spin-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-serve-timing-and-spin-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

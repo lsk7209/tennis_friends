@@ -10,12 +10,12 @@ export const metadata = {
   description: '백핸드 정확도를 높이려면 힘이 아니라 타점과 각도를 조정해야 한다. 원핸드·투핸드별 교정 루틴, 지역 코트별 전략, 20분 감각 회복 훈련까지.',
   keywords: ['백핸드', '테니스 백핸드', '원핸드 백핸드', '투핸드 백핸드', '타점', '라켓면 각도', '리듬', '폼 교정'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/backhand-accuracy-full-guide',
+    canonical: 'https://www.tennisfrens.com/blog/backhand-accuracy-full-guide',
   },
   openGraph: {
     title: '백핸드 정확도 향상 완전 가이드 | 원핸드·투핸드 타점·라켓면·리듬',
     description: '백핸드 정확도를 높이려면 힘이 아니라 타점과 각도를 조정해야 한다. 원핸드·투핸드별 교정 루틴, 지역 코트별 전략, 20분 감각 회복 훈련까지.',
-    url: 'https://tennisfriends.co.kr/blog/backhand-accuracy-full-guide',
+    url: 'https://www.tennisfrens.com/blog/backhand-accuracy-full-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

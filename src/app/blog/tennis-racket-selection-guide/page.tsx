@@ -10,12 +10,12 @@ export const metadata = {
   description: '라켓은 단순한 도구가 아니다. 무게와 밸런스, 스트링 텐션이 경기력을 결정한다. 올바른 선택이 실력을 바꾼다.',
   keywords: ['테니스 라켓', '라켓 선택', '스트링 텐션', '밸런스', '무게', '테니스 장비', '라켓 추천'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-racket-selection-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-racket-selection-guide',
   },
   openGraph: {
     title: '테니스 라켓 선택 완전 가이드 — 무게·밸런스·스트링 세팅으로 결정되는 퍼포먼스 차이 | 당신의 플레이 스타일에 맞는 최적의 라켓 찾기',
     description: '라켓은 단순한 도구가 아니다. 무게와 밸런스, 스트링 텐션이 경기력을 결정한다. 올바른 선택이 실력을 바꾼다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-racket-selection-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-racket-selection-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

@@ -10,12 +10,12 @@ export const metadata = {
   description: '겨울 테니스 실내 코트에서 스윙 감각과 스피드를 유지하는 7가지 루틴. 장비, 워밍업, 리듬 훈련, 컨디션 관리까지 완벽 가이드.',
   keywords: ['겨울 테니스', '실내 코트', '테니스 루틴', '스피드 유지', '감각 훈련', '겨울 훈련'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/winter-indoor-tennis-training-routine',
+    canonical: 'https://www.tennisfrens.com/blog/winter-indoor-tennis-training-routine',
   },
   openGraph: {
     title: '겨울 테니스 실내 훈련 루틴 | 스피드·감각 유지법 완전정리',
     description: '겨울 테니스 실내 코트에서 스윙 감각과 스피드를 유지하는 7가지 루틴. 장비, 워밍업, 리듬 훈련, 컨디션 관리까지 완벽 가이드.',
-    url: 'https://tennisfriends.co.kr/blog/winter-indoor-tennis-training-routine',
+    url: 'https://www.tennisfrens.com/blog/winter-indoor-tennis-training-routine',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

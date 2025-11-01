@@ -10,12 +10,12 @@ export const metadata = {
   description: '초보자도 30일이면 실전 감각을 만들 수 있다. 일일 루틴과 훈련 플랜으로 \'처음\'을 \'자신감\'으로 바꾼다.',
   keywords: ['테니스 초보자', '30일 훈련', '테니스 루틴', '기초 기술', '실전 감각', '성장 플랜'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-beginner-30day-growth-plan',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-beginner-30day-growth-plan',
   },
   openGraph: {
     title: '테니스 초보자의 30일 성장 루틴 — 실전 감각을 만드는 훈련 플랜 | 기초부터 경기 감각까지 완성하는 한 달 프로그램',
     description: '초보자도 30일이면 실전 감각을 만들 수 있다. 일일 루틴과 훈련 플랜으로 \'처음\'을 \'자신감\'으로 바꾼다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-beginner-30day-growth-plan',
+    url: 'https://www.tennisfrens.com/blog/tennis-beginner-30day-growth-plan',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

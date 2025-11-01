@@ -96,7 +96,7 @@ export default function BlogPage() {
       badge: '추천 글',
       category: '회복 전략',
       date: '2025-09-14',
-      readTime: '12분',
+    readTime: '12분',
       badgeColor: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
       categoryColor: 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300',
     },
@@ -112,7 +112,7 @@ export default function BlogPage() {
   const startIndex = (currentPage - 1) * postsPerPage;
   const endIndex = startIndex + postsPerPage;
   const currentPosts = sortedBlogPosts.slice(startIndex, endIndex);
-
+  
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -121,8 +121,8 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950 dark:via-indigo-950 dark:to-purple-950">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
+      {/* Header */}
+      <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium mb-6">
             <FileText className="w-4 h-4" />
             테니스 블로그
@@ -136,8 +136,8 @@ export default function BlogPage() {
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             테니스 실력 향상을 위한 전문적인 가이드와 최신 정보를 제공합니다.
             초보자부터 프로 선수까지 모두가 즐길 수 있는 콘텐츠를 준비하고 있습니다.
-          </p>
-        </div>
+        </p>
+      </div>
 
         {/* Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -147,20 +147,20 @@ export default function BlogPage() {
                 <div className="flex items-center gap-2 mb-4">
                   <Badge className={post.badgeColor}>
                     {post.badge}
-                  </Badge>
+          </Badge>
                   <Badge className={post.categoryColor}>
                     {post.category}
                   </Badge>
                 </div>
-
+                
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   {post.title}
                 </h3>
-
+                
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                   {post.excerpt}
                 </p>
-
+                
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                     <span>{post.date}</span>
@@ -169,28 +169,28 @@ export default function BlogPage() {
                   </div>
                   <Link href={`/blog/${post.id}`}>
                     <Button className="bg-blue-500 hover:bg-blue-600">
-                      자세히 보기
+                    자세히 보기
                     </Button>
                   </Link>
                 </div>
               </CardContent>
             </Card>
-          ))}
-        </div>
+        ))}
+      </div>
 
-        {/* Pagination */}
-        {totalPages > 1 && (
+      {/* Pagination */}
+      {totalPages > 1 && (
           <div className="flex items-center justify-center gap-2 mb-16">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-            >
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
               <ChevronLeft className="w-4 h-4" />
-              이전
-            </Button>
-
+            이전
+          </Button>
+          
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <Button
                 key={page}
@@ -202,18 +202,18 @@ export default function BlogPage() {
                 {page}
               </Button>
             ))}
-
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-            >
-              다음
+          
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            다음
               <ChevronRight className="w-4 h-4" />
-            </Button>
-          </div>
-        )}
+          </Button>
+        </div>
+      )}
 
         {/* Coming Soon Section */}
         <div className="mt-16 text-center">
@@ -233,7 +233,7 @@ export default function BlogPage() {
                 <CardContent className="p-6">
                   <h3 className="font-medium text-gray-900 dark:text-white mb-2">
                     {topic}
-                  </h3>
+          </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     곧 업데이트 예정입니다
                   </p>

@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://tennisfriends.co.kr/sitemap.xml',
+    sitemap: 'https://www.tennisfrens.com/sitemap.xml',
   }
 }

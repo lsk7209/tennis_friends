@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스는 체력보다 \'에너지 분배\'의 싸움이다. 집중력과 리듬을 끝까지 유지하는 루틴이 승부를 결정한다.',
   keywords: ['테니스 컨디션', '체력 유지', '집중력', '경기 루틴', '에너지 관리', '수분 보충'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-inmatch-condition-management',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-inmatch-condition-management',
   },
   openGraph: {
     title: '테니스 경기 중 컨디션 유지법 — 체력과 집중력을 끝까지 지키는 루틴 | 후반에도 무너지지 않는 경기력의 비밀',
     description: '테니스는 체력보다 \'에너지 분배\'의 싸움이다. 집중력과 리듬을 끝까지 유지하는 루틴이 승부를 결정한다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-inmatch-condition-management',
+    url: 'https://www.tennisfrens.com/blog/tennis-inmatch-condition-management',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

@@ -10,12 +10,12 @@ export const metadata = {
   description: '풋워크는 테니스의 심장이다. 발의 리듬이 곧 경기의 리듬이며, 좋은 스윙은 좋은 발에서 시작된다.',
   keywords: ['테니스 풋워크', '발 리듬', '체중 이동', '스텝', '반응 속도', '균형'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-footwork-science',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-footwork-science',
   },
   openGraph: {
     title: '테니스 풋워크의 과학 — 발의 리듬이 경기의 리듬을 만든다 | 공보다 빠르게 움직이는 발의 기술',
     description: '풋워크는 테니스의 심장이다. 발의 리듬이 곧 경기의 리듬이며, 좋은 스윙은 좋은 발에서 시작된다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-footwork-science',
+    url: 'https://www.tennisfrens.com/blog/tennis-footwork-science',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

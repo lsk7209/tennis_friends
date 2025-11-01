@@ -10,12 +10,12 @@ export const metadata = {
   description: '어깨·팔꿈치·무릎 보호를 위한 워밍업·가동성·쿨다운 3단계 루틴과 지역별 기후 대응, 부상 징후별 대처법까지.',
   keywords: ['테니스 부상 예방', '워밍업', '가동성', '쿨다운', '스트레칭', '팔꿈치 통증', '어깨 통증', '무릎 통증'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-injury-prevention-full-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-injury-prevention-full-guide',
   },
   openGraph: {
     title: '테니스 부상 예방 루틴 | 10분 워밍업·가동성·쿨다운 완전 정리',
     description: '어깨·팔꿈치·무릎 보호를 위한 워밍업·가동성·쿨다운 3단계 루틴과 지역별 기후 대응, 부상 징후별 대처법까지.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-injury-prevention-full-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-injury-prevention-full-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

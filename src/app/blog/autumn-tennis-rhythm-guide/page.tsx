@@ -10,12 +10,12 @@ export const metadata = {
   description: '가을 테니스 시즌에 흔들리는 리듬과 스윙 타이밍을 잡는 법. 지역별 코트 전략, 풋워크 훈련 루틴, 스트링 세팅 팁까지 한눈에 정리.',
   keywords: ['가을 테니스', '테니스 리듬', '풋워크', '스윙 타이밍', '코트 전략', '스트링 세팅'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/autumn-tennis-rhythm-guide',
+    canonical: 'https://www.tennisfrens.com/blog/autumn-tennis-rhythm-guide',
   },
   openGraph: {
     title: '가을 테니스 리듬 되찾기 | 스윙·풋워크·지역별 전략 완벽 가이드',
     description: '가을 테니스 시즌에 흔들리는 리듬과 스윙 타이밍을 잡는 법. 지역별 코트 전략, 풋워크 훈련 루틴, 스트링 세팅 팁까지 한눈에 정리.',
-    url: 'https://tennisfriends.co.kr/blog/autumn-tennis-rhythm-guide',
+    url: 'https://www.tennisfrens.com/blog/autumn-tennis-rhythm-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스의 승패는 멘탈이 결정한다. 실수 후 3초, 그 짧은 루틴이 경기 전체의 흐름을 바꾼다.',
   keywords: ['테니스 멘탈', '멘탈 붕괴 방지', '실수 회복', '집중력 유지', '호흡 루틴', '심리전'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-mental-focus-recovery',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-mental-focus-recovery',
   },
   openGraph: {
     title: '테니스 경기 중 멘탈 붕괴 방지법 — 실수 후 3초 회복 루틴의 힘 | 흔들리지 않는 플레이어의 비밀',
     description: '테니스의 승패는 멘탈이 결정한다. 실수 후 3초, 그 짧은 루틴이 경기 전체의 흐름을 바꾼다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-mental-focus-recovery',
+    url: 'https://www.tennisfrens.com/blog/tennis-mental-focus-recovery',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

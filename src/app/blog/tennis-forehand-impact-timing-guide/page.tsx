@@ -10,12 +10,12 @@ export const metadata = {
   description: '포핸드 임팩트 타이밍, 라켓 각도, 하체 리듬 조정까지 완전 정리. 코트별 포핸드 전략과 실전 훈련 루틴까지 한눈에.',
   keywords: ['테니스 포핸드', '임팩트 타이밍', '포핸드 타점', '스윙 리듬', '하체 회전', '포핸드 훈련'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-forehand-impact-timing-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-forehand-impact-timing-guide',
   },
   openGraph: {
     title: '테니스 포핸드 임팩트 완전 정복 | 타점·스윙 리듬·회전 타이밍 가이드',
     description: '포핸드 임팩트 타이밍, 라켓 각도, 하체 리듬 조정까지 완전 정리. 코트별 포핸드 전략과 실전 훈련 루틴까지 한눈에.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-forehand-impact-timing-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-forehand-impact-timing-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

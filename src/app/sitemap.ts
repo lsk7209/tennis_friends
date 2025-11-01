@@ -42,7 +42,7 @@ const blogPosts = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tennisfriends.co.kr'
+  const baseUrl = 'https://www.tennisfrens.com'
 
   // 기본 페이지들
   const staticPages: MetadataRoute.Sitemap = [

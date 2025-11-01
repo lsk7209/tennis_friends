@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스화는 단순한 운동화가 아니다. 코트 종류, 발의 형태, 체중 이동에 따라 신발의 성능이 달라진다.',
   keywords: ['테니스화', '테니스 신발', '코트별 신발', '접지력', '쿠션', '안정성', '부상 예방'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-shoes-selection-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-shoes-selection-guide',
   },
   openGraph: {
     title: '테니스화 선택법 — 코트별 접지력·쿠션·안정성으로 완성하는 발의 밸런스 | 경기력과 부상을 동시에 잡는 신발의 과학',
     description: '테니스화는 단순한 운동화가 아니다. 코트 종류, 발의 형태, 체중 이동에 따라 신발의 성능이 달라진다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-shoes-selection-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-shoes-selection-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

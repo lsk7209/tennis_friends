@@ -10,12 +10,12 @@ export const metadata = {
   description: '루틴은 단순한 습관이 아니다. 매일의 일관된 반복이 집중력, 안정감, 승부 감각을 만든다.',
   keywords: ['테니스 루틴', '습관', '집중력', '멘탈', '일관성', '자동화'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-power-of-routine',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-power-of-routine',
   },
   openGraph: {
     title: '테니스에서 루틴의 힘 — 일관된 습관이 경기력을 만든다 | 반복이 만들어내는 집중과 자신감의 과학',
     description: '루틴은 단순한 습관이 아니다. 매일의 일관된 반복이 집중력, 안정감, 승부 감각을 만든다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-power-of-routine',
+    url: 'https://www.tennisfrens.com/blog/tennis-power-of-routine',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

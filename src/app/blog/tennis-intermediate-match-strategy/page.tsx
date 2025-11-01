@@ -10,12 +10,12 @@ export const metadata = {
   description: '중급자에게 필요한 건 기술이 아니라 \'흐름의 감각\'이다. 포인트 설계와 리듬 조절이 승부를 만든다.',
   keywords: ['테니스 전략', '중급자', '포인트 설계', '리듬 조절', '경기 운영', '승부 전략'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-intermediate-match-strategy',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-intermediate-match-strategy',
   },
   openGraph: {
     title: '테니스 중급자의 경기 운영법 — 포인트 설계와 리듬 조절의 기술 | 이기는 경기의 흐름을 만드는 전략적 사고',
     description: '중급자에게 필요한 건 기술이 아니라 \'흐름의 감각\'이다. 포인트 설계와 리듬 조절이 승부를 만든다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-intermediate-match-strategy',
+    url: 'https://www.tennisfrens.com/blog/tennis-intermediate-match-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

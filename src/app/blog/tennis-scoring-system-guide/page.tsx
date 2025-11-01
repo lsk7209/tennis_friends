@@ -10,12 +10,12 @@ export const metadata = {
   description: '15-30-40-게임, 단순해 보이지만 복잡한 규칙 속에는 전략의 심리가 숨어 있다. 점수를 이해하면 경기 흐름이 보인다.',
   keywords: ['테니스 점수', '게임 규칙', '세트', '타이브레이크', '듀스', '어드밴티지', '브레이크', '테니스 초보', '점수 체계'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-scoring-system-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-scoring-system-guide',
   },
   openGraph: {
     title: '테니스 경기 점수 체계 완전 이해 — 게임·세트·타이브레이크까지 한 번에 정리 | 초보도 3분이면 이해하는 점수의 구조',
     description: '15-30-40-게임, 단순해 보이지만 복잡한 규칙 속에는 전략의 심리가 숨어 있다. 점수를 이해하면 경기 흐름이 보인다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-scoring-system-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-scoring-system-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

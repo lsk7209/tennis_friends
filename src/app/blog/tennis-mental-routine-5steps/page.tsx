@@ -10,12 +10,12 @@ export const metadata = {
   description: '포인트 사이 20초를 지배하라. 루틴·시선·호흡·이미지 트레이닝으로 흔들리지 않는 멘탈을 만드는 5단계 심리 전략.',
   keywords: ['테니스 멘탈', '집중력', '루틴', '심리훈련', '시합 전략', '긴장 관리', '실수 극복', '흐름 유지'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-mental-routine-5steps',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-mental-routine-5steps',
   },
   openGraph: {
     title: '멘탈 루틴 5단계 — 시합 중 흔들리지 않는 집중력의 기술 | 긴장·실수·흐름을 제어하는 심리 루틴 완전 가이드',
     description: '포인트 사이 20초를 지배하라. 루틴·시선·호흡·이미지 트레이닝으로 흔들리지 않는 멘탈을 만드는 5단계 심리 전략.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-mental-routine-5steps',
+    url: 'https://www.tennisfrens.com/blog/tennis-mental-routine-5steps',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

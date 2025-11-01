@@ -64,7 +64,7 @@ const blogPosts = [
 ];
 
 export async function GET(request: NextRequest) {
-  const baseUrl = 'https://tennisfriends.co.kr';
+  const baseUrl = 'https://www.tennisfrens.com';
 
   const rssItems = blogPosts.map((post) => {
     const postUrl = `${baseUrl}/blog/${post.slug}`;

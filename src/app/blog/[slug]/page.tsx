@@ -52,12 +52,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       telephone: false,
     },
     alternates: {
-      canonical: `https://tennisfriends.co.kr/blog/${slug}`,
+      canonical: `https://www.tennisfrens.com/blog/${slug}`,
     },
     openGraph: {
       title: `${post.title} | TennisFriends`,
       description: post.description,
-      url: `https://tennisfriends.co.kr/blog/${slug}`,
+      url: `https://www.tennisfrens.com/blog/${slug}`,
       siteName: 'TennisFriends',
       locale: 'ko_KR',
       type: 'article',

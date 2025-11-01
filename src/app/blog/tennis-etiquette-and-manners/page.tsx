@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스의 품격은 스윙보다 태도에서 드러난다. 매너 있는 플레이가 실력을 완성한다.',
   keywords: ['테니스 예절', '테니스 매너', '스포츠맨십', '코트 예절', '테니스 태도', '클럽 문화'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-etiquette-and-manners',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-etiquette-and-manners',
   },
   openGraph: {
     title: '테니스 코트 예절과 매너 — 진짜 실력자는 태도에서 드러난다 | 경기력보다 중요한 스포츠맨십의 기술',
     description: '테니스의 품격은 스윙보다 태도에서 드러난다. 매너 있는 플레이가 실력을 완성한다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-etiquette-and-manners',
+    url: 'https://www.tennisfrens.com/blog/tennis-etiquette-and-manners',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

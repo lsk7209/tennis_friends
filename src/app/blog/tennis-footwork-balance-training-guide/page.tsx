@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스 풋워크 밸런스 향상 루틴. 하체 중심 이동과 리듬 훈련, 코트별 발 스텝 전략까지 완벽 가이드.',
   keywords: ['테니스 풋워크', '밸런스 훈련', '하체 리듬', '균형 이동', '스텝 훈련', '코트별 전략'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-footwork-balance-training-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-footwork-balance-training-guide',
   },
   openGraph: {
     title: '테니스 풋워크 밸런스 훈련 | 하체 중심 리듬·균형 이동 완전정복',
     description: '테니스 풋워크 밸런스 향상 루틴. 하체 중심 이동과 리듬 훈련, 코트별 발 스텝 전략까지 완벽 가이드.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-footwork-balance-training-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-footwork-balance-training-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

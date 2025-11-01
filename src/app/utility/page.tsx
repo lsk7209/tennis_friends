@@ -927,8 +927,8 @@ export default function UtilityPage() {
     }
   ];
 
-  const filteredUtilities = selectedCategory === '전체'
-    ? utilities
+  const filteredUtilities = selectedCategory === '전체' 
+    ? utilities 
     : selectedCategory === '실력 평가'
     ? utilities.filter(u =>
         ['실력 측정', '성향 분석', '기술 분석', '기술 향상', '멘탈 강화'].includes(u.category)

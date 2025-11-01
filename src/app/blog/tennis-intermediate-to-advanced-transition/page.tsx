@@ -10,12 +10,12 @@ export const metadata = {
   description: '중급자는 기술로는 충분하지만, 운영력에서 한계를 느낀다. \'스윙의 일관성\'과 \'포인트 설계\'가 상급자의 문을 연다.',
   keywords: ['테니스 중급자', '상급자', '스윙 일관성', '경기 운영력', '포인트 설계', '멘탈 루틴', '전략', '성장'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-intermediate-to-advanced-transition',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-intermediate-to-advanced-transition',
   },
   openGraph: {
     title: '중급자에서 상급자로 가는 전환 포인트 — 스윙 일관성과 경기 운영력의 분기점 | 안정에서 전략으로 진화하는 5가지 변화',
     description: '중급자는 기술로는 충분하지만, 운영력에서 한계를 느낀다. \'스윙의 일관성\'과 \'포인트 설계\'가 상급자의 문을 연다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-intermediate-to-advanced-transition',
+    url: 'https://www.tennisfrens.com/blog/tennis-intermediate-to-advanced-transition',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

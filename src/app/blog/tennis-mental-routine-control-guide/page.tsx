@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스 경기 중 흔들리지 않는 멘탈 루틴. 호흡, 시선, 루틴, 리듬을 통해 자신감과 집중력을 높이는 심리 관리법.',
   keywords: ['테니스 멘탈', '집중력 훈련', '심리 관리', '루틴', '긴장감 제어', '자신감'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-mental-routine-control-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-mental-routine-control-guide',
   },
   openGraph: {
     title: '테니스 멘탈 루틴 5단계 | 집중력 유지·긴장감 제어법 완전 가이드',
     description: '테니스 경기 중 흔들리지 않는 멘탈 루틴. 호흡, 시선, 루틴, 리듬을 통해 자신감과 집중력을 높이는 심리 관리법.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-mental-routine-control-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-mental-routine-control-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스는 하루에 배우지 못한다. 하지만 올바른 30일 루틴이면 \'폼·타점·감각\'이 완성된다. 초보를 위한 실전형 훈련 로드맵.',
   keywords: ['테니스 초보자', '훈련 플랜', '입문자', '30일 루틴', '폼 교정', '기초 훈련', '테니스 입문', '초보자 가이드'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-beginner-30day-training-plan',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-beginner-30day-training-plan',
   },
   openGraph: {
     title: '테니스 초보자의 첫 30일 훈련 플랜 — 입문부터 경기 감각까지 4주 완성 로드맵 | 기초·폼·리듬·실전까지 단계별 가이드',
     description: '테니스는 하루에 배우지 못한다. 하지만 올바른 30일 루틴이면 \'폼·타점·감각\'이 완성된다. 초보를 위한 실전형 훈련 로드맵.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-beginner-30day-training-plan',
+    url: 'https://www.tennisfrens.com/blog/tennis-beginner-30day-training-plan',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

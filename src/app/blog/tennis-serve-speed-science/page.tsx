@@ -10,12 +10,12 @@ export const metadata = {
   description: '서브는 힘이 아니라 타이밍이다. 근육의 순서, 무게 이동, 호흡의 리듬이 속도를 결정한다.',
   keywords: ['테니스 서브', '서브 속도', '타이밍', '리듬', '토스', '기술'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-serve-speed-science',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-serve-speed-science',
   },
   openGraph: {
     title: '테니스 서브 속도의 과학 — 파워보다 타이밍이 만든다 | 빠른 서브의 비밀은 근력이 아니라 리듬이다',
     description: '서브는 힘이 아니라 타이밍이다. 근육의 순서, 무게 이동, 호흡의 리듬이 속도를 결정한다.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-serve-speed-science',
+    url: 'https://www.tennisfrens.com/blog/tennis-serve-speed-science',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
