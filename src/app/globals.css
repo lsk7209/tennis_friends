@@ -687,6 +687,39 @@ a:focus-visible {
     color: #e6edf3;
   }
 
+  /* Blog resource links - better visibility */
+  .prose a[href*="tennis.com"],
+  .prose a[href*="usta.com"],
+  .prose a[href*="wikipedia.org"],
+  .prose a[href*="youtube.com"] {
+    color: #1d4ed8 !important; /* blue-700 */
+    font-weight: 500 !important;
+    text-decoration: none !important;
+  }
+
+  .prose a[href*="tennis.com"]:hover,
+  .prose a[href*="usta.com"]:hover,
+  .prose a[href*="wikipedia.org"]:hover,
+  .prose a[href*="youtube.com"]:hover {
+    color: #1e40af !important; /* blue-800 */
+    text-decoration: underline !important;
+  }
+
+  /* Dark mode resource links */
+  .dark .prose a[href*="tennis.com"],
+  .dark .prose a[href*="usta.com"],
+  .dark .prose a[href*="wikipedia.org"],
+  .dark .prose a[href*="youtube.com"] {
+    color: #60a5fa !important; /* blue-400 */
+  }
+
+  .dark .prose a[href*="tennis.com"]:hover,
+  .dark .prose a[href*="usta.com"]:hover,
+  .dark .prose a[href*="wikipedia.org"]:hover,
+  .dark .prose a[href*="youtube.com"]:hover {
+    color: #93c5fd !important; /* blue-300 */
+  }
+
   /* Button improvements */
   .dark button {
     transition: all 0.2s ease;
