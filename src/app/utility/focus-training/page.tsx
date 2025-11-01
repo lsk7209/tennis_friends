@@ -1,0 +1,322 @@
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { Metadata } from 'next';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Wind, Brain, Eye, Timer, Target, Sparkles, CheckCircle, ArrowRight, Play, Pause, RotateCcw } from 'lucide-react';
+import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+
+// 메타데이터
+export const metadata: Metadata = {
+  title: '집중력 훈련 - 테니스 멘탈 트레이닝 | TennisFriends',
+  description: '테니스 경기 중 필요한 집중력을 향상시키는 다양한 훈련 프로그램입니다. 명상, 호흡법, 시각화 기법을 활용합니다.',
+  keywords: ['집중력 훈련', '테니스 멘탈', '명상', '호흡법', '시각화', '멘탈 트레이닝'],
+  alternates: {
+    canonical: 'https://tennisfriends.co.kr/utility/focus-training',
+  },
+  openGraph: {
+    title: '집중력 훈련 - 테니스 멘탈 트레이닝 | TennisFriends',
+    description: '테니스 경기 중 필요한 집중력을 향상시키는 다양한 훈련 프로그램입니다.',
+    url: 'https://tennisfriends.co.kr/utility/focus-training',
+    siteName: 'TennisFriends',
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '집중력 훈련 - 테니스 멘탈 트레이닝 | TennisFriends',
+    description: '테니스 경기 중 필요한 집중력을 향상시키는 다양한 훈련 프로그램입니다.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export default function FocusTrainingIntro() {
+  const features = [
+    {
+      icon: Wind,
+      title: '호흡법 훈련',
+      description: '테니스 경기 중 안정적인 호흡을 유지하는 방법을 배우고 연습합니다.',
+      gradient: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Brain,
+      title: '명상 프로그램',
+      description: '마음의 평화를 찾고 경기 전후 집중력을 향상시키는 명상 기법입니다.',
+      gradient: 'from-purple-500 to-indigo-500'
+    },
+    {
+      icon: Eye,
+      title: '시각화 훈련',
+      description: '성공적인 샷과 경기를 상상하며 자신감을 높이는 시각화 기법입니다.',
+      gradient: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Timer,
+      title: '집중력 측정',
+      description: '현재 집중력 수준을 측정하고 훈련 전후 변화를 추적합니다.',
+      gradient: 'from-orange-500 to-red-500'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: CheckCircle,
+      title: '정신 집중력 향상',
+      description: '경기 중 중요한 순간에 최대의 집중력을 발휘할 수 있습니다.',
+      gradient: 'from-blue-400 to-cyan-400'
+    },
+    {
+      icon: Target,
+      title: '스트레스 관리',
+      description: '경기 압박감과 긴장감을 효과적으로 관리하고 극복합니다.',
+      gradient: 'from-green-400 to-emerald-400'
+    },
+    {
+      icon: Sparkles,
+      title: '자신감 향상',
+      description: '긍정적인 시각화로 자신감을 높이고 최상의 퍼포먼스를 발휘합니다.',
+      gradient: 'from-purple-400 to-indigo-400'
+    },
+    {
+      icon: Timer,
+      title: '시간 관리',
+      description: '짧은 시간에 효과적인 멘탈 트레이닝으로 효율성을 높입니다.',
+      gradient: 'from-orange-400 to-red-400'
+    }
+  ];
+
+  const trainingPrograms = [
+    {
+      title: '호흡 집중 훈련',
+      description: '4-4-4 호흡법으로 마음을 안정시키고 집중력을 높입니다.',
+      duration: '5분',
+      difficulty: '쉬움',
+      benefits: ['불안감 해소', '집중력 향상', '심박수 안정화']
+    },
+    {
+      title: '시각화 명상',
+      description: '완벽한 샷을 상상하며 자신감을 키우는 시각화 훈련입니다.',
+      duration: '10분',
+      difficulty: '중간',
+      benefits: ['자신감 향상', '기술 향상', '정신력 강화']
+    },
+    {
+      title: '마인드풀니스 훈련',
+      description: '현재 순간에 집중하며 불필요한 생각을 제거하는 고급 훈련입니다.',
+      duration: '15분',
+      difficulty: '어려움',
+      benefits: ['깊은 집중', '정신 안정', '성능 최적화']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 dark:from-purple-950 dark:via-indigo-950 dark:to-blue-950">
+      {/* Hero Section */}
+      <FadeIn>
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full text-sm font-medium mb-6">
+              <Brain className="w-4 h-4" />
+              집중력 훈련
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              테니스
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent"> 멘탈 트레이닝</span>
+            </h1>
+
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+              테니스 경기 중 필요한 집중력을 향상시키는 다양한 훈련 프로그램입니다.
+              명상, 호흡법, 시각화 기법으로 경기력을 극대화하세요.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/utility/focus-training/test">
+                <Button size="lg" className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-3 text-lg">
+                  <Play className="w-5 h-5 mr-2" />
+                  집중력 훈련 시작
+                </Button>
+              </Link>
+              <Link href="#features">
+                <Button variant="outline" size="lg" className="border-purple-500 text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-950 px-8 py-3 text-lg">
+                  자세히 보기
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
+      {/* Features Section */}
+      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto">
+          <SlideUp>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                훈련 방법
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                과학적이고 효과적인 집중력 향상 기법들
+              </p>
+            </div>
+          </SlideUp>
+
+          <StaggeredAnimation className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <StaggeredItem key={index}>
+                <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all group">
+                  <CardContent className="p-6">
+                    <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${feature.gradient} text-white mb-4 group-hover:scale-110 transition-transform`}>
+                      <feature.icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </StaggeredItem>
+            ))}
+          </StaggeredAnimation>
+        </div>
+      </section>
+
+      {/* Training Programs Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <SlideUp>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                훈련 프로그램
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                난이도별로 구성된 체계적인 집중력 향상 프로그램
+              </p>
+            </div>
+          </SlideUp>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {trainingPrograms.map((program, index) => (
+              <Card key={index} className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">
+                      {index + 1}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
+                        {program.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                        {program.description}
+                      </p>
+                      <div className="flex items-center gap-3 mb-3">
+                        <Badge className={
+                          program.difficulty === '쉬움' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' :
+                          program.difficulty === '중간' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300' :
+                          'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
+                        }>
+                          {program.difficulty}
+                        </Badge>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                          {program.duration}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-2 text-sm">
+                      기대 효과:
+                    </h4>
+                    <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                      {program.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center gap-1">
+                          <CheckCircle className="w-3 h-3 text-green-500" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto">
+          <SlideUp>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                훈련 효과
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                집중력 훈련이 테니스 실력에 미치는 긍정적인 영향들
+              </p>
+            </div>
+          </SlideUp>
+
+          <StaggeredAnimation className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <StaggeredItem key={index}>
+                <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+                  <CardContent className="p-6">
+                    <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${benefit.gradient} text-white mb-4`}>
+                      <benefit.icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                      {benefit.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </StaggeredItem>
+            ))}
+          </StaggeredAnimation>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <Card className="bg-gradient-to-r from-purple-500 to-indigo-500 border-0 text-white">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-4">
+                지금 바로 시작하세요
+              </h3>
+              <p className="text-purple-100 mb-6 text-lg">
+                멘탈 트레이닝으로 테니스 실력을 한 단계 업그레이드하세요
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/utility/focus-training/test">
+                  <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-50 px-8 py-3">
+                    <Brain className="w-5 h-5 mr-2" />
+                    집중력 훈련하기
+                  </Button>
+                </Link>
+                <Link href="/utility">
+                  <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
+                    다른 도구 둘러보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    </div>
+  );
+}
