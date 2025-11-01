@@ -1,6 +1,9 @@
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 export default function TennisBeginnerGuidePage() {
   const title = "테니스 초보자 완벽 가이드: 30일 만에 즐기는 테니스";
@@ -159,6 +162,60 @@ export default function TennisBeginnerGuidePage() {
       </div>
 
       <FAQ items={faqs} />
+
+      {/* 관련 글 섹션 */}
+      <section className="mt-16">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">관련 글 더보기</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Link href="/blog/tennis-equipment-guide">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
+                  장비 가이드
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  테니스 초보자를 위한 장비 선택 가이드
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  라켓, 스트링, 신발 등 테니스 장비의 모든 것. 초보자가 알아야 할 필수 지식과 추천 제품.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/blog/tennis-footwork-basics">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 mb-2">
+                  테니스 레슨
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  테니스 풋워크 기초: 코트 지배의 핵심 이동 기술
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  테니스에서 50%의 승패를 좌우하는 풋워크 기술. 스플릿 스텝, 크로스오버, 사이드 셔플의 올바른 방법과 연습법을 배우고 코트 전체를 자유자재로 누비세요.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/blog/tennis-forehand-master-guide">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300 mb-2">
+                  테니스 레슨
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  테니스 포핸드 마스터 가이드: 포핸드 기술 완벽 정복
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  테니스 타격의 70%를 차지하는 포핸드. 기본자세부터 고급기술까지 단계별로 배우고 안정적이고 강력한 포핸드를 만들어 보세요.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+        </div>
+      </section>
     </Article>
   );
 }

@@ -1,6 +1,9 @@
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 export default function TennisFootworkBasicsPage() {
   const title = "테니스 풋워크 기초: 코트 지배의 핵심 이동 기술";
@@ -139,6 +142,60 @@ export default function TennisFootworkBasicsPage() {
       </div>
 
       <FAQ items={faqs} />
+
+      {/* 관련 글 섹션 */}
+      <section className="mt-16">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">관련 글 더보기</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Link href="/blog/tennis-forehand-master-guide">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
+                  테니스 레슨
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  포핸드 마스터 가이드: 완벽한 스트로크 만들기
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  포핸드 스트로크의 모든 것을 다루는 완벽 가이드. 기본부터 고급 기술까지 단계별로 배우세요.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/blog/tennis-fitness-conditioning">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 mb-2">
+                  건강 & 피트니스
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  테니스 피트니스: 체력과 테크닉의 균형
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  테니스에 최적화된 피트니스 훈련법. 체력 향상과 부상 예방을 동시에 이루세요.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/blog/tennis-beginner-guide">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300 mb-2">
+                  초보자 가이드
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  테니스 초보자 완벽 가이드
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  테니스를 처음 시작하는 분들을 위한 모든 것. 기초부터 실전까지 단계별 학습.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+        </div>
+      </section>
     </Article>
   );
 }

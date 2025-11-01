@@ -1,6 +1,9 @@
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 export default function TennisEquipmentGuidePage() {
   const title = "테니스 장비 가이드: 올바른 장비 선택의 모든 것";
@@ -132,6 +135,60 @@ export default function TennisEquipmentGuidePage() {
       </div>
 
       <FAQ items={faqs} />
+
+      {/* 관련 글 섹션 */}
+      <section className="mt-16">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">관련 글 더보기</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Link href="/blog/tennis-string-guide">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
+                  장비 가이드
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  라켓 스트링 종류별 특징과 선택 가이드
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  테니스 스트링의 종류와 특징을 분석하고 자신의 플레이 스타일에 맞는 스트링 선택 가이드를 제공합니다.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/blog/tennis-shoes-selection-guide">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 mb-2">
+                  장비 가이드
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  테니스 신발 선택 완벽 가이드
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  코트 타입별, 발 모양별, 예산별로 추천하는 테니스 신발 선택 가이드와 관리법.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/blog/tennis-apparel-guide">
+            <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all group cursor-pointer">
+              <CardContent className="p-4">
+                <Badge className="bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300 mb-2">
+                  장비 가이드
+                </Badge>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+                  테니스 의류 가이드: 운동복부터 액세서리까지
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  테니스 플레이에 최적화된 의류 선택과 관리법. 기능성, 스타일, 예산까지 고려한 완벽 가이드.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+        </div>
+      </section>
     </Article>
   );
 }
