@@ -35,7 +35,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'warmup-4-minutes', text: '1단계 — 워밍업 4분 (혈류와 신경 활성화)', depth: 2 },
   { id: 'mobility-4-minutes', text: '2단계 — 가동성 4분 (움직임 범위 확장)', depth: 2 },
   { id: 'cooldown-5-minutes', text: '3단계 — 쿨다운 5분 (근막 이완과 회복)', depth: 2 },
-  { id: 'regional-climate-adaptation', text: 'GEO별 기후 대응 루틴', depth: 2 },
+  { id: 'regional-climate-adaptation', text: '계절별 기후 대응 루틴', depth: 2 },
   { id: 'injury-signs-and-treatment', text: '부상 신호와 대처법', depth: 2 },
   { id: 'conclusion-routine-is-skill', text: '결론 — 루틴은 기술이다', depth: 2 },
 ];
@@ -208,7 +208,7 @@ export default function TennisInjuryPreventionFullGuidePage() {
       <section id="regional-climate-adaptation" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
-          GEO별 기후 대응 루틴
+          계절별 기후 대응 루틴
         </h2>
 
         <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">

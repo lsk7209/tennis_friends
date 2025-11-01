@@ -36,7 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: '3second-recovery-routine', text: '2. 3초 회복 루틴 — \'인식 → 리셋 → 리듬\'', depth: 2 },
   { id: 'mistake-avoid-actions', text: '3. 실수 후 행동 금지 3가지', depth: 2 },
   { id: 'routine-word-system', text: '4. 루틴 워드 시스템 — 뇌를 다시 세팅하는 말', depth: 2 },
-  { id: 'geo-mental-strategy', text: '5. GEO별 멘탈 관리 전략', depth: 2 },
+  { id: 'regional-mental-strategy', text: '5. 지역별 멘탈 관리 전략', depth: 2 },
   { id: 'practical-routine-example', text: '6. 실전 루틴 예시 — 포인트 간 20초의 활용법', depth: 2 },
   { id: 'training-routine-10min', text: '7. 훈련 루틴 (10분)', depth: 2 },
   { id: 'conclusion-mental-training', text: '결론 — 멘탈은 타고나는 게 아니라 훈련으로 만들어진다', depth: 2 },
@@ -60,7 +60,7 @@ const faqs = [
     a: '자신의 호흡 리듬을 유지하세요. 타인의 템포에 끌려가지 않는 게 핵심입니다.'
   },
   {
-    q: 'GEO 환경이 멘탈에도 영향을 주나요?',
+    q: '코트 환경이 멘탈에도 영향을 주나요?',
     a: '그렇습니다. 습도·바람·온도는 신체 피로와 집중력에 직접 작용하므로 루틴 형태를 환경에 맞춰야 합니다.'
   }
 ];
@@ -251,10 +251,10 @@ export default function TennisMentalFocusRecoveryPage() {
         </div>
       </section>
 
-      <section id="geo-mental-strategy" className="mb-12">
+      <section id="regional-mental-strategy" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-          GEO별 멘탈 관리 전략
+          지역별 멘탈 관리 전략
         </h2>
 
         <div className="space-y-4 mb-6">
@@ -278,7 +278,7 @@ export default function TennisMentalFocusRecoveryPage() {
 
         <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500">
           <p className="text-indigo-800 dark:text-indigo-200 text-sm">
-            <strong>📍 GEO 팁:</strong> 환경별로 루틴 형태를 달리하면, 경기 중 리듬 붕괴를 미리 차단할 수 있습니다.
+            <strong>💡 멘탈 팁:</strong> 코트 환경에 맞춰 루틴을 조정하면 경기 중 집중력을 유지할 수 있습니다.
           </p>
         </div>
       </section>

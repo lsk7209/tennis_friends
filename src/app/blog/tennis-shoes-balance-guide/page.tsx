@@ -198,7 +198,7 @@ export default function TennisShoesBalanceGuidePage() {
 
         <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500">
           <p className="text-indigo-800 dark:text-indigo-200 text-sm">
-            GEO별 조건을 고려하면 마찰계수와 신발 수명까지 바꿀 수 있습니다. 실제로 동일 모델도 기후 조건에 따라 착화감이 달라집니다.
+            지역별 기후 조건을 고려하면 신발의 마찰계수와 수명이 크게 달라집니다. 같은 모델이라도 기후에 따라 착화감이 달라질 수 있습니다.
           </p>
         </div>
       </section>

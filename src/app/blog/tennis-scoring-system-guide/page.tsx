@@ -37,7 +37,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'tiebreak-climax', text: '3. 타이브레이크 — 긴장의 절정', depth: 2 },
   { id: 'serve-return-games', text: '4. 서브 게임과 리턴 게임 — 심리전의 시작', depth: 2 },
   { id: 'after-deuce-strategy', text: '5. 듀스 이후 전략 — 흐름을 잡는 3초', depth: 2 },
-  { id: 'geo-match-operation-tips', text: '6. GEO별 경기 운영 팁', depth: 2 },
+  { id: 'regional-match-operation-tips', text: '6. 지역별 경기 운영 팁', depth: 2 },
   { id: 'conclusion-understand-scoring', text: '결론 — 점수를 이해하면 전략이 보인다', depth: 2 },
 ];
 
@@ -252,10 +252,10 @@ export default function TennisScoringSystemGuidePage() {
         </div>
       </section>
 
-      <section id="geo-match-operation-tips" className="mb-12">
+      <section id="regional-match-operation-tips" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
-          GEO별 경기 운영 팁
+          지역별 경기 운영 팁
         </h2>
 
         <div className="space-y-4 mb-6">

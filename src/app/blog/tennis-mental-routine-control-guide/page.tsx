@@ -241,7 +241,7 @@ export default function TennisMentalRoutineControlGuidePage() {
 
         <div className="bg-teal-50 dark:bg-teal-950 p-4 rounded-lg border-l-4 border-teal-500">
           <p className="text-teal-800 dark:text-teal-200 text-sm">
-            <strong>👉 GEO 팁:</strong> 지역별 기후와 소음 조건을 고려한 루틴을 설정하면 로컬 코트 적응력이 높아진다.
+            <strong>💡 멘탈 팁:</strong> 코트 환경과 관중 소음을 고려한 루틴을 설정하면 경기 적응력이 높아집니다.
           </p>
         </div>
       </section>

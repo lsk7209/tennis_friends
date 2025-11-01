@@ -36,7 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'timing-creation-3step-routine', text: '2. 타이밍을 만드는 3단계 루틴', depth: 2 },
   { id: 'power-vs-control-serve-comparison', text: '3. 파워 서브 vs 컨트롤 서브 비교', depth: 2 },
   { id: 'toss-science-accuracy-consistency-over-height', text: '4. 토스의 과학 — 정확도는 \'높이\'보다 \'일관성\'', depth: 2 },
-  { id: 'geo-serve-rhythm-adjustment', text: '5. GEO별 서브 리듬 조정법', depth: 2 },
+  { id: 'regional-serve-rhythm-adjustment', text: '5. 지역별 서브 리듬 조정법', depth: 2 },
   { id: 'fast-serve-training-routine-15min', text: '6. 빠른 서브를 만드는 훈련 루틴 (15분)', depth: 2 },
   { id: 'serve-mistake-reduction-3second-routine', text: '7. 서브 실패를 줄이는 3초 루틴', depth: 2 },
   { id: 'conclusion-serve-true-speed-from-harmony', text: '결론 — 서브의 진짜 속도는 \'조화\'에서 나온다', depth: 2 },
@@ -56,7 +56,7 @@ const faqs = [
     a: '호흡 루틴으로 긴장을 풀고, 임팩트 타이밍을 늦추세요. 급할수록 천천히입니다.'
   },
   {
-    q: 'GEO 환경이 서브에 영향을 주나요?',
+    q: '지역별 환경이 서브에 영향을 주나요?',
     a: '네. 온도와 습도에 따라 공의 반발력과 회전이 달라집니다. 환경에 맞게 토스 높이와 템포를 조정하세요.'
   },
   {
@@ -237,10 +237,10 @@ export default function TennisServeSpeedSciencePage() {
         </div>
       </section>
 
-      <section id="geo-serve-rhythm-adjustment" className="mb-12">
+      <section id="regional-serve-rhythm-adjustment" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-          GEO별 서브 리듬 조정법
+          지역별 서브 리듬 조정법
         </h2>
 
         <div className="space-y-4 mb-6">
@@ -371,7 +371,7 @@ export default function TennisServeSpeedSciencePage() {
                   테니스 경기 중 멘탈 붕괴 방지법 — 실수 후 3초 회복 루틴의 힘
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  실수 후 3초 회복 루틴으로 멘탈을 회복하고 경기 흐름을 되찾는 법. 감정 제어·집중 루틴·GEO별 멘탈 관리 전략.
+                  실수 후 3초 회복 루틴으로 멘탈을 회복하고 경기 흐름을 되찾는 법. 감정 제어·집중 루틴·효과적인 멘탈 관리 전략.
                 </p>
               </CardContent>
             </Card>

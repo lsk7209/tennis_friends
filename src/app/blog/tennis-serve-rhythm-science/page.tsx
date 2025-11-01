@@ -7,14 +7,14 @@ import Link from 'next/link';
 
 export const metadata = {
   title: '서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성 | 첫 서브 성공률 70% 만드는 방법',
-  description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 GEO별 조정법 완전 정리.',
+  description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
   keywords: ['테니스 서브', '토스', '체중이동', '회전', '리듬', '서브 타이밍', '플랫 서브', '슬라이스 서브', '킥 서브'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/blog/tennis-serve-rhythm-science',
   },
   openGraph: {
     title: '서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성 | 첫 서브 성공률 70% 만드는 방법',
-    description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 GEO별 조정법 완전 정리.',
+    description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
     url: 'https://www.tennisfrens.com/blog/tennis-serve-rhythm-science',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,7 +23,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성 | 첫 서브 성공률 70% 만드는 방법',
-    description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 GEO별 조정법 완전 정리.',
+    description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
   },
   robots: {
     index: true,
@@ -36,7 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'toss-science', text: '2. 토스의 과학 — 높이와 위치', depth: 2 },
   { id: 'weight-transfer', text: '3. 체중이동 — \'뒤에서 앞\'으로의 에너지 전달', depth: 2 },
   { id: 'spin-science', text: '4. 회전의 과학 — 플랫, 슬라이스, 킥', depth: 2 },
-  { id: 'geo-serve-adjustment', text: '5. GEO별 서브 조정 전략', depth: 2 },
+  { id: 'regional-serve-adjustment', text: '5. 지역별 서브 조정 전략', depth: 2 },
   { id: '15-min-serve-routine', text: '6. 15분 서브 리듬 루틴', depth: 2 },
   { id: 'conclusion-serve-rhythm', text: '결론 — 서브는 \'박자\'로 완성된다', depth: 2 },
 ];
@@ -231,10 +231,10 @@ export default function TennisServeRhythmSciencePage() {
         </div>
       </section>
 
-      <section id="geo-serve-adjustment" className="mb-12">
+      <section id="regional-serve-adjustment" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-purple-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-          GEO별 서브 조정 전략
+          지역별 서브 조정 전략
         </h2>
 
         <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">

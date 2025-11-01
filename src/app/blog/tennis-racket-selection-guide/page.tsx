@@ -36,7 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'balance-point', text: '2. 밸런스 포인트 — 라켓의 \'중심\'을 느껴라', depth: 2 },
   { id: 'string-pattern', text: '3. 스트링 패턴 — 스핀과 컨트롤의 비밀', depth: 2 },
   { id: 'string-tension', text: '4. 스트링 텐션 — 힘과 감각의 균형점', depth: 2 },
-  { id: 'geo-racket-setting', text: '5. GEO별 라켓 세팅 전략', depth: 2 },
+  { id: 'regional-racket-setting', text: '5. 지역별 라켓 세팅 전략', depth: 2 },
   { id: 'racket-replacement', text: '6. 라켓 교체 주기 — 실력보다 먼저 바꾸지 마라', depth: 2 },
   { id: 'testing-method', text: '7. 테스트 방법 — 매장에서 \'3구 테스트\'', depth: 2 },
   { id: 'conclusion-racket-rhythm', text: '결론 — 라켓은 스펙이 아니라 리듬이다', depth: 2 },
@@ -60,7 +60,7 @@ const faqs = [
     a: '그렇습니다. 16x19는 스핀, 18x20은 컨트롤 중심입니다.'
   },
   {
-    q: 'GEO 환경에 맞는 라켓 세팅이 필요한가요?',
+    q: '지역별 환경에 맞는 라켓 세팅이 필요한가요?',
     a: '네. 지역 기후에 따라 반발력과 습도가 달라져 텐션 조정이 필수입니다.'
   }
 ];
@@ -284,10 +284,10 @@ export default function TennisRacketSelectionGuidePage() {
         </div>
       </section>
 
-      <section id="geo-racket-setting" className="mb-12">
+      <section id="regional-racket-setting" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-cyan-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-          GEO별 라켓 세팅 전략
+          지역별 라켓 세팅 전략
         </h2>
 
         <div className="space-y-4 mb-6">
