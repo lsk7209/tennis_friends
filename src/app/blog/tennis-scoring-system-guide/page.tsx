@@ -313,21 +313,6 @@ export default function TennisScoringSystemGuidePage() {
               </CardContent>
             </Card>
           </Link>
-          <Link href="/blog/serve-return-prediction-guide">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
-              <CardContent className="p-4">
-                <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
-                  리턴 마스터
-                </Badge>
-                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
-                  리턴은 반응이 아니라 '예측'의 기술이다
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  서브 리턴은 반응이 아니라 예측의 경기다. 토스와 스텝 타이밍, 라켓 각도를 조정하면 180km 서브도 되돌릴 수 있다.
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
         </div>
       </div>
 

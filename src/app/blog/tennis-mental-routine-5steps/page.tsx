@@ -265,36 +265,6 @@ export default function TennisMentalRoutine5StepsPage() {
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
         <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link href="/blog/tennis-footwork-balance-training-guide">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
-              <CardContent className="p-4">
-                <Badge className="bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300 mb-2">
-                  풋워크 마스터
-                </Badge>
-                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
-                  테니스 풋워크 밸런스, 빠름보다 '안정'이 먼저다
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  공을 쫓는 속도보다 중요한 건 중심을 잃지 않는 안정감이다. 프로 선수처럼 밸런스를 유지하는 하체 리듬과 스텝 훈련을 정리했다.
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
-          <Link href="/blog/tennis-mental-routine-control-guide">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
-              <CardContent className="p-4">
-                <Badge className="bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300 mb-2">
-                  멘탈 트레이닝
-                </Badge>
-                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
-                  테니스 멘탈 루틴, 승부를 결정짓는 건 결국 마음이다
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  포핸드보다 어려운 게 멘탈이다. 경기 중 흔들리지 않고 집중력을 유지하는 루틴 5단계, 프로 선수들의 심리 컨트롤법을 해석한다.
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
         </div>
       </div>
 

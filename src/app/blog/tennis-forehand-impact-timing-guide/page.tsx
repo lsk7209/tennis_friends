@@ -299,21 +299,6 @@ export default function TennisForehandImpactTimingGuidePage() {
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
         <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link href="/blog/tennis-serve-timing-and-spin-guide">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
-              <CardContent className="p-4">
-                <Badge className="bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300 mb-2">
-                  서브 마스터
-                </Badge>
-                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
-                  테니스 서브 완전 정복, 힘이 아닌 타이밍으로 승부하라
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  테니스 서브를 강하게 만드는 핵심은 타이밍과 리듬이다. 플랫·슬라이스·킥서브까지, 아마추어도 즉시 실력 향상 가능한 서브 완전 가이드.
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
           <Link href="/guide/tennis-footwork-balance-training">
             <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
               <CardContent className="p-4">

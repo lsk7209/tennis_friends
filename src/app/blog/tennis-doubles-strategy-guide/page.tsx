@@ -336,21 +336,6 @@ export default function TennisDoublesStrategyGuidePage() {
               </CardContent>
             </Card>
           </Link>
-          <Link href="/blog/tennis-scoring-system-guide">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
-              <CardContent className="p-4">
-                <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
-                  경기 운영
-                </Badge>
-                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
-                  테니스 경기 점수 체계 완전 이해 — 게임·세트·타이브레이크까지 한 번에 정리
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  15-30-40-게임, 단순해 보이지만 복잡한 규칙 속에는 전략의 심리가 숨어 있다. 점수를 이해하면 경기 흐름이 보인다.
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
         </div>
       </div>
 
