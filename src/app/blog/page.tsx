@@ -30,12 +30,46 @@ export default function BlogPage() {
         </div>
 
         {/* Latest Blog Posts */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300">
+                  풋워크 마스터
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 풋워크 밸런스, 빠름보다 '안정'이 먼저다
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                공을 쫓는 속도보다 중요한 건 중심을 잃지 않는 안정감이다. 프로 선수처럼 밸런스를 유지하는 하체 리듬과 스텝 훈련을 정리했다.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-11-01</span>
+                  <span>•</span>
+                  <span>9분</span>
+                </div>
+                <Link href="/blog/tennis-footwork-balance-training-guide">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300">
                   멘탈 마스터
@@ -69,7 +103,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
-                  인기 글
+                  추천 글
                 </Badge>
                 <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300">
                   포핸드 마스터
@@ -103,7 +137,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">
-                  추천 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
                   서브 마스터
@@ -137,7 +171,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                  인기 글
+                  추천 글
                 </Badge>
                 <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">
                   겨울 시즌
@@ -171,7 +205,7 @@ export default function BlogPage() {
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">
-                  추천 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
                   가을 시즌
