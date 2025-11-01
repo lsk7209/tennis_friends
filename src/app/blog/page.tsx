@@ -31,12 +31,46 @@ export default function BlogPage() {
 
         {/* Latest Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Newest Post: 테니스 점수 체계 */}
+          {/* Newest Post: 초보자 30일 훈련 플랜 */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
+                  최신 글
+                </Badge>
+                <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300">
+                  초보자 가이드
+                </Badge>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                테니스 초보자의 첫 30일 훈련 플랜 — 입문부터 경기 감각까지 4주 완성 로드맵
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                테니스는 하루에 배우지 못한다. 하지만 올바른 30일 루틴이면 '폼·타점·감각'이 완성된다. 초보를 위한 실전형 훈련 로드맵.
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <span>2025-09-17</span>
+                  <span>•</span>
+                  <span>12분</span>
+                </div>
+                <Link href="/blog/tennis-beginner-30day-training-plan">
+                  <Button className="bg-blue-500 hover:bg-blue-600">
+                    자세히 보기
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
             <CardContent className="p-8">
               <div className="flex items-center gap-2 mb-4">
                 <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                  최신 글
+                  인기 글
                 </Badge>
                 <Badge className="bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300">
                   초보 가이드
