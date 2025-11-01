@@ -159,23 +159,11 @@ export default function NutritionGuideIntro() {
             </SlideUp>
             
             <SlideUp delay={0.8}>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+              <div className="flex justify-center mb-12">
                 <Link href="/utility/nutrition-guide/test">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto px-8 py-4 text-lg font-semibold rounded-xl focus-ring">
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold rounded-xl focus-ring">
                     <Apple className="h-5 w-5 mr-2" />
                     영양 계획 만들기
-                  </Button>
-                </Link>
-                <Link href="/utility/training-planner">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 border-gray-300 hover:border-green-500 px-8 py-4 text-lg focus-ring">
-                    <TrendingUp className="h-5 w-5 mr-2" />
-                    훈련 계획과 함께
-                  </Button>
-                </Link>
-                <Link href="/utility/match-analyzer">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 border-gray-300 hover:border-green-500 px-8 py-4 text-lg focus-ring">
-                    <Zap className="h-5 w-5 mr-2" />
-                    경기 분석하기
                   </Button>
                 </Link>
               </div>
@@ -453,18 +441,12 @@ export default function NutritionGuideIntro() {
                     </p>
                   </SlideUp>
                   <SlideUp delay={0.8}>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex justify-center">
                       <Link href="/utility/nutrition-guide/test">
                         <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold focus-ring">
                           <Apple className="h-5 w-5 mr-2" />
                           영양 계획 만들기
                           <ArrowRight className="h-5 w-5 ml-2" />
-                        </Button>
-                      </Link>
-                      <Link href="/utility/training-planner">
-                        <Button variant="outline" className="bg-white border-gray-300 hover:border-green-500 px-8 py-4 text-lg font-semibold focus-ring">
-                          <TrendingUp className="h-5 w-5 mr-2" />
-                          훈련 계획과 함께
                         </Button>
                       </Link>
                     </div>

@@ -391,18 +391,12 @@ export default function NtrpTestIntro() {
                   단 5분이면 당신의 정확한 테니스 실력을 확인할 수 있습니다.<br />
                   <span className="text-gray-600">과학적 분석과 전문가의 조언이 기다립니다.</span>
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex justify-center">
                   <Link href="/utility/ntrp-test/test">
                     <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                       <BarChart3 className="h-5 w-5 mr-2" />
                       실력 테스트 시작하기
                       <ArrowRight className="h-5 w-5 ml-2" />
-                    </Button>
-                  </Link>
-                  <Link href="/utility/string-tension">
-                    <Button variant="outline" className="bg-white border-2 border-gray-300 hover:border-green-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                      <Target className="h-5 w-5 mr-2" />
-                      스트링 텐션 계산기
                     </Button>
                   </Link>
                 </div>

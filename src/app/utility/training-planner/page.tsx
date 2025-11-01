@@ -436,18 +436,12 @@ export default function TrainingPlannerIntro() {
                     </p>
                   </SlideUp>
                   <SlideUp delay={0.8}>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex justify-center">
                       <Link href="/utility/training-planner/test">
                         <Button className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                           <Calculator className="h-5 w-5 mr-2" />
                           훈련 계획 만들기
                           <ArrowRight className="h-5 w-5 ml-2" />
-                        </Button>
-                      </Link>
-                      <Link href="/utility/ntrp-test">
-                        <Button variant="outline" className="bg-white border-2 border-gray-300 hover:border-violet-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                          <Target className="h-5 w-5 mr-2" />
-                          먼저 실력 테스트
                         </Button>
                       </Link>
                     </div>
