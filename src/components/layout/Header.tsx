@@ -54,7 +54,7 @@ const Header: React.FC = () => {
   const navItems = [
     { href: '/utility/', label: '유틸리티' },
     { href: '/blog', label: '블로그' },
-    { href: '/players', label: '선수들' },
+    { href: '/players', label: '테니스선수' },
   ];
 
   // 현재 경로에 따라 활성 상태 결정
