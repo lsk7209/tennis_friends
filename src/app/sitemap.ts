@@ -5,6 +5,22 @@ export const revalidate = false
 
 // 블로그 글 목록 (실제로는 데이터베이스나 파일에서 동적으로 가져와야 함)
 const blogPosts = [
+  'frances-tiafoe',
+  'tommy-paul',
+  'ben-shelton',
+  'grigor-dimitrov',
+  'holger-rune',
+  'hubert-hurkacz',
+  'taylor-fritz',
+  'alex-de-minaur',
+  'casper-ruud',
+  'stefanos-tsitsipas',
+  'andrey-rublev',
+  'alexander-zverev',
+  'daniil-medvedev',
+  'novak-djokovic',
+  'jannik-sinner',
+  'carlos-alcaraz',
   'autumn-tennis-rhythm-guide',
   'backhand-accuracy-full-guide',
   'rainy-day-tennis-tips-guide',

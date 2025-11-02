@@ -1,6 +1,182 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "frances-tiafoe",
+    "title": "프란시스 티아포 — 에너지와 창의로 코트를 달구다",
+    "excerpt": "폭발적인 스텝과 감각적인 터치, 변주를 두려워하지 않는 전진으로 흐름을 뒤집는 프란시스 티아포의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-10-12",
+    "readTime": "8분",
+    "badgeColor": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "tommy-paul",
+    "title": "토미 폴 — 속도와 각도로 조립하는 미국식 하드 테니스",
+    "excerpt": "가벼운 발과 예리한 각, 과감한 전진으로 흐름을 끊어먹는 토미 폴의 성장, 스타일, 인간미와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-09-24",
+    "readTime": "8분",
+    "badgeColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "ben-shelton",
+    "title": "벤 셸턴 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도",
+    "excerpt": "좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 셸턴의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-09-18",
+    "readTime": "8분",
+    "badgeColor": "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "grigor-dimitrov",
+    "title": "그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌",
+    "excerpt": "원핸드 백핸드의 미학과 노련한 전술, 성숙한 멘탈로 커리어의 두 번째 절정을 만드는 그리고르 디미트로프의 성장, 스타일, 인간적 면모를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-08-27",
+    "readTime": "8분",
+    "badgeColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "holger-rune",
+    "title": "홀게르 루네 — 불꽃과 계산 사이의 대담함",
+    "excerpt": "공격적인 리턴과 예측 불가한 변주로 흐름을 흔드는 홀게르 루네의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-08-11",
+    "readTime": "8분",
+    "badgeColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "hubert-hurkacz",
+    "title": "후베르트 후르카츠 — 탄력과 절제로 설계하는 현대형 서브&발리",
+    "excerpt": "거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓는 후베르트 후르카츠의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-10-02",
+    "readTime": "8분",
+    "badgeColor": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "taylor-fritz",
+    "title": "테일러 프리츠 — 서브와 타이밍으로 하드를 설득하다",
+    "excerpt": "강력한 서브와 직선적인 포핸드, 차분한 리턴 선택으로 큰 코트를 좁혀 버리는 테일러 프리츠의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-07-15",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "alex-de-minaur",
+    "title": "알렉스 데 미노르 — 스피드와 담대함으로 시간을 훔치는 기술",
+    "excerpt": "폭발적인 풋워크와 끈질긴 수비·카운터로 리듬을 빼앗는 알렉스 데 미노르의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-10-08",
+    "readTime": "8분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "casper-ruud",
+    "title": "카스페르 루드 — 점토 위에서 증명한 질서와 끈기",
+    "excerpt": "꾸준함과 규율로 흐름을 쌓는 카스페르 루드의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 이야기를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-09-29",
+    "readTime": "7분",
+    "badgeColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "stefanos-tsitsipas",
+    "title": "스테파노스 치치파스 — 공격과 우아함 사이의 균형",
+    "excerpt": "길게 뻗는 원핸드 백핸드와 거침없는 전진으로 감성과 이성을 조율하는 스테파노스 치치파스의 성장, 철학, 인간적인 면모를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-10-19",
+    "readTime": "8분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "andrey-rublev",
+    "title": "안드레이 루블료프 — 불꽃 같은 포핸드, 절제된 규율",
+    "excerpt": "강력한 포핸드와 끊임없는 전진 의지로 랠리의 톤을 올리는 안드레이 루블료프의 성장, 스타일, 인간미와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-09-07",
+    "readTime": "8분",
+    "badgeColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "alexander-zverev",
+    "title": "알렉산더 즈베레프 — 균형과 리듬으로 구축한 장기전의 기술",
+    "excerpt": "길고 무거운 랠리에서 균형을 잃지 않는 알렉산더 즈베레프의 성장, 플레이 철학, 인간적인 면모와 라이벌 이야기를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-08-23",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "daniil-medvedev",
+    "title": "다닐 메드베데프 — 각도와 깊이로 짜는 지공의 미학",
+    "excerpt": "낮은 탄도로 깊이를 누적하고, 리턴과 코트 포지셔닝으로 상대의 선택지를 지우는 다닐 메드베데프의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-09-21",
+    "readTime": "8분",
+    "badgeColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "novak-djokovic",
+    "title": "노바크 조코비치 — 균형, 리턴, 멘탈로 완성한 '결정의 기술'",
+    "excerpt": "리턴을 출발점으로 포인트를 다시 설계하고, 루틴과 호흡으로 큰 순간을 관리하는 노바크 조코비치의 성장, 철학, 인간적인 면모를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-09-03",
+    "readTime": "8분",
+    "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "jannik-sinner",
+    "title": "야닉 시너 — 속도와 정확도로 재정의한 '현대 표준'",
+    "excerpt": "빠른 준비와 직선적인 임팩트, 차가운 선택으로 흐름을 압축하는 야닉 시너의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-08-14",
+    "readTime": "8분",
+    "badgeColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "carlos-alcaraz",
+    "title": "카를로스 알카라즈 — '즐기는 재능'으로 시대를 앞당긴 젊은 왕",
+    "excerpt": "공격적 베이스라인과 변주로 흐름을 장악하는 카를로스 알카라즈의 성장, 스타일, 인간미와 라이벌 이야기를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-11-01",
+    "readTime": "6분",
+    "badgeColor": "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
     "id": "autumn-tennis-rhythm-guide",
     "title": "가을 테니스 리듬 되찾기 | 스윙·풋워크·지역별 전략 완벽 가이드",
     "excerpt": "가을 테니스 시즌에 흔들리는 리듬과 스윙 타이밍을 잡는 법. 지역별 코트 전략, 풋워크 훈련 루틴, 스트링 세팅 팁까지 한눈에 정리....",

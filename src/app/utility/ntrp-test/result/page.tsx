@@ -33,6 +33,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
+import { trackTestCompletion } from '@/components/Tracking';
 
 function ResultContent() {
   const searchParams = useSearchParams();
@@ -44,6 +45,18 @@ function ResultContent() {
   const character = charMap[q13] || '올라운더';
   const [copied, setCopied] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
+
+  // 테스트 완료 추적
+  useEffect(() => {
+    if (score > 0) {
+      trackTestCompletion('ntrp-test', {
+        level: level,
+        score: score,
+        character: character,
+        q13: q13
+      });
+    }
+  }, [score, level, character, q13]);
 
   // NTRP 레벨별 상세 정보
   const getLevelDetails = (level: string) => {

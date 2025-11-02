@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { playStyleResults, getPlayStyleStats } from '@/lib/playStyleTest';
+import { trackTestCompletion } from '@/components/Tracking';
 
 const styleIcons = {
   1: Zap,
@@ -67,6 +68,15 @@ function PlayStyleResultContent() {
     const playStyleResult = playStyleResults.find(r => r.id === styleId) || playStyleResults[0];
     setResult(playStyleResult);
     setStats(getPlayStyleStats(playStyleResult));
+
+    // 테스트 완료 추적
+    if (styleId) {
+      trackTestCompletion('play-style-test', {
+        styleId: styleId,
+        styleName: playStyleResult.name,
+        description: playStyleResult.description
+      });
+    }
   }, [searchParams]);
 
   if (!result) {
