@@ -98,6 +98,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/players`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
   ];
 
   // 유틸리티 페이지들
@@ -138,13 +144,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // 블로그 글들
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map(slug => ({
+  // 선수 페이지들 (블로그에서 분리)
+  const playerSlugs = [
+    'carlos-alcaraz',
+    'jannik-sinner',
+    'novak-djokovic',
+    'daniil-medvedev',
+    'alexander-zverev',
+    'andrey-rublev',
+    'stefanos-tsitsipas',
+    'casper-ruud',
+    'alex-de-minaur',
+    'taylor-fritz',
+    'hubert-hurkacz',
+    'holger-rune',
+    'grigor-dimitrov',
+    'ben-shelton',
+    'tommy-paul',
+    'frances-tiafoe',
+  ];
+
+  const playerPages: MetadataRoute.Sitemap = playerSlugs.map(slug => ({
+    url: `${baseUrl}/players/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  // 블로그 글들 (선수 페이지 제외)
+  const blogOnlyPosts = blogPosts.filter(slug => !playerSlugs.includes(slug));
+  const blogPages: MetadataRoute.Sitemap = blogOnlyPosts.map(slug => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 
-  return [...staticPages, ...utilityPages, ...blogPages]
+  return [...staticPages, ...utilityPages, ...playerPages, ...blogPages]
 }

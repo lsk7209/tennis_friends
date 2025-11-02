@@ -121,7 +121,7 @@ export default function PlayersPage() {
                 {player.country}
               </p>
 
-              <Link href={`/blog/${player.slug}`}>
+              <Link href={`/players/${player.slug}`}>
                 <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white">
                   <Target className="w-4 h-4 mr-2" />
                   자세히 보기
