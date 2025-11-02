@@ -3,6 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
 export const metadata = {
@@ -142,18 +143,18 @@ export default function TommyPaulBlogPost() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">내부 링크</h4>
-                <ul className="space-y-1 text-sm">
-                  <li><Link href="/players" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">🏆 선수 프로필</Link></li>
-                  <li><Link href="/utility/ntrp-test" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">🎯 실력 테스트</Link></li>
-                  <li><Link href="/utility/play-style-test" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">🎾 플레이 스타일 테스트</Link></li>
+                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">내부 링크</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href="/players" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🏆 선수 프로필</Link></li>
+                  <li><Link href="/utility/ntrp-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎯 실력 테스트</Link></li>
+                  <li><Link href="/utility/play-style-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎾 플레이 스타일 테스트</Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">외부 자료</h4>
-                <ul className="space-y-1 text-sm">
-                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">ATP 투어 공식 사이트</a></li>
-                  <li><a href="https://en.wikipedia.org/wiki/Tommy_Paul_(tennis)" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">위키피디아 프로필</a></li>
+                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">외부 자료</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">ATP 투어 공식 사이트</a></li>
+                  <li><a href="https://en.wikipedia.org/wiki/Tommy_Paul_(tennis)" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">위키피디아 프로필</a></li>
                 </ul>
               </div>
             </div>

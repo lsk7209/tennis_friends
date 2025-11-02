@@ -3,6 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
 export const metadata = {
@@ -71,36 +72,62 @@ const faqs = [
 
 export default function CasperRuudBlogPost() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
-      <Article
-        title="카스페르 루드 — 인내와 정밀도로 짓는 점토의 문장"
-        excerpt="긴 랠리를 두려워하지 않는 인내, 정밀한 구질과 전술적 전진으로 점토를 지배하는 카스페르 루드의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          {/* Tags */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
+        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
             {['테니스', '카스페르 루드', '선수 프로필', '스토리', '노르웨이'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
+              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
                 {tag}
               </Badge>
             ))}
           </div>
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+            카스페르 루드
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
+            인내와 정밀도로 짓는 점토의 문장
+          </p>
+          <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
+            긴 랠리를 두려워하지 않는 인내, 정밀한 구질과 전술적 전진으로 점토를 지배하는 카스페르 루드의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
+          </p>
+          
+          {/* Meta Info */}
+          <div className="flex flex-wrap items-center gap-6 text-blue-100">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="font-medium">8분 읽기</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span className="font-medium">2025년 9월 29일</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          {/* Reading Time & Date */}
-          <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-8">
-            <span>📖 8분 읽기</span>
-            <span>•</span>
-            <span>2025년 9월 29일</span>
+      <Article title="" excerpt="">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+          {/* Table of Contents */}
+          <div className="mb-12">
+            <TOC items={tocItems} />
           </div>
 
-          {/* Table of Contents */}
-          <TOC items={tocItems} />
-
           {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h1 id="casper-ruud-patience-precision-build-clay-sentence">카스페르 루드 — 인내와 정밀도로 짓는 점토의 문장</h1>
-
-            <p><strong>직답:</strong> 카스페르 루드(Casper Ruud)는 긴 랠리를 기꺼이 받아들이는 인내와 정밀한 구질, 전술적 전진으로 점토와 하드에서 안정적인 승률을 쌓는 노르웨이의 간판이다.</p>
+          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
+              <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
+                <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
+                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 카스페르 루드(Casper Ruud)는 긴 랠리를 기꺼이 받아들이는 인내와 정밀한 구질, 전술적 전진으로 점토와 하드에서 안정적인 승률을 쌓는 노르웨이의 간판이다.
+              </p>
+            </div>
 
             <h2 id="growth-background-nordic-discipline-family-coaching">성장 배경 — 북유럽의 규율과 가족 코칭</h2>
             <p>선수였던 아버지의 세심한 지도로 기초가 다져졌다. 훈련 노트에는 화려한 지표보다 '오늘의 수정 한 줄'이 먼저 적혔고, 워밍업·스트레칭·첫 서브 루틴을 매일 같은 순서로 반복했다. 실내와 야외를 오가는 북유럽 환경은 바운드·바람·온도 변화에 민감해지는 감각을 길렀고, 루드는 "동작을 줄이고 접점을 앞에 둔다"는 원칙을 생활의 리듬으로 고정했다. 이 질서가 큰 관중과 긴 랠리 속에서도 표정을 흔들리지 않게 만든다.</p>
@@ -140,26 +167,83 @@ export default function CasperRuudBlogPost() {
           </div>
 
           {/* Related Links */}
-          <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-            <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-              📚 관련 자료
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">내부 링크</h4>
-                <ul className="space-y-1 text-sm">
-                  <li><Link href="/players" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">🏆 선수 프로필</Link></li>
-                  <li><Link href="/utility/ntrp-test" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">🎯 실력 테스트</Link></li>
-                  <li><Link href="/utility/play-style-test" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">🎾 플레이 스타일 테스트</Link></li>
-                </ul>
+          <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
               </div>
-              <div>
-                <h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">외부 자료</h4>
-                <ul className="space-y-1 text-sm">
-                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">ATP 투어 공식 사이트</a></li>
-                  <li><a href="https://en.wikipedia.org/wiki/Casper_Ruud" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">위키피디아 프로필</a></li>
-                </ul>
-              </div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                관련 자료
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    내부 링크
+                  </h4>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <span className="text-xl">🏆</span>
+                        <span className="font-medium">선수 프로필</span>
+                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <span className="text-xl">🎯</span>
+                        <span className="font-medium">실력 테스트</span>
+                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <span className="text-xl">🎾</span>
+                        <span className="font-medium">플레이 스타일 테스트</span>
+                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                    외부 자료
+                  </h4>
+                  <ul className="space-y-3">
+                    <li>
+                      <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                        <span className="text-xl">🌐</span>
+                        <span className="font-medium">ATP 투어 공식 사이트</span>
+                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://en.wikipedia.org/wiki/Casper_Ruud" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                        <span className="text-xl">📖</span>
+                        <span className="font-medium">위키피디아 프로필</span>
+                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
