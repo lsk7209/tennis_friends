@@ -19,6 +19,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import { PLAYERS_PER_PAGE } from '@/lib/constants';
 
 // 블로그 포스트가 있는 선수들의 slug 리스트
 const playersWithBlogPosts = [
@@ -74,8 +75,6 @@ const playerNames: { [key: string]: { name: string; nameEn: string; country: str
   'nicolas-jarry': { name: '니콜라스 자리', nameEn: 'Nicolas Jarry', country: 'Chile', countryFlag: '🇨🇱' }
 };
 
-const PLAYERS_PER_PAGE = 12;
-
 export default function PlayersPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'country'>('name');
@@ -111,11 +110,15 @@ export default function PlayersPage() {
     return players;
   }, [searchQuery, sortBy]);
 
-  // 페이지네이션 계산
-  const totalPages = Math.ceil(filteredAndSortedPlayers.length / PLAYERS_PER_PAGE);
-  const startIndex = (currentPage - 1) * PLAYERS_PER_PAGE;
-  const endIndex = startIndex + PLAYERS_PER_PAGE;
-  const paginatedPlayers = filteredAndSortedPlayers.slice(startIndex, endIndex);
+  // 페이지네이션 계산 - useMemo로 최적화
+  const { totalPages, paginatedPlayers, totalPlayers, startIndex, endIndex } = useMemo(() => {
+    const total = filteredAndSortedPlayers.length;
+    const pages = Math.ceil(total / PLAYERS_PER_PAGE);
+    const start = (currentPage - 1) * PLAYERS_PER_PAGE;
+    const end = start + PLAYERS_PER_PAGE;
+    const players = filteredAndSortedPlayers.slice(start, end);
+    return { totalPages: pages, paginatedPlayers: players, totalPlayers: total, startIndex: start, endIndex: end };
+  }, [filteredAndSortedPlayers, currentPage]);
 
   // 검색/정렬 변경 시 첫 페이지로 리셋
   useEffect(() => {
@@ -207,7 +210,7 @@ export default function PlayersPage() {
             <Card>
               <CardContent className="p-6 text-center">
                 <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">{playersWithBlogPosts.length}</div>
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">{totalPlayers}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">선수 프로필</div>
               </CardContent>
             </Card>
@@ -215,7 +218,7 @@ export default function PlayersPage() {
               <CardContent className="p-6 text-center">
                 <Trophy className="h-8 w-8 text-yellow-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {playersWithBlogPosts.length}
+                  {totalPlayers}
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">블로그 포스트</div>
               </CardContent>
@@ -224,7 +227,7 @@ export default function PlayersPage() {
               <CardContent className="p-6 text-center">
                 <Star className="h-8 w-8 text-green-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {playersWithBlogPosts.length}
+                  {totalPlayers}
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">상세 정보</div>
               </CardContent>
@@ -265,8 +268,8 @@ export default function PlayersPage() {
           </div>
 
           {/* Results Count */}
-          <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            총 {filteredAndSortedPlayers.length}명의 선수를 찾았습니다
+          <div className="mt-4 text-sm text-gray-600 dark:text-gray-400" role="status" aria-live="polite">
+            총 {filteredAndSortedPlayers.length}명의 선수를 찾았습니다 ({startIndex + 1} - {Math.min(endIndex, filteredAndSortedPlayers.length)} / {filteredAndSortedPlayers.length}명)
           </div>
         </div>
       </section>

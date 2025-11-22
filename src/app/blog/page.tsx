@@ -1,65 +1,53 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import { allBlogPosts } from '@/data/blog-posts';
+import { BADGE_LABELS, BADGE_COLORS, CATEGORY_COLORS, POSTS_PER_PAGE } from '@/lib/constants';
+import type { BlogPostData } from '@/types/blog';
 
 export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 12;
 
-  // 모든 블로그 글 데이터 (다양한 배지와 색상 적용)
-  const blogPosts = allBlogPosts.map((post, index) => {
-    const badges = ['최신 글', '인기 글', '추천 글', '핫 이슈'];
-    const badgeColors = [
-      'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300',
-      'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
-      'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
-      'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
-      'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
-      'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
-    ];
-    const categoryColors = [
-      'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300',
-      'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300',
-      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300',
-      'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300',
-      'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300',
-      'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300',
-      'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300',
-      'bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300'
-    ];
+  // 모든 블로그 글 데이터 (다양한 배지와 색상 적용) - useMemo로 최적화
+  const blogPosts = useMemo(() => {
+    return allBlogPosts.map((post, index) => {
+      // 날짜를 다양하게 설정 (최근 3개월 내)
+      const baseDate = new Date('2025-09-01');
+      const daysToAdd = Math.floor(index * 2.3); // 글마다 다른 날짜
+      const postDate = new Date(baseDate);
+      postDate.setDate(baseDate.getDate() + daysToAdd);
 
-    // 날짜를 다양하게 설정 (최근 3개월 내)
-    const baseDate = new Date('2025-09-01');
-    const daysToAdd = Math.floor(index * 2.3); // 글마다 다른 날짜
-    const postDate = new Date(baseDate);
-    postDate.setDate(baseDate.getDate() + daysToAdd);
+      return {
+        ...post,
+        badge: BADGE_LABELS[index % BADGE_LABELS.length],
+        badgeColor: BADGE_COLORS[index % BADGE_COLORS.length],
+        categoryColor: CATEGORY_COLORS[index % CATEGORY_COLORS.length],
+        date: postDate.toISOString().split('T')[0],
+        readTime: `${8 + (index % 5) * 2}분` // 8분, 10분, 12분, 14분, 16분 반복
+      } as BlogPostData & { badge: string; badgeColor: string; categoryColor: string; readTime: string };
+    });
+  }, []);
 
-    return {
-      ...post,
-      badge: badges[index % badges.length],
-      badgeColor: badgeColors[index % badgeColors.length],
-      categoryColor: categoryColors[index % categoryColors.length],
-      date: postDate.toISOString().split('T')[0],
-      readTime: `${8 + (index % 5) * 2}분` // 8분, 10분, 12분, 14분, 16분 반복
-    };
-  });
+  // 작성일자 기준으로 최신순 정렬 - useMemo로 최적화
+  const sortedBlogPosts = useMemo(() => {
+    return [...blogPosts].sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+  }, [blogPosts]);
 
-  // 작성일자 기준으로 최신순 정렬
-  const sortedBlogPosts = [...blogPosts].sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
-
-  // Pagination 계산
-  const totalPages = Math.ceil(sortedBlogPosts.length / postsPerPage);
-  const startIndex = (currentPage - 1) * postsPerPage;
-  const endIndex = startIndex + postsPerPage;
-  const currentPosts = sortedBlogPosts.slice(startIndex, endIndex);
+  // Pagination 계산 - useMemo로 최적화
+  const { totalPages, currentPosts } = useMemo(() => {
+    const total = Math.ceil(sortedBlogPosts.length / POSTS_PER_PAGE);
+    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+    const endIndex = startIndex + POSTS_PER_PAGE;
+    const posts = sortedBlogPosts.slice(startIndex, endIndex);
+    return { totalPages: total, currentPosts: posts };
+  }, [sortedBlogPosts, currentPage]);
   
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -115,7 +103,7 @@ export default function BlogPage() {
                     <span>•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <Link href={`/blog/${post.slug || post.id}`}>
+                  <Link href={`/blog/${post.slug || post.id}`} aria-label={`${post.title} 자세히 보기`}>
                     <Button className="bg-blue-500 hover:bg-blue-600">
                     자세히 보기
                     </Button>
@@ -134,6 +122,7 @@ export default function BlogPage() {
             size="sm"
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
+            aria-label="이전 페이지"
           >
               <ChevronLeft className="w-4 h-4" />
             이전
@@ -156,6 +145,7 @@ export default function BlogPage() {
             size="sm"
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
+            aria-label="다음 페이지"
           >
             다음
               <ChevronRight className="w-4 h-4" />

@@ -6,22 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Clock, ArrowLeft, ArrowRight, Share2 } from 'lucide-react';
 import { allBlogPosts } from '@/data/blog-posts';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  category: string;
-  description?: string;
-  excerpt?: string;
-  date: string;
-  readTime: string;
-  slug: string;
-  tags?: string[];
-  content?: string;
-  author?: string;
-  summary?: string;
-  highlight?: string;
-}
+import type { BlogPost } from '@/types/blog';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
