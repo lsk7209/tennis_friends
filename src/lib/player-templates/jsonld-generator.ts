@@ -116,11 +116,12 @@ export function generateStructuredData(player: Player, faqs: PlayerFAQ[]) {
 
   // FAQ가 있으면 FAQPage가 @graph에 포함되어 있음
   if (faqs.length > 0 && '@graph' in profilePageSchema) {
+    const profilePageWithGraph = profilePageSchema as any;
     return {
       '@context': 'https://schema.org',
       '@graph': [
         personSchema,
-        ...(profilePageSchema as any).@graph,
+        ...profilePageWithGraph['@graph'],
         breadcrumbSchema,
       ],
     };
