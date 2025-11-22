@@ -43,7 +43,9 @@ export default function LeaderboardPage() {
           setRows(dummyData);
         }
       } catch (error) {
-        console.error('리더보드 로딩 중 오류:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error('리더보드 로딩 중 오류:', error);
+        }
         // 오류 발생 시 더미 데이터 설정
         const dummyData = [
           { id: '1', score: 75, level: '4.5', character: '올라운더', created_at: '2025-01-24T10:30:00Z' },

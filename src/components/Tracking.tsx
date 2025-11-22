@@ -75,7 +75,10 @@ export const trackTestCompletion = (testType: string, testResult?: any) => {
     updateTestCompletionCount(testType);
 
   } catch (error) {
-    console.error('Failed to track test completion:', error);
+    // 프로덕션에서는 에러를 조용히 처리
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Failed to track test completion:', error);
+    }
   }
 };
 
@@ -168,7 +171,10 @@ export default function Tracking() {
           // API가 없는 경우 무시
         });
       } catch (error) {
-        console.error('Failed to track visit:', error);
+        // 프로덕션에서는 에러를 조용히 처리
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Failed to track visit:', error);
+        }
       }
     };
 

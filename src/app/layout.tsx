@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import Tracking from "@/components/Tracking";
 import AdSense from "@/components/AdSense";
+
+// 폰트 최적화 - Inter만 next/font로 로드, Pretendard는 CSS에서 로드
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  preload: true,
+  adjustFontFallback: true,
+});
 
 export const metadata: Metadata = {
   title: "TennisFriends - 당신의 테니스 파트너",
@@ -54,14 +64,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <html lang="ko">
+        <html lang="ko" className={inter.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;700;900&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
+        {/* Pretendard 폰트 최적화 로드 */}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+          rel="stylesheet"
+        />
       </head>
       <body className={`bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-black font-display text-gray-900 dark:text-gray-100 antialiased`}>
         <div className="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">

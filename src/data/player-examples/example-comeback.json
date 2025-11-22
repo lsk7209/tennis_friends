@@ -1,0 +1,37 @@
+{
+  "nameKo": "알렉산더 즈베레프",
+  "nameEn": "Alexander Zverev",
+  "slug": "alexander-zverev",
+  "country": "Germany",
+  "birthYear": 1997,
+  "hand": "right",
+  "backhand": "two-handed",
+  "rankingCurrent": 6,
+  "rankingPeak": 2,
+  "rankingPeakDate": "2022-06-13",
+  "tour": "ATP",
+  "style": "aggressive",
+  "favoriteSurface": "hard",
+  "templateType": "comeback",
+  "stats": {
+    "serveMaxSpeed": 230,
+    "firstServePct": 70,
+    "forehandRPM": 3000,
+    "tiebreakWinRate": 62,
+    "top10Record": "18승 22패",
+    "recent10Matches": "7승 3패",
+    "fiveSetWinRate": 60,
+    "breakPointConversion": 43
+  },
+  "tagsStory": [
+    "부상 극복의 상징",
+    "재도약하는 전사",
+    "빅서버"
+  ],
+  "height": 198,
+  "weight": 90,
+  "coach": "Alexander Zverev Sr.",
+  "hometown": "Hamburg",
+  "turnedPro": 2013
+}
+

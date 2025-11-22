@@ -22,7 +22,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // 실제 구현에서는 API 호출
-    console.log('Form submitted:', formData);
+    // 폼 제출 완료 (프로덕션에서는 로그 제거)
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
   };

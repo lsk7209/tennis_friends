@@ -109,7 +109,7 @@ function PlayStyleResultContent() {
           url: window.location.href
         });
       } catch (error) {
-        console.log('공유 취소됨');
+        // 공유 취소됨 (프로덕션에서는 로그 제거)
       }
     } else {
       navigator.clipboard.writeText(window.location.href);

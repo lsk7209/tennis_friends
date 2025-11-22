@@ -1,0 +1,37 @@
+{
+  "nameKo": "야닉 시너",
+  "nameEn": "Jannik Sinner",
+  "slug": "jannik-sinner",
+  "country": "Italy",
+  "birthYear": 2001,
+  "hand": "right",
+  "backhand": "two-handed",
+  "rankingCurrent": 4,
+  "rankingPeak": 3,
+  "rankingPeakDate": "2024-01-29",
+  "tour": "ATP",
+  "style": "aggressive",
+  "favoriteSurface": "hard",
+  "templateType": "narrative",
+  "stats": {
+    "serveMaxSpeed": 215,
+    "firstServePct": 64,
+    "forehandRPM": 3200,
+    "tiebreakWinRate": 60,
+    "top10Record": "15승 12패",
+    "recent10Matches": "8승 2패",
+    "fiveSetWinRate": 65,
+    "breakPointConversion": 42
+  },
+  "tagsStory": [
+    "성장하는 영재",
+    "도전하는 선수",
+    "이탈리아의 희망"
+  ],
+  "height": 188,
+  "weight": 76,
+  "coach": "Darren Cahill",
+  "hometown": "San Candido",
+  "turnedPro": 2018
+}
+

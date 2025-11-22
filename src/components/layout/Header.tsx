@@ -13,6 +13,9 @@ const Header: React.FC = () => {
   const pathname = usePathname();
 
   useEffect(() => {
+    // SSR 호환성을 위한 클라이언트 사이드 체크
+    if (typeof window === 'undefined') return;
+
     // 다크모드 상태 초기화
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -31,12 +34,19 @@ const Header: React.FC = () => {
     setIsDark(shouldBeDark);
     document.documentElement.classList.toggle('dark', shouldBeDark);
 
-    // 스크롤 감지
+    // 스크롤 감지 (throttle 적용)
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

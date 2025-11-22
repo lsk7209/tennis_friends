@@ -1,0 +1,38 @@
+{
+  "nameKo": "카를로스 알카라즈",
+  "nameEn": "Carlos Alcaraz",
+  "slug": "carlos-alcaraz",
+  "country": "Spain",
+  "birthYear": 2003,
+  "hand": "right",
+  "backhand": "two-handed",
+  "rankingCurrent": 2,
+  "rankingPeak": 1,
+  "rankingPeakDate": "2022-09-12",
+  "tour": "ATP",
+  "style": "aggressive",
+  "favoriteSurface": "clay",
+  "templateType": "technique",
+  "stats": {
+    "serveMaxSpeed": 220,
+    "firstServePct": 68,
+    "forehandRPM": 3500,
+    "tiebreakWinRate": 65,
+    "top10Record": "20승 15패",
+    "recent10Matches": "7승 3패",
+    "fiveSetWinRate": 70,
+    "breakPointConversion": 45
+  },
+  "tagsStory": [
+    "하이라이트 제조기",
+    "전천후",
+    "공격형",
+    "젊은 왕"
+  ],
+  "height": 183,
+  "weight": 72,
+  "coach": "Juan Carlos Ferrero",
+  "hometown": "El Palmar, Murcia",
+  "turnedPro": 2018
+}
+

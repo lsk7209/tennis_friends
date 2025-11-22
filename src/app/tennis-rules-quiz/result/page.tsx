@@ -64,7 +64,9 @@ function TennisRulesQuizResultContent() {
       link.href = canvas.toDataURL();
       link.click();
     } catch (error) {
-      console.error('이미지 생성 중 오류:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('이미지 생성 중 오류:', error);
+      }
     } finally {
       setIsGeneratingImage(false);
     }
@@ -110,7 +112,9 @@ function TennisRulesQuizResultContent() {
       
       pdf.save(`tennis-rules-quiz-result-${score}-${grade}.pdf`);
     } catch (error) {
-      console.error('PDF 생성 중 오류:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('PDF 생성 중 오류:', error);
+      }
     } finally {
       setIsGeneratingPDF(false);
     }

@@ -95,7 +95,9 @@ export default function AdminPage() {
         loadStatsFromLocalStorage();
       }
     } catch (error) {
-      console.error('API 호출 실패, localStorage에서 데이터 로드:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('API 호출 실패, localStorage에서 데이터 로드:', error);
+      }
       loadStatsFromLocalStorage();
     }
     setLoading(false);
@@ -391,7 +393,9 @@ export default function AdminPage() {
         topUtilities
       });
     } catch (error) {
-      console.error('localStorage 데이터 로드 실패:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('localStorage 데이터 로드 실패:', error);
+      }
     }
   };
 

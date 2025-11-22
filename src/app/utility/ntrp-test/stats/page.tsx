@@ -103,7 +103,9 @@ export default function StatsPage() {
           );
         }
       } catch (error) {
-        console.error('데이터 로딩 중 오류:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error('데이터 로딩 중 오류:', error);
+        }
       } finally {
         setIsLoading(false);
       }

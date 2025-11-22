@@ -15,7 +15,26 @@ const nextConfig: NextConfig = {
   
   // 성능 최적화
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: [
+      'lucide-react',
+      '@radix-ui/react-icons',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-select',
+      '@radix-ui/react-tabs',
+      'recharts',
+    ],
+  },
+  
+  // 번들 최적화
+  swcMinify: true,
+  
+  // 컴파일러 옵션
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
   },
   
   // 이미지 최적화 (정적 export에서는 제한적)

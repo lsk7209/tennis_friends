@@ -123,7 +123,7 @@ export default function MatchRecorderTest() {
       result: calculateResult()
     };
 
-    console.log('경기 기록 데이터:', finalData);
+    // 경기 기록 데이터 저장 완료 (프로덕션에서는 로그 제거)
 
     // 저장 시뮬레이션
     await new Promise(resolve => setTimeout(resolve, 2000));

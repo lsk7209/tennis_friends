@@ -1,0 +1,37 @@
+{
+  "nameKo": "다닐 메드베데프",
+  "nameEn": "Daniil Medvedev",
+  "slug": "daniil-medvedev",
+  "country": "Russia",
+  "birthYear": 1996,
+  "hand": "right",
+  "backhand": "two-handed",
+  "rankingCurrent": 3,
+  "rankingPeak": 1,
+  "rankingPeakDate": "2022-02-28",
+  "tour": "ATP",
+  "style": "counter-puncher",
+  "favoriteSurface": "hard",
+  "templateType": "rivalry",
+  "stats": {
+    "serveMaxSpeed": 200,
+    "firstServePct": 63,
+    "forehandRPM": 2500,
+    "tiebreakWinRate": 58,
+    "top10Record": "25승 20패",
+    "recent10Matches": "6승 4패",
+    "fiveSetWinRate": 68,
+    "breakPointConversion": 40
+  },
+  "tagsStory": [
+    "라이벌과 함께 성장",
+    "카운터펀처",
+    "하드 코트의 왕"
+  ],
+  "height": 198,
+  "weight": 83,
+  "coach": "Gilles Cervara",
+  "hometown": "Moscow",
+  "turnedPro": 2014
+}
+
