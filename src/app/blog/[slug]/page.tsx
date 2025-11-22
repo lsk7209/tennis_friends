@@ -41,15 +41,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const description = post.excerpt || post.description || '';
-  const tags = post.tags || [post.category, '테니스', '블로그'];
+  const description = post.excerpt || '';
+  const tags = [post.category, '테니스', '블로그'];
 
   return {
     title: `${post.title} | TennisFriends`,
     description,
     keywords: tags,
-    authors: [{ name: post.author || 'TennisFriends' }],
-    creator: post.author || 'TennisFriends',
+    authors: [{ name: 'TennisFriends' }],
+    creator: 'TennisFriends',
     publisher: 'TennisFriends',
     formatDetection: {
       email: false,
@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: 'ko_KR',
       type: 'article',
       publishedTime: post.date,
-      authors: [post.author || 'TennisFriends'],
+      authors: ['TennisFriends'],
       tags,
     },
     twitter: {
@@ -207,13 +207,15 @@ export default async function BlogPostPage({ params }: PageProps) {
         />
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-2 mt-8">
-          {post.tags.map((tag, index) => (
-            <Badge key={index} variant="outline" className="bg-background-dark border-white/5">
-              {tag}
-            </Badge>
-          ))}
-        </div>
+        {post.tags && post.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-8">
+            {post.tags.map((tag, index) => (
+              <Badge key={index} variant="outline" className="bg-background-dark border-white/5">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
       </article>
 
       {/* Related Posts */}
