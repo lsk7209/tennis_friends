@@ -27,9 +27,6 @@ const nextConfig: NextConfig = {
     ],
   },
   
-  // 번들 최적화
-  swcMinify: true,
-  
   // 컴파일러 옵션
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
