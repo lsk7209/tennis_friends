@@ -41,7 +41,10 @@ const playersWithBlogPosts = [
   'ugo-humbert',
   'sebastian-baez',
   'lorenzo-musetti',
-  'sebastian-korda'
+  'sebastian-korda',
+  'cameron-norrie',
+  'tallon-griekspoor',
+  'nicolas-jarry'
 ];
 
 // 선수 slug와 이름 매핑
@@ -65,7 +68,10 @@ const playerNames: { [key: string]: { name: string; nameEn: string; country: str
   'ugo-humbert': { name: '우고 엄베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷' },
   'sebastian-baez': { name: '세바스티안 바에즈', nameEn: 'Sebastian Baez', country: 'Argentina', countryFlag: '🇦🇷' },
   'lorenzo-musetti': { name: '로렌초 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹' },
-  'sebastian-korda': { name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸' }
+  'sebastian-korda': { name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸' },
+  'cameron-norrie': { name: '카메론 노리', nameEn: 'Cameron Norrie', country: 'United Kingdom', countryFlag: '🇬🇧' },
+  'tallon-griekspoor': { name: '탈론 그릭스푸어', nameEn: 'Tallon Griekspoor', country: 'Netherlands', countryFlag: '🇳🇱' },
+  'nicolas-jarry': { name: '니콜라스 자리', nameEn: 'Nicolas Jarry', country: 'Chile', countryFlag: '🇨🇱' }
 };
 
 const PLAYERS_PER_PAGE = 12;
