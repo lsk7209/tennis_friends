@@ -87,7 +87,7 @@ export function extractHeadings(markdown: string): Array<{ id: string; text: str
  * FAQ 섹션 추출
  */
 export function extractFAQs(markdown: string): Array<{ question: string; answer: string }> {
-  const faqRegex = /### (.+?)\n\n(.+?)(?=\n### |$)/gs;
+  const faqRegex = /### (.+?)\n\n([\s\S]+?)(?=\n### |$)/g;
   const faqs: Array<{ question: string; answer: string }> = [];
   let match;
 
