@@ -14,8 +14,7 @@ import {
   TrendingUp,
   Users,
   Target,
-  Zap,
-  Tennis
+  Zap
 } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
@@ -117,9 +116,9 @@ export default function PlayersPage() {
                 <div className="relative z-10 text-4xl transform group-hover:scale-110 transition-transform duration-300">
                   {player.countryFlag}
                 </div>
-                {/* 테니스 라켓 아이콘 (우측 하단 작은 장식) */}
-                <div className="absolute bottom-1 right-1 opacity-30 group-hover:opacity-50 transition-opacity duration-300">
-                  <Tennis className="w-4 h-4 text-white" />
+                {/* 테니스 공 아이콘 (우측 하단 작은 장식) */}
+                <div className="absolute bottom-1 right-1 opacity-40 group-hover:opacity-60 transition-opacity duration-300">
+                  <div className="w-3 h-3 rounded-full bg-white/60 border border-white/80"></div>
                 </div>
               </div>
             </div>
