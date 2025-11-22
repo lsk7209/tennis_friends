@@ -203,7 +203,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         {/* Article Content */}
         <div 
           className="prose prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: post.content || '' }}
         />
 
         {/* Tags */}
