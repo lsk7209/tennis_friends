@@ -14,7 +14,8 @@ import {
   TrendingUp,
   Users,
   Target,
-  Zap
+  Zap,
+  Tennis
 } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
@@ -35,7 +36,11 @@ const playersWithBlogPosts = [
   'grigor-dimitrov',
   'ben-shelton',
   'tommy-paul',
-  'frances-tiafoe'
+  'frances-tiafoe',
+  'ugo-humbert',
+  'sebastian-baez',
+  'lorenzo-musetti',
+  'sebastian-korda'
 ];
 
 // 선수 slug와 이름 매핑
@@ -55,7 +60,11 @@ const playerNames: { [key: string]: { name: string; nameEn: string; country: str
   'grigor-dimitrov': { name: '그리고르 디미트로프', nameEn: 'Grigor Dimitrov', country: 'Bulgaria', countryFlag: '🇧🇬' },
   'ben-shelton': { name: '벤 셸턴', nameEn: 'Ben Shelton', country: 'United States', countryFlag: '🇺🇸' },
   'tommy-paul': { name: '토미 폴', nameEn: 'Tommy Paul', country: 'United States', countryFlag: '🇺🇸' },
-  'frances-tiafoe': { name: '프란시스 티아포', nameEn: 'Frances Tiafoe', country: 'United States', countryFlag: '🇺🇸' }
+  'frances-tiafoe': { name: '프란시스 티아포', nameEn: 'Frances Tiafoe', country: 'United States', countryFlag: '🇺🇸' },
+  'ugo-humbert': { name: '우고 엄베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷' },
+  'sebastian-baez': { name: '세바스티안 바에즈', nameEn: 'Sebastian Baez', country: 'Argentina', countryFlag: '🇦🇷' },
+  'lorenzo-musetti': { name: '로렌초 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹' },
+  'sebastian-korda': { name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸' }
 };
 
 export default function PlayersPage() {
@@ -99,8 +108,19 @@ export default function PlayersPage() {
           <div className="flex items-start gap-4">
             {/* 선수 이미지 */}
             <div className="relative">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                {player.name.charAt(0)}
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg relative overflow-hidden group">
+                {/* 배경 패턴 */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,_white_1px,_transparent_1px)] bg-[length:8px_8px]"></div>
+                </div>
+                {/* 국기 이모지 (큰 사이즈) */}
+                <div className="relative z-10 text-4xl transform group-hover:scale-110 transition-transform duration-300">
+                  {player.countryFlag}
+                </div>
+                {/* 테니스 라켓 아이콘 (우측 하단 작은 장식) */}
+                <div className="absolute bottom-1 right-1 opacity-30 group-hover:opacity-50 transition-opacity duration-300">
+                  <Tennis className="w-4 h-4 text-white" />
+                </div>
               </div>
             </div>
 
