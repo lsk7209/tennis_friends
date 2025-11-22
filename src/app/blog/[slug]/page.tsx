@@ -92,12 +92,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 // 로컬 blogPosts 배열 제거 - allBlogPosts 사용
 const blogPosts: BlogPost[] = allBlogPosts.map(post => ({
   ...post,
-  description: post.excerpt || post.description || '',
-  tags: post.tags || [post.category, '테니스', '블로그'],
-  content: post.content || `<h2>${post.title}</h2><p>${post.excerpt || ''}</p>`,
-  author: post.author || 'TennisFriends',
-  summary: post.summary || post.excerpt || '',
-  highlight: post.highlight || post.excerpt || '',
+  description: post.excerpt || '',
+  tags: [post.category, '테니스', '블로그'],
+  content: `<h2>${post.title}</h2><p>${post.excerpt || ''}</p>`,
+  author: 'TennisFriends',
+  summary: post.excerpt || '',
+  highlight: post.excerpt || '',
 }));
 
 export async function generateStaticParams() {
