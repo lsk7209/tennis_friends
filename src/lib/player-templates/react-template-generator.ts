@@ -371,8 +371,8 @@ export function generateTemplateSections(
  * TOC 아이템 생성
  */
 export function generateTOCItems(player: Player, hasOptional: boolean): Array<{ id: string; text: string; depth: 2 | 3 }> {
-  const baseItems = [
-    { id: 'why-again-notable', text: `${player.nameKo}, ${player.templateType === 'comeback' ? '왜 다시 주목받는 선수인가?' : player.templateType === 'mindset' ? '왜 여전히 세계 최고인가?' : '왜 주목받는 선수인가?'}`, depth: 2 as const },
+  const baseItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
+    { id: 'why-again-notable', text: `${player.nameKo}, ${player.templateType === 'comeback' ? '왜 다시 주목받는 선수인가?' : player.templateType === 'mindset' ? '왜 여전히 세계 최고인가?' : '왜 주목받는 선수인가?'}`, depth: 2 },
     { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
     { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   ];
