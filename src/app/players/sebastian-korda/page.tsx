@@ -337,8 +337,10 @@ export default function SebastianKordaPage() {
             <CTA
               title="더 많은 테니스 선수 이야기"
               description="다른 테니스 선수들의 스토리도 확인해보세요"
-              buttonText="선수 목록 보기"
-              buttonLink="/players"
+              primaryButton={{
+                text: "선수 목록 보기",
+                href: "/players"
+              }}
             />
           </div>
         </div>
