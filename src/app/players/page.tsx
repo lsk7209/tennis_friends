@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,7 +14,9 @@ import {
   TrendingUp,
   Users,
   Target,
-  Zap
+  Zap,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
@@ -66,9 +68,12 @@ const playerNames: { [key: string]: { name: string; nameEn: string; country: str
   'sebastian-korda': { name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸' }
 };
 
+const PLAYERS_PER_PAGE = 12;
+
 export default function PlayersPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'country'>('name');
+  const [currentPage, setCurrentPage] = useState(1);
 
   // 필터링 및 정렬된 선수 목록 (블로그 포스트가 있는 선수들만)
   const filteredAndSortedPlayers = useMemo(() => {
@@ -98,6 +103,17 @@ export default function PlayersPage() {
     }
 
     return players;
+  }, [searchQuery, sortBy]);
+
+  // 페이지네이션 계산
+  const totalPages = Math.ceil(filteredAndSortedPlayers.length / PLAYERS_PER_PAGE);
+  const startIndex = (currentPage - 1) * PLAYERS_PER_PAGE;
+  const endIndex = startIndex + PLAYERS_PER_PAGE;
+  const paginatedPlayers = filteredAndSortedPlayers.slice(startIndex, endIndex);
+
+  // 검색/정렬 변경 시 첫 페이지로 리셋
+  useEffect(() => {
+    setCurrentPage(1);
   }, [searchQuery, sortBy]);
 
   const getPlayerCard = (player: { slug: string; name: string; nameEn: string; country: string; countryFlag: string }) => {
@@ -254,7 +270,7 @@ export default function PlayersPage() {
         <div className="container mx-auto max-w-6xl px-4">
           <StaggeredAnimation>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredAndSortedPlayers.map((player, index) => (
+              {paginatedPlayers.map((player, index) => (
                 <StaggeredItem key={player.slug}>
                   {getPlayerCard(player)}
                 </StaggeredItem>
@@ -273,6 +289,76 @@ export default function PlayersPage() {
               <p className="text-gray-600 dark:text-gray-400">
                 다른 검색어로 시도해보세요
               </p>
+            </div>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="mt-12 flex flex-col items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                  disabled={currentPage === 1}
+                  className="flex items-center gap-1"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  이전
+                </Button>
+
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => {
+                    // 페이지 번호 표시 로직: 현재 페이지 주변만 표시
+                    if (
+                      page === 1 ||
+                      page === totalPages ||
+                      (page >= currentPage - 1 && page <= currentPage + 1)
+                    ) {
+                      return (
+                        <Button
+                          key={page}
+                          variant={currentPage === page ? "default" : "outline"}
+                          size="sm"
+                          onClick={() => setCurrentPage(page)}
+                          className={`min-w-[40px] ${
+                            currentPage === page
+                              ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0"
+                              : ""
+                          }`}
+                        >
+                          {page}
+                        </Button>
+                      );
+                    } else if (
+                      page === currentPage - 2 ||
+                      page === currentPage + 2
+                    ) {
+                      return (
+                        <span key={page} className="px-2 text-gray-400">
+                          ...
+                        </span>
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
+
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                  disabled={currentPage === totalPages}
+                  className="flex items-center gap-1"
+                >
+                  다음
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
+
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                {startIndex + 1} - {Math.min(endIndex, filteredAndSortedPlayers.length)} / {filteredAndSortedPlayers.length}명
+              </div>
             </div>
           )}
         </div>
