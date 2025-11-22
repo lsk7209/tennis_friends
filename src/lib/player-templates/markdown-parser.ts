@@ -22,16 +22,17 @@ function parseFrontmatter(markdown: string): { data: Record<string, any>; conten
     const colonIndex = line.indexOf(':');
     if (colonIndex > 0) {
       const key = line.substring(0, colonIndex).trim();
-      let value = line.substring(colonIndex + 1).trim();
+      let value: string | string[] = line.substring(colonIndex + 1).trim();
       
       // 따옴표 제거
-      if ((value.startsWith('"') && value.endsWith('"')) || 
-          (value.startsWith("'") && value.endsWith("'"))) {
+      if (typeof value === 'string' && 
+          ((value.startsWith('"') && value.endsWith('"')) || 
+           (value.startsWith("'") && value.endsWith("'")))) {
         value = value.slice(1, -1);
       }
       
       // 배열 파싱 (간단한 형식)
-      if (value.startsWith('[') && value.endsWith(']')) {
+      if (typeof value === 'string' && value.startsWith('[') && value.endsWith(']')) {
         value = value.slice(1, -1).split(',').map(v => v.trim().replace(/["']/g, ''));
       }
       
