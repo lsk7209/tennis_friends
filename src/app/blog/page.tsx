@@ -115,7 +115,7 @@ export default function BlogPage() {
                     <span>•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <Link href={`/blog/${post.id}`}>
+                  <Link href={`/blog/${post.slug || post.id}`}>
                     <Button className="bg-blue-500 hover:bg-blue-600">
                     자세히 보기
                     </Button>

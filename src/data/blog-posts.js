@@ -2,6 +2,7 @@
 export const allBlogPosts = [
   {
     "id": "frances-tiafoe",
+    "slug": "frances-tiafoe",
     "title": "프란시스 티아포 — 에너지와 창의로 코트를 달구다",
     "excerpt": "폭발적인 스텝과 감각적인 터치, 변주를 두려워하지 않는 전진으로 흐름을 뒤집는 프란시스 티아포의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
     "badge": "최신 글",
@@ -13,6 +14,7 @@ export const allBlogPosts = [
   },
   {
     "id": "tommy-paul",
+    "slug": "tommy-paul",
     "title": "토미 폴 — 속도와 각도로 조립하는 미국식 하드 테니스",
     "excerpt": "가벼운 발과 예리한 각, 과감한 전진으로 흐름을 끊어먹는 토미 폴의 성장, 스타일, 인간미와 과제를 한 편으로.",
     "badge": "최신 글",
@@ -24,6 +26,7 @@ export const allBlogPosts = [
   },
   {
     "id": "ben-shelton",
+    "slug": "ben-shelton",
     "title": "벤 셸턴 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도",
     "excerpt": "좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 셸턴의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
     "badge": "최신 글",
@@ -35,6 +38,7 @@ export const allBlogPosts = [
   },
   {
     "id": "grigor-dimitrov",
+    "slug": "grigor-dimitrov",
     "title": "그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌",
     "excerpt": "원핸드 백핸드의 미학과 노련한 전술, 성숙한 멘탈로 커리어의 두 번째 절정을 만드는 그리고르 디미트로프의 성장, 스타일, 인간적 면모를 한 편으로.",
     "badge": "최신 글",
@@ -53,7 +57,8 @@ export const allBlogPosts = [
     "date": "2025-08-11",
     "readTime": "8분",
     "badgeColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "holger-rune"
   },
   {
     "id": "hubert-hurkacz",
@@ -64,7 +69,8 @@ export const allBlogPosts = [
     "date": "2025-10-02",
     "readTime": "8분",
     "badgeColor": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "hubert-hurkacz"
   },
   {
     "id": "taylor-fritz",
@@ -75,7 +81,8 @@ export const allBlogPosts = [
     "date": "2025-07-15",
     "readTime": "8분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "taylor-fritz"
   },
   {
     "id": "alex-de-minaur",
@@ -86,7 +93,8 @@ export const allBlogPosts = [
     "date": "2025-10-08",
     "readTime": "8분",
     "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "alex-de-minaur"
   },
   {
     "id": "casper-ruud",
@@ -97,7 +105,8 @@ export const allBlogPosts = [
     "date": "2025-09-29",
     "readTime": "7분",
     "badgeColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "casper-ruud"
   },
   {
     "id": "stefanos-tsitsipas",
@@ -108,7 +117,8 @@ export const allBlogPosts = [
     "date": "2025-10-19",
     "readTime": "8분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "stefanos-tsitsipas"
   },
   {
     "id": "andrey-rublev",
@@ -119,7 +129,8 @@ export const allBlogPosts = [
     "date": "2025-09-07",
     "readTime": "8분",
     "badgeColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "andrey-rublev"
   },
   {
     "id": "alexander-zverev",
@@ -130,7 +141,8 @@ export const allBlogPosts = [
     "date": "2025-08-23",
     "readTime": "8분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "alexander-zverev"
   },
   {
     "id": "daniil-medvedev",
@@ -141,7 +153,8 @@ export const allBlogPosts = [
     "date": "2025-09-21",
     "readTime": "8분",
     "badgeColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "daniil-medvedev"
   },
   {
     "id": "novak-djokovic",
@@ -152,7 +165,8 @@ export const allBlogPosts = [
     "date": "2025-09-03",
     "readTime": "8분",
     "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "novak-djokovic"
   },
   {
     "id": "jannik-sinner",
@@ -163,7 +177,8 @@ export const allBlogPosts = [
     "date": "2025-08-14",
     "readTime": "8분",
     "badgeColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "jannik-sinner"
   },
   {
     "id": "carlos-alcaraz",
@@ -174,7 +189,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "6분",
     "badgeColor": "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "carlos-alcaraz"
   },
   {
     "id": "autumn-tennis-rhythm-guide",
@@ -185,7 +201,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "autumn-tennis-rhythm-guide"
   },
   {
     "id": "backhand-accuracy-full-guide",
@@ -196,7 +213,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "backhand-accuracy-full-guide"
   },
   {
     "id": "rainy-day-tennis-tips-guide",
@@ -207,7 +225,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "rainy-day-tennis-tips-guide"
   },
   {
     "id": "serve-return-prediction-guide",
@@ -218,7 +237,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "serve-return-prediction-guide"
   },
   {
     "id": "tennis-advanced-pattern-analysis",
@@ -229,7 +249,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-advanced-pattern-analysis"
   },
   {
     "id": "tennis-backhand-technique-guide",
@@ -240,7 +261,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-backhand-technique-guide"
   },
   {
     "id": "tennis-beginner-30day-growth-plan",
@@ -251,7 +273,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-beginner-30day-growth-plan"
   },
   {
     "id": "tennis-beginner-30day-training-plan",
@@ -262,7 +285,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-beginner-30day-training-plan"
   },
   {
     "id": "tennis-doubles-strategy-guide",
@@ -273,7 +297,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-doubles-strategy-guide"
   },
   {
     "id": "tennis-doubles-teamwork-strategy",
@@ -284,7 +309,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-doubles-teamwork-strategy"
   },
   {
     "id": "tennis-etiquette-and-manners",
@@ -295,7 +321,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-etiquette-and-manners"
   },
   {
     "id": "tennis-footwork-balance-training-guide",
@@ -306,7 +333,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-footwork-balance-training-guide"
   },
   {
     "id": "tennis-footwork-science",
@@ -317,7 +345,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-footwork-science"
   },
   {
     "id": "tennis-forehand-impact-timing-guide",
@@ -328,7 +357,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-forehand-impact-timing-guide"
   },
   {
     "id": "tennis-injury-prevention-full-guide",
@@ -339,7 +369,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-injury-prevention-full-guide"
   },
   {
     "id": "tennis-injury-prevention-recovery",
@@ -350,7 +381,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-injury-prevention-recovery"
   },
   {
     "id": "tennis-inmatch-condition-management",
@@ -361,7 +393,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-inmatch-condition-management"
   },
   {
     "id": "tennis-intermediate-match-strategy",
@@ -372,7 +405,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-intermediate-match-strategy"
   },
   {
     "id": "tennis-intermediate-to-advanced-transition",
@@ -383,7 +417,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-intermediate-to-advanced-transition"
   },
   {
     "id": "tennis-mental-focus-recovery",
@@ -394,7 +429,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-mental-focus-recovery"
   },
   {
     "id": "tennis-mental-routine-5steps",
@@ -405,7 +441,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-mental-routine-5steps"
   },
   {
     "id": "tennis-mental-routine-control-guide",
@@ -416,7 +453,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-mental-routine-control-guide"
   },
   {
     "id": "tennis-postmatch-recovery-routine",
@@ -427,7 +465,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-postmatch-recovery-routine"
   },
   {
     "id": "tennis-power-of-routine",
@@ -438,7 +477,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-power-of-routine"
   },
   {
     "id": "tennis-racket-selection-guide",
@@ -449,7 +489,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-racket-selection-guide"
   },
   {
     "id": "tennis-scoring-system-guide",
@@ -460,7 +501,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-scoring-system-guide"
   },
   {
     "id": "tennis-serve-rhythm-science",
@@ -471,7 +513,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-serve-rhythm-science"
   },
   {
     "id": "tennis-serve-speed-science",
@@ -482,7 +525,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-serve-speed-science"
   },
   {
     "id": "tennis-serve-timing-and-spin-guide",
@@ -493,7 +537,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-serve-timing-and-spin-guide"
   },
   {
     "id": "tennis-shoes-balance-guide",
@@ -504,7 +549,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-shoes-balance-guide"
   },
   {
     "id": "tennis-shoes-selection-guide",
@@ -515,7 +561,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-shoes-selection-guide"
   },
   {
     "id": "tennis-volley-technique-guide",
@@ -526,7 +573,8 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "tennis-volley-technique-guide"
   },
   {
     "id": "winter-indoor-tennis-training-routine",
@@ -537,6 +585,7 @@ export const allBlogPosts = [
     "date": "2025-11-01",
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "slug": "winter-indoor-tennis-training-routine"
   }
 ];
