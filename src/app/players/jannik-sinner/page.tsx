@@ -3,244 +3,277 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle } from 'lucide-react';
 
-export const metadata = {
-  title: '야닉 시너 선수 프로필과 스토리',
-  description: '이탈리아 출신 야닉 시너의 성장 배경, 경기 스타일, 루틴과 멘탈, 라이벌 구도를 깊이 있게 담았습니다.',
-  keywords: ['테니스', '야닉 시너', '선수 프로필', '스토리', '이탈리아'],
+export const metadata: Metadata = {
+  title: '야닉 시너 — 세계랭킹 4위 | 플레이스타일·명장면·최근 경기력',
+  description: '야닉 시너의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 탁월한 스트로크 기술과 서브 앤 발리 게임을 겸비한 이탈리아의 차세대 스타.',
+  keywords: ['야닉 시너', 'Jannik Sinner', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '공격형', '서브 앤 발리'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/jannik-sinner',
   },
   openGraph: {
-    title: '야닉 시너 선수 프로필과 스토리',
-    description: '이탈리아 출신 야닉 시너의 성장 배경, 경기 스타일, 루틴과 멘탈, 라이벌 구도를 깊이 있게 담았습니다.',
+    title: '야닉 시너 — 세계랭킹 4위 | 플레이스타일·명장면·최근 경기력',
+    description: '야닉 시너의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/jannik-sinner',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
-    type: 'website',
+    type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '야닉 시너 선수 프로필과 스토리',
-    description: '이탈리아 출신 야닉 시너의 성장 배경, 경기 스타일, 루틴과 멘탈, 라이벌 구도를 깊이 있게 담았습니다.',
+    title: '야닉 시너 — 세계랭킹 4위 | 플레이스타일·명장면·최근 경기력',
+    description: '야닉 시너의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-alps-discipline-made-conciseness', text: '성장 배경 — 알프스의 규율이 만든 간결함', depth: 2 },
-  { id: 'playing-style-short-backswing-long-straight', text: '경기 스타일 — 짧은 백스윙, 길게 미는 직선', depth: 2 },
-  { id: 'rhythm-selection-emotion-low-standard-clear', text: '리듬과 선택 — 감정은 낮게, 기준은 선명하게', depth: 2 },
-  { id: 'experience-transition-hard-straight-grass-concise-clay', text: '경험과 전환 — 하드의 직선, 잔디의 간결, 점토의 인내', depth: 2 },
-  { id: 'human-aspects-restraint-focus-team-first', text: '인간적인 면모 — 절제, 집중, 그리고 팀 퍼스트', depth: 2 },
-  { id: 'nationality-culture-artisan-country-learned-detail', text: '국적과 문화 — 장인의 나라에서 배운 디테일', depth: 2 },
-  { id: 'relationships-rivals-speed-question-angle-answer', text: '관계와 라이벌 — 속도로 묻고, 각으로 답한다', depth: 2 },
-  { id: 'famous-scenes-center-depth-twice-down-line-once', text: '명장면 — 중앙 깊이 두 번, 다운더라인 한 번', depth: 2 },
-  { id: 'equipment-details-tension-balance-contact-adjustment', text: '장비와 디테일 — 텐션·밸런스·접점의 미세 조정', depth: 2 },
-  { id: 'future-challenges-net-ahead-one-beat-more', text: '앞으로의 과제 — 네트 앞에서 한 박자 더', depth: 2 },
-  { id: 'fans-community-lasting-trust-way', text: '팬과 커뮤니티 — 오래 가는 신뢰의 방식', depth: 2 },
+  { id: 'why-again-notable', text: '야닉 시너, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
+  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
+  { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
+  { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
+  { id: 'recent-form', text: '요즘 야닉 시너의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '야닉 시너, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
     q: '야닉 시너의 경기 스타일은 어떤가요?',
-    a: '빠른 준비와 직선적인 임팩트, 차가운 선택이 특징입니다. 짧은 백스윙으로 길게 미는 직선으로 상대를 압박하며, 높이보다 속도, 회전보다 길이로 큰 코트의 시간을 압축해 경기를 자신의 속도로 끌고 옵니다.'
+    a: '공격형 스타일로, 탁월한 스트로크 기술과 서브 앤 발리 게임이 특징입니다. 짧은 백스윙, 길게 미는 직선으로 흐름을 설계합니다.',
   },
   {
-    q: '시너의 성장 배경은 어떤가요?',
-    a: '북이탈리아 산악지대에서 스키와 테니스를 함께 배웠습니다. 알프스의 규율이 만든 간결함으로, 동작을 줄이고 접점을 앞에 둔다는 원칙을 집요하게 주입받았고, 원정이 잦아도 일상의 질서를 잃지 않았습니다.'
+    q: '시너의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
+    a: '최고 랭킹은 4위였으며, 현재도 4위를 유지하고 있습니다. 특히 ATP 파이널스 우승을 차지하며 전성기를 구가하고 있습니다.',
   },
   {
     q: '시너의 강점은 무엇인가요?',
-    a: '속도와 정확도가 최대 강점입니다. 빠른 준비와 직선적인 임팩트로 흐름을 압축하며, 차가운 선택으로 큰 코트의 시간을 단축합니다. 감정은 낮게 유지하되 기준은 선명하게 유지하는 능력이 뛰어납니다.'
+    a: '탁월한 스트로크 기술과 서브 앤 발리 게임이 최대 강점입니다. 짧은 백스윙, 길게 미는 직선으로 흐름을 설계하는 능력이 뛰어납니다.',
   },
   {
     q: '시너의 인간적인 면모는 어떤가요?',
-    a: '절제, 집중, 팀 퍼스트가 특징입니다. 인터뷰는 짧고 일관되며, 코치와 트레이너의 이름을 먼저 언급합니다. 강함을 과시하기보다 강함을 다루는 방식을 선택하는 유형입니다.'
+    a: '절제와 집중, 팀 퍼스트가 특징입니다. 인터뷰에서 준비와 팀을 먼저 언급하며, 감정은 낮게 기준은 선명하게 유지하는 일관성이 있습니다.',
   },
   {
-    q: '시너의 미래 전망은 어떻게 되나요?',
-    a: '네트 앞에서 한 박자 더가 과제입니다. 하프코트 마무리 빈도, 리턴 직후 3구에서의 전진 타이밍 반 박자 앞당김, 세컨드 서브 코스 다양화를 통해 긴 경기에서도 에너지 관리를 수월하게 할 수 있습니다.'
+    q: '시너를 한 문장으로 설명하면?',
+    a: '탁월한 스트로크 기술과 서브 앤 발리 게임을 겸비한 이탈리아의 차세대 스타입니다.',
   },
 ];
 
-export default function JannikSinnerBlogPost() {
+export default function JannikSinnerPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
+      <Article
+        title="야닉 시너"
+        excerpt="탁월한 스트로크 기술과 서브 앤 발리 게임을 겸비한 이탈리아의 차세대 스타"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+          {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '야닉 시너', '선수 프로필', '스토리', '이탈리아'].map((tag) => (
-              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
+            {['테니스', '야닉 시너', '선수 프로필', '이탈리아', '공격형', '서브 앤 발리'].map((tag) => (
+              <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
             ))}
           </div>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            야닉 시너
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            속도와 정확도로 재정의한 '현대 표준'
-          </p>
-          <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            빠른 준비와 직선적인 임팩트, 차가운 선택으로 흐름을 압축하는 야닉 시너의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
-          </p>
-          
-          {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-6 text-blue-100">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="font-medium">8분 읽기</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span className="font-medium">2025년 8월 14일</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <Article title="" excerpt="">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
-          <div className="mb-12">
-            <TOC items={tocItems} />
-          </div>
+          <TOC items={tocItems} />
 
           {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
-              <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
-                <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 야닉 시너(Jannik Sinner)는 빠른 준비와 직선적인 임팩트, 차가운 선택으로 큰 코트의 시간을 압축해 경기를 자신의 속도로 끌고 오는 이탈리아의 간판입니다.
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            <h2 id="why-again-notable">야닉 시너, 왜 주목받는 선수인가?</h2>
+            <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
+              <div className="flex items-start gap-3">
+                <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
+                  탁월한 스트로크 기술과 서브 앤 발리 게임을 겸비한 이탈리아의 차세대 스타
+                </p>
+              </div>
+            </blockquote>
+            <p>야닉 시너는 이탈리아 출신의 세계랭킹 4위 테니스 선수로, 탁월한 스트로크 기술과 서브 앤 발리 게임으로 ATP 투어를 지배하고 있다. 세계랭킹 4위를 유지하며, 특히 ATP 파이널스 우승을 차지하며 전성기를 구가하고 있다. 짧은 백스윙, 길게 미는 직선으로 흐름을 설계하는 그의 테니스는 차세대 스타의 설계자로 평가받는다.</p>
+            <p>그는 2024년 ATP 파이널스 우승을 차지하며 전성기를 구가했고, 최근 몇 시즌 동안 큰 대회에서도 안정적인 경기력을 보여주고 있다. 그의 테니스는 화려함보다는 효율을 추구하며, 특히 탁월한 스트로크 기술과 서브 앤 발리 게임이 뛰어나다.</p>
+
+            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
+            <p>야닉 시너는 이탈리아 출신의 세계랭킹 4위 선수로, 공격형 스타일과 탁월한 스트로크 기술, 서브 앤 발리 게임이 특징인 ATP 투어의 차세대 스타다.</p>
+            
+            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
+              </div>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">이탈리아</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">2001년 (23세)</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">4위</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">4위</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">공격형</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">서브 앤 발리</span></span>
+                </li>
+              </ul>
+            </div>
+
+            <p>플레이 스타일은 공격형으로 분류된다. 베이스라인에서 강력한 그라운드 스트로크를 구사하면서도, 기회가 생기면 네트로 전진해 발리로 마무리하는 능력을 갖추고 있다. 특히 탁월한 스트로크 기술과 서브 앤 발리 게임이 그의 시그니처 무기로, 짧은 백스윙, 길게 미는 직선으로 흐름을 설계한다.</p>
+            
+            <div className="not-prose my-6 flex flex-wrap gap-2">
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border-blue-300 dark:border-blue-700">
+                <Zap className="w-3 h-3 mr-1 inline" />
+                탁월한 스트로크
+              </Badge>
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
+                <Shield className="w-3 h-3 mr-1 inline" />
+                서브 앤 발리
+              </Badge>
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
+                <Star className="w-3 h-3 mr-1 inline" />
+                차세대 스타
+              </Badge>
+            </div>
+            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"탁월한 스트로크"</strong>, <strong>"서브 앤 발리"</strong>, <strong>"차세대 스타"</strong>이다. 그의 테니스는 화려한 장식보다는 효율을 추구하며, 특히 짧은 백스윙, 길게 미는 직선으로 흐름을 설계하는 능력이 뛰어나다.</p>
+
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+
+            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
+            <p>시너가 세계 상위권을 유지하는 힘은 탁월한 스트로크 기술, 서브 앤 발리 게임, 그리고 기술의 완성도에서 나온다.</p>
+
+            <h3 className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+              기술적 강점
+            </h3>
+            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+                <strong className="text-purple-700 dark:text-purple-300">탁월한 스트로크 기술</strong>이 가장 큰 무기. 짧은 백스윙, 길게 미는 직선으로 흐름을 설계한다.
               </p>
             </div>
+            <p>탁월한 스트로크 기술이 가장 큰 무기다. 짧은 백스윙, 길게 미는 직선으로 흐름을 설계한다. 포핸드는 넓은 궤도와 빠른 채찍질로 코트를 벌린다. 백핸드는 양손의 견고함으로 라인을 얇게 긁어 각을 만든다. 서브는 와이드와 바디의 비율을 바꿔 첫 두 타구의 구조를 설계하고, 짧은 리턴이 오면 하프코트에서 한 걸음 전진해 발리로 결말을 재촉한다.</p>
+            <p>서브 앤 발리 게임이 뛰어나다. 퍼스트 서브로 시작해 백핸드로 봉합하는 전술로 흐름을 제어한다. 리턴은 퍼스트 서브에는 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 전진해 접점을 앞세운다. 이어지는 첫 스트로크는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서 코너의 문을 열어 상대의 스텝을 묶는다.</p>
 
-            <h2 id="growth-background-alps-discipline-made-conciseness">성장 배경 — 알프스의 규율이 만든 간결함</h2>
-            <p>북이탈리아 산악지대에서 스키와 테니스를 함께 배운 유년은 그에게 균형 감각과 모멘텀 관리의 언어를 선물했습니다. 미끄러짐과 제동, 재가속을 반복하는 스키의 감각은 테니스 풋워크로 번역되었고, 코치진은 '동작을 줄이고 접점을 앞에 둔다'는 단 하나의 원칙을 집요하게 주입했습니다. 원정이 잦아도 수면·식단·가벼운 코어 루틴을 고정하며 일상의 질서를 잃지 않았고, 훈련 일지에는 화려한 수치보다 "오늘의 수정 한 줄"이 먼저 적혔습니다.</p>
+            <h3 className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
+              피지컬 능력
+            </h3>
+            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">5세트 경기에서도 후반까지 안정적인 경기력</strong>을 유지한다.</p>
 
-            <h2 id="playing-style-short-backswing-long-straight">경기 스타일 — 짧은 백스윙, 길게 미는 직선</h2>
-            <p>시너의 볼은 높이보다 속도, 회전보다 길이로 상대를 압박합니다. 백핸드는 양손의 견고함으로 네트를 넉넉히 넘기면서도 라인을 얇게 긁어 코너를 찔러 넣고, 포핸드는 짧게 준비해 임팩트 구간을 길게 가져가 깊이를 확보합니다. 리턴에서는 한 발 안쪽에서 출발해 접점을 앞세우고, 세컨드 서브 리턴에선 과감히 전진해 랠리의 첫 톤을 본인 쪽으로 당깁니다. 네트 접근은 필요할 때만, 하프코트에 빈 공간이 열리면 한 걸음 더 들어가 간결한 발리로 문장을 닫습니다.</p>
-
-            <h2 id="rhythm-selection-emotion-low-standard-clear">리듬과 선택 — 감정은 낮게, 기준은 선명하게</h2>
-            <p>포인트 사이 루틴은 단출합니다. 라켓 스트링을 정리하고, 두 번의 깊은 호흡, 일정한 토스. 스코어가 밀려도 루틴의 길이를 바꾸지 않아 심박의 급등을 막습니다. 타이브레이크 초반엔 높이·길이를 먼저 점검하고, 세 번째 포인트부터 라인을 얇게 쓰며 균형을 흔듭니다. 그는 위험을 피하지 않지만, 이유 없는 도박도 하지 않습니다. 선택의 기준은 "속도 유지, 접점 앞, 다음 볼 준비"라는 세 단어로 요약됩니다.</p>
-
-            <h2 id="experience-transition-hard-straight-grass-concise-clay">경험과 전환 — 하드의 직선, 잔디의 간결, 점토의 인내</h2>
-            <p>하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 주도권을 잡습니다. 잔디에선 토스를 낮추고 백스윙을 더 줄여 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 질주를 통제합니다. 점토에서는 회전을 조금 더해 낙구를 안정시키고, 네 번째나 다섯 번째 스트로크에서 드롭·슬라이스로 템포를 흔든 뒤 바로 직선으로 전환합니다. 표면이 달라져도 원칙은 동일합니다. 흐름을 먼저 안정시키고, 열린 틈에서만 칼을 뽑는다.</p>
-
-            <h2 id="human-aspects-restraint-focus-team-first">인간적인 면모 — 절제, 집중, 그리고 팀 퍼스트</h2>
-            <p>그의 인터뷰는 짧고 일관됩니다. 이긴 날은 준비가 맞았다고, 진 날은 수정이 필요하다고 담담히 말합니다. 코치와 트레이너의 이름을 먼저 언급하고, 경기장 스태프에게도 예의를 잃지 않습니다. 팬과의 소통은 차분하지만 따뜻하며, 사인을 기다리는 아이에게 눈높이를 맞추는 장면이 자주 포착됩니다. 강함을 과시하기보다 강함을 다루는 방식을 선택하는 유형입니다.</p>
-
-            <h2 id="nationality-culture-artisan-country-learned-detail">국적과 문화 — 장인의 나라에서 배운 디테일</h2>
-            <p>이탈리아의 장인 문화는 '작은 것이 전체를 완성한다'는 믿음을 강조합니다. 시너의 테니스에도 그 정신이 녹아 있습니다. 라켓 각도, 발의 방향, 토스의 높이 같은 미세 요소가 결과를 만든다는 확신이 그의 계획을 지탱합니다. 대표팀 이벤트에서 보이는 침착한 리더십은 개인을 넘어 공동체의 상징으로 확장됩니다.</p>
-
-            <h2 id="relationships-rivals-speed-question-angle-answer">관계와 라이벌 — 속도로 묻고, 각으로 답한다</h2>
-            <p>동시대 강자들과의 승부에서 시너는 속도로 질문합니다. 강한 톱스핀으로 밀어붙이는 상대에겐 라켓면을 더 닫아 플랫에 가깝게 맞서고, 네트를 서두르는 유형에겐 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만듭니다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 스윙 길이를 바꿔 '같은 구역을 다른 속도'로 찌르는 방식으로 균형을 되찾습니다.</p>
-
-            <h2 id="famous-scenes-center-depth-twice-down-line-once">명장면 — 중앙 깊이 두 번, 다운더라인 한 번</h2>
-            <p>브레이크 포인트. 중앙 깊은 볼 두 개로 상대 스텝을 뒤로 밀어낸 뒤, 그는 백핸드를 몸 가까이 끌어당겨 라인으로 단호히 접습니다. 공이 흰 선을 스치며 미끄러질 때 관중의 숨이 잠시 멎고, 시너는 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟습니다. 감정이 아니라 절차가 승부를 만든다는 믿음이 응축된 순간입니다.</p>
-
-            <h2 id="equipment-details-tension-balance-contact-adjustment">장비와 디테일 — 텐션·밸런스·접점의 미세 조정</h2>
-            <p>그는 라켓 밸런스를 과하게 머리쪽으로 보내지 않아 스윙 회복이 빠르고, 스트링 텐션은 기온과 공의 반발에 맞춰 소폭 조정합니다. 더운 날엔 텐션을 올려 반발을 제어하고, 실내에서는 텐션을 낮춰 체공 시간을 확보합니다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목의 흔들림을 줄입니다. 장비가 플레이를 지배하도록 두지 않고, 플레이가 요구하는 만큼만 조정한다는 철학이 일관됩니다.</p>
-
-            <h2 id="future-challenges-net-ahead-one-beat-more">앞으로의 과제 — 네트 앞에서 한 박자 더</h2>
-            <p>그가 더 멀리 가기 위한 열쇠는 하프코트에서의 마무리 빈도입니다. 리턴 직후 3구에서 전진 타이밍을 반 박자 앞당기고, 세컨드 서브 코스의 다양화를 통해 예측을 늦춘다면, 긴 경기에서도 에너지 관리가 쉬워질 것입니다. 이미 갖춘 속도와 정확성 위에 결말의 속도가 더해지면, 그의 이름은 큰 무대의 마지막 장면에서 더 자주 호명될 가능성이 큽니다.</p>
-
-            <h2 id="fans-community-lasting-trust-way">팬과 커뮤니티 — 오래 가는 신뢰의 방식</h2>
-            <p>그를 오래 응원하게 만드는 힘은 태도의 일관성입니다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말합니다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상이 완성됩니다. 기록은 표가 되지만, 태도는 기억이 됩니다. 시너의 이름이 세월을 건너 사랑받을 이유가 바로 여기에 있습니다.</p>
-          </div>
-
-          {/* Related Links */}
-          <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+            <h3 className="flex items-center gap-2">
+              <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              멘탈 강점
+            </h3>
+            <div className="not-prose my-4 p-4 bg-green-50 dark:bg-green-950/20 border-l-4 border-green-500 rounded-r-lg shadow-sm">
+              <div className="flex items-center gap-2 mb-2">
+                <Target className="w-4 h-4 text-green-700 dark:text-green-400" />
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-0">
+                  핵심 통계
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
-              </h3>
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
+                타이브레이크에서 비교적 강한 편 · 감정은 낮게 기준은 선명하게 유지 · 절제와 집중
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">실력 테스트</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">플레이 스타일 테스트</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    외부 자료
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어 공식 사이트</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://en.wikipedia.org/wiki/Jannik_Sinner" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">📖</span>
-                        <span className="font-medium">위키피디아 프로필</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+            <p>포인트 사이 그는 스트링을 훑고 두 번의 깊은 호흡으로 리듬을 고정한다. 스코어가 흔들려도 루틴의 길이를 바꾸지 않아 심박이 급등하지 않는다. 타이브레이크 초반에는 네트를 넉넉히 넘기는 구질로 높이와 길이를 확인하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던진다. 감정은 낮게 기준은 선명하게 유지하는 일관성이 특징이다.</p>
+
+            <h3 className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+              전술적 다양성
+            </h3>
+            <p>표면별 전개가 뛰어나다. 하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 주도권을 잡고, 리턴 게임에서는 중앙 깊은 볼로 각을 지워 다음 볼에서 속도를 끌어올린다. 잔디에서는 토스를 낮추고 백스윙을 줄여 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 속도를 통제한다. 점토에서는 회전을 더해 낙구를 안정시키고 랠리의 길이를 받아들이되, 네 번째나 다섯 번째 스트로크에서 드롭과 슬라이스를 섞어 템포를 흔든다.</p>
+
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+
+            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            <p>시너의 커리어를 상징하는 경기는 2024년 ATP 파이널스 우승과 최근 몇 시즌의 큰 대회들이다.</p>
+
+            <h3>2024년 ATP 파이널스 우승</h3>
+            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
+              <div className="flex items-center gap-2 mb-3">
+                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전성기의 정점</p>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+                <strong>2024년 ATP 파이널스</strong>에서 우승을 차지하며 전성기를 구가했다. 특히 결승전에서의 경기력은 그의 기술적 완성도를 보여주는 대표적인 사례였다.
+              </p>
             </div>
+            <p>2024년 ATP 파이널스에서 그는 우승을 차지하며 전성기를 구가했다. 당시 세계 최고 수준의 선수들을 연파하며 우승했다. 특히 결승전에서의 경기력은 그의 기술적 완성도를 보여주는 대표적인 사례였다. 탁월한 스트로크 기술과 서브 앤 발리 게임, 그리고 중요한 포인트에서의 침착함이 모두 어우러진 경기였다.</p>
+
+            <h3>최근 시즌의 경기력</h3>
+            <p>최근 시즌에서는 큰 대회에서 보여준 경기들이 인상적이다. 특히 윔블던 4강 진출과 마스터스 1000 시리즈 우승을 거두며, 큰 대회에서도 안정적인 경기력을 보여줬다. 특히 브레이크 포인트 상황에서 중앙 깊은 볼 두 번, 다운더라인 한 번의 패턴은 그의 테니스가 가진 설득력을 한눈에 보여준다.</p>
+
+            <h3>대표 명장면</h3>
+            <blockquote className="not-prose my-4 p-5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/50 dark:to-slate-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg shadow-sm">
+              <div className="flex items-start gap-3">
+                <Zap className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic leading-relaxed">
+                  브레이크 포인트. 중앙 깊은 볼 두 개로 상대 스텝을 뒤로 밀어낸 뒤, 백핸드를 몸 가까이 끌어당겨 다운더라인으로 단호히 접는다. 공이 흰 선을 스치며 빠져나갈 때 관중의 탄성이 터지고, 그는 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟는다. 중앙 깊이 두 번, 다운더라인 한 번의 패턴이 바로 이 순간이다.
+                </p>
+              </div>
+            </blockquote>
+
+            <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
+            <p>시너는 경기력뿐 아니라 절제와 집중, 그리고 팀 퍼스트 덕분에 팬층이 두텁다.</p>
+
+            <h3>코트 매너</h3>
+            <p>그는 절제와 집중을 겸비했다. 인터뷰에서 준비와 팀을 먼저 언급한다. 잘된 날에는 계획이 맞았다고, 부족한 날에는 수정 항목이 분명하다고 말한다. 팬에겐 미소와 눈맞춤을, 코트 스태프에겐 짧은 감사를 잊지 않는다. 패배 뒤에도 책임의 방향을 자기 쪽으로 당기고, 승리한 날에는 스태프와 팬에게 차례로 감사를 전한다.</p>
+
+            <h3>인터뷰 스타일</h3>
+            <p>인터뷰는 진솔하고 체계적이다. 준비와 팀을 먼저 언급하며, 자신의 성과보다는 상대의 강점을 인정하는 모습을 자주 보인다. 긴 일정 속에서도 회복·수면·식단의 루틴을 생활로 고정해 컨디션의 파고를 낮춘다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 완성한다.</p>
+
+            <h3>팀과의 관계</h3>
+            <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 오랜 기간 함께한 코치와의 유대는 그의 안정적인 경기력에 기여하고 있으며, 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 이탈리아의 훈련 문화는 장인의 나라에서 배운 디테일을 중시하는데, 시너의 테니스에도 이 정신이 뚜렷하다.</p>
+
+            <h2 id="recent-form">요즘 야닉 시너의 경기력 흐름은 어떤가?</h2>
+            <p>최근 몇 시즌 동안 시너는 빠르게 성장하고 있으며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
+
+            <h3>최근 성적</h3>
+            <div className="not-prose my-4 p-3 bg-blue-50 dark:bg-blue-950/20 border-l-3 border-blue-500 rounded-r shadow-sm">
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0 flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-blue-600" />
+                <strong>상승세:</strong> 최근 10경기 <strong className="text-blue-700 dark:text-blue-400">강한 상대에게도 꾸준히 승리</strong> · 탑 10 선수들과의 경기에서도 승리
+              </p>
+            </div>
+            <p>최근 10경기 기준으로 보면, 그는 강한 상대에게도 꾸준히 승리를 거두는 편이다. 탑 10 선수들과의 경기에서도 승리를 거두며, 자신의 테니스가 여전히 경쟁력이 있음을 증명하고 있다. 최근 3개월 동안의 성적도 안정적이며, 큰 대회에서 후반 라운드에 진출하는 빈도가 높아졌다.</p>
+
+            <h3>부상 관리</h3>
+            <p>부상과 관련해서는 현재 큰 문제가 없는 상태다. 체계적인 회복과 관리 덕분에 경기에 지장을 주는 수준은 아니다. 다만 나이가 어리기 때문에 몸 관리에 더 신경을 쓰고 있으며, 불필요한 스프린트를 줄이고 효율적인 경기 운영에 집중하고 있다.</p>
+
+            <h3>랭킹과 스타일 변화</h3>
+            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 4위를 유지하고 있다. 빠르게 성장하며 상위권으로 올라오는 과정에서, 그는 여전히 탑 10 선수들과 경쟁할 수 있는 능력을 보여줬다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다.</p>
+
+            <h2 id="one-sentence-summary">야닉 시너, 한 문장으로 정리하면?</h2>
+            <p>야닉 시너는 탁월한 스트로크 기술과 서브 앤 발리 게임을 겸비한 이탈리아의 차세대 스타다.</p>
+            <p>그의 테니스는 화려함보다는 효율을 추구하며, 특히 짧은 백스윙, 길게 미는 직선으로 흐름을 설계하는 능력이 뛰어나다. 타이브레이크와 장기전에서의 멘탈 강점, 그리고 표면별 전개 능력이 세계 상위권을 유지하게 해준다. 절제와 집중을 겸비한 그의 테니스는 결과를 넘어 설득으로 남으며, 차세대 스타로 기억될 것이다.</p>
           </div>
 
           {/* FAQ Section */}

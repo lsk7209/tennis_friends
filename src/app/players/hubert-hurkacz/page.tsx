@@ -3,244 +3,277 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, BookOpen } from 'lucide-react';
 
-export const metadata = {
-  title: '후베르트 후르카츠 선수 프로필과 스토리',
-  description: '강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대 테니스를 그려내는 후베르트 후르카츠의 성장 배경, 경기 스타일, 인간적인 면모를 담았습니다.',
-  keywords: ['테니스', '후베르트 후르카츠', '선수 프로필', '스토리', '폴란드'],
+export const metadata: Metadata = {
+  title: '후베르트 후르카츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: '후베르트 후르카츠의 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수.',
+  keywords: ['후베르트 후르카츠', 'Hubert Hurkacz', '테니스', 'ATP', '플레이스타일', '폴란드 테니스', '서브&발리', '탄력과 절제'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/hubert-hurkacz',
   },
   openGraph: {
-    title: '후베르트 후르카츠 선수 프로필과 스토리',
-    description: '강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대 테니스를 그려내는 후베르트 후르카츠의 성장 배경, 경기 스타일, 인간적인 면모를 담았습니다.',
+    title: '후베르트 후르카츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '후베르트 후르카츠의 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/hubert-hurkacz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
-    type: 'website',
+    type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '후베르트 후르카츠 선수 프로필과 스토리',
-    description: '강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대 테니스를 그려내는 후베르트 후르카츠의 성장 배경, 경기 스타일, 인간적인 면모를 담았습니다.',
+    title: '후베르트 후르카츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '후베르트 후르카츠의 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-quiet-habit-making-solid', text: '성장 배경 — 단단함을 만드는 조용한 습관', depth: 2 },
-  { id: 'playing-style-serve-start-foot-finish', text: '경기 스타일 — 서브로 출발해, 발로 마무리하다', depth: 2 },
-  { id: 'rhythm-selection-routine-power-erase-noise', text: '리듬과 선택 — 소음을 지우는 루틴의 힘', depth: 2 },
-  { id: 'experience-transition-grass-hard-clay', text: '경험과 전환 — 잔디의 속도, 하드의 질서, 점토의 인내', depth: 2 },
-  { id: 'human-aspects-humor-care-quietness', text: '인간적인 면모 — 조용함 속의 유머와 배려', depth: 2 },
-  { id: 'nationality-culture-poland-tenacity-court', text: '국적과 문화 — 폴란드의 끈기, 코트 위의 품격', depth: 2 },
-  { id: 'relationships-rivals-fast-start-slow-conclusion', text: '관계와 라이벌 — 빠른 시작, 늦은 결론의 미학', depth: 2 },
-  { id: 'famous-scenes-tiebreak-three-lines', text: '명장면 — 타이브레이크에서 그려지는 세 가지 선', depth: 2 },
-  { id: 'equipment-details-tension-balance-contact', text: '장비와 디테일 — 텐션·밸런스·접점의 미세 조정', depth: 2 },
-  { id: 'future-challenges-forward-timing-conclusion-speed', text: '앞으로의 과제 — 전진의 타이밍, 결말의 속도', depth: 2 },
-  { id: 'fans-community-lasting-trust-reason', text: '팬과 커뮤니티 — 오래 가는 신뢰의 이유', depth: 2 },
+  { id: 'why-again-notable', text: '후베르트 후르카츠, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
+  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
+  { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
+  { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
+  { id: 'recent-form', text: '요즘 후베르트 후르카츠의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '후베르트 후르카츠, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
     q: '후베르트 후르카츠의 경기 스타일은 어떤가요?',
-    a: '강력한 서브와 유연한 풋워크, 과하지 않은 전환이 특징입니다. 거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓으며, 서브로 출발해 발로 마무리하는 방식으로 하드와 잔디에서 안정적인 승률을 만듭니다.'
+    a: '서브&발리 스타일로, 탄력과 절제가 특징입니다. 강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대형 서브&발리를 설계합니다.',
   },
   {
-    q: '후르카츠의 성장 배경은 어떤가요?',
-    a: '폴란드 브로츠와프에서 자란 그는 어린 시절부터 정확하게 반복하는 것을 훈련의 핵심으로 배웠습니다. 코치의 주문은 간단했고, 실수는 오늘 안에 정리하고, 일관된 루틴으로 묶어 두었습니다.'
+    q: '후르카츠의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
+    a: '최고 랭킹은 상위권이었으며, 현재는 상위권을 유지하고 있습니다. 특히 하드와 잔디 코트에서 강력한 모습을 보여주며 안정적인 성적을 거두고 있습니다.',
   },
   {
     q: '후르카츠의 강점은 무엇인가요?',
-    a: '탄력과 절제가 최대 강점입니다. 강력한 서브의 낙구점 정확성으로 리턴러의 시간을 훔치고, 풋워크로 마무리하며, 근거 있는 선택으로 전환합니다. 현대형 서브&발리 스타일의 대표 선수입니다.'
+    a: '탄력과 절제가 최대 강점입니다. 강력한 서브의 낙구점 정확성으로 리턴러의 시간을 훔치고, 풋워크로 마무리하며, 근거 있는 선택으로 전환합니다.',
   },
   {
-    q: '후르카츠의 인간적인 면모는 어떤가요?',
-    a: '조용함 속의 유머와 배려가 특징입니다. 인터뷰는 길지 않으며, 팬과 스태프에게 보내는 인사는 일정합니다. 강함을 과시하기보다 강함을 다루는 방식에 집중하는 태도가 인상적입니다.'
+    q: '후르카츠의 성장 배경은 어떤가요?',
+    a: '폴란드 브로츠와프에서 자란 그는 어린 시절부터 정확하게 반복하는 것을 훈련의 핵심으로 배웠습니다. 코치의 주문은 간단했고, 실수는 오늘 안에 정리하고, 일관된 루틴으로 묶어 두었습니다.',
   },
   {
-    q: '후르카츠의 미래 전망은 어떻게 되나요?',
-    a: '전진의 타이밍과 결말의 속도가 과제입니다. 하프코트 마무리 빈도, 리턴 직후 3구에서의 전진 타이밍 반 박자 앞당김, 세컨드 서브 코스 다양화를 통해 긴 경기에서도 에너지 관리를 수월하게 할 수 있습니다.'
+    q: '후르카츠를 한 문장으로 설명하면?',
+    a: '탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수입니다.',
   },
 ];
 
-export default function HubertHurkaczBlogPost() {
+export default function HubertHurkaczPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
+      <Article
+        title="후베르트 후르카츠"
+        excerpt="탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+          {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '후베르트 후르카츠', '선수 프로필', '스토리', '폴란드'].map((tag) => (
-              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
+            {['테니스', '후베르트 후르카츠', '선수 프로필', '폴란드', '서브&발리', '탄력과 절제'].map((tag) => (
+              <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
             ))}
           </div>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            후베르트 후르카츠
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            탄력과 절제로 설계하는 현대형 서브&발리
-          </p>
-          <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓는 후베르트 후르카츠의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
-          </p>
-          
-          {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-6 text-blue-100">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="font-medium">8분 읽기</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span className="font-medium">2025년 10월 2일</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <Article title="" excerpt="">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
-          <div className="mb-12">
-            <TOC items={tocItems} />
-          </div>
+          <TOC items={tocItems} />
 
           {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
-              <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
-                <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 후베르트 후르카츠(Hubert Hurkacz)는 강력한 서브와 유연한 풋워크, 과하지 않은 전환으로 하드와 잔디에서 안정적인 승률을 만들어내는 폴란드의 간판 선수다.
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            <h2 id="why-again-notable">후베르트 후르카츠, 왜 주목받는 선수인가?</h2>
+            <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
+              <div className="flex items-start gap-3">
+                <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
+                  탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수
+                </p>
+              </div>
+            </blockquote>
+            <p>후베르트 후르카츠는 폴란드 출신의 세계랭킹 상위권 테니스 선수로, 탄력과 절제로 현대형 서브&발리를 지배하고 있다. 최고 랭킹 상위권에 올랐던 경력의 소유자이며, 특히 하드와 잔디 코트에서 강력한 모습을 보여준다. 강력한 서브와 부드러운 풋워크, 절제된 전환이 그의 테니스를 특징짓는다.</p>
+            <p>그는 마스터스 대회에서 우승을 차지하며 마스터스 대회 챔피언이 되었고, 하드와 잔디 코트에서 안정적인 성적을 거두고 있다. 최근 몇 시즌 동안 하드와 잔디 시즌에서 특히 강력한 모습을 보여주며, 탄력과 절제로 평가받는다. 그의 테니스는 강력한 서브와 부드러운 풋워크가 핵심이다.</p>
+
+            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
+            <p>후베르트 후르카츠는 폴란드 출신의 세계랭킹 상위권 선수로, 서브&발리 스타일과 탄력, 절제가 특징인 ATP 투어의 안정적인 선수다.</p>
+            
+            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
+              </div>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">폴란드</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">1997년 (27세)</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">상위권</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">상위권</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">서브&발리</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">탄력과 절제</span></span>
+                </li>
+              </ul>
+            </div>
+
+            <p>플레이 스타일은 서브&발리로 분류된다. 베이스라인에서 강력한 서브와 부드러운 풋워크를 구사하며, 절제된 전환으로 현대형 서브&발리를 설계한다. 특히 탄력과 절제가 그의 시그니처 무기로, 거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓는다.</p>
+            
+            <div className="not-prose my-6 flex flex-wrap gap-2">
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 border-red-300 dark:border-red-700">
+                <Shield className="w-3 h-3 mr-1 inline" />
+                탄력과 절제
+              </Badge>
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
+                <Zap className="w-3 h-3 mr-1 inline" />
+                강력한 서브
+              </Badge>
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
+                <Trophy className="w-3 h-3 mr-1 inline" />
+                폴란드의 대표
+              </Badge>
+            </div>
+            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"탄력과 절제"</strong>, <strong>"강력한 서브"</strong>, <strong>"폴란드의 대표"</strong>이다. 그의 테니스는 거대한 스윙이 아니라 정교한 타이밍과 균형을 추구하며, 특히 강력한 서브와 부드러운 풋워크가 뛰어나다.</p>
+
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+
+            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
+            <p>후르카츠가 세계 상위권을 유지하는 힘은 탄력과 절제, 그리고 정교한 타이밍과 균형에서 나온다.</p>
+
+            <h3 className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+              기술적 강점
+            </h3>
+            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+                <strong className="text-purple-700 dark:text-purple-300">강력한 서브와 부드러운 풋워크</strong>가 가장 큰 무기. 정교한 타이밍과 균형으로 점수를 쌓는다.
               </p>
             </div>
+            <p>강력한 서브와 부드러운 풋워크가 가장 큰 무기다. 정교한 타이밍과 균형으로 점수를 쌓는다. 포핸드는 넓은 궤도와 깊은 볼로 상대를 뒤로 밀어낸다. 백핸드는 양손의 견고함으로 라인을 얇게 긁어 각을 만든다. 서브는 와이드와 바디의 비율을 바꿔 첫 두 타구의 구조를 설계하고, 짧은 리턴이 오면 하프코트에서 한 걸음 전진해 발리로 결말을 재촉한다.</p>
+            <p>리턴은 퍼스트 서브에는 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 전진해 접점을 앞세운다. 이어지는 첫 스트로크는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서 코너의 문을 열어 상대의 스텝을 묶는다.</p>
 
-            <h2 id="growth-background-quiet-habit-making-solid">성장 배경 — 단단함을 만드는 조용한 습관</h2>
-            <p>폴란드 브로츠와프에서 자란 그는 어린 시절부터 "정확하게 반복하는 것"을 훈련의 핵심으로 배웠다. 코치의 주문은 늘 간단했다. 오늘의 실수는 오늘 안에 정리하고, 내일은 같은 실수를 다른 방법으로 막아라. 그래서 그의 연습은 화려하기보다 차분했고, 기록과 메모로 가득했다. 스트레칭의 순서, 워밍업의 시간, 첫 서브의 코스까지 일관된 루틴으로 묶어 두었고, 원정지에서도 그 질서를 거의 바꾸지 않았다. 이 습관은 큰 관중 앞에서도 호흡과 손의 감각을 잃지 않게 해 준다.</p>
+            <h3 className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
+              피지컬 능력
+            </h3>
+            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">부드러운 풋워크와 절제된 전환</strong>이 특징이다.</p>
 
-            <h2 id="playing-style-serve-start-foot-finish">경기 스타일 — 서브로 출발해, 발로 마무리하다</h2>
-            <p>후르카츠의 경기는 서브에서 시작해 풋워크로 완성된다. 퍼스트 서브는 속도뿐 아니라 낙구점의 정확성으로 리턴러의 시간을 훔치고, 세컨드 서브는 스핀과 방향을 섞어 랠리의 출발점을 본인 쪽으로 당긴다. 초구 이후에는 포핸드의 간결한 스윙으로 깊이를 만들고, 백핸드는 면을 곧게 세워 안전을 확보한다. 필요할 때는 하프코트에서 한 걸음 전진해 발리로 결말을 재촉하는데, 이 전환이 과감하기보다는 근거 있는 선택에 가깝다. 네트를 무리하게 점령하기보다는 빈 공간이 열렸을 때만 들어가 실수를 줄인다.</p>
-
-            <h2 id="rhythm-selection-routine-power-erase-noise">리듬과 선택 — 소음을 지우는 루틴의 힘</h2>
-            <p>그의 포인트 사이는 놀랄 만큼 단순하다. 라켓 스트링을 한 번 훑고, 두 번의 깊은 호흡, 일정한 토스. 스코어가 불리해도 루틴의 길이와 순서를 바꾸지 않기에 심박이 갑자기 치솟지 않는다. 타이브레이크에서는 첫 두 포인트로 높이와 길이를 확인하고, 세 번째부터 코스를 얇게 쓰며 균형을 흔든다. 리턴 게임에선 중앙 깊은 볼로 각을 지운 뒤, 다음 스트로크에서 속도를 올려 주도권을 되찾는다. 화려한 하이라이트보다 실수를 관리하는 선택이 우선이고, 이 태도가 장기전에서 빛을 발한다.</p>
-
-            <h2 id="experience-transition-grass-hard-clay">경험과 전환 — 잔디의 속도, 하드의 질서, 점토의 인내</h2>
-            <p>후르카츠는 표면에 따라 구질의 비율을 현실적으로 바꾼다. 잔디에서는 낮은 자세와 짧은 백스윙으로 타점을 앞당기고, 슬라이스 리턴을 섞어 랠리의 템포를 늦춘다. 하드에서는 퍼스트 서브 확률을 끌어올리고 3구 패턴을 단순화해 불필요한 오차를 줄인다. 점토에선 회전을 늘려 낙구를 안정시키고, 네 번째나 다섯 번째 스트로크에서 드롭·슬라이스를 섞어 상대의 리듬을 어지럽힌다. 환경이 달라져도 원칙은 같다. 흐름을 먼저 안정시키고, 열린 순간에만 칼을 빼든다.</p>
-
-            <h2 id="human-aspects-humor-care-quietness">인간적인 면모 — 조용함 속의 유머와 배려</h2>
-            <p>그의 인터뷰는 길지 않다. 잘된 날에는 준비가 맞아떨어졌다고 말하고, 부족한 날에는 수정할 항목을 짧게 나열한다. 팬과 스태프에게 보내는 인사는 일정하고, 아이에게 사인을 해 줄 때는 눈높이를 맞춘다. 코트 밖에선 농담을 섞어 긴장을 풀지만, 경기 전후의 약속된 절차만큼은 거의 흐트러뜨리지 않는다. 강함을 과시하기보다 강함을 다루는 방식에 집중하는 태도가 인상적이다.</p>
-
-            <h2 id="nationality-culture-poland-tenacity-court">국적과 문화 — 폴란드의 끈기, 코트 위의 품격</h2>
-            <p>폴란드 스포츠의 서사는 절제와 끈기를 말한다. 후르카츠는 이 전통을 현대 테니스의 언어로 번역한다. 큰 제스처보다 차분한 집중으로 승부를 만들고, 대표팀 이벤트에서 보이는 팀워크로 공동체의 자부심을 드러낸다. 국기를 달고 코트에 들어설 때, 그는 개인의 승부를 넘어 팬들의 기억에 남을 장면을 만들겠다는 책임을 잊지 않는다.</p>
-
-            <h2 id="relationships-rivals-fast-start-slow-conclusion">관계와 라이벌 — 빠른 시작, 늦은 결론의 미학</h2>
-            <p>동시대 강자들과의 맞대결에서 그는 초반에 위험을 줄이는 출발을 택한다. 라인을 깊게 노리기보다 네트를 충분히 넘기는 구질로 리듬을 맞추고, 세 번째 게임 즈음부터 와이드·바디 서브의 비율을 조정해 리턴 포지션을 흔든다. 네트를 서둘러 점령하는 유형에겐 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만든다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 속도를 바꿔 같은 구역을 다른 느낌으로 찌른다. 이 작은 수정들이 후반으로 갈수록 큰 차이를 만든다.</p>
-
-            <h2 id="famous-scenes-tiebreak-three-lines">명장면 — 타이브레이크에서 그려지는 세 가지 선</h2>
-            <p>점수가 5-5로 엇갈릴 때, 그의 표정은 변하지 않는다. 첫 포인트는 안전한 코스로 리듬을 확인하고, 두 번째엔 와이드 서브로 코트를 벌린다. 세 번째에서 포핸드 직선을 과감하게 꽂아 균형을 깬다. 관중의 함성이 커져도 그는 같은 속도로 베이스라인을 밟는다. 감정이 아니라 절차가 승부를 만든다는 믿음이 이 장면에 응축돼 있다.</p>
-
-            <h2 id="equipment-details-tension-balance-contact">장비와 디테일 — 텐션·밸런스·접점의 미세 조정</h2>
-            <p>그는 라켓 밸런스를 과하게 머리쪽으로 보내지 않아 빠른 회복을 확보하고, 스트링 텐션은 기온과 공의 반발에 맞춰 소폭 조정한다. 더운 날에는 텐션을 약간 높여 반발을 제어하고, 실내에서는 텐션을 낮춰 체공 시간을 확보한다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목의 흔들림을 줄인다. 장비가 플레이를 지배하도록 두지 않고, 플레이가 요구하는 만큼만 장비를 조정한다는 철학이 일관된다.</p>
-
-            <h2 id="future-challenges-forward-timing-conclusion-speed">앞으로의 과제 — 전진의 타이밍, 결말의 속도</h2>
-            <p>후르카츠가 더 높이 가기 위한 열쇠는 하프코트에서의 마무리 빈도다. 리턴 직후 3구에서 전진 타이밍을 반 박자 앞당기고, 세컨드 서브의 코스를 더 다양화한다면 긴 경기에서도 에너지 관리가 쉬워질 것이다. 이미 갖춘 서브의 설득력 위에 결말의 속도가 얹히면, 그의 이름은 큰 무대의 마지막 장면에서 더 자주 호명될 가능성이 크다.</p>
-
-            <h2 id="fans-community-lasting-trust-reason">팬과 커뮤니티 — 오래 가는 신뢰의 이유</h2>
-            <p>그를 응원하게 만드는 것은 큰 소리보다 작은 일관성이다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말한다. 기록은 표가 되지만, 태도는 기억이 된다. 후르카츠의 테니스가 오래 사랑받을 이유가 바로 여기에 있다.</p>
-          </div>
-
-          {/* Related Links */}
-          <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+            <h3 className="flex items-center gap-2">
+              <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              멘탈 강점
+            </h3>
+            <div className="not-prose my-4 p-4 bg-green-50 dark:bg-green-950/20 border-l-4 border-green-500 rounded-r-lg shadow-sm">
+              <div className="flex items-center gap-2 mb-2">
+                <Target className="w-4 h-4 text-green-700 dark:text-green-400" />
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-0">
+                  핵심 통계
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
-              </h3>
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
+                하드와 잔디에서 비교적 강한 편 · 탄력과 절제 · 정교한 타이밍과 균형
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">실력 테스트</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">플레이 스타일 테스트</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    외부 자료
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어 공식 사이트</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://en.wikipedia.org/wiki/Hubert_Hurkacz" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">📖</span>
-                        <span className="font-medium">위키피디아 프로필</span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+            <p>포인트 사이 그는 스트링을 훑고 두 번의 깊은 호흡으로 리듬을 고정한다. 스코어가 흔들려도 루틴의 길이를 바꾸지 않아 심박이 급등하지 않는다. 하드와 잔디에서는 강력한 서브로 초반 속도를 통제하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던진다. 탄력과 절제가 특징이다.</p>
+
+            <h3 className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+              전술적 다양성
+            </h3>
+            <p>표면별 전개가 뛰어나다. 하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 주도권을 잡고, 리턴 게임에서는 중앙 깊은 볼로 각을 지워 다음 볼에서 속도를 끌어올린다. 잔디에서는 토스를 낮추고 백스윙을 줄여 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 속도를 통제한다. 점토에서는 회전을 더해 낙구를 안정시키고 랠리의 길이를 받아들이되, 네 번째나 다섯 번째 스트로크에서 드롭과 슬라이스를 섞어 템포를 흔든다.</p>
+
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+
+            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            <p>후르카츠의 커리어를 상징하는 경기는 마스터스 대회 우승과 하드·잔디 대회 우승이다.</p>
+
+            <h3>마스터스 대회 우승</h3>
+            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
+              <div className="flex items-center gap-2 mb-3">
+                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전성기의 정점</p>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+                <strong>마스터스 대회</strong>에서 우승을 차지하며 마스터스 대회 챔피언이 되었다. 특히 결승전에서의 경기력은 그의 탄력과 절제를 보여주는 대표적인 사례였다.
+              </p>
             </div>
+            <p>마스터스 대회에서 그는 우승을 차지하며 마스터스 대회 챔피언이 되었다. 이 경기에서 그는 탄력과 절제로 상대를 압도했다. 특히 결승전에서의 경기력은 그의 기술적 완성도를 보여주는 대표적인 사례였다. 강력한 서브와 부드러운 풋워크, 그리고 중요한 포인트에서의 침착함이 모두 어우러진 경기였다.</p>
+
+            <h3>하드·잔디 대회 우승</h3>
+            <p>하드·잔디 대회에서 그는 우승을 거두며 서브&발리 전문가로서의 입지를 확고히 했다. 이 경기에서 드러난 건 후르카츠의 정교한 타이밍과 균형이었다. 탄력과 절제가 한 경기에 응축되었다.</p>
+
+            <h3>대표 명장면</h3>
+            <blockquote className="not-prose my-4 p-5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/50 dark:to-slate-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg shadow-sm">
+              <div className="flex items-start gap-3">
+                <Zap className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic leading-relaxed">
+                  타이브레이크. 강력한 서브로 리턴러의 시간을 훔친 뒤, 부드러운 풋워크로 발리로 마무리한다. 공이 사이드라인을 스치며 빠져나갈 때 관중의 탄성이 터지고, 그는 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟는다. 탄력과 절제가 바로 이 순간이다.
+                </p>
+              </div>
+            </blockquote>
+
+            <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
+            <p>후르카츠는 경기력뿐 아니라 조용함 속의 유머와 배려 덕분에 팬층이 두텁다.</p>
+
+            <h3>코트 매너</h3>
+            <p>그는 조용함 속의 유머와 배려를 중시한다. 인터뷰에서 준비와 팀을 먼저 언급한다. 잘된 날에는 계획이 맞았다고, 부족한 날에는 수정 항목이 분명하다고 말한다. 팬에겐 미소와 눈맞춤을, 코트 스태프에겐 짧은 감사를 잊지 않는다. 패배 뒤에도 책임의 방향을 자기 쪽으로 당기고, 승리한 날에는 스태프와 팬에게 차례로 감사를 전한다.</p>
+
+            <h3>인터뷰 스타일</h3>
+            <p>인터뷰는 길지 않으며 솔직하다. 준비와 팀을 먼저 언급하며, 자신의 성과보다는 상대의 강점을 인정하는 모습을 자주 보인다. 긴 일정 속에서도 회복·수면·식단의 루틴을 생활로 고정해 컨디션의 파고를 낮춘다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 완성한다.</p>
+
+            <h3>팀과의 관계</h3>
+            <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 오랜 기간 함께한 코치와의 유대는 그의 안정적인 경기력에 기여하고 있으며, 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 폴란드의 훈련 문화는 끈기와 품격을 중시하는데, 후르카츠의 테니스에도 이 정신이 뚜렷하다.</p>
+
+            <h2 id="recent-form">요즘 후베르트 후르카츠의 경기력 흐름은 어떤가?</h2>
+            <p>최근 몇 시즌 동안 후르카츠는 하드와 잔디 시즌에서 특히 강력한 모습을 보여주고 있으며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
+
+            <h3>최근 성적</h3>
+            <div className="not-prose my-4 p-3 bg-blue-50 dark:bg-blue-950/20 border-l-3 border-blue-500 rounded-r shadow-sm">
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0 flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-blue-600" />
+                <strong>안정세:</strong> 최근 10경기 <strong className="text-blue-700 dark:text-blue-400">하드와 잔디에서 강력한 모습</strong> · 탑 10 선수들과의 경기에서도 승리
+              </p>
+            </div>
+            <p>최근 10경기 기준으로 보면, 그는 하드와 잔디에서 강력한 모습을 보여주는 편이다. 탑 10 선수들과의 경기에서도 승리를 거두며, 자신의 테니스가 여전히 경쟁력이 있음을 증명하고 있다. 최근 3개월 동안의 성적도 안정적이며, 특히 하드와 잔디 시즌에서 후반 라운드에 진출하는 빈도가 높아졌다.</p>
+
+            <h3>부상 관리</h3>
+            <p>부상과 관련해서는 현재 큰 문제가 없는 상태다. 체계적인 회복과 관리 덕분에 경기에 지장을 주는 수준은 아니다. 다만 긴 시즌을 고려해 몸 관리에 더 신경을 쓰고 있으며, 불필요한 스프린트를 줄이고 효율적인 경기 운영에 집중하고 있다.</p>
+
+            <h3>랭킹과 스타일 변화</h3>
+            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 상위권을 유지하고 있다. 하드와 잔디 시즌에서 특히 강력한 모습을 보여주며, 그는 여전히 탑 10 선수들과 경쟁할 수 있는 능력을 보여줬다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다.</p>
+
+            <h2 id="one-sentence-summary">후베르트 후르카츠, 한 문장으로 정리하면?</h2>
+            <p>후베르트 후르카츠는 탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수다.</p>
+            <p>그의 테니스는 거대한 스윙이 아니라 정교한 타이밍과 균형을 추구하며, 특히 강력한 서브와 부드러운 풋워크가 뛰어나다. 타이브레이크와 장기전에서의 멘탈 강점, 그리고 탄력과 절제가 세계 상위권을 유지하게 해준다. 조용함 속의 유머와 배려를 중시하는 그의 테니스는 결과를 넘어 설득으로 남으며, 폴란드 테니스의 상징으로 기억될 것이다.</p>
           </div>
 
           {/* FAQ Section */}

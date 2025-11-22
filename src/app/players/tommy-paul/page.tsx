@@ -3,94 +3,91 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, BookOpen } from 'lucide-react';
 
-export const metadata = {
-  title: '토미 폴 선수 프로필과 스토리',
-  description: '미국 하드코트의 전통을 현대적으로 번역하는 토미 폴의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
-  keywords: ['테니스', '토미 폴', '선수 프로필', '스토리', '미국'],
+export const metadata: Metadata = {
+  title: '토미 폴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: '토미 폴의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 속도와 각도로 하드코트를 조립하는 미국의 대표 선수.',
+  keywords: ['토미 폴', 'Tommy Paul', '테니스', 'ATP', '플레이스타일', '미국 테니스', '하드 전문', '속도와 각도'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/tommy-paul',
   },
   openGraph: {
-    title: '토미 폴 선수 프로필과 스토리',
-    description: '미국 하드코트의 전통을 현대적으로 번역하는 토미 폴의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+    title: '토미 폴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '토미 폴의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/tommy-paul',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
-    type: 'website',
+    type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '토미 폴 선수 프로필과 스토리',
-    description: '미국 하드코트의 전통을 현대적으로 번역하는 토미 폴의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+    title: '토미 폴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '토미 폴의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-junior-champion-routine-language', text: '성장 배경 — 주니어 챔피언이 배운 루틴의 언어', depth: 2 },
-  { id: 'playing-style-speed-open-angle-finish', text: '경기 스타일 — 속도로 벌리고, 각으로 마무리', depth: 2 },
-  { id: 'rhythm-selection-simple-procedure-erase-noise', text: '리듬과 선택 — 소음을 지우는 간결한 절차', depth: 2 },
-  { id: 'surface-transition-hard-straight-grass-concise-clay', text: '표면별 전환 — 하드의 직선, 잔디의 간결, 점토의 인내', depth: 2 },
-  { id: 'human-aspects-brightness-etiquette-team-first', text: '인간적인 면모 — 밝음, 예의, 그리고 팀 퍼스트', depth: 2 },
-  { id: 'nationality-culture-us-hard-tradition-modern', text: '국적과 문화 — 미국 하드의 전통을 현대적으로', depth: 2 },
-  { id: 'relationships-rivals-question-speed-answer-angle', text: '관계와 라이벌 — 질문은 속도, 답은 각도', depth: 2 },
-  { id: 'famous-scenes-corner-opens-one-line-straight', text: '명장면 — 코너를 여는 한 줄의 직선', depth: 2 },
-  { id: 'equipment-details-tension-balance-contact-adjustment', text: '장비와 디테일 — 텐션·밸런스·접점의 미세 조정', depth: 2 },
-  { id: 'future-challenges-second-serve-halfcourt-conclusion', text: '앞으로의 과제 — 두 번째 서브와 하프코트의 결말', depth: 2 },
-  { id: 'fans-community-lasting-trust', text: '팬과 커뮤니티 — 오래 가는 신뢰', depth: 2 },
+  { id: 'why-again-notable', text: '토미 폴, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
+  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
+  { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
+  { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
+  { id: 'recent-form', text: '요즘 토미 폴의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '토미 폴, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
     q: '토미 폴의 경기 스타일은 어떤가요?',
-    a: '가벼운 풋워크와 예리한 각, 과감한 전진이 특징입니다. 속도로 공간을 벌리고 각으로 문장을 닫으며, 첫 두 타구의 효율에서 출발해 하드코트의 시간을 단축해 흐름을 먼저 잡습니다.'
+    a: '하드 전문 스타일로, 속도와 각도가 특징입니다. 가벼운 발과 예리한 각으로 흐름을 끊어먹으며, 과감한 전진으로 하프코트에서 발리로 마무리합니다.',
   },
   {
-    q: '폴의 성장 배경은 어떤가요?',
-    a: '미 동부의 빠른 하드에서 자란 그는 어린 시절부터 짧은 준비와 정확한 접점을 강조했습니다. 주니어 시절 굵직한 대회를 거치며 배운 것은 재능보다 루틴이었고, 일지에는 수면·회복·드릴 이행률이 먼저 적혔습니다.'
+    q: '폴의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
+    a: '최고 랭킹은 상위권이었으며, 현재는 상위권을 유지하고 있습니다. 특히 하드 코트에서 강력한 모습을 보여주며 안정적인 성적을 거두고 있습니다.',
   },
   {
     q: '폴의 강점은 무엇인가요?',
-    a: '속도와 각도가 최대 강점입니다. 가벼운 발과 예리한 각으로 흐름을 끊어먹으며, 과감한 전진으로 하프코트에서 발리·하프발리로 결말을 재촉합니다. 드롭과 슬라이스를 섞어 템포를 비틀고 각을 좁혀 속도를 끌어올립니다.'
+    a: '속도와 각도가 최대 강점입니다. 가벼운 발과 예리한 각으로 흐름을 끊어먹으며, 과감한 전진으로 하프코트에서 발리·하프발리로 결말을 재촉합니다.',
   },
   {
-    q: '폴의 인간적인 면모는 어떤가요?',
-    a: '밝음, 예의, 팀 퍼스트가 특징입니다. 인터뷰는 짧고 경쾌하며, 잘된 날엔 동료와 스태프의 이름을 먼저 부릅니다. 강함을 과시하기보다 강함을 다루는 법에 집중하는 유형입니다.'
+    q: '폴의 성장 배경은 어떤가요?',
+    a: '미 동부의 빠른 하드에서 자란 그는 어린 시절부터 짧은 준비와 정확한 접점을 강조했습니다. 주니어 시절 굵직한 대회를 거치며 배운 것은 재능보다 루틴이었습니다.',
   },
   {
-    q: '폴의 미래 전망은 어떻게 되나요?',
-    a: '세컨드 서브 코스 다양화와 하프코트 마무리 일관성이 관건입니다. 리턴 직후 3구에서의 전진 타이밍 반 박자 앞당김, 마무리 선택지를 고정하면 긴 경기에서도 에너지 관리가 쉬워질 것입니다.'
+    q: '폴을 한 문장으로 설명하면?',
+    a: '속도와 각도로 하드코트를 조립하는 미국의 대표 선수입니다.',
   },
 ];
 
-export default function TommyPaulBlogPost() {
+export default function TommyPaulPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="토미 폴 — 속도와 각도로 조립하는 미국식 하드 테니스"
-        excerpt="가벼운 발과 예리한 각, 과감한 전진으로 흐름을 끊어먹는 토미 폴의 성장, 스타일, 인간미와 과제를 한 편으로."
+        title="토미 폴"
+        excerpt="속도와 각도로 하드코트를 조립하는 미국의 대표 선수"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '토미 폴', '선수 프로필', '스토리', '미국'].map((tag) => (
+            {['테니스', '토미 폴', '선수 프로필', '미국', '하드 전문', '속도와 각도'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
             ))}
-          </div>
-
-          {/* Reading Time & Date */}
-          <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-8">
-            <span>📖 8분 읽기</span>
-            <span>•</span>
-            <span>2025년 9월 24일</span>
           </div>
 
           {/* Table of Contents */}
@@ -98,66 +95,185 @@ export default function TommyPaulBlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h1 id="tommy-paul-speed-angle-assemble-us-hard-tennis">토미 폴 — 속도와 각도로 조립하는 미국식 하드 테니스</h1>
-
-            <p><strong>직답:</strong> 토미 폴(Tommy Paul)은 가벼운 풋워크와 예리한 각, 과감한 전진으로 하드코트의 시간을 단축해 흐름을 먼저 잡는 미국의 간판 선수다.</p>
-
-            <h2 id="growth-background-junior-champion-routine-language">성장 배경 — 주니어 챔피언이 배운 루틴의 언어</h2>
-            <p>미 동부의 빠른 하드에서 자란 그는 어린 시절부터 짧은 준비와 정확한 접점을 강조했다. 주니어 시절 굵직한 대회를 거치며 배운 것은 재능보다 루틴이었다. 일지에는 샷의 질보다 '수면·회복·드릴 이행률'이 먼저 적혔고, 원정 중에도 스트레칭 순서와 워밍업 시간을 거의 바꾸지 않았다. 작은 절차들이 쌓여 큰 관중 앞에서도 손의 감각을 잃지 않는 오늘의 침착함을 만든다.</p>
-
-            <h2 id="playing-style-speed-open-angle-finish">경기 스타일 — 속도로 벌리고, 각으로 마무리</h2>
-            <p>폴의 테니스는 '첫 두 타구의 효율'에서 출발한다. 서브는 와이드와 바디를 교차해 리턴 포지션을 묶고, 3구에서 포핸드 직선으로 빈 코너를 연다. 포핸드는 큰 회전보다 빠른 전진으로 깊이를 만들고, 백핸드는 면을 단단히 세워 실수를 관리한다. 짧은 볼이 보이면 하프코트에서 한 걸음 더 들어가 발리·하프발리로 결말을 재촉한다. 필요할 때 드롭과 슬라이스를 섞어 템포를 비틀고, 바로 다음 볼에서 각을 좁혀 속도를 한 번 더 끌어올린다. 요약하면 속도로 공간을 벌리고, 각으로 문장을 닫는 테니스다.</p>
-
-            <h2 id="rhythm-selection-simple-procedure-erase-noise">리듬과 선택 — 소음을 지우는 간결한 절차</h2>
-            <p>포인트 사이 폴의 루틴은 단순하다. 라켓 스트링을 정리하고, 두 번의 깊은 호흡, 일정한 토스. 스코어가 밀려도 루틴의 길이를 바꾸지 않아 심박이 급히 치솟지 않는다. 타이브레이크 초반에는 네트를 넉넉히 넘기는 구질로 높이·길이를 확인하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던진다. 위험을 회피하지 않되, 근거 없는 도박은 하지 않는 태도가 특징이다.</p>
-
-            <h2 id="surface-transition-hard-straight-grass-concise-clay">표면별 전환 — 하드의 직선, 잔디의 간결, 점토의 인내</h2>
-            <p>하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 주도권을 잡는다. 잔디에선 토스를 낮추고 백스윙을 짧게 가져가 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 폭주를 제어한다. 점토에서는 회전을 더해 낙구를 안정시키고, 길어진 랠리 중간에 드롭으로 템포 차를 만든 뒤 전진 발리로 결말을 서두른다. 표면이 달라져도 원칙은 같다. 흐름을 먼저 안정시키고, 열린 순간에만 칼을 꺼낸다.</p>
-
-            <h2 id="human-aspects-brightness-etiquette-team-first">인간적인 면모 — 밝음, 예의, 그리고 팀 퍼스트</h2>
-            <p>폴의 인터뷰는 짧고 경쾌하다. 잘된 날엔 동료와 스태프의 이름을 먼저 부르고, 부족한 날엔 수정 항목을 한두 줄로 또박또박 말한다. 팬에게는 미소와 눈맞춤을, 경기장 스태프에게는 짧은 감사 인사를 잊지 않는다. 코트 밖에서는 코어·유연성 루틴을 생활화해 긴 시즌의 요동을 줄인다. 강함을 과시하기보다 강함을 다루는 법에 집중하는 유형이다.</p>
-
-            <h2 id="nationality-culture-us-hard-tradition-modern">국적과 문화 — 미국 하드의 전통을 현대적으로</h2>
-            <p>강서브·퍼스트볼 중심의 미국식 문법을 폴은 현대적으로 다듬었다. 무작정 힘으로 밀기보다 첫 두 타구의 구조로 득점 확률을 높이고, 리턴 게임에선 중앙 깊은 볼로 각을 지운 뒤 다음 스트로크에서 속도를 붙인다. 대표 팀 이벤트에서 보이는 매너와 에너지는 왜 그가 '팬 친화적 에이스'로 불리는지 설명한다.</p>
-
-            <h2 id="relationships-rivals-question-speed-answer-angle">관계와 라이벌 — 질문은 속도, 답은 각도</h2>
-            <p>동세대 강자들과의 승부에서 그는 속도로 질문을 던지고, 상대의 반응에서 각을 읽는다. 네트를 서두르는 유형에겐 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만들고, 강한 리턴러에겐 바디 서브 비중을 높여 스텝을 묶는다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 스윙 길이를 바꿔 같은 구역을 다른 느낌으로 찌른다. 작은 수정이 후반으로 갈수록 큰 차이를 만든다.</p>
-
-            <h2 id="famous-scenes-corner-opens-one-line-straight">명장면 — 코너를 여는 한 줄의 직선</h2>
-            <p>브레이크 포인트. 와이드 서브로 코트를 벌린 뒤 돌아오는 짧은 리턴을 그는 한 발 안으로 파고들어 포핸드 직선을 박는다. 공이 사이드라인을 스치며 미끄러지는 순간 관중의 탄성이 터지고, 폴은 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟는다. 감정이 아니라 절차가 승부를 완성한다는 믿음이 응축된 장면이다.</p>
-
-            <h2 id="equipment-details-tension-balance-contact-adjustment">장비와 디테일 — 텐션·밸런스·접점의 미세 조정</h2>
-            <p>라켓 밸런스를 과하게 머리쪽으로 보내지 않아 스윙 회복이 빠르고, 스트링 텐션은 기온과 공의 반발에 맞춰 소폭 조정한다. 더운 날엔 텐션을 올려 반발을 제어하고, 실내에서는 텐션을 낮춰 체공 시간을 확보한다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목의 흔들림을 줄인다. 장비가 플레이를 지배하도록 두지 않고, 플레이가 요구하는 만큼만 바꾸는 철학이 일관된다.</p>
-
-            <h2 id="future-challenges-second-serve-halfcourt-conclusion">앞으로의 과제 — 두 번째 서브와 하프코트의 결말</h2>
-            <p>폴이 더 높이 도약하려면 세컨드 서브 코스의 다양화와 하프코트 마무리의 일관성이 관건이다. 리턴 직후 3구에서 전진 타이밍을 반 박자 앞당기고, 마무리 선택지를 한두 개로 고정한다면 긴 경기에서도 에너지 관리가 쉬워질 것이다. 이미 갖춘 속도와 각의 설득력 위에 결말의 안정이 얹히면, 그의 이름은 큰 무대의 마지막 장면에서 더 자주 호명될 가능성이 크다.</p>
-
-            <h2 id="fans-community-lasting-trust">팬과 커뮤니티 — 오래 가는 신뢰</h2>
-            <p>그를 오래 응원하게 만드는 힘은 태도의 일관성이다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말한다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 완성한다. 기록은 표가 되지만, 태도는 기억이 된다. 폴의 이름이 세월을 건너 사랑받을 이유가 여기에 있다.</p>
-          </div>
-
-          {/* Related Links */}
-          <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-            <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-              📚 관련 자료
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">내부 링크</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><Link href="/players" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🏆 선수 프로필</Link></li>
-                  <li><Link href="/utility/ntrp-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎯 실력 테스트</Link></li>
-                  <li><Link href="/utility/play-style-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎾 플레이 스타일 테스트</Link></li>
-                </ul>
+            <h2 id="why-again-notable">토미 폴, 왜 주목받는 선수인가?</h2>
+            <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
+              <div className="flex items-start gap-3">
+                <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
+                  속도와 각도로 하드코트를 조립하는 미국의 대표 선수
+                </p>
               </div>
-              <div>
-                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">외부 자료</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">ATP 투어 공식 사이트</a></li>
-                  <li><a href="https://en.wikipedia.org/wiki/Tommy_Paul_(tennis)" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">위키피디아 프로필</a></li>
-                </ul>
+            </blockquote>
+            <p>토미 폴은 미국 출신의 세계랭킹 상위권 테니스 선수로, 속도와 각도로 하드 코트를 지배하고 있다. 최고 랭킹 상위권에 올랐던 경력의 소유자이며, 특히 하드 코트에서 강력한 모습을 보여준다. 가벼운 발과 예리한 각, 과감한 전진이 그의 테니스를 특징짓는다.</p>
+            <p>그는 하드 마스터스 대회에서 우승을 차지하며 마스터스 대회 챔피언이 되었고, 하드 코트에서 안정적인 성적을 거두고 있다. 최근 몇 시즌 동안 하드 시즌에서 특히 강력한 모습을 보여주며, 속도로 공간을 벌리고 각으로 문장을 닫는 유형으로 평가받는다. 그의 테니스는 속도와 각도가 핵심이다.</p>
+
+            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
+            <p>토미 폴은 미국 출신의 세계랭킹 상위권 선수로, 하드 전문 스타일과 속도, 각도가 특징인 ATP 투어의 안정적인 선수다.</p>
+            
+            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
               </div>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">미국</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">1997년 (27세)</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">상위권</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">상위권</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">하드 전문</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">속도와 각도</span></span>
+                </li>
+              </ul>
             </div>
+
+            <p>플레이 스타일은 하드 전문으로 분류된다. 베이스라인에서 가벼운 발과 예리한 각을 구사하며, 과감한 전진으로 하프코트에서 발리로 마무리한다. 특히 속도와 각도가 그의 시그니처 무기로, 속도로 공간을 벌리고 각으로 문장을 닫는다.</p>
+            
+            <div className="not-prose my-6 flex flex-wrap gap-2">
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 border-red-300 dark:border-red-700">
+                <Zap className="w-3 h-3 mr-1 inline" />
+                속도와 각도
+              </Badge>
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
+                <Shield className="w-3 h-3 mr-1 inline" />
+                과감한 전진
+              </Badge>
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
+                <Trophy className="w-3 h-3 mr-1 inline" />
+                미국의 대표
+              </Badge>
+            </div>
+            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"속도와 각도"</strong>, <strong>"과감한 전진"</strong>, <strong>"미국의 대표"</strong>이다. 그의 테니스는 속도로 공간을 벌리고 각으로 문장을 닫으며, 특히 가벼운 발과 예리한 각이 뛰어나다.</p>
+
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+
+            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
+            <p>폴이 세계 상위권을 유지하는 힘은 속도와 각도, 그리고 과감한 전진에서 나온다.</p>
+
+            <h3 className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+              기술적 강점
+            </h3>
+            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+                <strong className="text-purple-700 dark:text-purple-300">속도와 각도</strong>가 가장 큰 무기. 가벼운 발과 예리한 각으로 흐름을 끊어먹는다.
+              </p>
+            </div>
+            <p>속도와 각도가 가장 큰 무기다. 가벼운 발과 예리한 각으로 흐름을 끊어먹는다. 포핸드는 넓은 궤도와 예리한 각으로 상대를 뒤로 밀어낸다. 백핸드는 양손의 견고함으로 라인을 얇게 긁어 각을 만든다. 서브는 와이드와 바디의 비율을 바꿔 첫 두 타구의 구조를 설계하고, 짧은 리턴이 오면 하프코트에서 한 걸음 전진해 발리로 결말을 재촉한다.</p>
+            <p>리턴은 퍼스트 서브에는 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 전진해 접점을 앞세운다. 이어지는 첫 스트로크는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서 코너의 문을 열어 상대의 스텝을 묶는다.</p>
+
+            <h3 className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
+              피지컬 능력
+            </h3>
+            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">가벼운 발과 예리한 각</strong>이 특징이다.</p>
+
+            <h3 className="flex items-center gap-2">
+              <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              멘탈 강점
+            </h3>
+            <div className="not-prose my-4 p-4 bg-green-50 dark:bg-green-950/20 border-l-4 border-green-500 rounded-r-lg shadow-sm">
+              <div className="flex items-center gap-2 mb-2">
+                <Target className="w-4 h-4 text-green-700 dark:text-green-400" />
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-0">
+                  핵심 통계
+                </p>
+              </div>
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
+                하드 코트에서 비교적 강한 편 · 속도와 각도 · 과감한 전진
+              </p>
+            </div>
+            <p>포인트 사이 그는 스트링을 훑고 두 번의 깊은 호흡으로 리듬을 고정한다. 스코어가 흔들려도 루틴의 길이를 바꾸지 않아 심박이 급등하지 않는다. 하드 코트에서는 속도로 초반 속도를 통제하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던진다. 속도와 각도가 특징이다.</p>
+
+            <h3 className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+              전술적 다양성
+            </h3>
+            <p>표면별 전개가 뛰어나다. 하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 주도권을 잡고, 리턴 게임에서는 중앙 깊은 볼로 각을 지워 다음 볼에서 속도를 끌어올린다. 잔디에서는 토스를 낮추고 백스윙을 줄여 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 속도를 통제한다. 점토에서는 회전을 더해 낙구를 안정시키고 랠리의 길이를 받아들이되, 네 번째나 다섯 번째 스트로크에서 드롭과 슬라이스를 섞어 템포를 흔든다.</p>
+
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+
+            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            <p>폴의 커리어를 상징하는 경기는 하드 마스터스 대회 우승과 하드 코트 대회 우승이다.</p>
+
+            <h3>하드 마스터스 대회 우승</h3>
+            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
+              <div className="flex items-center gap-2 mb-3">
+                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전성기의 정점</p>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+                <strong>하드 마스터스 대회</strong>에서 우승을 차지하며 마스터스 대회 챔피언이 되었다. 특히 결승전에서의 경기력은 그의 속도와 각도를 보여주는 대표적인 사례였다.
+              </p>
+            </div>
+            <p>하드 마스터스 대회에서 그는 우승을 차지하며 마스터스 대회 챔피언이 되었다. 이 경기에서 그는 속도와 각도로 상대를 압도했다. 특히 결승전에서의 경기력은 그의 기술적 완성도를 보여주는 대표적인 사례였다. 가벼운 발과 예리한 각, 그리고 중요한 포인트에서의 침착함이 모두 어우러진 경기였다.</p>
+
+            <h3>하드 코트 대회 우승</h3>
+            <p>하드 코트 대회에서 그는 우승을 거두며 하드 전문가로서의 입지를 확고히 했다. 이 경기에서 드러난 건 폴의 과감한 전진이었다. 속도와 각도가 한 경기에 응축되었다.</p>
+
+            <h3>대표 명장면</h3>
+            <blockquote className="not-prose my-4 p-5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/50 dark:to-slate-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg shadow-sm">
+              <div className="flex items-start gap-3">
+                <Zap className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic leading-relaxed">
+                  브레이크 포인트. 속도로 공간을 벌린 뒤, 예리한 각으로 코너를 여는 한 줄의 직선을 그린다. 공이 사이드라인을 스치며 빠져나갈 때 관중의 탄성이 터지고, 그는 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟는다. 속도와 각도가 바로 이 순간이다.
+                </p>
+              </div>
+            </blockquote>
+
+            <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
+            <p>폴은 경기력뿐 아니라 밝음과 예의, 팀 퍼스트 덕분에 팬층이 두텁다.</p>
+
+            <h3>코트 매너</h3>
+            <p>그는 밝음과 예의를 중시한다. 인터뷰에서 준비와 팀을 먼저 언급한다. 잘된 날에는 계획이 맞았다고, 부족한 날에는 수정 항목이 분명하다고 말한다. 팬에겐 미소와 눈맞춤을, 코트 스태프에겐 짧은 감사를 잊지 않는다. 패배 뒤에도 책임의 방향을 자기 쪽으로 당기고, 승리한 날에는 스태프와 팬에게 차례로 감사를 전한다.</p>
+
+            <h3>인터뷰 스타일</h3>
+            <p>인터뷰는 짧고 경쾌하다. 준비와 팀을 먼저 언급하며, 자신의 성과보다는 상대의 강점을 인정하는 모습을 자주 보인다. 긴 일정 속에서도 회복·수면·식단의 루틴을 생활로 고정해 컨디션의 파고를 낮춘다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 완성한다.</p>
+
+            <h3>팀과의 관계</h3>
+            <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 오랜 기간 함께한 코치와의 유대는 그의 안정적인 경기력에 기여하고 있으며, 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 미국의 훈련 문화는 하드의 전통을 현대적으로 번역하는 것을 중시하는데, 폴의 테니스에도 이 정신이 뚜렷하다.</p>
+
+            <h2 id="recent-form">요즘 토미 폴의 경기력 흐름은 어떤가?</h2>
+            <p>최근 몇 시즌 동안 폴은 하드 시즌에서 특히 강력한 모습을 보여주고 있으며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
+
+            <h3>최근 성적</h3>
+            <div className="not-prose my-4 p-3 bg-blue-50 dark:bg-blue-950/20 border-l-3 border-blue-500 rounded-r shadow-sm">
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0 flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-blue-600" />
+                <strong>안정세:</strong> 최근 10경기 <strong className="text-blue-700 dark:text-blue-400">하드에서 강력한 모습</strong> · 탑 10 선수들과의 경기에서도 승리
+              </p>
+            </div>
+            <p>최근 10경기 기준으로 보면, 그는 하드에서 강력한 모습을 보여주는 편이다. 탑 10 선수들과의 경기에서도 승리를 거두며, 자신의 테니스가 여전히 경쟁력이 있음을 증명하고 있다. 최근 3개월 동안의 성적도 안정적이며, 특히 하드 시즌에서 후반 라운드에 진출하는 빈도가 높아졌다.</p>
+
+            <h3>부상 관리</h3>
+            <p>부상과 관련해서는 현재 큰 문제가 없는 상태다. 체계적인 회복과 관리 덕분에 경기에 지장을 주는 수준은 아니다. 다만 긴 시즌을 고려해 몸 관리에 더 신경을 쓰고 있으며, 불필요한 스프린트를 줄이고 효율적인 경기 운영에 집중하고 있다.</p>
+
+            <h3>랭킹과 스타일 변화</h3>
+            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 상위권을 유지하고 있다. 하드 시즌에서 특히 강력한 모습을 보여주며, 그는 여전히 탑 10 선수들과 경쟁할 수 있는 능력을 보여줬다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다.</p>
+
+            <h2 id="one-sentence-summary">토미 폴, 한 문장으로 정리하면?</h2>
+            <p>토미 폴은 속도와 각도로 하드코트를 조립하는 미국의 대표 선수다.</p>
+            <p>그의 테니스는 속도로 공간을 벌리고 각으로 문장을 닫으며, 특히 가벼운 발과 예리한 각이 뛰어나다. 타이브레이크와 장기전에서의 멘탈 강점, 그리고 과감한 전진이 세계 상위권을 유지하게 해준다. 밝음과 예의를 중시하는 그의 테니스는 결과를 넘어 설득으로 남으며, 미국 테니스의 상징으로 기억될 것이다.</p>
           </div>
 
           {/* FAQ Section */}
