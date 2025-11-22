@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, ArrowRight, Star, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '그리고르 디미트로프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -97,9 +98,12 @@ export default function GrigorDimitrovPage() {
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <h2 id="why-again-notable">그리고르 디미트로프, 왜 다시 주목받는 선수인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
-              <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                원핸드 백핸드의 미학과 우아한 올코트 플레이로 두 번째 전성기를 만들어가고 있는 베테랑 선수
-              </p>
+              <div className="flex items-start gap-3">
+                <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
+                  원핸드 백핸드의 미학과 우아한 올코트 플레이로 두 번째 전성기를 만들어가고 있는 베테랑 선수
+                </p>
+              </div>
             </blockquote>
             <p>그리고르 디미트로프는 불가리아 출신의 베테랑 테니스 선수로, 최근 몇 시즌 동안 두 번째 전성기를 만들어가고 있다. 세계랭킹 <strong>3위</strong>에 올랐던 경력의 소유자이지만, 부상과 기복을 겪으며 랭킹이 하락했던 시기가 있었다. 그러나 원핸드 백핸드의 미학과 우아한 올코트 플레이로 다시 상위권으로 복귀하며, 테니스 팬들에게 기술의 완성도와 근성을 동시에 보여주는 선수로 자리 잡았다. 한 손 백핸드의 아름다움을 현대 테니스에 살려낸 희귀한 케이스이기도 하다.</p>
             <p>그는 <strong>2017년 ATP 파이널 우승</strong>을 차지하며 전성기를 구가했지만, 이후 부상과 컨디션 저하로 랭킹이 떨어졌다. 최근에는 체계적인 회복과 훈련을 통해 다시 <strong>톱 20권 내</strong>로 복귀했고, 큰 대회에서도 안정적인 경기력을 보여주고 있다. 그의 테니스는 화려함보다는 효율을 추구하는 우아함이 특징이며, 특히 원핸드 백핸드의 선명한 곡선과 전진 플레이가 여전히 경쟁력 있는 무기로 작동한다.</p>
@@ -107,41 +111,107 @@ export default function GrigorDimitrovPage() {
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
             <p>그리고르 디미트로프는 불가리아 출신의 세계랭킹 상위권 선수로, 올코트 스타일과 한 손 백핸드, 공격적인 포핸드가 특징인 ATP 투어의 베테랑이다.</p>
             
-            <div className="not-prose my-6 p-4 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-200 dark:border-gray-800">
-              <ul className="space-y-2 text-sm">
-                <li><strong>국적:</strong> 불가리아</li>
-                <li><strong>생년:</strong> 1991년 (30대 중반)</li>
-                <li><strong>최고 랭킹:</strong> 3위</li>
-                <li><strong>현재 랭킹:</strong> 톱 10~20 사이</li>
-                <li><strong>주 종목:</strong> 단식 (ATP 투어)</li>
-                <li><strong>플레이 스타일:</strong> 올코트 플레이어</li>
-                <li><strong>시그니처 무기:</strong> 원핸드 백핸드</li>
+            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
+              </div>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">불가리아</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">1991년 (30대 중반)</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">3위</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">톱 10~20 사이</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">올코트 플레이어</span></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">원핸드 백핸드</span></span>
+                </li>
               </ul>
             </div>
 
             <p>플레이 스타일은 올코트 플레이어로 분류된다. 베이스라인에서 강력한 그라운드 스트로크를 구사하면서도, 기회가 생기면 네트로 전진해 발리로 마무리하는 능력을 갖추고 있다. 특히 <strong>원핸드 백핸드</strong>가 그의 시그니처 무기로, 현대 테니스에서 점점 사라져가는 한 손 백핸드의 아름다움을 보여주는 대표적인 선수다.</p>
+            <div className="not-prose my-6 flex flex-wrap gap-2">
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border-blue-300 dark:border-blue-700">
+                <Heart className="w-3 h-3 mr-1 inline" />
+                우아한 전사
+              </Badge>
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
+                <Star className="w-3 h-3 mr-1 inline" />
+                한 손 백핸드의 미학
+              </Badge>
+              <Badge variant="secondary" className="text-xs px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 border-amber-300 dark:border-amber-700">
+                <Trophy className="w-3 h-3 mr-1 inline" />
+                두 번째 전성기
+              </Badge>
+            </div>
             <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"우아한 전사"</strong>, <strong>"한 손 백핸드의 미학"</strong>, <strong>"두 번째 전성기를 만드는 베테랑"</strong>이다. 그의 테니스는 화려한 장식보다는 효율을 위한 우아함에 초점을 맞추고 있으며, 경기장 밖에서도 품위 있는 매너로 유명하다.</p>
+
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
             <p>디미트로프가 세계 상위권을 유지하는 힘은 기술의 완성도, 멘탈의 성숙함, 그리고 전술적 다양성에서 나온다.</p>
 
-            <h3>기술적 강점</h3>
+            <h3 className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+              기술적 강점
+            </h3>
+            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+                <strong className="text-purple-700 dark:text-purple-300">원핸드 백핸드</strong>가 가장 큰 무기. 높은 타점에서도 손목의 긴장을 최소화해 라켓면을 오래 유지. 선명한 곡선으로 코트 구석을 정확히 긁어냄.
+              </p>
+            </div>
             <p>원핸드 백핸드가 가장 큰 무기다. 높은 타점에서도 손목의 긴장을 최소화해 라켓면을 오래 유지한다. 임팩트 뒤 상체를 가볍게 열어 각을 만든다. 이 백핸드는 선명한 곡선을 그리며 코트 구석을 정확히 긁어낸다.</p>
             <p>포핸드는 회전량을 상황에 맞춰 조절한다. 크로스로 상대를 밖으로 밀어낸 뒤, 다운더라인으로 결말을 짓는다. 서브는 와이드와 바디의 비율을 바꿔 첫 두 타구의 구조를 설계한다.</p>
 
-            <h3>피지컬 능력</h3>
-            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, 5세트 경기에서도 후반까지 안정적인 경기력을 유지한다.</p>
+            <h3 className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
+              피지컬 능력
+            </h3>
+            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">5세트 경기에서도 후반까지 안정적인 경기력</strong>을 유지한다.</p>
 
-            <h3>멘탈 강점</h3>
-            <div className="not-prose my-4 p-3 bg-green-50 dark:bg-green-950/20 border-l-3 border-green-500 rounded-r">
+            <h3 className="flex items-center gap-2">
+              <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              멘탈 강점
+            </h3>
+            <div className="not-prose my-4 p-4 bg-green-50 dark:bg-green-950/20 border-l-4 border-green-500 rounded-r-lg shadow-sm">
+              <div className="flex items-center gap-2 mb-2">
+                <Target className="w-4 h-4 text-green-700 dark:text-green-400" />
+                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-0">
+                  핵심 통계
+                </p>
+              </div>
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
-                타이브레이크 승률 <strong className="text-green-700 dark:text-green-400">60% 이상</strong> · 브레이크 포인트에서의 침착함
+                타이브레이크 승률 <strong className="text-green-700 dark:text-green-400 text-base">60% 이상</strong> · 브레이크 포인트에서의 침착함
               </p>
             </div>
             <p>타이브레이크 승률이 <strong>60%를 넘는</strong> 편이다. 브레이크 포인트 상황에서도 침착함을 유지한다. 포인트 사이의 절차를 엄격하게 반복하는 루틴이 심박이 급히 오르는 것을 막아준다. 스코어가 흔들려도 루틴의 길이를 바꾸지 않아 실수의 폭이 좁다.</p>
 
-            <h3>전술적 다양성</h3>
+            <h3 className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+              전술적 다양성
+            </h3>
             <p>상대의 강점을 거울처럼 받아 적응한다. 강한 리턴러를 만나면 퍼스트 서브 확률을 끌어올리고 3구 패턴을 단순화한다. 네트를 서둘러 점령하는 유형에게는 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만든다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 속도를 바꿔 같은 구역을 다른 느낌으로 찌른다.</p>
+
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-injury-career">어떤 부상과 공백이 이 선수의 커리어를 흔들었나?</h2>
             <p>디미트로프의 커리어는 2017년 ATP 파이널 우승 이후 부상과 컨디션 저하로 큰 시련을 겪었다. 어깨 부상과 손목 문제가 반복되며 랭킹이 하락했고, 경기력도 불안정해졌다.</p>
@@ -156,9 +226,12 @@ export default function GrigorDimitrovPage() {
 
             <h3>체계적인 복귀</h3>
             <blockquote className="not-prose my-4 p-4 bg-purple-50 dark:bg-purple-950/30 border-l-4 border-purple-500 rounded-r-lg italic">
-              <p className="text-base text-gray-800 dark:text-gray-200 mb-0">
-                "서브로 공간, 백핸드로 각, 전진으로 결말"
-              </p>
+              <div className="flex items-start gap-3">
+                <Heart className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-800 dark:text-gray-200 mb-0">
+                  "서브로 공간, 백핸드로 각, 전진으로 결말"
+                </p>
+              </div>
             </blockquote>
             <p>복귀 과정은 체계적이었다. 회복과 수면, 식단의 규칙을 먼저 지키기 시작했다. 경기 플랜을 간결한 문장으로 묶었다. 위의 원칙을 세웠다. 큰 틀은 그대로 두고 디테일만 조정하는 방식으로 접근했다.</p>
 
@@ -169,8 +242,11 @@ export default function GrigorDimitrovPage() {
             <p>디미트로프의 커리어를 상징하는 경기는 2017년 ATP 파이널 우승과 최근 몇 시즌의 복귀 과정에서 보여준 대회들이다.</p>
 
             <h3>2017년 ATP 파이널 우승</h3>
-            <div className="not-prose my-4 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-800">
-              <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-2">🏆 커리어 전성기의 정점</p>
+            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
+              <div className="flex items-center gap-2 mb-3">
+                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전성기의 정점</p>
+              </div>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
                 <strong>2017년 ATP 파이널</strong>에서 당시 세계 최고 수준의 선수들을 연파하며 우승. 원핸드 백핸드의 선명한 곡선과 전진 플레이, 중요한 포인트에서의 침착함이 모두 어우러진 경기.
               </p>
@@ -181,10 +257,13 @@ export default function GrigorDimitrovPage() {
             <p>최근 시즌에서는 부상에서 복귀한 후 큰 대회에서 보여준 경기들이 인상적이다. 랭킹이 하락했던 시기를 지나 다시 상위권으로 올라오는 과정에서, 그는 여전히 탑 10 선수들과 경쟁할 수 있는 능력을 보여줬다. 특히 브레이크 포인트 상황에서 백핸드 다운더라인을 가르는 장면은 그의 테니스가 가진 설득력을 한눈에 보여준다.</p>
 
             <h3>대표 명장면</h3>
-            <blockquote className="not-prose my-4 p-4 bg-gray-50 dark:bg-gray-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg">
-              <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic">
-                브레이크 포인트에서의 백핸드 다운더라인 샷. 랠리의 호흡이 잠시 멎는 순간, 그는 백핸드를 몸 가까이 끌어당겨 라인을 가른다. 공이 흰 선을 스치며 빠져나가면 관중의 탄성이 터진다. 그는 표정을 바꾸지 않은 채 네트를 향해 두 걸음 전진한다.
-              </p>
+            <blockquote className="not-prose my-4 p-5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/50 dark:to-slate-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg shadow-sm">
+              <div className="flex items-start gap-3">
+                <Zap className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic leading-relaxed">
+                  브레이크 포인트에서의 백핸드 다운더라인 샷. 랠리의 호흡이 잠시 멎는 순간, 그는 백핸드를 몸 가까이 끌어당겨 라인을 가른다. 공이 흰 선을 스치며 빠져나가면 관중의 탄성이 터진다. 그는 표정을 바꾸지 않은 채 네트를 향해 두 걸음 전진한다.
+                </p>
+              </div>
             </blockquote>
             <p>준비와 결단, 그리고 설명 가능한 과감함이 한 장면에 응축된다.</p>
 
