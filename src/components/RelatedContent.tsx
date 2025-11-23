@@ -19,11 +19,15 @@ export interface RelatedItem {
   description?: string;
   excerpt?: string;
   category?: string;
+  tags?: string[];
   href: string;
   date?: string;
   readTime?: string;
   badge?: string;
 }
+
+// RelatedContentItem은 RelatedItem의 별칭
+export type RelatedContentItem = RelatedItem;
 
 interface RelatedContentProps {
   items: RelatedItem[];

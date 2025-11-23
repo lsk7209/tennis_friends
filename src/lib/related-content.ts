@@ -3,18 +3,7 @@
  * 카테고리, 태그, 키워드 기반으로 관련 컨텐츠를 추천합니다.
  */
 
-export interface RelatedContentItem {
-  id: string;
-  title: string;
-  description?: string;
-  excerpt?: string;
-  category?: string;
-  tags?: string[];
-  href: string;
-  date?: string;
-  readTime?: string;
-  badge?: string;
-}
+import type { RelatedContentItem } from '@/components/RelatedContent';
 
 /**
  * 블로그 포스트의 관련글을 추천하는 함수
