@@ -77,6 +77,7 @@ import {
   ChevronRight,
   type LucideIcon
 } from 'lucide-react';
+import type { UtilityMetadata } from '@/lib/utilities';
 
 // ============================================
 // 유틸리티 메타데이터 관리 시스템
@@ -107,7 +108,7 @@ import {
 //
 // ============================================
 
-export const utilitiesMetadata = [
+export const utilitiesMetadata: UtilityMetadata[] = [
   {
     id: 'play-style-test',
     title: '테니스 플레이 스타일 진단',

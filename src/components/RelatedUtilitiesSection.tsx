@@ -9,6 +9,7 @@
 
 import React, { useMemo } from 'react';
 import { utilitiesMetadata } from '@/app/utility/page';
+import type { UtilityMetadata } from '@/lib/utilities';
 import RelatedContent from '@/components/RelatedContent';
 import { getRelatedUtilities } from '@/lib/related-content';
 import { utilityToRelatedItem } from '@/lib/utilities';
