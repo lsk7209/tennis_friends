@@ -80,7 +80,7 @@ export default function AdminPage() {
                 totalVisitors: Math.max(cloudflareStats.totalVisitors || 0, localStats.totalVisitors || 0),
                 source: 'cloudflare+local',
               });
-            } else {
+      } else {
               // Cloudflare 데이터만 사용
               setStats({
                 ...EMPTY_STATS_DATA,
@@ -203,7 +203,7 @@ export default function AdminPage() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">관리자 대시보드</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">관리자 대시보드</h1>
             <div className="mt-2 flex items-center gap-4 text-sm">
               {dataStatus.hasData ? (
                 <>
@@ -284,9 +284,9 @@ export default function AdminPage() {
             >
               테스트 데이터 생성
             </Button>
-            <Button onClick={fetchStats} variant="outline">
-              새로고침
-            </Button>
+          <Button onClick={fetchStats} variant="outline">
+            새로고침
+          </Button>
           </div>
         </div>
 
@@ -1477,7 +1477,11 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                         const apiUrl = process.env.NEXT_PUBLIC_ANALYTICS_API_URL;
                         if (apiUrl) {
                           const realtime = await getRealtimeStats(password || '1234');
-                          alert(`실시간 통계:\n\n마지막 업데이트: ${realtime.lastUpdate || '없음'}\n오늘 방문자: ${realtime.todayCount}명`);
+                          if (realtime) {
+                            alert(`실시간 통계:\n\n마지막 업데이트: ${realtime.lastUpdate || '없음'}\n오늘 방문자: ${realtime.todayCount}명`);
+                          } else {
+                            alert('실시간 통계를 가져올 수 없습니다.');
+                          }
                         } else {
                           alert('Cloudflare Analytics API가 설정되지 않았습니다.\n환경 변수 NEXT_PUBLIC_ANALYTICS_API_URL를 확인하세요.');
                         }
