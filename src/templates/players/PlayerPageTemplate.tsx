@@ -21,6 +21,7 @@ import {
   Star, CheckCircle, Crown, Users, BookOpen, ArrowRight 
 } from 'lucide-react';
 import { Player, TemplateType, PlayerMetadata, PlayerFAQ } from '@/types/player';
+import RelatedPlayerContent from '@/components/RelatedPlayerContent';
 
 interface PlayerPageTemplateProps {
   player: Player;
@@ -404,6 +405,13 @@ export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections 
 
           {/* FAQ Section */}
           <FAQ items={faqs.map(faq => ({ q: faq.question, a: faq.answer }))} />
+
+          {/* Related Content */}
+          <RelatedPlayerContent 
+            playerName={player.nameKo}
+            playerSlug={player.slug}
+            maxItems={6}
+          />
 
           {/* CTA */}
           <CTA />

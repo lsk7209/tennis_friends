@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import RelatedUtilitiesSection from '@/components/RelatedUtilitiesSection';
 
 // 메타데이터는 layout.tsx에서 처리
 
@@ -323,6 +324,9 @@ export default function TennisDictionaryPage() {
             </div>
           </div>
         )}
+
+        {/* 관련 유틸리티 추천 */}
+        <RelatedUtilitiesSection currentUtilityId="tennis-dictionary" />
       </div>
     </div>
   );

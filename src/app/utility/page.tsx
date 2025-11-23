@@ -107,7 +107,7 @@ import {
 //
 // ============================================
 
-const utilitiesMetadata = [
+export const utilitiesMetadata = [
   {
     id: 'play-style-test',
     title: '테니스 플레이 스타일 진단',

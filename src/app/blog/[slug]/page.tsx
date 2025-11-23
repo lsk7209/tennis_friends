@@ -6,6 +6,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Clock, ArrowLeft, ArrowRight, Share2 } from 'lucide-react';
 import { allBlogPosts } from '@/data/blog-posts';
 import type { BlogPost } from '@/types/blog';
+import RelatedContent from '@/components/RelatedContent';
+import { getRelatedBlogPosts } from '@/lib/related-content';
+import type { RelatedContentItem } from '@/components/RelatedContent';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -107,9 +110,32 @@ export default async function BlogPostPage({ params }: PageProps) {
     );
   }
 
-  const relatedPosts = blogPosts
-    .filter(p => p.id !== post.id && p.category === post.category)
-    .slice(0, 3);
+  // 개선된 관련글 추천 알고리즘 사용
+  const currentPostItem: RelatedContentItem = {
+    id: post.id,
+    title: post.title,
+    description: post.description,
+    excerpt: post.excerpt,
+    category: post.category,
+    tags: post.tags,
+    href: `/blog/${post.slug}`,
+    date: post.date,
+    readTime: post.readTime,
+  };
+  
+  const allPostsItems: RelatedContentItem[] = blogPosts.map(p => ({
+    id: p.id,
+    title: p.title,
+    description: p.description,
+    excerpt: p.excerpt,
+    category: p.category,
+    tags: p.tags,
+    href: `/blog/${p.slug}`,
+    date: p.date,
+    readTime: p.readTime,
+  }));
+  
+  const relatedPosts = getRelatedBlogPosts(currentPostItem, allPostsItems, 6);
 
   return (
     <div className="container mx-auto max-w-4xl px-4 py-12">
@@ -203,30 +229,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       </article>
 
       {/* Related Posts */}
-      {relatedPosts.length > 0 && (
-        <section className="mt-16">
-          <h2 className="text-2xl font-bold text-text-light mb-6">관련 글 더보기</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {relatedPosts.map((relatedPost) => (
-              <Link key={relatedPost.id} href={`/blog/${relatedPost.slug}`}>
-                <Card className="h-full bg-content-dark border-white/10 hover:border-primary/50 transition-all group cursor-pointer">
-                  <CardContent className="p-4">
-                    <Badge className="bg-primary/20 text-primary mb-2">
-                      {relatedPost.category}
-                    </Badge>
-                    <h3 className="font-bold text-text-light group-hover:text-primary transition-colors mb-2 line-clamp-2">
-                      {relatedPost.title}
-                    </h3>
-                    <p className="text-text-muted text-sm line-clamp-2">
-                      {relatedPost.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      <RelatedContent 
+        items={relatedPosts}
+        title="관련 글 더보기"
+        type="blog"
+        maxItems={6}
+      />
 
       {/* CTA Section */}
       <Card className="mt-16 bg-primary/10 border-primary/20">

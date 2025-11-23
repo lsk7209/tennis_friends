@@ -153,23 +153,32 @@ export default function Tracking() {
         existingData.push(visitorData);
         const recentData = existingData.slice(-1000);
 
-        // 로컬 스토리지에 저장
+        // 로컬 스토리지에 저장 (백업용)
         localStorage.setItem('visitorData', JSON.stringify(recentData));
 
-        // 서버 사이드 API가 있다면 함께 호출 (정적 배포에서는 무시됨)
-        fetch('/api/track', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            page: pathname,
-            referrer: document.referrer,
-            userAgent: navigator.userAgent,
-          }),
-        }).catch(() => {
-          // API가 없는 경우 무시
-        });
+        // Cloudflare Workers API 호출
+        const apiUrl = process.env.NEXT_PUBLIC_ANALYTICS_API_URL;
+        if (apiUrl) {
+          fetch(`${apiUrl}/api/track`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              page: pathname,
+              referrer: document.referrer,
+              userAgent: navigator.userAgent,
+              screenWidth: screen.width,
+              screenHeight: screen.height,
+              language: navigator.language,
+              timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+              sessionId: sessionId,
+              isNewVisitor: isNewVisitor,
+            }),
+          }).catch(() => {
+            // API 호출 실패 시 무시 (로컬스토리지에만 저장)
+          });
+        }
       } catch (error) {
         // 프로덕션에서는 에러를 조용히 처리
         if (process.env.NODE_ENV === 'development') {

@@ -1,0 +1,30 @@
+name = "tennis-analytics"
+main = "src/index.ts"
+compatibility_date = "2024-01-25"
+
+# KV 네임스페이스
+[[kv_namespaces]]
+binding = "ANALYTICS_KV"
+id = "your-kv-namespace-id"  # 실제 KV 네임스페이스 ID로 교체 필요
+preview_id = "your-preview-kv-namespace-id"
+
+# Rate Limiter (선택적, Cloudflare 대시보드에서 설정)
+# [[rate_limits]]
+# id = "your-rate-limiter-id"
+
+# 크론 트리거 (매일 자정에 통계 집계)
+[triggers]
+crons = ["0 0 * * *"]  # 매일 자정 (UTC)
+
+# 환경 변수
+[vars]
+ADMIN_PASSWORD = "your-admin-password"  # 실제 비밀번호로 교체 필요
+
+# 프로덕션 환경
+[env.production]
+name = "tennis-analytics-prod"
+
+# 스테이징 환경
+[env.staging]
+name = "tennis-analytics-staging"
+
