@@ -2,6 +2,8 @@
  * 관리자 페이지 상수 정의
  */
 
+import type { StatsData } from '@/types/admin';
+
 export const ADMIN_PASSWORD = '1234';
 export const AUTO_REFRESH_INTERVAL = 30000; // 30초
 export const MAX_RECENT_VISITORS = 100;
@@ -106,5 +108,5 @@ export const EMPTY_STATS_DATA = {
     duplicateRecords: 0,
     issues: [],
   },
-} as const;
+} as StatsData;
 
