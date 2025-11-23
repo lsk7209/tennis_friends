@@ -92,6 +92,8 @@ export interface StatsData {
     duplicateRecords: number;
     issues: string[];
   };
+  source?: string; // 데이터 소스 ('local', 'cloudflare-kv', 'cloudflare+local' 등)
+  period?: string; // 통계 기간 ('30days' 등)
 }
 
 export interface DataStatus {
