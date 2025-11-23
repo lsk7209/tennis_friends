@@ -5,6 +5,9 @@ compatibility_date = "2024-01-25"
 # @cloudflare/next-on-pages는 .vercel/output/static에 빌드 결과를 생성
 pages_build_output_dir = ".vercel/output/static"
 
+# Node.js 호환성 플래그 (Next.js 사용 시 필요)
+compatibility_flags = ["nodejs_compat"]
+
 # 환경 변수
 [vars]
 NEXT_PUBLIC_SITE_URL = "https://tennisfriends.co.kr"

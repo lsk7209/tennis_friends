@@ -23,16 +23,18 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Build
-      run: npm run cf-build
+    - name: Build (next-on-pages)
+      run: npx @cloudflare/next-on-pages@1
       env:
-        NEXT_PUBLIC_SITE_URL: https://tennisfriends.co.kr
+        NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr' }}
+        NEXT_PUBLIC_ANALYTICS_API_URL: ${{ secrets.NEXT_PUBLIC_ANALYTICS_API_URL }}
         
     - name: Deploy to Cloudflare Pages
       uses: cloudflare/pages-action@v1
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        projectName: tennis-friends
-        directory: out
+        projectName: ${{ secrets.CLOUDFLARE_PAGES_PROJECT || 'tennis-friends' }}
+        directory: .vercel/output/static
+        wranglerVersion: '3'
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
