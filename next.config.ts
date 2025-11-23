@@ -1,11 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 클라우드플레어 호스팅을 위한 설정
-  output: 'export',
+  // Cloudflare Pages 배포 설정
+  // @cloudflare/next-on-pages 사용 시 output: 'export'는 제거
+  // next-on-pages가 자체적으로 빌드 출력을 처리함
+  ...(process.env.CF_PAGES !== 'true' && {
+    output: 'export', // GitHub Pages 등 다른 배포용
+    distDir: 'out',
+  }),
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'out',
 
   // GitHub Pages 배포용 설정
   ...(process.env.GITHUB_ACTIONS && process.env.GITHUB_PAGES === 'true' && {
@@ -57,32 +61,35 @@ const nextConfig: NextConfig = {
     },
   }),
   
-  // 보안 헤더
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-    ];
-  },
+  // 보안 헤더 (정적 export에서는 제한적, Cloudflare Pages에서는 wrangler.toml 또는 _headers 파일 사용)
+  // Cloudflare Pages에서는 Functions에서 헤더를 설정하거나 _headers 파일 사용
+  ...(process.env.CF_PAGES !== 'true' && {
+    async headers() {
+      return [
+        {
+          source: '/(.*)',
+          headers: [
+            {
+              key: 'X-Frame-Options',
+              value: 'DENY',
+            },
+            {
+              key: 'X-Content-Type-Options',
+              value: 'nosniff',
+            },
+            {
+              key: 'Referrer-Policy',
+              value: 'origin-when-cross-origin',
+            },
+            {
+              key: 'X-XSS-Protection',
+              value: '1; mode=block',
+            },
+          ],
+        },
+      ];
+    },
+  }),
 };
 
 export default nextConfig;

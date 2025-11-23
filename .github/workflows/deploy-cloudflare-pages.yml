@@ -33,6 +33,7 @@ jobs:
       - name: Build (next-on-pages)
         run: npx @cloudflare/next-on-pages@1
         env:
+          CF_PAGES: 'true'
           NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr' }}
           NEXT_PUBLIC_ANALYTICS_API_URL: ${{ secrets.NEXT_PUBLIC_ANALYTICS_API_URL }}
 
