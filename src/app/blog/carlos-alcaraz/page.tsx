@@ -7,15 +7,15 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 
 export const metadata = {
-  title: '카를로스 알카라즈 선수 프로필과 스토리',
-  description: '스페인 출신 테니스 선수 카를로스 알카라즈의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
-  keywords: ['테니스', '카를로스 알카라즈', '선수 프로필', '스토리', 'ATP'],
+  title: '카를로스 알카라스 선수 프로필과 스토리',
+  description: '스페인 출신 테니스 선수 카를로스 알카라스의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
+  keywords: ['테니스', '카를로스 알카라스', '선수 프로필', '스토리', 'ATP'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/blog/carlos-alcaraz',
   },
   openGraph: {
-    title: '카를로스 알카라즈 선수 프로필과 스토리',
-    description: '스페인 출신 테니스 선수 카를로스 알카라즈의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
+    title: '카를로스 알카라스 선수 프로필과 스토리',
+    description: '스페인 출신 테니스 선수 카를로스 알카라스의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
     url: 'https://www.tennisfrens.com/blog/carlos-alcaraz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '카를로스 알카라즈 선수 프로필과 스토리',
-    description: '스페인 출신 테니스 선수 카를로스 알카라즈의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
+    title: '카를로스 알카라스 선수 프로필과 스토리',
+    description: '스페인 출신 테니스 선수 카를로스 알카라스의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
   },
   robots: {
     index: true,
@@ -45,7 +45,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 
 const faqs = [
   {
-    q: '카를로스 알카라즈의 주무기는 무엇인가요?',
+    q: '카를로스 알카라스의 주무기는 무엇인가요?',
     a: '그의 주무기는 공격적인 베이스라인 플레이와 빠른 코트 커버리지입니다. 강력한 스트로크와 탁월한 운동능력으로 상대를 압박합니다.'
   },
   {
@@ -74,7 +74,7 @@ export default function CarlosAlcarazBlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '카를로스 알카라즈', '선수 프로필', '스토리', 'ATP'].map((tag) => (
+            {['테니스', '카를로스 알카라스', '선수 프로필', '스토리', 'ATP'].map((tag) => (
               <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
                 {tag}
               </Badge>
@@ -82,13 +82,13 @@ export default function CarlosAlcarazBlogPost() {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            카를로스 알카라즈
+            카를로스 알카라스
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
             '즐기는 재능'으로 시대를 앞당긴 젊은 왕
           </p>
           <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            공격적 베이스라인과 변주로 흐름을 장악하는 카를로스 알카라즈의 성장, 스타일, 인간미와 라이벌 이야기를 한 편으로.
+            공격적 베이스라인과 변주로 흐름을 장악하는 카를로스 알카라스의 성장, 스타일, 인간미와 라이벌 이야기를 한 편으로.
           </p>
           
           {/* Meta Info */}
@@ -125,7 +125,7 @@ export default function CarlosAlcarazBlogPost() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
               <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
                 <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 카를로스 알카라즈는 스페인 무르시아 엘팔마에서 자란 선수로, 공격적인 베이스라인과 빠른 전환으로 흐름을 틀어쥐는 것이 강점입니다.
+                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 카를로스 알카라스는 스페인 무르시아 엘팔마에서 자란 선수로, 공격적인 베이스라인과 빠른 전환으로 흐름을 틀어쥐는 것이 강점입니다.
               </p>
             </div>
 

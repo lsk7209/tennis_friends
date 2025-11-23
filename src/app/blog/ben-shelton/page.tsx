@@ -7,15 +7,15 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
 export const metadata = {
-  title: '벤 셸턴 선수 프로필과 스토리',
-  description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 셸턴의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
-  keywords: ['테니스', '벤 셸턴', '선수 프로필', '스토리', '미국'],
+  title: '벤 쉘튼 선수 프로필과 스토리',
+  description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 쉘튼의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+  keywords: ['테니스', '벤 쉘튼', '선수 프로필', '스토리', '미국'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/blog/ben-shelton',
   },
   openGraph: {
-    title: '벤 셸턴 선수 프로필과 스토리',
-    description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 셸턴의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+    title: '벤 쉘튼 선수 프로필과 스토리',
+    description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 쉘튼의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
     url: 'https://www.tennisfrens.com/blog/ben-shelton',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '벤 셸턴 선수 프로필과 스토리',
-    description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 셸턴의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+    title: '벤 쉘튼 선수 프로필과 스토리',
+    description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 쉘튼의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
   },
   robots: {
     index: true,
@@ -48,7 +48,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 
 const faqs = [
   {
-    q: '벤 셸턴의 경기 스타일은 어떤가요?',
+    q: '벤 쉘튼의 경기 스타일은 어떤가요?',
     a: '좌손의 폭발적 서브와 대담한 전진, 카운터 본능이 특징입니다. 애드코트 와이드로 크게 휘어나가는 킥성 구질로 리턴러를 코트 밖으로 끌어내고, 첫 타에서 공간을 벌리고 두 번째에서 결말을 재촉하는 테니스로 큰 코트의 시간을 압축합니다.'
   },
   {
@@ -73,13 +73,13 @@ export default function BenSheltonBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="벤 셸턴 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도"
-        excerpt="좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 셸턴의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
+        title="벤 쉘튼 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도"
+        excerpt="좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 쉘튼의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '벤 셸턴', '선수 프로필', '스토리', '미국'].map((tag) => (
+            {['테니스', '벤 쉘튼', '선수 프로필', '스토리', '미국'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -98,9 +98,9 @@ export default function BenSheltonBlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h1 id="ben-shelton-explosive-serve-bold-advance-new-generation-speed">벤 셸턴 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도</h1>
+            <h1 id="ben-shelton-explosive-serve-bold-advance-new-generation-speed">벤 쉘튼 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도</h1>
 
-            <p><strong>직답:</strong> 벤 셸턴(Ben Shelton)은 좌손의 폭발적 서브와 대담한 전진, 카운터 본능으로 큰 코트의 시간을 압축하며 경기를 단숨에 뒤집는 미국의 차세대 간판이다.</p>
+            <p><strong>직답:</strong> 벤 쉘튼(Ben Shelton)은 좌손의 폭발적 서브와 대담한 전진, 카운터 본능으로 큰 코트의 시간을 압축하며 경기를 단숨에 뒤집는 미국의 차세대 간판이다.</p>
 
             <h2 id="growth-background-track-court-speed-language">성장 배경 — 트랙에서 코트로, 속도의 언어를 배우다</h2>
             <p>그의 운동 DNA는 빠르다. 어릴 때부터 단거리 달리기와 점프 동작을 접했고, 대학 무대에서 체계적인 피지컬 트레이닝을 거치며 '폭발→회복→재가속'의 리듬을 몸에 새겼다. 코치였던 아버지는 화려한 기술보다 기본기의 견고함과 일상을 강조했다. 훈련 일지에는 샷의 질보다 루틴 이행률이 먼저 적혔고, 원정 중에도 수면·식단·가벼운 코어 루틴을 놓치지 않았다. 이 생활의 질서가 오늘의 '빠르되 무너지지 않는' 셸턴을 만든다.</p>

@@ -8,15 +8,15 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '카를로스 알카라즈 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
-  description: '카를로스 알카라즈의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 폭발적인 파워와 젊은 에너지로 테니스계를 이끌어갈 스페인의 신성.',
-  keywords: ['카를로스 알카라즈', 'Carlos Alcaraz', '테니스', 'ATP', '플레이스타일', '스페인 테니스', '공격형', '차세대 스타'],
+  title: '카를로스 알카라스 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
+  description: '카를로스 알카라스의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 폭발적인 파워와 젊은 에너지로 테니스계를 이끌어갈 스페인의 신성.',
+  keywords: ['카를로스 알카라스', 'Carlos Alcaraz', '테니스', 'ATP', '플레이스타일', '스페인 테니스', '공격형', '차세대 스타'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/carlos-alcaraz',
   },
   openGraph: {
-    title: '카를로스 알카라즈 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
-    description: '카를로스 알카라즈의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '카를로스 알카라스 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
+    description: '카를로스 알카라스의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/carlos-alcaraz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '카를로스 알카라즈 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
-    description: '카를로스 알카라즈의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '카를로스 알카라스 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
+    description: '카를로스 알카라스의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -41,19 +41,19 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '카를로스 알카라즈, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'why-again-notable', text: '카를로스 알카라스, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'growth-story', text: '카를로스 알카라즈는 어떻게 여기까지 왔을까?', depth: 2 },
+  { id: 'growth-story', text: '카를로스 알카라스는 어떻게 여기까지 왔을까?', depth: 2 },
   { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 카를로스 알카라즈의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '카를로스 알카라즈, 한 문장으로 정리하면?', depth: 2 },
+  { id: 'recent-form', text: '요즘 카를로스 알카라스의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '카를로스 알카라스, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '카를로스 알카라즈의 경기 스타일은 어떤가요?',
+    q: '카를로스 알카라스의 경기 스타일은 어떤가요?',
     a: '공격형 스타일로, 폭발적인 파워와 스피드를 겸비했습니다. 강력한 포핸드와 탁월한 운동능력으로 상대를 압도합니다.',
   },
   {
@@ -78,13 +78,13 @@ export default function CarlosAlcarazPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="카를로스 알카라즈"
+        title="카를로스 알카라스"
         excerpt="폭발적인 파워와 젊은 에너지로 테니스계를 이끌어갈 스페인의 신성"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '카를로스 알카라즈', '선수 프로필', '스페인', '공격형', '차세대 스타'].map((tag) => (
+            {['테니스', '카를로스 알카라스', '선수 프로필', '스페인', '공격형', '차세대 스타'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -96,7 +96,7 @@ export default function CarlosAlcarazPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">카를로스 알카라즈, 왜 주목받는 선수인가?</h2>
+            <h2 id="why-again-notable">카를로스 알카라스, 왜 주목받는 선수인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
@@ -105,11 +105,11 @@ export default function CarlosAlcarazPage() {
                 </p>
               </div>
             </blockquote>
-            <p>카를로스 알카라즈는 스페인 출신의 세계랭킹 2위 테니스 선수로, 폭발적인 파워와 젊은 에너지로 ATP 투어를 지배하고 있다. 세계랭킹 1위에 올랐던 경력의 소유자이며, 역대 최연소 기록을 세웠다. 강력한 포핸드와 탁월한 운동능력으로 상대를 압도하는 그의 테니스는 차세대 스타의 설계자로 평가받는다.</p>
+            <p>카를로스 알카라스는 스페인 출신의 세계랭킹 2위 테니스 선수로, 폭발적인 파워와 젊은 에너지로 ATP 투어를 지배하고 있다. 세계랭킹 1위에 올랐던 경력의 소유자이며, 역대 최연소 기록을 세웠다. 강력한 포핸드와 탁월한 운동능력으로 상대를 압도하는 그의 테니스는 차세대 스타의 설계자로 평가받는다.</p>
             <p>그는 2022년 US 오픈 우승을 차지하며 그랜드 슬램 챔피언이 되었고, 같은 해 세계랭킹 1위를 달성했다. 최근 몇 시즌 동안 큰 대회에서도 안정적인 경기력을 보여주고 있으며, 특히 윔블던에서 우승을 거두며 기록을 계속 갱신하고 있다. 그의 테니스는 화려함보다는 효율을 추구하며, 특히 폭발적인 파워가 뛰어나다.</p>
 
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>카를로스 알카라즈는 스페인 출신의 세계랭킹 2위 선수로, 공격형 스타일과 폭발적인 파워, 탁월한 운동능력이 특징인 ATP 투어의 차세대 스타다.</p>
+            <p>카를로스 알카라스는 스페인 출신의 세계랭킹 2위 선수로, 공격형 스타일과 폭발적인 파워, 탁월한 운동능력이 특징인 ATP 투어의 차세대 스타다.</p>
             
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
@@ -168,7 +168,7 @@ export default function CarlosAlcarazPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="growth-story">카를로스 알카라즈는 어떻게 여기까지 왔을까?</h2>
+            <h2 id="growth-story">카를로스 알카라스는 어떻게 여기까지 왔을까?</h2>
             <p>알카라즈의 성장 스토리는 일상에서 축적된 힘과 빠른 적응력이 핵심이다.</p>
 
             <h3>성장 배경</h3>
@@ -277,7 +277,7 @@ export default function CarlosAlcarazPage() {
             <h3>팀과의 관계</h3>
             <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 오랜 기간 함께한 코치와의 유대는 그의 안정적인 경기력에 기여하고 있으며, 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 스페인의 훈련 문화는 전통 위에 올린 현대적 해석을 중시하는데, 알카라즈의 테니스에도 이 정신이 뚜렷하다.</p>
 
-            <h2 id="recent-form">요즘 카를로스 알카라즈의 경기력 흐름은 어떤가?</h2>
+            <h2 id="recent-form">요즘 카를로스 알카라스의 경기력 흐름은 어떤가?</h2>
             <p>최근 몇 시즌 동안 알카라즈는 빠르게 성장하고 있으며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
 
             <h3>최근 성적</h3>
@@ -295,8 +295,8 @@ export default function CarlosAlcarazPage() {
             <h3>랭킹과 스타일 변화</h3>
             <p>랭킹 변동을 보면, 그는 현재 세계랭킹 2위를 유지하고 있다. 빠르게 성장하며 상위권으로 올라오는 과정에서, 그는 여전히 탑 10 선수들과 경쟁할 수 있는 능력을 보여줬다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다.</p>
 
-            <h2 id="one-sentence-summary">카를로스 알카라즈, 한 문장으로 정리하면?</h2>
-            <p>카를로스 알카라즈는 폭발적인 파워와 젊은 에너지로 테니스계를 이끌어갈 스페인의 신성이다.</p>
+            <h2 id="one-sentence-summary">카를로스 알카라스, 한 문장으로 정리하면?</h2>
+            <p>카를로스 알카라스는 폭발적인 파워와 젊은 에너지로 테니스계를 이끌어갈 스페인의 신성이다.</p>
             <p>그의 테니스는 화려함보다는 효율을 추구하며, 특히 강력한 포핸드와 탁월한 운동능력으로 상대를 압도하는 능력이 뛰어나다. 타이브레이크와 장기전에서의 멘탈 강점, 그리고 빠른 적응력이 세계 상위권을 유지하게 해준다. 결과보다 태도를 중시하는 그의 테니스는 결과를 넘어 설득으로 남으며, 차세대 스타로 기억될 것이다.</p>
           </div>
 

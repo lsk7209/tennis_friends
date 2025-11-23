@@ -8,15 +8,15 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '로렌초 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
-  description: '로렌초 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타.',
-  keywords: ['로렌초 무세티', 'Lorenzo Musetti', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '원핸드 백핸드', '차세대'],
+  title: '로렌조 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
+  description: '로렌조 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타.',
+  keywords: ['로렌조 무세티', 'Lorenzo Musetti', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '원핸드 백핸드', '차세대'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/lorenzo-musetti',
   },
   openGraph: {
-    title: '로렌초 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
-    description: '로렌초 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '로렌조 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
+    description: '로렌조 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/lorenzo-musetti',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '로렌초 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
-    description: '로렌초 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '로렌조 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
+    description: '로렌조 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -41,19 +41,19 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '로렌초 무세티, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'why-again-notable', text: '로렌조 무세티, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'growth-story', text: '로렌초 무세티는 어떻게 여기까지 왔을까?', depth: 2 },
+  { id: 'growth-story', text: '로렌조 무세티는 어떻게 여기까지 왔을까?', depth: 2 },
   { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 로렌초 무세티의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '로렌초 무세티, 한 문장으로 정리하면?', depth: 2 },
+  { id: 'recent-form', text: '요즘 로렌조 무세티의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '로렌조 무세티, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '로렌초 무세티의 경기 스타일은 어떤가요?',
+    q: '로렌조 무세티의 경기 스타일은 어떤가요?',
     a: '원핸드 백핸드 스타일로, 우아한 원핸드 백핸드와 창의적인 플레이가 특징입니다. 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주는 대표적인 선수입니다.',
   },
   {
@@ -78,13 +78,13 @@ export default function LorenzoMusettiPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="로렌초 무세티"
+        title="로렌조 무세티"
         excerpt="우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '로렌초 무세티', '선수 프로필', '이탈리아', '원핸드 백핸드', '차세대'].map((tag) => (
+            {['테니스', '로렌조 무세티', '선수 프로필', '이탈리아', '원핸드 백핸드', '차세대'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -96,7 +96,7 @@ export default function LorenzoMusettiPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">로렌초 무세티, 왜 주목받는 선수인가?</h2>
+            <h2 id="why-again-notable">로렌조 무세티, 왜 주목받는 선수인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
@@ -105,11 +105,11 @@ export default function LorenzoMusettiPage() {
                 </p>
               </div>
             </blockquote>
-            <p>로렌초 무세티는 이탈리아 출신의 세계랭킹 25위권 테니스 선수로, 우아한 원핸드 백핸드와 창의적인 플레이로 ATP 투어를 지배하고 있다. 세계랭킹 25위권을 유지하며, 특히 클레이 코트에서 강력한 모습을 보여준다. 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주는 그의 테니스는 이탈리아 테니스의 미래로 평가받는다.</p>
+            <p>로렌조 무세티는 이탈리아 출신의 세계랭킹 25위권 테니스 선수로, 우아한 원핸드 백핸드와 창의적인 플레이로 ATP 투어를 지배하고 있다. 세계랭킹 25위권을 유지하며, 특히 클레이 코트에서 강력한 모습을 보여준다. 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주는 그의 테니스는 이탈리아 테니스의 미래로 평가받는다.</p>
             <p>그는 주니어 시절부터 원핸드 백핸드의 아름다움을 보여주며 빠르게 성장했고, 특히 클레이 코트에서의 강력한 모습으로 주목받기 시작했다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 큰 대회에서도 안정적인 경기력을 보여주고 있다. 그의 테니스는 화려함과 효율을 모두 추구하며, 특히 우아한 원핸드 백핸드가 뛰어나다.</p>
 
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>로렌초 무세티는 이탈리아 출신의 세계랭킹 25위권 선수로, 원핸드 백핸드 스타일과 창의적인 플레이가 특징인 ATP 투어의 차세대 스타다.</p>
+            <p>로렌조 무세티는 이탈리아 출신의 세계랭킹 25위권 선수로, 원핸드 백핸드 스타일과 창의적인 플레이가 특징인 ATP 투어의 차세대 스타다.</p>
             
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
@@ -168,7 +168,7 @@ export default function LorenzoMusettiPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="growth-story">로렌초 무세티는 어떻게 여기까지 왔을까?</h2>
+            <h2 id="growth-story">로렌조 무세티는 어떻게 여기까지 왔을까?</h2>
             <p>무세티의 성장 스토리는 이탈리아에서의 어린 시절과 주니어 시절부터의 원핸드 백핸드의 아름다움이 핵심이다.</p>
 
             <h3>성장 배경</h3>
@@ -286,7 +286,7 @@ export default function LorenzoMusettiPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="recent-form">요즘 로렌초 무세티의 경기력 흐름은 어떤가?</h2>
+            <h2 id="recent-form">요즘 로렌조 무세티의 경기력 흐름은 어떤가?</h2>
             <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 클레이 코트에서 강력한 모습을 보여주고 있다.</p>
 
             <h3 className="flex items-center gap-2">
@@ -322,7 +322,7 @@ export default function LorenzoMusettiPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="one-sentence-summary">로렌초 무세티, 한 문장으로 정리하면?</h2>
+            <h2 id="one-sentence-summary">로렌조 무세티, 한 문장으로 정리하면?</h2>
             <p>우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타다.</p>
             <p>무세티는 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주며, 특히 클레이 코트에서 긴 랠리를 두려워하지 않는다. 우아한 원핸드 백핸드와 창의적인 플레이로 상대를 압박하며, 인내로 경기를 이끌어간다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 클레이 시즌에서 강력한 모습을 보여주고 있다.</p>
           </div>

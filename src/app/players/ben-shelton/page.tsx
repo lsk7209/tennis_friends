@@ -8,15 +8,15 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '벤 셸턴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '벤 셸턴의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 좌손 강서브와 대담한 전진으로 큰 코트의 시간을 압축하는 미국의 차세대 간판.',
-  keywords: ['벤 셸턴', 'Ben Shelton', '테니스', 'ATP', '플레이스타일', '미국 테니스', '공격형', '좌손 서브', '차세대'],
+  title: '벤 쉘튼 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: '벤 쉘튼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 좌손 강서브와 대담한 전진으로 큰 코트의 시간을 압축하는 미국의 차세대 간판.',
+  keywords: ['벤 쉘튼', 'Ben Shelton', '테니스', 'ATP', '플레이스타일', '미국 테니스', '공격형', '좌손 서브', '차세대'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/ben-shelton',
   },
   openGraph: {
-    title: '벤 셸턴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '벤 셸턴의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '벤 쉘튼 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '벤 쉘튼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/ben-shelton',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '벤 셸턴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '벤 셸턴의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '벤 쉘튼 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '벤 쉘튼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -41,19 +41,19 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '벤 셸턴, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'why-again-notable', text: '벤 쉘튼, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'growth-story', text: '벤 셸턴은 어떻게 여기까지 왔을까?', depth: 2 },
+  { id: 'growth-story', text: '벤 쉘튼은 어떻게 여기까지 왔을까?', depth: 2 },
   { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 벤 셸턴의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '벤 셸턴, 한 문장으로 정리하면?', depth: 2 },
+  { id: 'recent-form', text: '요즘 벤 쉘튼의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '벤 쉘튼, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '벤 셸턴의 경기 스타일은 어떤가요?',
+    q: '벤 쉘튼의 경기 스타일은 어떤가요?',
     a: '공격형 스타일로, 좌손의 폭발적 서브와 대담한 전진이 특징입니다. 애드코트 와이드로 크게 휘어나가는 킥성 구질로 리턴러를 코트 밖으로 끌어내고, 첫 타에서 공간을 벌리고 두 번째에서 결말을 재촉하는 테니스입니다.',
   },
   {
@@ -78,13 +78,13 @@ export default function BenSheltonPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="벤 셸턴"
+        title="벤 쉘튼"
         excerpt="좌손 서브의 파괴력과 대담한 전진으로 큰 코트의 시간을 압축하며 경기를 단숨에 뒤집는 미국의 차세대 간판"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '벤 셸턴', '선수 프로필', '미국', '공격형', '좌손 서브'].map((tag) => (
+            {['테니스', '벤 쉘튼', '선수 프로필', '미국', '공격형', '좌손 서브'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -96,7 +96,7 @@ export default function BenSheltonPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">벤 셸턴, 왜 주목받는 선수인가?</h2>
+            <h2 id="why-again-notable">벤 쉘튼, 왜 주목받는 선수인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
@@ -105,11 +105,11 @@ export default function BenSheltonPage() {
                 </p>
               </div>
             </blockquote>
-            <p>벤 셸턴은 미국 출신의 세계랭킹 상위권 테니스 선수로, 좌손의 폭발적 서브와 대담한 전진으로 ATP 투어에서 빠르게 성장하고 있다. 대학 테니스에서 프로로 전환한 지 얼마 되지 않았지만, 이미 큰 대회에서 인상적인 경기력을 보여주며 차세대 간판으로 주목받고 있다. 애드코트 와이드로 크게 휘어나가는 킥성 구질로 리턴러를 코트 밖으로 끌어내고, 첫 타에서 공간을 벌리고 두 번째에서 결말을 재촉하는 그의 테니스는 신세대의 속도를 보여준다.</p>
+            <p>벤 쉘튼은 미국 출신의 세계랭킹 상위권 테니스 선수로, 좌손의 폭발적 서브와 대담한 전진으로 ATP 투어에서 빠르게 성장하고 있다. 대학 테니스에서 프로로 전환한 지 얼마 되지 않았지만, 이미 큰 대회에서 인상적인 경기력을 보여주며 차세대 간판으로 주목받고 있다. 애드코트 와이드로 크게 휘어나가는 킥성 구질로 리턴러를 코트 밖으로 끌어내고, 첫 타에서 공간을 벌리고 두 번째에서 결말을 재촉하는 그의 테니스는 신세대의 속도를 보여준다.</p>
             <p>그는 대학 무대에서 체계적인 피지컬 트레이닝을 거치며 폭발→회복→재가속의 리듬을 몸에 새겼다. 프로로 전환한 후에도 빠르게 적응하며, 특히 하드 코트와 잔디 코트에서 강력한 모습을 보여주고 있다. 그의 테니스는 화려한 장식보다는 효율을 위한 속도에 초점을 맞추고 있으며, 특히 좌손 서브의 파괴력이 뛰어나다.</p>
 
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>벤 셸턴은 미국 출신의 세계랭킹 상위권 선수로, 공격형 스타일과 좌손 서브가 특징인 ATP 투어의 차세대 간판이다.</p>
+            <p>벤 쉘튼은 미국 출신의 세계랭킹 상위권 선수로, 공격형 스타일과 좌손 서브가 특징인 ATP 투어의 차세대 간판이다.</p>
             
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
@@ -168,7 +168,7 @@ export default function BenSheltonPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="growth-story">벤 셸턴은 어떻게 여기까지 왔을까?</h2>
+            <h2 id="growth-story">벤 쉘튼은 어떻게 여기까지 왔을까?</h2>
             <p>셸턴의 성장 스토리는 트랙에서 코트로의 전환과 대학 무대에서의 체계적인 훈련이 핵심이다.</p>
 
             <h3>성장 배경</h3>
@@ -273,7 +273,7 @@ export default function BenSheltonPage() {
             <h3>팀과의 관계</h3>
             <p>코치였던 아버지와의 관계는 그의 안정적인 경기력에 기여하고 있으며, 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 대표팀 이벤트에서 보이는 매너와 에너지는 왜 그가 스타성 있는 차세대 리더로 불리는지 설명한다.</p>
 
-            <h2 id="recent-form">요즘 벤 셸턴의 경기력 흐름은 어떤가?</h2>
+            <h2 id="recent-form">요즘 벤 쉘튼의 경기력 흐름은 어떤가?</h2>
             <p>최근 몇 시즌 동안 셸턴은 빠르게 성장하고 있으며, 큰 대회에서도 인상적인 경기력을 보여주고 있다.</p>
 
             <h3>최근 성적</h3>
@@ -285,8 +285,8 @@ export default function BenSheltonPage() {
             <h3>랭킹과 스타일 변화</h3>
             <p>랭킹 변동을 보면, 그는 현재 상승세에 있다. 프로로 전환한 후 빠르게 적응하며 상위권으로 올라오는 과정에서, 그는 여전히 탑 10 선수들과 경쟁할 수 있는 능력을 보여줬다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다.</p>
 
-            <h2 id="one-sentence-summary">벤 셸턴, 한 문장으로 정리하면?</h2>
-            <p>벤 셸턴은 좌손 서브의 파괴력과 대담한 전진으로 큰 코트의 시간을 압축하며 경기를 단숨에 뒤집는 미국의 차세대 간판이다.</p>
+            <h2 id="one-sentence-summary">벤 쉘튼, 한 문장으로 정리하면?</h2>
+            <p>벤 쉘튼은 좌손 서브의 파괴력과 대담한 전진으로 큰 코트의 시간을 압축하며 경기를 단숨에 뒤집는 미국의 차세대 간판이다.</p>
             <p>그의 테니스는 화려한 장식보다는 효율을 위한 속도에 초점을 맞추고 있으며, 특히 좌손 서브의 파괴력이 뛰어나다. 폭발력과 회복력, 그리고 카운터 본능이 세계 상위권을 유지하게 해준다. 밝음과 예의를 겸비한 그의 테니스는 결과를 넘어 설득으로 남으며, 차세대 간판으로 기억될 것이다.</p>
           </div>
 

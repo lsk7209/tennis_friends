@@ -86,7 +86,7 @@ export default function AndreyRublevBlogPost() {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            안드레이 루블료프
+            안드레이 루블레프
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
             불꽃 같은 포핸드로 흐름을 찢는 힘

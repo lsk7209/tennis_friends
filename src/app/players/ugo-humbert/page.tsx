@@ -8,15 +8,15 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '우고 엄베르 — 세계랭킹 20위권 | 플레이스타일·명장면·최근 경기력',
-  description: '우고 엄베르의 좌완 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 좌완 서브의 각도와 발리의 정밀도로 코트를 지배하는 프랑스 출신의 세계랭킹 20위권 선수.',
-  keywords: ['우고 엄베르', 'Ugo Humbert', '테니스', 'ATP', '플레이스타일', '프랑스 테니스', '좌완', '서브&발리'],
+  title: '우고 움베르 — 세계랭킹 20위권 | 플레이스타일·명장면·최근 경기력',
+  description: '우고 움베르의 좌완 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 좌완 서브의 각도와 발리의 정밀도로 코트를 지배하는 프랑스 출신의 세계랭킹 20위권 선수.',
+  keywords: ['우고 움베르', 'Ugo Humbert', '테니스', 'ATP', '플레이스타일', '프랑스 테니스', '좌완', '서브&발리'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/ugo-humbert',
   },
   openGraph: {
-    title: '우고 엄베르 — 세계랭킹 20위권 | 플레이스타일·명장면·최근 경기력',
-    description: '우고 엄베르의 좌완 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '우고 움베르 — 세계랭킹 20위권 | 플레이스타일·명장면·최근 경기력',
+    description: '우고 움베르의 좌완 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/ugo-humbert',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '우고 엄베르 — 세계랭킹 20위권 | 플레이스타일·명장면·최근 경기력',
-    description: '우고 엄베르의 좌완 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '우고 움베르 — 세계랭킹 20위권 | 플레이스타일·명장면·최근 경기력',
+    description: '우고 움베르의 좌완 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -41,18 +41,18 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '우고 엄베르, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'why-again-notable', text: '우고 움베르, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
   { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 우고 엄베르의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '우고 엄베르, 한 문장으로 정리하면?', depth: 2 },
+  { id: 'recent-form', text: '요즘 우고 움베르의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '우고 움베르, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '우고 엄베르의 경기 스타일은 어떤가요?',
+    q: '우고 움베르의 경기 스타일은 어떤가요?',
     a: '좌완 서브&발리 스타일로, 좌완 서브의 각도와 발리의 정밀도가 특징입니다. 와이드 서브로 공간을 벌리고 발리로 마무리하는 전통적인 서브&발리 게임을 현대적으로 구현합니다.',
   },
   {
@@ -77,13 +77,13 @@ export default function UgoHumbertPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="우고 엄베르"
+        title="우고 움베르"
         excerpt="좌완 서브의 각도와 발리의 정밀도로 코트를 지배하는 프랑스 출신의 강자"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '우고 엄베르', '선수 프로필', '프랑스', '좌완', '서브&발리'].map((tag) => (
+            {['테니스', '우고 움베르', '선수 프로필', '프랑스', '좌완', '서브&발리'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -95,7 +95,7 @@ export default function UgoHumbertPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">우고 엄베르, 왜 주목받는 선수인가?</h2>
+            <h2 id="why-again-notable">우고 움베르, 왜 주목받는 선수인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
@@ -104,11 +104,11 @@ export default function UgoHumbertPage() {
                 </p>
               </div>
             </blockquote>
-            <p>우고 엄베르는 프랑스 출신의 세계랭킹 20위권 테니스 선수로, 좌완 서브의 각도와 발리의 정밀도로 ATP 투어를 지배하고 있다. 세계랭킹 20위권을 유지하며, 특히 좌완의 유리함을 잘 활용한 서브&발리 게임이 특징이다. 와이드 서브로 공간을 벌리고 발리로 마무리하는 그의 테니스는 현대적 서브&발리의 설계자로 평가받는다.</p>
+            <p>우고 움베르는 프랑스 출신의 세계랭킹 20위권 테니스 선수로, 좌완 서브의 각도와 발리의 정밀도로 ATP 투어를 지배하고 있다. 세계랭킹 20위권을 유지하며, 특히 좌완의 유리함을 잘 활용한 서브&발리 게임이 특징이다. 와이드 서브로 공간을 벌리고 발리로 마무리하는 그의 테니스는 현대적 서브&발리의 설계자로 평가받는다.</p>
             <p>그는 2024년 파리 마스터스에서 세계랭킹 2위 카를로스 알카라즈를 꺾으며 큰 주목을 받았고, 2025년 마르세유와 두바이에서 우승을 차지하며 좋은 컨디션을 유지하고 있다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 탑 10 선수들과의 경기에서도 승리를 거두고 있다. 그의 테니스는 전통적인 서브&발리 게임을 현대적으로 구현하며, 특히 좌완의 각도가 뛰어나다.</p>
 
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>우고 엄베르는 프랑스 출신의 세계랭킹 20위권 선수로, 좌완 서브&발리 스타일과 정밀한 발리 기술이 특징인 ATP 투어의 강자다.</p>
+            <p>우고 움베르는 프랑스 출신의 세계랭킹 20위권 선수로, 좌완 서브&발리 스타일과 정밀한 발리 기술이 특징인 ATP 투어의 강자다.</p>
             
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
@@ -275,7 +275,7 @@ export default function UgoHumbertPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="recent-form">요즘 우고 엄베르의 경기력 흐름은 어떤가?</h2>
+            <h2 id="recent-form">요즘 우고 움베르의 경기력 흐름은 어떤가?</h2>
             <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 2025년 마르세유와 두바이에서 우승을 차지하며 좋은 컨디션을 유지하고 있다.</p>
 
             <h3 className="flex items-center gap-2">
@@ -311,7 +311,7 @@ export default function UgoHumbertPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="one-sentence-summary">우고 엄베르, 한 문장으로 정리하면?</h2>
+            <h2 id="one-sentence-summary">우고 움베르, 한 문장으로 정리하면?</h2>
             <p>좌완 서브의 각도와 발리의 정밀도로 코트를 지배하는 프랑스 출신의 강자다.</p>
             <p>엄베르는 전통적인 서브&발리 게임을 현대적으로 구현하며, 특히 좌완의 유리함을 잘 활용한다. 와이드 서브로 공간을 벌리고 발리로 마무리하는 능력이 뛰어나며, 특히 정밀한 발리 기술이 뛰어나다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 2025년 마르세유와 두바이에서 우승을 차지하며 좋은 컨디션을 유지하고 있다.</p>
           </div>

@@ -7,15 +7,15 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
 export const metadata = {
-  title: '알렉스 데 미노르 선수 프로필과 스토리',
-  description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 데 미노르의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
-  keywords: ['테니스', '알렉스 데 미노르', '선수 프로필', '스토리', '호주'],
+  title: '알렉스 드 미노 선수 프로필과 스토리',
+  description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 드 미노의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
+  keywords: ['테니스', '알렉스 드 미노', '선수 프로필', '스토리', '호주'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/blog/alex-de-minaur',
   },
   openGraph: {
-    title: '알렉스 데 미노르 선수 프로필과 스토리',
-    description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 데 미노르의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
+    title: '알렉스 드 미노 선수 프로필과 스토리',
+    description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 드 미노의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
     url: 'https://www.tennisfrens.com/blog/alex-de-minaur',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '알렉스 데 미노르 선수 프로필과 스토리',
-    description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 데 미노르의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
+    title: '알렉스 드 미노 선수 프로필과 스토리',
+    description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 드 미노의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
   },
   robots: {
     index: true,
@@ -49,7 +49,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 
 const faqs = [
   {
-    q: '알렉스 데 미노르의 경기 스타일은 어떤가요?',
+    q: '알렉스 드 미노의 경기 스타일은 어떤가요?',
     a: '끊임없는 풋워크와 흔들리지 않는 수비·전환, 간결한 결말이 특징입니다. 속도를 유지하며 각을 제한하고, 상대의 공격을 길이로 희석한 뒤 빈틈에서 한 박자 빠르게 닫는 테니스입니다.'
   },
   {
@@ -78,7 +78,7 @@ export default function AlexDeMinaurBlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '알렉스 데 미노르', '선수 프로필', '스토리', '호주'].map((tag) => (
+            {['테니스', '알렉스 드 미노', '선수 프로필', '스토리', '호주'].map((tag) => (
               <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
                 {tag}
               </Badge>
@@ -86,13 +86,13 @@ export default function AlexDeMinaurBlogPost() {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            알렉스 데 미노르
+            알렉스 드 미노
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
             끝나지 않는 발, 흔들리지 않는 선택
           </p>
           <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            가벼운 발과 끈질긴 수비, 간결한 전환으로 상대의 시간을 빼앗는 알렉스 데 미노르의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
+            가벼운 발과 끈질긴 수비, 간결한 전환으로 상대의 시간을 빼앗는 알렉스 드 미노의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
           </p>
           
           {/* Meta Info */}
@@ -125,7 +125,7 @@ export default function AlexDeMinaurBlogPost() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
               <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
                 <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 알렉스 데 미노르(Alex de Minaur)는 끊임없이 이어지는 풋워크와 흔들리지 않는 수비·전환, 간결한 결말로 상대의 시간을 빼앗는 호주의 간판이다.
+                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 알렉스 드 미노(Alex de Minaur)는 끊임없이 이어지는 풋워크와 흔들리지 않는 수비·전환, 간결한 결말로 상대의 시간을 빼앗는 호주의 간판이다.
               </p>
             </div>
 

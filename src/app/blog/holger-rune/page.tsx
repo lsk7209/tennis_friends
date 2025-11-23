@@ -7,15 +7,15 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
 export const metadata = {
-  title: '홀게르 루네 선수 프로필과 스토리',
-  description: '덴마크 출신 홀게르 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
-  keywords: ['테니스', '홀게르 루네', '선수 프로필', '스토리', '덴마크'],
+  title: '홀거 루네 선수 프로필과 스토리',
+  description: '덴마크 출신 홀거 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
+  keywords: ['테니스', '홀거 루네', '선수 프로필', '스토리', '덴마크'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/blog/holger-rune',
   },
   openGraph: {
-    title: '홀게르 루네 선수 프로필과 스토리',
-    description: '덴마크 출신 홀게르 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
+    title: '홀거 루네 선수 프로필과 스토리',
+    description: '덴마크 출신 홀거 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
     url: 'https://www.tennisfrens.com/blog/holger-rune',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '홀게르 루네 선수 프로필과 스토리',
-    description: '덴마크 출신 홀게르 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
+    title: '홀거 루네 선수 프로필과 스토리',
+    description: '덴마크 출신 홀거 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
   },
   robots: {
     index: true,
@@ -48,7 +48,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 
 const faqs = [
   {
-    q: '홀게르 루네의 경기 스타일은 어떤가요?',
+    q: '홀거 루네의 경기 스타일은 어떤가요?',
     a: '예측 불가한 변주와 공격적인 리턴, 순간 가속이 특징입니다. 리턴으로 시작해 변주로 마무리하며, 공격적인 리턴과 드롭샷, 하프코트 진입으로 흐름을 뒤틀어 큰 무대에서 존재감을 증명합니다.'
   },
   {
@@ -73,13 +73,13 @@ export default function HolgerRuneBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="홀게르 루네 — 불꽃과 계산 사이의 대담함"
-        excerpt="공격적인 리턴과 예측 불가한 변주로 흐름을 흔드는 홀게르 루네의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
+        title="홀거 루네 — 불꽃과 계산 사이의 대담함"
+        excerpt="공격적인 리턴과 예측 불가한 변주로 흐름을 흔드는 홀거 루네의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '홀게르 루네', '선수 프로필', '스토리', '덴마크'].map((tag) => (
+            {['테니스', '홀거 루네', '선수 프로필', '스토리', '덴마크'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -98,9 +98,9 @@ export default function HolgerRuneBlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h1 id="holger-rune-fire-calculated-boldness">홀게르 루네 — 불꽃과 계산 사이의 대담함</h1>
+            <h1 id="holger-rune-fire-calculated-boldness">홀거 루네 — 불꽃과 계산 사이의 대담함</h1>
 
-            <p><strong>직답:</strong> 홀게르 루네(Holger Rune)는 예측 불가한 변주와 공격적인 리턴, 순간 가속으로 흐름을 뒤틀며 큰 무대에서 존재감을 증명해 온 덴마크의 간판 선수다.</p>
+            <p><strong>직답:</strong> 홀거 루네(Holger Rune)는 예측 불가한 변주와 공격적인 리턴, 순간 가속으로 흐름을 뒤틀며 큰 무대에서 존재감을 증명해 온 덴마크의 간판 선수다.</p>
 
             <h2 id="growth-background-indoor-court-density">성장 배경 — 북유럽의 실내 코트가 만든 밀도</h2>
             <p>루네의 어린 시절은 긴 겨울과 실내 코트의 규칙에서 시작됐다. 코칭팀은 반복과 기록을 중시했고, 하루 훈련을 '기술·전술·멘탈' 세 칸으로 나누어 체크리스트를 채웠다. 실내의 균일한 바운드에서 그는 타점의 오차를 줄이고, 라켓면 각도를 미세하게 바꾸는 감각을 익혔다. 야외로 나가 바람과 온도 차가 커지면, 루네는 스윙의 크기를 줄여 타점을 앞에 두는 방식으로 적응했다. 이 경험은 표면이 달라져도 자신이 통제할 수 있는 요소에 집중하는 습관을 만들었다. 승부가 흔들릴 때일수록 그는 기록으로 돌아가 수정 항목을 한 줄로 요약했다. "토스 낮춤, 리듬 간결."</p>

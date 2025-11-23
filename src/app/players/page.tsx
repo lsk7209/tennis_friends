@@ -50,28 +50,28 @@ const playersWithBlogPosts = [
 
 // 선수 slug와 이름 매핑
 const playerNames: { [key: string]: { name: string; nameEn: string; country: string; countryFlag: string } } = {
-  'carlos-alcaraz': { name: '카를로스 알카라즈', nameEn: 'Carlos Alcaraz', country: 'Spain', countryFlag: '🇪🇸' },
+  'carlos-alcaraz': { name: '카를로스 알카라스', nameEn: 'Carlos Alcaraz', country: 'Spain', countryFlag: '🇪🇸' },
   'jannik-sinner': { name: '야닉 시너', nameEn: 'Jannik Sinner', country: 'Italy', countryFlag: '🇮🇹' },
-  'novak-djokovic': { name: '노바크 조코비치', nameEn: 'Novak Djokovic', country: 'Serbia', countryFlag: '🇷🇸' },
+  'novak-djokovic': { name: '노박 조코비치', nameEn: 'Novak Djokovic', country: 'Serbia', countryFlag: '🇷🇸' },
   'daniil-medvedev': { name: '다닐 메드베데프', nameEn: 'Daniil Medvedev', country: 'Russia', countryFlag: '🇷🇺' },
   'alexander-zverev': { name: '알렉산더 즈베레프', nameEn: 'Alexander Zverev', country: 'Germany', countryFlag: '🇩🇪' },
-  'andrey-rublev': { name: '안드레이 루블료프', nameEn: 'Andrey Rublev', country: 'Russia', countryFlag: '🇷🇺' },
+  'andrey-rublev': { name: '안드레이 루블레프', nameEn: 'Andrey Rublev', country: 'Russia', countryFlag: '🇷🇺' },
   'stefanos-tsitsipas': { name: '스테파노스 치치파스', nameEn: 'Stefanos Tsitsipas', country: 'Greece', countryFlag: '🇬🇷' },
   'casper-ruud': { name: '카스페르 루드', nameEn: 'Casper Ruud', country: 'Norway', countryFlag: '🇳🇴' },
-  'alex-de-minaur': { name: '알렉스 데 미노르', nameEn: 'Alex de Minaur', country: 'Australia', countryFlag: '🇦🇺' },
+  'alex-de-minaur': { name: '알렉스 드 미노', nameEn: 'Alex de Minaur', country: 'Australia', countryFlag: '🇦🇺' },
   'taylor-fritz': { name: '테일러 프리츠', nameEn: 'Taylor Fritz', country: 'United States', countryFlag: '🇺🇸' },
   'hubert-hurkacz': { name: '후베르트 후르카츠', nameEn: 'Hubert Hurkacz', country: 'Poland', countryFlag: '🇵🇱' },
-  'holger-rune': { name: '홀게르 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰' },
+  'holger-rune': { name: '홀거 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰' },
   'grigor-dimitrov': { name: '그리고르 디미트로프', nameEn: 'Grigor Dimitrov', country: 'Bulgaria', countryFlag: '🇧🇬' },
-  'ben-shelton': { name: '벤 셸턴', nameEn: 'Ben Shelton', country: 'United States', countryFlag: '🇺🇸' },
+  'ben-shelton': { name: '벤 쉘튼', nameEn: 'Ben Shelton', country: 'United States', countryFlag: '🇺🇸' },
   'tommy-paul': { name: '토미 폴', nameEn: 'Tommy Paul', country: 'United States', countryFlag: '🇺🇸' },
   'frances-tiafoe': { name: '프란시스 티아포', nameEn: 'Frances Tiafoe', country: 'United States', countryFlag: '🇺🇸' },
-  'ugo-humbert': { name: '우고 엄베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷' },
+  'ugo-humbert': { name: '우고 움베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷' },
   'sebastian-baez': { name: '세바스티안 바에즈', nameEn: 'Sebastian Baez', country: 'Argentina', countryFlag: '🇦🇷' },
-  'lorenzo-musetti': { name: '로렌초 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹' },
-  'sebastian-korda': { name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸' },
+  'lorenzo-musetti': { name: '로렌조 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹' },
+  'sebastian-korda': { name: '세바스찬 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸' },
   'cameron-norrie': { name: '카메론 노리', nameEn: 'Cameron Norrie', country: 'United Kingdom', countryFlag: '🇬🇧' },
-  'tallon-griekspoor': { name: '탈론 그릭스푸어', nameEn: 'Tallon Griekspoor', country: 'Netherlands', countryFlag: '🇳🇱' },
+  'tallon-griekspoor': { name: '탈론 크리에크스푸르', nameEn: 'Tallon Griekspoor', country: 'Netherlands', countryFlag: '🇳🇱' },
   'nicolas-jarry': { name: '니콜라스 자리', nameEn: 'Nicolas Jarry', country: 'Chile', countryFlag: '🇨🇱' }
 };
 

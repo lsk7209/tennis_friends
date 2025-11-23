@@ -8,15 +8,15 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '안드레이 루블료프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '안드레이 루블료프의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 불꽃 같은 포핸드와 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 러시아 출신의 세계랭킹 상위권 선수.',
-  keywords: ['안드레이 루블료프', 'Andrey Rublev', '테니스', 'ATP', '플레이스타일', '러시아 테니스', '공격형', '포핸드'],
+  title: '안드레이 루블레프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: '안드레이 루블레프의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 불꽃 같은 포핸드와 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 러시아 출신의 세계랭킹 상위권 선수.',
+  keywords: ['안드레이 루블레프', 'Andrey Rublev', '테니스', 'ATP', '플레이스타일', '러시아 테니스', '공격형', '포핸드'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/andrey-rublev',
   },
   openGraph: {
-    title: '안드레이 루블료프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '안드레이 루블료프의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '안드레이 루블레프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '안드레이 루블레프의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/andrey-rublev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '안드레이 루블료프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '안드레이 루블료프의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '안드레이 루블레프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '안드레이 루블레프의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -41,18 +41,18 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '안드레이 루블료프, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'why-again-notable', text: '안드레이 루블레프, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
   { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 안드레이 루블료프의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '안드레이 루블료프, 한 문장으로 정리하면?', depth: 2 },
+  { id: 'recent-form', text: '요즘 안드레이 루블레프의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '안드레이 루블레프, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '안드레이 루블료프의 경기 스타일은 어떤가요?',
+    q: '안드레이 루블레프의 경기 스타일은 어떤가요?',
     a: '공격형 스타일로, 불꽃 같은 포핸드와 간결한 리듬이 특징입니다. 직선의 파워와 끊어치는 템포로 하드코트를 지배하며, 꾸준한 루틴으로 경기의 흐름을 설계합니다.',
   },
   {
@@ -77,13 +77,13 @@ export default function AndreyRublevPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="안드레이 루블료프"
+        title="안드레이 루블레프"
         excerpt="불꽃 같은 포핸드와 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 러시아 출신의 강자"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '안드레이 루블료프', '선수 프로필', '러시아', '공격형', '포핸드'].map((tag) => (
+            {['테니스', '안드레이 루블레프', '선수 프로필', '러시아', '공격형', '포핸드'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -95,7 +95,7 @@ export default function AndreyRublevPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">안드레이 루블료프, 왜 주목받는 선수인가?</h2>
+            <h2 id="why-again-notable">안드레이 루블레프, 왜 주목받는 선수인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
@@ -104,11 +104,11 @@ export default function AndreyRublevPage() {
                 </p>
               </div>
             </blockquote>
-            <p>안드레이 루블료프는 러시아 출신의 세계랭킹 상위권 테니스 선수로, 불꽃 같은 포핸드와 간결한 리듬으로 ATP 투어를 지배하고 있다. 세계랭킹 상위권을 유지하며, 특히 하드 코트에서 강력한 모습을 보여준다. 직선의 파워와 끊어치는 템포로 상대를 압박하는 그의 테니스는 하드코트의 설계자로 평가받는다.</p>
+            <p>안드레이 루블레프는 러시아 출신의 세계랭킹 상위권 테니스 선수로, 불꽃 같은 포핸드와 간결한 리듬으로 ATP 투어를 지배하고 있다. 세계랭킹 상위권을 유지하며, 특히 하드 코트에서 강력한 모습을 보여준다. 직선의 파워와 끊어치는 템포로 상대를 압박하는 그의 테니스는 하드코트의 설계자로 평가받는다.</p>
             <p>그는 마스터스 1000 시리즈에서 우승을 거두며 큰 대회에서도 안정적인 경기력을 보여주고 있다. 최근 몇 시즌 동안 꾸준한 성적을 유지하며, 특히 탑 10 선수들과의 경기에서도 승리를 거두고 있다. 그의 테니스는 화려함보다는 효율을 추구하며, 특히 불꽃 같은 포핸드가 뛰어나다.</p>
 
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>안드레이 루블료프는 러시아 출신의 세계랭킹 상위권 선수로, 공격형 스타일과 불꽃 같은 포핸드가 특징인 ATP 투어의 강자다.</p>
+            <p>안드레이 루블레프는 러시아 출신의 세계랭킹 상위권 선수로, 공격형 스타일과 불꽃 같은 포핸드가 특징인 ATP 투어의 강자다.</p>
             
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
@@ -252,7 +252,7 @@ export default function AndreyRublevPage() {
             <h3>팀과의 관계</h3>
             <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 오랜 기간 함께한 코치와의 유대는 그의 안정적인 경기력에 기여하고 있으며, 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 러시아의 훈련 문화는 반복과 규칙을 중시하는데, 루블료프의 테니스에도 이 정신이 뚜렷하다.</p>
 
-            <h2 id="recent-form">요즘 안드레이 루블료프의 경기력 흐름은 어떤가?</h2>
+            <h2 id="recent-form">요즘 안드레이 루블레프의 경기력 흐름은 어떤가?</h2>
             <p>최근 몇 시즌 동안 루블료프는 큰 대회에서 안정적인 경기력을 보여주고 있다.</p>
 
             <h3>최근 성적</h3>
@@ -264,8 +264,8 @@ export default function AndreyRublevPage() {
             <h3>랭킹과 스타일 변화</h3>
             <p>랭킹 변동을 보면, 그는 현재 상위권을 유지하고 있다. 하락했던 시기가 있었지만, 다시 상위권으로 복귀했고 꾸준한 성적 유지로 최상위권을 지키고 있다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다.</p>
 
-            <h2 id="one-sentence-summary">안드레이 루블료프, 한 문장으로 정리하면?</h2>
-            <p>안드레이 루블료프는 불꽃 같은 포핸드와 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 러시아 출신의 강자다.</p>
+            <h2 id="one-sentence-summary">안드레이 루블레프, 한 문장으로 정리하면?</h2>
+            <p>안드레이 루블레프는 불꽃 같은 포핸드와 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 러시아 출신의 강자다.</p>
             <p>그의 테니스는 화려함보다는 효율을 추구하며, 특히 직선의 파워와 끊어치는 템포로 하드코트를 지배한다. 타이브레이크와 장기전에서의 멘탈 강점, 그리고 꾸준한 루틴으로 경기의 흐름을 설계하는 능력이 세계 상위권을 유지하게 해준다. 뜨거움과 배려를 겸비한 그의 테니스는 결과를 넘어 설득으로 남으며, 하드코트에서의 강력한 모습으로 기억될 것이다.</p>
           </div>
 

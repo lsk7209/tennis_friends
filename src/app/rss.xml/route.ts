@@ -132,8 +132,8 @@ const blogPosts = [
     readingMinutes: 8,
   },
   {
-    title: '안드레이 루블료프 — 불꽃 같은 포핸드, 절제된 규율',
-    description: '강력한 포핸드와 끊임없는 전진 의지로 랠리의 톤을 올리는 안드레이 루블료프의 성장, 스타일, 인간미와 과제를 한 편으로.',
+    title: '안드레이 루블레프 — 불꽃 같은 포핸드, 절제된 규율',
+    description: '강력한 포핸드와 끊임없는 전진 의지로 랠리의 톤을 올리는 안드레이 루블레프의 성장, 스타일, 인간미와 과제를 한 편으로.',
     slug: 'andrey-rublev',
     date: '2025-09-07',
     readingMinutes: 8,

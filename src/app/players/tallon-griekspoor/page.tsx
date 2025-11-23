@@ -8,15 +8,15 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '탈론 그릭스푸어 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
-  description: '탈론 그릭스푸어의 강력한 서브와 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 네덜란드 테니스의 희망으로 떠오르는 세계랭킹 35위권 선수.',
-  keywords: ['탈론 그릭스푸어', 'Tallon Griekspoor', '테니스', 'ATP', '플레이스타일', '네덜란드 테니스', '서브', '그라운드 스트로크'],
+  title: '탈론 크리에크스푸르 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
+  description: '탈론 크리에크스푸르의 강력한 서브와 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 네덜란드 테니스의 희망으로 떠오르는 세계랭킹 35위권 선수.',
+  keywords: ['탈론 크리에크스푸르', 'Tallon Griekspoor', '테니스', 'ATP', '플레이스타일', '네덜란드 테니스', '서브', '그라운드 스트로크'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/tallon-griekspoor',
   },
   openGraph: {
-    title: '탈론 그릭스푸어 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
-    description: '탈론 그릭스푸어의 강력한 서브와 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '탈론 크리에크스푸르 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
+    description: '탈론 크리에크스푸르의 강력한 서브와 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/tallon-griekspoor',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '탈론 그릭스푸어 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
-    description: '탈론 그릭스푸어의 강력한 서브와 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '탈론 크리에크스푸르 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
+    description: '탈론 크리에크스푸르의 강력한 서브와 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -41,18 +41,18 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '탈론 그릭스푸어, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'why-again-notable', text: '탈론 크리에크스푸르, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
   { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 탈론 그릭스푸어의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '탈론 그릭스푸어, 한 문장으로 정리하면?', depth: 2 },
+  { id: 'recent-form', text: '요즘 탈론 크리에크스푸르의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '탈론 크리에크스푸르, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '탈론 그릭스푸어의 경기 스타일은 어떤가요?',
+    q: '탈론 크리에크스푸르의 경기 스타일은 어떤가요?',
     a: '강력한 서브와 그라운드 스트로크 스타일로, 특히 서브의 속도와 정확도가 특징입니다. 네덜란드 테니스의 희망으로 평가받고 있습니다.',
   },
   {
@@ -77,13 +77,13 @@ export default function TallonGriekspoorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="탈론 그릭스푸어"
+        title="탈론 크리에크스푸르"
         excerpt="강력한 서브와 그라운드 스트로크로 네덜란드 테니스의 희망으로 떠오르는 선수"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '탈론 그릭스푸어', '선수 프로필', '네덜란드', '서브', '그라운드 스트로크'].map((tag) => (
+            {['테니스', '탈론 크리에크스푸르', '선수 프로필', '네덜란드', '서브', '그라운드 스트로크'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -95,7 +95,7 @@ export default function TallonGriekspoorPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">탈론 그릭스푸어, 왜 주목받는 선수인가?</h2>
+            <h2 id="why-again-notable">탈론 크리에크스푸르, 왜 주목받는 선수인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
@@ -104,11 +104,11 @@ export default function TallonGriekspoorPage() {
                 </p>
               </div>
             </blockquote>
-            <p>탈론 그릭스푸어는 네덜란드 출신의 세계랭킹 35위권 테니스 선수로, 강력한 서브와 그라운드 스트로크로 ATP 투어를 지배하고 있다. 세계랭킹 35위권을 유지하며, 특히 서브의 속도와 정확도가 뛰어나다. 그의 테니스는 네덜란드 테니스의 희망으로 평가받는다.</p>
+            <p>탈론 크리에크스푸르는 네덜란드 출신의 세계랭킹 35위권 테니스 선수로, 강력한 서브와 그라운드 스트로크로 ATP 투어를 지배하고 있다. 세계랭킹 35위권을 유지하며, 특히 서브의 속도와 정확도가 뛰어나다. 그의 테니스는 네덜란드 테니스의 희망으로 평가받는다.</p>
             <p>그는 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 상위권으로 올라가고 있다. 최고 랭킹 30위권을 기록했으며, 특히 탑 10 선수들과의 경기에서도 승리를 거두고 있다. 그의 테니스는 강력한 서브와 그라운드 스트로크를 기반으로 하며, 특히 포핸드의 파워가 뛰어나다.</p>
 
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>탈론 그릭스푸어는 네덜란드 출신의 세계랭킹 35위권 선수로, 강력한 서브와 그라운드 스트로크 스타일이 특징인 ATP 투어의 강자다.</p>
+            <p>탈론 크리에크스푸르는 네덜란드 출신의 세계랭킹 35위권 선수로, 강력한 서브와 그라운드 스트로크 스타일이 특징인 ATP 투어의 강자다.</p>
             
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
@@ -262,7 +262,7 @@ export default function TallonGriekspoorPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="recent-form">요즘 탈론 그릭스푸어의 경기력 흐름은 어떤가?</h2>
+            <h2 id="recent-form">요즘 탈론 크리에크스푸르의 경기력 흐름은 어떤가?</h2>
             <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 상위권으로 올라가고 있다.</p>
 
             <h3 className="flex items-center gap-2">
@@ -298,7 +298,7 @@ export default function TallonGriekspoorPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="one-sentence-summary">탈론 그릭스푸어, 한 문장으로 정리하면?</h2>
+            <h2 id="one-sentence-summary">탈론 크리에크스푸르, 한 문장으로 정리하면?</h2>
             <p>강력한 서브와 그라운드 스트로크로 네덜란드 테니스의 희망으로 떠오르는 선수다.</p>
             <p>그릭스푸어는 강력한 서브와 그라운드 스트로크를 기반으로 하며, 특히 포핸드의 파워가 뛰어나다. 서브의 속도와 정확도가 뛰어나며, 특히 에이스와 서비스 위너를 많이 만들어낸다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 상위권으로 올라가고 있다.</p>
           </div>

@@ -8,15 +8,15 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '세바스티안 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
-  description: '세바스티안 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타.',
-  keywords: ['세바스티안 코르다', 'Sebastian Korda', '테니스', 'ATP', '플레이스타일', '미국 테니스', '테니스 명가', '차세대'],
+  title: '세바스찬 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
+  description: '세바스찬 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타.',
+  keywords: ['세바스찬 코르다', 'Sebastian Korda', '테니스', 'ATP', '플레이스타일', '미국 테니스', '테니스 명가', '차세대'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/sebastian-korda',
   },
   openGraph: {
-    title: '세바스티안 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
-    description: '세바스티안 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '세바스찬 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
+    description: '세바스찬 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/sebastian-korda',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '세바스티안 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
-    description: '세바스티안 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '세바스찬 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
+    description: '세바스찬 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -41,19 +41,19 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '세바스티안 코르다, 왜 주목받는 선수인가?', depth: 2 },
+  { id: 'why-again-notable', text: '세바스찬 코르다, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'growth-story', text: '세바스티안 코르다는 어떻게 여기까지 왔을까?', depth: 2 },
+  { id: 'growth-story', text: '세바스찬 코르다는 어떻게 여기까지 왔을까?', depth: 2 },
   { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 세바스티안 코르다의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '세바스티안 코르다, 한 문장으로 정리하면?', depth: 2 },
+  { id: 'recent-form', text: '요즘 세바스찬 코르다의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '세바스찬 코르다, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '세바스티안 코르다의 경기 스타일은 어떤가요?',
+    q: '세바스찬 코르다의 경기 스타일은 어떤가요?',
     a: '올코트 스타일로, 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 특징입니다. 강력한 그라운드 스트로크와 안정적인 서브를 구사합니다.',
   },
   {
@@ -78,13 +78,13 @@ export default function SebastianKordaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="세바스티안 코르다"
+        title="세바스찬 코르다"
         excerpt="테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '세바스티안 코르다', '선수 프로필', '미국', '테니스 명가', '차세대'].map((tag) => (
+            {['테니스', '세바스찬 코르다', '선수 프로필', '미국', '테니스 명가', '차세대'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -96,7 +96,7 @@ export default function SebastianKordaPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">세바스티안 코르다, 왜 주목받는 선수인가?</h2>
+            <h2 id="why-again-notable">세바스찬 코르다, 왜 주목받는 선수인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
@@ -105,11 +105,11 @@ export default function SebastianKordaPage() {
                 </p>
               </div>
             </blockquote>
-            <p>세바스티안 코르다는 미국 출신의 세계랭킹 30위권 테니스 선수로, 테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 ATP 투어를 지배하고 있다. 세계랭킹 30위권을 유지하며, 특히 올코트에서 강력한 모습을 보여준다. 아버지 페트르 코르다(전 세계 랭킹 2위)와 어머니 레지나 라지코바(전 프로 테니스 선수) 사이에서 태어난 그의 테니스는 미국 테니스의 미래로 평가받는다.</p>
+            <p>세바스찬 코르다는 미국 출신의 세계랭킹 30위권 테니스 선수로, 테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 ATP 투어를 지배하고 있다. 세계랭킹 30위권을 유지하며, 특히 올코트에서 강력한 모습을 보여준다. 아버지 페트르 코르다(전 세계 랭킹 2위)와 어머니 레지나 라지코바(전 프로 테니스 선수) 사이에서 태어난 그의 테니스는 미국 테니스의 미래로 평가받는다.</p>
             <p>그는 어릴 때부터 테니스 명가 출신으로 체계적인 훈련을 받으며 빠르게 성장했고, 특히 큰 대회에서 안정적인 경기력을 보여주며 주목받기 시작했다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 올코트에서 강력한 모습을 보여주고 있다. 그의 테니스는 유전된 재능과 체계적인 훈련이 결합된 결과로, 특히 강력한 그라운드 스트로크가 뛰어나다.</p>
 
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>세바스티안 코르다는 미국 출신의 세계랭킹 30위권 선수로, 올코트 스타일과 테니스 명가 출신의 재능이 특징인 ATP 투어의 차세대 스타다.</p>
+            <p>세바스찬 코르다는 미국 출신의 세계랭킹 30위권 선수로, 올코트 스타일과 테니스 명가 출신의 재능이 특징인 ATP 투어의 차세대 스타다.</p>
             
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
@@ -168,7 +168,7 @@ export default function SebastianKordaPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="growth-story">세바스티안 코르다는 어떻게 여기까지 왔을까?</h2>
+            <h2 id="growth-story">세바스찬 코르다는 어떻게 여기까지 왔을까?</h2>
             <p>코르다의 성장 스토리는 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 핵심이다.</p>
 
             <h3>성장 배경</h3>
@@ -286,7 +286,7 @@ export default function SebastianKordaPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="recent-form">요즘 세바스티안 코르다의 경기력 흐름은 어떤가?</h2>
+            <h2 id="recent-form">요즘 세바스찬 코르다의 경기력 흐름은 어떤가?</h2>
             <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 올코트에서 강력한 모습을 보여주고 있다.</p>
 
             <h3 className="flex items-center gap-2">
@@ -322,7 +322,7 @@ export default function SebastianKordaPage() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="one-sentence-summary">세바스티안 코르다, 한 문장으로 정리하면?</h2>
+            <h2 id="one-sentence-summary">세바스찬 코르다, 한 문장으로 정리하면?</h2>
             <p>테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타다.</p>
             <p>코르다는 테니스 명가 출신으로 유전된 재능과 체계적인 훈련을 받아 기본기가 견고하며, 특히 올코트에서 긴 랠리를 두려워하지 않는다. 강력한 그라운드 스트로크와 안정적인 서브로 상대를 압박하며, 인내로 경기를 이끌어간다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 올코트에서 강력한 모습을 보여주고 있다.</p>
           </div>

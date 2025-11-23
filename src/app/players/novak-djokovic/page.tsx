@@ -8,15 +8,15 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, ArrowRight, Star, CheckCircle, Crown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '노바크 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
-  description: '노바크 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 얼음 멘탈·전술가·흐름 읽는 선수·역전의 달인으로 주목받는 세르비아 출신의 세계랭킹 1위 선수.',
-  keywords: ['노바크 조코비치', 'Novak Djokovic', '테니스', 'ATP', '플레이스타일', '세르비아 테니스', '전천후', '멘탈', '전술'],
+  title: '노박 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
+  description: '노박 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 얼음 멘탈·전술가·흐름 읽는 선수·역전의 달인으로 주목받는 세르비아 출신의 세계랭킹 1위 선수.',
+  keywords: ['노박 조코비치', 'Novak Djokovic', '테니스', 'ATP', '플레이스타일', '세르비아 테니스', '전천후', '멘탈', '전술'],
   alternates: {
     canonical: 'https://www.tennisfrens.com/players/novak-djokovic',
   },
   openGraph: {
-    title: '노바크 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
-    description: '노바크 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '노박 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
+    description: '노박 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://www.tennisfrens.com/players/novak-djokovic',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '노바크 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
-    description: '노바크 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '노박 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
+    description: '노박 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -41,18 +41,18 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '노바크 조코비치, 왜 여전히 세계 최고인가?', depth: 2 },
+  { id: 'why-again-notable', text: '노박 조코비치, 왜 여전히 세계 최고인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
   { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 노바크 조코비치의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '노바크 조코비치, 한 문장으로 정리하면?', depth: 2 },
+  { id: 'recent-form', text: '요즘 노박 조코비치의 경기력 흐름은 어떤가?', depth: 2 },
+  { id: 'one-sentence-summary', text: '노박 조코비치, 한 문장으로 정리하면?', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '노바크 조코비치의 경기 스타일은 어떤가요?',
+    q: '노박 조코비치의 경기 스타일은 어떤가요?',
     a: '전천후 스타일과 탁월한 리턴 능력, 멘탈 강점이 특징입니다. 리턴을 출발점으로 포인트의 구조를 다시 짜고, 루틴과 호흡으로 큰 순간을 관리하는 전술적 완성도가 높은 선수입니다.'
   },
   {
@@ -77,13 +77,13 @@ export default function NovakDjokovicPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title="노바크 조코비치"
+        title="노박 조코비치"
         excerpt="멘탈과 전술로 경기를 지배하는, 흐름을 읽는 전술가이자 역전의 달인"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '노바크 조코비치', '선수 프로필', '세르비아', '전천후', '멘탈'].map((tag) => (
+            {['테니스', '노박 조코비치', '선수 프로필', '세르비아', '전천후', '멘탈'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -95,7 +95,7 @@ export default function NovakDjokovicPage() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">노바크 조코비치, 왜 여전히 세계 최고인가?</h2>
+            <h2 id="why-again-notable">노박 조코비치, 왜 여전히 세계 최고인가?</h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Crown className="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
@@ -104,11 +104,11 @@ export default function NovakDjokovicPage() {
                 </p>
               </div>
             </blockquote>
-            <p>노바크 조코비치는 세르비아 출신의 세계랭킹 <strong>1위</strong> 테니스 선수로, 그랜드 슬램 <strong>24회 우승</strong>이라는 남자 테니스 역사상 최다 기록을 보유하고 있다. 30대 후반의 나이에도 불구하고 여전히 세계 최고 수준의 경기력을 유지하며, 멘탈의 성숙함과 전술적 완성도로 테니스계를 지배하고 있다. 리턴을 출발점으로 포인트의 구조를 다시 짜고, 루틴과 호흡으로 큰 순간을 관리하는 그의 테니스는 효율과 정확성의 극치를 보여준다.</p>
+            <p>노박 조코비치는 세르비아 출신의 세계랭킹 <strong>1위</strong> 테니스 선수로, 그랜드 슬램 <strong>24회 우승</strong>이라는 남자 테니스 역사상 최다 기록을 보유하고 있다. 30대 후반의 나이에도 불구하고 여전히 세계 최고 수준의 경기력을 유지하며, 멘탈의 성숙함과 전술적 완성도로 테니스계를 지배하고 있다. 리턴을 출발점으로 포인트의 구조를 다시 짜고, 루틴과 호흡으로 큰 순간을 관리하는 그의 테니스는 효율과 정확성의 극치를 보여준다.</p>
             <p>그는 <strong>2011년</strong> 처음 세계랭킹 1위에 올랐고, 이후 <strong>400주 이상</strong> 1위를 유지하며 테니스 역사에 이름을 남겼다. 현재도 세계랭킹 1위를 유지하고 있으며, 나이가 들어감에 따라 경기 선택과 체력 관리를 더욱 정밀하게 하면서도 여전히 큰 대회에서 우승을 거두고 있다. 그의 테니스는 화려함보다는 효율을 추구하며, 특히 타이브레이크와 5세트 경기에서의 멘탈 강점이 두드러진다.</p>
 
             <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>노바크 조코비치는 세르비아 출신의 세계랭킹 1위 선수로, 전천후 스타일과 탁월한 멘탈, 전술적 완성도가 특징인 ATP 투어의 레전드다.</p>
+            <p>노박 조코비치는 세르비아 출신의 세계랭킹 1위 선수로, 전천후 스타일과 탁월한 멘탈, 전술적 완성도가 특징인 ATP 투어의 레전드다.</p>
             
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
@@ -258,7 +258,7 @@ export default function NovakDjokovicPage() {
             <h3>팀과의 관계</h3>
             <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 오랜 기간 함께한 코치와의 유대는 그의 안정적인 경기력에 기여한다. 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 세르비아 출신이라는 정체성도 그의 이미지에 큰 영향을 미친다. 작은 나라에서 배운 큰 자부심이 그의 테니스에 녹아 있다.</p>
 
-            <h2 id="recent-form">요즘 노바크 조코비치의 경기력 흐름은 어떤가?</h2>
+            <h2 id="recent-form">요즘 노박 조코비치의 경기력 흐름은 어떤가?</h2>
             <p>최근 몇 시즌 동안 조코비치는 여전히 세계 최고 수준의 경기력을 유지하고 있다. 나이가 들어감에 따라 경기 선택을 더욱 정밀하게 하면서도, 큰 대회에서 최고의 컨디션을 발휘하고 있다.</p>
 
             <h3>최근 성적</h3>
@@ -270,8 +270,8 @@ export default function NovakDjokovicPage() {
             <h3>랭킹과 스타일 변화</h3>
             <p>랭킹 변동을 보면, 그는 현재 세계랭킹 1위를 유지하고 있다. 하락했던 시기가 있었지만, 다시 1위로 복귀했다. 꾸준한 성적 유지로 최상위권을 지키고 있다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였다. 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다. 이미 증명한 안정 위에 결말의 속도가 얹히면, 그의 이름은 여전히 마지막 장면에 남을 것이다.</p>
 
-            <h2 id="one-sentence-summary">노바크 조코비치, 한 문장으로 정리하면?</h2>
-            <p>노바크 조코비치는 멘탈과 전술로 경기를 지배하는, 흐름을 읽는 전술가이자 역전의 달인이다.</p>
+            <h2 id="one-sentence-summary">노박 조코비치, 한 문장으로 정리하면?</h2>
+            <p>노박 조코비치는 멘탈과 전술로 경기를 지배하는, 흐름을 읽는 전술가이자 역전의 달인이다.</p>
             <p>그의 테니스는 감정보다는 절차에 기반하며, 리턴을 출발점으로 포인트의 구조를 다시 짜는 전술적 완성도가 특징이다. 타이브레이크와 5세트 경기에서의 멘탈 강점, 그리고 상대의 강점을 거울처럼 받아 적응하는 능력이 세계 최고 수준을 유지하게 해준다. 규율과 배려를 겸비한 그의 테니스는 결과를 넘어 설득으로 남으며, 테니스 역사에 길이 남을 레전드로 기억될 것이다.</p>
           </div>
 
