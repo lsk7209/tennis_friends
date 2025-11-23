@@ -4,6 +4,8 @@
  * 최적화: KV bulk reads, 배치 작업, 에러 처리, Rate limiting
  */
 
+/// <reference types="@cloudflare/workers-types" />
+
 export interface Env {
   ANALYTICS_KV: KVNamespace;
   ADMIN_PASSWORD?: string;
