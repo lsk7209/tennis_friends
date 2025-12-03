@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '세바스찬 코르다 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function SebastianKordaPage() {
         title="세바스찬 코르다"
         excerpt="테니스 명가의 DNA를 물려받아 우아하고 정석적인 플레이를 펼치는 미국의 기대주"
         image="/images/players/sebastian-korda.png"
-      >
+      ><PersonSchema
+          name="Sebastian Korda"
+          nameKo="세바스찬 코르다"
+          description="미국 출신의 차세대 테니스 스타. 공격적인 플레이와 뛰어난 기술로 주목받는 선수."
+          image="/images/players/sebastian-korda.png"
+          nationality="United States"
+          birthDate="2000-07-05"
+          height="196"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'ATP 250 Champion', 'NextGen ATP Finals participant'
+          ]}
+          url="https://tennisfriends.co.kr/players/sebastian-korda"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Sebastian Korda"

@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '벤 쉘튼 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function BenSheltonPage() {
         title="벤 쉘튼"
         excerpt="좌손 강서브와 대담한 전진으로 큰 코트의 시간을 압축하는 미국의 차세대 간판"
         image="/images/players/ben-shelton.png"
-      >
+      ><PersonSchema
+          name="Ben Shelton"
+          nameKo="벤 쉘튼"
+          description="미국 출신의 차세대 빅 서버. 폭발적인 서브와 공격적인 플레이로 주목받는 선수."
+          image="/images/players/ben-shelton.png"
+          nationality="United States"
+          birthDate="2002-10-09"
+          height="193"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'US Open Semifinalist', 'ATP 250 Champion'
+          ]}
+          url="https://tennisfriends.co.kr/players/ben-shelton"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Ben Shelton"

@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '카메론 노리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function CameronNorriePage() {
         title="카메론 노리"
         excerpt="꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 테니스 스타"
         image="/images/players/cameron-norrie.png"
-      >
+      ><PersonSchema
+          name="Cameron Norrie"
+          nameKo="카메론 노리"
+          description="영국 출신의 투지의 파이터. 끈질긴 수비와 안정적인 플레이로 주목받는 선수."
+          image="/images/players/cameron-norrie.png"
+          nationality="United Kingdom"
+          birthDate="1995-08-23"
+          height="188"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'ATP Masters 1000 Champion', 'ATP 500 Champion (multiple titles)'
+          ]}
+          url="https://tennisfriends.co.kr/players/cameron-norrie"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Cameron Norrie"

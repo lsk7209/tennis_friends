@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '테일러 프리츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function TaylorFritzPage() {
         title="테일러 프리츠"
         excerpt="직선적 포핸드와 안정된 서브로 하드코트를 설계하는 미국의 대표 선수"
         image="/images/players/taylor-fritz.png"
-      >
+      ><PersonSchema
+          name="Taylor Fritz"
+          nameKo="테일러 프리츠"
+          description="미국 출신의 파워 테니스 선수. 강력한 서브와 포핸드로 주목받는 선수."
+          image="/images/players/taylor-fritz.png"
+          nationality="United States"
+          birthDate="1997-10-28"
+          height="196"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'ATP Masters 1000 Champion', 'ATP Finals Champion (2022)'
+          ]}
+          url="https://tennisfriends.co.kr/players/taylor-fritz"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Taylor Fritz"

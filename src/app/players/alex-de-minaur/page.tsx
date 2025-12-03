@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '알렉스 드 미노 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function AlexDeMinaurPage() {
         title="알렉스 드 미노"
         excerpt="투어에서 가장 빠른 발과 지치지 않는 체력으로 상대를 질식시키는 호주의 악마"
         image="/images/players/alex-de-minaur.png"
-      >
+      ><PersonSchema
+          name="Alex de Minaur"
+          nameKo="알렉스 드 미노"
+          description="호주 출신의 스피드 플레이어. 뛰어난 발놀림과 끈질긴 수비로 주목받는 선수."
+          image="/images/players/alex-de-minaur.png"
+          nationality="Australia"
+          birthDate="1999-02-17"
+          height="183"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'ATP 500 Champion (multiple titles)', 'ATP Cup Champion'
+          ]}
+          url="https://tennisfriends.co.kr/players/alex-de-minaur"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Alex de Minaur"

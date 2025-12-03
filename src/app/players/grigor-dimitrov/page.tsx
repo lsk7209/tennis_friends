@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '그리고르 디미트로프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function GrigorDimitrovPage() {
         title="그리고르 디미트로프"
         excerpt="두 번째 전성기, 한 손 백핸드의 미학을 보여주는 불가리아의 테니스 영웅"
         image="/images/players/grigor-dimitrov.png"
-      >
+      ><PersonSchema
+          name="Grigor Dimitrov"
+          nameKo="그리고르 디미트로프"
+          description="불가리아 출신의 우아한 테니스 선수. 아름다운 단손 백핸드와 다재다능한 플레이로 주목받는 선수."
+          image="/images/players/grigor-dimitrov.png"
+          nationality="Bulgaria"
+          birthDate="1991-05-16"
+          height="191"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'ATP Finals Champion (2017)', 'ATP Masters 1000 Champion'
+          ]}
+          url="https://tennisfriends.co.kr/players/grigor-dimitrov"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Grigor Dimitrov"

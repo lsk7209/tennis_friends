@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '다닐 메드베데프 — 세계랭킹 4위 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function DaniilMedvedevPage() {
         title="다닐 메드베데프"
         excerpt="낮은 탄도와 깊은 낙구로 상대의 선택지를 좁혀 가는 하드 코트의 설계자"
         image="/images/players/daniil-medvedev.png"
-      >
+      ><PersonSchema
+          name="Daniil Medvedev"
+          nameKo="다닐 메드베데프"
+          description="러시아 출신의 세계 정상급 테니스 선수. 독창적인 플레이 스타일과 뛰어난 전술로 주목받는 선수."
+          image="/images/players/daniil-medvedev.png"
+          nationality="Russia"
+          birthDate="1996-02-11"
+          height="198"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'US Open Champion (2021)', 'ATP Finals Champion (2020)', 'ATP World No. 1'
+          ]}
+          url="https://tennisfriends.co.kr/players/daniil-medvedev"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Daniil Medvedev"

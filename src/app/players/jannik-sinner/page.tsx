@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, BookOpen, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '야닉 시너 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function JannikSinnerPage() {
         title="야닉 시너"
         excerpt="탁월한 스트로크 기술과 서브 앤 발리 게임을 겸비한 이탈리아의 차세대 스타"
         image="/images/players/jannik-sinner.png"
-      >
+      ><PersonSchema
+          name="Jannik Sinner"
+          nameKo="야닉 시너"
+          description="이탈리아 출신의 차세대 테니스 스타. 강력한 양손 샷과 뛰어난 베이스라인 플레이로 주목받는 선수."
+          image="/images/players/jannik-sinner.png"
+          nationality="Italy"
+          birthDate="2001-08-16"
+          height="188"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'Grand Slam Singles Champion (2 titles)', 'ATP Finals Champion', 'ATP Masters 1000 Champion'
+          ]}
+          url="https://tennisfriends.co.kr/players/jannik-sinner"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Jannik Sinner"

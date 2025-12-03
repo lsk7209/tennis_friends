@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '후베르트 후르카츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function HubertHurkaczPage() {
         title="후베르트 후르카츠"
         excerpt="탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수"
         image="/images/players/hubert-hurkacz.png"
-      >
+      ><PersonSchema
+          name="Hubert Hurkacz"
+          nameKo="후베르트 후르카치"
+          description="폴란드 출신의 빅 서버. 강력한 서브와 네트 플레이로 주목받는 선수."
+          image="/images/players/hubert-hurkacz.png"
+          nationality="Poland"
+          birthDate="1997-02-11"
+          height="196"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'ATP Masters 1000 Champion', 'Wimbledon Semifinalist'
+          ]}
+          url="https://tennisfriends.co.kr/players/hubert-hurkacz"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Hubert Hurkacz"

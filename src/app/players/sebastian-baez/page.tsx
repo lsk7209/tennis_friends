@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '세바스티안 바에즈 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function SebastianBaezPage() {
         title="세바스티안 바에즈"
         excerpt="작은 거인이 보여주는 끈기와 열정의 아르헨티나 테니스"
         image="/images/players/sebastian-baez.png"
-      >
+      ><PersonSchema
+          name="Sebastian Baez"
+          nameKo="세바스티안 바에즈"
+          description="아르헨티나 출신의 클레이 코트 스페셜리스트. 작은 체구지만 뛰어난 발놀림과 전술로 주목받는 선수."
+          image="/images/players/sebastian-baez.png"
+          nationality="Argentina"
+          birthDate="2000-12-28"
+          height="170"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'ATP 250 Champion (multiple titles)'
+          ]}
+          url="https://tennisfriends.co.kr/players/sebastian-baez"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Sebastian Baez"

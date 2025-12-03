@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, BookOpen, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '카를로스 알카라스 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function CarlosAlcarazPage() {
         title="카를로스 알카라스"
         excerpt="폭발적인 파워와 젊은 에너지로 테니스계를 이끌어갈 스페인의 신성"
         image="/images/players/carlos-alcaraz.png"
-      >
+      ><PersonSchema
+          name="Carlos Alcaraz"
+          nameKo="카를로스 알카라스"
+          description="스페인 출신의 차세대 테니스 스타. 폭발적인 공격력과 뛰어난 운동 능력으로 주목받는 ATP 투어의 라이징 스타."
+          image="/images/players/carlos-alcaraz.png"
+          nationality="Spain"
+          birthDate="2003-05-05"
+          height="183"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'Grand Slam Singles Champion (4 titles)', 'ATP World No. 1', 'ATP Masters 1000 Champion'
+          ]}
+          url="https://tennisfriends.co.kr/players/carlos-alcaraz"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Carlos Alcaraz"

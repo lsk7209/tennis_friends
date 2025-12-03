@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Flame, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '안드레이 루블레프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function AndreyRublevPage() {
         title="안드레이 루블레프"
         excerpt="폭발적인 포핸드와 지치지 않는 열정으로 코트를 불태우는 러시아 출신의 세계랭킹 상위권 선수"
         image="/images/players/andrey-rublev.png"
-      >
+      ><PersonSchema
+          name="Andrey Rublev"
+          nameKo="안드레이 루블레프"
+          description="러시아 출신의 파워 테니스 선수. 강력한 포핸드와 공격적인 플레이로 주목받는 선수."
+          image="/images/players/andrey-rublev.png"
+          nationality="Russia"
+          birthDate="1997-10-20"
+          height="188"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'ATP Masters 1000 Champion', 'ATP 500 Champion (multiple titles)'
+          ]}
+          url="https://tennisfriends.co.kr/players/andrey-rublev"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Andrey Rublev"

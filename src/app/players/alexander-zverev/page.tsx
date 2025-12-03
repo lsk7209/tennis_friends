@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, RotateCcw, AlertTriangle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '알렉산더 즈베레프 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
@@ -82,7 +84,21 @@ export default function AlexanderZverevPage() {
         title="알렉산더 즈베레프"
         excerpt="장벽 같은 서브와 칼같은 양손 백핸드로 흐름을 제어하는 독일 출신의 세계랭킹 2위 선수"
         image="/images/players/alexander-zverev.png"
-      >
+      ><PersonSchema
+          name="Alexander Zverev"
+          nameKo="알렉산더 즈베레프"
+          description="독일 출신의 세계 정상급 테니스 선수. 강력한 서브와 포핸드로 주목받는 선수."
+          image="/images/players/alexander-zverev.png"
+          nationality="Germany"
+          birthDate="1997-04-20"
+          height="198"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'Olympic Gold Medalist (Tokyo 2020)', 'ATP Finals Champion (2018, 2021)', 'ATP Masters 1000 Champion'
+          ]}
+          url="https://tennisfriends.co.kr/players/alexander-zverev"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Alexander Zverev"
