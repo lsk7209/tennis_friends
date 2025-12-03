@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerSkillGauges from '@/components/players/PlayerSkillGauges';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -144,7 +144,8 @@ export default function NovakDjokovicPage() {
             <p><strong>"완벽한 육각형 플레이어 (All-Court Player)"</strong></p>
             <p>노박 조코비치는 세르비아 출신의 세계랭킹 1위 선수로, 전천후 스타일과 탁월한 멘탈, 전술적 완성도가 특징인 ATP 투어의 레전드다.</p>
 
-            <PlayerSkillGauges
+            <PlayerHexagonStats
+              playerName="노박 조코비치"
               attributes={[
                 { name: '리턴 (Return)', score: 10, description: '역대 최고의 리턴 능력. 상대의 서브를 무력화시키고 랠리의 주도권을 가져온다.' },
                 { name: '멘탈 (Mental)', score: 10, description: '타이브레이크와 위기 상황에서 더 강해지는 강철 멘탈.' },
