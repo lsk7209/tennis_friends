@@ -44,7 +44,7 @@ export default function Article({ title, excerpt, date, author = "TennisFriends"
   };
 
   return (
-    <article className="prose prose-lg dark:prose-invert max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <article className="prose prose-lg dark:prose-invert max-w-[1380px] mx-auto px-4 sm:px-6 py-8">
       <JsonLd data={jsonLd} />
       <header className="mb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 !leading-tight">{title}</h1>

@@ -15,7 +15,7 @@ const StaggeredAnimation = dynamic(() => import('@/components/ScrollAnimation').
 const StaggeredItem = dynamic(() => import('@/components/ScrollAnimation').then(mod => mod.StaggeredItem), { ssr: false });
 
 export default function Home() {
-      const blogPosts = homeBlogPosts;
+  const blogPosts = homeBlogPosts;
 
   return (
     <div className="min-h-screen">
@@ -29,11 +29,11 @@ export default function Home() {
                 <span className="text-blue-600">
                   테니스를 즐겁게
                 </span>
-          </h1>
+              </h1>
             </FadeIn>
             <SlideUp delay={0.4}>
               <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-                당신의 테니스 실력 향상을 위한 모든 것, TennisFriends와 함께 시작하세요. 
+                당신의 테니스 실력 향상을 위한 모든 것, TennisFriends와 함께 시작하세요.
                 과학적 분석과 전문가의 조언으로 더 나은 테니스 플레이어가 되어보세요.
               </p>
             </SlideUp>
@@ -41,12 +41,12 @@ export default function Home() {
               <div className="flex items-center justify-center mb-12">
                 <Link href="/utility">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-xl font-bold rounded-2xl focus-ring shadow-lg hover:shadow-xl transition-all duration-300">
-                    🎾 유틸리티 시작하기
+                    🎾 실력테스트 해보기
                   </Button>
                 </Link>
               </div>
             </SlideUp>
-            
+
             {/* Trust indicators */}
             <FadeIn delay={0.8}>
               <div className="flex flex-wrap items-center justify-center gap-8 text-gray-500 text-sm">
@@ -141,7 +141,7 @@ export default function Home() {
               ))}
             </div>
           </StaggeredAnimation>
-          
+
           <FadeIn delay={0.3}>
             <div className="text-center mt-12">
               <Link href="/blog">
@@ -173,8 +173,8 @@ export default function Home() {
                   </SlideUp>
                   <SlideUp delay={0.6}>
                     <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                      TennisFriends 커뮤니티에서 당신의 열정을 공유하고, 
-                      함께 성장하는 테니스 여정을 시작해보세요. 
+                      TennisFriends 커뮤니티에서 당신의 열정을 공유하고,
+                      함께 성장하는 테니스 여정을 시작해보세요.
                       데이터 기반의 객관적 피드백과 전문가의 조언이 기다립니다.
                     </p>
                   </SlideUp>
