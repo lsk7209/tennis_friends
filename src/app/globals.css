@@ -15,25 +15,34 @@
 /* 색상 토큰: 심플/고대비, 다크모드 대응 */
 :root {
   --bg: #ffffff;
-  --fg: #0f172a;         /* slate-900 */
-  --muted: #475569;      /* slate-600 */
-  --border: #e2e8f0;     /* slate-200 */
-  --accent: #0ea5e9;     /* sky-500(링크 포커스) */
-  --code-bg: #0b1020;    /* 딥 네이비 */
+  --fg: #0f172a;
+  /* slate-900 */
+  --muted: #475569;
+  /* slate-600 */
+  --border: #e2e8f0;
+  /* slate-200 */
+  --accent: #0ea5e9;
+  /* sky-500(링크 포커스) */
+  --code-bg: #0b1020;
+  /* 딥 네이비 */
 }
 
 /* 다크모드는 JavaScript에서 .dark 클래스로 제어 */
 .dark {
   --bg: #0b0f19;
-  --fg: #e5e7eb;       /* slate-200 */
-  --muted: #94a3b8;    /* slate-400 */
-  --border: #1f2937;   /* gray-800 */
-  --accent: #38bdf8;   /* sky-400 */
+  --fg: #e5e7eb;
+  /* slate-200 */
+  --muted: #94a3b8;
+  /* slate-400 */
+  --border: #1f2937;
+  /* gray-800 */
+  --accent: #38bdf8;
+  /* sky-400 */
   --code-bg: #0b1020;
 }
 
-html { 
-  font-feature-settings: "ss01","cv01","cv02"; 
+html {
+  font-feature-settings: "ss01", "cv01", "cv02";
 }
 
 body {
@@ -45,73 +54,80 @@ body {
 }
 
 /* 링크/포커스 접근성 */
-a { 
-  color: var(--accent); 
-  text-underline-offset: 2px; 
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
 }
 
-a:focus-visible { 
-  outline: 2px solid var(--accent); 
-  outline-offset: 2px; 
-  border-radius: 2px; 
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* 본문 타이포(리듬) */
 .prose {
-  max-width: 85ch;
+  max-width: 100ch;
   line-height: 1.8;
-  font-size: 1.0625rem; /* 17px */
+  font-size: 1.0625rem;
+  /* 17px */
   letter-spacing: 0.003em;
 }
 
-.prose h1, .prose h2, .prose h3 {
+.prose h1,
+.prose h2,
+.prose h3 {
   line-height: 1.25;
   letter-spacing: -0.015em;
-  scroll-margin-top: 88px; /* 고정 헤더 대비 앵커 여유 */
+  scroll-margin-top: 88px;
+  /* 고정 헤더 대비 앵커 여유 */
 }
 
-.prose h1 { 
-  font-size: clamp(1.875rem, 2vw + 1.2rem, 2.25rem); 
-  font-weight: 800; 
+.prose h1 {
+  font-size: clamp(1.875rem, 2vw + 1.2rem, 2.25rem);
+  font-weight: 800;
 }
 
-.prose h2 { 
-  font-size: clamp(1.375rem, 1.2vw + 1rem, 1.625rem); 
-  font-weight: 700; 
-  margin-top: 2.5rem; 
+.prose h2 {
+  font-size: clamp(1.375rem, 1.2vw + 1rem, 1.625rem);
+  font-weight: 700;
+  margin-top: 2.5rem;
 }
 
-.prose h3 { 
-  font-size: 1.125rem; 
-  font-weight: 700; 
-  margin-top: 1.75rem; 
+.prose h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
 }
 
-.prose p, .prose ul, .prose ol, .prose blockquote { 
-  color: var(--fg); 
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote {
+  color: var(--fg);
 }
 
-.prose p { 
-  margin: 1em 0; 
+.prose p {
+  margin: 1em 0;
 }
 
-.prose strong { 
-  font-weight: 700; 
+.prose strong {
+  font-weight: 700;
 }
 
 .prose blockquote {
   border-left: 3px solid var(--border);
-  margin: 1.25rem 0; 
-  padding: .75rem 1rem; 
-  color: var(--fg); 
+  margin: 1.25rem 0;
+  padding: .75rem 1rem;
+  color: var(--fg);
   background: color-mix(in oklab, var(--border) 20%, transparent);
 }
 
-.prose hr { 
-  border: 0; 
-  height: 1px; 
-  background: var(--border); 
-  margin: 2rem 0; 
+.prose hr {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: 2rem 0;
 }
 
 .prose code {
@@ -131,27 +147,28 @@ a:focus-visible {
 }
 
 /* 표/리스트 */
-.prose table { 
-  width: 100%; 
-  border-collapse: collapse; 
-  font-size: .95rem; 
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .95rem;
 }
 
-.prose th, .prose td { 
-  border: 1px solid var(--border); 
-  padding: .6rem .7rem; 
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: .6rem .7rem;
 }
 
-.prose thead th { 
-  background: color-mix(in oklab, var(--border) 60%, transparent); 
-  text-align: left; 
+.prose thead th {
+  background: color-mix(in oklab, var(--border) 60%, transparent);
+  text-align: left;
 }
 
 /* 목차 컴팩트 */
 .toc {
   border: 1px solid var(--border);
-  border-radius: 10px; 
-  padding: .75rem 1rem; 
+  border-radius: 10px;
+  padding: .75rem 1rem;
   margin: 1rem 0 1.5rem;
   background: color-mix(in oklab, var(--border) 15%, transparent);
 }
@@ -165,9 +182,9 @@ a:focus-visible {
   color: var(--accent);
 }
 
-.toc ol { 
-  margin: 0; 
-  padding-left: 1.1rem; 
+.toc ol {
+  margin: 0;
+  padding-left: 1.1rem;
 }
 
 /* FAQ 아코디언: 가독/크롤러 친화 */
@@ -176,28 +193,28 @@ a:focus-visible {
   margin-top: 2rem;
 }
 
-.faq details { 
-  border-bottom: 1px solid var(--border); 
-  padding: .5rem 0; 
+.faq details {
+  border-bottom: 1px solid var(--border);
+  padding: .5rem 0;
 }
 
 .faq summary {
-  cursor: pointer; 
-  list-style: none; 
+  cursor: pointer;
+  list-style: none;
   font-weight: 700;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: .5rem 0;
 }
 
-.faq summary::-webkit-details-marker { 
-  display: none; 
+.faq summary::-webkit-details-marker {
+  display: none;
 }
 
-.faq .answer { 
-  color: var(--muted); 
-  padding: .25rem 0 .75rem 0; 
+.faq .answer {
+  color: var(--muted);
+  padding: .25rem 0 .75rem 0;
 }
 
 @theme inline {
@@ -245,11 +262,11 @@ a:focus-visible {
   * {
     box-sizing: border-box;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -257,7 +274,7 @@ a:focus-visible {
     font-feature-settings: "kern" 1, "liga" 1;
     line-height: 1.6;
   }
-  
+
   .material-symbols-outlined {
     font-variation-settings:
       'FILL' 0,
@@ -266,33 +283,38 @@ a:focus-visible {
       'opsz' 24;
     font-size: 20px;
   }
-  
+
   /* Typography improvements */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.025em;
   }
-  
+
   h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
   }
-  
+
   h2 {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 700;
   }
-  
+
   h3 {
     font-size: clamp(1.25rem, 3vw, 1.875rem);
     font-weight: 600;
   }
-  
+
   /* Improved prose styling - 심플한 스타일로 통합 */
   .prose {
     color: var(--fg);
-    max-width: 85ch;
+    max-width: 100ch;
   }
 
   /* Code blocks - better contrast */
@@ -309,32 +331,35 @@ a:focus-visible {
     border-radius: 0.25rem;
     font-size: 0.875em;
   }
-  
-  .prose h1, .prose h2, .prose h3, .prose h4 {
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
     color: var(--fg);
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
-  
+
   .prose h1 {
     margin-bottom: 0;
   }
-  
+
   .prose h2 {
     margin-top: 3em;
     margin-bottom: 1.5em;
   }
-  
+
   .prose h3 {
     margin-top: 2.5em;
     margin-bottom: 1.25em;
   }
-  
+
   .prose p {
     margin-bottom: 1em;
     line-height: 1.8;
   }
-  
+
   .prose a {
     color: var(--accent);
     text-decoration: none;
@@ -342,41 +367,42 @@ a:focus-visible {
     transition: all 0.2s ease;
     text-underline-offset: 2px;
   }
-  
+
   .prose a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
   }
-  
+
   .prose a:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
     border-radius: 2px;
   }
-  
+
   .prose strong {
     color: var(--fg);
     font-weight: 700;
   }
-  
-  .prose ul, .prose ol {
+
+  .prose ul,
+  .prose ol {
     margin-bottom: 1em;
     padding-left: 1.5rem;
   }
-  
+
   .prose li {
     margin-bottom: 0.5rem;
     line-height: 1.8;
   }
-  
-  .prose ul > li::before {
+
+  .prose ul>li::before {
     background-color: var(--accent);
     width: 6px;
     height: 6px;
     border-radius: 50%;
     margin-right: 0.75rem;
   }
-  
+
   .prose blockquote {
     border-left: 3px solid var(--border);
     background: color-mix(in oklab, var(--border) 20%, transparent);
@@ -384,33 +410,33 @@ a:focus-visible {
     margin: 1.25rem 0;
     color: var(--fg);
   }
-  
+
   /* Improved card styling */
   .card-hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .card-hover:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
-  
+
   /* Modern color palette */
   .bg-primary-gradient {
     background: linear-gradient(135deg, oklch(0.7 0.16 165) 0%, oklch(0.65 0.18 180) 50%, oklch(0.6 0.2 195) 100%);
   }
-  
+
   .text-primary-gradient {
     background: linear-gradient(135deg, oklch(0.7 0.16 165) 0%, oklch(0.65 0.18 180) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .border-primary-gradient {
     border-image: linear-gradient(135deg, oklch(0.7 0.16 165) 0%, oklch(0.65 0.18 180) 100%) 1;
   }
-  
+
   /* Button improvements */
   .btn-primary {
     background: linear-gradient(135deg, oklch(0.7 0.16 165) 0%, oklch(0.65 0.18 180) 100%);
@@ -419,7 +445,7 @@ a:focus-visible {
     position: relative;
     overflow: hidden;
   }
-  
+
   .btn-primary::before {
     content: '';
     position: absolute;
@@ -430,56 +456,57 @@ a:focus-visible {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
   }
-  
+
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px 0 rgba(112, 191, 165, 0.35);
   }
-  
+
   .btn-primary:hover::before {
     left: 100%;
   }
-  
+
   /* Focus improvements */
   .focus-ring {
     outline: 2px solid transparent;
     outline-offset: 2px;
   }
-  
+
   .focus-ring:focus {
     outline: 2px solid #34D399;
     outline-offset: 2px;
   }
-  
+
   /* Details/Summary improvements */
-  details[open] > summary .details-arrow-open {
+  details[open]>summary .details-arrow-open {
     transform: rotate(180deg);
   }
-  
-  details:not([open]) > summary .details-arrow-closed {
+
+  details:not([open])>summary .details-arrow-closed {
     transform: rotate(0deg);
   }
-  
-  .group[open] > summary .details-arrow {
+
+  .group[open]>summary .details-arrow {
     transform: rotate(180deg);
   }
-  
+
   /* Loading states */
   .loading-shimmer {
     background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
   }
-  
+
   @keyframes shimmer {
     0% {
       background-position: -200% 0;
     }
+
     100% {
       background-position: 200% 0;
     }
   }
-  
+
   /* Dark mode loading */
   .dark .loading-shimmer {
     background: linear-gradient(90deg, #374151 25%, #4B5563 50%, #374151 75%);
@@ -489,17 +516,23 @@ a:focus-visible {
   /* Header/Footer scoped styling fix (force light background and dark text regardless of dark mode) */
   .tf-text-black,
   .tf-text-black * {
-    background-color: #ffffff !important; /* force white background */
-    color: #111827 !important; /* force dark text */
+    background-color: #ffffff !important;
+    /* force white background */
+    color: #111827 !important;
+    /* force dark text */
   }
+
   .tf-text-black a,
   .tf-text-black a:hover,
   .tf-text-black a:focus,
   .tf-text-black a:active {
-    color: #111827 !important; /* force links to dark text */
+    color: #111827 !important;
+    /* force links to dark text */
   }
+
   .tf-text-black svg {
-    color: #111827 !important; /* force icons to dark color */
+    color: #111827 !important;
+    /* force icons to dark color */
     fill: currentColor !important;
   }
 
@@ -511,7 +544,7 @@ a:focus-visible {
     background-color: #ffffff !important;
     color: #111827 !important;
   }
-  
+
   /* Blockquote readability fix - ensure text is dark enough */
   blockquote {
     color: var(--fg) !important;
@@ -520,26 +553,40 @@ a:focus-visible {
   /* Modern Dark Mode - Clean & Sophisticated */
   .dark {
     /* Base colors - subtle and elegant */
-    --bg-primary: #0a0a0a;    /* near-black for main background */
-    --bg-secondary: #111111;  /* slightly lighter for cards */
-    --bg-tertiary: #1a1a1a;   /* for elevated elements */
-    --bg-accent: #262626;     /* for subtle accents */
+    --bg-primary: #0a0a0a;
+    /* near-black for main background */
+    --bg-secondary: #111111;
+    /* slightly lighter for cards */
+    --bg-tertiary: #1a1a1a;
+    /* for elevated elements */
+    --bg-accent: #262626;
+    /* for subtle accents */
 
     /* Text colors - high contrast and readable */
-    --text-primary: #fafafa;   /* off-white for primary text */
-    --text-secondary: #d4d4d8; /* zinc-300 for secondary text */
-    --text-muted: #a1a1aa;     /* zinc-400 for muted text */
-    --text-subtle: #71717a;    /* zinc-500 for subtle hints */
+    --text-primary: #fafafa;
+    /* off-white for primary text */
+    --text-secondary: #d4d4d8;
+    /* zinc-300 for secondary text */
+    --text-muted: #a1a1aa;
+    /* zinc-400 for muted text */
+    --text-subtle: #71717a;
+    /* zinc-500 for subtle hints */
 
     /* Accent colors - modern and vibrant */
-    --accent-blue: #3b82f6;    /* blue-500 */
-    --accent-emerald: #10b981;  /* emerald-500 */
-    --accent-purple: #8b5cf6;   /* violet-500 */
-    --accent-rose: #f43f5e;     /* rose-500 */
+    --accent-blue: #3b82f6;
+    /* blue-500 */
+    --accent-emerald: #10b981;
+    /* emerald-500 */
+    --accent-purple: #8b5cf6;
+    /* violet-500 */
+    --accent-rose: #f43f5e;
+    /* rose-500 */
 
     /* Border and dividers */
-    --border-subtle: #27272a;  /* zinc-800 */
-    --border-medium: #3f3f46;   /* zinc-700 */
+    --border-subtle: #27272a;
+    /* zinc-800 */
+    --border-medium: #3f3f46;
+    /* zinc-700 */
   }
 
   /* Body background - subtle gradient for depth */
@@ -631,10 +678,11 @@ a:focus-visible {
   .dark .shadow-lg {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
   }
+
   blockquote.text-gray-600 {
     color: var(--fg) !important;
   }
-  
+
   /* Page-specific backgrounds */
   .blog-page {
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f0f9ff 100%);
@@ -691,7 +739,8 @@ a:focus-visible {
   .prose a[href*="usta.com"],
   .prose a[href*="wikipedia.org"],
   .prose a[href*="youtube.com"] {
-    color: #1d4ed8 !important; /* blue-700 */
+    color: #1d4ed8 !important;
+    /* blue-700 */
     font-weight: 500 !important;
     text-decoration: none !important;
   }
@@ -700,7 +749,8 @@ a:focus-visible {
   .prose a[href*="usta.com"]:hover,
   .prose a[href*="wikipedia.org"]:hover,
   .prose a[href*="youtube.com"]:hover {
-    color: #1e40af !important; /* blue-800 */
+    color: #1e40af !important;
+    /* blue-800 */
     text-decoration: underline !important;
   }
 
@@ -709,14 +759,16 @@ a:focus-visible {
   .dark .prose a[href*="usta.com"],
   .dark .prose a[href*="wikipedia.org"],
   .dark .prose a[href*="youtube.com"] {
-    color: #60a5fa !important; /* blue-400 */
+    color: #60a5fa !important;
+    /* blue-400 */
   }
 
   .dark .prose a[href*="tennis.com"]:hover,
   .dark .prose a[href*="usta.com"]:hover,
   .dark .prose a[href*="wikipedia.org"]:hover,
   .dark .prose a[href*="youtube.com"]:hover {
-    color: #93c5fd !important; /* blue-300 */
+    color: #93c5fd !important;
+    /* blue-300 */
   }
 
   /* Button improvements */
@@ -738,34 +790,35 @@ a:focus-visible {
     ring-color: var(--accent-blue);
     ring-offset-color: var(--bg-primary);
   }
+
   .section-padding {
     padding: clamp(3rem, 8vw, 6rem) 0;
   }
-  
+
   .container-padding {
     padding: 0 clamp(1rem, 4vw, 2rem);
   }
-  
+
   /* Text selection */
   ::selection {
     background-color: rgba(52, 211, 153, 0.2);
     color: #F3F4F6;
   }
-  
+
   /* Scrollbar styling */
   ::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: #1F2937;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: #374151;
     border-radius: 4px;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background: #4B5563;
   }
@@ -846,6 +899,7 @@ a:focus-visible {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
