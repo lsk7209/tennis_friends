@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function CarlosAlcarazPage() {
             <p><strong>"폭발적인 올라운더 (Explosive All-Rounder)"</strong></p>
             <p>카를로스 알카라스는 스페인 출신의 세계랭킹 2위 선수로, 공격형 스타일과 폭발적인 파워, 탁월한 운동능력이 특징인 ATP 투어의 차세대 스타다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="카를로스 알카라스"
               attributes={[
                 { name: '포핸드 (Forehand)', score: 10, description: '투어 최강의 파워와 스핀. 어디서든 위너를 만들어내는 해결사.' },
                 { name: '스피드/풋워크', score: 10, description: '미친 활동량. 도저히 잡을 수 없는 공을 받아내 역습한다.' },

@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function TaylorFritzPage() {
             <p><strong>"공격적인 베이스라이너 (Aggressive Baseliner)"</strong></p>
             <p>테일러 프리츠는 미국 출신의 장신 선수로, 강력한 포핸드와 서브를 앞세운 공격적인 플레이가 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="테일러 프리츠"
               attributes={[
                 { name: '포핸드 (Forehand)', score: 9.5, description: '빠르고 낮게 깔리는 플랫성 포핸드는 그의 가장 큰 무기다. 크로스와 다운더라인 모두 위력적이다.' },
                 { name: '서브 (Serve)', score: 9.0, description: '196cm의 키에서 내리꽂는 서브는 정확도와 파워를 겸비했다.' },

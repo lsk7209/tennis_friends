@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function AlexanderZverevPage() {
             <p><strong>"강력한 베이스라이너 (Aggressive Baseliner)"</strong></p>
             <p>알렉산더 즈베레프는 독일 출신의 세계랭킹 2위 선수로, 강력한 서브와 백핸드를 앞세운 공격적인 베이스라인 플레이가 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="알렉산더 즈베레프"
               attributes={[
                 { name: '서브 (Serve)', score: 9.8, description: '220km/h를 넘나드는 강력한 퍼스트 서브. 높은 타점에서 내리꽂는 각도가 위협적.' },
                 { name: '백핸드 (Backhand)', score: 9.8, description: '투어 최고의 양손 백핸드 중 하나. 크로스와 다운더라인을 자유자재로 구사.' },

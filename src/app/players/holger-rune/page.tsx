@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function HolgerRunePage() {
             <p><strong>"공격적인 올라운더 (Aggressive All-Rounder)"</strong></p>
             <p>홀거 루네는 덴마크 출신의 신성으로, 강력한 백핸드와 빠른 발을 무기로 하는 공격적인 스타일이 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="홀거 루네"
               attributes={[
                 { name: '백핸드 (Backhand)', score: 9.5, description: '투어 최고 수준의 양손 백핸드. 다운더라인과 크로스 앵글 모두 자유자재로 구사한다.' },
                 { name: '스피드 (Speed)', score: 9.0, description: '폭발적인 순발력으로 코트 커버 범위가 매우 넓다.' },

@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function BenSheltonPage() {
             <p><strong>"폭발적인 서브 앤 포핸드 (Explosive Serve & Forehand)"</strong></p>
             <p>벤 쉘튼은 왼손잡이의 이점과 압도적인 파워를 바탕으로 경기를 지배하는 공격형 플레이어다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="벤 쉘튼"
               attributes={[
                 { name: '서브 (Serve)', score: 10, description: '투어에서 가장 강력한 서브 중 하나. 최고 시속 240km의 광속 서브와 왼손잡이 특유의 킥 서브가 위협적이다.' },
                 { name: '포핸드 (Forehand)', score: 9.0, description: '엄청난 스윙 스피드에서 나오는 헤비 탑스핀 포핸드는 상대를 코트 밖으로 밀어낸다.' },

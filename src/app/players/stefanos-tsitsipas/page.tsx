@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function StefanosTsitsipasPage() {
             <p><strong>"공격적인 올코트 플레이어 (Aggressive All-Court Player)"</strong></p>
             <p>스테파노스 치치파스는 그리스 출신의 세계랭킹 상위권 선수로, 강력한 포핸드와 네트 플레이를 즐기는 공격적인 스타일이 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="스테파노스 치치파스"
               attributes={[
                 { name: '포핸드 (Forehand)', score: 9.5, description: '높은 타점에서 감아치는 헤비 탑스핀 포핸드는 상대를 베이스라인 뒤로 밀어낸다.' },
                 { name: '서브 (Serve)', score: 9.0, description: '193cm의 키에서 나오는 강력한 서브. 세컨드 서브의 킥도 위협적이다.' },

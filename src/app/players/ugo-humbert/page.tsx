@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function UgoHumbertPage() {
             <p><strong>"공격적인 템포 조절자 (Aggressive Tempo Controller)"</strong></p>
             <p>움베르는 빠른 발과 뛰어난 반사 신경을 바탕으로 경기 템포를 빠르게 가져가는 공격형 플레이어다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="우고 움베르"
               attributes={[
                 { name: '포핸드 (Forehand)', score: 9.0, description: '짧은 테이크백에서 나오는 빠르고 간결한 포핸드. 라이징 볼 처리가 일품이다.' },
                 { name: '서브 (Serve)', score: 8.8, description: '왼손잡이의 이점을 살린 슬라이스 서브가 위협적이다. 중요할 때 에이스를 꽂아 넣는다.' },

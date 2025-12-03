@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function TommyPaulPage() {
             <p><strong>"발 빠른 카운터 펀처 & 올라운더 (Speedy Counter-Puncher & All-Rounder)"</strong></p>
             <p>토미 폴은 미국 선수로는 드물게 클레이 코트에서도 강점을 보이는 올라운더로, 빠른 발을 이용한 수비와 역습이 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="토미 폴"
               attributes={[
                 { name: '스피드 (Speed)', score: 9.5, description: '투어 최상위권의 기동력. 코트 커버 범위가 넓어 수비에서 공격으로 전환하는 속도가 빠르다.' },
                 { name: '포핸드 (Forehand)', score: 8.8, description: '헤비 탑스핀이 걸린 포핸드는 상대를 베이스라인 뒤로 밀어낸다. 역크로스 샷이 일품이다.' },

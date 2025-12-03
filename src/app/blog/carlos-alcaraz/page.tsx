@@ -236,10 +236,13 @@ export default function CarlosAlcarazBlogPost() {
           </div>
 
           {/* FAQ Section */}
-          <FAQ items={faqs} />
 
           {/* CTA */}
-          <CTA />
+          
+      {/* FAQ Section */}
+      <FAQ items={faqs} />
+
+      <CTA />
         </div>
       </Article>
     </div>

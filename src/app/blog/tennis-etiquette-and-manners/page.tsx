@@ -314,6 +314,10 @@ export default function TennisEtiquetteAndMannersPage() {
         </p>
       </section>
 
+      
+      {/* FAQ Section */}
+      <FAQ items={faqs} />
+
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
         <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -334,8 +338,6 @@ export default function TennisEtiquetteAndMannersPage() {
           </Link>
         </div>
       </div>
-
-      <FAQ items={faqs} />
     </Article>
   );
 }

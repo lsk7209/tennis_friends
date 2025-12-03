@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function AlexDeMinaurPage() {
             <p><strong>"스피드 카운터펀처 (Speed Counter-Puncher)"</strong></p>
             <p>드 미노는 빠른 발을 이용해 상대의 공격을 무력화시키고, 상대의 힘을 역이용하는 카운터 펀처다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="알렉스 드 미노"
               attributes={[
                 { name: '스피드 (Speed)', score: 10, description: '투어 최고 수준. 코트 끝에서 끝까지 순식간에 이동한다. 그의 수비 범위는 상상을 초월한다.' },
                 { name: '체력 (Stamina)', score: 9.5, description: '5세트 접전에도 지치지 않는다. 랠리가 길어질수록 그에게 유리하다.' },

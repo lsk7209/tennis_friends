@@ -248,10 +248,13 @@ export default function NovakDjokovicBlogPost() {
           </div>
 
           {/* FAQ Section */}
-          <FAQ items={faqs} />
 
           {/* CTA */}
-          <CTA />
+          
+      {/* FAQ Section */}
+      <FAQ items={faqs} />
+
+      <CTA />
         </div>
       </Article>
     </div>

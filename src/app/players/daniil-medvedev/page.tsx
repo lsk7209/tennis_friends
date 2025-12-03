@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function DaniilMedvedevPage() {
             <p><strong>"지능형 카운터펀처 (Strategic Counter-Puncher)"</strong></p>
             <p>다닐 메드베데프는 러시아 출신의 세계랭킹 4위 선수로, 카운터펀처 스타일과 탁월한 리턴 능력이 특징인 ATP 투어의 강자다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="다닐 메드베데프"
               attributes={[
                 { name: '수비/리턴 (Defense)', score: 10, description: '코트 뒤쪽에서 모든 공을 받아내는 "문어" 같은 수비 범위.' },
                 { name: '멘탈/전술 (Tactics)', score: 9.5, description: '상대의 약점을 집요하게 파고드는 체스 플레이어.' },

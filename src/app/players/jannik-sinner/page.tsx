@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function JannikSinnerPage() {
             <p><strong>"베이스라인의 저격수 (Aggressive Baseliner)"</strong></p>
             <p>야닉 시너는 이탈리아 출신의 세계랭킹 1위 선수로, 공격형 스타일과 탁월한 스트로크 기술, 서브 앤 발리 게임이 특징인 ATP 투어의 차세대 스타다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="야닉 시너"
               attributes={[
                 { name: '백핸드 (Backhand)', score: 10, description: '투어에서 가장 깨끗하고 강력한 양손 백핸드. 앵글 샷이 일품.' },
                 { name: '포핸드 (Forehand)', score: 9.8, description: '무거운 스핀과 빠른 스피드로 상대를 베이스라인 뒤로 밀어낸다.' },

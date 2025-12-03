@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function FrancesTiafoePage() {
             <p><strong>"창의적인 올라운더 (Creative All-Rounder)"</strong></p>
             <p>프란시스 티아포는 미국 출신의 선수로, 변칙적인 플레이와 뛰어난 운동 신경을 바탕으로 한 올라운드 플레이가 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="프란시스 티아포"
               attributes={[
                 { name: '포핸드 (Forehand)', score: 9.0, description: '테이크백이 짧고 독특하지만, 임팩트 순간의 폭발력이 엄청나다. 위너 생산 능력이 뛰어나다.' },
                 { name: '네트 플레이 (Net Play)', score: 9.0, description: '손감각이 매우 좋다. 발리와 스매싱은 물론, 터치 샷도 자유자재로 구사한다.' },

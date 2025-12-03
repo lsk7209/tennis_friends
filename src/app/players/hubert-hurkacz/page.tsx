@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function HubertHurkaczPage() {
             <p><strong>"올라운드 빅 서버 (All-Round Big Server)"</strong></p>
             <p>후베르트 후르카츠는 폴란드 출신의 장신 선수로, 강력한 서브와 유연한 움직임을 겸비한 올라운더다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="후베르트 후르카츠"
               attributes={[
                 { name: '서브 (Serve)', score: 9.8, description: '투어에서 가장 위력적인 서브 중 하나. 에이스 생산 능력이 탁월하다.' },
                 { name: '네트 플레이 (Net Play)', score: 9.2, description: '복식 경기 경험이 풍부하여 발리와 스매싱 처리가 매우 깔끔하다.' },

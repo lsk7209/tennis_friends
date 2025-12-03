@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -142,8 +142,9 @@ export default function JaumeMunarPage() {
                         <p><strong>"클레이 코트 수비형 베이스라이너 (Clay Court Defensive Baseliner)"</strong></p>
                         <p>무나르는 전형적인 스페인 스타일의 클레이 코트 전문가로, 수비에서 시작하여 상대의 실수를 유도하는 플레이를 선호한다.</p>
 
-                        <PlayerAttributes
-                            attributes={[
+                        <PlayerHexagonStats
+              playerName="자우메 무나르"
+              attributes={[
                                 { name: '클레이 코트 수비', score: 9.5, description: '클레이 코트에서의 수비 능력은 투어 최상급. 어떤 공도 받아낼 수 있다.' },
                                 { name: '체력 (Stamina)', score: 9.3, description: '긴 랠리를 마다하지 않는다. 3시간이 넘는 경기에서도 지치지 않는 체력.' },
                                 { name: '탑스핀 (Topspin)', score: 9.0, description: '높은 탑스핀으로 공을 깊숙이 보낸다. 클레이에서 효과적으로 바운드를 높인다.' },

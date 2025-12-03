@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function CasperRuudPage() {
             <p><strong>"안정적인 베이스라이너 (Consistent Baseliner)"</strong></p>
             <p>카스페르 루드는 노르웨이 출신의 세계랭킹 상위권 선수로, 강력한 포핸드와 안정적인 경기 운영이 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="카스페르 루드"
               attributes={[
                 { name: '포핸드 (Forehand)', score: 9.8, description: '나달을 연상시키는 엄청난 회전량의 탑스핀 포핸드. 클레이 코트에서 특히 위력적이다.' },
                 { name: '일관성 (Consistency)', score: 9.5, description: '실수를 거의 하지 않는 안정적인 플레이. 상대가 지칠 때까지 랠리를 이어간다.' },

@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function CameronNorriePage() {
             <p><strong>"끈질긴 카운터 펀처 (Gritty Counter-Puncher)"</strong></p>
             <p>카메론 노리는 왼손잡이 특유의 각도와 엄청난 체력을 바탕으로 상대를 압박하는 베이스라이너다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="카메론 노리"
               attributes={[
                 { name: '체력 (Stamina)', score: 10, description: '투어 최고의 심폐지구력을 자랑한다. 5세트 접전에서도 지친 기색을 보이지 않는다.' },
                 { name: '일관성 (Consistency)', score: 9.5, description: '범실이 매우 적다. 기계처럼 공을 넘기며 상대의 인내심을 시험한다.' },

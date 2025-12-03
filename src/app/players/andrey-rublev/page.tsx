@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function AndreyRublevPage() {
             <p><strong>"공격적인 베이스라이너 (Aggressive Baseliner)"</strong></p>
             <p>안드레이 루블레프는 러시아 출신의 세계랭킹 상위권 선수로, 강력한 포핸드를 앞세운 공격적인 플레이가 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="안드레이 루블레프"
               attributes={[
                 { name: '포핸드 (Forehand)', score: 10, description: '투어 최강의 포핸드. 어떤 위치에서도 위너를 만들어내는 파괴력.' },
                 { name: '열정/에너지', score: 10, description: '매 포인트 전력을 다하는 에너지. 지치지 않는 체력의 소유자.' },

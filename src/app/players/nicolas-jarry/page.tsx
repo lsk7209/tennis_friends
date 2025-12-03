@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function NicolasJarryPage() {
             <p><strong>"파워 서버 & 포핸드 히터 (Power Server & Forehand Hitter)"</strong></p>
             <p>자리는 큰 키를 활용한 고공 폭격으로 경기를 단순하게 풀어가는 스타일이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="니콜라스 자리"
               attributes={[
                 { name: '서브 (Serve)', score: 9.5, description: '201cm의 타점에서 내리꽂는 서브는 알고도 막기 힘들다. 세컨드 서브의 킥도 위협적이다.' },
                 { name: '포핸드 (Forehand)', score: 9.0, description: '플랫하게 때리는 포핸드는 엄청난 속도로 코트를 가른다. 원투 펀치의 핵심이다.' },

@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function SebastianKordaPage() {
             <p><strong>"우아한 올라운더 (Elegant All-Rounder)"</strong></p>
             <p>코르다는 큰 키(196cm)에도 불구하고 부드러운 움직임과 정교한 기술을 구사하는 올라운드 플레이어다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="세바스티안 코르다"
               attributes={[
                 { name: '백핸드 (Backhand)', score: 9.5, description: '투어 최고 수준의 양손 백핸드를 가졌다. 타점이 일정하고 코스 공략이 매우 정교하다.' },
                 { name: '기술 (Technique)', score: 9.5, description: '모든 샷의 폼이 교과서적이다. 불필요한 힘을 쓰지 않고 효율적으로 공을 친다.' },

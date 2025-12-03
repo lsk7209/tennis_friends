@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function TallonGriekspoorPage() {
             <p><strong>"공격적인 베이스라이너 (Aggressive Baseliner)"</strong></p>
             <p>탈론 크리에크스푸르는 네덜란드 출신의 선수로, 강력한 서브와 포핸드를 앞세운 공격적인 플레이가 특징이다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="탈론 크리에크스푸르"
               attributes={[
                 { name: '포핸드 (Forehand)', score: 9.0, description: '그의 가장 큰 무기. 베이스라인 어디서든 위너를 만들어낼 수 있는 파워를 가졌다.' },
                 { name: '서브 (Serve)', score: 8.8, description: '퍼스트 서브의 위력이 상당하며, 에이스 생산 능력이 좋다.' },

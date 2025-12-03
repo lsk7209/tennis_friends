@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function GrigorDimitrovPage() {
             <p><strong>"우아한 올라운더 (Elegant All-Rounder)"</strong></p>
             <p>디미트로프는 모든 샷을 수준급으로 구사하는 올라운드 플레이어로, 특히 유연성을 바탕으로 한 수비와 역습 능력이 뛰어나다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="그리고르 디미트로프"
               attributes={[
                 { name: '백핸드 (Backhand)', score: 9.5, description: '그의 상징과도 같은 샷. 탑스핀과 슬라이스를 자유자재로 섞어 쓰며 상대를 요리한다.' },
                 { name: '유연성 (Flexibility)', score: 9.5, description: '투어 최고의 유연성을 자랑한다. 불가능해 보이는 자세에서도 위력적인 샷을 만들어낸다.' },

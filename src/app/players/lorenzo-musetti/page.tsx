@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function LorenzoMusettiPage() {
             <p><strong>"창의적인 테크니션 (Creative Technician)"</strong></p>
             <p>무세티는 정형화된 패턴보다는 상황에 맞는 다양한 구질과 코스 선택으로 상대를 공략하는 올라운드 플레이어다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="로렌조 무세티"
               attributes={[
                 { name: '백핸드 (Backhand)', score: 9.5, description: '그의 트레이드마크. 앵글 샷, 다운더라인, 슬라이스 등 모든 기술을 완벽하게 구사한다.' },
                 { name: '창의성 (Creativity)', score: 10, description: '예측 불가능한 샷을 만들어낸다. 드롭샷, 로브, 트위너 등 화려한 기술을 즐긴다.' },

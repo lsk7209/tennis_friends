@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -140,7 +140,8 @@ export default function SebastianBaezPage() {
             <p><strong>"끈질긴 베이스라이너 (Gritty Baseliner)"</strong></p>
             <p>바에즈는 빠른 발을 이용한 수비와 강력한 포핸드 역습을 주무기로 하는 전형적인 클레이 코트형 플레이어다.</p>
 
-            <PlayerAttributes
+            <PlayerHexagonStats
+              playerName="세바스티안 바에즈"
               attributes={[
                 { name: '스피드 (Speed)', score: 9.5, description: '코트 커버 능력이 탁월하다. 빠른 발로 수비 범위를 넓히고, 역습 기회를 만든다.' },
                 { name: '포핸드 (Forehand)', score: 9.0, description: '작은 체구에서 나온다고 믿기 힘든 파워를 가졌다. 특히 인사이드-아웃 포핸드가 위력적이다.' },

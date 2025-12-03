@@ -3,7 +3,7 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
-import PlayerAttributes from '@/components/players/PlayerAttributes';
+import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -142,8 +142,9 @@ export default function AlexMichelsenPage() {
                         <p><strong>"공격적인 베이스라이너 (Aggressive Baseliner)"</strong></p>
                         <p>미첼슨은 베이스라인에서 강력한 그라운드 스트로크로 주도권을 잡는 현대적인 스타일의 선수다.</p>
 
-                        <PlayerAttributes
-                            attributes={[
+                        <PlayerHexagonStats
+              playerName="알렉스 미첼슨"
+              attributes={[
                                 { name: '포핸드 (Forehand)', score: 9.0, description: '그의 최대 무기. 높은 타점에서 강하게 때리는 포핸드는 위너 생산 능력이 뛰어나다.' },
                                 { name: '체력 (Fitness)', score: 8.8, description: '젊은 나이답게 체력이 좋다. 긴 랠리에서도 지치지 않는 스태미나를 보여준다.' },
                                 { name: '이동 능력 (Movement)', score: 8.5, description: '빠른 풋워크로 코트를 넓게 커버한다. 수비에서 공격으로의 전환이 빠르다.' },
