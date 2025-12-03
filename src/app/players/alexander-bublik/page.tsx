@@ -1,3 +1,4 @@
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
@@ -71,6 +72,14 @@ export default function AlexanderBublikPage() {
         title="알렉산데르 부블리크"
         excerpt="강력한 서브와 예측 불가한 플레이로 ATP 투어를 지배하는 카자흐스탄의 대표 선수"
       >
+
+      <BreadcrumbSchema
+        items={[
+          { name: '홈', item: 'https://tennisfriends.co.kr' },
+          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+          { name: '알렉산더 부블리크', item: 'https://tennisfriends.co.kr/players/alexander-bublik' },
+        ]}
+      />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="flex flex-wrap gap-2 mb-6">
             {['테니스', '알렉산데르 부블리크', '선수 프로필', '카자흐스탄', '공격형', '강력한 서브'].map((tag) => (

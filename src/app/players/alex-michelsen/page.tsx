@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import PersonSchema from '@/components/seo/PersonSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 
@@ -100,7 +101,15 @@ export default function AlexMichelsenPage() {
                     ]}
                     url="https://tennisfriends.co.kr/players/alex-michelsen"
                 />
-                <FAQSchema faqs={faqs} />
+
+      <BreadcrumbSchema
+        items={[
+          { name: '홈', item: 'https://tennisfriends.co.kr' },
+          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+          { name: '알렉스 미첼슨', item: 'https://tennisfriends.co.kr/players/alex-michelsen' },
+        ]}
+      />
+      <FAQSchema faqs={faqs} />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
                     <PlayerProfileCard
                         name="Alex Michelsen"

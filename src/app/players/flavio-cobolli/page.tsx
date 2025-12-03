@@ -1,3 +1,4 @@
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
@@ -67,6 +68,14 @@ export default function FlavioCobolliPage() {
         title="플라비오 코볼리"
         excerpt="강력한 포핸드와 서브로 ATP 투어를 지배하는 이탈리아의 차세대 스타"
       >
+
+      <BreadcrumbSchema
+        items={[
+          { name: '홈', item: 'https://tennisfriends.co.kr' },
+          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+          { name: '플라비오 코볼리', item: 'https://tennisfriends.co.kr/players/flavio-cobolli' },
+        ]}
+      />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="flex flex-wrap gap-2 mb-6">
             {['테니스', '플라비오 코볼리', '선수 프로필', '이탈리아', '공격형', '강력한 포핸드'].map((tag) => (

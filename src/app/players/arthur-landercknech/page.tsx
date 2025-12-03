@@ -1,3 +1,4 @@
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
@@ -67,6 +68,14 @@ export default function ArthurLandercknechPage() {
         title="아르튀르 랭데르크네슈"
         excerpt="강력한 포핸드와 서브로 ATP 투어를 지배하는 프랑스의 차세대 스타"
       >
+
+      <BreadcrumbSchema
+        items={[
+          { name: '홈', item: 'https://tennisfriends.co.kr' },
+          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+          { name: '아르튀르 랑데르크네슈', item: 'https://tennisfriends.co.kr/players/arthur-landercknech' },
+        ]}
+      />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="flex flex-wrap gap-2 mb-6">
             {['테니스', '아르튀르 랭데르크네슈', '선수 프로필', '프랑스', '공격형', '강력한 포핸드'].map((tag) => (
