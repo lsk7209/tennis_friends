@@ -49,30 +49,30 @@ const playersWithBlogPosts = [
 ];
 
 // 선수 slug와 이름 매핑
-const playerNames: { [key: string]: { name: string; nameEn: string; country: string; countryFlag: string } } = {
-  'carlos-alcaraz': { name: '카를로스 알카라스', nameEn: 'Carlos Alcaraz', country: 'Spain', countryFlag: '🇪🇸' },
-  'jannik-sinner': { name: '야닉 시너', nameEn: 'Jannik Sinner', country: 'Italy', countryFlag: '🇮🇹' },
-  'novak-djokovic': { name: '노박 조코비치', nameEn: 'Novak Djokovic', country: 'Serbia', countryFlag: '🇷🇸' },
-  'daniil-medvedev': { name: '다닐 메드베데프', nameEn: 'Daniil Medvedev', country: 'Russia', countryFlag: '🇷🇺' },
-  'alexander-zverev': { name: '알렉산더 즈베레프', nameEn: 'Alexander Zverev', country: 'Germany', countryFlag: '🇩🇪' },
-  'andrey-rublev': { name: '안드레이 루블레프', nameEn: 'Andrey Rublev', country: 'Russia', countryFlag: '🇷🇺' },
-  'stefanos-tsitsipas': { name: '스테파노스 치치파스', nameEn: 'Stefanos Tsitsipas', country: 'Greece', countryFlag: '🇬🇷' },
-  'casper-ruud': { name: '카스페르 루드', nameEn: 'Casper Ruud', country: 'Norway', countryFlag: '🇳🇴' },
-  'alex-de-minaur': { name: '알렉스 드 미노', nameEn: 'Alex de Minaur', country: 'Australia', countryFlag: '🇦🇺' },
-  'taylor-fritz': { name: '테일러 프리츠', nameEn: 'Taylor Fritz', country: 'United States', countryFlag: '🇺🇸' },
-  'hubert-hurkacz': { name: '후베르트 후르카츠', nameEn: 'Hubert Hurkacz', country: 'Poland', countryFlag: '🇵🇱' },
-  'holger-rune': { name: '홀거 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰' },
-  'grigor-dimitrov': { name: '그리고르 디미트로프', nameEn: 'Grigor Dimitrov', country: 'Bulgaria', countryFlag: '🇧🇬' },
-  'ben-shelton': { name: '벤 쉘튼', nameEn: 'Ben Shelton', country: 'United States', countryFlag: '🇺🇸' },
-  'tommy-paul': { name: '토미 폴', nameEn: 'Tommy Paul', country: 'United States', countryFlag: '🇺🇸' },
-  'frances-tiafoe': { name: '프란시스 티아포', nameEn: 'Frances Tiafoe', country: 'United States', countryFlag: '🇺🇸' },
-  'ugo-humbert': { name: '우고 움베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷' },
-  'sebastian-baez': { name: '세바스티안 바에즈', nameEn: 'Sebastian Baez', country: 'Argentina', countryFlag: '🇦🇷' },
-  'lorenzo-musetti': { name: '로렌조 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹' },
-  'sebastian-korda': { name: '세바스찬 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸' },
-  'cameron-norrie': { name: '카메론 노리', nameEn: 'Cameron Norrie', country: 'United Kingdom', countryFlag: '🇬🇧' },
-  'tallon-griekspoor': { name: '탈론 크리에크스푸르', nameEn: 'Tallon Griekspoor', country: 'Netherlands', countryFlag: '🇳🇱' },
-  'nicolas-jarry': { name: '니콜라스 자리', nameEn: 'Nicolas Jarry', country: 'Chile', countryFlag: '🇨🇱' }
+const playerNames: { [key: string]: { name: string; nameEn: string; country: string; countryFlag: string; image?: string } } = {
+  'carlos-alcaraz': { name: '카를로스 알카라스', nameEn: 'Carlos Alcaraz', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/carlos-alcaraz.png' },
+  'jannik-sinner': { name: '야닉 시너', nameEn: 'Jannik Sinner', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/jannik-sinner.png' },
+  'novak-djokovic': { name: '노박 조코비치', nameEn: 'Novak Djokovic', country: 'Serbia', countryFlag: '🇷🇸', image: '/images/players/novak-djokovic.png' },
+  'daniil-medvedev': { name: '다닐 메드베데프', nameEn: 'Daniil Medvedev', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/daniil-medvedev.png' },
+  'alexander-zverev': { name: '알렉산더 즈베레프', nameEn: 'Alexander Zverev', country: 'Germany', countryFlag: '🇩🇪', image: '/images/players/alexander-zverev.png' },
+  'andrey-rublev': { name: '안드레이 루블레프', nameEn: 'Andrey Rublev', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/andrey-rublev.png' },
+  'stefanos-tsitsipas': { name: '스테파노스 치치파스', nameEn: 'Stefanos Tsitsipas', country: 'Greece', countryFlag: '🇬🇷', image: '/images/players/stefanos-tsitsipas.png' },
+  'casper-ruud': { name: '카스페르 루드', nameEn: 'Casper Ruud', country: 'Norway', countryFlag: '🇳🇴', image: '/images/players/casper-ruud.png' },
+  'alex-de-minaur': { name: '알렉스 드 미노', nameEn: 'Alex de Minaur', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/alex-de-minaur.png' },
+  'taylor-fritz': { name: '테일러 프리츠', nameEn: 'Taylor Fritz', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/taylor-fritz.png' },
+  'hubert-hurkacz': { name: '후베르트 후르카츠', nameEn: 'Hubert Hurkacz', country: 'Poland', countryFlag: '🇵🇱', image: '/images/players/hubert-hurkacz.png' },
+  'holger-rune': { name: '홀거 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/holger-rune.png' },
+  'grigor-dimitrov': { name: '그리고르 디미트로프', nameEn: 'Grigor Dimitrov', country: 'Bulgaria', countryFlag: '🇧🇬', image: '/images/players/grigor-dimitrov.png' },
+  'ben-shelton': { name: '벤 쉘튼', nameEn: 'Ben Shelton', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/ben-shelton.png' },
+  'tommy-paul': { name: '토미 폴', nameEn: 'Tommy Paul', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/tommy-paul.png' },
+  'frances-tiafoe': { name: '프란시스 티아포', nameEn: 'Frances Tiafoe', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/frances-tiafoe.png' },
+  'ugo-humbert': { name: '우고 움베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷', image: '/images/players/ugo-humbert.png' },
+  'sebastian-baez': { name: '세바스티안 바에즈', nameEn: 'Sebastian Baez', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/sebastian-baez.png' },
+  'lorenzo-musetti': { name: '로렌초 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/lorenzo-musetti.png' },
+  'sebastian-korda': { name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/sebastian-korda.png' },
+  'cameron-norrie': { name: '카메론 노리', nameEn: 'Cameron Norrie', country: 'United Kingdom', countryFlag: '🇬🇧', image: '/images/players/cameron-norrie.png' },
+  'tallon-griekspoor': { name: '탈론 크리에크스푸르', nameEn: 'Tallon Griekspoor', country: 'Netherlands', countryFlag: '🇳🇱', image: '/images/players/tallon-griekspoor.png' },
+  'nicolas-jarry': { name: '니콜라스 자리', nameEn: 'Nicolas Jarry', country: 'Chile', countryFlag: '🇨🇱', image: '/images/players/nicolas-jarry.png' }
 };
 
 export default function PlayersPage() {
@@ -125,27 +125,37 @@ export default function PlayersPage() {
     setCurrentPage(1);
   }, [searchQuery, sortBy]);
 
-  const getPlayerCard = (player: { slug: string; name: string; nameEn: string; country: string; countryFlag: string }) => {
+  const getPlayerCard = (player: { slug: string; name: string; nameEn: string; country: string; countryFlag: string; image?: string }) => {
     return (
       <Card key={player.slug} className="bg-white dark:bg-gray-800 border-0 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer">
         <CardContent className="p-6">
           <div className="flex items-start gap-4">
             {/* 선수 이미지 */}
             <div className="relative">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg relative overflow-hidden group">
-                {/* 배경 패턴 */}
-                <div className="absolute inset-0 opacity-20">
-                  <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,_white_1px,_transparent_1px)] bg-[length:8px_8px]"></div>
+              {player.image ? (
+                <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-2 border-white dark:border-gray-700 group-hover:border-blue-500 transition-colors">
+                  <img
+                    src={player.image}
+                    alt={player.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                {/* 국기 이모지 (큰 사이즈) */}
-                <div className="relative z-10 text-4xl transform group-hover:scale-110 transition-transform duration-300">
-                  {player.countryFlag}
+              ) : (
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg relative overflow-hidden group">
+                  {/* 배경 패턴 */}
+                  <div className="absolute inset-0 opacity-20">
+                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,_white_1px,_transparent_1px)] bg-[length:8px_8px]"></div>
+                  </div>
+                  {/* 국기 이모지 (큰 사이즈) */}
+                  <div className="relative z-10 text-4xl transform group-hover:scale-110 transition-transform duration-300">
+                    {player.countryFlag}
+                  </div>
+                  {/* 테니스 공 아이콘 (우측 하단 작은 장식) */}
+                  <div className="absolute bottom-1 right-1 opacity-40 group-hover:opacity-60 transition-opacity duration-300">
+                    <div className="w-3 h-3 rounded-full bg-white/60 border border-white/80"></div>
+                  </div>
                 </div>
-                {/* 테니스 공 아이콘 (우측 하단 작은 장식) */}
-                <div className="absolute bottom-1 right-1 opacity-40 group-hover:opacity-60 transition-opacity duration-300">
-                  <div className="w-3 h-3 rounded-full bg-white/60 border border-white/80"></div>
-                </div>
-              </div>
+              )}
             </div>
 
             {/* 선수 정보 */}
@@ -330,11 +340,10 @@ export default function PlayersPage() {
                           variant={currentPage === page ? "default" : "outline"}
                           size="sm"
                           onClick={() => setCurrentPage(page)}
-                          className={`min-w-[40px] ${
-                            currentPage === page
+                          className={`min-w-[40px] ${currentPage === page
                               ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0"
                               : ""
-                          }`}
+                            }`}
                         >
                           {page}
                         </Button>
@@ -375,7 +384,7 @@ export default function PlayersPage() {
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600">
-        <div className="container mx-auto max-w-4xl px-4 text-center">
+        <div className="container mx-auto max-w-5xl px-4 text-center">
           <Card className="bg-white/95 backdrop-blur-md border-0 shadow-2xl">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">

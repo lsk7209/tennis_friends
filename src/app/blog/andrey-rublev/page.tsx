@@ -11,12 +11,12 @@ export const metadata = {
   description: '불꽃 같은 포핸드, 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 안드레이 루블레프의 성장 배경과 경기 철학, 라이벌 구도를 정리했습니다.',
   keywords: ['테니스', '안드레이 루블레프', '선수 프로필', '스토리', '러시아'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/andrey-rublev',
+    canonical: 'https://tennisfriends.co.kr/blog/andrey-rublev',
   },
   openGraph: {
     title: '안드레이 루블레프 선수 프로필과 스토리',
     description: '불꽃 같은 포핸드, 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 안드레이 루블레프의 성장 배경과 경기 철학, 라이벌 구도를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/andrey-rublev',
+    url: 'https://tennisfriends.co.kr/blog/andrey-rublev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -113,7 +113,7 @@ export default function AndreyRublevBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="andrey-rublev" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

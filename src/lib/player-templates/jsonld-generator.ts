@@ -47,7 +47,7 @@ export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
       name: player.nameEn,
       alternateName: player.nameKo,
     },
-    url: `https://www.tennisfrens.com/players/${player.slug}`,
+    url: `https://tennisfriends.co.kr/players/${player.slug}`,
     description: `${player.nameKo}의 프로필 페이지`,
   };
 
@@ -88,19 +88,19 @@ export function generateBreadcrumbSchema(player: Player) {
         '@type': 'ListItem',
         position: 1,
         name: '홈',
-        item: 'https://www.tennisfrens.com',
+        item: 'https://tennisfriends.co.kr',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: '테니스 선수',
-        item: 'https://www.tennisfrens.com/players',
+        item: 'https://tennisfriends.co.kr/players',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: player.nameKo,
-        item: `https://www.tennisfrens.com/players/${player.slug}`,
+        item: `https://tennisfriends.co.kr/players/${player.slug}`,
       },
     ],
   };

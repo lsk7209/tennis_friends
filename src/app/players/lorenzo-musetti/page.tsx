@@ -2,30 +2,32 @@ import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
+import PlayerProfileCard from '@/components/players/PlayerProfileCard';
+import PlayerAttributes from '@/components/players/PlayerAttributes';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users, BookOpen } from 'lucide-react';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '로렌조 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
-  description: '로렌조 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타.',
-  keywords: ['로렌조 무세티', 'Lorenzo Musetti', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '원핸드 백핸드', '차세대'],
+  title: '로렌조 무세티 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: '로렌조 무세티의 예술적인 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 창의적인 샷 메이킹과 우아함으로 코트를 수놓는 이탈리아의 테니스 아티스트.',
+  keywords: ['로렌조 무세티', 'Lorenzo Musetti', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '원핸드 백핸드', '예술적'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/players/lorenzo-musetti',
+    canonical: 'https://tennisfriends.co.kr/players/lorenzo-musetti',
   },
   openGraph: {
-    title: '로렌조 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
-    description: '로렌조 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://www.tennisfrens.com/players/lorenzo-musetti',
+    title: '로렌조 무세티 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '로렌조 무세티의 예술적인 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    url: 'https://tennisfriends.co.kr/players/lorenzo-musetti',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '로렌조 무세티 — 세계랭킹 25위권 | 플레이스타일·명장면·최근 경기력',
-    description: '로렌조 무세티의 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '로렌조 무세티 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '로렌조 무세티의 예술적인 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -44,7 +46,6 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'why-again-notable', text: '로렌조 무세티, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
   { id: 'growth-story', text: '로렌조 무세티는 어떻게 여기까지 왔을까?', depth: 2 },
-  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
   { id: 'recent-form', text: '요즘 로렌조 무세티의 경기력 흐름은 어떤가?', depth: 2 },
@@ -54,23 +55,23 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 const faqs = [
   {
     q: '로렌조 무세티의 경기 스타일은 어떤가요?',
-    a: '원핸드 백핸드 스타일로, 우아한 원핸드 백핸드와 창의적인 플레이가 특징입니다. 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주는 대표적인 선수입니다.',
+    a: '화려한 원핸드 백핸드와 창의적인 샷 메이킹이 돋보이는 올라운드 플레이어입니다. 드롭샷과 로브 등 다양한 기술을 구사합니다.',
   },
   {
     q: '무세티의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
-    a: '최고 랭킹은 25위권이었으며, 현재도 25위권을 유지하고 있습니다. 특히 클레이 코트에서 강력한 모습을 보여주며, 큰 대회에서도 안정적인 경기력을 보여주고 있습니다.',
+    a: '최고 랭킹은 15위이며, 현재는 20위권 내외를 유지하고 있습니다. 꾸준히 성장하며 탑 10 진입을 노리고 있습니다.',
   },
   {
     q: '무세티의 강점은 무엇인가요?',
-    a: '우아한 원핸드 백핸드와 창의적인 플레이가 최대 강점입니다. 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주며, 특히 클레이 코트에서 강력한 모습을 보여줍니다.',
+    a: '예측 불가능한 샷 선택과 뛰어난 손감각, 그리고 클레이 코트에서의 강점이 있습니다. 특히 백핸드 다운더라인은 일품입니다.',
   },
   {
-    q: '무세티의 성장 배경은 어떤가요?',
-    a: '이탈리아에서 태어나 어릴 때부터 테니스를 시작했고, 주니어 시절부터 원핸드 백핸드의 아름다움을 보여주며 빠르게 성장했습니다. 특히 클레이 코트에서의 강력한 모습으로 주목받기 시작했습니다.',
+    q: '무세티의 약점은 무엇인가요?',
+    a: '감정 기복이 심해 경기력에 영향을 미칠 때가 있으며, 하드 코트에서의 성적이 클레이 코트에 비해 다소 떨어집니다.',
   },
   {
     q: '무세티를 한 문장으로 설명하면?',
-    a: '우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타입니다.',
+    a: '코트 위에 그림을 그리는 이탈리아의 테니스 예술가입니다.',
   },
 ];
 
@@ -79,138 +80,68 @@ export default function LorenzoMusettiPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
         title="로렌조 무세티"
-        excerpt="우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타"
+        excerpt="창의적인 샷 메이킹과 우아함으로 코트를 수놓는 이탈리아의 테니스 아티스트"
+        image="/images/players/lorenzo-musetti.png"
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '로렌조 무세티', '선수 프로필', '이탈리아', '원핸드 백핸드', '차세대'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerProfileCard
+            name="Lorenzo Musetti"
+            country="Italy"
+            age={22}
+            height="185cm"
+            plays="Right-handed (One-handed backhand)"
+            turnedPro={2019}
+            grandSlams={0}
+            ranking={25}
+          />
 
-          {/* Table of Contents */}
-          <TOC items={tocItems} />
+          <div className="prose dark:prose-invert max-w-none">
+            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8">
+              이탈리아의 낭만 테니스. <strong className="text-purple-600 dark:text-purple-400">예술적인 원핸드 백핸드</strong>와 천재적인 감각으로 관중을 매료시키는 코트 위의 마법사.
+            </p>
 
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">로렌조 무세티, 왜 주목받는 선수인가?</h2>
+            <TOC items={tocItems} />
+
+            <h2 id="why-again-notable" className="flex items-center gap-2 mt-12">
+              <Crown className="w-6 h-6 text-yellow-500" />
+              로렌조 무세티, 왜 주목받는 선수인가?
+            </h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                 <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                  우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타
+                  창의적인 샷 메이킹과 우아함으로 코트를 수놓는 이탈리아의 테니스 아티스트
                 </p>
               </div>
             </blockquote>
-            <p>로렌조 무세티는 이탈리아 출신의 세계랭킹 25위권 테니스 선수로, 우아한 원핸드 백핸드와 창의적인 플레이로 ATP 투어를 지배하고 있다. 세계랭킹 25위권을 유지하며, 특히 클레이 코트에서 강력한 모습을 보여준다. 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주는 그의 테니스는 이탈리아 테니스의 미래로 평가받는다.</p>
-            <p>그는 주니어 시절부터 원핸드 백핸드의 아름다움을 보여주며 빠르게 성장했고, 특히 클레이 코트에서의 강력한 모습으로 주목받기 시작했다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 큰 대회에서도 안정적인 경기력을 보여주고 있다. 그의 테니스는 화려함과 효율을 모두 추구하며, 특히 우아한 원핸드 백핸드가 뛰어나다.</p>
+            <p>로렌조 무세티는 야닉 시너와 함께 이탈리아 테니스의 황금기를 이끄는 주역이다. 파워 중심의 현대 테니스에서 보기 드문 '기술자' 유형으로, 그의 플레이는 마치 예술 작품을 보는 듯한 느낌을 준다.</p>
+            <p>특히 그의 원핸드 백핸드는 현역 선수 중 가장 아름답다는 평가를 받는다. 단순히 폼만 좋은 것이 아니라, 위기 상황에서 터져 나오는 기상천외한 샷들은 그가 가진 천재성을 증명한다. 성적을 떠나 '보는 맛'이 있는 선수로 팬들의 사랑을 받고 있다.</p>
 
-            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>로렌조 무세티는 이탈리아 출신의 세계랭킹 25위권 선수로, 원핸드 백핸드 스타일과 창의적인 플레이가 특징인 ATP 투어의 차세대 스타다.</p>
-            
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">이탈리아</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">2002년 (22세)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">25위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">25위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">올코트</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">원핸드 백핸드</span></span>
-                </li>
-              </ul>
-            </div>
+            <h2 id="what-type-of-player" className="flex items-center gap-2 mt-12">
+              <Target className="w-6 h-6 text-red-500" />
+              이 선수는 어떤 유형의 플레이어인가?
+            </h2>
+            <p><strong>"창의적인 테크니션 (Creative Technician)"</strong></p>
+            <p>무세티는 정형화된 패턴보다는 상황에 맞는 다양한 구질과 코스 선택으로 상대를 공략하는 올라운드 플레이어다.</p>
 
-            <p>플레이 스타일은 올코트로 분류된다. 베이스라인에서 강력한 그라운드 스트로크를 구사하면서도, 기회가 생기면 네트로 전진해 발리로 마무리하는 능력을 갖추고 있다. 특히 우아한 원핸드 백핸드가 그의 시그니처 무기로, 현대 테니스에서 점점 사라져가는 한 손 백핸드의 아름다움을 보여주는 대표적인 선수다.</p>
-            
-            <div className="not-prose my-6 flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border-blue-300 dark:border-blue-700">
-                <Zap className="w-3 h-3 mr-1 inline" />
-                우아한 원핸드 백핸드
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
-                <Shield className="w-3 h-3 mr-1 inline" />
-                창의적인 플레이
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
-                <Target className="w-3 h-3 mr-1 inline" />
-                클레이 전문
-              </Badge>
-            </div>
-            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"우아한 원핸드 백핸드"</strong>, <strong>"창의적인 플레이"</strong>, <strong>"클레이 전문"</strong>이다. 그의 테니스는 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주며, 특히 클레이 코트에서 강력한 모습을 보여준다.</p>
+            <PlayerAttributes
+              attributes={[
+                { name: '백핸드 (Backhand)', score: 9.5, description: '그의 트레이드마크. 앵글 샷, 다운더라인, 슬라이스 등 모든 기술을 완벽하게 구사한다.' },
+                { name: '창의성 (Creativity)', score: 10, description: '예측 불가능한 샷을 만들어낸다. 드롭샷, 로브, 트위너 등 화려한 기술을 즐긴다.' },
+                { name: '터치 (Touch)', score: 9.5, description: '손감각이 매우 뛰어나다. 네트 앞에서의 섬세한 발리와 드롭 발리는 일품이다.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '백핸드에 가려져 있지만, 포핸드 역시 강력한 스핀과 파워를 겸비하고 있다.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '감정 기복이 심한 편이다. 경기가 안 풀릴 때 스스로 무너지는 모습을 보이기도 한다.' },
+              ]}
+            />
 
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="growth-story">로렌조 무세티는 어떻게 여기까지 왔을까?</h2>
-            <p>무세티의 성장 스토리는 이탈리아에서의 어린 시절과 주니어 시절부터의 원핸드 백핸드의 아름다움이 핵심이다.</p>
-
-            <h3>성장 배경</h3>
-            <p>그는 이탈리아에서 태어나 어릴 때부터 테니스를 시작했다. 코치였던 부모와 형제와 함께한 반복 훈련은 원핸드 백핸드의 아름다움을 강조했다. 이동이 잦은 유소년 시절에도 일지를 쓰며 하루의 루틴을 고정했고, 실내와 야외를 오가는 환경에서 바운드의 차이를 몸으로 익혔다.</p>
-
-            <h3>주니어 시절</h3>
-            <p>주니어 시절부터 원핸드 백핸드의 아름다움을 보여주며 빠르게 성장했다. 특히 클레이 코트에서의 강력한 모습으로 주목받기 시작했고, 이탈리아 테니스의 미래로 평가받기 시작했다. 이 시기 동안 우아한 원핸드 백핸드와 창의적인 플레이가 그의 시그니처 무기로 자리 잡았다.</p>
-
-            <h3>전환점</h3>
-            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
-              <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전환점</p>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong>주니어에서 프로로 전환</strong>한 후 빠르게 적응하며 큰 대회에서 인상적인 경기력을 보여주기 시작했다. 특히 클레이 코트에서 강력한 모습을 보여주며 이탈리아 테니스의 차세대 스타로 주목받기 시작했다.
-              </p>
-            </div>
-            <p>주니어에서 프로로 전환한 후 그는 빠르게 적응하며 큰 대회에서 인상적인 경기력을 보여주기 시작했다. 특히 클레이 코트에서 강력한 모습을 보여주며 이탈리아 테니스의 차세대 스타로 주목받기 시작했다. 이 시기 동안 우아한 원핸드 백핸드와 창의적인 플레이가 그의 시그니처 무기로 자리 잡았다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>무세티가 세계 상위권을 유지하는 힘은 우아한 원핸드 백핸드, 창의적인 플레이, 그리고 클레이 코트에서의 적응력에서 나온다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              기술적 강점
-            </h3>
-            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong className="text-purple-700 dark:text-purple-300">우아한 원핸드 백핸드</strong>가 가장 큰 무기. 현대 테니스에서 점점 사라져가는 한 손 백핸드의 아름다움을 보여준다.
-              </p>
-            </div>
-            <p>우아한 원핸드 백핸드가 가장 큰 무기다. 현대 테니스에서 점점 사라져가는 한 손 백핸드의 아름다움을 보여준다. 포핸드는 넓은 궤도와 빠른 채찍질로 코트를 벌린다. 백핸드는 원핸드의 우아함으로 라인을 얇게 긁어 각을 만든다. 특히 클레이 코트에서 긴 랠리를 두려워하지 않으며, 깊은 구질로 상대를 압박한다.</p>
-            <p>서브는 안정적인 구질로 시작해 첫 두 타구의 구조를 설계하고, 짧은 리턴이 오면 하프코트에서 한 걸음 전진해 발리로 결말을 재촉한다. 리턴은 퍼스트 서브에는 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 전진해 접점을 앞세운다. 이어지는 첫 스트로크는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서 코너의 문을 열어 상대의 스텝을 묶는다.</p>
+            <p>플레이 스타일은 매우 다채롭다. 베이스라인 뒤에서 묵직한 탑스핀을 보내다가도, 기습적인 드롭샷으로 상대를 네트로 불러들인다. 상대의 허를 찌르는 패싱샷과 로브는 그의 전매특허다.</p>
+            <p>클레이 코트에서 가장 좋은 경기력을 보여주지만, 최근에는 하드 코트와 잔디 코트에서도 적응력을 높여가고 있다. 다만 서브 파워가 다소 부족하고, 리턴 게임에서 기복을 보이는 점은 보완해야 할 부분이다.</p>
 
             <h3 className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
               피지컬 능력
             </h3>
-            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">5세트 경기에서도 후반까지 안정적인 경기력</strong>을 유지한다.</p>
+            <p>185cm의 적당한 키에 유연한 신체를 가지고 있다. 근력보다는 탄력을 이용한 스윙 메커니즘을 가지고 있어 부드러운 샷을 구사한다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">유연한 몸놀림</strong>은 어려운 자세에서도 밸런스를 유지하게 해준다.</p>
 
             <h3 className="flex items-center gap-2">
               <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -223,129 +154,56 @@ export default function LorenzoMusettiPage() {
                   핵심 통계
                 </p>
               </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                클레이 코트에서의 승률이 높으며, 특히 긴 랠리에서의 승률이 뛰어나다. 우아한 원핸드 백핸드를 구사하는 자신감이 뛰어나다.
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
+                ATP 투어 2승 · 함부르크 오픈 우승(ATP 500) · 주니어 세계 랭킹 <strong className="text-green-700 dark:text-green-400 text-base">1위 출신</strong>
               </p>
             </div>
-            <p>클레이 코트에서의 승률이 높으며, 특히 긴 랠리에서의 승률이 뛰어나다. 우아한 원핸드 백핸드를 구사하는 자신감이 뛰어나며, 특히 중요한 포인트에서도 침착하게 경기를 진행한다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              전술적 다양성
-            </h3>
-            <p>베이스라인 게임을 기본으로 하되, 기회가 생기면 네트로 전진해 발리로 마무리한다. 상대의 약점을 파악해 구질을 조절하며, 특히 클레이 코트에서 깊은 구질로 상대를 압박한다. 창의적인 플레이로 상대를 혼란스럽게 만드는 능력이 뛰어나다.</p>
+            <p>예술가적인 기질이 있어 감정 표현이 솔직하다. 이는 양날의 검이 되기도 하는데, 분위기를 타면 누구도 막을 수 없지만, 한 번 흔들리면 걷잡을 수 없이 무너지기도 한다. 최근에는 멘탈 코칭을 통해 평정심을 유지하려 노력하고 있다.</p>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
-            <p>무세티를 설명하는 대표 경기는 클레이 코트에서의 우승 경기와 큰 대회에서의 승리 경기다.</p>
+            <h2 id="growth-story">로렌조 무세티는 어떻게 여기까지 왔을까?</h2>
+            <p>무세티는 2019년 호주 오픈 주니어 단식 우승을 차지하며 세계 주니어 랭킹 1위에 올랐다. 프로 데뷔 후에도 챌린저 투어에서 두각을 나타내며 빠르게 성장했다.</p>
+            <p>2022년 함부르크 오픈 결승에서 카를로스 알카라스를 꺾고 생애 첫 투어 우승을 차지하며 전 세계를 놀라게 했다. 이후 나폴리 오픈에서도 우승하며 이탈리아 테니스의 차세대 주자로 확실히 자리매김했다.</p>
 
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-sm">
+            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            <p>무세티의 잠재력이 폭발한 경기는 2022년 함부르크 오픈 결승이다.</p>
+
+            <h3>2022년 함부르크 오픈 결승</h3>
+            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
               <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">클레이 코트 우승</h4>
+                <Award className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">천재 대 천재</p>
               </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                <strong>특징:</strong> 우아한 원핸드 백핸드로 우승
-              </p>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                이 경기에서 드러난 건 무세티의 우아한 원핸드 백핸드와 창의적인 플레이였다. 특히 클레이 코트에서 긴 랠리를 두려워하지 않는 능력이 뛰어났고, 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여줬다.
+                당시 세계 랭킹 1위를 향해 질주하던 <strong>카를로스 알카라스</strong>와 맞붙어 풀세트 접전 끝에 2-1 승리를 거뒀다. 5번의 매치 포인트를 놓치고도 무너지지 않고 끝내 우승을 차지한, 기술과 멘탈이 모두 빛난 명승부였다.
               </p>
             </div>
-
-            <p>이 경기로 인해 무세티는 이탈리아 테니스의 차세대 스타로 평가받기 시작했고, 특히 우아한 원핸드 백핸드와 창의적인 플레이가 뛰어나다는 것을 보여줬다. 팬들과 전문가들은 그의 원핸드 백핸드의 아름다움을 높이 평가했고, 특히 클레이 코트에서의 강력한 모습을 인정받았다.</p>
-
-            <blockquote className="not-prose my-6 p-4 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-500 rounded-r-lg">
-              <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                "이 경기에서 드러난 건 무세티의 우아한 원핸드 백핸드와 창의적인 플레이였다."
-              </p>
-            </blockquote>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
-            <p>경기력뿐 아니라 우아한 플레이 스타일과 창의성 덕분에 팬층이 두텁다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Heart className="w-5 h-5 text-red-600 dark:text-red-400" />
-              코트 매너
-            </h3>
-            <p>우아한 플레이 스타일이 특징이다. 경기 중에도 감정을 드러내지 않고 차분하게 경기를 진행하며, 특히 중요한 포인트에서도 침착하게 원핸드 백핸드를 구사한다. 페어플레이를 중시하며, 상대 선수와의 관계도 좋다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              인터뷰 스타일
-            </h3>
-            <p>인터뷰에서 경기 분석을 차분하게 설명하며, 특히 우아한 원핸드 백핸드와 창의적인 플레이에 대해 자세히 설명한다. 팀과의 협력도 중요하게 생각하며, 특히 이탈리아 테니스의 미래를 이끌어갈 선수로 평가받는다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              팀과의 관계
-            </h3>
-            <p>코치와의 관계가 좋으며, 특히 전술적 조언을 잘 받아들인다. 팀과의 협력도 중요하게 생각하며, 특히 이탈리아 테니스의 미래를 이끌어갈 선수로 평가받는다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <p>팬들은 무세티의 '낭만'에 끌린다.</p>
+            <p>효율성만을 강조하는 현대 테니스에서, 아름다움과 창의성을 추구하는 그의 플레이는 신선한 충격을 준다. 또한 잘생긴 외모와 스타일리시한 패션 감각도 인기 요인 중 하나다.</p>
 
             <h2 id="recent-form">요즘 로렌조 무세티의 경기력 흐름은 어떤가?</h2>
-            <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 클레이 코트에서 강력한 모습을 보여주고 있다.</p>
+            <p>2023년에는 다소 기복 있는 모습을 보였으나, 2024년 들어 다시 안정감을 찾아가고 있다. 몬테카를로 마스터스 등 클레이 시즌에서 좋은 성적을 거두며 랭킹을 회복 중이다.</p>
 
-            <h3 className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              최근 성적
-            </h3>
-            <div className="not-prose my-4 p-4 bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 rounded-r-lg shadow-sm">
-              <div className="flex items-center gap-2 mb-2">
-                <Target className="w-4 h-4 text-blue-700 dark:text-blue-400" />
-                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-0">
-                  최근 성과
-                </p>
-              </div>
-              <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1 mb-0">
-                <li>• 클레이 코트에서 꾸준한 성적</li>
-                <li>• 큰 대회에서 안정적인 경기력</li>
-                <li>• 우아한 원핸드 백핸드로 주목받음</li>
-              </ul>
-            </div>
-            <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 클레이 코트에서 강력한 모습을 보여주고 있다. 우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 차세대 스타로 주목받고 있으며, 특히 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
-              부상 및 컨디션
-            </h3>
-            <p>큰 부상 없이 경기에 임하고 있으며, 특히 체력 관리도 잘 하고 있다. 우아한 원핸드 백핸드를 구사하는 능력이 뛰어나며, 특히 클레이 코트에서의 적응력이 뛰어나다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-              랭킹 변동
-            </h3>
-            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 25위권을 유지하고 있다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 클레이 시즌에서 강력한 모습을 보여준다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 특히 우아한 원핸드 백핸드 활용을 더욱 강화하고 있다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <h3>최근 성적</h3>
+            <p>아빠가 된 후 책임감이 더해져 멘탈적으로 한층 성숙해졌다는 평가를 받는다. 재능만큼은 의심할 여지가 없는 만큼, 꾸준함만 갖춘다면 탑 10 진입은 시간문제다.</p>
 
             <h2 id="one-sentence-summary">로렌조 무세티, 한 문장으로 정리하면?</h2>
-            <p>우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타다.</p>
-            <p>무세티는 현대 테니스에서 점점 사라져가는 원핸드 백핸드의 아름다움을 보여주며, 특히 클레이 코트에서 긴 랠리를 두려워하지 않는다. 우아한 원핸드 백핸드와 창의적인 플레이로 상대를 압박하며, 인내로 경기를 이끌어간다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 클레이 시즌에서 강력한 모습을 보여주고 있다.</p>
+            <p>로렌조 무세티는 우아한 원핸드 백핸드와 창의적인 플레이로 이탈리아 테니스의 미래를 이끌어가는 차세대 스타다.</p>
+            <p>그의 테니스는 단순한 승부가 아닌 하나의 공연을 보는 듯한 즐거움을 준다. 천재적인 감각과 예술적인 샷 메이킹은 그를 특별하게 만들며, 이탈리아 테니스의 르네상스를 이끄는 주역으로 기억될 것이다.</p>
           </div>
 
           {/* FAQ Section */}
-          <div className="mt-12">
-            <FAQ items={faqs} />
-          </div>
+          <FAQ items={faqs} />
 
-          {/* CTA Section */}
-          <div className="mt-12">
-            <CTA
-              title="더 많은 테니스 선수 이야기"
-              description="다른 테니스 선수들의 스토리도 확인해보세요"
-              primaryButton={{
-                text: "선수 목록 보기",
-                href: "/players"
-              }}
-            />
-          </div>
+          {/* CTA */}
+          <CTA />
         </div>
       </Article>
     </div>
   );
 }
-

@@ -11,12 +11,12 @@ export const metadata = {
   description: '낮은 탄도와 깊은 낙구, 독특한 포지셔닝으로 지공의 미학을 구현하는 다닐 메드베데프의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
   keywords: ['테니스', '다닐 메드베데프', '선수 프로필', '스토리', '러시아'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/daniil-medvedev',
+    canonical: 'https://tennisfriends.co.kr/blog/daniil-medvedev',
   },
   openGraph: {
     title: '다닐 메드베데프 선수 프로필과 스토리',
     description: '낮은 탄도와 깊은 낙구, 독특한 포지셔닝으로 지공의 미학을 구현하는 다닐 메드베데프의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/daniil-medvedev',
+    url: 'https://tennisfriends.co.kr/blog/daniil-medvedev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -113,7 +113,7 @@ export default function DaniilMedvedevBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="daniil-medvedev" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

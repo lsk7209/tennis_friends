@@ -2,22 +2,24 @@ import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
+import PlayerProfileCard from '@/components/players/PlayerProfileCard';
+import PlayerAttributes from '@/components/players/PlayerAttributes';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, BookOpen } from 'lucide-react';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '프란시스 티아포 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
   description: '프란시스 티아포의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 에너지와 창의로 하드코트를 달구는 미국의 대표 선수.',
   keywords: ['프란시스 티아포', 'Frances Tiafoe', '테니스', 'ATP', '플레이스타일', '미국 테니스', '하드 전문', '에너지와 창의'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/players/frances-tiafoe',
+    canonical: 'https://tennisfriends.co.kr/players/frances-tiafoe',
   },
   openGraph: {
     title: '프란시스 티아포 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '프란시스 티아포의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://www.tennisfrens.com/players/frances-tiafoe',
+    url: 'https://tennisfriends.co.kr/players/frances-tiafoe',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -44,7 +46,6 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'why-again-notable', text: '프란시스 티아포, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
   { id: 'growth-story', text: '프란시스 티아포는 어떻게 여기까지 왔을까?', depth: 2 },
-  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
   { id: 'recent-form', text: '요즘 프란시스 티아포의 경기력 흐름은 어떤가?', depth: 2 },
@@ -54,23 +55,23 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 const faqs = [
   {
     q: '프란시스 티아포의 경기 스타일은 어떤가요?',
-    a: '하드 전문 스타일로, 에너지와 창의가 특징입니다. 폭발적인 스텝과 감각적인 터치로 흐름을 뒤집으며, 변주를 두려워하지 않는 전진으로 경기를 자신의 리듬으로 끌고 옵니다.',
+    a: '독특한 폼의 포핸드와 창의적인 네트 플레이가 특징인 공격적인 올라운더입니다. 쇼맨십이 뛰어나 관중과 호흡하며 경기하는 것을 즐깁니다.',
   },
   {
     q: '티아포의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
-    a: '최고 랭킹은 상위권이었으며, 현재는 상위권을 유지하고 있습니다. 특히 하드 코트에서 강력한 모습을 보여주며 안정적인 성적을 거두고 있습니다.',
+    a: '최고 랭킹은 10위이며, 현재는 20위권을 유지하고 있습니다. 2022년 US 오픈 4강 진출이 커리어 하이입니다.',
   },
   {
     q: '티아포의 강점은 무엇인가요?',
-    a: '에너지와 창의가 최대 강점입니다. 폭발적인 스텝과 감각적인 터치로 흐름을 뒤집으며, 변주를 두려워하지 않는 전진으로 경기를 자신의 리듬으로 끌고 옵니다.',
+    a: '폭발적인 포핸드와 뛰어난 발리 감각, 그리고 코트 전체를 활용하는 운동 능력이 강점입니다.',
   },
   {
-    q: '티아포의 성장 배경은 어떤가요?',
-    a: '커뮤니티 코트에서 시작했습니다. 제한된 환경에서도 매일 코트를 지키며 벽치기·풋워크·코어 드릴을 빠뜨리지 않는 루틴을 만들었고, 동작을 줄이고 접점을 앞에 둔다는 한 문장을 속도로 번역했습니다.',
+    q: '티아포의 약점은 무엇인가요?',
+    a: '서브의 일관성이 다소 부족하고, 경기 중 기복이 심해 집중력을 잃는 경우가 종종 있습니다.',
   },
   {
     q: '티아포를 한 문장으로 설명하면?',
-    a: '에너지와 창의로 하드코트를 달구는 미국의 대표 선수입니다.',
+    a: '코트 위의 엔터테이너이자, 불가능을 가능으로 만드는 미국의 희망입니다.',
   },
 ];
 
@@ -80,23 +81,31 @@ export default function FrancesTiafoePage() {
       <Article
         title="프란시스 티아포"
         excerpt="에너지와 창의로 하드코트를 달구는 미국의 대표 선수"
+        image="/images/players/frances-tiafoe.png"
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '프란시스 티아포', '선수 프로필', '미국', '하드 전문', '에너지와 창의'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerProfileCard
+            name="Frances Tiafoe"
+            country="United States"
+            age={26}
+            height="188cm"
+            plays="Right-handed (Two-handed backhand)"
+            turnedPro={2015}
+            grandSlams={0}
+            ranking={20}
+          />
 
-          {/* Table of Contents */}
-          <TOC items={tocItems} />
+          <div className="prose dark:prose-invert max-w-none">
+            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8">
+              코트 위의 쇼맨. <strong className="text-purple-600 dark:text-purple-400">독창적인 플레이</strong>와 넘치는 에너지로 관중을 열광시키는 미국의 슈퍼스타.
+            </p>
 
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">프란시스 티아포, 왜 주목받는 선수인가?</h2>
+            <TOC items={tocItems} />
+
+            <h2 id="why-again-notable" className="flex items-center gap-2 mt-12">
+              <Crown className="w-6 h-6 text-yellow-500" />
+              프란시스 티아포, 왜 주목받는 선수인가?
+            </h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
@@ -105,112 +114,34 @@ export default function FrancesTiafoePage() {
                 </p>
               </div>
             </blockquote>
-            <p>프란시스 티아포는 미국 출신의 세계랭킹 상위권 테니스 선수로, 에너지와 창의로 하드 코트를 지배하고 있다. 최고 랭킹 상위권에 올랐던 경력의 소유자이며, 특히 하드 코트에서 강력한 모습을 보여준다. 폭발적인 스텝과 감각적인 터치, 변주를 두려워하지 않는 전진이 그의 테니스를 특징짓는다.</p>
-            <p>그는 US 오픈에서 준우승을 차지하며 그랜드 슬램 결승에 진출했고, 하드 코트에서 안정적인 성적을 거두고 있다. 최근 몇 시즌 동안 하드 시즌에서 특히 강력한 모습을 보여주며, 에너지와 창의로 평가받는다. 그의 테니스는 폭발적인 스텝과 감각적인 터치가 핵심이다.</p>
+            <p>프란시스 티아포는 시에라리온 이민자 가정 출신으로, 어려운 환경을 딛고 세계적인 선수로 성장한 '아메리칸 드림'의 주인공이다. 2022년 US 오픈에서 라파엘 나달을 꺾고 4강에 오르며 미국 테니스 팬들을 열광시켰다.</p>
+            <p>그의 경기는 지루할 틈이 없다. 독특한 스윙 폼에서 나오는 강력한 샷과 예상치 못한 타이밍의 드롭샷, 그리고 득점 후 보여주는 세레머니는 그의 트레이드마크다. '빅 포' 시대 이후 가장 개성 넘치는 선수 중 한 명으로 꼽히며, 테니스의 대중화를 이끄는 스타로 주목받고 있다.</p>
 
-            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>프란시스 티아포는 미국 출신의 세계랭킹 상위권 선수로, 하드 전문 스타일과 에너지, 창의가 특징인 ATP 투어의 안정적인 선수다.</p>
-            
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">미국</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">1998년 (26세)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">상위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">상위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">하드 전문</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">에너지와 창의</span></span>
-                </li>
-              </ul>
-            </div>
+            <h2 id="what-type-of-player" className="flex items-center gap-2 mt-12">
+              <Target className="w-6 h-6 text-red-500" />
+              이 선수는 어떤 유형의 플레이어인가?
+            </h2>
+            <p><strong>"창의적인 올라운더 (Creative All-Rounder)"</strong></p>
+            <p>프란시스 티아포는 미국 출신의 선수로, 변칙적인 플레이와 뛰어난 운동 신경을 바탕으로 한 올라운드 플레이가 특징이다.</p>
 
-            <p>플레이 스타일은 하드 전문으로 분류된다. 베이스라인에서 폭발적인 스텝과 감각적인 터치를 구사하며, 변주를 두려워하지 않는 전진으로 경기를 자신의 리듬으로 끌고 온다. 특히 에너지와 창의가 그의 시그니처 무기로, 속도로 공간을 만들고 터치로 문장을 닫는다.</p>
-            
-            <div className="not-prose my-6 flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 border-red-300 dark:border-red-700">
-                <Zap className="w-3 h-3 mr-1 inline" />
-                에너지와 창의
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
-                <Shield className="w-3 h-3 mr-1 inline" />
-                폭발적인 스텝
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
-                <Trophy className="w-3 h-3 mr-1 inline" />
-                미국의 대표
-              </Badge>
-            </div>
-            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"에너지와 창의"</strong>, <strong>"폭발적인 스텝"</strong>, <strong>"미국의 대표"</strong>이다. 그의 테니스는 속도로 공간을 만들고 터치로 문장을 닫으며, 특히 변주를 두려워하지 않는 전진이 뛰어나다.</p>
+            <PlayerAttributes
+              attributes={[
+                { name: '포핸드 (Forehand)', score: 9.0, description: '테이크백이 짧고 독특하지만, 임팩트 순간의 폭발력이 엄청나다. 위너 생산 능력이 뛰어나다.' },
+                { name: '네트 플레이 (Net Play)', score: 9.0, description: '손감각이 매우 좋다. 발리와 스매싱은 물론, 터치 샷도 자유자재로 구사한다.' },
+                { name: '운동 신경 (Athleticism)', score: 8.8, description: '탄력적인 움직임으로 코트를 넓게 쓴다. 어려운 공도 끝까지 쫓아가 받아낸다.' },
+                { name: '쇼맨십 (Showmanship)', score: 10, description: '관중의 환호를 에너지원으로 삼는다. 큰 경기일수록 더 좋은 경기력을 보여준다.' },
+                { name: '서브 (Serve)', score: 8.5, description: '파워는 좋으나 일관성이 다소 부족하다. 하지만 중요할 때 터지는 에이스는 위협적이다.' },
+              ]}
+            />
 
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="growth-story">프란시스 티아포는 어떻게 여기까지 왔을까?</h2>
-            <p>티아포의 성장 스토리는 커뮤니티 코트에서 시작한 원동력과 빠른 적응력이 핵심이다.</p>
-
-            <h3>성장 배경</h3>
-            <p>그의 테니스는 커뮤니티 코트에서 시작됐다. 제한된 환경에서도 매일 코트를 지키며 벽치기·풋워크·코어 드릴을 빠뜨리지 않는 루틴을 만들었고, 동작을 줄이고 접점을 앞에 둔다는 한 문장을 속도로 번역했다. 이동이 잦은 유소년 시절에도 일지를 쓰며 하루의 루틴을 고정했고, 실내와 야외를 오가는 환경에서 바운드의 차이를 몸으로 익혔다.</p>
-
-            <h3>주니어 시절</h3>
-            <p>주니어 시절부터 빠른 성장을 보였으며, 특히 에너지와 창의가 두드러졌다. 프로로 전환한 후 체계적인 피지컬 트레이닝을 거치며 폭발→회복→재가속의 리듬을 몸에 새겼다. 이 생활의 질서가 오늘의 빠르되 무너지지 않는 티아포를 만든다.</p>
-
-            <h3>전환점</h3>
-            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
-              <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전환점</p>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong>US 오픈 준우승</strong>으로 전성기를 구가하기 시작했다. 특히 결승전에서의 경기력은 그의 에너지와 창의를 보여주는 대표적인 사례였다.
-              </p>
-            </div>
-            <p>US 오픈에서 그는 준우승을 차지하며 그랜드 슬램 결승에 진출했다. 이 시기 동안 에너지와 창의가 그의 시그니처 무기로 자리 잡았다. 특히 폭발적인 스텝과 감각적인 터치로 상대를 압도하는 능력이 세계 최고 수준임을 증명했다. 변주를 두려워하지 않는 전진으로 경기를 자신의 리듬으로 끌고 오는 능력이 뛰어났다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>티아포가 세계 상위권을 유지하는 힘은 에너지와 창의, 그리고 변주를 두려워하지 않는 전진에서 나온다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              기술적 강점
-            </h3>
-            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong className="text-purple-700 dark:text-purple-300">폭발적인 스텝과 감각적인 터치</strong>가 가장 큰 무기. 속도로 공간을 만들고 터치로 문장을 닫는다.
-              </p>
-            </div>
-            <p>폭발적인 스텝과 감각적인 터치가 가장 큰 무기다. 속도로 공간을 만들고 터치로 문장을 닫는다. 포핸드는 넓은 궤도와 예리한 각으로 상대를 뒤로 밀어낸다. 백핸드는 양손의 견고함으로 라인을 얇게 긁어 각을 만든다. 서브는 와이드와 바디의 비율을 바꿔 첫 두 타구의 구조를 설계하고, 짧은 리턴이 오면 하프코트에서 한 걸음 전진해 발리로 결말을 재촉한다.</p>
-            <p>리턴은 퍼스트 서브에는 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 전진해 접점을 앞세운다. 이어지는 첫 스트로크는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서 코너의 문을 열어 상대의 스텝을 묶는다.</p>
+            <p>플레이 스타일은 매우 공격적이고 변칙적이다. 정석적인 폼은 아니지만, 자신만의 리듬으로 상대를 흔든다. 베이스라인 대결을 하다가도 기습적으로 네트로 대시하거나 드롭샷을 놓는 등 창의적인 플레이를 즐긴다.</p>
+            <p>백핸드는 안정적이며, 슬라이스를 적절히 섞어 템포를 조절한다. 리턴 게임에서도 공격적인 자세를 취하며, 상대의 세컨드 서브를 적극적으로 공략한다. 다만 감정 기복이 있어 경기가 안 풀릴 때는 급격히 무너지는 모습을 보이기도 한다.</p>
 
             <h3 className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
               피지컬 능력
             </h3>
-            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">폭발적인 스텝과 감각적인 터치</strong>가 특징이다.</p>
+            <p>188cm의 키에 다부진 체격을 갖추고 있다. 근력이 좋아 파워풀한 샷을 구사하며, 유연성도 뛰어나다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">폭발적인 순발력</strong>은 그의 변칙 플레이를 가능하게 하는 원동력이다.</p>
 
             <h3 className="flex items-center gap-2">
               <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -224,76 +155,42 @@ export default function FrancesTiafoePage() {
                 </p>
               </div>
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
-                하드 코트에서 비교적 강한 편 · 에너지와 창의 · 변주를 두려워하지 않는 전진
+                US 오픈 4강 · 탑 10 진입 경험 · 타이브레이크 승률 <strong className="text-green-700 dark:text-green-400 text-base">준수함</strong>
               </p>
             </div>
-            <p>포인트 사이 그는 스트링을 훑고 두 번의 깊은 호흡으로 리듬을 고정한다. 스코어가 흔들려도 루틴의 길이를 바꾸지 않아 심박이 급등하지 않는다. 하드 코트에서는 속도로 초반 속도를 통제하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던진다. 에너지와 창의가 특징이다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              전술적 다양성
-            </h3>
-            <p>표면별 전개가 뛰어나다. 하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 주도권을 잡고, 리턴 게임에서는 중앙 깊은 볼로 각을 지워 다음 볼에서 속도를 끌어올린다. 잔디에서는 토스를 낮추고 백스윙을 줄여 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 속도를 통제한다. 점토에서는 회전을 더해 낙구를 안정시키고 랠리의 길이를 받아들이되, 네 번째나 다섯 번째 스트로크에서 드롭과 슬라이스를 섞어 템포를 흔든다.</p>
+            <p>긍정적이고 에너지가 넘친다. 관중과 소통하며 분위기를 자신의 것으로 만드는 능력이 탁월하다. '빅 매치'를 즐기는 강심장을 가지고 있어, 그랜드 슬램 같은 큰 무대에서 더 강한 모습을 보여준다.</p>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
-            <p>티아포의 커리어를 상징하는 경기는 US 오픈 준우승과 하드 마스터스 대회 우승이다.</p>
+            <h2 id="growth-story">프란시스 티아포는 어떻게 여기까지 왔을까?</h2>
+            <p>티아포의 아버지는 메릴랜드의 한 테니스 센터 관리인으로 일했고, 티아포는 그곳에서 살다시피 하며 테니스를 배웠다. 넉넉하지 않은 형편이었지만 재능과 열정으로 주니어 무대를 평정하고 2015년 프로에 데뷔했다.</p>
+            <p>2018년 델레이 비치 오픈에서 첫 투어 우승을 차지하며 가능성을 보였고, 2019년 호주 오픈 8강에 오르며 세계 무대에 이름을 알렸다. 이후 꾸준히 성장하여 2022년 US 오픈 4강 신화를 쓰며 미국 테니스의 간판스타로 자리매김했다.</p>
 
-            <h3>US 오픈 준우승</h3>
+            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            <p>티아포의 인생 경기는 2022년 US 오픈 16강전이다.</p>
+
+            <h3>2022년 US 오픈 16강</h3>
             <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
               <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전성기의 정점</p>
+                <Award className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">거인을 무너뜨리다</p>
               </div>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong>US 오픈</strong>에서 준우승을 차지하며 그랜드 슬램 결승에 진출했다. 특히 결승전에서의 경기력은 그의 에너지와 창의를 보여주는 대표적인 사례였다.
+                우승 후보 0순위였던 <strong>라파엘 나달</strong>을 상대로 3-1 승리를 거뒀다. 나달의 그랜드 슬램 23연승을 저지한 이 경기는 티아포의 잠재력이 만개했음을 알리는 신호탄이었다.
               </p>
             </div>
-            <p>US 오픈에서 그는 준우승을 차지하며 그랜드 슬램 결승에 진출했다. 이 경기에서 그는 에너지와 창의로 상대를 압도했다. 특히 결승전에서의 경기력은 그의 기술적 완성도를 보여주는 대표적인 사례였다. 폭발적인 스텝과 감각적인 터치, 그리고 중요한 포인트에서의 침착함이 모두 어우러진 경기였다.</p>
 
-            <h3>하드 마스터스 대회 우승</h3>
-            <p>하드 마스터스 대회에서 그는 우승을 거두며 하드 전문가로서의 입지를 확고히 했다. 이 경기에서 드러난 건 티아포의 변주를 두려워하지 않는 전진이었다. 에너지와 창의가 한 경기에 응축되었다.</p>
-
-            <h3>대표 명장면</h3>
-            <blockquote className="not-prose my-4 p-5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/50 dark:to-slate-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg shadow-sm">
-              <div className="flex items-start gap-3">
-                <Zap className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
-                <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic leading-relaxed">
-                  브레이크 포인트. 드롭샷으로 상대를 멈춘 뒤, 직선으로 찌르는 패싱샷을 그린다. 공이 사이드라인을 스치며 빠져나갈 때 관중의 탄성이 터지고, 그는 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟는다. 에너지와 창의가 바로 이 순간이다.
-                </p>
-              </div>
-            </blockquote>
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
-            <p>티아포는 경기력뿐 아니라 밝음과 예의, 팀 퍼스트 덕분에 팬층이 두텁다.</p>
-
-            <h3>코트 매너</h3>
-            <p>그는 밝음과 예의를 중시한다. 인터뷰에서 준비와 팀을 먼저 언급한다. 잘된 날에는 계획이 맞았다고, 부족한 날에는 수정 항목이 분명하다고 말한다. 팬에겐 미소와 눈맞춤을, 코트 스태프에겐 짧은 감사를 잊지 않는다. 패배 뒤에도 책임의 방향을 자기 쪽으로 당기고, 승리한 날에는 스태프와 팬에게 차례로 감사를 전한다.</p>
-
-            <h3>인터뷰 스타일</h3>
-            <p>인터뷰는 경쾌하지만 책임의 언어가 분명하다. 준비와 팀을 먼저 언급하며, 자신의 성과보다는 상대의 강점을 인정하는 모습을 자주 보인다. 긴 일정 속에서도 회복·수면·식단의 루틴을 생활로 고정해 컨디션의 파고를 낮춘다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 완성한다.</p>
-
-            <h3>팀과의 관계</h3>
-            <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 오랜 기간 함께한 코치와의 유대는 그의 안정적인 경기력에 기여하고 있으며, 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 미국의 훈련 문화는 하드의 전통을 창의로 확장하는 것을 중시하는데, 티아포의 테니스에도 이 정신이 뚜렷하다.</p>
+            <p>팬들은 티아포의 드라마틱한 인생 스토리와 유쾌한 성격에 매료된다.</p>
+            <p>어려움을 극복하고 성공한 그의 이야기는 많은 사람들에게 영감을 준다. 또한 코트 위에서의 열정적인 세레머니와 인터뷰에서의 솔직한 입담은 그를 더욱 사랑스럽게 만든다. 르브론 제임스 등 NBA 스타들과의 친분도 화제가 되곤 한다.</p>
 
             <h2 id="recent-form">요즘 프란시스 티아포의 경기력 흐름은 어떤가?</h2>
-            <p>최근 몇 시즌 동안 티아포는 하드 시즌에서 특히 강력한 모습을 보여주고 있으며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
+            <p>2023년 슈투트가르트 오픈 우승으로 잔디 코트에서도 강점을 보였고, 탑 10에 진입하며 커리어 하이를 찍었다. 2024년에는 다소 주춤하고 있지만, 여전히 위협적인 선수다.</p>
 
             <h3>최근 성적</h3>
-            <div className="not-prose my-4 p-3 bg-blue-50 dark:bg-blue-950/20 border-l-3 border-blue-500 rounded-r shadow-sm">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0 flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-blue-600" />
-                <strong>안정세:</strong> 최근 10경기 <strong className="text-blue-700 dark:text-blue-400">하드에서 강력한 모습</strong> · 탑 10 선수들과의 경기에서도 승리
-              </p>
-            </div>
-            <p>최근 10경기 기준으로 보면, 그는 하드에서 강력한 모습을 보여주는 편이다. 탑 10 선수들과의 경기에서도 승리를 거두며, 자신의 테니스가 여전히 경쟁력이 있음을 증명하고 있다. 최근 3개월 동안의 성적도 안정적이며, 특히 하드 시즌에서 후반 라운드에 진출하는 빈도가 높아졌다.</p>
-
-            <h3>부상 관리</h3>
-            <p>부상과 관련해서는 현재 큰 문제가 없는 상태다. 체계적인 회복과 관리 덕분에 경기에 지장을 주는 수준은 아니다. 다만 긴 시즌을 고려해 몸 관리에 더 신경을 쓰고 있으며, 불필요한 스프린트를 줄이고 효율적인 경기 운영에 집중하고 있다.</p>
-
-            <h3>랭킹과 스타일 변화</h3>
-            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 상위권을 유지하고 있다. 하드 시즌에서 특히 강력한 모습을 보여주며, 그는 여전히 탑 10 선수들과 경쟁할 수 있는 능력을 보여줬다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다.</p>
+            <p>휴스턴 오픈 준우승으로 클레이 코트 시즌을 시작했다. 기복을 줄이고 꾸준함을 유지하는 것이 과제다. 홈 그라운드인 북미 하드 코트 시즌에서 다시 한번 비상을 노리고 있다.</p>
 
             <h2 id="one-sentence-summary">프란시스 티아포, 한 문장으로 정리하면?</h2>
             <p>프란시스 티아포는 에너지와 창의로 하드코트를 달구는 미국의 대표 선수다.</p>

@@ -10,12 +10,12 @@ export const metadata = {
   description: '경기는 끝났지만, 진짜 승부는 회복에서 시작된다. 경기 후 24시간, 루틴 하나가 다음 실력을 결정한다.',
   keywords: ['테니스 회복', '경기 후 루틴', '피로 회복', '냉찜질', '스트레칭', '영양 보충', '수면', '근육 회복'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-postmatch-recovery-routine',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-postmatch-recovery-routine',
   },
   openGraph: {
     title: '테니스 경기 후 회복 루틴 — 24시간 리커버리 사이클로 피로 없이 다음 경기 준비하기 | 근육 회복과 멘탈 리셋의 과학',
     description: '경기는 끝났지만, 진짜 승부는 회복에서 시작된다. 경기 후 24시간, 루틴 하나가 다음 실력을 결정한다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-postmatch-recovery-routine',
+    url: 'https://tennisfriends.co.kr/blog/tennis-postmatch-recovery-routine',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -69,7 +69,7 @@ export default function TennisPostmatchRecoveryRoutinePage() {
   const excerpt = '경기는 끝났지만, 진짜 승부는 회복에서 시작된다. 경기 후 24시간, 루틴 하나가 다음 실력을 결정한다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-postmatch-recovery-routine" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-cyan-50 to-teal-50 dark:from-cyan-950 dark:to-teal-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300">

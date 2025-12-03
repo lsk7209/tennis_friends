@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: '테니스 블로그 | TennisFriends',
     description: '테니스 실력 향상을 위한 전문적인 가이드와 최신 정보를 제공합니다.',
     type: 'website',
-    url: 'https://www.tennisfrens.com/blog',
+    url: 'https://tennisfriends.co.kr/blog',
   },
 };
 

@@ -10,12 +10,12 @@ export const metadata = {
   description: '라켓은 단순한 도구가 아니다. 무게와 밸런스, 스트링 텐션이 경기력을 결정한다. 올바른 선택이 실력을 바꾼다.',
   keywords: ['테니스 라켓', '라켓 선택', '스트링 텐션', '밸런스', '무게', '테니스 장비', '라켓 추천'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-racket-selection-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-racket-selection-guide',
   },
   openGraph: {
     title: '테니스 라켓 선택 완전 가이드 — 무게·밸런스·스트링 세팅으로 결정되는 퍼포먼스 차이 | 당신의 플레이 스타일에 맞는 최적의 라켓 찾기',
     description: '라켓은 단순한 도구가 아니다. 무게와 밸런스, 스트링 텐션이 경기력을 결정한다. 올바른 선택이 실력을 바꾼다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-racket-selection-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-racket-selection-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,14 @@ export default function TennisRacketSelectionGuidePage() {
   const excerpt = '라켓은 단순한 도구가 아니다. 무게와 밸런스, 스트링 텐션이 경기력을 결정한다. 올바른 선택이 실력을 바꾼다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article 
+      title={title} 
+      excerpt={excerpt}
+      date="2024-01-15"
+      slug="tennis-racket-selection-guide"
+      author="TennisFriends"
+      image="/images/blog/tennis-racket-selection-guide.png"
+    >
       <div className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">
@@ -396,7 +403,40 @@ export default function TennisRacketSelectionGuidePage() {
         <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
           좋은 라켓은 숫자가 아닌 <strong>몸의 리듬</strong>과 맞는 라켓입니다. 무게·밸런스·텐션·스트링을 이해하면, 라켓이 당신의 플레이를 완성시킵니다. 기계적 기준보다 감각적 일관성을 우선하세요. 결국 라켓은 '당신의 연장된 팔'입니다.
         </p>
+        
+        <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-100 dark:border-blue-800">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+            참고 자료: 테니스 라켓의 물리적 특성에 대한 더 자세한 기술적 정보는 국제테니스연맹(ITF)의 기술 리포트를 참고하세요.
+          </p>
+          <a 
+            href="https://www.itftennis.com/en/about-us/tennis-tech/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium flex items-center gap-1"
+          >
+            ITF Tennis Technology & Technical Centre
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+          </a>
+        </div>
       </section>
+
+      <div className="my-12">
+        <Card className="bg-gradient-to-r from-indigo-500 to-purple-600 border-none text-white overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"></div>
+          <CardContent className="p-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold mb-2">내 실력에 맞는 라켓을 찾고 계신가요?</h3>
+              <p className="text-indigo-100">먼저 정확한 NTRP 레벨을 측정하고, 데이터 기반의 장비 추천을 받아보세요.</p>
+            </div>
+            <Link href="/utility/ntrp-test">
+              <span className="inline-flex items-center justify-center px-6 py-3 bg-white text-indigo-600 font-bold rounded-full hover:bg-indigo-50 transition-colors shadow-lg whitespace-nowrap">
+                NTRP 실력 측정하기
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+              </span>
+            </Link>
+          </CardContent>
+        </Card>
+      </div>
 
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
         <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>

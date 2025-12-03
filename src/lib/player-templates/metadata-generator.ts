@@ -97,7 +97,7 @@ export function generatePlayerMetadata(player: Player): PlayerMetadata {
     title: generateTitle(player),
     description: generateDescription(player),
     keywords: generateKeywords(player),
-    canonical: `https://www.tennisfrens.com/players/${player.slug}`,
+    canonical: `https://tennisfriends.co.kr/players/${player.slug}`,
     ogImage: `/images/players/${player.slug}.jpg`,
   };
 }

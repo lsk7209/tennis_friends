@@ -11,12 +11,12 @@ export const metadata = {
   description: '장벽 같은 서브와 칼같은 양손 백핸드로 흐름을 제어하는 알렉산더 즈베레프의 성장 배경, 경기 스타일, 관계와 과제를 한 편으로.',
   keywords: ['테니스', '알렉산더 즈베레프', '선수 프로필', '스토리', '독일'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/alexander-zverev',
+    canonical: 'https://tennisfriends.co.kr/blog/alexander-zverev',
   },
   openGraph: {
     title: '알렉산더 즈베레프 선수 프로필과 스토리',
     description: '장벽 같은 서브와 칼같은 양손 백핸드로 흐름을 제어하는 알렉산더 즈베레프의 성장 배경, 경기 스타일, 관계와 과제를 한 편으로.',
-    url: 'https://www.tennisfrens.com/blog/alexander-zverev',
+    url: 'https://tennisfriends.co.kr/blog/alexander-zverev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -114,7 +114,7 @@ export default function AlexanderZverevBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="alexander-zverev" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

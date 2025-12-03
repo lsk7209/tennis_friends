@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스 풋워크 밸런스 향상 루틴. 하체 중심 이동과 리듬 훈련, 코트별 발 스텝 전략까지 완벽 가이드.',
   keywords: ['테니스 풋워크', '밸런스 훈련', '하체 리듬', '균형 이동', '스텝 훈련', '코트별 전략'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-footwork-balance-training-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-footwork-balance-training-guide',
   },
   openGraph: {
     title: '테니스 풋워크 밸런스 훈련 | 하체 중심 리듬·균형 이동 완전정복',
     description: '테니스 풋워크 밸런스 향상 루틴. 하체 중심 이동과 리듬 훈련, 코트별 발 스텝 전략까지 완벽 가이드.',
-    url: 'https://www.tennisfrens.com/blog/tennis-footwork-balance-training-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-footwork-balance-training-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function TennisFootworkBalanceTrainingGuidePage() {
   const excerpt = '공을 쫓는 속도보다 중요한 건 중심을 잃지 않는 안정감이다. 프로 선수처럼 밸런스를 유지하는 하체 리듬과 스텝 훈련을 정리했다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-footwork-balance-training-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-cyan-50 to-teal-50 dark:from-cyan-950 dark:to-teal-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300">

@@ -2,6 +2,8 @@ import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
+import PlayerProfileCard from '@/components/players/PlayerProfileCard';
+import PlayerAttributes from '@/components/players/PlayerAttributes';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -12,12 +14,12 @@ export const metadata: Metadata = {
   description: '노박 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 얼음 멘탈·전술가·흐름 읽는 선수·역전의 달인으로 주목받는 세르비아 출신의 세계랭킹 1위 선수.',
   keywords: ['노박 조코비치', 'Novak Djokovic', '테니스', 'ATP', '플레이스타일', '세르비아 테니스', '전천후', '멘탈', '전술'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/players/novak-djokovic',
+    canonical: 'https://tennisfriends.co.kr/players/novak-djokovic',
   },
   openGraph: {
     title: '노박 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
     description: '노박 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://www.tennisfrens.com/players/novak-djokovic',
+    url: 'https://tennisfriends.co.kr/players/novak-djokovic',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -41,9 +43,9 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '노박 조코비치, 왜 여전히 세계 최고인가?', depth: 2 },
+  { id: 'why-again-notable', text: '노박 조코비치, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
+  { id: 'growth-story', text: '노박 조코비치는 어떻게 여기까지 왔을까?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
   { id: 'recent-form', text: '요즘 노박 조코비치의 경기력 흐름은 어떤가?', depth: 2 },
@@ -53,23 +55,23 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 const faqs = [
   {
     q: '노박 조코비치의 경기 스타일은 어떤가요?',
-    a: '전천후 스타일과 탁월한 리턴 능력, 멘탈 강점이 특징입니다. 리턴을 출발점으로 포인트의 구조를 다시 짜고, 루틴과 호흡으로 큰 순간을 관리하는 전술적 완성도가 높은 선수입니다.'
+    a: '전천후 스타일로, 멘탈과 전술적 완성도가 특징입니다. 리턴을 출발점으로 포인트의 구조를 다시 짜는 능력이 뛰어납니다.',
   },
   {
     q: '조코비치의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
-    a: '최고 랭킹과 현재 랭킹 모두 1위입니다. 세계랭킹 1위를 400주 이상 유지했으며, 그랜드 슬램 24회 우승이라는 남자 테니스 역사상 최다 기록을 보유하고 있습니다.'
+    a: '최고 랭킹은 1위이며, 현재도 세계랭킹 1위를 유지하고 있습니다. 400주 이상 1위를 유지하며 테니스 역사에 이름을 남겼습니다.',
   },
   {
     q: '조코비치의 강점은 무엇인가요?',
-    a: '멘탈의 성숙함과 전술적 다양성이 최대 강점입니다. 타이브레이크 승률이 70%를 넘는 편이며, 5세트 경기에서도 후반까지 안정적인 경기력을 유지합니다. 상대의 강점을 거울처럼 받아 적응하는 전술적 능력도 뛰어납니다.'
+    a: '멘탈과 전술적 완성도가 최대 강점입니다. 타이브레이크와 5세트 경기에서의 멘탈 강점, 그리고 상대의 강점을 거울처럼 받아 적응하는 능력이 뛰어납니다.',
   },
   {
     q: '조코비치의 인간적인 면모는 어떤가요?',
-    a: '규율과 배려가 특징입니다. 인터뷰에서 준비와 팀을 먼저 언급하며, 승리의 날에는 스태프 이름을, 패배의 날에는 수정 항목을 나열합니다. 경쟁은 냉정하게, 인간관계는 따뜻하게 대하는 대비가 그의 이미지를 만듭니다.'
+    a: '규율과 배려가 특징입니다. 코트 밖에서는 팬들에게 친절하고, 동료 선수들을 배려하는 모습을 자주 보여줍니다.',
   },
   {
     q: '조코비치를 한 문장으로 설명하면?',
-    a: '멘탈과 전술로 경기를 지배하는, 흐름을 읽는 전술가이자 역전의 달인입니다.'
+    a: '멘탈과 전술로 경기를 지배하는, 흐름을 읽는 전술가이자 역전의 달인입니다.',
   },
 ];
 
@@ -78,24 +80,32 @@ export default function NovakDjokovicPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
         title="노박 조코비치"
-        excerpt="멘탈과 전술로 경기를 지배하는, 흐름을 읽는 전술가이자 역전의 달인"
+        excerpt="전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필"
+        image="/images/players/novak-djokovic.png"
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '노박 조코비치', '선수 프로필', '세르비아', '전천후', '멘탈'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-          
-          {/* Table of Contents */}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerProfileCard
+            name="Novak Djokovic"
+            country="Serbia"
+            age={37}
+            height="188cm"
+            plays="Right-handed (Two-handed backhand)"
+            turnedPro={2003}
+            grandSlams={24}
+            ranking={1}
+          />
+
+          <div className="prose dark:prose-invert max-w-none">
+            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8">
+              테니스 역사상 가장 완벽한 선수. <strong className="text-blue-600 dark:text-blue-400">무결점의 테크닉</strong>과 강철 같은 멘탈로 코트를 지배하는 살아있는 전설.
+            </p>
+
             <TOC items={tocItems} />
 
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">노박 조코비치, 왜 여전히 세계 최고인가?</h2>
+            <h2 id="why-again-notable" className="flex items-center gap-2 mt-12">
+              <Crown className="w-6 h-6 text-yellow-500" />
+              노박 조코비치, 왜 주목받는 선수인가?
+            </h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Crown className="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
@@ -107,75 +117,31 @@ export default function NovakDjokovicPage() {
             <p>노박 조코비치는 세르비아 출신의 세계랭킹 <strong>1위</strong> 테니스 선수로, 그랜드 슬램 <strong>24회 우승</strong>이라는 남자 테니스 역사상 최다 기록을 보유하고 있다. 30대 후반의 나이에도 불구하고 여전히 세계 최고 수준의 경기력을 유지하며, 멘탈의 성숙함과 전술적 완성도로 테니스계를 지배하고 있다. 리턴을 출발점으로 포인트의 구조를 다시 짜고, 루틴과 호흡으로 큰 순간을 관리하는 그의 테니스는 효율과 정확성의 극치를 보여준다.</p>
             <p>그는 <strong>2011년</strong> 처음 세계랭킹 1위에 올랐고, 이후 <strong>400주 이상</strong> 1위를 유지하며 테니스 역사에 이름을 남겼다. 현재도 세계랭킹 1위를 유지하고 있으며, 나이가 들어감에 따라 경기 선택과 체력 관리를 더욱 정밀하게 하면서도 여전히 큰 대회에서 우승을 거두고 있다. 그의 테니스는 화려함보다는 효율을 추구하며, 특히 타이브레이크와 5세트 경기에서의 멘탈 강점이 두드러진다.</p>
 
-            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
+            <h2 id="what-type-of-player" className="flex items-center gap-2 mt-12">
+              <Target className="w-6 h-6 text-red-500" />
+              이 선수는 어떤 유형의 플레이어인가?
+            </h2>
+            <p><strong>"완벽한 육각형 플레이어 (All-Court Player)"</strong></p>
             <p>노박 조코비치는 세르비아 출신의 세계랭킹 1위 선수로, 전천후 스타일과 탁월한 멘탈, 전술적 완성도가 특징인 ATP 투어의 레전드다.</p>
-            
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">세르비아</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">1987년 (30대 후반)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Crown className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">1위</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Crown className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">1위</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">1위 유지 기간:</strong> <span className="text-gray-600 dark:text-gray-400">400주 이상</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">전천후 플레이어</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Trophy className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">그랜드 슬램:</strong> <span className="text-gray-600 dark:text-gray-400">24회 우승 (남자 테니스 최다 기록)</span></span>
-                </li>
-              </ul>
-            </div>
 
-            <p>플레이 스타일은 전천후 플레이어로 분류된다. 베이스라인에서 강력한 그라운드 스트로크를 구사하면서도, 기회가 생기면 네트로 전진해 발리로 마무리하는 능력을 갖추고 있다. 특히 <strong>리턴 능력</strong>이 뛰어나며, 상대의 서브를 깊고 낮게 되돌려 포인트의 구조를 다시 설계하는 것이 그의 최대 강점이다.</p>
-            <div className="not-prose my-6 flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border-blue-300 dark:border-blue-700">
-                <Brain className="w-3 h-3 mr-1 inline" />
-                얼음 멘탈
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
-                <Award className="w-3 h-3 mr-1 inline" />
-                전술가
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
-                <Target className="w-3 h-3 mr-1 inline" />
-                흐름 읽는 선수
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 border-red-300 dark:border-red-700">
-                <Zap className="w-3 h-3 mr-1 inline" />
-                역전의 달인
-              </Badge>
-            </div>
-            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"얼음 멘탈"</strong>, <strong>"전술가"</strong>, <strong>"흐름 읽는 선수"</strong>, <strong>"역전의 달인"</strong>이다. 그의 테니스는 감정보다는 절차에 기반하며, 위기 상황에서도 침착함을 유지하는 능력이 뛰어나다. 경기장 밖에서도 규율과 배려를 겸비한 모습을 보여준다.</p>
+            <PlayerAttributes
+              attributes={[
+                { name: '리턴 (Return)', score: 10, description: '역대 최고의 리턴 능력. 상대의 서브를 무력화시키고 랠리의 주도권을 가져온다.' },
+                { name: '멘탈 (Mental)', score: 10, description: '타이브레이크와 위기 상황에서 더 강해지는 강철 멘탈.' },
+                { name: '백핸드 (Backhand)', score: 10, description: '투어에서 가장 안정적이고 위협적인 양손 백핸드.' },
+                { name: '체력/유연성', score: 9.8, description: '고무인간이라 불리는 유연성과 지치지 않는 체력.' },
+                { name: '전술 (Tactics)', score: 9.8, description: '상대의 약점을 파고드는 완벽한 경기 운영 능력.' },
+              ]}
+            />
 
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <p>플레이 스타일은 전천후(All-Rounder)로 분류된다. 베이스라인에서의 수비와 공격 전환이 완벽하며, 네트 플레이와 드롭샷 등 모든 기술을 자유자재로 구사한다. 특히 리턴 능력이 가장 큰 무기다. 상대의 강력한 서브를 깊숙이 받아넘겨 랠리의 주도권을 가져온다. 백핸드는 투어에서 가장 안정적이고 위협적이며, 포핸드 역시 정확도와 파워를 겸비했다.</p>
+            <p>전술적 완성도가 뛰어나다. 상대의 약점을 집요하게 파고들며, 경기의 흐름을 읽고 조절하는 능력이 탁월하다. 위기 상황에서는 더욱 집중력을 발휘하며, 타이브레이크 승률이 매우 높다. 그의 테니스는 감정보다는 절차에 기반하며, 루틴과 호흡으로 큰 순간을 관리한다.</p>
 
-            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>조코비치가 세계 상위권을 유지하는 힘은 멘탈의 성숙함, 전술적 다양성, 그리고 기술의 완성도에서 나온다.</p>
+            <h3 className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
+              피지컬 능력
+            </h3>
+            <p>유연성이 뛰어나다. '고무인간'이라는 별명처럼 믿기 힘든 각도에서 공을 받아넘긴다. 코트 커버리지가 넓어 수비 범위가 넓다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">5세트 경기에서도 후반까지 안정적인 경기력</strong>을 유지한다.</p>
 
             <h3 className="flex items-center gap-2">
               <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -198,71 +164,42 @@ export default function NovakDjokovicPage() {
               <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
               전술적 다양성
             </h3>
-            <p>리턴 능력과 랠리 패턴의 다양성이 최대 강점이다. 퍼스트 서브조차 깊고 낮게 되돌려 상대의 3구 패턴을 끊는다. 세컨드 서브에는 한 발 전진해 출발점 자체를 흔든다. 상대의 강점을 거울처럼 받아 적응한다. 강한 톱스핀으로 밀어붙이는 유형에게는 라켓면을 더 닫아 플랫에 가깝게 맞선다. 네트 대시를 서두르는 상대에게는 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만든다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 속도를 바꿔 같은 구역을 다른 느낌으로 찌른다.</p>
+            <p>상대의 강점을 거울처럼 받아 적응한다. 상대가 강하게 치면 그 힘을 이용해 더 강하게 받아치고, 약하게 치면 그 틈을 파고든다. 드롭샷과 로브를 적절히 섞어 상대를 흔들고, 네트 플레이로 포인트를 마무리한다. 그의 테니스는 상대의 예측을 벗어나는 창의성과 정확성을 동시에 보여준다.</p>
 
-            <h3 className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              기술적 완성도
-            </h3>
-            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong className="text-purple-700 dark:text-purple-300">리턴</strong>이 가장 큰 무기. 포핸드는 짧은 준비와 긴 임팩트로 직선을 만들고, 백핸드는 양손의 견고함으로 코너를 얇게 긁어 각을 세움.
-              </p>
-            </div>
-            <p>리턴이 가장 큰 무기다. 포핸드는 짧은 준비와 긴 임팩트로 직선을 만든다. 백핸드는 양손의 견고함으로 코너를 얇게 긁어 각을 세운다. 수비에서는 관절의 유연성과 스플릿 스텝으로 도달 범위를 넓힌다. 옆으로 밀려난 순간에도 균형을 잃지 않은 채 다음 볼을 준비한다. 네트 접근은 필요할 때만 하며, 열린 공간이 보이면 한 걸음 전진해 간결한 발리로 마무리한다.</p>
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h3 className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
-              피지컬 능력
-            </h3>
-            <p>코트 커버리지와 체력 관리가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 장기전에서도 에너지 관리를 효율적으로 한다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">5세트 경기에서도 후반까지 안정적인 경기력</strong>을 유지한다. 나이가 들어감에 따라 경기 선택을 더욱 정밀하게 하면서도 큰 대회에서 최고의 컨디션을 발휘한다.</p>
+            <h2 id="growth-story">노박 조코비치는 어떻게 여기까지 왔을까?</h2>
+            <p>조코비치의 성장 배경은 전쟁의 포화 속에서 시작된다. 어린 시절 세르비아 내전을 겪으며 멘탈을 단련했고, 어려운 환경 속에서도 테니스에 대한 열정을 잃지 않았다. 그의 테니스는 화려한 장식보다는 효율을 추구하며, 특히 멘탈과 전술적 완성도가 뛰어나다.</p>
+            <p>그는 2008년 호주 오픈 우승을 시작으로 그랜드 슬램 우승 행진을 이어갔다. 2011년에는 3개의 그랜드 슬램 타이틀을 휩쓸며 세계랭킹 1위에 올랐다. 이후 페더러, 나달과 함께 '빅3' 시대를 열며 테니스 역사를 새로 썼다. 최근에는 그랜드 슬램 24회 우승이라는 대기록을 달성하며 역대 최고의 선수로 인정받고 있다.</p>
 
             <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
-            <p>조코비치의 커리어를 상징하는 경기는 여러 그랜드 슬램 결승전과 최근 몇 시즌의 대회들이다. 특히 멘탈 강점과 전술적 변화 능력이 드러나는 경기들이 인상적이다.</p>
+            <p>조코비치의 커리어를 상징하는 경기는 2019년 윔블던 결승과 2012년 호주 오픈 결승이다.</p>
 
-            <h3>2019년 윔블던 결승전</h3>
+            <h3>2019년 윔블던 결승</h3>
             <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
               <div className="flex items-center gap-2 mb-3">
                 <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">멘탈 강점의 결정적 증명</p>
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">역대 최장 시간 결승전</p>
               </div>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong>2019년 윔블던 결승전</strong>에서 로저 페더러와의 경기. 두 번의 챔피언십 포인트를 극복하며 역전승. 타이브레이크에서의 침착함과 중요한 포인트에서의 선택이 승부를 결정. 감정이 아닌 절차가 승부를 만든다는 믿음이 한 경기에 응축.
+                <strong>2019년 윔블던 결승</strong>에서 로저 페더러를 상대로 4시간 57분의 혈투 끝에 승리했다. 2번의 매치 포인트를 극복하고 타이브레이크에서 승리하며 멘탈의 승리를 보여주었다.
               </p>
             </div>
-            <p>이 경기에서 드러난 건 조코비치의 절차적 완성도였다.</p>
 
-            <h3>최근 시즌의 경기력</h3>
-            <p>최근 시즌에서도 그는 여전히 큰 대회에서 우승을 거두며 자신의 테니스가 경쟁력이 있음을 증명하고 있다. 특히 그랜드 슬램 대회에서의 경기력은 나이가 들어감에 따라 오히려 더욱 안정적이 되었다. 중요한 포인트에서의 선택과 전술적 변화가 여전히 세계 최고 수준이다.</p>
-
-            <h3>대표 명장면</h3>
-            <blockquote className="not-prose my-4 p-5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/50 dark:to-slate-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg shadow-sm">
-              <div className="flex items-start gap-3">
-                <Zap className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
-                <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic leading-relaxed">
-                  브레이크 포인트에서의 리턴과 백핸드 다운더라인 샷. 애드코트에서 바디로 파고드는 서브를 낮게 되돌린다. 다음 포인트에서도 중앙 깊은 리턴으로 각을 지운다. 상대의 퍼스트볼이 짧아지는 순간, 조코비치는 백핸드를 몸 가까이 끌어당겨 라인으로 단호히 접는다. 공이 흰 선을 스치며 빠져나갈 때 관중의 숨이 멎는다. 그는 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟는다.
-                </p>
-              </div>
-            </blockquote>
-            <p>감정이 아닌 절차가 승부를 만든다는 믿음이 응축된 장면이다.</p>
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
-            <p>조코비치는 경기력뿐 아니라 규율과 배려, 그리고 일관성 덕분에 팬층이 두텁다.</p>
-
-            <h3>코트 매너</h3>
-            <p>그는 항상 절차를 지킨다. 포인트 사이의 루틴을 엄격하게 반복한다. 스코어가 기울어도 루틴의 길이를 바꾸지 않는다. 패배 뒤에도 책임의 방향을 자기 쪽으로 당긴다. 승리한 날에는 스태프와 팬에게 차례로 감사를 전한다. 코트 스태프를 향한 짧은 감사 인사를 잊지 않는다. 품위가 이미지가 아니라 습관임을 보여준다.</p>
-
-            <h3>인터뷰 스타일</h3>
-            <p>인터뷰는 진솔하고 체계적이다. 준비와 팀을 먼저 언급한다. 자신의 성과보다는 상대의 강점을 인정하는 모습을 자주 보인다. 승리의 날에는 스태프 이름을, 패배의 날에는 수정 항목을 나열한다. 패배에 대한 분석도 객관적이며, 항상 배움의 자세를 유지한다. 경쟁은 냉정하게, 인간관계는 따뜻하게 대하는 대비가 그의 이미지를 만든다.</p>
-
-            <h3>팀과의 관계</h3>
-            <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 오랜 기간 함께한 코치와의 유대는 그의 안정적인 경기력에 기여한다. 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 세르비아 출신이라는 정체성도 그의 이미지에 큰 영향을 미친다. 작은 나라에서 배운 큰 자부심이 그의 테니스에 녹아 있다.</p>
+            <p>팬들이 조코비치에게 열광하는 이유는 그의 불굴의 의지와 완벽주의, 그리고 인간적인 매력 때문이다.</p>
+            <p>그의 경기는 언제나 드라마틱하며, 포기하지 않는 모습은 팬들에게 큰 영감을 준다. 또한 코트 밖에서의 유머러스하고 지적인 모습, 그리고 자선 활동에 앞장서는 모습은 팬들의 존경을 받는다.</p>
 
             <h2 id="recent-form">요즘 노박 조코비치의 경기력 흐름은 어떤가?</h2>
-            <p>최근 몇 시즌 동안 조코비치는 여전히 세계 최고 수준의 경기력을 유지하고 있다. 나이가 들어감에 따라 경기 선택을 더욱 정밀하게 하면서도, 큰 대회에서 최고의 컨디션을 발휘하고 있다.</p>
+            <p>최근 조코비치의 경기력은 여전히 세계 최고 수준이다. 나이가 무색할 만큼 체력과 스피드가 뛰어나며, 경험에서 우러나오는 노련미가 더해져 더욱 강력해졌다.</p>
 
             <h3>최근 성적</h3>
-            <p>최근 10경기 기준으로 보면, 그는 강한 상대에게도 꾸준히 승리를 거둔다. 탑 10 선수들과의 경기에서도 여전히 우위를 보인다. 자신의 테니스가 경쟁력이 있음을 증명하고 있다. 최근 시즌 동안의 성적도 안정적이며, 그랜드 슬램 대회에서도 우승을 거두며 기록을 계속 갱신하고 있다.</p>
+            <p>2023년 3개의 그랜드 슬램 타이틀(호주 오픈, 프랑스 오픈, US 오픈)을 휩쓸며 건재함을 과시했다. 2024년에도 여전히 강력한 우승 후보로 꼽히며, 그랜드 슬램 25회 우승을 목표로 하고 있다.</p>
+
+            <h3>경기력 분석</h3>
+            <p>경기력 측면에서는 서브와 포핸드가 더욱 정교해졌다. 특히 서브의 정확도와 파워가 향상되어 서비스 게임을 더욱 쉽게 가져가는 모습을 보여준다. 또한 멘탈적인 부분에서도 더욱 성숙해져 위기 상황에서도 흔들리지 않는 모습을 보여준다.</p>
 
             <h3>부상 관리</h3>
             <p>부상과 관련해서는 현재 큰 문제가 없는 상태다. 나이가 들어감에 따라 몸 관리에 더 신경을 쓰고 있다. 경기 선택을 더욱 정밀하게 하면서 체력과 부상 리스크를 관리한다. 시즌 운영에서 대회 선택을 최적화하여 최고의 날을 더 자주 만들 수 있도록 노력하고 있다.</p>

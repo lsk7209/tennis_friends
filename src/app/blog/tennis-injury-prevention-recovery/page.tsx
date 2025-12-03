@@ -10,12 +10,12 @@ export const metadata = {
   description: '부상은 실력이 아니라 루틴의 문제다. 어깨·무릎·손목을 지키는 습관만 만들어도 경기력은 2배로 오래간다.',
   keywords: ['테니스 부상', '부상 예방', '어깨 통증', '무릎 부상', '손목 부상', '스트레칭', '회복 루틴', '테니스 건강 관리'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-injury-prevention-recovery',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-injury-prevention-recovery',
   },
   openGraph: {
     title: '테니스 부상 예방과 회복 루틴 — 어깨·무릎·손목을 지키는 과학적 관리법 | 아마추어를 위한 부상 제로 실전 매뉴얼',
     description: '부상은 실력이 아니라 루틴의 문제다. 어깨·무릎·손목을 지키는 습관만 만들어도 경기력은 2배로 오래간다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-injury-prevention-recovery',
+    url: 'https://tennisfriends.co.kr/blog/tennis-injury-prevention-recovery',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -69,7 +69,7 @@ export default function TennisInjuryPreventionRecoveryPage() {
   const excerpt = '부상은 실력이 아니라 루틴의 문제다. 어깨·무릎·손목을 지키는 습관만 만들어도 경기력은 2배로 오래간다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-injury-prevention-recovery" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">

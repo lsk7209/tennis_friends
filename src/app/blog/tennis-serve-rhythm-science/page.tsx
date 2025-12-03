@@ -10,12 +10,12 @@ export const metadata = {
   description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
   keywords: ['테니스 서브', '토스', '체중이동', '회전', '리듬', '서브 타이밍', '플랫 서브', '슬라이스 서브', '킥 서브'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-serve-rhythm-science',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-serve-rhythm-science',
   },
   openGraph: {
     title: '서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성 | 첫 서브 성공률 70% 만드는 방법',
     description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
-    url: 'https://www.tennisfrens.com/blog/tennis-serve-rhythm-science',
+    url: 'https://tennisfriends.co.kr/blog/tennis-serve-rhythm-science',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -69,7 +69,7 @@ export default function TennisServeRhythmSciencePage() {
   const excerpt = '서브는 힘이 아니라 리듬의 예술이다. 토스의 높이, 체중이동, 회전축이 일치하면 첫 서브 성공률이 두 배로 오른다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-serve-rhythm-science" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300">

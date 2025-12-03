@@ -11,12 +11,12 @@ export const metadata = {
   description: '이탈리아 출신 야닉 시너의 성장 배경, 경기 스타일, 루틴과 멘탈, 라이벌 구도를 깊이 있게 담았습니다.',
   keywords: ['테니스', '야닉 시너', '선수 프로필', '스토리', '이탈리아'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/jannik-sinner',
+    canonical: 'https://tennisfriends.co.kr/blog/jannik-sinner',
   },
   openGraph: {
     title: '야닉 시너 선수 프로필과 스토리',
     description: '이탈리아 출신 야닉 시너의 성장 배경, 경기 스타일, 루틴과 멘탈, 라이벌 구도를 깊이 있게 담았습니다.',
-    url: 'https://www.tennisfrens.com/blog/jannik-sinner',
+    url: 'https://tennisfriends.co.kr/blog/jannik-sinner',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -112,7 +112,7 @@ export default function JannikSinnerBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="jannik-sinner" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

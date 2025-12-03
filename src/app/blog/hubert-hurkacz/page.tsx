@@ -11,12 +11,12 @@ export const metadata = {
   description: '강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대 테니스를 그려내는 후베르트 후르카츠의 성장 배경, 경기 스타일, 인간적인 면모를 담았습니다.',
   keywords: ['테니스', '후베르트 후르카츠', '선수 프로필', '스토리', '폴란드'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/hubert-hurkacz',
+    canonical: 'https://tennisfriends.co.kr/blog/hubert-hurkacz',
   },
   openGraph: {
     title: '후베르트 후르카츠 선수 프로필과 스토리',
     description: '강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대 테니스를 그려내는 후베르트 후르카츠의 성장 배경, 경기 스타일, 인간적인 면모를 담았습니다.',
-    url: 'https://www.tennisfrens.com/blog/hubert-hurkacz',
+    url: 'https://tennisfriends.co.kr/blog/hubert-hurkacz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -112,7 +112,7 @@ export default function HubertHurkaczBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="hubert-hurkacz" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

@@ -10,12 +10,12 @@ export const metadata = {
   description: '복식은 기술이 아니라 호흡의 경기다. 시선, 커뮤니케이션, 포지션이 하나로 맞을 때 비로소 승리가 시작된다.',
   keywords: ['테니스 복식', '팀워크', '커뮤니케이션', '시선', '포지셔닝', '듀오 플레이'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-doubles-teamwork-strategy',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-doubles-teamwork-strategy',
   },
   openGraph: {
     title: '테니스 복식의 팀워크 전략 — 호흡·시선·커뮤니케이션으로 완성하는 듀오 플레이 | 두 사람이 하나처럼 움직이는 법',
     description: '복식은 기술이 아니라 호흡의 경기다. 시선, 커뮤니케이션, 포지션이 하나로 맞을 때 비로소 승리가 시작된다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-doubles-teamwork-strategy',
+    url: 'https://tennisfriends.co.kr/blog/tennis-doubles-teamwork-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -69,7 +69,7 @@ export default function TennisDoublesTeamworkStrategyPage() {
   const excerpt = '복식은 기술이 아니라 호흡의 경기다. 시선, 커뮤니케이션, 포지션이 하나로 맞을 때 비로소 승리가 시작된다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-doubles-teamwork-strategy" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-red-50 to-pink-50 dark:from-red-950 dark:to-pink-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">

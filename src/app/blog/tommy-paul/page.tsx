@@ -11,12 +11,12 @@ export const metadata = {
   description: '미국 하드코트의 전통을 현대적으로 번역하는 토미 폴의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
   keywords: ['테니스', '토미 폴', '선수 프로필', '스토리', '미국'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tommy-paul',
+    canonical: 'https://tennisfriends.co.kr/blog/tommy-paul',
   },
   openGraph: {
     title: '토미 폴 선수 프로필과 스토리',
     description: '미국 하드코트의 전통을 현대적으로 번역하는 토미 폴의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/tommy-paul',
+    url: 'https://tennisfriends.co.kr/blog/tommy-paul',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -72,7 +72,7 @@ const faqs = [
 export default function TommyPaulBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
-      <Article
+      <Article slug="tommy-paul" date="2024-01-01"
         title="토미 폴 — 속도와 각도로 조립하는 미국식 하드 테니스"
         excerpt="가벼운 발과 예리한 각, 과감한 전진으로 흐름을 끊어먹는 토미 폴의 성장, 스타일, 인간미와 과제를 한 편으로."
       >

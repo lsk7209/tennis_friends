@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스의 품격은 스윙보다 태도에서 드러난다. 매너 있는 플레이가 실력을 완성한다.',
   keywords: ['테니스 예절', '테니스 매너', '스포츠맨십', '코트 예절', '테니스 태도', '클럽 문화'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-etiquette-and-manners',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-etiquette-and-manners',
   },
   openGraph: {
     title: '테니스 코트 예절과 매너 — 진짜 실력자는 태도에서 드러난다 | 경기력보다 중요한 스포츠맨십의 기술',
     description: '테니스의 품격은 스윙보다 태도에서 드러난다. 매너 있는 플레이가 실력을 완성한다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-etiquette-and-manners',
+    url: 'https://tennisfriends.co.kr/blog/tennis-etiquette-and-manners',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function TennisEtiquetteAndMannersPage() {
   const excerpt = '테니스의 품격은 스윙보다 태도에서 드러난다. 매너 있는 플레이가 실력을 완성한다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-etiquette-and-manners" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-neutral-50 to-stone-50 dark:from-neutral-950 dark:to-stone-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-300">

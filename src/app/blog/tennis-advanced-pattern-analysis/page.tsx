@@ -10,12 +10,12 @@ export const metadata = {
   description: '상급자는 공을 치지 않는다, 상대를 읽는다. 패턴 분석과 카운터 전략이 진짜 승부의 기술이다.',
   keywords: ['테니스 전략', '상급자', '패턴 분석', '카운터 전략', '심리전', '경기 읽기'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-advanced-pattern-analysis',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-advanced-pattern-analysis',
   },
   openGraph: {
     title: '테니스 상급자의 경기 읽기 — 상대 패턴 분석과 카운터 전략 | 흐름을 읽고 이기는 플레이의 심리학',
     description: '상급자는 공을 치지 않는다, 상대를 읽는다. 패턴 분석과 카운터 전략이 진짜 승부의 기술이다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-advanced-pattern-analysis',
+    url: 'https://tennisfriends.co.kr/blog/tennis-advanced-pattern-analysis',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function TennisAdvancedPatternAnalysisPage() {
   const excerpt = '상급자는 공을 치지 않는다, 상대를 읽는다. 패턴 분석과 카운터 전략이 진짜 승부의 기술이다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-advanced-pattern-analysis" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-gray-50 to-slate-50 dark:from-gray-950 dark:to-slate-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">

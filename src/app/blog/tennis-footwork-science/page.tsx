@@ -11,12 +11,12 @@ export const metadata = {
   description: '풋워크는 테니스의 심장이다. 발의 리듬이 곧 경기의 리듬이며, 좋은 스윙은 좋은 발에서 시작된다.',
   keywords: ['테니스 풋워크', '발 리듬', '체중 이동', '스텝', '반응 속도', '균형'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-footwork-science',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-footwork-science',
   },
   openGraph: {
     title: '테니스 풋워크의 과학 — 발의 리듬이 경기의 리듬을 만든다 | 공보다 빠르게 움직이는 발의 기술',
     description: '풋워크는 테니스의 심장이다. 발의 리듬이 곧 경기의 리듬이며, 좋은 스윙은 좋은 발에서 시작된다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-footwork-science',
+    url: 'https://tennisfriends.co.kr/blog/tennis-footwork-science',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -71,7 +71,7 @@ export default function TennisFootworkSciencePage() {
   const excerpt = '풋워크는 테니스의 심장이다. 발의 리듬이 곧 경기의 리듬이며, 좋은 스윙은 좋은 발에서 시작된다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-footwork-science" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-gray-50 to-teal-50 dark:from-gray-950 dark:to-teal-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">

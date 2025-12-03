@@ -10,12 +10,12 @@ export const metadata = {
   description: '백핸드 정확도를 높이려면 힘이 아니라 타점과 각도를 조정해야 한다. 원핸드·투핸드별 교정 루틴, 지역 코트별 전략, 20분 감각 회복 훈련까지.',
   keywords: ['백핸드', '테니스 백핸드', '원핸드 백핸드', '투핸드 백핸드', '타점', '라켓면 각도', '리듬', '폼 교정'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/backhand-accuracy-full-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/backhand-accuracy-full-guide',
   },
   openGraph: {
     title: '백핸드 정확도 향상 완전 가이드 | 원핸드·투핸드 타점·라켓면·리듬',
     description: '백핸드 정확도를 높이려면 힘이 아니라 타점과 각도를 조정해야 한다. 원핸드·투핸드별 교정 루틴, 지역 코트별 전략, 20분 감각 회복 훈련까지.',
-    url: 'https://www.tennisfrens.com/blog/backhand-accuracy-full-guide',
+    url: 'https://tennisfriends.co.kr/blog/backhand-accuracy-full-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -69,7 +69,7 @@ export default function BackhandAccuracyFullGuidePage() {
   const excerpt = '백핸드의 정확도는 근력이 아니라 타점의 3cm와 라켓면의 1도에서 결정된다. 원핸드·투핸드별 폼 교정, 코트별 대응, 루틴까지 완전 정리.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="backhand-accuracy-full-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-gray-50 to-slate-50 dark:from-gray-950 dark:to-slate-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">

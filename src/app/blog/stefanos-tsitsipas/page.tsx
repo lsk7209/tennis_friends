@@ -11,12 +11,12 @@ export const metadata = {
   description: '원핸드 백핸드와 전진 본능, 표면별 전개와 멘탈 루틴까지—스테파노스 치치파스의 플레이 철학과 과제를 정리했습니다.',
   keywords: ['테니스', '스테파노스 치치파스', '선수 프로필', '스토리', '그리스'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/stefanos-tsitsipas',
+    canonical: 'https://tennisfriends.co.kr/blog/stefanos-tsitsipas',
   },
   openGraph: {
     title: '스테파노스 치치파스 선수 프로필과 스토리',
     description: '원핸드 백핸드와 전진 본능, 표면별 전개와 멘탈 루틴까지—스테파노스 치치파스의 플레이 철학과 과제를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/stefanos-tsitsipas',
+    url: 'https://tennisfriends.co.kr/blog/stefanos-tsitsipas',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -113,7 +113,7 @@ export default function StefanosTsitsipasBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="stefanos-tsitsipas" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

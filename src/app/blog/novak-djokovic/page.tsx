@@ -11,12 +11,12 @@ export const metadata = {
   description: '리턴·밸런스·멘탈로 큰 순간을 뒤집는 노박 조코비치의 성장 배경, 경기 스타일, 루틴과 인간적인 면모, 라이벌 구도를 정리했습니다.',
   keywords: ['테니스', '노박 조코비치', '선수 프로필', '스토리', '세르비아'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/novak-djokovic',
+    canonical: 'https://tennisfriends.co.kr/blog/novak-djokovic',
   },
   openGraph: {
     title: '노박 조코비치 선수 프로필과 스토리',
     description: '리턴·밸런스·멘탈로 큰 순간을 뒤집는 노박 조코비치의 성장 배경, 경기 스타일, 루틴과 인간적인 면모, 라이벌 구도를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/novak-djokovic',
+    url: 'https://tennisfriends.co.kr/blog/novak-djokovic',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -113,7 +113,7 @@ export default function NovakDjokovicBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="novak-djokovic" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

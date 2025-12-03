@@ -11,12 +11,12 @@ export const metadata = {
   description: '미국 하드에서 빛나는 에너지와 창의적 선택, 팀 퍼스트 태도로 사랑받는 프란시스 티아포의 성장 배경과 플레이 철학, 라이벌 구도를 정리했습니다.',
   keywords: ['테니스', '프란시스 티아포', '선수 프로필', '스토리', '미국'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/frances-tiafoe',
+    canonical: 'https://tennisfriends.co.kr/blog/frances-tiafoe',
   },
   openGraph: {
     title: '프란시스 티아포 선수 프로필과 스토리',
     description: '미국 하드에서 빛나는 에너지와 창의적 선택, 팀 퍼스트 태도로 사랑받는 프란시스 티아포의 성장 배경과 플레이 철학, 라이벌 구도를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/frances-tiafoe',
+    url: 'https://tennisfriends.co.kr/blog/frances-tiafoe',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -73,7 +73,7 @@ const faqs = [
 export default function FrancesTiafoeBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
-      <Article
+      <Article slug="frances-tiafoe" date="2024-01-01"
         title="프란시스 티아포 — 에너지와 창의로 코트를 달구다"
         excerpt="폭발적인 스텝과 감각적인 터치, 변주를 두려워하지 않는 전진으로 흐름을 뒤집는 프란시스 티아포의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
       >

@@ -10,12 +10,12 @@ export const metadata = {
   description: '어깨·팔꿈치·무릎 보호를 위한 워밍업·가동성·쿨다운 3단계 루틴과 지역별 기후 대응, 부상 징후별 대처법까지.',
   keywords: ['테니스 부상 예방', '워밍업', '가동성', '쿨다운', '스트레칭', '팔꿈치 통증', '어깨 통증', '무릎 통증'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-injury-prevention-full-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-injury-prevention-full-guide',
   },
   openGraph: {
     title: '테니스 부상 예방 루틴 | 10분 워밍업·가동성·쿨다운 완전 정리',
     description: '어깨·팔꿈치·무릎 보호를 위한 워밍업·가동성·쿨다운 3단계 루틴과 지역별 기후 대응, 부상 징후별 대처법까지.',
-    url: 'https://www.tennisfrens.com/blog/tennis-injury-prevention-full-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-injury-prevention-full-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -68,7 +68,7 @@ export default function TennisInjuryPreventionFullGuidePage() {
   const excerpt = '테니스 부상의 80%는 준비 부족 때문이다. 워밍업-가동성-쿨다운 루틴을 구조화하면 매 경기 부상 없이 성장할 수 있다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-injury-prevention-full-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">

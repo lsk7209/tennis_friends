@@ -10,12 +10,12 @@ export const metadata = {
   description: '하드·클레이·올코트별 아웃솔 차이, 평발/요족 맞춤 인솔, 지역별 기후 조건과 교체 주기까지 완전 정리.',
   keywords: ['테니스화', '테니스 신발', '하드코트 신발', '클레이코트 신발', '평발', '요족', '인솔', '사이징'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-shoes-balance-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-shoes-balance-guide',
   },
   openGraph: {
     title: '테니스화 선택 완전 가이드 | 접지·지지·쿠션·사이징 균형법',
     description: '하드·클레이·올코트별 아웃솔 차이, 평발/요족 맞춤 인솔, 지역별 기후 조건과 교체 주기까지 완전 정리.',
-    url: 'https://www.tennisfrens.com/blog/tennis-shoes-balance-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-shoes-balance-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -68,7 +68,7 @@ export default function TennisShoesBalanceGuidePage() {
   const excerpt = '테니스 실력의 절반은 신발에서 시작된다. 표면·발형·지지·사이징을 이해하면 부상은 줄고, 스텝 속도는 오른다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-shoes-balance-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-gray-50 to-stone-50 dark:from-gray-950 dark:to-stone-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300">

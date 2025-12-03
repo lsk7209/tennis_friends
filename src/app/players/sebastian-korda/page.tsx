@@ -2,30 +2,32 @@ import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
+import PlayerProfileCard from '@/components/players/PlayerProfileCard';
+import PlayerAttributes from '@/components/players/PlayerAttributes';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users, BookOpen } from 'lucide-react';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '세바스찬 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
-  description: '세바스찬 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타.',
-  keywords: ['세바스찬 코르다', 'Sebastian Korda', '테니스', 'ATP', '플레이스타일', '미국 테니스', '테니스 명가', '차세대'],
+  title: '세바스찬 코르다 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: '세바스찬 코르다의 깔끔한 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 테니스 명가의 DNA를 물려받아 우아하고 정석적인 플레이를 펼치는 미국의 기대주.',
+  keywords: ['세바스찬 코르다', 'Sebastian Korda', '테니스', 'ATP', '플레이스타일', '미국 테니스', '테니스 명가', '올라운더'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/players/sebastian-korda',
+    canonical: 'https://tennisfriends.co.kr/players/sebastian-korda',
   },
   openGraph: {
-    title: '세바스찬 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
-    description: '세바스찬 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://www.tennisfrens.com/players/sebastian-korda',
+    title: '세바스찬 코르다 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '세바스찬 코르다의 깔끔한 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    url: 'https://tennisfriends.co.kr/players/sebastian-korda',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '세바스찬 코르다 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
-    description: '세바스찬 코르다의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '세바스찬 코르다 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '세바스찬 코르다의 깔끔한 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -44,7 +46,6 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'why-again-notable', text: '세바스찬 코르다, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
   { id: 'growth-story', text: '세바스찬 코르다는 어떻게 여기까지 왔을까?', depth: 2 },
-  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
   { id: 'recent-form', text: '요즘 세바스찬 코르다의 경기력 흐름은 어떤가?', depth: 2 },
@@ -54,23 +55,23 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 const faqs = [
   {
     q: '세바스찬 코르다의 경기 스타일은 어떤가요?',
-    a: '올코트 스타일로, 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 특징입니다. 강력한 그라운드 스트로크와 안정적인 서브를 구사합니다.',
+    a: '군더더기 없는 깔끔한 폼과 안정적인 스트로크가 특징인 올라운드 플레이어입니다. 공격과 수비의 밸런스가 매우 좋습니다.',
   },
   {
     q: '코르다의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
-    a: '최고 랭킹은 30위권이었으며, 현재도 30위권을 유지하고 있습니다. 특히 큰 대회에서 안정적인 경기력을 보여주며, 미국 테니스의 차세대 스타로 주목받고 있습니다.',
+    a: '최고 랭킹은 23위이며, 현재는 20위권 중반을 유지하고 있습니다. 부상 복귀 후 다시 상승세를 타고 있습니다.',
   },
   {
     q: '코르다의 강점은 무엇인가요?',
-    a: '테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 최대 강점입니다. 강력한 그라운드 스트로크와 안정적인 서브를 구사하며, 특히 올코트에서 강력한 모습을 보여줍니다.',
+    a: '양손 백핸드의 안정감과 정확도가 뛰어나며, 네트 플레이 능력도 준수합니다. 경기 운영 능력이 나이에 비해 성숙합니다.',
   },
   {
-    q: '코르다의 성장 배경은 어떤가요?',
-    a: '아버지 페트르 코르다(전 세계 랭킹 2위)와 어머니 레지나 라지코바(전 프로 테니스 선수) 사이에서 태어나 어릴 때부터 테니스를 시작했습니다. 테니스 명가 출신으로 체계적인 훈련을 받으며 빠르게 성장했습니다.',
+    q: '코르다의 약점은 무엇인가요?',
+    a: '서브 파워가 체격 조건에 비해 다소 아쉬우며, 잦은 부상이 성장의 걸림돌이 되고 있습니다.',
   },
   {
     q: '코르다를 한 문장으로 설명하면?',
-    a: '테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타입니다.',
+    a: '테니스 명가의 DNA를 물려받은, 가장 교과서적인 폼을 가진 선수입니다.',
   },
 ];
 
@@ -79,138 +80,68 @@ export default function SebastianKordaPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
         title="세바스찬 코르다"
-        excerpt="테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타"
+        excerpt="테니스 명가의 DNA를 물려받아 우아하고 정석적인 플레이를 펼치는 미국의 기대주"
+        image="/images/players/sebastian-korda.png"
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '세바스찬 코르다', '선수 프로필', '미국', '테니스 명가', '차세대'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerProfileCard
+            name="Sebastian Korda"
+            country="United States"
+            age={23}
+            height="196cm"
+            plays="Right-handed (Two-handed backhand)"
+            turnedPro={2018}
+            grandSlams={0}
+            ranking={26}
+          />
 
-          {/* Table of Contents */}
-          <TOC items={tocItems} />
+          <div className="prose dark:prose-invert max-w-none">
+            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8">
+              로열 패밀리의 후계자. <strong className="text-blue-600 dark:text-blue-400">교과서적인 폼</strong>과 영리한 경기 운영으로 코트를 지배하는 미국 테니스의 귀공자.
+            </p>
 
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">세바스찬 코르다, 왜 주목받는 선수인가?</h2>
+            <TOC items={tocItems} />
+
+            <h2 id="why-again-notable" className="flex items-center gap-2 mt-12">
+              <Crown className="w-6 h-6 text-yellow-500" />
+              세바스찬 코르다, 왜 주목받는 선수인가?
+            </h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                 <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                  테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타
+                  테니스 명가의 DNA를 물려받아 우아하고 정석적인 플레이를 펼치는 미국의 기대주
                 </p>
               </div>
             </blockquote>
-            <p>세바스찬 코르다는 미국 출신의 세계랭킹 30위권 테니스 선수로, 테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 ATP 투어를 지배하고 있다. 세계랭킹 30위권을 유지하며, 특히 올코트에서 강력한 모습을 보여준다. 아버지 페트르 코르다(전 세계 랭킹 2위)와 어머니 레지나 라지코바(전 프로 테니스 선수) 사이에서 태어난 그의 테니스는 미국 테니스의 미래로 평가받는다.</p>
-            <p>그는 어릴 때부터 테니스 명가 출신으로 체계적인 훈련을 받으며 빠르게 성장했고, 특히 큰 대회에서 안정적인 경기력을 보여주며 주목받기 시작했다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 올코트에서 강력한 모습을 보여주고 있다. 그의 테니스는 유전된 재능과 체계적인 훈련이 결합된 결과로, 특히 강력한 그라운드 스트로크가 뛰어나다.</p>
+            <p>세바스찬 코르다는 '테니스 로열 패밀리'의 일원이다. 아버지는 1998년 호주 오픈 챔피언 페트르 코르다, 어머니는 전직 테니스 선수 레지나 라이크르토바다. 두 누나는 LPGA 투어 챔피언인 제시카 코르다와 넬리 코르다다.</p>
+            <p>이런 엄청난 스포츠 유전자를 물려받은 그는 어린 시절부터 체계적인 엘리트 교육을 받았다. 그 결과, 투어에서 가장 깔끔하고 군더더기 없는 폼을 갖추게 되었다. 단순히 배경만 좋은 것이 아니라, 실력으로도 주니어 호주 오픈 우승을 차지하며 자신의 가치를 증명했다.</p>
 
-            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>세바스찬 코르다는 미국 출신의 세계랭킹 30위권 선수로, 올코트 스타일과 테니스 명가 출신의 재능이 특징인 ATP 투어의 차세대 스타다.</p>
-            
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">미국</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">2000년 (24세)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">30위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">30위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">올코트</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">강력한 그라운드 스트로크</span></span>
-                </li>
-              </ul>
-            </div>
+            <h2 id="what-type-of-player" className="flex items-center gap-2 mt-12">
+              <Target className="w-6 h-6 text-red-500" />
+              이 선수는 어떤 유형의 플레이어인가?
+            </h2>
+            <p><strong>"우아한 올라운더 (Elegant All-Rounder)"</strong></p>
+            <p>코르다는 큰 키(196cm)에도 불구하고 부드러운 움직임과 정교한 기술을 구사하는 올라운드 플레이어다.</p>
 
-            <p>플레이 스타일은 올코트로 분류된다. 베이스라인에서 강력한 그라운드 스트로크를 구사하면서도, 기회가 생기면 네트로 전진해 발리로 마무리하는 능력을 갖추고 있다. 특히 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 그의 시그니처 무기로, 현대 테니스에서 점점 사라져가는 전통적인 테니스의 아름다움을 보여주는 대표적인 선수다.</p>
-            
-            <div className="not-prose my-6 flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border-blue-300 dark:border-blue-700">
-                <Zap className="w-3 h-3 mr-1 inline" />
-                테니스 명가 출신
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
-                <Shield className="w-3 h-3 mr-1 inline" />
-                체계적인 훈련
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
-                <Target className="w-3 h-3 mr-1 inline" />
-                올코트 전문
-              </Badge>
-            </div>
-            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"테니스 명가 출신"</strong>, <strong>"체계적인 훈련"</strong>, <strong>"올코트 전문"</strong>이다. 그의 테니스는 유전된 재능과 체계적인 훈련이 결합된 결과로, 특히 올코트에서 강력한 모습을 보여준다.</p>
+            <PlayerAttributes
+              attributes={[
+                { name: '백핸드 (Backhand)', score: 9.5, description: '투어 최고 수준의 양손 백핸드를 가졌다. 타점이 일정하고 코스 공략이 매우 정교하다.' },
+                { name: '기술 (Technique)', score: 9.5, description: '모든 샷의 폼이 교과서적이다. 불필요한 힘을 쓰지 않고 효율적으로 공을 친다.' },
+                { name: '네트 플레이 (Net Play)', score: 9.0, description: '복식 경기 경험도 많아 발리와 스매싱 처리가 능숙하다. 터치 감각이 좋다.' },
+                { name: '리턴 (Return)', score: 8.5, description: '상대의 강서브를 부드럽게 받아쳐 공격 기회로 만드는 능력이 탁월하다.' },
+                { name: '서브 (Serve)', score: 8.0, description: '키에 비해 파워는 다소 아쉽지만, 코스 선택과 회전 조절이 뛰어나다.' },
+              ]}
+            />
 
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="growth-story">세바스찬 코르다는 어떻게 여기까지 왔을까?</h2>
-            <p>코르다의 성장 스토리는 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 핵심이다.</p>
-
-            <h3>성장 배경</h3>
-            <p>그는 아버지 페트르 코르다(전 세계 랭킹 2위)와 어머니 레지나 라지코바(전 프로 테니스 선수) 사이에서 태어났다. 어릴 때부터 테니스 명가 출신으로 체계적인 훈련을 받았고, 코치였던 아버지는 화려한 기술보다 기본기의 견고함과 일상을 강조했다. 훈련 일지에는 샷의 질보다 루틴 이행률이 먼저 적혔고, 원정 중에도 수면과 식단, 가벼운 코어 루틴을 놓치지 않았다.</p>
-
-            <h3>주니어 시절</h3>
-            <p>주니어 시절부터 빠른 성장을 보였으며, 특히 테니스 명가 출신으로 유전된 재능이 두드러졌다. 아버지의 지도 아래 체계적인 훈련을 거치며 강력한 그라운드 스트로크와 안정적인 서브를 몸에 새겼다. 이 생활의 질서가 오늘의 빠르되 무너지지 않는 코르다를 만든다.</p>
-
-            <h3>전환점</h3>
-            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
-              <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전환점</p>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong>주니어에서 프로로 전환</strong>한 후 빠르게 적응하며 큰 대회에서 인상적인 경기력을 보여주기 시작했다. 특히 올코트에서 강력한 모습을 보여주며 미국 테니스의 차세대 스타로 주목받기 시작했다.
-              </p>
-            </div>
-            <p>주니어에서 프로로 전환한 후 그는 빠르게 적응하며 큰 대회에서 인상적인 경기력을 보여주기 시작했다. 특히 올코트에서 강력한 모습을 보여주며 미국 테니스의 차세대 스타로 주목받기 시작했다. 이 시기 동안 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 그의 시그니처 무기로 자리 잡았다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>코르다가 세계 상위권을 유지하는 힘은 테니스 명가 출신으로 유전된 재능, 체계적인 훈련, 그리고 올코트에서의 적응력에서 나온다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              기술적 강점
-            </h3>
-            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong className="text-purple-700 dark:text-purple-300">강력한 그라운드 스트로크</strong>가 가장 큰 무기. 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 결합된 결과다.
-              </p>
-            </div>
-            <p>강력한 그라운드 스트로크가 가장 큰 무기다. 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 결합된 결과다. 포핸드는 넓은 궤도와 빠른 채찍질로 코트를 벌린다. 백핸드는 양손의 견고함으로 라인을 얇게 긁어 각을 만든다. 특히 올코트에서 긴 랠리를 두려워하지 않으며, 깊은 구질로 상대를 압박한다.</p>
-            <p>서브는 안정적인 구질로 시작해 첫 두 타구의 구조를 설계하고, 짧은 리턴이 오면 하프코트에서 한 걸음 전진해 발리로 결말을 재촉한다. 리턴은 퍼스트 서브에는 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 전진해 접점을 앞세운다. 이어지는 첫 스트로크는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서 코너의 문을 열어 상대의 스텝을 묶는다.</p>
+            <p>플레이 스타일은 매우 안정적이다. 무리하게 위너를 노리기보다는 상대를 좌우로 흔들며 기회를 엿본다. 베이스라인 플레이뿐만 아니라 네트 플레이에도 능해, 서브 앤 발리나 칩 앤 차지 같은 다양한 전술을 구사한다.</p>
+            <p>특히 백핸드 다운더라인은 그의 가장 강력한 무기 중 하나다. 멘토인 안드레 애거시의 영향을 받아 리턴 게임에서도 강한 면모를 보인다. 다만 파워 면에서는 아직 보완이 필요하며, 잦은 부상으로 인해 경기력을 꾸준히 유지하는 데 어려움을 겪기도 한다.</p>
 
             <h3 className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
               피지컬 능력
             </h3>
-            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">5세트 경기에서도 후반까지 안정적인 경기력</strong>을 유지한다. 테니스 명가 출신으로 체계적인 훈련을 받아 기본기가 견고하다.</p>
+            <p>196cm의 장신이지만 움직임이 둔하지 않다. 긴 팔다리를 이용한 수비 범위가 넓고, 부드러운 스윙 메커니즘 덕분에 체력 소모가 적다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">효율적인 신체 활용</strong>은 그의 가장 큰 장점이다.</p>
 
             <h3 className="flex items-center gap-2">
               <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -223,129 +154,56 @@ export default function SebastianKordaPage() {
                   핵심 통계
                 </p>
               </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                올코트에서의 승률이 높으며, 특히 큰 대회에서 안정적인 경기력을 보여준다. 테니스 명가 출신으로 체계적인 훈련을 받아 기본기가 견고하다.
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
+                호주 오픈 8강(2023) · ATP 투어 1승 · 주니어 호주 오픈 <strong className="text-green-700 dark:text-green-400 text-base">우승</strong>
               </p>
             </div>
-            <p>올코트에서의 승률이 높으며, 특히 큰 대회에서 안정적인 경기력을 보여준다. 테니스 명가 출신으로 체계적인 훈련을 받아 기본기가 견고하며, 특히 중요한 포인트에서도 침착하게 경기를 진행한다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              전술적 다양성
-            </h3>
-            <p>베이스라인 게임을 기본으로 하되, 기회가 생기면 네트로 전진해 발리로 마무리한다. 상대의 약점을 파악해 구질을 조절하며, 특히 올코트에서 깊은 구질로 상대를 압박한다. 테니스 명가 출신으로 체계적인 훈련을 받아 전술적 다양성이 뛰어나다.</p>
+            <p>스포츠 가족의 일원답게 승부욕이 강하면서도 냉정함을 잃지 않는다. 경기 중 감정 기복이 적고, 위기 상황에서도 침착하게 대처한다. 아버지와 누나들의 조언을 통해 프로 선수로서의 마인드셋을 잘 갖추고 있다.</p>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
-            <p>코르다를 설명하는 대표 경기는 큰 대회에서의 승리 경기와 올코트에서의 우승 경기다.</p>
+            <h2 id="growth-story">세바스찬 코르다는 어떻게 여기까지 왔을까?</h2>
+            <p>코르다는 어린 시절 아이스하키 선수로 활동했으나, 2009년 US 오픈을 관람한 후 테니스로 전향했다. 아버지의 지도를 받으며 기본기를 다졌고, 2018년 주니어 호주 오픈 우승으로 두각을 나타냈다.</p>
+            <p>2021년 파르마 오픈에서 첫 투어 우승을 차지했고, 넥스트 젠 파이널스 준우승을 거두며 차세대 스타로 인정받았다. 2023년 호주 오픈에서는 다닐 메드베데프를 꺾고 8강에 오르는 파란을 일으켰다.</p>
 
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-sm">
+            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            <p>코르다의 잠재력을 확인시켜준 경기는 2023년 호주 오픈 3라운드다.</p>
+
+            <h3>2023년 호주 오픈 3라운드</h3>
+            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
               <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">큰 대회 승리</h4>
+                <Award className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">거함을 무너뜨리다</p>
               </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                <strong>특징:</strong> 테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 승리
-              </p>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                이 경기에서 드러난 건 코르다의 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이었다. 특히 올코트에서 강력한 그라운드 스트로크와 안정적인 서브를 구사하며, 큰 대회에서도 안정적인 경기력을 보여줬다.
+                우승 후보였던 <strong>다닐 메드베데프</strong>를 상대로 3-0 완승을 거뒀다. 메드베데프의 끈질긴 수비를 정교한 공격으로 뚫어내며, 자신이 탑 랭커와 대등하게 싸울 수 있음을 전 세계에 알렸다.
               </p>
             </div>
-
-            <p>이 경기로 인해 코르다는 미국 테니스의 차세대 스타로 평가받기 시작했고, 특히 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이 뛰어나다는 것을 보여줬다. 팬들과 전문가들은 그의 기본기의 견고함을 높이 평가했고, 특히 올코트에서의 강력한 모습을 인정받았다.</p>
-
-            <blockquote className="not-prose my-6 p-4 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-500 rounded-r-lg">
-              <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                "이 경기에서 드러난 건 코르다의 테니스 명가 출신으로 유전된 재능과 체계적인 훈련이었다."
-              </p>
-            </blockquote>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
-            <p>경기력뿐 아니라 테니스 명가 출신의 스토리와 겸손한 성격 덕분에 팬층이 두텁다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Heart className="w-5 h-5 text-red-600 dark:text-red-400" />
-              코트 매너
-            </h3>
-            <p>겸손한 성격이 특징이다. 경기 중에도 감정을 드러내지 않고 차분하게 경기를 진행하며, 특히 중요한 포인트에서도 침착하게 그라운드 스트로크를 구사한다. 페어플레이를 중시하며, 상대 선수와의 관계도 좋다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              인터뷰 스타일
-            </h3>
-            <p>인터뷰에서 경기 분석을 차분하게 설명하며, 특히 테니스 명가 출신으로 유전된 재능과 체계적인 훈련에 대해 자세히 설명한다. 팀과의 협력도 중요하게 생각하며, 특히 미국 테니스의 미래를 이끌어갈 선수로 평가받는다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              팀과의 관계
-            </h3>
-            <p>아버지인 페트르 코르다와의 관계가 좋으며, 특히 전술적 조언을 잘 받아들인다. 팀과의 협력도 중요하게 생각하며, 특히 미국 테니스의 미래를 이끌어갈 선수로 평가받는다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <p>팬들은 코르다의 '깔끔함'을 좋아한다.</p>
+            <p>군더더기 없는 폼과 신사적인 매너는 보는 이들을 편안하게 만든다. 또한 '코르다 가문'의 막내라는 스토리텔링도 흥미로운 요소다. 누나들과 함께 '골프-테니스 남매'로 불리며 많은 관심을 받고 있다.</p>
 
             <h2 id="recent-form">요즘 세바스찬 코르다의 경기력 흐름은 어떤가?</h2>
-            <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 올코트에서 강력한 모습을 보여주고 있다.</p>
+            <p>2023년 손목 부상으로 잠시 주춤했으나, 2024년 들어 다시 컨디션을 회복하고 있다. 꾸준히 대회에 출전하며 경기 감각을 끌어올리고 있다.</p>
 
-            <h3 className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              최근 성적
-            </h3>
-            <div className="not-prose my-4 p-4 bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 rounded-r-lg shadow-sm">
-              <div className="flex items-center gap-2 mb-2">
-                <Target className="w-4 h-4 text-blue-700 dark:text-blue-400" />
-                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-0">
-                  최근 성과
-                </p>
-              </div>
-              <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1 mb-0">
-                <li>• 올코트에서 꾸준한 성적</li>
-                <li>• 큰 대회에서 안정적인 경기력</li>
-                <li>• 테니스 명가 출신으로 주목받음</li>
-              </ul>
-            </div>
-            <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 올코트에서 강력한 모습을 보여주고 있다. 테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 차세대 스타로 주목받고 있으며, 특히 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
-              부상 및 컨디션
-            </h3>
-            <p>큰 부상 없이 경기에 임하고 있으며, 특히 체력 관리도 잘 하고 있다. 테니스 명가 출신으로 체계적인 훈련을 받아 기본기가 견고하며, 특히 올코트에서의 적응력이 뛰어나다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-              랭킹 변동
-            </h3>
-            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 30위권을 유지하고 있다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 올코트에서 강력한 모습을 보여준다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 특히 테니스 명가 출신으로 유전된 재능 활용을 더욱 강화하고 있다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <h3>최근 성적</h3>
+            <p>부상만 없다면 언제든 탑 10에 진입할 수 있는 기량을 갖추고 있다. 피지컬을 조금 더 보완하고 서브 파워를 늘린다면, 그랜드 슬램 우승도 노려볼 만한 재목이다.</p>
 
             <h2 id="one-sentence-summary">세바스찬 코르다, 한 문장으로 정리하면?</h2>
-            <p>테니스 명가 출신으로 유전된 재능과 체계적인 훈련으로 미국 테니스의 미래를 이끌어가는 차세대 스타다.</p>
-            <p>코르다는 테니스 명가 출신으로 유전된 재능과 체계적인 훈련을 받아 기본기가 견고하며, 특히 올코트에서 긴 랠리를 두려워하지 않는다. 강력한 그라운드 스트로크와 안정적인 서브로 상대를 압박하며, 인내로 경기를 이끌어간다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 올코트에서 강력한 모습을 보여주고 있다.</p>
+            <p>세바스찬 코르다는 테니스 명가의 DNA를 물려받아 우아하고 정석적인 플레이를 펼치는 미국의 기대주다.</p>
+            <p>그의 테니스는 기본에 충실하면서도 현대적인 감각을 잃지 않는다. 완벽한 폼에서 나오는 정교한 샷들은 테니스의 교본과도 같다. 부상을 이겨내고 꾸준함을 보여준다면, 아버지의 뒤를 이어 그랜드 슬램 챔피언이 될 날이 머지않았다.</p>
           </div>
 
           {/* FAQ Section */}
-          <div className="mt-12">
-            <FAQ items={faqs} />
-          </div>
+          <FAQ items={faqs} />
 
-          {/* CTA Section */}
-          <div className="mt-12">
-            <CTA
-              title="더 많은 테니스 선수 이야기"
-              description="다른 테니스 선수들의 스토리도 확인해보세요"
-              primaryButton={{
-                text: "선수 목록 보기",
-                href: "/players"
-              }}
-            />
-          </div>
+          {/* CTA */}
+          <CTA />
         </div>
       </Article>
     </div>
   );
 }
-

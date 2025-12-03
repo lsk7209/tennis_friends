@@ -10,12 +10,12 @@ export const metadata = {
   description: '루틴은 단순한 습관이 아니다. 매일의 일관된 반복이 집중력, 안정감, 승부 감각을 만든다.',
   keywords: ['테니스 루틴', '습관', '집중력', '멘탈', '일관성', '자동화'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-power-of-routine',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-power-of-routine',
   },
   openGraph: {
     title: '테니스에서 루틴의 힘 — 일관된 습관이 경기력을 만든다 | 반복이 만들어내는 집중과 자신감의 과학',
     description: '루틴은 단순한 습관이 아니다. 매일의 일관된 반복이 집중력, 안정감, 승부 감각을 만든다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-power-of-routine',
+    url: 'https://tennisfriends.co.kr/blog/tennis-power-of-routine',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function TennisPowerOfRoutinePage() {
   const excerpt = '루틴은 단순한 습관이 아니다. 매일의 일관된 반복이 집중력, 안정감, 승부 감각을 만든다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-power-of-routine" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">

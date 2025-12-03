@@ -10,12 +10,12 @@ export const metadata = {
   description: '포핸드 임팩트 타이밍, 라켓 각도, 하체 리듬 조정까지 완전 정리. 코트별 포핸드 전략과 실전 훈련 루틴까지 한눈에.',
   keywords: ['테니스 포핸드', '임팩트 타이밍', '포핸드 타점', '스윙 리듬', '하체 회전', '포핸드 훈련'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-forehand-impact-timing-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-forehand-impact-timing-guide',
   },
   openGraph: {
     title: '테니스 포핸드 임팩트 완전 정복 | 타점·스윙 리듬·회전 타이밍 가이드',
     description: '포핸드 임팩트 타이밍, 라켓 각도, 하체 리듬 조정까지 완전 정리. 코트별 포핸드 전략과 실전 훈련 루틴까지 한눈에.',
-    url: 'https://www.tennisfrens.com/blog/tennis-forehand-impact-timing-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-forehand-impact-timing-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function TennisForehandImpactTimingGuidePage() {
   const excerpt = '포핸드는 테니스의 심장이다. 스윙 속도보다 중요한 건 임팩트 타이밍과 몸의 회전 리듬. 이 0.1초의 차이가 경기 전체를 바꾼다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-forehand-impact-timing-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">

@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.tennisfrens.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfriends.co.kr"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "TennisFriends - 당신의 테니스 파트너",
     description: "데이터로 똑똑하게, 테니스를 즐겁게. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.",
-    url: "https://tennisfriends.co.kr",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfriends.co.kr",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "website",

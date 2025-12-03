@@ -11,12 +11,12 @@ export const metadata = {
   description: '스페인 출신 테니스 선수 카를로스 알카라스의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
   keywords: ['테니스', '카를로스 알카라스', '선수 프로필', '스토리', 'ATP'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/carlos-alcaraz',
+    canonical: 'https://tennisfriends.co.kr/blog/carlos-alcaraz',
   },
   openGraph: {
     title: '카를로스 알카라스 선수 프로필과 스토리',
     description: '스페인 출신 테니스 선수 카를로스 알카라스의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
-    url: 'https://www.tennisfrens.com/blog/carlos-alcaraz',
+    url: 'https://tennisfriends.co.kr/blog/carlos-alcaraz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -109,7 +109,7 @@ export default function CarlosAlcarazBlogPost() {
         </div>
       </div>
 
-      <Article
+      <Article slug="carlos-alcaraz" date="2024-01-01"
         title=""
         excerpt=""
       >

@@ -11,12 +11,12 @@ export const metadata = {
   description: '점토에서 빛나는 인내와 정밀한 구질 운영, 전술적 전진으로 성장한 카스페르 루드의 배경과 플레이 철학, 라이벌 구도를 정리했습니다.',
   keywords: ['테니스', '카스페르 루드', '선수 프로필', '스토리', '노르웨이'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/casper-ruud',
+    canonical: 'https://tennisfriends.co.kr/blog/casper-ruud',
   },
   openGraph: {
     title: '카스페르 루드 선수 프로필과 스토리',
     description: '점토에서 빛나는 인내와 정밀한 구질 운영, 전술적 전진으로 성장한 카스페르 루드의 배경과 플레이 철학, 라이벌 구도를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/casper-ruud',
+    url: 'https://tennisfriends.co.kr/blog/casper-ruud',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -113,7 +113,7 @@ export default function CasperRuudBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="casper-ruud" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

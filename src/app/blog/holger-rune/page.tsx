@@ -11,12 +11,12 @@ export const metadata = {
   description: '덴마크 출신 홀거 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
   keywords: ['테니스', '홀거 루네', '선수 프로필', '스토리', '덴마크'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/holger-rune',
+    canonical: 'https://tennisfriends.co.kr/blog/holger-rune',
   },
   openGraph: {
     title: '홀거 루네 선수 프로필과 스토리',
     description: '덴마크 출신 홀거 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
-    url: 'https://www.tennisfrens.com/blog/holger-rune',
+    url: 'https://tennisfriends.co.kr/blog/holger-rune',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -72,7 +72,7 @@ const faqs = [
 export default function HolgerRuneBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
-      <Article
+      <Article slug="holger-rune" date="2024-01-01"
         title="홀거 루네 — 불꽃과 계산 사이의 대담함"
         excerpt="공격적인 리턴과 예측 불가한 변주로 흐름을 흔드는 홀거 루네의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
       >

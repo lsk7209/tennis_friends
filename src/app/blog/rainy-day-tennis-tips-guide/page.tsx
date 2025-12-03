@@ -10,12 +10,12 @@ export const metadata = {
   description: '비 오는 날 테니스 감각 유지법 6가지. 실내 대체 훈련, 스트링 관리, 리듬 감각 훈련까지 완벽 정리.',
   keywords: ['비 오는 날 테니스', '감각 유지', '실내 훈련', '장비 관리', '루틴', '스트링'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/rainy-day-tennis-tips-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/rainy-day-tennis-tips-guide',
   },
   openGraph: {
     title: '비 오는 날 테니스 루틴 | 감각 유지·실내 훈련·장비 관리법 완전 가이드',
     description: '비 오는 날 테니스 감각 유지법 6가지. 실내 대체 훈련, 스트링 관리, 리듬 감각 훈련까지 완벽 정리.',
-    url: 'https://www.tennisfrens.com/blog/rainy-day-tennis-tips-guide',
+    url: 'https://tennisfriends.co.kr/blog/rainy-day-tennis-tips-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function RainyDayTennisTipsGuidePage() {
   const excerpt = '비가 와도 테니스 감각은 잃지 않는다. 실내 대체 루틴부터 장비 관리, 리듬 유지 훈련까지, 날씨에 구애받지 않는 플레이어의 비밀을 공개한다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="rainy-day-tennis-tips-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-950 dark:to-gray-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300">

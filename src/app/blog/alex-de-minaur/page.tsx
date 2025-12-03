@@ -11,12 +11,12 @@ export const metadata = {
   description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 드 미노의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
   keywords: ['테니스', '알렉스 드 미노', '선수 프로필', '스토리', '호주'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/alex-de-minaur',
+    canonical: 'https://tennisfriends.co.kr/blog/alex-de-minaur',
   },
   openGraph: {
     title: '알렉스 드 미노 선수 프로필과 스토리',
     description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 드 미노의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/alex-de-minaur',
+    url: 'https://tennisfriends.co.kr/blog/alex-de-minaur',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -113,7 +113,7 @@ export default function AlexDeMinaurBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="alex-de-minaur" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

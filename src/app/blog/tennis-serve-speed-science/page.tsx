@@ -10,12 +10,12 @@ export const metadata = {
   description: '서브는 힘이 아니라 타이밍이다. 근육의 순서, 무게 이동, 호흡의 리듬이 속도를 결정한다.',
   keywords: ['테니스 서브', '서브 속도', '타이밍', '리듬', '토스', '기술'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-serve-speed-science',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-serve-speed-science',
   },
   openGraph: {
     title: '테니스 서브 속도의 과학 — 파워보다 타이밍이 만든다 | 빠른 서브의 비밀은 근력이 아니라 리듬이다',
     description: '서브는 힘이 아니라 타이밍이다. 근육의 순서, 무게 이동, 호흡의 리듬이 속도를 결정한다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-serve-speed-science',
+    url: 'https://tennisfriends.co.kr/blog/tennis-serve-speed-science',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function TennisServeSpeedSciencePage() {
   const excerpt = '서브는 힘이 아니라 타이밍이다. 근육의 순서, 무게 이동, 호흡의 리듬이 속도를 결정한다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-serve-speed-science" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-950 dark:to-orange-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">

@@ -11,12 +11,12 @@ export const metadata = {
   description: '원핸드 백핸드와 노련한 전술로 커리어의 두 번째 전성기를 만든 그리고르 디미트로프의 성장 배경, 경기 스타일, 인간적인 면모와 과제를 정리했습니다.',
   keywords: ['테니스', '그리고르 디미트로프', '선수 프로필', '스토리', '불가리아'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/grigor-dimitrov',
+    canonical: 'https://tennisfriends.co.kr/blog/grigor-dimitrov',
   },
   openGraph: {
     title: '그리고르 디미트로프 선수 프로필과 스토리',
     description: '원핸드 백핸드와 노련한 전술로 커리어의 두 번째 전성기를 만든 그리고르 디미트로프의 성장 배경, 경기 스타일, 인간적인 면모와 과제를 정리했습니다.',
-    url: 'https://www.tennisfrens.com/blog/grigor-dimitrov',
+    url: 'https://tennisfriends.co.kr/blog/grigor-dimitrov',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -72,7 +72,7 @@ const faqs = [
 export default function GrigorDimitrovBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
-      <Article
+      <Article slug="grigor-dimitrov" date="2024-01-01"
         title="그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌"
         excerpt="원핸드 백핸드의 미학과 노련한 전술, 성숙한 멘탈로 커리어의 두 번째 절정을 만드는 그리고르 디미트로프의 성장, 스타일, 인간적 면모를 한 편으로."
       >

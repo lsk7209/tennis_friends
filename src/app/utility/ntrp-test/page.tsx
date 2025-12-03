@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요. 15개 질문으로 당신의 실제 NTRP 등급을 알아보세요. 실력 향상을 위한 맞춤형 가이드 제공.',
   keywords: ['NTRP', '테니스 실력 테스트', '실력 측정', '테니스 등급', '실력 향상'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/ntrp-test',
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/utility/ntrp-test`,
   },
   openGraph: {
     title: 'NTRP 실력 테스트 - 테니스 실력 측정 | TennisFriends',
     description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요. 15개 질문으로 당신의 실제 NTRP 등급을 알아보세요.',
-    url: 'https://tennisfriends.co.kr/utility/ntrp-test',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/utility/ntrp-test`,
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

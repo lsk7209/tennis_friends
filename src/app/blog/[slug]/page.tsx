@@ -44,12 +44,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       telephone: false,
     },
     alternates: {
-      canonical: `https://www.tennisfrens.com/blog/${slug}`,
+      canonical: `https://tennisfriends.co.kr/blog/${slug}`,
     },
     openGraph: {
       title: `${post.title} | TennisFriends`,
       description,
-      url: `https://www.tennisfrens.com/blog/${slug}`,
+      url: `https://tennisfriends.co.kr/blog/${slug}`,
       siteName: 'TennisFriends',
       locale: 'ko_KR',
       type: 'article',

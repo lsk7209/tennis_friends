@@ -2,22 +2,24 @@ import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
+import PlayerProfileCard from '@/components/players/PlayerProfileCard';
+import PlayerAttributes from '@/components/players/PlayerAttributes';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, BookOpen } from 'lucide-react';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, RotateCcw, AlertTriangle, Crown } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '카스페르 루드 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '카스페르 루드의 점토 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 인내와 정밀도로 점토를 지배하는 노르웨이의 대표 선수.',
-  keywords: ['카스페르 루드', 'Casper Ruud', '테니스', 'ATP', '플레이스타일', '노르웨이 테니스', '점토 전문', '인내와 정밀도'],
+  description: '카스페르 루드의 안정적인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 강력한 탑스핀 포핸드와 성실함으로 코트를 지배하는 노르웨이 출신의 세계랭킹 상위권 선수.',
+  keywords: ['카스페르 루드', 'Casper Ruud', '테니스', 'ATP', '플레이스타일', '노르웨이 테니스', '탑스핀', '클레이 코트'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/players/casper-ruud',
+    canonical: 'https://tennisfriends.co.kr/players/casper-ruud',
   },
   openGraph: {
     title: '카스페르 루드 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '카스페르 루드의 점토 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://www.tennisfrens.com/players/casper-ruud',
+    description: '카스페르 루드의 안정적인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    url: 'https://tennisfriends.co.kr/players/casper-ruud',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '카스페르 루드 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '카스페르 루드의 점토 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    description: '카스페르 루드의 안정적인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'why-again-notable', text: '카스페르 루드, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
+  { id: 'growth-story', text: '카스페르 루드는 어떻게 여기까지 왔을까?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
   { id: 'recent-form', text: '요즘 카스페르 루드의 경기력 흐름은 어떤가?', depth: 2 },
@@ -53,23 +55,23 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 const faqs = [
   {
     q: '카스페르 루드의 경기 스타일은 어떤가요?',
-    a: '점토 전문 스타일로, 인내와 정밀도가 특징입니다. 긴 랠리를 두려워하지 않으며, 정밀한 구질과 전술적 전진으로 점토를 지배합니다.',
+    a: '베이스라인에서의 안정적인 플레이와 강력한 탑스핀 포핸드가 특징입니다. 실수를 최소화하고 끈질기게 물고 늘어지는 스타일입니다.',
   },
   {
     q: '루드의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
-    a: '최고 랭킹은 2위였으며, 현재는 상위권을 유지하고 있습니다. 특히 점토 코트에서 강력한 모습을 보여주며 안정적인 성적을 거두고 있습니다.',
+    a: '최고 랭킹은 2위이며, 현재도 세계랭킹 10위권을 꾸준히 유지하고 있습니다. 그랜드 슬램 준우승 3회의 경력이 있습니다.',
   },
   {
     q: '루드의 강점은 무엇인가요?',
-    a: '인내와 정밀도가 최대 강점입니다. 긴 랠리를 기꺼이 받아들이며, 정밀한 구질과 전술적 전진으로 점토에서 강력한 모습을 보여줍니다.',
+    a: '나달을 연상시키는 헤비 탑스핀 포핸드가 최대 강점입니다. 또한 체력과 멘탈이 매우 강해 장기전에 능합니다.',
   },
   {
-    q: '루드의 성장 배경은 어떤가요?',
-    a: '선수였던 아버지의 세심한 지도로 기초가 다져졌습니다. 북유럽의 규율과 가족 코칭으로 체계적인 훈련을 받으며 성장했습니다.',
+    q: '루드의 약점은 무엇인가요?',
+    a: '백핸드가 상대적으로 평범하다는 평가를 받습니다. 또한 하드 코트나 잔디 코트에서의 폭발력이 클레이 코트에 비해 부족할 때가 있습니다.',
   },
   {
     q: '루드를 한 문장으로 설명하면?',
-    a: '인내와 정밀도로 점토를 지배하는 노르웨이의 대표 선수입니다.',
+    a: '성실함과 꾸준함으로 정상에 오른 노르웨이 테니스의 개척자입니다.',
   },
 ];
 
@@ -78,115 +80,68 @@ export default function CasperRuudPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
         title="카스페르 루드"
-        excerpt="인내와 정밀도로 점토를 지배하는 노르웨이의 대표 선수"
+        excerpt="강력한 탑스핀 포핸드와 성실함으로 코트를 지배하는 노르웨이 출신의 세계랭킹 상위권 선수"
+        image="/images/players/casper-ruud.png"
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '카스페르 루드', '선수 프로필', '노르웨이', '점토 전문', '인내와 정밀도'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerProfileCard
+            name="Casper Ruud"
+            country="Norway"
+            age={25}
+            height="183cm"
+            plays="Right-handed (Two-handed backhand)"
+            turnedPro={2015}
+            grandSlams={0}
+            ranking={7}
+          />
 
-          {/* Table of Contents */}
-          <TOC items={tocItems} />
+          <div className="prose dark:prose-invert max-w-none">
+            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8">
+              북유럽의 아이스맨. <strong className="text-orange-600 dark:text-orange-400">헤비 탑스핀 포핸드</strong>와 강철 같은 체력으로 상대를 질식시키는 클레이 코트의 강자.
+            </p>
 
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">카스페르 루드, 왜 주목받는 선수인가?</h2>
+            <TOC items={tocItems} />
+
+            <h2 id="why-again-notable" className="flex items-center gap-2 mt-12">
+              <Crown className="w-6 h-6 text-yellow-500" />
+              카스페르 루드, 왜 주목받는 선수인가?
+            </h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                 <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                  인내와 정밀도로 점토를 지배하는 노르웨이의 대표 선수
+                  강력한 탑스핀 포핸드와 성실함으로 코트를 지배하는 노르웨이 출신의 세계랭킹 상위권 선수
                 </p>
               </div>
             </blockquote>
-            <p>카스페르 루드는 노르웨이 출신의 세계랭킹 상위권 테니스 선수로, 인내와 정밀도로 점토 코트를 지배하고 있다. 최고 랭킹 2위에 올랐던 경력의 소유자이며, 특히 점토 코트에서 강력한 모습을 보여준다. 긴 랠리를 두려워하지 않는 인내와 정밀한 구질, 전술적 전진이 그의 테니스를 특징짓는다.</p>
-            <p>그는 프렌치 오픈에서 준우승을 차지하며 그랜드 슬램 결승에 진출했고, 점토 코트에서 안정적인 성적을 거두고 있다. 최근 몇 시즌 동안 점토 시즌에서 특히 강력한 모습을 보여주며, 화려함보다 확률 높은 선택을 꾸준히 누적하는 유형으로 평가받는다. 그의 테니스는 인내와 정밀도가 핵심이다.</p>
+            <p>카스페르 루드는 노르웨이 테니스 역사상 가장 높은 랭킹에 오른 선수로, 라파엘 나달 아카데미 출신답게 강력한 탑스핀 포핸드를 구사한다. 그랜드 슬램 결승에 3번이나 진출하며 메이저 타이틀에 근접한 실력을 증명했고, 세계랭킹 2위까지 오르는 기염을 토했다. 특히 클레이 코트에서의 강세가 두드러지지만, 하드 코트에서도 ATP 파이널스 준우승을 차지하는 등 올라운더로서의 면모를 갖추고 있다.</p>
+            <p>그는 투어에서 가장 성실하고 매너 좋은 선수로 알려져 있으며, 스포츠맨십 상을 수상하기도 했다. 꾸준함과 안정성을 바탕으로 상위권을 유지하고 있으며, '빅3' 이후의 테니스계를 이끌어갈 주요 선수 중 한 명으로 평가받는다.</p>
 
-            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>카스페르 루드는 노르웨이 출신의 세계랭킹 상위권 선수로, 점토 전문 스타일과 인내, 정밀한 구질이 특징인 ATP 투어의 안정적인 선수다.</p>
-            
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">노르웨이</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">1998년 (26세)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">2위</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">상위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">점토 전문</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">인내와 정밀도</span></span>
-                </li>
-              </ul>
-            </div>
+            <h2 id="what-type-of-player" className="flex items-center gap-2 mt-12">
+              <Target className="w-6 h-6 text-red-500" />
+              이 선수는 어떤 유형의 플레이어인가?
+            </h2>
+            <p><strong>"안정적인 베이스라이너 (Consistent Baseliner)"</strong></p>
+            <p>카스페르 루드는 노르웨이 출신의 세계랭킹 상위권 선수로, 강력한 포핸드와 안정적인 경기 운영이 특징이다.</p>
 
-            <p>플레이 스타일은 점토 전문으로 분류된다. 베이스라인에서 긴 랠리를 기꺼이 받아들이며, 정밀한 구질과 전술적 전진으로 점토를 지배한다. 특히 인내와 정밀도가 그의 시그니처 무기로, 화려함보다 확률 높은 선택을 꾸준히 누적하는 유형이다.</p>
-            
-            <div className="not-prose my-6 flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 border-red-300 dark:border-red-700">
-                <Shield className="w-3 h-3 mr-1 inline" />
-                인내와 정밀도
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
-                <Target className="w-3 h-3 mr-1 inline" />
-                점토 전문
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
-                <Trophy className="w-3 h-3 mr-1 inline" />
-                노르웨이의 대표
-              </Badge>
-            </div>
-            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"인내와 정밀도"</strong>, <strong>"점토 전문"</strong>, <strong>"노르웨이의 대표"</strong>이다. 그의 테니스는 화려함보다 확률 높은 선택을 꾸준히 누적하며, 특히 긴 랠리를 두려워하지 않는 인내가 뛰어나다.</p>
+            <PlayerAttributes
+              attributes={[
+                { name: '포핸드 (Forehand)', score: 9.8, description: '나달을 연상시키는 엄청난 회전량의 탑스핀 포핸드. 클레이 코트에서 특히 위력적이다.' },
+                { name: '일관성 (Consistency)', score: 9.5, description: '실수를 거의 하지 않는 안정적인 플레이. 상대가 지칠 때까지 랠리를 이어간다.' },
+                { name: '움직임 (Movement)', score: 9.0, description: '빠른 발과 뛰어난 예측 능력으로 코트 전체를 커버한다.' },
+                { name: '서브 (Serve)', score: 8.5, description: '파워보다는 정확도와 회전을 중시하는 서브. 꾸준히 발전하고 있다.' },
+                { name: '백핸드 (Backhand)', score: 8.5, description: '안정적이지만 공격적인 위력은 포핸드에 비해 다소 떨어진다.' },
+              ]}
+            />
 
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>루드가 세계 상위권을 유지하는 힘은 인내와 정밀도, 그리고 전술적 전진에서 나온다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              기술적 강점
-            </h3>
-            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong className="text-purple-700 dark:text-purple-300">정밀한 구질</strong>이 가장 큰 무기. 길이의 누적에서 출발하며, 확률 높은 선택을 꾸준히 누적한다.
-              </p>
-            </div>
-            <p>정밀한 구질이 가장 큰 무기다. 길이의 누적에서 출발하며, 확률 높은 선택을 꾸준히 누적한다. 포핸드는 넓은 궤도와 깊은 볼로 상대를 뒤로 밀어낸다. 백핸드는 양손의 견고함으로 라인을 얇게 긁어 각을 만든다. 서브는 와이드와 바디의 비율을 바꿔 첫 두 타구의 구조를 설계하고, 짧은 리턴이 오면 하프코트에서 한 걸음 전진해 발리로 결말을 재촉한다.</p>
-            <p>리턴은 퍼스트 서브에는 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 전진해 접점을 앞세운다. 이어지는 첫 스트로크는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서 코너의 문을 열어 상대의 스텝을 묶는다.</p>
+            <p>플레이 스타일은 전형적인 클레이 코트 스페셜리스트의 장점을 가진 베이스라이너다. 베이스라인 뒤에서 많은 양의 스핀이 걸린 공을 깊숙이 보내 상대를 뒤로 밀어내고, 짧은 공이 오면 강력한 포핸드 위너로 마무리한다. 그의 포핸드 RPM(분당 회전수)은 투어 최상위권에 속한다.</p>
+            <p>수비 능력이 매우 뛰어나다. 상대의 공격을 끈질기게 받아넘기며 실수를 유도한다. 최근에는 하드 코트에서의 적응력을 높이기 위해 공격적인 플레이 비중을 늘리고 있으며, 네트 플레이와 서브 능력 향상에도 힘쓰고 있다. 멘탈적으로 매우 차분하고 침착하여 경기 중 감정 기복이 거의 없다.</p>
 
             <h3 className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
               피지컬 능력
             </h3>
-            <p>코트 커버리지가 뛰어나다. 전진과 후퇴를 자유롭게 오간다. 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 장기전에서도 체력 관리가 뛰어나며, <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">긴 랠리를 두려워하지 않는 인내</strong>가 특징이다.</p>
+            <p>탄탄한 체격과 지치지 않는 체력을 자랑한다. 5세트 경기도 문제없이 소화하며, 연전에도 강한 모습을 보인다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">부상이 거의 없는 철저한 자기 관리</strong> 또한 그의 큰 장점이다.</p>
 
             <h3 className="flex items-center gap-2">
               <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -200,76 +155,42 @@ export default function CasperRuudPage() {
                 </p>
               </div>
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
-                긴 랠리에서 비교적 강한 편 · 인내와 정밀도 · 전술적 전진
+                그랜드 슬램 결승 3회 진출 · 클레이 코트 승률 <strong className="text-green-700 dark:text-green-400 text-base">최상위권</strong> · 스포츠맨십 상 수상
               </p>
             </div>
-            <p>포인트 사이 그는 스트링을 훑고 두 번의 깊은 호흡으로 리듬을 고정한다. 스코어가 흔들려도 루틴의 길이를 바꾸지 않아 심박이 급등하지 않는다. 긴 랠리에서는 네트를 넉넉히 넘기는 구질로 높이와 길이를 확인하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던진다. 인내와 정밀도가 특징이다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              전술적 다양성
-            </h3>
-            <p>표면별 전개가 뛰어나다. 점토에서는 회전을 더해 낙구를 안정시키고 랠리의 길이를 받아들이되, 네 번째나 다섯 번째 스트로크에서 드롭과 슬라이스를 섞어 템포를 흔든다. 하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 주도권을 잡고, 리턴 게임에서는 중앙 깊은 볼로 각을 지워 다음 볼에서 속도를 끌어올린다. 잔디에서는 토스를 낮추고 백스윙을 줄여 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 속도를 통제한다.</p>
+            <p>항상 평정심을 유지한다. 심판 판정에 불복하거나 라켓을 던지는 모습을 거의 볼 수 없다. 이러한 차분함은 위기 상황에서 올바른 판단을 내리는 데 도움을 준다. '나이스 가이'라는 별명처럼 코트 안팎에서 모범적인 태도를 보여준다.</p>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
-            <p>루드의 커리어를 상징하는 경기는 프렌치 오픈 준우승과 점토 마스터스 대회 우승이다.</p>
+            <h2 id="growth-story">카스페르 루드는 어떻게 여기까지 왔을까?</h2>
+            <p>루드는 노르웨이 테니스 선수였던 아버지 크리스티안 루드의 지도를 받으며 성장했다. 라파엘 나달 아카데미에서 훈련하며 기량을 급성장시켰고, 2020년 부에노스아이레스 오픈 우승으로 노르웨이 선수 최초의 ATP 투어 우승자가 되었다.</p>
+            <p>2022년은 그에게 최고의 해였다. 프랑스 오픈과 US 오픈에서 준우승을 차지하고, ATP 파이널스에서도 준우승하며 세계랭킹 2위까지 올랐다. 비록 메이저 우승 문턱에서 좌절했지만, 세계 정상급 선수임을 확실히 각인시켰다. 2023년 프랑스 오픈에서도 다시 한번 결승에 오르며 클레이 코트의 강자임을 입증했다.</p>
 
-            <h3>프렌치 오픈 준우승</h3>
+            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            <p>루드의 커리어를 상징하는 경기는 2022년 프랑스 오픈 8강전이다.</p>
+
+            <h3>2022년 프랑스 오픈 8강</h3>
             <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
               <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">커리어 전성기의 정점</p>
+                <Award className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">노르웨이 더비 승리</p>
               </div>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong>프렌치 오픈</strong>에서 준우승을 차지하며 그랜드 슬램 결승에 진출했다. 특히 결승전에서의 경기력은 그의 인내와 정밀도를 보여주는 대표적인 사례였다.
+                <strong>홀게르 루네</strong>와의 8강전에서 3-1로 승리하며 생애 첫 그랜드 슬램 4강에 진출했다. 북유럽 라이벌전에서의 승리로 자신의 입지를 확고히 했다.
               </p>
             </div>
-            <p>프렌치 오픈에서 그는 준우승을 차지하며 그랜드 슬램 결승에 진출했다. 이 경기에서 그는 인내와 정밀도로 상대를 압도했다. 특히 결승전에서의 경기력은 그의 기술적 완성도를 보여주는 대표적인 사례였다. 긴 랠리를 두려워하지 않는 인내와 정밀한 구질, 그리고 중요한 포인트에서의 침착함이 모두 어우러진 경기였다.</p>
 
-            <h3>점토 마스터스 대회 우승</h3>
-            <p>점토 마스터스 대회에서 그는 우승을 거두며 점토 전문가로서의 입지를 확고히 했다. 이 경기에서 드러난 건 루드의 전술적 전진이었다. 인내와 정밀도가 한 경기에 응축되었다.</p>
-
-            <h3>대표 명장면</h3>
-            <blockquote className="not-prose my-4 p-5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/50 dark:to-slate-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg shadow-sm">
-              <div className="flex items-start gap-3">
-                <Zap className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
-                <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic leading-relaxed">
-                  브레이크 포인트. 중앙 깊은 볼 두 개로 상대 스텝을 뒤로 밀어낸 뒤, 포핸드를 몸 가까이 끌어당겨 다운더라인으로 단호히 접는다. 공이 사이드라인을 스치며 빠져나갈 때 관중의 탄성이 터지고, 그는 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟는다. 인내와 정밀도가 바로 이 순간이다.
-                </p>
-              </div>
-            </blockquote>
+            <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
-            <p>루드는 경기력뿐 아니라 절제와 예의, 팀 퍼스트 덕분에 팬층이 두텁다.</p>
-
-            <h3>코트 매너</h3>
-            <p>그는 절제와 예의를 중시한다. 인터뷰에서 준비와 팀을 먼저 언급한다. 잘된 날에는 계획이 맞았다고, 부족한 날에는 수정 항목이 분명하다고 말한다. 팬에겐 미소와 눈맞춤을, 코트 스태프에겐 짧은 감사를 잊지 않는다. 패배 뒤에도 책임의 방향을 자기 쪽으로 당기고, 승리한 날에는 스태프와 팬에게 차례로 감사를 전한다.</p>
-
-            <h3>인터뷰 스타일</h3>
-            <p>인터뷰는 진솔하고 체계적이다. 준비와 팀을 먼저 언급하며, 자신의 성과보다는 상대의 강점을 인정하는 모습을 자주 보인다. 긴 일정 속에서도 회복·수면·식단의 루틴을 생활로 고정해 컨디션의 파고를 낮춘다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 완성한다.</p>
-
-            <h3>팀과의 관계</h3>
-            <p>코치와 팀과의 관계에서도 신뢰가 두터운 것으로 알려져 있다. 특히 아버지이자 코치인 크리스티안 루드와의 관계는 그의 안정적인 경기력에 기여하고 있으며, 팀 전체가 하나의 목표를 향해 나아가는 모습을 보여준다. 노르웨이의 훈련 문화는 작은 시장에서 큰 상징을 만드는 것을 중시하는데, 루드의 테니스에도 이 정신이 뚜렷하다.</p>
+            <p>팬들이 루드에게 호감을 느끼는 이유는 그의 성실함과 겸손함이다.</p>
+            <p>화려한 퍼포먼스나 자극적인 언행은 없지만, 묵묵히 자신의 길을 가는 모습이 신뢰를 준다. 또한 잘생긴 외모와 깔끔한 매너는 많은 여성 팬들을 확보하는 요인이기도 하다. 골프를 즐기는 등 건전한 사생활도 긍정적인 이미지를 더한다.</p>
 
             <h2 id="recent-form">요즘 카스페르 루드의 경기력 흐름은 어떤가?</h2>
-            <p>최근 몇 시즌 동안 루드는 점토 시즌에서 특히 강력한 모습을 보여주고 있으며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
+            <p>최근 루드는 꾸준히 상위권을 유지하고 있다. 클레이 코트 시즌에는 언제나 우승 후보로 꼽히며, 하드 코트에서도 점차 성적을 내고 있다.</p>
 
             <h3>최근 성적</h3>
-            <div className="not-prose my-4 p-3 bg-blue-50 dark:bg-blue-950/20 border-l-3 border-blue-500 rounded-r shadow-sm">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0 flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-blue-600" />
-                <strong>안정세:</strong> 최근 10경기 <strong className="text-blue-700 dark:text-blue-400">점토에서 강력한 모습</strong> · 탑 10 선수들과의 경기에서도 승리
-              </p>
-            </div>
-            <p>최근 10경기 기준으로 보면, 그는 점토에서 강력한 모습을 보여주는 편이다. 탑 10 선수들과의 경기에서도 승리를 거두며, 자신의 테니스가 여전히 경쟁력이 있음을 증명하고 있다. 최근 3개월 동안의 성적도 안정적이며, 특히 점토 시즌에서 후반 라운드에 진출하는 빈도가 높아졌다.</p>
-
-            <h3>부상 관리</h3>
-            <p>부상과 관련해서는 현재 큰 문제가 없는 상태다. 체계적인 회복과 관리 덕분에 경기에 지장을 주는 수준은 아니다. 다만 긴 시즌을 고려해 몸 관리에 더 신경을 쓰고 있으며, 불필요한 스프린트를 줄이고 효율적인 경기 운영에 집중하고 있다.</p>
-
-            <h3>랭킹과 스타일 변화</h3>
-            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 상위권을 유지하고 있다. 점토 시즌에서 특히 강력한 모습을 보여주며, 그는 여전히 탑 10 선수들과 경쟁할 수 있는 능력을 보여줬다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 하프코트에서의 마무리를 한 박자 더 빠르게 가져오는 데 집중하고 있다.</p>
+            <p>2024년 바르셀로나 오픈 우승으로 시즌 첫 타이틀을 획득했다. 몬테카를로 마스터스 준우승 등 큰 대회에서도 좋은 성적을 이어가고 있다. 그랜드 슬램 우승이라는 목표를 향해 한 걸음씩 나아가고 있다.</p>
 
             <h2 id="one-sentence-summary">카스페르 루드, 한 문장으로 정리하면?</h2>
             <p>카스페르 루드는 인내와 정밀도로 점토를 지배하는 노르웨이의 대표 선수다.</p>

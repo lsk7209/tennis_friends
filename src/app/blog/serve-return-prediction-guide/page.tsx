@@ -10,12 +10,12 @@ export const metadata = {
   description: '서브 리턴은 예측의 기술이다. 토스 패턴, 발 리듬, 라켓 준비각, 코트별 리턴 전략과 훈련 루틴까지 완전 정리.',
   keywords: ['서브 리턴', '테니스 리턴', '토스 읽기', '스텝 타이밍', '라켓 준비각', '예측 기술'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/serve-return-prediction-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/serve-return-prediction-guide',
   },
   openGraph: {
     title: '테니스 서브 리턴 완전정복 | 토스 읽기·첫 스텝 타이밍·라켓 각도',
     description: '서브 리턴은 예측의 기술이다. 토스 패턴, 발 리듬, 라켓 준비각, 코트별 리턴 전략과 훈련 루틴까지 완전 정리.',
-    url: 'https://www.tennisfrens.com/blog/serve-return-prediction-guide',
+    url: 'https://tennisfriends.co.kr/blog/serve-return-prediction-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -69,7 +69,7 @@ export default function ServeReturnPredictionGuidePage() {
   const excerpt = '서브 리턴은 반응이 아니라 예측의 경기다. 토스와 스텝 타이밍, 라켓 각도를 조정하면 180km 서브도 되돌릴 수 있다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="serve-return-prediction-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">

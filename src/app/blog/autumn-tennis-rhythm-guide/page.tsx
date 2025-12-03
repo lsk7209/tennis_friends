@@ -10,12 +10,12 @@ export const metadata = {
   description: '가을 테니스 시즌에 흔들리는 리듬과 스윙 타이밍을 잡는 법. 지역별 코트 전략, 풋워크 훈련 루틴, 스트링 세팅 팁까지 한눈에 정리.',
   keywords: ['가을 테니스', '테니스 리듬', '풋워크', '스윙 타이밍', '코트 전략', '스트링 세팅'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/autumn-tennis-rhythm-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/autumn-tennis-rhythm-guide',
   },
   openGraph: {
     title: '가을 테니스 리듬 되찾기 | 스윙·풋워크·지역별 전략 완벽 가이드',
     description: '가을 테니스 시즌에 흔들리는 리듬과 스윙 타이밍을 잡는 법. 지역별 코트 전략, 풋워크 훈련 루틴, 스트링 세팅 팁까지 한눈에 정리.',
-    url: 'https://www.tennisfrens.com/blog/autumn-tennis-rhythm-guide',
+    url: 'https://tennisfriends.co.kr/blog/autumn-tennis-rhythm-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function AutumnTennisRhythmGuidePage() {
   const excerpt = '가을 바람이 불면 공의 감각도 달라진다. 테니스 실력은 힘이 아니라 리듬에서 나온다. 지금, 당신의 스윙과 풋워크를 조율할 완벽한 계절이다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="autumn-tennis-rhythm-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">

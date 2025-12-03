@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스 경기 중 흔들리지 않는 멘탈 루틴. 호흡, 시선, 루틴, 리듬을 통해 자신감과 집중력을 높이는 심리 관리법.',
   keywords: ['테니스 멘탈', '집중력 훈련', '심리 관리', '루틴', '긴장감 제어', '자신감'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-mental-routine-control-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-mental-routine-control-guide',
   },
   openGraph: {
     title: '테니스 멘탈 루틴 5단계 | 집중력 유지·긴장감 제어법 완전 가이드',
     description: '테니스 경기 중 흔들리지 않는 멘탈 루틴. 호흡, 시선, 루틴, 리듬을 통해 자신감과 집중력을 높이는 심리 관리법.',
-    url: 'https://www.tennisfrens.com/blog/tennis-mental-routine-control-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-mental-routine-control-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function TennisMentalRoutineControlGuidePage() {
   const excerpt = '포핸드보다 어려운 게 멘탈이다. 경기 중 흔들리지 않고 집중력을 유지하는 루틴 5단계, 프로 선수들의 심리 컨트롤법을 해석한다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-mental-routine-control-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-purple-50 to-violet-50 dark:from-purple-950 dark:to-violet-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">

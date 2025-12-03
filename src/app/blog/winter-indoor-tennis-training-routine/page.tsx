@@ -10,12 +10,12 @@ export const metadata = {
   description: '겨울 테니스 실내 코트에서 스윙 감각과 스피드를 유지하는 7가지 루틴. 장비, 워밍업, 리듬 훈련, 컨디션 관리까지 완벽 가이드.',
   keywords: ['겨울 테니스', '실내 코트', '테니스 루틴', '스피드 유지', '감각 훈련', '겨울 훈련'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/winter-indoor-tennis-training-routine',
+    canonical: 'https://tennisfriends.co.kr/blog/winter-indoor-tennis-training-routine',
   },
   openGraph: {
     title: '겨울 테니스 실내 훈련 루틴 | 스피드·감각 유지법 완전정리',
     description: '겨울 테니스 실내 코트에서 스윙 감각과 스피드를 유지하는 7가지 루틴. 장비, 워밍업, 리듬 훈련, 컨디션 관리까지 완벽 가이드.',
-    url: 'https://www.tennisfrens.com/blog/winter-indoor-tennis-training-routine',
+    url: 'https://tennisfriends.co.kr/blog/winter-indoor-tennis-training-routine',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function WinterIndoorTennisTrainingRoutinePage() {
   const excerpt = '겨울엔 테니스 감이 떨어진다고요? 실내 코트에서도 스피드와 감각을 유지할 수 있는 루틴이 있습니다. 시즌 오프를 성장기로 만드는 법, 지금 시작하세요.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="winter-indoor-tennis-training-routine" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">

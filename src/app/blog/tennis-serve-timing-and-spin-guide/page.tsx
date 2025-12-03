@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스 서브를 강하게 만드는 핵심은 타이밍과 리듬이다. 플랫·슬라이스·킥서브까지, 아마추어도 즉시 실력 향상 가능한 서브 완전 가이드.',
   keywords: ['테니스 서브', '서브 타이밍', '스핀 서브', '플랫 서브', '슬라이스 서브', '킥 서브', '리듬'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-serve-timing-and-spin-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-serve-timing-and-spin-guide',
   },
   openGraph: {
     title: '테니스 서브 타이밍과 스핀 컨트롤 완전 가이드 | 리듬으로 서브 완성하기',
     description: '테니스 서브를 강하게 만드는 핵심은 타이밍과 리듬이다. 플랫·슬라이스·킥서브까지, 아마추어도 즉시 실력 향상 가능한 서브 완전 가이드.',
-    url: 'https://www.tennisfrens.com/blog/tennis-serve-timing-and-spin-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-serve-timing-and-spin-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -70,7 +70,7 @@ export default function TennisServeTimingAndSpinGuidePage() {
   const excerpt = '강한 서브는 팔힘이 아니라 리듬에서 나온다. 아마추어가 프로처럼 보이게 만드는 서브 타이밍과 스핀 컨트롤의 모든 것을 정리했다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-serve-timing-and-spin-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-950 dark:to-orange-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">

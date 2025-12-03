@@ -2,29 +2,31 @@ import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
+import PlayerProfileCard from '@/components/players/PlayerProfileCard';
+import PlayerAttributes from '@/components/players/PlayerAttributes';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users } from 'lucide-react';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '카메론 노리 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
-  description: '카메론 노리의 좌완 베이스라인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 세계랭킹 30위권 선수.',
+  title: '카메론 노리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: '카메론 노리의 좌완 베이스라인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 테니스 스타.',
   keywords: ['카메론 노리', 'Cameron Norrie', '테니스', 'ATP', '플레이스타일', '영국 테니스', '좌완', '베이스라인'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/players/cameron-norrie',
+    canonical: 'https://tennisfriends.co.kr/players/cameron-norrie',
   },
   openGraph: {
-    title: '카메론 노리 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
+    title: '카메론 노리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '카메론 노리의 좌완 베이스라인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://www.tennisfrens.com/players/cameron-norrie',
+    url: 'https://tennisfriends.co.kr/players/cameron-norrie',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '카메론 노리 — 세계랭킹 30위권 | 플레이스타일·명장면·최근 경기력',
+    title: '카메론 노리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '카메론 노리의 좌완 베이스라인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
@@ -41,9 +43,9 @@ export const metadata: Metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '카메론 노리, 왜 여전히 세계 최고인가?', depth: 2 },
+  { id: 'why-again-notable', text: '카메론 노리, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
+  { id: 'growth-story', text: '카메론 노리는 어떻게 여기까지 왔을까?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
   { id: 'recent-form', text: '요즘 카메론 노리의 경기력 흐름은 어떤가?', depth: 2 },
@@ -53,23 +55,23 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 const faqs = [
   {
     q: '카메론 노리의 경기 스타일은 어떤가요?',
-    a: '좌완 베이스라인 스타일로, 꾸준함과 전술적 사고가 특징입니다. 강력한 포핸드와 안정적인 백핸드를 구사하며, 특히 좌완의 유리함을 잘 활용합니다.',
+    a: '왼손잡이의 이점을 살린 헤비 탑스핀 포핸드와 매우 플랫한 백핸드를 섞어 쓰는 까다로운 베이스라이너입니다. 체력이 매우 좋습니다.',
   },
   {
     q: '노리의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
-    a: '최고 랭킹은 8위였으며, 현재는 30위권을 유지하고 있습니다. 특히 2022년 인디언 웰스에서 우승하며 큰 주목을 받았습니다.',
+    a: '최고 랭킹은 8위이며, 현재는 30위권에 머물러 있습니다. 2021년 인디언 웰스 우승으로 탑 10에 진입했습니다.',
   },
   {
     q: '노리의 강점은 무엇인가요?',
-    a: '꾸준함과 전술적 사고가 최대 강점입니다. 좌완 포핸드의 각도와 안정적인 백핸드를 구사하며, 특히 긴 랠리에서도 침착하게 경기를 이끌어가는 능력이 뛰어납니다.',
+    a: '지치지 않는 체력과 끈질긴 수비력, 그리고 상대의 리듬을 깨는 독특한 백핸드 궤적이 강점입니다.',
   },
   {
-    q: '노리의 인간적인 면모는 어떤가요?',
-    a: '침착하고 겸손한 성격이 특징입니다. 인터뷰에서 경기 분석을 차분하게 설명하며, 팀과의 협력도 중요하게 생각합니다.',
+    q: '노리의 약점은 무엇인가요?',
+    a: '결정적인 한 방(위너) 능력이 최정상급 선수들에 비해 부족하며, 서브의 위력이 다소 약한 편입니다.',
   },
   {
     q: '노리를 한 문장으로 설명하면?',
-    a: '꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 좌완 베이스라인 플레이어입니다.',
+    a: '성실함과 끈기로 상대를 질식시키는 영국의 철인입니다.',
   },
 ];
 
@@ -78,115 +80,68 @@ export default function CameronNorriePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
         title="카메론 노리"
-        excerpt="꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 좌완 베이스라인 플레이어"
+        excerpt="꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 테니스 스타"
+        image="/images/players/cameron-norrie.png"
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '카메론 노리', '선수 프로필', '영국', '좌완', '베이스라인'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerProfileCard
+            name="Cameron Norrie"
+            country="United Kingdom"
+            age={28}
+            height="188cm"
+            plays="Left-handed (Two-handed backhand)"
+            turnedPro={2017}
+            grandSlams={0}
+            ranking={33}
+          />
 
-          {/* Table of Contents */}
-          <TOC items={tocItems} />
+          <div className="prose dark:prose-invert max-w-none">
+            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8">
+              지치지 않는 엔진. <strong className="text-blue-600 dark:text-blue-400">왼손잡이의 이점</strong>과 강철 같은 체력으로 상대를 무너뜨리는 영국의 자존심.
+            </p>
 
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">카메론 노리, 왜 여전히 세계 최고인가?</h2>
+            <TOC items={tocItems} />
+
+            <h2 id="why-again-notable" className="flex items-center gap-2 mt-12">
+              <Crown className="w-6 h-6 text-yellow-500" />
+              카메론 노리, 왜 주목받는 선수인가?
+            </h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                 <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                  꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 좌완 베이스라인 플레이어
+                  꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 테니스 스타
                 </p>
               </div>
             </blockquote>
-            <p>카메론 노리는 영국 출신의 세계랭킹 30위권 테니스 선수로, 꾸준함과 전술적 사고로 ATP 투어를 지배하고 있다. 세계랭킹 30위권을 유지하며, 특히 좌완 베이스라인 플레이어로서 강력한 포핸드와 안정적인 백핸드를 구사한다. 그의 테니스는 꾸준함과 전술적 다양성으로 평가받는다.</p>
-            <p>그는 2022년 인디언 웰스에서 우승하며 큰 주목을 받았고, 최고 랭킹 8위를 기록했다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 탑 10 선수들과의 경기에서도 승리를 거두고 있다. 그의 테니스는 좌완의 유리함을 잘 활용하며, 특히 긴 랠리에서도 침착하게 경기를 이끌어가는 능력이 뛰어나다.</p>
+            <p>카메론 노리는 화려한 스타 플레이어는 아니지만, 투어에서 가장 상대하기 까다로운 선수 중 한 명으로 꼽힌다. 2021년 인디언 웰스 마스터스에서 깜짝 우승을 차지하며 세계적인 주목을 받았고, 2022년 윔블던 4강에 오르며 영국 테니스의 새로운 희망으로 떠올랐다.</p>
+            <p>그의 테니스는 '성실함' 그 자체다. 어떤 공이든 끝까지 쫓아가 받아넘기며, 상대가 지쳐서 실수할 때까지 랠리를 이어간다. 남아프리카 공화국에서 태어나 뉴질랜드에서 자라고 영국 국적을 선택한 독특한 이력의 소유자로, 다양한 문화를 경험한 덕분인지 적응력이 매우 뛰어나다.</p>
 
-            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>카메론 노리는 영국 출신의 세계랭킹 30위권 선수로, 좌완 베이스라인 스타일과 전술적 사고가 특징인 ATP 투어의 강자다.</p>
-            
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">영국</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">1995년 (29세)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">8위</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">30위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">베이스라인</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">좌완 포핸드</span></span>
-                </li>
-              </ul>
-            </div>
+            <h2 id="what-type-of-player" className="flex items-center gap-2 mt-12">
+              <Target className="w-6 h-6 text-red-500" />
+              이 선수는 어떤 유형의 플레이어인가?
+            </h2>
+            <p><strong>"끈질긴 카운터 펀처 (Gritty Counter-Puncher)"</strong></p>
+            <p>카메론 노리는 왼손잡이 특유의 각도와 엄청난 체력을 바탕으로 상대를 압박하는 베이스라이너다.</p>
 
-            <p>플레이 스타일은 베이스라인으로 분류된다. 강력한 포핸드와 안정적인 백핸드를 구사하며, 특히 좌완의 유리함을 잘 활용한다. 긴 랠리에서도 침착하게 경기를 이끌어가는 능력이 뛰어나며, 전술적 다양성도 높다.</p>
-            
-            <div className="not-prose my-6 flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border-blue-300 dark:border-blue-700">
-                <Brain className="w-3 h-3 mr-1 inline" />
-                전술적 사고
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
-                <Shield className="w-3 h-3 mr-1 inline" />
-                꾸준함
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
-                <Target className="w-3 h-3 mr-1 inline" />
-                좌완 포핸드
-              </Badge>
-            </div>
-            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"전술적 사고"</strong>, <strong>"꾸준함"</strong>, <strong>"좌완 포핸드"</strong>이다. 그의 테니스는 좌완의 유리함을 잘 활용하며, 특히 긴 랠리에서도 침착하게 경기를 이끌어가는 능력이 뛰어나다.</p>
+            <PlayerAttributes
+              attributes={[
+                { name: '체력 (Stamina)', score: 10, description: '투어 최고의 심폐지구력을 자랑한다. 5세트 접전에서도 지친 기색을 보이지 않는다.' },
+                { name: '일관성 (Consistency)', score: 9.5, description: '범실이 매우 적다. 기계처럼 공을 넘기며 상대의 인내심을 시험한다.' },
+                { name: '백핸드 (Backhand)', score: 9.0, description: '테이크백이 거의 없는 독특한 폼으로 매우 플랫하게 친다. 공이 낮게 깔려 상대가 처리하기 어렵다.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '왼손잡이 특유의 헤비 탑스핀으로 상대를 코트 밖으로 몰아낸다.' },
+                { name: '멘탈 (Mental)', score: 9.0, description: '어떤 상황에서도 포기하지 않는 끈기가 있다. 항상 차분하게 경기에 임한다.' },
+              ]}
+            />
 
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>노리가 세계 상위권을 유지하는 힘은 전술적 사고, 꾸준함, 그리고 좌완 포핸드의 각도에서 나온다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              기술적 강점
-            </h3>
-            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong className="text-purple-700 dark:text-purple-300">좌완 포핸드의 각도</strong>가 가장 큰 무기. 강력한 포핸드와 안정적인 백핸드를 구사한다.
-              </p>
-            </div>
-            <p>좌완 포핸드의 각도가 가장 큰 무기다. 강력한 포핸드와 안정적인 백핸드를 구사하며, 특히 좌완의 유리함을 잘 활용한다. 포핸드는 깊이와 각도를 조절해 상대의 약점을 공략하며, 백핸드는 안정적으로 랠리를 이어간다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">긴 랠리에서도 침착하게 경기를 이끌어가는 능력</strong>이 뛰어나다.</p>
-            <p>서브는 안정적이며, 특히 첫 서브의 성공률이 높다. 리턴도 안정적으로 구사하며, 특히 좌완의 각도를 잘 활용한다. 그라운드 스트로크는 깊이와 각도를 조절해 상대의 약점을 공략하며, 특히 포핸드의 각도가 뛰어나다.</p>
+            <p>플레이 스타일은 철저하게 계산된 확률 테니스다. 무리한 공격보다는 안전한 코스로 공을 보내며 랠리를 길게 가져간다. 특히 백핸드는 회전이 거의 없는 플랫 구질이라 바운드 후 낮게 깔리는데, 이는 탑스핀 위주의 현대 테니스에서 매우 이질적이고 까다로운 무기다.</p>
+            <p>반면 포핸드는 많은 회전을 걸어 높게 튀어 오르게 만든다. 이처럼 양쪽 날개의 구질 차이를 이용하여 상대의 리듬을 뺏는 것이 노리의 주된 전술이다. 서브는 빠르지 않지만 코스 공략이 좋고, 왼손잡이의 이점을 잘 활용한다.</p>
 
             <h3 className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
               피지컬 능력
             </h3>
-            <p>체력이 뛰어나다. 긴 랠리에서도 침착하게 경기를 이끌어가는 능력이 뛰어나며, 특히 5세트 경기에서도 안정적인 경기력을 보여준다. 코트 커버리지도 좋아 베이스라인에서도 강력한 그라운드 스트로크를 구사한다.</p>
+            <p>마라톤 선수급의 심폐지구력을 가지고 있다. 비시즌 훈련량이 엄청난 것으로 유명하며, 경기 후반으로 갈수록 체력적 우위를 점한다. 발놀림이 빠르고 잔발을 많이 사용하여 항상 최적의 타점을 잡는다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">강철 같은 체력</strong>은 그의 가장 큰 자산이다.</p>
 
             <h3 className="flex items-center gap-2">
               <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -199,142 +154,56 @@ export default function CameronNorriePage() {
                   핵심 통계
                 </p>
               </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                타이브레이크 승률이 60%를 넘는 편이며, 특히 중요한 포인트에서도 침착하게 경기를 이끌어가는 능력이 뛰어나다.
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
+                인디언 웰스 우승 · 윔블던 4강 · 리턴 게임 승률 <strong className="text-green-700 dark:text-green-400 text-base">상위권</strong>
               </p>
             </div>
-            <p>타이브레이크 승률이 60%를 넘는 편이며, 특히 중요한 포인트에서도 침착하게 경기를 이끌어가는 능력이 뛰어나다. 5세트 경기에서도 안정적인 경기력을 보여주며, 특히 역전 승리도 자주 거둔다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">긴 랠리에서도 침착하게 경기를 이끌어가는 능력</strong>이 뛰어나다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              전술적 다양성
-            </h3>
-            <p>베이스라인 게임을 기본으로 하되, 전술적 다양성이 높다. 상대의 약점을 파악해 포핸드와 백핸드의 비율을 조절하며, 특히 좌완의 유리함을 잘 활용한다. 긴 랠리에서도 침착하게 경기를 이끌어가는 능력이 뛰어나며, 특히 각도와 깊이를 조절해 상대의 약점을 공략한다.</p>
+            <p>감정 기복이 거의 없고 묵묵히 자신의 플레이를 한다. '돌부처' 같은 모습으로 상대에게 심리적 압박감을 준다. 대학 테니스(TCU)를 거치며 다져진 팀워크와 전술 이해도도 높다.</p>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
+            <h2 id="growth-story">카메론 노리는 어떻게 여기까지 왔을까?</h2>
+            <p>노리는 남아공 요하네스버그에서 태어나 뉴질랜드 오클랜드에서 자랐다. 주니어 시절 뉴질랜드 대표로 뛰었으나, 지원 부족 등으로 영국으로 국적을 옮겼다. 미국 텍사스 크리스천 대학교(TCU)에서 대학 최고의 선수로 활약한 뒤 2017년 프로에 데뷔했다.</p>
+            <p>초반에는 챌린저 무대에서 경험을 쌓았고, 2021년 기량이 급성장하며 투어 2승과 인디언 웰스 우승을 차지했다. 2022년에는 윔블던 4강에 오르며 앤디 머레이의 뒤를 잇는 영국 테니스의 간판으로 자리 잡았다.</p>
+
             <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
-            <p>노리를 설명하는 대표 경기는 2022년 인디언 웰스 결승에서 우승한 경기와 2022년 ATP 파이널스에서 탑 10 선수들을 꺾은 경기다.</p>
+            <p>노리의 커리어 하이라이트는 2021년 인디언 웰스 결승이다.</p>
 
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-sm">
+            <h3>2021년 인디언 웰스 결승</h3>
+            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
               <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">2022년 인디언 웰스 결승</h4>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                <strong>상대:</strong> 니콜라스 바실라시스
-              </p>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                <strong>결과:</strong> 6-4, 6-4 승리
-              </p>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                이 경기에서 드러난 건 노리의 전술적 사고와 꾸준함이었다. 특히 좌완 포핸드의 각도와 안정적인 백핸드를 구사하며, 침착하게 경기를 이끌어갔다. 이 경기로 인해 노리는 큰 주목을 받기 시작했고, 특히 영국 테니스의 간판으로 평가받기 시작했다.
-              </p>
-            </div>
-
-            <p>이 경기로 인해 노리는 큰 주목을 받기 시작했고, 특히 영국 테니스의 간판으로 평가받기 시작했다. 팬들과 전문가들은 그의 전술적 사고와 꾸준함을 높이 평가했고, 특히 탑 10 선수들과의 경기에서도 승리를 거둘 수 있는 능력을 보여줬다.</p>
-
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-xl border border-green-200 dark:border-green-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-3">
-                <Star className="w-5 h-5 text-green-600 dark:text-green-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">2022년 ATP 파이널스</h4>
+                <Award className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">언더독의 반란</p>
               </div>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                2022년 ATP 파이널스에서 탑 10 선수들을 꺾으며 좋은 성적을 거두었다. 특히 전술적 사고와 꾸준함이 뛰어나며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.
+                결승에서 <strong>니콜로즈 바실라쉬빌리</strong>를 상대로 2-1 역전승을 거뒀다. 첫 세트를 내주고도 포기하지 않고 끈질기게 따라붙어 결국 우승컵을 들어 올렸다. 영국 선수로는 최초의 인디언 웰스 우승이었다.
               </p>
             </div>
-
-            <blockquote className="not-prose my-6 p-4 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-500 rounded-r-lg">
-              <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                "이 경기에서 드러난 건 노리의 전술적 사고와 꾸준함이었다."
-              </p>
-            </blockquote>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
-            <p>경기력뿐 아니라 침착하고 겸손한 성격 덕분에 팬층이 두텁다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Heart className="w-5 h-5 text-red-600 dark:text-red-400" />
-              코트 매너
-            </h3>
-            <p>침착하고 겸손한 성격이 특징이다. 경기 중에도 감정을 드러내지 않고 차분하게 경기를 진행하며, 특히 중요한 포인트에서도 침착하게 경기를 이끌어간다. 페어플레이를 중시하며, 상대 선수와의 관계도 좋다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              인터뷰 스타일
-            </h3>
-            <p>인터뷰에서 경기 분석을 차분하게 설명하며, 특히 전술적 사고에 대해 자세히 설명한다. 팀과의 협력도 중요하게 생각하며, 특히 코치와의 관계도 좋다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              팀과의 관계
-            </h3>
-            <p>코치와의 관계가 좋으며, 특히 전술적 조언을 잘 받아들인다. 팀과의 협력도 중요하게 생각하며, 특히 영국 테니스의 간판으로 평가받는다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <p>팬들은 노리의 성실함과 투지에 박수를 보낸다.</p>
+            <p>화려하지는 않지만 묵묵히 최선을 다하는 모습이 감동을 준다. 또한 코트 밖에서는 소탈하고 친근한 성격으로 알려져 있다. 영국 팬들에게는 앤디 머레이 이후 믿고 볼 수 있는 든든한 존재다.</p>
 
             <h2 id="recent-form">요즘 카메론 노리의 경기력 흐름은 어떤가?</h2>
-            <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 30위권을 유지하고 있다.</p>
+            <p>2024년 들어 다소 부진한 모습을 보이며 랭킹이 30위권으로 떨어졌다. 하지만 리우 오픈 4강에 오르는 등 클레이 코트에서 반등의 조짐을 보이고 있다.</p>
 
-            <h3 className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              최근 성적
-            </h3>
-            <div className="not-prose my-4 p-4 bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 rounded-r-lg shadow-sm">
-              <div className="flex items-center gap-2 mb-2">
-                <Target className="w-4 h-4 text-blue-700 dark:text-blue-400" />
-                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-0">
-                  최근 성과
-                </p>
-              </div>
-              <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1 mb-0">
-                <li>• 2022년 인디언 웰스 우승</li>
-                <li>• 최고 랭킹 8위 달성</li>
-                <li>• 탑 10 선수들과의 경기에서 승리</li>
-              </ul>
-            </div>
-            <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 30위권을 유지하고 있다. 특히 전술적 사고와 꾸준함이 뛰어나며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
-              부상 및 컨디션
-            </h3>
-            <p>큰 부상 없이 경기에 임하고 있으며, 특히 체력 관리도 잘 하고 있다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 긴 랠리에서도 침착하게 경기를 이끌어가는 능력이 뛰어나다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-              랭킹 변동
-            </h3>
-            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 30위권을 유지하고 있다. 최고 랭킹 8위를 기록했으며, 최근 몇 시즌 동안 꾸준한 성적을 거두고 있다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 특히 좌완 포핸드의 각도 활용을 더욱 강화하고 있다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <h3>최근 성적</h3>
+            <p>호주 오픈 16강 진출로 건재함을 알렸으나, 이후 잔부상 등으로 기복 있는 모습을 보였다. 체력적인 강점을 바탕으로 다시 폼을 끌어올린다면 언제든 탑 10에 복귀할 수 있는 저력을 가지고 있다.</p>
 
             <h2 id="one-sentence-summary">카메론 노리, 한 문장으로 정리하면?</h2>
-            <p>꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 좌완 베이스라인 플레이어다.</p>
-            <p>노리는 좌완의 유리함을 잘 활용하며, 특히 긴 랠리에서도 침착하게 경기를 이끌어가는 능력이 뛰어나다. 강력한 포핸드와 안정적인 백핸드를 구사하며, 특히 전술적 다양성도 높다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 2022년 인디언 웰스에서 우승하며 큰 주목을 받았다.</p>
+            <p>카메론 노리는 꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 테니스 스타다.</p>
+            <p>그의 테니스는 화려함보다 실리를 추구하며, 특히 지치지 않는 체력과 까다로운 구질이 강점이다. 타이브레이크와 장기전에서의 멘탈 강점, 그리고 끈질긴 수비가 세계 상위권을 유지하게 해준다. 성실함과 겸손을 중시하는 그의 테니스는 결과를 넘어 설득으로 남으며, 영국 테니스의 든든한 버팀목으로 기억될 것이다.</p>
           </div>
 
           {/* FAQ Section */}
-          <div className="mt-12">
-            <FAQ items={faqs} />
-          </div>
+          <FAQ items={faqs} />
 
-          {/* CTA Section */}
-          <div className="mt-12">
-            <CTA
-              title="더 많은 테니스 선수 이야기"
-              description="다른 테니스 선수들의 스토리도 확인해보세요"
-              primaryButton={{
-                text: "선수 목록 보기",
-                href: "/players"
-              }}
-            />
-          </div>
+          {/* CTA */}
+          <CTA />
         </div>
       </Article>
     </div>
   );
 }
-

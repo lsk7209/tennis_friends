@@ -11,12 +11,12 @@ export const metadata = {
   description: '백핸드는 힘이 아니라 밸런스의 기술이다. 왼손이 리드하고 오른손이 따라올 때 정확도와 파워가 동시에 완성된다.',
   keywords: ['테니스 백핸드', '양손 백핸드', '스윙 기술', '임팩트', '타점', '기술'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-backhand-technique-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-backhand-technique-guide',
   },
   openGraph: {
     title: '테니스 백핸드의 기술 — 왼손의 리드로 완성하는 정확한 임팩트 | 흔들림 없는 스윙을 만드는 양손 백핸드의 비밀',
     description: '백핸드는 힘이 아니라 밸런스의 기술이다. 왼손이 리드하고 오른손이 따라올 때 정확도와 파워가 동시에 완성된다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-backhand-technique-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-backhand-technique-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -71,7 +71,7 @@ export default function TennisBackhandTechniqueGuidePage() {
   const excerpt = '백핸드는 힘이 아니라 밸런스의 기술이다. 왼손이 리드하고 오른손이 따라올 때 정확도와 파워가 동시에 완성된다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-backhand-technique-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">

@@ -10,12 +10,12 @@ export const metadata = {
   description: '복식은 기술이 아니라 \'조화\'의 경기다. 포지션, 시선, 말 한마디가 승부를 결정한다. 네트 플레이와 소통의 리듬이 핵심이다.',
   keywords: ['테니스 복식', '복식 전략', '포지셔닝', '네트 플레이', '커뮤니케이션', '팀워크', '발리', '포인트 설계'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-doubles-strategy-guide',
+    canonical: 'https://tennisfriends.co.kr/blog/tennis-doubles-strategy-guide',
   },
   openGraph: {
     title: '복식 경기 전략 완전정복 — 포지셔닝·커뮤니케이션·네트 플레이의 모든 것 | 팀워크로 승부하는 테니스의 본질',
     description: '복식은 기술이 아니라 \'조화\'의 경기다. 포지션, 시선, 말 한마디가 승부를 결정한다. 네트 플레이와 소통의 리듬이 핵심이다.',
-    url: 'https://www.tennisfrens.com/blog/tennis-doubles-strategy-guide',
+    url: 'https://tennisfriends.co.kr/blog/tennis-doubles-strategy-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -69,7 +69,7 @@ export default function TennisDoublesStrategyGuidePage() {
   const excerpt = '복식은 기술이 아니라 \'조화\'의 경기다. 포지션, 시선, 말 한마디가 승부를 결정한다. 네트 플레이와 소통의 리듬이 핵심이다.';
 
   return (
-    <Article title={title} excerpt={excerpt}>
+    <Article slug="tennis-doubles-strategy-guide" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-950 dark:to-indigo-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">

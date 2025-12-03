@@ -2,30 +2,32 @@ import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
+import PlayerProfileCard from '@/components/players/PlayerProfileCard';
+import PlayerAttributes from '@/components/players/PlayerAttributes';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Users } from 'lucide-react';
+import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '니콜라스 자리 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
-  description: '니콜라스 자리의 장신 서브와 강력한 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 칠레 테니스의 간판으로 떠오르는 세계랭킹 35위권 선수.',
+  title: '니콜라스 자리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: '니콜라스 자리의 장신 서브와 파워풀한 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 칠레 테니스의 자존심을 지키는 2미터 거인의 강력한 한 방.',
   keywords: ['니콜라스 자리', 'Nicolas Jarry', '테니스', 'ATP', '플레이스타일', '칠레 테니스', '장신', '서브'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/players/nicolas-jarry',
+    canonical: 'https://tennisfriends.co.kr/players/nicolas-jarry',
   },
   openGraph: {
-    title: '니콜라스 자리 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
-    description: '니콜라스 자리의 장신 서브와 강력한 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://www.tennisfrens.com/players/nicolas-jarry',
+    title: '니콜라스 자리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '니콜라스 자리의 장신 서브와 파워풀한 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    url: 'https://tennisfriends.co.kr/players/nicolas-jarry',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '니콜라스 자리 — 세계랭킹 35위권 | 플레이스타일·명장면·최근 경기력',
-    description: '니콜라스 자리의 장신 서브와 강력한 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '니콜라스 자리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+    description: '니콜라스 자리의 장신 서브와 파워풀한 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {
     index: true,
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'why-again-notable', text: '니콜라스 자리, 왜 주목받는 선수인가?', depth: 2 },
   { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
+  { id: 'growth-story', text: '니콜라스 자리는 어떻게 여기까지 왔을까?', depth: 2 },
   { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
   { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
   { id: 'recent-form', text: '요즘 니콜라스 자리의 경기력 흐름은 어떤가?', depth: 2 },
@@ -53,23 +55,23 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 const faqs = [
   {
     q: '니콜라스 자리의 경기 스타일은 어떤가요?',
-    a: '장신 서브와 강력한 그라운드 스트로크 스타일로, 특히 장신의 유리함을 활용한 서브가 특징입니다. 칠레 테니스의 간판으로 평가받고 있습니다.',
+    a: '201cm의 장신에서 뿜어져 나오는 강력한 서브와 포핸드가 주무기인 공격형 플레이어입니다. 짧은 랠리로 승부를 봅니다.',
   },
   {
     q: '자리의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
-    a: '최고 랭킹은 20위권이었으며, 현재는 35위권을 유지하고 있습니다. 특히 최근 몇 시즌 동안 꾸준한 성적을 거두며 상위권을 유지하고 있습니다.',
+    a: '최고 랭킹은 16위이며, 현재는 20위권 초중반을 유지하고 있습니다. 도핑 징계 이후 성공적으로 복귀하여 커리어 하이를 경신했습니다.',
   },
   {
     q: '자리의 강점은 무엇인가요?',
-    a: '장신 서브와 강력한 그라운드 스트로크가 최대 강점입니다. 장신의 유리함을 활용한 서브가 뛰어나며, 특히 포핸드의 파워가 뛰어납니다.',
+    a: '압도적인 서브 파워와 높은 타점에서 내리꽂는 포핸드입니다. 특히 클레이 코트에서도 강한 면모를 보입니다.',
   },
   {
-    q: '자리의 인간적인 면모는 어떤가요?',
-    a: '열정적이고 도전적인 성격이 특징입니다. 인터뷰에서 경기 분석을 솔직하게 설명하며, 팀과의 협력도 중요하게 생각합니다.',
+    q: '자리의 약점은 무엇인가요?',
+    a: '큰 키로 인해 움직임이 다소 둔하며, 낮은 공 처리에 어려움을 겪습니다. 리턴 게임에서의 수비력도 보완이 필요합니다.',
   },
   {
     q: '자리를 한 문장으로 설명하면?',
-    a: '장신 서브와 강력한 그라운드 스트로크로 칠레 테니스의 간판으로 떠오르는 선수입니다.',
+    a: '칠레 테니스의 부활을 알리는 거인입니다.',
   },
 ];
 
@@ -78,115 +80,68 @@ export default function NicolasJarryPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
         title="니콜라스 자리"
-        excerpt="장신 서브와 강력한 그라운드 스트로크로 칠레 테니스의 간판으로 떠오르는 선수"
+        excerpt="칠레 테니스의 자존심을 지키는 2미터 거인의 강력한 한 방"
+        image="/images/players/nicolas-jarry.png"
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '니콜라스 자리', '선수 프로필', '칠레', '장신', '서브'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerProfileCard
+            name="Nicolas Jarry"
+            country="Chile"
+            age={28}
+            height="201cm"
+            plays="Right-handed (Two-handed backhand)"
+            turnedPro={2014}
+            grandSlams={0}
+            ranking={24}
+          />
 
-          {/* Table of Contents */}
-          <TOC items={tocItems} />
+          <div className="prose dark:prose-invert max-w-none">
+            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8">
+              안데스 산맥의 거인. <strong className="text-red-600 dark:text-red-400">압도적인 피지컬</strong>에서 나오는 파괴력으로 상대를 제압하는 칠레의 테니스 영웅.
+            </p>
 
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">니콜라스 자리, 왜 주목받는 선수인가?</h2>
+            <TOC items={tocItems} />
+
+            <h2 id="why-again-notable" className="flex items-center gap-2 mt-12">
+              <Crown className="w-6 h-6 text-yellow-500" />
+              니콜라스 자리, 왜 주목받는 선수인가?
+            </h2>
             <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
               <div className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                 <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                  장신 서브와 강력한 그라운드 스트로크로 칠레 테니스의 간판으로 떠오르는 선수
+                  칠레 테니스의 자존심을 지키는 2미터 거인의 강력한 한 방
                 </p>
               </div>
             </blockquote>
-            <p>니콜라스 자리는 칠레 출신의 세계랭킹 35위권 테니스 선수로, 장신 서브와 강력한 그라운드 스트로크로 ATP 투어를 지배하고 있다. 세계랭킹 35위권을 유지하며, 특히 장신의 유리함을 활용한 서브가 뛰어나다. 그의 테니스는 칠레 테니스의 간판으로 평가받는다.</p>
-            <p>그는 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 최고 랭킹 20위권을 기록했다. 특히 탑 10 선수들과의 경기에서도 승리를 거두고 있으며, 그의 테니스는 장신의 유리함을 잘 활용하며, 특히 강력한 서브와 그라운드 스트로크를 기반으로 한다.</p>
+            <p>니콜라스 자리는 칠레 테니스의 전설인 하이메 필롤의 손자로, 테니스 명문가 출신이다. 201cm의 엄청난 키를 바탕으로 투어에서 가장 강력한 서브를 구사하는 선수 중 한 명이다.</p>
+            <p>한때 도핑 위반으로 11개월 자격 정지를 당하며 랭킹이 소멸되는 시련을 겪었으나, 밑바닥부터 다시 시작하여 세계 랭킹 20위권까지 올라온 인간 승리의 주인공이기도 하다. 그의 복귀 스토리는 많은 팬들에게 감동을 주었다.</p>
 
-            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>니콜라스 자리는 칠레 출신의 세계랭킹 35위권 선수로, 장신 서브와 강력한 그라운드 스트로크 스타일이 특징인 ATP 투어의 강자다.</p>
-            
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">칠레</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">생년:</strong> <span className="text-gray-600 dark:text-gray-400">1995년 (29세)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">20위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">35위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">주 종목:</strong> <span className="text-gray-600 dark:text-gray-400">단식 (ATP 투어)</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">빅서버</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">장신 서브</span></span>
-                </li>
-              </ul>
-            </div>
+            <h2 id="what-type-of-player" className="flex items-center gap-2 mt-12">
+              <Target className="w-6 h-6 text-red-500" />
+              이 선수는 어떤 유형의 플레이어인가?
+            </h2>
+            <p><strong>"파워 서버 & 포핸드 히터 (Power Server & Forehand Hitter)"</strong></p>
+            <p>자리는 큰 키를 활용한 고공 폭격으로 경기를 단순하게 풀어가는 스타일이다.</p>
 
-            <p>플레이 스타일은 빅서버로 분류된다. 장신의 유리함을 활용한 서브가 뛰어나며, 특히 강력한 그라운드 스트로크를 구사한다. 포핸드의 파워가 뛰어나며, 백핸드도 안정적이다.</p>
-            
-            <div className="not-prose my-6 flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border-blue-300 dark:border-blue-700">
-                <Zap className="w-3 h-3 mr-1 inline" />
-                장신 서브
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700">
-                <Shield className="w-3 h-3 mr-1 inline" />
-                파워 포핸드
-              </Badge>
-              <Badge variant="secondary" className="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 border-indigo-300 dark:border-indigo-700">
-                <Target className="w-3 h-3 mr-1 inline" />
-                칠레의 간판
-              </Badge>
-            </div>
-            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"장신 서브"</strong>, <strong>"파워 포핸드"</strong>, <strong>"칠레의 간판"</strong>이다. 그의 테니스는 장신의 유리함을 잘 활용하며, 특히 강력한 서브와 그라운드 스트로크를 기반으로 한다.</p>
+            <PlayerAttributes
+              attributes={[
+                { name: '서브 (Serve)', score: 9.5, description: '201cm의 타점에서 내리꽂는 서브는 알고도 막기 힘들다. 세컨드 서브의 킥도 위협적이다.' },
+                { name: '포핸드 (Forehand)', score: 9.0, description: '플랫하게 때리는 포핸드는 엄청난 속도로 코트를 가른다. 원투 펀치의 핵심이다.' },
+                { name: '네트 플레이 (Net Play)', score: 8.0, description: '긴 팔을 이용한 리치(reach)가 좋아 네트 앞에서의 장악력이 뛰어나다.' },
+                { name: '멘탈 (Mental)', score: 8.5, description: '징계를 이겨내고 돌아온 만큼 정신력이 강하다. 위기 상황에서도 흔들리지 않는다.' },
+                { name: '움직임 (Movement)', score: 7.0, description: '큰 키로 인해 좌우 움직임이 다소 느리다. 이를 보완하기 위해 공격적인 포지션을 취한다.' },
+              ]}
+            />
 
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
-
-            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>자리가 세계 상위권을 유지하는 힘은 장신 서브, 파워 포핸드, 그리고 안정적인 백핸드에서 나온다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              기술적 강점
-            </h3>
-            <div className="not-prose my-4 p-4 bg-purple-50/50 dark:bg-purple-950/20 rounded-lg border-l-2 border-purple-400 dark:border-purple-600">
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                <strong className="text-purple-700 dark:text-purple-300">장신 서브</strong>가 가장 큰 무기. 장신의 유리함을 활용한 서브가 뛰어나다.
-              </p>
-            </div>
-            <p>장신 서브가 가장 큰 무기다. 장신의 유리함을 활용한 서브가 뛰어나며, 특히 서브의 속도와 정확도가 뛰어나다. 서브는 깊이와 각도를 조절해 상대의 약점을 공략하며, 특히 에이스와 서비스 위너를 많이 만들어낸다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">장신의 유리함을 활용한 서브로 경기를 지배하는 능력</strong>이 뛰어나다.</p>
-            <p>포핸드는 파워가 뛰어나며, 특히 깊이와 각도를 조절해 상대의 약점을 공략한다. 백핸드는 안정적으로 랠리를 이어가며, 특히 깊이와 정확도가 뛰어나다. 그라운드 스트로크는 강력하며, 특히 포핸드의 파워가 뛰어나다.</p>
+            <p>플레이 스타일은 '닥공(닥치고 공격)'에 가깝다. 서브로 상대를 무너뜨리고, 리턴이 넘어오면 강력한 포핸드로 마무리한다. 랠리를 길게 가져가기보다는 3구 안에 승부를 보는 것을 선호한다.</p>
+            <p>의외로 클레이 코트 성적이 좋다. 높은 바운드를 이용해 자신의 타점인 어깨 높이에서 공을 강하게 때릴 수 있기 때문이다. 백핸드는 수비적인 편이지만, 기회가 오면 다운더라인으로 공격하기도 한다.</p>
 
             <h3 className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
               피지컬 능력
             </h3>
-            <p>장신의 유리함을 활용한 체력이 뛰어나다. 긴 랠리에서도 강력한 그라운드 스트로크를 구사하며, 특히 5세트 경기에서도 안정적인 경기력을 보여준다. 코트 커버리지도 좋아 베이스라인에서도 강력한 그라운드 스트로크를 구사한다.</p>
+            <p>201cm, 90kg의 거구다. 압도적인 피지컬에서 나오는 힘은 타의 추종을 불허한다. 다만 큰 키로 인해 무릎 부상의 위험이 있고, 체력 소모가 심한 편이라 경기 후반으로 갈수록 집중력이 떨어질 수 있다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">압도적인 높이</strong>는 그의 가장 큰 자산이다.</p>
 
             <h3 className="flex items-center gap-2">
               <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -199,129 +154,56 @@ export default function NicolasJarryPage() {
                   핵심 통계
                 </p>
               </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                서브 에이스 수가 투어 상위권 수준이며, 특히 장신의 유리함을 활용한 서브가 뛰어나다.
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-0">
+                ATP 투어 3승 · 로마 마스터스 준우승(2024) · 서브 에이스 <strong className="text-green-700 dark:text-green-400 text-base">상위 5%</strong>
               </p>
             </div>
-            <p>서브 에이스 수가 투어 상위권 수준이며, 특히 장신의 유리함을 활용한 서브가 뛰어나다. 타이브레이크 승률도 높은 편이며, 특히 서브로 경기를 지배하는 능력이 뛰어나다. <strong className="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">장신의 유리함을 활용한 서브로 경기를 이끌어가는 능력</strong>이 뛰어나다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              전술적 다양성
-            </h3>
-            <p>빅서버 게임을 기본으로 하되, 전술적 다양성이 높다. 상대의 약점을 파악해 서브 위치를 조절하며, 특히 장신의 유리함을 활용한 서브를 활용해 경기를 이끌어간다. 그라운드 스트로크는 강력하며, 특히 포핸드의 파워를 활용해 상대의 약점을 공략한다.</p>
+            <p>가족의 지지가 큰 힘이 된다. 아내와 두 아들이 투어에 동행하며 심리적인 안정을 주고 있다. 코트 위에서는 감정을 잘 드러내지 않고 묵묵히 자신의 플레이에 집중하는 스타일이다.</p>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
-            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
-            <p>자리를 설명하는 대표 경기는 최근 몇 시즌 동안 상위권 선수들을 꺾은 경기와 대회에서 좋은 성적을 거둔 경기다.</p>
+            <h2 id="growth-story">니콜라스 자리는 어떻게 여기까지 왔을까?</h2>
+            <p>자리는 2014년 프로에 데뷔하여 꾸준히 성장했으나, 2020년 도핑 검사에서 금지 약물 성분이 검출되어 11개월 자격 정지를 받았다. (오염된 비타민 보충제 섭취가 원인으로 밝혀짐)</p>
+            <p>랭킹이 소멸된 상태에서 복귀한 그는 챌린저 투어부터 다시 시작해야 했다. 하지만 포기하지 않고 묵묵히 땀을 흘린 결과, 2023년 산티아고 오픈과 제네바 오픈에서 우승하며 화려하게 부활했다. 2024년에는 마스터스 결승까지 오르며 전성기를 맞이했다.</p>
 
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-sm">
+            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            <p>자리의 저력을 보여준 경기는 2024년 로마 마스터스 준결승이다.</p>
+
+            <h3>2024년 로마 마스터스 준결승</h3>
+            <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
               <div className="flex items-center gap-2 mb-3">
-                <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">최근 대회 성적</h4>
+                <Award className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">생애 첫 마스터스 결승행</p>
               </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                <strong>특징:</strong> 상위권 선수들과의 경기에서 승리
-              </p>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-                이 경기에서 드러난 건 자리의 장신 서브와 강력한 그라운드 스트로크였다. 특히 장신의 유리함을 활용한 서브가 뛰어나며, 포핸드의 파워가 뛰어나다. 이 경기로 인해 자리는 큰 주목을 받기 시작했고, 특히 칠레 테니스의 간판으로 평가받기 시작했다.
+                미국의 <strong>토미 폴</strong>을 상대로 풀세트 접전 끝에 승리했다. 강력한 서브와 포핸드로 상대를 압박하며 생애 첫 마스터스 1000 시리즈 결승 진출이라는 쾌거를 이뤘다.
               </p>
             </div>
-
-            <p>이 경기로 인해 자리는 큰 주목을 받기 시작했고, 특히 칠레 테니스의 간판으로 평가받기 시작했다. 팬들과 전문가들은 그의 장신 서브와 강력한 그라운드 스트로크를 높이 평가했고, 특히 상위권을 유지할 수 있는 능력을 보여줬다.</p>
-
-            <blockquote className="not-prose my-6 p-4 bg-indigo-50 dark:bg-indigo-950/30 border-l-4 border-indigo-500 rounded-r-lg">
-              <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                "이 경기에서 드러난 건 자리의 장신 서브와 강력한 그라운드 스트로크였다."
-              </p>
-            </blockquote>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
-            <p>경기력뿐 아니라 열정적이고 도전적인 성격 덕분에 팬층이 두텁다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Heart className="w-5 h-5 text-red-600 dark:text-red-400" />
-              코트 매너
-            </h3>
-            <p>열정적이고 도전적인 성격이 특징이다. 경기 중에도 감정을 드러내며 경기를 진행하며, 특히 중요한 포인트에서도 강력한 서브를 구사한다. 페어플레이를 중시하며, 상대 선수와의 관계도 좋다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              인터뷰 스타일
-            </h3>
-            <p>인터뷰에서 경기 분석을 솔직하게 설명하며, 특히 장신 서브와 강력한 그라운드 스트로크에 대해 자세히 설명한다. 팀과의 협력도 중요하게 생각하며, 특히 코치와의 관계도 좋다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              팀과의 관계
-            </h3>
-            <p>코치와의 관계가 좋으며, 특히 전술적 조언을 잘 받아들인다. 팀과의 협력도 중요하게 생각하며, 특히 칠레 테니스의 간판으로 평가받는다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <p>팬들은 자리의 시원시원한 플레이와 가족 사랑에 감동한다.</p>
+            <p>복잡한 전술보다는 힘 대 힘으로 맞붙는 그의 경기는 보는 맛이 있다. 또한 경기 후 코트로 들어온 아들을 안아주는 모습은 '아들 바보'의 면모를 보여주며 팬들의 마음을 따뜻하게 만든다.</p>
 
             <h2 id="recent-form">요즘 니콜라스 자리의 경기력 흐름은 어떤가?</h2>
-            <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 35위권을 유지하고 있다.</p>
+            <p>2024년 로마 마스터스 준우승으로 커리어 하이를 찍었으나, 이후 약간의 부침을 겪고 있다. 하지만 여전히 강력한 서브를 보유하고 있어 언제든 상위권 선수들을 위협할 수 있는 존재다.</p>
 
-            <h3 className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              최근 성적
-            </h3>
-            <div className="not-prose my-4 p-4 bg-blue-50 dark:bg-blue-950/20 border-l-4 border-blue-500 rounded-r-lg shadow-sm">
-              <div className="flex items-center gap-2 mb-2">
-                <Target className="w-4 h-4 text-blue-700 dark:text-blue-400" />
-                <p className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-0">
-                  최근 성과
-                </p>
-              </div>
-              <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1 mb-0">
-                <li>• 최고 랭킹 20위권 달성</li>
-                <li>• 상위권 선수들과의 경기에서 승리</li>
-                <li>• 꾸준한 성적 유지</li>
-              </ul>
-            </div>
-            <p>최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 35위권을 유지하고 있다. 특히 장신 서브와 강력한 그라운드 스트로크가 뛰어나며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
-              부상 및 컨디션
-            </h3>
-            <p>큰 부상 없이 경기에 임하고 있으며, 특히 체력 관리도 잘 하고 있다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 장신의 유리함을 활용한 서브와 강력한 그라운드 스트로크를 기반으로 경기를 이끌어가고 있다.</p>
-
-            <h3 className="flex items-center gap-2">
-              <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-              랭킹 변동
-            </h3>
-            <p>랭킹 변동을 보면, 그는 현재 세계랭킹 35위권을 유지하고 있다. 최고 랭킹 20위권을 기록했으며, 최근 몇 시즌 동안 꾸준한 성적을 거두고 있다. 플레이 스타일의 작은 변화도 눈에 띈다. 과거보다는 더 효율적인 경기를 하기 위해 전술적 다양성을 높였고, 특히 장신 서브의 활용을 더욱 강화하고 있다.</p>
-
-            <hr className="my-8 border-gray-200 dark:border-gray-800" />
+            <h3>최근 성적</h3>
+            <p>큰 키에서 나오는 서브는 여전히 투어 최고 수준이다. 리턴과 수비력만 조금 더 보완한다면 탑 10 진입도 충분히 가능한 선수다.</p>
 
             <h2 id="one-sentence-summary">니콜라스 자리, 한 문장으로 정리하면?</h2>
-            <p>장신 서브와 강력한 그라운드 스트로크로 칠레 테니스의 간판으로 떠오르는 선수다.</p>
-            <p>자리는 장신의 유리함을 활용한 서브와 강력한 그라운드 스트로크를 기반으로 하며, 특히 포핸드의 파워가 뛰어나다. 서브의 속도와 정확도가 뛰어나며, 특히 에이스와 서비스 위너를 많이 만들어낸다. 최근 몇 시즌 동안 꾸준한 성적을 거두며, 특히 최고 랭킹 20위권을 기록했다.</p>
+            <p>니콜라스 자리는 장신 서브와 강력한 그라운드 스트로크로 칠레 테니스의 간판으로 떠오르는 선수다.</p>
+            <p>그의 테니스는 단순하지만 강력하다. 시련을 딛고 일어선 불굴의 의지와 가족을 사랑하는 따뜻한 마음을 가진 그는, 칠레를 넘어 남미 테니스를 대표하는 거인으로 우뚝 섰다.</p>
           </div>
 
           {/* FAQ Section */}
-          <div className="mt-12">
-            <FAQ items={faqs} />
-          </div>
+          <FAQ items={faqs} />
 
-          {/* CTA Section */}
-          <div className="mt-12">
-            <CTA
-              title="더 많은 테니스 선수 이야기"
-              description="다른 테니스 선수들의 스토리도 확인해보세요"
-              primaryButton={{
-                text: "선수 목록 보기",
-                href: "/players"
-              }}
-            />
-          </div>
+          {/* CTA */}
+          <CTA />
         </div>
       </Article>
     </div>
   );
 }
-

@@ -11,12 +11,12 @@ export const metadata = {
   description: '직선적 포핸드와 안정된 서브, 전술적 선택으로 하드코트를 설계하는 테일러 프리츠의 성장 배경과 플레이 철학, 라이벌 구도를 한 편으로.',
   keywords: ['테니스', '테일러 프리츠', '선수 프로필', '스토리', '미국'],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/taylor-fritz',
+    canonical: 'https://tennisfriends.co.kr/blog/taylor-fritz',
   },
   openGraph: {
     title: '테일러 프리츠 선수 프로필과 스토리',
     description: '직선적 포핸드와 안정된 서브, 전술적 선택으로 하드코트를 설계하는 테일러 프리츠의 성장 배경과 플레이 철학, 라이벌 구도를 한 편으로.',
-    url: 'https://www.tennisfrens.com/blog/taylor-fritz',
+    url: 'https://tennisfriends.co.kr/blog/taylor-fritz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -113,7 +113,7 @@ export default function TaylorFritzBlogPost() {
         </div>
       </div>
 
-      <Article title="" excerpt="">
+      <Article slug="taylor-fritz" date="2024-01-01" title="" excerpt="">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">
