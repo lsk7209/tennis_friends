@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
 };
 
-const tocItems = [
+const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
     { id: 'why-again-notable', text: '아르튀르 필스, 왜 주목받는 선수인가?', depth: 2 },
     { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
     { id: 'growth-story', text: '아르튀르 필스는 어떻게 여기까지 왔을까?', depth: 2 },
@@ -52,7 +52,7 @@ const tocItems = [
     { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
     { id: 'recent-form', text: '요즘 아르튀르 필스의 경기력 흐름은 어떤가?', depth: 2 },
     { id: 'one-sentence-summary', text: '아르튀르 필스, 한 문장으로 정리하면?', depth: 2 },
-] as const;
+];
 
 const faqs = [
     {
