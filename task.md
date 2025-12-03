@@ -4,6 +4,7 @@
 - Enhance player listing and profile pages with high-quality images.
 - Standardize player profile layout using `PlayerProfileCard` and `PlayerAttributes` components.
 - Ensure consistent and wide content area for better readability.
+- **Optimize SEO with structured data (Person Schema & FAQPage Schema).**
 
 ## Progress
 - [x] **Image Generation**
@@ -33,33 +34,19 @@
 
 - [x] **Component Integration & Page Creation**
   - [x] `src/app/players/page.tsx`: Updated `getPlayerCard` to display images.
-  - [x] `src/components/blog/Article.tsx`: Increased max-width to `max-w-5xl`.
-  - [x] All player pages updated to `max-w-5xl`.
-  - [x] Novak Djokovic
-  - [x] Carlos Alcaraz
-  - [x] Jannik Sinner
-  - [x] Daniil Medvedev
-  - [x] Alexander Zverev
-  - [x] Andrey Rublev
-  - [x] Stefanos Tsitsipas
-  - [x] Casper Ruud
-  - [x] Holger Rune
-  - [x] Hubert Hurkacz
-  - [x] Taylor Fritz
-  - [x] Tommy Paul
-  - [x] Frances Tiafoe
-  - [x] Cameron Norrie
-  - [x] Tallon Griekspoor
-  - [x] Grigor Dimitrov
-  - [x] Ben Shelton
-  - [x] Ugo Humbert
-  - [x] Sebastian Baez
-  - [x] Lorenzo Musetti
-  - [x] Sebastian Korda
-  - [x] Nicolas Jarry
-  - [x] Alex de Minaur
+  - [x] `src/components/blog/Article.tsx`: Increased max-width to `max-w-7xl`.
+  - [x] All player pages updated to `max-w-7xl`.
+  - [x] All 23 player pages created with `PlayerProfileCard` and `PlayerAttributes`.
+
+- [x] **SEO Optimization**
+  - [x] Created `PersonSchema` component for structured data
+  - [x] Created `FAQSchema` component for FAQ rich snippets
+  - [x] Applied PersonSchema and FAQSchema to Novak Djokovic page
+  - [x] Verified JSON-LD presence in page source
+  - [ ] Apply SEO schemas to all remaining player pages (in progress)
 
 ## Next Steps
-- [ ] Generate images for remaining 9 players once quota resets (approx. 5 hours).
-- [ ] SEO Audit for all player pages (Check metadata, JSON-LD, headings).
-- [ ] Verify mobile responsiveness for the wider content area.
+- [ ] Apply PersonSchema and FAQSchema to all 22 remaining player pages
+- [ ] Generate images for remaining 9 players once quota resets
+- [ ] Verify mobile responsiveness for the wider content area
+- [ ] Run Google Rich Results Test on player pages

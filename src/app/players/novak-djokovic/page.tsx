@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, ArrowRight, Star, CheckCircle, Crown } from 'lucide-react';
+import PersonSchema from '@/components/seo/PersonSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '노박 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
@@ -83,6 +85,24 @@ export default function NovakDjokovicPage() {
         excerpt="전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필"
         image="/images/players/novak-djokovic.png"
       >
+        <PersonSchema
+          name="Novak Djokovic"
+          nameKo="노박 조코비치"
+          description="세르비아 출신의 세계랭킹 1위 프로 테니스 선수. 그랜드 슬램 24회 우승이라는 남자 테니스 역사상 최다 기록 보유. 멘탈과 전술로 경기를 지배하는 전천후 플레이어."
+          image="/images/players/novak-djokovic.png"
+          nationality="Serbia"
+          birthDate="1987-05-22"
+          height="188"
+          jobTitle="Professional Tennis Player"
+          award={[
+            'Grand Slam Singles Champion (24 titles)',
+            'ATP World No. 1',
+            'Olympic Gold Medalist',
+            'ATP Finals Champion (7 titles)',
+          ]}
+          url="https://tennisfriends.co.kr/players/novak-djokovic"
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Novak Djokovic"

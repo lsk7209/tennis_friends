@@ -374,7 +374,12 @@ export default function PlayersPage() {
                 </Button>
               </div>
 
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                {startIndex + 1} - {Math.min(endIndex, filteredAndSortedPlayers.length)} / {filteredAndSortedPlayers.length}명
+              </div>
             </div>
+          )}
+        </div>
       </section>
 
       {/* CTA Section */}
