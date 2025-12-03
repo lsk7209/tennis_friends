@@ -9,12 +9,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import PersonSchema from '@/components/seo/PersonSchema';
+import ProfilePageSchema from '@/components/seo/ProfilePageSchema';
+import KeyTakeaways from '@/components/blog/KeyTakeaways';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '홀거 루네 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '홀거 루네의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 불꽃과 계산 사이의 대담함으로 테니스계를 흔드는 덴마크의 차세대 스타.',
+  description: "홀거 루네 (Holger Rune) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['홀거 루네', 'Holger Rune', '테니스', 'ATP', '플레이스타일', '덴마크 테니스', '공격형', '불꽃과 계산'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/holger-rune',
@@ -78,6 +79,12 @@ const faqs = [
   },
 ];
 
+const keyTakeaways = [
+  "투어 최고 수준의 백핸드와 폭발적인 기동력을 갖춘 공격형 올라운더",
+  "2022 파리 마스터스 우승으로 입증된 '자이언트 킬러' 본능",
+  "넘치는 승부욕과 스타성으로 차세대 '빅3' 후보로 거론되는 덴마크의 희망"
+];
+
 export default function HolgerRunePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
@@ -85,30 +92,39 @@ export default function HolgerRunePage() {
         title="홀거 루네"
         excerpt="불꽃과 계산 사이의 대담함으로 테니스계를 흔드는 덴마크의 차세대 스타"
         image="/images/players/holger-rune.png"
-      ><PersonSchema
-          name="Holger Rune"
-          nameKo="홀거 루네"
-          description="덴마크 출신의 차세대 테니스 스타. 공격적인 플레이와 강한 정신력으로 주목받는 선수."
+      ><ProfilePageSchema
+          name="홀거 루네 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력"
+          description="홀거 루네 (Holger Rune) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석."
           image="/images/players/holger-rune.png"
-          nationality="Denmark"
-          birthDate="2003-04-29"
-          height="185"
-          jobTitle="Professional Tennis Player"
-          award={[
-            'ATP Masters 1000 Champion', 'ATP NextGen Finals Champion'
-          ]}
-          url="https://tennisfriends.co.kr/players/holger-rune"
+          mainEntity={{
+            '@type': 'Person',
+            name: 'Holger Rune',
+            alternateName: '홀거 루네',
+            description: '덴마크 출신의 차세대 테니스 스타. 공격적인 플레이와 강한 정신력으로 주목받는 선수.',
+            image: '/images/players/holger-rune.png',
+            jobTitle: 'Professional Tennis Player',
+            nationality: { '@type': 'Country', name: 'Denmark' },
+            birthDate: '2003-04-29',
+            height: { '@type': 'QuantitativeValue', value: '185', unitText: 'cm' },
+            award: ['ATP Masters 1000 Champion', 'ATP NextGen Finals Champion'],
+            sameAs: [
+              'https://en.wikipedia.org/wiki/Holger_Rune',
+              'https://www.atptour.com/en/players/holger-rune/r0dg/overview',
+              'https://www.instagram.com/holgerrune'
+            ]
+          }}
         />
 
-      <BreadcrumbSchema
-        items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '홀거 루네', item: 'https://tennisfriends.co.kr/players/holger-rune' },
-        ]}
-      />
-      <FAQSchema faqs={faqs} />
+        <BreadcrumbSchema
+          items={[
+            { name: '홈', item: 'https://tennisfriends.co.kr' },
+            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+            { name: '홀거 루네', item: 'https://tennisfriends.co.kr/players/holger-rune' },
+          ]}
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <KeyTakeaways items={keyTakeaways} />
           <PlayerProfileCard
             name="Holger Rune"
             country="Denmark"

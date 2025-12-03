@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '그리고르 디미트로프 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '그리고르 디미트로프의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 두 번째 전성기·한 손 백핸드의 미학·우아한 올코트 플레이어로 주목받는 불가리아의 테니스 영웅.',
+  description: "그리고르 디미트로프 (Grigor Dimitrov) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['그리고르 디미트로프', 'Grigor Dimitrov', '테니스', 'ATP', '플레이스타일', '불가리아 테니스', '올코트', '원핸드 백핸드', '두 번째 전성기'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/grigor-dimitrov',

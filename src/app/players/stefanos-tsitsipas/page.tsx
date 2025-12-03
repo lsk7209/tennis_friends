@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '스테파노스 치치파스 — 그리스의 테니스 신화 | 플레이스타일·명장면·최근 경기력',
-  description: '스테파노스 치치파스의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 우아한 원핸드 백핸드와 공격적인 네트 플레이로 코트를 수놓는 그리스의 테니스 영웅.',
+  description: "스테파노스 치치파스 (Stefanos Tsitsipas) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['스테파노스 치치파스', 'Stefanos Tsitsipas', '테니스', 'ATP', '플레이스타일', '그리스 테니스', '원핸드 백핸드', '올코트'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/stefanos-tsitsipas',

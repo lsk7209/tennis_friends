@@ -9,12 +9,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import PersonSchema from '@/components/seo/PersonSchema';
+import ProfilePageSchema from '@/components/seo/ProfilePageSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import KeyTakeaways from '@/components/blog/KeyTakeaways';
 
 export const metadata: Metadata = {
   title: '프란시스 티아포 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '프란시스 티아포의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 에너지와 창의로 하드코트를 달구는 미국의 대표 선수.',
+  description: "프란시스 티아포 (Frances Tiafoe) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['프란시스 티아포', 'Frances Tiafoe', '테니스', 'ATP', '플레이스타일', '미국 테니스', '하드 전문', '에너지와 창의'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/frances-tiafoe',
@@ -78,6 +79,12 @@ const faqs = [
   },
 ];
 
+const keyTakeaways = [
+  "독특한 폼과 폭발적인 포핸드로 상대를 압도하는 공격형 플레이어",
+  "2022 US 오픈 4강 진출로 증명된 빅매치 강점과 스타성",
+  "관중과 호흡하며 에너지를 얻는 쇼맨십과 창의적인 네트 플레이"
+];
+
 export default function FrancesTiafoePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
@@ -85,30 +92,39 @@ export default function FrancesTiafoePage() {
         title="프란시스 티아포"
         excerpt="에너지와 창의로 하드코트를 달구는 미국의 대표 선수"
         image="/images/players/frances-tiafoe.png"
-      ><PersonSchema
-          name="Frances Tiafoe"
-          nameKo="프란시스 티아포"
-          description="미국 출신의 에너지 넘치는 테니스 선수. 공격적인 플레이와 강한 체력으로 주목받는 선수."
+      ><ProfilePageSchema
+          name="프란시스 티아포 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력"
+          description="프란시스 티아포 (Frances Tiafoe) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석."
           image="/images/players/frances-tiafoe.png"
-          nationality="United States"
-          birthDate="1998-01-20"
-          height="188"
-          jobTitle="Professional Tennis Player"
-          award={[
-            'US Open Semifinalist', 'ATP 500 Champion'
-          ]}
-          url="https://tennisfriends.co.kr/players/frances-tiafoe"
+          mainEntity={{
+            '@type': 'Person',
+            name: 'Frances Tiafoe',
+            alternateName: '프란시스 티아포',
+            description: '미국 출신의 에너지 넘치는 테니스 선수. 공격적인 플레이와 강한 체력으로 주목받는 선수.',
+            image: '/images/players/frances-tiafoe.png',
+            jobTitle: 'Professional Tennis Player',
+            nationality: { '@type': 'Country', name: 'United States' },
+            birthDate: '1998-01-20',
+            height: { '@type': 'QuantitativeValue', value: '188', unitText: 'cm' },
+            award: ['US Open Semifinalist', 'ATP 500 Champion'],
+            sameAs: [
+              'https://en.wikipedia.org/wiki/Frances_Tiafoe',
+              'https://www.atptour.com/en/players/frances-tiafoe/td51/overview',
+              'https://www.instagram.com/bigfoe1998/'
+            ]
+          }}
         />
 
-      <BreadcrumbSchema
-        items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '프란시스 티아포', item: 'https://tennisfriends.co.kr/players/frances-tiafoe' },
-        ]}
-      />
-      <FAQSchema faqs={faqs} />
+        <BreadcrumbSchema
+          items={[
+            { name: '홈', item: 'https://tennisfriends.co.kr' },
+            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+            { name: '프란시스 티아포', item: 'https://tennisfriends.co.kr/players/frances-tiafoe' },
+          ]}
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <KeyTakeaways items={keyTakeaways} />
           <PlayerProfileCard
             name="Frances Tiafoe"
             country="United States"

@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '벤 쉘튼 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '벤 쉘튼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 좌손 강서브와 대담한 전진으로 큰 코트의 시간을 압축하는 미국의 차세대 간판.',
+  description: "벤 쉘튼 (Ben Shelton) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['벤 쉘튼', 'Ben Shelton', '테니스', 'ATP', '플레이스타일', '미국 테니스', '공격형', '좌손 서브', '차세대'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/ben-shelton',

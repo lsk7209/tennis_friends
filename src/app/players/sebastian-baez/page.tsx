@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '세바스티안 바에즈 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '세바스티안 바에즈의 클레이 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 작은 거인이 보여주는 끈기와 열정의 아르헨티나 테니스.',
+  description: "세바스티안 바에즈 (Sebastian Baez) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['세바스티안 바에즈', 'Sebastian Baez', '테니스', 'ATP', '플레이스타일', '아르헨티나 테니스', '클레이', '베이스라인'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/sebastian-baez',

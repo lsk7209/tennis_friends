@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '니콜라스 자리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '니콜라스 자리의 장신 서브와 파워풀한 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 칠레 테니스의 자존심을 지키는 2미터 거인의 강력한 한 방.',
+  description: "니콜라스 자리 (Nicolas Jarry) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['니콜라스 자리', 'Nicolas Jarry', '테니스', 'ATP', '플레이스타일', '칠레 테니스', '장신', '서브'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/nicolas-jarry',

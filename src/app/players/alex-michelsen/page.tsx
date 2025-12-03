@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
     title: '알렉스 미첼슨 — 차세대 미국 테니스 | 플레이스타일·명장면·최근 경기력',
-    description: '알렉스 미첼슨의 공격적인 베이스라인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 강력한 포핸드·빠른 코트 커버·젊은 에너지로 주목받는 미국 테니스의 미래.',
+    description: "알렉스 미첼슨 (Alex Michelsen) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['알렉스 미첼슨', 'Alex Michelsen', '테니스', 'ATP', '플레이스타일', '미국 테니스', '차세대', '공격형'],
     alternates: {
         canonical: 'https://tennisfriends.co.kr/players/alex-michelsen',

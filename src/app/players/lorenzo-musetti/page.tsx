@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '로렌조 무세티 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '로렌조 무세티의 예술적인 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 창의적인 샷 메이킹과 우아함으로 코트를 수놓는 이탈리아의 테니스 아티스트.',
+  description: "로렌조 무세티 (Lorenzo Musetti) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['로렌조 무세티', 'Lorenzo Musetti', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '원핸드 백핸드', '예술적'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/lorenzo-musetti',

@@ -45,7 +45,17 @@ const playersWithBlogPosts = [
   'sebastian-korda',
   'cameron-norrie',
   'tallon-griekspoor',
-  'nicolas-jarry'
+  'nicolas-jarry',
+  'matteo-berrettini',
+  'gael-monfils',
+  'arthur-fils',
+  'alexei-popyrin',
+  'jan-lennard-struff',
+  'adrian-mannarino',
+  'matteo-arnaldi',
+  'jordan-thompson',
+  'zhizhen-zhang',
+  'giovanni-mpetshi-perricard'
 ];
 
 // 선수 slug와 이름 매핑 (전체 43명)
@@ -93,7 +103,17 @@ const playerNames: { [key: string]: { name: string; nameEn: string; country: str
   'linner-tien': { name: '리너 티엔', nameEn: 'Learner Tien', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/linner-tien.png' },
   'luciano-darderi': { name: '루치아노 다르데리', nameEn: 'Luciano Darderi', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/luciano-darderi.png' },
   'tomas-machac': { name: '토마스 마하츠', nameEn: 'Tomas Machac', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/tomas-machac.png' },
-  'valentin-vacherot': { name: '발랑탱 바슈로', nameEn: 'Valentin Vacherot', country: 'Monaco', countryFlag: '🇲🇨', image: '/images/players/valentin-vacherot.png' }
+  'valentin-vacherot': { name: '발랑탱 바슈로', nameEn: 'Valentin Vacherot', country: 'Monaco', countryFlag: '🇲🇨', image: '/images/players/valentin-vacherot.png' },
+  'matteo-berrettini': { name: '마테오 베레티니', nameEn: 'Matteo Berrettini', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/matteo-berrettini.png' },
+  'gael-monfils': { name: '가엘 몽피스', nameEn: 'Gael Monfils', country: 'France', countryFlag: '🇫🇷', image: '/images/players/gael-monfils.png' },
+  'arthur-fils': { name: '아르튀르 필스', nameEn: 'Arthur Fils', country: 'France', countryFlag: '🇫🇷', image: '/images/players/arthur-fils.png' },
+  'alexei-popyrin': { name: '알렉세이 포피린', nameEn: 'Alexei Popyrin', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/alexei-popyrin.png' },
+  'jan-lennard-struff': { name: '얀-레나드 스트루프', nameEn: 'Jan-Lennard Struff', country: 'Germany', countryFlag: '🇩🇪', image: '/images/players/jan-lennard-struff.svg' },
+  'adrian-mannarino': { name: '아드리안 만나리노', nameEn: 'Adrian Mannarino', country: 'France', countryFlag: '🇫🇷', image: '/images/players/adrian-mannarino.svg' },
+  'matteo-arnaldi': { name: '마테오 아르날디', nameEn: 'Matteo Arnaldi', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/matteo-arnaldi.svg' },
+  'jordan-thompson': { name: '조던 톰슨', nameEn: 'Jordan Thompson', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/jordan-thompson.svg' },
+  'zhizhen-zhang': { name: '장지전', nameEn: 'Zhizhen Zhang', country: 'China', countryFlag: '🇨🇳', image: '/images/players/zhizhen-zhang.svg' },
+  'giovanni-mpetshi-perricard': { name: '지오반니 음페치 페리카르', nameEn: 'Giovanni Mpetshi Perricard', country: 'France', countryFlag: '🇫🇷', image: '/images/players/giovanni-mpetshi-perricard.svg' }
 };
 
 export default function PlayersPage() {

@@ -9,12 +9,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import PersonSchema from '@/components/seo/PersonSchema';
+import ProfilePageSchema from '@/components/seo/ProfilePageSchema';
+import KeyTakeaways from '@/components/blog/KeyTakeaways';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '우고 움베르 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '우고 움베르의 공격적인 좌완 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 빠른 템포와 강력한 샷으로 상대를 압박하는 프랑스의 에이스.',
+  description: "우고 움베르 (Ugo Humbert) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['우고 움베르', 'Ugo Humbert', '테니스', 'ATP', '플레이스타일', '프랑스 테니스', '좌완', '공격형'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/ugo-humbert',
@@ -78,6 +79,12 @@ const faqs = [
   },
 ];
 
+const keyTakeaways = [
+  "빠른 템포의 라이징 샷과 왼손잡이 이점을 살린 공격적인 플레이",
+  "ATP 투어 결승전 승률 100% (6전 6승)의 놀라운 승부사 기질",
+  "피아노 연주로 다져진 섬세한 손감각과 폭발적인 샷의 조화"
+];
+
 export default function UgoHumbertPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
@@ -85,29 +92,37 @@ export default function UgoHumbertPage() {
         title="우고 움베르"
         excerpt="빠른 템포와 강력한 샷으로 상대를 압박하는 프랑스의 에이스"
         image="/images/players/ugo-humbert.png"
-      ><PersonSchema
-          name="Ugo Humbert"
-          nameKo="우고 움베르"
-          description="프랑스 출신의 레프티 플레이어. 공격적인 서브와 포핸드로 주목받는 선수."
+      ><ProfilePageSchema
+          name="우고 움베르 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력"
+          description="우고 움베르 (Ugo Humbert) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석."
           image="/images/players/ugo-humbert.png"
-          nationality="France"
-          birthDate="1998-06-26"
-          height="188"
-          jobTitle="Professional Tennis Player"
-          award={[
-            'ATP 500 Champion', 'Olympic Bronze Medalist (doubles)'
-          ]}
-          url="https://tennisfriends.co.kr/players/ugo-humbert"
+          mainEntity={{
+            '@type': 'Person',
+            name: 'Ugo Humbert',
+            alternateName: '우고 움베르',
+            description: '프랑스 출신의 레프티 플레이어. 공격적인 서브와 포핸드로 주목받는 선수.',
+            image: '/images/players/ugo-humbert.png',
+            jobTitle: 'Professional Tennis Player',
+            nationality: { '@type': 'Country', name: 'France' },
+            birthDate: '1998-06-26',
+            height: { '@type': 'QuantitativeValue', value: '188', unitText: 'cm' },
+            award: ['ATP 500 Champion', 'Olympic Bronze Medalist (doubles)'],
+            sameAs: [
+              'https://en.wikipedia.org/wiki/Ugo_Humbert',
+              'https://www.atptour.com/en/players/ugo-humbert/h996/overview',
+              'https://www.instagram.com/ugohumbert/'
+            ]
+          }}
         />
 
-      <BreadcrumbSchema
-        items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '우고 움베르', item: 'https://tennisfriends.co.kr/players/ugo-humbert' },
-        ]}
-      />
-      <FAQSchema faqs={faqs} />
+        <BreadcrumbSchema
+          items={[
+            { name: '홈', item: 'https://tennisfriends.co.kr' },
+            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+            { name: '우고 움베르', item: 'https://tennisfriends.co.kr/players/ugo-humbert' },
+          ]}
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Ugo Humbert"

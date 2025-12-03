@@ -9,12 +9,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import PersonSchema from '@/components/seo/PersonSchema';
+import ProfilePageSchema from '@/components/seo/ProfilePageSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import KeyTakeaways from '@/components/blog/KeyTakeaways';
 
 export const metadata: Metadata = {
   title: '테일러 프리츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '테일러 프리츠의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 직선적 포핸드와 안정된 서브로 하드코트를 설계하는 미국의 대표 선수.',
+  description: "테일러 프리츠 (Taylor Fritz) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['테일러 프리츠', 'Taylor Fritz', '테니스', 'ATP', '플레이스타일', '미국 테니스', '하드 전문', '직선적 포핸드'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/taylor-fritz',
@@ -78,6 +79,12 @@ const faqs = [
   },
 ];
 
+const keyTakeaways = [
+  "강력한 서브와 플랫성 포핸드를 앞세운 전형적인 미국식 하드 히터",
+  "2022 인디언 웰스 우승으로 증명한 빅매치 경쟁력과 부상 투혼",
+  "최근 풋워크 개선과 네트 플레이 강화로 완성형 올라운더로 진화 중"
+];
+
 export default function TaylorFritzPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
@@ -85,30 +92,39 @@ export default function TaylorFritzPage() {
         title="테일러 프리츠"
         excerpt="직선적 포핸드와 안정된 서브로 하드코트를 설계하는 미국의 대표 선수"
         image="/images/players/taylor-fritz.png"
-      ><PersonSchema
-          name="Taylor Fritz"
-          nameKo="테일러 프리츠"
-          description="미국 출신의 파워 테니스 선수. 강력한 서브와 포핸드로 주목받는 선수."
+      ><ProfilePageSchema
+          name="테일러 프리츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력"
+          description="테일러 프리츠 (Taylor Fritz) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석."
           image="/images/players/taylor-fritz.png"
-          nationality="United States"
-          birthDate="1997-10-28"
-          height="196"
-          jobTitle="Professional Tennis Player"
-          award={[
-            'ATP Masters 1000 Champion', 'ATP Finals Champion (2022)'
-          ]}
-          url="https://tennisfriends.co.kr/players/taylor-fritz"
+          mainEntity={{
+            '@type': 'Person',
+            name: 'Taylor Fritz',
+            alternateName: '테일러 프리츠',
+            description: '미국 출신의 파워 테니스 선수. 강력한 서브와 포핸드로 주목받는 선수.',
+            image: '/images/players/taylor-fritz.png',
+            jobTitle: 'Professional Tennis Player',
+            nationality: { '@type': 'Country', name: 'United States' },
+            birthDate: '1997-10-28',
+            height: { '@type': 'QuantitativeValue', value: '196', unitText: 'cm' },
+            award: ['ATP Masters 1000 Champion', 'ATP Finals Champion (2022)'],
+            sameAs: [
+              'https://en.wikipedia.org/wiki/Taylor_Fritz',
+              'https://www.atptour.com/en/players/taylor-fritz/fb98/overview',
+              'https://www.instagram.com/taylor_fritz/'
+            ]
+          }}
         />
 
-      <BreadcrumbSchema
-        items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '테일러 프리츠', item: 'https://tennisfriends.co.kr/players/taylor-fritz' },
-        ]}
-      />
-      <FAQSchema faqs={faqs} />
+        <BreadcrumbSchema
+          items={[
+            { name: '홈', item: 'https://tennisfriends.co.kr' },
+            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+            { name: '테일러 프리츠', item: 'https://tennisfriends.co.kr/players/taylor-fritz' },
+          ]}
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <KeyTakeaways items={keyTakeaways} />
           <PlayerProfileCard
             name="Taylor Fritz"
             country="United States"

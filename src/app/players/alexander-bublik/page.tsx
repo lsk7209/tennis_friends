@@ -9,7 +9,7 @@ import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, Che
 
 export const metadata: Metadata = {
   title: '알렉산데르 부블리크 — 세계랭킹 11위 | 플레이스타일·명장면·최근 경기력',
-  description: '알렉산데르 부블리크의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 강력한 서브와 예측 불가한 플레이로 ATP 투어를 지배하는 카자흐스탄의 대표 선수.',
+  description: "알렉산더 부블리크 (Alexander Bublik) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['알렉산데르 부블리크', 'Alexander Bublik', '테니스', 'ATP', '플레이스타일', '카자흐스탄 테니스', '공격형', '강력한 서브'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/alexander-bublik',

@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
     title: '자우메 무나르 — 클레이 코트 스페셜리스트 | 플레이스타일·명장면·최근 경기력',
-    description: '자우메 무나르의 클레이 코트 전문가 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 끈질긴 수비·높은 탑스핀·클레이 마스터로 주목받는 스페인의 투지의 선수.',
+    description: "자우메 무나르 (Jaume Munar) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['자우메 무나르', 'Jaume Munar', '테니스', 'ATP', '플레이스타일', '스페인 테니스', '클레이 코트', '수비형'],
     alternates: {
         canonical: 'https://tennisfriends.co.kr/players/jaume-munar',

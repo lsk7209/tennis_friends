@@ -61,12 +61,12 @@ export default function AdminPage() {
       if (apiUrl) {
         try {
           // Cloudflare 연결 상태 확인
-          setCloudflareStatus((prev) => ({ 
-            ...prev, 
-            connected: true, 
-            lastCheck: new Date().toISOString() 
+          setCloudflareStatus((prev) => ({
+            ...prev,
+            connected: true,
+            lastCheck: new Date().toISOString()
           }));
-          
+
           const cloudflareStats = await getCloudflareStats(password || ADMIN_PASSWORD);
           if (cloudflareStats && cloudflareStats.source === 'cloudflare-kv') {
             // Cloudflare 데이터와 localStorage 데이터 병합
@@ -80,7 +80,7 @@ export default function AdminPage() {
                 totalVisitors: Math.max(cloudflareStats.totalVisitors || 0, localStats.totalVisitors || 0),
                 source: 'cloudflare+local',
               });
-      } else {
+            } else {
               // Cloudflare 데이터만 사용
               setStats({
                 ...EMPTY_STATS_DATA,
@@ -109,7 +109,7 @@ export default function AdminPage() {
   const loadStatsFromLocalStorage = async (): Promise<StatsData | null> => {
     try {
       const rawData = localStorage.getItem('visitorData');
-      
+
       // 데이터 상태 확인
       if (!rawData || rawData === '[]') {
         setDataStatus({
@@ -123,17 +123,17 @@ export default function AdminPage() {
       }
 
       const visitorData = JSON.parse(rawData);
-      
+
       // 데이터 유효성 검사
       if (!Array.isArray(visitorData)) {
         throw new Error('방문자 데이터 형식이 올바르지 않습니다.');
       }
 
       // 데이터 상태 업데이트
-      const lastUpdate = visitorData.length > 0 
+      const lastUpdate = visitorData.length > 0
         ? new Date(visitorData[visitorData.length - 1].timestamp).toLocaleString('ko-KR')
         : null;
-      
+
       setDataStatus({
         hasData: visitorData.length > 0,
         dataCount: visitorData.length,
@@ -143,10 +143,10 @@ export default function AdminPage() {
 
       // 통계 계산 (리팩토링된 함수 사용)
       const calculatedStats = calculateStats(visitorData as VisitorData[]);
-      
+
       // 테스트 완료 통계 추가 (Tracking 컴포넌트에서 가져옴)
       calculatedStats.testCompletionStats = getPopularTests();
-      
+
       setStats(calculatedStats);
       return calculatedStats;
     } catch (error) {
@@ -203,7 +203,7 @@ export default function AdminPage() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-8">
           <div>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">관리자 대시보드</h1>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">관리자 대시보드</h1>
             <div className="mt-2 flex items-center gap-4 text-sm">
               {dataStatus.hasData ? (
                 <>
@@ -225,11 +225,11 @@ export default function AdminPage() {
                 </>
               )}
               {cloudflareStatus.apiUrl && (
-                <Badge 
-                  variant="outline" 
+                <Badge
+                  variant="outline"
                   className={
-                    cloudflareStatus.connected 
-                      ? "bg-green-50 text-green-700 border-green-200" 
+                    cloudflareStatus.connected
+                      ? "bg-green-50 text-green-700 border-green-200"
                       : "bg-yellow-50 text-yellow-700 border-yellow-200"
                   }
                 >
@@ -244,7 +244,7 @@ export default function AdminPage() {
             </div>
           </div>
           <div className="flex gap-2">
-            <Button 
+            <Button
               onClick={() => {
                 // 테스트 데이터 생성
                 if (typeof window !== 'undefined' && confirm('테스트 데이터를 생성하시겠습니까?')) {
@@ -254,8 +254,8 @@ export default function AdminPage() {
                     return {
                       id: `test-${i}`,
                       timestamp: now.toISOString(),
-                      referrer: i % 3 === 0 ? 'https://www.google.com/search?q=테니스' : 
-                               i % 3 === 1 ? 'https://www.naver.com/search?q=테니스+실력' : '',
+                      referrer: i % 3 === 0 ? 'https://www.google.com/search?q=테니스' :
+                        i % 3 === 1 ? 'https://www.naver.com/search?q=테니스+실력' : '',
                       userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
                       ip: 'client-side',
                       page: i % 2 === 0 ? '/blog/tennis-footwork-science' : '/utility/ntrp-test',
@@ -284,9 +284,9 @@ export default function AdminPage() {
             >
               테스트 데이터 생성
             </Button>
-          <Button onClick={fetchStats} variant="outline">
-            새로고침
-          </Button>
+            <Button onClick={fetchStats} variant="outline">
+              새로고침
+            </Button>
           </div>
         </div>
 
@@ -663,12 +663,12 @@ export default function AdminPage() {
                   <ResponsiveContainer width="100%" height={300}>
                     <AreaChart data={stats.hourlyStats}>
                       <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis 
-                        dataKey="hour" 
+                      <XAxis
+                        dataKey="hour"
                         tickFormatter={(value) => `${value}시`}
                       />
                       <YAxis />
-                      <Tooltip 
+                      <Tooltip
                         labelFormatter={(value) => `${value}시`}
                         formatter={(value: any) => [`${value}명`, '방문자']}
                       />
@@ -720,7 +720,7 @@ export default function AdminPage() {
                         outerRadius={80}
                         fill="#8884d8"
                         dataKey="count"
-                        label={({ category, percent }) => `${category} ${((percent as number) * 100).toFixed(0)}%`}
+                        label={({ category, percent }: any) => `${category} ${((percent as number) * 100).toFixed(0)}%`}
                       >
                         {stats.referrerCategoryStats.map((entry, index) => {
                           const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444'];
@@ -819,7 +819,7 @@ export default function AdminPage() {
             </Card>
 
             {/* ========== 상세 통계 섹션 ========== */}
-            
+
             {/* 유입 경로 상세 분석 */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
               <Card>
@@ -1070,10 +1070,10 @@ export default function AdminPage() {
                             <span className="text-sm">{item.pageCount}페이지</span>
                             <div className="flex items-center gap-2">
                               <div className="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                                <div 
+                                <div
                                   className="h-full bg-blue-500"
-                                  style={{ 
-                                    width: `${(item.sessionCount / stats.sessionStats.totalSessions) * 100}%` 
+                                  style={{
+                                    width: `${(item.sessionCount / stats.sessionStats.totalSessions) * 100}%`
                                   }}
                                 />
                               </div>
@@ -1104,9 +1104,8 @@ export default function AdminPage() {
                     <div className="p-3 bg-white dark:bg-gray-800 rounded-lg">
                       <div className="text-sm text-muted-foreground mb-1">연결 상태</div>
                       <div className="flex items-center gap-2">
-                        <div className={`w-3 h-3 rounded-full ${
-                          cloudflareStatus.connected ? 'bg-green-500' : 'bg-red-500'
-                        }`} />
+                        <div className={`w-3 h-3 rounded-full ${cloudflareStatus.connected ? 'bg-green-500' : 'bg-red-500'
+                          }`} />
                         <span className="font-semibold">
                           {cloudflareStatus.connected ? '연결됨' : '연결 안됨'}
                         </span>
@@ -1119,7 +1118,7 @@ export default function AdminPage() {
                     <div className="p-3 bg-white dark:bg-gray-800 rounded-lg">
                       <div className="text-sm text-muted-foreground mb-1">마지막 확인</div>
                       <div className="text-sm">
-                        {cloudflareStatus.lastCheck 
+                        {cloudflareStatus.lastCheck
                           ? new Date(cloudflareStatus.lastCheck).toLocaleString('ko-KR')
                           : '아직 확인 안됨'}
                       </div>
@@ -1128,7 +1127,7 @@ export default function AdminPage() {
                   {!cloudflareStatus.connected && cloudflareStatus.apiUrl && (
                     <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
                       <p className="text-sm text-yellow-800 dark:text-yellow-200">
-                        ⚠️ Cloudflare Workers에 연결할 수 없습니다. 
+                        ⚠️ Cloudflare Workers에 연결할 수 없습니다.
                         Workers가 배포되어 있고 KV 네임스페이스가 설정되어 있는지 확인하세요.
                       </p>
                     </div>
@@ -1157,9 +1156,8 @@ export default function AdminPage() {
                   </div>
                   <div className="p-4 bg-white dark:bg-gray-800 rounded-lg">
                     <div className="text-sm text-muted-foreground mb-1">변화율</div>
-                    <div className={`text-2xl font-bold flex items-center gap-2 ${
-                      stats.trendAnalysis.changePercent >= 0 ? 'text-green-600' : 'text-red-600'
-                    }`}>
+                    <div className={`text-2xl font-bold flex items-center gap-2 ${stats.trendAnalysis.changePercent >= 0 ? 'text-green-600' : 'text-red-600'
+                      }`}>
                       {stats.trendAnalysis.changePercent >= 0 ? (
                         <TrendingUp className="h-5 w-5" />
                       ) : (
@@ -1313,7 +1311,7 @@ export default function AdminPage() {
                           <span>완료: {test.completed}명</span>
                         </div>
                         <div className="mt-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                          <div 
+                          <div
                             className="bg-blue-500 h-2 rounded-full transition-all"
                             style={{ width: `${test.rate}%` }}
                           />
@@ -1368,7 +1366,7 @@ export default function AdminPage() {
                         console.log('방문자 데이터:', data);
                         console.log('데이터 개수:', data.length);
                         console.log('최신 데이터:', data[data.length - 1]);
-                        
+
                         // 데이터 검증 결과 출력
                         const validation = {
                           총레코드: data.length,
@@ -1387,7 +1385,7 @@ export default function AdminPage() {
                           테스트완료: data.filter((v: any) => v.testCompleted).length
                         };
                         console.log('데이터 검증 결과:', validation);
-                        
+
                         alert(`콘솔에 데이터를 출력했습니다. 개발자 도구(F12)를 확인하세요.\n\n데이터 개수: ${data.length}건\n유효 레코드: ${validation.유효레코드}건\n최신 기록: ${validation.최신기록}`);
                       } else {
                         alert('localStorage에 데이터가 없습니다.\n\n다른 페이지를 방문하면 데이터가 수집됩니다.');
@@ -1406,11 +1404,11 @@ export default function AdminPage() {
                         alert('데이터가 없습니다. 다른 페이지를 방문하거나 테스트 데이터를 생성하세요.');
                         return;
                       }
-                      
+
                       const data = JSON.parse(rawData);
                       const testDataCount = data.filter((v: any) => v.id && v.id.startsWith('test-')).length;
                       const realDataCount = data.length - testDataCount;
-                      
+
                       const message = `
 데이터 분석 결과:
 
@@ -1424,7 +1422,7 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
 - Tracking 컴포넌트: ${typeof window !== 'undefined' ? '활성화' : '비활성화'}
 - localStorage: ${rawData ? '데이터 있음' : '데이터 없음'}
                       `.trim();
-                      
+
                       alert(message);
                     }}
                     variant="outline"
@@ -1446,21 +1444,21 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                             console.error('Cloudflare 데이터 삭제 실패:', error);
                           }
                         }
-                        
+
                         // localStorage 삭제
                         localStorage.removeItem('visitorData');
                         localStorage.removeItem('tennis_session_id');
                         localStorage.removeItem('tennis_session_expiry');
                         localStorage.removeItem('tennis_first_visit');
-                        
+
                         // 테스트 완료 카운터 삭제
                         const testTypes = ['ntrp-test', 'play-style-test', 'flexibility-test', 'reaction-test',
-                                          'focus-training', 'string-tension', 'equipment-recommendation',
-                                          'training-planner', 'match-analyzer', 'injury-risk', 'nutrition-guide'];
+                          'focus-training', 'string-tension', 'equipment-recommendation',
+                          'training-planner', 'match-analyzer', 'injury-risk', 'nutrition-guide'];
                         testTypes.forEach(testType => {
                           localStorage.removeItem(`test_completion_${testType}`);
                         });
-                        
+
                         alert('데이터가 삭제되었습니다. 페이지를 새로고침합니다.');
                         window.location.reload();
                       }
@@ -1509,7 +1507,7 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-3">
-                  <Button 
+                  <Button
                     onClick={() => {
                       const dataStr = JSON.stringify(stats, null, 2);
                       const dataBlob = new Blob([dataStr], { type: 'application/json' });
@@ -1525,7 +1523,7 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                     <Download className="h-4 w-4 mr-2" />
                     JSON 다운로드
                   </Button>
-                  <Button 
+                  <Button
                     onClick={() => {
                       const csv = [
                         ['항목', '값'],
@@ -1612,11 +1610,11 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                         <TableCell className="text-sm">
                           <Badge variant="outline" className={
                             visitor.deviceType === 'mobile' ? 'border-green-500 text-green-700' :
-                            visitor.deviceType === 'tablet' ? 'border-blue-500 text-blue-700' :
-                            'border-gray-500 text-gray-700'
+                              visitor.deviceType === 'tablet' ? 'border-blue-500 text-blue-700' :
+                                'border-gray-500 text-gray-700'
                           }>
                             {visitor.deviceType === 'mobile' ? '📱' :
-                             visitor.deviceType === 'tablet' ? '📱' : '🖥️'} {visitor.deviceType}
+                              visitor.deviceType === 'tablet' ? '📱' : '🖥️'} {visitor.deviceType}
                           </Badge>
                         </TableCell>
                         <TableCell className="text-sm">

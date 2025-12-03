@@ -9,12 +9,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown } from 'lucide-react';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import PersonSchema from '@/components/seo/PersonSchema';
+import ProfilePageSchema from '@/components/seo/ProfilePageSchema';
+import KeyTakeaways from '@/components/blog/KeyTakeaways';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '후베르트 후르카츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '후베르트 후르카츠의 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수.',
+  description: "후베르트 후르카츠 (Hubert Hurkacz) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['후베르트 후르카츠', 'Hubert Hurkacz', '테니스', 'ATP', '플레이스타일', '폴란드 테니스', '서브&발리', '탄력과 절제'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/hubert-hurkacz',
@@ -78,6 +79,12 @@ const faqs = [
   },
 ];
 
+const keyTakeaways = [
+  "196cm의 장신에서 뿜어져 나오는 강력한 서브와 부드러운 네트 플레이",
+  "2021 윔블던 4강 및 마이애미 오픈 우승으로 증명된 빅매치 강점",
+  "침착한 멘탈과 매너로 '코트 위의 신사'라 불리는 폴란드의 영웅"
+];
+
 export default function HubertHurkaczPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
@@ -85,30 +92,39 @@ export default function HubertHurkaczPage() {
         title="후베르트 후르카츠"
         excerpt="탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수"
         image="/images/players/hubert-hurkacz.png"
-      ><PersonSchema
-          name="Hubert Hurkacz"
-          nameKo="후베르트 후르카치"
-          description="폴란드 출신의 빅 서버. 강력한 서브와 네트 플레이로 주목받는 선수."
+      ><ProfilePageSchema
+          name="후베르트 후르카츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력"
+          description="후베르트 후르카츠 (Hubert Hurkacz) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석."
           image="/images/players/hubert-hurkacz.png"
-          nationality="Poland"
-          birthDate="1997-02-11"
-          height="196"
-          jobTitle="Professional Tennis Player"
-          award={[
-            'ATP Masters 1000 Champion', 'Wimbledon Semifinalist'
-          ]}
-          url="https://tennisfriends.co.kr/players/hubert-hurkacz"
+          mainEntity={{
+            '@type': 'Person',
+            name: 'Hubert Hurkacz',
+            alternateName: '후베르트 후르카츠',
+            description: '폴란드 출신의 빅 서버. 강력한 서브와 네트 플레이로 주목받는 선수.',
+            image: '/images/players/hubert-hurkacz.png',
+            jobTitle: 'Professional Tennis Player',
+            nationality: { '@type': 'Country', name: 'Poland' },
+            birthDate: '1997-02-11',
+            height: { '@type': 'QuantitativeValue', value: '196', unitText: 'cm' },
+            award: ['ATP Masters 1000 Champion', 'Wimbledon Semifinalist'],
+            sameAs: [
+              'https://en.wikipedia.org/wiki/Hubert_Hurkacz',
+              'https://www.atptour.com/en/players/hubert-hurkacz/h940/overview',
+              'https://www.instagram.com/hubihurkacz/'
+            ]
+          }}
         />
 
-      <BreadcrumbSchema
-        items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '후베르트 후르카츠', item: 'https://tennisfriends.co.kr/players/hubert-hurkacz' },
-        ]}
-      />
-      <FAQSchema faqs={faqs} />
+        <BreadcrumbSchema
+          items={[
+            { name: '홈', item: 'https://tennisfriends.co.kr' },
+            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+            { name: '후베르트 후르카츠', item: 'https://tennisfriends.co.kr/players/hubert-hurkacz' },
+          ]}
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <KeyTakeaways items={keyTakeaways} />
           <PlayerProfileCard
             name="Hubert Hurkacz"
             country="Poland"

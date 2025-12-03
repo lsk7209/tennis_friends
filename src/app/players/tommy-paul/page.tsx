@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '토미 폴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '토미 폴의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 속도와 각도로 하드코트를 조립하는 미국의 대표 선수.',
+  description: "토미 폴 (Tommy Paul) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['토미 폴', 'Tommy Paul', '테니스', 'ATP', '플레이스타일', '미국 테니스', '하드 전문', '속도와 각도'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/tommy-paul',

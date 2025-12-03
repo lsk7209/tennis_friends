@@ -14,7 +14,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: '세바스찬 코르다 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: '세바스찬 코르다의 깔끔한 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 테니스 명가의 DNA를 물려받아 우아하고 정석적인 플레이를 펼치는 미국의 기대주.',
+  description: "세바스티안 코르다 (Sebastian Korda) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['세바스찬 코르다', 'Sebastian Korda', '테니스', 'ATP', '플레이스타일', '미국 테니스', '테니스 명가', '올라운더'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/sebastian-korda',

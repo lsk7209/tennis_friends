@@ -9,7 +9,7 @@ import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, Che
 
 export const metadata: Metadata = {
   title: '프란시스코 세룬돌로 — 세계랭킹 21위 | 플레이스타일·명장면·최근 경기력',
-  description: '프란시스코 세룬돌로의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. 강력한 포핸드와 클레이 전문 플레이로 ATP 투어를 지배하는 아르헨티나의 대표 선수.',
+  description: "프란시스코 세룬돌로 (Francisco Cerundolo) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['프란시스코 세룬돌로', 'Francisco Cerundolo', '테니스', 'ATP', '플레이스타일', '아르헨티나 테니스', '공격형', '클레이 전문'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/players/francisco-cerundolo',
