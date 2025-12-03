@@ -58,7 +58,7 @@ a:focus-visible {
 
 /* 본문 타이포(리듬) */
 .prose {
-  max-width: 72ch;
+  max-width: 85ch;
   line-height: 1.8;
   font-size: 1.0625rem; /* 17px */
   letter-spacing: 0.003em;
@@ -292,7 +292,7 @@ a:focus-visible {
   /* Improved prose styling - 심플한 스타일로 통합 */
   .prose {
     color: var(--fg);
-    max-width: 72ch;
+    max-width: 85ch;
   }
 
   /* Code blocks - better contrast */
