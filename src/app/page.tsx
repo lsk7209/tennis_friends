@@ -196,6 +196,36 @@ export default function Home() {
               </CardContent>
             </Card>
           </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className="mt-16 pt-12 border-t border-gray-200">
+              <h3 className="text-center text-sm font-bold text-gray-500 uppercase tracking-wider mb-6">
+                인기 검색어 & 추천 토픽
+              </h3>
+              <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                {[
+                  { name: "테니스 라켓 추천", href: "/blog" },
+                  { name: "NTRP 레벨 테스트", href: "/utility/ntrp-calculator" },
+                  { name: "테니스 스트링 텐션", href: "/utility/string-tension-calculator" },
+                  { name: "테니스 엘보 예방", href: "/utility/injury-risk-test" },
+                  { name: "페더러 프로필", href: "/players/roger-federer" },
+                  { name: "나달 클레이 코트", href: "/players/rafael-nadal" },
+                  { name: "조코비치 그랜드슬램", href: "/players/novak-djokovic" },
+                  { name: "시너 포핸드", href: "/players/jannik-sinner" },
+                  { name: "알카라스 경기 일정", href: "/players/carlos-alcaraz" },
+                  { name: "테니스 룰 퀴즈", href: "/tennis-rules-quiz" },
+                  { name: "테니스 입문 가이드", href: "/blog" },
+                  { name: "테니스화 추천", href: "/blog" },
+                ].map((topic, index) => (
+                  <Link key={index} href={topic.href}>
+                    <Badge variant="secondary" className="bg-white hover:bg-blue-50 text-gray-600 hover:text-blue-600 border border-gray-200 px-4 py-2 text-sm transition-all cursor-pointer">
+                      # {topic.name}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </div>

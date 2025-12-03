@@ -8,6 +8,7 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import ProfilePageSchema from '@/components/seo/ProfilePageSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import KeyTakeaways from '@/components/blog/KeyTakeaways';
+import RelatedKeywords from '@/components/seo/RelatedKeywords';
 import { Metadata } from 'next';
 import { Crown, Star, Target, Shield, Brain, Award } from 'lucide-react';
 
@@ -235,6 +236,19 @@ export default function AlexeiPopyrinPage() {
                     </div>
 
                     <FAQ items={faqs} />
+
+                    <RelatedKeywords
+                        keywords={[
+                            { name: "알렉세이 포피린 랭킹", href: "/players/alexei-popyrin" },
+                            { name: "포피린 라켓", href: "/players/alexei-popyrin" },
+                            { name: "호주 테니스 선수", href: "/players" },
+                            { name: "테니스 서브 잘하는 법", href: "/blog" },
+                            { name: "ATP 마스터스 1000 우승자", href: "/players" },
+                            { name: "테니스 포핸드 그립", href: "/blog" },
+                            { name: "알렉세이 포피린 인스타", href: "https://www.instagram.com/alexeipopyrin/" },
+                        ]}
+                    />
+
                     <CTA />
                 </div>
             </Article>

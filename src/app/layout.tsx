@@ -32,6 +32,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "google-site-verification-code", // Replace with actual code
+    other: {
+      "naver-site-verification": "naver-site-verification-code", // Replace with actual code
+    },
+  },
   openGraph: {
     title: "TennisFriends - 당신의 테니스 파트너",
     description: "데이터로 똑똑하게, 테니스를 즐겁게. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.",
@@ -39,11 +45,20 @@ export const metadata: Metadata = {
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Tennis Friends - 테니스 친구들",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "TennisFriends - 당신의 테니스 파트너",
     description: "데이터로 똑똑하게, 테니스를 즐겁게. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -64,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <html lang="ko" className={inter.variable}>
+    <html lang="ko" className={inter.variable}>
       <head>
         {/* Pretendard 폰트 최적화 로드 */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
