@@ -83,7 +83,7 @@ export default function DaniilMedvedevPage() {
         excerpt="낮은 탄도와 깊은 낙구로 상대의 선택지를 좁혀 가는 하드 코트의 설계자"
         image="/images/players/daniil-medvedev.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Daniil Medvedev"
             country="Russia"

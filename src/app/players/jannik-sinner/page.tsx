@@ -83,7 +83,7 @@ export default function JannikSinnerPage() {
         excerpt="탁월한 스트로크 기술과 서브 앤 발리 게임을 겸비한 이탈리아의 차세대 스타"
         image="/images/players/jannik-sinner.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Jannik Sinner"
             country="Italy"

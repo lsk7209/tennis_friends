@@ -71,7 +71,7 @@ export default function JackDraperPage() {
         title="잭 드레이퍼"
         excerpt="강력한 포핸드와 서브로 ATP 투어를 지배하는 영국의 차세대 스타"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="flex flex-wrap gap-2 mb-6">
             {['테니스', '잭 드레이퍼', '선수 프로필', '영국', '공격형', '강력한 포핸드'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">

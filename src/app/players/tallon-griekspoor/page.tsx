@@ -83,7 +83,7 @@ export default function TallonGriekspoorPage() {
         excerpt="네덜란드 테니스의 희망으로 떠오르는 공격형 베이스라이너"
         image="/images/players/tallon-griekspoor.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Tallon Griekspoor"
             country="Netherlands"

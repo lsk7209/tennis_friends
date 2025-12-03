@@ -83,7 +83,7 @@ export default function BenSheltonPage() {
         excerpt="좌손 강서브와 대담한 전진으로 큰 코트의 시간을 압축하는 미국의 차세대 간판"
         image="/images/players/ben-shelton.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Ben Shelton"
             country="United States"

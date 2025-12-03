@@ -83,7 +83,7 @@ export default function LorenzoMusettiPage() {
         excerpt="창의적인 샷 메이킹과 우아함으로 코트를 수놓는 이탈리아의 테니스 아티스트"
         image="/images/players/lorenzo-musetti.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Lorenzo Musetti"
             country="Italy"

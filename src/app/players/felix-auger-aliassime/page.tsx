@@ -80,7 +80,7 @@ export default function FelixAugerAliassimePage() {
         title="펠릭스 오제-알리아심"
         excerpt="강력한 서브와 포핸드로 ATP 투어를 지배하는 캐나다의 차세대 스타"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="flex flex-wrap gap-2 mb-6">
             {['테니스', '펠릭스 오제-알리아심', '선수 프로필', '캐나다', '공격형', '강력한 서브'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">

@@ -83,7 +83,7 @@ export default function NicolasJarryPage() {
         excerpt="칠레 테니스의 자존심을 지키는 2미터 거인의 강력한 한 방"
         image="/images/players/nicolas-jarry.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Nicolas Jarry"
             country="Chile"

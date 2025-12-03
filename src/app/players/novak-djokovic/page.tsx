@@ -83,7 +83,7 @@ export default function NovakDjokovicPage() {
         excerpt="전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필"
         image="/images/players/novak-djokovic.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Novak Djokovic"
             country="Serbia"

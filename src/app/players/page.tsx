@@ -341,8 +341,8 @@ export default function PlayersPage() {
                           size="sm"
                           onClick={() => setCurrentPage(page)}
                           className={`min-w-[40px] ${currentPage === page
-                              ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0"
-                              : ""
+                            ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0"
+                            : ""
                             }`}
                         >
                           {page}
@@ -374,17 +374,12 @@ export default function PlayersPage() {
                 </Button>
               </div>
 
-              <div className="text-sm text-gray-600 dark:text-gray-400">
-                {startIndex + 1} - {Math.min(endIndex, filteredAndSortedPlayers.length)} / {filteredAndSortedPlayers.length}명
-              </div>
             </div>
-          )}
-        </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600">
-        <div className="container mx-auto max-w-5xl px-4 text-center">
+        <div className="container mx-auto max-w-7xl px-4 text-center">
           <Card className="bg-white/95 backdrop-blur-md border-0 shadow-2xl">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">

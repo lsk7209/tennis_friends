@@ -83,7 +83,7 @@ export default function CasperRuudPage() {
         excerpt="강력한 탑스핀 포핸드와 성실함으로 코트를 지배하는 노르웨이 출신의 세계랭킹 상위권 선수"
         image="/images/players/casper-ruud.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Casper Ruud"
             country="Norway"

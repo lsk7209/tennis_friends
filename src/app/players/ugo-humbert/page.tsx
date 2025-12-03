@@ -83,7 +83,7 @@ export default function UgoHumbertPage() {
         excerpt="빠른 템포와 강력한 샷으로 상대를 압박하는 프랑스의 에이스"
         image="/images/players/ugo-humbert.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Ugo Humbert"
             country="France"

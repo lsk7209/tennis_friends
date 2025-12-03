@@ -83,7 +83,7 @@ export default function TaylorFritzPage() {
         excerpt="직선적 포핸드와 안정된 서브로 하드코트를 설계하는 미국의 대표 선수"
         image="/images/players/taylor-fritz.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Taylor Fritz"
             country="United States"

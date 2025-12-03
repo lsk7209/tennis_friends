@@ -83,7 +83,7 @@ export default function StefanosTsitsipasPage() {
         excerpt="우아한 원핸드 백핸드와 공격적인 네트 플레이로 코트를 수놓는 그리스의 테니스 영웅"
         image="/images/players/stefanos-tsitsipas.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Stefanos Tsitsipas"
             country="Greece"

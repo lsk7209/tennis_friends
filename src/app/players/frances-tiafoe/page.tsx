@@ -83,7 +83,7 @@ export default function FrancesTiafoePage() {
         excerpt="에너지와 창의로 하드코트를 달구는 미국의 대표 선수"
         image="/images/players/frances-tiafoe.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Frances Tiafoe"
             country="United States"

@@ -83,7 +83,7 @@ export default function AlexDeMinaurPage() {
         excerpt="투어에서 가장 빠른 발과 지치지 않는 체력으로 상대를 질식시키는 호주의 악마"
         image="/images/players/alex-de-minaur.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Alex de Minaur"
             country="Australia"

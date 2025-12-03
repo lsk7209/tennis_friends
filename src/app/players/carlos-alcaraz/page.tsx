@@ -83,7 +83,7 @@ export default function CarlosAlcarazPage() {
         excerpt="폭발적인 파워와 젊은 에너지로 테니스계를 이끌어갈 스페인의 신성"
         image="/images/players/carlos-alcaraz.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Carlos Alcaraz"
             country="Spain"

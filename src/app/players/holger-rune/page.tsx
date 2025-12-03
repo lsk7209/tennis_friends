@@ -83,7 +83,7 @@ export default function HolgerRunePage() {
         excerpt="불꽃과 계산 사이의 대담함으로 테니스계를 흔드는 덴마크의 차세대 스타"
         image="/images/players/holger-rune.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Holger Rune"
             country="Denmark"

@@ -83,7 +83,7 @@ export default function CameronNorriePage() {
         excerpt="꾸준함과 전술적 사고로 세계 상위권을 유지하는 영국 출신의 테니스 스타"
         image="/images/players/cameron-norrie.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Cameron Norrie"
             country="United Kingdom"

@@ -83,7 +83,7 @@ export default function AlexanderZverevPage() {
         excerpt="장벽 같은 서브와 칼같은 양손 백핸드로 흐름을 제어하는 독일 출신의 세계랭킹 2위 선수"
         image="/images/players/alexander-zverev.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Alexander Zverev"
             country="Germany"

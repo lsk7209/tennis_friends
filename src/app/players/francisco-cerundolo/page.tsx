@@ -67,7 +67,7 @@ export default function FranciscoCerundoloPage() {
         title="프란시스코 세룬돌로"
         excerpt="강력한 포핸드와 클레이 전문 플레이로 ATP 투어를 지배하는 아르헨티나의 대표 선수"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="flex flex-wrap gap-2 mb-6">
             {['테니스', '프란시스코 세룬돌로', '선수 프로필', '아르헨티나', '공격형', '클레이 전문'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">

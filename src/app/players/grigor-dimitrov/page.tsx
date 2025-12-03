@@ -83,7 +83,7 @@ export default function GrigorDimitrovPage() {
         excerpt="두 번째 전성기, 한 손 백핸드의 미학을 보여주는 불가리아의 테니스 영웅"
         image="/images/players/grigor-dimitrov.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Grigor Dimitrov"
             country="Bulgaria"

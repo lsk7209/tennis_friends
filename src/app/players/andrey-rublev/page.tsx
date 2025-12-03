@@ -83,7 +83,7 @@ export default function AndreyRublevPage() {
         excerpt="폭발적인 포핸드와 지치지 않는 열정으로 코트를 불태우는 러시아 출신의 세계랭킹 상위권 선수"
         image="/images/players/andrey-rublev.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Andrey Rublev"
             country="Russia"

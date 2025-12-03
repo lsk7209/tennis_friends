@@ -83,7 +83,7 @@ export default function SebastianKordaPage() {
         excerpt="테니스 명가의 DNA를 물려받아 우아하고 정석적인 플레이를 펼치는 미국의 기대주"
         image="/images/players/sebastian-korda.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Sebastian Korda"
             country="United States"

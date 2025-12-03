@@ -83,7 +83,7 @@ export default function SebastianBaezPage() {
         excerpt="작은 거인이 보여주는 끈기와 열정의 아르헨티나 테니스"
         image="/images/players/sebastian-baez.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Sebastian Baez"
             country="Argentina"

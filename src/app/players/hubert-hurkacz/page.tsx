@@ -83,7 +83,7 @@ export default function HubertHurkaczPage() {
         excerpt="탄력과 절제로 현대형 서브&발리를 설계하는 폴란드의 대표 선수"
         image="/images/players/hubert-hurkacz.png"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Hubert Hurkacz"
             country="Poland"
