@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -21,112 +19,27 @@ import {
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 import { PLAYERS_PER_PAGE } from '@/lib/constants';
 
-// 블로그 포스트가 있는 선수들의 slug 리스트
-const playersWithBlogPosts = [
-  'carlos-alcaraz',
-  'jannik-sinner',
-  'novak-djokovic',
-  'daniil-medvedev',
-  'alexander-zverev',
-  'andrey-rublev',
-  'stefanos-tsitsipas',
-  'casper-ruud',
-  'alex-de-minaur',
-  'taylor-fritz',
-  'hubert-hurkacz',
-  'holger-rune',
-  'grigor-dimitrov',
-  'ben-shelton',
-  'tommy-paul',
-  'frances-tiafoe',
-  'ugo-humbert',
-  'sebastian-baez',
-  'lorenzo-musetti',
-  'sebastian-korda',
-  'cameron-norrie',
-  'tallon-griekspoor',
-  'nicolas-jarry',
-  'matteo-berrettini',
-  'gael-monfils',
-  'arthur-fils',
-  'alexei-popyrin',
-  'jan-lennard-struff',
-  'adrian-mannarino',
-  'matteo-arnaldi',
-  'jordan-thompson',
-  'zhizhen-zhang',
-  'giovanni-mpetshi-perricard'
-];
-
-// 선수 slug와 이름 매핑 (전체 43명)
-const playerNames: { [key: string]: { name: string; nameEn: string; country: string; countryFlag: string; image?: string } } = {
-  'carlos-alcaraz': { name: '카를로스 알카라스', nameEn: 'Carlos Alcaraz', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/carlos-alcaraz.png' },
-  'jannik-sinner': { name: '야닉 시너', nameEn: 'Jannik Sinner', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/jannik-sinner.png' },
-  'novak-djokovic': { name: '노박 조코비치', nameEn: 'Novak Djokovic', country: 'Serbia', countryFlag: '🇷🇸', image: '/images/players/novak-djokovic.png' },
-  'daniil-medvedev': { name: '다닐 메드베데프', nameEn: 'Daniil Medvedev', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/daniil-medvedev.png' },
-  'alexander-zverev': { name: '알렉산더 즈베레프', nameEn: 'Alexander Zverev', country: 'Germany', countryFlag: '🇩🇪', image: '/images/players/alexander-zverev.png' },
-  'andrey-rublev': { name: '안드레이 루블레프', nameEn: 'Andrey Rublev', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/andrey-rublev.png' },
-  'stefanos-tsitsipas': { name: '스테파노스 치치파스', nameEn: 'Stefanos Tsitsipas', country: 'Greece', countryFlag: '🇬🇷', image: '/images/players/stefanos-tsitsipas.png' },
-  'casper-ruud': { name: '카스페르 루드', nameEn: 'Casper Ruud', country: 'Norway', countryFlag: '🇳🇴', image: '/images/players/casper-ruud.png' },
-  'alex-de-minaur': { name: '알렉스 드 미노', nameEn: 'Alex de Minaur', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/alex-de-minaur.png' },
-  'taylor-fritz': { name: '테일러 프리츠', nameEn: 'Taylor Fritz', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/taylor-fritz.png' },
-  'hubert-hurkacz': { name: '후베르트 후르카츠', nameEn: 'Hubert Hurkacz', country: 'Poland', countryFlag: '🇵🇱', image: '/images/players/hubert-hurkacz.png' },
-  'holger-rune': { name: '홀거 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/holger-rune.png' },
-  'grigor-dimitrov': { name: '그리고르 디미트로프', nameEn: 'Grigor Dimitrov', country: 'Bulgaria', countryFlag: '🇧🇬', image: '/images/players/grigor-dimitrov.png' },
-  'ben-shelton': { name: '벤 쉘튼', nameEn: 'Ben Shelton', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/ben-shelton.png' },
-  'tommy-paul': { name: '토미 폴', nameEn: 'Tommy Paul', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/tommy-paul.png' },
-  'frances-tiafoe': { name: '프란시스 티아포', nameEn: 'Frances Tiafoe', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/frances-tiafoe.png' },
-  'ugo-humbert': { name: '우고 움베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷', image: '/images/players/ugo-humbert.png' },
-  'sebastian-baez': { name: '세바스티안 바에즈', nameEn: 'Sebastian Baez', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/sebastian-baez.png' },
-  'lorenzo-musetti': { name: '로렌조 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/lorenzo-musetti.png' },
-  'sebastian-korda': { name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/sebastian-korda.png' },
-  'cameron-norrie': { name: '카메론 노리', nameEn: 'Cameron Norrie', country: 'United Kingdom', countryFlag: '🇬🇧', image: '/images/players/cameron-norrie.png' },
-  'tallon-griekspoor': { name: '탈론 크리에크스푸르', nameEn: 'Tallon Griekspoor', country: 'Netherlands', countryFlag: '🇳🇱', image: '/images/players/tallon-griekspoor.png' },
-  'nicolas-jarry': { name: '니콜라스 자리', nameEn: 'Nicolas Jarry', country: 'Chile', countryFlag: '🇨🇱', image: '/images/players/nicolas-jarry.png' },
-  // 추가된 19명
-  'alejandro-davidovich-fokina': { name: '알레한드로 다비도비치 포키나', nameEn: 'Alejandro Davidovich Fokina', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/alejandro-davidovich-fokina.png' },
-  'alexander-bublik': { name: '알렉산더 부블리크', nameEn: 'Alexander Bublik', country: 'Kazakhstan', countryFlag: '🇰🇿', image: '/images/players/alexander-bublik.png' },
-  'alex-michelsen': { name: '알렉스 미첼슨', nameEn: 'Alex Michelsen', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/alex-michelsen.png' },
-  'arthur-landercknech': { name: '아르튀르 랑데르크네슈', nameEn: 'Arthur Landercknech', country: 'France', countryFlag: '🇫🇷', image: '/images/players/arthur-landercknech.png' },
-  'brandon-nakashima': { name: '브랜든 나카시마', nameEn: 'Brandon Nakashima', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/brandon-nakashima.png' },
-  'corentin-moutet': { name: '코랑탱 무테', nameEn: 'Corentin Moutet', country: 'France', countryFlag: '🇫🇷', image: '/images/players/corentin-moutet.png' },
-  'denis-shapovalov': { name: '데니스 샤포발로프', nameEn: 'Denis Shapovalov', country: 'Canada', countryFlag: '🇨🇦', image: '/images/players/denis-shapovalov.png' },
-  'felix-auger-aliassime': { name: '펠릭스 오제 알리아심', nameEn: 'Felix Auger-Aliassime', country: 'Canada', countryFlag: '🇨🇦', image: '/images/players/felix-auger-aliassime.png' },
-  'flavio-cobolli': { name: '플라비오 코볼리', nameEn: 'Flavio Cobolli', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/flavio-cobolli.png' },
-  'francisco-cerundolo': { name: '프란시스코 세룬돌로', nameEn: 'Francisco Cerundolo', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/francisco-cerundolo.png' },
-  'jack-draper': { name: '잭 드레이퍼', nameEn: 'Jack Draper', country: 'United Kingdom', countryFlag: '🇬🇧', image: '/images/players/jack-draper.png' },
-  'jakub-mensik': { name: '야쿠프 멘시크', nameEn: 'Jakub Mensik', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/jakub-mensik.png' },
-  'jaume-munar': { name: '자우메 무나르', nameEn: 'Jaume Munar', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/jaume-munar.png' },
-  'jiri-lehecka': { name: '이리 레헤츠카', nameEn: 'Jiri Lehecka', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/jiri-lehecka.png' },
-  'joao-fonseca': { name: '주앙 폰세카', nameEn: 'Joao Fonseca', country: 'Brazil', countryFlag: '🇧🇷', image: '/images/players/joao-fonseca.png' },
-  'karen-khachanov': { name: '카렌 하차노프', nameEn: 'Karen Khachanov', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/karen-khachanov.png' },
-  'linner-tien': { name: '리너 티엔', nameEn: 'Learner Tien', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/linner-tien.png' },
-  'luciano-darderi': { name: '루치아노 다르데리', nameEn: 'Luciano Darderi', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/luciano-darderi.png' },
-  'tomas-machac': { name: '토마스 마하츠', nameEn: 'Tomas Machac', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/tomas-machac.png' },
-  'valentin-vacherot': { name: '발랑탱 바슈로', nameEn: 'Valentin Vacherot', country: 'Monaco', countryFlag: '🇲🇨', image: '/images/players/valentin-vacherot.png' },
-  'matteo-berrettini': { name: '마테오 베레티니', nameEn: 'Matteo Berrettini', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/matteo-berrettini.png' },
-  'gael-monfils': { name: '가엘 몽피스', nameEn: 'Gael Monfils', country: 'France', countryFlag: '🇫🇷', image: '/images/players/gael-monfils.png' },
-  'arthur-fils': { name: '아르튀르 필스', nameEn: 'Arthur Fils', country: 'France', countryFlag: '🇫🇷', image: '/images/players/arthur-fils.png' },
-  'alexei-popyrin': { name: '알렉세이 포피린', nameEn: 'Alexei Popyrin', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/alexei-popyrin.png' },
-  'jan-lennard-struff': { name: '얀-레나드 스트루프', nameEn: 'Jan-Lennard Struff', country: 'Germany', countryFlag: '🇩🇪', image: '/images/players/jan-lennard-struff.svg' },
-  'adrian-mannarino': { name: '아드리안 만나리노', nameEn: 'Adrian Mannarino', country: 'France', countryFlag: '🇫🇷', image: '/images/players/adrian-mannarino.svg' },
-  'matteo-arnaldi': { name: '마테오 아르날디', nameEn: 'Matteo Arnaldi', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/matteo-arnaldi.svg' },
-  'jordan-thompson': { name: '조던 톰슨', nameEn: 'Jordan Thompson', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/jordan-thompson.svg' },
-  'zhizhen-zhang': { name: '장지전', nameEn: 'Zhizhen Zhang', country: 'China', countryFlag: '🇨🇳', image: '/images/players/zhizhen-zhang.svg' },
-  'giovanni-mpetshi-perricard': { name: '지오반니 음페치 페리카르', nameEn: 'Giovanni Mpetshi Perricard', country: 'France', countryFlag: '🇫🇷', image: '/images/players/giovanni-mpetshi-perricard.svg' }
-};
+import { PLAYERS_DB } from '@/data/players';
+import { PlayerData } from '@/types/player';
 
 export default function PlayersPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'country'>('name');
+  const [genderFilter, setGenderFilter] = useState<'all' | 'male' | 'female'>('male'); // Default to male since we mostly have male players
   const [currentPage, setCurrentPage] = useState(1);
 
-  // 필터링 및 정렬된 선수 목록 (블로그 포스트가 있는 선수들만)
+  // 필터링 및 정렬된 선수 목록
   const filteredAndSortedPlayers = useMemo(() => {
-    let players = playersWithBlogPosts.map(slug => ({
+    // 모든 선수 데이터를 배열로 변환
+    let players = Object.entries(PLAYERS_DB).map(([slug, data]) => ({
       slug,
-      ...playerNames[slug]
+      ...data
     }));
+
+    // 성별 필터 적용
+    if (genderFilter !== 'all') {
+      players = players.filter(player => player.gender === genderFilter);
+    }
 
     // 검색 적용
     if (searchQuery.trim()) {
@@ -149,7 +62,7 @@ export default function PlayersPage() {
     }
 
     return players;
-  }, [searchQuery, sortBy]);
+  }, [searchQuery, sortBy, genderFilter]);
 
   // 페이지네이션 계산 - useMemo로 최적화
   const { totalPages, paginatedPlayers, totalPlayers, startIndex, endIndex } = useMemo(() => {
@@ -164,7 +77,7 @@ export default function PlayersPage() {
   // 검색/정렬 변경 시 첫 페이지로 리셋
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, sortBy]);
+  }, [searchQuery, sortBy, genderFilter]);
 
   const getPlayerCard = (player: { slug: string; name: string; nameEn: string; country: string; countryFlag: string; image?: string }) => {
     return (
@@ -291,6 +204,28 @@ export default function PlayersPage() {
       <section className="py-8 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            {/* Gender Filter Tabs */}
+            <div className="flex bg-gray-100 dark:bg-gray-700 p-1 rounded-lg mb-4 md:mb-0">
+              <button
+                onClick={() => setGenderFilter('male')}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${genderFilter === 'male'
+                  ? 'bg-white dark:bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                  }`}
+              >
+                ATP (남자)
+              </button>
+              <button
+                onClick={() => setGenderFilter('female')}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${genderFilter === 'female'
+                  ? 'bg-white dark:bg-gray-600 text-pink-600 dark:text-pink-400 shadow-sm'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                  }`}
+              >
+                WTA (여자)
+              </button>
+            </div>
+
             {/* Search */}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
@@ -299,7 +234,7 @@ export default function PlayersPage() {
                 placeholder="선수 이름, 국가, 스타일 검색..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
+                className="pl-10 h-10"
               />
             </div>
 
