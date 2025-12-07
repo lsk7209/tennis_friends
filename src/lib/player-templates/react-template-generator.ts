@@ -24,9 +24,9 @@ interface TemplateSections {
     summary: string;
     technical: { title: string; highlight: string; content: string[] };
     physical: { title: string; content: string[] };
-    mental: { 
-      title: string; 
-      stats: string; 
+    mental: {
+      title: string;
+      stats: string;
       content: string[];
     };
     tactical: { title: string; content: string[] };
@@ -190,7 +190,17 @@ export function generateTemplateSections(
   }
 ): TemplateSections {
   const currentYear = new Date().getFullYear();
-  const age = currentYear - player.birthYear;
+  const birthYear = player.birthYear || (player.birthDate ? parseInt(player.birthDate.split('-')[0]) : 2000);
+  const age = currentYear - birthYear;
+
+  /* Fallback Variables */
+  const nameKo = player.nameKo || player.name;
+  const rank = player.rankingCurrent || player.rank || 0;
+  const peakRank = player.rankingPeak || rank;
+  const tour = player.tour || (player.gender === 'male' ? 'ATP' : 'WTA');
+  const style = getPlayStyleKo(player.style || 'all-court');
+  const backhand = getBackhandKo(player.backhand || 'Two-handed');
+  const templateType = player.templateType || 'standard';
 
   // 캐릭터 태그 아이콘 매핑
   const tagIconMap: Record<string, { icon: 'heart' | 'star' | 'trophy' | 'brain' | 'award' | 'target' | 'zap'; color: string }> = {
@@ -215,21 +225,21 @@ export function generateTemplateSections(
 
   const sections: TemplateSections = {
     introduction: {
-      title: `${player.nameKo}, ${player.templateType === 'comeback' ? '왜 다시 주목받는 선수인가?' : player.templateType === 'mindset' ? '왜 여전히 세계 최고인가?' : '왜 주목받는 선수인가?'}`,
+      title: `${nameKo}, ${templateType === 'comeback' ? '왜 다시 주목받는 선수인가?' : templateType === 'mindset' ? '왜 여전히 세계 최고인가?' : '왜 주목받는 선수인가?'}`,
       quote: content.introduction.quote,
       content: content.introduction.paragraphs,
     },
     playerType: {
       title: '이 선수는 어떤 유형의 플레이어인가?',
-      description: `${player.nameKo}는 ${player.country} 출신의 세계랭킹 상위권 선수로, ${getPlayStyleKo(player.style)} 스타일과 ${getBackhandKo(player.backhand)} 백핸드가 특징인 ${player.tour} 투어의 ${age >= 30 ? '베테랑' : '선수'}다.`,
+      description: `${nameKo}는 ${player.country} 출신의 세계랭킹 상위권 선수로, ${style} 스타일과 ${backhand} 백핸드가 특징인 ${tour} 투어의 ${age >= 30 ? '베테랑' : '선수'}다.`,
       profileItems: [
         { label: '국적', value: player.country, icon: 'check' },
-        { label: '생년', value: `${player.birthYear}년 (${age}세)`, icon: 'check' },
-        { label: '최고 랭킹', value: `${player.rankingPeak}위`, icon: 'trophy' },
-        { label: '현재 랭킹', value: `${player.rankingCurrent}위`, icon: 'trending' },
-        { label: '주 종목', value: `단식 (${player.tour})`, icon: 'check' },
-        { label: '플레이 스타일', value: getPlayStyleKo(player.style), icon: 'zap' },
-        { label: '시그니처 무기', value: `${getBackhandKo(player.backhand)} 백핸드`, icon: 'target' },
+        { label: '생년', value: `${birthYear}년 (${age}세)`, icon: 'check' },
+        { label: '최고 랭킹', value: `${peakRank}위`, icon: 'trophy' },
+        { label: '현재 랭킹', value: `${rank}위`, icon: 'trending' },
+        { label: '주 종목', value: `단식 (${tour})`, icon: 'check' },
+        { label: '플레이 스타일', value: style, icon: 'zap' },
+        { label: '시그니처 무기', value: `${backhand} 백핸드`, icon: 'target' },
       ],
       playStyle: content.playerType.playStyle,
       characterTags: content.playerType.characterTags.map(tag => {
@@ -284,7 +294,7 @@ export function generateTemplateSections(
       },
     },
     recentForm: {
-      title: `요즘 ${player.nameKo}의 경기력 흐름은 어떤가?`,
+      title: `요즘 ${nameKo}의 경기력 흐름은 어떤가?`,
       summary: content.recentForm.summary,
       recentPerformance: {
         title: '최근 성적',
@@ -300,14 +310,14 @@ export function generateTemplateSections(
       },
     },
     oneLiner: {
-      title: `${player.nameKo}, 한 문장으로 정리하면?`,
+      title: `${nameKo}, 한 문장으로 정리하면?`,
       summary: content.oneLiner.summary,
       content: content.oneLiner.paragraphs,
     },
   };
 
   // 템플릿 유형별 선택 섹션 추가
-  if (player.templateType === 'comeback' && content.optional?.injuryCareer) {
+  if (templateType === 'comeback' && content.optional?.injuryCareer) {
     sections.optional = {
       injuryCareer: {
         title: '어떤 부상과 공백이 이 선수의 커리어를 흔들었나?',
@@ -330,11 +340,11 @@ export function generateTemplateSections(
     };
   }
 
-  if (player.templateType === 'narrative' && content.optional?.growthStory) {
+  if (templateType === 'narrative' && content.optional?.growthStory) {
     sections.optional = {
       ...sections.optional,
       growthStory: {
-        title: `${player.nameKo}은 어떻게 여기까지 왔을까?`,
+        title: `${nameKo}은 어떻게 여기까지 왔을까?`,
         summary: content.optional.growthStory.summary,
         background: {
           title: '성장 배경',
@@ -352,7 +362,7 @@ export function generateTemplateSections(
     };
   }
 
-  if (player.templateType === 'rivalry' && content.optional?.rivalry) {
+  if (templateType === 'rivalry' && content.optional?.rivalry) {
     sections.optional = {
       ...sections.optional,
       rivalry: {
@@ -371,21 +381,24 @@ export function generateTemplateSections(
  * TOC 아이템 생성
  */
 export function generateTOCItems(player: Player, hasOptional: boolean): Array<{ id: string; text: string; depth: 2 | 3 }> {
+  const nameKo = player.nameKo || player.name;
+  const templateType = player.templateType || 'standard';
+
   const baseItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-    { id: 'why-again-notable', text: `${player.nameKo}, ${player.templateType === 'comeback' ? '왜 다시 주목받는 선수인가?' : player.templateType === 'mindset' ? '왜 여전히 세계 최고인가?' : '왜 주목받는 선수인가?'}`, depth: 2 },
+    { id: 'why-again-notable', text: `${nameKo}, ${templateType === 'comeback' ? '왜 다시 주목받는 선수인가?' : templateType === 'mindset' ? '왜 여전히 세계 최고인가?' : '왜 주목받는 선수인가?'}`, depth: 2 },
     { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
     { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
   ];
 
-  if (player.templateType === 'comeback') {
+  if (templateType === 'comeback') {
     baseItems.push({ id: 'what-injury-career', text: '어떤 부상과 공백이 이 선수의 커리어를 흔들었나?', depth: 2 });
   }
 
   baseItems.push(
     { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
     { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-    { id: 'recent-form', text: `요즘 ${player.nameKo}의 경기력 흐름은 어떤가?`, depth: 2 },
-    { id: 'one-sentence-summary', text: `${player.nameKo}, 한 문장으로 정리하면?`, depth: 2 }
+    { id: 'recent-form', text: `요즘 ${nameKo}의 경기력 흐름은 어떤가?`, depth: 2 },
+    { id: 'one-sentence-summary', text: `${nameKo}, 한 문장으로 정리하면?`, depth: 2 }
   );
 
   return baseItems;

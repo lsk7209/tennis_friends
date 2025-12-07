@@ -11,6 +11,7 @@ import { join } from 'path';
  */
 export function loadTemplate(templateType: TemplateType): string {
   const templateMap: Record<TemplateType, string> = {
+    standard: 'template-technique.md', // Default
     technique: 'template-technique.md',
     mindset: 'template-mindset.md',
     narrative: 'template-narrative.md',
@@ -31,21 +32,33 @@ export function loadTemplate(templateType: TemplateType): string {
  */
 function replacePlaceholders(template: string, player: Player): string {
   const currentYear = new Date().getFullYear();
-  const age = currentYear - player.birthYear;
-  
+  const birthYear = player.birthYear || (player.birthDate ? parseInt(player.birthDate.split('-')[0]) : 2000);
+  const age = currentYear - birthYear;
+  const nameKo = player.nameKo || player.name;
+  const rank = player.rankingCurrent || player.rank || 0;
+  const peakRank = player.rankingPeak || rank;
+  const tour = player.tour || (player.gender === 'male' ? 'ATP' : 'WTA');
+  const style = player.style || 'all-court';
+  const surface = player.favoriteSurface || 'hard';
+
+  // Derive hand/backhand from new or old fields
+  // old 'hand' unknown, new 'plays'
+  const hand = player.plays === 'Left-handed' ? 'left' : 'right';
+  const backhand = player.backhand === 'One-handed' ? 'one-handed' : 'two-handed';
+
   const replacements: Record<string, string> = {
-    '{선수명}': player.nameKo,
-    '{랭킹}': player.rankingCurrent.toString(),
+    '{선수명}': nameKo,
+    '{랭킹}': rank.toString(),
     '{국적}': player.country,
     '{나이}': age.toString(),
-    '{출생년도}': player.birthYear.toString(),
-    '{현재 랭킹}': player.rankingCurrent.toString(),
-    '{최고 랭킹}': player.rankingPeak.toString(),
-    '{ATP/WTA}': player.tour,
-    '{오른손/왼손}': player.hand === 'right' ? '오른손' : '왼손',
-    '{원핸드/투핸드}': player.backhand === 'one-handed' ? '원핸드' : '투핸드',
-    '{스타일}': getPlayStyleKo(player.style),
-    '{하드/클레이/그래스/혼합}': getSurfaceKo(player.favoriteSurface),
+    '{출생년도}': birthYear.toString(),
+    '{현재 랭킹}': rank.toString(),
+    '{최고 랭킹}': peakRank.toString(),
+    '{ATP/WTA}': tour,
+    '{오른손/왼손}': hand === 'right' ? '오른손' : '왼손',
+    '{원핸드/투핸드}': backhand === 'one-handed' ? '원핸드' : '투핸드',
+    '{스타일}': getPlayStyleKo(style),
+    '{하드/클레이/그래스/혼합}': getSurfaceKo(surface),
     '{작성일}': new Date().toISOString().split('T')[0],
   };
 
@@ -89,7 +102,8 @@ function getSurfaceKo(surface: string): string {
  * 템플릿 생성
  */
 export function generateTemplate(player: Player): string {
-  const template = loadTemplate(player.templateType);
+  const type = player.templateType || 'standard';
+  const template = loadTemplate(type);
   return replacePlaceholders(template, player);
 }
 
@@ -97,27 +111,28 @@ export function generateTemplate(player: Player): string {
  * 템플릿 타입 자동 선택 로직
  */
 export function selectTemplateType(player: Player): TemplateType {
+  const tags = player.tagsStory || [];
+
   // 라이벌이 뚜렷한 경우
-  if (player.tagsStory.some(tag => tag.includes('라이벌'))) {
+  if (tags.some(tag => tag.includes('라이벌'))) {
     return 'rivalry';
   }
 
   // 부상/복귀 키워드가 있는 경우
-  if (player.tagsStory.some(tag => tag.includes('부상') || tag.includes('복귀'))) {
+  if (tags.some(tag => tag.includes('부상') || tag.includes('복귀'))) {
     return 'comeback';
   }
 
   // 성장 서사 키워드가 있는 경우
-  if (player.tagsStory.some(tag => tag.includes('성장') || tag.includes('영재'))) {
+  if (tags.some(tag => tag.includes('성장') || tag.includes('영재'))) {
     return 'narrative';
   }
 
   // 멘탈/전술 키워드가 있는 경우
-  if (player.tagsStory.some(tag => tag.includes('멘탈') || tag.includes('전술'))) {
+  if (tags.some(tag => tag.includes('멘탈') || tag.includes('전술'))) {
     return 'mindset';
   }
 
   // 기본값: 기술 특화형
   return 'technique';
 }
-

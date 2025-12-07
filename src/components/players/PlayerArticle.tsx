@@ -20,13 +20,9 @@ export default function PlayerArticle({ player, title, excerpt, children }: Play
         {/* 선수 기본 정보 배지 */}
         <div className="flex flex-wrap gap-2 mb-4">
           <Badge variant="outline">{player.country}</Badge>
-          <Badge variant="outline">랭킹 {player.rankingCurrent}위</Badge>
-          <Badge variant="outline">{player.tour}</Badge>
-          {player.tagsStory.slice(0, 3).map((tag, index) => (
-            <Badge key={index} variant="secondary">
-              {tag}
-            </Badge>
-          ))}
+          {player.rank && <Badge variant="outline">랭킹 {player.rank}위</Badge>}
+          <Badge variant="outline">{player.gender === 'male' ? 'ATP' : 'WTA'}</Badge>
+          {/* Tags removed as they are not in PlayerData */}
         </div>
 
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>

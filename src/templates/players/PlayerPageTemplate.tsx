@@ -16,9 +16,9 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { 
-  Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, 
-  Star, CheckCircle, Crown, Users, BookOpen, ArrowRight 
+import {
+  Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap,
+  Star, CheckCircle, Crown, Users, BookOpen, ArrowRight
 } from 'lucide-react';
 import { Player, TemplateType, PlayerMetadata, PlayerFAQ } from '@/types/player';
 import RelatedPlayerContent from '@/components/RelatedPlayerContent';
@@ -47,9 +47,9 @@ interface PlayerPageTemplateProps {
       summary: string;
       technical: { title: string; highlight: string; content: string[] };
       physical: { title: string; content: string[] };
-      mental: { 
-        title: string; 
-        stats: string; 
+      mental: {
+        title: string;
+        stats: string;
         content: string[];
       };
       tactical: { title: string; content: string[] };
@@ -153,18 +153,22 @@ const getIconColor = (iconName: string) => {
 
 export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections }: PlayerPageTemplateProps) {
   const currentYear = new Date().getFullYear();
-  const age = currentYear - player.birthYear;
+  const birthYear = player.birthYear || (player.birthDate ? parseInt(player.birthDate.split('-')[0]) : 2000);
+  const age = currentYear - birthYear;
+  const nameKo = player.nameKo || player.name;
+  const tags = player.tagsStory || [];
+  const slug = player.slug || '';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article
-        title={player.nameKo}
+        title={nameKo}
         excerpt={sections.oneLiner.summary}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', player.nameKo, '선수 프로필', player.country, ...player.tagsStory.slice(0, 2)].map((tag) => (
+            {['테니스', nameKo, '선수 프로필', player.country, ...tags.slice(0, 2)].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
@@ -193,7 +197,7 @@ export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections 
             {/* 선수 유형 섹션 */}
             <h2 id="what-type-of-player">{sections.playerType.title}</h2>
             <p>{sections.playerType.description}</p>
-            
+
             <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
                 <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -214,14 +218,14 @@ export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections 
             </div>
 
             <p>{sections.playerType.playStyle}</p>
-            
+
             <div className="not-prose my-6 flex flex-wrap gap-2">
               {sections.playerType.characterTags.map((tag, idx) => {
                 const Icon = getIcon(tag.icon);
                 return (
-                  <Badge 
-                    key={idx} 
-                    variant="secondary" 
+                  <Badge
+                    key={idx}
+                    variant="secondary"
                     className={`text-xs px-3 py-1 ${tag.color} border-opacity-30 dark:border-opacity-30`}
                   >
                     <Icon className="w-3 h-3 mr-1 inline" />
@@ -407,9 +411,9 @@ export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections 
           <FAQ items={faqs.map(faq => ({ q: faq.question, a: faq.answer }))} />
 
           {/* Related Content */}
-          <RelatedPlayerContent 
-            playerName={player.nameKo}
-            playerSlug={player.slug}
+          <RelatedPlayerContent
+            playerName={nameKo}
+            playerSlug={slug}
             maxItems={6}
           />
 

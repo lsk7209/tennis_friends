@@ -160,14 +160,18 @@ export default async function PlayerProfilePage({ params }: Props) {
                                         <Info className="w-6 h-6 mr-2 text-blue-600" />
                                         선수 소개
                                     </h2>
-                                    <div className="prose dark:prose-invert max-w-none">
-                                        {generateBio()}
+                                    <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
+                                        {player.longBio ? (
+                                            <div dangerouslySetInnerHTML={{ __html: player.longBio.replace(/\n/g, '<br/>') }} />
+                                        ) : (
+                                            generateBio()
+                                        )}
                                     </div>
                                 </section>
 
                                 <AdSense />
 
-                                <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                     <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
                                         <h3 className="text-sm font-semibold text-gray-500 uppercase mb-1">국적</h3>
                                         <div className="text-lg font-medium flex items-center gap-2">
@@ -175,7 +179,22 @@ export default async function PlayerProfilePage({ params }: Props) {
                                             {player.country}
                                         </div>
                                     </div>
-                                    {/* Additional stats can be added here when available in DB */}
+                                    {player.plays && (
+                                        <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
+                                            <h3 className="text-sm font-semibold text-gray-500 uppercase mb-1">주손 (Plays)</h3>
+                                            <div className="text-lg font-medium">
+                                                {player.plays === 'Right-handed' ? '오른손잡이' : '왼손잡이'}
+                                            </div>
+                                        </div>
+                                    )}
+                                    {player.backhand && (
+                                        <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
+                                            <h3 className="text-sm font-semibold text-gray-500 uppercase mb-1">백핸드 (Backhand)</h3>
+                                            <div className="text-lg font-medium">
+                                                {player.backhand === 'One-handed' ? '원핸드' : '투핸드'}
+                                            </div>
+                                        </div>
+                                    )}
                                 </section>
                             </TabsContent>
 

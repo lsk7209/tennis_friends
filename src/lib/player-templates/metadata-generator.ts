@@ -9,17 +9,19 @@ import { Metadata } from 'next';
  * SEO 타이틀 생성 (45-60자)
  */
 function generateTitle(player: Player): string {
-  const baseTitle = `${player.nameKo} — 세계랭킹 ${player.rankingCurrent}위`;
-  const style = getPlayStyleKo(player.style);
+  const nameKo = player.nameKo || player.name;
+  const rank = player.rankingCurrent || player.rank || 0;
+  const baseTitle = `${nameKo} — 세계랭킹 ${rank}위`;
+  const style = getPlayStyleKo(player.style || 'all-court');
   const suffix = `| 플레이스타일·명장면·최근 경기력`;
-  
+
   const title = `${baseTitle} ${suffix}`;
-  
+
   // 60자 초과 시 조정
   if (title.length > 60) {
     return `${baseTitle} | ${style} 스타일·최근 경기력`;
   }
-  
+
   return title;
 }
 
@@ -27,16 +29,18 @@ function generateTitle(player: Player): string {
  * SEO 설명 생성 (110-155자)
  */
 function generateDescription(player: Player): string {
-  const style = getPlayStyleKo(player.style);
-  const tags = player.tagsStory.slice(0, 2).join('·');
-  
-  const description = `${player.nameKo}의 ${style} 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. ${tags}로 주목받는 ${player.country} 출신의 세계랭킹 ${player.rankingCurrent}위 선수.`;
-  
+  const nameKo = player.nameKo || player.name;
+  const rank = player.rankingCurrent || player.rank || 0;
+  const style = getPlayStyleKo(player.style || 'all-court');
+  const tags = (player.tagsStory || []).slice(0, 2).join('·');
+
+  const description = `${nameKo}의 ${style} 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필. ${tags}로 주목받는 ${player.country} 출신의 세계랭킹 ${rank}위 선수.`;
+
   // 155자 초과 시 조정
   if (description.length > 155) {
-    return `${player.nameKo}의 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.`;
+    return `${nameKo}의 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.`;
   }
-  
+
   return description;
 }
 
@@ -44,20 +48,24 @@ function generateDescription(player: Player): string {
  * 키워드 생성
  */
 function generateKeywords(player: Player): string[] {
+  const nameKo = player.nameKo || player.name;
+  const tour = player.tour || (player.gender === 'male' ? 'ATP' : 'WTA');
   const keywords = [
-    player.nameKo,
+    nameKo,
     player.nameEn,
     '테니스',
-    player.tour,
+    tour,
     '플레이스타일',
     `${player.country} 테니스`,
-    getPlayStyleKo(player.style),
-    getSurfaceKo(player.favoriteSurface),
+    getPlayStyleKo(player.style || 'all-court'),
+    getSurfaceKo(player.favoriteSurface || 'hard'),
   ];
-  
+
   // 태그 추가
-  keywords.push(...player.tagsStory);
-  
+  if (player.tagsStory) {
+    keywords.push(...player.tagsStory);
+  }
+
   return [...new Set(keywords)]; // 중복 제거
 }
 
@@ -97,8 +105,8 @@ export function generatePlayerMetadata(player: Player): PlayerMetadata {
     title: generateTitle(player),
     description: generateDescription(player),
     keywords: generateKeywords(player),
-    canonical: `https://tennisfriends.co.kr/players/${player.slug}`,
-    ogImage: `/images/players/${player.slug}.jpg`,
+    canonical: `https://tennisfriends.co.kr/players/${player.slug || ''}`,
+    ogImage: `/images/players/${player.slug || 'default'}.jpg`,
   };
 }
 
@@ -107,7 +115,7 @@ export function generatePlayerMetadata(player: Player): PlayerMetadata {
  */
 export function generateNextMetadata(player: Player): Metadata {
   const metadata = generatePlayerMetadata(player);
-  
+
   return {
     title: metadata.title,
     description: metadata.description,

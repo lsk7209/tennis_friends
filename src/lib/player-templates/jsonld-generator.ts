@@ -9,29 +9,35 @@ import { Player, PlayerFAQ } from '@/types/player';
  */
 export function generatePersonSchema(player: Player) {
   const currentYear = new Date().getFullYear();
-  const age = currentYear - player.birthYear;
+  const birthYear = player.birthYear || (player.birthDate ? parseInt(player.birthDate.split('-')[0]) : 2000);
+  const age = currentYear - birthYear;
+  const nameKo = player.nameKo || player.name;
+  const rank = player.rankingCurrent || player.rank || 0;
+  const tour = player.tour || (player.gender === 'male' ? 'ATP' : 'WTA');
+  const style = player.style || 'All-Court';
+  const surface = player.favoriteSurface || 'Hard';
 
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: player.nameEn,
-    alternateName: player.nameKo,
+    alternateName: nameKo,
     nationality: {
       '@type': 'Country',
       name: player.country,
     },
-    birthDate: `${player.birthYear}-01-01`, // 정확한 생일이 없으면 1월 1일
+    birthDate: `${birthYear}-01-01`,
     jobTitle: 'Professional Tennis Player',
     memberOf: {
       '@type': 'Organization',
-      name: player.tour,
+      name: tour,
     },
     knowsAbout: [
       'Tennis',
-      getPlayStyleKo(player.style),
-      getSurfaceKo(player.favoriteSurface),
+      getPlayStyleKo(style),
+      getSurfaceKo(surface),
     ],
-    description: `${player.nameKo}은(는) ${player.country} 출신의 세계랭킹 ${player.rankingCurrent}위 테니스 선수입니다.`,
+    description: `${nameKo}은(는) ${player.country} 출신의 세계랭킹 ${rank}위 테니스 선수입니다.`,
   };
 }
 
@@ -39,16 +45,19 @@ export function generatePersonSchema(player: Player) {
  * ProfilePage 스키마 생성
  */
 export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
+  const nameKo = player.nameKo || player.name;
+  const slug = player.slug || '';
+
   const metadata = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
     mainEntity: {
       '@type': 'Person',
       name: player.nameEn,
-      alternateName: player.nameKo,
+      alternateName: nameKo,
     },
-    url: `https://tennisfriends.co.kr/players/${player.slug}`,
-    description: `${player.nameKo}의 프로필 페이지`,
+    url: `https://tennisfriends.co.kr/players/${slug}`,
+    description: `${nameKo}의 프로필 페이지`,
   };
 
   // FAQ가 있으면 FAQPage 스키마도 추가
@@ -99,8 +108,8 @@ export function generateBreadcrumbSchema(player: Player) {
       {
         '@type': 'ListItem',
         position: 3,
-        name: player.nameKo,
-        item: `https://tennisfriends.co.kr/players/${player.slug}`,
+        name: player.nameKo || player.name,
+        item: `https://tennisfriends.co.kr/players/${player.slug || ''}`,
       },
     ],
   };
