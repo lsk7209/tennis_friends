@@ -340,15 +340,129 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     },
     'alex-de-minaur': {
         name: '알렉스 드 미노', nameEn: 'Alex de Minaur', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/alex-de-minaur.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '스피드 데몬(Speed Demon). 투어에서 가장 빠른 발을 가진 선수로 평가받으며, 끈질긴 수비와 카운터 펀치로 상대를 지치게 만듭니다.'
+        longBio: '스피드 데몬(Speed Demon)이라는 별명처럼 투어에서 가장 빠른 발을 가진 선수로 평가받으며, 끈질긴 수비와 카운터 펀치로 상대를 지치게 만듭니다.',
+        detailedProfile: {
+            oneLineSummary: '코트 위를 지배하는 "스피드 데몬", 끈질긴 수비와 투지로 상대를 질식시키는 승부사.',
+            whyNotable: `
+                <p><strong>"빛보다 빠른 발, 포기를 모르는 사나이"</strong></p>
+                <p>알렉스 드 미노는 'Speed Demon'이라는 별명에 걸맞게 투어에서 가장 빠른 스피드를 자랑합니다. 도저히 닿을 수 없어 보이는 공도 기적적으로 받아넘기며 상대를 절망에 빠뜨립니다.</p>
+                <p>큰 키나 강력한 파워는 없지만, 지치지 않는 체력과 멘탈로 이를 극복하고 Top 10에 진입하며 '노력형 천재'의 정석을 보여줍니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"카운터 펀처 (Counter Puncher)"</strong></p>
+                <p>드 미노의 테니스는 '발'로 합니다. 탁월한 코트 커버리지를 바탕으로 상대의 실수를 유도하고, 기습적인 카운터 샷으로 득점합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>스피드:</strong> 타의 추종을 불허하는 그의 최대 무기입니다. 코트의 모든 곳을 커버하며 긴 랠리를 유도합니다.</li>
+                    <li><strong>플랫 샷:</strong> 네트를 스치듯 낮게 깔리는 플랫성 스트로크는 상대가 공격적인 샷을 하지 못하게 만듭니다.</li>
+                    <li><strong>리턴:</strong> 빠른 반응 속도로 상대의 강서브를 효과적으로 차단합니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '스피드 (Speed)', score: 10, description: 'ATP 투어 최고의 준족.' },
+                { name: '체력 (Stamina)', score: 9.5, description: '5세트 내내 뛰어다녀도 지치지 않음.' },
+                { name: '멘탈 (Mental)', score: 9, description: '끝까지 포기하지 않는 좀비 같은 근성.' },
+                { name: '리턴 (Return)', score: 8.5, description: '상대의 서브 게임을 끈질기게 괴롭힘.' },
+                { name: '백핸드 (Backhand)', score: 8.5, description: '안정적이고 견고한 수비.' },
+                { name: '파워 (Power)', score: 6.5, description: '체격 조건상 파워는 다소 부족함.' }
+            ],
+            growthStory: `
+                <p>호주인 아버지와 스페인인 어머니 사이에서 태어나 스페인과 호주를 오가며 테니스를 배웠습니다. 어릴 때는 왜소한 체격 때문에 주목받지 못했지만, 레이튼 휴이트(전 세계 1위)의 멘토링을 받으며 급성장했습니다.</p>
+                <p>끊임없는 노력으로 피지컬 열세를 극복하고 2024년 멕시코 오픈 우승, 프랑스 오픈 8강, 윔블던 8강 등 최고의 시즌을 보내며 Top 10에 안착했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 멕시코 오픈 결승 vs 토미 폴',
+                date: '2023. 03. 05',
+                description: 'ATP 500 시리즈 결승에서 토미 폴을 꺾고 우승을 차지한 경기. 특유의 끈질긴 수비로 상대의 에러를 유발하고, 결정적인 순간 과감한 공격으로 승부를 결정지으며 "빅 타이틀" 경쟁력을 입증했습니다.'
+            },
+            recentForm: `
+                <p><strong>"Top 10의 자격"</strong></p>
+                <p>2024년 들어 더욱 공격적인 테니스를 장착하며 커리어 하이를 경신했습니다. 부상으로 윔블던 8강 기권의 아쉬움을 남겼지만, 건강하게 복귀한다면 언제든 상위권을 위협할 수 있는 전력입니다.</p>
+            `
+        }
     },
     'taylor-fritz': {
         name: '테일러 프리츠', nameEn: 'Taylor Fritz', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/taylor-fritz.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '미국 남자 테니스의 에이스. 강력한 서브와 파워풀한 포핸드를 앞세운 전형적인 공격형 스타일로, 홈 그라운드인 미국 대회에서 특히 강합니다.'
+        longBio: '미국 남자 테니스의 에이스. 강력한 서브와 파워풀한 포핸드를 앞세운 전형적인 공격형 스타일로, 홈 그라운드인 미국 대회에서 특히 강합니다.',
+        detailedProfile: {
+            oneLineSummary: '미국 테니스의 자존심이자 에이스, 강력한 서브와 포핸드로 무장한 "미스터 아메리카".',
+            whyNotable: `
+                <p><strong>"미국 테니스의 부활을 이끄는 선봉장"</strong></p>
+                <p>로딕 이후 끊겼던 미국 남자 테니스의 계보를 잇는 에이스입니다. 2022년 인디언 웰스 결승에서 나달을 꺾고 우승하며 21년 만에 미국인 챔피언이 탄생했음을 알렸습니다.</p>
+                <p>잘생긴 외모와 넷플릭스 다큐멘터리 '브레이크 포인트' 출연으로 대중적인 인지도도 매우 높으며, 미국 내 테니스 붐을 다시 일으키고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 베이스라이너 (Aggressive Baseliner)"</strong></p>
+                <p>큰 키에서 나오는 강서브와 포핸드로 경기를 주도합니다. 전형적인 하드 히터 스타일이지만, 최근에는 백핸드와 수비력도 많이 향상되었습니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>포핸드:</strong> 프리츠의 가장 강력한 무기입니다. 플랫하게 꽂히는 포핸드 위너는 그야말로 일품입니다.</li>
+                    <li><strong>서브:</strong> 시속 220km를 넘나드는 서브는 위기관리 능력의 핵심입니다.</li>
+                    <li><strong>백핸드:</strong> 과거에는 약점이었으나, 이제는 랠리를 버티고 역습을 할 수 있을 정도로 견고해졌습니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 9.5, description: '미국 선수 특유의 파워풀한 포핸드.' },
+                { name: '서브 (Serve)', score: 9.5, description: '투어 최상위권의 서브 능력.' },
+                { name: '멘탈 (Mental)', score: 8.5, description: '홈 관중의 응원을 등에 업으면 더욱 강해짐.' },
+                { name: '백핸드 (Backhand)', score: 8.5, description: '약점에서 준수한 무기로 성장.' },
+                { name: '네트 플레이 (Net)', score: 7.5, description: '아직은 발전이 필요한 부분.' },
+                { name: '스피드 (Speed)', score: 8, description: '체격에 비해 나쁘지 않은 기동력.' }
+            ],
+            growthStory: `
+                <p>전 테니스 선수였던 어머니(캐시 메이, 전 세계 10위)의 영향으로 자연스럽게 테니스를 접했습니다. 주니어 시절부터 미국 내 랭킹 1위를 다투며 엘리트 코스를 밟았습니다.</p>
+                <p>2015년 US 오픈 주니어 우승 이후 프로에 데뷔했으나, 잠시 정체기를 겪기도 했습니다. 하지만 2022년 인디언 웰스 우승을 기점으로 기량이 만개하여 Top 5까지 진입했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2022 인디언 웰스 마스터스 결승 vs 라파엘 나달',
+                date: '2022. 03. 20',
+                description: '발목 부상 투혼 끝에 전승 행진을 달리던 나달을 2-0으로 꺾고 우승한 기적 같은 경기. 미국 테니스 역사상 가장 감동적인 순간 중 하나로 꼽힙니다.'
+            },
+            recentForm: `
+                <p><strong>"메이저 우승을 향한 도전"</strong></p>
+                <p>하드 코트에서는 그 누구와 붙어도 이길 수 있는 경쟁력을 갖췄습니다. 2024년 호주 오픈 8강 진출 등 메이저 대회에서 꾸준히 성적을 내고 있으며, 이제는 우승 트로피를 노리고 있습니다.</p>
+            `
+        }
     },
     'hubert-hurkacz': {
         name: '후베르트 후르카츠', nameEn: 'Hubert Hurkacz', country: 'Poland', countryFlag: '🇵🇱', image: '/images/players/hubert-hurkacz.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '폴란드의 서브 몬스터. 큰 키에서 내리꽂는 에이스급 서브와 부드러운 발리 터치, 그리고 겸손한 성품으로 사랑받는 선수입니다.'
+        longBio: '폴란드의 서브 몬스터. 큰 키에서 내리꽂는 에이스급 서브와 부드러운 발리 터치, 그리고 겸손한 성품으로 사랑받는 선수입니다.',
+        detailedProfile: {
+            oneLineSummary: '코트 위의 신사, 강력한 서브와 부드러운 터치를 겸비한 폴란드의 "Hubi".',
+            whyNotable: `
+                <p><strong>"서브 에이스 머신 & 윔블던 4강 신화"</strong></p>
+                <p>투어에서 가장 많은 에이스를 기록하는 선수 중 한 명입니다. 단순히 서브만 좋은 것이 아니라, 큰 키(196cm)에도 불구하고 놀랍도록 유연한 움직임과 부드러운 발리 능력을 갖췄습니다.</p>
+                <p>2021년 윔블던 8강에서 '잔디의 황제' 로저 페더러를 3-0으로 완파하고 은퇴시킨 선수로도 역사에 이름을 남겼습니다. 항상 예의 바르고 겸손한 태도로 동료 선수들에게도 인정받는 모범생입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"올라운드 서버 (All-round Server)"</strong></p>
+                <p>강력한 서브를 바탕으로 게임을 풀어가지만, 베이스라인 랠리와 넷 플레이 모두 능숙합니다. 특히 수비 상황에서 몸을 날리는 다이빙 발리는 그의 트레이드마크입니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>서브:</strong> 최고 시속 230km에 육박하며, 코스 선택이 매우 정확해 리턴하기 가장 까다로운 서브 중 하나입니다.</li>
+                    <li><strong>발리:</strong> 복식 경기 경험이 많아 네트 플레이가 매우 안정적입니다.</li>
+                    <li><strong>이동성:</strong> 장신 선수라고 믿기 힘들 만큼 코트 커버리지가 좋고 수비가 끈질깁니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 10, description: '현존하는 최고의 서버 중 한 명.' },
+                { name: '발리 (Volley)', score: 9, description: '부드럽고 정교한 손기술.' },
+                { name: '멘탈 (Mental)', score: 8.5, description: '항상 침착함을 유지함.' },
+                { name: '백핸드 (Backhand)', score: 8.5, description: '안정적이고 견고함.' },
+                { name: '포핸드 (Forehand)', score: 8, description: '가끔 흔들릴 때가 있음.' },
+                { name: '스피드 (Speed)', score: 8, description: '큰 키를 커버하는 좋은 움직임.' }
+            ],
+            growthStory: `
+                <p>폴란드 브로츠와프 출신으로, 어머니가 주니어 테니스 챔피언 출신입니다. 체조 선수였던 할아버지의 유전자를 물려받아 큰 키에도 유연한 신체를 가졌습니다.</p>
+                <p>조용히 성장하다가 2021년 마이애미 오픈(마스터스 1000) 우승으로 깜짝 스타가 되었고, 이후 꾸준히 Top 10을 유지하며 폴란드 테니스의 역사를 새로 쓰고 있습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2021 마이애미 오픈 결승 vs 야닉 시너',
+                date: '2021. 04. 04',
+                description: '생애 첫 마스터스 우승의 감격적인 순간. 절친한 후배이자 라이벌인 시너를 상대로 노련한 경기 운영을 보여주며 2-0 승리를 거뒀습니다. 이 우승으로 그는 세계적인 강자로 인정받게 되었습니다.'
+            },
+            recentForm: `
+                <p><strong>"잔디와 하드의 강자"</strong></p>
+                <p>빠른 코트에서 특히 강점을 보입니다. 2023년 상하이 마스터스 우승 등 여전한 기량을 과시하고 있으며, 서브 감각조절이 잘 되는 날에는 그 누구도 그를 막을 수 없습니다.</p>
+            `
+        }
     },
     'holger-rune': {
         name: '홀게르 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/holger-rune.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
@@ -394,20 +508,171 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     },
     'grigor-dimitrov': {
         name: '그리고르 디미트로프', nameEn: 'Grigor Dimitrov', country: 'Bulgaria', countryFlag: '🇧🇬', image: '/images/players/grigor-dimitrov.png', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
-        longBio: '베이비 페더러라는 별명처럼 가장 아름다운 폼을 가진 선수 중 하나. 유려한 원핸드 백핸드와 다채로운 기술로 제2의 전성기를 맞이했습니다.'
+        longBio: '베이비 페더러라는 별명처럼 가장 아름다운 폼을 가진 선수 중 하나. 유려한 원핸드 백핸드와 다채로운 기술로 제2의 전성기를 맞이했습니다.',
+        detailedProfile: {
+            oneLineSummary: '제2의 전성기를 맞이한 "베이비 페더러", 가장 우아하고 기술적인 원핸드 백핸더.',
+            whyNotable: `
+                <p><strong>"가장 아름다운 테니스를 구사하는 선수"</strong></p>
+                <p>로저 페더러를 연상시키는 부드러운 폼과 우아한 원핸드 백핸드 덕분에 '베이비 페더러'라는 별명으로 불렸습니다. 한때 기대만큼 성장하지 못했다는 평도 있었으나, 30대에 접어들어 더욱 완숙하고 효율적인 플레이로 제2의 전성기를 맞이하며 Top 10에 복귀했습니다.</p>
+                <p>코트 안팎에서의 매너와 스타일리시한 외모로 많은 팬을 보유하고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"올라운드 테크니션 (All-round Technician)"</strong></p>
+                <p>코트 위의 모든 기술을 최상급으로 구사할 수 있습니다. 강력한 서브, 날카로운 슬라이스, 파워풀한 탑스핀, 그리고 섬세한 발리까지 모든 샷이 교과서적입니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>백핸드:</strong> 그의 상징과도 같습니다. 특히 백핸드 슬라이스는 투어 최고 수준으로, 경기 템포를 조절하고 상대 리듬을 뺏는 데 탁월합니다.</li>
+                    <li><strong>운동신경:</strong> 유연한 신체를 이용해 믿기 힘든 수비 장면을 연출하곤 합니다. 다이빙 샷이나 스플릿 스텝은 예술에 가깝습니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '테크닉 (Technique)', score: 10, description: '모든 샷을 완벽한 폼으로 구사.' },
+                { name: '백핸드 (Backhand)', score: 9, description: '가장 아름다운 원핸드 백핸드.' },
+                { name: '운동신경 (Athleticism)', score: 9.5, description: '유연성과 탄력이 최상급.' },
+                { name: '서브 (Serve)', score: 8.5, description: '기복이 있지만 터지면 막을 수 없음.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '중요한 순간 흔들리는 경향이 있음.' },
+                { name: '체력 (Stamina)', score: 8, description: '나이가 들었음에도 잘 관리됨.' }
+            ],
+            growthStory: `
+                <p>불가리아 하스코보 출신으로, 주니어 시절부터 '천재'로 불렸습니다. 2008년 윔블던, US 오픈 주니어 우승을 휩쓸며 혜성처럼 등장했습니다.</p>
+                <p>2017년 ATP 파이널스 우승으로 세계 3위까지 올랐으나 이후 부진과 부상으로 랭킹이 하락했습니다. 하지만 포기하지 않고 폼을 교정하고 체력을 보완하여 2023-2024 시즌 화려하게 부활했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2017 ATP 파이널스 결승 vs 다비드 고팽',
+                date: '2017. 11. 19',
+                description: '디미트로프 커리어의 정점. 왕중왕전인 파이널스에서 전승 우승을 차지하며 세계 3위를 확정 지었습니다. 이 대회 우승으로 그는 "Big 3" 다음가는 실력자임을 증명했습니다.'
+            },
+            recentForm: `
+                <p><strong>"회춘한 베테랑"</strong></p>
+                <p>2024년 마이애미 오픈에서 알카라스, 즈베레프 등 젊은 강자들을 연파하고 결승에 오르는 기염을 토했습니다. 전성기 못지않은 몸놀림과 더욱 노련해진 경기 운영으로 투어의 다크호스로 군림하고 있습니다.</p>
+            `
+        }
     },
     'ben-shelton': {
         name: '벤 쉘튼', nameEn: 'Ben Shelton', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/ben-shelton.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '미국 대학 테니스 출신의 괴물 신인. 230km/h를 넘나드는 왼손 폭탄 서브와 다이내믹한 플레이, 그리고 전화기 세리머니로 스타성을 입증했습니다.'
+        longBio: '미국 대학 테니스 출신의 괴물 신인. 230km/h를 넘나드는 왼손 폭탄 서브와 다이내믹한 플레이, 그리고 전화기 세리머니로 스타성을 입증했습니다.',
+        detailedProfile: {
+            oneLineSummary: '240km/h 서브를 꽂아 넣는 미국의 "슈퍼 루키", 코트 위의 에너자이저.',
+            whyNotable: `
+                <p><strong>"대학 테니스에서 US 오픈 4강까지"</strong></p>
+                <p>미국 대학(NCAA) 챔피언 출신으로, 프로 데뷔 1년 만에 US 오픈 4강에 오르는 괴력을 발휘했습니다. 왼손잡이 특유의 각도 큰 서브와 폭발적인 포핸드, 그리고 시원시원한 성격으로 단숨에 스타덤에 올랐습니다.</p>
+                <p>특히 US 오픈에서 보여준 '전화기 세리머니(Hang up the phone)'는 전 세계적인 밈이 되기도 했습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"빅 서버 & 하드 히터 (Big Server & Hard Hitter)"</strong></p>
+                <p>쉘튼의 테니스는 '화력' 그 자체입니다. 엄청난 피지컬에서 나오는 서브와 포핸드는 그 어떤 수비도 뚫어버립니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>서브:</strong> 투어에서 가장 빠른 서브(최고 241km/h)를 구사하는 선수 중 하나입니다. 왼손잡이의 이점까지 더해져 위력이 배가됩니다.</li>
+                    <li><strong>운동신경:</strong> 미식축구 선수 출신이었던 만큼 폭발적인 순발력과 점프력을 보여줍니다.</li>
+                    <li><strong>스매싱:</strong> 서브만큼이나 강력한 스매싱 능력을 갖추고 있어, 로브를 띄우는 것이 자살행위가 될 수 있습니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 9.5, description: '투어 최고 수준의 구속과 파워.' },
+                { name: '포핸드 (Forehand)', score: 9, description: '맞으면 터지는 듯한 타격감.' },
+                { name: '파워 (Power)', score: 9.5, description: '압도적인 힘.' },
+                { name: '운동신경 (Athleticism)', score: 9, description: '폭발적인 점프력과 스피드.' },
+                { name: '멘탈 (Mental)', score: 8, description: '큰 무대를 즐기는 강심장.' },
+                { name: '리턴 (Return)', score: 7, description: '아직 다듬어야 할 부분.' }
+            ],
+            growthStory: `
+                <p>전 프로 테니스 선수이자 대학 코치인 브라이언 쉘튼의 아들입니다. 어릴 때는 미식축구에 더 관심이 많았으나, 12세 때 본격적으로 테니스를 시작했습니다.</p>
+                <p>플로리다 대학 시절 NCAA 단식 우승으로 대학 무대를 평정한 뒤 프로로 전향, 해외 투어 경험이 전무한 상태에서 호주 오픈 8강에 오르는 기적을 썼습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 US 오픈 8강 vs 프란시스 티아포',
+                date: '2023. 09. 06',
+                description: '미국 테니스의 신구 대결. 선배 티아포를 상대로 압도적인 화력을 뽐내며 3-1 승리를 거두고 4강에 진출했습니다. 이 경기 승리 후 보여준 전화기 세리머니는 대회의 하이라이트였습니다.'
+            },
+            recentForm: `
+                <p><strong>"다듬어지는 원석"</strong></p>
+                <p>2023년 재팬 오픈에서 생애 첫 투어 우승을 차지하며 상승세를 탔습니다. 아직 경험 부족으로 인한 기복이 있지만, 성장 속도가 매우 빨라 Top 10 진입이 유력시됩니다.</p>
+            `
+        }
     },
     'tommy-paul': {
         name: '토미 폴', nameEn: 'Tommy Paul', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/tommy-paul.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '빠른 발과 뛰어난 운동 신경을 가진 미국의 톱 랭커. 수비에서 공격으로 전환하는 능력이 탁월하며, 그랜드슬램 4강에 오르는 등 꾸준한 상승세입니다.'
+        longBio: '빠른 발과 뛰어난 운동 신경을 가진 미국의 톱 랭커. 수비에서 공격으로 전환하는 능력이 탁월하며, 그랜드슬램 4강에 오르는 등 꾸준한 상승세입니다.',
+        detailedProfile: {
+            oneLineSummary: '빠른 발과 조코비치도 인정한 운동신경, "육각형 플레이어"의 정석.',
+            whyNotable: `
+                <p><strong>"가장 운동신경이 뛰어난 미국 선수"</strong></p>
+                <p>토미 폴은 폭발적인 파워보다는 탁월한 밸런스와 빠른 발을 이용한 올라운드 플레이로 승부합니다. 2023년 호주 오픈에서 미국 남자 선수로는 14년 만에 4강에 진출하며 자신의 시대를 알렸습니다.</p>
+                <p>코트 위에서는 냉정하지만 밖에서는 자유분방한 성격의 소유자로, 패셔너블한 스타일로도 유명합니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 카운터 펀처 (Aggressive Counter Puncher)"</strong></p>
+                <p>수비력이 뛰어나지만 수비에만 치중하지 않습니다. 기회가 오면 지체 없이 네트로 대시하거나 포핸드로 공격 전환을 시도합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>풋워크:</strong> 투어 최상위권의 스텝을 자랑합니다. 어떤 공이든 쫓아가 받아내는 능력이 뛰어납니다.</li>
+                    <li><strong>포핸드:</strong> 역크로스 포핸드는 그의 주득점원이며, 상대의 백핸드 쪽을 집요하게 공략합니다.</li>
+                    <li><strong>전환:</strong> 수비에서 공격으로 전환하는 속도가 매우 빠릅니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '스피드 (Speed)', score: 9.5, description: '코트 커버리지가 매우 넓음.' },
+                { name: '운동신경 (Athleticism)', score: 9.5, description: '타고난 신체 밸런스.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '정확하고 날카로운 역크로스.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정적인 연결 중심.' },
+                { name: '네트 플레이 (Net)', score: 8.5, description: '복식 경험이 풍부해 발리가 좋음.' },
+                { name: '서브 (Serve)', score: 7.5, description: '파워보다는 코스 공략 위주.' }
+            ],
+            growthStory: `
+                <p>주니어 시절 롤랑가로스 주니어 우승과 US 오픈 주니어 준우승을 차지하며 일찌감치 유망주로 꼽혔습니다. 테일러 프리츠, 라일리 오펠카와 함께 '미국 테니스 황금세대'의 일원입니다.</p>
+                <p>한동안 부상과 정체기를 겪었으나, 꾸준히 랭킹을 끌어올려 2023년에 생애 첫 Top 20, 그리고 Top 15 진입에 성공했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 호주 오픈 8강 vs 벤 쉘튼',
+                date: '2023. 01. 25',
+                description: '미국 테니스의 현재와 미래의 대결. 쉘튼의 강력한 서브와 파워를 노련한 경기 운영과 빠른 발로 무력화시키며 3-1 승리를 거두고 생애 첫 메이저 4강에 올랐습니다.'
+            },
+            recentForm: `
+                <p><strong>"꾸준함의 대명사"</strong></p>
+                <p>2024년 댈러스 오픈 우승, 델레이 비치 준우승 등 시즌 초반부터 좋은 흐름을 이어가고 있습니다. 큰 기복 없이 매 대회 상위권 성적을 내는 것이 강점입니다.</p>
+            `
+        }
     },
     'frances-tiafoe': {
         name: '프란시스 티아포', nameEn: 'Frances Tiafoe', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/frances-tiafoe.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '빅 포(Big Foe). 독특한 포핸드 폼과 쇼맨십, 그리고 관중과 호흡하는 에너지 넘치는 플레이로 US 오픈 4강 신화를 쓴 미국의 스타입니다.'
+        longBio: '빅 포(Big Foe). 독특한 포핸드 폼과 쇼맨십, 그리고 관중과 호흡하는 에너지 넘치는 플레이로 US 오픈 4강 신화를 쓴 미국의 스타입니다.',
+        detailedProfile: {
+            oneLineSummary: '관중을 미치게 만드는 "Big Foe", 독특한 폼과 쇼맨십으로 무장한 엔터테이너.',
+            whyNotable: `
+                <p><strong>"아메리칸 드림의 상징"</strong></p>
+                <p>시에라리온 이민자 가정 출신으로, 아버지가 관리인으로 일하던 테니스 센터에서 라켓을 잡기 시작한 이야기는 한 편의 영화 같습니다. 2022년 US 오픈에서 나달을 꺾고 흑인 남성 선수로는 아서 애시 이후 16년 만에 4강에 오르며 미국의 새로운 영웅으로 떠올랐습니다.</p>
+                <p>경기 중 관중의 호응을 유도하고 화려한 세리머니를 펼치는 등 최고의 쇼맨십을 자랑합니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 올라운더 (Aggressive All-Rounder)"</strong></p>
+                <p>변칙적이고 창의적인 플레이를 즐깁니다. 포핸드 스윙 폼이 매우 독특하지만 위력적이며, 네트 플레이와 발리 센스도 뛰어납니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>포핸드:</strong> 테이크백이 짧고 채찍처럼 휘두르는 독특한 폼을 가졌습니다. 타이밍을 뺏기 좋고 스핀이 많이 걸립니다.</li>
+                    <li><strong>발리:</strong> 복식 경기에서도 두각을 나타낼 만큼 손맛이 좋고 네트 앞 움직임이 민첩합니다.</li>
+                    <li><strong>서브:</strong> 파워보다는 다양한 코스와 구질로 승부합니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '쇼맨십 (Showmanship)', score: 10, description: '관중을 조련하는 마에스트로.' },
+                { name: '포핸드 (Forehand)', score: 9, description: '독특하지만 파괴적인 샷.' },
+                { name: '네트 플레이 (Net)', score: 9, description: '감각적인 터치 발리.' },
+                { name: '운동신경 (Athleticism)', score: 9, description: '탄력과 유연성이 뛰어남.' },
+                { name: '서브 (Serve)', score: 8, description: '평균 이상이지만 기복이 있음.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정적으로 버티는 역할.' }
+            ],
+            growthStory: `
+                <p>메릴랜드주 칼리지파크의 테니스 센터에서 5살 때부터 형과 함께 테니스를 쳤습니다. 어려운 가정 형편 속에서도 재능을 인정받아 후원을 받으며 성장했습니다.</p>
+                <p>2018년 델레이 비치 우승으로 첫 투어 타이틀을 따냈고, 2022년 US 오픈 4강으로 커리어 하이를 찍으며 세계적인 선수로 발돋움했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2022 US 오픈 16강 vs 라파엘 나달',
+                date: '2022. 09. 05',
+                description: '티아포의 인생 경기. 그랜드슬램 22회 우승자인 나달을 상대로 3-1 승리를 거두며 전 세계를 충격에 빠뜨렸습니다. 강력한 스트로크와 흔들리지 않는 멘탈로 나달을 압도했습니다.'
+            },
+            recentForm: `
+                <p><strong>"Top 10 재진입을 노리는 강자"</strong></p>
+                <p>2023년 슈투트가르트와 휴스턴 우승으로 잔디와 클레이 코트에서도 경쟁력을 증명했습니다. 기복을 줄이고 꾸준함을 유지한다면 다시 한번 메이저 대회에서 돌풍을 일으킬 수 있습니다.</p>
+            `
+        }
     },
     'ugo-humbert': {
         name: '우고 움베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷', image: '/images/players/ugo-humbert.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
@@ -420,7 +685,45 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     },
     'lorenzo-musetti': {
         name: '로렌조 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/lorenzo-musetti.png', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
-        longBio: '이탈리아의 예술가. 화려한 원핸드 백핸드와 창의적인 샷 메이킹으로 보는 이들을 매료시키는 스타일리시한 플레이어입니다.'
+        longBio: '이탈리아의 예술가. 화려한 원핸드 백핸드와 창의적인 샷 메이킹으로 보는 이들을 매료시키는 스타일리시한 플레이어입니다.',
+        detailedProfile: {
+            oneLineSummary: '코트 위의 예술가, 낭만적인 원핸드 백핸드와 창의성으로 승부하는 테크니션.',
+            whyNotable: `
+                <p><strong>"이탈리아 테니스의 르네상스, 그 중심"</strong></p>
+                <p>로렌조 무세티는 아름다운 원핸드 백핸드와 마법 같은 샷 메이킹으로 '코트 위의 예술가'라 불립니다. 2024년 윔블던 4강, 파리 올림픽 동메달을 획득하며 야닉 시너와 함께 이탈리아 테니스의 황금기를 이끌고 있습니다.</p>
+                <p>단순히 이기는 것보다 '어떻게' 이기는지를 보여주는 스타일리시한 플레이로 수많은 팬을 매료시킵니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"올코트 크리에이터 (All-court Creator)"</strong></p>
+                <p>정형화된 플레이를 거부합니다. 베이스라인 뒤에서 엄청난 양의 스핀을 건 샷을 날리다가도, 기습적인 드롭샷이나 네트 대시로 득점합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>백핸드:</strong> 가스케, 바브린카의 뒤를 잇는 명품 원핸드 백핸드입니다. 다운더라인 위너는 감탄을 자아냅니다.</li>
+                    <li><strong>터치:</strong> 손목 감각이 타의 추종을 불허합니다. 드롭샷과 발리 터치는 예술의 경지입니다.</li>
+                    <li><strong>다양성:</strong> 슬라이스, 롭, 앵글 샷 등 코트의 모든 공간을 활용하는 옵션을 가졌습니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '창의성 (Creativity)', score: 10, description: '예측 불가능한 샷 셀렉션.' },
+                { name: '테크닉 (Technique)', score: 9.5, description: '모든 구질을 자유자재로 구사.' },
+                { name: '백핸드 (Backhand)', score: 9.5, description: '원핸드 백핸드의 로망 그 자체.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '감정 기복이 경기력에 영향을 줌.' },
+                { name: '서브 (Serve)', score: 8, description: '코스는 좋으나 파워는 평범함.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '회전량이 많아 까다로움.' }
+            ],
+            growthStory: `
+                <p>이탈리아 카라라 출신으로, 어릴 때부터 나이답지 않은 노련한 플레이로 주목받았습니다. 2019년 호주 오픈 주니어 우승을 차지하며 세계 주니어 1위에 올랐습니다.</p>
+                <p>프로 데뷔 후 클레이 코트에서 강점을 보이다가, 2024년 잔디 코트(윔블던 4강)에서의 맹활약으로 모든 코트에서 통하는 선수임을 증명했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2024 파리 올림픽 동메달 결정전 vs 펠릭스 오제-알리아심',
+                date: '2024. 08. 04',
+                description: '이탈리아 테니스 역사상 100년 만의 올림픽 메달을 안긴 경기. 3세트 접전 끝에 승리하며 조국에 동메달을 바쳤습니다. 승리가 확정된 순간 코트에 누워 보여준 기쁨은 전 세계에 감동을 주었습니다.'
+            },
+            recentForm: `
+                <p><strong>"커리어 하이 시즌"</strong></p>
+                <p>2024년 중반부터 기량이 만개했습니다. 특히 잔디 시즌 퀸즈 클럽 준우승, 윔블던 4강에 이어 올림픽 메달까지 획득하며 최고의 상승세를 타고 있습니다.</p>
+            `
+        }
     },
     'sebastian-korda': {
         name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/sebastian-korda.png', gender: 'male',
@@ -1020,15 +1323,129 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     },
     'maria-sakkari': {
         name: '마리아 사카리', nameEn: 'Maria Sakkari', country: 'Greece', countryFlag: '🇬🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '그리스의 스파르탄. 투어 최고 수준의 근육질 몸매에서 나오는 파워풀한 테니스와 쉽게 포기하지 않는 강인한 멘탈이 트레이드마크입니다.'
+        longBio: '그리스의 스파르탄. 투어 최고 수준의 근육질 몸매에서 나오는 파워풀한 테니스와 쉽게 포기하지 않는 강인한 멘탈이 트레이드마크입니다.',
+        detailedProfile: {
+            oneLineSummary: '그리스 신화 속 전사 같은 피지컬, 지칠 줄 모르는 "스파르탄 우먼".',
+            whyNotable: `
+                <p><strong>"가장 강력한 피지컬을 가진 선수"</strong></p>
+                <p>마리아 사카리는 WTA 투어에서 가장 뛰어난 체력을 가진 선수 중 한 명으로 꼽힙니다. '스파르탄(Spartan)'이라는 별명답게 근육질의 탄탄한 몸매와 지치지 않는 활동량으로 코트를 누빕니다. 치치파스와 함께 그리스 테니스의 황금기를 이끄는 국가대표 아이콘입니다.</p>
+                <p>넷플릭스 '브레이크 포인트'에서도 비중 있게 다뤄질 만큼 스타성을 인정받고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 베이스라이너 (Aggressive Baseliner)"</strong></p>
+                <p>사카리의 테니스는 '힘'과 '활동량'으로 정의됩니다. 베이스라인 뒤에서 강력한 탑스핀 포핸드로 상대를 밀어붙이고, 어떤 공이든 쫓아가 받아내는 수비력으로 질식시킵니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>피지컬:</strong> 크로스핏 선수에 버금가는 근력과 체력으로 3세트 접전에서 더욱 강한 모습을 보입니다.</li>
+                    <li><strong>포핸드:</strong> 남성 선수들처럼 무겁고 강하게 감기는 탑스핀 포핸드가 주무기입니다.</li>
+                    <li><strong>서브:</strong> 키는 크지 않지만(172cm), 뛰어난 근력에서 나오는 킥 서브가 위력적입니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '피지컬 (Physicality)', score: 10, description: 'WTA 최고의 근력과 체력.' },
+                { name: '파워 (Power)', score: 9, description: '밀리지 않는 묵직한 스트로크.' },
+                { name: '스피드 (Speed)', score: 9, description: '코트 커버리지가 매우 넓음.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '준결승 등 큰 무대 징크스가 있음.' },
+                { name: '서브 (Serve)', score: 8, description: '킥 서브 활용도가 좋음.' },
+                { name: '네트 플레이 (Net)', score: 7.5, description: '빈도가 높지 않지만 준수함.' }
+            ],
+            growthStory: `
+                <p>테니스 선수였던 어머니의 영향으로 테니스를 시작했습니다. 18세에 바르셀로나로 유학을 떠나 체계적인 훈련을 받았으며, 2017년부터 꾸준히 랭킹을 끌어올려 그리스 여자 선수 최초로 Top 10에 진입했습니다.</p>
+                <p>수많은 4강 탈락의 아픔을 겪었지만, 2023년 과달라하라 오픈(WTA 1000) 우승으로 그간의 설움을 씻어냈습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2021 프랑스 오픈 16강 vs 소피아 케닌',
+                date: '2021. 06. 07',
+                description: '전년도 준우승자이자 세계 4위인 케닌을 상대로 압도적인 파워를 뽐내며 2-0 완승을 거뒀습니다. 이 승리로 생애 첫 그랜드슬램 8강을 넘어 4강까지 진출하는 쾌거를 이뤘습니다.'
+            },
+            recentForm: `
+                <p><strong>"Top 10의 터줏대감"</strong></p>
+                <p>기복 없는 플레이로 꾸준히 상위권을 유지하고 있습니다. 새로운 코치 데이비드 윗과 함께 공격적인 플레이를 다듬으며 다시 한번 메이저 우승에 도전하고 있습니다.</p>
+            `
+        }
     },
     'jelena-ostapenko': {
         name: '옐레나 오스타펜코', nameEn: 'Jelena Ostapenko', country: 'Latvia', countryFlag: '🇱🇻', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '코트 위의 폭주기관차. 모든 공을 위너로 만들겠다는 듯한 공격적인 풀스윙 샷을 구사하며, 컨디션이 좋은 날에는 누구도 막을 수 없는 파괴력을 보여줍니다. 2017 롤랑가로스 챔피언.'
+        longBio: '코트 위의 폭주기관차. 모든 공을 위너로 만들겠다는 듯한 공격적인 풀스윙 샷을 구사하며, 컨디션이 좋은 날에는 누구도 막을 수 없는 파괴력을 보여줍니다. 2017 롤랑가로스 챔피언.',
+        detailedProfile: {
+            oneLineSummary: '모 아니면 도, 들어가는 날은 아무도 막을 수 없는 "코트 위의 폭주기관차".',
+            whyNotable: `
+                <p><strong>"가장 예측 불가능한 선수"</strong></p>
+                <p>옐레나 오스타펜코는 투어에서 가장 화끈한 공격 테니스를 구사합니다. 2017년 롤랑가로스에서 시드도 받지 못한 20세의 나이로 우승하며 세계를 놀라게 했습니다. 실수가 쏟아지다가도, 긁히는 날에는 세계 1위도 압도적인 스코어로 이겨버리는 도깨비 같은 매력의 소유자입니다.</p>
+                <p>솔직하고 거침없는 성격과 화려한 패션으로도 많은 화제(와 논란)를 몰고 다닙니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"극단적인 공격형 (High Risk High Reward)"</strong></p>
+                <p>수비는 생각하지 않습니다. 리턴부터 위너를 노리고 풀스윙을 날립니다. 볼 스도가 남자 선수들 평균보다 빠를 때도 있을 정도로 강력합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>스트로크:</strong> 포핸드, 백핸드 모두 플랫하게 때리며, 라인 근처를 집요하게 노립니다.</li>
+                    <li><strong>리턴:</strong> 상대의 서브가 약하면 지체 없이 위너성 리턴을 날립니다.</li>
+                    <li><strong>기복:</strong> 컨디션에 따라 위너 50개, 에러 50개를 기록하기도 하는 극단적인 경기를 보여줍니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '파워 (Power)', score: 10, description: '남자 선수에 버금가는 샷 스피드.' },
+                { name: '공격성 (Aggression)', score: 10, description: '무조건 공격 앞으로.' },
+                { name: '서브 (Serve)', score: 7, description: '더블 폴트가 잦음.' },
+                { name: '안정성 (Consistency)', score: 4, description: '극심한 기복이 약점.' },
+                { name: '멘탈 (Mental)', score: 6, description: '감정 기복이 심함.' },
+                { name: '수비 (Defense)', score: 5, description: '수비보다는 공격으로 해결하려 함.' }
+            ],
+            growthStory: `
+                <p>라트비아 리가 출신으로, 어머니의 지도로 5세 때 테니스를 시작했습니다. 어릴 때 볼룸 댄스를 배운 덕분에 풋워크가 의외로 좋습니다.</p>
+                <p>2017년 프랑스 오픈 깜짝 우승으로 스타덤에 올랐습니다. 이후 기복 논란에 시달렸지만, 복식에서도 그랜드슬램 타이틀을 따내며 다재다능함을 증명했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2017 프랑스 오픈 결승 vs 시모나 할렙',
+                date: '2017. 06. 10',
+                description: '그녀의 인생을 바꿀 경기. 당시 최강의 수비력을 자랑하던 할렙을 상대로, 무려 54개의 위너(할렙 8개)를 쏟아부으며 2-1 역전승을 거뒀습니다. "공격이 최선의 수비"임을 증명한 명승부였습니다.'
+            },
+            recentForm: `
+                <p><strong>"여전한 파괴력"</strong></p>
+                <p>2024년 초반 2개 대회에서 우승하며 부활을 알렸습니다. 여전히 기복은 있지만, 긁히는 날의 오스타펜코는 투어에서 가장 두려운 존재입니다.</p>
+            `
+        }
     },
     'naomi-osaka': {
         name: '나오미 오사카', nameEn: 'Naomi Osaka', country: 'Japan', countryFlag: '🇯🇵', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '4번의 그랜드슬램 우승에 빛나는 하드 코트의 여왕. 압도적인 서브와 포핸드 파워를 갖췄으며, 코트 밖에서는 사회적 목소리를 내는 영향력 있는 아이콘입니다.'
+        longBio: '4번의 그랜드슬램 우승에 빛나는 하드 코트의 여왕. 압도적인 서브와 포핸드 파워를 갖췄으며, 코트 밖에서는 사회적 목소리를 내는 영향력 있는 아이콘입니다.',
+        detailedProfile: {
+            oneLineSummary: '아시아 최초 세계 랭킹 1위, 4번의 그랜드슬램을 정복한 "하드 코트의 여왕".',
+            whyNotable: `
+                <p><strong>"테니스의 아이콘이자 시대의 아이콘"</strong></p>
+                <p>나오미 오사카는 단순히 테니스를 잘 치는 선수를 넘어섰습니다. 남녀 통틀어 아시아 국적 선수 최초로 세계 랭킹 1위에 올랐으며, 4번의 메이저 타이틀(US 오픈 2회, 호주 오픈 2회)을 따내며 하드 코트를 지배했습니다.</p>
+                <p>또한 블라임 라이브스 매터(BLM) 운동 지지, 멘탈 헬스 이슈 공론화 등 코트 밖에서도 사회적 영향력을 행사하는 글로벌 아이콘입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"파워 베이스라이너 (Power Baseliner)"</strong></p>
+                <p>세레나 윌리엄스를 연상케 하는 압도적인 파워 테니스를 구사합니다. 특히 서브와 3구 공격으로 포인트를 끝내는 능력이 탁월합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>서브:</strong> 여자 선수 중 최고 수준의 서브 스피드(시속 200km 육박)를 자랑하며, 위기 상황에서 에이스로 탈출하는 능력이 뛰어납니다.</li>
+                    <li><strong>포핸드:</strong> 타점이 빠르고 묵직한 포핸드 위너는 그녀의 전매특허입니다.</li>
+                    <li><strong>집중력:</strong> 빅 포인트에서의 집중력이 매우 좋아, 브레이크 위기 관리 능력이 탁월합니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '파워 (Power)', score: 10, description: '투어 최정상급 스트로크 파워.' },
+                { name: '서브 (Serve)', score: 9.5, description: '중요한 순간에 터지는 강서브.' },
+                { name: '멘탈 (Mental)', score: 8, description: '큰 경기에 강하지만, 최근 멘탈 이슈 겪음.' },
+                { name: '포핸드 (Forehand)', score: 9.5, description: '경기를 끝낼 수 있는 결정구.' },
+                { name: '수비 (Defense)', score: 7.5, description: '공격에 비해 수비 커버리지는 평범.' },
+                { name: '클레이/잔디 (Surface)', score: 6, description: '하드 코트 외에서는 성적이 저조함.' }
+            ],
+            growthStory: `
+                <p>아이티 출신 아버지와 일본인 어머니 사이에서 태어났습니다. 3세 때 미국으로 이주해 테니스를 시작했습니다.</p>
+                <p>2018년 인디언 웰스 우승으로 두각을 나타내더니, 같은 해 US 오픈에서 세레나 윌리엄스를 꺾고 우승하며 여제의 탄생을 알렸습니다. 이후 단기간에 4개의 메이저 타이틀을 휩쓸었습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2018 US 오픈 결승 vs 세레나 윌리엄스',
+                date: '2018. 09. 08',
+                description: '테니스 역사상 가장 드라마틱하고 논란이 많았던 결승전. 심판 판정 항의로 분위기가 뒤숭숭한 상황에서도, 20세의 오사카는 흔들리지 않고 자신의 우상인 세레나를 2-0으로 완파하며 생애 첫 메이저 우승을 차지했습니다.'
+            },
+            recentForm: `
+                <p><strong>"엄마가 되어 돌아온 챔피언"</strong></p>
+                <p>출산 후 2024년 복귀했습니다. 예전의 압도적인 기량은 아직 돌아오지 않았지만, 2024 프랑스 오픈에서 시비옹테크를 매치 포인트까지 몰아붙이는 등 클래스는 살아있음을 증명했습니다.</p>
+            `
+        }
     },
     'caroline-wozniacki': {
         name: '캐롤라인 보즈니아키', nameEn: 'Caroline Wozniacki', country: 'Denmark', countryFlag: '🇩🇰', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
@@ -1056,11 +1473,87 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     },
     'madison-keys': {
         name: '매디슨 키스', nameEn: 'Madison Keys', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: 'WTA 투어 최고의 파워 히터 중 한 명. 묵직한 서브와 포핸드로 상대를 힘으로 압박하는 공격적인 스타일을 구사합니다.'
+        longBio: 'WTA 투어 최고의 파워 히터 중 한 명. 묵직한 서브와 포핸드로 상대를 힘으로 압박하는 공격적인 스타일을 구사합니다.',
+        detailedProfile: {
+            oneLineSummary: 'WTA 최고 수준의 "헤비볼 히터", 들어가는 날은 아무도 막을 수 없는 파괴력.',
+            whyNotable: `
+                <p><strong>"가장 묵직한 공을 치는 선수"</strong></p>
+                <p>매디슨 키스의 샷은 단순한 스피드를 넘어 '무게감'이 다릅니다. 남자 선수들에 버금가는 샷 평속을 기록할 정도로 압도적인 파워를 자랑합니다. 2017 US 오픈 결승에 오르며 미국 여자 테니스의 중심축으로 자리 잡았습니다.</p>
+                <p>코트 밖에서는 동료 선수들을 살뜰히 챙기고 자선 활동에 앞장서는 따뜻한 리더십의 소유자입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 베이스라이너 (Aggressive Baseliner)"</strong></p>
+                <p>복잡한 전술보다는 압도적인 힘으로 밀어붙이는 스타일입니다. 서브와 포핸드 한 방으로 포인트를 끝내는 것을 선호합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>포핸드:</strong> 그녀의 트레이드마크. 엄청난 스윙 스피드에서 나오는 포핸드 위너는 총알같이 빠릅니다.</li>
+                    <li><strong>서브:</strong> 킥 서브와 플랫 서브 모두 강력하며, 서브 게임을 쉽게 지키는 편입니다.</li>
+                    <li><strong>잔디 코트:</strong> 낮게 깔리는 빠른 공을 좋아해 잔디 코트에서 특히 강합니다(이스트본 2회 우승).</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '파워 (Power)', score: 10, description: '투어에서 가장 무거운 공을 침.' },
+                { name: '서브 (Serve)', score: 9.5, description: '강력한 서브권.' },
+                { name: '포핸드 (Forehand)', score: 9.5, description: '결정력만큼은 최상급.' },
+                { name: '안정성 (Consistency)', score: 6, description: '홈런(에러)이 많은 편.' },
+                { name: '움직임 (Movement)', score: 7, description: '직선 움직임은 좋으나 좌우 수비는 약함.' },
+                { name: '멘탈 (Mental)', score: 8, description: '긍정적이지만 중요할 때 흔들림.' }
+            ],
+            growthStory: `
+                <p>어릴 때부터 '천재 소녀'로 불리며 14세에 프로에 데뷔했습니다. 린제이 데이븐포트 등 레전드들의 지도를 받으며 성장했습니다.</p>
+                <p>2017년 US 오픈 준우승으로 잠재력을 폭발시켰고, 모든 그랜드슬램 대회에서 4강 이상의 성적을 거둔 몇 안 되는 선수 중 하나입니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 US 오픈 8강 vs 마르케타 본드로우소바',
+                date: '2023. 09. 06',
+                description: '홈 팬들 앞에서 윔블던 챔피언 본드로우소바를 2-0으로 완파한 경기. 강력한 파워로 상대의 수비벽을 완전히 무너뜨리며 4강 진출에 성공했습니다.'
+            },
+            recentForm: `
+                <p><strong>"여전한 우승 후보"</strong></p>
+                <p>투어 생활 10년이 넘은 베테랑이 되었지만 파워는 여전합니다. 2024년 스트라스부르, 이스트본 등에서 우승 및 4강에 오르며 꾸준함을 과시하고 있습니다.</p>
+            `
+        }
     },
     'daria-kasatkina': {
         name: '다리아 카사트키나', nameEn: 'Daria Kasatkina', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '코트 위의 예술가. 파워보다는 다양한 스핀과 각도, 창의적인 샷 메이킹으로 승부하는 지능적인 플레이어입니다.'
+        longBio: '코트 위의 예술가. 파워보다는 다양한 스핀과 각도, 창의적인 샷 메이킹으로 승부하는 지능적인 플레이어입니다.',
+        detailedProfile: {
+            oneLineSummary: '파워 테니스 시대의 "반란군", 현란한 스핀과 전술로 상대를 무너뜨리는 테크니션.',
+            whyNotable: `
+                <p><strong>"코트 안팎의 진정한 자유로운 영혼"</strong></p>
+                <p>다리아 카사트키나는 힘으로만 승부하는 현대 테니스에서 독보적인 '다양성'을 보여주는 선수입니다. 특히 인기 테니스 브이로그 'What The Vlog'를 운영하며 투어 생활의 비하인드 스토리를 팬들에게 솔직하게 공개해 큰 사랑을 받고 있습니다.</p>
+                <p>또한 쉽지 않은 상황에서도 자신의 정체성과 목소리를 당당하게 내는 용기 있는 선수로 존경받고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"지능형 카운터 펀처 + 스핀 마스터"</strong></p>
+                <p>파워는 약하지만, 남자 선수급의 회전량을 가진 포핸드와 정교한 슬라이스, 드롭샷으로 상대를 요리합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>포핸드:</strong> 라파엘 나달을 연상시키는 헤비 탑스핀 포핸드를 구사합니다. 공이 높게 튀어 올라 상대의 타점을 흔듭니다.</li>
+                    <li><strong>점프 백핸드:</strong> 리턴이나 수비 상황에서 껑충 뛰어오르며 치는 백핸드 샷은 그녀의 시그니처입니다.</li>
+                    <li><strong>전술:</strong> 상대의 약점을 파고드는 집요함과 코트의 길목을 차단하는 센수가 탁월합니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '다양성 (Variety)', score: 10, description: '타의 추종을 불허하는 샷 셀렉션.' },
+                { name: '스핀 (Spin)', score: 10, description: '엄청난 RPM의 포핸드.' },
+                { name: '센스 (IQ)', score: 9.5, description: '상대의 수를 읽는 능력이 뛰어남.' },
+                { name: '스피드 (Speed)', score: 9, description: '클레이 코트에서의 움직임이 특히 좋음.' },
+                { name: '파워 (Power)', score: 5, description: '서브와 스트로크 파워는 약한 편.' },
+                { name: '서브 (Serve)', score: 5, description: '느린 서브가 최대 약점.' }
+            ],
+            growthStory: `
+                <p>러시아 톨리아티 출신으로, 형의 권유로 테니스를 시작했습니다. 2014년 프랑스 오픈 주니어 우승을 차지하며 유망주로 떠올랐습니다.</p>
+                <p>성인 무대에서도 2018년 인디언 웰스 준우승, 2022년 프랑스 오픈 4강에 오르며 꾸준히 상위권을 유지하고 있습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2018 인디언 웰스 4강 vs 비너스 윌리엄스',
+                date: '2018. 03. 17',
+                description: '전설 비너스를 상대로 명승부를 펼쳤습니다. 3세트 타이브레이크 접전 끝에 승리하며, 파워 히터를 상대로 어떻게 싸워야 하는지를 보여준 교과서적인 경기였습니다.'
+            },
+            recentForm: `
+                <p><strong>"꾸준함의 힘"</strong></p>
+                <p>2024년에도 여러 대회에서 결승에 오르며 Top 15 안팎의 랭킹을 유지하고 있습니다. 특히 잔디와 하드 코트에서도 결승에 진출하며 '올라운더'로서의 면모를 과시하고 있습니다.</p>
+            `
+        }
     },
     'beatriz-haddad-maia': {
         name: '베아트리스 하다드 마이아', nameEn: 'Beatriz Haddad Maia', country: 'Brazil', countryFlag: '🇧🇷', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
@@ -1088,15 +1581,137 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     },
     'emma-raducanu': {
         name: '엠마 라두카누', nameEn: 'Emma Raducanu', country: 'United Kingdom', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '기적의 아이콘. 2021 US 오픈에서 예선 통과자 최초로 무실세트 우승이라는 신화를 썼습니다. 깔끔한 기술과 스타성을 겸비한 영국의 희망입니다.'
+        longBio: '기적의 아이콘. 2021 US 오픈에서 예선 통과자 최초로 무실세트 우승이라는 신화를 썼습니다. 깔끔한 기술과 스타성을 겸비한 영국의 희망입니다.',
+        detailedProfile: {
+            oneLineSummary: '예선 통과자 신화의 주인공, 전 세계가 주목하는 "영국의 신데렐라".',
+            whyNotable: `
+                <p><strong>"테니스 역사상 가장 위대한 신데렐라 스토리"</strong></p>
+                <p>2021년 18세의 나이로 US 오픈에 예선부터 참가해, 단 한 세트도 내주지 않고(20세트 연속 승리) 우승을 차지했습니다. 예선 통과자의 메이저 우승은 테니스 역사상 전무후무한 기록입니다. 이 우승 하나로 그녀는 단숨에 전 세계적인 슈퍼스타가 되었습니다.</p>
+                <p>뛰어난 실력뿐만 아니라 지적인 인터뷰 스킬, 다문화적 배경(루마니아/중국 혼혈, 영국 국적)으로 글로벌 브랜드들의 러브콜을 받는 아이콘입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"지능적인 베이스라이너 (Aggressive Counter Puncher)"</strong></p>
+                <p>라두카누의 테니스는 '깨끗함' 그 자체입니다. 무리해서 세게 치기보다는 상대의 힘을 이용해 코스 깊숙이 찔러 넣는 능력이 탁월합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>리턴:</strong> 그녀의 우승 원동력이었던 리턴 능력은 투어 최상급입니다. 베이스라인 안쪽으로 들어와 라이징 볼을 공략합니다.</li>
+                    <li><strong>백핸드:</strong> 다운더라인 백핸드는 그녀의 시그니처 샷으로, 위기 상황에서 흐름을 바꿉니다.</li>
+                    <li><strong>움직임:</strong> 물 흐르듯 유연한 코트 커버 능력을 갖췄습니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '기술 (Technique)', score: 9.5, description: '교과서적인 깔끔한 폼.' },
+                { name: '리턴 (Return)', score: 9.5, description: '공격적인 리턴이 일품.' },
+                { name: '스타성 (Star Power)', score: 10, description: '전 세계가 주목하는 흥행 보증수표.' },
+                { name: '백핸드 (Backhand)', score: 9, description: '가장 자신 있는 무기.' },
+                { name: '체력 (Fitness)', score: 7, description: '잦은 부상이 발목을 잡음.' },
+                { name: '서브 (Serve)', score: 7.5, description: '정확도는 좋으나 파워 보강 필요.' }
+            ],
+            growthStory: `
+                <p>캐나다 토론토에서 태어나 2세 때 영국으로 이주했습니다. 학업과 운동을 병행하며 모범생으로 자랐고, 수학과 경제학 A레벨을 받을 정도로 머리가 좋습니다.</p>
+                <p>2021년 윔블던 16강 진출로 가능성을 보여주더니, 곧이어 열린 US 오픈에서 테니스 역사를 새로 쓰며 여왕의 자리에 올랐습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2021 US 오픈 결승 vs 레일라 페르난데스',
+                date: '2021. 09. 11',
+                description: '10대들의 결승전으로 전 세계의 이목이 집중된 경기. 긴장되는 순간에도 침착하게 자신의 플레이를 펼치며 2-0 완승을 거뒀습니다. 우승 직후 보여준 환한 미소는 그녀의 트레이드마크가 되었습니다.'
+            },
+            recentForm: `
+                <p><strong>"재도약을 위한 숨 고르기"</strong></p>
+                <p>우승 이후 잦은 코치 교체와 손목/발목 부상 수술로 힘든 시간을 보냈습니다. 2024년 복귀 후 점차 경기 감각을 끌어올리고 있으며, 건강한 몸 상태를 유지한다면 언제든 다시 정상에 오를 수 있는 잠재력을 가졌습니다.</p>
+            `,
+            fanAppeal: `
+                <p><strong>"테니스판 엠마 왓슨"</strong></p>
+                <p>지적이고 우아한 이미지와 코트 위에서의 승부사 기질이 공존하는 반전 매력의 소유자입니다. 디올, 티파니, 포르쉐 등 럭셔리 브랜드의 앰버서더로 활동하며 패션 아이콘으로도 사랑받고 있습니다.</p>
+            `
+        }
     },
     'leylah-fernandez': {
         name: '레일라 페르난데스', nameEn: 'Leylah Fernandez', country: 'Canada', countryFlag: '🇨🇦', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '작은 고추가 맵다. 왜소한 체격에도 불구하고 빠른 발과 영리한 플레이, 그리고 지치지 않는 투지로 2021 US 오픈 준우승을 차지했습니다.'
+        longBio: '작은 고추가 맵다. 왜소한 체격에도 불구하고 빠른 발과 영리한 플레이, 그리고 지치지 않는 투지로 2021 US 오픈 준우승을 차지했습니다.',
+        detailedProfile: {
+            oneLineSummary: '작은 거인, 코트 위의 파이터 "레일라".',
+            whyNotable: `
+                <p><strong>"자이언트 킬러 (Giant Killer)"</strong></p>
+                <p>168cm의 단신이지만, 자신보다 훨씬 크고 힘센 선수들을 잇달아 무너뜨리는 '다윗과 골리앗'의 승부를 보여줍니다. 2021년 US 오픈 결승 진출 과정에서 오사카, 케르버, 스비톨리나, 사발렌카 등 최정상급 선수들을 연파하며 전 세계에 이름을 각인시켰습니다.</p>
+                <p>관중의 호응을 유도하고 매 포인트 포효하는 엄청난 파이팅 스피릿이 트레이드마크입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적인 카운터 펀처 + 빠른 템포"</strong></p>
+                <p>상대의 힘에 밀리지 않기 위해 베이스라인에 딱 붙어서 라이징 볼을 처리합니다. 박자를 뺏는 빠른 타이밍의 스트로크가 일품입니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>왼손잡이 이점:</strong> 까다로운 왼손 앵글 샷과 서브로 상대를 코트 밖으로 밀어냅니다.</li>
+                    <li><strong>타이밍:</strong> 공이 정점에 오르기 전에 치는 빠른 타이밍으로 상대의 준비 시간을 뺏습니다.</li>
+                    <li><strong>네트 플레이:</strong> 복식 그랜드슬램 준우승 경험이 있을 정도로 발리 센스가 뛰어납니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '투지 (Fighting Spirit)', score: 10, description: '절대 포기하지 않는 악바리 근성.' },
+                { name: '스피드 (Speed)', score: 9, description: '빠른 발로 코트 전체를 커버.' },
+                { name: '타이밍 (Timing)', score: 9.5, description: '박자를 뺏는 탁월한 감각.' },
+                { name: '멘탈 (Mental)', score: 9, description: '큰 무대에서도 주눅 들지 않음.' },
+                { name: '파워 (Power)', score: 7, description: '체격적 한계로 파워는 다소 부족.' },
+                { name: '서브 (Serve)', score: 7.5, description: '슬라이스 서브를 잘 활용함.' }
+            ],
+            growthStory: `
+                <p>에콰도르 출신 축구 선수 아버지와 필리핀계 캐나다인 어머니 사이에서 태어났습니다. 어릴 때 '너무 작아서 테니스 선수로 성공할 수 없다'는 말을 들었지만, 이를 악물고 노력해 보란 듯이 세계적인 선수로 성장했습니다.</p>
+                <p>가족의 헌신적인 뒷바라지가 있었으며, 동생 비앙카 페르난데스도 테니스 선수로 활동 중입니다.</p>
+            `,
+            signatureMatch: {
+                title: '2021 US 오픈 4강 vs 아리나 사발렌카',
+                date: '2021. 09. 10',
+                description: '힘 대 기술의 대결. 당시 세계 2위 사발렌카의 무시무시한 파워에 맞서, 한 박자 빠른 공격과 끈질긴 수비로 2-1 승리를 거뒀습니다. 결승 진출을 확정 짓고 코트에 주저앉아 눈물 흘리는 모습은 명장면이었습니다.'
+            },
+            recentForm: `
+                <p><strong>"복식과 단식 병행"</strong></p>
+                <p>단식 랭킹은 30위권에 머물러 있지만, 빌리 진 킹 컵에서 캐나다의 첫 우승을 이끄는 등 국가대항전에서 특히 강한 모습을 보입니다. 2024년에도 꾸준히 상승세를 타고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p><strong>"웃음과 눈물의 아이콘"</strong></p>
+                <p>경기 중에는 매서운 눈빛으로 싸우지만, 인터뷰할 때는 해맑은 미소로 팬들을 무장해제 시킵니다. 다양한 문화적 배경 덕분에 남미와 아시아 팬들에게도 큰 사랑을 받고 있습니다.</p>
+            `
+        }
     },
     'mirra-andreeva': {
         name: '미라 안드레예바', nameEn: 'Mirra Andreeva', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: 'WTA의 슈퍼 틴에이저. 16세의 나이에 윔블던 16강, 롤랑가로스 4강(2024)에 오르며 천재성을 입증한, 여자 테니스의 차세대 지배자 후보입니다.'
+        longBio: 'WTA의 슈퍼 틴에이저. 16세의 나이에 윔블던 16강, 롤랑가로스 4강(2024)에 오르며 천재성을 입증한, 여자 테니스의 차세대 지배자 후보입니다.',
+        detailedProfile: {
+            oneLineSummary: 'WTA를 뒤흔든 17세 천재 소녀, "제2의 마르티나 힝기스".',
+            whyNotable: `
+                <p><strong>"10대의 반란을 이끄는 선두주자"</strong></p>
+                <p>2023년 15세의 나이로 마드리드 오픈 16강에 오르며 혜성처럼 등장했습니다. 이후 윔블던 16강, 2024년 롤랑가로스 4강까지 진출하며 '반짝 돌풍'이 아님을 증명했습니다.</p>
+                <p>어린 나이가 믿기지 않는 노련한 경기 운영과 센스는 전설 마르티나 힝기스를 연상시키며, 차기 세계 1위 후보로 손색이 없습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"천재적인 카운터 펀처 (Smart Counter Puncher)"</strong></p>
+                <p>힘으로 제압하기보다는 상대의 힘을 역이용하고, 코트의 빈 곳을 정확히 찌르는 지능적인 테니스를 구사합니다. 공을 다루는 손목 감각이 타고났습니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>백핸드:</strong> 안드레예바의 가장 강력한 무기입니다. 다운더라인 백핸드는 이미 투어 상위권 수준입니다.</li>
+                    <li><strong>경기 운영:</strong> 상대의 움직임을 미리 읽고 대처하는 능력이 돋보입니다. 드롭샷과 로브를 적재적소에 섞어 씁니다.</li>
+                    <li><strong>멘탈:</strong> 지고 있는 상황에서도 쉽게 무너지지 않는 투지를 보여주지만, 가끔 감정을 주체하지 못하는 모습은 숙제입니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '센스 (Tennis IQ)', score: 10, description: '타고난 길목 차단과 코스 선택.' },
+                { name: '백핸드 (Backhand)', score: 9.5, description: '날카롭고 정확한 최고 무기.' },
+                { name: '수비 (Defense)', score: 9, description: '끈질기게 따라가서 받아냄.' },
+                { name: '잠재력 (Potential)', score: 10, description: '10년 이상 투어를 지배할 재목.' },
+                { name: '경험 (Experience)', score: 4, description: '아직 투어 경험이 부족함.' },
+                { name: '서브 (Serve)', score: 7, description: '파워와 다양성을 키워야 함.' }
+            ],
+            growthStory: `
+                <p>러시아 크라스노야르스크 출신으로, 언니 에리카 안드레예바와 함께 자매 테니스 선수로 유명합니다. 프랑스 칸의 엘리트 테니스 센터에서 훈련하며 빠르게 성장했습니다.</p>
+                <p>주니어 무대를 평정하고 프로에 데뷔하자마자 탑 랭커들을 연파하며 '무서운 10대'의 등장을 알렸습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2024 롤랑가로스 8강 vs 아리나 사발렌카',
+                date: '2024. 06. 05',
+                description: '세계를 놀라게 한 경기. 몸 상태가 좋지 않았던 사발렌카를 상대로 영리하게 코트를 넓게 사용하며 2-1 역전승을 거두고, 생애 첫 메이저 4강에 진출했습니다. 최연소 그랜드슬램 4강 기록(1997년 힝기스 이후)을 세웠습니다.'
+            },
+            recentForm: `
+                <p><strong>"거침없는 상승세"</strong></p>
+                <p>WTA 500 대회 등 투어 레벨에서도 꾸준히 성적을 내고 있습니다. 파워가 붙고 경험이 쌓인다면 2-3년 안에 메이저 우승도 가능하다는 평가입니다.</p>
+            `
+        }
     },
     'linda-noskova': {
         name: '린다 노스코바', nameEn: 'Linda Noskova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',

@@ -65,24 +65,72 @@ export default async function PlayerProfilePage({ params }: Props) {
     }
 
     // --- Smart Tag Logic ---
-    const getSmartTags = (bio: string) => {
+    const getSmartTags = (playerData: typeof player) => {
         const tags = [];
-        if (bio.includes('서브') || bio.includes('에이스')) tags.push({ text: 'Big Server', icon: <Zap className="w-3 h-3" />, color: 'blue' });
-        if (bio.includes('클레이')) tags.push({ text: 'Clay Specialist', icon: <Activity className="w-3 h-3" />, color: 'orange' });
-        if (bio.includes('우승') || bio.includes('챔피언')) tags.push({ text: 'Title Winner', icon: <Trophy className="w-3 h-3" />, color: 'yellow' });
-        if (bio.includes('공격') || bio.includes('파워')) tags.push({ text: 'Aggressive', icon: <Target className="w-3 h-3" />, color: 'red' });
-        if (bio.includes('수비') || bio.includes('끈질긴')) tags.push({ text: 'Defender', icon: <Shield className="w-3 h-3" />, color: 'green' });
-        if (bio.includes('발리') || bio.includes('네트')) tags.push({ text: 'Net Player', icon: <Activity className="w-3 h-3" />, color: 'purple' });
-        if (bio.includes('랭킹 1위') || bio.includes('No.1')) tags.push({ text: 'World No.1', icon: <Crown className="w-3 h-3" />, color: 'amber' });
+        const combinedText = [
+            playerData.longBio,
+            playerData.detailedProfile?.playStyle,
+            playerData.detailedProfile?.whyNotable,
+            playerData.detailedProfile?.oneLineSummary
+        ].join(' ').toLowerCase();
 
-        // Default tags if none match
-        if (tags.length === 0) {
-            tags.push({ text: 'Pro Player', icon: <Star className="w-3 h-3" />, color: 'gray' });
+        // 1. Physical/Technical Traits (From Static Data)
+        if (playerData.plays === 'Left-handed') {
+            tags.push({ text: 'Left-Handed', icon: <Hand className="w-3 h-3" />, color: 'teal' });
         }
-        return tags;
+        if (playerData.backhand === 'One-handed') {
+            tags.push({ text: 'One-Handed BH', icon: <Star className="w-3 h-3" />, color: 'indigo' });
+        }
+
+        // 2. Play Style & Strengths (From Bio/Detailed)
+        if (combinedText.includes('서브') || combinedText.includes('에이스') || combinedText.includes('big server')) {
+            tags.push({ text: 'Big Server', icon: <Zap className="w-3 h-3" />, color: 'blue' });
+        }
+        if (combinedText.includes('클레이') || combinedText.includes('clay') || combinedText.includes('흙신')) {
+            tags.push({ text: 'Clay Specialist', icon: <Activity className="w-3 h-3" />, color: 'orange' });
+        }
+        if (combinedText.includes('잔디') || combinedText.includes('grass')) {
+            tags.push({ text: 'Grass Court', icon: <Activity className="w-3 h-3" />, color: 'green' });
+        }
+        if (combinedText.includes('공격') || combinedText.includes('파워') || combinedText.includes('aggressive')) {
+            tags.push({ text: 'Aggressive', icon: <Target className="w-3 h-3" />, color: 'red' });
+        }
+        if (combinedText.includes('수비') || combinedText.includes('끈질긴') || combinedText.includes('counter')) {
+            tags.push({ text: 'Defender', icon: <Shield className="w-3 h-3" />, color: 'emerald' });
+        }
+        if (combinedText.includes('발리') || combinedText.includes('네트') || combinedText.includes('net play')) {
+            tags.push({ text: 'Net Player', icon: <Activity className="w-3 h-3" />, color: 'purple' });
+        }
+
+        // 3. Achievements & Status
+        if (combinedText.includes('랭킹 1위') || combinedText.includes('no.1') || combinedText.includes('number one')) {
+            tags.push({ text: 'World No.1', icon: <Crown className="w-3 h-3" />, color: 'amber' });
+        }
+        if (combinedText.includes('그랜드슬램 우승') || combinedText.includes('grand slam champion') || combinedText.includes('메이저 우승')) {
+            tags.push({ text: 'Grand Slam Champ', icon: <Trophy className="w-3 h-3" />, color: 'yellow' });
+        } else if (combinedText.includes('우승') || combinedText.includes('title')) {
+            tags.push({ text: 'Title Winner', icon: <Award className="w-3 h-3" />, color: 'sky' });
+        }
+        if (combinedText.includes('신성') || combinedText.includes('유망주') || combinedText.includes('rookie') || combinedText.includes('next gen')) {
+            tags.push({ text: 'Rising Star', icon: <Star className="w-3 h-3" />, color: 'pink' });
+        }
+        if (combinedText.includes('베테랑') || combinedText.includes('legend') || combinedText.includes('레전드')) {
+            tags.push({ text: 'Veteran', icon: <Brain className="w-3 h-3" />, color: 'slate' });
+        }
+
+        // Deduplicate by text just in case
+        const uniqueTags = Array.from(new Map(tags.map(item => [item.text, item])).values());
+
+        // Default if empty
+        if (uniqueTags.length === 0) {
+            uniqueTags.push({ text: 'Pro Player', icon: <Star className="w-3 h-3" />, color: 'gray' });
+        }
+
+        // Limit to 4 tags to avoid clutter
+        return uniqueTags.slice(0, 4);
     };
 
-    const smartTags = getSmartTags(player.longBio || '');
+    const smartTags = getSmartTags(player);
 
     // Generate generic bio if specific content is missing
     const generateBio = () => {
