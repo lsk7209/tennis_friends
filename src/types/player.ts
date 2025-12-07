@@ -15,6 +15,26 @@ export type PlayerData = {
   height?: string;
   rank?: number;
 
+  // Rich Content for Enriched Profiles
+  detailedProfile?: {
+    whyNotable?: string;
+    playStyle?: string;
+    growthStory?: string;
+    signatureMatch?: {
+      title: string;
+      date?: string;
+      description: string;
+    };
+    hexagonStats?: Array<{
+      name: string;
+      score: number;
+      description?: string;
+    }>;
+    fanAppeal?: string;
+    recentForm?: string;
+    oneLineSummary?: string;
+  };
+
   // Legacy Compatibility Fields
   nameKo?: string;
   birthYear?: number;

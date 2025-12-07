@@ -233,6 +233,7 @@ Top 10 및 주요 상위 랭커 구현 완료.
 
 ## 🛠️ Next Development Steps
 
-1. **WTA 선수 데이터 추가 완료 (Tier 3 잔여)**: 나머지 약 40명의 여성 선수 DB 추가
+1. **WTA 선수 데이터 추가 완료 (Tier 3 잔여)**: 나머지 약 40명의 여성 선수 DB 추가 예정
 2. **이미지 생성**: 신규 추가된 남/여 선수들의 프로필 일러스트 생성 (AI Quota Reset 대기)
-3. **Bio Enrichment**: 주요 선수들의 longBio 추가 작성 및 한국어 데이터 품질 검수
+3. **Bio Enrichment**: ✅ 현재 구현된 모든 선수(160+명)의 longBio 작성 완료
+
