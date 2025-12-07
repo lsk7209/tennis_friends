@@ -5,7 +5,45 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     'carlos-alcaraz': {
         name: '카를로스 알카라스', nameEn: 'Carlos Alcaraz', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/carlos-alcaraz.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '카를로스 알카라스는 스페인의 테니스 신동으로, 폭발적인 스피드와 강력한 포핸드로 코트를 지배합니다. 어린 나이에 그랜드슬램을 제패하며 차세대 테니스 황제로 불립니다.'
+        longBio: '카를로스 알카라스는 스페인의 테니스 신동으로, 폭발적인 스피드와 강력한 포핸드로 코트를 지배합니다. 어린 나이에 그랜드슬램을 제패하며 차세대 테니스 황제로 불립니다.',
+        detailedProfile: {
+            oneLineSummary: '나달의 투지와 페더러의 공격성을 겸비한 완성형 천재, 새로운 테니스 황제.',
+            whyNotable: `
+                <p><strong>"빅3 시대를 종식시킨 차세대 황제"</strong></p>
+                <p>카를로스 알카라스는 역사상 최연소(만 19세 4개월)로 세계 랭킹 1위에 등극하며 테니스 역사를 새로 썼습니다. 나달의 후계자로 불리지만, 페더러의 공격적인 넷 플레이와 조코비치의 유연한 수비력까지 갖춘 '완성형 하이브리드' 선수로 평가받습니다.</p>
+                <p>무엇보다 그는 코트 위에서 항상 미소를 잃지 않으며, 창의적이고 대담한 샷으로 관중을 매료시키는 최고의 스타성을 가지고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 올라운더 (Aggressive All-Rounder)"</strong></p>
+                <p>알카라스는 약점이 없는 것이 특징입니다. 베이스라인에서 강력한 파워로 상대를 압도하다가도, 기습적인 드롭샷이나 서브 앤 발리로 허를 찌릅니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>드롭샷:</strong> 투어 역사상 최고의 드롭샷 구사 능력 중 하나를 보유했습니다. 상대가 베이스라인 뒤로 물러나면 어김없이 네트 바로 앞에 공을 떨어뜨립니다.</li>
+                    <li><strong>포핸드:</strong> 탄환 같은 스피드와 엄청난 회전량을 동반한 포핸드는 그의 가장 확실한 득점 루트입니다.</li>
+                    <li><strong>스피드:</strong> '우사인 볼트'에 비견될 만큼 빠른 발을 가지고 있어, 도저히 불가능해 보이는 공도 끝까지 쫓아가 위너로 만들어냅니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '스피드 (Speed)', score: 10, description: '코트 끝에서 끝까지 순식간에 이동하는 놀라운 기동력.' },
+                { name: '포핸드 (Forehand)', score: 10, description: '어떤 위치에서도 위너를 만들어내는 파괴력.' },
+                { name: '창의성 (Creativity)', score: 10, description: '드롭샷, 로브 등 예측 불가능한 샷 셀렉션.' },
+                { name: '멘탈 (Mental)', score: 9.5, description: '중요한 포인트에서 더 과감해지는 강심장.' },
+                { name: '네트 플레이 (Net)', score: 9.5, description: '발리와 스매싱 결정력이 매우 높음.' },
+                { name: '서브 (Serve)', score: 9, description: '다양한 구질과 코스 공략이 뛰어남.' }
+            ],
+            growthStory: `
+                <p>스페인 무르시아 출신으로 4살 때 테니스 라켓을 잡았습니다. 후안 카를로스 페레로(전 세계 1위)의 지도를 받으며 재능을 꽃피웠습니다.</p>
+                <p>10대 시절부터 챌린저 투어를 폭격하며 '괴물 신인'으로 주목받았고, 2022 US 오픈 우승으로 자신의 시대를 활짝 열었습니다. 클레이, 잔디, 하드 등 모든 코트에서 우승을 차지하며 가장 완벽한 선수가 되었습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 윔블던 결승 vs 노박 조코비치',
+                date: '2023. 07. 16',
+                description: '테니스 역사에 길이 남을 세대교체의 순간. 잔디 코트의 제왕 조코비치의 윔블던 5연패를 저지한 명승부입니다. 5세트 접전 끝에 승리하며, 하드, 클레이뿐만 아니라 잔디에서도 최강임을 증명했습니다.'
+            },
+            recentForm: `
+                <p><strong>"황제의 행보"</strong></p>
+                <p>부상 이슈가 간간이 있지만, 출전하는 대회마다 우승 후보 1순위입니다. 2024년 롤랑가로스와 윔블던을 연속 제패하며 '채널 슬램'을 달성, 21세의 나이에 커리어 그랜드슬램에 한 발짝 더 다가섰습니다.</p>
+            `
+        }
     },
     'jannik-sinner': {
         name: '야닉 시너', nameEn: 'Jannik Sinner', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/jannik-sinner.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
@@ -176,15 +214,129 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     },
     'andrey-rublev': {
         name: '안드레이 루블레프', nameEn: 'Andrey Rublev', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/andrey-rublev.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. "Bweh"라는 기합 소리와 함께 매 포인트 전력을 다하는 파워풀한 공격 테니스를 구사합니다.'
+        longBio: '투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. "Bweh"라는 기합 소리와 함께 매 포인트 전력을 다하는 파워풀한 공격 테니스를 구사합니다.',
+        detailedProfile: {
+            oneLineSummary: '폭발적인 포핸드와 뜨거운 열정, 코트 위의 "하드 히터".',
+            whyNotable: `
+                <p><strong>"Bweh! 기합 소리만큼 강력한 파괴력"</strong></p>
+                <p>안드레이 루블레프는 투어 선수들이 가장 상대하기 싫어하는 선수 중 한 명입니다. 매 포인트마다 라켓이 부러질 듯 온몸을 실어 치는 포핸드는 엄청난 파괴력을 자랑합니다. 특유의 기합 소리("Bweh")와 함께 코트 위에서 모든 에너지를 쏟아붓는 열정적인 스타일로 많은 팬들의 사랑을 받고 있습니다.</p>
+                <p>코트 밖에서는 수줍음 많고 착한 성품을 지녔지만, 경기 중에는 그 누구보다도 승부욕에 불타오르는 반전 매력의 소유자입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 베이스라이너 (Aggressive Baseliner)"</strong></p>
+                <p>루블레프의 전략은 단순하지만 강력합니다. 강력한 서브와 그보다 더 강력한 포핸드로 상대를 베이스라인 뒤로 밀어낸 뒤, 위너를 꽂아 넣습니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>포핸드:</strong> ATP 투어에서 가장 빠른 스윙 스피드와 파괴력을 가진 포핸드 중 하나입니다. 인사이드-아웃 포핸드는 그의 전매특허입니다.</li>
+                    <li><strong>체력:</strong> 쉴 새 없이 몰아치는 스타일임에도 지치지 않는 엄청난 활동량을 보여줍니다.</li>
+                    <li><strong>멘탈:</strong> 경기가 풀리지 않을 때 자책하거나 라켓을 치는 등 감정을 표출하는 경우가 잦아, 멘탈 관리가 약점으로 지적되기도 합니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 10, description: '투어 최강의 파괴력을 지닌 포핸드.' },
+                { name: '파워 (Power)', score: 9.5, description: '체구에 비해 믿을 수 없는 볼 스피 생성.' },
+                { name: '스피드 (Speed)', score: 9, description: '빠른 발로 포핸드 칠 공간을 만들어냄.' },
+                { name: '서브 (Serve)', score: 8.5, description: '강력하지만 코스 예측이 비교적 쉬움.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정적이지만 포핸드만큼 위협적이지 않음.' },
+                { name: '멘탈 (Mental)', score: 7, description: '감정 기복이 심해 경기력에 영향을 줌.' }
+            ],
+            growthStory: `
+                <p>러시아 모스크바에서 복싱 선수 출신 아버지와 테니스 코치 어머니 사이에서 태어났습니다. 주니어 시절 세계 랭킹 1위를 기록하며 일찍부터 재능을 인정받았습니다.</p>
+                <p>프로 전향 후 꾸준히 Top 10을 유지하며 상위권에 자리 잡았으나, 메이저 대회 8강의 벽을 넘지 못해 '8강 징크스'에 시달리기도 했습니다. 하지만 2023년 몬테카를로 마스터스 우승으로 큰 경기에서도 통할 수 있음을 증명했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 몬테카를로 마스터스 결승 vs 홀게르 루네',
+                date: '2023. 04. 16',
+                description: '생애 첫 마스터스 1000 시리즈 우승을 차지한 경기. 3세트 1-4로 뒤지고 있던 절망적인 상황에서 대역전승을 거두며 감격의 눈물을 흘렸습니다.'
+            },
+            recentForm: `
+                <p><strong>"꾸준함의 대명사"</strong></p>
+                <p>기복 없이 매 시즌 ATP 파이널스에 진출할 만큼 꾸준한 성적을 내고 있습니다. 2024년 마드리드 오픈 우승 등 클레이 코트에서도 강한 면모를 보이며 커리어 하이 시즌을 노리고 있습니다.</p>
+            `
+        }
     },
     'stefanos-tsitsipas': {
         name: '스테파노스 치치파스', nameEn: 'Stefanos Tsitsipas', country: 'Greece', countryFlag: '🇬🇷', image: '/images/players/stefanos-tsitsipas.png', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
-        longBio: '그리스의 테니스 신. 우아한 원핸드 백핸드와 공격적인 포핸드, 그리고 네트 플레이까지 갖춘 올라운드 플레이어입니다.'
+        longBio: '그리스의 테니스 신. 우아한 원핸드 백핸드와 공격적인 포핸드, 그리고 네트 플레이까지 갖춘 올라운드 플레이어입니다.',
+        detailedProfile: {
+            oneLineSummary: '그리스 조각상 같은 외모와 우아한 원핸드 백핸드, 스타성을 겸비한 "그리스의 신".',
+            whyNotable: `
+                <p><strong>"현대 테니스에 남은 낭만, 원핸드 백핸더"</strong></p>
+                <p>스테파노스 치치파스는 멸종 위기에 처한 '원핸드 백핸드'의 명맥을 잇는 대표주자입니다. 페더러를 연상시키는 우아한 폼과 공격적인 네트 플레이로 '가장 아름다운 테니스를 하는 선수' 중 한 명으로 꼽힙니다.</p>
+                <p>큰 키와 수려한 외모, 그리고 코트 밖에서의 철학적인(?) 인터뷰와 활발한 유튜브 활동으로 엄청난 팬덤을 보유하고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 올코트 플레이어 (Aggressive All-Court Player)"</strong></p>
+                <p>강력한 포핸드를 바탕으로 네트 점령을 즐기는 공격적인 스타일입니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>포핸드:</strong> 치치파스의 주득점원입니다. 높은 타점에서 감아치는 묵직한 포핸드는 클레이 코트에서 더욱 위력을 발휘합니다.</li>
+                    <li><strong>네트 플레이:</strong> 복식을 병행하며 다져진 발리 감각이 뛰어납니다. 기회가 오면 주저 없이 네트로 대시하여 포인트를 끝냅니다.</li>
+                    <li><strong>백핸드:</strong> 화려하고 우아하지만, 그의 유일한 약점이기도 합니다. 높은 공이나 빠른 리턴에 밀리는 경향이 있습니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 9.5, description: '가장 강력하고 믿을 수 있는 무기.' },
+                { name: '서브 (Serve)', score: 9, description: '190cm가 넘는 키에서 나오는 위력적인 서브.' },
+                { name: '네트 플레이 (Net)', score: 9, description: '과감한 대시와 부드러운 터치.' },
+                { name: '스피드 (Speed)', score: 8.5, description: '장신임에도 불구하고 코트 커버가 좋음.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '아름답지만 기복이 있는 양날의 검.' },
+                { name: '멘탈 (Mental)', score: 8, description: '중요한 순간 흔들리는 경향이 있음.' }
+            ],
+            growthStory: `
+                <p>테니스 선수 출신 부모님(어머니는 소련 국가대표 출신)의 영향으로 어릴 때부터 라켓을 잡았습니다. 주니어 시절 세계 1위에 오르며 그리스 테니스의 희망으로 떠올랐습니다.</p>
+                <p>2019년 호주 오픈에서 우상이었던 로저 페더러를 꺾으며 세계적인 스타로 발돋움했고, 그해 ATP 파이널스에서 최연소 우승을 차지하며 차세대 선두주자임을 입증했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2019 ATP 파이널스 결승 vs 도미니크 팀',
+                date: '2019. 11. 17',
+                description: '왕중왕전인 ATP 파이널스 데뷔 무대에서 우승까지 차지한 역사적인 경기. 3세트 타이브레이크까지 가는 접전 끝에 승리하며, 21세의 나이로 최연소 챔피언에 등극했습니다.'
+            },
+            recentForm: `
+                <p><strong>"클레이의 강자"</strong></p>
+                <p>최근에는 하드 코트보다 클레이 코트에서 더 강한 모습을 보이고 있습니다. 2024년 몬테카를로 마스터스에서 3번째 우승을 차지하며 부활의 신호탄을 쏘아 올렸습니다.</p>
+            `
+        }
     },
     'casper-ruud': {
         name: '카스페르 루드', nameEn: 'Casper Ruud', country: 'Norway', countryFlag: '🇳🇴', image: '/images/players/casper-ruud.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '노르웨이 테니스의 새 역사를 쓰고 있는 선수. 나달 아카데미 출신답게 클레이 코트에서 특히 강하며, 엄청난 회전량의 포핸드 탑스핀이 주무기입니다.'
+        longBio: '노르웨이 테니스의 새 역사를 쓰고 있는 선수. 나달 아카데미 출신답게 클레이 코트에서 특히 강하며, 엄청난 회전량의 포핸드 탑스핀이 주무기입니다.',
+        detailedProfile: {
+            oneLineSummary: '가장 예의 바른 "북유럽의 신사", 성실함으로 쌓아 올린 클레이의 탑.',
+            whyNotable: `
+                <p><strong>"나달의 수제자, 클레이의 프린스"</strong></p>
+                <p>카스페르 루드는 노르웨이 역사상 최초로 ATP 투어 우승, 그랜드슬램 결승 진출, 세계 랭킹 2위 등 모든 기록을 갈아치우고 있는 국민 영웅입니다. 라파엘 나달 아카데미 출신으로, 나달을 연상시키는 엄청난 회전량의 헤비 탑스핀 포핸드를 구사합니다.</p>
+                <p>투어에서 가장 매너 좋은 선수에게 수여하는 '스테판 에드베리 스포츠맨십 상'을 수상할 정도로 훌륭한 인품을 지녀, 안티가 없는 선수로도 유명합니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"클레이 코트 스페셜리스트 + 베이스라이너"</strong></p>
+                <p>루드의 가장 큰 무기는 단연 **포핸드**입니다. 나달 다음으로 많은 분당 회전수(RPM)를 기록할 정도로 공이 묵직하게 튀어 올라 상대를 괴롭힙니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>포핸드:</strong> 그의 승리 공식입니다. 높은 탄도로 깊숙이 떨어지는 포핸드로 상대를 뒤로 밀어낸 뒤, 짧아진 공을 강타합니다.</li>
+                    <li><strong>체력:</strong> 클레이 코트에서 긴 랠리를 버텨내는 강인한 체력과 인내심을 갖췄습니다.</li>
+                    <li><strong>서브:</strong> 빠르지는 않지만 킥 서브를 잘 활용해 상대를 코트 밖으로 밀어내는 지능적인 서브를 넣습니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 9.5, description: '나달의 향기가 느껴지는 헤비 탑스핀.' },
+                { name: '체력 (Stamina)', score: 9.5, description: '5세트도 문제없는 강철 체력.' },
+                { name: '멘탈 (Mental)', score: 9, description: '흥분하지 않고 차분하게 경기를 풀어감.' },
+                { name: '스피드 (Speed)', score: 8.5, description: '클레이에서의 풋워크가 매우 좋음.' },
+                { name: '서브 (Serve)', score: 8, description: '파워보다는 회전과 코스 중심.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정적이지만 결정력은 포핸드에 비해 아쉬움.' }
+            ],
+            growthStory: `
+                <p>전직 프로 테니스 선수였던 아버지 크리스티안 루드의 지도를 받으며 자랐습니다. 더 큰 성장을 위해 스페인 마요르카의 라파엘 나달 아카데미로 유학을 떠났고, 그곳에서 실력이 급성장했습니다.</p>
+                <p>초기에는 클레이 코트에서만 강하다는 편견이 있었으나, 2022 US 오픈(하드 코트) 준우승을 차지하며 올라운드 플레이어로서의 가능성을 입증했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2022 프랑스 오픈 4강 vs 마린 칠리치',
+                date: '2022. 06. 03',
+                description: '노르웨이 선수 최초로 그랜드슬램 결승 진출을 확정 지은 경기. 베테랑 칠리치의 강력한 공격을 끈질긴 수비와 포핸드 역습으로 무력화시키며 3-1 역전승을 거뒀습니다.'
+            },
+            recentForm: `
+                <p><strong>"큰 경기에 강한 남자"</strong></p>
+                <p>2022, 2023 프랑스 오픈 2년 연속 준우승을 차지하며 '클레이 2인자'의 입지를 굳혔습니다. 2024년 바르셀로나 오픈에서 생애 가장 큰 타이틀(ATP 500)을 획득하며 커리어 하이를 경신했습니다.</p>
+            `
+        }
     },
     'alex-de-minaur': {
         name: '알렉스 드 미노', nameEn: 'Alex de Minaur', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/alex-de-minaur.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
@@ -199,8 +351,46 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         longBio: '폴란드의 서브 몬스터. 큰 키에서 내리꽂는 에이스급 서브와 부드러운 발리 터치, 그리고 겸손한 성품으로 사랑받는 선수입니다.'
     },
     'holger-rune': {
-        name: '홀거 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/holger-rune.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '덴마크의 악동이자 슈퍼 루키. 폭발적인 에너지와 다재다능한 기술, 그리고 거침없는 승부욕으로 단숨에 톱 랭커로 도약했습니다.'
+        name: '홀게르 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/holger-rune.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '덴마크의 악동이자 슈퍼 루키. 폭발적인 에너지와 다재다능한 기술, 그리고 거침없는 승부욕으로 단숨에 톱 랭커로 도약했습니다.',
+        detailedProfile: {
+            oneLineSummary: '코트 위의 악동이자 천재, 승부욕으로 무장한 덴마크의 "다이너마이트".',
+            whyNotable: `
+                <p><strong>"빅3를 꺾은 무서운 10대"</strong></p>
+                <p>홀게르 루네는 2022 파리 마스터스 결승에서 '테니스 황제' 노박 조코비치를 꺾고 19세의 나이로 우승을 차지하며 전 세계를 놀라게 했습니다. 이 대회에서 그는 5명의 탑 랭커를 연파하는 괴력을 보여주었습니다.</p>
+                <p>경기 중 감정 표현이 솔직하고 때로는 거친 행동으로 '악동' 이미지가 있지만, 그만큼 테니스에 대한 열정과 승부욕이 누구보다 강한 선수입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 올라운더 (Aggressive All-Rounder)"</strong></p>
+                <p>루네는 빠른 발과 강력한 샷을 바탕으로 상대를 끊임없이 압박합니다. 베이스라인 뒤에 머물기보다는 기회가 생기면 과감하게 네트로 대시하는 플레이를 즐깁니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>백핸드:</strong> 그의 가장 큰 무기입니다. 다운더라인 백핸드는 투어 최고 수준의 정확도와 파워를 자랑합니다.</li>
+                    <li><strong>드롭샷:</strong> 중요한 순간에 허를 찌르는 드롭샷을 매우 잘 구사합니다.</li>
+                    <li><strong>에너지:</strong> 코트 위에서 넘치는 에너지를 발산하며, 관중의 호응을 유도하고 분위기를 자신의 것으로 가져오는 데 능합니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '백핸드 (Backhand)', score: 9.5, description: '투어에서 가장 위협적인 백핸드 중 하나.' },
+                { name: '스피드 (Speed)', score: 9, description: '폭발적인 순간 스피드.' },
+                { name: '멘탈 (Mental)', score: 8.5, description: '지기 싫어하는 엄청난 승부욕.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '강력하지만 가끔 기복이 있음.' },
+                { name: '창의성 (Creativity)', score: 9, description: '드롭샷, 넷 플레이 등 다양한 옵션 보유.' },
+                { name: '서브 (Serve)', score: 8, description: '점점 발전하고 있는 부분.' }
+            ],
+            growthStory: `
+                <p>덴마크 코펜하겐 출신으로, 누나를 따라 6살 때 테니스를 시작했습니다. 어릴 때부터 '세계 1위'가 되겠다는 목표가 확고했습니다.</p>
+                <p>주니어 세계 1위를 거쳐 프로 데뷔 후에도 빠르게 랭킹을 올렸습니다. 2022년 프랑스 오픈 8강, 파리 마스터스 우승 등으로 단숨에 Top 10에 진입하며 알카라스와 함께 차세대를 이끌 주역으로 인정받았습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2022 파리 마스터스 결승 vs 노박 조코비치',
+                date: '2022. 11. 06',
+                description: '루네의 이름을 전 세계에 알린 인생 경기. 디펜딩 챔피언 조코비치를 상대로 3세트 접전 끝에 2-1 역전승을 거뒀습니다. 마지막 게임에서 무려 6번의 브레이크 포인트를 막아내며 우승을 확정 짓는 장면은 압권이었습니다.'
+            },
+            recentForm: `
+                <p><strong>"성장통과 도약"</strong></p>
+                <p>최근 코치진 교체 등으로 다소 불안정한 모습을 보였으나, 여전히 최고의 재능을 가진 선수임에는 의심의 여지가 없습니다. 멘탈적인 성숙이 더해진다면 언제든 메이저 우승을 노릴 수 있는 다크호스입니다.</p>
+            `
+        }
     },
     'grigor-dimitrov': {
         name: '그리고르 디미트로프', nameEn: 'Grigor Dimitrov', country: 'Bulgaria', countryFlag: '🇧🇬', image: '/images/players/grigor-dimitrov.png', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
@@ -699,16 +889,130 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     'jessica-pegula': {
         name: '제시카 페굴라', nameEn: 'Jessica Pegula', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/jessica-pegula.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '꾸준함의 대명사. 화려하진 않지만 탄탄한 기본기와 영리한 경기 운영으로 투어 상위권을 꾸준히 유지하는 탑 플레이어입니다. 한국계 어머니를 둔 것으로도 유명합니다.'
+        longBio: '꾸준함의 대명사. 화려하진 않지만 탄탄한 기본기와 영리한 경기 운영으로 투어 상위권을 꾸준히 유지하는 탑 플레이어입니다. 한국계 어머니를 둔 것으로도 유명합니다.',
+        detailedProfile: {
+            oneLineSummary: '화려하지 않지만 가장 단단한, 투어에서 가장 신뢰할 수 있는 "꾸준함의 아이콘".',
+            whyNotable: `
+                <p><strong>"편견을 실력으로 깬 노력파"</strong></p>
+                <p>제시카 페굴라는 NFL 버팔로 빌스 구단주의 딸로, 엄청난 재벌가 상속녀라는 배경 때문에 데뷔 초에는 '취미로 테니스 친다'는 편견에 시달렸습니다. 하지만 그녀는 묵묵히 밑바닥 챌린저 투어부터 시작해 세계 랭킹 3위까지 오르며 오직 실력으로 자신을 증명했습니다.</p>
+                <p>어머니가 한국계 입양아인 킴 페굴라(Kim Pegula)라 한국 팬들에게는 '하프 코리안'으로도 친숙하며, 실제로 김치와 한국 문화를 사랑하는 모습을 자주 보여줍니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"지능형 카운터 펀처 + 플랫 히터"</strong></p>
+                <p>페굴라의 테니스는 '군더더기 없음' 그 자체입니다. 낮고 빠르게 깔리는 플랫성 스트로크로 상대의 시간을 빼앗고, 상대의 힘을 이용하는 카운터 능력이 탁월합니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>안정성:</strong> 그녀의 가장 큰 무기입니다. 에러가 거의 없는 기계적인 스트로크로 상대를 질리게 만듭니다.</li>
+                    <li><strong>리턴:</strong> 베이스라인에 바짝 붙어서 라이징 볼을 처리하는 리턴 능력은 투어 최상급입니다.</li>
+                    <li><strong>복식:</strong> 고프와 함께 복식 세계 랭킹 1위를 찍을 만큼 네트 플레이와 경기 운영 능력이 뛰어납니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '안정성 (Consistency)', score: 10, description: '에러를 거의 하지 않는 정교함.' },
+                { name: '리턴 (Return)', score: 9.5, description: '상대의 서브를 무력화시키는 빠른 박자.' },
+                { name: '전술 (Tactics)', score: 9.5, description: '상대의 약점을 파고드는 영리함.' },
+                { name: '멘탈 (Mental)', score: 9, description: '재벌가라는 배경을 잊게 만드는 헝그리 정신.' },
+                { name: '백핸드 (Backhand)', score: 9, description: '낮게 깔리는 플랫 백핸드가 일품.' },
+                { name: '서브 (Serve)', score: 7.5, description: '파워보다는 코스 위주, 다소 평범함.' }
+            ],
+            growthStory: `
+                <p>부유한 환경이었지만 테니스 선수로서의 길은 순탄치 않았습니다. 잦은 고관절과 무릎 부상으로 20대 중반까지 빛을 보지 못했습니다.</p>
+                <p>하지만 포기하지 않고 재활에 성공한 뒤, 2021년 호주 오픈 8강 진출을 기점으로 잠재력이 폭발했습니다. 27세라는 늦은 나이에 전성기를 맞이한 '대기만성'의 표본입니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 몬트리올(캐나다 오픈) 결승 vs 류드밀라 삼소노바',
+                date: '2023. 08. 14',
+                description: '이전까지 4강에서 자주 미끄러졌던 징크스를 깨고 WTA 1000 시리즈 우승을 차진한 경기. 6-1, 6-0 이라는 압도적인 스코어로 상대를 제압하며 자신의 커리어 하이를 찍었습니다.'
+            },
+            recentForm: `
+                <p><strong>"Top 5의 수문장"</strong></p>
+                <p>슬램 우승은 아직 없지만, 마스터스급 대회에서는 꾸준히 결승에 오르며 랭킹 포인트를 쌓고 있습니다. 가장 기복 없는 경기력을 보여주는 선수 중 한 명입니다.</p>
+            `
+        }
     },
     'ons-jabeur': {
         name: '온스 자베르', nameEn: 'Ons Jabeur', country: 'Tunisia', countryFlag: '🇹🇳', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '코트 위의 마법사. 예측 불가능한 드롭샷과 창의적인 플레이 스타일로 팬들에게 즐거움을 선사하는 튀니지의 영웅입니다.'
+        longBio: '코트 위의 마법사. 예측 불가능한 드롭샷과 창의적인 플레이 스타일로 팬들에게 즐거움을 선사하는 튀니지의 영웅입니다.',
+        detailedProfile: {
+            oneLineSummary: '아프리카의 자존심이자 코트 위의 마법사, 예측 불가능한 "행복 테니스"의 전도사.',
+            whyNotable: `
+                <p><strong>"아랍 여성 스포츠의 역사를 새로 쓰는 선구자"</strong></p>
+                <p>온스 자베르는 아랍 및 북아프리카 선수 최초로 그랜드슬램 결승(윔블던, US 오픈)에 진출한 살아있는 역사입니다. 그녀의 성공은 단순한 개인의 성취를 넘어, 아랍권 여성들에게 "우리도 할 수 있다"는 희망의 메시지가 되었습니다.</p>
+                <p>팬들에게 항상 웃음을 잃지 않는 유쾌한 성격으로 '행복부 장관(Minister of Happiness)'이라는 별명을 가지고 있으며, 투어에서 가장 사랑받는 선수 중 한 명입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"창의적 올라운더 (Creative All-Rounder)"</strong></p>
+                <p>자베르의 테니스는 '보는 맛'이 있습니다. 기계적인 랠리 대신, 끊임없이 구질을 변화시키고 허를 찌르는 드롭샷으로 상대를 흔들어 놓습니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>드롭샷:</strong> 타의 추종을 불허하는 드롭샷 장인입니다. 베이스라인 깊숙이 공을 보내다 예고 없이 툭 떨어뜨리는 샷은 알고도 당할 수밖에 없습니다.</li>
+                    <li><strong>슬라이스:</strong> 포핸드, 백핸드 가리지 않고 자유자재로 슬라이스를 구사해 상대의 리듬을 완전히 뺏습니다.</li>
+                    <li><strong>변칙:</strong> 정석적인 플레이보다는 본능적이고 감각적인 샷을 즐겨, '코트 위의 마법사'로 불립니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '창의성 (Creativity)', score: 10, description: '상상할 수 없는 샷을 현실로 만드는 능력.' },
+                { name: '드롭샷 (Drop Shot)', score: 10, description: '투어 최고의 터치 감각.' },
+                { name: '포핸드 (Forehand)', score: 9, description: '파워보다는 각도와 코스가 일품.' },
+                { name: '서브 (Serve)', score: 8.5, description: '키에 비해 꽤 강력하고 다양한 서브.' },
+                { name: '멘탈 (Mental)', score: 8, description: '큰 경기 결승에서 부담감을 느끼는 편.' },
+                { name: '체력 (Stamina)', score: 8, description: '긴 랠리보다는 빠른 승부를 선호.' }
+            ],
+            growthStory: `
+                <p>튀니지의 작은 마을에서 3세 때 테니스를 시작했습니다. 열악한 인프라 속에서도 꿈을 키운 그녀는, 주니어 시절 프랑스 오픈 우승을 차지하며 재능을 알렸습니다.</p>
+                <p>프로 초반에는 스폰서가 없어 힘든 시기를 겪었지만, 포기하지 않고 랭킹을 끌어올려 탑 텐에 진입했습니다. 이제는 튀니지의 국민 영웅이자 전 세계 테니스 팬들의 사랑을 받는 스타가 되었습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2022 윔블던 4강 vs 타티아나 마리아',
+                date: '2022. 07. 07',
+                description: '아랍/아프리카 선수 최초의 그랜드슬램 결승 진출을 확정 지은 역사적인 경기. 절친한 친구인 마리아와의 대결에서 승리한 후, 네트 앞에서 긴 포옹을 나누는 장면은 윔블던 역사상 가장 아름다운 스포츠맨십으로 기억됩니다.'
+            },
+            recentForm: `
+                <p><strong>"마지막 퍼즐, 슬램 우승"</strong></p>
+                <p>메이저 대회 준우승만 3번(윔블던 2회, US 오픈 1회)을 기록하며 우승 문턱에서 아쉬움을 삼켰습니다. 무릎 부상으로 잠시 주춤했지만, 여전히 클레이와 잔디 코트에서 가장 위협적인 선수입니다.</p>
+            `
+        }
     },
     'qinwen-zheng': {
         name: '정 친원', nameEn: 'Qinwen Zheng', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '중국의 새로운 에이스 "Queen Wen". 2024 호주 오픈 준우승자이자 2024 파리 올림픽 금메달리스트로, 리나의 뒤를 이어 아시아 테니스를 이끌어갈 강력한 서브와 포핸드의 소유자입니다.'
+        longBio: '중국의 새로운 에이스 "Queen Wen". 2024 호주 오픈 준우승자이자 2024 파리 올림픽 금메달리스트로, 리나의 뒤를 이어 아시아 테니스를 이끌어갈 강력한 서브와 포핸드의 소유자입니다.',
+        detailedProfile: {
+            oneLineSummary: '아시아 최초 올림픽 단식 금메달리스트, 대륙의 기상을 품은 "Queen Wen".',
+            whyNotable: `
+                <p><strong>"아시아 테니스의 새 역사를 쓴 금메달리스트"</strong></p>
+                <p>정 친원은 2024 파리 올림픽에서 아시아 선수 최초로 테니스 단식 금메달을 획득하며 전설 리나(Li Na)를 넘어섰습니다. 'Queen Wen'이라는 별명처럼 코트 위에서 당당하고 카리스마 넘치는 모습을 보여주며, 중국을 넘어 전 세계적인 스타로 발돋움했습니다.</p>
+                <p>2024 호주 오픈 준우승까지 차지하며 메이저 대회 경쟁력도 입증했습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"파워풀한 공격형 베이스라이너"</strong></p>
+                <p>강력한 신체 조건에서 나오는 파워가 압도적입니다. 서브와 포핸드 모두 남자 선수 못지않은 스피드와 회전을 보여줍니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>서브:</strong> WTA 투어에서 에이스 1, 2위를 다툴 만큼 강력합니다. 첫 서브가 터지는 날에는 게임을 쉽게 풀어갑니다.</li>
+                    <li><strong>포핸드:</strong> 헤비 탑스핀이 걸린 포핸드는 바운드 후 높게 튀어 올라 상대를 괴롭힙니다.</li>
+                    <li><strong>멘탈:</strong> 올림픽 4강에서 세계 1위 시비옹테크를 꺾었을 때 보여준 집중력과 투지는 그녀가 큰 경기에 강한 '강심장'임을 증명했습니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 9.5, description: '투어 최정상급 에이스 생산 능력.' },
+                { name: '포핸드 (Forehand)', score: 9.5, description: '묵직하고 파괴력 있는 탑스핀 포핸드.' },
+                { name: '멘탈 (Mental)', score: 9.5, description: '중요한 순간에 흔들리지 않는 대담함.' },
+                { name: '체력 (Stamina)', score: 9, description: '3세트 접전에도 지치지 않는 체력.' },
+                { name: '스피드 (Speed)', score: 8.5, description: '큰 키에 비해 준수한 기동력.' },
+                { name: '백핸드 (Backhand)', score: 8.5, description: '안정적이며 포핸드를 잘 받쳐줌.' }
+            ],
+            growthStory: `
+                <p>중국 후베이성 출신으로 7세 때 테니스를 시작했습니다. 리나의 경기를 보고 테니스 선수의 꿈을 키웠으며, 리나의 전 코치였던 카를로스 로드리게스의 지도를 받기도 했습니다.</p>
+                <p>스페인 바르셀로나로 유학을 떠나 기량을 갈고닦았으며, 2022년 WTA 신인상을 수상하며 혜성처럼 등장했습니다. 이후 매년 급성장하여 이제는 그랜드슬램 우승 후보 0순위로 꼽힙니다.</p>
+            `,
+            signatureMatch: {
+                title: '2024 파리 올림픽 결승 vs 도나 베키치',
+                date: '2024. 08. 03',
+                description: '아시아 테니스 역사상 최고의 순간. 결승전 중압감을 이겨내고 2-0 완승을 거두며 시상대 가장 높은 곳에 섰습니다. 중국 전역을 열광의 도가니로 빠뜨린 역사적인 경기입니다.'
+            },
+            recentForm: `
+                <p><strong>"세계 최정상급 레벨"</strong></p>
+                <p>올림픽 금메달 이후 자신감이 절정에 달했습니다. 서브와 스트로크의 완성도가 더욱 높아졌으며, 이제는 어떤 상대를 만나도 주눅 들지 않고 자신의 플레이를 펼칩니다.</p>
+            `
+        }
     },
     'marketa-vondrousova': {
         name: '마르케타 본드로우소바', nameEn: 'Marketa Vondrousova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',

@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Info, Trophy, Activity, ArrowLeft, ExternalLink, Star, Target, Zap, Crown, MapPin, Hand, CheckCircle, Shield, Award, Brain, List } from 'lucide-react';
+import { Info, Trophy, Activity, ArrowLeft, ExternalLink, Star, Target, Zap, Crown, MapPin, Hand, CheckCircle, Shield, Award, Brain, List, Heart } from 'lucide-react';
 import Link from 'next/link';
 import PersonSchema from '@/components/seo/PersonSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
@@ -293,6 +293,17 @@ export default async function PlayerProfilePage({ params }: Props) {
                                                         {player.detailedProfile.signatureMatch.description}
                                                     </p>
                                                 </div>
+                                            </>
+                                        )}
+
+                                        {player.detailedProfile.fanAppeal && (
+                                            <>
+                                                <hr className="my-8 border-gray-200 dark:border-gray-800" />
+                                                <h2 id="what-attracts-fans" className="flex items-center gap-2 mt-12 scroll-mt-24">
+                                                    <Heart className="w-6 h-6 text-pink-500" />
+                                                    팬들은 이 선수의 어떤 점에 끌릴까?
+                                                </h2>
+                                                <div dangerouslySetInnerHTML={{ __html: player.detailedProfile.fanAppeal }} />
                                             </>
                                         )}
 
