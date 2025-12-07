@@ -98,7 +98,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     'max-purcell': { name: '맥스 퍼셀', nameEn: 'Max Purcell', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
     'dominik-koepfer': { name: '도미닉 쾨퍼', nameEn: 'Dominik Koepfer', country: 'Germany', countryFlag: '🇩🇪', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed' },
     'aleksandar-vukic': { name: '알렉산더 부키치', nameEn: 'Aleksandar Vukic', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
-    'yoshihito-nishioka': { name: '니시오카 요시히토', nameEn: 'Yoshihito Nishioka', country: 'Japan', countryFlag: '🇯🇵', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed' },
+    'yoshihito-nishioka': { name: '요시히토 니시오카', nameEn: 'Yoshihito Nishioka', country: 'Japan', countryFlag: '🇯🇵', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed' },
     'alexander-shevchenko': { name: '알렉산더 셰브첸코', nameEn: 'Alexander Shevchenko', country: 'Kazakhstan', countryFlag: '🇰🇿', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
     'rinky-hijikata': { name: '린키 히지카타', nameEn: 'Rinky Hijikata', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
     'botic-van-de-zandschulp': { name: '보틱 반 더 잔츠슐프', nameEn: 'Botic van de Zandschulp', country: 'Netherlands', countryFlag: '🇳🇱', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
@@ -166,7 +166,165 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     'leylah-fernandez': { name: '레일라 페르난데스', nameEn: 'Leylah Fernandez', country: 'Canada', countryFlag: '🇨🇦', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed' },
     'mirra-andreeva': { name: '미라 안드레예바', nameEn: 'Mirra Andreeva', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed' },
     'linda-noskova': { name: '린다 노스코바', nameEn: 'Linda Noskova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed' },
-    'marta-kostyuk': { name: '마르타 코스튜크', nameEn: 'Marta Kostyuk', country: 'Ukraine', countryFlag: '🇺🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed' }
+    'marta-kostyuk': { name: '마르타 코스튜크', nameEn: 'Marta Kostyuk', country: 'Ukraine', countryFlag: '🇺🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed' },
+
+    // --- Added Male Players (Roadmap Completion) ---
+    'shang-juncheng': { name: '상 쥔청', nameEn: 'Shang Juncheng', country: 'China', countryFlag: '🇨🇳', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed' },
+    'duje-ajdukovic': { name: '두예 아이두코비치', nameEn: 'Duje Ajdukovic', country: 'Croatia', countryFlag: '🇭🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'dominic-thiem': {
+        name: '도미니크 팀', nameEn: 'Dominic Thiem', country: 'Austria', countryFlag: '🇦🇹', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
+        longBio: '클레이 코트의 왕자이자 US 오픈 챔피언. 강력한 원핸드 백핸드와 엄청난 회전량의 탑스핀 스트로크로 빅3를 위협했던 선수입니다.'
+    },
+    'fabio-fognini': { name: '파비오 포니니', nameEn: 'Fabio Fognini', country: 'Italy', countryFlag: '🇮🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'reilly-opelka': { name: '라일리 오펠카', nameEn: 'Reilly Opelka', country: 'United States', countryFlag: '🇺🇸', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'marin-cilic': {
+        name: '마린 칠리치', nameEn: 'Marin Cilic', country: 'Croatia', countryFlag: '🇭🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '2014 US 오픈 챔피언. 큰 키에서 나오는 강력한 서브와 플랫한 스트로크가 강점인 베테랑입니다.'
+    },
+    'milos-raonic': { name: '밀로스 라오니치', nameEn: 'Milos Raonic', country: 'Canada', countryFlag: '🇨🇦', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'nick-kyrgios': {
+        name: '닉 키리오스', nameEn: 'Nick Kyrgios', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '코트 위의 악동이자 천재. 예측 불가능한 플레이와 강력한 서브, 그리고 쇼맨십으로 관중을 사로잡는 스타 플레이어입니다.'
+    },
+    'richard-gasquet': {
+        name: '리샤르 가스케', nameEn: 'Richard Gasquet', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
+        longBio: '예술적인 원핸드 백핸드의 소유자. 테니스 역사상 가장 아름다운 백핸드 폼을 가진 선수 중 하나로 꼽힙니다.'
+    },
+    'diego-schwartzman': { name: '디에고 슈와르츠만', nameEn: 'Diego Schwartzman', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'david-goffin': { name: '다비드 고핀', nameEn: 'David Goffin', country: 'Belgium', countryFlag: '🇧🇪', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'thanasi-kokkinakis': { name: '타나시 코키나키스', nameEn: 'Thanasi Kokkinakis', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'hugo-gaston': { name: '위고 가스통', nameEn: 'Hugo Gaston', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed' },
+    'luca-nardi': { name: '루카 나르디', nameEn: 'Luca Nardi', country: 'Italy', countryFlag: '🇮🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'dino-prizmic': { name: '디노 프리즈미치', nameEn: 'Dino Prizmic', country: 'Croatia', countryFlag: '🇭🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+    'coleman-wong': { name: '콜먼 웡', nameEn: 'Coleman Wong', country: 'Hong Kong', countryFlag: '🇭🇰', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed' },
+
+    // --- Added Female Players (Batch 2 - Enriched) ---
+    'dayana-yastremska': {
+        name: '다야나 야스트렘스카', nameEn: 'Dayana Yastremska', country: 'Ukraine', countryFlag: '🇺🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '폭발적인 공격력을 자랑하는 우크라이나의 파워 히터. 2024 호주 오픈에서 예선 통과자 신분으로 4강까지 진출하는 돌풍을 일으키며 세계를 놀라게 했습니다.'
+    },
+    'anna-kalinskaya': {
+        name: '안나 칼린스카야', nameEn: 'Anna Kalinskaya', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '군더더기 없는 깔끔한 스트로크가 특징인 선수. 최근 두바이 챔피언십 결승 진출 등 투어 무대에서 기량이 만개하며 다크호스로 떠올랐습니다.'
+    },
+    'jasmine-paolini': {
+        name: '자스민 파올리니', nameEn: 'Jasmine Paolini', country: 'Italy', countryFlag: '🇮🇹', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '작은 거인. 163cm의 단신이지만 빠른 발과 지칠 줄 모르는 체력으로 2024년 롤랑가로스와 윔블던 결승에 진출하며 세계 톱 랭커로 도약했습니다.'
+    },
+    'sorana-cirstea': {
+        name: '소라나 크르스테아', nameEn: 'Sorana Cirstea', country: 'Romania', countryFlag: '🇷🇴', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '루마니아의 베테랑. 공격적인 베이스라인 플레이를 구사하며, 투어 경력 내내 꾸준히 상위권을 위협하는 저력을 보여줍니다.'
+    },
+    'anastasia-potapova': {
+        name: '아나스타샤 포타포바', nameEn: 'Anastasia Potapova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '주니어 세계 1위 출신의 재능. 강한 승부욕과 파이팅 넘치는 플레이로 코트 위에서 존재감을 발휘하는 영건입니다.'
+    },
+    'ekaterina-alexandrova': {
+        name: '에카테리나 알렉산드로바', nameEn: 'Ekaterina Alexandrova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '낮고 빠른 플랫성 타구가 일품인 선수. 특히 실내 코트에서 강한 면모를 보이며, 리듬을 탔을 때는 톱 랭커들도 막기 힘든 공격력을 뽐냅니다.'
+    },
+    'liudmila-samsonova': {
+        name: '류드밀라 삼소노바', nameEn: 'Liudmila Samsonova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '강력한 서브와 포핸드를 앞세운 공격형 플레이어. 하드 코트에서 특히 위력적이며, WTA 투어 타이틀을 여러 차례 차지한 실력자입니다.'
+    },
+    'veronika-kudermetova': {
+        name: '베로니카 쿠데르메토바', nameEn: 'Veronika Kudermetova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '단식과 복식 모두 세계 수준인 올라운더. 안정적인 스트로크와 네트 플레이 능력을 겸비하여 어떤 상황에서도 견고한 경기를 펼칩니다.'
+    },
+    'elise-mertens': {
+        name: '엘리스 메르텐스', nameEn: 'Elise Mertens', country: 'Belgium', countryFlag: '🇧🇪', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '벨기에 테니스의 계보를 잇는 선수. 기복 없는 꾸준함과 뛰어난 수비력이 강점이며, 복식에서는 세계 랭킹 1위를 기록한 바 있습니다.'
+    },
+    'donna-vekic': {
+        name: '돈나 베키치', nameEn: 'Donna Vekic', country: 'Croatia', countryFlag: '🇭🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '강력한 서브와 포핸드를 겸비한 크로아티아의 스타. 2024 파리 올림픽 은메달리스트로, 오랜 부상을 딛고 제2의 전성기를 맞이했습니다.'
+    },
+    'marie-bouzkova': {
+        name: '마리 부즈코바', nameEn: 'Marie Bouzkova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '코트 위의 에너자이저. 끈질긴 수비와 지치지 않는 체력으로 상대를 지치게 만들며, 항상 미소를 잃지 않는 스포츠맨십으로 사랑받습니다.'
+    },
+    'katerina-siniakova': {
+        name: '카테리나 시니아코바', nameEn: 'Katerina Siniakova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '현역 최고의 복식 여제 중 한 명. 그랜드슬램 복식 전관왕(골든 슬램)을 달성했으며, 단식에서도 특유의 투지와 네트 플레이로 경쟁력을 보여줍니다.'
+    },
+    'caroline-garcia': {
+        name: '카롤린 가르시아', nameEn: 'Caroline Garcia', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '공격적인 리턴 포지스("Fly with Caro")과 다이내믹한 플레이가 특징입니다. WTA 파이널스 우승 경험이 있는 프랑스의 에이스입니다.'
+    },
+    'anhelina-kalinina': {
+        name: '안헬리나 칼리니나', nameEn: 'Anhelina Kalinina', country: 'Ukraine', countryFlag: '🇺🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '우크라이나 테니스의 주축. 클레이 코트에서 강점을 보이며, 탄탄한 기본기를 바탕으로 로마 마스터스 결승에 오르는 저력을 보여주었습니다.'
+    },
+    'lesia-tsurenko': {
+        name: '레시아 추렌코', nameEn: 'Lesia Tsurenko', country: 'Ukraine', countryFlag: '🇺🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '투어 경험이 풍부한 베테랑. 부상을 자주 겪으면서도 오뚝이처럼 다시 일어서는 정신력의 소유자로, 카운터 펀치 능력이 뛰어납니다.'
+    },
+    'magda-linette': {
+        name: '마그다 리네트', nameEn: 'Magda Linette', country: 'Poland', countryFlag: '🇵🇱', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '성실함의 대명사. 30대에 접어들어 2023 호주 오픈 4강에 진출하며 커리어 하이를 찍은 대기만성형 플레이어입니다.'
+    },
+    'sofia-kenin': {
+        name: '소피아 케닌', nameEn: 'Sofia Kenin', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '2020 호주 오픈 챔피언. 작은 체구에도 불구하고 뛰어난 타이밍과 코트 커버력, 그리고 강한 승부근성이 돋보이는 선수입니다.'
+    },
+    'paula-badosa': {
+        name: '파울라 바도사', nameEn: 'Paula Badosa', country: 'Spain', countryFlag: '🇪🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '강력한 베이스라인 플레이가 강점인 스페인의 스타. 부상을 딛고 다시 랭킹을 끌어올리고 있는 저력의 선수입니다.'
+    },
+    'karolina-muchova': {
+        name: '카롤리나 무호바', nameEn: 'Karolina Muchova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '올라운드 플레이어의 정석. 다양한 구질과 네트 플레이, 슬라이스를 자유자재로 구사하며 "테니스를 가장 예쁘게 치는 선수" 중 한 명으로 꼽힙니다. 2023 롤랑가로스 준우승자.'
+    },
+    'ajla-tomljanovic': {
+        name: '아일라 톰얀로비치', nameEn: 'Ajla Tomljanovic', country: 'Australia', countryFlag: '🇦🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '강력한 그라운드 스트로크를 가진 호주의 간판. 세레나 윌리엄스의 은퇴 경기 상대이자 승자로 역사에 남았으며, 메이저 대회에서 꾸준히 8강권에 도전하는 실력자입니다.'
+    },
+    'camila-giorgi': {
+        name: '카밀라 조르지', nameEn: 'Camila Giorgi', country: 'Italy', countryFlag: '🇮🇹', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '이탈리아의 하드 히터. 작은 체구에서 뿜어져 나오는 폭발적인 스트로크 파워는 투어 최고 수준이며, 공격적인 스타일로 정평이 나 있습니다.'
+    },
+    'wang-xinyu': {
+        name: '왕 신유', nameEn: 'Wang Xinyu', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '중국 테니스의 차세대 주자 "중국의 샤라포바". 182cm의 장신에서 나오는 시원한 스트로크가 강점이며, 복식에서도 그랜드슬램 우승을 차지했습니다.'
+    },
+    'wang-xiyu': {
+        name: '왕 시위', nameEn: 'Wang Xiyu', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '강력한 왼손 포핸드를 가진 중국의 기대주. 2018 US 오픈 주니어 챔피언 출신으로, 파워풀한 테니스를 구사합니다.'
+    },
+    'zhu-lin': {
+        name: '주 린', nameEn: 'Zhu Lin', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '대기만성형 플레이어. 꾸준한 노력 끝에 2023 호주 오픈 16강, 투어 첫 우승을 달성하며 전성기를 맞이했습니다. '
+    },
+    'yuan-yue': {
+        name: '위안 위에', nameEn: 'Yuan Yue', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '공격적인 플레이가 돋보이는 중국 선수. 2024년 투어 첫 우승을 차지하며 세계 랭킹을 빠르게 끌어올리고 있습니다.'
+    },
+    'diane-parry': {
+        name: '디안 파리', nameEn: 'Diane Parry', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'One-handed',
+        longBio: 'WTA 투어에서 보기 드문 원핸드 백핸드 구사자. 우아한 폼과 클래식한 테니스 스타일로 주목받는 프랑스의 유망주입니다.'
+    },
+    'clara-burel': {
+        name: '클라라 뷔렐', nameEn: 'Clara Burel', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '프랑스의 영 건. 주니어 세계 1위 출신으로, 안정적인 경기 운영과 영리한 플레이로 성인 무대에서도 두각을 나타내고 있습니다.'
+    },
+    'varvara-gracheva': {
+        name: '바르바라 그라체바', nameEn: 'Varvara Gracheva', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '러시아에서 프랑스로 국적을 변경한 선수. 다양한 구질을 섞어 쓰는 까다로운 스트로크로 상대를 괴롭히는 스타일입니다.'
+    },
+    'tatjana-maria': {
+        name: '타티아나 마리아', nameEn: 'Tatjana Maria', country: 'Germany', countryFlag: '🇩🇪', gender: 'female', plays: 'Right-handed', backhand: 'One-handed',
+        longBio: '슬라이스 마스터. 포핸드와 백핸드 모두에서 자유자재로 구사하는 슬라이스로 상대를 혼란에 빠뜨리는 독특한 스타일의 베테랑입니다. 두 아이의 엄마이자 2022 윔블던 4강 신화의 주인공.'
+    },
+    'laura-siegemund': {
+        name: '로라 시그문드', nameEn: 'Laura Siegemund', country: 'Germany', countryFlag: '🇩🇪', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '변칙 플레이의 여왕. 드롭샷, 네트 대시 등 다양한 전술로 상대를 흔드는 지능적인 플레이가 일품이며, 복식에서도 그랜드슬램 챔피언입니다.'
+    },
+
+    // --- Added Male (Bonus) ---
+    'hong-seong-chan': {
+        name: '홍성찬', nameEn: 'Seong-chan Hong', country: 'Korea', countryFlag: '🇰🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '대한민국의 테니스 국가대표. "홍대리"라는 별명처럼 데이비스컵 등 국가대항전에서 놀라운 투혼과 승부사 기질을 발휘하며 한국 테니스의 허리를 책임지고 있습니다.'
+    }
 };
 
 export const getPlayerSlugs = () => Object.keys(PLAYERS_DB);

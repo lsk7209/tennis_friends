@@ -1,52 +1,19 @@
-# Player Image Integration & Profile Enhancement
+# Task: Player Image and Data Enrichment
 
-## Objectives
-- Enhance player listing and profile pages with high-quality images.
-- Standardize player profile layout using `PlayerProfileCard` and `PlayerAttributes` components.
-- Ensure consistent and wide content area for better readability.
-- **Optimize SEO with structured data (Person Schema & FAQPage Schema).**
-
-## Progress
-- [x] **Image Generation**
-  - [x] Novak Djokovic
-  - [x] Carlos Alcaraz
-  - [x] Jannik Sinner
-  - [x] Daniil Medvedev
-  - [x] Alexander Zverev
-  - [x] Andrey Rublev
-  - [x] Stefanos Tsitsipas
-  - [x] Casper Ruud
-  - [x] Holger Rune
-  - [x] Hubert Hurkacz
-  - [x] Taylor Fritz
-  - [x] Tommy Paul
-  - [x] Frances Tiafoe
-  - [x] Cameron Norrie
-  - [ ] Tallon Griekspoor (Pending Quota)
-  - [ ] Grigor Dimitrov (Pending Quota)
-  - [ ] Ben Shelton (Pending Quota)
-  - [ ] Ugo Humbert (Pending Quota)
-  - [ ] Sebastian Baez (Pending Quota)
-  - [ ] Lorenzo Musetti (Pending Quota)
-  - [ ] Sebastian Korda (Pending Quota)
-  - [ ] Nicolas Jarry (Pending Quota)
-  - [ ] Alex de Minaur (Pending Quota)
-
-- [x] **Component Integration & Page Creation**
-  - [x] `src/app/players/page.tsx`: Updated `getPlayerCard` to display images.
-  - [x] `src/components/blog/Article.tsx`: Increased max-width to `max-w-7xl`.
-  - [x] All player pages updated to `max-w-7xl`.
-  - [x] All 23 player pages created with `PlayerProfileCard` and `PlayerAttributes`.
-
-- [x] **SEO Optimization**
-  - [x] Created `PersonSchema` component for structured data
-  - [x] Created `FAQSchema` component for FAQ rich snippets
-  - [x] Applied PersonSchema and FAQSchema to Novak Djokovic page
-  - [x] Verified JSON-LD presence in page source
-  - [ ] Apply SEO schemas to all remaining player pages (in progress)
+## Status
+- [x] Initial image generation (Sabalenka successfully added)
+- [x] Rate limit hit for image generation (Blocked until quota resets)
+- [x] Data enrichment for all 113 players
+  - `plays` (Right/Left) added
+  - `backhand` (One/Two) added
+  - `longBio` added for key players (Nadal, Murray, Wawrinka, Nishikori, Kwon, Swiatek, Sabalenka, Gauff, Rybakina, Pegula, Jabeur)
+- [x] Type definitions updated (`src/types/player.ts`) to be backward compatible with legacy components
+- [x] Dynamic page logic updated (`src/app/players/[slug]/page.tsx`) to display enriched content
+- [x] Legacy templates updated (`react-template-generator.ts`, `metadata-generator.ts`) to handle new optional fields
+- [x] Build errors resolved and project successfully deployed
 
 ## Next Steps
-- [ ] Apply PersonSchema and FAQSchema to all 22 remaining player pages
-- [ ] Generate images for remaining 9 players once quota resets
-- [ ] Verify mobile responsiveness for the wider content area
-- [ ] Run Google Rich Results Test on player pages
+- [ ] Wait for image generation quota reset (~4 hours from session start)
+- [ ] Generate minimalist vector illustrations for remaining players
+- [ ] Continue expanding `longBio` for mid-tier players
+- [ ] Monitor SEO performance of new dynamic pages

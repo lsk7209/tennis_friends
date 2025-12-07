@@ -6,12 +6,12 @@
 
 ---
 
-## 👨 ATP (남자 선수) - 목표 100명
+## 👨 ATP (남자 선수) - 목표 100명 (달성 완료!)
 
-### ✅ Implemented (53명)
-이미 페이지가 생성되어 있거나 `playerNames`에 등록된 선수들입니다.
+### ✅ Implemented (101명)
+ATP Top 100 및 주요 레전드 선수 구현이 완료되었습니다.
 
-| Rank/Status | Player Name (En) | Name (Ko) | Country | Notes |
+| Status | Player Name (En) | Name (Ko) | Country | Notes |
 |---|---|---|---|---|
 | Implemented | Carlos Alcaraz | 카를로스 알카라스 | 🇪🇸 Spain | |
 | Implemented | Jannik Sinner | 야닉 시너 | 🇮🇹 Italy | |
@@ -66,66 +66,60 @@
 | Implemented | Jordan Thompson | 조던 톰슨 | 🇦🇺 Australia | |
 | Implemented | Zhizhen Zhang | 장지전 | 🇨🇳 China | |
 | Implemented | Giovanni Mpetshi Perricard | 지오반니 음페치 페리카르 | 🇫🇷 France | |
-
-### 🚀 Planned (47명)
-추가 개발이 필요한 ATP 선수 리스트입니다.
-
-| Priority | Player Name (En) | Name (Ko) | Country | Status |
-|---|---|---|---|---|
-| High | Rafael Nadal | 라파엘 나달 | 🇪🇸 Spain | Legend (Active/Retiring) |
-| High | Andy Murray | 앤디 머레이 | 🇬🇧 UK | Legend (High Interest) |
-| High | Stan Wawrinka | 스탄 바브린카 | 🇨🇭 Switzerland | Legend |
-| High | Kei Nishikori | 니시코리 케이 | 🇯🇵 Japan | Asian Star |
-| High | Soonwoo Kwon | 권순우 | 🇰🇷 Korea | Domestic Interest |
-| Medium | Christopher Eubanks | 크리스토퍼 유뱅크스 | 🇺🇸 USA | |
-| Medium | Emil Ruusuvuori | 에밀 루수부오리 | 🇫🇮 Finland | |
-| Medium | Miomir Kecmanovic | 미오미르 케크마노비치 | 🇷🇸 Serbia | |
-| Medium | Roman Safiullin | 로만 사피울린 | 🇷🇺 Russia | |
-| Medium | Laslo Djere | 라슬로 제레 | 🇷🇸 Serbia | |
-| Medium | Daniel Evans | 다니엘 에반스 | 🇬🇧 UK | |
-| Medium | Roberto Carballes Baena | 로베르토 카르바예스 바에나 | 🇪🇸 Spain | |
-| Medium | Nuno Borges | 누노 보르헤스 | 🇵🇹 Portugal | |
-| Medium | Mackenzie McDonald | 매켄지 맥도날드 | 🇺🇸 USA | |
-| Medium | Max Purcell | 맥스 퍼셀 | 🇦🇺 Australia | |
-| Medium | Dominik Koepfer | 도미닉 쾨퍼 | 🇩🇪 Germany | |
-| Medium | Aleksandar Vukic | 알렉산더 부키치 | 🇦🇺 Australia | |
-| Medium | Yoshihito Nishioka | 니시오카 요시히토 | 🇯🇵 Japan | |
-| Medium | Alexander Shevchenko | 알렉산더 셰브첸코 | 🇰🇿 Kazakhstan | |
-| Medium | Rinky Hijikata | 린키 히지카타 | 🇦🇺 Australia | |
-| Medium | Botic van de Zandschulp | 보틱 반 더 잔츠슐프 | 🇳🇱 Netherlands | |
-| Medium | Yannick Hanfmann | 야닉 한프만 | 🇩🇪 Germany | |
-| Medium | Pavel Kotov | 파벨 코토프 | 🇷🇺 Russia | |
-| Medium | Aslan Karatsev | 아슬란 카라체프 | 🇷🇺 Russia | |
-| Medium | Fabian Marozsan | 파비안 마로잔 | 🇭🇺 Hungary | |
-| Medium | Sumit Nagal | 수밋 나갈 | 🇮🇳 India | |
-| Medium | Taro Daniel | 타로 다니엘 | 🇯🇵 Japan | |
-| Medium | Roberto Bautista Agut | 로베르토 바우티스타 아굿 | 🇪🇸 Spain | Veteran |
-| Medium | Marton Fucsovics | 마르톤 푸초비치 | 🇭🇺 Hungary | |
-| Medium | Borna Coric | 보르나 초리치 | 🇭🇷 Croatia | |
-| Medium | Shang Juncheng | 상 쥔청 | 🇨🇳 China | Next Gen |
-| Medium | Duje Ajdukovic | 두예 아이두코비치 | 🇭🇷 Croatia | |
-| Medium | Dominic Thiem | 도미니크 팀 | 🇦🇹 Austria | Fan Favorite |
-| Medium | Fabio Fognini | 파비오 포니니 | 🇮🇹 Italy | Fan Favorite |
-| Medium | Reilly Opelka | 라일리 오펠카 | 🇺🇸 USA | Big Server |
-| Medium | Marin Cilic | 마린 칠리치 | 🇭🇷 Croatia | US Open Champ |
-| Medium | Milos Raonic | 밀로스 라오니치 | 🇨🇦 Canada | Big Server |
-| Medium | Nick Kyrgios | 닉 키리오스 | 🇦🇺 Australia | High Interest/Controversial |
-| Medium | Richard Gasquet | 리샤르 가스케 | 🇫🇷 France | One-handed Backhand |
-| Medium | Diego Schwartzman | 디에고 슈와르츠만 | 🇦🇷 Argentina | |
-| Medium | David Goffin | 다비드 고핀 | 🇧🇪 Belgium | |
-| Medium | Thanasi Kokkinakis | 타나시 코키나키스 | 🇦🇺 Australia | |
-| Medium | Corentin Moutet | 코랑탱 무테 | 🇫🇷 France | (Duplicate Check needed) |
-| Medium | Hugo Gaston | 위고 가스통 | 🇫🇷 France | Drop Shot Master |
-| Medium | Luca Nardi | 루카 나르디 | 🇮🇹 Italy | Next Gen |
-| Medium | Dino Prizmic | 디노 프리즈미치 | 🇭🇷 Croatia | Next Gen |
-| Medium | Coleman Wong | 콜먼 웡 | 🇭🇰 Hong Kong | Next Gen |
+| Implemented | Rafael Nadal | 라파엘 나달 | 🇪🇸 Spain | Legend |
+| Implemented | Andy Murray | 앤디 머레이 | 🇬🇧 UK | Legend |
+| Implemented | Stan Wawrinka | 스탄 바브린카 | 🇨🇭 Switzerland | Legend |
+| Implemented | Kei Nishikori | 니시코리 케이 | 🇯🇵 Japan | Asian Star |
+| Implemented | Soonwoo Kwon | 권순우 | 🇰🇷 Korea | Domestic Star |
+| Implemented | Christopher Eubanks | 크리스토퍼 유뱅크스 | 🇺🇸 USA | |
+| Implemented | Emil Ruusuvuori | 에밀 루수부오리 | 🇫🇮 Finland | |
+| Implemented | Miomir Kecmanovic | 미오미르 케크마노비치 | 🇷🇸 Serbia | |
+| Implemented | Roman Safiullin | 로만 사피울린 | 🇷🇺 Russia | |
+| Implemented | Laslo Djere | 라슬로 제레 | 🇷🇸 Serbia | |
+| Implemented | Daniel Evans | 다니엘 에반스 | 🇬🇧 UK | |
+| Implemented | Roberto Carballes Baena | 로베르토 카르바예스 바에나 | 🇪🇸 Spain | |
+| Implemented | Nuno Borges | 누노 보르헤스 | 🇵🇹 Portugal | |
+| Implemented | Mackenzie McDonald | 매켄지 맥도날드 | 🇺🇸 USA | |
+| Implemented | Max Purcell | 맥스 퍼셀 | 🇦🇺 Australia | |
+| Implemented | Dominik Koepfer | 도미닉 쾨퍼 | 🇩🇪 Germany | |
+| Implemented | Aleksandar Vukic | 알렉산더 부키치 | 🇦🇺 Australia | |
+| Implemented | Yoshihito Nishioka | 니시오카 요시히토 | 🇯🇵 Japan | |
+| Implemented | Alexander Shevchenko | 알렉산더 셰브첸코 | 🇰🇿 Kazakhstan | |
+| Implemented | Rinky Hijikata | 린키 히지카타 | 🇦🇺 Australia | |
+| Implemented | Botic van de Zandschulp | 보틱 반 더 잔츠슐프 | 🇳🇱 Netherlands | |
+| Implemented | Yannick Hanfmann | 야닉 한프만 | 🇩🇪 Germany | |
+| Implemented | Pavel Kotov | 파벨 코토프 | 🇷🇺 Russia | |
+| Implemented | Aslan Karatsev | 아슬란 카라체프 | 🇷🇺 Russia | |
+| Implemented | Fabian Marozsan | 파비안 마로잔 | 🇭🇺 Hungary | |
+| Implemented | Sumit Nagal | 수밋 나갈 | 🇮🇳 India | |
+| Implemented | Taro Daniel | 타로 다니엘 | 🇯🇵 Japan | |
+| Implemented | Roberto Bautista Agut | 로베르토 바우티스타 아굿 | 🇪🇸 Spain | Veteran |
+| Implemented | Marton Fucsovics | 마르톤 푸초비치 | 🇭🇺 Hungary | |
+| Implemented | Borna Coric | 보르나 초리치 | 🇭🇷 Croatia | |
+| Implemented | Shang Juncheng | 상 쥔청 | 🇨🇳 China | Next Gen |
+| Implemented | Duje Ajdukovic | 두예 아이두코비치 | 🇭🇷 Croatia | |
+| Implemented | Dominic Thiem | 도미니크 팀 | 🇦🇹 Austria | Fan Favorite |
+| Implemented | Fabio Fognini | 파비오 포니니 | 🇮🇹 Italy | Fan Favorite |
+| Implemented | Reilly Opelka | 라일리 오펠카 | 🇺🇸 USA | |
+| Implemented | Marin Cilic | 마린 칠리치 | 🇭🇷 Croatia | |
+| Implemented | Milos Raonic | 밀로스 라오니치 | 🇨🇦 Canada | |
+| Implemented | Nick Kyrgios | 닉 키리오스 | 🇦🇺 Australia | |
+| Implemented | Richard Gasquet | 리샤르 가스케 | 🇫🇷 France | |
+| Implemented | Diego Schwartzman | 디에고 슈와르츠만 | 🇦🇷 Argentina | |
+| Implemented | David Goffin | 다비드 고핀 | 🇧🇪 Belgium | |
+| Implemented | Thanasi Kokkinakis | 타나시 코키나키스 | 🇦🇺 Australia | |
+| Implemented | Hugo Gaston | 위고 가스통 | 🇫🇷 France | Drop Shot Master |
+| Implemented | Luca Nardi | 루카 나르디 | 🇮🇹 Italy | Next Gen |
+| Implemented | Dino Prizmic | 디노 프리즈미치 | 🇭🇷 Croatia | Next Gen |
+| Implemented | Coleman Wong | 콜먼 웡 | 🇭🇰 Hong Kong | Next Gen |
+| Implemented (Bonus) | Seong-chan Hong | 홍성찬 | 🇰🇷 Korea | Domestic Star |
 
 ---
 
-## 👩 WTA (여자 선수) - 목표 100명
+## 👩 WTA (여자 선수) - 목표 100명 (진행률 ~60%)
 
-### 🚀 Planned (Top 100 List)
-현재 WTA 섹션은 구현된 선수가 없으므로, 최우선 개발 대상입니다.
+### ✅ Implemented (60명)
+Top 10 및 주요 상위 랭커 구현 완료.
 
 | Rank/Tier | Player Name (En) | Name (Ko) | Country | Notes |
 |---|---|---|---|---|
@@ -189,6 +183,12 @@
 | Tier 3 | Varvara Gracheva | 바르바라 그라체바 | 🇫🇷 France | |
 | Tier 3 | Tatjana Maria | 타티아나 마리아 | 🇩🇪 Germany | Slice Master |
 | Tier 3 | Laura Siegemund | 로라 시그문드 | 🇩🇪 Germany | |
+
+### 🚀 Planned (40명 남음)
+나머지 Tier 3 및 주요 선수들
+
+| Rank/Tier | Player Name (En) | Name (Ko) | Country | Notes |
+|---|---|---|---|---|
 | Tier 3 | Jule Niemeier | 율레 니마이어 | 🇩🇪 Germany | |
 | Tier 3 | Elisabetta Cocciaretto | 엘리자베타 코치아레토 | 🇮🇹 Italy | |
 | Tier 3 | Martina Trevisan | 마르티나 트레비산 | 🇮🇹 Italy | |
@@ -200,7 +200,7 @@
 | Tier 3 | Petra Martic | 페트라 마르티치 | 🇭🇷 Croatia | |
 | Tier 3 | Anna Karolina Schmiedlova | 안나 카롤리나 슈미들로바 | 🇸🇰 Slovakia | |
 | Tier 3 | Viktoria Hruncakova | 빅토리아 흐룬차코바 | 🇸🇰 Slovakia | |
-| Tier 3 | Katerina Siniakova | 카테리나 시니아코바 | 🇨🇿 Czech Republic | |
+| Tier 3 | Katerina Siniakova | 카테리나 시니아코바 | 🇨🇿 Czech Republic | (Duplicate Check) |
 | Tier 3 | Brenda Fruhvirtova | 브렌다 프루비르토바 | 🇨🇿 Czech Republic | Super Teen |
 | Tier 3 | Sara Bejlek | 사라 베일렉 | 🇨🇿 Czech Republic | |
 | Tier 3 | Yulia Putintseva | 율리아 푸틴세바 | 🇰🇿 Kazakhstan | |
@@ -233,7 +233,6 @@
 
 ## 🛠️ Next Development Steps
 
-1. **WTA 선수 데이터 추가**: `src/app/players/page.tsx`에 Top 10 여성 선수부터 순차적으로 등록
-2. **페이지 생성**: 여성 선수 프로필 페이지 생성 (`src/app/players/[slug]/page.tsx`)
-3. **이미지 생성**: 여성 선수 프로필 이미지 일러스트 생성 요청
-
+1. **WTA 선수 데이터 추가 완료 (Tier 3 잔여)**: 나머지 약 40명의 여성 선수 DB 추가
+2. **이미지 생성**: 신규 추가된 남/여 선수들의 프로필 일러스트 생성 (AI Quota Reset 대기)
+3. **Bio Enrichment**: 주요 선수들의 longBio 추가 작성 및 한국어 데이터 품질 검수
