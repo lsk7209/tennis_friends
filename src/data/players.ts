@@ -1031,7 +1031,45 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     'soonwoo-kwon': {
         name: '권순우', nameEn: 'Soonwoo Kwon', country: 'Korea', countryFlag: '🇰🇷', image: '/images/players/soonwoo-kwon.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '대한민국 테니스의 간판 스타. 빠른 스피드와 공격적인 포핸드를 주무기로 ATP 투어 우승을 차지하며 한국 테니스의 위상을 높였습니다.'
+        longBio: '대한민국 테니스의 새로운 역사를 쓴 "코리안 썬더". 이형택 이후 18년 만에 ATP 투어 우승을 차지했으며, 한국 선수 최초로 ATP 투어 2회 우승이라는 금자탑을 쌓은 명실상부한 한국 테니스의 에이스입니다.',
+        detailedProfile: {
+            oneLineSummary: '한국 테니스 최초 ATP 투어 2회 우승! 체격의 열세를 스피드와 "닥공"으로 극복한 불굴의 파이터.',
+            whyNotable: `
+                <p><strong>"한국 테니스의 역사를 새로 쓴 에이스"</strong></p>
+                <p>권순우는 이형택 이후 오랫동안 침체기였던 한국 테니스에 혜성처럼 등장한 희망입니다. 2021년 아스타나 오픈 우승으로 18년 만에 한국인 ATP 투어 챔피언이 되었고, 2023년에는 애들레이드 인터내셔널 2에서 '러키 루저(Lucky Loser)'로 본선에 올라 우승까지 차지하는 기적을 쓰며 <strong>한국인 최초 ATP 투어 멀티 타이틀(2승)</strong> 보유자가 되었습니다.</p>
+                <p>세계적인 선수들에 비해 왜소한 체격(180cm, 72kg)이지만, 한 박자 빠른 타이밍과 물러서지 않는 공격적인 플레이로 서양의 거구들을 쓰러뜨리는 모습은 짜릿한 쾌감을 선사합니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적인 속사포 (Aggressive Shotmaker)"</strong></p>
+                <p>권순우의 테니스는 '빠름'과 '닥공(닥치고 공격)'으로 요약됩니다. 상대가 준비할 시간을 주지 않는 빠른 템포의 스트로크와 기민한 발놀림이 그의 전매특허입니다.</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>포핸드:</strong> 체중을 온전히 실어 때리는 포핸드는 체격 대비 놀라운 파워를 냅니다. 특히 라이징 볼을 공략해 박자를 뺏는 샷이 일품입니다.</li>
+                    <li><strong>드롭샷:</strong> 빠른 발을 이용해 코트 안으로 들어가 구사하는 드롭샷은 성공률이 매우 높습니다.</li>
+                    <li><strong>스피드:</strong> 투어 내에서도 수준급인 풋워크로 코트 구석구석을 커버하며, 수비 후 역습 전환이 매우 빠릅니다.</li>
+                </ul>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 9, description: '체격을 뛰어넘는 파워와 박자 뺏기.' },
+                { name: '스피드 (Speed)', score: 9, description: '투어 상위권의 민첩한 풋워크.' },
+                { name: '멘탈 (Mental)', score: 8.5, description: '러키 루저 우승 신화를 쓴 강심장.' },
+                { name: '전술 (Tactics)', score: 8.5, description: '다양한 구질로 상대를 흔드는 영리함.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정 적이고 견고한 연결.' },
+                { name: '서브 (Serve)', score: 7, description: '신체 조건상 절대적 위력은 다소 부족.' }
+            ],
+            growthStory: `
+                <p>경상북도 상주 출신으로 초등학교 4학년 때 테니스를 시작했습니다. 고교 시절부터 두각을 나타냈으며, 건국대학교 재학 중 퓨처스 대회를 휩쓸며 프로 무대에 뛰어들었습니다.</p>
+                <p>당진시청에 입단 후 체계적인 지원 속에 급성장했습니다. 챌린저 무대를 평정하고 ATP 투어에 도전하여, 실패를 두려워하지 않는 도전 정신으로 마침내 세계 52위(커리어 하이)에 오르는 기염을 토했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 애들레이드 인터내셔널 2 결승 vs 로베르토 바우티스타 아굿',
+                date: '2023. 01. 14',
+                description: '한국 테니스 역사의 명장면. 예선에서 탈락했으나 기권자 발생으로 본선에 합류(러키 루저)한 뒤 우승까지 차지하는 영화 같은 스토리를 완성했습니다. 결승에서 베테랑 바우티스타 아굿을 상대로 3세트 접전 끝에 승리하며 한국인 최초 투어 2회 우승을 달성했습니다.'
+            },
+            recentForm: `
+                <p><strong>"부활을 위한 숨고르기"</strong></p>
+                <p>어깨 부상 등으로 잠시 공백기가 있었고 랭킹이 하락했지만, 보호 랭킹(PR) 제도를 활용해 다시 투어 무대를 두드리고 있습니다. 여전히 공격적인 본능은 살아있으며, 건강만 회복한다면 언제든 다시 투어급 경쟁력을 보여줄 수 있는 선수입니다.</p>
+            `
+        }
     },
     'christopher-eubanks': {
         name: '크리스토퍼 유뱅크스', nameEn: 'Christopher Eubanks', country: 'United States', countryFlag: '🇺🇸', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
