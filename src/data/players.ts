@@ -725,11 +725,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'sebastian-korda': {
-        name: '세바스티안 코르다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/sebastian-korda.png', gender: 'male',
-        plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '테니스 명문가 코르다 패밀리의 아들. 아버지 페트르 코르다의 유전자를 물려받아 부드럽고 깔끔한 폼과 강력한 양손 스트로크를 구사합니다.'
-    },
+
     'cameron-norrie': {
         name: '카메론 노리', nameEn: 'Cameron Norrie', country: 'United Kingdom', countryFlag: '🇬🇧', image: '/images/players/cameron-norrie.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '영국의 철인. 지치지 않는 체력과 독특한 플랫 백핸드, 그리고 엄청난 회전량의 포핸드를 섞어 상대를 까다롭게 만드는 왼손잡이 전략가입니다.'
@@ -1440,7 +1436,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'sebastian-korda': {
-        name: '세바스찬 코다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸', gender: 'male',
+        name: '세바스찬 코다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/sebastian-korda.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '스포츠 명문 코다 가문의 막내. 아버지 페트르 코다의 재능을 물려받아 부드러운 스윙과 정교한 기술을 구사하는 올라운드 플레이어입니다.',
         detailedProfile: {
