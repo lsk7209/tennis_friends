@@ -161,6 +161,9 @@ export default async function PlayerProfilePage({ params }: Props) {
                 jobTitle="Professional Tennis Player"
                 url={`https://tennisfriends.co.kr/players/${resolvedParams.slug}`}
             />
+            {player.detailedProfile?.faq && (
+                <FAQSchema faqData={player.detailedProfile.faq} />
+            )}
 
             {/* Header / Hero */}
             <div className="bg-gradient-to-r from-blue-800 to-indigo-900 text-white pt-24 pb-20 px-4 relative overflow-hidden">
@@ -286,6 +289,9 @@ export default async function PlayerProfilePage({ params }: Props) {
                                                     <li><a href="#signature-match" className="hover:text-blue-600 transition-colors">4. 인생 경기</a></li>
                                                 )}
                                                 <li><a href="#recent-form" className="hover:text-blue-600 transition-colors">5. 최근 폼 & 전망</a></li>
+                                                {player.detailedProfile.faq && (
+                                                    <li><a href="#faq" className="hover:text-blue-600 transition-colors">6. 자주 묻는 질문 (FAQ)</a></li>
+                                                )}
                                             </ul>
                                         </div>
 
@@ -360,6 +366,29 @@ export default async function PlayerProfilePage({ params }: Props) {
                                             최근 흐름과 전망
                                         </h2>
                                         <div dangerouslySetInnerHTML={{ __html: player.detailedProfile.recentForm || '' }} />
+
+                                        {player.detailedProfile.faq && player.detailedProfile.faq.length > 0 && (
+                                            <>
+                                                <h2 id="faq" className="flex items-center gap-2 mt-12 scroll-mt-24">
+                                                    <Info className="w-6 h-6 text-gray-500" />
+                                                    자주 묻는 질문
+                                                </h2>
+                                                <div className="not-prose space-y-4 mt-6">
+                                                    {player.detailedProfile.faq.map((item, idx) => (
+                                                        <div key={idx} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+                                                            <div className="p-4 bg-gray-50 dark:bg-gray-700/50 font-bold text-gray-900 dark:text-gray-100 flex items-start gap-2">
+                                                                <span className="text-blue-600 shrink-0">Q.</span>
+                                                                {item.question}
+                                                            </div>
+                                                            <div className="p-4 text-gray-700 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-gray-700 flex items-start gap-2">
+                                                                <span className="text-green-600 font-bold shrink-0">A.</span>
+                                                                <div>{item.answer}</div>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
                                     </div>
                                 ) : (
                                     <>

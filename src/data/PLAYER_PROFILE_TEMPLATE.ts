@@ -116,6 +116,15 @@ export interface PlayerTemplate {
          * - <p>설명 문단</p>
          */
         recentForm: string;
+
+        /**
+         * 자주 묻는 질문 (AEO 최적화)
+         * - 3-5개의 핵심 질문과 답변
+         */
+        faq?: Array<{
+            question: string;
+            answer: string;
+        }>;
     };
 }
 

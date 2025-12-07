@@ -33,6 +33,10 @@ export type PlayerData = {
     fanAppeal?: string;
     recentForm?: string;
     oneLineSummary?: string;
+    faq?: Array<{
+      question: string;
+      answer: string;
+    }>;
   };
 
   // Legacy Compatibility Fields
