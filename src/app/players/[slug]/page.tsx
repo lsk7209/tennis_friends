@@ -162,7 +162,12 @@ export default async function PlayerProfilePage({ params }: Props) {
                 url={`https://tennisfriends.co.kr/players/${resolvedParams.slug}`}
             />
             {player.detailedProfile?.faq && (
-                <FAQSchema faqData={player.detailedProfile.faq} />
+                <FAQSchema
+                    faqs={player.detailedProfile.faq.map(item => ({
+                        q: item.question,
+                        a: item.answer
+                    }))}
+                />
             )}
 
             {/* Header / Hero */}
