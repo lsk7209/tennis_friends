@@ -1053,7 +1053,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 { name: '스피드 (Speed)', score: 9, description: '투어 상위권의 민첩한 풋워크.' },
                 { name: '멘탈 (Mental)', score: 8.5, description: '러키 루저 우승 신화를 쓴 강심장.' },
                 { name: '전술 (Tactics)', score: 8.5, description: '다양한 구질로 상대를 흔드는 영리함.' },
-                { name: '백핸드 (Backhand)', score: 8, description: '안정 적이고 견고한 연결.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정적이고 견고한 연결.' },
                 { name: '서브 (Serve)', score: 7, description: '신체 조건상 절대적 위력은 다소 부족.' }
             ],
             growthStory: `

@@ -170,12 +170,14 @@ a:focus-visible {
   border-radius: 10px;
   padding: .75rem 1rem;
   margin: 1rem 0 1.5rem;
-  background: color-mix(in oklab, var(--border) 15%, transparent);
+  background-color: #f3f4f6;
+  /* gray-100 to ensure contrast */
 }
 
 .toc a {
   text-decoration: none;
-  color: var(--fg);
+  color: #111827;
+  /* gray-900 (black-ish) */
 }
 
 .toc a:hover {
