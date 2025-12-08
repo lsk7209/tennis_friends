@@ -57,27 +57,25 @@ export interface PlayerTemplate {
     detailedProfile: {
         /**
          * 한 줄 요약 (H2 아래 들어갈 핵심 문구)
-         * 예: '기록 파괴자이자 살아있는 전설, 테니스의 모든 역사를 새로 쓴 "무결점의 GOAT".'
+         * 예: '상대를 질식시키는 "코트 위의 체스 마스터", 빅3 시대를 끝낸 가장 지능적인 승부사.'
          */
         oneLineSummary: string;
 
         /**
          * 왜 주목해야 하는가? (HTML)
-         * - <p><strong>"핵심 키워드/별명"</strong></p>
-         * - <p>설명 문단 1</p>
-         * - <p>설명 문단 2 (선택)</p>
+         * - Highlight Box 사용 권장
+         * - 예시:
+         * <div class="highlight-box">
+         *     <div class="highlight-box-title">🏆 타이틀</div>
+         *     <p>내용...</p>
+         * </div>
          */
         whyNotable: string;
 
         /**
          * 플레이 스타일 (HTML)
-         * - <p><strong>"스타일 정의 (예: 공격적 베이스라이너)"</strong></p>
-         * - <p>설명 문단</p>
-         * - <ul class="list-disc pl-5 my-4 space-y-2">
-         * -     <li><strong>강점 1:</strong> 설명</li>
-         * -     <li><strong>강점 2:</strong> 설명</li>
-         * -     <li><strong>강점 3:</strong> 설명</li>
-         * - </ul>
+         * - "별명/정의" 강조
+         * - Highlight Box 내 리스트 사용 권장
          */
         playStyle: string;
 
@@ -96,8 +94,8 @@ export interface PlayerTemplate {
 
         /**
          * 성장 스토리 (HTML)
-         * - <p>문단 1 (출신, 배경)</p>
-         * - <p>문단 2 (주요 성과, 현재 위치)</p>
+         * - 주요 키워드 색상 강조 (text-blue-700 등)
+         * - 인용구 (<blockquote>) 활용
          */
         growthStory: string;
 
@@ -105,21 +103,29 @@ export interface PlayerTemplate {
          * 대표 경기 (Signature Match)
          */
         signatureMatch: {
-            title: string; // 예: "2019 윔블던 결승 vs 로저 페더러"
-            date: string;  // 예: "2019. 07. 14"
-            description: string; // 경기 내용 및 의미 설명
+            title: string;
+            date: string;
+            description: string; // <strong> 등으로 점수나 핵심 내용 강조
         };
+
+        /**
+         * 팬 어필 / 입덕 포인트 (New Standard)
+         * - Highlight Box 사용 권장
+         * - 선수의 반전 매력, 성격, 에피소드 등
+         */
+        fanAppeal?: string;
 
         /**
          * 최근 폼 / 관전 포인트 (HTML)
          * - <p><strong>"키워드"</strong></p>
-         * - <p>설명 문단</p>
+         * - 설명 문단
          */
         recentForm: string;
 
         /**
-         * 자주 묻는 질문 (AEO 최적화)
-         * - 3-5개의 핵심 질문과 답변
+         * 자주 묻는 질문 (AEO/Voice Search 최적화)
+         * - 구체적이고 대화체인 질문 권장
+         * - 답변은 3-4문장 내외, 두괄식 구성
          */
         faq?: Array<{
             question: string;
@@ -129,53 +135,75 @@ export interface PlayerTemplate {
 }
 
 /**
- * [템플릿 가이드]
- * - 톤앤매너: 전문적이지만 읽기 쉬운 한국어. '해요'체 보다는 '합니다'체 권장.
- * - 강조: 핵심 키워드나 문장은 <strong> 태그나 ** (마크다운) 사용 가능하나, HTML 문자열 내에서는 <strong> 권장.
- * - 길이: 모바일 가독성을 위해 문단은 3-4줄을 넘지 않도록 구성.
+ * [템플릿 가이드 - The "Gold Standard"]
+ * - 톤앤매너: 전문적이지만 읽기 쉬운 한국어. '해요'체 보다는 '합니다'체 사용.
+ * - 시각화: 
+ *   - Highlight Box: <div class="highlight-box"><div class="highlight-box-title">...</div>...</div>
+ *   - Blockquote: <blockquote>...</blockquote>
+ *   - 강조: <span class="font-semibold text-blue-700">...</span>, <span class="underline decoration-wavy ...">...</span>
+ * - AEO: FAQ 질문은 구체적으로 ("~는 언제인가요?" X -> "~가 세계 1위가 된 시점과 기간은?" O)
  */
 
-/* 예시 데이터 (Novak Djokovic)
+/* 예시 데이터 (Daniil Medvedev - The Gold Standard) */
 export const EXAMPLE_PLAYER: PlayerTemplate = {
-    name: '노박 조코비치', nameEn: 'Novak Djokovic', country: 'Serbia', countryFlag: '🇷🇸', image: '/images/players/novak-djokovic.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-    longBio: '테니스 역사상 가장 위대한 선수(GOAT). 무결점의 테크닉과 불굴의 정신력, 그리고 압도적인 유연성으로 그랜드슬램 최다 우승 기록을 보유하고 있습니다.',
+    name: '다닐 메드베데프', nameEn: 'Daniil Medvedev', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/daniil-medvedev.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+    longBio: '코트 위의 체스 마스터. 198cm의 장신에서 나오는 강력한 서브와 투어 최고의 수비력, 그리고 상대를 질식시키는 지능적인 경기 운영으로 빅3의 독주를 막아선 차세대 황제입니다.',
     detailedProfile: {
-        oneLineSummary: '기록 파괴자이자 살아있는 전설, 테니스의 모든 역사를 새로 쓴 "무결점의 GOAT".',
+        oneLineSummary: '상대를 질식시키는 "코트 위의 체스 마스터", 빅3 시대를 끝낸 가장 지능적인 승부사.',
         whyNotable: `
-            <p><strong>"The Great of All Time (GOAT)"</strong></p>
-            <p>노박 조코비치를 설명하는 데는 긴 말이 필요 없습니다. **그랜드슬램 최다 우승(24회), 마스터스 1000 최다 우승, ATP 파이널스 최다 우승, 역대 최장기간 세계 랭킹 1위** 등 테니스의 거의 모든 주요 기록을 보유하고 있습니다.</p>
-            <p>페더러의 우아함과 나달의 투지 사이에서, 조코비치는 '완벽함'이라는 단어로 정의됩니다. 어떤 상황에서도 무너지지 않는 강철 같은 멘탈과, 신체 능력을 극한으로 끌어올린 유연성은 그를 난공불락의 요새로 만들었습니다.</p>
+            <div class="highlight-box">
+                <div class="highlight-box-title">🏆 빅3의 독주를 멈춰 세운 난공불락의 벽</div>
+                <p>다닐 메드베데프는 2021년 <strong>US 오픈 결승에서 노박 조코비치를 3-0으로 완파</strong>하며, 조코비치의 '캘린더 그랜드슬램' 대기록 달성을 저지한 주인공입니다. 이는 2000년대 이후 테니스 역사상 가장 충격적인 결승전 중 하나로 꼽힙니다.</p>
+            </div>
+            <p>그는 단순히 공을 세게 치는 것이 아니라, <span class="px-1 rounded bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 font-bold">'코트 위의 체스 마스터'</span>라는 별명처럼 상대의 수를 미리 읽고 가장 까다로운 코스로 공을 보내 실수를 유발합니다.</p>
         `,
         playStyle: `
-            <p><strong>"육각형의 정점 (Complete Player)"</strong></p>
-            <p>조코비치는 뚜렷한 약점이 없는 '무결점 플레이어'입니다. 공격과 수비의 완벽한 조화, 정교한 리턴, 그리고 코트 구석구석을 찌르는 정밀함은 타의 추종을 불허합니다.</p>
-            <ul class="list-disc pl-5 my-4 space-y-2">
-                <li><strong>리턴:</strong> 역사상 최고의 리터너로 꼽힙니다. 상대의 강서브를 발 밑으로 떨어뜨려 공격권 자체를 무력화시킵니다.</li>
-                <li><strong>유연성:</strong> '고무 인간'이라 불릴 정도로 관절 가동 범위가 넓어, 불가능해 보이는 수비 상황에서도 균형을 잃지 않고 공을 받아냅니다.</li>
-                <li><strong>백핸드:</strong> 투어 역사상 가장 완벽한 투핸드 백핸드를 구사합니다. 다운더라인 샷은 그의 필살기입니다.</li>
-            </ul>
+            <p><strong>"비정통적 수비형 카운터 펀처 (Unorthodox Counter Puncher)"</strong></p>
+            <p>메드베데프의 테니스는 교과서와는 거리가 멉니다. 하지만 그 **비정통성(Unorthodox)**이 바로 그의 가장 큰 무기입니다.</p>
+            <div class="highlight-box">
+                <div class="highlight-box-title">🐙 메드베데프의 3가지 "사기 유닛" 기술</div>
+                <ul class="list-disc pl-5 my-0 space-y-2">
+                    <li><strong>딥 리턴 포지션:</strong> 중계 화면 밖으로 나갈 정도로 뒤에서 리턴을 준비합니다.</li>
+                    <li><strong>문어 (The Octopus):</strong> 긴 팔다리로 코트 구석구석을 커버하는 능력입니다.</li>
+                    <li><strong>초저공 플랫 스트로크:</strong> 네트를 스치듯 낮게 깔리는 '레이저 샷'을 구사합니다.</li>
+                </ul>
+            </div>
         `,
         hexagonStats: [
-            { name: '리턴 (Return)', score: 10, description: '역사상 최고의 리턴 능력.' },
-            { name: '백핸드 (Backhand)', score: 10, description: '수비와 공격 모두 완벽한 투어 최고의 백핸드.' },
-            { name: '멘탈 (Mental)', score: 10, description: '타이브레이크 승률 역대 1위. 압박감을 즐기는 강심장.' },
-            { name: '체력 (Stamina)', score: 10, description: '5시간의 혈투 끝에도 지치지 않는 무한 동력.' },
-            { name: '수비 (Defense)', score: 10, description: '코트의 모든 공을 받아내는 통곡의 벽.' },
-            { name: '서브 (Serve)', score: 9, description: '화려하진 않지만 정교한 코스 공략으로 에이스를 양산함.' }
+            { name: '수비 (Defense)', score: 10, description: '투어 역사상 가장 넓은 수비 범위를 자랑하는 통곡의 벽.' },
+            { name: '전술 (Tactics)', score: 10, description: '상대의 멘탈과 전략을 완전히 무너뜨리는 두뇌 플레이.' },
+            { name: '서브 (Serve)', score: 9.5, description: '200km/h를 쉽게 넘기는 플랫 서브.' },
+            { name: '백핸드 (Backhand)', score: 9.5, description: '공격과 수비 밸런스가 완벽한 무기.' },
+            { name: '포핸드 (Forehand)', score: 8.5, description: '폼은 특이하지만 타점 잡기가 까다로움.' },
+            { name: '멘탈 (Mental)', score: 9, description: '관중의 야유조차 에너지로 바꾸는 강철 멘탈.' }
         ],
         growthStory: `
-            <p>세르비아 베오그라드에서 태어난 조코비치는 전쟁의 포화 속에서 테니스를 배웠습니다. 이러한 성장 배경은 그에게 누구에게도 지지 않는 불굴의 정신력을 심어주었습니다.</p>
-            <p>2008년 첫 호주 오픈 우승 이후, 글루텐 프리 식단 등 철저한 자기 관리를 통해 신체적 한계를 극복했습니다. 2011년 시즌 43연승이라는 대기록과 함께 페더러-나달의 양강 체제를 깨뜨리며 1인 독재 시대를 열었습니다.</p>
+            <p>러시아 모스크바 태생으로 <span class="font-semibold text-blue-700 dark:text-blue-400">수학 영재 학교</span> 출신입니다.</p>
+            <blockquote>
+                "나는 재능이 없었다. 그래서 머리를 써야만 했다."
+            </blockquote>
+            <p>프랑스로 건너가 <strong>질 세바라</strong> 코치를 만나 독특한 폼을 장점으로 승화시켰고, 결국 <span class="bg-yellow-100 dark:bg-yellow-900/30 px-1 rounded">세계 1위</span>까지 올랐습니다.</p>
         `,
         signatureMatch: {
-            title: '2019 윔블던 결승 vs 로저 페더러',
-            date: '2019. 07. 14',
-            description: '테니스 역사상 가장 위대한 결승전 중 하나. 마지막 세트 12-12 타이브레이크까지 가는 4시간 57분의 혈투 끝에 우승을 차지했습니다. 특히 매치 포인트 위기(15-40)를 두 번이나 극복하고 역전승을 일궈낸 이 경기는 그의 멘탈을 증명하는 최고의 명장면입니다.'
+            title: '2021 US 오픈 결승 vs 노박 조코비치',
+            date: '2021. 09. 12',
+            description: '전 세계의 예상을 뒤엎고 <strong>세트 스코어 3-0</strong>으로 완승을 거두며 생애 첫 메이저 타이틀을 획득했습니다.'
         },
+        fanAppeal: `
+            <div class="highlight-box">
+                <div class="highlight-box-title">😈 미워할 수 없는 "솔직한 빌런"</div>
+                <p>코트 위에서는 관중과 싸우지만 경기 후엔 쿨하게 인정하는 반전 매력의 소유자입니다.</p>
+            </div>
+        `,
         recentForm: `
-            <p><strong>"여전히 정상에서"</strong></p>
-            <p>30대 중반을 훌쩍 넘긴 나이에도 여전히 전성기 기량을 유지하고 있습니다. 2023년 그랜드슬램 3회 우승, 2024 파리 올림픽 금메달을 목표로 달리는 그는 여전히 모든 대회의 가장 강력한 우승 후보입니다.</p>
-        `
+            <p><strong>"하드 코트의 지배자"</strong></p>
+            <p>여전히 <span class="font-bold text-indigo-600 dark:text-indigo-400">강력한 우승 후보</span>이며, 클레이/잔디 코트에서도 성적을 내며 <span class="underline decoration-2 decoration-green-400 underline-offset-2">'올라운더'</span>로 진화 중입니다.</p>
+        `,
+        faq: [
+            {
+                question: '다닐 메드베데프는 언제, 얼마나 오랫동안 세계 랭킹 1위를 유지했나요?',
+                answer: '2022년 2월 28일, "빅4" 체제를 깨고 1위에 등극하여 총 16주간 유지했습니다.'
+            }
+        ]
     }
 };
-*/
