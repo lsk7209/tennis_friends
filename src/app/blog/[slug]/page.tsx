@@ -49,9 +49,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     path: `/blog/${slug}`,
     type: 'article',
     publishedTime: post.date,
-    authors: [post.author || 'TennisFriends'],
+    authors: ['TennisFriends'],
     tags,
-    image: post.image,
   });
 }
 
@@ -140,7 +139,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         description={post.excerpt || ''}
         slug={post.slug}
         date={post.date}
-        author={post.author}
+        author="TennisFriends"
         category={post.category}
         readingTime={post.readTime}
         keywords={post.tags}
@@ -196,7 +195,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="flex items-center justify-between">
             <div className="text-sm text-text-muted">
               <span itemProp="author" itemScope itemType="https://schema.org/Person">
-                <span itemProp="name">작성자: {post.author}</span>
+                <span itemProp="name">작성자: TennisFriends</span>
               </span>
             </div>
             <Button variant="outline" size="sm" className="bg-content-dark border-white/10">
