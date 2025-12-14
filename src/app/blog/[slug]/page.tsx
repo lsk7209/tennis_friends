@@ -93,10 +93,10 @@ export default async function BlogPostPage({ params }: PageProps) {
   const currentPostItem: RelatedContentItem = {
     id: post.id,
     title: post.title,
-    description: post.description,
+    description: post.excerpt,
     excerpt: post.excerpt,
     category: post.category,
-    tags: post.tags,
+    tags: post.tags || [],
     href: `/blog/${post.slug}`,
     date: post.date,
     readTime: post.readTime,
@@ -120,7 +120,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const faqItems = [
     {
       question: `${post.title}에 대해 자세히 알고 싶습니다.`,
-      answer: post.description || post.excerpt || `${post.title}에 대한 상세 정보를 제공합니다.`,
+      answer: post.excerpt || `${post.title}에 대한 상세 정보를 제공합니다.`,
     },
     {
       question: `${post.category} 카테고리의 다른 글도 있나요?`,
@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Enhanced Structured Data */}
       <EnhancedBlogPostSchema
         title={post.title}
-        description={post.description || post.excerpt || ''}
+        description={post.excerpt || ''}
         slug={post.slug}
         date={post.date}
         author={post.author}
@@ -190,7 +190,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </h1>
           
           <p className="text-lg text-text-muted mb-6" itemProp="description">
-            {post.description || post.excerpt}
+            {post.excerpt}
           </p>
           
           <div className="flex items-center justify-between">
