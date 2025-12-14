@@ -11,12 +11,13 @@ import { NextRequest } from 'next/server';
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ verification: string }> }
+  context?: { params?: Promise<{ verification?: string }> }
 ) {
-  const { verification } = await params;
+  const params = context?.params ? await context.params : {};
+  const verification = params?.verification;
   const envCode = process.env.NAVER_SITE_VERIFICATION;
   
-  const code = envCode || verification;
+  const code = envCode || verification || '';
   const html = `naver-site-verification: ${code}`;
 
   return new Response(html, {

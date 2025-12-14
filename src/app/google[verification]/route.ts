@@ -16,13 +16,14 @@ import { NextRequest } from 'next/server';
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ verification: string }> }
+  context?: { params?: Promise<{ verification?: string }> }
 ) {
-  const { verification } = await params;
+  const params = context?.params ? await context.params : {};
+  const verification = params?.verification;
   const envCode = process.env.GOOGLE_SITE_VERIFICATION;
   
   // 환경 변수에 설정된 코드와 일치하는지 확인
-  const code = envCode || verification;
+  const code = envCode || verification || '';
   
   // 구글 인증 HTML 파일 내용
   const html = `google-site-verification: ${code}.html`;

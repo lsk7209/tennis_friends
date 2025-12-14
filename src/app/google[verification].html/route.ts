@@ -5,12 +5,13 @@ import { NextRequest } from 'next/server';
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ verification: string }> }
+  context?: { params?: Promise<{ verification?: string }> }
 ) {
-  const { verification } = await params;
+  const params = context?.params ? await context.params : {};
+  const verification = params?.verification;
   const envCode = process.env.GOOGLE_SITE_VERIFICATION;
   
-  const code = envCode || verification;
+  const code = envCode || verification || '';
   const html = `google-site-verification: ${code}.html`;
 
   return new Response(html, {
