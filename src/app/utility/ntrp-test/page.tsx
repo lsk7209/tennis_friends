@@ -6,35 +6,23 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BarChart3, Target, TrendingUp, Clock, Users, Award, CheckCircle, ArrowRight, Sparkles, Zap, Shield } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import QuizSchema from '@/components/seo/QuizSchema';
+import FAQSection from '@/components/seo/FAQSection';
+import { generatePageMetadata } from '@/lib/seo/metadata-helpers';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: 'NTRP 실력 테스트 - 테니스 실력 측정 | TennisFriends',
-  description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요. 15개 질문으로 당신의 실제 NTRP 등급을 알아보세요. 실력 향상을 위한 맞춤형 가이드 제공.',
-  keywords: ['NTRP', '테니스 실력 테스트', '실력 측정', '테니스 등급', '실력 향상'],
-  alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/utility/ntrp-test`,
-  },
-  openGraph: {
-    title: 'NTRP 실력 테스트 - 테니스 실력 측정 | TennisFriends',
-    description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요. 15개 질문으로 당신의 실제 NTRP 등급을 알아보세요.',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/utility/ntrp-test`,
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'NTRP 실력 테스트 - 테니스 실력 측정 | TennisFriends',
-    description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// Enhanced metadata with Naver optimization
+export const metadata: Metadata = generatePageMetadata({
+  title: 'NTRP 실력 테스트',
+  description: 'NTRP 실력 테스트로 정확한 테니스 실력을 측정하세요. 15개 질문으로 당신의 실제 NTRP 등급을 알아보고, 실력 향상을 위한 맞춤형 가이드를 받으세요.',
+  path: '/utility/ntrp-test',
+  type: 'website',
+  tags: ['NTRP', '테니스 실력 테스트', '실력 측정', '테니스 등급', '실력 향상', '테니스 평가'],
+});
 
 export default function NtrpTestIntro() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const utilityUrl = `${siteUrl}/utility/ntrp-test`;
+
   const features = [
     {
       icon: BarChart3,
@@ -115,10 +103,52 @@ export default function NtrpTestIntro() {
     { label: '만족도', value: '4.8/5', icon: Award, color: 'text-orange-600' }
   ];
 
+  // FAQ items for AI snippet optimization
+  const faqItems = [
+    {
+      question: 'NTRP 실력 테스트는 무엇인가요?',
+      answer: 'NTRP(National Tennis Rating Program)는 미국 테니스 협회가 개발한 표준화된 테니스 실력 평가 시스템입니다. 15개 질문을 통해 정확한 실력 등급을 측정하고, 개인화된 개선 방향을 제시합니다.',
+    },
+    {
+      question: '테스트는 얼마나 걸리나요?',
+      answer: '약 5분 정도 소요됩니다. 15개의 간단한 질문에 솔직하게 답변하시면 됩니다.',
+    },
+    {
+      question: 'NTRP 등급은 어떻게 결정되나요?',
+      answer: '과학적 알고리즘을 통해 답변을 분석하여 1.5부터 5.0+까지의 NTRP 등급을 산출합니다. 각 등급은 특정 기술 수준과 경기 능력을 나타냅니다.',
+    },
+    {
+      question: '테스트 결과는 어떻게 활용할 수 있나요?',
+      answer: '테스트 결과를 통해 현재 실력을 객관적으로 파악하고, 개선이 필요한 영역을 확인할 수 있습니다. 또한 적절한 연습 파트너를 찾거나 대회 참가 시 참고할 수 있습니다.',
+    },
+    {
+      question: '테스트는 무료인가요?',
+      answer: '네, 100% 무료로 제공됩니다. 언제든지 반복해서 테스트하여 실력 향상을 추적할 수 있습니다.',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <>
+      {/* Enhanced Quiz Schema for SEO/AEO */}
+      <QuizSchema
+        name="NTRP 실력 테스트"
+        description="15개 질문으로 정확한 테니스 실력을 측정하고, NTRP 등급과 개인화된 개선 방향을 확인하세요."
+        url={utilityUrl}
+        numberOfQuestions={15}
+        timeRequired="PT5M"
+        educationalLevel="Beginner to Advanced"
+        about="테니스 실력 평가"
+        aggregateRating={{
+          ratingValue: 4.8,
+          ratingCount: 15000,
+        }}
+      />
+    <main className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32">
+      <section 
+        className="relative overflow-hidden py-20 md:py-32"
+        aria-label="NTRP 실력 테스트 소개"
+      >
         {/* Background Decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-blue-500/5 to-purple-500/5"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-400/10 rounded-full blur-3xl"></div>
@@ -190,10 +220,13 @@ export default function NtrpTestIntro() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="features-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 id="features-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               왜 TennisFriends NTRP 테스트인가?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -226,10 +259,13 @@ export default function NtrpTestIntro() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-slate-100">
+      <section 
+        className="py-20 bg-gradient-to-br from-gray-50 to-slate-100"
+        aria-labelledby="benefits-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 id="benefits-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               테스트의 장점
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -257,10 +293,13 @@ export default function NtrpTestIntro() {
       </section>
 
       {/* NTRP Levels Section */}
-      <section className="py-20 bg-white">
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="ntrp-levels-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 id="ntrp-levels-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               NTRP 레벨 시스템
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -288,10 +327,13 @@ export default function NtrpTestIntro() {
       </section>
 
       {/* Test Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
+      <section 
+        className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50"
+        aria-labelledby="stats-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 id="stats-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               테스트 통계
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -319,10 +361,13 @@ export default function NtrpTestIntro() {
       </section>
 
       {/* How it Works Section */}
-      <section className="py-20 bg-white">
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="how-it-works-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               간단한 3단계로 완성
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -370,8 +415,25 @@ export default function NtrpTestIntro() {
         </div>
       </section>
 
+      {/* FAQ Section - AI Snippet Optimization */}
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="faq-heading"
+      >
+        <div className="container mx-auto max-w-4xl px-4">
+          <FAQSection 
+            items={faqItems}
+            id="faq"
+            title="자주 묻는 질문"
+          />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden">
+      <section 
+        className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden"
+        aria-label="테스트 시작하기"
+      >
         {/* Decorative Elements */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
@@ -405,6 +467,7 @@ export default function NtrpTestIntro() {
           </Card>
         </div>
       </section>
-    </div>
+    </main>
+    </>
   );
 }

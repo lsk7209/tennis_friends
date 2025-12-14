@@ -6,11 +6,13 @@ const nextConfig: NextConfig = {
   ...(process.env.GITHUB_ACTIONS && process.env.GITHUB_PAGES === 'true' ? {
     output: 'export',
     distDir: 'out',
-    basePath: '/tennis_friends',
-    assetPrefix: '/tennis_friends',
+    // basePath는 환경 변수로 설정 가능, 기본값은 저장소 이름 기반
+    basePath: process.env.GITHUB_PAGES_BASE_PATH || (process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}` : '/tennis_friends'),
+    assetPrefix: process.env.GITHUB_PAGES_BASE_PATH || (process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}` : '/tennis_friends'),
     images: {
       unoptimized: true,
-    }
+    },
+    trailingSlash: true, // GitHub Pages에서 정적 파일 접근 최적화
   } : {
     // Vercel/General Optimization
     images: {
@@ -67,6 +69,53 @@ const nextConfig: NextConfig = {
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
+          },
+          // 크롤러 최적화 헤더
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+          },
+          // AI 크롤러 허용
+          {
+            key: 'Permissions-Policy',
+            value: 'interest-cohort=()', // FLoC 비활성화, AI 크롤러는 허용
+          },
+        ],
+      },
+      // 사이트맵과 RSS는 캐싱 최적화
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600',
+          },
+        ],
+      },
+      {
+        source: '/sitemap-naver.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600',
+          },
+        ],
+      },
+      {
+        source: '/rss.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600',
+          },
+        ],
+      },
+      {
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=86400',
           },
         ],
       },

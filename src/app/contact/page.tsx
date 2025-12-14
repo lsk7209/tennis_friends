@@ -9,6 +9,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
+// Note: Metadata cannot be exported from client components
+// This will be handled by a layout or parent component
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',

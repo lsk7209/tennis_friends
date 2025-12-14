@@ -56,18 +56,41 @@ npm start
 
 이 프로젝트는 GitHub Actions를 통해 자동으로 GitHub Pages에 배포됩니다.
 
-#### 자동 배포 설정
+#### 빠른 배포 (3단계)
 
-1. GitHub 저장소의 **Settings** → **Pages**로 이동
-2. **Source**를 **GitHub Actions**로 설정
-3. `main` 브랜치에 푸시하면 자동으로 빌드 및 배포됩니다
+1. **GitHub 저장소 설정**
+   - 저장소 **Settings** → **Pages** → **Source**: **GitHub Actions** 선택
+
+2. **코드 푸시**
+   ```bash
+   git push origin main
+   ```
+
+3. **배포 확인**
+   - **Actions** 탭에서 배포 상태 확인
+   - 배포된 URL: `https://[username].github.io/[repository-name]`
+
+#### 자동 배포
+
+- `main` 또는 `master` 브랜치에 푸시하면 자동으로 빌드 및 배포됩니다
+- 워크플로우: `.github/workflows/deploy-github-pages.yml`
 
 #### 수동 배포
 
 ```bash
-# GitHub Pages에 배포
+# 로컬에서 빌드 및 배포
 npm run gh-pages
 ```
+
+#### 환경 변수 설정 (선택)
+
+GitHub 저장소의 **Settings** → **Secrets and variables** → **Actions**에서 Secrets 추가:
+
+- `NEXT_PUBLIC_SITE_URL`: 사이트 URL
+- `GITHUB_PAGES_BASE_PATH`: basePath (기본값은 저장소 이름)
+- 기타 환경 변수들
+
+자세한 내용은 `GITHUB_PAGES_DEPLOYMENT.md`를 참고하세요.
 
 ### Cloudflare Pages 배포
 

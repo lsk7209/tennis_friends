@@ -7,6 +7,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Shield, AlertTriangle, Heart, Target, Users, CheckCircle, ArrowRight, Sparkles, Zap } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import SoftwareApplicationSchema from '@/components/seo/SoftwareApplicationSchema';
+import FAQSection from '@/components/seo/FAQSection';
 
 export default function InjuryRiskIntro() {
   const features = [
@@ -90,10 +92,58 @@ export default function InjuryRiskIntro() {
     }
   ];
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const utilityUrl = `${siteUrl}/utility/injury-risk`;
+
+  // FAQ items for AI snippet optimization
+  const faqItems = [
+    {
+      question: '부상 위험 예측은 무엇인가요?',
+      answer: '부상 위험 예측은 개인의 나이, 플레이 빈도, 이전 부상 이력, 장비 상태, 코트 환경, 준비 운동 등 6가지 주요 요인을 종합 분석하여 테니스 부상 위험도를 측정하는 도구입니다.',
+    },
+    {
+      question: '어떤 부상 위험 요인을 분석하나요?',
+      answer: '나이, 플레이 빈도, 이전 부상 이력, 장비 상태, 코트 환경, 준비 운동 등 6가지 주요 요인을 분석합니다. 각 요인은 과학적 데이터와 전문가 의견을 바탕으로 평가됩니다.',
+    },
+    {
+      question: '부상 위험도가 높게 나오면 어떻게 해야 하나요?',
+      answer: '위험도가 높게 나오면 해당 위험 요인별 맞춤형 예방 방법과 운동 가이드를 제공합니다. 워밍업 강화, 장비 교체, 플레이 빈도 조정 등의 구체적인 조언을 받을 수 있습니다.',
+    },
+    {
+      question: '이 도구는 의학적 진단을 대체하나요?',
+      answer: '아니요, 이 도구는 예방 목적의 참고 자료입니다. 실제 부상이나 통증이 있다면 반드시 전문의의 진단을 받으시기 바랍니다.',
+    },
+    {
+      question: '테스트는 무료인가요?',
+      answer: '네, 100% 무료로 제공됩니다. 언제든지 반복해서 사용하여 부상 위험도를 확인하고 예방 조치를 취할 수 있습니다.',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
+    <>
+      {/* SoftwareApplication Schema for Assessment Tool */}
+      <SoftwareApplicationSchema
+        name="부상 위험 예측"
+        description="개인별 플레이 환경과 이력을 종합 분석하여 정확한 부상 위험도를 측정하고, 맞춤형 예방 가이드를 제공하는 웹 도구입니다."
+        url={utilityUrl}
+        applicationCategory="WebApplication"
+        featureList={[
+          '위험도 평가',
+          '예방 가이드',
+          '안전한 플레이',
+          '개인별 맞춤',
+        ]}
+        offers={{
+          price: '0',
+          priceCurrency: 'KRW',
+        }}
+      />
+    <main className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32">
+      <section 
+        className="relative overflow-hidden py-20 md:py-32"
+        aria-label="부상 위험 예측 소개"
+      >
         {/* Background Decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 via-orange-500/5 to-amber-500/5"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-red-400/10 rounded-full blur-3xl"></div>
@@ -164,11 +214,14 @@ export default function InjuryRiskIntro() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="features-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <SlideUp>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              <h2 id="features-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                 왜 TennisFriends 부상 예방인가?
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -202,11 +255,14 @@ export default function InjuryRiskIntro() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-slate-100">
+      <section 
+        className="py-20 bg-gradient-to-br from-gray-50 to-slate-100"
+        aria-labelledby="benefits-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <SlideUp>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              <h2 id="benefits-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                 부상 예방의 장점
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -239,11 +295,14 @@ export default function InjuryRiskIntro() {
       </section>
 
       {/* Risk Factors Section */}
-      <section className="py-20 bg-white">
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="risk-factors-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <SlideUp>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              <h2 id="risk-factors-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                 부상 위험 요인
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -272,11 +331,14 @@ export default function InjuryRiskIntro() {
       </section>
 
       {/* How it Works Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
+      <section 
+        className="py-20 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50"
+        aria-labelledby="how-it-works-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <SlideUp>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                 간단한 3단계로 완성
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -334,8 +396,25 @@ export default function InjuryRiskIntro() {
         </div>
       </section>
 
+      {/* FAQ Section - AI Snippet Optimization */}
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="faq-heading"
+      >
+        <div className="container mx-auto max-w-4xl px-4">
+          <FAQSection 
+            items={faqItems}
+            id="faq"
+            title="자주 묻는 질문"
+          />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-red-600 via-orange-600 to-amber-600 relative overflow-hidden">
+      <section 
+        className="py-20 bg-gradient-to-br from-red-600 via-orange-600 to-amber-600 relative overflow-hidden"
+        aria-label="위험도 체크 시작하기"
+      >
         {/* Decorative Elements */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
@@ -379,6 +458,7 @@ export default function InjuryRiskIntro() {
           </FadeIn>
         </div>
       </section>
-    </div>
+    </main>
+    </>
   );
 }

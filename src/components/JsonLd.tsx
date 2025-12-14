@@ -1,14 +1,59 @@
 import React from 'react';
 
+/**
+ * Enhanced JsonLd Component for SEO/AEO Optimization
+ * 
+ * Features:
+ * - Type-safe schema support
+ * - Multiple schema support via @graph
+ * - Automatic validation
+ * - Naver/Google/AI bot optimization
+ */
 interface JsonLdProps {
-    data: Record<string, any>;
+    /**
+     * Schema data - can be a single schema or @graph array
+     */
+    data: Record<string, any> | { '@graph': Array<Record<string, any>> };
+    
+    /**
+     * Optional ID for the script tag (useful for multiple schemas on same page)
+     */
+    id?: string;
+    
+    /**
+     * Whether to validate the schema structure (development only)
+     */
+    validate?: boolean;
 }
 
-export default function JsonLd({ data }: JsonLdProps) {
+/**
+ * Validates basic schema structure (development helper)
+ */
+function validateSchema(data: Record<string, any>): boolean {
+    if (process.env.NODE_ENV !== 'development') return true;
+    
+    // Basic validation: must have @context and @type (or @graph)
+    if ('@graph' in data) {
+        return Array.isArray(data['@graph']) && data['@graph'].length > 0;
+    }
+    
+    return '@context' in data && ('@type' in data || '@graph' in data);
+}
+
+export default function JsonLd({ data, id, validate = false }: JsonLdProps) {
+    // Validate in development mode
+    if (validate && !validateSchema(data as Record<string, any>)) {
+        console.warn('[JsonLd] Schema validation failed:', data);
+    }
+
+    // Ensure proper formatting
+    const formattedData = JSON.stringify(data, null, 0);
+
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+            id={id}
+            dangerouslySetInnerHTML={{ __html: formattedData }}
         />
     );
 }

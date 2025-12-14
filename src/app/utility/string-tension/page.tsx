@@ -6,33 +6,18 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calculator, Target, Settings, Zap, Shield, TrendingUp, ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import SoftwareApplicationSchema from '@/components/seo/SoftwareApplicationSchema';
+import FAQSection from '@/components/seo/FAQSection';
+import { generatePageMetadata } from '@/lib/seo/metadata-helpers';
 
-// 메타데이터
-export const metadata: Metadata = {
-  title: '스트링 텐션 계산기 - 최적 텐션 추천 | TennisFriends',
+// Enhanced metadata with Naver optimization
+export const metadata: Metadata = generatePageMetadata({
+  title: '스트링 텐션 계산기',
   description: '스트링 텐션 계산기로 당신에게 맞는 최적 텐션을 찾아보세요. 라켓 무게, 플레이 스타일, 실력을 고려한 과학적 텐션 추천.',
-  keywords: ['스트링 텐션', '텐션 계산기', '테니스 스트링', '라켓 텐션', '스트링 장력'],
-  alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/string-tension',
-  },
-  openGraph: {
-    title: '스트링 텐션 계산기 - 최적 텐션 추천 | TennisFriends',
-    description: '스트링 텐션 계산기로 당신에게 맞는 최적 텐션을 찾아보세요. 라켓 무게, 플레이 스타일, 실력을 고려한 과학적 텐션 추천.',
-    url: 'https://tennisfriends.co.kr/utility/string-tension',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '스트링 텐션 계산기 - 최적 텐션 추천 | TennisFriends',
-    description: '스트링 텐션 계산기로 당신에게 맞는 최적 텐션을 찾아보세요.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  path: '/utility/string-tension',
+  type: 'website',
+  tags: ['스트링 텐션', '텐션 계산기', '테니스 스트링', '라켓 텐션', '스트링 장력', '테니스 장비'],
+});
 
 export default function StringTensionIntro() {
   const features = [
@@ -77,10 +62,58 @@ export default function StringTensionIntro() {
     }
   ];
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const utilityUrl = `${siteUrl}/utility/string-tension`;
+
+  // FAQ items for AI snippet optimization
+  const faqItems = [
+    {
+      question: '스트링 텐션은 무엇인가요?',
+      answer: '스트링 텐션은 라켓 프레임에 스트링을 얼마나 팽팽하게 당겨서 끼우는지를 나타내는 수치입니다. 적절한 텐션은 플레이 스타일, 실력, 환경에 따라 달라집니다.',
+    },
+    {
+      question: '최적의 텐션은 어떻게 결정되나요?',
+      answer: '라켓 헤드 사이즈, 스트링 종류, 플레이 스타일, NTRP 레벨, 환경(온도, 습도) 등을 종합적으로 고려하여 결정됩니다. 이 계산기는 이러한 요소들을 분석하여 최적의 텐션을 추천합니다.',
+    },
+    {
+      question: '텐션이 너무 높거나 낮으면 어떻게 되나요?',
+      answer: '텐션이 너무 높으면 컨트롤은 좋아지지만 파워와 스핀이 줄어들고, 너무 낮으면 파워는 좋아지지만 컨트롤이 어려워집니다. 또한 부적절한 텐션은 부상 위험을 증가시킬 수 있습니다.',
+    },
+    {
+      question: '계절에 따라 텐션을 조정해야 하나요?',
+      answer: '네, 온도와 습도에 따라 텐션을 조정하는 것이 좋습니다. 여름에는 약간 낮추고, 겨울에는 약간 높이는 것이 일반적입니다. 계산기에서 환경 조건을 선택하면 이를 고려한 추천을 받을 수 있습니다.',
+    },
+    {
+      question: '이 계산기는 무료인가요?',
+      answer: '네, 100% 무료로 제공됩니다. 언제든지 반복해서 사용하여 최적의 텐션을 찾을 수 있습니다.',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-emerald-50 to-teal-50">
+    <>
+      {/* SoftwareApplication Schema for Calculator Tool */}
+      <SoftwareApplicationSchema
+        name="스트링 텐션 계산기"
+        description="라켓, 스트링, 플레이 스타일을 종합 분석하여 최적의 스트링 텐션을 추천하는 웹 도구입니다."
+        url={utilityUrl}
+        applicationCategory="WebApplication"
+        featureList={[
+          '정확한 텐션 계산',
+          '맞춤형 추천',
+          '실전 가이드',
+          '부상 예방',
+        ]}
+        offers={{
+          price: '0',
+          priceCurrency: 'KRW',
+        }}
+      />
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-emerald-50 to-teal-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32">
+      <section 
+        className="relative overflow-hidden py-20 md:py-32"
+        aria-label="스트링 텐션 계산기 소개"
+      >
         {/* Background Decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-emerald-500/5 to-teal-500/5"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
@@ -152,10 +185,13 @@ export default function StringTensionIntro() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="features-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 id="features-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               왜 TennisFriends 텐션 계산기인가?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -188,10 +224,13 @@ export default function StringTensionIntro() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-slate-100">
+      <section 
+        className="py-20 bg-gradient-to-br from-gray-50 to-slate-100"
+        aria-labelledby="benefits-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 id="benefits-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               텐션 계산의 장점
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -219,10 +258,13 @@ export default function StringTensionIntro() {
       </section>
 
       {/* How it Works Section */}
-      <section className="py-20 bg-white">
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="how-it-works-heading"
+      >
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               간단한 3단계로 완성
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -270,8 +312,25 @@ export default function StringTensionIntro() {
         </div>
       </section>
 
+      {/* FAQ Section - AI Snippet Optimization */}
+      <section 
+        className="py-20 bg-white"
+        aria-labelledby="faq-heading"
+      >
+        <div className="container mx-auto max-w-4xl px-4">
+          <FAQSection 
+            items={faqItems}
+            id="faq"
+            title="자주 묻는 질문"
+          />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-emerald-600 to-teal-600 relative overflow-hidden">
+      <section 
+        className="py-20 bg-gradient-to-br from-blue-600 via-emerald-600 to-teal-600 relative overflow-hidden"
+        aria-label="계산기 시작하기"
+      >
         {/* Decorative Elements */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
@@ -305,6 +364,7 @@ export default function StringTensionIntro() {
           </Card>
         </div>
       </section>
-    </div>
+    </main>
+    </>
   );
 }

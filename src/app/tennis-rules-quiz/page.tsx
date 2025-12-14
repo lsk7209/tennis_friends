@@ -7,6 +7,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Play, BookOpen, Target, Trophy, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import { FadeIn, SlideUp, SlideDown, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import QuizSchema from '@/components/seo/QuizSchema';
+import FAQSection from '@/components/seo/FAQSection';
 
 export default function TennisRulesQuizIntro() {
   const [dailyTip, setDailyTip] = useState('');
@@ -104,10 +106,55 @@ export default function TennisRulesQuizIntro() {
     }
   ];
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const quizUrl = `${siteUrl}/tennis-rules-quiz`;
+
+  // FAQ items for AI snippet optimization
+  const faqItems = [
+    {
+      question: '테니스 규칙 퀴즈는 무엇인가요?',
+      answer: '테니스 규칙 퀴즈는 12문항의 랜덤 문제를 통해 테니스 규칙에 대한 이해도를 측정하는 도구입니다. 각 문항마다 정답과 상세한 해설을 즉시 확인할 수 있으며, 카테고리별 약점 분석도 제공합니다.',
+    },
+    {
+      question: '퀴즈는 얼마나 걸리나요?',
+      answer: '약 5분 정도 소요됩니다. 12문항의 문제를 풀고 결과를 확인하는 시간을 포함합니다.',
+    },
+    {
+      question: '문제는 어떻게 출제되나요?',
+      answer: '실제 경기에서 자주 발생하는 상황들을 중심으로 출제됩니다. 서브, 풋폴트, 점수 체계, 복식 규칙, 타이브레이크 등 다양한 카테고리에서 문제가 출제됩니다.',
+    },
+    {
+      question: '등급은 어떻게 결정되나요?',
+      answer: '12문항 중 맞힌 개수에 따라 결정됩니다. 10-12점은 Rules Pro, 7-9점은 Match Ready, 4-6점은 Learning, 0-3점은 Beginner 등급입니다.',
+    },
+    {
+      question: '퀴즈는 무료인가요?',
+      answer: '네, 100% 무료로 제공됩니다. 언제든지 반복해서 사용하여 규칙 실력을 향상시킬 수 있습니다.',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {/* Quiz Schema for SEO/AEO */}
+      <QuizSchema
+        name="테니스 규칙 퀴즈"
+        description="12문항 랜덤 퀴즈로 실전 규칙 감각을 점검하고 약점을 분석해보세요. 각 문항마다 정답과 상세한 해설을 즉시 확인할 수 있습니다."
+        url={quizUrl}
+        numberOfQuestions={12}
+        timeRequired="PT5M"
+        educationalLevel="Beginner to Advanced"
+        about="테니스 규칙 학습"
+        aggregateRating={{
+          ratingValue: 4.7,
+          ratingCount: 5000,
+        }}
+      />
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-emerald-50 via-white to-sky-50">
+      <section 
+        className="section-padding bg-gradient-to-br from-emerald-50 via-white to-sky-50"
+        aria-label="테니스 규칙 퀴즈 소개"
+      >
         <div className="container mx-auto max-w-6xl container-padding">
           <div className="text-center max-w-4xl mx-auto">
             <FadeIn delay={0.2}>
@@ -181,11 +228,14 @@ export default function TennisRulesQuizIntro() {
       </section>
 
       {/* Features Section */}
-      <section className="section-padding bg-white">
+      <section 
+        className="section-padding bg-white"
+        aria-labelledby="features-heading"
+      >
         <div className="container mx-auto max-w-6xl container-padding">
           <SlideUp>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 왜 TennisFriends 규칙 퀴즈인가?
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -218,11 +268,14 @@ export default function TennisRulesQuizIntro() {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-gray-50">
+      <section 
+        className="section-padding bg-gray-50"
+        aria-labelledby="benefits-heading"
+      >
         <div className="container mx-auto max-w-6xl container-padding">
           <SlideUp>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="benefits-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 퀴즈의 장점
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -253,11 +306,14 @@ export default function TennisRulesQuizIntro() {
       </section>
 
       {/* Grade Levels Section */}
-      <section className="section-padding bg-white">
+      <section 
+        className="section-padding bg-white"
+        aria-labelledby="grade-levels-heading"
+      >
         <div className="container mx-auto max-w-6xl container-padding">
           <SlideUp>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="grade-levels-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 등급 시스템
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -287,7 +343,10 @@ export default function TennisRulesQuizIntro() {
       </section>
 
       {/* Daily Tip Section */}
-      <section className="section-padding bg-gray-50">
+      <section 
+        className="section-padding bg-gray-50"
+        aria-labelledby="daily-tip-heading"
+      >
         <div className="container mx-auto max-w-4xl container-padding">
           <FadeIn>
             <Card className="bg-gradient-to-r from-emerald-50 to-sky-50 border-emerald-200 shadow-lg">
@@ -296,7 +355,7 @@ export default function TennisRulesQuizIntro() {
                   <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <BookOpen className="h-8 w-8 text-emerald-600" />
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h2 id="daily-tip-heading" className="text-2xl font-bold text-gray-900 mb-4">
                     오늘의 TIP
                   </h2>
                   <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -312,8 +371,25 @@ export default function TennisRulesQuizIntro() {
         </div>
       </section>
 
+      {/* FAQ Section - AI Snippet Optimization */}
+      <section 
+        className="section-padding bg-white"
+        aria-labelledby="faq-heading"
+      >
+        <div className="container mx-auto max-w-4xl container-padding">
+          <FAQSection 
+            items={faqItems}
+            id="faq"
+            title="자주 묻는 질문"
+          />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-emerald-50 via-white to-sky-50">
+      <section 
+        className="section-padding bg-gradient-to-r from-emerald-50 via-white to-sky-50"
+        aria-label="퀴즈 시작하기"
+      >
         <div className="container mx-auto max-w-4xl container-padding text-center">
           <FadeIn>
             <Card className="bg-white border-gray-200 shadow-lg">
@@ -350,6 +426,7 @@ export default function TennisRulesQuizIntro() {
           </FadeIn>
         </div>
       </section>
-    </div>
+    </main>
+    </>
   );
 }

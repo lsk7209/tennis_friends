@@ -1,7 +1,23 @@
 import React from 'react';
+import { Metadata } from 'next';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Heart, Target, Users, Award } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'TennisFriends 소개 | 테니스 실력 향상을 위한 종합 플랫폼',
+  description: 'TennisFriends는 데이터 기반의 정확한 분석과 전문적인 정보로 테니스 실력 향상을 돕는 종합 플랫폼입니다. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 위험도 평가 등 다양한 도구를 제공합니다.',
+  keywords: ['TennisFriends', '테니스 플랫폼', '테니스 커뮤니티', '테니스 실력 향상', 'NTRP', '테니스 도구'],
+  alternates: {
+    canonical: 'https://tennisfriends.co.kr/about',
+  },
+  openGraph: {
+    title: 'TennisFriends 소개 | 테니스 실력 향상을 위한 종합 플랫폼',
+    description: '데이터 기반의 정확한 분석과 전문적인 정보로 테니스 실력 향상을 돕는 종합 플랫폼입니다.',
+    url: 'https://tennisfriends.co.kr/about',
+    type: 'website',
+  },
+};
 
 export default function AboutPage() {
   const teamMembers = [
