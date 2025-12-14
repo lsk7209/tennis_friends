@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const description = post.excerpt || post.description || '';
-  const tags = [post.category, '테니스', '블로그', ...(post.tags || [])];
+  const description = post.excerpt || '';
+  const tags = [post.category, '테니스', '블로그'];
 
   // Use enhanced metadata helper for consistency
   return generatePageMetadata({
