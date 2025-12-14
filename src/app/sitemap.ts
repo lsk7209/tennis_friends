@@ -26,7 +26,15 @@ function getSlugsFromDir(dirPath: string): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr'
+  // 런타임에 요청 호스트를 사용하거나 환경 변수 사용
+  // Vercel/프로덕션에서는 요청 헤더를 사용할 수 없으므로 환경 변수 우선 사용
+  let baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  
+  // 환경 변수가 없으면 기본값 사용 (실제 도메인으로 변경 필요)
+  if (!baseUrl) {
+    // 프로덕션 환경에서는 실제 도메인을 환경 변수로 설정해야 함
+    baseUrl = 'https://www.tennisfrens.com';
+  }
   
   // baseUrl 정규화 (trailing slash 제거)
   const normalizedBaseUrl = baseUrl.replace(/\/$/, '')

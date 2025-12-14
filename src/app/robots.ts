@@ -4,7 +4,8 @@ export const dynamic = 'force-static'
 export const revalidate = false
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  // 환경 변수 우선 사용, 없으면 기본값 (실제 도메인으로 변경 필요)
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
   
   return {
     rules: [
