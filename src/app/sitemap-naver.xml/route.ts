@@ -74,10 +74,10 @@ export async function GET(request: NextRequest) {
     urls.push(`${normalizedBaseUrl}/blog/${slug}`);
   });
 
-  // 네이버 사이트맵 XML 생성
+  // 네이버 사이트맵 XML 생성 (네이버 검색 최적화)
+  // 네이버는 표준 sitemap 형식을 사용하되, 네이버 네임스페이스는 선택사항
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:n="http://www.naver.com/schemas/sitemap/0.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(url => `  <url>
     <loc>${url}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
