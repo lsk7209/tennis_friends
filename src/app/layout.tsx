@@ -95,24 +95,30 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
           rel="stylesheet"
         />
-        {/* RSS 피드 */}
+        {/* RSS 피드 - 구글, 네이버, 다음 모두 지원 */}
         <link rel="alternate" type="application/rss+xml" title="TennisFriends RSS Feed" href="/rss.xml" />
-        {/* 네이버 검색 등록 */}
-        <meta name="naver-site-verification" content={process.env.NAVER_SITE_VERIFICATION || "naver-site-verification-code"} />
-        {/* 다음 검색 등록 */}
-        <meta name="daum-site-verification" content={process.env.DAUM_SITE_VERIFICATION || "daum-site-verification-code"} />
-        {/* Bing 웹마스터 도구 */}
+        
+        {/* 검색 엔진 사이트 인증 */}
+        {/* 네이버 서치어드바이저 인증 */}
+        {process.env.NAVER_SITE_VERIFICATION && (
+          <meta name="naver-site-verification" content={process.env.NAVER_SITE_VERIFICATION} />
+        )}
+        {/* 다음 검색 등록 인증 */}
+        {process.env.DAUM_SITE_VERIFICATION && (
+          <meta name="daum-site-verification" content={process.env.DAUM_SITE_VERIFICATION} />
+        )}
+        {/* Bing 웹마스터 도구 인증 */}
         {process.env.BING_SITE_VERIFICATION && (
           <meta name="msvalidate.01" content={process.env.BING_SITE_VERIFICATION} />
         )}
-        {/* 네이버 블로그 RSS */}
-        <link rel="alternate" type="application/rss+xml" title="TennisFriends 네이버 RSS" href="/rss.xml" />
-        {/* 네이버 검색 최적화 */}
-        <meta name="NaverBot" content="All" />
-        <meta name="Yeti" content="All" />
-        {/* 다음 검색 최적화 */}
-        <meta name="DaumBot" content="All" />
-        <meta name="Daumoa" content="All" />
+        
+        {/* 네이버 검색 최적화 - 크롤러 허용 */}
+        <meta name="NaverBot" content="index, follow, all" />
+        <meta name="Yeti" content="index, follow, all" />
+        
+        {/* 다음 검색 최적화 - 크롤러 허용 */}
+        <meta name="DaumBot" content="index, follow, all" />
+        <meta name="Daumoa" content="index, follow, all" />
         {/* 모바일 최적화 */}
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
