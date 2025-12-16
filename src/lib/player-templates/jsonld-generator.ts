@@ -89,6 +89,32 @@ export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
  * BreadcrumbList 스키마 생성
  */
 export function generateBreadcrumbSchema(player: Player) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const playerName = (player.nameKo || player.name || '').trim();
+  const playerSlug = (player.slug || '').trim();
+  
+  // name이 비어있으면 빈 배열 반환
+  if (!playerName) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: '홈',
+          item: siteUrl,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: '테니스 선수',
+          item: `${siteUrl}/players`,
+        },
+      ],
+    };
+  }
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -97,19 +123,19 @@ export function generateBreadcrumbSchema(player: Player) {
         '@type': 'ListItem',
         position: 1,
         name: '홈',
-        item: 'https://tennisfriends.co.kr',
+        item: siteUrl,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: '테니스 선수',
-        item: 'https://tennisfriends.co.kr/players',
+        item: `${siteUrl}/players`,
       },
       {
         '@type': 'ListItem',
         position: 3,
-        name: player.nameKo || player.name,
-        item: `https://tennisfriends.co.kr/players/${player.slug || ''}`,
+        name: playerName,
+        item: playerSlug ? `${siteUrl}/players/${playerSlug}` : `${siteUrl}/players`,
       },
     ],
   };

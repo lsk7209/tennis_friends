@@ -172,12 +172,17 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url.startsWith('http') ? item.url : getCanonicalUrl(item.url),
-    })),
+    itemListElement: items
+      .filter(item => item.name && item.name.trim() !== '') // 빈 name 필터링
+      .map((item, index) => {
+        const itemUrl = item.url.startsWith('http') ? item.url : getCanonicalUrl(item.url);
+        return {
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.name.trim(), // 공백 제거
+          item: itemUrl, // URL 문자열 (Google 요구사항 준수)
+        };
+      }),
   };
 }
 
