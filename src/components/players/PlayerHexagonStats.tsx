@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer } from 'recharts';
 
 interface SkillAttribute {
@@ -14,6 +15,12 @@ interface PlayerHexagonStatsProps {
 }
 
 export default function PlayerHexagonStats({ attributes, playerName }: PlayerHexagonStatsProps) {
+    // 클라이언트 사이드에서만 차트 렌더링 (SSR에서 컨테이너 크기 계산 문제 방지)
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     // Recharts용 데이터 변환
     const chartData = attributes.map(attr => ({
         skill: attr.name,
@@ -69,36 +76,42 @@ export default function PlayerHexagonStats({ attributes, playerName }: PlayerHex
 
                     {/* Hexagon 레이더 차트 */}
                     <div className="w-full h-[350px] relative">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart data={chartData}>
-                                <PolarGrid
-                                    stroke="#475569"
-                                    strokeWidth={1.5}
-                                />
-                                <PolarAngleAxis
-                                    dataKey="skill"
-                                    tick={{
-                                        fill: '#e2e8f0',
-                                        fontSize: 12,
-                                        fontWeight: 600
-                                    }}
-                                />
-                                <PolarRadiusAxis
-                                    angle={90}
-                                    domain={[0, 10]}
-                                    tick={{ fill: '#64748b', fontSize: 10 }}
-                                    tickCount={6}
-                                />
-                                <Radar
-                                    name={playerName}
-                                    dataKey="value"
-                                    stroke={rating.color}
-                                    fill={rating.color}
-                                    fillOpacity={0.25}
-                                    strokeWidth={3}
-                                />
-                            </RadarChart>
-                        </ResponsiveContainer>
+                        {isMounted ? (
+                            <ResponsiveContainer width="100%" height="100%">
+                                <RadarChart data={chartData}>
+                                    <PolarGrid
+                                        stroke="#475569"
+                                        strokeWidth={1.5}
+                                    />
+                                    <PolarAngleAxis
+                                        dataKey="skill"
+                                        tick={{
+                                            fill: '#e2e8f0',
+                                            fontSize: 12,
+                                            fontWeight: 600
+                                        }}
+                                    />
+                                    <PolarRadiusAxis
+                                        angle={90}
+                                        domain={[0, 10]}
+                                        tick={{ fill: '#64748b', fontSize: 10 }}
+                                        tickCount={6}
+                                    />
+                                    <Radar
+                                        name={playerName}
+                                        dataKey="value"
+                                        stroke={rating.color}
+                                        fill={rating.color}
+                                        fillOpacity={0.25}
+                                        strokeWidth={3}
+                                    />
+                                </RadarChart>
+                            </ResponsiveContainer>
+                        ) : (
+                            <div className="w-full h-full flex items-center justify-center">
+                                <div className="text-slate-400">Loading chart...</div>
+                            </div>
+                        )}
 
                         {/* 중앙 캐릭터 실루엣 */}
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">

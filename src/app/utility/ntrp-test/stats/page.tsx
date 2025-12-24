@@ -18,8 +18,11 @@ export default function StatsPage() {
   const [trend, setTrend] = useState<{ date: string; avg: number }[]>([]);
   const [chars, setChars] = useState<{ name: string; value: number }[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  // 클라이언트 사이드에서만 차트 렌더링 (SSR에서 컨테이너 크기 계산 문제 방지)
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const fetchData = async () => {
       try {
         const device = getDeviceId();
@@ -152,14 +155,20 @@ export default function StatsPage() {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">점수 분포 (최근 100)</h3>
                   <div className="h-64">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <BarChart data={dist}>
+                    {isMounted ? (
+                      <ResponsiveContainer width="100%" height="100%">
+                        <BarChart data={dist}>
                         <XAxis dataKey="bucket" />
                         <YAxis />
                         <Tooltip />
                         <Bar dataKey="count" fill="#10b981" />
                       </BarChart>
                     </ResponsiveContainer>
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-gray-400">Loading chart...</div>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -168,14 +177,20 @@ export default function StatsPage() {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">일자별 평균 레벨 (최근 100)</h3>
                   <div className="h-64">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <LineChart data={trend}>
+                    {isMounted ? (
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart data={trend}>
                         <XAxis dataKey="date" />
                         <YAxis domain={[1.5, 5.3]} />
                         <Tooltip />
                         <Line type="monotone" dataKey="avg" stroke="#10b981" strokeWidth={2} />
                       </LineChart>
                     </ResponsiveContainer>
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-gray-400">Loading chart...</div>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -184,8 +199,9 @@ export default function StatsPage() {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">캐릭터 비율</h3>
                   <div className="h-72">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <PieChart>
+                    {isMounted ? (
+                      <ResponsiveContainer width="100%" height="100%">
+                        <PieChart>
                         <Pie
                           data={chars}
                           dataKey="value"
@@ -200,6 +216,11 @@ export default function StatsPage() {
                         <Tooltip />
                       </PieChart>
                     </ResponsiveContainer>
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-gray-400">Loading chart...</div>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>

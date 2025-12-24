@@ -62,8 +62,11 @@ function PlayStyleResultContent() {
   const searchParams = useSearchParams();
   const [result, setResult] = useState<any>(null);
   const [stats, setStats] = useState<any[]>([]);
+  // 클라이언트 사이드에서만 차트 렌더링 (SSR에서 컨테이너 크기 계산 문제 방지)
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const styleId = parseInt(searchParams.get('style') || '1');
     const playStyleResult = playStyleResults.find(r => r.id === styleId) || playStyleResults[0];
     setResult(playStyleResult);
@@ -191,8 +194,9 @@ function PlayStyleResultContent() {
                   </h3>
                 </div>
                 <div className="h-80">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <RadarChart data={chartData}>
+                  {isMounted ? (
+                    <ResponsiveContainer width="100%" height="100%">
+                      <RadarChart data={chartData}>
                       <PolarGrid stroke="#e5e7eb" />
                       <PolarAngleAxis dataKey="subject" tick={{ fill: '#374151', fontSize: 12 }} />
                       <PolarRadiusAxis angle={90} domain={[0, 5]} tick={{ fill: '#9ca3af', fontSize: 10 }} />
@@ -211,7 +215,12 @@ function PlayStyleResultContent() {
                         </linearGradient>
                       </defs>
                     </RadarChart>
-                  </ResponsiveContainer>
+                    </ResponsiveContainer>
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-gray-400">Loading chart...</div>
+                    </div>
+                  )}
                 </div>
               </CardContent>
             </Card>

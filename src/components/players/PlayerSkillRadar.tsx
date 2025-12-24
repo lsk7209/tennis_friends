@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 
 interface SkillAttribute {
@@ -13,6 +14,12 @@ interface PlayerSkillRadarProps {
 }
 
 export default function PlayerSkillRadar({ attributes }: PlayerSkillRadarProps) {
+    // 클라이언트 사이드에서만 차트 렌더링 (SSR에서 컨테이너 크기 계산 문제 방지)
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     // Recharts용 데이터 변환
     const chartData = attributes.map(attr => ({
         skill: attr.name,
@@ -32,8 +39,9 @@ export default function PlayerSkillRadar({ attributes }: PlayerSkillRadarProps) 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 {/* 레이더 차트 */}
                 <div className="w-full h-[400px] bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700">
-                    <ResponsiveContainer width="100%" height="100%">
-                        <RadarChart data={chartData}>
+                    {isMounted ? (
+                        <ResponsiveContainer width="100%" height="100%">
+                            <RadarChart data={chartData}>
                             <PolarGrid stroke="#94a3b8" strokeDasharray="3 3" />
                             <PolarAngleAxis
                                 dataKey="skill"
@@ -64,7 +72,12 @@ export default function PlayerSkillRadar({ attributes }: PlayerSkillRadarProps) 
                                 formatter={(value: number) => [`${value}/10`, '점수']}
                             />
                         </RadarChart>
-                    </ResponsiveContainer>
+                        </ResponsiveContainer>
+                    ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                            <div className="text-gray-400">Loading chart...</div>
+                        </div>
+                    )}
                 </div>
 
                 {/* 능력치 상세 설명 */}
