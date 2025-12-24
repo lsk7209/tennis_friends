@@ -47,12 +47,10 @@ interface QuizSchemaProps {
   };
   
   /**
-   * Aggregate rating (optional)
+   * Note: AggregateRating은 제거되었습니다.
+   * Quiz 타입은 Google 리뷰 스니펫을 지원하지 않으므로 AggregateRating을 포함하면 오류가 발생합니다.
+   * 리뷰 스니펫이 필요한 경우 SoftwareApplication 타입을 사용하세요.
    */
-  aggregateRating?: {
-    ratingValue: number;
-    ratingCount: number;
-  };
 }
 
 /**
@@ -74,7 +72,6 @@ export default function QuizSchema({
   educationalLevel,
   about,
   publisher,
-  aggregateRating,
 }: QuizSchemaProps) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
   
@@ -93,6 +90,8 @@ export default function QuizSchema({
   };
 
   // Quiz schema
+  // Note: Quiz 타입은 리뷰 스니펫을 지원하지 않으므로 AggregateRating을 포함하지 않습니다.
+  // 리뷰 스니펫이 필요한 경우 SoftwareApplication 타입을 사용하세요.
   const quizSchema = {
     '@context': 'https://schema.org',
     '@type': 'Quiz',
@@ -104,15 +103,7 @@ export default function QuizSchema({
     ...(educationalLevel && { educationalLevel }),
     ...(about && { about }),
     publisher: defaultPublisher,
-    ...(aggregateRating && {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: aggregateRating.ratingValue,
-        ratingCount: aggregateRating.ratingCount,
-        bestRating: 5,
-        worstRating: 1,
-      },
-    }),
+    // AggregateRating 제거: Quiz 타입은 리뷰 스니펫을 지원하지 않음
   };
 
   // Organization schema
@@ -131,11 +122,18 @@ export default function QuizSchema({
   };
 
   // BreadcrumbList schema
-  const breadcrumbSchema = generateBreadcrumbSchema([
+  // name이 유효한 경우에만 마지막 항목 포함
+  const breadcrumbItems = [
     { name: '홈', url: '/' },
     { name: '유틸리티', url: '/utility' },
-    { name, url },
-  ]);
+  ];
+  
+  const validName = name?.trim();
+  if (validName && validName.length > 0) {
+    breadcrumbItems.push({ name: validName, url });
+  }
+  
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
 
   // Combined schema using @graph
   const combinedSchema = {

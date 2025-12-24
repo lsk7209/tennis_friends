@@ -43,12 +43,15 @@ export function generatePersonSchema(player: Player) {
 
 /**
  * ProfilePage 스키마 생성
+ * 
+ * Note: FAQPage는 별도의 FAQSchema 컴포넌트에서 생성되므로 여기서는 생성하지 않습니다.
+ * 중복 생성을 방지하기 위해 ProfilePage만 반환합니다.
  */
 export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
   const nameKo = player.nameKo || player.name;
   const slug = player.slug || '';
 
-  const metadata = {
+  return {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
     mainEntity: {
@@ -59,30 +62,6 @@ export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
     url: `https://tennisfriends.co.kr/players/${slug}`,
     description: `${nameKo}의 프로필 페이지`,
   };
-
-  // FAQ가 있으면 FAQPage 스키마도 추가
-  if (faqs.length > 0) {
-    return {
-      ...metadata,
-      '@graph': [
-        metadata,
-        {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: faqs.map(faq => ({
-            '@type': 'Question',
-            name: faq.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: faq.answer,
-            },
-          })),
-        },
-      ],
-    };
-  }
-
-  return metadata;
 }
 
 /**
@@ -93,74 +72,53 @@ export function generateBreadcrumbSchema(player: Player) {
   const playerName = (player.nameKo || player.name || '').trim();
   const playerSlug = (player.slug || '').trim();
   
-  // name이 비어있으면 빈 배열 반환
-  if (!playerName) {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: '홈',
-          item: siteUrl,
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: '테니스 선수',
-          item: `${siteUrl}/players`,
-        },
-      ],
-    };
+  // 기본 breadcrumb 항목
+  const breadcrumbItems = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: '홈',
+      item: siteUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: '테니스 선수',
+      item: `${siteUrl}/players`,
+    },
+  ];
+
+  // playerName이 유효한 경우에만 마지막 항목 추가
+  if (playerName && playerName.length > 0) {
+    const playerUrl = playerSlug && playerSlug.length > 0 
+      ? `${siteUrl}/players/${playerSlug}` 
+      : `${siteUrl}/players`;
+    
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: playerName,
+      item: playerUrl,
+    });
   }
 
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: '홈',
-        item: siteUrl,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: '테니스 선수',
-        item: `${siteUrl}/players`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: playerName,
-        item: playerSlug ? `${siteUrl}/players/${playerSlug}` : `${siteUrl}/players`,
-      },
-    ],
+    itemListElement: breadcrumbItems,
   };
 }
 
 /**
  * 통합 구조화 데이터 생성
+ * 
+ * Note: FAQPage는 별도의 FAQSchema 컴포넌트에서 생성되므로 여기서는 포함하지 않습니다.
+ * 중복 생성을 방지하기 위해 Person, ProfilePage, BreadcrumbList만 포함합니다.
  */
 export function generateStructuredData(player: Player, faqs: PlayerFAQ[]) {
   const personSchema = generatePersonSchema(player);
   const profilePageSchema = generateProfilePageSchema(player, faqs);
   const breadcrumbSchema = generateBreadcrumbSchema(player);
-
-  // FAQ가 있으면 FAQPage가 @graph에 포함되어 있음
-  if (faqs.length > 0 && '@graph' in profilePageSchema) {
-    const profilePageWithGraph = profilePageSchema as any;
-    return {
-      '@context': 'https://schema.org',
-      '@graph': [
-        personSchema,
-        ...profilePageWithGraph['@graph'],
-        breadcrumbSchema,
-      ],
-    };
-  }
 
   return {
     '@context': 'https://schema.org',

@@ -169,20 +169,26 @@ export interface BreadcrumbItem {
 }
 
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
+  // 유효한 항목만 필터링 (name과 url이 모두 비어있지 않아야 함)
+  const validItems = items.filter(item => {
+    const name = item.name?.trim();
+    const url = item.url?.trim();
+    return name && name.length > 0 && url && url.length > 0;
+  });
+
+  // 필터링 후 position 재조정
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items
-      .filter(item => item.name && item.name.trim() !== '') // 빈 name 필터링
-      .map((item, index) => {
-        const itemUrl = item.url.startsWith('http') ? item.url : getCanonicalUrl(item.url);
-        return {
-          '@type': 'ListItem',
-          position: index + 1,
-          name: item.name.trim(), // 공백 제거
-          item: itemUrl, // URL 문자열 (Google 요구사항 준수)
-        };
-      }),
+    itemListElement: validItems.map((item, index) => {
+      const itemUrl = item.url.startsWith('http') ? item.url : getCanonicalUrl(item.url);
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name.trim(), // 공백 제거
+        item: itemUrl, // URL 문자열 (Google 요구사항 준수)
+      };
+    }),
   };
 }
 

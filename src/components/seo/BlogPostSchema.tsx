@@ -80,29 +80,37 @@ export default function BlogPostSchema({
   };
 
   // BreadcrumbList 스키마
+  // title이 유효한 경우에만 마지막 항목 추가
+  const breadcrumbItems = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: '홈',
+      item: siteUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: '블로그',
+      item: `${siteUrl}/blog`,
+    },
+  ];
+
+  // title이 유효한 경우에만 추가
+  const validTitle = title?.trim();
+  if (validTitle && validTitle.length > 0) {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: validTitle,
+      item: url,
+    });
+  }
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: '홈',
-        item: siteUrl,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: '블로그',
-        item: `${siteUrl}/blog`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: title,
-        item: url,
-      },
-    ],
+    itemListElement: breadcrumbItems,
   };
 
   // 통합 스키마 (네이버/다음 최적화)

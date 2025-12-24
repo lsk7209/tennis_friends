@@ -111,11 +111,18 @@ export default function EnhancedBlogPostSchema({
   };
 
   // BreadcrumbList schema
-  const breadcrumbSchema = generateBreadcrumbSchema([
+  // title이 유효한 경우에만 마지막 항목 포함
+  const breadcrumbItems = [
     { name: '홈', url: '/' },
     { name: '블로그', url: '/blog' },
-    { name: title, url: `/blog/${slug}` },
-  ]);
+  ];
+  
+  const validTitle = title?.trim();
+  if (validTitle && validTitle.length > 0) {
+    breadcrumbItems.push({ name: validTitle, url: `/blog/${slug}` });
+  }
+  
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
 
   // Combined schema using @graph (recommended by Google)
   const combinedSchema = {

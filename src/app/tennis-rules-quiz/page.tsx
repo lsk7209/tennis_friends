@@ -144,10 +144,6 @@ export default function TennisRulesQuizIntro() {
         timeRequired="PT5M"
         educationalLevel="Beginner to Advanced"
         about="테니스 규칙 학습"
-        aggregateRating={{
-          ratingValue: 4.7,
-          ratingCount: 5000,
-        }}
       />
     <main className="min-h-screen bg-white">
       {/* Hero Section */}

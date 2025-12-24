@@ -138,10 +138,6 @@ export default function NtrpTestIntro() {
         timeRequired="PT5M"
         educationalLevel="Beginner to Advanced"
         about="테니스 실력 평가"
-        aggregateRating={{
-          ratingValue: 4.8,
-          ratingCount: 15000,
-        }}
       />
     <main className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
       {/* Hero Section */}
