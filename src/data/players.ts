@@ -2,7 +2,7 @@ import { PlayerData } from '@/types/player';
 
 export const PLAYERS_DB: Record<string, PlayerData> = {
     // --- Existing Male Players (53) ---
-    'carlos-alcaraz': {
+    'carlos-alcaraz': { image: '/images/players/carlos-alcaraz.png',
         name: '카를로스 알카라스', nameEn: 'Carlos Alcaraz', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/carlos-alcaraz.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '카를로스 알카라스는 스페인의 테니스 신동으로, 폭발적인 스피드와 강력한 포핸드로 코트를 지배합니다. 어린 나이에 그랜드슬램을 제패하며 차세대 테니스 황제로 불립니다.',
@@ -74,7 +74,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'jannik-sinner': {
+    'jannik-sinner': { image: '/images/players/jannik-sinner.png',
         name: '야닉 시너', nameEn: 'Jannik Sinner', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/jannik-sinner.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '이탈리아 최초의 로저스 컵 우승자이자 차세대 빅3 후보. 강력한 베이스라인 스트로크와 기복 없는 멘탈이 강점입니다. 스키 선수 출신다운 유연한 움직임이 돋보입니다.',
         detailedProfile: {
@@ -145,7 +145,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'novak-djokovic': {
+    'novak-djokovic': { image: '/images/players/novak-djokovic.png',
         name: '노박 조코비치', nameEn: 'Novak Djokovic', country: 'Serbia', countryFlag: '🇷🇸', image: '/images/players/novak-djokovic.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '테니스 역사상 가장 위대한 선수(GOAT). 무결점의 테크닉과 불굴의 정신력, 그리고 압도적인 유연성으로 그랜드슬램 최다 우승 기록을 보유하고 있습니다.',
         detailedProfile: {
@@ -216,7 +216,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'daniil-medvedev': {
+    'daniil-medvedev': { image: '/images/players/daniil-medvedev.png',
         name: '다닐 메드베데프', nameEn: 'Daniil Medvedev', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/daniil-medvedev.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 체스 마스터. 198cm의 장신에서 나오는 강력한 서브와 투어 최고의 수비력, 그리고 상대를 질식시키는 지능적인 경기 운영으로 빅3의 독주를 막아선 차세대 황제입니다.',
         detailedProfile: {
@@ -291,7 +291,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'alexander-zverev': {
+    'alexander-zverev': { image: '/images/players/alexander-zverev.png',
         name: '알렉산더 즈베레프', nameEn: 'Alexander Zverev', country: 'Germany', countryFlag: '🇩🇪', image: '/images/players/alexander-zverev.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '큰 키에서 나오는 강력한 서브와 세계 최고 수준의 투핸드 백핸드를 보유했습니다. 올림픽 금메달리스트이자 꾸준히 정상권을 지키는 독일의 에이스입니다.',
         detailedProfile: {
@@ -359,7 +359,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'andrey-rublev': {
+    'andrey-rublev': { image: '/images/players/andrey-rublev.png',
         name: '안드레이 루블레프', nameEn: 'Andrey Rublev', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/andrey-rublev.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. "Bweh"라는 기합 소리와 함께 매 포인트 전력을 다하는 파워풀한 공격 테니스를 구사합니다.',
         detailedProfile: {
@@ -427,7 +427,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'stefanos-tsitsipas': {
+    'stefanos-tsitsipas': { image: '/images/players/stefanos-tsitsipas.png',
         name: '스테파노스 치치파스', nameEn: 'Stefanos Tsitsipas', country: 'Greece', countryFlag: '🇬🇷', image: '/images/players/stefanos-tsitsipas.png', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
         longBio: '그리스의 테니스 신. 우아한 원핸드 백핸드와 공격적인 포핸드, 그리고 네트 플레이까지 갖춘 올라운드 플레이어입니다.',
         detailedProfile: {
@@ -495,7 +495,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'casper-ruud': {
+    'casper-ruud': { image: '/images/players/casper-ruud.png',
         name: '카스페르 루드', nameEn: 'Casper Ruud', country: 'Norway', countryFlag: '🇳🇴', image: '/images/players/casper-ruud.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '노르웨이 테니스의 새 역사를 쓰고 있는 선수. 나달 아카데미 출신답게 클레이 코트에서 특히 강하며, 엄청난 회전량의 포핸드 탑스핀이 주무기입니다.',
         detailedProfile: {
@@ -563,7 +563,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'alex-de-minaur': {
+    'alex-de-minaur': { image: '/images/players/alex-de-minaur.png',
         name: '알렉스 드 미노', nameEn: 'Alex de Minaur', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/alex-de-minaur.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '스피드 데몬(Speed Demon)이라는 별명처럼 투어에서 가장 빠른 발을 가진 선수로 평가받으며, 끈질긴 수비와 카운터 펀치로 상대를 지치게 만듭니다.',
         detailedProfile: {
@@ -631,7 +631,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'taylor-fritz': {
+    'taylor-fritz': { image: '/images/players/taylor-fritz.png',
         name: '테일러 프리츠', nameEn: 'Taylor Fritz', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/taylor-fritz.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '미국 남자 테니스의 에이스. 강력한 서브와 파워풀한 포핸드를 앞세운 전형적인 공격형 스타일로, 홈 그라운드인 미국 대회에서 특히 강합니다.',
         detailedProfile: {
@@ -699,7 +699,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'hubert-hurkacz': {
+    'hubert-hurkacz': { image: '/images/players/hubert-hurkacz.png',
         name: '후베르트 후르카츠', nameEn: 'Hubert Hurkacz', country: 'Poland', countryFlag: '🇵🇱', image: '/images/players/hubert-hurkacz.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '폴란드의 서브 몬스터. 큰 키에서 내리꽂는 에이스급 서브와 부드러운 발리 터치, 그리고 겸손한 성품으로 사랑받는 선수입니다.',
         detailedProfile: {
@@ -767,7 +767,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'holger-rune': {
+    'holger-rune': { image: '/images/players/holger-rune.png',
         name: '홀게르 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/holger-rune.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '덴마크의 악동이자 슈퍼 루키. 폭발적인 에너지와 다재다능한 기술, 그리고 거침없는 승부욕으로 단숨에 톱 랭커로 도약했습니다.',
         detailedProfile: {
@@ -835,7 +835,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'grigor-dimitrov': {
+    'grigor-dimitrov': { image: '/images/players/grigor-dimitrov.png',
         name: '그리고르 디미트로프', nameEn: 'Grigor Dimitrov', country: 'Bulgaria', countryFlag: '🇧🇬', image: '/images/players/grigor-dimitrov.png', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
         longBio: '베이비 페더러라는 별명처럼 가장 아름다운 폼을 가진 선수 중 하나. 유려한 원핸드 백핸드와 다채로운 기술로 제2의 전성기를 맞이했습니다.',
         detailedProfile: {
@@ -903,7 +903,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'ben-shelton': {
+    'ben-shelton': { image: '/images/players/ben-shelton.png',
         name: '벤 쉘튼', nameEn: 'Ben Shelton', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/ben-shelton.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '미국 대학 테니스 출신의 괴물 신인. 230km/h를 넘나드는 왼손 폭탄 서브와 다이내믹한 플레이, 그리고 전화기 세리머니로 스타성을 입증했습니다.',
         detailedProfile: {
@@ -971,7 +971,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'tommy-paul': {
+    'tommy-paul': { image: '/images/players/tommy-paul.png',
         name: '토미 폴', nameEn: 'Tommy Paul', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/tommy-paul.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '빠른 발과 뛰어난 운동 신경을 가진 미국의 톱 랭커. 수비에서 공격으로 전환하는 능력이 탁월하며, 그랜드슬램 4강에 오르는 등 꾸준한 상승세입니다.',
         detailedProfile: {
@@ -1039,7 +1039,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'frances-tiafoe': {
+    'frances-tiafoe': { image: '/images/players/frances-tiafoe.png',
         name: '프란시스 티아포', nameEn: 'Frances Tiafoe', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/frances-tiafoe.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '빅 포(Big Foe). 독특한 포핸드 폼과 쇼맨십, 그리고 관중과 호흡하는 에너지 넘치는 플레이로 US 오픈 4강 신화를 쓴 미국의 스타입니다.',
@@ -1108,7 +1108,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'ugo-humbert': {
+    'ugo-humbert': { image: '/images/players/ugo-humbert.png',
         name: '우고 움베르', nameEn: 'Ugo Humbert', country: 'France', countryFlag: '🇫🇷', image: '/images/players/ugo-humbert.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '프랑스의 현재이자 미래. 왼손잡이 특유의 각도 깊은 서브와 빠른 템포의 공격적인 테니스로 실내 하드 코트에서 특히 강한 면모를 보입니다.',
         detailedProfile: {
@@ -1176,7 +1176,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'sebastian-baez': {
+    'sebastian-baez': { image: '/images/players/sebastian-baez.png',
         name: '세바스티안 바에즈', nameEn: 'Sebastian Baez', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/sebastian-baez.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '작은 고추가 맵다. 단신이지만 엄청난 활동량과 끈질긴 랠리 능력, 그리고 강력한 포핸드로 클레이 코트에서 무서운 저력을 보여주는 선수입니다.',
@@ -1245,7 +1245,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'lorenzo-musetti': {
+    'lorenzo-musetti': { image: '/images/players/lorenzo-musetti.png',
         name: '로렌조 무세티', nameEn: 'Lorenzo Musetti', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/lorenzo-musetti.png', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
         longBio: '이탈리아의 예술가. 화려한 원핸드 백핸드와 창의적인 샷 메이킹으로 보는 이들을 매료시키는 스타일리시한 플레이어입니다.',
         detailedProfile: {
@@ -1314,7 +1314,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
 
-    'cameron-norrie': {
+    'cameron-norrie': { image: '/images/players/cameron-norrie.png',
         name: '카메론 노리', nameEn: 'Cameron Norrie', country: 'United Kingdom', countryFlag: '🇬🇧', image: '/images/players/cameron-norrie.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '영국의 철인. 지치지 않는 체력과 독특한 플랫 백핸드, 그리고 엄청난 회전량의 포핸드를 섞어 상대를 까다롭게 만드는 왼손잡이 전략가입니다.',
         detailedProfile: {
@@ -1381,7 +1381,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'tallon-griekspoor': {
+    'tallon-griekspoor': { image: '/images/players/tallon-griekspoor.png',
         name: '탈론 크리에크스푸르', nameEn: 'Tallon Griekspoor', country: 'Netherlands', countryFlag: '🇳🇱', image: '/images/players/tallon-griekspoor.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '네덜란드 테니스의 에이스. 네덜란드 역대 최다 우승 기록을 갱신하고 있으며, 강력한 서브와 포핸드를 앞세운 공격적인 플레이가 특징입니다.',
@@ -1448,7 +1448,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'nicolas-jarry': {
+    'nicolas-jarry': { image: '/images/players/nicolas-jarry.png',
         name: '니콜라스 자리', nameEn: 'Nicolas Jarry', country: 'Chile', countryFlag: '🇨🇱', image: '/images/players/nicolas-jarry.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '칠레의 거인. 2미터에 가까운 키에서 뿜어져 나오는 압도적인 서브와 포핸드는 투어에서 가장 상대하기 까다로운 무기 중 하나입니다.',
@@ -1516,7 +1516,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'alejandro-davidovich-fokina': {
+    'alejandro-davidovich-fokina': { image: '/images/players/alejandro-davidovich-fokina.png',
         name: '알레한드로 다비도비치 포키나', nameEn: 'Alejandro Davidovich Fokina', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/alejandro-davidovich-fokina.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '다이빙 샷의 장인. 코트 위에서 몸을 아끼지 않는 허슬 플레이와 팬들을 열광시키는 쇼맨십으로 유명한 스페인의 재능입니다.',
@@ -1584,7 +1584,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'alex-michelsen': {
+    'alex-michelsen': { image: '/images/players/alex-michelsen.png',
         name: '알렉스 미첼슨', nameEn: 'Alex Michelsen', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/alex-michelsen.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '미국 테니스의 최신성. 190cm가 넘는 키에서 나오는 안정적인 서비스 게임과 나이답지 않은 침착한 경기 운영이 돋보이는 유망주입니다.',
@@ -1652,7 +1652,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'arthur-landercknech': {
+    'arthur-landercknech': { image: '/images/players/arthur-landercknech.png',
         name: '아르튀르 랑데르크네슈', nameEn: 'Arthur Rinderknech', country: 'France', countryFlag: '🇫🇷', image: '/images/players/arthur-landercknech.png', gender: 'male',
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '미국 대학 테니스(Texas A&M)를 평정하고 프로에 온 늦깍이 스타. 강력한 서브와 포핸드를 앞세운 공격적인 테니스를 구사합니다.',
@@ -1719,7 +1719,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'brandon-nakashima': {
+    'brandon-nakashima': { image: '/images/players/brandon-nakashima.png',
         name: '브랜든 나카시마', nameEn: 'Brandon Nakashima', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/brandon-nakashima.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '기계 같은 정밀함. 감정을 드러내지 않는 포커페이스와 기복 없는 백핸드 스트로크로 넥스트젠 파이널스 우승을 차지한 실력파입니다.',
@@ -1786,7 +1786,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'corentin-moutet': {
+    'corentin-moutet': { image: '/images/players/corentin-moutet.png',
         name: '코랑탱 무테', nameEn: 'Corentin Moutet', country: 'France', countryFlag: '🇫🇷', image: '/images/players/corentin-moutet.png', gender: 'male',
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '프랑스의 왼손잡이 마법사. 작은 체구지만 뛰어난 손감각과 드롭샷, 발리 등 다양한 기술로 상대를 괴롭히는 창의적인 플레이어입니다.',
@@ -1854,7 +1854,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'flavio-cobolli': {
+    'flavio-cobolli': { image: '/images/players/flavio-cobolli.png',
         name: '플라비오 코볼리', nameEn: 'Flavio Cobolli', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/flavio-cobolli.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '이탈리아의 떠오르는 샛별. AS 로마 유스 출신의 축구 선수 경력을 가지고 있어 발놀림이 뛰어나며, 파이팅 넘치는 플레이가 인상적입니다.',
@@ -1921,7 +1921,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'francisco-cerundolo': {
+    'francisco-cerundolo': { image: '/images/players/francisco-cerundolo.png',
         name: '프란시스코 세룬돌로', nameEn: 'Francisco Cerundolo', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/francisco-cerundolo.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '아르헨티나 No.1. 남미 특유의 클레이 코트 강점은 물론 하드 코트에서도 강력한 포핸드 위너를 쏟아내는 전천후 플레이어입니다.',
@@ -1989,7 +1989,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'jakub-mensik': {
+    'jakub-mensik': { image: '/images/players/jakub-mensik.png',
         name: '야쿠프 멘시크', nameEn: 'Jakub Mensik', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/jakub-mensik.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '체코의 10대 돌풍. 193cm의 큰 키와 강력한 서브, 그리고 나달을 꺾는 등 대담한 플레이로 투어에 신선한 충격을 주고 있습니다.',
@@ -2051,7 +2051,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'jaume-munar': {
+    'jaume-munar': { image: '/images/players/jaume-munar.png',
         name: '자우메 무나르', nameEn: 'Jaume Munar', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/jaume-munar.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '라파엘 나달 아카데미 수석 졸업생. 전형적인 스페인 클레이 코트 스페셜리스트로, 끈질긴 수비와 안정적인 스트로크가 강점입니다.',
@@ -2113,7 +2113,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'jiri-lehecka': {
+    'jiri-lehecka': { image: '/images/players/jiri-lehecka.png',
         name: '이리 레헤츠카', nameEn: 'Jiri Lehecka', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/jiri-lehecka.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '체코 테니스의 부활을 알리는 신호탄. 토마스 베르디흐를 연상시키는 깔끔하고 강력한 플랫성 스트로크로 빠르게 랭킹을 끌어올렸습니다.',
@@ -2176,7 +2176,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'joao-fonseca': {
+    'joao-fonseca': { image: '/images/players/joao-fonseca.png',
         name: '주앙 폰세카', nameEn: 'Joao Fonseca', country: 'Brazil', countryFlag: '🇧🇷', image: '/images/players/joao-fonseca.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '브라질의 슈퍼 원더키드. 2006년생으로 넥스트젠의 선두주자이며, 리오 오픈에서 최연소 8강에 오르는 등 폭발적인 잠재력을 보여주고 있습니다.',
@@ -2239,7 +2239,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'karen-khachanov': {
+    'karen-khachanov': { image: '/images/players/karen-khachanov.png',
         name: '카렌 하차노프', nameEn: 'Karen Khachanov', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/karen-khachanov.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '파리의 마스터스 챔피언. 198cm의 장신에서 나오는 강력한 서브와 두꺼운 그립의 포핸드로 상대를 힘으로 압박하는 파워 히터입니다.',
@@ -2302,7 +2302,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'linner-tien': {
+    'linner-tien': { image: '/images/players/linner-tien.png',
         name: '리너 티엔', nameEn: 'Learner Tien', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/linner-tien.png', gender: 'male',
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '미국 테니스의 숨은 보석. 10대 때 두 번이나 US 오픈 주니어 챔피언에 올랐으며, 왼손잡이 특유의 까다로운 구질과 지능적인 플레이가 강점입니다.',
@@ -2365,7 +2365,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'luciano-darderi': {
+    'luciano-darderi': { image: '/images/players/luciano-darderi.png',
         name: '루치아노 다르데리', nameEn: 'Luciano Darderi', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/luciano-darderi.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '이탈리아의 클레이 스페셜리스트. 아르헨티나 태생으로 남미 스타일의 끈질긴 랠리와 파워 넘치는 포핸드를 구사하며 급성장하고 있는 선수입니다.',
@@ -2428,7 +2428,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'tomas-machac': {
+    'tomas-machac': { image: '/images/players/tomas-machac.png',
         name: '토마스 마하츠', nameEn: 'Tomas Machac', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/tomas-machac.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '조코비치를 꺾은 사나이. 체코의 유망주로, 매우 공격적인 리턴과 빠른 템포의 스트로크로 상대를 압박하는 스타일입니다.',
@@ -2495,7 +2495,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'valentin-vacherot': {
+    'valentin-vacherot': { image: '/images/players/valentin-vacherot.png',
         name: '발랑탱 바슈로', nameEn: 'Valentin Vacherot', country: 'Monaco', countryFlag: '🇲🇨', image: '/images/players/valentin-vacherot.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '모나코의 자존심. 챌린저 투어를 제패하며 ATP 무대에 도전장을 내민 늦깍이 유망주로, 침착한 경기 운영이 돋보입니다.',
@@ -2562,7 +2562,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'alexei-popyrin': {
+    'alexei-popyrin': { image: '/images/players/alexei-popyrin.png',
         name: '알렉세이 포피린', nameEn: 'Alexei Popyrin', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/alexei-popyrin.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '호주의 거포. 196cm의 장신에서 뿜어져 나오는 서브와 포핸드가 강력하며, 마스터스 1000 우승(몬트리올)으로 잠재력을 폭발시켰습니다.',
@@ -2629,7 +2629,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'jan-lennard-struff': {
+    'jan-lennard-struff': { image: '/images/players/jan-lennard-struff.png',
         name: '얀-레나드 스트루프', nameEn: 'Jan-Lennard Struff', country: 'Germany', countryFlag: '🇩🇪', image: '/images/players/jan-lennard-struff.svg', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '독일의 대기만성형 스타. 공격적인 서브 앤 발리와 강력한 포핸드로 상대를 몰아붙이는 스타일로, 30대의 나이에 커리어 하이를 경신 중입니다.',
@@ -2697,7 +2697,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'adrian-mannarino': {
+    'adrian-mannarino': { image: '/images/players/adrian-mannarino.png',
         name: '아드리안 만나리노', nameEn: 'Adrian Mannarino', country: 'France', countryFlag: '🇫🇷', image: '/images/players/adrian-mannarino.svg', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '테니스계의 힙스터. 매우 낮은 텐션의 라켓을 사용하여 공을 툭툭 건드리는 듯한 독특한 스윙으로 상대의 리듬을 뺏는 왼손잡이 베테랑입니다.',
         detailedProfile: {
@@ -2763,7 +2763,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'matteo-arnaldi': {
+    'matteo-arnaldi': { image: '/images/players/matteo-arnaldi.png',
         name: '마테오 아르날디', nameEn: 'Matteo Arnaldi', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/matteo-arnaldi.svg', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '이탈리아의 지치지 않는 엔진. 데이비스컵 우승의 주역으로, 빠른 발과 끈질긴 수비, 그리고 결정적인 순간에 터지는 위너가 강점입니다.',
@@ -2830,7 +2830,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'jordan-thompson': {
+    'jordan-thompson': { image: '/images/players/jordan-thompson.png',
         name: '조던 톰슨', nameEn: 'Jordan Thompson', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/jordan-thompson.svg', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '호주의 콧수염 파이터. 투박하지만 실속 있는 플레이, 특히 훌륭한 넷 플레이와 더블즈 실력을 겸비한 전천후 플레이어입니다.',
@@ -2897,7 +2897,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'zhizhen-zhang': {
+    'zhizhen-zhang': { image: '/images/players/zhizhen-zhang.png',
         name: '장지전', nameEn: 'Zhizhen Zhang', country: 'China', countryFlag: '🇨🇳', image: '/images/players/zhizhen-zhang.svg', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '중국 남자 테니스의 역사. 중국 선수 최초로 마스터스 8강, 세계 랭킹 50위 진입 등 아시아 테니스의 새로운 역사를 쓰고 있는 파워 히터입니다.',
@@ -2964,7 +2964,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'giovanni-mpetshi-perricard': {
+    'giovanni-mpetshi-perricard': { image: '/images/players/giovanni-mpetshi-perricard.png',
         name: '지오반니 음페치 페리카르', nameEn: 'Giovanni Mpetshi Perricard', country: 'France', countryFlag: '🇫🇷', image: '/images/players/giovanni-mpetshi-perricard.svg', gender: 'male',
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '프랑스의 203cm 거인 유망주. 엄청난 높이에서 내리꽂는 서브와 강력한 원핸드 백핸드로 챌린저 투어를 폭격하고 있는 무서운 신예입니다.',
@@ -3033,7 +3033,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     },
 
     // --- New Male Players (30) ---
-    'rafael-nadal': {
+    'rafael-nadal': { image: '/images/players/rafael-nadal.png',
         name: '라파엘 나달', nameEn: 'Rafael Nadal', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/rafael-nadal.png', gender: 'male',
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '클레이 황제, 라파엘 나달. 흙신이라는 별명답게 롤랑가로스 최다 우승 기록을 보유하고 있으며, 강력한 탑스핀 포핸드와 불굴의 정신력으로 테니스 역사를 새로 썼습니다.',
@@ -3076,7 +3076,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'andy-murray': {
+    'andy-murray': { image: '/images/players/andy-murray.png',
         name: '앤디 머레이', nameEn: 'Andy Murray', country: 'United Kingdom', countryFlag: '🇬🇧', image: '/images/players/andy-murray.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '영국의 테니스 영웅, 앤디 머레이. 놀라운 수비력과 전술적인 플레이로 BIG 4의 일원으로 활약했으며, 윔블던 우승으로 영국 테니스의 한을 풀었습니다.',
@@ -3119,7 +3119,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'stan-wawrinka': {
+    'stan-wawrinka': { image: '/images/players/stan-wawrinka.png',
         name: '스탄 바브린카', nameEn: 'Stan Wawrinka', country: 'Switzerland', countryFlag: '🇨🇭', image: '/images/players/stan-wawrinka.png', gender: 'male',
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '대기만성형 스타, 스탄 바브린카. "Stanimal"이라는 별명처럼 폭발적인 파워와 예술적인 원핸드 백핸드로 그랜드슬램 3회 우승을 달성했습니다.',
@@ -3162,7 +3162,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'kei-nishikori': {
+    'kei-nishikori': { image: '/images/players/kei-nishikori.png',
         name: '니시코리 케이', nameEn: 'Kei Nishikori', country: 'Japan', countryFlag: '🇯🇵', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '아시아 남자 테니스의 자존심. 빠른 발과 뛰어난 리턴 능력, 그리고 시그니처인 "Air-K" 점프 샷으로 유명합니다.',
@@ -3205,7 +3205,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'soonwoo-kwon': {
+    'soonwoo-kwon': { image: '/images/players/soonwoo-kwon.png',
         name: '권순우', nameEn: 'Soonwoo Kwon', country: 'Korea', countryFlag: '🇰🇷', image: '/images/players/soonwoo-kwon.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '대한민국 테니스의 새로운 역사를 쓴 "코리안 썬더". 이형택 이후 18년 만에 ATP 투어 우승을 차지했으며, 한국 선수 최초로 ATP 투어 2회 우승이라는 금자탑을 쌓은 명실상부한 한국 테니스의 에이스입니다.',
@@ -3248,7 +3248,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'christopher-eubanks': {
+    'christopher-eubanks': { image: '/images/players/christopher-eubanks.png',
         name: '크리스토퍼 유뱅크스', nameEn: 'Christopher Eubanks', country: 'United States', countryFlag: '🇺🇸', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
         longBio: '201cm의 장신에서 뿜어져 나오는 강력한 서브와 시원한 포핸드, 그리고 우아한 원핸드 백핸드가 특징입니다. 2023 윔블던 8강 돌풍의 주인공입니다.',
         detailedProfile: {
@@ -3314,7 +3314,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'emil-ruusuvuori': {
+    'emil-ruusuvuori': { image: '/images/players/emil-ruusuvuori.png',
         name: '에밀 루수부오리', nameEn: 'Emil Ruusuvuori', country: 'Finland', countryFlag: '🇫🇮', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '핀란드를 대표하는 테니스 에이스. 군더더기 없는 깔끔한 폼에서 나오는 강력한 그라운드 스트로크가 주무기인 베이스라이너입니다.',
         detailedProfile: {
@@ -3380,7 +3380,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'miomir-kecmanovic': {
+    'miomir-kecmanovic': { image: '/images/players/miomir-kecmanovic.png',
         name: '미오미르 케크마노비치', nameEn: 'Miomir Kecmanovic', country: 'Serbia', countryFlag: '🇷🇸', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '세르비아 테니스의 계보를 잇는 선수. 탄탄한 기본기와 끈질긴 수비력, 그리고 기복 없는 플레이로 투어에서 꾸준한 성적을 내고 있습니다.',
         detailedProfile: {
@@ -3446,7 +3446,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'roman-safiullin': {
+    'roman-safiullin': { image: '/images/players/roman-safiullin.png',
         name: '로만 사피울린', nameEn: 'Roman Safiullin', country: 'Russia', countryFlag: '🇷🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '러시아의 숨은 강자. 호주 오픈 주니어 챔피언 출신으로, 부상을 딛고 일어나 2023 윔블던 8강에 오르며 강력한 파워 히터의 면모를 과시했습니다.',
         detailedProfile: {
@@ -3512,7 +3512,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'laslo-djere': {
+    'laslo-djere': { image: '/images/players/laslo-djere.png',
         name: '라슬로 제레', nameEn: 'Laslo Djere', country: 'Serbia', countryFlag: '🇷🇸', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '불굴의 의지를 가진 선수. 개인적인 아픔을 극복하고 투어 우승을 차지한 인간 승리의 드라마를 썼으며, 클레이 코트에서 특히 끈질긴 모습을 보여줍니다.',
         detailedProfile: {
@@ -3578,7 +3578,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'daniel-evans': {
+    'daniel-evans': { image: '/images/players/daniel-evans.png',
         name: '다니엘 에반스', nameEn: 'Daniel Evans', country: 'United Kingdom', countryFlag: '🇬🇧', gender: 'male', plays: 'Right-handed', backhand: 'One-handed',
         longBio: '영국의 테크니션. 작은 체구지만 정교한 슬라이스와 뛰어난 네트 플레이, 그리고 창의적인 경기 운영으로 상대를 혼란에 빠뜨리는 지능적인 플레이어입니다.',
         detailedProfile: {
@@ -3644,7 +3644,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'roberto-carballes-baena': {
+    'roberto-carballes-baena': { image: '/images/players/roberto-carballes-baena.png',
         name: '로베르토 카르바예스 바에나', nameEn: 'Roberto Carballes Baena', country: 'Spain', countryFlag: '🇪🇸', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '전형적인 스페인 클레이 코트 스페셜리스트. 지치지 않는 체력과 끈질긴 랠리 능력으로 상대를 진이 빠지게 만드는 "늪 테니스"의 구사자입니다.',
         detailedProfile: {
@@ -3710,7 +3710,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'nuno-borges': {
+    'nuno-borges': { image: '/images/players/nuno-borges.png',
         name: '누노 보르헤스', nameEn: 'Nuno Borges', country: 'Portugal', countryFlag: '🇵🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '포르투갈 테니스의 희망. 미국 대학 테니스(NCAA) 준우승 출신으로, 탄탄한 기본기와 공격적인 포핸드를 바탕으로 투어 무대에 성공적으로 안착했습니다.',
         detailedProfile: {
@@ -3776,7 +3776,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'mackenzie-mcdonald': {
+    'mackenzie-mcdonald': { image: '/images/players/mackenzie-mcdonald.png',
         name: '매켄지 맥도날드', nameEn: 'Mackenzie McDonald', country: 'United States', countryFlag: '🇺🇸', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '빠른 발과 박자 빠른 스트로크가 강점인 선수 "Mackie". 2023 호주 오픈에서 라파엘 나달을 꺾는 이변을 연출한 바 있는 실력파입니다.',
         detailedProfile: {
@@ -3842,7 +3842,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'max-purcell': {
+    'max-purcell': { image: '/images/players/max-purcell.png',
         name: '맥스 퍼셀', nameEn: 'Max Purcell', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '단식과 복식을 모두 잘하는 호주의 테크니션. 윔블던 복식 챔피언 출신으로, 독특한 슬라이스와 서브 앤 발리 등 클래식한 변칙 플레이를 구사합니다.',
         detailedProfile: {
@@ -3908,7 +3908,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'dominik-koepfer': {
+    'dominik-koepfer': { image: '/images/players/dominik-koepfer.png',
         name: '도미닉 쾨퍼', nameEn: 'Dominik Koepfer', country: 'Germany', countryFlag: '🇩🇪', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '독일의 파이터. 미국 대학 테니스 출신으로, 끈질긴 랠리와 포기하지 않는 투지로 상대를 끝까지 물고 늘어지는 플레이 스타일을 가졌습니다.',
         detailedProfile: {
@@ -3974,7 +3974,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'aleksandar-vukic': {
+    'aleksandar-vukic': { image: '/images/players/aleksandar-vukic.png',
         name: '알렉산더 부키치', nameEn: 'Aleksandar Vukic', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '호주의 또 다른 유망주. 188cm의 키에서 나오는 강력한 서브와 포핸드가 주무기이며, 공격적인 스타일로 랭킹 상승세를 타고 있습니다.',
         detailedProfile: {
@@ -4040,7 +4040,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'yoshihito-nishioka': {
+    'yoshihito-nishioka': { image: '/images/players/yoshihito-nishioka.png',
         name: '요시히토 니시오카', nameEn: 'Yoshihito Nishioka', country: 'Japan', countryFlag: '🇯🇵', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '일본의 왼손잡이 테크니션. 작은 신장의 약점을 엄청난 스피드와 지능적인 경기 운영, 그리고 끈질긴 수비로 극복하며 투어 타이틀을 획득했습니다.',
         detailedProfile: {
@@ -4106,7 +4106,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'alexander-shevchenko': {
+    'alexander-shevchenko': { image: '/images/players/alexander-shevchenko.png',
         name: '알렉산더 셰브첸코', nameEn: 'Alexander Shevchenko', country: 'Kazakhstan', countryFlag: '🇰🇿', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '카자흐스탄을 대표하는 신예. 빠른 발과 공격적인 베이스라인 플레이로 투어 무대에서 빠르게 경쟁력을 입증하고 있는 선수입니다.',
         detailedProfile: {
@@ -4172,7 +4172,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'rinky-hijikata': {
+    'rinky-hijikata': { image: '/images/players/rinky-hijikata.png',
         name: '린키 히지카타', nameEn: 'Rinky Hijikata', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '호주의 파이터. 2023 US 오픈 16강 진출로 이름을 알렸으며, 빠른 발과 넘치는 투지, 그리고 관중을 사로잡는 세리머니가 인상적입니다.',
         detailedProfile: {
@@ -4238,7 +4238,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'botic-van-de-zandschulp': {
+    'botic-van-de-zandschulp': { image: '/images/players/botic-van-de-zandschulp.png',
         name: '보틱 반 더 잔츠슐프', nameEn: 'Botic van de Zandschulp', country: 'Netherlands', countryFlag: '🇳🇱', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '네덜란드의 실력파. 2021 US 오픈 8강 돌풍의 주역으로, 무표정한 얼굴에서 뿜어져 나오는 묵직하고 강력한 스트로크가 일품입니다.',
         detailedProfile: {
@@ -4304,7 +4304,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'yannick-hanfmann': {
+    'yannick-hanfmann': { image: '/images/players/yannick-hanfmann.png',
         name: '야닉 한프만', nameEn: 'Yannick Hanfmann', country: 'Germany', countryFlag: '🇩🇪', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '인간 승리의 드라마. 태어날 때부터 청각 장애가 있었지만 이를 극복하고 프로 테니스 선수가 되었으며, 묵직한 서브와 파워풀한 샷을 구사합니다.',
         detailedProfile: {
@@ -4370,7 +4370,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'pavel-kotov': {
+    'pavel-kotov': { image: '/images/players/pavel-kotov.png',
         name: '파벨 코토프', nameEn: 'Pavel Kotov', country: 'Russia', countryFlag: '🇷🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '러시아의 공격형 플레이어. 감정을 숨기지 않는 스타일과 강력한 그라운드 스트로크로 투어에서 존재감을 드러내고 있는 선수입니다.',
         detailedProfile: {
@@ -4436,7 +4436,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'aslan-karatsev': {
+    'aslan-karatsev': { image: '/images/players/aslan-karatsev.png',
         name: '아슬란 카라체프', nameEn: 'Aslan Karatsev', country: 'Russia', countryFlag: '🇷🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '러시아의 비밀병기. 2021 호주 오픈 4강 신화를 쓰며 혜성처럼 등장했습니다. 탄탄한 종아리 근육에서 나오는 폭발적인 스트로크는 투어 최고 수준입니다.',
         detailedProfile: {
@@ -4898,7 +4898,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'gael-monfils': {
+    'gael-monfils': { image: '/images/players/gael-monfils.png',
         name: '가엘 몽피스', nameEn: 'Gael Monfils', country: 'France', countryFlag: '🇫🇷', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 쇼맨 "La Monf". 믿을 수 없는 운동신경과 화려한 플레이로 관중들을 열광시키는 테니스계 최고의 엔터테이너입니다.',
@@ -4941,7 +4941,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'matteo-berrettini': {
+    'matteo-berrettini': { image: '/images/players/matteo-berrettini.png',
         name: '마테오 베레티니', nameEn: 'Matteo Berrettini', country: 'Italy', countryFlag: '🇮🇹', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '이탈리아의 "망치(The Hammer)". 모델 같은 외모와 그에 걸맞은 파괴적인 포핸드, 강력한 서브로 윔블던 준우승을 차지한 스타 플레이어입니다.',
@@ -5157,7 +5157,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'arthur-fils': {
+    'arthur-fils': { image: '/images/players/arthur-fils.png',
         name: '아서 필스', nameEn: 'Arthur Fils', country: 'France', countryFlag: '🇫🇷', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '프랑스 테니스의 미래. 폭발적인 피지컬과 두려움 없는 공격 테니스로 최연소 Top 50에 진입한 괴물 신인입니다.',
@@ -5200,7 +5200,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'sebastian-korda': {
+    'sebastian-korda': { image: '/images/players/sebastian-korda.png',
         name: '세바스찬 코다', nameEn: 'Sebastian Korda', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/sebastian-korda.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '스포츠 명문 코다 가문의 막내. 아버지 페트르 코다의 재능을 물려받아 부드러운 스윙과 정교한 기술을 구사하는 올라운드 플레이어입니다.',
@@ -5243,7 +5243,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'iga-swiatek': {
+    'iga-swiatek': { image: '/images/players/iga-swiatek.png',
         name: '이가 시비옹테크', nameEn: 'Iga Swiatek', country: 'Poland', countryFlag: '🇵🇱', image: '/images/players/iga-swiatek.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '폴란드 최초의 그랜드슬램 단식 우승자이자 현 여자 테니스 세계 랭킹 1위. "흙신" 라파엘 나달을 연상시키는 강력한 탑스핀 포핸드와 압도적인 활동량으로 클레이 코트에서 절대적인 강세를 보입니다. 37연승이라는 21세기 최다 연승 기록을 보유하고 있습니다.',
         detailedProfile: {
@@ -5285,7 +5285,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'aryna-sabalenka': {
+    'aryna-sabalenka': { image: '/images/players/aryna-sabalenka.png',
         name: '아리나 사발렌카', nameEn: 'Aryna Sabalenka', country: 'Belarus', countryFlag: '🇧🇾', image: '/images/players/aryna-sabalenka.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '강력한 파워 테니스의 대명사. 폭발적인 서브와 포핸드로 공격적인 플레이를 구사하며 하드 코트 그랜드슬램에서 눈부신 성과를 거두었습니다.',
@@ -5328,7 +5328,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'coco-gauff': {
+    'coco-gauff': { image: '/images/players/coco-gauff.png',
         name: '코코 가우프', nameEn: 'Coco Gauff', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/coco-gauff.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '미국의 천재 테니스 소녀에서 슈퍼스타로. 10대 시절부터 세계적인 주목을 받았으며, 놀라운 운동신경과 강력한 백핸드를 보유하고 있습니다.',
@@ -5371,7 +5371,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'elena-rybakina': {
+    'elena-rybakina': { image: '/images/players/elena-rybakina.png',
         name: '엘레나 리바키나', nameEn: 'Elena Rybakina', country: 'Kazakhstan', countryFlag: '🇰🇿', image: '/images/players/elena-rybakina.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '차가운 평정심을 가진 "아이스 퀸". 강력하고 정교한 서브와 플랫한 스트로크로 윔블던 우승을 차지한 강타자입니다.',
@@ -5414,7 +5414,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'jessica-pegula': {
+    'jessica-pegula': { image: '/images/players/jessica-pegula.png',
         name: '제시카 페굴라', nameEn: 'Jessica Pegula', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/jessica-pegula.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '꾸준함의 대명사. 화려하진 않지만 탄탄한 기본기와 영리한 경기 운영으로 투어 상위권을 꾸준히 유지하는 탑 플레이어입니다. 한국계 어머니를 둔 것으로도 유명합니다.',
@@ -5457,7 +5457,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'ons-jabeur': {
+    'ons-jabeur': { image: '/images/players/ons-jabeur.png',
         name: '온스 자베르', nameEn: 'Ons Jabeur', country: 'Tunisia', countryFlag: '🇹🇳', image: '/images/players/ons-jabeur.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 마법사. 예측 불가능한 드롭샷과 창의적인 플레이 스타일로 팬들에게 즐거움을 선사하는 튀니지의 영웅입니다.',
@@ -9574,7 +9574,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
 
 
     // --- New Additions (Batch 3) ---
-    'venus-williams': {
+    'venus-williams': { image: '/images/players/venus-williams.png',
         name: '비너스 윌리엄스', nameEn: 'Venus Williams', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/venus-williams.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '7개의 그랜드슬램 타이틀을 보유한 살아있는 전설. 동생 세레나와 함께 여자 테니스의 파워 시대를 열었으며, 40대가 넘은 나이에도 코트를 지키는 존경받는 아이콘입니다.',
         detailedProfile: {
@@ -9628,7 +9628,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'maria-sharapova': {
+    'maria-sharapova': { image: '/images/players/maria-sharapova.png',
         name: '마리아 샤라포바', nameEn: 'Maria Sharapova', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/maria-sharapova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '커리어 그랜드슬램 달성자. 실력과 스타성을 완벽하게 겸비했던 테니스 역사상 최고의 슈퍼스타 중 한 명입니다. 강렬한 괴성(Shouting)과 끈질긴 승부 근성이 트레이드마크였습니다.',
         detailedProfile: {
@@ -9736,7 +9736,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'serena-williams': {
+    'serena-williams': { image: '/images/players/serena-williams.png',
         name: '세레나 윌리엄스', nameEn: 'Serena Williams', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/serena-williams.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '그랜드슬램 23회 우승에 빛나는 "GOAT". 여자 테니스의 차원을 바꾼 압도적인 파워와 불굴의 멘탈을 가진 역사상 최고의 선수입니다.',
         detailedProfile: {
@@ -9898,7 +9898,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'zheng-qinwen': {
+    'zheng-qinwen': { image: '/images/players/zheng-qinwen.png',
         name: '정친원', nameEn: 'Zheng Qinwen', country: 'China', countryFlag: '🇨🇳', image: '/images/players/zheng-qinwen.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '2024 파리 올림픽 금메달리스트. 리나의 뒤를 잇는 중국 테니스의 새로운 에이스로, 강력한 서브와 공격적인 플레이가 돋보이는 "Queen Wen"입니다.',
         detailedProfile: {
