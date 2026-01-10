@@ -17,5 +17,8 @@
 - [x] Cleanup redundant GitHub workflow files
 - [x] Verify local build and deploy to GitHub
 - [ ] Generate minimalist vector illustrations for remaining players
+  - [x] **Batch 2**: Fabian Marozsan, Sumit Nagal, Taro Daniel, Roberto Bautista Agut, Marton Fucsovics, Borna Coric, Felix Auger-Aliassime, Denis Shapovalov, Alexander Bublik, Jack Draper
+  - [x] **Batch 3**: Qinwen Zheng, Marketa Vondrousova, Maria Sakkari, Jelena Ostapenko, Naomi Osaka, Caroline Wozniacki, Angelique Kerber, Elina Svitolina, Victoria Azarenka, Karolina Pliskova
+
 - [ ] Continue expanding `longBio` for mid-tier players
 - [ ] Monitor SEO performance of new dynamic pages
