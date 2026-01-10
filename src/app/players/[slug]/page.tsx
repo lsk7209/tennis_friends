@@ -9,7 +9,9 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Info, Trophy, Activity, ArrowLeft, ExternalLink, Star, Target, Zap, Crown, MapPin, Hand, CheckCircle, Shield, Award, Brain, List, Heart } from 'lucide-react';
 import Link from 'next/link';
-import PersonSchema from '@/components/seo/PersonSchema';
+import ProfilePageSchema from '@/components/seo/ProfilePageSchema';
+import { allBlogPosts } from '@/data/blog-posts';
+import RelatedContent from '@/components/RelatedContent';
 import FAQSchema from '@/components/seo/FAQSchema';
 import AdSense from '@/components/AdSense';
 import Image from 'next/image';
@@ -63,6 +65,12 @@ export default async function PlayerProfilePage({ params }: Props) {
     if (!player) {
         notFound();
     }
+
+    const breadcrumbItems = [
+        { name: 'Home', item: 'https://tennisfriends.co.kr' },
+        { name: 'Players', item: 'https://tennisfriends.co.kr/players' },
+        { name: player.nameEn, item: `https://tennisfriends.co.kr/players/${resolvedParams.slug}` }
+    ];
 
     // --- Smart Tag Logic ---
     const getSmartTags = (playerData: typeof player) => {
@@ -152,14 +160,33 @@ export default async function PlayerProfilePage({ params }: Props) {
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
-            <PersonSchema
-                name={player.nameEn}
-                nameKo={player.name}
-                description={`${player.name} 테니스 선수 프로필`}
+            <BreadcrumbSchema items={breadcrumbItems} />
+            <ProfilePageSchema
+                name={`${player.name} (${player.nameEn}) - 테니스 프로필`}
+                description={`${player.name} 선수의 상세 프로필, 랭킹, 플레이 스타일, 사용 장비 정보.`}
                 image={player.image || '/images/default-player.png'}
-                nationality={player.country}
-                jobTitle="Professional Tennis Player"
-                url={`https://tennisfriends.co.kr/players/${resolvedParams.slug}`}
+                breadcrumb={{
+                    "@type": "BreadcrumbList",
+                    "itemListElement": breadcrumbItems.map((item, index) => ({
+                        "@type": "ListItem",
+                        "position": index + 1,
+                        "name": item.name,
+                        "item": item.item
+                    }))
+                }}
+                mainEntity={{
+                    '@type': 'Person',
+                    name: player.nameEn,
+                    alternateName: player.name,
+                    description: `${player.name} 테니스 선수 프로필`,
+                    image: player.image || '/images/default-player.png',
+                    nationality: {
+                        '@type': 'Country',
+                        name: player.country
+                    },
+                    jobTitle: "Professional Tennis Player",
+                    url: `https://tennisfriends.co.kr/players/${resolvedParams.slug}`
+                }}
             />
             {player.detailedProfile?.faq && (
                 <FAQSchema
@@ -270,7 +297,7 @@ export default async function PlayerProfilePage({ params }: Props) {
                         <Tabs defaultValue="overview" className="w-full">
                             <TabsList className="grid w-full grid-cols-2 mb-8 bg-gray-100 dark:bg-gray-900 p-1 rounded-lg">
                                 <TabsTrigger value="overview" className="rounded-md data-[state=active]:bg-white data-[state=active]:shadow-sm">선수 소개</TabsTrigger>
-                                <TabsTrigger value="stats" className="rounded-md data-[state=active]:bg-white data-[state=active]:shadow-sm">통계 & 기록 (Soon)</TabsTrigger>
+                                <TabsTrigger value="stats" className="rounded-md data-[state=active]:bg-white data-[state=active]:shadow-sm">능력치 (Stats)</TabsTrigger>
                             </TabsList>
 
                             <TabsContent value="overview" className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
@@ -447,18 +474,79 @@ export default async function PlayerProfilePage({ params }: Props) {
 
                             </TabsContent>
 
-                            <TabsContent value="stats">
-                                <div className="text-center py-16 bg-gray-50 dark:bg-gray-900/50 rounded-2xl border border-dashed border-gray-200 dark:border-gray-700">
-                                    <Activity className="w-16 h-16 mx-auto mb-4 text-gray-300 dark:text-gray-600" />
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">데이터 수집 중</h3>
-                                    <p className="text-gray-500 dark:text-gray-400 max-w-sm mx-auto">
-                                        {player.name} 선수의 상세 시즌 스탯, 승률, 서브 기록 등 정밀 데이터를 준비하고 있습니다.
-                                    </p>
-                                </div>
+                            <TabsContent value="stats" className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
+                                {player.detailedProfile?.hexagonStats ? (
+                                    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm">
+                                        <h3 className="flex items-center text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                                            <Activity className="w-5 h-5 mr-2 text-blue-500" />
+                                            육각형 능력치 분석
+                                        </h3>
+                                        <div className="flex justify-center mb-8">
+                                            <PlayerHexagonStats
+                                                playerName={player.name}
+                                                attributes={player.detailedProfile.hexagonStats}
+                                            />
+                                        </div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            {player.detailedProfile.hexagonStats.map((stat, idx) => (
+                                                <div key={idx} className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg">
+                                                    <div className="flex justify-between items-center mb-2">
+                                                        <span className="font-bold text-gray-700 dark:text-gray-200">{stat.name}</span>
+                                                        <span className="font-bold text-blue-600 dark:text-blue-400">{stat.score}</span>
+                                                    </div>
+                                                    <p className="text-sm text-gray-600 dark:text-gray-400">{stat.description}</p>
+                                                    <div className="w-full bg-gray-200 dark:bg-gray-600 h-1.5 rounded-full mt-2">
+                                                        <div
+                                                            className="bg-blue-500 h-1.5 rounded-full transition-all duration-1000"
+                                                            style={{ width: `${stat.score * 10}%` }}
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="text-center py-16 bg-gray-50 dark:bg-gray-900/50 rounded-2xl border border-dashed border-gray-200 dark:border-gray-700">
+                                        <Activity className="w-16 h-16 mx-auto mb-4 text-gray-300 dark:text-gray-600" />
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">데이터 수집 중</h3>
+                                        <p className="text-gray-500 dark:text-gray-400 max-w-sm mx-auto">
+                                            {player.name} 선수의 정밀 능력치 데이터를 수집하고 있습니다.
+                                        </p>
+                                    </div>
+                                )}
                             </TabsContent>
                         </Tabs>
                     </CardContent>
                 </Card>
+            </div>
+
+            {/* Related Blog Posts Section */}
+            <div className="max-w-4xl mx-auto px-4 mt-8">
+                {(() => {
+                    const relatedPosts = allBlogPosts
+                        .filter(post =>
+                            post.title.includes(player?.name || '') ||
+                            post.excerpt?.includes(player?.name || '') ||
+                            (player?.nameEn && post.title.toLowerCase().includes(player.nameEn.toLowerCase())) ||
+                            (player?.nameEn && post.excerpt?.toLowerCase().includes(player.nameEn.toLowerCase()))
+                        )
+                        .slice(0, 3)
+                        .map(post => ({
+                            ...post,
+                            href: `/blog/${post.slug}`
+                        }));
+
+                    if (relatedPosts.length > 0) {
+                        return (
+                            <RelatedContent
+                                items={relatedPosts}
+                                title={`${player.name} 선수 관련 가이드`}
+                                type="blog"
+                            />
+                        );
+                    }
+                    return null;
+                })()}
             </div>
 
             <div className="max-w-4xl mx-auto px-4 mt-12 text-center">
@@ -469,7 +557,7 @@ export default async function PlayerProfilePage({ params }: Props) {
                     </Button>
                 </Link>
             </div>
-        </div>
+        </div >
     );
 }
 
