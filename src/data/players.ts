@@ -3077,7 +3077,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'andy-murray': {
-        name: '앤디 머레이', nameEn: 'Andy Murray', country: 'United Kingdom', countryFlag: '🇬🇧', gender: 'male',
+        name: '앤디 머레이', nameEn: 'Andy Murray', country: 'United Kingdom', countryFlag: '🇬🇧', image: '/images/players/andy-murray.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '영국의 테니스 영웅, 앤디 머레이. 놀라운 수비력과 전술적인 플레이로 BIG 4의 일원으로 활약했으며, 윔블던 우승으로 영국 테니스의 한을 풀었습니다.',
         detailedProfile: {
@@ -3120,7 +3120,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'stan-wawrinka': {
-        name: '스탄 바브린카', nameEn: 'Stan Wawrinka', country: 'Switzerland', countryFlag: '🇨🇭', gender: 'male',
+        name: '스탄 바브린카', nameEn: 'Stan Wawrinka', country: 'Switzerland', countryFlag: '🇨🇭', image: '/images/players/stan-wawrinka.png', gender: 'male',
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '대기만성형 스타, 스탄 바브린카. "Stanimal"이라는 별명처럼 폭발적인 파워와 예술적인 원핸드 백핸드로 그랜드슬램 3회 우승을 달성했습니다.',
         detailedProfile: {
@@ -5329,7 +5329,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'coco-gauff': {
-        name: '코코 가우프', nameEn: 'Coco Gauff', country: 'United States', countryFlag: '🇺🇸', gender: 'female',
+        name: '코코 가우프', nameEn: 'Coco Gauff', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/coco-gauff.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '미국의 천재 테니스 소녀에서 슈퍼스타로. 10대 시절부터 세계적인 주목을 받았으며, 놀라운 운동신경과 강력한 백핸드를 보유하고 있습니다.',
         detailedProfile: {
@@ -5372,7 +5372,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'elena-rybakina': {
-        name: '엘레나 리바키나', nameEn: 'Elena Rybakina', country: 'Kazakhstan', countryFlag: '🇰🇿', gender: 'female',
+        name: '엘레나 리바키나', nameEn: 'Elena Rybakina', country: 'Kazakhstan', countryFlag: '🇰🇿', image: '/images/players/elena-rybakina.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '차가운 평정심을 가진 "아이스 퀸". 강력하고 정교한 서브와 플랫한 스트로크로 윔블던 우승을 차지한 강타자입니다.',
         detailedProfile: {
@@ -5458,7 +5458,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'ons-jabeur': {
-        name: '온스 자베르', nameEn: 'Ons Jabeur', country: 'Tunisia', countryFlag: '🇹🇳', gender: 'female',
+        name: '온스 자베르', nameEn: 'Ons Jabeur', country: 'Tunisia', countryFlag: '🇹🇳', image: '/images/players/ons-jabeur.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 마법사. 예측 불가능한 드롭샷과 창의적인 플레이 스타일로 팬들에게 즐거움을 선사하는 튀니지의 영웅입니다.',
         detailedProfile: {
@@ -9575,7 +9575,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
 
     // --- New Additions (Batch 3) ---
     'venus-williams': {
-        name: '비너스 윌리엄스', nameEn: 'Venus Williams', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '비너스 윌리엄스', nameEn: 'Venus Williams', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/venus-williams.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '7개의 그랜드슬램 타이틀을 보유한 살아있는 전설. 동생 세레나와 함께 여자 테니스의 파워 시대를 열었으며, 40대가 넘은 나이에도 코트를 지키는 존경받는 아이콘입니다.',
         detailedProfile: {
             oneLineSummary: '여자 테니스 파워 게임의 창시자, 영원한 챔피언이자 "Queen V".',
@@ -9629,7 +9629,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'maria-sharapova': {
-        name: '마리아 샤라포바', nameEn: 'Maria Sharapova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '마리아 샤라포바', nameEn: 'Maria Sharapova', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/maria-sharapova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '커리어 그랜드슬램 달성자. 실력과 스타성을 완벽하게 겸비했던 테니스 역사상 최고의 슈퍼스타 중 한 명입니다. 강렬한 괴성(Shouting)과 끈질긴 승부 근성이 트레이드마크였습니다.',
         detailedProfile: {
             oneLineSummary: '17세 윔블던 우승의 충격, 실력과 미모, 사업 수완까지 갖춘 "테니스 여제".',
@@ -9737,7 +9737,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'serena-williams': {
-        name: '세레나 윌리엄스', nameEn: 'Serena Williams', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '세레나 윌리엄스', nameEn: 'Serena Williams', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/serena-williams.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '그랜드슬램 23회 우승에 빛나는 "GOAT". 여자 테니스의 차원을 바꾼 압도적인 파워와 불굴의 멘탈을 가진 역사상 최고의 선수입니다.',
         detailedProfile: {
             oneLineSummary: '여자 테니스 역사상 최고의 선수, "The Queen".',
@@ -9899,7 +9899,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'zheng-qinwen': {
-        name: '정친원', nameEn: 'Zheng Qinwen', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '정친원', nameEn: 'Zheng Qinwen', country: 'China', countryFlag: '🇨🇳', image: '/images/players/zheng-qinwen.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '2024 파리 올림픽 금메달리스트. 리나의 뒤를 잇는 중국 테니스의 새로운 에이스로, 강력한 서브와 공격적인 플레이가 돋보이는 "Queen Wen"입니다.',
         detailedProfile: {
             oneLineSummary: '아시아 최초 올림픽 단식 금메달, 대륙의 기상을 품은 "Queen Wen".',

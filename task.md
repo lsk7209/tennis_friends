@@ -13,7 +13,9 @@
 - [x] Build errors resolved and project successfully deployed
 
 ## Next Steps
-- [ ] Wait for image generation quota reset (~4 hours from session start)
+- [x] Wait for image generation quota reset (~4 hours from session start)
+- [x] Cleanup redundant GitHub workflow files
+- [x] Verify local build and deploy to GitHub
 - [ ] Generate minimalist vector illustrations for remaining players
 - [ ] Continue expanding `longBio` for mid-tier players
 - [ ] Monitor SEO performance of new dynamic pages
