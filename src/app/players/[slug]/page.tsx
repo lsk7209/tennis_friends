@@ -551,7 +551,7 @@ export default async function PlayerProfilePage({ params }: Props) {
             </div>
 
             <div className="max-w-4xl mx-auto px-4 mt-12 text-center">
-                <Link href="/utility">
+                <Link href="/utility/play-style-test">
                     <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 transition-all rounded-full px-8 h-12 text-base font-bold">
                         <Activity className="w-5 h-5 mr-2" />
                         내 플레이 스타일과 비슷한 선수는? (테스트)
