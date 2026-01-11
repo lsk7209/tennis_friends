@@ -19,7 +19,9 @@
 - [ ] Generate minimalist vector illustrations for remaining players
   - [x] **Batch 2**: Fabian Marozsan, Sumit Nagal, Taro Daniel, Roberto Bautista Agut, Marton Fucsovics, Borna Coric, Felix Auger-Aliassime, Denis Shapovalov, Alexander Bublik, Jack Draper
   - [x] **Batch 3**: Qinwen Zheng, Marketa Vondrousova, Maria Sakkari, Jelena Ostapenko, Naomi Osaka, Caroline Wozniacki, Angelique Kerber, Elina Svitolina, Victoria Azarenka, Karolina Pliskova
+  - [x] **Batch 4**: Sloane Stephens, Madison Keys, Daria Kasatkina, Beatriz Haddad Maia, Danielle Collins, Barbora Krejcikova, Petra Kvitova, Belinda Bencic, Bianca Andreescu, Emma Raducanu
 - [x] Deploy Batch 2 & 3 images and data updates to GitHub
+- [ ] Deploy Batch 4 images and data updates to GitHub
 
 - [ ] Continue expanding `longBio` for mid-tier players
 - [ ] Monitor SEO performance of new dynamic pages

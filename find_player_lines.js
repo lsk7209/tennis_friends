@@ -6,16 +6,16 @@ const content = fs.readFileSync(playersPath, 'utf8');
 const lines = content.split('\n');
 
 const targets = [
-    'qinwen-zheng',
-    'marketa-vondrousova',
-    'maria-sakkari',
-    'jelena-ostapenko',
-    'naomi-osaka',
-    'caroline-wozniacki',
-    'angelique-kerber',
-    'elina-svitolina',
-    'victoria-azarenka',
-    'karolina-pliskova'
+    'sloane-stephens',
+    'madison-keys',
+    'daria-kasatkina',
+    'beatriz-haddad-maia',
+    'danielle-collins',
+    'barbora-krejcikova',
+    'petra-kvitova',
+    'belinda-bencic',
+    'bianca-andreescu',
+    'emma-raducanu'
 ];
 
 console.log('--- Found Lines ---');

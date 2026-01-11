@@ -6085,6 +6085,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'sloane-stephens': {
+        image: '/images/players/sloane-stephens.png',
         name: '슬론 스티븐스', nameEn: 'Sloane Stephens', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '2017 US 오픈 챔피언. 부드러운 움직임과 강력한 포핸드, 그리고 뛰어난 수비력을 겸비한 올라운드 플레이어입니다.',
         detailedProfile: {
@@ -6151,6 +6152,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'madison-keys': {
+        image: '/images/players/madison-keys.png',
         name: '매디슨 키스', nameEn: 'Madison Keys', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: 'WTA 투어 최고의 파워 히터 중 한 명. 묵직한 서브와 포핸드로 상대를 힘으로 압박하는 공격적인 스타일을 구사합니다.',
         detailedProfile: {
@@ -6193,6 +6195,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'daria-kasatkina': {
+        image: '/images/players/daria-kasatkina.png',
         name: '다리아 카사트키나', nameEn: 'Daria Kasatkina', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 예술가. 파워보다는 다양한 스핀과 각도, 창의적인 샷 메이킹으로 승부하는 지능적인 플레이어입니다.',
         detailedProfile: {
@@ -6235,6 +6238,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'beatriz-haddad-maia': {
+        image: '/images/players/beatriz-haddad-maia.png',
         name: '베아트리스 하다드 마이아', nameEn: 'Beatriz Haddad Maia', country: 'Brazil', countryFlag: '🇧🇷', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '남미 여자 테니스의 자존심. 왼손잡이 특유의 까다로운 서브와 강력한 포핸드, 그리고 매 포인트 최선을 다하는 파이팅이 돋보입니다.',
         detailedProfile: {
@@ -6301,6 +6305,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'danielle-collins': {
+        image: '/images/players/danielle-collins.png',
         name: '다니엘 콜린스', nameEn: 'Danielle Collins', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: 'Danimal. 엄청난 승부욕과 공격적인 베이스라인 플레이로 2022 호주 오픈 준우승을 차지했습니다. 2024년을 끝으로 은퇴를 예고한 그녀의 마지막 불꽃을 주목하세요.',
         detailedProfile: {
@@ -6367,6 +6372,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'barbora-krejcikova': {
+        image: '/images/players/barbora-krejcikova.png',
         name: '바르보라 크레이치코바', nameEn: 'Barbora Krejcikova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '단식과 복식을 모두 제패한 진정한 챔피언. 2021 롤랑가로스, 2024 윔블던 단식 우승자이자 골든 슬래머로, 우아하고 기술적인 플레이가 일품입니다.',
         detailedProfile: {
@@ -6433,6 +6439,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'petra-kvitova': {
+        image: '/images/players/petra-kvitova.png',
         name: '페트라 크비토바', nameEn: 'Petra Kvitova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '윔블던 2회 우승자. 강력한 왼손 서브와 포핸드를 앞세운 시원시원한 공격 테니스의 대명사입니다. 강도 피습 사건으로 왼손 신경이 끊어지는 부상을 당했으나 기적적으로 재활에 성공했습니다.',
         detailedProfile: {
@@ -6487,6 +6494,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'belinda-bencic': {
+        image: '/images/players/belinda-bencic.png',
         name: '벨린다 벤치치', nameEn: 'Belinda Bencic', country: 'Switzerland', countryFlag: '🇨🇭', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '도쿄 올림픽 금메달리스트. 빠른 타이밍에 공을 처리하여 상대의 시간을 빼앗는 플레이가 장기이며, 마르티나 힝기스를 잇는 스위스의 스타입니다.',
         detailedProfile: {
@@ -6544,6 +6552,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'bianca-andreescu': {
+        image: '/images/players/bianca-andreescu.png',
         name: '비앙카 안드레스쿠', nameEn: 'Bianca Andreescu', country: 'Canada', countryFlag: '🇨🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '2019 US 오픈 챔피언. 세레나 윌리엄스를 꺾고 우승한 저력의 선수로, 강력한 파워와 다양한 구질을 섞어 쓰는 능력이 탁월합니다.',
         detailedProfile: {
@@ -6601,6 +6610,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'emma-raducanu': {
+        image: '/images/players/emma-raducanu.png',
         name: '엠마 라두카누', nameEn: 'Emma Raducanu', country: 'United Kingdom', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '기적의 아이콘. 2021 US 오픈에서 예선 통과자 최초로 무실세트 우승이라는 신화를 썼습니다. 깔끔한 기술과 스타성을 겸비한 영국의 희망입니다.',
         detailedProfile: {
