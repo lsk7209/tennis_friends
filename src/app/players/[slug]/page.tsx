@@ -314,7 +314,7 @@ export default async function PlayerProfilePage({ params }: Props) {
                                                 <List className="w-4 h-4 mr-2" />
                                                 목차
                                             </h4>
-                                            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                            <ul className="space-y-2 text-sm text-gray-800 dark:text-gray-200 font-medium">
                                                 <li><a href="#why-notable" className="hover:text-blue-600 transition-colors">1. 왜 주목받는 선수인가?</a></li>
                                                 <li><a href="#play-style" className="hover:text-blue-600 transition-colors">2. 플레이 스타일 분석</a></li>
                                                 <li><a href="#growth-story" className="hover:text-blue-600 transition-colors">3. 성장 스토리</a></li>
