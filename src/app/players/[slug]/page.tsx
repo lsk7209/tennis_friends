@@ -17,6 +17,7 @@ import AdSense from '@/components/AdSense';
 import Image from 'next/image';
 import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import TOC from '@/components/blog/TOC';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 // Force static generation for these paths
 export async function generateStaticParams() {

@@ -21,7 +21,7 @@
   - [x] **Batch 3**: Qinwen Zheng, Marketa Vondrousova, Maria Sakkari, Jelena Ostapenko, Naomi Osaka, Caroline Wozniacki, Angelique Kerber, Elina Svitolina, Victoria Azarenka, Karolina Pliskova
   - [x] **Batch 4**: Sloane Stephens, Madison Keys, Daria Kasatkina, Beatriz Haddad Maia, Danielle Collins, Barbora Krejcikova, Petra Kvitova, Belinda Bencic, Bianca Andreescu, Emma Raducanu
 - [x] Deploy Batch 2 & 3 images and data updates to GitHub
-- [ ] Deploy Batch 4 images and data updates to GitHub
+- [x] Deploy Batch 4 images and data updates to GitHub
 
 - [ ] Continue expanding `longBio` for mid-tier players
 - [ ] Monitor SEO performance of new dynamic pages
