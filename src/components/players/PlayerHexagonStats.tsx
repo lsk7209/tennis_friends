@@ -87,7 +87,7 @@ export default function PlayerHexagonStats({ attributes, playerName }: PlayerHex
                                         dataKey="skill"
                                         tick={{
                                             fill: '#e2e8f0',
-                                            fontSize: 12,
+                                            fontSize: 10,
                                             fontWeight: 600
                                         }}
                                     />

@@ -265,32 +265,32 @@ export default async function PlayerProfilePage({ params }: Props) {
                     <CardContent className="p-6 md:p-8">
                         {/* Quick Stats Layout */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 border-b border-gray-100 dark:border-gray-700 pb-8">
-                            <div className="flex flex-col gap-1">
-                                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Nationality</span>
-                                <div className="flex items-center gap-2 font-medium text-gray-900 dark:text-gray-100">
-                                    <MapPin className="w-4 h-4 text-blue-500" />
+                            <div className="flex flex-col">
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">국적 (Nationality)</span>
+                                <div className="flex items-center gap-2 font-medium">
+                                    <span className="text-xl">{player.countryFlag}</span>
                                     {player.country}
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Plays</span>
-                                <div className="flex items-center gap-2 font-medium text-gray-900 dark:text-gray-100">
+                            <div className="flex flex-col">
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">주손 (Plays)</span>
+                                <div className="flex items-center gap-2 font-medium">
                                     <Hand className="w-4 h-4 text-orange-500" />
-                                    {player.plays === 'Left-handed' ? 'Left-handed' : 'Right-handed'}
+                                    {player.plays === 'Right-handed' ? '오른손잡이' : '왼손잡이'}
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Backhand</span>
-                                <div className="flex items-center gap-2 font-medium text-gray-900 dark:text-gray-100">
-                                    <Target className="w-4 h-4 text-green-500" />
-                                    {player.backhand === 'One-handed' ? 'One-handed' : 'Two-handed'}
+                            <div className="flex flex-col">
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">백핸드 (Backhand)</span>
+                                <div className="flex items-center gap-2 font-medium">
+                                    <Activity className="w-4 h-4 text-green-500" />
+                                    {player.backhand === 'One-handed' ? '원핸드' : '투핸드'}
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Status</span>
-                                <div className="flex items-center gap-2 font-medium text-gray-900 dark:text-gray-100">
+                            <div className="flex flex-col">
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">상태 (Status)</span>
+                                <div className="flex items-center gap-2 font-medium">
                                     <CheckCircle className="w-4 h-4 text-purple-500" />
-                                    Active Player
+                                    현역 선수
                                 </div>
                             </div>
                         </div>
