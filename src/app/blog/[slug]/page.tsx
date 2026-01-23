@@ -13,6 +13,7 @@ import type { RelatedContentItem } from '@/components/RelatedContent';
 import EnhancedBlogPostSchema from '@/components/seo/EnhancedBlogPostSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FAQSection from '@/components/seo/FAQSection';
+import { blogContentMap } from '@/data/blog-content';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -38,6 +39,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: ['TennisFriends'],
       tags: post.category ? [post.category] : [],
+      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/${post.slug}`,
+    },
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/${post.slug}`,
     },
   };
 }
@@ -52,6 +57,18 @@ export default async function BlogPostPage({ params }: Props) {
 
   // Type assertion since blog posts from JS might not strictly match TS interface
   const typedPost: any = post;
+
+  // Merge content from blogContentMap if available
+  const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
+  if (contentData) {
+    typedPost.content = contentData.content;
+    typedPost.tags = contentData.tags;
+    typedPost.summary = contentData.summary;
+    typedPost.highlight = contentData.highlight;
+    if (contentData.faq) {
+      // We'll handle FAQ merging later in the component
+    }
+  }
 
   // Transform blog posts to RelatedItem type with safe fallbacks
   const allPostsForRelated: RelatedContentItem[] = allBlogPosts.map(p => ({
@@ -82,8 +99,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   const relatedPosts = getRelatedBlogPosts(currentRelatedItem, allPostsForRelated, 6);
 
-  // FAQ Items - Currently empty/placeholder as data doesn't exist yet
-  const faqItems: any[] = [];
+  // FAQ Items
+  const faqItems: any[] = contentData?.faq ? contentData.faq.map(item => ({
+    question: item.question,
+    acceptedAnswer: { text: item.answer }
+  })) : [];
 
   const breadcrumbItems = [
     { name: 'Home', item: 'https://tennisfriends.co.kr' },

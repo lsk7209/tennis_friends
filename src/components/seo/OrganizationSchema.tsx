@@ -17,7 +17,7 @@ export default function OrganizationSchema({
   email = 'tennisfriends@tennisfriends.co.kr',
   sameAs = [],
 }: OrganizationSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
   const logoUrl = logo || `${siteUrl}/logo.png`;
 
   const schema = {

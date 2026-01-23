@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             images: player.image ? [player.image] : [],
         },
         alternates: {
-            canonical: `https://tennisfriends.co.kr/players/${slug}`,
+            canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/players/${slug}`,
         }
     };
 }
@@ -309,12 +309,12 @@ export default async function PlayerProfilePage({ params }: Props) {
                                         </p>
 
                                         {/* Table of Contents for Rich Profiles */}
-                                        <div className="not-prose bg-gray-50 dark:bg-gray-800/50 p-6 rounded-xl mb-8 border border-gray-100 dark:border-gray-700">
-                                            <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
+                                        <div className="not-prose bg-gray-100 dark:bg-gray-800 p-6 rounded-xl mb-8 border border-gray-200 dark:border-gray-700">
+                                            <h4 className="font-bold text-gray-900 dark:text-gray-50 mb-4 flex items-center">
                                                 <List className="w-4 h-4 mr-2" />
                                                 목차
                                             </h4>
-                                            <ul className="space-y-2 text-sm text-gray-800 dark:text-gray-200 font-medium">
+                                            <ul className="space-y-2 text-sm text-gray-900 dark:text-gray-100 font-semibold">
                                                 <li><a href="#why-notable" className="hover:text-blue-600 transition-colors">1. 왜 주목받는 선수인가?</a></li>
                                                 <li><a href="#play-style" className="hover:text-blue-600 transition-colors">2. 플레이 스타일 분석</a></li>
                                                 <li><a href="#growth-story" className="hover:text-blue-600 transition-colors">3. 성장 스토리</a></li>

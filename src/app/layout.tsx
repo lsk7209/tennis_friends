@@ -35,9 +35,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com"),
-  alternates: {
-    canonical: "/",
-  },
+
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || "",
     other: {
@@ -97,7 +95,7 @@ export default function RootLayout({
         />
         {/* RSS 피드 - 구글, 네이버, 다음 모두 지원 */}
         <link rel="alternate" type="application/rss+xml" title="TennisFriends RSS Feed" href="/rss.xml" />
-        
+
         {/* 검색 엔진 사이트 인증 */}
         {/* 네이버 서치어드바이저 인증 */}
         {process.env.NAVER_SITE_VERIFICATION && (
@@ -111,11 +109,11 @@ export default function RootLayout({
         {process.env.BING_SITE_VERIFICATION && (
           <meta name="msvalidate.01" content={process.env.BING_SITE_VERIFICATION} />
         )}
-        
+
         {/* 네이버 검색 최적화 - 크롤러 허용 */}
         <meta name="NaverBot" content="index, follow, all" />
         <meta name="Yeti" content="index, follow, all" />
-        
+
         {/* 다음 검색 최적화 - 크롤러 허용 */}
         <meta name="DaumBot" content="index, follow, all" />
         <meta name="Daumoa" content="index, follow, all" />

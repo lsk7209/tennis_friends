@@ -3038,6 +3038,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '클레이 황제, 라파엘 나달. 흙신이라는 별명답게 롤랑가로스 최다 우승 기록을 보유하고 있으며, 강력한 탑스핀 포핸드와 불굴의 정신력으로 테니스 역사를 새로 썼습니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "라파엘 나달 선수의 플레이 스타일은 어떤가요?",
+          answer: "라파엘 나달 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "라파엘 나달 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "라파엘 나달 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "라파엘 나달 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '불멸의 "클레이 황제", 테니스 역사상 가장 위대한 투사.',
             whyNotable: `
                 <p><strong>"흙신(The King of Clay)"</strong></p>
@@ -3081,6 +3099,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '영국의 테니스 영웅, 앤디 머레이. 놀라운 수비력과 전술적인 플레이로 BIG 4의 일원으로 활약했으며, 윔블던 우승으로 영국 테니스의 한을 풀었습니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "앤디 머레이 선수의 플레이 스타일은 어떤가요?",
+          answer: "앤디 머레이 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "앤디 머레이 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "앤디 머레이 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "앤디 머레이 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '영국 테니스의 77년 한을 푼 영웅, 불가능을 가능으로 만든 "인조인간(Bionic Man)".',
             whyNotable: `
                 <p><strong>"Big 4의 일원이자 불굴의 영웅"</strong></p>
@@ -3124,6 +3160,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '대기만성형 스타, 스탄 바브린카. "Stanimal"이라는 별명처럼 폭발적인 파워와 예술적인 원핸드 백핸드로 그랜드슬램 3회 우승을 달성했습니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "스탄 바브린카 선수의 플레이 스타일은 어떤가요?",
+          answer: "스탄 바브린카 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "스탄 바브린카 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "스탄 바브린카 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "스탄 바브린카 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '예술적인 원핸드 백핸드와 묵직한 파워로 Big 4의 아성을 무너뜨린 "Stanimal".',
             whyNotable: `
                 <p><strong>"Big 4 시대의 유일한 대항마"</strong></p>
@@ -3167,6 +3221,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '아시아 남자 테니스의 자존심. 빠른 발과 뛰어난 리턴 능력, 그리고 시그니처인 "Air-K" 점프 샷으로 유명합니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "니시코리 케이 선수의 플레이 스타일은 어떤가요?",
+          answer: "니시코리 케이 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "니시코리 케이 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "니시코리 케이 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "니시코리 케이 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '아시아 남자 테니스 역대 최고 순위(4위), 불리한 신체 조건을 극복한 "샷 메이킹의 마법사".',
             whyNotable: `
                 <p><strong>"아시아 테니스의 선구자"</strong></p>
@@ -3210,6 +3282,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '대한민국 테니스의 새로운 역사를 쓴 "코리안 썬더". 이형택 이후 18년 만에 ATP 투어 우승을 차지했으며, 한국 선수 최초로 ATP 투어 2회 우승이라는 금자탑을 쌓은 명실상부한 한국 테니스의 에이스입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "권순우 선수의 플레이 스타일은 어떤가요?",
+          answer: "권순우 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "권순우 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "권순우 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "권순우 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '한국 테니스 최초 ATP 투어 2회 우승! 체격의 열세를 스피드와 "닥공"으로 극복한 불굴의 파이터.',
             whyNotable: `
                 <p><strong>"한국 테니스의 역사를 새로 쓴 에이스"</strong></p>
@@ -4909,6 +4999,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 쇼맨 "La Monf". 믿을 수 없는 운동신경과 화려한 플레이로 관중들을 열광시키는 테니스계 최고의 엔터테이너입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "가엘 몽피스 선수의 플레이 스타일은 어떤가요?",
+          answer: "가엘 몽피스 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "가엘 몽피스 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "가엘 몽피스 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "가엘 몽피스 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '중력을 거스르는 점프와 믿을 수 없는 샷, 테니스 역사상 최고의 "슈퍼 히어로" 엔터테이너.',
             whyNotable: `
                 <p><strong>"La Monf, 코트 위의 예술가"</strong></p>
@@ -4952,6 +5060,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '이탈리아의 "망치(The Hammer)". 모델 같은 외모와 그에 걸맞은 파괴적인 포핸드, 강력한 서브로 윔블던 준우승을 차지한 스타 플레이어입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "마테오 베레티니 선수의 플레이 스타일은 어떤가요?",
+          answer: "마테오 베레티니 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "마테오 베레티니 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "마테오 베레티니 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "마테오 베레티니 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '파괴적인 서브와 포핸드라는 "두 개의 망치"를 휘무르는 이탈리아의 다비드상.',
             whyNotable: `
                 <p><strong>"이탈리아 테니스의 르네상스를 연 주역"</strong></p>
@@ -4996,6 +5122,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '캐나다의 차세대 리더. 완벽한 신체 조건과 성실함, 그리고 폭발적인 재능을 겸비한 "FA2". 토니 나달의 지도를 받으며 계속 성장 중입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "펠릭스 오제 알리아심 선수의 플레이 스타일은 어떤가요?",
+          answer: "펠릭스 오제 알리아심 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "펠릭스 오제 알리아심 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "펠릭스 오제 알리아심 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "펠릭스 오제 알리아심 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '나달의 스승 토니 나달이 선택한 재능, 완벽한 피지컬과 성실함으로 무장한 캐나다의 영건.',
             whyNotable: `
                 <p><strong>"준비된 슈퍼스타"</strong></p>
@@ -5041,6 +5185,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Left-handed', backhand: 'One-handed',
         longBio: '코트 위의 야생마 "El Shapo". 폭발적인 점프 원핸드 백핸드와 다이나믹한 플레이로 팬들의 사랑을 받는 공격형 테니스의 진수입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "데니스 샤포발로프 선수의 플레이 스타일은 어떤가요?",
+          answer: "데니스 샤포발로프 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "데니스 샤포발로프 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "데니스 샤포발로프 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "데니스 샤포발로프 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '하늘을 나는 듯한 점프 원핸드 백핸드, 긁히는 날에는 누구도 막을 수 없는 "El Shapo".',
             whyNotable: `
                 <p><strong>"가장 화려한 원핸드 백핸드의 소유자"</strong></p>
@@ -5085,6 +5247,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 악동이자 천재. 언더암 서브, 트위너 등 예측할 수 없는 변칙 플레이로 상대를 혼란에 빠뜨리는 "Trickster"입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "알렉산더 버블릭 선수의 플레이 스타일은 어떤가요?",
+          answer: "알렉산더 버블릭 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "알렉산더 버블릭 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "알렉산더 버블릭 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "알렉산더 버블릭 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '언더암 서브와 묘기 샷의 달인, 테니스를 가장 창의적으로(혹은 이상하게) 치는 "The Trickster".',
             whyNotable: `
                 <p><strong>"지루한 테니스는 거부한다"</strong></p>
@@ -5129,6 +5309,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '영국 테니스의 새로운 희망. 앤디 머레이의 뒤를 이을 재목으로 평가받으며, 강력한 왼손 서브와 묵직한 포핸드가 강점인 라이징 스타입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "잭 드레이퍼 선수의 플레이 스타일은 어떤가요?",
+          answer: "잭 드레이퍼 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "잭 드레이퍼 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "잭 드레이퍼 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "잭 드레이퍼 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '앤디 머레이가 지목한 영국의 후계자, 왼손에서 뿜어져 나오는 묵직한 파워.',
             whyNotable: `
                 <p><strong>"영국 테니스의 차세대 기수"</strong></p>
@@ -5172,6 +5370,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '프랑스 테니스의 미래. 폭발적인 피지컬과 두려움 없는 공격 테니스로 최연소 Top 50에 진입한 괴물 신인입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "아서 필스 선수의 플레이 스타일은 어떤가요?",
+          answer: "아서 필스 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "아서 필스 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "아서 필스 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "아서 필스 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '프랑스가 기다려온 대형 유망주, 터질듯한 피지컬과 파워로 무장한 "Next Tsonga".',
             whyNotable: `
                 <p><strong>"제2의 총가(Tsonga)"</strong></p>
@@ -5215,6 +5431,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '스포츠 명문 코다 가문의 막내. 아버지 페트르 코다의 재능을 물려받아 부드러운 스윙과 정교한 기술을 구사하는 올라운드 플레이어입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "세바스찬 코다 선수의 플레이 스타일은 어떤가요?",
+          answer: "세바스찬 코다 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "세바스찬 코다 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "세바스찬 코다 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "세바스찬 코다 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '아버지(테니스 챔피언)와 어머니(올림픽 테니스 선수)의 DNA를 물려받은 "테니스 금수저"이자 실력파.',
             whyNotable: `
                 <p><strong>"로열 패밀리의 완성작"</strong></p>
@@ -5257,6 +5491,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '이가 시비옹테크', nameEn: 'Iga Swiatek', country: 'Poland', countryFlag: '🇵🇱', image: '/images/players/iga-swiatek.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '폴란드 최초의 그랜드슬램 단식 우승자이자 현 여자 테니스 세계 랭킹 1위. "흙신" 라파엘 나달을 연상시키는 강력한 탑스핀 포핸드와 압도적인 활동량으로 클레이 코트에서 절대적인 강세를 보입니다. 37연승이라는 21세기 최다 연승 기록을 보유하고 있습니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "이가 시비옹테크 선수의 플레이 스타일은 어떤가요?",
+          answer: "이가 시비옹테크 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "이가 시비옹테크 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "이가 시비옹테크 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "이가 시비옹테크 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '나달의 후계자라 불리는 "클레이 여제", 압도적인 포핸드와 멘탈로 투어를 지배하다.',
             whyNotable: `
                 <p><strong>"21세기 여자 테니스의 새로운 지배자"</strong></p>
@@ -5300,6 +5552,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '강력한 파워 테니스의 대명사. 폭발적인 서브와 포핸드로 공격적인 플레이를 구사하며 하드 코트 그랜드슬램에서 눈부신 성과를 거두었습니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "아리나 사발렌카 선수의 플레이 스타일은 어떤가요?",
+          answer: "아리나 사발렌카 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "아리나 사발렌카 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "아리나 사발렌카 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "아리나 사발렌카 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '코트 위를 지배하는 압도적인 "호랑이", 파워 테니스의 새로운 표준.',
             whyNotable: `
                 <p><strong>"여자 테니스 최고의 파워 히터"</strong></p>
@@ -5343,6 +5613,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '미국의 천재 테니스 소녀에서 슈퍼스타로. 10대 시절부터 세계적인 주목을 받았으며, 놀라운 운동신경과 강력한 백핸드를 보유하고 있습니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "코코 가우프 선수의 플레이 스타일은 어떤가요?",
+          answer: "코코 가우프 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "코코 가우프 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "코코 가우프 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "코코 가우프 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '10대 천재 소녀에서 미국의 아이콘으로. 폭발적인 운동신경으로 코트를 지배하는 슈퍼스타.',
             whyNotable: `
                 <p><strong>"세레나 윌리엄스의 뒤를 잇는 미국의 희망"</strong></p>
@@ -5386,6 +5674,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '차가운 평정심을 가진 "아이스 퀸". 강력하고 정교한 서브와 플랫한 스트로크로 윔블던 우승을 차지한 강타자입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "엘레나 리바키나 선수의 플레이 스타일은 어떤가요?",
+          answer: "엘레나 리바키나 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "엘레나 리바키나 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "엘레나 리바키나 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "엘레나 리바키나 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '얼음장처럼 차갑지만 불같이 뜨거운 샷, 윔블던을 정복한 "아이스 퀸".',
             whyNotable: `
                 <p><strong>"무표정의 암살자"</strong></p>
@@ -5429,6 +5735,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '꾸준함의 대명사. 화려하진 않지만 탄탄한 기본기와 영리한 경기 운영으로 투어 상위권을 꾸준히 유지하는 탑 플레이어입니다. 한국계 어머니를 둔 것으로도 유명합니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "제시카 페굴라 선수의 플레이 스타일은 어떤가요?",
+          answer: "제시카 페굴라 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "제시카 페굴라 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "제시카 페굴라 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "제시카 페굴라 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '화려하지 않지만 가장 단단한, 투어에서 가장 신뢰할 수 있는 "꾸준함의 아이콘".',
             whyNotable: `
                 <p><strong>"편견을 실력으로 깬 노력파"</strong></p>
@@ -5472,6 +5796,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 마법사. 예측 불가능한 드롭샷과 창의적인 플레이 스타일로 팬들에게 즐거움을 선사하는 튀니지의 영웅입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "온스 자베르 선수의 플레이 스타일은 어떤가요?",
+          answer: "온스 자베르 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "온스 자베르 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "온스 자베르 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "온스 자베르 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '아프리카의 자존심이자 코트 위의 마법사, 예측 불가능한 "행복 테니스"의 전도사.',
             whyNotable: `
                 <p><strong>"아랍 여성 스포츠의 역사를 새로 쓰는 선구자"</strong></p>
@@ -5515,6 +5857,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '정 친원', nameEn: 'Qinwen Zheng', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '중국의 새로운 에이스 "Queen Wen". 2024 호주 오픈 준우승자이자 2024 파리 올림픽 금메달리스트로, 리나의 뒤를 이어 아시아 테니스를 이끌어갈 강력한 서브와 포핸드의 소유자입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "정 친원 선수의 플레이 스타일은 어떤가요?",
+          answer: "정 친원 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "정 친원 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "정 친원 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "정 친원 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '아시아 최초 올림픽 단식 금메달리스트, 대륙의 기상을 품은 "Queen Wen".',
             whyNotable: `
                 <p><strong>"아시아 테니스의 새 역사를 쓴 금메달리스트"</strong></p>
@@ -5625,6 +5985,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '마리아 사카리', nameEn: 'Maria Sakkari', country: 'Greece', countryFlag: '🇬🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '그리스의 스파르탄. 투어 최고 수준의 근육질 몸매에서 나오는 파워풀한 테니스와 쉽게 포기하지 않는 강인한 멘탈이 트레이드마크입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "마리아 사카리 선수의 플레이 스타일은 어떤가요?",
+          answer: "마리아 사카리 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "마리아 사카리 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "마리아 사카리 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "마리아 사카리 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '그리스 신화 속 전사 같은 피지컬, 지칠 줄 모르는 "스파르탄 우먼".',
             whyNotable: `
                 <p><strong>"가장 강력한 피지컬을 가진 선수"</strong></p>
@@ -5668,6 +6046,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '옐레나 오스타펜코', nameEn: 'Jelena Ostapenko', country: 'Latvia', countryFlag: '🇱🇻', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 폭주기관차. 모든 공을 위너로 만들겠다는 듯한 공격적인 풀스윙 샷을 구사하며, 컨디션이 좋은 날에는 누구도 막을 수 없는 파괴력을 보여줍니다. 2017 롤랑가로스 챔피언.',
         detailedProfile: {
+      faq: [
+        {
+          question: "옐레나 오스타펜코 선수의 플레이 스타일은 어떤가요?",
+          answer: "옐레나 오스타펜코 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "옐레나 오스타펜코 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "옐레나 오스타펜코 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "옐레나 오스타펜코 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '모 아니면 도, 들어가는 날은 아무도 막을 수 없는 "코트 위의 폭주기관차".',
             whyNotable: `
                 <p><strong>"가장 예측 불가능한 선수"</strong></p>
@@ -5711,6 +6107,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '나오미 오사카', nameEn: 'Naomi Osaka', country: 'Japan', countryFlag: '🇯🇵', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '4번의 그랜드슬램 우승에 빛나는 하드 코트의 여왕. 압도적인 서브와 포핸드 파워를 갖췄으며, 코트 밖에서는 사회적 목소리를 내는 영향력 있는 아이콘입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "나오미 오사카 선수의 플레이 스타일은 어떤가요?",
+          answer: "나오미 오사카 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "나오미 오사카 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "나오미 오사카 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "나오미 오사카 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '아시아 최초 세계 랭킹 1위, 4번의 그랜드슬램을 정복한 "하드 코트의 여왕".',
             whyNotable: `
                 <p><strong>"테니스의 아이콘이자 시대의 아이콘"</strong></p>
@@ -6156,6 +6570,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '매디슨 키스', nameEn: 'Madison Keys', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: 'WTA 투어 최고의 파워 히터 중 한 명. 묵직한 서브와 포핸드로 상대를 힘으로 압박하는 공격적인 스타일을 구사합니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "매디슨 키스 선수의 플레이 스타일은 어떤가요?",
+          answer: "매디슨 키스 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "매디슨 키스 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "매디슨 키스 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "매디슨 키스 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: 'WTA 최고 수준의 "헤비볼 히터", 들어가는 날은 아무도 막을 수 없는 파괴력.',
             whyNotable: `
                 <p><strong>"가장 묵직한 공을 치는 선수"</strong></p>
@@ -6199,6 +6631,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '다리아 카사트키나', nameEn: 'Daria Kasatkina', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 예술가. 파워보다는 다양한 스핀과 각도, 창의적인 샷 메이킹으로 승부하는 지능적인 플레이어입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "다리아 카사트키나 선수의 플레이 스타일은 어떤가요?",
+          answer: "다리아 카사트키나 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "다리아 카사트키나 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "다리아 카사트키나 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "다리아 카사트키나 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '파워 테니스 시대의 "반란군", 현란한 스핀과 전술로 상대를 무너뜨리는 테크니션.',
             whyNotable: `
                 <p><strong>"코트 안팎의 진정한 자유로운 영혼"</strong></p>
@@ -6614,6 +7064,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '엠마 라두카누', nameEn: 'Emma Raducanu', country: 'United Kingdom', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '기적의 아이콘. 2021 US 오픈에서 예선 통과자 최초로 무실세트 우승이라는 신화를 썼습니다. 깔끔한 기술과 스타성을 겸비한 영국의 희망입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "엠마 라두카누 선수의 플레이 스타일은 어떤가요?",
+          answer: "엠마 라두카누 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "엠마 라두카누 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "엠마 라두카누 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "엠마 라두카누 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '예선 통과자 신화의 주인공, 전 세계가 주목하는 "영국의 신데렐라".',
             whyNotable: `
                 <p><strong>"테니스 역사상 가장 위대한 신데렐라 스토리"</strong></p>
@@ -6660,6 +7128,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '레일라 페르난데스', nameEn: 'Leylah Fernandez', country: 'Canada', countryFlag: '🇨🇦', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '작은 고추가 맵다. 왜소한 체격에도 불구하고 빠른 발과 영리한 플레이, 그리고 지치지 않는 투지로 2021 US 오픈 준우승을 차지했습니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "레일라 페르난데스 선수의 플레이 스타일은 어떤가요?",
+          answer: "레일라 페르난데스 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "레일라 페르난데스 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "레일라 페르난데스 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "레일라 페르난데스 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: '작은 거인, 코트 위의 파이터 "레일라".',
             whyNotable: `
                 <p><strong>"자이언트 킬러 (Giant Killer)"</strong></p>
@@ -6706,6 +7192,24 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         name: '미라 안드레예바', nameEn: 'Mirra Andreeva', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: 'WTA의 슈퍼 틴에이저. 16세의 나이에 윔블던 16강, 롤랑가로스 4강(2024)에 오르며 천재성을 입증한, 여자 테니스의 차세대 지배자 후보입니다.',
         detailedProfile: {
+      faq: [
+        {
+          question: "미라 안드레예바 선수의 플레이 스타일은 어떤가요?",
+          answer: "미라 안드레예바 선수는 독특하고 강력한 플레이 스타일을 가지고 있으며, 팬들에게 깊은 인상을 주는 경기를 펼칩니다."
+        },
+        {
+          question: "미라 안드레예바 선수의 주요 성과는 무엇인가요?",
+          answer: "다양한 투어 대회에서 우수한 성적을 거두었으며, 꾸준히 상위 랭킹을 유지하고 있는 톱 클래스 선수입니다."
+        },
+        {
+          question: "미라 안드레예바 선수는 어떤 국적의 선수인가요?",
+          answer: "국제 무대에서 자국을 대표하여 활약하고 있는 자랑스러운 테니스 선수입니다."
+        },
+        {
+          question: "미라 안드레예바 선수에 대한 재미있는 사실이 있나요?",
+          answer: "경기장 밖에서도 팬들과 적극적으로 소통하며, 테니스 외에도 다양한 관심사를 가지고 있는 매력적인 선수입니다."
+        }
+      ],
             oneLineSummary: 'WTA를 뒤흔든 17세 천재 소녀, "제2의 마르티나 힝기스".',
             whyNotable: `
                 <p><strong>"10대의 반란을 이끄는 선두주자"</strong></p>
