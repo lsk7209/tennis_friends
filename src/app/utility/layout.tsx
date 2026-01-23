@@ -15,11 +15,23 @@ export const metadata: Metadata = {
   },
 };
 
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+
 export default function UtilityLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: '홈', item: '/' },
+          { name: '유틸리티', item: '/utility' },
+        ]}
+      />
+      {children}
+    </>
+  );
 }
 

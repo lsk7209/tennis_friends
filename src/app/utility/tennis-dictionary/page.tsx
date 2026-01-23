@@ -7,122 +7,8 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import RelatedUtilitiesSection from '@/components/RelatedUtilitiesSection';
-
-// 메타데이터는 layout.tsx에서 처리
-
-interface Term {
-  id: string;
-  term: string;
-  category: string;
-  definition: string;
-  pronunciation?: string;
-  examples: string[];
-  relatedTerms: string[];
-  difficulty: '초급' | '중급' | '고급';
-}
-
-const tennisTerms: Term[] = [
-  {
-    id: 'ace',
-    term: '에이스 (Ace)',
-    category: '서브',
-    definition: '상대가 공을 터치하지 못한 서브. 서브 에이스는 테니스에서 가장 짜릿한 순간 중 하나입니다.',
-    pronunciation: '에이스',
-    examples: ['연속 3개의 에이스로 경기를 주도했다.', '첫 서브 에이스로 포인트를 가져갔다.'],
-    relatedTerms: ['서브', '첫 서브', '두 번째 서브'],
-    difficulty: '초급'
-  },
-  {
-    id: 'backhand',
-    term: '백핸드 (Backhand)',
-    category: '타격 기술',
-    definition: '라켓을 반대 손으로 쥐고 치는 타격. 한손 백핸드와 양손 백핸드로 나뉩니다.',
-    pronunciation: '백핸드',
-    examples: ['강력한 백핸드로 크로스코트 위너를 만들었다.', '백핸드 슬라이스로 공의 회전을 주었다.'],
-    relatedTerms: ['포핸드', '슬라이스', '토핑'],
-    difficulty: '초급'
-  },
-  {
-    id: 'forehand',
-    term: '포핸드 (Forehand)',
-    category: '타격 기술',
-    definition: '라켓을 잡은 손과 같은 방향으로 치는 타격. 테니스 타격의 기본 중의 기본입니다.',
-    pronunciation: '포핸드',
-    examples: ['깊은 포핸드로 상대를 베이스라인 뒤로 밀어냈다.', '포핸드 드라이브로 안정적인 랠리를 이어갔다.'],
-    relatedTerms: ['백핸드', '크로스코트', '다운 더 라인'],
-    difficulty: '초급'
-  },
-  {
-    id: 'volley',
-    term: '발리 (Volley)',
-    category: '네트 플레이',
-    definition: '공이 바운스되기 전에 네트 앞에서 타격하는 기술. 빠르고 정확한 반사 신경이 필요합니다.',
-    pronunciation: '발리',
-    examples: ['강력한 발리로 포인트를 마무리했다.', '드롭 발리로 상대를 네트로 끌어들였다.'],
-    relatedTerms: ['하프 발리', '드롭 발리', '스매시'],
-    difficulty: '중급'
-  },
-  {
-    id: 'baseline',
-    term: '베이스라인 (Baseline)',
-    category: '코트',
-    definition: '코트의 끝부분을 가로지르는 선. 베이스라인 플레이어들은 코트 뒤쪽에서 강력한 타격을 구사합니다.',
-    pronunciation: '베이스라인',
-    examples: ['베이스라인에서 강력한 포핸드를 구사했다.', '베이스라인 랠리가 20번을 넘었다.'],
-    relatedTerms: ['네트', '서브 라인', '센터 라인'],
-    difficulty: '초급'
-  },
-  {
-    id: 'deuce',
-    term: '듀스 (Deuce)',
-    category: '점수',
-    definition: '40-40 상황. 듀스부터는 포인트당 승패가 결정되며, 먼저 2포인트 차로 이기는 팀이 승리합니다.',
-    pronunciation: '듀스',
-    examples: ['듀스 상황에서 집중력을 발휘했다.', '듀스 코트에서 경기를 이어갔다.'],
-    relatedTerms: ['애드', '브레이크 포인트', '세트 포인트'],
-    difficulty: '초급'
-  },
-  {
-    id: 'love',
-    term: '러브 (Love)',
-    category: '점수',
-    definition: '0점을 의미하는 영어 단어. "러브 올"은 0-0을 의미합니다.',
-    pronunciation: '러브',
-    examples: ['러브에서 시작하는 게임이었다.', '러브 피프틴에서 포인트를 내주었다.'],
-    relatedTerms: ['피프틴', '써티', '포티'],
-    difficulty: '초급'
-  },
-  {
-    id: 'slice',
-    term: '슬라이스 (Slice)',
-    category: '타격 기술',
-    definition: '공의 아랫부분을 스치듯 타격하여 회전을 주는 기술. 공이 낮게 바운스됩니다.',
-    pronunciation: '슬라이스',
-    examples: ['슬라이스 백핸드로 변화를 주었다.', '슬라이스 서브로 상대의 리턴을 어렵게 만들었다.'],
-    relatedTerms: ['토핑', '플랫', '드라이브'],
-    difficulty: '중급'
-  },
-  {
-    id: 'topspin',
-    term: '톱스핀 (Topspin)',
-    category: '타격 기술',
-    definition: '공의 윗부분을 스치듯 타격하여 앞으로 회전시키는 기술. 공이 높게 튀어오릅니다.',
-    pronunciation: '톱스핀',
-    examples: ['강한 톱스핀으로 공을 코트 안쪽으로 보냈다.', '톱스핀 포핸드가 그의 주무기였다.'],
-    relatedTerms: ['백스핀', '사이드스핀', '플랫'],
-    difficulty: '중급'
-  },
-  {
-    id: 'approach-shot',
-    term: '어프로치 샷 (Approach Shot)',
-    category: '전략',
-    definition: '네트로 다가가기 위해 치는 타격. 상대를 네트 뒤로 물러나게 만드는 전략적 타격입니다.',
-    pronunciation: '어프로치 샷',
-    examples: ['깊은 어프로치 샷으로 네트로 올라갔다.', '드롭 샷으로 이어지는 어프로치 샷을 구사했다.'],
-    relatedTerms: ['네트 어프로치', '다운 더 라인', '크로스코트'],
-    difficulty: '고급'
-  }
-];
+import { tennisTerms } from '@/data/tennis-terms';
+import { Metadata } from 'next';
 
 export default function TennisDictionaryPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -133,7 +19,7 @@ export default function TennisDictionaryPage() {
 
   const filteredTerms = tennisTerms.filter(term => {
     const matchesSearch = term.term.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         term.definition.toLowerCase().includes(searchTerm.toLowerCase());
+      term.definition.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === '전체' || term.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -147,6 +33,7 @@ export default function TennisDictionaryPage() {
     }
     setFavorites(newFavorites);
   };
+
 
   const speakTerm = (text: string) => {
     if ('speechSynthesis' in window) {
@@ -224,11 +111,10 @@ export default function TennisDictionaryPage() {
                     </Badge>
                     <Badge
                       variant="outline"
-                      className={`text-xs ${
-                        term.difficulty === '초급' ? 'border-green-500 text-green-700' :
+                      className={`text-xs ${term.difficulty === '초급' ? 'border-green-500 text-green-700' :
                         term.difficulty === '중급' ? 'border-yellow-500 text-yellow-700' :
-                        'border-red-500 text-red-700'
-                      }`}
+                          'border-red-500 text-red-700'
+                        }`}
                     >
                       {term.difficulty}
                     </Badge>

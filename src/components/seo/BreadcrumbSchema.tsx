@@ -1,4 +1,5 @@
-import React from 'react';
+
+import JsonLd from '@/components/JsonLd';
 
 interface BreadcrumbItem {
     name: string;
@@ -9,30 +10,23 @@ interface BreadcrumbSchemaProps {
     items: BreadcrumbItem[];
 }
 
+/**
+ * BreadcrumbList 스키마 컴포넌트
+ * 검색 결과에 탐색 경로(Breadcrumb)를 표시하도록 돕습니다.
+ */
 export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
-    // 유효한 항목만 필터링 (name이 비어있지 않고, item URL도 있어야 함)
-    const validItems = items.filter(item => {
-        const name = item.name?.trim();
-        const itemUrl = item.item?.trim();
-        return name && name.length > 0 && itemUrl && itemUrl.length > 0;
-    });
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
 
-    // 필터링 후 position 재조정
-    const breadcrumbList = {
+    const schema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
-        itemListElement: validItems.map((item, index) => ({
+        itemListElement: items.map((item, index) => ({
             '@type': 'ListItem',
             position: index + 1,
-            name: item.name.trim(), // 공백 제거
-            item: item.item.trim(), // URL 문자열
+            name: item.name,
+            item: item.item.startsWith('http') ? item.item : `${siteUrl}${item.item}`,
         })),
     };
 
-    return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
-        />
-    );
+    return <JsonLd data={schema} />;
 }

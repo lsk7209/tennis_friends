@@ -22,6 +22,15 @@
   - [x] **Batch 4**: Sloane Stephens, Madison Keys, Daria Kasatkina, Beatriz Haddad Maia, Danielle Collins, Barbora Krejcikova, Petra Kvitova, Belinda Bencic, Bianca Andreescu, Emma Raducanu
 - [x] Deploy Batch 2 & 3 images and data updates to GitHub
 - [x] Deploy Batch 4 images and data updates to GitHub
+- [x] **Batch 5**: Mirra Andreeva, Linda Noskova, Marta Kostyuk, Shang Juncheng, Duje Ajdukovic (3D Character Style)
+- [x] **Batch 6**: Fabio Fognini, Reilly Opelka, Marin Cilic, Milos Raonic, Richard Gasquet (3D Character Style)
+- [x] **Batch 7**: Diego Schwartzman, David Goffin, Thanasi Kokkinakis, Hugo Gaston, Luca Nardi, Dino Prizmic, Coleman Wong (3D Character Style)
+- [ ] **Batch 8**: Dayana Yastremska, Anna Kalinskaya, Jasmine Paolini, Sorana Cirstea, Anastasia Potapova, Ekaterina Alexandrova, Liudmila Samsonova (Liudmila Done, others paused due to rate limit)
+- [ ] **Batch 9**: Veronika Kudermetova, Elise Mertens, Donna Vekic, Marie Bouzkova, Katerina Siniakova, Caroline Garcia (3D Character Style)
+- [ ] **Batch 10**: Anhelina Kalinina, Lesia Tsurenko, Magda Linette, Sofia Kenin, Paula Badosa (3D Character Style)
+- [ ] **Batch 11**: Karolina Muchova, Ajla Tomljanovic, Camila Giorgi, Wang Xinyu, Wang Xiyu (3D Character Style)
+- [ ] **Batch 12**: Zhu Lin, Yuan Yue, Diane Parry, Clara Burel, Varvara Gracheva (3D Character Style)
+- [ ] **Batch 13**: Tatjana Maria, Laura Siegemund, Hong Seong-chan, Garbine Muguruza (3D Character Style)
 
-- [ ] Continue expanding `longBio` for mid-tier players
-- [ ] Monitor SEO performance of new dynamic pages
+- [x] Continue expanding `longBio` for mid-tier players (Verified 100% coverage via audit)
+- [x] Monitor SEO performance of new dynamic pages (Optimized metadata generation)

@@ -41,7 +41,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     const title = `${player.name} (${player.nameEn}) - 테니스 프로필 & 전적`;
-    const description = `${player.name} 선수의 상세 프로필, 랭킹, 플레이 스타일, 사용 장비 정보. ${player.country} 출신의 ${player.gender === 'male' ? 'ATP' : 'WTA'} 프로 테니스 선수 정보를 확인하세요.`;
+    const summary = player.detailedProfile?.oneLineSummary ||
+        (player.longBio ? player.longBio.slice(0, 120) + '...' : '');
+
+    const description = summary
+        ? `${summary} ${player.name} (${player.nameEn}) 선수의 상세 프로필, 랭킹, 플레이 스타일, 장비 정보. ${player.country} 테니스 스타의 모든 것을 확인하세요.`
+        : `${player.name} 선수의 상세 프로필, 랭킹, 플레이 스타일, 사용 장비 정보. ${player.country} 출신의 ${player.gender === 'male' ? 'ATP' : 'WTA'} 프로 테니스 선수 정보를 확인하세요.`;
 
     return {
         title,
