@@ -3,10 +3,21 @@
 ## Status
 - [x] Initial image generation (Sabalenka successfully added)
 - [x] Rate limit hit for image generation (Blocked until quota resets)
-- [x] Data enrichment for all 113 players
-  - `plays` (Right/Left) added
-  - `backhand` (One/Two) added
-  - `longBio` added for key players (Nadal, Murray, Wawrinka, Nishikori, Kwon, Swiatek, Sabalenka, Gauff, Rybakina, Pegula, Jabeur)
+- [x] 선수 데이터 추가
+    - [x] 루블레프, 즈베레프, 치치파스, 알카라스, 시너 (완료)
+    - [x] 이가 스비옹텍 (Iga Swiatek) - *Priority*
+    - [x] 로저 페더러 (Roger Federer) - *Legend*
+    - [x] 정현 (Hyeon Chung) - *Korean Legend*
+- [ ] 콘텐츠 제작 (ROI 순차 진행)
+    - [ ] **초보자 가이드** (검색량 확보)
+        - [x] 테니스 시작하기 완벽 가이드 (입문)
+        - [x] 테니스 레슨 비용 가이드 (비용)
+    - [ ] **장비 가이드** (구매 전환)
+        - [x] 테니스 라켓 추천 가이드 2026
+        - [x] 테니스화 선택 가이드
+    - [ ] **유틸리티 가제** (트래픽 유지)
+        - [ ] 스트링 수명 계산기
+ for key players (Nadal, Murray, Wawrinka, Nishikori, Kwon, Swiatek, Sabalenka, Gauff, Rybakina, Pegula, Jabeur)
 - [x] Type definitions updated (`src/types/player.ts`) to be backward compatible with legacy components
 - [x] Dynamic page logic updated (`src/app/players/[slug]/page.tsx`) to display enriched content
 - [x] Legacy templates updated (`react-template-generator.ts`, `metadata-generator.ts`) to handle new optional fields

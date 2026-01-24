@@ -75,6 +75,8 @@ import {
   Gamepad2,
   ChevronLeft,
   ChevronRight,
+  Footprints,
+  Flame,
   type LucideIcon
 } from 'lucide-react';
 import type { UtilityMetadata } from '@/lib/utilities';
@@ -106,6 +108,42 @@ export const utilitiesMetadata: UtilityMetadata[] = [
     bgColor: 'bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50',
     iconBg: 'bg-gradient-to-br from-blue-500 to-cyan-500',
     category: '실력 측정'
+  },
+  {
+    id: 'utr-calculator',
+    title: 'UTR 레이팅 계산기',
+    description: '경기 결과를 입력하면 예상 UTR(Universal Tennis Rating)을 계산해드립니다.',
+    icon: Calculator,
+    status: '완료',
+    features: ['경기 결과 분석', '전 세계 표준', '레벨 추정', '성장 추적'],
+    gradient: 'from-indigo-500 via-purple-500 to-pink-500',
+    bgColor: 'bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50',
+    iconBg: 'bg-gradient-to-br from-indigo-500 to-purple-500',
+    category: '실력 측정'
+  },
+  {
+    id: 'shoe-recommender',
+    title: 'AI 테니스화 추천기',
+    description: '발 모양과 플레이 스타일을 분석하여 최적의 테니스화를 추천해드립니다.',
+    icon: Footprints,
+    status: '완료',
+    features: ['발볼 분석', '스타일 매칭', '브랜드 비교', '최저가 확인'],
+    gradient: 'from-orange-500 via-red-500 to-yellow-500',
+    bgColor: 'bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50',
+    iconBg: 'bg-gradient-to-br from-orange-500 to-red-500',
+    category: '장비 추천'
+  },
+  {
+    id: 'calorie-calculator',
+    title: '테니스 칼로리 계산기',
+    description: '운동 강도와 시간을 고려하여 정확한 칼로리 소모량을 계산해드립니다.',
+    icon: Flame,
+    status: '완료',
+    features: ['단/복식 구분', 'METs 기반', '운동 효과 분석', '다이어트'],
+    gradient: 'from-green-500 via-yellow-500 to-orange-500',
+    bgColor: 'bg-gradient-to-br from-green-50 via-yellow-50 to-orange-50',
+    iconBg: 'bg-gradient-to-br from-green-500 to-yellow-500',
+    category: '건강 관리'
   },
   {
     id: 'string-tension',
