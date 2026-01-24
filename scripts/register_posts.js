@@ -69,13 +69,13 @@ if (arrayEndIndex === -1) {
 const today = new Date().toISOString().split('T')[0];
 const newEntries = newPostsMetadata.map(post => {
     return `  {
-    "id": "${post.slug}",
-    "slug": "${post.slug}",
-    "title": "${post.title}",
-    "excerpt": "${post.description}",
+    "id": ${JSON.stringify(post.slug)},
+    "slug": ${JSON.stringify(post.slug)},
+    "title": ${JSON.stringify(post.title)},
+    "excerpt": ${JSON.stringify(post.description)},
     "badge": "최신 글",
-    "category": "${post.category}",
-    "date": "${today}",
+    "category": ${JSON.stringify(post.category)},
+    "date": ${JSON.stringify(today)},
     "readTime": "10분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"

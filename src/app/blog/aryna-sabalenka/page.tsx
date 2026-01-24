@@ -7,15 +7,15 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
 export const metadata = {
-  title: '아리나 사발렌카: 파워 테니스의 정점',
-  description: '폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다.',
-  keywords: ['테니스', '아리나 사발렌카', 'Aryna Sabalenka', 'WTA', '강서브', '호주 오픈'],
+  title: "아리나 사발렌카: 파워 테니스의 정점",
+  description: "폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다.",
+  keywords: ["테니스","아리나 사발렌카","Aryna Sabalenka","WTA","강서브"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/aryna-sabalenka',
   },
   openGraph: {
-    title: '아리나 사발렌카: 파워 테니스의 정점',
-    description: '폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다.',
+    title: "아리나 사발렌카: 파워 테니스의 정점",
+    description: "폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다.",
     url: 'https://tennisfriends.co.kr/blog/aryna-sabalenka',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '아리나 사발렌카: 파워 테니스의 정점',
-    description: '폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다.',
+    title: "아리나 사발렌카: 파워 테니스의 정점",
+    description: "폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다.",
   },
   robots: {
     index: true,
@@ -34,25 +34,20 @@ export const metadata = {
 
 const tocItems = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'style-power-tennis', text: '경기 스타일: 타협 없는 파워 테니스', depth: 2 },
-  { id: 'mental-transformation', text: '멘탈의 진화: 더블 폴트 여왕에서 서브 퀸으로', depth: 2 },
-  { id: 'australian-open-breakthrough', text: '메이저 우승과 아버지와의 약속', depth: 2 },
-  { id: 'tiger-tattoo-meaning', text: '팔뚝의 호랑이 문신이 의미하는 것', depth: 2 },
+  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
+  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
+  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '사발렌카의 서브가 왜 특별한가요?',
-    a: 'WTA에서 가장 빠른 축에 속하는 시속 190km 이상의 광속 서브를 구사합니다. 과거에는 더블 폴트가 많아 약점이었지만, 바이오메카닉 교정을 통해 현재는 가장 믿을 수 있는 무기가 되었습니다.'
+    q: '아리나 사발렌카: 파워 테니스의 정점 관련 자주 묻는 질문 1',
+    a: '이곳에 답변이 들어갑니다. 구체적이고 도움이 되는 정보를 제공하세요.'
   },
   {
-    q: '그녀의 별명 \'The Tiger\'의 유래는?',
-    a: '왼쪽 팔뚝에 있는 호랑이 문신과 코트 위에서 포효하는 공격적인 스타일 때문에 붙여진 별명입니다. 그녀는 18세 때 이 문신을 새기며 코트 위에서 호랑이처럼 싸우겠다고 다짐했습니다.'
-  },
-  {
-    q: '사발렌카가 우승한 그랜드 슬램 대회는?',
-    a: '호주 오픈에서 강세를 보이며, 2023년과 2024년 2년 연속 우승을 차지했습니다. 하드 코트에서 그녀의 파워 테니스가 가장 잘 발휘됩니다.'
+    q: '아리나 사발렌카: 파워 테니스의 정점 관련 자주 묻는 질문 2',
+    a: '이곳에 답변이 들어갑니다. 독자의 궁금증을 해결해 줄 수 있는 내용을 작성하세요.'
   },
 ];
 
@@ -64,16 +59,18 @@ export default function BlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">테니스</Badge>
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">아리나 사발렌카</Badge>
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">WTA</Badge>
+            <Badge key="테니스" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">테니스</Badge>
+            <Badge key="아리나 사발렌카" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">아리나 사발렌카</Badge>
+            <Badge key="Aryna Sabalenka" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">Aryna Sabalenka</Badge>
+            <Badge key="WTA" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">WTA</Badge>
+            <Badge key="강서브" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">강서브</Badge>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
             아리나 사발렌카: 파워 테니스의 정점
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 분석합니다.
+            폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다.
           </p>
 
           <div className="flex flex-wrap items-center gap-6 text-blue-100">
@@ -102,35 +99,31 @@ export default function BlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-
+            
             <h2 id="introduction">들어가며</h2>
             <p>
-              단지 공을 세게 치는 것만으로 세계 1위에 오를 수는 없습니다. 아리나 사발렌카(Aryna Sabalenka)는 압도적인 파워를 가지고 있었지만, 불안정한 서브와 감정적인 기복으로 오랫동안 '미완의 대기'로 평가받았습니다. 하지만 그녀는 끊임없는 자기 혁신을 통해 단점을 강점으로 바꾸었고, 마침내 메이저 챔피언의 자리에 올랐습니다. 코트 위의 호랑이, 사발렌카의 진화 과정을 살펴봅니다.
+              {"폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다."} 이 글에서는 {"테니스"}에 대해 깊이 있게 알아봅니다.
+              (이곳에 서론 내용을 작성해 주세요.)
             </p>
 
-            <h2 id="style-power-tennis">경기 스타일: 타협 없는 파워 테니스</h2>
+            <h2 id="key-point-1">핵심 포인트 1</h2>
             <p>
-              사발렌카의 테니스는 '공격 일변도'입니다. 그녀의 포핸드와 백핸드는 모두 투어 최상위권의 스피드를 자랑하며, 상대가 수비할 시간조차 주지 않고 코트 구석을 찌릅니다. 단순히 힘으로만 밀어붙이는 것이 아니라, 네트 앞에서의 과감한 드라이브 발리와 스매싱으로 포인트를 마무리하는 결정력이 탁월합니다. 그녀를 상대하는 선수들은 첫 서브부터 리턴까지 매 순간 엄청난 압박감을 느끼게 됩니다.
+              첫 번째 중요한 내용은... (내용 작성)
             </p>
 
-            <h2 id="mental-transformation">멘탈의 진화: 더블 폴트 여왕에서 서브 퀸으로</h2>
+            <h2 id="key-point-2">핵심 포인트 2</h2>
             <p>
-              2022년 초, 그녀는 극심한 서브 난조(Yips)를 겪으며 한 경기에서 20개 이상의 더블 폴트를 범하기도 했습니다. 많은 전문가가 그녀의 추락을 예상했지만, 그녀는 바이오메카닉 전문가와 함께 서브 모션을 처음부터 다시 뜯어고치는 과감한 결단을 내렸습니다. 그 결과, 지금 그녀의 서브는 WTA에서 가장 위협적인 무기가 되었습니다. 이 과정에서 보여준 그녀의 용기와 끈기는 기술적인 성취보다 더 큰 울림을 줍니다.
+              두 번째 중요한 내용은... (내용 작성)
             </p>
 
-            <h2 id="australian-open-breakthrough">메이저 우승과 아버지와의 약속</h2>
+            <h2 id="key-point-3">핵심 포인트 3</h2>
             <p>
-              그녀의 왼쪽 팔뚝에는 돌아가신 아버지를 기리는 호랑이 문신이 있습니다. 아이스하키 선수 출신이었던 아버지는 그녀에게 "25살이 되기 전에 그랜드 슬램을 두 개 우승하겠다"는 목표를 심어준 멘토였습니다. 2019년 갑작스러운 아버지의 별세는 그녀에게 큰 시련이었지만, 그녀는 그 약속을 지키기 위해 라켓을 더욱 꽉 쥐었습니다. 그리고 마침내 호주 오픈 우승 트로피를 들어 올리며 하늘에 있는 아버지에게 헌정했습니다.
-            </p>
-
-            <h2 id="tiger-tattoo-meaning">팔뚝의 호랑이 문신이 의미하는 것</h2>
-            <p>
-              "나는 코트 위에서 파이터가 되어야 해요." 그녀의 팔에 새겨진 호랑이는 단순한 장식이 아닙니다. 경기 흐름이 불리할 때, 관중의 응원이 상대방에게 쏠릴 때, 그녀는 이 문신을 보며 자신 안의 야성을 깨웁니다. 사발렌카의 트레이드마크인 경기 중의 포효는 단순히 화를 내는 것이 아니라, 스스로에게 싸울 의지를 불어넣는 의식과도 같습니다.
+              세 번째 중요한 내용은... (내용 작성)
             </p>
 
             <h2 id="conclusion">마무리하며</h2>
             <p>
-              아리나 사발렌카는 완성형 선수가 되어서 돌아왔습니다. 파워와 정교함, 열정과 냉정 사이의 균형을 찾은 그녀는 이제 어떤 코트, 어떤 상대를 만나도 물러서지 않습니다. '파워 테니스의 정점'을 보여주는 그녀의 경기는 언제나 짜릿한 전율을 선사합니다.
+              지금까지 아리나 사발렌카: 파워 테니스의 정점에 대해 알아보았습니다. 여러분의 테니스 라이프에 도움이 되기를 바랍니다.
             </p>
 
           </div>
@@ -162,9 +155,9 @@ export default function BlogPost() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">내 플레이 스타일 찾기</span>
+                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <span className="text-xl">🎯</span>
+                        <span className="font-medium">NTRP 자가 진단</span>
                       </Link>
                     </li>
                   </ul>
@@ -177,10 +170,10 @@ export default function BlogPost() {
                     추천 링크
                   </h4>
                   <ul className="space-y-3">
-                    <li>
-                      <a href="https://www.wtatennis.com/players/320760/aryna-sabalenka" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                     <li>
+                      <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         <span className="text-xl">🌐</span>
-                        <span className="font-medium">사발렌카 WTA 프로필</span>
+                        <span className="font-medium">ATP 투어</span>
                       </a>
                     </li>
                   </ul>

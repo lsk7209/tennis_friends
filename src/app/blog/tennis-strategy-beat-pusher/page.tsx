@@ -7,15 +7,15 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 
 export const metadata = {
-  title: '일명 '푸셔(Pusher)'를 이기는 5가지 전략',
-  description: '실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.',
-  keywords: ['테니스 전술', '푸셔', 'Pusher', '연타', '멘탈 관리'],
+  title: "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
+  description: "실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.",
+  keywords: ["테니스 전술","푸셔","Pusher","연타","멘탈 관리"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-strategy-beat-pusher',
   },
   openGraph: {
-    title: '일명 '푸셔(Pusher)'를 이기는 5가지 전략',
-    description: '실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.',
+    title: "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
+    description: "실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.",
     url: 'https://tennisfriends.co.kr/blog/tennis-strategy-beat-pusher',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '일명 '푸셔(Pusher)'를 이기는 5가지 전략',
-    description: '실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.',
+    title: "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
+    description: "실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.",
   },
   robots: {
     index: true,
@@ -33,52 +33,37 @@ export const metadata = {
 };
 
 const tocItems = [
-  {
-    "id": "intro",
-    "text": "푸셔란 무엇인가?",
-    "depth": 2
-  },
-  {
-    "id": "strategy-1",
-    "text": "전략 1: 짧은 공으로 끌어내기",
-    "depth": 2
-  },
-  {
-    "id": "strategy-2",
-    "text": "전략 2: 네트 플레이로 압박",
-    "depth": 2
-  },
-  {
-    "id": "strategy-3",
-    "text": "전략 3: 각도 활용",
-    "depth": 2
-  },
-  {
-    "id": "mental",
-    "text": "멘탈 게임: 인내가 답",
-    "depth": 2
-  }
+  { id: 'introduction', text: '들어가며', depth: 2 },
+  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
+  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
+  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 
 const faqs = [
   {
-    "q": "푸셔를 상대할 때 가장 흔한 실수는?",
-    "a": "조급해져서 무리한 파워샷을 시도하다 실수하는 것입니다. 푸셔는 상대의 실수를 기다리는 스타일이므로, 인내심을 잃으면 그들의 함정에 빠집니다."
-  }
+    q: '일명 '푸셔(Pusher)'를 이기는 5가지 전략 관련 자주 묻는 질문 1',
+    a: '이곳에 답변이 들어갑니다. 구체적이고 도움이 되는 정보를 제공하세요.'
+  },
+  {
+    q: '일명 '푸셔(Pusher)'를 이기는 5가지 전략 관련 자주 묻는 질문 2',
+    a: '이곳에 답변이 들어갑니다. 독자의 궁금증을 해결해 줄 수 있는 내용을 작성하세요.'
+  },
 ];
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
+      {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">테니스 전술</Badge>
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">푸셔</Badge>
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">Pusher</Badge>
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">연타</Badge>
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">멘탈 관리</Badge>
+            <Badge key="테니스 전술" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">테니스 전술</Badge>
+            <Badge key="푸셔" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">푸셔</Badge>
+            <Badge key="Pusher" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">Pusher</Badge>
+            <Badge key="연타" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">연타</Badge>
+            <Badge key="멘탈 관리" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">멘탈 관리</Badge>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
@@ -107,39 +92,43 @@ export default function BlogPost() {
 
       <Article slug="tennis-strategy-beat-pusher" date="2026-01-24" title="일명 '푸셔(Pusher)'를 이기는 5가지 전략" excerpt="실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+          {/* Table of Contents */}
           <div className="mb-12">
             <TOC items={tocItems} />
           </div>
 
+          {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
             
-<h2 id="intro">푸셔란 무엇인가?</h2>
+            <h2 id="introduction">들어가며</h2>
             <p>
-              푸셔(Pusher)는 강력한 위너보다는 안정적인 리턴으로 공을 계속 넘기는 스타일의 선수를 말합니다. 그들은 상대의 실수를 유도하며 끈질기게 랠리를 이어갑니다. 동호인 수준에서 가장 많이 마주치는 유형이며, 대응 전략 없이는 매우 답답한 상대입니다.
+              {"실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드."} 이 글에서는 {"테니스 전술"}에 대해 깊이 있게 알아봅니다.
+              (이곳에 서론 내용을 작성해 주세요.)
             </p>
 
-            <h2 id="strategy-1">전략 1: 짧은 공으로 끌어내기</h2>
+            <h2 id="key-point-1">핵심 포인트 1</h2>
             <p>
-              푸셔는 베이스라인에서 편안하게 수비합니다. 드롭샷이나 짧은 슬라이스로 그들을 네트 앞으로 끌어내면, 그들의 리듬이 깨집니다. 움직임이 많아질수록 푸셔의 정확도는 떨어집니다.
+              첫 번째 중요한 내용은... (내용 작성)
             </p>
 
-            <h2 id="strategy-2">전략 2: 네트 플레이로 압박</h2>
+            <h2 id="key-point-2">핵심 포인트 2</h2>
             <p>
-              좋은 어프로치 샷 후 네트로 전진하세요. 푸셔는 패싱샷보다 로브를 선호하는 경우가 많으므로, 오버헤드 스매싱 기회를 얻을 수 있습니다.
+              두 번째 중요한 내용은... (내용 작성)
             </p>
 
-            <h2 id="strategy-3">전략 3: 각도 활용</h2>
+            <h2 id="key-point-3">핵심 포인트 3</h2>
             <p>
-              단순히 깊게 보내는 것만으로는 부족합니다. 크로스 코트 앵글샷으로 푸셔를 코트 밖으로 끌어낸 뒤, 반대편 오픈 코트로 위너를 꽂으세요.
+              세 번째 중요한 내용은... (내용 작성)
             </p>
 
-            <h2 id="mental">멘탈 게임: 인내가 답</h2>
+            <h2 id="conclusion">마무리하며</h2>
             <p>
-              푸셔와의 경기는 멘탈 게임입니다. 조급해하지 마세요. 기회가 올 때까지 실수 없이 기다리는 것이 승리의 열쇠입니다.
+              지금까지 일명 '푸셔(Pusher)'를 이기는 5가지 전략에 대해 알아보았습니다. 여러분의 테니스 라이프에 도움이 되기를 바랍니다.
             </p>
 
           </div>
 
+          {/* Related Links */}
           <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
@@ -147,7 +136,9 @@ export default function BlogPost() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">관련 자료</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                관련 자료
+              </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
@@ -163,6 +154,12 @@ export default function BlogPost() {
                         <span className="font-medium">선수 프로필 더보기</span>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <span className="text-xl">🎯</span>
+                        <span className="font-medium">NTRP 자가 진단</span>
+                      </Link>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -176,7 +173,7 @@ export default function BlogPost() {
                      <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP/WTA 투어</span>
+                        <span className="font-medium">ATP 투어</span>
                       </a>
                     </li>
                   </ul>
