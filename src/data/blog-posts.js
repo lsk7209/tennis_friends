@@ -16,7 +16,7 @@ export const allBlogPosts = [
   {
     "id": "tommy-paul",
     "slug": "tommy-paul",
-    "tags": ["선수 프로필","서브"],
+    "tags": ["선수 프로필", "서브"],
     "title": "토미 폴 — 속도와 각도로 조립하는 미국식 하드 테니스",
     "excerpt": "가벼운 발과 예리한 각, 과감한 전진으로 흐름을 끊어먹는 토미 폴의 성장, 스타일, 인간미와 과제를 한 편으로.",
     "badge": "최신 글",
@@ -62,8 +62,8 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "holger-rune"
-    "tags": ["선수 프로필","서브"],
+    "slug": "holger-rune",
+    "tags": ["선수 프로필", "서브"],
   },
   {
     "id": "hubert-hurkacz",
@@ -75,8 +75,8 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "hubert-hurkacz"
-    "tags": ["선수 프로필","서브"],
+    "slug": "hubert-hurkacz",
+    "tags": ["선수 프로필", "서브"],
   },
   {
     "id": "taylor-fritz",
@@ -88,7 +88,7 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "taylor-fritz"
+    "slug": "taylor-fritz",
     "tags": ["선수 프로필"],
   },
   {
@@ -101,7 +101,7 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "alex-de-minaur"
+    "slug": "alex-de-minaur",
     "tags": ["선수 프로필"],
   },
   {
@@ -114,7 +114,7 @@ export const allBlogPosts = [
     "readTime": "7분",
     "badgeColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "casper-ruud"
+    "slug": "casper-ruud",
     "tags": ["선수 프로필"],
   },
   {
@@ -127,8 +127,8 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "stefanos-tsitsipas"
-    "tags": ["선수 프로필","포핸드"],
+    "slug": "stefanos-tsitsipas",
+    "tags": ["선수 프로필", "포핸드"],
   },
   {
     "id": "andrey-rublev",
@@ -140,7 +140,7 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "andrey-rublev"
+    "slug": "andrey-rublev",
     "tags": ["선수 프로필"],
   },
   {
@@ -153,7 +153,7 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "alexander-zverev"
+    "slug": "alexander-zverev",
     "tags": ["선수 프로필"],
   },
   {
@@ -166,7 +166,7 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "daniil-medvedev"
+    "slug": "daniil-medvedev",
     "tags": ["선수 프로필"],
   },
   {
@@ -179,7 +179,7 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "novak-djokovic"
+    "slug": "novak-djokovic",
     "tags": ["선수 프로필"],
   },
   {
@@ -192,7 +192,7 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "jannik-sinner"
+    "slug": "jannik-sinner",
     "tags": ["선수 프로필"],
   },
   {
@@ -205,7 +205,7 @@ export const allBlogPosts = [
     "readTime": "6분",
     "badgeColor": "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "carlos-alcaraz"
+    "slug": "carlos-alcaraz",
     "tags": ["테니스 지식"],
   },
   {
@@ -218,8 +218,8 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "autumn-tennis-rhythm-guide"
-    "tags": ["백핸드","라켓"],
+    "slug": "autumn-tennis-rhythm-guide",
+    "tags": ["백핸드", "라켓"],
   },
   {
     "id": "backhand-accuracy-full-guide",
@@ -231,7 +231,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "backhand-accuracy-full-guide"
+    "slug": "backhand-accuracy-full-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -244,8 +244,8 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "rainy-day-tennis-tips-guide"
-    "tags": ["서브","라켓"],
+    "slug": "rainy-day-tennis-tips-guide",
+    "tags": ["서브", "라켓"],
   },
   {
     "id": "serve-return-prediction-guide",
@@ -257,7 +257,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "serve-return-prediction-guide"
+    "slug": "serve-return-prediction-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -270,7 +270,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-advanced-pattern-analysis"
+    "slug": "tennis-advanced-pattern-analysis",
     "tags": ["백핸드"],
   },
   {
@@ -283,7 +283,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-backhand-technique-guide"
+    "slug": "tennis-backhand-technique-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -296,7 +296,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-beginner-30day-growth-plan"
+    "slug": "tennis-beginner-30day-growth-plan",
     "tags": ["테니스 지식"],
   },
   {
@@ -309,7 +309,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-beginner-30day-training-plan"
+    "slug": "tennis-beginner-30day-training-plan",
     "tags": ["복식"],
   },
   {
@@ -322,7 +322,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-doubles-strategy-guide"
+    "slug": "tennis-doubles-strategy-guide",
     "tags": ["복식"],
   },
   {
@@ -335,7 +335,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-doubles-teamwork-strategy"
+    "slug": "tennis-doubles-teamwork-strategy",
     "tags": ["테니스 지식"],
   },
   {
@@ -348,7 +348,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-etiquette-and-manners"
+    "slug": "tennis-etiquette-and-manners",
     "tags": ["테니스 지식"],
   },
   {
@@ -361,7 +361,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-footwork-balance-training-guide"
+    "slug": "tennis-footwork-balance-training-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -374,7 +374,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-footwork-science"
+    "slug": "tennis-footwork-science",
     "tags": ["포핸드"],
   },
   {
@@ -387,7 +387,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-forehand-impact-timing-guide"
+    "slug": "tennis-forehand-impact-timing-guide",
     "tags": ["부상 예방"],
   },
   {
@@ -400,7 +400,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-injury-prevention-full-guide"
+    "slug": "tennis-injury-prevention-full-guide",
     "tags": ["부상 예방"],
   },
   {
@@ -413,7 +413,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-injury-prevention-recovery"
+    "slug": "tennis-injury-prevention-recovery",
     "tags": ["테니스 지식"],
   },
   {
@@ -426,7 +426,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-inmatch-condition-management"
+    "slug": "tennis-inmatch-condition-management",
     "tags": ["테니스 지식"],
   },
   {
@@ -439,7 +439,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-intermediate-match-strategy"
+    "slug": "tennis-intermediate-match-strategy",
     "tags": ["테니스 지식"],
   },
   {
@@ -452,7 +452,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-intermediate-to-advanced-transition"
+    "slug": "tennis-intermediate-to-advanced-transition",
     "tags": ["멘탈 트레이닝"],
   },
   {
@@ -465,7 +465,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-mental-focus-recovery"
+    "slug": "tennis-mental-focus-recovery",
     "tags": ["멘탈 트레이닝"],
   },
   {
@@ -478,7 +478,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-mental-routine-5steps"
+    "slug": "tennis-mental-routine-5steps",
     "tags": ["멘탈 트레이닝"],
   },
   {
@@ -491,7 +491,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-mental-routine-control-guide"
+    "slug": "tennis-mental-routine-control-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -504,7 +504,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-postmatch-recovery-routine"
+    "slug": "tennis-postmatch-recovery-routine",
     "tags": ["테니스 지식"],
   },
   {
@@ -517,8 +517,8 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-power-of-routine"
-    "tags": ["스트링","라켓"],
+    "slug": "tennis-power-of-routine",
+    "tags": ["스트링", "라켓"],
   },
   {
     "id": "tennis-racket-selection-guide",
@@ -530,7 +530,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-racket-selection-guide"
+    "slug": "tennis-racket-selection-guide",
     "tags": ["경기 운영"],
   },
   {
@@ -543,7 +543,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-scoring-system-guide"
+    "slug": "tennis-scoring-system-guide",
     "tags": ["서브"],
   },
   {
@@ -556,7 +556,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-serve-rhythm-science"
+    "slug": "tennis-serve-rhythm-science",
     "tags": ["서브"],
   },
   {
@@ -569,7 +569,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-serve-speed-science"
+    "slug": "tennis-serve-speed-science",
     "tags": ["서브"],
   },
   {
@@ -582,7 +582,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-serve-timing-and-spin-guide"
+    "slug": "tennis-serve-timing-and-spin-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -595,7 +595,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-shoes-balance-guide"
+    "slug": "tennis-shoes-balance-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -608,7 +608,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-shoes-selection-guide"
+    "slug": "tennis-shoes-selection-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -621,7 +621,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "tennis-volley-technique-guide"
+    "slug": "tennis-volley-technique-guide",
     "tags": ["테니스 지식"],
   },
   {
@@ -634,7 +634,7 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "slug": "winter-indoor-tennis-training-routine"
+    "slug": "winter-indoor-tennis-training-routine",
     "tags": ["선수 프로필"],
   },
   {
@@ -692,7 +692,7 @@ export const allBlogPosts = [
   {
     "id": "nick-kyrgios",
     "slug": "nick-kyrgios",
-    "tags": ["선수 프로필","서브"],
+    "tags": ["선수 프로필", "서브"],
     "title": "닉 키리오스: 코트 위의 악동이자 천재",
     "excerpt": "예측 불가능한 플레이와 쇼맨십. 닉 키리오스의 천재적인 감각과 그 뒤에 숨겨진 테니스 철학, 그리고 논란과 매력을 동시에 탐구합니다.",
     "badge": "최신 글",
@@ -718,7 +718,7 @@ export const allBlogPosts = [
   {
     "id": "felix-auger-aliassime",
     "slug": "felix-auger-aliassime",
-    "tags": ["선수 프로필","백핸드"],
+    "tags": ["선수 프로필", "백핸드"],
     "title": "펠릭스 오제-알리아심: 캐나다의 테니스 희망",
     "excerpt": "성실함과 운동 능력을 겸비한 펠릭스 오제-알리아심. 그의 강력한 포핸드와 서비스 게임, 그리고 그랜드 슬램을 향한 도전을 정리합니다.",
     "badge": "최신 글",
@@ -835,7 +835,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-overhead-smash-guide",
     "slug": "tennis-overhead-smash-guide",
-    "tags": ["테니스 기술","백핸드"],
+    "tags": ["테니스 기술", "백핸드"],
     "title": "스매싱 실수 줄이는 법 (오버헤드 스매시 가이드)",
     "excerpt": "가장 강력하지만 가장 실수하기 쉬운 샷. 스매싱의 타점 잡기, 왼손의 역할, 그리고 자신감 있게 마무리하는 비결.",
     "badge": "최신 글",
@@ -848,7 +848,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-slice-backhand-mastery",
     "slug": "tennis-slice-backhand-mastery",
-    "tags": ["테니스 기술","서브"],
+    "tags": ["테니스 기술", "서브"],
     "title": "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)",
     "excerpt": "낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.",
     "badge": "최신 글",
@@ -900,7 +900,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-string-tension-guide",
     "slug": "tennis-string-tension-guide",
-    "tags": ["테니스 장비","스트링"],
+    "tags": ["테니스 장비", "스트링"],
     "title": "스트링 텐션의 비밀: 높게? 낮게?",
     "excerpt": "텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법.",
     "badge": "최신 글",
@@ -952,7 +952,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-dampener-effectiveness",
     "slug": "tennis-dampener-effectiveness",
-    "tags": ["테니스 장비","경기 운영"],
+    "tags": ["테니스 장비", "경기 운영"],
     "title": "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
     "excerpt": "작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.",
     "badge": "최신 글",
@@ -965,7 +965,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-mental-closing-matches",
     "slug": "tennis-mental-closing-matches",
-    "tags": ["멘탈 트레이닝","부상 예방"],
+    "tags": ["멘탈 트레이닝", "부상 예방"],
     "title": "매치 포인트 공포증 극복하기 (Choking 방지)",
     "excerpt": "다 이긴 게임을 뒤집히는 '초킹(Choking)'. 긴장되는 순간에 팔이 굳는 현상을 극복하고 경기를 마무리하는 멘탈 루틴.",
     "badge": "최신 글",
@@ -1027,95 +1027,95 @@ export const allBlogPosts = [
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
   }
-  ,{
+  , {
     "id": "dayana-yastremska",
     "slug": "dayana-yastremska",
-    "tags": ["선수 프로필"],
-    "title": "다야나 야스트렘스카 — 파워 히터",
-    "excerpt": "예선 통과자의 신화, 우크라이나의 긍지를 짊어진 "파워 히터".",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2026-01-24",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  "tags": ["선수 프로필"],
+  "title": "다야나 야스트렘스카 — 파워 히터",
+  "excerpt": "예선 통과자의 신화, 우크라이나의 긍지를 짊어진 "파워 히터".",
+  "badge": "최신 글",
+  "category": "선수 프로필",
+  "date": "2026-01-24",
+  "readTime": "8분",
+  "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+  "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
   }
-  ,{
-    "id": "anna-kalinskaya",
+  , {
+  "id": "anna-kalinskaya",
     "slug": "anna-kalinskaya",
-    "tags": ["선수 프로필"],
-    "title": "안나 칼린스카야 — 러시아의 얼음공주",
-    "excerpt": "차갑고 매서운 스트로크, 세계 1위를 사로잡은 "러시아의 얼음공주".",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2026-01-24",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  }
-  ,{
-    "id": "jasmine-paolini",
+      "tags": ["선수 프로필"],
+        "title": "안나 칼린스카야 — 러시아의 얼음공주",
+          "excerpt": "차갑고 매서운 스트로크, 세계 1위를 사로잡은 "러시아의 얼음공주".",
+            "badge": "최신 글",
+              "category": "선수 프로필",
+                "date": "2026-01-24",
+                  "readTime": "8분",
+                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+}
+  , {
+  "id": "jasmine-paolini",
     "slug": "jasmine-paolini",
-    "tags": ["선수 프로필"],
-    "title": "자스민 파올리니 — 작은 거인",
-    "excerpt": "163cm의 "작은 거인", 롤랑가로스와 윔블던 결승을 동시에 밟은 이탈리아의 기적.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2026-01-24",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  }
-  ,{
-    "id": "sorana-cirstea",
+      "tags": ["선수 프로필"],
+        "title": "자스민 파올리니 — 작은 거인",
+          "excerpt": "163cm의 "작은 거인", 롤랑가로스와 윔블던 결승을 동시에 밟은 이탈리아의 기적.",
+            "badge": "최신 글",
+              "category": "선수 프로필",
+                "date": "2026-01-24",
+                  "readTime": "8분",
+                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+}
+  , {
+  "id": "sorana-cirstea",
     "slug": "sorana-cirstea",
-    "tags": ["선수 프로필"],
-    "title": "소라나 크르스테아 — 공격 본능",
-    "excerpt": "30대에 전성기를 맞이한 루마니아의 "공격 본능", 꾸준함의 대명사.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2026-01-24",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  }
-  ,{
-    "id": "anastasia-potapova",
+      "tags": ["선수 프로필"],
+        "title": "소라나 크르스테아 — 공격 본능",
+          "excerpt": "30대에 전성기를 맞이한 루마니아의 "공격 본능", 꾸준함의 대명사.",
+            "badge": "최신 글",
+              "category": "선수 프로필",
+                "date": "2026-01-24",
+                  "readTime": "8분",
+                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+}
+  , {
+  "id": "anastasia-potapova",
     "slug": "anastasia-potapova",
-    "tags": ["선수 프로필"],
-    "title": "아나스타샤 포타포바 — 파이터",
-    "excerpt": "주니어 랭킹 1위의 재능, 코트를 지배하는 강렬한 "파이터".",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2026-01-24",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  }
-  ,{
-    "id": "ekaterina-alexandrova",
+      "tags": ["선수 프로필"],
+        "title": "아나스타샤 포타포바 — 파이터",
+          "excerpt": "주니어 랭킹 1위의 재능, 코트를 지배하는 강렬한 "파이터".",
+            "badge": "최신 글",
+              "category": "선수 프로필",
+                "date": "2026-01-24",
+                  "readTime": "8분",
+                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+}
+  , {
+  "id": "ekaterina-alexandrova",
     "slug": "ekaterina-alexandrova",
-    "tags": ["선수 프로필"],
-    "title": "에카테리나 알렉산드로바 — 실내 코트의 여왕",
-    "excerpt": "코트 위에 미사일을 쏘는 "실내 코트의 여왕", 예측 불가의 플랫 히터.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2026-01-24",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  }
-  ,{
-    "id": "liudmila-samsonova",
+      "tags": ["선수 프로필"],
+        "title": "에카테리나 알렉산드로바 — 실내 코트의 여왕",
+          "excerpt": "코트 위에 미사일을 쏘는 "실내 코트의 여왕", 예측 불가의 플랫 히터.",
+            "badge": "최신 글",
+              "category": "선수 프로필",
+                "date": "2026-01-24",
+                  "readTime": "8분",
+                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+}
+  , {
+  "id": "liudmila-samsonova",
     "slug": "liudmila-samsonova",
-    "tags": ["선수 프로필"],
-    "title": "류드밀라 삼소노바 — 파워 히터",
-    "excerpt": "이탈리아에서 자란 러시아의 "파워 히터", 폭발적인 서브와 포핸드의 소유자.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2026-01-24",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  }
+      "tags": ["선수 프로필"],
+        "title": "류드밀라 삼소노바 — 파워 히터",
+          "excerpt": "이탈리아에서 자란 러시아의 "파워 히터", 폭발적인 서브와 포핸드의 소유자.",
+            "badge": "최신 글",
+              "category": "선수 프로필",
+                "date": "2026-01-24",
+                  "readTime": "8분",
+                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+}
 ];
