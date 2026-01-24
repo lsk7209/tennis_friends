@@ -10,7 +10,7 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 export const metadata = {
   title: "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)",
   description: "낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.",
-  keywords: ["테니스 기술","슬라이스","백핸드","Slice","페이스 조절"],
+  keywords: ["테니스 기술", "슬라이스", "백핸드", "Slice", "페이스 조절"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-slice-backhand-mastery',
   },
@@ -43,12 +43,12 @@ const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
 
 const faqs = [
   {
-    q: "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기) 관련 자주 묻는 질문 1",
-    a: '이곳에 답변이 들어갑니다. 구체적이고 도움이 되는 정보를 제공하세요.'
+    q: "슬라이스를 칠 때 공이 너무 높게 뜹니다.",
+    a: "라켓 면이 너무 하늘을 보고 있거나, 스윙 궤적이 너무 가파른 하향 곡선일 가능성이 큽니다. 임팩트 순간 라켓 면을 지면과 수직에 가깝게 유지하고, 앞으로 밀어주는 동작(Follow-through)을 더 길게 가져가 보세요."
   },
   {
-    q: "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기) 관련 자주 묻는 질문 2",
-    a: '이곳에 답변이 들어갑니다. 독자의 궁금증을 해결해 줄 수 있는 내용을 작성하세요.'
+    q: "양손 백핸드 유저도 슬라이스를 배워야 하나요?",
+    a: "필수입니다. 멀리 떨어지는 공을 방어하거나 낮은 바운드 대응, 드롭샷 전환 등 양손으로는 한계가 있는 상황에서 슬라이스는 완벽한 대안이 됩니다."
   },
 ];
 
@@ -100,31 +100,45 @@ export default function BlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-            
+
             <h2 id="introduction">들어가며</h2>
+            <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-2xl mb-8 border border-slate-200 dark:border-slate-700">
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-0">
+                슬라이스 백핸드(Slice Backhand)는 테니스계의 <strong>'스위스 아미 나이프'</strong>입니다. 강력한 톱스핀을 방어할 때, 게임의 리듬을 바꿀 때, 혹은 우아한 드롭샷으로 연결할 때 모두 쓰이기 때문입니다. 페더러처럼 낮고 날카롭게 깔려 들어가는 슬라이스의 비결을 무엇일까요?
+              </p>
+            </div>
+
+            <h2 id="key-point-1">그립과 스윙 경로: "하이 투 로우(High to Low)"</h2>
             <p>
-              {"낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우."} 이 글에서는 {"테니스 기술"}에 대해 깊이 있게 알아봅니다.
-              (이곳에 서론 내용을 작성해 주세요.)
+              슬라이스는 <strong>컨티넨탈 그립</strong>이 필수입니다.
+            </p>
+            <p>
+              스윙의 시작점은 당신의 어깨 뒤쪽, 귀 높이 정도가 좋습니다. 공을 위에서 아래로 사선으로 깎아내리듯 스윙하되, 임팩트 순간 라켓 면이 너무 열리지 않게 주의해야 합니다. 라켓 면이 너무 열리면 공이 높게 둥실 뜨고, 반대로 너무 닫히면 네트에 걸립니다.
             </p>
 
-            <h2 id="key-point-1">핵심 포인트 1</h2>
+            <h2 id="key-point-2">수비에서의 활용: "힘을 중화하라"</h2>
             <p>
-              첫 번째 중요한 내용은... (내용 작성)
+              베이스라인 끝에서 상대의 강력한 스트로크를 받았을 때, 톱스핀으로 맞대응하는 것은 체력 소모가 큽니다.
             </p>
+            <div className="bg-blue-50 dark:bg-blue-900/30 p-5 rounded-xl my-6">
+              <p className="text-sm font-medium mb-2">슬라이스 방어의 장점:</p>
+              <ul className="text-sm space-y-2">
+                <li>• <strong>공 속도 조절:</strong> 상대의 빠른 샷을 느리게 되돌려 주어 재정비 시간을 벌어줍니다.</li>
+                <li>• <strong>낮은 바운드:</strong> 상대가 공격적인 위너를 치기 어렵도록 공을 낮게 깔아줍니다.</li>
+              </ul>
+            </div>
 
-            <h2 id="key-point-2">핵심 포인트 2</h2>
+            <h2 id="key-point-3">공격에서의 활용: "심리적 압박"</h2>
             <p>
-              두 번째 중요한 내용은... (내용 작성)
+              슬라이스는 훌륭한 <strong>어프로치 샷(Approach Shot)</strong>이 됩니다.
             </p>
-
-            <h2 id="key-point-3">핵심 포인트 3</h2>
             <p>
-              세 번째 중요한 내용은... (내용 작성)
+              상대의 백핸드 깊숙한 곳으로 낮게 깔리는 슬라이스를 보내면, 상대는 낮은 타점에서 억지로 공을 들어 올려야 합니다. 이때 상대의 샷은 힘이 없거나 높게 뜨게 되며, 당신은 네트에서 손쉬운 발리로 포인트를 마무리할 수 있습니다.
             </p>
 
             <h2 id="conclusion">마무리하며</h2>
             <p>
-              지금까지 슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)에 대해 알아보았습니다. 여러분의 테니스 라이프에 도움이 되기를 바랍니다.
+              슬라이스는 힘으로 치는 샷이 아니라 '터치'와 '감각'의 기술입니다. 단순히 넘기는 공이 아니라, 바둑의 정석처럼 코트 여기저기에 전략적으로 깔아두는 수라고 생각하세요. 낮게 깔리는 슬라이스 하나만 제대로 구비해도 상대는 어마어마한 피로감을 느끼게 될 것입니다.
             </p>
 
           </div>
@@ -171,7 +185,7 @@ export default function BlogPost() {
                     추천 링크
                   </h4>
                   <ul className="space-y-3">
-                     <li>
+                    <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         <span className="text-xl">🌐</span>
                         <span className="font-medium">ATP 투어</span>
@@ -184,10 +198,10 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
-                    <RelatedPosts 
-            currentSlug="tennis-slice-backhand-mastery" 
-            category="테니스 기술" 
-            tags={["테니스 기술","슬라이스","백핸드","Slice","페이스 조절"]} 
+          <RelatedPosts
+            currentSlug="tennis-slice-backhand-mastery"
+            category="테니스 기술"
+            tags={["테니스 기술", "슬라이스", "백핸드", "Slice", "페이스 조절"]}
           />
 
           <CTA />

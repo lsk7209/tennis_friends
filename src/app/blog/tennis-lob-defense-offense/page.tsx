@@ -10,7 +10,7 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 export const metadata = {
   title: "로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브",
   description: "위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.",
-  keywords: ["테니스 기술","로브","Lob","탑스핀 로브","수비"],
+  keywords: ["테니스 기술", "로브", "Lob", "탑스핀 로브", "수비"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-lob-defense-offense',
   },
@@ -43,12 +43,12 @@ const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
 
 const faqs = [
   {
-    q: "로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브 관련 자주 묻는 질문 1",
-    a: '이곳에 답변이 들어갑니다. 구체적이고 도움이 되는 정보를 제공하세요.'
+    q: "상대가 스매싱을 잘하는데 로브를 띄워도 될까요?",
+    a: "네, 하지만 깊이가 중요합니다. 베이스라인 근처까지 깊게 보내면 스매싱 공격권에서도 수비가 가능합니다. 또한 태양을 등지고 로브를 띄우면 상대의 시야를 방해하여 실수를 유도할 수도 있습니다."
   },
   {
-    q: "로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브 관련 자주 묻는 질문 2",
-    a: '이곳에 답변이 들어갑니다. 독자의 궁금증을 해결해 줄 수 있는 내용을 작성하세요.'
+    q: "탑스핀 로브 연습은 어떻게 하나요?",
+    a: "와이퍼 스윙과 비슷하게 공 아래에서 위로 급격하게 라켓을 채 올려줘야 합니다. 네트 바로 앞에서 무릎을 굽히고 공을 감아올리는 짧은 동작부터 연습해 보세요."
   },
 ];
 
@@ -100,31 +100,49 @@ export default function BlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-            
+
             <h2 id="introduction">들어가며</h2>
+            <div className="bg-sky-50 dark:bg-sky-900/40 p-6 rounded-2xl mb-8 border border-sky-100 dark:border-sky-800">
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-0">
+                로브(Lob)는 종종 수비수의 최후 수단으로 여겨지지만, 사실은 <strong>가장 스마트한 공격 수단</strong>이기도 합니다. 하늘 높이 띄우는 공 하나가 상대의 기세와 리듬을 완벽하게 뺏을 수 있기 때문입니다. 위기 상황을 탈출하는 수비형 로브부터, 네트 대시한 상대를 무너뜨리는 공격형 탑스핀 로브까지 정리해 드립니다.
+              </p>
+            </div>
+
+            <h2 id="key-point-1">수비형 로브: "시간을 벌어라"</h2>
             <p>
-              {"위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다."} 이 글에서는 {"테니스 기술"}에 대해 깊이 있게 알아봅니다.
-              (이곳에 서론 내용을 작성해 주세요.)
+              코트 밖으로 밀려났을 때, 가장 필요한 것은 다시 중앙으로 복귀할 <strong>'시간'</strong>입니다.
+            </p>
+            <ul className="space-y-3 my-4">
+              <li className="flex gap-2">
+                <span className="text-sky-500 font-bold">●</span>
+                <span><strong>궤적:</strong> 최대한 높게 띄우세요. 공이 하늘에 머무는 시간이 길수록 당신이 위치를 잡을 여유가 생깁니다.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-sky-500 font-bold">●</span>
+                <span><strong>깊이:</strong> 공의 높이보다 중요한 것은 깊이입니다. 서비스 라인 근처에 떨어지는 로브는 상대에게 스매싱 기회만 줄 뿐입니다. 베이스라인 안쪽 1~2m 지점을 겨냥하세요.</span>
+              </li>
+            </ul>
+
+            <h2 id="key-point-2">공격형 탑스핀 로브: "허를 찔러라"</h2>
+            <p>
+              상대가 네트로 대시할 때, 패싱샷만 생각하는 것은 초보입니다.
+            </p>
+            <p>
+              탑스핀 로브는 드라이브를 거는 것처럼 빠른 스윙을 하면서 마지막 순간에 공을 위로 감아올립니다. 상대는 낮은 공이 올 줄 알고 자세를 낮췄다가, 머리 위로 빠르게 넘어가는 공을 바라볼 수밖에 없습니다. 바운드 후에도 스핀 때문에 공이 멀리 도망가므로 추격이 거의 불가능합니다.
             </p>
 
-            <h2 id="key-point-1">핵심 포인트 1</h2>
+            <h2 id="key-point-3">복식 경기에서의 로브 활용</h2>
             <p>
-              첫 번째 중요한 내용은... (내용 작성)
+              복식에서 로브는 <strong>'포메이션 파괴자'</strong>입니다.
             </p>
-
-            <h2 id="key-point-2">핵심 포인트 2</h2>
-            <p>
-              두 번째 중요한 내용은... (내용 작성)
-            </p>
-
-            <h2 id="key-point-3">핵심 포인트 3</h2>
-            <p>
-              세 번째 중요한 내용은... (내용 작성)
-            </p>
+            <div className="bg-slate-50 dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 my-6">
+              <h4 className="font-bold mb-2">로브-앤-대시 (Lob and Dash)</h4>
+              <p className="text-sm">리턴 상황에서 전위의 머리 위로 로브를 띄우고 즉시 우리 팀 두 사람 모두 네트로 전진하세요. 상대방은 공을 쫓아 뒤로 물러나야 하며, 우리 팀은 강력한 네트 점유권을 가져오게 됩니다.</p>
+            </div>
 
             <h2 id="conclusion">마무리하며</h2>
             <p>
-              지금까지 로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브에 대해 알아보았습니다. 여러분의 테니스 라이프에 도움이 되기를 바랍니다.
+              로브를 잘 치는 선수는 상대를 심리적 압박 속에 가둡니다. 상대는 '언제 머리 위로 로브가 올지 모른다'는 불안감에 공격적인 네트 대시를 주저하게 되기 때문입니다. 연습할 때 로브를 '도망가는 공'이 아니라 '게임을 재설계하는 공'으로 생각하고 사용해 보세요.
             </p>
 
           </div>
@@ -171,7 +189,7 @@ export default function BlogPost() {
                     추천 링크
                   </h4>
                   <ul className="space-y-3">
-                     <li>
+                    <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         <span className="text-xl">🌐</span>
                         <span className="font-medium">ATP 투어</span>
@@ -184,10 +202,10 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
-                    <RelatedPosts 
-            currentSlug="tennis-lob-defense-offense" 
-            category="테니스 기술" 
-            tags={["테니스 기술","로브","Lob","탑스핀 로브","수비"]} 
+          <RelatedPosts
+            currentSlug="tennis-lob-defense-offense"
+            category="테니스 기술"
+            tags={["테니스 기술", "로브", "Lob", "탑스핀 로브", "수비"]}
           />
 
           <CTA />

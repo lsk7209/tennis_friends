@@ -10,7 +10,7 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 export const metadata = {
   title: "오버그립 교체 주기와 종류(건식/습식) 추천",
   description: "손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍.",
-  keywords: ["테니스 장비","오버그립","그립 테이프","손땀","용품 추천"],
+  keywords: ["테니스 장비", "오버그립", "그립 테이프", "손땀", "용품 추천"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-overgrip-guide',
   },
@@ -43,12 +43,12 @@ const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
 
 const faqs = [
   {
-    q: "오버그립 교체 주기와 종류(건식/습식) 추천 관련 자주 묻는 질문 1",
-    a: '이곳에 답변이 들어갑니다. 구체적이고 도움이 되는 정보를 제공하세요.'
+    q: "흰색 그립 말고 유색 그립은 성능이 다른가요?",
+    a: "미세하게 다릅니다. 대체로 흰색 오버그립이 색소가 들어가지 않아 가장 순수한 타키(Tacky)함과 흡수력을 보여줍니다. 프로 선수들이 유독 흰색 그립을 선호하는 이유이기도 합니다."
   },
   {
-    q: "오버그립 교체 주기와 종류(건식/습식) 추천 관련 자주 묻는 질문 2",
-    a: '이곳에 답변이 들어갑니다. 독자의 궁금증을 해결해 줄 수 있는 내용을 작성하세요.'
+    q: "그립을 감을 때 겹치는 정도는 어느 정도가 좋나요?",
+    a: "보통 1/8인치(약 3mm) 정도 겹치는 것이 표준입니다. 너무 많이 겹치면 그립이 울퉁불퉁해지고 두꺼워져 면을 느끼기 어려워집니다."
   },
 ];
 
@@ -100,31 +100,60 @@ export default function BlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-            
+
             <h2 id="introduction">들어가며</h2>
-            <p>
-              {"손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍."} 이 글에서는 {"테니스 장비"}에 대해 깊이 있게 알아봅니다.
-              (이곳에 서론 내용을 작성해 주세요.)
-            </p>
+            <div className="bg-emerald-50 dark:bg-emerald-900/30 p-6 rounded-2xl mb-8 border border-emerald-100 dark:border-emerald-800 text-center">
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-0">
+                테니스 라켓에서 가장 자주 교체해야 하는 소모품은 무엇일까요? 스트링보다 더 자주, 어쩌면 매 경기마다 신경 써야 할 아이템이 바로 <strong>오버그립(Overgrip)</strong>입니다. 오버그립 하나만 잘 골라도 '손에서 라켓이 빠질 것 같은 불안함'에서 해방될 수 있습니다.
+              </p>
+            </div>
 
-            <h2 id="key-point-1">핵심 포인트 1</h2>
+            <h2 id="key-point-1">종류별 특징: 타키(Tacky) vs 드라이(Dry)</h2>
             <p>
-              첫 번째 중요한 내용은... (내용 작성)
+              본인의 손에 땀이 얼마나 나는지에 따라 선택이 완전히 갈립니다.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+              <div className="p-5 border-t-4 border-blue-500 bg-white dark:bg-slate-900 shadow-sm rounded-b-xl">
+                <h4 className="font-bold text-blue-600 mb-2">● 타키 그립 (Tacky)</h4>
+                <p className="text-sm leading-relaxed">손에 착 달라붙는 쫀득한 느낌이 특징입니다. 땀이 적거나 보통인 분들에게 최상의 그립감을 제공합니다. (예: 윌슨 프로 오버그립)</p>
+              </div>
+              <div className="p-5 border-t-4 border-slate-400 bg-white dark:bg-slate-900 shadow-sm rounded-b-xl">
+                <h4 className="font-bold text-slate-600 mb-2">● 드라이 그립 (Dry)</h4>
+                <p className="text-sm leading-relaxed">천 소재와 비슷하며 땀을 흡수할수록 더 쫀득해집니다. 손에 땀이 많은 '다한증' 유저들의 필수 아이템입니다. (예: 투나 그립)</p>
+              </div>
+            </div>
 
-            <h2 id="key-point-2">핵심 포인트 2</h2>
+            <h2 id="key-point-2">교체 주기: 언제 바꿔야 할까?</h2>
             <p>
-              두 번째 중요한 내용은... (내용 작성)
+              많은 분이 그립이 닳아서 가루가 날릴 때까지 사용하지만, 이는 부상의 원인이 됩니다.
             </p>
+            <ul className="space-y-3 my-4">
+              <li className="flex items-start gap-2">
+                <span className="text-red-500 font-bold">!</span>
+                <span><strong>색상 변색:</strong> 흰색 그립이 회색이나 갈색으로 변했다면 이미 위생과 성능을 잃은 상태입니다.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-red-500 font-bold">!</span>
+                <span><strong>광택 발생:</strong> 그립 표면이 매끈해지며 빛이 나기 시작하면 마찰력이 사라진 것입니다.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-red-500 font-bold">!</span>
+                <span><strong>권장 주기:</strong> 주 2~3회 테니스를 친다면 최소 2주에 한 번은 교체하는 것이 좋습니다.</span>
+              </li>
+            </ul>
 
-            <h2 id="key-point-3">핵심 포인트 3</h2>
-            <p>
-              세 번째 중요한 내용은... (내용 작성)
-            </p>
+            <h2 id="key-point-3">초보자를 위한 그립 감는 꿀팁</h2>
+            <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+              <ol className="list-decimal pl-5 space-y-2">
+                <li><strong>오버랩(Overlap):</strong> 약 2~3mm 정도씩 겹치게 감는 것이 표준입니다. 두껍게 감고 싶다면 더 많이 겹치세요.</li>
+                <li><strong>텐션 유지:</strong> 감는 동안 그립을 살짝 당겨서 팽팽함을 유지해야 나중에 밀리지 않습니다.</li>
+                <li><strong>마무리:</strong> 동봉된 마감 테이프를 붙이기 전, 그립 끝부분을 사선으로 잘라주면 훨씬 깔끔하게 마무리됩니다.</li>
+              </ol>
+            </div>
 
             <h2 id="conclusion">마무리하며</h2>
             <p>
-              지금까지 오버그립 교체 주기와 종류(건식/습식) 추천에 대해 알아보았습니다. 여러분의 테니스 라이프에 도움이 되기를 바랍니다.
+              오버그립은 단돈 몇 천 원으로 장비의 성능을 비약적으로 높일 수 있는 최고의 튜닝입니다. 낡은 그립을 버리고 새 그립을 감는 것만으로도 여러분의 샷은 훨씬 정교해질 것입니다. 오늘 가방 속 라켓의 그립 상태를 확인해 보세요!
             </p>
 
           </div>
@@ -171,7 +200,7 @@ export default function BlogPost() {
                     추천 링크
                   </h4>
                   <ul className="space-y-3">
-                     <li>
+                    <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         <span className="text-xl">🌐</span>
                         <span className="font-medium">ATP 투어</span>
@@ -184,10 +213,10 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
-                    <RelatedPosts 
-            currentSlug="tennis-overgrip-guide" 
-            category="테니스 장비" 
-            tags={["테니스 장비","오버그립","그립 테이프","손땀","용품 추천"]} 
+          <RelatedPosts
+            currentSlug="tennis-overgrip-guide"
+            category="테니스 장비"
+            tags={["테니스 장비", "오버그립", "그립 테이프", "손땀", "용품 추천"]}
           />
 
           <CTA />

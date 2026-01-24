@@ -10,7 +10,7 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 export const metadata = {
   title: "스트링 텐션의 비밀: 높게? 낮게?",
   description: "텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법.",
-  keywords: ["테니스 장비","스트링 텐션","라켓 수리","컨트롤","파워"],
+  keywords: ["테니스 장비", "스트링 텐션", "라켓 수리", "컨트롤", "파워"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-string-tension-guide',
   },
@@ -43,12 +43,12 @@ const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
 
 const faqs = [
   {
-    q: "스트링 텐션의 비밀: 높게? 낮게? 관련 자주 묻는 질문 1",
-    a: '이곳에 답변이 들어갑니다. 구체적이고 도움이 되는 정보를 제공하세요.'
+    q: "텐션이 낮아지면 스핀이 정말 더 많이 걸리나요?",
+    a: "네, '스냅백(Snap-back)' 현상 때문입니다. 스트링이 임팩트 시 옆으로 밀렸다가 다시 제자리로 돌아오면서 공에 회전을 더해주는데, 텐션이 낮을수록 스트링의 가동 범위가 넓어져 스핀량이 증가합니다."
   },
   {
-    q: "스트링 텐션의 비밀: 높게? 낮게? 관련 자주 묻는 질문 2",
-    a: '이곳에 답변이 들어갑니다. 독자의 궁금증을 해결해 줄 수 있는 내용을 작성하세요.'
+    q: "스트링 작업 후 시간이 지나면 텐션이 변하나요?",
+    a: "그렇습니다. 이를 '텐션 로스'라고 합니다. 보통 줄을 맨 직후 24시간 내에 가장 많이 떨어지며, 폴리 스트링의 경우 한 달 정도 지나면 탄성을 잃어 '죽은 스트링'이 되므로 주기적인 교체가 필요합니다."
   },
 ];
 
@@ -100,31 +100,83 @@ export default function BlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-            
+
             <h2 id="introduction">들어가며</h2>
-            <p>
-              {"텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법."} 이 글에서는 {"테니스 장비"}에 대해 깊이 있게 알아봅니다.
-              (이곳에 서론 내용을 작성해 주세요.)
-            </p>
+            <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-2xl mb-8 border-l-8 border-blue-500">
+              <p className="text-lg text-slate-800 dark:text-slate-200 leading-relaxed mb-0 font-medium">
+                "라켓을 바꾼 것보다 텐션을 2파운드 조정한 것이 경기력을 더 크게 바꿨습니다." 많은 프로 선수가 입을 모아 하는 말입니다. 스트링 텐션은 공이 라켓에 머무는 시간과 반발력을 결정하는 핵심 변수입니다.
+              </p>
+            </div>
 
-            <h2 id="key-point-1">핵심 포인트 1</h2>
+            <h2 id="key-point-1">높은 텐션(Tight): '컨트롤'의 정석</h2>
             <p>
-              첫 번째 중요한 내용은... (내용 작성)
+              보통 55파운드 이상의 높은 텐션을 의미합니다. 스트링이 팽팽하면 임팩트 시 '트램펄린 효과'가 줄어듭니다.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+              <Card className="bg-white dark:bg-slate-900 border-blue-100 dark:border-blue-900">
+                <CardContent className="p-4">
+                  <h4 className="text-blue-600 font-bold mb-2">장점</h4>
+                  <ul className="text-sm space-y-1">
+                    <li>• 정교한 샷 컨트롤이 가능</li>
+                    <li>• 공이 라인 밖으로 나가는 것을 억제</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="bg-white dark:bg-slate-900 border-red-100 dark:border-red-900">
+                <CardContent className="p-4">
+                  <h4 className="text-red-600 font-bold mb-2">단점</h4>
+                  <ul className="text-sm space-y-1">
+                    <li>• 스스로 만들어야 하는 파워 부담</li>
+                    <li>• 팔에 전달되는 충격 증가 (부상 위험)</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
 
-            <h2 id="key-point-2">핵심 포인트 2</h2>
+            <h2 id="key-point-2">낮은 텐션(Loose): '파워'와 '스핀'의 극대화</h2>
             <p>
-              두 번째 중요한 내용은... (내용 작성)
+              40~48파운드 수준의 낮은 텐션은 최근 현대 테니스의 트렌드이기도 합니다. 스트링이 더 많이 변형되었다가 복원되면서 공에 엄청난 에너지를 실어줍니다.
             </p>
+            <ul className="space-y-3 my-4">
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0" />
+                <span><strong>스냅백(Snap-back) 효과:</strong> 스트링이 미끄러졌다 돌아오며 스핀량이 늘어납니다.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0" />
+                <span><strong>편안한 타구감:</strong> 충격을 스트링이 대신 흡수하여 엘보 방지에 도움을 줍니다.</span>
+              </li>
+            </ul>
 
-            <h2 id="key-point-3">핵심 포인트 3</h2>
+            <h2 id="key-point-3">나에게 맞는 '적정 텐션' 찾는 법</h2>
             <p>
-              세 번째 중요한 내용은... (내용 작성)
+              가장 좋은 기준은 본인의 <strong>스윙 스피드</strong>입니다.
             </p>
+            <table className="w-full text-sm border-collapse my-6">
+              <thead>
+                <tr className="bg-slate-100 dark:bg-slate-800">
+                  <th className="p-3 border">유형</th>
+                  <th className="p-3 border">추천 범위</th>
+                  <th className="p-3 border">핵심 이유</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="p-3 border font-bold">초보자</td>
+                  <td className="p-3 border text-center">48~52 lbs</td>
+                  <td className="p-3 border">부족한 근력을 스트링 파워로 보완</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border font-bold">중상급자</td>
+                  <td className="p-3 border text-center">52~56 lbs</td>
+                  <td className="p-3 border">강한 스윙을 코트 안에 가두기 위함</td>
+                </tr>
+              </tbody>
+            </table>
 
             <h2 id="conclusion">마무리하며</h2>
             <p>
-              지금까지 스트링 텐션의 비밀: 높게? 낮게?에 대해 알아보았습니다. 여러분의 테니스 라이프에 도움이 되기를 바랍니다.
+              텐션 선택에 정답은 없습니다. 하지만 중요한 규칙 하나는 있습니다. <strong>"겨울철에는 평소보다 2~3파운드 낮추고, 여름철에는 높이세요."</strong> 온도가 낮으면 스트링 자체가 딱딱해지기 때문입니다. 작은 실험을 통해 여러분만의 골디락스(Goldilocks) 텐션을 찾으시길 바랍니다.
             </p>
 
           </div>
@@ -171,7 +223,7 @@ export default function BlogPost() {
                     추천 링크
                   </h4>
                   <ul className="space-y-3">
-                     <li>
+                    <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         <span className="text-xl">🌐</span>
                         <span className="font-medium">ATP 투어</span>
@@ -184,10 +236,10 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
-                    <RelatedPosts 
-            currentSlug="tennis-string-tension-guide" 
-            category="테니스 장비" 
-            tags={["테니스 장비","스트링 텐션","라켓 수리","컨트롤","파워"]} 
+          <RelatedPosts
+            currentSlug="tennis-string-tension-guide"
+            category="테니스 장비"
+            tags={["테니스 장비", "스트링 텐션", "라켓 수리", "컨트롤", "파워"]}
           />
 
           <CTA />

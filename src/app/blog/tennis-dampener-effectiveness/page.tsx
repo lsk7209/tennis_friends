@@ -10,7 +10,7 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 export const metadata = {
   title: "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
   description: "작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.",
-  keywords: ["테니스 장비","댐퍼","진동 방지","엘보링","타구음"],
+  keywords: ["테니스 장비", "댐퍼", "진동 방지", "엘보링", "타구음"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-dampener-effectiveness',
   },
@@ -43,12 +43,12 @@ const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
 
 const faqs = [
   {
-    q: "댐퍼(Dampener)의 효과: 진동 감소와 타구감 관련 자주 묻는 질문 1",
-    a: '이곳에 답변이 들어갑니다. 구체적이고 도움이 되는 정보를 제공하세요.'
+    q: "댐퍼를 사용하면 팔꿈치 통증(테니스 엘보)이 줄어드나요?",
+    a: "댐퍼는 타구음과 미세한 고주파 진동을 줄여주어 '타구감'을 부드럽게 만들지만, 실제 팔로 전달되는 큰 충격 에너지를 흡수하지는 못합니다. 엘보 예방을 위해서는 부드러운 스트링이나 낮은 텐션 선택이 더 효과적입니다."
   },
   {
-    q: "댐퍼(Dampener)의 효과: 진동 감소와 타구감 관련 자주 묻는 질문 2",
-    a: '이곳에 답변이 들어갑니다. 독자의 궁금증을 해결해 줄 수 있는 내용을 작성하세요.'
+    q: "프로 선수들은 댐퍼를 많이 사용하나요?",
+    a: "취향에 따라 갈립니다. 조코비치나 나달은 댐퍼를 사용하지만, 페더러나 머레이처럼 사용하지 않는 선수들도 많습니다. 사용하지 않는 선수들은 현의 미세한 떨림을 통해 공의 터치감을 더 정확히 느끼고 싶어 하는 경우가 많습니다."
   },
 ];
 
@@ -100,31 +100,61 @@ export default function BlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-            
+
             <h2 id="introduction">들어가며</h2>
-            <p>
-              {"작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교."} 이 글에서는 {"테니스 장비"}에 대해 깊이 있게 알아봅니다.
-              (이곳에 서론 내용을 작성해 주세요.)
-            </p>
+            <div className="bg-blue-50 dark:bg-blue-900/30 p-6 rounded-2xl mb-8 border border-blue-100 dark:border-blue-800">
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-0">
+                라켓 스트링 하단에 끼워진 작은 고무 조각, '댐퍼(Dampener)' 혹은 '엘보링'이라 불리는 이 부품은 테니스인들 사이에서 가장 논쟁이 뜨거운 소품 중 하나입니다. "엘보를 예방해준다"는 믿음부터 "단순한 장식일 뿐이다"라는 회의론까지, 댐퍼의 실제 효과와 선택 기준에 대해 과학적으로 파헤쳐 봅니다.
+              </p>
+            </div>
 
-            <h2 id="key-point-1">핵심 포인트 1</h2>
+            <h2 id="key-point-1">진동 감소와 '타구음'의 심리적 효과</h2>
             <p>
-              첫 번째 중요한 내용은... (내용 작성)
+              댐퍼의 가장 즉각적인 효과는 임팩트 시 발생하는 <strong>'핑(Ping)'</strong> 하는 높은 주파수의 금속성 소음을 잡아주는 것입니다. 이 소리가 사라지면 타구감이 훨씬 묵직하고 부드럽게 느껴집니다.
             </p>
+            <Card className="my-6 bg-slate-50 dark:bg-slate-900 border-none shadow-inner">
+              <CardContent className="pt-6">
+                <ul className="space-y-3">
+                  <li className="flex gap-2">
+                    <span className="text-blue-500 font-bold">✓</span>
+                    <span><strong>음향적 안정:</strong> 스트링의 잔류 진동 소음을 제거하여 집중력을 높여줍니다.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-blue-500 font-bold">✓</span>
+                    <span><strong>피드백 변화:</strong> 덜덜거리는 진동이 손에 덜 전달되어 심리적으로 안도감을 줍니다.</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
 
-            <h2 id="key-point-2">핵심 포인트 2</h2>
+            <h2 id="key-point-2">테니스 엘보 방지 효과의 진실</h2>
             <p>
-              두 번째 중요한 내용은... (내용 작성)
+              많은 입문자가 댐퍼를 '엘보링'이라 부르며 부상 방지용으로 구매하지만, 스포츠 과학 연구에 따르면 <strong>댐퍼가 라켓 프레임에서 팔로 전달되는 충격량 자체를 줄여주지는 못합니다.</strong>
             </p>
+            <div className="bg-amber-50 dark:bg-amber-900/20 p-5 rounded-xl border-l-4 border-amber-400 my-6">
+              <p className="text-amber-800 dark:text-amber-200 text-sm mb-0">
+                엘보는 주로 잘못된 스윙 폼, 라켓의 강성, 스트링 텐션, 그리고 근력 부족에서 기인합니다. 댐퍼는 '불쾌한 느낌'을 지워줄 뿐, 물리적인 충격을 흡수하는 장치는 아닙니다. 부상 방지를 원하신다면 라켓 무게와 스트링 텐션 조절이 우선입니다.
+              </p>
+            </div>
 
-            <h2 id="key-point-3">핵심 포인트 3</h2>
+            <h2 id="key-point-3">나에게 맞는 댐퍼 종류와 선택법</h2>
             <p>
-              세 번째 중요한 내용은... (내용 작성)
+              댐퍼는 크게 '버튼형'과 '긴 줄 형태'로 나뉩니다.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="p-4 border border-slate-200 dark:border-slate-800 rounded-xl">
+                <h4 className="font-bold mb-2">● 버튼형 (Button)</h4>
+                <p className="text-sm">가장 일반적이며 탈부착이 쉽습니다. 소리 차단 능력은 보통이며 귀여운 캐릭터 디자인이 많습니다.</p>
+              </div>
+              <div className="p-4 border border-slate-200 dark:border-slate-800 rounded-xl">
+                <h4 className="font-bold mb-2">● 웜형 (Worm)</h4>
+                <p className="text-sm">여러 줄의 스트링에 걸쳐 설치하며, 진동 억제 능력이 훨씬 뛰어납니다. 묵직한 타구감을 선호하는 선수들에게 적합합니다.</p>
+              </div>
+            </div>
 
             <h2 id="conclusion">마무리하며</h2>
             <p>
-              지금까지 댐퍼(Dampener)의 효과: 진동 감소와 타구감에 대해 알아보았습니다. 여러분의 테니스 라이프에 도움이 되기를 바랍니다.
+              댐퍼 사용 여부는 전적으로 <strong>'개인의 취향'</strong>입니다. 안드레 애거시처럼 굵은 고무줄을 묶어 쓰기도 하고, 로저 페더러나 세레나 윌리엄스처럼 아예 사용하지 않는 선수들도 많습니다. 만약 임팩트 시의 맑은 소리를 통해 공의 위치를 파악하고 싶다면 제거하고, 부드러운 타구감을 원한다면 장착해 보세요. 작은 변화가 여러분의 즐거움을 더해줄 것입니다.
             </p>
 
           </div>
@@ -171,7 +201,7 @@ export default function BlogPost() {
                     추천 링크
                   </h4>
                   <ul className="space-y-3">
-                     <li>
+                    <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         <span className="text-xl">🌐</span>
                         <span className="font-medium">ATP 투어</span>
@@ -184,10 +214,10 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
-                    <RelatedPosts 
-            currentSlug="tennis-dampener-effectiveness" 
-            category="테니스 장비" 
-            tags={["테니스 장비","댐퍼","진동 방지","엘보링","타구음"]} 
+          <RelatedPosts
+            currentSlug="tennis-dampener-effectiveness"
+            category="테니스 장비"
+            tags={["테니스 장비", "댐퍼", "진동 방지", "엘보링", "타구음"]}
           />
 
           <CTA />
