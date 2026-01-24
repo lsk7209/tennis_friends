@@ -263,11 +263,11 @@ const tocItems = [
 
 const faqs = [
   {
-    q: '${post.title} 관련 자주 묻는 질문 1',
+    q: ${JSON.stringify(post.title + ' 관련 자주 묻는 질문 1')},
     a: '이곳에 답변이 들어갑니다. 구체적이고 도움이 되는 정보를 제공하세요.'
   },
   {
-    q: '${post.title} 관련 자주 묻는 질문 2',
+    q: ${JSON.stringify(post.title + ' 관련 자주 묻는 질문 2')},
     a: '이곳에 답변이 들어갑니다. 독자의 궁금증을 해결해 줄 수 있는 내용을 작성하세요.'
   },
 ];
