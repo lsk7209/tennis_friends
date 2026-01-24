@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "네트 플레이의 정석: 어프로치 샷과 위치 선정",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-net-play-positioning" 
+            category="테니스 전술" 
+            tags={["테니스 전술","발리","네트 플레이","포지셔닝","복식"]} 
+          />
+
           <CTA />
         </div>
       </Article>

@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 부상 예방과 회복 루틴 — 어깨·무릎·손목을 지키는 과학적 관리법 | 아마추어를 위한 부상 제로 실전 매뉴얼',

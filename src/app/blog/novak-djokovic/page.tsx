@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '노박 조코비치 선수 프로필과 스토리',
@@ -273,6 +274,14 @@ export default function NovakDjokovicBlogPost() {
 
           {/* FAQ Section */}
           <FAQ items={faqs} />
+
+                    <RelatedPosts 
+            currentSlug="novak-djokovic" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '노박 조코비치', '선수 프로필', '스토리', '세르비아']} 
+          />
 
           <CTA />
         </div>

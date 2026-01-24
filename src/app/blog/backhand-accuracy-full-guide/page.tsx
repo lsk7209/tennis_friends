@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '백핸드 정확도 향상 완전 가이드 | 원핸드·투핸드 타점·라켓면·리듬',

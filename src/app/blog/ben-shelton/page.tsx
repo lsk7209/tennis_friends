@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '벤 쉘튼 선수 프로필과 스토리',
@@ -167,7 +168,15 @@ export default function BenSheltonBlogPost() {
       {/* FAQ Section */}
       <FAQ items={faqs} />
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="ben-shelton" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '벤 쉘튼', '선수 프로필', '스토리', '미국']} 
+          />
+
+          <CTA />
         </div>
       </Article>
     </div>

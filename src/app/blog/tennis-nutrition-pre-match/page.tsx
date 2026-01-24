@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "경기 전 최고의 식단과 에너지 보충",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-nutrition-pre-match" 
+            category="테니스 건강" 
+            tags={["테니스 건강","식단","에너지 젤","수분 보충","경기 준비"]} 
+          />
+
           <CTA />
         </div>
       </Article>

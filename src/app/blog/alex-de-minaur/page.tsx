@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '알렉스 드 미노 선수 프로필과 스토리',
@@ -254,7 +255,15 @@ export default function AlexDeMinaurBlogPost() {
       {/* FAQ Section */}
       <FAQ items={faqs} />
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="alex-de-minaur" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '알렉스 드 미노', '선수 프로필', '스토리', '호주']} 
+          />
+
+          <CTA />
         </div>
       </Article>
     </div>

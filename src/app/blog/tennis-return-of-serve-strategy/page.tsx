@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "서브 리턴 전략: 서버의 구질 읽는 법",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-return-of-serve-strategy" 
+            category="테니스 전술" 
+            tags={["테니스 전술","리턴","Return","서브 공략","브레이크"]} 
+          />
+
           <CTA />
         </div>
       </Article>

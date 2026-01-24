@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성 | 첫 서브 성공률 70% 만드는 방법',

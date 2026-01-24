@@ -10,6 +10,7 @@ export interface BlogPostData {
   readTime: string;
   badgeColor?: string;
   categoryColor?: string;
+  tags?: string[];
 }
 
 export interface BlogPost extends BlogPostData {

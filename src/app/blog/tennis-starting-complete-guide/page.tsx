@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
     title: '테니스 시작하기 완벽 가이드 — 입문부터 첫 게임까지 30일 완성 로드맵 | 라켓 준비, 레슨 예약, 코트 찾기',

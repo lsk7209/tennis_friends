@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "엘레나 리바키나: 차가운 아이스 퀸의 플레이",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="elena-rybakina" 
+            category="테니스" 
+            tags={["테니스","엘레나 리바키나","Elena Rybakina","Wimbledon","서브 퀸"]} 
+          />
+
           <CTA />
         </div>
       </Article>

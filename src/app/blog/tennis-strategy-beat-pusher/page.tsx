@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-strategy-beat-pusher" 
+            category="테니스 전술" 
+            tags={["테니스 전술","푸셔","Pusher","연타","멘탈 관리"]} 
+          />
+
           <CTA />
         </div>
       </Article>

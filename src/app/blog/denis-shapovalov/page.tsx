@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "데니스 샤포발로프: 왼손 원핸드 백핸드의 낭만",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="denis-shapovalov" 
+            category="테니스" 
+            tags={["테니스","데니스 샤포발로프","Denis Shapovalov","원핸드 백핸드","왼손잡이"]} 
+          />
+
           <CTA />
         </div>
       </Article>

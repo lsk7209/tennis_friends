@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '멘탈 루틴 5단계 — 시합 중 흔들리지 않는 집중력의 기술 | 긴장·실수·흐름을 제어하는 심리 루틴 완전 가이드',

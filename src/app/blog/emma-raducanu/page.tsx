@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "엠마 라두카누: 신데렐라 스토리 그 후",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="emma-raducanu" 
+            category="테니스" 
+            tags={["테니스","엠마 라두카누","Emma Raducanu","US 오픈","신데렐라"]} 
+          />
+
           <CTA />
         </div>
       </Article>

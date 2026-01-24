@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
     title: '2026년 테니스 라켓 추천 가이드 — 초보자부터 상급자까지 BEST 5 | 윌슨, 바볼랏, 요넥스',

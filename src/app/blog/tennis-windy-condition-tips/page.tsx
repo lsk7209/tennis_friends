@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "바람 부는 날 테니스 잘 치는 법",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-windy-condition-tips" 
+            category="테니스 팁" 
+            tags={["테니스 팁","바람","날씨","풋워크","야외 테니스"]} 
+          />
+
           <CTA />
         </div>
       </Article>

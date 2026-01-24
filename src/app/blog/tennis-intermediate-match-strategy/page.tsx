@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 중급자의 경기 운영법 — 포인트 설계와 리듬 조절의 기술 | 이기는 경기의 흐름을 만드는 전략적 사고',

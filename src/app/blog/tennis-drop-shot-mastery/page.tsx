@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "드롭샷 마스터하기: 타이밍과 위장술",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-drop-shot-mastery" 
+            category="테니스 기술" 
+            tags={["테니스 기술","드롭샷","전술","터치","슬라이스"]} 
+          />
+
           <CTA />
         </div>
       </Article>

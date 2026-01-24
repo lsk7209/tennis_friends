@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 발리의 기술 — 네트 앞 1초 반응으로 결정되는 승부 | 감각·타이밍·밸런스로 완성하는 공격의 예술',
@@ -418,7 +419,15 @@ export default function TennisVolleyTechniqueGuidePage() {
         </div>
       </div>
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="tennis-volley-technique-guide" 
+            category="
+            발리 기술
+          " 
+            tags={['테니스 발리', '네트 플레이', '반응 속도', '기술', '포지셔닝', '복식']} 
+          />
+
+          <CTA />
     </Article>
   );
 }

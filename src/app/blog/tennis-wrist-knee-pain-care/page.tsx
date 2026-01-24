@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "테니스 엘보 외의 부상: 손목 및 무릎 통증 관리",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-wrist-knee-pain-care" 
+            category="테니스 건강" 
+            tags={["테니스 건강","부상 방지","손목 통증","무릎 재활","스트레칭"]} 
+          />
+
           <CTA />
         </div>
       </Article>

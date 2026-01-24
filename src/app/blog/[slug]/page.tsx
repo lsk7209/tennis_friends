@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';

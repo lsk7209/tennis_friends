@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '후베르트 후르카츠 선수 프로필과 스토리',
@@ -250,7 +251,15 @@ export default function HubertHurkaczBlogPost() {
       {/* FAQ Section */}
       <FAQ items={faqs} />
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="hubert-hurkacz" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '후베르트 후르카츠', '선수 프로필', '스토리', '폴란드']} 
+          />
+
+          <CTA />
         </div>
       </Article>
     </div>

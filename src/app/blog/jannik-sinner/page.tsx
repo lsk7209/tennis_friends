@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '야닉 시너 선수 프로필과 스토리',
@@ -250,7 +251,15 @@ export default function JannikSinnerBlogPost() {
       {/* FAQ Section */}
       <FAQ items={faqs} />
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="jannik-sinner" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '야닉 시너', '선수 프로필', '스토리', '이탈리아']} 
+          />
+
+          <CTA />
         </div>
       </Article>
     </div>

@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "스매싱 실수 줄이는 법 (오버헤드 스매시 가이드)",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-overhead-smash-guide" 
+            category="테니스 기술" 
+            tags={["테니스 기술","스매싱","오버헤드","Smash","결정구"]} 
+          />
+
           <CTA />
         </div>
       </Article>

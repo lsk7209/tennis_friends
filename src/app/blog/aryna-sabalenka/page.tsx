@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "아리나 사발렌카: 파워 테니스의 정점",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="aryna-sabalenka" 
+            category="테니스" 
+            tags={["테니스","아리나 사발렌카","Aryna Sabalenka","WTA","강서브"]} 
+          />
+
           <CTA />
         </div>
       </Article>

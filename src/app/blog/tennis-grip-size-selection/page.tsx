@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "그립 두께와 사이즈 선택의 중요성",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-grip-size-selection" 
+            category="테니스 장비" 
+            tags={["테니스 장비","그립 사이즈","라켓 그립","부상 방지","튜닝"]} 
+          />
+
           <CTA />
         </div>
       </Article>

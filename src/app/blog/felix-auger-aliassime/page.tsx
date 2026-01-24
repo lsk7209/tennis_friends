@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "펠릭스 오제-알리아심: 캐나다의 테니스 희망",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="felix-auger-aliassime" 
+            category="테니스" 
+            tags={["테니스","펠릭스 오제-알리아심","Felix Auger-Aliassime","캐나다","유망주"]} 
+          />
+
           <CTA />
         </div>
       </Article>

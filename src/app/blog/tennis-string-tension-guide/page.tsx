@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "스트링 텐션의 비밀: 높게? 낮게?",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-string-tension-guide" 
+            category="테니스 장비" 
+            tags={["테니스 장비","스트링 텐션","라켓 수리","컨트롤","파워"]} 
+          />
+
           <CTA />
         </div>
       </Article>

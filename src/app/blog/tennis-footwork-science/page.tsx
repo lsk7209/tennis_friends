@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 풋워크의 과학 — 발의 리듬이 경기의 리듬을 만든다 | 공보다 빠르게 움직이는 발의 기술',
@@ -412,7 +413,15 @@ export default function TennisFootworkSciencePage() {
         </div>
       </div>
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="tennis-footwork-science" 
+            category="
+            풋워크 과학
+          " 
+            tags={['테니스 풋워크', '발 리듬', '체중 이동', '스텝', '반응 속도', '균형']} 
+          />
+
+          <CTA />
     </Article>
   );
 }

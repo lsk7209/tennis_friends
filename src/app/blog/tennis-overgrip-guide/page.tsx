@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "오버그립 교체 주기와 종류(건식/습식) 추천",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-overgrip-guide" 
+            category="테니스 장비" 
+            tags={["테니스 장비","오버그립","그립 테이프","손땀","용품 추천"]} 
+          />
+
           <CTA />
         </div>
       </Article>

@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '복식 경기 전략 완전정복 — 포지셔닝·커뮤니케이션·네트 플레이의 모든 것 | 팀워크로 승부하는 테니스의 본질',

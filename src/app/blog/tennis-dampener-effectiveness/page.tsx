@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-dampener-effectiveness" 
+            category="테니스 장비" 
+            tags={["테니스 장비","댐퍼","진동 방지","엘보링","타구음"]} 
+          />
+
           <CTA />
         </div>
       </Article>

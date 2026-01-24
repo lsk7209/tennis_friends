@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "온스 자베르: 튀니지의 마법사",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="ons-jabeur" 
+            category="테니스" 
+            tags={["테니스","온스 자베르","Ons Jabeur","드롭샷","튀니지"]} 
+          />
+
           <CTA />
         </div>
       </Article>

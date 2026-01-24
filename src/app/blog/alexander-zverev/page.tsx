@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '알렉산더 즈베레프 선수 프로필과 스토리',
@@ -274,6 +275,14 @@ export default function AlexanderZverevBlogPost() {
 
           {/* FAQ Section */}
           <FAQ items={faqs} />
+
+                    <RelatedPosts 
+            currentSlug="alexander-zverev" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '알렉산더 즈베레프', '선수 프로필', '스토리', '독일']} 
+          />
 
           <CTA />
         </div>

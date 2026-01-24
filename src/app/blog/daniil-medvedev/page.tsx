@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '다닐 메드베데프 선수 프로필과 스토리',
@@ -254,7 +255,15 @@ export default function DaniilMedvedevBlogPost() {
       {/* FAQ Section */}
       <FAQ items={faqs} />
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="daniil-medvedev" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '다닐 메드베데프', '선수 프로필', '스토리', '러시아']} 
+          />
+
+          <CTA />
         </div>
       </Article>
     </div>

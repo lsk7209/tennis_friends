@@ -3,6 +3,7 @@ export const allBlogPosts = [
   {
     "id": "frances-tiafoe",
     "slug": "frances-tiafoe",
+    "tags": ["선수 프로필"],
     "title": "프란시스 티아포 — 에너지와 창의로 코트를 달구다",
     "excerpt": "폭발적인 스텝과 감각적인 터치, 변주를 두려워하지 않는 전진으로 흐름을 뒤집는 프란시스 티아포의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
     "badge": "최신 글",
@@ -15,6 +16,7 @@ export const allBlogPosts = [
   {
     "id": "tommy-paul",
     "slug": "tommy-paul",
+    "tags": ["선수 프로필","서브"],
     "title": "토미 폴 — 속도와 각도로 조립하는 미국식 하드 테니스",
     "excerpt": "가벼운 발과 예리한 각, 과감한 전진으로 흐름을 끊어먹는 토미 폴의 성장, 스타일, 인간미와 과제를 한 편으로.",
     "badge": "최신 글",
@@ -27,6 +29,7 @@ export const allBlogPosts = [
   {
     "id": "ben-shelton",
     "slug": "ben-shelton",
+    "tags": ["선수 프로필"],
     "title": "벤 쉘튼 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도",
     "excerpt": "좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 쉘튼의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
     "badge": "최신 글",
@@ -39,6 +42,7 @@ export const allBlogPosts = [
   {
     "id": "grigor-dimitrov",
     "slug": "grigor-dimitrov",
+    "tags": ["선수 프로필"],
     "title": "그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌",
     "excerpt": "원핸드 백핸드의 미학과 노련한 전술, 성숙한 멘탈로 커리어의 두 번째 절정을 만드는 그리고르 디미트로프의 성장, 스타일, 인간적 면모를 한 편으로.",
     "badge": "최신 글",
@@ -59,6 +63,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "holger-rune"
+    "tags": ["선수 프로필","서브"],
   },
   {
     "id": "hubert-hurkacz",
@@ -71,6 +76,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "hubert-hurkacz"
+    "tags": ["선수 프로필","서브"],
   },
   {
     "id": "taylor-fritz",
@@ -83,6 +89,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "taylor-fritz"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "alex-de-minaur",
@@ -95,6 +102,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "alex-de-minaur"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "casper-ruud",
@@ -107,6 +115,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "casper-ruud"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "stefanos-tsitsipas",
@@ -119,6 +128,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "stefanos-tsitsipas"
+    "tags": ["선수 프로필","포핸드"],
   },
   {
     "id": "andrey-rublev",
@@ -131,6 +141,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "andrey-rublev"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "alexander-zverev",
@@ -143,6 +154,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "alexander-zverev"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "daniil-medvedev",
@@ -155,6 +167,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "daniil-medvedev"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "novak-djokovic",
@@ -167,6 +180,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "novak-djokovic"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "jannik-sinner",
@@ -179,6 +193,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "jannik-sinner"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "carlos-alcaraz",
@@ -191,6 +206,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "slug": "carlos-alcaraz"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "autumn-tennis-rhythm-guide",
@@ -203,6 +219,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "autumn-tennis-rhythm-guide"
+    "tags": ["백핸드","라켓"],
   },
   {
     "id": "backhand-accuracy-full-guide",
@@ -215,6 +232,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "backhand-accuracy-full-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "rainy-day-tennis-tips-guide",
@@ -227,6 +245,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "rainy-day-tennis-tips-guide"
+    "tags": ["서브","라켓"],
   },
   {
     "id": "serve-return-prediction-guide",
@@ -239,6 +258,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "serve-return-prediction-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-advanced-pattern-analysis",
@@ -251,6 +271,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-advanced-pattern-analysis"
+    "tags": ["백핸드"],
   },
   {
     "id": "tennis-backhand-technique-guide",
@@ -263,6 +284,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-backhand-technique-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-beginner-30day-growth-plan",
@@ -275,6 +297,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-beginner-30day-growth-plan"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-beginner-30day-training-plan",
@@ -287,6 +310,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-beginner-30day-training-plan"
+    "tags": ["복식"],
   },
   {
     "id": "tennis-doubles-strategy-guide",
@@ -299,6 +323,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-doubles-strategy-guide"
+    "tags": ["복식"],
   },
   {
     "id": "tennis-doubles-teamwork-strategy",
@@ -311,6 +336,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-doubles-teamwork-strategy"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-etiquette-and-manners",
@@ -323,6 +349,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-etiquette-and-manners"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-footwork-balance-training-guide",
@@ -335,6 +362,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-footwork-balance-training-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-footwork-science",
@@ -347,6 +375,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-footwork-science"
+    "tags": ["포핸드"],
   },
   {
     "id": "tennis-forehand-impact-timing-guide",
@@ -359,6 +388,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-forehand-impact-timing-guide"
+    "tags": ["부상 예방"],
   },
   {
     "id": "tennis-injury-prevention-full-guide",
@@ -371,6 +401,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-injury-prevention-full-guide"
+    "tags": ["부상 예방"],
   },
   {
     "id": "tennis-injury-prevention-recovery",
@@ -383,6 +414,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-injury-prevention-recovery"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-inmatch-condition-management",
@@ -395,6 +427,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-inmatch-condition-management"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-intermediate-match-strategy",
@@ -407,6 +440,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-intermediate-match-strategy"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-intermediate-to-advanced-transition",
@@ -419,6 +453,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-intermediate-to-advanced-transition"
+    "tags": ["멘탈 트레이닝"],
   },
   {
     "id": "tennis-mental-focus-recovery",
@@ -431,6 +466,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-mental-focus-recovery"
+    "tags": ["멘탈 트레이닝"],
   },
   {
     "id": "tennis-mental-routine-5steps",
@@ -443,6 +479,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-mental-routine-5steps"
+    "tags": ["멘탈 트레이닝"],
   },
   {
     "id": "tennis-mental-routine-control-guide",
@@ -455,6 +492,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-mental-routine-control-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-postmatch-recovery-routine",
@@ -467,6 +505,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-postmatch-recovery-routine"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-power-of-routine",
@@ -479,6 +518,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-power-of-routine"
+    "tags": ["스트링","라켓"],
   },
   {
     "id": "tennis-racket-selection-guide",
@@ -491,6 +531,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-racket-selection-guide"
+    "tags": ["경기 운영"],
   },
   {
     "id": "tennis-scoring-system-guide",
@@ -503,6 +544,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-scoring-system-guide"
+    "tags": ["서브"],
   },
   {
     "id": "tennis-serve-rhythm-science",
@@ -515,6 +557,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-serve-rhythm-science"
+    "tags": ["서브"],
   },
   {
     "id": "tennis-serve-speed-science",
@@ -527,6 +570,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-serve-speed-science"
+    "tags": ["서브"],
   },
   {
     "id": "tennis-serve-timing-and-spin-guide",
@@ -539,6 +583,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-serve-timing-and-spin-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-shoes-balance-guide",
@@ -551,6 +596,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-shoes-balance-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-shoes-selection-guide",
@@ -563,6 +609,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-shoes-selection-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "tennis-volley-technique-guide",
@@ -575,6 +622,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "tennis-volley-technique-guide"
+    "tags": ["테니스 지식"],
   },
   {
     "id": "winter-indoor-tennis-training-routine",
@@ -587,10 +635,12 @@ export const allBlogPosts = [
     "badgeColor": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "slug": "winter-indoor-tennis-training-routine"
+    "tags": ["선수 프로필"],
   },
   {
     "id": "iga-swiatek",
     "slug": "iga-swiatek",
+    "tags": ["선수 프로필"],
     "title": "이가 시비옹테크: 무결점의 테니스 여제",
     "excerpt": "강력한 탑스핀 포핸드와 압도적인 멘탈로 WTA를 지배하는 이가 시비옹테크의 경기 스타일, 성장 과정, 그리고 그녀가 이룬 기록들을 분석합니다.",
     "badge": "최신 글",
@@ -603,6 +653,7 @@ export const allBlogPosts = [
   {
     "id": "aryna-sabalenka",
     "slug": "aryna-sabalenka",
+    "tags": ["선수 프로필"],
     "title": "아리나 사발렌카: 파워 테니스의 정점",
     "excerpt": "폭발적인 서브와 그라운드 스트로크로 코트를 장악하는 아리나 사발렌카. 그녀의 공격적인 스타일과 멘탈 극복 스토리를 다룹니다.",
     "badge": "최신 글",
@@ -615,6 +666,7 @@ export const allBlogPosts = [
   {
     "id": "coco-gauff",
     "slug": "coco-gauff",
+    "tags": ["선수 프로필"],
     "title": "코코 고프: 미국의 차세대 슈퍼스타",
     "excerpt": "10대 시절부터 천재성을 증명한 코코 고프. 놀라운 코트 커버리지와 강력한 백핸드, 그리고 끊임없이 진화하는 그녀의 테니스 세계를 조명합니다.",
     "badge": "최신 글",
@@ -627,6 +679,7 @@ export const allBlogPosts = [
   {
     "id": "elena-rybakina",
     "slug": "elena-rybakina",
+    "tags": ["선수 프로필"],
     "title": "엘레나 리바키나: 차가운 아이스 퀸의 플레이",
     "excerpt": "감정을 드러내지 않는 포커페이스와 우아한 위너. 엘레나 리바키나의 간결한 스윙 메커니즘과 강력한 서브의 비결을 파헤칩니다.",
     "badge": "최신 글",
@@ -639,6 +692,7 @@ export const allBlogPosts = [
   {
     "id": "nick-kyrgios",
     "slug": "nick-kyrgios",
+    "tags": ["선수 프로필","서브"],
     "title": "닉 키리오스: 코트 위의 악동이자 천재",
     "excerpt": "예측 불가능한 플레이와 쇼맨십. 닉 키리오스의 천재적인 감각과 그 뒤에 숨겨진 테니스 철학, 그리고 논란과 매력을 동시에 탐구합니다.",
     "badge": "최신 글",
@@ -651,6 +705,7 @@ export const allBlogPosts = [
   {
     "id": "alexander-bublik",
     "slug": "alexander-bublik",
+    "tags": ["선수 프로필"],
     "title": "알렉산더 부블릭: 언더암 서브와 창의성",
     "excerpt": "테니스를 즐기는 방식이 남다른 알렉산더 부블릭. 언더암 서브, 변칙 플레이, 그리고 그가 추구하는 창의적인 테니스의 세계.",
     "badge": "최신 글",
@@ -663,6 +718,7 @@ export const allBlogPosts = [
   {
     "id": "felix-auger-aliassime",
     "slug": "felix-auger-aliassime",
+    "tags": ["선수 프로필","백핸드"],
     "title": "펠릭스 오제-알리아심: 캐나다의 테니스 희망",
     "excerpt": "성실함과 운동 능력을 겸비한 펠릭스 오제-알리아심. 그의 강력한 포핸드와 서비스 게임, 그리고 그랜드 슬램을 향한 도전을 정리합니다.",
     "badge": "최신 글",
@@ -675,6 +731,7 @@ export const allBlogPosts = [
   {
     "id": "denis-shapovalov",
     "slug": "denis-shapovalov",
+    "tags": ["선수 프로필"],
     "title": "데니스 샤포발로프: 왼손 원핸드 백핸드의 낭만",
     "excerpt": "폭발적인 점프 원핸드 백핸드의 소유자 데니스 샤포발로프. 공격적인 스타일과 화려한 샷 메이킹, 그가 보여주는 낭만 테니스.",
     "badge": "최신 글",
@@ -687,6 +744,7 @@ export const allBlogPosts = [
   {
     "id": "ons-jabeur",
     "slug": "ons-jabeur",
+    "tags": ["선수 프로필"],
     "title": "온스 자베르: 튀니지의 마법사",
     "excerpt": "다양한 슬라이스와 드롭샷으로 상대를 현혹하는 온스 자베르. 아랍 테니스의 역사를 쓰고 있는 그녀의 창의적인 전술을 분석합니다.",
     "badge": "최신 글",
@@ -699,6 +757,7 @@ export const allBlogPosts = [
   {
     "id": "emma-raducanu",
     "slug": "emma-raducanu",
+    "tags": ["선수 프로필"],
     "title": "엠마 라두카누: 신데렐라 스토리 그 후",
     "excerpt": "예선 통과자 최초의 US 오픈 우승 기적. 엠마 라두카누의 스타일과 부상 극복, 그리고 다시 정상에 도전하는 여정을 다룹니다.",
     "badge": "최신 글",
@@ -711,6 +770,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-strategy-beat-pusher",
     "slug": "tennis-strategy-beat-pusher",
+    "tags": ["테니스 전술"],
     "title": "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
     "excerpt": "실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.",
     "badge": "최신 글",
@@ -723,6 +783,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-strategy-vs-lefty",
     "slug": "tennis-strategy-vs-lefty",
+    "tags": ["테니스 전술"],
     "title": "왼손잡이 상대 공략법 (Lefty 대응 전술)",
     "excerpt": "반대 회전 서브와 낯선 각도. 왼손잡이(Lefty) 선수를 상대로 당황하지 않고 유리한 고지를 점하는 전술적 팁.",
     "badge": "최신 글",
@@ -735,6 +796,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-windy-condition-tips",
     "slug": "tennis-windy-condition-tips",
+    "tags": ["테니스 전술"],
     "title": "바람 부는 날 테니스 잘 치는 법",
     "excerpt": "불규칙한 바람은 누구에게나 fair하지 않습니다. 바람을 이용하는 풋워크, 타점 조절, 그리고 심리적 우위를 점하는 방법.",
     "badge": "최신 글",
@@ -747,6 +809,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-drop-shot-mastery",
     "slug": "tennis-drop-shot-mastery",
+    "tags": ["테니스 전술"],
     "title": "드롭샷 마스터하기: 타이밍과 위장술",
     "excerpt": "상대의 허를 찌르는 드롭샷. 성공률을 높이는 그립, 터치 감각, 그리고 무엇보다 중요한 타이밍과 위장(Disguise) 기술.",
     "badge": "최신 글",
@@ -759,6 +822,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-lob-defense-offense",
     "slug": "tennis-lob-defense-offense",
+    "tags": ["테니스 기술"],
     "title": "로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브",
     "excerpt": "위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.",
     "badge": "최신 글",
@@ -771,6 +835,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-overhead-smash-guide",
     "slug": "tennis-overhead-smash-guide",
+    "tags": ["테니스 기술","백핸드"],
     "title": "스매싱 실수 줄이는 법 (오버헤드 스매시 가이드)",
     "excerpt": "가장 강력하지만 가장 실수하기 쉬운 샷. 스매싱의 타점 잡기, 왼손의 역할, 그리고 자신감 있게 마무리하는 비결.",
     "badge": "최신 글",
@@ -783,6 +848,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-slice-backhand-mastery",
     "slug": "tennis-slice-backhand-mastery",
+    "tags": ["테니스 기술","서브"],
     "title": "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)",
     "excerpt": "낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.",
     "badge": "최신 글",
@@ -795,6 +861,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-return-of-serve-strategy",
     "slug": "tennis-return-of-serve-strategy",
+    "tags": ["테니스 전술"],
     "title": "서브 리턴 전략: 서버의 구질 읽는 법",
     "excerpt": "게임의 시작은 서브지만, 브레이크의 시작은 리턴입니다. 스플릿 스텝 타이밍, 그립 전환, 그리고 서버의 루틴을 읽는 법.",
     "badge": "최신 글",
@@ -807,6 +874,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-net-play-positioning",
     "slug": "tennis-net-play-positioning",
+    "tags": ["테니스 전술"],
     "title": "네트 플레이의 정석: 어프로치 샷과 위치 선정",
     "excerpt": "발리는 손이 아닌 발로 합니다. 네트 점령을 위한 어프로치 샷의 선택과, 앵글을 차단하는 최적의 포지셔닝 가이드.",
     "badge": "최신 글",
@@ -819,6 +887,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-court-surfaces-explained",
     "slug": "tennis-court-surfaces-explained",
+    "tags": ["스트링"],
     "title": "클레이 코트 vs 하드 코트: 움직임과 전략의 차이",
     "excerpt": "바운드와 속도가 다른 코트 표면. 하드, 클레이, 잔디 코트 각각에 맞는 풋워크와 전술적 변화를 이해합니다.",
     "badge": "최신 글",
@@ -831,6 +900,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-string-tension-guide",
     "slug": "tennis-string-tension-guide",
+    "tags": ["테니스 장비","스트링"],
     "title": "스트링 텐션의 비밀: 높게? 낮게?",
     "excerpt": "텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법.",
     "badge": "최신 글",
@@ -843,6 +913,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-hybrid-string-setup",
     "slug": "tennis-hybrid-string-setup",
+    "tags": ["테니스 장비"],
     "title": "하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)",
     "excerpt": "선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.",
     "badge": "최신 글",
@@ -855,6 +926,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-grip-size-selection",
     "slug": "tennis-grip-size-selection",
+    "tags": ["테니스 장비"],
     "title": "그립 두께와 사이즈 선택의 중요성",
     "excerpt": "너무 얇으면 라켓이 돌고, 너무 두꺼우면 손목이 아픕니다. 정확한 그립 사이즈 측정법과 튜닝 팁.",
     "badge": "최신 글",
@@ -867,6 +939,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-overgrip-guide",
     "slug": "tennis-overgrip-guide",
+    "tags": ["테니스 장비"],
     "title": "오버그립 교체 주기와 종류(건식/습식) 추천",
     "excerpt": "손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍.",
     "badge": "최신 글",
@@ -879,6 +952,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-dampener-effectiveness",
     "slug": "tennis-dampener-effectiveness",
+    "tags": ["테니스 장비","경기 운영"],
     "title": "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
     "excerpt": "작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.",
     "badge": "최신 글",
@@ -891,6 +965,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-mental-closing-matches",
     "slug": "tennis-mental-closing-matches",
+    "tags": ["멘탈 트레이닝","부상 예방"],
     "title": "매치 포인트 공포증 극복하기 (Choking 방지)",
     "excerpt": "다 이긴 게임을 뒤집히는 '초킹(Choking)'. 긴장되는 순간에 팔이 굳는 현상을 극복하고 경기를 마무리하는 멘탈 루틴.",
     "badge": "최신 글",
@@ -903,6 +978,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-wrist-knee-pain-care",
     "slug": "tennis-wrist-knee-pain-care",
+    "tags": ["테니스 지식"],
     "title": "테니스 엘보 외의 부상: 손목 및 무릎 통증 관리",
     "excerpt": "TFCC 손상부터 슬개건염까지. 테니스 동호인을 괴롭히는 손목과 무릎 통증의 원인과 예방 스트레칭.",
     "badge": "최신 글",
@@ -915,6 +991,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-nutrition-pre-match",
     "slug": "tennis-nutrition-pre-match",
+    "tags": ["테니스 지식"],
     "title": "경기 전 최고의 식단과 에너지 보충",
     "excerpt": "경기 2시간 전 무엇을 먹어야 할까요? 탄수화물 로딩부터 수분 보충, 경기 중 바나나 섭취의 과학적 이유.",
     "badge": "최신 글",
@@ -927,6 +1004,7 @@ export const allBlogPosts = [
   {
     "id": "history-of-tennis-scoring",
     "slug": "history-of-tennis-scoring",
+    "tags": ["라켓"],
     "title": "테니스 점수(0, 15, 30, 40)의 유래와 역사",
     "excerpt": "왜 1, 2, 3이 아닐까요? 러브(Love)는 어디서 왔을까요? 중세 프랑스 귀족 놀이에서 유래한 독특한 점수 체계의 비밀.",
     "badge": "최신 글",
@@ -939,6 +1017,7 @@ export const allBlogPosts = [
   {
     "id": "tennis-bag-essentials-checklist",
     "slug": "tennis-bag-essentials-checklist",
+    "tags": ["라켓"],
     "title": "테니스 가방(라켓백) 필수 아이템 체크리스트",
     "excerpt": "고수들의 가방에는 무엇이 들어있을까요? 그립 파우더, 여분 양말, 비상약 등 코트 나갈 때 꼭 챙겨야 할 준비물 리스트.",
     "badge": "최신 글",

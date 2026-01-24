@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "테니스 가방(라켓백) 필수 아이템 체크리스트",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-bag-essentials-checklist" 
+            category="테니스 용품" 
+            tags={["테니스 용품","가방","준비물","체크리스트","꿀팁"]} 
+          />
+
           <CTA />
         </div>
       </Article>

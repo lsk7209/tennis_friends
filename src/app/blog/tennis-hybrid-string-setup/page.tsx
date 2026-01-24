@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-hybrid-string-setup" 
+            category="테니스 장비" 
+            tags={["테니스 장비","하이브리드 스트링","폴리","인조쉽","커스텀"]} 
+          />
+
           <CTA />
         </div>
       </Article>

@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 초보자의 첫 30일 훈련 플랜 — 입문부터 경기 감각까지 4주 완성 로드맵 | 기초·폼·리듬·실전까지 단계별 가이드',

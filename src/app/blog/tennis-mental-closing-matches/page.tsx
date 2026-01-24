@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "매치 포인트 공포증 극복하기 (Choking 방지)",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-mental-closing-matches" 
+            category="테니스 멘탈" 
+            tags={["테니스 멘탈","매치 포인트","긴장","초킹","심리"]} 
+          />
+
           <CTA />
         </div>
       </Article>

@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 경기 점수 체계 완전 이해 — 게임·세트·타이브레이크까지 한 번에 정리 | 초보도 3분이면 이해하는 점수의 구조',

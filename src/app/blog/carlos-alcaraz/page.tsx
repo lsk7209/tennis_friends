@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '카를로스 알카라스 선수 프로필과 스토리',
@@ -242,7 +243,15 @@ export default function CarlosAlcarazBlogPost() {
       {/* FAQ Section */}
       <FAQ items={faqs} />
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="carlos-alcaraz" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '카를로스 알카라스', '선수 프로필', '스토리', 'ATP']} 
+          />
+
+          <CTA />
         </div>
       </Article>
     </div>

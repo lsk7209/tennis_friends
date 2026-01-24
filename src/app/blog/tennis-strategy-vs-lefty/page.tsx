@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "왼손잡이 상대 공략법 (Lefty 대응 전술)",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-strategy-vs-lefty" 
+            category="테니스 전술" 
+            tags={["테니스 전술","왼손잡이","Lefty","서브 리턴","공략법"]} 
+          />
+
           <CTA />
         </div>
       </Article>

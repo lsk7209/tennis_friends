@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-slice-backhand-mastery" 
+            category="테니스 기술" 
+            tags={["테니스 기술","슬라이스","백핸드","Slice","페이스 조절"]} 
+          />
+
           <CTA />
         </div>
       </Article>

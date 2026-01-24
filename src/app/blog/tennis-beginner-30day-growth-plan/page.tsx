@@ -4,6 +4,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 초보자의 30일 성장 루틴 — 실전 감각을 만드는 훈련 플랜 | 기초부터 경기 감각까지 완성하는 한 달 프로그램',

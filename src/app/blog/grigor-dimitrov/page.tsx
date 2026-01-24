@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '그리고르 디미트로프 선수 프로필과 스토리',
@@ -167,7 +168,15 @@ export default function GrigorDimitrovBlogPost() {
       {/* FAQ Section */}
       <FAQ items={faqs} />
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="grigor-dimitrov" 
+            category="
+                {tag}
+              " 
+            tags={['테니스', '그리고르 디미트로프', '선수 프로필', '스토리', '불가리아']} 
+          />
+
+          <CTA />
         </div>
       </Article>
     </div>

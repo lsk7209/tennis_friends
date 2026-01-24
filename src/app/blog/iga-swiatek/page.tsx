@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "이가 시비옹테크: 무결점의 테니스 여제",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="iga-swiatek" 
+            category="테니스" 
+            tags={["테니스","이가 시비옹테크","Iga Swiatek","WTA","선수 프로필"]} 
+          />
+
           <CTA />
         </div>
       </Article>

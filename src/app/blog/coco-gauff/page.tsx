@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "코코 고프: 미국의 차세대 슈퍼스타",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="coco-gauff" 
+            category="테니스" 
+            tags={["테니스","코코 고프","Coco Gauff","US 오픈","신성"]} 
+          />
+
           <CTA />
         </div>
       </Article>

@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "클레이 코트 vs 하드 코트: 움직임과 전략의 차이",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="tennis-court-surfaces-explained" 
+            category="테니스 상식" 
+            tags={["테니스 상식","코트 종류","하드 코트","클레이 코트","전략"]} 
+          />
+
           <CTA />
         </div>
       </Article>

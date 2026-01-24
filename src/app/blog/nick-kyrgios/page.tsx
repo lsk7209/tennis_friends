@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "닉 키리오스: 코트 위의 악동이자 천재",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="nick-kyrgios" 
+            category="테니스" 
+            tags={["테니스","닉 키리오스","Nick Kyrgios","트릭샷","악동"]} 
+          />
+
           <CTA />
         </div>
       </Article>

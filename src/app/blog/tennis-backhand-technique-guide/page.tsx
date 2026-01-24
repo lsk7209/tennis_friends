@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 백핸드의 기술 — 왼손의 리드로 완성하는 정확한 임팩트 | 흔들림 없는 스윙을 만드는 양손 백핸드의 비밀',
@@ -390,7 +391,15 @@ export default function TennisBackhandTechniqueGuidePage() {
         </div>
       </div>
 
-      <CTA />
+                <RelatedPosts 
+            currentSlug="tennis-backhand-technique-guide" 
+            category="
+            백핸드 기술
+          " 
+            tags={['테니스 백핸드', '양손 백핸드', '스윙 기술', '임팩트', '타점', '기술']} 
+          />
+
+          <CTA />
     </Article>
   );
 }

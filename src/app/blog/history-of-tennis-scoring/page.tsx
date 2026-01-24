@@ -5,6 +5,7 @@ import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
+import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: "테니스 점수(0, 15, 30, 40)의 유래와 역사",
@@ -183,6 +184,12 @@ export default function BlogPost() {
           </div>
 
           <FAQ items={faqs} />
+                    <RelatedPosts 
+            currentSlug="history-of-tennis-scoring" 
+            category="테니스 역사" 
+            tags={["테니스 역사","점수 룰","15 30 40","Love","상식"]} 
+          />
+
           <CTA />
         </div>
       </Article>
