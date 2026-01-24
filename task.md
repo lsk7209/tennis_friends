@@ -15,6 +15,12 @@
     - [ ] **장비 가이드** (구매 전환)
         - [x] 테니스 라켓 추천 가이드 2026
         - [x] 테니스화 선택 가이드
+        - [x] 테니스 스트링 완전 가이드 (🚨누락 복구)
+    - [ ] **기술/Pain Point 가이드** (체류 시간)
+        - [/] 테니스 엘보 예방과 재활
+        - [ ] 포핸드 탑스핀 감각 익히기
+        - [ ] 슬라이스 서브 넣는 법
+        - [ ] 테니스장(코트) 예약 꿀팁
     - [ ] **유틸리티 가제** (트래픽 유지)
         - [ ] 스트링 수명 계산기
  for key players (Nadal, Murray, Wawrinka, Nishikori, Kwon, Swiatek, Sabalenka, Gauff, Rybakina, Pegula, Jabeur)
