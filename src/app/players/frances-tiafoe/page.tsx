@@ -134,6 +134,7 @@ export default function FrancesTiafoePage() {
             turnedPro={2015}
             grandSlams={0}
             ranking={20}
+            image="/images/players/frances-tiafoe.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

@@ -134,6 +134,7 @@ export default function HubertHurkaczPage() {
             turnedPro={2015}
             grandSlams={0}
             ranking={8}
+            image="/images/players/hubert-hurkacz.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

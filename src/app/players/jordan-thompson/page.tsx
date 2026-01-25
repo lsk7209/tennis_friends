@@ -134,6 +134,7 @@ export default function JordanThompsonPage() {
                         turnedPro={2013}
                         grandSlams={0}
                         ranking={32}
+            image="/images/players/jordan-thompson.svg"
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

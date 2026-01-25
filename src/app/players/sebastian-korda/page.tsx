@@ -118,6 +118,7 @@ export default function SebastianKordaPage() {
             turnedPro={2018}
             grandSlams={0}
             ranking={26}
+            image="/images/players/sebastian-korda.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

@@ -9,6 +9,7 @@ interface PlayerProfileProps {
     turnedPro: number;
     grandSlams: number;
     ranking: number;
+    image?: string;
 }
 
 export default function PlayerProfileCard({
@@ -20,22 +21,34 @@ export default function PlayerProfileCard({
     turnedPro,
     grandSlams,
     ranking,
+    image,
 }: PlayerProfileProps) {
     return (
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8 border border-gray-100 dark:border-gray-700">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-                <div>
-                    <div className="flex items-center gap-2 mb-1">
-                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white m-0">{name}</h2>
-                        {ranking === 1 && (
-                            <span className="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-0.5 rounded flex items-center gap-1">
-                                <Crown className="w-3 h-3" /> World No.1
-                            </span>
-                        )}
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
-                        <MapPin className="w-4 h-4" />
-                        {country}
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-6">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    {image && (
+                        <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-blue-50 dark:border-blue-900 shadow-inner flex-shrink-0 bg-gray-100 dark:bg-gray-700">
+                            <img
+                                src={image}
+                                alt={name}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    )}
+                    <div>
+                        <div className="flex items-center gap-2 mb-1">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white m-0">{name}</h2>
+                            {ranking === 1 && (
+                                <span className="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-0.5 rounded flex items-center gap-1">
+                                    <Crown className="w-3 h-3" /> World No.1
+                                </span>
+                            )}
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+                            <MapPin className="w-4 h-4" />
+                            {country}
+                        </div>
                     </div>
                 </div>
                 <div className="flex items-center gap-4 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-lg">

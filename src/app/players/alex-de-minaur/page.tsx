@@ -118,6 +118,7 @@ export default function AlexDeMinaurPage() {
             turnedPro={2015}
             grandSlams={0}
             ranking={11}
+            image="/images/players/alex-de-minaur.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

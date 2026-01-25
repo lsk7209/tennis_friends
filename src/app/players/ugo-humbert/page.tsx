@@ -133,6 +133,7 @@ export default function UgoHumbertPage() {
             turnedPro={2016}
             grandSlams={0}
             ranking={15}
+            image="/images/players/ugo-humbert.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

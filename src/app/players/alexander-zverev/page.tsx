@@ -118,6 +118,7 @@ export default function AlexanderZverevPage() {
             turnedPro={2013}
             grandSlams={0}
             ranking={2}
+            image="/images/players/alexander-zverev.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

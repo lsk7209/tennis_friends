@@ -118,6 +118,7 @@ export default function CasperRuudPage() {
             turnedPro={2015}
             grandSlams={0}
             ranking={7}
+            image="/images/players/casper-ruud.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

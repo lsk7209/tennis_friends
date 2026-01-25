@@ -4,18 +4,17 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '테니스 중급자의 경기 운영법 — 포인트 설계와 리듬 조절의 기술 | 이기는 경기의 흐름을 만드는 전략적 사고',
-  description: '중급자에게 필요한 건 기술이 아니라 \'흐름의 감각\'이다. 포인트 설계와 리듬 조절이 승부를 만든다.',
-  keywords: ['테니스 전략', '중급자', '포인트 설계', '리듬 조절', '경기 운영', '승부 전략'],
+  title: '테니스 중급자 승리 전략 — 코트 기하학과 포인트 설계의 기술 | 하이 퍼포먼스 전략 가이드',
+  description: '중급자에서 상급자로 가는 핵심은 스윙이 아니라 전략입니다. 코트 기하학, 인사이드 아웃 포핸드, 빅 포인트 심리학까지 승률을 높이는 모든 기술.',
+  keywords: ['테니스 전략', '중급자 테니스', '코트 기하학', '인사이드 아웃 포핸드', '포인트 설계', '테니스 승리 비결'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-intermediate-match-strategy',
   },
   openGraph: {
-    title: '테니스 중급자의 경기 운영법 — 포인트 설계와 리듬 조절의 기술 | 이기는 경기의 흐름을 만드는 전략적 사고',
-    description: '중급자에게 필요한 건 기술이 아니라 \'흐름의 감각\'이다. 포인트 설계와 리듬 조절이 승부를 만든다.',
+    title: '테니스 중급자 승리 전략 — 코트 기하학과 포인트 설계의 기술',
+    description: '중급자에서 상급자로 가는 핵심은 스윙이 아니라 전략입니다. 코트 기하학, 인사이드 아웃 포핸드, 빅 포인트 심리학까지 승률을 높이는 모든 기술.',
     url: 'https://tennisfriends.co.kr/blog/tennis-intermediate-match-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '테니스 중급자의 경기 운영법 — 포인트 설계와 리듬 조절의 기술 | 이기는 경기의 흐름을 만드는 전략적 사고',
-    description: '중급자에게 필요한 건 기술이 아니라 \'흐름의 감각\'이다. 포인트 설계와 리듬 조절이 승부를 만든다.',
+    title: '테니스 중급자 승리 전략 — 코트 기하학과 포인트 설계의 기술',
+    description: '중급자에서 상급자로 가는 핵심은 스윙이 아니라 전략입니다.',
   },
   robots: {
     index: true,
@@ -33,346 +32,132 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'point-design-concept', text: '1. 포인트 설계란 무엇인가', depth: 2 },
-  { id: 'rhythm-control-by-point', text: '2. 포인트별 리듬 조절 — 빠르게만 치면 진다', depth: 2 },
-  { id: 'opponent-type-strategy', text: '3. 상대 유형별 운영 전략', depth: 2 },
-  { id: 'strategic-thinking-by-section', text: '4. 포인트 구간별 전략적 사고', depth: 2 },
-  { id: 'regional-match-strategy', text: '5. 지역별 경기 운영 전략', depth: 2 },
-  { id: 'match-routine-thinking-flow', text: '6. 실전 루틴 — 경기 중 생각의 흐름 정리', depth: 2 },
-  { id: 'winning-sentence', text: '7. 승부를 가르는 한 문장', depth: 2 },
-  { id: 'conclusion-intermediate-wall', text: "결론 — 중급자의 벽은 \'생각의 속도\'에서 결정된다", depth: 2 },
+  { id: 'court-geometry', text: '1. 코트 기하학: 각도 이등분(Bisecting the Angle)의 원리', depth: 2 },
+  { id: 'inside-out-logic', text: '2. 인사이드 아웃 포핸드: 역방향의 미학', depth: 2 },
+  { id: 'three-phase-strategy', text: '3. 경기 운영 3단계: Neutral → Offense → Finish', depth: 2 },
+  { id: 'big-point-psychology', text: '4. 빅 포인트 심리학: 브레이크 포인트 극복법', depth: 2 },
+  { id: 'momentum-shift', text: '5. 모멘텀 관리: 흐름을 바꾸는 체인지 오버 활용', depth: 2 },
+  { id: 'adaptive-tactics', text: '6. 상황별 맞춤 전술: 카운터 펀처 vs 어그레시브 베이스라이너', depth: 2 },
+  { id: 'conclusion', text: '7. 결론: 전략이 스윙을 압도한다', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '경기 중 리듬이 자꾸 깨집니다.',
-    a: '호흡 루틴을 추가하세요. 3초 복식호흡 후 \'리듬\' 워드를 반복하면 안정됩니다.'
+    q: '중급자가 가장 쉽게 범하는 전술적 실수는?',
+    a: '어려운 상황에서 위너를 노리는 것입니다. 위기일수록 코트 중앙으로 높게 보내는 "안전 가이드라인"을 지키세요.'
   },
   {
-    q: '상대가 너무 공격적일 때는?',
-    a: '공을 깊게 보내 상대를 뒤로 밀고, 랠리를 길게 가져가세요.'
-  },
-  {
-    q: '템포 조절은 어떻게 연습하나요?',
-    a: '속도와 회전을 의도적으로 바꾸는 랠리 연습을 하세요. \'느림→빠름\' 리듬 훈련이 효과적입니다.'
-  },
-  {
-    q: '포인트 설계가 어렵습니다.',
-    a: '시작은 단순하게 하세요. \'백핸드 유도 후 네트 전진\' 패턴부터 익히면 됩니다.'
-  },
-  {
-    q: '코트 환경이 경기 운영에 왜 중요한가요?',
-    a: '지역별 코트 반발과 습도가 공의 속도에 영향을 주기 때문입니다. 환경을 알면 전략이 바뀝니다.'
+    q: '인사이드 아웃 포핸드는 언제 사용하나요?',
+    a: '내 백핸드 쪽으로 오는 비교적 짧거나 느린 공을 돌아서서 포핸드로 공격할 때 사용합니다. 상대의 역동작을 유발하기 좋습니다.'
   }
 ];
 
 export default function TennisIntermediateMatchStrategyPage() {
-  const title = '테니스 중급자의 경기 운영법 — 포인트 설계와 리듬 조절의 기술 | 이기는 경기의 흐름을 만드는 전략적 사고';
-  const excerpt = '중급자에게 필요한 건 기술이 아니라 \'흐름의 감각\'이다. 포인트 설계와 리듬 조절이 승부를 만든다.';
+  const title = '중급자의 벽을 넘는 법: 전략이 곧 실력이다';
+  const excerpt = '중급자에게 필요한 건 더 예쁜 스윙이 아닙니다. 코트의 공간을 읽고 상대의 리듬을 파악하는 "전략적 뇌"를 깨울 시간입니다.';
 
   return (
     <Article slug="tennis-intermediate-match-strategy" date="2024-01-01" title={title} excerpt={excerpt}>
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 p-6 rounded-lg mb-8">
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
-          <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-            전략 가이드
-          </Badge>
-          <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300">
-            중급자
-          </Badge>
+          <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">중급 전략</Badge>
+          <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">전술 최적화</Badge>
         </div>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          테니스 중급자는 '기술은 되지만 경기력이 불안한 단계'입니다. 공은 잘 치지만, 경기에서는 이기지 못하는 이유는 단 하나 — '포인트 설계 능력'이 없기 때문입니다.
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-bold text-center">
+          "테니스는 에러를 줄이는 게임이 아니라, 상대가 에러를 하게 만드는 게임입니다."
         </p>
       </div>
 
       <TOC items={tocItems} />
 
-      <div className="bg-white/50 p-4 rounded-lg mb-4">
-        <p className="text-sm text-gray-600 mb-2">📚 더 깊이 공부해보세요:</p>
-        <ul className="space-y-1 text-sm">
-          <li>• <a href="https://www.tennis.com/pro-game/2021/01/tennis-strategy-guide/789456/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">테니스 전략 가이드 - Tennis.com</a></li>
-          <li>• <a href="https://www.usta.com/en/home/play/tennis-strategy.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">USTA 테니스 전략 가이드</a></li>
-        </ul>
-      </div>
-
-      <section id="point-design-concept" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-blue-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">1</span>
-          포인트 설계란 무엇인가
-        </h2>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          포인트 설계는 단순히 공을 이어가는 것이 아니라, '상대의 약점을 유도해 득점 패턴을 만드는 사고 과정'입니다.
-        </p>
-
-        <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg border-l-4 border-blue-500 mb-6">
-          <h3 className="font-bold text-blue-800 dark:text-blue-200 mb-3">예시:</h3>
-          <div className="space-y-2">
-            <div className="flex items-start gap-3">
-              <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
-              <div>
-                <strong className="text-blue-800 dark:text-blue-200">상대 백핸드로 유도 →</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
-              <div>
-                <strong className="text-blue-800 dark:text-blue-200">짧은 공 발생 →</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
-              <div>
-                <strong className="text-blue-800 dark:text-blue-200">네트 전진 →</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
-              <div>
-                <strong className="text-blue-800 dark:text-blue-200">발리 마무리.</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          이 일련의 흐름이 하나의 '포인트 설계'입니다.
-        </p>
-
-        <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg border-l-4 border-green-500">
-          <p className="text-green-800 dark:text-green-200 text-sm">
-            <strong>💡 핵심:</strong> 중급자 단계부터는 '힘'보다 '흐름'을 다뤄야 합니다.
-          </p>
+      <section id="court-geometry" className="mt-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">1. 코트 기하학: 각도 이등분(Bisecting the Angle)의 원리</h2>
+        <p className="mb-4 text-gray-700 dark:text-gray-300">리커버리 스텝의 목적지는 코트 중앙이 아닙니다. <strong>상대가 칠 수 있는 최대 두 각도의 한가운데</strong>여야 합니다.</p>
+        <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 mb-6">
+          <ul className="space-y-3 text-sm">
+            <li>• <strong>공을 크로스로 쳤을 때:</strong> 중앙보다 약간 뒤쪽/반대쪽으로 이동.</li>
+            <li>• <strong>공을 다운더라인으로 쳤을 때:</strong> 중앙보다 친 방향 쪽으로 더 치우쳐서 대기.</li>
+            <li>• <strong>핵심:</strong> 이렇게 해야 상대의 어느 공격 각도든 최단 거리로 이동할 수 있습니다.</li>
+          </ul>
         </div>
       </section>
 
-      <section id="rhythm-control-by-point" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-purple-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">2</span>
-          포인트별 리듬 조절 — 빠르게만 치면 진다
-        </h2>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          공이 빠르면 강해 보이지만, 리듬이 일정하지 않으면 실수가 쌓입니다. 경기 중에는 '리듬 변주'가 필요합니다.
-        </p>
-
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600">
-            <thead>
-              <tr className="bg-gray-100 dark:bg-gray-800">
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">리듬 변화</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">효과</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-gray-300 dark:border-gray-600 p-3 font-medium">빠른 템포</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">상대 압박, 실수 유도</td>
-              </tr>
-              <tr className="bg-gray-50 dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3 font-medium">느린 템포</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">자신의 타이밍 회복, 에너지 절약</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-300 dark:border-gray-600 p-3 font-medium">템포 혼합</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">상대의 예측 방해</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg border-l-4 border-purple-500">
-          <p className="text-purple-800 dark:text-purple-200 text-sm">
-            <strong>💡 팁:</strong> 듀스 상황에서는 '속도를 줄여서 정확도로 압박'하세요. 급할수록 느리게 치는 것이 상급자의 리듬입니다.
-          </p>
-        </div>
-      </section>
-
-      <section id="opponent-type-strategy" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">3</span>
-          상대 유형별 운영 전략
-        </h2>
-
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600">
-            <thead>
-              <tr className="bg-gray-100 dark:bg-gray-800">
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">상대 유형</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">특징</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">대응 전략</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-gray-300 dark:border-gray-600 p-3 font-medium">공격형</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">빠른 타구, 짧은 랠리</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">깊은 탑스핀으로 체력전 유도</td>
-              </tr>
-              <tr className="bg-gray-50 dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3 font-medium">수비형</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">안정적, 실수 적음</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">각도 넓게 공략 + 네트 전진</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-300 dark:border-gray-600 p-3 font-medium">감각형</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">변화 많음, 속임수 사용</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">리듬 일정하게 유지, 예측 배제</td>
-              </tr>
-              <tr className="bg-gray-50 dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3 font-medium">파워형</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">서브·포핸드 중심</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">리턴을 깊게, 수비 후 카운터</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500">
-          <p className="text-indigo-800 dark:text-indigo-200 text-sm">
-            <strong>핵심 문장:</strong> "상대를 이기는 게 아니라, 리듬을 깨뜨리는 것이 목표다."
-          </p>
-        </div>
-      </section>
-
-      <section id="strategic-thinking-by-section" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
-          포인트 구간별 전략적 사고
-        </h2>
-
-        <div className="space-y-4 mb-6">
-          <div className="bg-pink-50 dark:bg-pink-950 p-4 rounded-lg">
-            <h3 className="font-bold text-pink-800 dark:text-pink-200 mb-2">1~3구: 주도권 설정</h3>
-            <p className="text-pink-700 dark:text-pink-300 text-sm">강한 서브·깊은 리턴으로 주도권 확보.</p>
-          </div>
-          <div className="bg-pink-50 dark:bg-pink-950 p-4 rounded-lg">
-            <h3 className="font-bold text-pink-800 dark:text-pink-200 mb-2">4~6구: 상대 리듬 파악</h3>
-            <p className="text-pink-700 dark:text-pink-300 text-sm">속도 조절, 스핀 변화로 상대 패턴 분석.</p>
-          </div>
-          <div className="bg-pink-50 dark:bg-pink-950 p-4 rounded-lg">
-            <h3 className="font-bold text-pink-800 dark:text-pink-200 mb-2">7구 이후: 체력전</h3>
-            <p className="text-pink-700 dark:text-pink-300 text-sm">상대 움직임 읽고 짧은 각으로 마무리.</p>
-          </div>
-        </div>
-
-        <div className="bg-cyan-50 dark:bg-cyan-950 p-4 rounded-lg border-l-4 border-cyan-500">
-          <p className="text-cyan-800 dark:text-cyan-200 text-sm">
-            <strong>💡 팁:</strong> 5구 이상 이어질 경우, 실수는 타이밍보다 '집중력 저하' 때문입니다. 포인트 중 호흡을 조절하세요.
-          </p>
-        </div>
-      </section>
-
-      <section id="regional-match-strategy" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-cyan-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-          지역별 경기 운영 전략
-        </h2>
-
-        <div className="space-y-4 mb-6">
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">서울·경기 (하드코트):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">반발 빠름 → 템포 조절 중요, 스핀 깊이 유지.</p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">부산 (습한 환경):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">공 무거움 → 에너지 배분형 운영 필요.</p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">대구 (건조·고온):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">공 튐 강함 → 빠른 첫 스트라이크로 짧은 포인트 전개.</p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">제주 (바람 많음):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">공 흔들림 큼 → 네트 플레이 비중 확대.</p>
-          </div>
-        </div>
-
-        <div className="bg-cyan-50 dark:bg-cyan-950 p-4 rounded-lg border-l-4 border-cyan-500">
-          <p className="text-cyan-800 dark:text-cyan-200 text-sm">
-            <strong>📍 GEO 팁:</strong> 환경에 맞게 리듬을 조절하는 것이 진짜 '전략적 운영'입니다.
-          </p>
-        </div>
-      </section>
-
-      <section id="match-routine-thinking-flow" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-teal-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
-          실전 루틴 — 경기 중 생각의 흐름 정리
-        </h2>
-
-        <div className="space-y-4 mb-6">
-          <div className="bg-teal-50 dark:bg-teal-950 p-4 rounded-lg">
-            <h3 className="font-bold text-teal-800 dark:text-teal-200 mb-2">1️⃣ 서브 전 — 목표 지역 1곳만 상상.</h3>
-          </div>
-          <div className="bg-teal-50 dark:bg-teal-950 p-4 rounded-lg">
-            <h3 className="font-bold text-teal-800 dark:text-teal-200 mb-2">2️⃣ 랠리 중 — 다음 구상하지 말고 '현재 공'만 집중.</h3>
-          </div>
-          <div className="bg-teal-50 dark:bg-teal-950 p-4 rounded-lg">
-            <h3 className="font-bold text-teal-800 dark:text-teal-200 mb-2">3️⃣ 포인트 후 — 루틴 워드 "리듬"으로 감정 리셋.</h3>
-          </div>
-        </div>
-
-        <div className="bg-orange-50 dark:bg-orange-950 p-4 rounded-lg border-l-4 border-orange-500">
-          <p className="text-orange-800 dark:text-orange-200 text-sm">
-            <strong>멘탈 팁:</strong> 실수를 분석하지 말고 '패턴'을 점검하세요. 감정보다 구조를 보는 것이 전략적 사고의 시작입니다.
-          </p>
-        </div>
-      </section>
-
-      <section id="winning-sentence" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-red-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">7</span>
-          승부를 가르는 한 문장
-        </h2>
-
-        <div className="bg-red-50 dark:bg-red-950 p-4 rounded-lg border-l-4 border-red-500">
-          <p className="text-red-800 dark:text-red-200 text-center text-lg font-medium">
-            "공을 이기려 하지 말고, 흐름을 이겨라."
-          </p>
-        </div>
-
-        <p className="text-gray-700 dark:text-gray-300 mt-6 leading-relaxed">
-          포인트 하나하나의 흐름을 설계하는 순간, 경기 전체의 리듬을 주도할 수 있습니다. 중급자는 이제 기술이 아니라 <strong>흐름의 플레이어</strong>로 진화해야 합니다.
-        </p>
-      </section>
-
-      <section id="conclusion-intermediate-wall" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-orange-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">8</span>
-          결론 — 중급자의 벽은 '생각의 속도'에서 결정된다
-        </h2>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          테니스는 근육보다 사고의 스포츠입니다. 스윙 속도보다 빠른 것은 '판단'입니다. 포인트 설계, 리듬 조절, 환경 인식 — 이 세 가지가 중급자를 상급자로 이끄는 다리입니다. 지금 필요한 건 더 강한 샷이 아니라, 더 깊은 생각입니다.
-        </p>
-      </section>
-
-      
-      {/* FAQ Section */}
-      <FAQ items={faqs} />
-
-      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
-        <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>
+      <section id="inside-out-logic" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">2. 인사이드 아웃 포핸드: 역방향의 미학</h2>
+        <p className="mb-6">자신의 백핸드 쪽 공을 포핸드로 처리하는 기술은 중급자의 가장 강력한 무기입니다.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link href="/blog/tennis-mental-focus-recovery">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
-              <CardContent className="p-4">
-                <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
-                  전략적 멘탈
-                </Badge>
-                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
-                  테니스 경기 중 멘탈 붕괴 방지법 — 실수 후 3초 회복 루틴의 힘
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  실수 후 3초 회복 루틴으로 멘탈을 회복하고 경기 흐름을 되찾는 법. 감정 제어·집중 루틴·GEO별 멘탈 관리 전략.
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
+          <Card className="bg-blue-50 dark:bg-blue-900/10 border-blue-100">
+            <CardContent className="p-5">
+              <h4 className="font-bold text-blue-800 mb-2">Inside-Out</h4>
+              <p className="text-xs">내 백핸드 쪽에서 상대의 백핸드 쪽으로 보내는 대각선 샷. 안전하지만 상대를 구석으로 멉니다.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-indigo-50 dark:bg-indigo-950 border-indigo-100">
+            <CardContent className="p-5">
+              <h4 className="font-bold text-indigo-800 mb-2">Inside-In</h4>
+              <p className="text-xs">내 백핸드 쪽에서 상대의 포핸드 쪽 라인을 따라 치는 샷. 위험부담이 크지만 결정구로 탁월합니다.</p>
+            </CardContent>
+          </Card>
         </div>
-      </div>
+      </section>
+
+      <section id="three-phase-strategy" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">3. 경기 운영 3단계: Neutral → Offense → Finish</h2>
+        <div className="relative border-l-2 border-blue-500 ml-4 pl-8 space-y-8">
+          <div className="relative">
+            <span className="absolute -left-11 top-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">01</span>
+            <h4 className="font-bold text-sm">NEUTRAL (중립)</h4>
+            <p className="text-xs text-slate-600">깊은 크로스 코트 랠리로 실수를 줄이며 기회를 엿보는 단계.</p>
+          </div>
+          <div className="relative">
+            <span className="absolute -left-11 top-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">02</span>
+            <h4 className="font-bold text-sm">OFFENSE (공격기회)</h4>
+            <p className="text-xs text-slate-600">상대의 짧은 볼을 놓치지 않고 각도를 벌리거나 베이스라인 안쪽으로 진입.</p>
+          </div>
+          <div className="relative">
+            <span className="absolute -left-11 top-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-[10px] text-white font-bold">03</span>
+            <h4 className="font-bold text-sm">FINISH (마무리)</h4>
+            <p className="text-xs text-slate-600">발리, 오버헤드, 또는 확실한 위너로 포인트를 획득.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="big-point-psychology" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">4. 빅 포인트 심리학: 브레이크 포인트 극복법</h2>
+        <p className="mb-4">"40-40 듀스나 브레이크 포인트에서는 상대를 이기려 하지 말고, <strong>상대가 지게 만드세요.</strong>"</p>
+        <Card className="border-dashed border-2">
+          <CardContent className="p-6">
+            <ul className="text-xs space-y-3 text-slate-600">
+              <li>• 서브 성공률 100%를 목표로 속도를 70%로 낮추기.</li>
+              <li>• 상대의 약점(보통 백핸드)으로만 5회 이상 랠리 보내기.</li>
+              <li>• 네트 높이를 평소보다 50cm 높게 설정하여 에러 확률 0% 추구.</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section id="adaptive-tactics" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">5. 상황별 맞춤 전술</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl">
+            <h5 className="font-bold text-sm text-blue-700">Counter-Puncher</h5>
+            <p className="text-[10px]">상대의 힘을 이용. 슬라이스와 로브를 섞어 상대의 리듬을 뺏고 실수를 유도.</p>
+          </div>
+          <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl">
+            <h5 className="font-bold text-sm text-red-700">Aggressive Baseliner</h5>
+            <p className="text-[10px]">먼저 주도권 잡기. 짧은 볼은 무조건 어프로치 샷으로 연결하여 상대를 압박.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">6. 결론: 전략이 스윙을 압도한다</h2>
+        <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          테니스는 결국 확률의 예술입니다. 더 멋진 폼보다 더 현명한 코스 선택이 당신에게 승리를 안겨줄 것입니다. 오늘부터는 라켓보다 <strong>코트 전체를 보는 시야</strong>를 먼저 확보하세요.
+        </p>
+      </section>
+
+      <FAQ items={faqs} />
     </Article>
   );
 }

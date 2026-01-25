@@ -133,7 +133,8 @@ export default function MatteoBerrettiniPage() {
                         plays="Right-handed (Two-handed backhand)"
                         turnedPro={2015}
                         grandSlams={0}
-                        ranking={45} // 랭킹은 변동 가능하므로 대략적인 최근 랭킹
+                        ranking={45}
+            image="/images/players/matteo-berrettini.png" // 랭킹은 변동 가능하므로 대략적인 최근 랭킹
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

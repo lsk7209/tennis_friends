@@ -118,6 +118,7 @@ export default function CarlosAlcarazPage() {
             turnedPro={2018}
             grandSlams={4}
             ranking={2}
+            image="/images/players/carlos-alcaraz.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

@@ -193,7 +193,8 @@ export default function TennisElbowPreventionGuidePage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Card className="bg-white dark:bg-gray-800 overflow-hidden">
                         <div className="h-40 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400">
-                            (손목 신전 스트레칭 이미지)
+                            <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center text-3xl mb-2">🖐️</div>
+                            <span className="text-gray-500 font-medium">손목 신전 스트레칭 등 이미지 업데이트 예정</span>
                         </div>
                         <CardContent className="p-4">
                             <h3 className="font-bold mb-2">1. 손목 신전 스트레칭</h3>
@@ -204,7 +205,8 @@ export default function TennisElbowPreventionGuidePage() {
                     </Card>
                     <Card className="bg-white dark:bg-gray-800 overflow-hidden">
                         <div className="h-40 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400">
-                            (악력기/고무공 운동 이미지)
+                            <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center text-3xl mb-2">✊</div>
+                            <span className="text-gray-500 font-medium">악력 운동 이미지 업데이트 예정</span>
                         </div>
                         <CardContent className="p-4">
                             <h3 className="font-bold mb-2">2. 전완근 강화 운동</h3>

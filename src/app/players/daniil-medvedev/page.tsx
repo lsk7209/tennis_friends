@@ -118,6 +118,7 @@ export default function DaniilMedvedevPage() {
             turnedPro={2014}
             grandSlams={1}
             ranking={4}
+            image="/images/players/daniil-medvedev.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

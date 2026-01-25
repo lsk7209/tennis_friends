@@ -134,6 +134,7 @@ export default function MatteoArnaldiPage() {
                         turnedPro={2019}
                         grandSlams={0}
                         ranking={35}
+            image="/images/players/matteo-arnaldi.svg"
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

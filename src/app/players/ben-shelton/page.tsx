@@ -118,6 +118,7 @@ export default function BenSheltonPage() {
             turnedPro={2022}
             grandSlams={0}
             ranking={14}
+            image="/images/players/ben-shelton.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

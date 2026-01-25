@@ -134,6 +134,7 @@ export default function HolgerRunePage() {
             turnedPro={2020}
             grandSlams={0}
             ranking={13}
+            image="/images/players/holger-rune.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

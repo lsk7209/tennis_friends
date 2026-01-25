@@ -118,6 +118,7 @@ export default function LorenzoMusettiPage() {
             turnedPro={2019}
             grandSlams={0}
             ranking={25}
+            image="/images/players/lorenzo-musetti.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

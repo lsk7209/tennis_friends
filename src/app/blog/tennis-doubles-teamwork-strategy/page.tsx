@@ -3,19 +3,17 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '테니스 복식의 팀워크 전략 — 호흡·시선·커뮤니케이션으로 완성하는 듀오 플레이 | 두 사람이 하나처럼 움직이는 법',
-  description: '복식은 기술이 아니라 호흡의 경기다. 시선, 커뮤니케이션, 포지션이 하나로 맞을 때 비로소 승리가 시작된다.',
-  keywords: ['테니스 복식', '팀워크', '커뮤니케이션', '시선', '포지셔닝', '듀오 플레이'],
+  title: '테니스 복식 마스터 가이드 — 진화된 포메이션과 팀워크의 과학 | 승률을 높이는 전략적 듀오 플레이',
+  description: '테니스 복식은 단순히 두 명이 치는 경기가 아닙니다. 호주형(Australian) 포메이션, I-포메이션, 포칭(Poaching) 타이밍 등 고급 전술과 팀워크 전략.',
+  keywords: ['테니스 복식', '호주형 포메이션', 'I-포메이션', '포칭', '복식 전략', '복식 팀워크', '테니스 전술'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-doubles-teamwork-strategy',
   },
   openGraph: {
-    title: '테니스 복식의 팀워크 전략 — 호흡·시선·커뮤니케이션으로 완성하는 듀오 플레이 | 두 사람이 하나처럼 움직이는 법',
-    description: '복식은 기술이 아니라 호흡의 경기다. 시선, 커뮤니케이션, 포지션이 하나로 맞을 때 비로소 승리가 시작된다.',
+    title: '테니스 복식 마스터 가이드 — 진화된 포메이션과 팀워크의 과학',
+    description: '테니스 복식은 단순히 두 명이 치는 경기가 아닙니다. 호주형(Australian) 포메이션, I-포메이션, 포칭(Poaching) 타이밍 등 고급 전술과 팀워크 전략.',
     url: 'https://tennisfriends.co.kr/blog/tennis-doubles-teamwork-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -23,8 +21,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '테니스 복식의 팀워크 전략 — 호흡·시선·커뮤니케이션으로 완성하는 듀오 플레이 | 두 사람이 하나처럼 움직이는 법',
-    description: '복식은 기술이 아니라 호흡의 경기다. 시선, 커뮤니케이션, 포지션이 하나로 맞을 때 비로소 승리가 시작된다.',
+    title: '테니스 복식 마스터 가이드 — 진화된 포메이션과 팀워크의 과학',
+    description: '테니스 복식은 단순히 두 명이 치는 경기가 아닙니다.',
   },
   robots: {
     index: true,
@@ -33,375 +31,103 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'doubles-essence-breathing-not-space', text: "1. 복식의 본질 — 공간이 아니라 \'호흡\'을 나누는 경기", depth: 2 },
-  { id: 'communication-structure-signals-over-words', text: "2. 커뮤니케이션의 구조화 — \'말보다 신호\'", depth: 2 },
-  { id: 'positioning-court-as-xy-axes', text: "3. 포지셔닝 — 코트를 \'X축과 Y축\'으로 나눠라", depth: 2 },
-  { id: 'geo-doubles-strategy', text: '4. GEO별 복식 운영 전략', depth: 2 },
-  { id: 'mistake-recovery-routine-teamwork-in-crisis', text: '5. 실수 후 루틴 — 팀워크는 위기 때 드러난다', depth: 2 },
-  { id: 'doubles-training-routine-20min-example', text: '6. 복식 훈련 루틴 (20분 루틴 예시)', depth: 2 },
-  { id: 'teamwork-philosophy-trust-over-skill', text: '7. 팀워크의 철학 — 실력보다 신뢰', depth: 2 },
+  { id: 'advanced-formations', text: '1. 고급 포메이션: 호주형(Australian) & I-포메이션', depth: 2 },
+  { id: 'poaching-mechanics', text: '2. 포칭(Poaching)의 미학: 0.1초의 인터셉트 타이밍', depth: 2 },
+  { id: 'behind-back-signals', text: '3. 비언어적 커뮤니케이션: 등 뒤의 수신호', depth: 2 },
+  { id: 'target-the-middle', text: '4. 센터 공략: 왜 중앙이 복식의 금광인가?', depth: 2 },
+  { id: 'partner-psychology', text: '5. 파트너 심리학: "우리"라는 리듬을 유지하는 법', depth: 2 },
+  { id: 'conclusion', text: '6. 결론: 복식은 합이 아니라 곱이다', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '복식 경기에서 파트너와 호흡이 잘 안 맞아요.',
-    a: '포인트 전 신호를 간결하게 정하세요. 손 신호 3가지로 루틴을 단순화하면 리듬이 맞습니다.'
+    q: '포칭을 나갔다가 뚫리면 어떻게 하나요?',
+    a: '뚫리는 것은 괜찮습니다. 중요한 것은 "나간다"는 의지입니다. 한 번의 포칭 성공이 상대의 리턴 정확도를 평소보다 30% 떨어뜨립니다.'
   },
   {
-    q: '복식 중 실수 후 분위기를 바꾸는 법은?',
-    a: '즉시 \'괜찮아\'라고 말하고, 시선을 맞추세요. 감정보다 리듬이 우선입니다.'
-  },
-  {
-    q: '포지션 교대를 자주 해야 하나요?',
-    a: '상대의 방향 예측에 따라 다릅니다. 예측이 읽혔을 땐 교대를 통해 흐름을 깨세요.'
-  },
-  {
-    q: 'GEO별 복식 운영 전략이 왜 중요한가요?',
-    a: '기후·코트 속도에 따라 공의 반응이 달라집니다. 환경에 맞춰 역할을 조정해야 합니다.'
-  },
-  {
-    q: '복식 훈련 루틴은 얼마나 자주 해야 하나요?',
-    a: '주 2회 이상, 20분씩 꾸준히 루틴 훈련을 반복하면 팀워크가 안정됩니다.'
+    q: '파트너가 계속 로브를 허용합니다.',
+    a: '파트너에게 뒤로 조금 더 물러나라고 조언하거나, 본인이 활발히 스위칭(Switching)하여 커버해주는 전략이 필요합니다.'
   }
 ];
 
 export default function TennisDoublesTeamworkStrategyPage() {
-  const title = '테니스 복식의 팀워크 전략 — 호흡·시선·커뮤니케이션으로 완성하는 듀오 플레이 | 두 사람이 하나처럼 움직이는 법';
-  const excerpt = '복식은 기술이 아니라 호흡의 경기다. 시선, 커뮤니케이션, 포지션이 하나로 맞을 때 비로소 승리가 시작된다.';
+  const title = '복식의 완성: 두 사람이 하나로 움직이는 시스템';
+  const excerpt = '복식은 실력의 합이 아닙니다. 두 사람의 움직임이 시너지를 낼 때, 코트는 훨씬 좁아 보이고 상대의 빈틈은 넓어 보입니다.';
 
   return (
     <Article slug="tennis-doubles-teamwork-strategy" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-red-50 to-pink-50 dark:from-red-950 dark:to-pink-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
-          <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">
-            복식 팀워크
-          </Badge>
-          <Badge className="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300">
-            듀오 플레이
-          </Badge>
+          <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">복식 전술</Badge>
+          <Badge className="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300">팀워크 사이언스</Badge>
         </div>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          복식은 단순히 '2명이 함께 치는 경기'가 아닙니다. 복식은 <strong>두 사람이 하나처럼 움직이는 리듬의 경기</strong>입니다. 기술보다 중요한 것은 시선과 호흡, 그리고 말 한마디로 만들어지는 신뢰입니다.
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-bold text-center italic">
+          "복식은 파트너가 잘못했을 때 내가 그 자리를 메우는 게임입니다."
         </p>
       </div>
 
       <TOC items={tocItems} />
 
-      <div className="bg-white/50 p-4 rounded-lg mb-4">
-        <p className="text-sm text-gray-600 mb-2">📚 더 깊이 공부해보세요:</p>
-        <ul className="space-y-1 text-sm">
-          <li>• <a href="https://www.tennis.com/pro-game/2021/01/doubles-strategy-guide/789456/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">테니스 복식 전략 가이드 - Tennis.com</a></li>
-          <li>• <a href="https://www.usta.com/en/home/play/tennis-basics/doubles.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">USTA 복식 가이드</a></li>
+      <section id="advanced-formations" className="mt-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">1. 고급 포메이션: 호주형(Australian) & I-포메이션</h2>
+        <p className="mb-4">상대 리턴너의 리듬을 완전히 무너뜨리는 필살기입니다.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <Card className="bg-slate-50 dark:bg-slate-900">
+            <CardContent className="p-5">
+              <h4 className="font-bold text-red-600 mb-2">Australian Formation</h4>
+              <p className="text-xs">서버와 네트 플레이어가 같은 사이드에 서서 상대의 강력한 크로스 리턴을 원천 차단합니다. 상대에게 어려운 다운더라인 리턴을 강요합니다.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-slate-50 dark:bg-slate-900">
+            <CardContent className="p-5">
+              <h4 className="font-bold text-pink-600 mb-2">I-Formation</h4>
+              <p className="text-xs">네트 플레이어가 센터 표시 바로 위에 낮게 웅크려 앉습니다. 서브 직후 좌/우 어디로 튈지 모르게 하여 리턴너에게 극심한 심리적 압박을 줍니다.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="poaching-mechanics" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">2. 포칭(Poaching)의 미학: 인터셉트 타이밍</h2>
+        <p className="mb-4">네트 플레이어의 존재 목적은 단순히 발리를 하는 것이 아니라, 상대를 <strong>'감시'</strong>하는 것입니다.</p>
+        <div className="p-6 bg-slate-900 text-white rounded-2xl">
+          <h4 className="text-pink-400 font-bold mb-3">Poaching Rhythm:</h4>
+          <ol className="text-xs space-y-3">
+            <li>1. 서버의 라켓이 공에 닿는 순간 <strong>스플릿 스텝</strong>.</li>
+            <li>2. 리턴너의 라켓 각도가 열리는 순간 <strong>대각선 전방</strong>으로 대담하게 돌진.</li>
+            <li>3. 발리는 짧고 날카롭게 상대 네트 플레이어의 발밑을 겨냥.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="behind-back-signals" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">3. 비언어적 커뮤니케이션: 등 뒤의 수신호</h2>
+        <p className="mb-4">말은 상대에게도 들립니다. 등 뒤에서 손가락으로 다음 플레이를 지시하세요.</p>
+        <div className="flex flex-wrap gap-4">
+          <div className="px-4 py-2 bg-red-100 text-red-800 rounded-full text-xs font-bold">✊ 주먹: Stay (그대로 유지)</div>
+          <div className="px-4 py-2 bg-pink-100 text-pink-800 rounded-full text-xs font-bold">✋ 보: Poach (인터셉트 나감)</div>
+          <div className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-xs font-bold">👆 검지: Wide Serve (와이드 서브 요청)</div>
+        </div>
+      </section>
+
+      <section id="target-the-middle" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">4. 센터 공략: 왜 중앙이 복식의 금광인가?</h2>
+        <p className="text-sm leading-relaxed mb-4">"누가 칠지 모르는 사이 공간을 뚫어라."</p>
+        <ul className="list-disc pl-5 space-y-2 text-xs text-slate-700 dark:text-slate-300">
+          <li><strong>의사결정 방해:</strong> 두 사람이 공을 서로 미루거나 동시에 달려들게 만듭니다.</li>
+          <li><strong>각도 축소:</strong> 중앙에서 발리를 하면 상대가 각도를 벌려 치기 매우 어렵습니다.</li>
+          <li><strong>에러 유도:</strong> 중앙은 네트가 가장 낮은 지점입니다. 득점 확률이 가장 높습니다.</li>
         </ul>
-      </div>
+      </section>
 
-      <section id="doubles-essence-breathing-not-space" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-red-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">1</span>
-          복식의 본질 — 공간이 아니라 '호흡'을 나누는 경기
-        </h2>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          복식은 공간 분할이 아닌 '감각의 분할'입니다. 상대보다 빠른 스윙보다, 파트너보다 느리지 않은 타이밍이 더 중요합니다.
+      <section id="conclusion" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">5. 결론: 복식은 합이 아니라 곱이다</h2>
+        <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          한 명의 스타 플레이어보다 <strong>두 명의 조화로운 플레이어</strong>가 항상 이깁니다. 파트너의 실수를 메우고, 서로의 강점을 극대화하는 시스템을 구축하세요. 코트는 두 명을 위해 충분히 넓지만, 팀워크가 있는 자들에게는 놀이터가 될 것입니다.
         </p>
-
-        <div className="bg-red-50 dark:bg-red-950 p-4 rounded-lg border-l-4 border-red-500 mb-6">
-          <p className="text-red-800 dark:text-red-200 text-sm mb-3">
-            <strong>핵심 문장:</strong> "복식의 승자는 말을 적게 하지만, 시선은 자주 나눈다."
-          </p>
-        </div>
-
-        <div className="bg-pink-50 dark:bg-pink-950 p-4 rounded-lg border-l-4 border-pink-500">
-          <h3 className="font-bold text-pink-800 dark:text-pink-200 mb-3">팀워크의 3요소:</h3>
-          <div className="space-y-2">
-            <div className="flex items-start gap-3">
-              <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
-              <div>
-                <strong className="text-pink-800 dark:text-pink-200">시선 — 상대보다 파트너를 먼저 본다.</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
-              <div>
-                <strong className="text-pink-800 dark:text-pink-200">리듬 — 공보다 파트너의 스텝을 듣는다.</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
-              <div>
-                <strong className="text-pink-800 dark:text-pink-200">신뢰 — 실수 후에도 미소로 호흡을 맞춘다.</strong>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
-      <section id="communication-structure-signals-over-words" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">2</span>
-          커뮤니케이션의 구조화 — '말보다 신호'
-        </h2>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          복식에서 긴 대화는 오히려 혼란을 만듭니다. 따라서 간결한 신호 시스템이 필요합니다.
-        </p>
-
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600">
-            <thead>
-              <tr className="bg-gray-100 dark:bg-gray-800">
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">신호</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">의미</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">상황</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">👆 (엄지 위)</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">네트 전진</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">리턴 약할 때</td>
-              </tr>
-              <tr className="bg-gray-50 dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">✋ (손바닥 펴기)</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">중앙 수비</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">서브 강할 때</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">✊ (주먹 쥠)</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">포지션 교대</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">리턴 방향 예측 시</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="bg-red-50 dark:bg-red-950 p-4 rounded-lg border-l-4 border-red-500">
-          <p className="text-red-800 dark:text-red-200 text-sm">
-            <strong>💡 루틴 팁:</strong> 매 포인트 전 3초 동안 파트너와 눈을 맞추고, 짧은 손 신호로 전략을 정리하세요.
-          </p>
-        </div>
-      </section>
-
-      <section id="positioning-court-as-xy-axes" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-red-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">3</span>
-          포지셔닝 — 코트를 'X축과 Y축'으로 나눠라
-        </h2>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          복식은 단순히 좌우 분할이 아닙니다. 코트를 <strong>대각선으로 나누는 X축 전략</strong>이 중요합니다.
-        </p>
-
-        <div className="bg-red-50 dark:bg-red-950 p-4 rounded-lg border-l-4 border-red-500 mb-6">
-          <h3 className="font-bold text-red-800 dark:text-red-200 mb-3">기본 형태:</h3>
-          <div className="space-y-2">
-            <div className="flex items-start gap-3">
-              <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">•</span>
-              <div>
-                <strong className="text-red-800 dark:text-red-200">공이 오른쪽으로 갈 때 → 파트너는 왼쪽 대각선 커버.</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">•</span>
-              <div>
-                <strong className="text-red-800 dark:text-red-200">네트 플레이 시 → 네트 전진자 1명, 후방자 1명 유지.</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">•</span>
-              <div>
-                <strong className="text-red-800 dark:text-red-200">로브 발생 시 → 후방자 커버, 전진자는 중앙으로 복귀.</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-pink-50 dark:bg-pink-950 p-4 rounded-lg border-l-4 border-pink-500">
-          <p className="text-pink-800 dark:text-pink-200 text-sm">
-            <strong>💡 포인트:</strong> 두 선수의 간격은 3m 이내, 항상 대각선 시야를 공유해야 합니다.
-          </p>
-        </div>
-      </section>
-
-      <section id="geo-doubles-strategy" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-purple-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
-          GEO별 복식 운영 전략
-        </h2>
-
-        <div className="space-y-4 mb-6">
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">서울·경기 (하드코트):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">반발 빠름 → 포지션 짧게, 네트 전진 비율 ↑.</p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">부산 (습도 높음):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">공 무거움 → 롱 랠리 대비, 후방 대기 유지.</p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">대구 (건조·고온):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">공 튐 강함 → 발리 중심 공격형 운영.</p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">제주 (바람 많음):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">바람 영향 큼 → 커뮤니케이션 빈도 ↑, 로브 대응 중요.</p>
-          </div>
-        </div>
-
-        <div className="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg border-l-4 border-purple-500">
-          <p className="text-purple-800 dark:text-purple-200 text-sm">
-            <strong>📍 GEO 팁:</strong> 환경별로 서로의 역할을 미리 정하면 경기 흐름이 훨씬 안정됩니다.
-          </p>
-        </div>
-      </section>
-
-      <section id="mistake-recovery-routine-teamwork-in-crisis" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-          실수 후 루틴 — 팀워크는 위기 때 드러난다
-        </h2>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          복식에서 가장 흔한 실수는 '서로의 실수에 반응하는 감정'입니다.
-        </p>
-
-        <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg border-l-4 border-indigo-500 mb-6">
-          <h3 className="font-bold text-indigo-800 dark:text-indigo-200 mb-3">루틴:</h3>
-          <div className="space-y-2">
-            <div className="flex items-start gap-3">
-              <span className="bg-indigo-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
-              <div>
-                <strong className="text-indigo-800 dark:text-indigo-200">실수 직후 — "괜찮아" 한마디 + 손 터치.</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-indigo-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
-              <div>
-                <strong className="text-indigo-800 dark:text-indigo-200">다음 포인트 준비 중 — 시선 교환, 짧은 호흡 동기화.</strong>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="bg-indigo-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
-              <div>
-                <strong className="text-indigo-800 dark:text-indigo-200">포인트 시작 전 — 루틴 워드 "리듬"으로 감정 리셋.</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-teal-50 dark:bg-teal-950 p-4 rounded-lg border-l-4 border-teal-500">
-          <p className="text-teal-800 dark:text-teal-200 text-sm">
-            <strong>💡 TIP:</strong> 실수 직후의 표정이 다음 포인트의 승패를 결정합니다.
-          </p>
-        </div>
-      </section>
-
-      <section id="doubles-training-routine-20min-example" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-teal-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
-          복식 훈련 루틴 (20분 루틴 예시)
-        </h2>
-
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600">
-            <thead>
-              <tr className="bg-gray-100 dark:bg-gray-800">
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">구간</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">시간</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">내용</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">0~5분</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">시선 훈련</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">파트너의 움직임만 바라보기</td>
-              </tr>
-              <tr className="bg-gray-50 dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">5~10분</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">커뮤니케이션 훈련</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">신호 교환, 타이밍 체크</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">10~15분</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">네트 전진 연습</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">2구 후 전진 타이밍 연습</td>
-              </tr>
-              <tr className="bg-gray-50 dark:bg-gray-800">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">15~20분</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">포인트 루틴 반복</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">실수 후 복귀 리듬 점검</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="bg-teal-50 dark:bg-teal-950 p-4 rounded-lg border-l-4 border-teal-500">
-          <p className="text-teal-800 dark:text-teal-200 text-sm">
-            <strong>💡 훈련 목표:</strong> 말을 줄이고 '감각을 공유하는 시간'을 늘리세요.
-          </p>
-        </div>
-      </section>
-
-      <section id="teamwork-philosophy-trust-over-skill" className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-cyan-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">7</span>
-          팀워크의 철학 — 실력보다 신뢰
-        </h2>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-          복식은 실력의 합이 아니라 신뢰의 합입니다. 서로의 템포를 존중하고, 상대보다 먼저 파트너를 배려할 때 진짜 팀이 만들어집니다.
-        </p>
-
-        <div className="bg-cyan-50 dark:bg-cyan-950 p-4 rounded-lg border-l-4 border-cyan-500">
-          <p className="text-cyan-800 dark:text-cyan-200 text-sm mb-4">
-            <strong>결론:</strong> 복식에서 이기는 법은 하나 — "같이 움직이는 리듬을 만들어라."
-          </p>
-          <p className="text-cyan-800 dark:text-cyan-200 text-sm">
-            팀워크는 기술이 아니라 태도입니다. 오늘부터는 공보다 파트너를 먼저 보고, 실수보다 리듬을 먼저 회복하세요. 그러면 두 사람이 아니라 '하나의 팀'이 코트를 지배하게 됩니다.
-          </p>
-        </div>
-      </section>
-
-      
-      {/* FAQ Section */}
       <FAQ items={faqs} />
-
-      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
-        <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link href="/blog/tennis-power-of-routine">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
-              <CardContent className="p-4">
-                <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
-                  루틴의 힘
-                </Badge>
-                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
-                  테니스에서 루틴의 힘 — 일관된 습관이 경기력을 만든다
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  루틴이 집중력과 경기력을 높이는 이유. 워밍업부터 멘탈 복구까지, 하루 루틴으로 완성하는 일관된 테니스 감각.
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
-          <Link href="/blog/tennis-mental-focus-recovery">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
-              <CardContent className="p-4">
-                <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
-                  멘탈 루틴
-                </Badge>
-                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
-                  테니스 경기 중 멘탈 붕괴 방지법 — 실수 후 3초 회복 루틴의 힘
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
-                  실수 후 3초 회복 루틴으로 멘탈을 회복하고 경기 흐름을 되찾는 법. 감정 제어·집중 루틴·GEO별 멘탈 관리 전략.
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
-        </div>
-      </div>
     </Article>
   );
 }

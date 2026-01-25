@@ -134,6 +134,7 @@ export default function JanLennardStruffPage() {
                         turnedPro={2009}
                         grandSlams={0}
                         ranking={35}
+            image="/images/players/jan-lennard-struff.svg"
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

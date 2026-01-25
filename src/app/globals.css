@@ -233,14 +233,15 @@ a:focus-visible {
   border-radius: 10px;
   padding: .75rem 1rem;
   margin: 1rem 0 1.5rem;
-  background-color: #f3f4f6;
-  /* gray-100 to ensure contrast */
+  background-color: #f8fafc;
+  /* lighter gray for better contrast */
 }
 
 .toc a {
   text-decoration: none;
-  color: #111827;
-  /* gray-900 (black-ish) */
+  color: #000000;
+  /* absolute black */
+  font-weight: 500;
 }
 
 .toc a:hover {

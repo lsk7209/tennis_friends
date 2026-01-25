@@ -120,6 +120,7 @@ export default function AlexMichelsenPage() {
                         turnedPro={2023}
                         grandSlams={0}
                         ranking={85}
+            image="/images/players/alex-michelsen.png"
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

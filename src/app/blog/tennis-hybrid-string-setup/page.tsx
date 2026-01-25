@@ -34,11 +34,13 @@ export const metadata = {
 };
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
-  { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '왜 하이브리드를 선택하는가?', depth: 2 },
-  { id: 'key-point-2', text: '메인(Main) vs 크로스(Cross): 어디에 무엇을 맬까?', depth: 2 },
-  { id: 'key-point-3', text: '추천하는 하이브리드 조합', depth: 2 },
-  { id: 'conclusion', text: '마무리하며', depth: 2 },
+  { id: 'introduction', text: '들어가며: 스트링의 연금술, 하이브리드', depth: 2 },
+  { id: 'hybrid-science', text: '1. 하이브리드의 과학: 왜 굳이 두 번 매는가?', depth: 2 },
+  { id: 'main-vs-cross', text: '2. 세로(Main) vs 가로(Cross): 80%의 법칙과 반전의 미학', depth: 2 },
+  { id: 'champions-setup', text: '3. 챔피언들의 선택: 페더러식 vs 조코비치식 셋업 비교', depth: 2 },
+  { id: 'lubrication-friction', text: '4. 윤활과 마찰: 스냅백을 극대화하는 조합의 비밀', depth: 2 },
+  { id: 'longevity-tips', text: '5. 수명 연장의 기술: 고가의 스트링 유지를 위한 관리법', depth: 2 },
+  { id: 'conclusion', text: '결론: 당신만의 골디락스 조합을 찾아서', depth: 2 },
 ];
 
 const faqs = [
@@ -101,70 +103,115 @@ export default function BlogPost() {
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
 
-            <h2 id="introduction">들어가며</h2>
+            <h2 id="introduction">들어가며: 스트링의 연금술, 하이브리드</h2>
             <div className="bg-purple-50 dark:bg-purple-900/30 p-6 rounded-2xl mb-8 border border-purple-100 dark:border-purple-800">
-              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-0">
-                과거에는 하나의 스트링으로 라켓 전체를 매는 것이 당연했습니다. 하지만 최근 프로와 동호인들 사이에서는 두 종류의 스트링을 섞어 쓰는 <strong>'하이브리드(Hybrid) 세팅'</strong>이 대세로 자리 잡았습니다. 폴리의 내구성과 천연 거트의 부드러움을 동시에 잡을 수 있는 마법 같은 조합, 하이브리드에 대해 알아봅니다.
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-0 text-center">
+                과거에는 하나의 스트링으로 라켓 전체를 매는 것이 당연했습니다. 하지만 최근 프로들 사이에서는 두 종류의 스트링을 섞어 쓰는 <strong>'하이브리드(Hybrid) 세팅'</strong>이 표준으로 자리 잡았습니다. 폴리의 내구성과 천연 거트의 마법 같은 타구감을 동시에 잡는 연금술, 하이브리드에 대해 깊이 알아봅니다.
               </p>
             </div>
 
-            <h2 id="key-point-1">왜 하이브리드를 선택하는가?</h2>
+            <h2 id="hybrid-science">1. 하이브리드의 과학: 왜 굳이 두 번 매는가?</h2>
             <p>
-              하이브리드 세팅의 핵심은 <strong>'단점 보완'</strong>입니다.
+              하이브리드 세팅은 단순히 두 줄을 섞는 행위가 아니라, 서로 상충하는 물리적 성질을 융합하는 디자인 과정입니다.
             </p>
-            <ul className="space-y-3 my-4">
-              <li className="flex gap-2">
-                <span className="text-purple-500 font-bold">●</span>
-                <span><strong>폴리 스트링:</strong> 스핀과 내구성은 좋지만 딱딱하여 팔에 무리가 갈 수 있습니다.</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="text-purple-500 font-bold">●</span>
-                <span><strong>인조/천연 거트:</strong> 부드럽고 파워가 좋지만 내구성이 약하고 스핀량이 적습니다.</span>
-              </li>
-            </ul>
-            <p>이 둘을 섞으면 부드러운 타구감과 강력한 스핀을 동시에 얻을 수 있습니다.</p>
-
-            <h2 id="key-point-2">메인(Main) vs 크로스(Cross): 어디에 무엇을 맬까?</h2>
-            <p>
-              라켓의 성능은 80% 이상 세로줄(Main)에 의해 결정됩니다.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-              <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl">
-                <h4 className="font-bold text-indigo-600 mb-2">1. 폴리(Main) + 부드러운 줄(Cross)</h4>
-                <p className="text-sm">나달이나 조코비치가 선호하는 방식입니다. 강력한 스핀과 컨트롤을 유지하면서도 팔에 오는 충격을 완화합니다.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+              <div className="p-5 border-t-4 border-indigo-500 bg-white dark:bg-slate-900 shadow-sm rounded-b-xl">
+                <h4 className="font-bold text-indigo-600 mb-2">폴리에스터 (Polyester)</h4>
+                <p className="text-xs text-slate-500 leading-relaxed mb-0">안정적인 컨트롤과 강력한 스핀을 제공하지만, 탄성이 낮아 팔에 충격을 그대로 전달합니다.</p>
               </div>
-              <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl">
-                <h4 className="font-bold text-green-600 mb-2">2. 부드러운 줄(Main) + 폴리(Cross)</h4>
-                <p className="text-sm">페더러가 사용했던 방식입니다. 극강의 터치감과 파워를 지향하며, 폴리가 가로에서 세로줄의 움직임을 도와 스핀을 만듭니다.</p>
+              <div className="p-5 border-t-4 border-amber-500 bg-white dark:bg-slate-900 shadow-sm rounded-b-xl">
+                <h4 className="font-bold text-amber-600 mb-2">천연 거트 (Natural Gut)</h4>
+                <p className="text-xs text-slate-500 leading-relaxed mb-0">최상의 탄성과 부드러움을 자랑하지만, 내구성이 약하고 가격이 매우 비쌉니다.</p>
+              </div>
+            </div>
+            <p className="text-sm">이 둘을 조합하면 폴리의 **컨트롤**과 천연 거트의 **안락함**을 7:3 혹은 4:6의 비율로 사용자가 직접 튜닝할 수 있게 됩니다.</p>
+
+            <h2 id="main-vs-cross">2. 세로(Main) vs 가로(Cross): 80%의 법칙과 반전의 미학</h2>
+            <p>
+              라켓의 최종 타구감 중 약 80%는 세로줄(Main)에 의해 결정됩니다. 따라서 어떤 줄을 메인에 두느냐가 라켓의 성격 자체를 규정합니다.
+            </p>
+            <div className="space-y-4 my-6">
+              <div className="flex items-start gap-4 bg-slate-50 dark:bg-slate-800 p-5 rounded-xl">
+                <Badge className="bg-blue-600">Standard Poly-Main</Badge>
+                <div>
+                  <h5 className="font-bold text-sm mb-1">메인: 폴리 + 가로: 천연/인조거트</h5>
+                  <p className="text-xs text-gray-600">스핀과 내구성이 우선인 공격적 성향. 가로줄이 완衝 역할을 하여 폴리 특유의 딱딱함을 상쇄합니다. (주로 조코비치, 나달 방식)</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 bg-slate-50 dark:bg-slate-800 p-5 rounded-xl">
+                <Badge className="bg-purple-600">Gut-Main (Federer Style)</Badge>
+                <div>
+                  <h5 className="font-bold text-sm mb-1">메인: 천연/인조거트 + 가로: 폴리</h5>
+                  <p className="text-xs text-gray-600">최상의 타구감과 비거리가 우선인 정교한 성향. 가로의 폴리 스트링이 세로의 천연 거트가 부드럽게 미끄러지도록 도와 스핀을 유도합니다.</p>
+                </div>
               </div>
             </div>
 
-            <h2 id="key-point-3">추천하는 하이브리드 조합</h2>
+            <h2 id="champions-setup">3. 챔피언들의 선택: 페더러식 vs 조코비치식 셋업 비교</h2>
             <p>
-              처음 시도하신다면 가장 검증된 조합으로 시작해 보세요.
+              역대 최고의 선수들도 하이브리드 세팅에 대해서는 서로 다른 철학을 보여줍니다.
             </p>
-            <Card className="my-6">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center border-b pb-2">
-                    <span className="font-bold">가성비 조합</span>
-                    <span className="text-sm">알루파워 + NXT / 럭실론 + 바이오로직</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b pb-2">
-                    <span className="font-bold">퍼포먼스 조합</span>
-                    <span className="text-sm">RPM 블라스트 + 인조거트</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-bold">플래그십 조합</span>
-                    <span className="text-sm">천연 거트 + 알루파워 (Champions Choice)</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="overflow-x-auto my-6">
+              <table className="w-full text-xs border-collapse font-light">
+                <thead>
+                  <tr className="bg-gray-100 dark:bg-gray-800 font-bold">
+                    <th className="border p-2">구분</th>
+                    <th className="border p-2">로저 페더러 (Classic)</th>
+                    <th className="border p-2">노박 조코비치 (Modern)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border p-2 font-bold bg-gray-50 dark:bg-gray-900">Main (세로)</td>
+                    <td className="border p-2">Wilson Natural Gut (천연)</td>
+                    <td className="border p-2">Luxilon ALU Power Rough (폴리)</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2 font-bold bg-gray-50 dark:bg-gray-900">Cross (가로)</td>
+                    <td className="border p-2">Luxilon ALU Power Rough (폴리)</td>
+                    <td className="border p-2">Babolat VS Gut (천연)</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2 font-bold bg-gray-50 dark:bg-gray-900">특징</td>
+                    <td className="border p-2">극강의 Touch & Power</td>
+                    <td className="border p-2">무시무시한 Spin & Control</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-            <h2 id="conclusion">마무리하며</h2>
+            <h2 id="lubrication-friction">4. 윤활과 마찰: 스냅백을 극대화하는 조합의 비밀</h2>
             <p>
-              하이브리드 세팅은 당신의 라켓을 커스텀 하는 가장 즐거운 방법입니다. 평소 팔이 아파 폴리를 포기했던 분들이나, 인조거트의 스핀량이 아쉬웠던 분들에게 하이브리드는 완벽한 해답이 될 것입니다. 당신의 플레이 스타일에 맞는 '황금 비율'을 찾아보세요.
+              하이브리드 세팅이 단일 폴리보다 더 나은 스핀을 제공할 수 있는 이유는 스트링 사이의 **'윤활 작용'** 때문입니다.
+            </p>
+            <div className="bg-blue-50 dark:bg-blue-900/10 p-5 rounded-2xl border-l-4 border-blue-500 my-6">
+              <p className="text-sm leading-relaxed mb-0">
+                천연 거트는 표면이 매끄럽고 기름기가 있어 폴리 스트링 위에서 매우 잘 미끄러집니다. 임팩트 시 메인 스트링이 옆으로 밀렸다가 제자리로 돌아오는 **스냅백(Snapback)** 거리가 단일 폴리 조합보다 길어질 수 있으며, 이는 곧 공에 더 많은 분당 회전수(RPM)를 부여합니다.
+              </p>
+            </div>
+
+            <h2 id="longevity-tips">5. 수명 연장의 기술: 고가의 스트링 유지를 위한 관리법</h2>
+            <p>
+              천연 거트가 포함된 하이브리드 세팅은 관리가 까다롭습니다. 당신의 지갑을 지키는 3가지 원칙입니다.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+              <div className="bg-white dark:bg-slate-900 p-4 rounded border shadow-sm">
+                <h4 className="font-bold text-xs mb-2">습도 차단</h4>
+                <p className="text-[10px] text-gray-500">천연 거트는 단백질입니다. 비 오는 날이나 습한 날에는 사용을 자제하고 가방에 방습제를 넣으세요.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-900 p-4 rounded border shadow-sm">
+                <h4 className="font-bold text-xs mb-2">프리스트레칭</h4>
+                <p className="text-[10px] text-gray-500">줄을 맬 때 미리 늘려주는 작업을 하면 초기 텐션 급락을 막아 교체 주기를 늦출 수 있습니다.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-900 p-4 rounded border shadow-sm">
+                <h4 className="font-bold text-xs mb-2">String Savers</h4>
+                <p className="text-[10px] text-gray-500">줄이 겹치는 부위에 작은 플라스틱 피스(String savers)를 끼우면 마찰에 의한 단절을 지연시킵니다.</p>
+              </div>
+            </div>
+
+            <h2 id="conclusion">결론: 당신만의 골디락스 조합을 찾아서</h2>
+            <p className="text-lg leading-relaxed">
+              하이브리드 세팅은 테니스 라켓을 당신의 신체 일부로 만드는 최종 공정입니다. 처음에는 관리가 편한 **인조쉽 + 폴리** 조합으로 시작하여, 점차 비중을 조절하며 나만의 타구감을 찾아보세요. 단 한 번의 스트링 작업으로 당신의 테니스는 '장비 탓'에서 자유로워질 것입니다.
             </p>
 
           </div>

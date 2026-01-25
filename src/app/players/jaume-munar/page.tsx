@@ -120,6 +120,7 @@ export default function JaumeMunarPage() {
                         turnedPro={2014}
                         grandSlams={0}
                         ranking={75}
+            image="/images/players/jaume-munar.png"
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

@@ -134,6 +134,7 @@ export default function ZhizhenZhangPage() {
                         turnedPro={2012}
                         grandSlams={0}
                         ranking={42}
+            image="/images/players/zhizhen-zhang.svg"
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

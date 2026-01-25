@@ -36,8 +36,11 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
     { id: 'string-importance', text: '1. 스트링의 세계: 라켓이 엔진이라면 스트링은 타이어', depth: 2 },
     { id: 'material-types', text: '2. 재질별 특징 비교 (폴리, 인조, 멀티, 천연)', depth: 2 },
     { id: 'tension-science', text: '3. 텐션(Tension)의 과학: 48 vs 52 vs 55', depth: 2 },
-    { id: 'hybrid-setup', text: '4. 하이브리드 세팅 (페더러 스타일)', depth: 2 },
-    { id: 'replacement-cycle', text: '5. 교체 주기: "줄이 안 끊어져도 갈아야 하나요?"', depth: 2 },
+    { id: 'tension-testing', text: '4. 텐션 테스트 방법 (How to Feel the Difference)', depth: 2 },
+    { id: 'brand-comparison', text: '5. 브랜드별 인기 모델 완전 비교', depth: 2 },
+    { id: 'hybrid-setup', text: '6. 하이브리드 세팅 (페더러 스타일)', depth: 2 },
+    { id: 'replacement-cycle', text: '7. 교체 주기 & 보관 관리법', depth: 2 },
+    { id: 'string-selector', text: '8. 나에게 맞는 스트링 찾기 (플로우차트)', depth: 2 },
     { id: 'conclusion', text: '결론 — 나만의 조합 찾기', depth: 2 },
 ];
 
@@ -193,9 +196,122 @@ export default function TennisStringGuidePage() {
                 </div>
             </section>
 
+            <section id="tension-testing" className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span className="bg-orange-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
+                    텐션 테스트 방법 (How to Feel the Difference)
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    숫자로만 보면 실감이 안 나죠? 텐션 차이를 직접 느껴보는 간단한 자가 테스트 방법입니다.
+                </p>
+                <Card className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 mb-6">
+                    <CardContent className="p-6">
+                        <h3 className="font-bold text-orange-700 dark:text-orange-400 mb-4">🧪 Quick Test: 공을 손으로 눌러보기</h3>
+                        <ol className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                            <li><strong>1. 라켓 바닥에 평평하게 눕히기:</strong> 라켓을 바닥이나 탁자에 평평하게 놓으세요.</li>
+                            <li><strong>2. 스트링 베드 중앙 누르기:</strong> 엄지손가락으로 스위트 스팟 중앙을 세게 눌러보세요.</li>
+                            <li><strong>3. 느낌 확인:</strong>
+                                <ul className="list-disc pl-6 mt-2 space-y-1">
+                                    <li><strong>낮은 텐션(~48):</strong> 손가락이 쏙 들어가며 트램폴린처럼 탄력이 느껴짐</li>
+                                    <li><strong>높은 텐션(55+):</strong> 딱딱하고 거의 움직이지 않음, 손가락이 아플 정도</li>
+                                </ul>
+                            </li>
+                            <li><strong>4. 타구 테스트:</strong> 같은 라켓에 텐션만 다르게 매서 미니 랠리를 해보면 바로 느낌의 차이를 알 수 있습니다.</li>
+                        </ol>
+                    </CardContent>
+                </Card>
+            </section>
+
+            <section id="brand-comparison" className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
+                    브랜드별 인기 모델 완전 비교
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    2026년 현재 전 세계 프로 및 동호인들이 가장 많이 사용하는 인기 스트링 Top 5입니다.
+                </p>
+                <div className="grid grid-cols-1 gap-4">
+                    <Card className="bg-white dark:bg-gray-800">
+                        <CardContent className="p-5">
+                            <div className="flex justify-between items-start mb-2">
+                                <h3 className="text-lg font-bold text-gray-900 dark:text-white">1. Babolat RPM Blast (폴리)</h3>
+                                <Badge className="bg-yellow-500 text-white">베스트셀러</Badge>
+                            </div>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                라파엘 나달 사용. 거친 표면(Octagonal)으로 스핀이 극대화됩니다. 상급자/하드히터 전용.
+                            </p>
+                            <div className="flex gap-2 text-xs">
+                                <Badge variant="outline">스핀 ★★★★★</Badge>
+                                <Badge variant="outline">내구성 ★★★★</Badge>
+                                <Badge variant="outline">타구감 ★★★</Badge>
+                            </div>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="bg-white dark:bg-gray-800">
+                        <CardContent className="p-5">
+                            <div className="flex justify-between items-start mb-2">
+                                <h3 className="text-lg font-bold text-gray-900 dark:text-white">2. Luxilon Alu Power (폴리)</h3>
+                                <Badge className="bg-blue-500 text-white">프로 애용</Badge>
+                            </div>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                노박 조코비치 사용. 컨트롤과 스핀의 완벽한 밸런스. RPM보다 부드러워 중급자도 가능.
+                            </p>
+                            <div className="flex gap-2 text-xs">
+                                <Badge variant="outline">스핀 ★★★★</Badge>
+                                <Badge variant="outline">내구성 ★★★★★</Badge>
+                                <Badge variant="outline">타구감 ★★★★</Badge>
+                            </div>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="bg-white dark:bg-gray-800">
+                        <CardContent className="p-5">
+                            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">3. Wilson NXT (멀티필라멘트)</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                부드러운 타구감으로 엘보 예방에 최고. 초급~중급자와 여성 플레이어에게 강력 추천.
+                            </p>
+                            <div className="flex gap-2 text-xs">
+                                <Badge variant="outline">스핀 ★★★</Badge>
+                                <Badge variant="outline">내구성 ★★★</Badge>
+                                <Badge variant="outline">타구감 ★★★★★</Badge>
+                            </div>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="bg-white dark:bg-gray-800">
+                        <CardContent className="p-5">
+                            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">4. Tecnifibre X-One Biphase (멀티)</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                두 가지 굵기의 섬유를 조합한 혁신적 구조. 파워와 편안함이 뛰어남. 하이브리드 크로스용으로 인기.
+                            </p>
+                            <div className="flex gap-2 text-xs">
+                                <Badge variant="outline">스핀 ★★★</Badge>
+                                <Badge variant="outline">내구성 ★★★</Badge>
+                                <Badge variant="outline">타구감 ★★★★★</Badge>
+                            </div>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="bg-white dark:bg-gray-800">
+                        <CardContent className="p-5">
+                            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">5. Prince Synthetic Gut (인조쉽)</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                초보자 입문용 국민 스트링. 가격 대비 성능이 훌륭하며 라켓 구매 시 기본으로 많이 장착됩니다.
+                            </p>
+                            <div className="flex gap-2 text-xs">
+                                <Badge variant="outline">가성비 ★★★★★</Badge>
+                                <Badge variant="outline">내구성 ★★★★</Badge>
+                                <Badge variant="outline">범용성 ★★★★</Badge>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </div>
+            </section>
+
             <section id="hybrid-setup" className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                    <span className="bg-purple-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
+                    <span className="bg-purple-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
                     하이브리드 세팅 (페더러 스타일)
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -215,13 +331,13 @@ export default function TennisStringGuidePage() {
 
             <section id="replacement-cycle" className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                    <span className="bg-teal-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
-                    교체 주기: "줄이 안 끊어져도 갈아야 하나요?"
+                    <span className="bg-teal-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">7</span>
+                    교체 주기 & 보관 관리법
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                     네, 무조건 갈아야 합니다. 줄은 매는 순간부터 늘어나기 시작해 탄성(Elasticity)을 잃습니다. 탄성을 잃은 줄(Dead String)로 치면 팔에 진동이 그대로 전달되어 부상을 유발합니다.
                 </p>
-                <div className="bg-teal-50 dark:bg-teal-950/30 p-4 rounded-lg">
+                <div className="bg-teal-50 dark:bg-teal-950/30 p-4 rounded-lg mb-6">
                     <h4 className="font-bold text-teal-700 dark:text-teal-300 mb-2">📅 권장 교체 주기</h4>
                     <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300">
                         <li><strong>주 3회 이상 플레이:</strong> 1~2개월마다</li>
@@ -229,11 +345,83 @@ export default function TennisStringGuidePage() {
                         <li><strong>잘 안 쳐도:</strong> 최소 6개월에 한 번은 교체 (고무줄 삭는 것과 비슷함)</li>
                     </ul>
                 </div>
+                <div className="bg-white dark:bg-gray-800 p-5 rounded-xl border">
+                    <h4 className="font-bold mb-3">💾 스트링 수명을 연장하는 보관 관리법</h4>
+                    <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                        <li><strong>🌡️ 직사광선 피하기:</strong> 자동차 트렁크나 창가에 두지 마세요. 고온은 스트링의 탄성을 빠르게 파괴합니다.</li>
+                        <li><strong>💧 습도 관리:</strong> 천연쉽(Natural Gut)은 특히 습기에 약합니다. 제습제를 넣은 라켓 가방에 보관하세요.</li>
+                        <li><strong>🧼 사용 후 닦기:</strong> 땀과 먼지가 줄 사이에 끼면 마찰력이 떨어집니다. 부드러운 천으로 가볍게 닦아주세요.</li>
+                        <li><strong>🎾 포일 팩 보관:</strong> 아직 안 쓴 스트링은 진공 팩을 뜯지 말고 보관하세요. 공기 노출이 산화를 촉진합니다.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="string-selector" className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">8</span>
+                    나에게 맞는 스트링 찾기 (플로우차트)
+                </h2>
+                <Card className="bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20">
+                    <CardContent className="p-6">
+                        <div className="space-y-4 text-sm">
+                            <div className="flex items-center gap-3">
+                                <div className="bg-white dark:bg-gray-800 px-4 py-2 rounded-lg font-bold text-gray-900 dark:text-white">시작</div>
+                                <span className="text-2xl">→</span>
+                                <div className="flex-1 bg-white dark:bg-gray-800 p-3 rounded-lg">
+                                    <strong>Q1. 테니스 경력은?</strong>
+                                    <div className="mt-2 space-y-1 text-xs">
+                                        <div>• 초보(1년 미만) → <strong className="text-green-600">인조쉽 또는 멀티필라멘트</strong></div>
+                                        <div>• 중급(1~3년) → <strong className="text-blue-600">폴리(48lbs 이하) or 하이브리드</strong></div>
+                                        <div>• 상급(3년+) → <strong className="text-purple-600">폴리 풀베드 or 하이브리드</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-3">
+                                <span className="text-2xl ml-20">⬇</span>
+                            </div>
+
+                            <div className="flex items-center gap-3">
+                                <div className="w-20"></div>
+                                <div className="flex-1 bg-white dark:bg-gray-800 p-3 rounded-lg">
+                                    <strong>Q2. 팔꿈치 통증(엘보)이 있나요?</strong>
+                                    <div className="mt-2 space-y-1 text-xs">
+                                        <div>• <strong className="text-red-600">예</strong> → 무조건 <strong>멀티필라멘트</strong> + 낮은 텐션(42~46)</div>
+                                        <div>• 아니오 → 다음 단계로</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-3">
+                                <span className="text-2xl ml-20">⬇</span>
+                            </div>
+
+                            <div className="flex items-center gap-3">
+                                <div className="w-20"></div>
+                                <div className="flex-1 bg-white dark:bg-gray-800 p-3 rounded-lg">
+                                    <strong>Q3. 플레이 스타일은?</strong>
+                                    <div className="mt-2 space-y-1 text-xs">
+                                        <div>• <strong>스핀 중시 베이스라이너</strong> → 폴리(RPM Blast, Alu Power)</div>
+                                        <div>• <strong>발리/서브 앤 발리</strong> → 멀티 or 천연쉽 (NXT, X-One)</div>
+                                        <div>• <strong>올라운드 플레이</strong> → 하이브리드 (메인 폴리 + 크로스 멀티)</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-3 mt-6">
+                                <div className="w-20"></div>
+                                <div className="flex-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-4 rounded-lg text-center font-bold">
+                                    완성! 이제 매장에서 스트링을 골라보세요 🎾
+                                </div>
+                            </div>
+                        </div>
+                    </CardContent>
+                </Card>
             </section>
 
             <section id="conclusion" className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                    <span className="bg-gray-800 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
+                    <span className="bg-gray-800 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">9</span>
                     결론 — 나만의 조합 찾기
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">

@@ -34,11 +34,15 @@ export const metadata = {
 };
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
-  { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: "높은 텐션(Tight): '컨트롤'의 정석", depth: 2 },
-  { id: 'key-point-2', text: "낮은 텐션(Loose): '파워'와 '스핀'의 극대화", depth: 2 },
-  { id: 'key-point-3', text: "나에게 맞는 '적정 텐션' 찾는 법", depth: 2 },
-  { id: 'conclusion', text: '마무리하며', depth: 2 },
+  { id: 'introduction', text: '들어가며: 텐션은 라켓의 엔진 튜닝이다', depth: 2 },
+  { id: 'high-tension', text: "1. 높은 텐션(Tight): '컨트롤'과 '일관성'의 정석", depth: 2 },
+  { id: 'low-tension', text: "2. 낮은 텐션(Loose): '파워'와 '스냅백'의 극대화", depth: 2 },
+  { id: 'physics-snapback', text: '3. 스냅백(Snapback)의 물리: 낮은 텐션이 스핀을 만드는 원리', depth: 2 },
+  { id: 'environmental-calibration', text: '4. 환경적 변수: 고도와 습도에 따른 텐션 조정', depth: 2 },
+  { id: 'tension-maintenance', text: '5. 텐션 관리: 황금의 첫 24시간과 프리스트레칭', depth: 2 },
+  { id: 'finding-sweet-spot', text: '6. 나만의 적정 텐션(Sweet Spot) 찾는 단계적 가이드', depth: 2 },
+  { id: 'pro-benchmarks', text: '7. 프로들의 텐션: 80lbs에서 30lbs까지의 극단적 사례', depth: 2 },
+  { id: 'conclusion', text: '결론: 텐션은 고정된 숫자가 아니라 흐르는 감각이다', depth: 2 },
 ];
 
 const faqs = [
@@ -101,82 +105,127 @@ export default function BlogPost() {
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
 
-            <h2 id="introduction">들어가며</h2>
+            <h2 id="introduction">들어가며: 텐션은 라켓의 엔진 튜닝이다</h2>
             <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-2xl mb-8 border-l-8 border-blue-500">
               <p className="text-lg text-slate-800 dark:text-slate-200 leading-relaxed mb-0 font-medium">
-                "라켓을 바꾼 것보다 텐션을 2파운드 조정한 것이 경기력을 더 크게 바꿨습니다." 많은 프로 선수가 입을 모아 하는 말입니다. 스트링 텐션은 공이 라켓에 머무는 시간과 반발력을 결정하는 핵심 변수입니다.
+                "라켓을 바꾼 것보다 텐션을 2파운드 조정한 것이 경기력을 더 크게 바꿨습니다." 많은 프로 선수가 입을 모아 하는 말입니다. 스트링 텐션은 공이 라켓에 머무는 시간(Dwell Time)과 반발 계수를 결정하는 유일한 변수입니다.
               </p>
             </div>
 
-            <h2 id="key-point-1">높은 텐션(Tight): '컨트롤'의 정석</h2>
+            <h2 id="high-tension">1. 높은 텐션(Tight): '컨트롤'과 '일관성'의 정석</h2>
             <p>
-              보통 55파운드 이상의 높은 텐션을 의미합니다. 스트링이 팽팽하면 임팩트 시 '트램펄린 효과'가 줄어듭니다.
+              보통 55파운드 이상의 높은 텐션을 의미합니다. 스트링이 팽팽하면 임팩트 시 '트램펄린 효과'가 억제되어 공이 튀어나가는 힘을 줄여줍니다.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
               <Card className="bg-white dark:bg-slate-900 border-blue-100 dark:border-blue-900">
                 <CardContent className="p-4">
-                  <h4 className="text-blue-600 font-bold mb-2">장점</h4>
+                  <h4 className="text-blue-600 font-bold mb-2">장점: 정밀 조준</h4>
                   <ul className="text-sm space-y-1">
-                    <li>• 정교한 샷 컨트롤이 가능</li>
-                    <li>• 공이 라인 밖으로 나가는 것을 억제</li>
+                    <li>• 임팩트 지점의 정확한 피드백 전달</li>
+                    <li>• 볼 날림(Flying) 현상 최소화</li>
                   </ul>
                 </CardContent>
               </Card>
               <Card className="bg-white dark:bg-slate-900 border-red-100 dark:border-red-900">
                 <CardContent className="p-4">
-                  <h4 className="text-red-600 font-bold mb-2">단점</h4>
+                  <h4 className="text-red-600 font-bold mb-2">단점: 물리적 부담</h4>
                   <ul className="text-sm space-y-1">
-                    <li>• 스스로 만들어야 하는 파워 부담</li>
-                    <li>• 팔에 전달되는 충격 증가 (부상 위험)</li>
+                    <li>• 스윙 속도가 느리면 비거리 확보 어려움</li>
+                    <li>• 관절로 전달되는 진동 에너지 증가</li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
 
-            <h2 id="key-point-2">낮은 텐션(Loose): '파워'와 '스핀'의 극대화</h2>
+            <h2 id="low-tension">2. 낮은 텐션(Loose): '파워'와 '스냅백'의 극대화</h2>
             <p>
-              40~48파운드 수준의 낮은 텐션은 최근 현대 테니스의 트렌드이기도 합니다. 스트링이 더 많이 변형되었다가 복원되면서 공에 엄청난 에너지를 실어줍니다.
+              40~48파운드 수준의 낮은 텐션은 최근 현대 테니스의 지배적인 트렌드입니다. 스트링이 더 깊게 변형되었다가 복원되면서 공에 추진력을 더해줍니다.
             </p>
-            <ul className="space-y-3 my-4">
-              <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0" />
-                <span><strong>스냅백(Snap-back) 효과:</strong> 스트링이 미끄러졌다 돌아오며 스핀량이 늘어납니다.</span>
+            <ul className="space-y-4 my-6">
+              <li className="flex items-start gap-3">
+                <Badge variant="outline" className="mt-1 shrink-0">파워</Badge>
+                <p className="text-sm">스트링 베드가 더 유연하게 작동하여, 작은 힘으로도 깊은 비거리를 낼 수 있습니다.</p>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0" />
-                <span><strong>편안한 타구감:</strong> 충격을 스트링이 대신 흡수하여 엘보 방지에 도움을 줍니다.</span>
+              <li className="flex items-start gap-3">
+                <Badge variant="outline" className="mt-1 shrink-0">편안함</Badge>
+                <p className="text-sm">충격을 스트링이 대신 흡수하여 테니스 엘보나 어깨 부상을 겪는 분들에게 '처방전'이 됩니다.</p>
               </li>
             </ul>
 
-            <h2 id="key-point-3">나에게 맞는 '적정 텐션' 찾는 법</h2>
+            <h2 id="physics-snapback">3. 스냅백(Snapback)의 물리: 낮은 텐션이 스핀을 만드는 원리</h2>
             <p>
-              가장 좋은 기준은 본인의 <strong>스윙 스피드</strong>입니다.
+              공에 회전을 걸기 위해서는 스트링이 공을 '감싸쥐는' 시간과 스트링끼리의 **수평 이동(Sliding)**이 필요합니다.
             </p>
-            <table className="w-full text-sm border-collapse my-6">
-              <thead>
-                <tr className="bg-slate-100 dark:bg-slate-800">
-                  <th className="p-3 border">유형</th>
-                  <th className="p-3 border">추천 범위</th>
-                  <th className="p-3 border">핵심 이유</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="p-3 border font-bold">초보자</td>
-                  <td className="p-3 border text-center">48~52 lbs</td>
-                  <td className="p-3 border">부족한 근력을 스트링 파워로 보완</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border font-bold">중상급자</td>
-                  <td className="p-3 border text-center">52~56 lbs</td>
-                  <td className="p-3 border">강한 스윙을 코트 안에 가두기 위함</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl my-6 border border-blue-100 dark:border-blue-800">
+              <p className="text-sm leading-relaxed mb-0">
+                <strong>스냅백 효과:</strong> 텐션이 낮을수록 메인 스트링이 크로스 스트링 위에서 더 넓게 이동했다가 돌아옵니다. 이 돌아오는 짧은 찰나의 순간에 공을 위로 강하게 긁어주며 스핀량을 폭발시킵니다. 팽팽한 텐션보다 느슨한 텐션에서 헤비 탑스핀이 더 잘 걸리는 과학적 이유입니다.
+              </p>
+            </div>
 
-            <h2 id="conclusion">마무리하며</h2>
+            <h2 id="environmental-calibration">4. 환경적 변수: 고도와 습도에 따른 텐션 조정</h2>
             <p>
-              텐션 선택에 정답은 없습니다. 하지만 중요한 규칙 하나는 있습니다. <strong>"겨울철에는 평소보다 2~3파운드 낮추고, 여름철에는 높이세요."</strong> 온도가 낮으면 스트링 자체가 딱딱해지기 때문입니다. 작은 실험을 통해 여러분만의 골디락스(Goldilocks) 텐션을 찾으시길 바랍니다.
+              실내 코트와 실외 코트, 그리고 지역적 기후는 공의 내부 압력뿐만 아니라 스트링의 성질을 바꿉니다.
+            </p>
+            <div className="space-y-4 my-6">
+              <div className="flex items-center gap-4 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <div className="w-24 font-bold text-xs">고지대 (Altitude)</div>
+                <p className="text-xs">공기가 희박하여 공이 더 빠르게 날아갑니다. 평소보다 <strong>+2~3lbs</strong> 높여 컨트롤을 확보하세요.</p>
+              </div>
+              <div className="flex items-center gap-4 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <div className="w-24 font-bold text-xs">고습도 (Humidity)</div>
+                <p className="text-xs">공과 스트링이 수분을 머금어 무거워집니다. <strong>-1~2lbs</strong> 낮추어 반발력을 보완하는 것이 유리합니다.</p>
+              </div>
+            </div>
+
+            <h2 id="tension-maintenance">5. 텐션 관리: 황금의 첫 24시간과 프리스트레칭</h2>
+            <p>
+              스트링 작업이 끝난 라켓은 가만히 두어도 탄성을 잃습니다. 이를 **'텐션 로스(Tension Loss)'**라고 합니다.
+            </p>
+            <div className="bg-amber-50 dark:bg-amber-950/30 p-5 rounded-xl my-6 border-l-4 border-amber-500 text-sm">
+              <ul className="list-disc pl-5 space-y-2 text-amber-900 dark:text-amber-200">
+                <li><strong>24시간의 법칙:</strong> 스트링 작업 직후 24시간 내에 초기 텐션의 약 10%가 급락합니다.</li>
+                <li><strong>프리 스트레칭:</strong> 머신에서 줄을 당기기 전 미리 늘려주는 작업입니다. 초기 낙폭을 줄여 텐션 유지력을 극대화합니다.</li>
+                <li><strong>교체 주기:</strong> 폴리 스트링은 20~30시간 사용 시 '데드(Dead)' 상태가 되므로 텐션 수치와 상관없이 교체해야 합니다.</li>
+              </ul>
+            </div>
+
+            <h2 id="finding-sweet-spot">6. 나만의 적정 텐션(Sweet Spot) 찾는 단계적 가이드</h2>
+            <p>
+              기준점이 없다면 다음의 '스텝 다운' 방식을 시도해 보세요.
+            </p>
+            <div className="space-y-3 my-6">
+              <div className="p-4 bg-white dark:bg-slate-900 border rounded-lg">
+                <h4 className="font-bold text-sm mb-1">Step 1: 라켓 권장 텐션의 중앙값 선택</h4>
+                <p className="text-xs text-gray-500">예: 권장 50-60lbs라면 55lbs에서 시작</p>
+              </div>
+              <div className="p-4 bg-white dark:bg-slate-900 border rounded-lg">
+                <h4 className="font-bold text-sm mb-1">Step 2: 비거리 체크</h4>
+                <p className="text-xs text-gray-500">공이 자꾸 베이스라인 밖으로 나가면 +2lbs, 네트에 걸리면 -2lbs 조정</p>
+              </div>
+              <div className="p-4 bg-white dark:bg-slate-900 border rounded-lg">
+                <h4 className="font-bold text-sm mb-1">Step 3: 팔의 통증 유무 확인</h4>
+                <p className="text-xs text-gray-500">정확한 타격에도 팔꿈치가 찌릿하다면 즉시 4lbs 이상 낮추어 부하를 줄임</p>
+              </div>
+            </div>
+
+            <h2 id="pro-benchmarks">7. 프로들의 텐션: 80lbs에서 30lbs까지의 극단적 사례</h2>
+            <p>
+              프로들의 선택은 우리가 텐션을 '정답'으로 여기지 말아야 할 이유를 보여줍니다.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+              <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded">
+                <h5 className="font-bold text-sm mb-1">Björn Borg (Extreme High)</h5>
+                <p className="text-xs">내구성이 약한 천연 거트를 무려 **80lbs**로 매어 사용했습니다. 극단적인 컨트롤을 원했기 때문입니다.</p>
+              </div>
+              <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded">
+                <h5 className="font-bold text-sm mb-1">Modern Pros (Extreme Low)</h5>
+                <p className="text-xs">일부 선수들은 팔 보호와 전설적인 스핀량을 위해 **30~35lbs**까지 낮추어 사용하며 새로운 기준을 만들고 있습니다.</p>
+              </div>
+            </div>
+
+            <h2 id="conclusion">결론: 텐션은 고정된 숫자가 아니라 흐르는 감각이다</h2>
+            <p className="text-lg leading-relaxed">
+              텐션 선택에 영원한 정답은 없습니다. 계절이 바뀌면 몸의 컨디션도 바뀌고, 코트의 환경도 변합니다. <strong>"겨울에는 낮추고, 여름에는 높인다"</strong>는 기본 원칙을 기억하되, 당신의 스윙 에너지를 코트 안에 가장 효율적으로 가두는 그 지점을 찾아보세요. 텐션 튜닝은 곧 당신의 플레이 스타일을 확립하는 과정입니다.
             </p>
 
           </div>

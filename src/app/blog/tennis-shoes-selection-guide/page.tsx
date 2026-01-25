@@ -35,10 +35,13 @@ export const metadata = {
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'why-tennis-shoes', text: '1. 왜 전용 테니스화인가? (러닝화와 차이점)', depth: 2 },
   { id: 'sole-types', text: '2. 코트별 밑창(Outsole) 종류: 올코트 vs 클레이', depth: 2 },
-  { id: 'stability-vs-speed', text: '3. 안정성(Stability) vs 스피드(Speed) 타입', depth: 2 },
-  { id: 'wide-fit', text: '4. 발볼 넓은 사람을 위한 추천 (와이드 핏)', depth: 2 },
-  { id: 'size-check', text: '5. 실패 없는 사이즈 선택법', depth: 2 },
-  { id: 'replacement', text: '6. 교체 주기와 관리법', depth: 2 },
+  { id: 'court-surface-science', text: '3. 코트 표면에 따른 밑창 과학', depth: 2 },
+  { id: 'stability-vs-speed', text: '4. 안정성(Stability) vs 스피드(Speed) 타입', depth: 2 },
+  { id: 'injury-prevention', text: '5. 부상 방지를 위한 생체역학', depth: 2 },
+  { id: 'brand-fit-comparison', text: '6. 브랜드별 핏 비교 (발볼 넓은 사람 필독)', depth: 2 },
+  { id: 'size-check', text: '7. 실패 없는 사이즈 선택법', depth: 2 },
+  { id: 'sole-testing', text: '8. 매장에서 할 수 있는 모션 테스트', depth: 2 },
+  { id: 'replacement', text: '9. 교체 주기와 관리법', depth: 2 },
   { id: 'conclusion', text: '결론 — 코트 위의 생명보험', depth: 2 },
 ];
 
@@ -161,9 +164,64 @@ export default function TennisShoesSelectionGuidePage() {
         </div>
       </section>
 
-      <section id="stability-vs-speed" className="mb-12">
+      <section id="court-surface-science" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-purple-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">3</span>
+          코트 표면에 따른 밑창 과학
+        </h2>
+
+        <p className="text-gray-700 dark:text-gray-300 mb-6">
+          코트 표면과 밑창의 상호작용은 부상과 직결됩니다. 각 표면별 최적 밑창을 이해하세요.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card className="bg-gray-50 dark:bg-gray-800">
+            <CardContent className="p-5">
+              <h3 className="font-bold text-lg mb-2">하드 코트 (Hard Court)</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                콘크리트 표면. 가장 마찰력이 높고 밑창 마모가 빠릅니다.
+              </p>
+              <div className="bg-white dark:bg-gray-900 p-3 rounded text-xs space-y-1">
+                <div><strong>추천 밑창:</strong> 올코트 (내구성 특화)</div>
+                <div><strong>쿠셔닝:</strong> 고급 (충격 흡수 필수)</div>
+                <div><strong>내구성:</strong> 3~4개월 (주 3회 기준)</div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-orange-50 dark:bg-orange-900/20">
+            <CardContent className="p-5">
+              <h3 className="font-bold text-lg mb-2">클레이 코트 (Clay Court)</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                흙 표면. 슬라이딩이 중요하며 마찰이 적습니다.
+              </p>
+              <div className="bg-white dark:bg-gray-900 p-3 rounded text-xs space-y-1">
+                <div><strong>추천 밑창:</strong> 클레이 전용 (풀 헤링본)</div>
+                <div><strong>쿠셔닝:</strong> 중급 (부드러운 표면)</div>
+                <div><strong>내구성:</strong> 6개월 이상</div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-green-50 dark:bg-green-900/20">
+            <CardContent className="p-5">
+              <h3 className="font-bold text-lg mb-2">인조잔디 (Omni)</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                모래가 섞인 잔디. 미끄러짐 방지가 핵심입니다.
+              </p>
+              <div className="bg-white dark:bg-gray-900 p-3 rounded text-xs space-y-1">
+                <div><strong>추천 밑창:</strong> 옴니 전용 (돌기형)</div>
+                <div><strong>쿠셔닝:</strong> 중고급</div>
+                <div><strong>내구성:</strong> 4~5개월</div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="stability-vs-speed" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+          <span className="bg-indigo-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
           안정성(Stability) vs 스피드(Speed) 타입
         </h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -203,36 +261,91 @@ export default function TennisShoesSelectionGuidePage() {
         </div>
       </section>
 
-      <section id="wide-fit" className="mb-12">
+      <section id="injury-prevention" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-orange-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
-          발볼 넓은 사람을 위한 추천 (와이드 핏)
+          <span className="bg-red-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
+          부상 방지를 위한 생체역학
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
-          한국인은 서양인에 비해 발볼이 넓은 편입니다. 나이키(칼발용)를 신으면 발가락 물집이 잡힐 수 있습니다.
-        </p>
-        <div className="bg-orange-50 dark:bg-orange-950/30 p-4 rounded-lg">
-          <h3 className="font-bold text-orange-700 dark:text-orange-300 mb-3">✅ 와이드(Wide/2E/4E) 모델이 나오는 브랜드</h3>
-          <ul className="space-y-2">
-            <li className="flex items-center gap-2">
-              <span className="bg-white dark:bg-gray-700 font-bold px-2 py-1 rounded text-sm shadow-sm">아식스 (Asics)</span>
-              <span className="text-sm text-gray-600 dark:text-gray-400">가장 다양한 와이드 라인업 보유. 발볼러의 구세주.</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="bg-white dark:bg-gray-700 font-bold px-2 py-1 rounded text-sm shadow-sm">뉴발란스 (New Balance)</span>
-              <span className="text-sm text-gray-600 dark:text-gray-400">2E(약간 넓음), 4E(매우 넓음)까지 출시.</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="bg-white dark:bg-gray-700 font-bold px-2 py-1 rounded text-sm shadow-sm">요넥스 (Yonex)</span>
-              <span className="text-sm text-gray-600 dark:text-gray-400">이클립션, 소닉케이지 등 와이드 버전 출시.</span>
-            </li>
-          </ul>
+
+        <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-xl border border-red-200 dark:border-red-800 mb-6">
+          <h3 className="font-bold text-red-700 dark:text-red-300 mb-4">테니스화가 방지하는 3대 부상</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
+              <h4 className="font-bold mb-2">⚠️ 발목 염좌 (Ankle Sprain)</h4>
+              <p className="text-gray-600 dark:text-gray-400">
+                빠른 방향 전환 시 발목 꺾임 발생. 높은 힐 스테빌라이저와 단단한 중창으로 예방.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
+              <h4 className="font-bold mb-2">⚠️ 족저근막염 (Plantar Fasciitis)</h4>
+              <p className="text-gray-600 dark:text-gray-400">
+                발바닥 충격 누적으로 발생. 아치 서포트와 뒤꿈치 젤/에어 쿠션이 필수적.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
+              <h4 className="font-bold mb-2">⚠️ 무릎 연골 마모</h4>
+              <p className="text-gray-600 dark:text-gray-400">
+                급정지 시 가해지는 충격 분산 부족. 고밀도 EVA 폼이 무릎 하중을 완화함.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="brand-fit-comparison" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+          <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
+          브랜드별 핏 비교 (발볼 넓은 사람 필독)
+        </h2>
+        <div className="space-y-4">
+          <Card className="bg-white dark:bg-gray-800">
+            <CardContent className="p-5">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-bold text-lg">아식스 (ASICS)</h3>
+                <Badge className="bg-green-600 text-white">동양인 최적</Badge>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                일본 브랜드로 한국인 족형에 가장 잘 맞습니다. 와이드(2E), 엑스트라 와이드(4E) 모델이 정식 출시됩니다.
+              </p>
+              <div className="flex gap-2 text-xs">
+                <Badge variant="outline">추천: 젤 레졸루션, 코트 FF</Badge>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-white dark:bg-gray-800">
+            <CardContent className="p-5">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-bold text-lg">나이키 (NIKE)</h3>
+                <Badge className="bg-orange-600 text-white">칼발용 (Narrow)</Badge>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                서양인 족형 기반으로 볼이 좁게 나옵니다. 발볼 있는 분은 최소 5~10mm 크게 신어야 합니다.
+              </p>
+              <div className="flex gap-2 text-xs">
+                <Badge variant="outline">추천: 베이퍼 프로, 줌 터보</Badge>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-white dark:bg-gray-800">
+            <CardContent className="p-5">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-bold text-lg">아디다스 (ADIDAS)</h3>
+                <Badge className="bg-blue-600 text-white">표준 (Standard)</Badge>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                안정성에 특화되어 발을 꽉 조이는 고정력이 강합니다. 신었을 때 처음의 압박감이 있는 편입니다.
+              </p>
+              <div className="flex gap-2 text-xs">
+                <Badge variant="outline">추천: 바리케이드, 우버소닉</Badge>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       <section id="size-check" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
+          <span className="bg-orange-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">7</span>
           실패 없는 사이즈 선택법
         </h2>
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border-l-4 border-pink-500 shadow-sm">
@@ -245,9 +358,77 @@ export default function TennisShoesSelectionGuidePage() {
         </div>
       </section>
 
+      <section id="sole-testing" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+          <span className="bg-cyan-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">8</span>
+          매장에서 할 수 있는 모션 테스트
+        </h2>
+
+        <p className="text-gray-700 dark:text-gray-300 mb-6 font-medium">
+          신발을 신었다면 그냥 걷지만 말고, 실제 테니스 동작을 흉내내보세요.
+        </p>
+
+        <div className="bg-cyan-50 dark:bg-cyan-950/30 p-6 rounded-xl border border-cyan-200 dark:border-cyan-800">
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
+              <div>
+                <h4 className="font-bold text-cyan-800 dark:text-cyan-200">앞금치 꾹꾹이 (Forefoot Flex)</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  까치발을 들어 앞부분이 부드럽게 꺾이는지 확인하세요. 너무 딱딱하면 런닝 추진력이 떨어집니다.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
+              <div>
+                <h4 className="font-bold text-cyan-800 dark:text-cyan-200">측면 버텼다 (Lateral Support)</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  옆으로 빠르게 두 걸음 이동했다가 급정지 해보세요. 발바닥이 신발 안에서 노는지(Sliding) 체크해야 합니다.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="bg-cyan-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</div>
+              <div>
+                <h4 className="font-bold text-cyan-800 dark:text-cyan-200">힐 슬립 체크 (Heel Slip)</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  뒤꿈치를 강하게 바닥에 찧었을 때 뒤꿈치가 들리거나 헐거운 느낌이 없는지 확인합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="replacement" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+          <span className="bg-gray-700 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">9</span>
+          교체 주기와 관리법
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <h4 className="font-bold mb-2">언제 바꿀까요?</h4>
+            <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+              <li>• 밑창 패턴이 지워져 매끈해졌을 때</li>
+              <li>• 발꿈치나 발볼 쪽 쿠션이 딱딱해졌을 때</li>
+              <li>• 캔버스 부분이 찢어지거나 발목 지지가 약해졌을 때</li>
+              <li>• 보통 주 2~3회 플레이 시 6개월 권장</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <h4 className="font-bold mb-2">어떻게 관리할까요?</h4>
+            <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+              <li>• 경기 후 통풍이 잘 되는 곳에서 말리기</li>
+              <li>• 세탁기 사용 지양 (쿠션 손상 원인)</li>
+              <li>• 벤틀레이션(통기성) 확보를 위해 신발 끈 풀기</li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <section id="conclusion" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-teal-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
+          <span className="bg-teal-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">10</span>
           결론 — 코트 위의 생명보험
         </h2>
         <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">

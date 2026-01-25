@@ -118,6 +118,7 @@ export default function CameronNorriePage() {
             turnedPro={2017}
             grandSlams={0}
             ranking={33}
+            image="/images/players/cameron-norrie.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

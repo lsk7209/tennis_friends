@@ -104,14 +104,14 @@ export default function NovakDjokovicPage() {
           url="https://tennisfriends.co.kr/players/novak-djokovic"
         />
 
-      <BreadcrumbSchema
-        items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '노박 조코비치', item: 'https://tennisfriends.co.kr/players/novak-djokovic' },
-        ]}
-      />
-      <FAQSchema faqs={faqs} />
+        <BreadcrumbSchema
+          items={[
+            { name: '홈', item: 'https://tennisfriends.co.kr' },
+            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
+            { name: '노박 조코비치', item: 'https://tennisfriends.co.kr/players/novak-djokovic' },
+          ]}
+        />
+        <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerProfileCard
             name="Novak Djokovic"
@@ -122,6 +122,7 @@ export default function NovakDjokovicPage() {
             turnedPro={2003}
             grandSlams={24}
             ranking={1}
+            image="/images/players/novak-djokovic.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">
@@ -247,8 +248,8 @@ export default function NovakDjokovicPage() {
 
           {/* CTA */}
           <CTA />
-        </div>
-      </Article>
-    </div>
+        </div >
+      </Article >
+    </div >
   );
 }

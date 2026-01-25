@@ -118,6 +118,7 @@ export default function StefanosTsitsipasPage() {
             turnedPro={2016}
             grandSlams={0}
             ranking={11}
+            image="/images/players/stefanos-tsitsipas.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

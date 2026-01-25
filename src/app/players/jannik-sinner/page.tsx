@@ -118,6 +118,7 @@ export default function JannikSinnerPage() {
             turnedPro={2018}
             grandSlams={2}
             ranking={1}
+            image="/images/players/jannik-sinner.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

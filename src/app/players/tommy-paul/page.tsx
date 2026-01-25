@@ -118,6 +118,7 @@ export default function TommyPaulPage() {
             turnedPro={2015}
             grandSlams={0}
             ranking={14}
+            image="/images/players/tommy-paul.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

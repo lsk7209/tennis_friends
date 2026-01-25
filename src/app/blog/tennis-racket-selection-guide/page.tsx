@@ -34,12 +34,15 @@ export const metadata = {
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'racket-weight', text: '1. 라켓 무게 — 컨트롤과 파워의 첫 번째 기준', depth: 2 },
-  { id: 'balance-point', text: "2. 밸런스 포인트 — 라켓의 \'중심\'을 느껴라", depth: 2 },
+  { id: 'balance-point', text: "2. 밸런스 포인트 — 라켓의 '중심'을 느껴라", depth: 2 },
   { id: 'string-pattern', text: '3. 스트링 패턴 — 스핀과 컨트롤의 비밀', depth: 2 },
   { id: 'string-tension', text: '4. 스트링 텐션 — 힘과 감각의 균형점', depth: 2 },
-  { id: 'regional-racket-setting', text: '5. 지역별 라켓 세팅 전략', depth: 2 },
-  { id: 'racket-replacement', text: '6. 라켓 교체 주기 — 실력보다 먼저 바꾸지 마라', depth: 2 },
-  { id: 'testing-method', text: "7. 테스트 방법 — 매장에서 \'3구 테스트\'", depth: 2 },
+  { id: 'ntrp-selection', text: '5. NTRP 구력별 추천 (초보~상급자)', depth: 2 },
+  { id: 'brand-comparison', text: '6. 브랜드별 라인업 비교 (바볼랏, 윌슨 등)', depth: 2 },
+  { id: 'price-tiers', text: '7. 가격대별 선택과 구매 전략', depth: 2 },
+  { id: 'regional-racket-setting', text: '8. 지역별 라켓 세팅 전략', depth: 2 },
+  { id: 'racket-replacement', text: '9. 라켓 교체 주기 — 실력보다 먼저 바꾸지 마라', depth: 2 },
+  { id: 'testing-method', text: "10. 테스트 방법 — 매장에서 '3구 테스트'", depth: 2 },
   { id: 'conclusion-racket-rhythm', text: '결론 — 라켓은 스펙이 아니라 리듬이다', depth: 2 },
 ];
 
@@ -71,8 +74,8 @@ export default function TennisRacketSelectionGuidePage() {
   const excerpt = '라켓은 단순한 도구가 아니다. 무게와 밸런스, 스트링 텐션이 경기력을 결정한다. 올바른 선택이 실력을 바꾼다.';
 
   return (
-    <Article 
-      title={title} 
+    <Article
+      title={title}
       excerpt={excerpt}
       date="2024-01-15"
       slug="tennis-racket-selection-guide"
@@ -292,9 +295,118 @@ export default function TennisRacketSelectionGuidePage() {
         </div>
       </section>
 
+      <section id="ntrp-selection" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+          <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
+          NTRP 구력별 추천 (초보~상급자)
+        </h2>
+
+        <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+          자신의 실력(NTRP 레벨)에 맞춰 라켓 스펙을 조정하는 것이 가장 효율적입니다.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <Card className="border-t-4 border-green-500">
+            <CardContent className="p-5">
+              <h3 className="font-bold text-lg mb-2 text-green-600">입문자 (NTRP 1.0~2.0)</h3>
+              <ul className="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                <li>• <strong>무게:</strong> 남성 280~290g / 여성 250~265g</li>
+                <li>• <strong>헤드 사이즈:</strong> 100~105 sq.in (넓은 스윗스팟)</li>
+                <li>• <strong>특징:</strong> 가볍고 반발력이 좋아 공을 넘기기 쉬운 라켓</li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="border-t-4 border-blue-500">
+            <CardContent className="p-5">
+              <h3 className="font-bold text-lg mb-2 text-blue-600">중급자 (NTRP 2.5~3.5)</h3>
+              <ul className="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                <li>• <strong>무게:</strong> 남성 300~305g / 여성 270~285g</li>
+                <li>• <strong>헤드 사이즈:</strong> 98~100 sq.in</li>
+                <li>• <strong>특징:</strong> 본인의 힘으로 공을 컨트롤하기 시작하는 밸런스형</li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="border-t-4 border-red-500">
+            <CardContent className="p-5">
+              <h3 className="font-bold text-lg mb-2 text-red-600">상급자 (NTRP 4.0 이상)</h3>
+              <ul className="text-sm space-y-2 text-gray-600 dark:text-gray-400">
+                <li>• <strong>무게:</strong> 남성 310g 이상 / 여성 290g 이상</li>
+                <li>• <strong>헤드 사이즈:</strong> 95~98 sq.in</li>
+                <li>• <strong>특징:</strong> 묵직한 무게로 파워와 정확한 컨트롤을 추구</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="brand-comparison" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+          <span className="bg-yellow-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
+          브랜드별 라인업 비교 (바볼랏, 윌슨 등)
+        </h2>
+        <div className="space-y-4">
+          <div className="p-5 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+            <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 bg-blue-500 rounded-full"></span> 바볼랏 (Babolat)
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600 dark:text-gray-400">
+              <div><strong>퓨어 드라이브:</strong> 압도적 파워, 입문자 추천</div>
+              <div><strong>퓨어 에어로:</strong> 엄청난 스핀량, 나달 라켓</div>
+            </div>
+          </div>
+          <div className="p-5 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+            <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 bg-red-500 rounded-full"></span> 윌슨 (Wilson)
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600 dark:text-gray-400">
+              <div><strong>블레이드:</strong> 부드러운 타구감, 정교한 컨트롤</div>
+              <div><strong>울트라:</strong> 편안한 반발력, 올라운더형</div>
+            </div>
+          </div>
+          <div className="p-5 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+            <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 bg-teal-500 rounded-full"></span> 요넥스 (Yonex)
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600 dark:text-gray-400">
+              <div><strong>이존(Ezone):</strong> 안정적 타구감, 높은 범용성</div>
+              <div><strong>브이코어(Vcore):</strong> 강력한 회전력 추구</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="price-tiers" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+          <span className="bg-emerald-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">7</span>
+          가격대별 선택과 구매 전략
+        </h2>
+        <div className="bg-emerald-50 dark:bg-emerald-950/30 p-6 rounded-xl border border-emerald-200 dark:border-emerald-800">
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <Badge className="bg-emerald-200 text-emerald-800">중고 (5~15만원)</Badge>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                입문 시 초기 비용 절감에 유리. 유명 카페나 당근마켓에서 인기 모델(퓨드, 블레이드 등)을 노리세요.
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <Badge className="bg-emerald-200 text-emerald-800">이월 정품 (18~24만원)</Badge>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                신형 출시 직전의 이전 버전 모델. 가성비가 가장 뛰어난 선택지입니다. 스펙 차이는 크지 않습니다.
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <Badge className="bg-emerald-200 text-emerald-800">신형 정품 (28~35만원)</Badge>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                최신 기술이 적용된 모델. 보증 기간 및 AS가 확실하며 중고가 방어력이 좋습니다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section id="regional-racket-setting" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-cyan-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">5</span>
+          <span className="bg-cyan-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">8</span>
           지역별 라켓 세팅 전략
         </h2>
 
@@ -326,7 +438,7 @@ export default function TennisRacketSelectionGuidePage() {
 
       <section id="racket-replacement" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">6</span>
+          <span className="bg-pink-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">9</span>
           라켓 교체 주기 — 실력보다 먼저 바꾸지 마라
         </h2>
 
@@ -354,7 +466,7 @@ export default function TennisRacketSelectionGuidePage() {
 
       <section id="testing-method" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-teal-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">7</span>
+          <span className="bg-teal-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">10</span>
           테스트 방법 — 매장에서 '3구 테스트'
         </h2>
 
@@ -397,21 +509,21 @@ export default function TennisRacketSelectionGuidePage() {
 
       <section id="conclusion-racket-rhythm" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="bg-orange-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">8</span>
+          <span className="bg-orange-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">11</span>
           결론 — 라켓은 스펙이 아니라 리듬이다
         </h2>
 
         <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
           좋은 라켓은 숫자가 아닌 <strong>몸의 리듬</strong>과 맞는 라켓입니다. 무게·밸런스·텐션·스트링을 이해하면, 라켓이 당신의 플레이를 완성시킵니다. 기계적 기준보다 감각적 일관성을 우선하세요. 결국 라켓은 '당신의 연장된 팔'입니다.
         </p>
-        
+
         <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-100 dark:border-blue-800">
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
             참고 자료: 테니스 라켓의 물리적 특성에 대한 더 자세한 기술적 정보는 국제테니스연맹(ITF)의 기술 리포트를 참고하세요.
           </p>
-          <a 
-            href="https://www.itftennis.com/en/about-us/tennis-tech/" 
-            target="_blank" 
+          <a
+            href="https://www.itftennis.com/en/about-us/tennis-tech/"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium flex items-center gap-1"
           >
@@ -439,7 +551,7 @@ export default function TennisRacketSelectionGuidePage() {
         </Card>
       </div>
 
-      
+
       {/* FAQ Section */}
       <FAQ items={faqs} />
 

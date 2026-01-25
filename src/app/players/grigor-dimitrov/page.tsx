@@ -118,6 +118,7 @@ export default function GrigorDimitrovPage() {
             turnedPro={2008}
             grandSlams={0}
             ranking={10}
+            image="/images/players/grigor-dimitrov.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

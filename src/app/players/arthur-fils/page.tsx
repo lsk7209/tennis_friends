@@ -134,6 +134,7 @@ export default function ArthurFilsPage() {
                         turnedPro={2021}
                         grandSlams={0}
                         ranking={30}
+            image="/images/players/arthur-fils.png"
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

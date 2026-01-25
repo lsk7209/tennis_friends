@@ -1,31 +1,28 @@
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
-import CTA from '@/components/blog/CTA';
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
+import { Badge } from '@/components/ui/badge';
 
 export const metadata = {
-  title: "서브 리턴 전략: 서버의 구질 읽는 법",
-  description: "게임의 시작은 서브지만, 브레이크의 시작은 리턴입니다. 스플릿 스텝 타이밍, 그립 전환, 그리고 서버의 루틴을 읽는 법.",
-  keywords: ["테니스 전술", "리턴", "Return", "서브 공략", "브레이크"],
+  title: '서브 리턴 마스터 전략 — 안드레 아가시의 타이밍 비결과 3대 타겟 존 | 브레이크 확률을 높이는 과학적 리턴 가이드',
+  description: '서브는 서버의 권리지만, 리턴은 승부의 시작입니다. 스플릿 스텝 과학, 짧은 백스윙, 리턴 타겟팅 등 브레이크를 부르는 모든 기술.',
+  keywords: ['테니스 리턴', '안드레 아가시 리턴', '서브 공략', '스플릿 스텝', '리턴 전술', '테니스 승리 전략'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-return-of-serve-strategy',
   },
   openGraph: {
-    title: "서브 리턴 전략: 서버의 구질 읽는 법",
-    description: "게임의 시작은 서브지만, 브레이크의 시작은 리턴입니다. 스플릿 스텝 타이밍, 그립 전환, 그리고 서버의 루틴을 읽는 법.",
+    title: '서브 리턴 마스터 전략 — 안드레 아가시의 타이밍 비결과 3대 타겟 존',
+    description: '서브는 서버의 권리지만, 리턴은 승부의 시작입니다. 스플릿 스텝 과학, 짧은 백스윙, 리턴 타겟팅 등 브레이크를 부르는 모든 기술.',
     url: 'https://tennisfriends.co.kr/blog/tennis-return-of-serve-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
-    type: 'article',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "서브 리턴 전략: 서버의 구질 읽는 법",
-    description: "게임의 시작은 서브지만, 브레이크의 시작은 리턴입니다. 스플릿 스텝 타이밍, 그립 전환, 그리고 서버의 루틴을 읽는 법.",
+    title: '서브 리턴 마스터 전략 — 안드레 아가시의 타이밍 비결과 3대 타겟 존',
+    description: '기회의 시작은 리턴입니다. 리턴이 안정되는 순간 모든 게임이 바뀝니다.',
   },
   robots: {
     index: true,
@@ -33,180 +30,114 @@ export const metadata = {
   },
 };
 
-const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
-  { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '스플릿 스텝의 마법: "공이 아니라 서버를 보라"', depth: 2 },
-  { id: 'key-point-2', text: '짧은 백스윙: "상대의 파워를 빌려라"', depth: 2 },
-  { id: 'key-point-3', text: '리턴의 타겟팅: "안전이 우선이다"', depth: 2 },
-  { id: 'conclusion', text: '마무리하며', depth: 2 },
+const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
+  { id: 'split-step-science', text: '1. 스플릿 스텝의 과학: 아가시의 "임팩트 점프" 법칙', depth: 2 },
+  { id: 'short-backswing', text: '2. 짧은 백스윙: 텐션 3/10 규칙과 블로킹 메커니즘', depth: 2 },
+  { id: 'return-target-zones', text: '3. 고확률 리턴 타겟: 3대의 골든 매직 존', depth: 2 },
+  { id: 'return-types', text: '4. 리턴의 종류: 블록(Block), 슬라이스(Slice), 립(Rip)', depth: 2 },
+  { id: 'returner-psychology', text: '5. 리턴너의 심리학: 서버를 "벽"으로 압박하라', depth: 2 },
+  { id: 'conclusion', text: '6. 결론: 리턴은 브레이크의 문을 여는 열쇠다', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: "강서브를 리턴할 때 손목이 너무 아파요.",
-    a: "라켓을 너무 꽉 쥐고 있거나, 정확한 스핀으로 공을 받아내지 못하기 때문일 수 있습니다. 면만 만들어준다는 느낌으로 가볍게 블로킹하고, 임팩트 순간 팔 전체의 무게로 밀어내 보세요."
+    q: '강서브 리턴 시 라켓이 밀려요.',
+    a: '라켓을 뒤로 빼지 말고 몸 앞 30cm 지점에서 고정한다는 느낌으로 "벽"을 만드세요. 힘이 아닌 팔 전체의 무게로 버티는 것이 핵심입니다.'
   },
   {
-    q: "리턴할 때 어느 정도 앞에 서 있어야 하나요?",
-    a: "서버의 속도에 따라 다릅니다. 빠른 서브라면 베이스라인 한두 발자국 뒤가 적당하며, 두 번째 서브처럼 느린 공이라면 베이스라인 안쪽으로 적극적으로 들어가서 리턴하는 것이 좋습니다."
-  },
+    q: '리턴 시 스탠스는 어떻게 잡나요?',
+    a: '기본적인 어깨너비보다 1.5배 더 넓게 잡으세요. 중심이 낮을수록 빠른 방향 전환이 가능합니다.'
+  }
 ];
 
-export default function BlogPost() {
+export default function TennisReturnOfServeStrategyPage() {
+  const title = '서브 리턴: 서버의 권리를 뺏는 정교한 기술';
+  const excerpt = '서브는 게임의 시작이지만, 리턴은 승부의 시작입니다. 0.5초 만에 날아오는 공을 제어하는 리턴의 모든 전술을 공개합니다.';
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
-          <div className="flex flex-wrap gap-2 mb-6">
-            <Badge key="테니스 전술" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">테니스 전술</Badge>
-            <Badge key="리턴" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">리턴</Badge>
-            <Badge key="Return" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">Return</Badge>
-            <Badge key="서브 공략" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">서브 공략</Badge>
-            <Badge key="브레이크" className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">브레이크</Badge>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            서브 리턴 전략: 서버의 구질 읽는 법
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            게임의 시작은 서브지만, 브레이크의 시작은 리턴입니다. 스플릿 스텝 타이밍, 그립 전환, 그리고 서버의 루틴을 읽는 법.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-6 text-blue-100">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="font-medium">5분 읽기</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span className="font-medium">2026-01-24</span>
-            </div>
-          </div>
+    <Article slug="tennis-return-of-serve-strategy" date="2024-01-01" title={title} excerpt={excerpt}>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 p-6 rounded-lg mb-8">
+        <div className="flex items-center gap-2 mb-3">
+          <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">리턴 전술</Badge>
+          <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">게임 브레이커</Badge>
         </div>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-bold text-center">
+          "최고의 리턴너는 가장 빠른 선수가 아니라 가장 잘 읽는 선수입니다."
+        </p>
       </div>
 
-      <Article slug="tennis-return-of-serve-strategy" date="2026-01-24" title="서브 리턴 전략: 서버의 구질 읽는 법" excerpt="게임의 시작은 서브지만, 브레이크의 시작은 리턴입니다. 스플릿 스텝 타이밍, 그립 전환, 그리고 서버의 루틴을 읽는 법.">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-          {/* Table of Contents */}
-          <div className="mb-12">
-            <TOC items={tocItems} />
+      <TOC items={tocItems} />
+
+      <section id="split-step-science" className="mt-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">1. 스플릿 스텝의 과학: 아가시의 "임팩트 점프" 법칙</h2>
+        <p className="mb-4">효과적인 리턴은 공이 코트에 닿기 전이 아니라, <strong>상대의 라켓이 공에 닿는 순간</strong> 지면에서 발이 떠 있어야 합니다.</p>
+        <div className="bg-slate-900 text-white p-6 rounded-2xl mb-6 flex items-center justify-around">
+          <div className="text-center">
+            <p className="text-[10px] text-slate-400">Launch</p>
+            <p className="text-xs font-bold">임팩트 직전 도약</p>
           </div>
-
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-
-            <h2 id="introduction">들어가며</h2>
-            <div className="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-2xl mb-8 border-l-4 border-indigo-500">
-              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-0">
-                테니스 경기의 절반은 리턴 게임입니다. 많은 사람들이 서브 연습에는 수백 시간을 쏟지만, 정작 <strong>'서브 리턴'</strong> 전술에는 무심하곤 합니다. 하지만 리턴 하나만 안정되어도 당신의 승률은 비약적으로 상승합니다. 상대의 서브를 무력화하고 게임 브레이크를 끌어낼 수 있는 전술적 노하우를 공개합니다.
-              </p>
-            </div>
-
-            <h2 id="key-point-1">스플릿 스텝의 마법: "공이 아니라 서버를 보라"</h2>
-            <p>
-              성공적인 리턴의 시작은 리듬입니다.
-            </p>
-            <p>
-              상대의 라켓이 공에 닿기 직전, 몸을 가볍게 점프시키는 <strong>스플릿 스텝</strong>을 밟으세요. 이때 시선은 상대의 공뿐만 아니라 토스의 높이와 라켓의 궤적을 함께 살펴야 합니다. 서버의 버릇(예: 와이드 서브를 넣을 때 토스가 더 옆으로 기우는 등)을 읽어낼 수 있다면 리턴은 훨씬 쉬워집니다.
-            </p>
-
-            <h2 id="key-point-2">짧은 백스윙: "상대의 파워를 빌려라"</h2>
-            <p>
-              서브는 게임에서 가장 빠른 공입니다. 평소 스트로크처럼 큰 테이크백을 가져가면 늦기 십상입니다.
-            </p>
-            <div className="bg-slate-50 dark:bg-slate-900 p-5 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 my-6">
-              <p className="text-sm italic">
-                "리턴은 치는 것이 아니라 <strong>'블로킹'</strong>하는 것이다."
-              </p>
-              <p className="text-xs text-slate-500 mt-2">라켓을 뒤로 빼지 말고 어깨만 가볍게 틀어주세요. 상대의 강력한 서브 속도를 반사판처럼 그대로 되돌려주는 것만으로도 충분히 위협적인 리턴이 됩니다.</p>
-            </div>
-
-            <h2 id="key-point-3">리턴의 타겟팅: "안전이 우선이다"</h2>
-            <p>
-              초보자의 실수는 리턴으로 즉시 위너를 치려 하는 것입니다.
-            </p>
-            <ul className="list-disc pl-5 space-y-2 my-4">
-              <li><strong>첫 번째 서브 리턴:</strong> 무조건 깊게, 코트 중앙으로 보내세요. 상대가 서브 대시를 하거나 강력한 3구 공격을 하는 것을 방지하는 것이 최우선 목표입니다.</li>
-              <li><strong>두 번째 서브 리턴:</strong> 좀 더 공격적으로 임하세요. 상대의 약한 쪽(주로 백핸드)으로 깊게 보내거나, 각도를 넓게 벌려 상대를 뛰게 만드세요.</li>
-            </ul>
-
-            <h2 id="conclusion">마무리하며</h2>
-            <p>
-              리턴은 멘탈 싸움입니다. 아무리 강력한 서브라도 한두 번 코트 깊숙이 되돌려보내면 서버는 심리적으로 흔들리기 시작합니다. 당신의 리턴이 벽(Wall)처럼 느껴지게 만드세요. 그것이 서브 게임을 브레이크하는 가장 확실한 방법입니다.
-            </p>
-
+          <div className="text-2xl">→</div>
+          <div className="text-center">
+            <p className="text-[10px] text-slate-400">Landing</p>
+            <p className="text-xs font-bold">방향 읽고 착지</p>
           </div>
-
-          {/* Related Links */}
-          <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필 더보기</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">NTRP 자가 진단</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    추천 링크
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어</span>
-                      </a>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
+          <div className="text-2xl">→</div>
+          <div className="text-center">
+            <p className="text-[10px] text-slate-400">Explosion</p>
+            <p className="text-xs font-bold">폭발적 첫 스텝</p>
           </div>
-
-          <FAQ items={faqs} />
-          <RelatedPosts
-            currentSlug="tennis-return-of-serve-strategy"
-            category="테니스 전술"
-            tags={["테니스 전술", "리턴", "Return", "서브 공략", "브레이크"]}
-          />
-
-          <CTA />
         </div>
-      </Article>
-    </div>
+      </section>
+
+      <section id="short-backswing" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">2. 짧은 백스윙: 텐션 3/10 규칙</h2>
+        <p className="mb-4">리턴 시 가장 큰 실수는 백스윙을 크게 가져가는 것입니다. <strong>"어깨는 틀되, 라켓은 남겨라"</strong>.</p>
+        <Card className="border-l-4 border-blue-500">
+          <CardContent className="p-5">
+            <h4 className="font-bold text-sm mb-2 italic">The 3/10 Tension Rule:</h4>
+            <p className="text-xs text-slate-500 leading-relaxed">준비 단계에서 그립 강도를 3 정도로 유지하세요. 너무 꽉 쥐면 반응 속도가 느려집니다. 임팩트 순간에만 8로 높여 공을 가볍게 튕겨냅니다.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section id="return-target-zones" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">3. 고확률 리턴 타겟: 3대의 골든 존</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-blue-200">
+            <h5 className="font-bold text-sm text-blue-600 mb-2">Zone A: Deep Middle</h5>
+            <p className="text-[10px]"><strong>80% 확률 성공존.</strong> 서버의 발치를 공략하여 각도를 줄이고 3구 공격을 차단합니다.</p>
+          </div>
+          <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-indigo-200">
+            <h5 className="font-bold text-sm text-indigo-600 mb-2">Zone B: Short Angle</h5>
+            <p className="text-[10px]"><strong>공격형 전략.</strong> 세컨 서브 공량 시 유용합니다. 상대를 코트 밖으로 완전히 끌어냅니다.</p>
+          </div>
+          <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-purple-200">
+            <h5 className="font-bold text-sm text-purple-600 mb-2">Zone C: Down the Line</h5>
+            <p className="text-[10px]"><strong>도박성 위너 존.</strong> 상대가 서브 앤 발리를 시도할 때 패싱샷으로 결정짓는 자리입니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="returner-psychology" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">4. 리턴너의 심리학: 서버를 압박하라</h2>
+        <p className="mb-4 text-sm leading-relaxed">서버는 자신의 서브가 무력해지는 순간 가장 큰 공포를 느낍니다.</p>
+        <div className="p-5 bg-blue-50 dark:bg-blue-900/10 rounded-2xl border-l-4 border-blue-500">
+          <ul className="text-xs space-y-2">
+            <li>• <strong>보디 랭귀지:</strong> 베이스라인 안쪽으로 서서 공격적인 자세를 취하세요.</li>
+            <li>• <strong>리듬 깨기:</strong> 리턴 직전에 베이스라인 위치를 앞뒤로 조정해 서버의 시선을 분산시키세요.</li>
+            <li>• <strong>안전 제일:</strong> 퍼스트 서브는 "무조건 코트 안으로" 되돌려주어 서버가 다시 준비하게 만드세요.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="conclusion" className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">5. 결론: 리턴은 브레이크의 문을 여는 열쇠다</h2>
+        <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          테니스의 위대한 선수들은 모두 위대한 리턴너였습니다. 강서브를 이기는 것은 더 강한 힘이 아니라 <strong>더 정교한 타이밍과 냉철한 코스 선택</strong>입니다. 오늘부터 당신의 리턴이 상대 서버의 가장 큰 고민거리가 되게 만드세요.
+        </p>
+      </section>
+
+      <FAQ items={faqs} />
+    </Article>
   );
 }

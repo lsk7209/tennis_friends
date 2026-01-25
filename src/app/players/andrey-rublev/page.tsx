@@ -118,6 +118,7 @@ export default function AndreyRublevPage() {
             turnedPro={2014}
             grandSlams={0}
             ranking={6}
+            image="/images/players/andrey-rublev.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

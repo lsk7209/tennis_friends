@@ -134,6 +134,7 @@ export default function GaelMonfilsPage() {
                         turnedPro={2004}
                         grandSlams={0}
                         ranking={38}
+                        image="/images/players/gael-monfils.png"
                     />
 
                     <div className="prose dark:prose-invert max-w-none">

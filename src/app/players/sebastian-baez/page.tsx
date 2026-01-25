@@ -118,6 +118,7 @@ export default function SebastianBaezPage() {
             turnedPro={2018}
             grandSlams={0}
             ranking={19}
+            image="/images/players/sebastian-baez.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

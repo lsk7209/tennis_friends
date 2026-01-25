@@ -118,6 +118,7 @@ export default function NicolasJarryPage() {
             turnedPro={2014}
             grandSlams={0}
             ranking={24}
+            image="/images/players/nicolas-jarry.png"
           />
 
           <div className="prose dark:prose-invert max-w-none">

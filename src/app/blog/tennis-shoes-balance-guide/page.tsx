@@ -272,13 +272,36 @@ export default function TennisShoesBalanceGuidePage() {
         </p>
       </section>
 
-      
       {/* FAQ Section */}
       <FAQ items={faqs} />
 
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
         <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Link href="/blog/tennis-shoes-selection-guide">
+            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-teal-400 transition-all group cursor-pointer h-full">
+              <CardContent className="p-4">
+                <Badge className="bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300 mb-2">
+                  기초 가이드
+                </Badge>
+                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 transition-colors mb-2 line-clamp-2">
+                  테니스화 선택 완전 가이드 — 올코트 vs 클레이 vs 옴니
+                </h4>
+              </CardContent>
+            </Card>
+          </Link>
+          <Link href="/blog/tennis-racket-selection-guide">
+            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-orange-400 transition-all group cursor-pointer h-full">
+              <CardContent className="p-4">
+                <Badge className="bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300 mb-2">
+                  장비 가이드
+                </Badge>
+                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-orange-600 transition-colors mb-2 line-clamp-2">
+                  테니스 라켓 선택 완전 가이드
+                </h4>
+              </CardContent>
+            </Card>
+          </Link>
         </div>
       </div>
     </Article>
