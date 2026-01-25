@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: "?쇱넀?≪씠 ?곷? 怨듬왂踰?(Lefty ????꾩닠) | ?쒕툕遺??蹂듭떇 ?꾨왂源뚯???紐⑤뱺 寃?,
-  description: "諛섎? ?뚯쟾 ?쒕툕? ??꽑 媛곷룄. ?쇱넀?≪씠(Lefty) ?좎닔???좎뒪瑜??쎈뒗 踰? ?쒕툕 肄붿뒪 怨듬왂, 洹몃━怨?蹂듭떇?먯꽌???밸━ 怨듭떇源뚯? ?ъ링 遺꾩꽍 媛?대뱶.",
-  keywords: ["?뚮땲???꾩닠", "?쇱넀?≪씠", "Lefty", "?쒕툕 由ы꽩", "怨듬왂踰?, "蹂듭떇 ?꾩닠", "?뚮땲????],
+  title: "왼손잡이 상대 공략법 (Lefty 대응 전술)",
+  description: "전체 선수의 10% 불과한 왼손잡이와의 대결, 낯선 서브 궤적과 스핀에 당황하지 마세요. 왼손잡이의 장점을 무력화하는 필승 전술.",
+  keywords: ["테니스 전술","왼손잡이","Lefty","테니스","공략법"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-strategy-vs-lefty',
   },
   openGraph: {
-    title: "?쇱넀?≪씠 ?곷? 怨듬왂踰?(Lefty ????꾩닠) | ?쒕툕遺??蹂듭떇 ?꾨왂源뚯?",
-    description: "諛섎? ?뚯쟾 ?쒕툕? ??꽑 媛곷룄. ?쇱넀?≪씠(Lefty) ?좎닔???좎뒪瑜??쎈뒗 踰? ?쒕툕 肄붿뒪 怨듬왂, 洹몃━怨?蹂듭떇?먯꽌???밸━ 怨듭떇源뚯? ?ъ링 遺꾩꽍.",
+    title: "왼손잡이 상대 공략법 (Lefty 대응 전술)",
+    description: "전체 선수의 10% 불과한 왼손잡이와의 대결, 낯선 서브 궤적과 스핀에 당황하지 마세요. 왼손잡이의 장점을 무력화하는 필승 전술.",
     url: 'https://tennisfriends.co.kr/blog/tennis-strategy-vs-lefty',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "?쇱넀?≪씠 ?곷? 怨듬왂踰?(Lefty ????꾩닠) | ?쒕툕遺??蹂듭떇 ?꾨왂源뚯?",
-    description: "諛섎? ?뚯쟾 ?쒕툕? ??꽑 媛곷룄. ?쇱넀?≪씠(Lefty) ?좎닔???좎뒪瑜??쎈뒗 踰? ?쒕툕 肄붿뒪 怨듬왂, 洹몃━怨?蹂듭떇?먯꽌???밸━ 怨듭떇源뚯? ?ъ링 遺꾩꽍.",
+    title: "왼손잡이 상대 공략법 (Lefty 대응 전술)",
+    description: "전체 선수의 10% 불과한 왼손잡이와의 대결, 낯선 서브 궤적과 스핀에 당황하지 마세요. 왼손잡이의 장점을 무력화하는 필승 전술.",
   },
   robots: {
     index: true,
@@ -33,185 +33,69 @@ export const metadata = {
   },
 };
 
-const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
-  { id: 'introduction', text: '1. ?ㅼ뼱媛硫? ???곕━???쇱넀?≪씠?먭쾶 ?뱁솴?섎뒗媛?', depth: 2 },
-  { id: 'mirror-principle', text: '2. 嫄곗슱???먮━瑜?源⑤떖?꾨씪 (The Mirror Principle)', depth: 2 },
-  { id: 'reading-service', text: '3. ?쇱넀?≪씠 ?쒕툕 ?쎄린: "?좎뒪 ?꾩튂? 諛붿슫??沅ㅼ쟻"', depth: 2 },
-  { id: 'adcenter-strategy', text: "4. 怨듯룷??'?좊뱶 肄뷀듃' ?덉텧 ?꾨왂", depth: 2 },
-  { id: 'rally-tactics', text: '5. ?좊━ ?꾨왂: 洹몃뱾??諛깊빖?쒕? ?щ깷?섎씪', depth: 2 },
-  { id: 'doubles-tactics', text: '6. 蹂듭떇?먯꽌???덊봽??Lefty) ??묐쾿', depth: 2 },
-  { id: 'practice-tips', text: '7. ?ㅼ쟾 ?鍮??곗뒿 ?뚰겕??, depth: 2 },
-  { id: 'conclusion', text: '8. 寃곕줎: ??꽕?뚯쓣 利먭굅??쇰줈 諛붽씀??踰?, depth: 2 },
+const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
+  { id: 'section-1', text: '1. 주요 특징', depth: 2 },
+  { id: 'section-2', text: '2. 플레이 스타일', depth: 2 },
+  { id: 'conclusion', text: '결론', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '?쇱넀?≪씠???щ씪?댁뒪 ?쒕툕????洹몃젃寃?留롮씠 ?섎굹??',
-    a: '?ㅻⅨ?먯옟?댁쓽 ?щ씪?댁뒪? ?뚯쟾 諛⑺뼢???뺣컲??닿린 ?뚮Ц?낅땲?? ?뱁엳 ?뱀떊??諛깊빖??諛붽묑履??좊뱶 肄뷀듃)?쇰줈 ?섍???沅ㅼ쟻? ?좎껜 援ъ“??媛??諛⑹뼱?섍린 ?대젮??肄붿뒪?낅땲??'
-  },
-  {
-    q: '?쇱넀?≪씠瑜??닿린?ㅻ㈃ 臾댁“嫄?諛깊빖?쒕쭔 移섎㈃ ?섎굹??',
-    a: '?⑥닚??諛깊빖??履쎌쑝濡?蹂대궡??寃껊낫?? 洹몃뱾??怨듭쓣 ?ㅼ뼱 ?щ젮???섍굅????? ?щ씪?댁뒪) ?믪? ??먯뿉??爾먯빞 ?섎뒗(源딆? ?묒뒪?) ?곹솴??留뚮뱶??寃껋씠 ??以묒슂?⑸땲??'
-  },
-  {
-    q: '?쇱넀?≪씠 ?뚰듃?덉? 蹂듭떇??????二쇱쓽???먯??',
-    a: '???щ엺???ы빖?쒓? 肄뷀듃 以묒븰(媛?대뜲)?쇰줈 ?ㅻ룄濡?諛곗튂?섎뒗 寃껋씠 ?좊━?⑸땲?? ?대? "?ы빖???붾툝 ?щ줈???쇨퀬 ?섎ŉ, 媛뺣젰???쇳꽣 怨듦꺽??媛?ν빐吏묐땲??'
-  },
-  {
-    q: '?쇱넀?≪씠 怨듬왂??援щ젰 ?μ긽???꾩????섎굹??',
-    a: '?? ??꽑 由щ벉???곸쓳?섎뒗 ?λ젰? 以묎툒?먯뿉???곴툒?먮줈 ?섏뼱媛???꾩닔 愿臾몄엯?덈떎. 蹂?붾Т?랁븳 ?곹솴 ?泥??λ젰??湲몃윭吏묐땲??'
+    "q": "왼손잡이랑 치면 왜 자꾸 빗맞을까요?",
+    "a": "공의 회전 방향이 반대(Side spin)라서 라켓에 맞을 때 평소와 다르게 튀어나가기 때문입니다. 공을 좀 더 끝까지 보고, 스위트 스폿에 정확히 맞추는 집중력이 필요합니다."
   }
 ];
 
-export default function LeftyStrategyBlogPost() {
+export default function BlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
-      <div className="relative bg-gradient-to-br from-orange-600 via-red-600 to-rose-700 dark:from-orange-900 dark:via-red-900 dark:to-rose-900">
+      <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['?뚮땲???꾩닠', '?쇱넀?≪씠', 'Lefty', '?쒕툕 由ы꽩', '?밸━ 怨듭떇'].map((tag) => (
-              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
-                ?뚮땲???좎닔
+            {["테니스 전술","왼손잡이","Lefty","테니스","공략법"].map((tag) => (
+              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                {tag}
               </Badge>
             ))}
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            ?쇱넀?≪씠(Lefty) ?곷? 怨듬왂踰?<br />
-            <span className="text-2xl md:text-3xl font-light opacity-90">諛섎? ?뚯쟾怨???꽑 媛곷룄瑜??닿린???밸━ 諛⑹젙??/span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+            왼손잡이 상대 공략법 (Lefty 대응 전술)
           </h1>
-          <p className="text-xl text-orange-50 mb-8 max-w-3xl">
-            ?곗씠?곗뿉 ?곕Ⅴ硫??쇱넀?≪씠???뚮땲?ㅺ퀎??'鍮꾨?移??꾪삊'?낅땲?? ?섏?留?洹몃뱾???⑦꽩???댄빐?섎㈃ ?ㅽ엳???뱀떊??寃쎄린瑜?二쇰룄?????덉뒿?덈떎.
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
+            전체 선수의 10% 불과한 왼손잡이와의 대결, 낯선 서브 궤적과 스핀에 당황하지 마세요. 왼손잡이의 장점을 무력화하는 필승 전술.
           </p>
         </div>
       </div>
 
-      <Article slug="tennis-strategy-vs-lefty" date="2026-01-24" title="?쇱넀?≪씠 怨듬왂踰? excerpt="諛섎? ?뚯쟾 ?쒕툕? ??꽑 媛곷룄瑜??닿린??踰?>
+      <Article slug="tennis-strategy-vs-lefty" date="2026-01-24" title="왼손잡이 상대 공략법 (Lefty 대응 전술)" excerpt="전체 선수의 10% 불과한 왼손잡이와의 대결, 낯선 서브 궤적과 스핀에 당황하지 마세요. 왼손잡이의 장점을 무력화하는 필승 전술.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-          <TOC items={tocItems} />
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            
+      <h2>코트 위의 이단아, 'Lefty'를 잡아라</h2>
+      <p>나달, 매켄로 등 전설적인 선수들 중에는 왼손잡이가 많습니다. 익숙하지 않은 궤적과 회전은 상대에게 큰 혼란을 줍니다. 하지만 원리를 알면 충분히 대처할 수 있습니다.</p>
 
-          <section id="introduction" className="mt-12 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">1. ?ㅼ뼱媛硫? ???곕━???쇱넀?≪씠?먭쾶 ?뱁솴?섎뒗媛?</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?쇳뙆???섎떖??媛뺣젰???쇱넀 ?묒뒪? ?ы빖?쒕? ?좎삱??蹂댁꽭?? ?쇱넀?≪씠 ?좎닔?????멸퀎 ?멸뎄????10%??遺덇낵?섏?留? ?꾨줈 臾대????곸쐞沅?鍮꾩쨷? 洹몃낫???⑥뵮 ?믪뒿?덈떎. ?대뒗 ?⑥닚???곗뿰???꾨떃?덈떎.
-              </p>
-              <p>
-                ?ㅻⅨ?먯옟?댁씤 ?뱀떊???쇱넀?≪씠? 寃쎄린?????먮겮???듬떟?⑥쓽 ?뺤껜??<strong>'?곗씠?곗쓽 遺議?</strong>?낅땲?? ?뱀떊? 90%???쒓컙??媛숈? ?ㅻⅨ?먯옟?댁? ?곗뒿?섏?留? ?쇱넀?≪씠??90%???쒓컙???뱀떊怨?媛숈? ?ㅻⅨ?먯옟?대? 怨듬왂?섎뒗 ??蹂대깄?덈떎. 利? 洹몃뱾? ?대? ?뱀떊?????뚭퀬 ?덉?留? ?뱀떊? 洹몃뱾????꽕 肉먯엯?덈떎.
-              </p>
-            </div>
-          </section>
+      <h3>1. 서브의 궤적을 이해하라</h3>
+      <p>왼손잡이의 슬라이스 서브는 오른손잡이와 반대 방향으로 휘어집니다. 듀스 코트에서는 바깥으로 흘러나가고, 애드 코트에서는 몸 쪽으로 파고듭니다. 이 궤적을 머릿속에 그리고 리턴 위치를 한 발짝 조정하세요.</p>
 
-          <section id="mirror-principle" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">2. 嫄곗슱???먮━瑜?源⑤떖?꾨씪 (The Mirror Principle)</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?쇱넀?≪씠 怨듬왂??泥リ구?뚯? 紐⑤뱺 寃껋씠 <strong>'嫄곗슱??鍮꾩튇 諛섎? ?대?吏'</strong>?꾩쓣 ?뚯뿉 媛곸씤?섎뒗 寃껋엯?덈떎.
-              </p>
-              <ul>
-                <li><strong>?ы빖???좊━:</strong> ?뱀떊???ы빖???щ줈?ㅺ? ?곷???諛깊빖???щ줈?ㅼ? 留뚮궔?덈떎 (?ㅻⅨ?먯옟??寃쎄린?먯꽌???ы빖??vs ?ы빖??.</li>
-                <li><strong>?쒕툕??諛⑺뼢:</strong> ?곷????щ씪?댁뒪 ?쒕툕???뱀떊???ㅻⅨ履쎌씠 ?꾨땶 ?쇱そ?쇰줈 ?섏뼱 ?섍컩?덈떎.</li>
-              </ul>
-              <p>
-                ???먮━瑜??댄빐?섏? 紐삵븯硫??뱀떊? 臾댁쓽?앹쟻?쇰줈 "怨듭씠 ???댁そ?쇰줈 ?ㅼ??"?쇨퀬 ?앷컖?섎ŉ 諛섏쓳 ?띾룄媛 0.2珥???뼱吏寃??⑸땲?? 0.2珥덉쓽 李⑥씠???먮윭? ?꾨떇?룹쓣 媛瑜대뒗 寃곗젙?곸씤 ?쒓컙?낅땲??
-              </p>
-            </div>
-          </section>
+      <h3>2. 상대의 백핸드를 노려라 (Cross-Court)</h3>
+      <p>오른손잡이끼리의 대결에서 주로 사용하는 '크로스 코트' 랠리는 왼손잡이에게는 강력한 포핸드 쪽입니다. 즉, 나의 포핸드 크로스가 상대의 포핸드로 가게 됩니다. 의식적으로 <strong>'다운더라인'</strong>이나 역크로스를 쳐서 상대의 백핸드(오른쪽 구석)를 공략해야 합니다.</p>
 
-          <section id="reading-service" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">3. ?쇱넀?≪씠 ?쒕툕 ?쎄린: "?좎뒪 ?꾩튂? 諛붿슫??沅ㅼ쟻"</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?쇱넀?≪씠 ?쒕툕???듭떖? ?뱀떊??諛깊빖??履쎌쑝濡?硫?댁???<strong>?щ씪?댁뒪 ?쒕툕</strong>?낅땲?? ?대? ?쎄린 ?꾪빐 ?ㅼ쓬 ??媛吏瑜?二쇰ぉ?섏꽭??
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                <Card className="bg-slate-50 dark:bg-slate-900 border-orange-100 shadow-sm">
-                  <CardContent className="p-6">
-                    <h3 className="font-bold text-lg mb-3">?뱧 ?좎뒪 ?꾩튂 (Toss Position)</h3>
-                    <p className="text-sm">?쇱넀?≪씠媛 癒몃━ ?쇱そ ?꾨줈 ?좎뒪瑜??믨쾶 ?섏쭊?ㅻ㈃, 洹멸쾬? 100% ???쒕툕??媛뺥븳 ?щ씪?댁뒪?낅땲?? 紐몄씠 ?쇱そ?쇰줈 湲곗슱?댁???媛곷룄瑜?蹂닿퀬 誘몃━ 諛붽묑履쎌쑝濡???諛??대룞?섏꽭??</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-slate-50 dark:bg-slate-900 border-orange-100 shadow-sm">
-                  <CardContent className="p-6">
-                    <h3 className="font-bold text-lg mb-3">?? 諛붿슫???덉륫 (Bounce)</h3>
-                    <p className="text-sm">諛붿슫???꾩뿉 怨듭씠 ?뱀떊??紐?履쎌쑝濡??뚭퀬?쒕뒗吏, 諛붽묑?쇰줈 ?섍??붿?瑜?怨듭씠 ?ㅽ듃瑜??섎뒗 ?쒓컙 寃곗젙?댁빞 ?⑸땲?? ?쒓컖?곸쑝濡?'諛섎? 沅ㅼ쟻'?꾩쓣 怨꾩냽 ?곴린?섏꽭??</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </section>
+      <h3>3. 중요할 때는 '센터'를 지켜라</h3>
+      <p>왼손잡이 선수들은 위기 상황에서 자신의 장기인 서브를 와이드로 넣으려는 경향이 있습니다. 하지만 리턴 시 센터를 너무 비우지 않도록 주의하세요. T존 서브도 강력할 수 있습니다.</p>
 
-          <section id="adcenter-strategy" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">4. 怨듯룷??'?좊뱶 肄뷀듃' ?덉텧 ?꾨왂</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?쇱넀?≪씠 ?좎닔??以묒슂???ъ씤???좊뱶 肄뷀듃)?먯꽌 ?뱀떊??諛깊빖??諛붽묑履쎌쑝濡??꾨쭩媛???쒕툕瑜??ｋ뒗 ?λ젰???곸썡?⑸땲??
-              </p>
-              <div className="bg-red-50 dark:bg-red-950 p-6 rounded-2xl border-l-8 border-red-500 mb-8">
-                <h3 className="text-xl font-bold text-red-900 dark:text-red-100 mb-4">?뮕 ?좊뱶 肄뷀듃 由ы꽩 ??/h3>
-                <p>
-                  ?됱냼蹂대떎 ??諛??댁? ??諛??뺣룄 <strong>?ъ씠?쒕씪??履쎌쑝濡????대룞?댁꽌</strong> ?쒖꽭?? ?곗〈(T-zone)??議곌툑 ?댁＜?붾씪??諛붽묑?쇰줈 ?섍???'??대뱶 ????癒쇱? 李⑤떒?섎뒗 寃껋씠 ?щ━???덉젙媛먯쓣 以띾땲?? 留뚯빟 ?곷?媛 ?곗〈?쇰줈 ?ｋ뒗?ㅻ㈃ 洹멸쾬? ?뱀떊???ы빖??履쎌씠湲곗뿉 ?泥섍? ???쎌뒿?덈떎.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section id="rally-tactics" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">5. ?좊━ ?꾨왂: 洹몃뱾??諛깊빖?쒕? ?щ깷?섎씪</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?쇱넀?≪씠???ы빖???묒뒪?? ?뱀떊??諛깊빖?쒕? ?믪? ??먯뿉??移섍쾶 留뚮뱾??愿대∼?숇땲?? ?대? 諛⑹뼱?섎뒗 寃껋쓣 ?섏뼱 怨듦꺽?쇰줈 ?꾪솚?섎젮硫??寃잛쓣 <strong>?곷???諛깊빖??/strong>濡?吏묒슂?섍쾶 ?뚮젮???⑸땲??
-              </p>
-              <ul className="space-y-4">
-                <li><strong>?몄궗?대뱶 ?꾩썐 ?ы빖??</strong> ?뱀떊???ы빖?쒕? 移??? ?곷???諛깊빖??援ъ꽍???ν빐 源딆? 媛곷룄濡?怨듭쓣 蹂대궡?몄슂. ?닿쾬???쇱넀?≪씠瑜?媛???뱁솴?섍쾶 留뚮뱶??怨듦꺽 猷⑦듃?낅땲??</li>
-                <li><strong>??? ?щ씪?댁뒪:</strong> ?쇱넀?≪씠?ㅼ? ?媛????뚯씠?щ갚怨??④퍡 媛뺥븳 ?묒뒪????좏샇?⑸땲?? 怨듭쓣 ??쾶 源붾━???щ씪?댁뒪濡?蹂대궡硫?洹몃뱾? 怨듭쓣 ?ㅼ뼱 ?щ젮???섎?濡?怨듦꺽?μ씠 諛섍컧?⑸땲??</li>
-              </ul>
-            </div>
-          </section>
-
-          <section id="doubles-tactics" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">6. 蹂듭떇?먯꽌???덊봽??Lefty) ??묐쾿</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                蹂듭떇?먯꽌 ?쇱넀?≪씠??'?꾩닠??移섑듃???낅땲?? ?곸씠 ?쇱넀?≪씠 ??대씪硫?以묒븰(Center) 怨듦꺽???뱁엳 二쇱쓽?댁빞 ?⑸땲??
-              </p>
-              <p>
-                諛섎?濡??뱀떊???뚰듃?덇? ?쇱넀?≪씠?쇰㈃, <strong>"?쇳꽣 ?ы빖??</strong>瑜??곴레 ?쒖슜?섏꽭?? ???щ엺??媛뺣젰???ы빖?쒓? 肄뷀듃 ?뺤쨷?숈쓣 泥좎???諛⑹뼱?섍퀬 怨듦꺽?????덉뒿?덈떎. ?대뒗 ?곷? ??먭쾶 ?꾩껌???쒓컖???뺣컯媛먯쓣 以띾땲??
-              </p>
-            </div>
-          </section>
-
-          <section id="practice-tips" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">7. ?ㅼ쟾 ?鍮??곗뒿 ?뚰겕??/h2>
-            <div className="bg-amber-50 dark:bg-amber-950 p-6 rounded-2xl mb-8">
-              <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-4">?썱 嫄곗슱 ?대?吏 ?곗뒿 ?쒕┫</h3>
-              <ul className="text-sm space-y-2">
-                <li><strong>踰쎌튂湲?</strong> 踰쎌뿉??移???怨듭씠 ??긽 ?ㅻⅨ履쎌뿉???쇱そ?쇰줈 ?섏뼱 ?ㅼ뼱?⑤떎怨??곸긽?섎ŉ ?ъ??붾떇 ?곗뒿???섏꽭??</li>
-                <li><strong>諛깊빖??由ы꽩 吏묒쨷:</strong> ?뚰듃?덉뿉寃??ㅻⅨ履쎌씠 ?꾨땶 ?쇱そ(諛깊빖??履??쇰줈 ?섏뼱 ?섍????쒕툕瑜?怨꾩냽 ?ｌ뼱?щ씪怨??붿껌?섏꽭??</li>
-                <li><strong>?숈쁺??遺꾩꽍:</strong> ?쇱넀?≪씠 ?꾨줈 ?좎닔(?섎떖, ?ㅽ룷諛쒕줈??????寃쎄린瑜?嫄곗슱 紐⑤뱶(Mirror)濡?諛섏쟾?쒖폒 ?쒖껌??蹂댁꽭?? ?뚭? 諛섎? 沅ㅼ쟻???듭닕?댁????????꾩????⑸땲??</li>
-              </ul>
-            </div>
-          </section>
-
-          <section id="conclusion" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">8. 寃곕줎: ??꽕?뚯쓣 利먭굅??쇰줈 諛붽씀??踰?/h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?쇱넀?≪씠???寃쎄린???뱀떊???뚮땲??吏??IQ)???뚯뒪?명븯???뚮????쒗뿕??낅땲?? 泥섏쓬?먮뒗 紐⑤뱺 寃껋씠 ?댁깋?섍퀬 由щ벉??源⑥???寃?媛숆쿋吏留? ?꾩뿉 ?멸툒??紐?媛吏 ?먯튃留뚯쓣 湲곗뼲?섎ŉ 寃쎄린???꾪빐 蹂댁꽭??
-              </p>
-              <p>
-                ??꽑 媛곷룄???곸쓳?섍퀬 ?밸━瑜??곕궡???쒓컙, ?뱀떊???뚮땲?ㅻ뒗 ??痢????볦뼱吏怨?源딆뼱吏?寃껋엯?덈떎. ?댁젣 ?ㅼ쓬 ?쇱넀?≪씠 ?곷?瑜?留뚮굹硫?湲댁옣 ???<strong>"?쒕뵒?????ㅻ젰???뚯뒪?명븷 湲고쉶媛 ?붽뎔!"</strong>?대씪硫?利먭쾪寃??쇱폆???섎몢瑜댁떆湲?諛붾엻?덈떎.
-              </p>
-            </div>
-          </section>
-
-          <FAQ items={faqs} />
-          <RelatedPosts
-            currentSlug="tennis-strategy-vs-lefty"
-            category="?뚮땲???꾩닠"
-            tags={["?뚮땲???꾩닠", "?쇱넀?≪씠", "Lefty", "?쒕툕 由ы꽩", "怨듬왂踰?, "蹂듭떇 ?꾩닠"]}
+      <h3>4. 나의 백핸드를 강화하라</h3>
+      <p>왼손잡이의 강력한 포핸드 역크로스는 나의 백핸드 쪽으로 깊게 들어옵니다. 백핸드 수비력이 약하다면 왼손잡이를 이기기 힘듭니다. 백핸드 슬라이스로 낮게 깔아 상대의 포핸드 공격을 무력화시키는 것도 좋은 전략입니다.</p>
+    
+          </div>
+          <div className="mt-12">
+             <FAQ items={faqs} />
+          </div>
+          <RelatedPosts 
+            currentSlug="tennis-strategy-vs-lefty" 
+            category="Strategy" 
+            tags={["테니스 전술","왼손잡이","Lefty","테니스","공략법"]} 
           />
-
           <CTA />
         </div>
       </Article>

@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: "諛붾엺 遺?????뚮땲????移섎뒗 踰?| ?쒕툕 ?좎뒪遺??硫섑깉源뚯? ?꾨꼍 媛?대뱶",
-  description: "媛뺥뭾???닿린???뗭썙?ъ? ???議곗젅. 諛붾엺???댁슜?섎뒗 ?쒕툕 ?좎뒪 ?섏젙踰뺢낵 ?붾뱶 泥댁씤吏 硫섑깉 愿由ш퉴吏, ?낆쿇?꾨? 湲고쉶濡?留뚮뱶???ㅼ쟾 ?명븯??媛?대뱶.",
-  keywords: ["?뚮땲????, "諛붾엺", "?좎뵪", "?뗭썙??, "?쇱쇅 ?뚮땲??, "?쒕툕 ?좎뒪", "硫섑깉 愿由?],
+  title: "바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)",
+  description: "강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.",
+  keywords: ["테니스","바람","강풍","테니스 꿀팁","야외 테니스"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-windy-condition-tips',
   },
   openGraph: {
-    title: "諛붾엺 遺?????뚮땲????移섎뒗 踰?| ?쒕툕 ?좎뒪遺??硫섑깉源뚯?",
-    description: "媛뺥뭾???닿린???뗭썙?ъ? ???議곗젅. 諛붾엺???댁슜?섎뒗 ?쒕툕 ?좎뒪 ?섏젙踰뺢낵 ?붾뱶 泥댁씤吏 硫섑깉 愿由ш퉴吏, ?낆쿇?꾨? 湲고쉶濡?留뚮뱶???ㅼ쟾 ?명븯??",
+    title: "바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)",
+    description: "강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.",
     url: 'https://tennisfriends.co.kr/blog/tennis-windy-condition-tips',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "諛붾엺 遺?????뚮땲????移섎뒗 踰?| ?쒕툕 ?좎뒪遺??硫섑깉源뚯?",
-    description: "媛뺥뭾???닿린???뗭썙?ъ? ???議곗젅. 諛붾엺???댁슜?섎뒗 ?쒕툕 ?좎뒪 ?섏젙踰뺢낵 ?붾뱶 泥댁씤吏 硫섑깉 愿由ш퉴吏, ?낆쿇?꾨? 湲고쉶濡?留뚮뱶???ㅼ쟾 ?명븯??",
+    title: "바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)",
+    description: "강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.",
   },
   robots: {
     index: true,
@@ -33,195 +33,78 @@ export const metadata = {
   },
 };
 
-const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
-  { id: 'introduction', text: '1. ?ㅼ뼱媛硫? 諛붾엺? ?μ븷臾쇱씤媛, 湲고쉶?멸??', depth: 2 },
-  { id: 'physics-of-wind', text: '2. 諛붾엺???щ━?숆낵 臾쇰━?? 諛⑺뼢蹂?怨듭쓽 沅ㅼ쟻 蹂??, depth: 2 },
-  { id: 'footwork-basics', text: "3. ?뗭썙?ъ쓽 ?ш뎄?? '?ъ쑀'瑜?留뚮뱶??10cm???붾컻", depth: 2 },
-  { id: 'serve-toss', text: '4. ?쒕툕 ?좎뒪 ?섏젙: 諛붾엺???쒖슦??踰?vs ?닿린??踰?, depth: 2 },
-  { id: 'groundstroke-tactics', text: '5. 洹몃씪?대뱶 ?ㅽ듃濡쒗겕: ?섏씠 留덉쭊(High Margin)怨??묒뒪?', depth: 2 },
-  { id: 'mental-routine', text: '6. 硫섑깉 ?꾨왂: "諛붾엺? ???뚰듃?덈떎"', depth: 2 },
-  { id: 'regional-court-tips', text: '7. ?쒓뎅 吏?뺣퀎 諛붾엺 ?뱀꽦 (??諛?肄뷀듃 vs 媛뺣? 肄뷀듃)', depth: 2 },
-  { id: 'conclusion', text: '8. 寃곕줎: ?낆쿇?꾩뿉??吏꾩젙??梨뷀뵾?몄씠 ?꾩깮?쒕떎', depth: 2 },
+const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
+  { id: 'section-1', text: '1. 주요 특징', depth: 2 },
+  { id: 'section-2', text: '2. 플레이 스타일', depth: 2 },
+  { id: 'conclusion', text: '결론', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '留욌컮?뚯씪 ??怨듭씠 ?덈Т 吏㏐쾶 ?⑥뼱?몄꽌 ?뱁솴?ㅻ윭?뚯슂.',
-    a: '留욌컮?뚯? 怨듭쓽 ?ш굅由щ? ??20~30% 以꾩엯?덈떎. ?됱냼蹂대떎 ?ㅽ듃 ?꾨? ???믨쾶 蹂닿퀬 湲멸쾶 移섎뒗 猷⑦봽(Loop) ???룹쓣 援ъ궗?댁빞 ?⑸땲??'
+    "q": "바람 부는 날 서브는 어떻게 해야 하나요?",
+    "a": "토스를 평소보다 낮게 하세요. 공이 공중에 머무는 시간을 줄여야 바람의 영향을 덜 받습니다. 스핀 서브나 슬라이스 서브를 주로 활용하여 확률을 높이는 것이 좋습니다."
   },
   {
-    q: '?쒕툕 ?좎뒪媛 諛붾엺???먭씀 ?붾뱾由??뚮뒗 ?대뼸寃??섎굹??',
-    a: '?좎뒪 ?믪씠瑜??됱냼??70~80% ?섏??쇰줈 ??텛?몄슂. ?꾪뙥????대컢??議곌툑 ?쒕몢瑜대뜑?쇰룄 怨듭씠 諛붾엺???????援ш컙?먯꽌 泥섎━?섎뒗 寃껋씠 ?⑥뵮 ?좊━?⑸땲??'
-  },
-  {
-    q: '?룸컮?뚯씠 遺???怨듭씠 ?먭씀 ?꾩썐?섎뒗???닿껐梨낆??',
-    a: '?룸컮?뚯? 怨듭쓣 ?쇱씤 諛뽰쑝濡?諛?대깄?덈떎. ?щ씪?댁뒪蹂대떎??媛뺣젰???묒뒪? ?꾩＜???룹쓣 ?ъ슜?섏뿬 怨듭씠 鍮⑤━ ?⑥뼱吏寃?Dip) 留뚮뱾?댁빞 ?⑸땲??'
-  },
-  {
-    q: '諛붾엺???덈Т ?ы븯硫?寃쎄린瑜?以묐떒?댁빞 ?섎굹??',
-    a: '怨듭씠 ?쒕?濡??吏 ?딅뒗 ?뺤젏(Wind Speed 15m/s ?댁긽)???꾨땲?쇰㈃, 諛붾엺 ?곸쓳 ?먰븳 ?뚮땲???ㅻ젰???쇰??낅땲?? ?대? 洹밸났?섎뒗 怨쇱젙?먯꽌 ?뺢탳???뗭썙?щ? 諛곗슦寃??⑸땲??'
+    "q": "상대가 로브만 띄우는데 바람 때문에 힘들어요.",
+    "a": "바람 부는 날 로브는 매우 위협적입니다. 무리해서 스매싱을 하기보다는, 바운드된 공을 안전하게 오버헤드나 포핸드로 처리하는 것이 낫습니다."
   }
 ];
 
-export default function WindyConditionBlogPost() {
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-sky-50 dark:from-slate-950 dark:via-gray-950 dark:to-sky-950">
-      <div className="relative bg-gradient-to-br from-blue-500 via-sky-600 to-indigo-700 dark:from-blue-900 dark:via-sky-900 dark:to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
+      <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['?뚮땲????, '?좎뵪 ???, '諛붾엺', '?쇱쇅 ?뚮땲??, '硫섑깉 愿由?].map((tag) => (
-              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
-                ?뚮땲???좎닔
+            {["테니스","바람","강풍","테니스 꿀팁","야외 테니스"].map((tag) => (
+              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                {tag}
               </Badge>
             ))}
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            諛붾엺 遺?????뚮땲??留덉뒪???꾨왂 <br />
-            <span className="text-2xl md:text-3xl font-light opacity-90">媛뺥뭾??臾닿린濡?留뚮뱶???뗭썙?ъ? ??議곗젅??湲곗닠</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+            바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)
           </h1>
-          <p className="text-xl text-sky-50 mb-8 max-w-3xl">
-            諛붾엺? ?묐궇??寃?낅땲?? ?곷?瑜?愿대∼???섎룄 ?덉?留? 以鍮꾨릺吏 ?딆? ?뱀떊??臾대꼫?⑤┫ ?섎룄 ?덉뒿?덈떎. ?ㅻ뒛 諛붾엺???ㅼ뒪由щ뒗 踰뺤쓣 諛곗썙遊낆떆??
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
+            강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.
           </p>
         </div>
       </div>
 
-      <Article slug="tennis-windy-condition-tips" date="2026-01-24" title="諛붾엺 遺?????뚮땲???? excerpt="媛뺥뭾???닿린???뗭썙?ъ? ???議곗젅">
+      <Article slug="tennis-windy-condition-tips" date="2026-01-24" title="바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)" excerpt="강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-          <TOC items={tocItems} />
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            
+      <h2>바람, 피할 수 없다면 이용하라</h2>
+      <p>야외 코트에서 테니스를 치다 보면 강풍을 만나는 경우가 많습니다. 많은 동호인들이 바람이 불면 짜증부터 내지만, 고수는 이를 기회로 삼습니다. 바람은 누구에게나 공평하게 불기 때문입니다.</p>
 
-          <section id="introduction" className="mt-12 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">1. ?ㅼ뼱媛硫? 諛붾엺? ?μ븷臾쇱씤媛, 湲고쉶?멸??</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?쇱쇅 ?뚮땲?ㅼ쓽 臾섎??댁옄 媛????蹂듬퀝? 諛붾줈 <strong>'諛붾엺'</strong>?낅땲?? 臾댄뭾 ?곹깭?먯꽌???꾨꼍???룹쓣 援ъ궗?섎뜕 ?좎닔??珥덉냽 5~7m??媛뺥뭾 ?욎뿉?쒕뒗 ?됰쾾??珥덈낫?먮줈 ?꾨씫?섍낀 ?⑸땲??
-              </p>
-              <p>
-                ?섏?留??꾨줈 ?좎닔?ㅼ? 諛붾엺???먮쭩?섏? ?딆뒿?덈떎. ?ㅽ엳??諛붾엺???댁슜???곷?????대컢??類뤾퀬, ?꾩????섏삱 ???녿뒗 沅ㅼ쟻???룹쓣 留뚮뱾?대깄?덈떎. 諛붾엺 遺???좎쓽 ?뱀옄??'媛???꾨꼍???ㅼ쐷???섎뒗 ?щ엺'???꾨땲??<strong>'媛?????곸쓳?섎뒗 ?щ엺'</strong>?낅땲??
-              </p>
-            </div>
-            <div className="bg-sky-50 dark:bg-sky-950 p-6 rounded-2xl border-l-8 border-sky-500 mt-8">
-              <p className="text-sky-800 dark:text-sky-200 italic mb-0">
-                "諛붾엺? ?됰벑?⑸땲?? ?묒そ 肄뷀듃 紐⑤몢?먭쾶 遺덇린 ?뚮Ц?댁짛. ?뱀떊??諛붾엺??'遺덉슫'?대씪怨??앷컖???? 怨좎닔??諛붾엺??'???섎굹???좎닔'濡??곸엯?⑸땲??"
-              </p>
-            </div>
-          </section>
+      <h3>1. 바람의 방향 읽기 (Head vs Tail)</h3>
+      <p>코트에 들어서면 가장 먼저 바람의 방향을 체크하세요. 깃발이나 나무의 흔들림을 보면 알 수 있습니다.</p>
+      <ul>
+        <li><strong>맞바람 (Headwind):</strong> 공이 날아오다가 급격히 떨어지거나 멈춥니다. 평소보다 20~30% 더 길게 스윙하고, 네트 마진을 높게 가져가야 합니다. 드롭샷이 매우 효과적입니다.</li>
+        <li><strong>뒷바람 (Tailwind):</strong> 공이 평소보다 훨씬 멀리 나갑니다. 파워보다는 회전(탑스핀)을 많이 걸어 공을 코트 안으로 떨어뜨리는 데 집중해야 합니다. 서브 시 토스를 조금 더 앞쪽에 두는 것이 좋습니다.</li>
+        <li><strong>옆바람 (Crosswind):</strong> 공이 휘어집니다. 바람이 불어오는 쪽을 더 겨냥하고 에이밍(Aiming)을 수정해야 합니다.</li>
+      </ul>
 
-          <section id="physics-of-wind" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">2. 諛붾엺???щ━?숆낵 臾쇰━?? 諛⑺뼢蹂?怨듭쓽 沅ㅼ쟻 蹂??/h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>諛붾엺??怨듭뿉 誘몄튂??臾쇰━???곹뼢?μ쓣 癒쇱? ?댄빐?댁빞 ?⑸땲?? 踰좎씠?ㅻ씪?몄뿉???먭뺨吏??諛붾엺??諛⑺뼢???곕Ⅸ 蹂?붾뒗 ?ㅼ쓬怨?媛숈뒿?덈떎.</p>
-              <ul>
-                <li><strong>留욌컮??(Headwind):</strong> 怨듭쓽 ?띾룄媛 湲됯꺽??以꾩뼱?ㅻŉ 諛붿슫??????쾶 源붾┰?덈떎. 怨듭씠 踰좎씠?ㅻ씪??洹쇱쿂源뚯? ?ㅼ? ?딄퀬 ?쒕퉬???쇱씤 洹쇱쿂???⑥뼱吏湲??ъ슦誘濡?怨듦꺽 湲고쉶瑜??ъ갑?댁빞 ?⑸땲??</li>
-                <li><strong>?룸컮??(Tailwind):</strong> 怨듭쓽 沅ㅼ쟻??湲몄뼱吏묐땲?? ?됱냼泥섎읆 移섎㈃ 踰좎씠?ㅻ씪??諛뽰쑝濡??섍?湲??쇱뫀?대ŉ, ?곷???怨듭? ?됱냼蹂대떎 ?⑥뵮 鍮좊Ⅴ怨??꾪삊?곸쑝濡??먭뺨吏묐땲??</li>
-                <li><strong>痢≫뭾 (Crosswind):</strong> 媛??源뚮떎濡쒖슫 諛붾엺?낅땲?? 怨듭씠 醫뚯슦濡??붾뱾由щŉ ??먯쓣 ?↔린 ?대졄寃?留뚮벊?덈떎.</li>
-              </ul>
-            </div>
-          </section>
+      <h3>2. 풋워크: 10cm의 싸움</h3>
+      <p>바람 부는 날 가장 중요한 것은 '잔발'입니다. 공이 마지막 순간에 흔들리기 때문에, 임팩트 직전까지 발을 멈추지 말고 미세하게 위치를 조정해야 합니다. 평소보다 무릎을 더 낮추고 스탠스를 넓게 벌려 안정감을 확보하세요.</p>
 
-          <section id="footwork-basics" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">3. ?뗭썙?ъ쓽 ?ш뎄?? '?ъ쑀'瑜?留뚮뱶??10cm???붾컻</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                諛붾엺 遺?????먮윭媛 留롮? ?댁쑀??<strong>'??먯씠 ?붾뱾由ш린 ?뚮Ц'</strong>?낅땲?? ?대? ?닿껐?섎뒗 ?좎씪??諛⑸쾿? ?ㅼ쐷??怨좎튂??寃껋씠 ?꾨땲???뗭썙?щ? ?섎━??寃껋엯?덈떎.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                <Card className="bg-white dark:bg-gray-800 border-blue-200 shadow-md">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-blue-700 mb-3">?몷 ?ㅻぐ ?ㅽ뀦 (Small Steps)</h3>
-                    <p className="text-sm">?꾪뙥??吏곸쟾源뚯? 諛쒖쓣 硫덉텛吏 留덉꽭?? 怨듭씠 ?붾뱾由щ뒗 10~20cm??嫄곕━瑜??붾컻濡?怨꾩냽 蹂댁젙?섎ŉ 理쒖쟻????먯쓣 李얠븘???⑸땲??</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-white dark:bg-gray-800 border-indigo-200 shadow-md">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-indigo-700 mb-3">?쭣 ?볦? ?ㅽ깲??/h3>
-                    <p className="text-sm">媛뺥뭾??紐몄쓽 洹좏삎??臾대꼫吏吏 ?딅룄濡??됱냼蹂대떎 臾대쫷??????텛怨??ㅽ깲?ㅻ? ?볤쾶 ?≪쑝?몄슂. ?덉젙?곸씤 ?섏껜媛 ?뺥솗???룹쓽 湲곕컲?낅땲??</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </section>
+      <h3>3. 타점과 스윙의 변화</h3>
+      <p>바람이 불 때는 큰 백스윙보다는 간결한 컴팩트 스윙이 유리합니다. 타점을 평소보다 조금 더 앞에서 잡고, 임팩트에 집중하세요. 풀 스윙으로 강타를 날리기보다는, 70~80%의 힘으로 정확하게 맞추는 것이 핵심입니다.</p>
 
-          <section id="serve-toss" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">4. ?쒕툕 ?좎뒪 ?섏젙: 諛붾엺???쒖슦??踰?vs ?닿린??踰?/h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?쒕툕??寃쎄린???쒖옉?댁옄 諛붾엺???곹뼢??媛??吏곸젒?곸쑝濡?諛쏅뒗 湲곗닠?낅땲??
-              </p>
-              <ol className="space-y-4">
-                <li><strong>?좎뒪 ?믪씠 ??텛湲?</strong> 怨듭씠 怨듭쨷??癒몃Т???쒓컙??湲몄닔濡?諛붾엺???곹뼢??留롮씠 諛쏆뒿?덈떎. ?됱냼蹂대떎 20~30cm ??쾶 ?섏?怨?由щ벉??鍮좊Ⅴ寃?媛?멸??몄슂.</li>
-                <li><strong>由대━???ъ씤??怨좎젙:</strong> 怨듭쓣 ?섏????먮걹??媛먭컖??吏묒쨷?섏꽭?? 諛붾엺???붾뱾由ъ? ?딅룄濡??됱냼蹂대떎 ???뺤떎?섍쾶 ?꾨줈 諛?댁＜???먮굦???꾩슂?⑸땲??</li>
-                <li><strong>媛뺥븳 ?ㅽ? ?쒖슜:</strong> 諛붾엺??怨듭쓣 ?붾뱾吏 紐삵븯?꾨줉 ??媛뺥븳 ?붿쭊(?뚯쟾)???ъ븘二쇱꽭?? ?щ씪?댁뒪?????쒕툕??諛붾엺??諛⑺뼢???곕씪 ?꾩껌??蹂?붾? ?쇱쑝?ㅻ뒗 臾닿린媛 ?⑸땲??</li>
-              </ol>
-            </div>
-          </section>
-
-          <section id="groundstroke-tactics" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">5. 洹몃씪?대뱶 ?ㅽ듃濡쒗겕: ?섏씠 留덉쭊(High Margin)怨??묒뒪?</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>諛붾엺 遺???좎쓽 ?ㅽ듃濡쒗겕 ?듭떖? <strong>'?덉쟾 留덉쭊'</strong> ?뺣낫?낅땲??</p>
-              <div className="bg-amber-50 dark:bg-amber-950 p-6 rounded-2xl mb-8">
-                <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-4">?뮕 ?ㅼ쟾 ?꾩닠 媛?대뱶</h3>
-                <ul className="text-sm space-y-2">
-                  <li><strong>肄뷀듃 ?뺤쨷???몃━湲?</strong> 醫뚯슦 痢≫뭾???ы븷 ?뚮뒗 ?쇱씤 洹쇱쿂瑜??몃━吏 留덉꽭?? 肄뷀듃 以묒븰???寃잛쑝濡?移섎㈃ 諛붾엺??諛?ㅻ룄 ?ъ쟾??肄붿“ ?덉쑝濡??ㅼ뼱媛??뺣쪧???믪뒿?덈떎.</li>
-                  <li><strong>?ㅽ듃 ???ъ쑀:</strong> ?됱냼蹂대떎 ?ㅽ듃 ??1m ?댁긽??吏?섍???猷⑦봽???룹쓣 援ъ궗?섏꽭?? 留욌컮?뚯뿉 怨듭씠 二쎌뼱???덉젙?곸쑝濡??섏뼱媛묐땲??</li>
-                  <li><strong>?ㅽ뵾?쒕낫???뺥솗??</strong> 100%???섏쑝濡??뚮━?????70%???섏쑝濡??앷퉴吏 ?뺥솗?섍쾶 ?꾪뙥?명븯??寃껋뿉 吏묒쨷?섏꽭??</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section id="mental-routine" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">6. 硫섑깉 ?꾨왂: "諛붾엺? ???뚰듃?덈떎"</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                諛붾엺 ?뚮Ц???ㅼ닔瑜??섎㈃ ?꾧뎄??吏쒖쬆???⑸땲?? ?섏?留?洹?吏쒖쬆???ㅼ쓬 ?ъ씤?몄뿉 ?곹뼢??二쇱뼱 '硫섑깉 遺뺢눼'濡??댁뼱吏??寃껋씠 ?⑤같??吏꾩쭨 ?먯씤?낅땲??
-              </p>
-              <blockquote>
-                "?곷???諛붾엺 ?뚮Ц???섎뱾?? ?닿? 1遺꾩씠?쇰룄 ???됱젙?ъ쓣 ?좎??섎㈃ ?닿릿??"
-              </blockquote>
-              <p>
-                ?붾뱶 泥댁씤吏瑜????뚮쭏??諛붾엺??諛⑺뼢???ㅼ떆 泥댄겕?섍퀬 猷⑦떞???섍린?섏꽭?? 諛붾엺??'洹밸났?댁빞 ???????꾨땶 <strong>'?④퍡 寃쎄린瑜?移섎Ⅴ???섍꼍???뚰듃??</strong>濡??몄젙?섎뒗 ?쒓컙, 紐⑤뱺 湲댁옣???由ш퀬 ?좎뿰???泥섍? 媛?ν빐吏묐땲??
-              </p>
-            </div>
-          </section>
-
-          <section id="regional-court-tips" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">7. ?쒓뎅 吏?뺣퀎 諛붾엺 ?뱀꽦 (??諛?肄뷀듃 vs 媛뺣? 肄뷀듃)</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>?쒓뎅????쒖쟻??肄뷀듃 ?섍꼍???곕Ⅸ ?랁뼢 ?뱀꽦???댄빐?섎㈃ 誘몃━ ?鍮꾪븷 ???덉뒿?덈떎.</p>
-              <div className="space-y-4">
-                <div className="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl">
-                  <h4 className="font-bold mb-2">?뙄 ?쒓컯蹂/媛뺣? 肄뷀듃 (留덊룷, 諛섑룷, 愿묐굹猷???</h4>
-                  <p className="text-sm">媛뺣컮?뚯씠 ?쇱젙?섍퀬 媛뺣젰?섍쾶 遺꾨떎. 二쇰줈 媛?以꾧린瑜??곕씪 痢≫뭾?대굹 留욌컮?뚯씠 ?뺤꽦?섎?濡? 寃쎄린 ??源껊컻?대굹 二쇰? ?섎Т???붾뱾由쇱쓣 蹂닿퀬 二?二쇳뼢??諛섎뱶???뚯븙?댁빞 ?⑸땲??</p>
-                </div>
-                <div className="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl">
-                  <h4 className="font-bold mb-2">????諛???肄뷀듃 (?⑥궛, ?쒖슱?, ?깅궓 ??</h4>
-                  <p className="text-sm">吏???곹뼢?쇰줈 '?뚯삤由?諛붾엺'?대굹 '?뚰뭾'????떎. 諛붾엺??諛⑺뼢???섏떆濡?諛붾뚮?濡??뱀젙 諛⑺뼢??留뱀떊?섏? 留먭퀬 留??ъ씤?몃쭏??怨듭쓽 ?붾뱾由쇱뿉 吏묒쨷?댁빞 ?⑸땲??</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="conclusion" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">8. 寃곕줎: ?낆쿇?꾩뿉??吏꾩젙??梨뷀뵾?몄씠 ?꾩깮?쒕떎</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?좎뵪媛 醫뗭? ???뚮땲?ㅻ? ??移섎뒗 寃껋? ?꾧뎄???????덉뒿?덈떎. ?섏?留?諛붾엺??嫄곗튌怨??섍꼍???댁븙?????밸━?섎뒗 寃껋? ?ㅼ쭅 以鍮꾨맂 ?щ엺留뚯씠 ?꾨┫ ???덈뒗 ?밴텒?낅땲??
-              </p>
-              <p>
-                ?댁젣 諛붾엺 遺???좎뿉??肄뷀듃濡??섍??몄슂. ?⑤뱾??吏묒쑝濡??뚯븘媛????뱀떊? 諛붾엺 ?띿뿉???뗭썙?ъ쓽 ?뺢탳?⑥쓣 ?ㅻ벉怨?硫섑깉???⑤떒?⑥쓣 ?ㅼ슦??寃껋엯?덈떎. ?ㅻ뒛 諛곗슫 ?곷뱾???щ윭遺꾩쓽 ?뚮땲???쇱씠?꾩뿉 '?쒗뭾'???섍만 諛붾엻?덈떎.
-              </p>
-            </div>
-          </section>
-
-          <FAQ items={faqs} />
-          <RelatedPosts
-            currentSlug="tennis-windy-condition-tips"
-            category="?뚮땲????
-            tags={["?뚮땲????, "諛붾엺", "?좎뵪", "?뗭썙??, "?쇱쇅 ?뚮땲??, "?쒕툕 ?좎뒪"]}
+      <h3>4. 멘탈리티: "나만 힘든 게 아니다"</h3>
+      <p>상대방도 똑같이 힘듭니다. 바람 탓을 하며 멘탈이 무너지는 순간 경기에서 집니다. "바람은 내 편"이라고 최면을 걸고, 실수하더라도 날씨 탓을 하지 말고 다음 포인트에 집중하는 것이 승리의 지름길입니다.</p>
+    
+          </div>
+          <div className="mt-12">
+             <FAQ items={faqs} />
+          </div>
+          <RelatedPosts 
+            currentSlug="tennis-windy-condition-tips" 
+            category="Strategy" 
+            tags={["테니스","바람","강풍","테니스 꿀팁","야외 테니스"]} 
           />
-
           <CTA />
         </div>
       </Article>

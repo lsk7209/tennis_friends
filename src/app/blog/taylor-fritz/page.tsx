@@ -8,24 +8,24 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: "후베르트 후르카츠: 폴란드의 서브 머신",
-  description: "조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.",
-  keywords: ["테니스","후베르트 후르카츠","Hubert Hurkacz","서브 앤 발리","폴란드"],
+  title: "테일러 프리츠: 미국 테니스의 자존심",
+  description: "강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.",
+  keywords: ["테니스","테일러 프리츠","Taylor Fritz","미국","하드 히터"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/hubert-hurkacz',
+    canonical: 'https://tennisfriends.co.kr/blog/taylor-fritz',
   },
   openGraph: {
-    title: "후베르트 후르카츠: 폴란드의 서브 머신",
-    description: "조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.",
-    url: 'https://tennisfriends.co.kr/blog/hubert-hurkacz',
+    title: "테일러 프리츠: 미국 테니스의 자존심",
+    description: "강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.",
+    url: 'https://tennisfriends.co.kr/blog/taylor-fritz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "후베르트 후르카츠: 폴란드의 서브 머신",
-    description: "조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.",
+    title: "테일러 프리츠: 미국 테니스의 자존심",
+    description: "강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.",
   },
   robots: {
     index: true,
@@ -41,8 +41,8 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 
 const faqs = [
   {
-    "q": "후르카츠가 채식주의자인가요?",
-    "a": "네, 그는 비건(Vegan) 식단을 실천하는 선수로 알려져 있습니다."
+    "q": "프리츠는 결혼했나요?",
+    "a": "네, 일찍 결혼하여 아들이 있으며, 현재는 인플루언서 모건 리들과 교제 중입니다."
   }
 ];
 
@@ -53,40 +53,40 @@ export default function BlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {["테니스","후베르트 후르카츠","Hubert Hurkacz","서브 앤 발리","폴란드"].map((tag) => (
+            {["테니스","테일러 프리츠","Taylor Fritz","미국","하드 히터"].map((tag) => (
               <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
                 {tag}
               </Badge>
             ))}
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            후베르트 후르카츠: 폴란드의 서브 머신
+            테일러 프리츠: 미국 테니스의 자존심
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.
+            강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.
           </p>
         </div>
       </div>
 
-      <Article slug="hubert-hurkacz" date="2026-01-24" title="후베르트 후르카츠: 폴란드의 서브 머신" excerpt="조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.">
+      <Article slug="taylor-fritz" date="2026-01-24" title="테일러 프리츠: 미국 테니스의 자존심" excerpt="강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             
-      <h2>부드러운 거인, 후베르트 후르카츠</h2>
-      <p>그는 투어에서 가장 '착한 선수'로 통합니다. 하지만 코트 위에서는 무자비한 서브를 꽂아 넣습니다.</p>
-      <h3>1. 완벽한 서브 메커니즘</h3>
-      <p>그의 서브는 폼이 간결하고 아름답습니다. 높은 타점에서 나오는 각도 깊은 서브는 받기 어렵기로 정평이 나 있습니다.</p>
-      <h3>2. 올바른 멘탈</h3>
-      <p>항상 긍정적이고 평정심을 유지하는 멘탈은 그가 꾸준히 톱10을 유지하는 비결입니다.</p>
+      <h2>캘리포니아의 별, 테일러 프리츠</h2>
+      <p>프리츠는 테니스 명문가 출신으로, 어머니가 톱10 플레이어였습니다. 타고난 재능에 노력까지 더해졌습니다.</p>
+      <h3>1. 베이스라인의 지배자</h3>
+      <p>그는 뒤로 물러서지 않습니다. 강력한 양쪽 스트로크로 베이스라인에서 상대를 압도합니다.</p>
+      <h3>2. 부상 투혼</h3>
+      <p>발목 부상에도 불구하고 붕대를 감고 출전하여 우승을 차지하는 등 강인한 정신력을 보여주었습니다.</p>
     
           </div>
           <div className="mt-12">
              <FAQ items={faqs} />
           </div>
           <RelatedPosts 
-            currentSlug="hubert-hurkacz" 
+            currentSlug="taylor-fritz" 
             category="Player" 
-            tags={["테니스","후베르트 후르카츠","Hubert Hurkacz","서브 앤 발리","폴란드"]} 
+            tags={["테니스","테일러 프리츠","Taylor Fritz","미국","하드 히터"]} 
           />
           <CTA />
         </div>

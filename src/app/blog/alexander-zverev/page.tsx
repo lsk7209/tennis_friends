@@ -8,24 +8,24 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '?뚮젆?곕뜑 利덈쿋?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
-  description: '?λ꼍 媛숈? ?쒕툕? 移쇨컳? ?묒넀 諛깊빖?쒕줈 ?먮쫫???쒖뼱?섎뒗 ?뚮젆?곕뜑 利덈쿋?덊봽???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? 怨쇱젣瑜????몄쑝濡?',
-  keywords: ['?뚮땲??, '?뚮젆?곕뜑 利덈쿋?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?낆씪'],
+  title: "알렉산더 즈베레프: 높이와 기술의 완벽한 조화",
+  description: "198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.",
+  keywords: ["테니스","알렉산더 즈베레프","Alexander Zverev","서브","독일"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/alexander-zverev',
   },
   openGraph: {
-    title: '?뚮젆?곕뜑 利덈쿋?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
-    description: '?λ꼍 媛숈? ?쒕툕? 移쇨컳? ?묒넀 諛깊빖?쒕줈 ?먮쫫???쒖뼱?섎뒗 ?뚮젆?곕뜑 利덈쿋?덊봽???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? 怨쇱젣瑜????몄쑝濡?',
+    title: "알렉산더 즈베레프: 높이와 기술의 완벽한 조화",
+    description: "198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.",
     url: 'https://tennisfriends.co.kr/blog/alexander-zverev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
-    type: 'website',
+    type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '?뚮젆?곕뜑 利덈쿋?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
-    description: '?λ꼍 媛숈? ?쒕툕? 移쇨컳? ?묒넀 諛깊빖?쒕줈 ?먮쫫???쒖뼱?섎뒗 ?뚮젆?곕뜑 利덈쿋?덊봽???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? 怨쇱젣瑜????몄쑝濡?',
+    title: "알렉산더 즈베레프: 높이와 기술의 완벽한 조화",
+    description: "198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.",
   },
   robots: {
     index: true,
@@ -34,256 +34,60 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-family-made-court-grammar', text: '?깆옣 諛곌꼍 ??媛議깆씠 留뚮뱺 肄뷀듃??臾몃쾿', depth: 2 },
-  { id: 'playing-style-first-start-backhand-suture', text: '寃쎄린 ?ㅽ??????쇱뒪?몃줈 ?쒖옉??諛깊빖?쒕줈 遊됲빀', depth: 2 },
-  { id: 'return-positioning-departure-delay-angle-erase', text: '由ы꽩怨??ъ??붾떇 ??異쒕컻?먯쓣 ??텛怨?媛곸쓣 吏?곕떎', depth: 2 },
-  { id: 'rhythm-selection-emotion-low-procedure-constant', text: '由щ벉怨??좏깮 ??媛먯젙? ??쾶, ?덉감???쇱젙?섍쾶', depth: 2 },
-  { id: 'surface-transition-hard-straight-clay-patience-grass', text: '?쒕㈃蹂??꾪솚 ???섎뱶??吏곸꽑, ?먰넗???몃궡, ?붾뵒??媛꾧껐', depth: 2 },
-  { id: 'experience-transition-crisis-gained-equilibrium', text: '寃쏀뿕怨??꾪솚 ???꾧린瑜?吏???살? ?됲삎媛?, depth: 2 },
-  { id: 'human-aspects-calm-humor-team-first', text: '?멸컙?곸씤 硫대え ??李⑤텇???띿쓽 ?좊㉧? ? ?쇱뒪??, depth: 2 },
-  { id: 'nationality-culture-order-accuracy-aesthetics', text: '援?쟻怨?臾명솕 ??吏덉꽌? ?뺥솗??誘명븰', depth: 2 },
-  { id: 'relationships-rivals-speed-generation-angle-answer', text: '愿怨꾩? ?쇱씠踰????띾룄???몃???媛곷룄濡??듯븯??, depth: 2 },
-  { id: 'famous-scenes-backhand-down-line-opens-narrow-door', text: '紐낆옣硫???諛깊빖???ㅼ슫?붾씪?몄씠 ?щ뒗 醫곸? 臾?, depth: 2 },
-  { id: 'equipment-details-tension-balance-contact-adjustment', text: '?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙', depth: 2 },
-  { id: 'future-challenges-second-serve-halfcourt-conclusion', text: '?욎쑝濡쒖쓽 怨쇱젣 ???몄빻???쒕툕? ?섑봽肄뷀듃??寃곕쭚', depth: 2 },
-  { id: 'fans-community-lasting-trust', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː', depth: 2 },
+  { id: 'section-1', text: '1. 주요 특징', depth: 2 },
+  { id: 'section-2', text: '2. 플레이 스타일', depth: 2 },
+  { id: 'conclusion', text: '결론', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '?뚮젆?곕뜑 利덈쿋?덊봽??寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
-    a: '?μ떊???쒕툕? ?뺥솗???묒넀 諛깊빖?? 李⑤텇???ъ??붾떇???뱀쭠?낅땲?? ?쒕툕濡??곗쐞瑜?留뚮뱾怨?諛깊빖?쒕줈 吏덉꽌瑜?怨좎젙?섎ŉ, ?ъ씤?몄쓽 ?띾룄瑜??듭젣?⑸땲??'
-  },
-  {
-    q: '利덈쿋?덊봽??媛議깅뱾? 紐⑤몢 ?뚮땲?ㅻ? ?섎굹??',
-    a: '?? ?뚮땲??紐낅Ц媛?낅땲?? ?꾨쾭吏???뚮젴 援?????異쒖떊 肄붿튂?대ŉ, ?대㉧????떆 ?꾨줈 ?좎닔??듬땲?? 洹몄쓽 ?뺤씤 誘몄깶 利덈쿋?덊봽 ?먰븳 ATP ?ъ뼱?먯꽌 ?쒖빟??踰좏뀒???좎닔?낅땲??'
-  },
-  {
-    q: '利덈쿋?덊봽媛 2022?꾩뿉 ?뱁븳 遺?곸씠 ?쇰쭏???ш컖?덈굹??',
-    a: '?꾨옉???ㅽ뵂 4媛뺤쟾?먯꽌 ?ㅻⅨ履?諛쒕ぉ ?몄륫 ?몃? 3媛쒓? ?꾩쟾???뚯뿴?섎뒗 以묒긽???낆뿀?듬땲?? ?섏?留?7媛쒖썡媛꾩쓽 ?밸룆???ы솢 ?앹뿉 ?깃났?곸쑝濡?蹂듦??섏뿬 ?ㅼ떆 ?뺤긽湲?湲곕웾??蹂댁뿬二쇨퀬 ?덉뒿?덈떎.'
-  },
-  {
-    q: '利덈쿋?덊봽??二쇰Т湲곕뒗 臾댁뾿?멸???',
-    a: '媛뺣젰??泥?踰덉㎏ ?쒕툕? ?④퍡 ?멸퀎 理쒓퀬 ?섏??쇰줈 ?됯?諛쏅뒗 ?ы빖??諛깊빖?쒓? ?듭떖?낅땲?? ?뱁엳 諛깊빖???ㅼ슫?붾씪?몄? 洹몄쓽 媛???꾨젰?곸씤 寃곗젙援ъ엯?덈떎.'
-  },
-  {
-    q: '利덈쿋?덊봽???대뼡 ?쇱폆???ъ슜?섎굹??',
-    a: 'Head Gravity Pro 紐⑤뜽???ъ슜?⑸땲?? ?볦? ?ㅼ쐞???ㅽ뤏怨??덉젙?곸씤 ?援ш컧???뱀쭠?대ŉ, 利덈쿋?덊봽??怨듦꺽?곸씤 踰좎씠?ㅻ씪???뚮젅?대? ???룸컺移⑦빀?덈떎.'
-  },
-  {
-    q: '利덈쿋?덊봽???щ┝???깆쟻??',
-    a: '2021 ?꾩퓙 ?щ┝???⑥옄 ?⑥떇?먯꽌 湲덈찓?ъ쓣 ?띾뱷?덉뒿?덈떎. ?대뒗 ?낆씪 ?⑥옄 ?뚮땲????궗??1988??蹂대━??踰좎빱 ?댄썑 理쒖큹???⑥떇 湲덈찓?ъ엯?덈떎.'
-  },
-  {
-    q: '利덈쿋?덊봽??蹂꾨챸? 臾댁뾿?멸???',
-    a: "二쇰줈 'Sascha(?ъ깶)'?쇰뒗 ?좎묶?쇰줈 遺덈┰?덈떎. ?대뒗 ?뚮젆?곕뜑?쇰뒗 ?대쫫???ъ떆?꾩떇 ?좎묶?쇰줈, 洹몄쓽 媛議깆쟻 諛곌꼍????蹂댁뿬以띾땲??"
-  },
-  {
-    q: '利덈쿋?덊봽???뚮땲??泥좏븰? 臾댁뾿?멸???',
-    a: '?쇨??깃낵 洹쒖쑉??以묒떆?⑸땲?? 留ㅼ씪 ?뺥빐吏?猷⑦떞??諛섎났?섎ŉ, 湲곗닠?곸씤 ?꾩닕誘몃낫?ㅻ뒗 ?ъ씤???섎굹?섎굹瑜??뺢탳?섍쾶 ?볦븘媛??怨쇱젙??以묒슂?섍쾶 ?ш퉩?덈떎.'
-  },
-  {
-    q: '利덈쿋?덊봽???ㅼ쓬 紐⑺몴??臾댁뾿?멸???',
-    a: '?꾩쭅 ?ъ꽦?섏? 紐삵븳 洹몃옖???щ옩 ?곗듅?낅땲?? ?섏감濡 寃곗듅怨?4媛뺤뿉 吏꾩텧?섎ŉ 臾몄쓣 ?먮뱶?ㅼ삩 留뚰겮, 議곕쭔媛?硫붿씠? ?몃줈?쇰? ?ㅼ뼱 ?щ┫ 寃껋쑝濡?湲곕?諛쏄퀬 ?덉뒿?덈떎.'
-  },
-  {
-    q: '?낆씪 ?뚮땲?ㅼ뿉??利덈쿋?덊봽???꾩긽??',
-    a: '蹂대━??踰좎빱, ?덊뀒??洹몃씪???댄썑 ?낆씪 ?뚮땲?ㅻ? ?멸퀎 理쒖젙?곴툒?쇰줈 ?좎??섍퀬 ?덈뒗 ?낅낫?곸씤 議댁옱?낅땲?? 援?? ???쟾?먯꽌???듭떖 二쇱텞?쇰줈 ?쒖빟?섎ŉ 援?????щ옉??諛쏄퀬 ?덉뒿?덈떎.'
-  },
+    "q": "즈베레프는 올림픽 금메달리스트인가요?",
+    "a": "네, 2020 도쿄 올림픽 남자 단식에서 금메달을 획득했습니다."
+  }
 ];
 
-export default function AlexanderZverevBlogPost() {
+export default function BlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
-      {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['?뚮땲??, '?뚮젆?곕뜑 利덈쿋?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?낆씪'].map((tag) => (
-              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
-                ?뚮땲???좎닔
+            {["테니스","알렉산더 즈베레프","Alexander Zverev","서브","독일"].map((tag) => (
+              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                {tag}
               </Badge>
             ))}
           </div>
-
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            ?뚮젆?곕뜑 利덈쿋?덊봽
+            알렉산더 즈베레프: 높이와 기술의 완벽한 조화
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            ?λ꼍 媛숈? ?쒕툕, 移쇨컳? 諛깊빖??
+            198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.
           </p>
-          <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            ?μ떊???쒕툕? ?뺥솗???묒넀 諛깊빖?쒕줈 肄뷀듃???띾룄瑜??듭젣?섎뒗 ?뚮젆?곕뜑 利덈쿋?덊봽???깆옣, ?꾩닠, ?멸컙?곸씤 硫대え? 怨쇱젣瑜??뺣━?덈떎.
-          </p>
-
-          {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-6 text-blue-100">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="font-medium">12遺??쎄린</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span className="font-medium">2025??9??12??/span>
-            </div>
-          </div>
         </div>
       </div>
 
-      <Article slug="alexander-zverev" date="2024-01-01" title="" excerpt="">
+      <Article slug="alexander-zverev" date="2026-01-24" title="알렉산더 즈베레프: 높이와 기술의 완벽한 조화" excerpt="198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-          {/* Table of Contents */}
-          <div className="mb-12">
-            <TOC items={tocItems} />
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            
+      <h2>독일 테니스의 자존심, 사샤 즈베레프</h2>
+      <p>알렉산더 즈베레프(애칭 사샤)는 주니어 시절부터 '차기 세계 1위'로 지목받던 천재였습니다. 큰 키와 유연한 움직임은 그를 더욱 특별하게 만듭니다.</p>
+      <h3>1. 압도적인 서브와 백핸드</h3>
+      <p>그의 서브는 시속 220km를 넘나들며, 특히 듀스 코트에서의 와이드 서브는 득점 공식입니다. 백핸드 다운더라인은 그의 가장 강력한 위닝샷입니다.</p>
+      <h3>2. 부상 극복과 성숙</h3>
+      <p>2022년 롤랑가로스에서의 치명적인 발목 부상은 그에게 시련이었지만, 동시에 그를 정신적으로 더 강하게 만들었습니다. 복귀 후 그는 더욱 단단해진 모습으로 투어를 호령하고 있습니다.</p>
+    
           </div>
-
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-3 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-base">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
-              <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
-                <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">吏곷떟:</strong> ?뚮젆?곕뜑 利덈쿋?덊봽(Alexander Zverev)??2誘명꽣??媛源뚯슫 ?뺣룄?곸씤 ?좎옣?먯꽌 ?섏삤???쒕툕??媛곷룄? ?ы빖??諛깊빖?쒖쓽 寃ш퀬?⑥쓣 寃고빀??肄뷀듃瑜??μ븙?섎뒗 '?믪씠??湲곗닠???낅땲?? 洹몄쓽 ?뚮땲?ㅻ뒗 ?⑥닚???뚯썙瑜??섏뼱, ??遺?곸쓣 洹밸났?섎ŉ ?살? ?뺤떊???깆닕?④낵 ?뺢탳??踰좎씠?ㅻ씪???좊━濡??꾩꽦???꾨? ?뚮땲?ㅼ쓽 ?뺤닔?낅땲??
-              </p>
-            </div>
-
-            <h2 id="genetic-environment-tennis-dynasty-pedigree">?좎쟾怨??섍꼍 ???뚮땲??媛臾몄쓽 ?덊넻</h2>
-            <p>利덈쿋?덊봽???뚮땲?ㅻ뒗 洹몄쓽 ?덇? ?띿뿉 ?먮Ⅴ??DNA? 媛숈뒿?덈떎. ?뚮젴 援?????異쒖떊??遺紐⑤떂怨???誘몄깶 利덈쿋?덊봽源뚯?, ??媛議깆씠 ?뚮땲?ㅺ퀎??理쒖쟾?좎뿉???쒕룞??諛곌꼍? 洹몄뿉寃?湲곗닠?곸씤 議곌린 援먯쑁肉먮쭔 ?꾨땲???꾨줈濡쒖꽌 媛뽰떠?????꾧꺽???먯꽭瑜??ъ뼱二쇱뿀?듬땲?? ?대┛ ?쒖젅遺???깆씤 ?좎닔?ㅺ낵 遺?ろ엳硫?諛곗슫 '肄뷀듃 ?꾩뿉?쒖쓽 ?앹〈踰?? 洹멸? 李⑥꽭? 二쇱옄??以?媛???쇱컢 ????빱濡?吏꾩엯?????덉뿀??鍮꾧껐?낅땲?? 洹몄쓽 ?ㅼ쐷 硫붿빱?덉쬁? 媛臾몄쓽 ?곌뎄? ?ㅼ쟾 寃쏀뿕???묒텞??寃곌낵臾쇱씠硫? 留?寃쎄린 洹몃뒗 媛議깆쓽 ?덇굅?쒕? ?닿묠??吏딆뼱吏?梨?肄뷀듃???섏꽠?덈떎.</p>
-
-            <h2 id="physical-advantage-height-serve-angle">?좎껜???댁젏 ???믪씠媛 留뚮뱶???쒕툕??誘명븰</h2>
-            <p>198cm???좎옣? 利덈쿋?덊봽?먭쾶 ?좎씠 ?대┛ ?좊Ъ?낅땲?? 媛怨듯븷 留뚰븳 ?쒖냽 220km??愿묒냽 ?쒕툕???⑥닚???띾룄 ?뚮Ц???꾨땲?? ?믪? ??먯뿉???꾨옒濡?媛뺥븯寃??대━苑귣뒗 '?섏쭅???숈감' ?뚮Ц???곷??먭쾶 ?????꾪삊???⑸땲?? 泥?踰덉㎏ ?쒕툕 ?깃났瑜좎씠 ?ъ뼱 理쒖긽?꾧텒???좎??섎뒗 ?좎쓽 利덈쿋?덊봽???쒓났遺덈씫???붿깉? 媛숈뒿?덈떎. ?쒕툕 寃뚯엫???먯돺寃?吏耳쒕궡???λ젰? 洹멸? 由ы꽩 寃뚯엫?먯꽌 ??怨쇨컧???쒕룄瑜??????덇쾶 ?뺣뒗 ?좊뱺???좊?媛 ?⑸땲??</p>
-
-            <h2 id="backhand-mastery-double-handed-consistency-down-the-line">諛깊빖?쒖쓽 ?μ씤 ???ы빖?쒖쓽 寃ш퀬?④낵 ?ㅼ슫?붾씪??/h2>
-            <p>利덈쿋?덊봽??媛????湲곗닠???먮??ъ? 諛깊빖?쒖엯?덈떎. 留롮? ?μ떊 ?좎닔?ㅼ씠 諛깊빖?쒖뿉???좎뿰??遺議깆쑝濡?怨좎쟾?섎뒗 寃껉낵 ?щ━, 洹몃뒗 源딄쾶 ?됱븘 ?섏껜???뚯쟾???쇱폆 ?앷퉴吏 ?꾨떖?섎뒗 ?λ젰???곸썡?⑸땲?? 肄뷀듃 源딆닕??怨녹뿉???덈━?섍쾶 爰얠뿬 ?ㅼ뼱媛???щ줈???룰낵, ?곷????덉긽??源④퀬 ?쇱씤??媛瑜대뒗 諛깊빖???ㅼ슫?붾씪?몄? ?꾨? ?뚮땲?ㅼ뿉??媛???꾨쫫?듦퀬 ?⑥쑉?곸씤 ??以??섎굹濡??됯?諛쏆뒿?덈떎. 洹몄쓽 諛깊빖??履쎌쑝濡?怨듭쓣 蹂대궡??寃껋? ?곷??먭쾶 怨듦꺽??湲고쉶媛 ?꾨땲???ㅽ엳??移댁슫?곗쓽 ?レ씠 ?⑸땲??</p>
-
-            <h2 id="mental-evolution-injury-comeback-maturity">?뺤떊??吏꾪솕 ??遺?곸쓣 ?쏄퀬 ?쇱뼱???깆닕??/h2>
-            <p>2022???꾨옉???ㅽ뵂 4媛뺤쟾, ?섎떖怨쇱쓽 ?덊닾 以??뱁븳 諛쒕ぉ 遺?곸? 洹몄쓽 而ㅻ━?댁뿉??媛???대몢???쒓컙?댁뿀?듬땲?? ?좎껜?댁뿉 ?섏???肄뷀듃瑜??좊굹???덈뜕 洹??λ㈃? 留롮? ?ъ쓣 ?덊?源앷쾶 ?덉뒿?덈떎. ?섏?留?湲??ы솢???쒓컙? 洹몃? 湲곗닠?곸쑝濡쒕굹 ?뺤떊?곸쑝濡??붿슧 ?⑤떒?섍쾶 留뚮뱾?덉뒿?덈떎. 議곌툒?⑥쓣 踰꾨━怨??ъ씤???섎굹?섎굹??吏묒쨷?섎뒗 踰뺤쓣 諛곗썱?쇰ŉ, 遺??蹂듦? ??蹂댁뿬以 洹몄쓽 ?쇨????깆쟻? ?⑥닚???щ뒫??寃곌낵媛 ?꾨땲??洹뱁븳???몃젰???듯븳 '?멸컙 ?밸━'??湲곕줉?낅땲??</p>
-
-            <h2 id="tactical-depth-all-court-transition-net-play">?꾩닠??源딆씠 ???ъ퐫???뚮젅?댁뼱濡쒖쓽 ?꾪솚</h2>
-            <p>怨쇨굅??利덈쿋?덊봽媛 媛뺣젰???쒕툕? 踰좎씠?ㅻ씪???ㅽ듃濡쒗겕?먮쭔 ?섏〈?덈떎硫? ?꾩옱??洹몃뒗 ?ㅽ듃 ?뚮젅?댁? ?щ씪?댁뒪瑜??곸젅???욌뒗 ?곷━?⑥쓣 蹂댁뿬以띾땲?? ?μ떊???쒖슜???볦? ?ㅽ듃 ?먯쑀?⑥? ?곷??먭쾶 ?뺣컯??二쇰ŉ, 吏㏃븘吏?蹂쇱쓣 泥섎━?섎뒗 ?뺢탳??諛쒕━??洹몄쓽 ?뚮땲?ㅻ? ?붿슧 ?ㅼ콈濡?쾶 留뚮벊?덈떎. ?섎퉬 ?곹솴?먯꽌???⑥닚??怨듭쓣 ?섍린??寃껋뿉 洹몄튂吏 ?딄퀬, ??? ?щ씪?댁뒪濡??곷???由щ벉??類륁쑝硫?怨듦꺽 湲고쉶瑜??용낫???몃젴誘멸? ?뗫낫?낅땲??</p>
-
-            <h2 id="rivalry-dynamics-generation-clash-next-gen-leader">?쇱씠踰?援щ룄 ???몃? 媛?異⑸룎??以묒떖</h2>
-            <p>議곗퐫鍮꾩튂?쇰뒗 嫄곕???踰쎄낵 ?뚯뭅?쇱뒪, ?쒕꼫?쇰뒗 臾댁꽌???좎삁???ъ씠?먯꽌 利덈쿋?덊봽??媛援???븷???섍퀬 ?덉뒿?덈떎. 鍮????몃젴?④낵 李⑥꽭? ?ㅽ??ㅼ쓽 ??컻?μ쓣 ?숈떆???곷??섎ŉ 洹몃뒗 ?먯떊留뚯쓽 ?낅낫?곸씤 ?꾩튂瑜?援ъ텞?덉뒿?덈떎. ?뱁엳 ????뚯뿉??媛뺥븳 硫대え瑜?蹂댁씠??洹몄쓽 湲곗쭏? 'ATP ?뚯씠?먯뒪 2???곗듅'怨?'?꾩퓙 ?щ┝??湲덈찓???대씪???붾젮??寃쎈젰?쇰줈 利앸챸?⑸땲?? ?쇱씠踰뚭낵???밸??먯꽌 蹂댁뿬二쇰뒗 洹몄쓽 ?ъ????뚮땲???щ뱾?먭쾶 ?꾩쑉???좎궗?⑸땲??</p>
-
-            <h2 id="human-story-discipline-behind-the-scenes-care">?멸컙?곸씤 ?ㅽ넗由???洹쒖쑉 ?ㅼ뿉 ?④꺼吏?諛곕젮</h2>
-            <p>肄뷀듃 ?꾩쓽 李④????대?吏? ?щ━, 利덈쿋?덊봽???怨?媛議깆뿉寃?留ㅼ슦 ?뚯떊?곸엯?덈떎. ?먯떊???밸━瑜?肄붿튂吏꾧낵 媛議깆쓽 怨듭쑝濡??뚮━??寃몄넀?⑥쓣 吏?붿쑝硫? ?대젮???섍꼍???대┛ ?좊쭩二쇰뱾???뺣뒗 ?먯꽑 ?쒕룞?먮룄 ?곴레?곸엯?덈떎. 泥좎????먭린 愿由ъ? ?뺥빐吏??덈젴 猷⑦떞?????섎（??鍮좊쑉由ъ? ?딅뒗 吏?낇븳 洹쒖쑉? 洹멸? ??10??媛源뚯씠 ?멸퀎 理쒖젙?곸쓽 ?먮━瑜??좎??????덈뒗吏瑜?蹂댁뿬二쇰뒗 利앷굅?낅땲?? </p>
-
-            <h2 id="equipment-details-tension-balance-contact-adjustment">?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙</h2>
-            <p>??뚯옣 湲곗삩쨌?듬룄??留욎떠 ?ㅽ듃留??먯뀡???뚰룺 議곗젙?섍퀬, ?쇱폆 諛몃윴?ㅻ뒗 怨쇰룄???ㅻ뱶 ?ㅻ퉬瑜??쇳빐 ?뚮났 ?쒓컙???⑥텞?⑸땲?? ?좊컻? 痢〓㈃ 吏吏? ?묒???洹좏삎??以묒떆??湲됯??띉룰툒?뺤??먯꽌 諛쒕ぉ???붾뱾由쇱쓣 以꾩엯?덈떎. 利덈쿋?덊봽??<strong>Head Gravity Pro</strong> 紐⑤뜽???ъ슜?섎ŉ, ?λ퉬媛 ?뚮젅?대? 吏諛고븯吏 ?딅룄濡? ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留?議곗젙?쒕떎???쒕룄媛 ?쇨??⑸땲??</p>
-
-            <h2 id="national-pride-germany-boris-becker-legacy-pride">援?쟻???먮??????낆씪 ?뚮땲?ㅼ쓽 ?⑷툑湲곕? ?뉖떎</h2>
-            <p>蹂대━??踰좎빱 ?댄썑 ?낆씪 ?뚮땲?ㅼ쓽 ??궗瑜??덈줈 ?곌퀬 ?덈뒗 洹몃뒗 援?? ???쟾???곗씠鍮꾩뒪 而듦낵 ?щ┝?쎌뿉??臾댁꽌??吏묒쨷?μ쓣 諛쒗쐶?⑸땲?? ?낆씪 援?린瑜?媛?댁뿉 ?ш퀬 ????洹몃뒗 ?됱냼蹂대떎 ??媛뺣젰???숆린遺?щ? ?삳뒗?ㅺ퀬 留먰빀?덈떎. ?꾩퓙 ?щ┝???뱀떆 湲덈찓?ъ쓣 嫄곕㉧伊???蹂댁뿬以 ?덈Ъ? 洹멸? ?쇰쭏???먯떊??議곌뎅????쒗븯??寃껋쓣 ?뚯쨷???ш린?붿? 蹂댁뿬以 媛먮룞?곸씤 ?λ㈃?댁뿀?듬땲??</p>
-
-            <h2 id="training-philosophy-consistency-repetition-order">?덈젴 泥좏븰 ???쇨??깃낵 諛섎났??誘명븰</h2>
-            <p>洹몄쓽 ?덈젴 ?쇱?????移섏쓽 ?ㅼ감???놁뒿?덈떎. 湲곗닠 ?덈젴留뚰겮?대굹 泥대젰 ?⑤젴怨??좎뿰???덈젴??留롮? ?쒓컙???좎븷?섎ŉ, 留ㅼ씪 ?묎컳? 猷⑦떞??諛섎났?섎뒗 ?몃궡?ъ씠?쇰쭚濡?洹몄쓽 吏꾩젙???щ뒫?낅땲?? "泥쒖옱?깆? ?곴컧蹂대떎 ?덇린?먯꽌 ?섏삩????留먯쿂?? 洹몃뒗 ?붾젮???꾨꼫 ?ㅼ뿉 ?④꺼吏??섏쿇 踰덉쓽 ?곗뒿 怨쇱젙????媛移??덇쾶 ?ш퉩?덈떎.</p>
-
-            <h2 id="future-challenges-second-serve-halfcourt-conclusion">?욎쑝濡쒖쓽 怨쇱젣 ???몄빻???쒕툕? ?섑봽肄뷀듃??寃곕쭚</h2>
-            <p>???믪씠 ?꾩빟?섎젮硫??몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?붿? ?섑봽肄뷀듃 留덈Т由ъ쓽 ?쇨??깆씠 愿嫄댁엯?덈떎. 由ы꽩 吏곹썑 3援ъ뿉???꾩쭊 ??대컢??諛?諛뺤옄 ?욌떦湲곌퀬, 寃곕쭚???좏깮吏瑜??쒕몢 媛쒕줈 怨좎젙?섎㈃ ?κ린?꾩뿉?쒕룄 ?먮꼫吏 愿由ш? ?쒖링 ?섏썡?댁쭏 寃껋엯?덈떎. 遺?곸쓣 ?닿꺼??洹몄쓽 ?⑤떒?댁쭊 諛쒕ぉ泥섎읆, 洹몄쓽 ?뚮땲???몄깮???붿슧 ?⑤떒?섍쾶 ?곴??닿?怨??덉뒿?덈떎.</p>
-
-            <h2 id="fans-community-lasting-trust">?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː</h2>
-            <p>利덈쿋?덊봽???щ뱾? 洹몄쓽 ?덇린? ?깆떎?⑥쓣 ?щ옉?⑸땲?? ?⑤같 ?띿뿉?쒕룄 諛곗???李얘퀬, ?밸━ ?띿뿉?쒕룄 媛쒖꽑?먯쓣 李얜뒗 洹몄쓽 ?쒕룄??留롮? ?대뱾?먭쾶 洹媛먯씠 ?⑸땲?? ?щ뱾怨쇱쓽 ?뚰넻?먯꽌??吏꾩넄?⑥쓣 ?껋? ?딆쑝硫? ?뚮땲?ㅺ? 二쇰뒗 利먭굅?????留롮? ?щ엺怨??섎늻怨좎옄 ?몃젰?⑸땲?? 洹몄쓽 ?대쫫? ?⑥닚????궧 ?곷떒??湲곕줉?섎뒗 寃껋쓣 ?섏뼱, ?ш린?섏? ?딅뒗 ?꾩쟾 ?뺤떊???곸쭠?쇰줈 湲곗뼲??寃껋엯?덈떎.</p>
+          <div className="mt-12">
+             <FAQ items={faqs} />
           </div>
-
-          {/* Related Links */}
-          <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                愿???먮즺
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    ?대? 留곹겕
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">?룇</span>
-                        <span className="font-medium">?좎닔 ?꾨줈??/span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">?렞</span>
-                        <span className="font-medium">?ㅻ젰 ?뚯뒪??/span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">?렱</span>
-                        <span className="font-medium">?뚮젅???ㅽ????뚯뒪??/span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    ?몃? ?먮즺
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">?뙋</span>
-                        <span className="font-medium">ATP ?ъ뼱 怨듭떇 ?ъ씠??/span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://en.wikipedia.org/wiki/Alexander_Zverev" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">?뱰</span>
-                        <span className="font-medium">?꾪궎?쇰뵒???꾨줈??/span>
-                        <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-
-          {/* CTA */}
-
-          {/* FAQ Section */}
-          <FAQ items={faqs} />
-
-                    <RelatedPosts 
+          <RelatedPosts 
             currentSlug="alexander-zverev" 
-            category="
-                ?뚮땲???좎닔
-              " 
-            tags={['?뚮땲??, '?뚮젆?곕뜑 利덈쿋?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?낆씪']} 
+            category="Player" 
+            tags={["테니스","알렉산더 즈베레프","Alexander Zverev","서브","독일"]} 
           />
-
           <CTA />
         </div>
       </Article>

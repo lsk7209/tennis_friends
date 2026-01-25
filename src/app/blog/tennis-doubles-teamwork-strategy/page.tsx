@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '?뚮땲??蹂듭떇 留덉뒪??媛?대뱶 ??吏꾪솕???щ찓?댁뀡怨???뚰겕??怨쇳븰 | ?밸쪧???믪씠???꾨왂??????뚮젅??,
-  description: '?뚮땲??蹂듭떇? ?⑥닚????紐낆씠 移섎뒗 寃쎄린媛 ?꾨떃?덈떎. ?몄＜??Australian) ?щ찓?댁뀡, I-?щ찓?댁뀡, ?ъ묶(Poaching) ??대컢 ??怨좉툒 ?꾩닠怨???뚰겕 ?꾨왂 ?ъ링 遺꾩꽍.',
-  keywords: ['?뚮땲??蹂듭떇', '?몄＜???щ찓?댁뀡', 'I-?щ찓?댁뀡', '?ъ묶', '蹂듭떇 ?꾨왂', '蹂듭떇 ??뚰겕', '?뚮땲???꾩닠'],
+  title: "복식의 신이 되는 팀워크 전략 (Doubles Strategy)",
+  description: "복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.",
+  keywords: ["테니스","복식","팀워크","포칭","발리"],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/tennis-doubles-teamwork-strategy',
   },
   openGraph: {
-    title: '?뚮땲??蹂듭떇 留덉뒪??媛?대뱶 ??吏꾪솕???щ찓?댁뀡怨???뚰겕??怨쇳븰',
-    description: '?뚮땲??蹂듭떇? ?⑥닚????紐낆씠 移섎뒗 寃쎄린媛 ?꾨떃?덈떎. ?몄＜??Australian) ?щ찓?댁뀡, I-?щ찓?댁뀡, ?ъ묶(Poaching) ??대컢 ??怨좉툒 ?꾩닠怨???뚰겕 ?꾨왂.',
+    title: "복식의 신이 되는 팀워크 전략 (Doubles Strategy)",
+    description: "복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.",
     url: 'https://tennisfriends.co.kr/blog/tennis-doubles-teamwork-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '?뚮땲??蹂듭떇 留덉뒪??媛?대뱶 ??吏꾪솕???щ찓?댁뀡怨???뚰겕??怨쇳븰',
-    description: '?뚮땲??蹂듭떇? ?⑥닚????紐낆씠 移섎뒗 寃쎄린媛 ?꾨떃?덈떎.',
+    title: "복식의 신이 되는 팀워크 전략 (Doubles Strategy)",
+    description: "복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.",
   },
   robots: {
     index: true,
@@ -34,183 +34,72 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'introduction', text: '1. ?ㅼ뼱媛硫? ??蹂듭떇? ?섑븰???꾨땶 ?щ━?숈씤媛?', depth: 2 },
-  { id: 'advanced-formations', text: '2. 怨좉툒 ?щ찓?댁뀡: ?몄＜??Australian) & I-?щ찓?댁뀡', depth: 2 },
-  { id: 'poaching-mechanics', text: '3. ?ъ묶(Poaching)??誘명븰: 0.1珥덈? ?〓뒗 踰?, depth: 2 },
-  { id: 'communication-signals', text: '4. 移⑤У???몄뼱: ?섏떊?몄? ?뚰듃?덉떗 猷⑦떞', depth: 2 },
-  { id: 'net-dominance', text: '5. ?ㅽ듃 ?먮졊??踰뺤튃: ?쒕퉬???쇱씤???섎뒗 ?먭? ?밸━?쒕떎', depth: 2 },
-  { id: 'mental-pairing', text: '6. ?섏뼱 硫섑깉 愿由? ?뚰듃?덉쓽 ?ㅼ닔瑜????ㅼ닔濡?留뚮뱶??踰?, depth: 2 },
-  { id: 'regional-match-tips', text: '7. ?쒓뎅 ?숉샇??蹂듭떇 ?뱀꽦 (濡쒕툕 ?섎퉬 ?꾨왂)', depth: 2 },
-  { id: 'conclusion', text: '8. 寃곕줎: 醫뗭? ?뚰듃?덇? ?섎뒗 寃껋씠 理쒖꽑???꾨왂?대떎', depth: 2 },
+  { id: 'section-1', text: '1. 주요 특징', depth: 2 },
+  { id: 'section-2', text: '2. 플레이 스타일', depth: 2 },
+  { id: 'conclusion', text: '결론', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '?뚰듃?덉? ?먭씀 ?숈꽑??寃뱀튂?붾뜲 ?대뼸寃??섎굹??',
-    a: '?쇳꽣?쇱씤??湲곗??쇰줈 媛곸옄???곸뿭???섎늻?? 怨듭쓽 沅ㅼ쟻???곕씪 ?④퍡 ?대룞?섎뒗 "??댄띁(Wiper) ?쒖뒪?????곗뒿?댁빞 ?⑸땲?? ??紐낆씠 ?ъ씠?쒕줈 鍮좎?硫??ㅻⅨ ??紐낆? 以묒븰?쇰줈 ?대룞?댁빞 援щ찉???앷린吏 ?딆뒿?덈떎.'
+    "q": "파트너가 자꾸 실수하는데 어떡하죠?",
+    "a": "절대로 탓하지 마세요. 심리적으로 위축되면 더 실수합니다. '괜찮아, 다음 거 하나 하자!'라고 파이팅을 불어넣어 주는 것이 승률을 높이는 최고의 방법입니다."
   },
   {
-    q: '?몄＜???щ찓?댁뀡? ?몄젣 ?ъ슜?섎굹??',
-    a: '?곷?諛⑹쓽 ?щ줈??由ы꽩???덈Т 媛뺣젰?댁꽌 ?곕━ ? ?쒕툕沅뚯쓣 吏?ㅺ린 ?대젮?????ъ슜?⑸땲?? ?곷????듦??곸씤 肄붿뒪瑜?媛뺤젣濡?諛붽씀寃?留뚮뱶???щ━???④낵媛 ?쎈땲??'
-  },
-  {
-    q: '?쒕툕 ?ｋ뒗 ?뚰듃?덉뿉寃??대뼡 ?좏샇瑜?以섏빞 ?섎굹??',
-    a: '湲곕낯?곸쑝濡?"?ъ묶??寃껋씤媛(Stay/Go)"? "?쒕툕 肄붿뒪(T議???대뱶)"??????⑹쓽媛 ?꾩슂?⑸땲?? ???ㅼ뿉???먭??쎌쑝濡??꾩튂瑜??뚮젮二쇰뒗 諛⑹떇???쇰컲?곸엯?덈떎.'
-  },
-  {
-    q: '蹂듭떇?먯꽌 濡쒕툕媛 ?덈Т 留롮씠 ?щ씪????섎뱾?댁슂.',
-    a: '?쒓뎅 ?숉샇???뚮땲?ㅼ쓽 ?꾪삎?곸씤 ?⑦꽩?낅땲?? ?ㅽ듃???덈Т 媛源앷쾶 遺숈? 留먭퀬, ?쒕퉬???쇱씤 洹쇱쿂?먯꽌 ?ㅽ뵆由??ㅽ뀦??諛잛쑝硫??ㅻℓ?쒕? 以鍮꾪븯???ъ쑀媛 ?꾩슂?⑸땲??'
+    "q": "전위 위치는 어디가 좋나요?",
+    "a": "서비스 박스 정중앙보다 약간 네트 쪽, 그리고 단식 사이드라인과 센터라인의 중간 정도가 기본입니다. 너무 네트에 붙으면 로브에 당하고, 너무 뒤에 있으면 발리 공격을 하기 힘듭니다."
   }
 ];
 
-export default function DoublesStrategyBlogPost() {
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 dark:from-slate-950 dark:via-gray-950 dark:to-purple-950">
-      <div className="relative bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 dark:from-purple-900 dark:via-violet-900 dark:to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-950 dark:to-blue-950">
+      <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['?뚮땲??蹂듭떇', '?꾨왂', '??뚰겕', '?ㅼ쟾 ?꾩닠', '留덉뒪??媛?대뱶'].map((tag) => (
-              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
-                ?뚮땲???좎닔
+            {["테니스","복식","팀워크","포칭","발리"].map((tag) => (
+              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                {tag}
               </Badge>
             ))}
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            ?뚮땲??蹂듭떇 留덉뒪??媛?대뱶 <br />
-            <span className="text-2xl md:text-3xl font-light opacity-90">媛쒖씤??湲곗닠???섏뼱 ?쒕꼫吏瑜?留뚮뱶????뚰겕??怨쇳븰</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+            복식의 신이 되는 팀워크 전략 (Doubles Strategy)
           </h1>
-          <p className="text-xl text-purple-50 mb-8 max-w-3xl">
-            ?⑥떇怨쇰뒗 ?꾩쟾???ㅻⅨ ?ㅽ룷痢? 蹂듭떇. ??紐낆쓽 ?좎닔媛 ?섎굹???좉린泥댁쿂???吏곸씪 ??肄뷀듃??鍮꾨줈??醫곴쾶 ?먭뺨吏湲??쒖옉?⑸땲??
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
+            복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.
           </p>
         </div>
       </div>
 
-      <Article slug="tennis-doubles-teamwork-strategy" date="2026-01-24" title="蹂듭떇 ??뚰겕 ?꾨왂" excerpt="吏꾪솕???щ찓?댁뀡怨???뚰겕??怨쇳븰">
+      <Article slug="tennis-doubles-teamwork-strategy" date="2026-01-24" title="복식의 신이 되는 팀워크 전략 (Doubles Strategy)" excerpt="복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-          <TOC items={tocItems} />
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            
+      <h2>둘이서 하나가 되는 예술, 복식 테니스</h2>
+      <p>복식 경기는 단순히 두 명이 코트에 서 있는 것이 아닙니다. 파트너와의 호흡, 역할 분담, 그리고 유기적인 움직임이 승패를 가릅니다.</p>
 
-          <section id="introduction" className="mt-12 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">1. ?ㅼ뼱媛硫? ??蹂듭떇? ?섑븰???꾨땶 ?щ━?숈씤媛?</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                留롮? ?숉샇?몄씠 蹂듭떇??'??紐낆씠 肄뷀듃瑜??섎닠 媛吏??寃뚯엫'?쇰줈 ?앷컖?⑸땲?? ?섏?留??대뒗 ?섑븰?곸씤 ?ㅼ궛?낅땲?? 蹂듭떇? <strong>'??紐낆쓽 ?쎌젏??媛由ш퀬 ?섎굹??媛뺤젏??洹밸??뷀븯???щ━ 寃뚯엫'</strong>?낅땲??
-              </p>
-              <p>
-                ?곷? ?? ?뱀떊怨??뚰듃???ъ씠??誘몄꽭???? 利?<strong>'遺덊넻??怨듦컙'</strong>???몃┰?덈떎. 洹??덉쓣 硫붿슦??寃껋? 媛뺣젰???ы빖?쒓? ?꾨땲?? ?뚰듃?덉????좊ː? ?꾨왂?곸씤 ?ъ??붾떇?낅땲?? ?ㅻ뒛? ?밸쪧??30% ?댁긽 ?뚯뼱?щ┫ ???덈뒗 怨좉툒 蹂듭떇 ?꾩닠???ㅻ９?덈떎.
-              </p>
-            </div>
-          </section>
+      <h3>1. 소통하라 (Communication)</h3>
+      <p>서브를 넣기 전, 리턴을 준비할 때 항상 파트너와 작전을 짜세요. "나 서브 티존으로 넣을게, 네가 포칭 나가", "가운데는 내가 맡을게" 같은 짧은 대화가 실수를 줄이고 신뢰를 쌓습니다. 실수했을 때 서로 격려하는 것은 기본 중의 기본입니다.</p>
 
-          <section id="advanced-formations" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">2. 怨좉툒 ?щ찓?댁뀡: ?몄＜??Australian) & I-?щ찓?댁뀡</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>湲곕낯?곸씤 1??1?ㅼ슫 ?щ찓?댁뀡?먯꽌 踰쀬뼱???곷?瑜??쇰???鍮좊쑉由щ뒗 ?뱀닔 ??뺤쓣 援ъ궗??蹂댁꽭??</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                <Card className="bg-white dark:bg-gray-800 border-purple-200 shadow-md">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-purple-700 mb-3">?눇?눣 ?몄＜???щ찓?댁뀡</h3>
-                    <p className="text-sm">?쒕쾭? ?꾩쐞媛 肄뷀듃??媛숈? 履쎌뿉 ?쒕뒗 諛⑹떇?낅땲?? ?곷???二쇳듅湲곗씤 ?щ줈??由ы꽩???먯쿇 遊됱뇙?섍퀬, ?듭닕?섏? ?딆? ?ㅼ슫?붾씪??由ы꽩??媛뺤슂?섏뿬 ?ㅼ닔瑜??좊룄?⑸땲??</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-white dark:bg-gray-800 border-indigo-200 shadow-md">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-indigo-700 mb-3">?뱄툘 I-?щ찓?댁뀡</h3>
-                    <p className="text-sm">?꾩쐞媛 ?쇳꽣 ?쒕퉬???쇱씤????쾶 ?롫뱶???됱븘 由ы꽩 吏곹썑 ?꾧킅?앺솕泥섎읆 醫뚯슦濡??吏곸씠??諛⑹떇?낅땲?? 由ы꽣???쒖빞瑜?媛???대뵒濡?移좎? 寃곗젙?섍린 ?대졄寃?留뚮벊?덈떎.</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </section>
+      <h3>2. 포칭(Poaching)의 미학</h3>
+      <p>전위(Net Player)는 가만히 서 있는 허수아비가 아닙니다. 파트너의 좋은 서브나 스트로크가 들어갔을 때, 과감하게 가운데로 뛰어들어 발리로 끊어먹어야 합니다. 설령 실패하더라도, 상대 리턴러에게 "언제든지 튀어나올 수 있다"는 압박감을 주는 것만으로도 큰 효과가 있습니다.</p>
 
-          <section id="poaching-mechanics" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">3. ?ъ묶(Poaching)??誘명븰: 0.1珥덈? ?〓뒗 踰?/h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                蹂듭떇??苑껋? '?ъ묶'?낅땲?? 諛쒕━?닿? ?곷???由ы꽩??媛濡쒖콈 ?ъ씤?몃? ?앸궡???쒓컙, 寃쎄린???먮쫫? ?꾩쟾???ㅻ컮?앸땲??
-              </p>
-              <ul>
-                <li><strong>?깃났?곸씤 ?ъ묶??議곌굔:</strong> ?곷???猷⑦떞(?듦?)???뚯븙?섏꽭?? 諛깊빖???щ씪?댁뒪瑜?移???怨좉컻瑜??숈씠??李곕굹, 洹몃븣媛 ?뚯쭊?댁빞 ??怨⑤뱺 ??꾩엯?덈떎.</li>
-                <li><strong>媛吏??ъ묶 (Fake Poaching):</strong> 媛?寃껋쿂??紐몄쓣 ??諛쒖쭩 ?붾뱾?덈떎媛 ?쒖옄由щ줈 ?뚯븘?ㅼ꽭?? ?곷????뱁솴?섏뿬 肄붿뒪瑜?諛붽씀?ㅻ떎 ?ㅽ듃??怨듭쓣 諛뺢굅???꾩썐??留뚮뱾寃??⑸땲??</li>
-              </ul>
-            </div>
-          </section>
+      <h3>3. 센터(Center)를 사수하라</h3>
+      <p>복식에서 가장 안전하고 효과적인 코스는 '센터'입니다. 두 사람 사이의 공간은 서로 미루다가 에러가 나기 쉽고, 앵글 샷의 각도를 줄여줍니다. 반대로 수비할 때도 센터를 먼저 막는 것이 우선입니다.</p>
 
-          <section id="communication-signals" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">4. 移⑤У???몄뼱: ?섏떊?몄? ?뚰듃?덉떗 猷⑦떞</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>?쒕툕瑜??ｊ린 ?? ?뚰듃?????ㅼ뿉???대（?댁????묒? ?먮룞?묒씠 ?뱁뙣瑜?媛由낅땲??</p>
-              <div className="bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl mb-8">
-                <h3 className="text-lg font-bold mb-4">?뼆 ?꾩닔 ?섏떊??3醫??명듃</h3>
-                <ul className="space-y-2 text-sm">
-                  <li><strong>二쇰㉨:</strong> Stay (?吏곸씠吏 留먭퀬 ?먮━瑜?吏耳쒕씪)</li>
-                  <li><strong>?먮컮???닿린:</strong> Switch/Poach (?쒕툕 吏곹썑 媛濡쒖콈湲곕굹 援먯감 ?대룞)</li>
-                  <li><strong>寃吏 ?먭???</strong> ?쒕툕 肄붿뒪 (?곗〈 ?먮뒗 ??대뱶)</li>
-                </ul>
-              </div>
-              <p>留??ъ씤???ъ씠???뚰듃?덉? 二쇰㉨??留욌?嫄곕굹 ?섏씠?뚯씠釉뚮? ?섎뒗 ?됱쐞???⑥닚??留ㅻ꼫媛 ?꾨떃?덈떎. ?대뒗 ?쒕줈??湲댁옣???怨??꾨왂???쇱껜媛먯쓣 ?뺤씤?섎뒗 <strong>'?щ━??由ъ뀑'</strong>?낅땲??</p>
-            </div>
-          </section>
-
-          <section id="net-dominance" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">5. ?ㅽ듃 ?먮졊??踰뺤튃: ?쒕퉬???쇱씤???섎뒗 ?먭? ?밸━?쒕떎</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                蹂듭떇 寃쎄린 ?듦퀎???곕Ⅴ硫? ??紐낆씠 紐⑤몢 ?ㅽ듃 洹쇱쿂(?쒕퉬???쇱씤 ?덉そ)???덈뒗 ????밸쪧??70%瑜??곹쉶?⑸땲??
-              </p>
-              <p>
-                怨듦꺽?곸씤 ??뚰겕瑜??꾪빐?쒕뒗 ??紐낆씠 踰좎씠?ㅻ씪?몄뿉 癒몃Ъ ???ㅻⅨ ??紐낆? ?딆엫?놁씠 <strong>'?꾩쭊??湲고쉶'</strong>瑜??용킄???⑸땲?? ?뚰듃?덉쓽 ?룹씠 源딄쾶 ?ㅼ뼱媛붾떎硫?吏泥??놁씠 ???щ엺 紐⑤몢 ?ㅽ듃濡?遺숇뒗 "2-?? ?щ찓?댁뀡???쒕룄?섏꽭??
-              </p>
-            </div>
-          </section>
-
-          <section id="mental-pairing" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">6. ?섏뼱 硫섑깉 愿由? ?뚰듃?덉쓽 ?ㅼ닔瑜????ㅼ닔濡?留뚮뱶??踰?/h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                蹂듭떇?먯꽌 媛??理쒖븙???뚮젅?댁뼱???뚰듃?덇? ?ㅼ닔?덉쓣 ???쒖닲???ш굅??爾먮떎蹂댁? ?딅뒗 ?щ엺?낅땲??
-              </p>
-              <blockquote>
-                "愿쒖갖?? ?ㅼ쓬 怨듭? ?닿? ?≪쓣寃?"
-              </blockquote>
-              <p>
-                ?뚰듃?덉쓽 ?먯떊媛먯씠 ?⑥뼱吏硫?? ?꾩껜???ㅻ젰??50% ?댄븯濡?湲됯컧?⑸땲?? ?뚰듃?덇? ?ㅼ닔?좎닔濡???諛앷쾶 "?섏씠???쒕룄!"?쇨퀬 ?몄퀜二쇱꽭?? ?щ━???뺣컯?먯꽌 踰쀬뼱???뚰듃?덇? 寃곗젙?곸씤 ?쒓컙???꾨떇?룹쓣 ?좊젮 寃쎄린瑜??ㅼ쭛?댁쨪 寃껋엯?덈떎.
-              </p>
-            </div>
-          </section>
-
-          <section id="regional-match-tips" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">7. ?쒓뎅 ?숉샇??蹂듭떇 ?뱀꽦 (濡쒕툕 ?섎퉬 ?꾨왂)</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>?쒓뎅 ?숉샇???뚮땲?ㅼ쓽 蹂듭떇? ???멸퀎 ?대뵒蹂대떎 '濡쒕툕(Lob)' ?ъ슜 鍮덈룄媛 ?믪뒿?덈떎.</p>
-              <div className="bg-amber-50 dark:bg-amber-950 p-6 rounded-2xl">
-                <h4 className="font-bold mb-4">?썳 濡쒕툕 吏???덉텧踰?/h4>
-                <p className="text-sm">
-                  ?꾩쐞???덉쓣 ???ㅽ듃???덈Т 媛源뚯씠 遺숈? 留덉꽭?? ?쒕퉬???쇱씤?먯꽌 1~2諛쒖쭩 ?욎뿉 ?쒕뒗 '誘몃뱶 肄뷀듃' ?ъ??섏쓣 ?좎??섎㈃, ?꾩쭊 諛쒕━? ?꾪눜 ?ㅻℓ?쒕? ?숈떆???泥섑븷 ???덉뒿?덈떎. 濡쒕툕媛 ?섏뼱媛붿쓣 ???뚰듃?덉? "Switch!"?쇨퀬 ?ш쾶 ?몄튂硫??숈꽑??瑗ъ씠吏 ?딄쾶 ?섎뒗 ?뚰넻???듭떖?낅땲??
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section id="conclusion" className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">8. 寃곕줎: 醫뗭? ?뚰듃?덇? ?섎뒗 寃껋씠 理쒖꽑???꾨왂?대떎</h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
-                ?뚮땲??蹂듭떇???뺤닔??寃곌뎅 <strong>'諛곕젮'</strong>? <strong>'?ъ깮'</strong>?낅땲?? ?뚰듃?덇? 移섍린 醫뗭? 怨듭쓣 留뚮뱾?댁＜?ㅺ퀬 ?몃젰?섍퀬, ?뚰듃?덉쓽 ?ㅼ닔瑜??닿? ??諛????곗뼱??硫붿슦?ㅻ뒗 ?먯꽭媛 理쒓퀬???꾩닠蹂대떎 ?욎꽠?덈떎.
-              </p>
-              <p>
-                ?ㅻ뒛 諛곗슫 ?щ찓?댁뀡怨??섏떊?몃? ?ㅼ쓬 寃뚯엫?먯꽌 ?뚰듃?덉? 誘몃━ ?곸쓽??蹂댁꽭?? ?④퍡 怨좊??섍퀬 ?쒕룄?섎뒗 怨쇱젙 ?먯껜媛 蹂듭떇??吏꾩젙??利먭굅??대ŉ, 洹?寃곌낵???먯뿰?ㅻ읇寃??밸━濡??곕씪??寃껋엯?덈떎. ?렱
-              </p>
-            </div>
-          </section>
-
-          <FAQ items={faqs} />
-          <RelatedPosts
-            currentSlug="tennis-doubles-teamwork-strategy"
-            category="?뚮땲???꾩닠"
-            tags={["?뚮땲??蹂듭떇", "?꾨왂", "??뚰겕", "?ㅼ쟾 ?꾩닠"]}
+      <h3>4. 진형의 변화 (I-Formation, Australian)</h3>
+      <p>상대가 리턴을 너무 잘한다면 진형을 바꿔보세요. 서버와 전위가 일직선에 서는 I-포메이션이나, 전위가 서버와 같은 쪽에 서는 호주형 포메이션은 상대의 리턴 리듬을 완전히 깨뜨릴 수 있는 고급 전술입니다.</p>
+    
+          </div>
+          <div className="mt-12">
+             <FAQ items={faqs} />
+          </div>
+          <RelatedPosts 
+            currentSlug="tennis-doubles-teamwork-strategy" 
+            category="Strategy" 
+            tags={["테니스","복식","팀워크","포칭","발리"]} 
           />
-
           <CTA />
         </div>
       </Article>
