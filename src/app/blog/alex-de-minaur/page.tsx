@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '알렉스 드 미노 선수 프로필과 스토리',
-  description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 드 미노의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
-  keywords: ['테니스', '알렉스 드 미노', '선수 프로필', '스토리', '호주'],
+  title: '?뚮젆????誘몃끂 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '?딆엫?녿뒗 ?뗭썙?ъ? ?붾뱾由ъ? ?딅뒗 ?좏깮?쇰줈 ?먯닔瑜??볥뒗 ?뚮젆????誘몃끂???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? ?ν썑 怨쇱젣瑜??뺣━?덉뒿?덈떎.',
+  keywords: ['?뚮땲??, '?뚮젆????誘몃끂', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?몄＜'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/alex-de-minaur',
   },
   openGraph: {
-    title: '알렉스 드 미노 선수 프로필과 스토리',
-    description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 드 미노의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
+    title: '?뚮젆????誘몃끂 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?딆엫?녿뒗 ?뗭썙?ъ? ?붾뱾由ъ? ?딅뒗 ?좏깮?쇰줈 ?먯닔瑜??볥뒗 ?뚮젆????誘몃끂???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? ?ν썑 怨쇱젣瑜??뺣━?덉뒿?덈떎.',
     url: 'https://tennisfriends.co.kr/blog/alex-de-minaur',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '알렉스 드 미노 선수 프로필과 스토리',
-    description: '끊임없는 풋워크와 흔들리지 않는 선택으로 점수를 쌓는 알렉스 드 미노의 성장 배경, 경기 스타일, 관계와 향후 과제를 정리했습니다.',
+    title: '?뚮젆????誘몃끂 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?딆엫?녿뒗 ?뗭썙?ъ? ?붾뱾由ъ? ?딅뒗 ?좏깮?쇰줈 ?먯닔瑜??볥뒗 ?뚮젆????誘몃끂???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? ?ν썑 怨쇱젣瑜??뺣━?덉뒿?덈떎.',
   },
   robots: {
     index: true,
@@ -34,40 +34,40 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-two-continents-made-rhythm-discipline', text: '성장 배경 — 두 대륙이 만든 리듬과 규율', depth: 2 },
-  { id: 'playing-style-speed-maintain-angle-limit-fast-return', text: '경기 스타일 — 속도 유지, 각도 제한, 빠른 복귀', depth: 2 },
-  { id: 'return-transition-departure-shake-foot-device', text: '리턴과 전환 — 출발점을 흔드는 발의 장치', depth: 2 },
-  { id: 'rhythm-selection-emotion-low-procedure-constant', text: '리듬과 선택 — 감정은 낮게, 절차는 일정하게', depth: 2 },
-  { id: 'surface-development-hard-straight-grass-concise-clay', text: '표면별 전개 — 하드의 직선, 잔디의 간결, 점토의 인내', depth: 2 },
-  { id: 'human-aspects-humble-language-firm-responsibility', text: '인간적인 면모 — 겸손한 언어, 확고한 책임', depth: 2 },
-  { id: 'nationality-culture-tradition-grit-modern-efficiency', text: '국적과 문화 — 전통의 투지, 현대의 효율', depth: 2 },
-  { id: 'relationships-rivals-speed-generation-length-angle-answer', text: '관계와 라이벌 — 속도의 세대에 길이·각으로 답하다', depth: 2 },
-  { id: 'famous-scenes-impossible-defense-reversal', text: '명장면 — 불가능해 보이는 수비에서의 반전', depth: 2 },
-  { id: 'equipment-details-lightness-stability', text: '장비와 디테일 — 가벼움 속의 안정', depth: 2 },
-  { id: 'future-challenges-conclusion-density-second-serve', text: '앞으로의 과제 — 결말의 밀도와 세컨드 서브', depth: 2 },
-  { id: 'fans-community-lasting-trust-way', text: '팬과 커뮤니티 — 오래 가는 신뢰의 방식', depth: 2 },
+  { id: 'growth-background-two-continents-made-rhythm-discipline', text: '?깆옣 諛곌꼍 ?????瑜숈씠 留뚮뱺 由щ벉怨?洹쒖쑉', depth: 2 },
+  { id: 'playing-style-speed-maintain-angle-limit-fast-return', text: '寃쎄린 ?ㅽ??????띾룄 ?좎?, 媛곷룄 ?쒗븳, 鍮좊Ⅸ 蹂듦?', depth: 2 },
+  { id: 'return-transition-departure-shake-foot-device', text: '由ы꽩怨??꾪솚 ??異쒕컻?먯쓣 ?붾뱶??諛쒖쓽 ?μ튂', depth: 2 },
+  { id: 'rhythm-selection-emotion-low-procedure-constant', text: '由щ벉怨??좏깮 ??媛먯젙? ??쾶, ?덉감???쇱젙?섍쾶', depth: 2 },
+  { id: 'surface-development-hard-straight-grass-concise-clay', text: '?쒕㈃蹂??꾧컻 ???섎뱶??吏곸꽑, ?붾뵒??媛꾧껐, ?먰넗???몃궡', depth: 2 },
+  { id: 'human-aspects-humble-language-firm-responsibility', text: '?멸컙?곸씤 硫대え ??寃몄넀???몄뼱, ?뺢퀬??梨낆엫', depth: 2 },
+  { id: 'nationality-culture-tradition-grit-modern-efficiency', text: '援?쟻怨?臾명솕 ???꾪넻???ъ?, ?꾨????⑥쑉', depth: 2 },
+  { id: 'relationships-rivals-speed-generation-length-angle-answer', text: '愿怨꾩? ?쇱씠踰????띾룄???몃???湲몄씠쨌媛곸쑝濡??듯븯??, depth: 2 },
+  { id: 'famous-scenes-impossible-defense-reversal', text: '紐낆옣硫???遺덇??ν빐 蹂댁씠???섎퉬?먯꽌??諛섏쟾', depth: 2 },
+  { id: 'equipment-details-lightness-stability', text: '?λ퉬? ?뷀뀒????媛踰쇱? ?띿쓽 ?덉젙', depth: 2 },
+  { id: 'future-challenges-conclusion-density-second-serve', text: '?욎쑝濡쒖쓽 怨쇱젣 ??寃곕쭚??諛?꾩? ?몄빻???쒕툕', depth: 2 },
+  { id: 'fans-community-lasting-trust-way', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː??諛⑹떇', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '알렉스 드 미노의 경기 스타일은 어떤가요?',
-    a: '끊임없는 풋워크와 흔들리지 않는 수비·전환, 간결한 결말이 특징입니다. 속도를 유지하며 각을 제한하고, 상대의 공격을 길이로 희석한 뒤 빈틈에서 한 박자 빠르게 닫는 테니스입니다.'
+    q: '?뚮젆????誘몃끂??寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
+    a: '?딆엫?녿뒗 ?뗭썙?ъ? ?붾뱾由ъ? ?딅뒗 ?섎퉬쨌?꾪솚, 媛꾧껐??寃곕쭚???뱀쭠?낅땲?? ?띾룄瑜??좎??섎ŉ 媛곸쓣 ?쒗븳?섍퀬, ?곷???怨듦꺽??湲몄씠濡??ъ꽍????鍮덊땲?먯꽌 ??諛뺤옄 鍮좊Ⅴ寃??ル뒗 ?뚮땲?ㅼ엯?덈떎.'
   },
   {
-    q: '데 미노르의 성장 배경은 어떤가요?',
-    a: '복수 문화권에서 성장했으며, 실내·야외를 오가며 다양한 바운드와 기후를 경험했습니다. 워밍업 순서, 스트레칭 시간, 첫 서브 루틴을 고정해 생활의 질서를 만들었고, 짧고 촘촘한 인터벌로 가속-감속-재가속의 리듬을 몸에 새겼습니다.'
+    q: '??誘몃끂瑜댁쓽 ?깆옣 諛곌꼍? ?대뼡媛??',
+    a: '蹂듭닔 臾명솕沅뚯뿉???깆옣?덉쑝硫? ?ㅻ궡쨌?쇱쇅瑜??ㅺ?硫??ㅼ뼇??諛붿슫?쒖? 湲고썑瑜?寃쏀뿕?덉뒿?덈떎. ?뚮컢???쒖꽌, ?ㅽ듃?덉묶 ?쒓컙, 泥??쒕툕 猷⑦떞??怨좎젙???앺솢??吏덉꽌瑜?留뚮뱾?덇퀬, 吏㏐퀬 珥섏킌???명꽣踰뚮줈 媛??媛먯냽-?ш??띿쓽 由щ벉??紐몄뿉 ?덇꼈?듬땲??'
   },
   {
-    q: '데 미노르의 강점은 무엇인가요?',
-    a: '끝나지 않는 발과 흔들리지 않는 선택이 최대 강점입니다. 가벼운 발과 끈질긴 수비로 상대의 시간을 빼앗으며, 간결한 전환으로 빠르게 결말을 만듭니다.'
+    q: '??誘몃끂瑜댁쓽 媛뺤젏? 臾댁뾿?멸???',
+    a: '?앸굹吏 ?딅뒗 諛쒓낵 ?붾뱾由ъ? ?딅뒗 ?좏깮??理쒕? 媛뺤젏?낅땲?? 媛踰쇱슫 諛쒓낵 ?덉쭏湲??섎퉬濡??곷????쒓컙??鍮쇱븮?쇰ŉ, 媛꾧껐???꾪솚?쇰줈 鍮좊Ⅴ寃?寃곕쭚??留뚮벊?덈떎.'
   },
   {
-    q: '데 미노르의 인간적인 면모는 어떤가요?',
-    a: '겸손한 언어와 확고한 책임이 특징입니다. 인터뷰는 담백하며, 팀 퍼스트 성향이 강해 경기 전후의 절차를 생활로 옮겨 놓았습니다. 강함을 과시하기보다 강함을 다루는 법을 택하는 유형입니다.'
+    q: '??誘몃끂瑜댁쓽 ?멸컙?곸씤 硫대え???대뼡媛??',
+    a: '寃몄넀???몄뼱? ?뺢퀬??梨낆엫???뱀쭠?낅땲?? ?명꽣酉곕뒗 ?대갚?섎ŉ, ? ?쇱뒪???깊뼢??媛뺥빐 寃쎄린 ?꾪썑???덉감瑜??앺솢濡???꺼 ?볦븯?듬땲?? 媛뺥븿??怨쇱떆?섍린蹂대떎 媛뺥븿???ㅻ（??踰뺤쓣 ?앺븯???좏삎?낅땲??'
   },
   {
-    q: '데 미노르의 미래 전망은 어떻게 되나요?',
-    a: '하프코트 마무리 일관성과 세컨드 서브 코스 다양화가 관건입니다. 리턴 직후 3구에서 전진 타이밍 반 박자 앞당김, 결말 선택지를 고정하면 긴 경기에서도 에너지 관리가 쉬워질 것입니다.'
+    q: '??誘몃끂瑜댁쓽 誘몃옒 ?꾨쭩? ?대뼸寃??섎굹??',
+    a: '?섑봽肄뷀듃 留덈Т由??쇨??깃낵 ?몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?붽? 愿嫄댁엯?덈떎. 由ы꽩 吏곹썑 3援ъ뿉???꾩쭊 ??대컢 諛?諛뺤옄 ?욌떦源, 寃곕쭚 ?좏깮吏瑜?怨좎젙?섎㈃ 湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?ъ썙吏?寃껋엯?덈떎.'
   },
 ];
 
@@ -79,21 +79,21 @@ export default function AlexDeMinaurBlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '알렉스 드 미노', '선수 프로필', '스토리', '호주'].map((tag) => (
-              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
-                {tag}
+            {['?뚮땲??, '?뚮젆????誘몃끂', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?몄＜'].map((tag) => (
+              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            알렉스 드 미노
+            ?뚮젆????誘몃끂
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            끝나지 않는 발, 흔들리지 않는 선택
+            ?앸굹吏 ?딅뒗 諛? ?붾뱾由ъ? ?딅뒗 ?좏깮
           </p>
           <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            가벼운 발과 끈질긴 수비, 간결한 전환으로 상대의 시간을 빼앗는 알렉스 드 미노의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
+            媛踰쇱슫 諛쒓낵 ?덉쭏湲??섎퉬, 媛꾧껐???꾪솚?쇰줈 ?곷????쒓컙??鍮쇱븮???뚮젆????誘몃끂???깆옣, ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜????몄쑝濡?
           </p>
           
           {/* Meta Info */}
@@ -102,13 +102,13 @@ export default function AlexDeMinaurBlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-medium">8분 읽기</span>
+              <span className="font-medium">8遺??쎄린</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className="font-medium">2025년 10월 20일</span>
+              <span className="font-medium">2025??10??20??/span>
             </div>
           </div>
         </div>
@@ -126,45 +126,45 @@ export default function AlexDeMinaurBlogPost() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
               <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
                 <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 알렉스 드 미노(Alex de Minaur)는 끊임없이 이어지는 풋워크와 흔들리지 않는 수비·전환, 간결한 결말로 상대의 시간을 빼앗는 호주의 간판이다.
+                <strong className="text-blue-700 dark:text-blue-300">吏곷떟:</strong> ?뚮젆????誘몃끂(Alex de Minaur)???딆엫?놁씠 ?댁뼱吏???뗭썙?ъ? ?붾뱾由ъ? ?딅뒗 ?섎퉬쨌?꾪솚, 媛꾧껐??寃곕쭚濡??곷????쒓컙??鍮쇱븮???몄＜??媛꾪뙋?대떎.
               </p>
             </div>
 
-            <h2 id="growth-background-two-continents-made-rhythm-discipline">성장 배경 — 두 대륙이 만든 리듬과 규율</h2>
-            <p>복수 문화권에서 성장한 그는 실내·야외를 오가며 다양한 바운드와 기후를 경험했다. 코칭팀은 "동작을 줄이고 접점을 앞에 둔다"는 원칙을 반복했고, 그는 훈련 일지에 매일 '오늘의 수정 한 줄'을 적었다. 원정이 잦을수록 워밍업 순서, 스트레칭 시간, 첫 서브 루틴을 고정해 생활의 질서를 만들었고, 이 습관이 큰 관중 속에서도 표정을 흔들리지 않게 했다. 체력은 양으로만 키우지 않았다. 짧고 촘촘한 인터벌, 코너에서 코너로 이어지는 풋워크 드릴로 '가속-감속-재가속'의 리듬을 몸에 새겼다.</p>
+            <h2 id="growth-background-two-continents-made-rhythm-discipline">?깆옣 諛곌꼍 ?????瑜숈씠 留뚮뱺 由щ벉怨?洹쒖쑉</h2>
+            <p>蹂듭닔 臾명솕沅뚯뿉???깆옣??洹몃뒗 ?ㅻ궡쨌?쇱쇅瑜??ㅺ?硫??ㅼ뼇??諛붿슫?쒖? 湲고썑瑜?寃쏀뿕?덈떎. 肄붿묶?? "?숈옉??以꾩씠怨??묒젏???욎뿉 ?붾떎"???먯튃??諛섎났?덇퀬, 洹몃뒗 ?덈젴 ?쇱???留ㅼ씪 '?ㅻ뒛???섏젙 ??以????곸뿀?? ?먯젙????쓣?섎줉 ?뚮컢???쒖꽌, ?ㅽ듃?덉묶 ?쒓컙, 泥??쒕툕 猷⑦떞??怨좎젙???앺솢??吏덉꽌瑜?留뚮뱾?덇퀬, ???듦?????愿以??띿뿉?쒕룄 ?쒖젙???붾뱾由ъ? ?딄쾶 ?덈떎. 泥대젰? ?묒쑝濡쒕쭔 ?ㅼ슦吏 ?딆븯?? 吏㏐퀬 珥섏킌???명꽣踰? 肄붾꼫?먯꽌 肄붾꼫濡??댁뼱吏???뗭썙???쒕┫濡?'媛??媛먯냽-?ш?????由щ벉??紐몄뿉 ?덇꼈??</p>
 
-            <h2 id="playing-style-speed-maintain-angle-limit-fast-return">경기 스타일 — 속도 유지, 각도 제한, 빠른 복귀</h2>
-            <p>데 미노르의 포인트는 속도를 유지하며 각을 제한하는 데 초점이 맞춰져 있다. 포핸드는 큰 스윙보다 짧은 준비와 길게 미는 임팩트로 깊이를 확보하고, 백핸드는 양손의 단단한 면으로 안전을 쌓는다. 수비 국면에선 낮게 깔린 슬라이스와 로브로 시간을 벌고, 다음 볼에서 즉시 중앙을 회수해 카운터의 각을 만든다. 짧은 볼이 보이면 하프코트로 한 걸음 전진해 하프발리·드롭 이후 전진 발리로 결말을 앞당긴다. 요약하면 상대의 공격을 길이로 희석하고, 빈틈에서 한 박자 빠르게 닫는 테니스다.</p>
+            <h2 id="playing-style-speed-maintain-angle-limit-fast-return">寃쎄린 ?ㅽ??????띾룄 ?좎?, 媛곷룄 ?쒗븳, 鍮좊Ⅸ 蹂듦?</h2>
+            <p>??誘몃끂瑜댁쓽 ?ъ씤?몃뒗 ?띾룄瑜??좎??섎ŉ 媛곸쓣 ?쒗븳?섎뒗 ??珥덉젏??留욎떠???덈떎. ?ы빖?쒕뒗 ???ㅼ쐷蹂대떎 吏㏃? 以鍮꾩? 湲멸쾶 誘몃뒗 ?꾪뙥?몃줈 源딆씠瑜??뺣낫?섍퀬, 諛깊빖?쒕뒗 ?묒넀???⑤떒??硫댁쑝濡??덉쟾???볥뒗?? ?섎퉬 援?㈃?먯꽑 ??쾶 源붾┛ ?щ씪?댁뒪? 濡쒕툕濡??쒓컙??踰뚭퀬, ?ㅼ쓬 蹂쇱뿉??利됱떆 以묒븰???뚯닔??移댁슫?곗쓽 媛곸쓣 留뚮뱺?? 吏㏃? 蹂쇱씠 蹂댁씠硫??섑봽肄뷀듃濡???嫄몄쓬 ?꾩쭊???섑봽諛쒕━쨌?쒕∼ ?댄썑 ?꾩쭊 諛쒕━濡?寃곕쭚???욌떦湲대떎. ?붿빟?섎㈃ ?곷???怨듦꺽??湲몄씠濡??ъ꽍?섍퀬, 鍮덊땲?먯꽌 ??諛뺤옄 鍮좊Ⅴ寃??ル뒗 ?뚮땲?ㅻ떎.</p>
 
-            <h2 id="return-transition-departure-shake-foot-device">리턴과 전환 — 출발점을 흔드는 발의 장치</h2>
-            <p>퍼스트 서브 리턴은 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 과감히 전진해 접점을 앞세운다. 리턴 직후 중앙 깊은 볼로 각을 닫아두며, 세 번째 스트로크에서만 코너를 열어 균열을 만든다. 네트를 서두르는 상대에겐 낮은 통과샷과 깊은 로브를 교차해 첫 시도를 주저하게 한다. 이 작은 장치들이 합쳐지면 상대의 3구 패턴은 서서히 무뎌진다.</p>
+            <h2 id="return-transition-departure-shake-foot-device">由ы꽩怨??꾪솚 ??異쒕컻?먯쓣 ?붾뱶??諛쒖쓽 ?μ튂</h2>
+            <p>?쇱뒪???쒕툕 由ы꽩? ?쒕몢 嫄몄쓬 ?ㅼ뿉???쒖옉???꾨룄? 湲몄씠瑜?留욎텛怨? ?몄빻???쒕툕?먮뒗 怨쇨컧???꾩쭊???묒젏???욎꽭?대떎. 由ы꽩 吏곹썑 以묒븰 源딆? 蹂쇰줈 媛곸쓣 ?レ븘?먮ŉ, ??踰덉㎏ ?ㅽ듃濡쒗겕?먯꽌留?肄붾꼫瑜??댁뼱 洹좎뿴??留뚮뱺?? ?ㅽ듃瑜??쒕몢瑜대뒗 ?곷??먭쾺 ??? ?듦낵?룰낵 源딆? 濡쒕툕瑜?援먯감??泥??쒕룄瑜?二쇱??섍쾶 ?쒕떎. ???묒? ?μ튂?ㅼ씠 ?⑹퀜吏硫??곷???3援??⑦꽩? ?쒖꽌??臾대럩吏꾨떎.</p>
 
-            <h2 id="rhythm-selection-emotion-low-procedure-constant">리듬과 선택 — 감정은 낮게, 절차는 일정하게</h2>
-            <p>포인트 사이 루틴은 단출하다. 라켓 스트링을 정리하고 두 번의 깊은 호흡 후 일정한 토스. 스코어가 기울어도 루틴의 길이를 바꾸지 않아 심박이 급등하지 않는다. 타이브레이크 초반엔 네트를 넉넉히 넘기는 구질로 높이·길이를 확인하고, 3~4포인트 구간에서만 라인을 얇게 써 균형을 흔든다. 위험을 회피하지 않되 근거 없는 도박은 하지 않는 선택이 일관된다.</p>
+            <h2 id="rhythm-selection-emotion-low-procedure-constant">由щ벉怨??좏깮 ??媛먯젙? ??쾶, ?덉감???쇱젙?섍쾶</h2>
+            <p>?ъ씤???ъ씠 猷⑦떞? ?⑥텧?섎떎. ?쇱폆 ?ㅽ듃留곸쓣 ?뺣━?섍퀬 ??踰덉쓽 源딆? ?명씉 ???쇱젙???좎뒪. ?ㅼ퐫?닿? 湲곗슱?대룄 猷⑦떞??湲몄씠瑜?諛붽씀吏 ?딆븘 ?щ컯??湲됰벑?섏? ?딅뒗?? ??대툕?덉씠??珥덈컲???ㅽ듃瑜??됰꼮???섍린??援ъ쭏濡??믪씠쨌湲몄씠瑜??뺤씤?섍퀬, 3~4?ъ씤??援ш컙?먯꽌留??쇱씤???뉕쾶 ??洹좏삎???붾뱺?? ?꾪뿕???뚰뵾?섏? ?딅릺 洹쇨굅 ?녿뒗 ?꾨컯? ?섏? ?딅뒗 ?좏깮???쇨??쒕떎.</p>
 
-            <h2 id="surface-development-hard-straight-grass-concise-clay">표면별 전개 — 하드의 직선, 잔디의 간결, 점토의 인내</h2>
-            <p>하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 주도권을 잡고, 리턴 게임에선 중앙 깊은 볼로 각을 지워 다음 볼에서 속도를 끌어올린다. 잔디에선 토스를 낮추고 백스윙을 더 줄여 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 폭주를 통제한다. 점토에서는 회전을 늘려 낙구를 안정시키고, 길어진 랠리 중간에 드롭·슬라이스를 섞어 템포를 비튼 뒤 직선 전환으로 결말을 만든다. 표면이 달라져도 먼저 안정, 틈에서 가속이라는 원칙은 변하지 않는다.</p>
+            <h2 id="surface-development-hard-straight-grass-concise-clay">?쒕㈃蹂??꾧컻 ???섎뱶??吏곸꽑, ?붾뵒??媛꾧껐, ?먰넗???몃궡</h2>
+            <p>?섎뱶?먯꽌???쇱뒪???쒕툕 ?뺣쪧怨?3援??⑦꽩???띾룄濡?二쇰룄沅뚯쓣 ?↔퀬, 由ы꽩 寃뚯엫?먯꽑 以묒븰 源딆? 蹂쇰줈 媛곸쓣 吏???ㅼ쓬 蹂쇱뿉???띾룄瑜??뚯뼱?щ┛?? ?붾뵒?먯꽑 ?좎뒪瑜???텛怨?諛깆뒪?숈쓣 ??以꾩뿬 ??먯쓣 ?욎뿉 怨좎젙, ?щ씪?댁뒪 由ы꽩???욎뼱 珥덈컲 ??＜瑜??듭젣?쒕떎. ?먰넗?먯꽌???뚯쟾???섎젮 ?숆뎄瑜??덉젙?쒗궎怨? 湲몄뼱吏??좊━ 以묎컙???쒕∼쨌?щ씪?댁뒪瑜??욎뼱 ?쒗룷瑜?鍮꾪듉 ??吏곸꽑 ?꾪솚?쇰줈 寃곕쭚??留뚮뱺?? ?쒕㈃???щ씪?몃룄 癒쇱? ?덉젙, ?덉뿉??媛?띿씠?쇰뒗 ?먯튃? 蹂?섏? ?딅뒗??</p>
 
-            <h2 id="human-aspects-humble-language-firm-responsibility">인간적인 면모 — 겸손한 언어, 확고한 책임</h2>
-            <p>그의 인터뷰는 담백하다. 이긴 날엔 준비가 맞았다고, 진 날엔 수정 항목이 분명하다고 말한다. 팬에게는 미소와 또렷한 인사를, 코트 스태프에게는 짧은 감사를 건넨다. 팀 퍼스트 성향이 강해 경기 전후의 절차를 생활로 옮겨 놓았고, 긴 시즌에도 컨디션의 파고가 크지 않다. '강함을 과시하기보다 강함을 다루는 법'을 택하는 유형이다.</p>
+            <h2 id="human-aspects-humble-language-firm-responsibility">?멸컙?곸씤 硫대え ??寃몄넀???몄뼱, ?뺢퀬??梨낆엫</h2>
+            <p>洹몄쓽 ?명꽣酉곕뒗 ?대갚?섎떎. ?닿릿 ?좎뿏 以鍮꾧? 留욎븯?ㅺ퀬, 吏??좎뿏 ?섏젙 ??ぉ??遺꾨챸?섎떎怨?留먰븳?? ?ъ뿉寃뚮뒗 誘몄냼? ?먮졆???몄궗瑜? 肄뷀듃 ?ㅽ깭?꾩뿉寃뚮뒗 吏㏃? 媛먯궗瑜?嫄대꽙?? ? ?쇱뒪???깊뼢??媛뺥빐 寃쎄린 ?꾪썑???덉감瑜??앺솢濡???꺼 ?볦븯怨? 湲??쒖쫵?먮룄 而⑤뵒?섏쓽 ?뚭퀬媛 ?ъ? ?딅떎. '媛뺥븿??怨쇱떆?섍린蹂대떎 媛뺥븿???ㅻ（??踰????앺븯???좏삎?대떎.</p>
 
-            <h2 id="nationality-culture-tradition-grit-modern-efficiency">국적과 문화 — 전통의 투지, 현대의 효율</h2>
-            <p>호주 테니스는 투지와 체력의 상징처럼 이야기되지만, 데 미노르는 여기에 효율을 더했다. 무작정 달리기보다 수비와 전환의 품질을 균일하게 유지하고, 확률 높은 선택을 꾸준히 누적한다. 대표팀 이벤트에서 보이는 에너지와 매너는 왜 그가 '팬 친화적 에이스'로 불리는지 설명한다.</p>
+            <h2 id="nationality-culture-tradition-grit-modern-efficiency">援?쟻怨?臾명솕 ???꾪넻???ъ?, ?꾨????⑥쑉</h2>
+            <p>?몄＜ ?뚮땲?ㅻ뒗 ?ъ?? 泥대젰???곸쭠泥섎읆 ?댁빞湲곕릺吏留? ??誘몃끂瑜대뒗 ?ш린???⑥쑉???뷀뻽?? 臾댁옉???щ━湲곕낫???섎퉬? ?꾪솚???덉쭏??洹좎씪?섍쾶 ?좎??섍퀬, ?뺣쪧 ?믪? ?좏깮??袁몄????꾩쟻?쒕떎. ??쒗? ?대깽?몄뿉??蹂댁씠???먮꼫吏? 留ㅻ꼫????洹멸? '??移쒗솕???먯씠??濡?遺덈━?붿? ?ㅻ챸?쒕떎.</p>
 
-            <h2 id="relationships-rivals-speed-generation-length-angle-answer">관계와 라이벌 — 속도의 세대에 길이·각으로 답하다</h2>
-            <p>폭발적인 가속으로 초반을 장악하는 동세대와 맞붙을 때, 그는 리턴 포지션과 중앙 깊은 볼로 속도를 상쇄한다. 네트를 서두르는 유형에겐 낮은 통과샷과 깊은 로브를 교차해 첫 시도를 주저하게 만들고, 같은 패턴이 두 번 허용되면 세 번째에는 타점과 스윙 길이를 바꿔 같은 구역을 다른 속도로 찌른다. 작은 수정이 후반의 큰 차이를 만든다.</p>
+            <h2 id="relationships-rivals-speed-generation-length-angle-answer">愿怨꾩? ?쇱씠踰????띾룄???몃???湲몄씠쨌媛곸쑝濡??듯븯??/h2>
+            <p>??컻?곸씤 媛?띿쑝濡?珥덈컲???μ븙?섎뒗 ?숈꽭?? 留욌텤???? 洹몃뒗 由ы꽩 ?ъ??섍낵 以묒븰 源딆? 蹂쇰줈 ?띾룄瑜??곸뇙?쒕떎. ?ㅽ듃瑜??쒕몢瑜대뒗 ?좏삎?먭쾺 ??? ?듦낵?룰낵 源딆? 濡쒕툕瑜?援먯감??泥??쒕룄瑜?二쇱??섍쾶 留뚮뱾怨? 媛숈? ?⑦꽩????踰??덉슜?섎㈃ ??踰덉㎏?먮뒗 ??먭낵 ?ㅼ쐷 湲몄씠瑜?諛붽퓭 媛숈? 援ъ뿭???ㅻⅨ ?띾룄濡?李뚮Ⅸ?? ?묒? ?섏젙???꾨컲????李⑥씠瑜?留뚮뱺??</p>
 
-            <h2 id="famous-scenes-impossible-defense-reversal">명장면 — 불가능해 보이는 수비에서의 반전</h2>
-            <p>브레이크 포인트. 코너 깊숙한 공을 슬라이딩으로 끌어올린 뒤, 데 미노르는 중앙을 한 박자 먼저 회수한다. 상대의 다음 볼이 반 박자 짧아지는 순간, 그는 포핸드 직선을 가차 없이 꽂는다. 관중의 탄성이 터져도 그는 같은 속도로 베이스라인을 밟는다. 감정이 아니라 절차가 반전을 만든 장면이다.</p>
+            <h2 id="famous-scenes-impossible-defense-reversal">紐낆옣硫???遺덇??ν빐 蹂댁씠???섎퉬?먯꽌??諛섏쟾</h2>
+            <p>釉뚮젅?댄겕 ?ъ씤?? 肄붾꼫 源딆닕??怨듭쓣 ?щ씪?대뵫?쇰줈 ?뚯뼱?щ┛ ?? ??誘몃끂瑜대뒗 以묒븰????諛뺤옄 癒쇱? ?뚯닔?쒕떎. ?곷????ㅼ쓬 蹂쇱씠 諛?諛뺤옄 吏㏃븘吏???쒓컙, 洹몃뒗 ?ы빖??吏곸꽑??媛李??놁씠 苑귣뒗?? 愿以묒쓽 ?꾩꽦???곗졇??洹몃뒗 媛숈? ?띾룄濡?踰좎씠?ㅻ씪?몄쓣 諛잙뒗?? 媛먯젙???꾨땲???덉감媛 諛섏쟾??留뚮뱺 ?λ㈃?대떎.</p>
 
-            <h2 id="equipment-details-lightness-stability">장비와 디테일 — 가벼움 속의 안정</h2>
-            <p>대회장 기온·습도에 따라 스트링 텐션을 소폭 조정하고, 라켓 밸런스는 과도한 헤드 헤비를 피해 스윙 회복을 빠르게 한다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목 흔들림을 줄인다. 장비가 플레이를 지배하지 않도록, 플레이가 요구하는 만큼만 조정하는 철학이 일관된다.</p>
+            <h2 id="equipment-details-lightness-stability">?λ퉬? ?뷀뀒????媛踰쇱? ?띿쓽 ?덉젙</h2>
+            <p>??뚯옣 湲곗삩쨌?듬룄???곕씪 ?ㅽ듃留??먯뀡???뚰룺 議곗젙?섍퀬, ?쇱폆 諛몃윴?ㅻ뒗 怨쇰룄???ㅻ뱶 ?ㅻ퉬瑜??쇳빐 ?ㅼ쐷 ?뚮났??鍮좊Ⅴ寃??쒕떎. ?좊컻? 痢〓㈃ 吏吏? ?묒???洹좏삎??以묒떆??湲됯??띉룰툒?뺤??먯꽌 諛쒕ぉ ?붾뱾由쇱쓣 以꾩씤?? ?λ퉬媛 ?뚮젅?대? 吏諛고븯吏 ?딅룄濡? ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留?議곗젙?섎뒗 泥좏븰???쇨??쒕떎.</p>
 
-            <h2 id="future-challenges-conclusion-density-second-serve">앞으로의 과제 — 결말의 밀도와 세컨드 서브</h2>
-            <p>더 높은 단계로 가기 위해선 하프코트 마무리의 일관성과 세컨드 서브 코스의 다양화가 관건이다. 리턴 직후 3구에서 전진 타이밍을 반 박자 앞당기고, 결말의 선택지를 한두 개로 고정한다면 긴 경기에서도 에너지 관리가 쉬워질 것이다. 이미 갖춘 이동 능력과 방어·전환의 설득력 위에 결말의 밀도가 더해질 때, 그의 이름은 큰 무대의 마지막 장면에서 더 자주 불릴 가능성이 크다.</p>
+            <h2 id="future-challenges-conclusion-density-second-serve">?욎쑝濡쒖쓽 怨쇱젣 ??寃곕쭚??諛?꾩? ?몄빻???쒕툕</h2>
+            <p>???믪? ?④퀎濡?媛湲??꾪빐???섑봽肄뷀듃 留덈Т由ъ쓽 ?쇨??깃낵 ?몄빻???쒕툕 肄붿뒪???ㅼ뼇?붽? 愿嫄댁씠?? 由ы꽩 吏곹썑 3援ъ뿉???꾩쭊 ??대컢??諛?諛뺤옄 ?욌떦湲곌퀬, 寃곕쭚???좏깮吏瑜??쒕몢 媛쒕줈 怨좎젙?쒕떎硫?湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?ъ썙吏?寃껋씠?? ?대? 媛뽰텣 ?대룞 ?λ젰怨?諛⑹뼱쨌?꾪솚???ㅻ뱷???꾩뿉 寃곕쭚??諛?꾧? ?뷀빐吏??? 洹몄쓽 ?대쫫? ??臾대???留덉?留??λ㈃?먯꽌 ???먯＜ 遺덈┫ 媛?μ꽦???щ떎.</p>
 
-            <h2 id="fans-community-lasting-trust-way">팬과 커뮤니티 — 오래 가는 신뢰의 방식</h2>
-            <p>그를 오래 응원하게 만드는 힘은 태도의 일관성이다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말한다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상이 완성된다. 기록은 표가 되지만, 태도는 기억이 된다. 데 미노르의 테니스가 결과를 넘어 이야기로 남는 이유다.</p>
+            <h2 id="fans-community-lasting-trust-way">?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː??諛⑹떇</h2>
+            <p>洹몃? ?ㅻ옒 ?묒썝?섍쾶 留뚮뱶???섏? ?쒕룄???쇨??깆씠?? ?닿린???좎뿉??媛먯궗???쒖꽌瑜?吏?ㅺ퀬, 吏???좎뿉??梨낆엫??癒쇱? 留먰븳?? ?묒? ?쒖뒪泥섏? ?뺥솗???좏깮??紐⑥뿬 ???щ엺??珥덉긽???꾩꽦?쒕떎. 湲곕줉? ?쒓? ?섏?留? ?쒕룄??湲곗뼲???쒕떎. ??誘몃끂瑜댁쓽 ?뚮땲?ㅺ? 寃곌낵瑜??섏뼱 ?댁빞湲곕줈 ?⑤뒗 ?댁쑀??</p>
           </div>
 
           {/* Related Links */}
@@ -176,7 +176,7 @@ export default function AlexDeMinaurBlogPost() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
+                愿???먮즺
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -184,13 +184,13 @@ export default function AlexDeMinaurBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
+                    ?대? 留곹겕
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필</span>
+                        <span className="text-xl">?룇</span>
+                        <span className="font-medium">?좎닔 ?꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -198,8 +198,8 @@ export default function AlexDeMinaurBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">실력 테스트</span>
+                        <span className="text-xl">?렞</span>
+                        <span className="font-medium">?ㅻ젰 ?뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -207,8 +207,8 @@ export default function AlexDeMinaurBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">플레이 스타일 테스트</span>
+                        <span className="text-xl">?렱</span>
+                        <span className="font-medium">?뚮젅???ㅽ????뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -221,13 +221,13 @@ export default function AlexDeMinaurBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    외부 자료
+                    ?몃? ?먮즺
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어 공식 사이트</span>
+                        <span className="text-xl">?뙋</span>
+                        <span className="font-medium">ATP ?ъ뼱 怨듭떇 ?ъ씠??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -235,8 +235,8 @@ export default function AlexDeMinaurBlogPost() {
                     </li>
                     <li>
                       <a href="https://en.wikipedia.org/wiki/Alex_de_Minaur" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">📖</span>
-                        <span className="font-medium">위키피디아 프로필</span>
+                        <span className="text-xl">?뱰</span>
+                        <span className="font-medium">?꾪궎?쇰뵒???꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -258,9 +258,9 @@ export default function AlexDeMinaurBlogPost() {
                 <RelatedPosts 
             currentSlug="alex-de-minaur" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '알렉스 드 미노', '선수 프로필', '스토리', '호주']} 
+            tags={['?뚮땲??, '?뚮젆????誘몃끂', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?몄＜']} 
           />
 
           <CTA />

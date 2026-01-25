@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '다닐 메드베데프 선수 프로필과 스토리',
-  description: '낮은 탄도와 깊은 낙구, 독특한 포지셔닝으로 지공의 미학을 구현하는 다닐 메드베데프의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
-  keywords: ['테니스', '다닐 메드베데프', '선수 프로필', '스토리', '러시아'],
+  title: '?ㅻ땺 硫붾뱶踰좊뜲???좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '??? ?꾨룄? 源딆? ?숆뎄, ?낇듅???ъ??붾떇?쇰줈 吏怨듭쓽 誘명븰??援ы쁽?섎뒗 ?ㅻ땺 硫붾뱶踰좊뜲?꾩쓽 ?깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
+  keywords: ['?뚮땲??, '?ㅻ땺 硫붾뱶踰좊뜲??, '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?ъ떆??],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/daniil-medvedev',
   },
   openGraph: {
-    title: '다닐 메드베데프 선수 프로필과 스토리',
-    description: '낮은 탄도와 깊은 낙구, 독특한 포지셔닝으로 지공의 미학을 구현하는 다닐 메드베데프의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+    title: '?ㅻ땺 硫붾뱶踰좊뜲???좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '??? ?꾨룄? 源딆? ?숆뎄, ?낇듅???ъ??붾떇?쇰줈 吏怨듭쓽 誘명븰??援ы쁽?섎뒗 ?ㅻ땺 硫붾뱶踰좊뜲?꾩쓽 ?깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
     url: 'https://tennisfriends.co.kr/blog/daniil-medvedev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '다닐 메드베데프 선수 프로필과 스토리',
-    description: '낮은 탄도와 깊은 낙구, 독특한 포지셔닝으로 지공의 미학을 구현하는 다닐 메드베데프의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+    title: '?ㅻ땺 硫붾뱶踰좊뜲???좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '??? ?꾨룄? 源딆? ?숆뎄, ?낇듅???ъ??붾떇?쇰줈 吏怨듭쓽 誘명븰??援ы쁽?섎뒗 ?ㅻ땺 硫붾뱶踰좊뜲?꾩쓽 ?깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
   },
   robots: {
     index: true,
@@ -34,40 +34,40 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-rules-records', text: '성장 배경 — 규칙과 기록으로 만든 안정감', depth: 2 },
-  { id: 'playing-style-low-trajectory-straight', text: '경기 스타일 — 낮은 탄도, 긴 직선, 늦게 닫히는 각', depth: 2 },
-  { id: 'return-positioning-start-point', text: '리턴과 포지셔닝 — 출발점을 바꾸는 기술', depth: 2 },
-  { id: 'rhythm-selection-emotion-procedure', text: '리듬과 선택 — 감정은 낮게, 절차는 일정하게', depth: 2 },
-  { id: 'surface-transition-hard-grass-clay', text: '표면별 전환 — 하드의 직선, 잔디의 간결, 점토의 인내', depth: 2 },
-  { id: 'human-aspects-honesty-humor-discipline', text: '인간적인 면모 — 솔직함과 유머, 그리고 규율', depth: 2 },
-  { id: 'nationality-culture-belief-rules', text: '국적과 문화 — 규칙을 믿는 끈기', depth: 2 },
-  { id: 'relationships-rivals-speed-angle', text: '관계와 라이벌 — 속도의 세대와 각도의 문답', depth: 2 },
-  { id: 'famous-scenes-center-twice-line-once', text: '명장면 — 중앙 두 번, 라인 한 번', depth: 2 },
-  { id: 'equipment-details-tension-balance-contact', text: '장비와 디테일 — 텐션·밸런스·접점의 미세 조정', depth: 2 },
-  { id: 'future-challenges-advance-timing-conclusion', text: '앞으로의 과제 — 전진의 타이밍과 결말의 간결함', depth: 2 },
-  { id: 'fans-community-lasting-trust', text: '팬과 커뮤니티 — 오래 가는 신뢰', depth: 2 },
+  { id: 'growth-background-rules-records', text: '?깆옣 諛곌꼍 ??洹쒖튃怨?湲곕줉?쇰줈 留뚮뱺 ?덉젙媛?, depth: 2 },
+  { id: 'playing-style-low-trajectory-straight', text: '寃쎄린 ?ㅽ???????? ?꾨룄, 湲?吏곸꽑, ??쾶 ?ロ엳??媛?, depth: 2 },
+  { id: 'return-positioning-start-point', text: '由ы꽩怨??ъ??붾떇 ??異쒕컻?먯쓣 諛붽씀??湲곗닠', depth: 2 },
+  { id: 'rhythm-selection-emotion-procedure', text: '由щ벉怨??좏깮 ??媛먯젙? ??쾶, ?덉감???쇱젙?섍쾶', depth: 2 },
+  { id: 'surface-transition-hard-grass-clay', text: '?쒕㈃蹂??꾪솚 ???섎뱶??吏곸꽑, ?붾뵒??媛꾧껐, ?먰넗???몃궡', depth: 2 },
+  { id: 'human-aspects-honesty-humor-discipline', text: '?멸컙?곸씤 硫대え ???붿쭅?④낵 ?좊㉧, 洹몃━怨?洹쒖쑉', depth: 2 },
+  { id: 'nationality-culture-belief-rules', text: '援?쟻怨?臾명솕 ??洹쒖튃??誘용뒗 ?덇린', depth: 2 },
+  { id: 'relationships-rivals-speed-angle', text: '愿怨꾩? ?쇱씠踰????띾룄???몃?? 媛곷룄??臾몃떟', depth: 2 },
+  { id: 'famous-scenes-center-twice-line-once', text: '紐낆옣硫???以묒븰 ??踰? ?쇱씤 ??踰?, depth: 2 },
+  { id: 'equipment-details-tension-balance-contact', text: '?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙', depth: 2 },
+  { id: 'future-challenges-advance-timing-conclusion', text: '?욎쑝濡쒖쓽 怨쇱젣 ???꾩쭊????대컢怨?寃곕쭚??媛꾧껐??, depth: 2 },
+  { id: 'fans-community-lasting-trust', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '다닐 메드베데프의 경기 스타일은 어떤가요?',
-    a: '낮은 탄도와 깊은 낙구, 독특한 코트 포지셔닝이 특징입니다. 각도와 깊이로 상대의 선택지를 점점 좁혀 가는 지공의 미학을 구현합니다.'
+    q: '?ㅻ땺 硫붾뱶踰좊뜲?꾩쓽 寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
+    a: '??? ?꾨룄? 源딆? ?숆뎄, ?낇듅??肄뷀듃 ?ъ??붾떇???뱀쭠?낅땲?? 媛곷룄? 源딆씠濡??곷????좏깮吏瑜??먯젏 醫곹? 媛??吏怨듭쓽 誘명븰??援ы쁽?⑸땲??'
   },
   {
-    q: '메드베데프의 성장 배경은 어떤가요?',
-    a: '실내 코트와 기록 노트로 채워진 유년기를 보냈습니다. 규칙과 기록으로 안정감을 만들었고, 생활의 질서가 큰 무대에서도 표정을 흔들리지 않게 만듭니다.'
+    q: '硫붾뱶踰좊뜲?꾩쓽 ?깆옣 諛곌꼍? ?대뼡媛??',
+    a: '?ㅻ궡 肄뷀듃? 湲곕줉 ?명듃濡?梨꾩썙吏??좊뀈湲곕? 蹂대깉?듬땲?? 洹쒖튃怨?湲곕줉?쇰줈 ?덉젙媛먯쓣 留뚮뱾?덇퀬, ?앺솢??吏덉꽌媛 ??臾대??먯꽌???쒖젙???붾뱾由ъ? ?딄쾶 留뚮벊?덈떎.'
   },
   {
-    q: '메드베데프의 강점은 무엇인가요?',
-    a: '낮은 탄도, 긴 직선, 늦게 닫히는 각이 강점입니다. 리턴과 포지셔닝으로 출발점을 바꾸는 기술과 베이스라인 뒤에서의 길이 제어, 시간 훔치기가 뛰어납니다.'
+    q: '硫붾뱶踰좊뜲?꾩쓽 媛뺤젏? 臾댁뾿?멸???',
+    a: '??? ?꾨룄, 湲?吏곸꽑, ??쾶 ?ロ엳??媛곸씠 媛뺤젏?낅땲?? 由ы꽩怨??ъ??붾떇?쇰줈 異쒕컻?먯쓣 諛붽씀??湲곗닠怨?踰좎씠?ㅻ씪???ㅼ뿉?쒖쓽 湲몄씠 ?쒖뼱, ?쒓컙 ?붿튂湲곌? ?곗뼱?⑸땲??'
   },
   {
-    q: '메드베데프의 인간적인 면모는 어떤가요?',
-    a: '직설적이지만 책임의 언어가 분명합니다. 코트 밖에서는 유머로 분위기를 풀지만, 경기 전후 절차와 팀과의 약속은 거의 흐트러뜨리지 않습니다.'
+    q: '硫붾뱶踰좊뜲?꾩쓽 ?멸컙?곸씤 硫대え???대뼡媛??',
+    a: '吏곸꽕?곸씠吏留?梨낆엫???몄뼱媛 遺꾨챸?⑸땲?? 肄뷀듃 諛뽰뿉?쒕뒗 ?좊㉧濡?遺꾩쐞湲곕? ?吏留? 寃쎄린 ?꾪썑 ?덉감? ?怨쇱쓽 ?쎌냽? 嫄곗쓽 ?먰듃?щ쑉由ъ? ?딆뒿?덈떎.'
   },
   {
-    q: '메드베데프의 미래 전망은 어떻게 되나요?',
-    a: '하프코트에서의 한 박자 빠른 마무리와 세컨드 서브 코스 다양화가 과제입니다. 리턴 직후 전진 타이밍을 앞당기고 마무리 선택지를 단순화하면 에너지 관리가 개선됩니다.'
+    q: '硫붾뱶踰좊뜲?꾩쓽 誘몃옒 ?꾨쭩? ?대뼸寃??섎굹??',
+    a: '?섑봽肄뷀듃?먯꽌????諛뺤옄 鍮좊Ⅸ 留덈Т由ъ? ?몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?붽? 怨쇱젣?낅땲?? 由ы꽩 吏곹썑 ?꾩쭊 ??대컢???욌떦湲곌퀬 留덈Т由??좏깮吏瑜??⑥닚?뷀븯硫??먮꼫吏 愿由ш? 媛쒖꽑?⑸땲??'
   },
 ];
 
@@ -79,21 +79,21 @@ export default function DaniilMedvedevBlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '다닐 메드베데프', '선수 프로필', '스토리', '러시아'].map((tag) => (
-              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
-                {tag}
+            {['?뚮땲??, '?ㅻ땺 硫붾뱶踰좊뜲??, '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?ъ떆??].map((tag) => (
+              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            다닐 메드베데프
+            ?ㅻ땺 硫붾뱶踰좊뜲??
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            각도와 깊이로 짜는 지공의 미학
+            媛곷룄? 源딆씠濡?吏쒕뒗 吏怨듭쓽 誘명븰
           </p>
           <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            낮은 탄도로 깊이를 누적하고, 리턴과 코트 포지셔닝으로 상대의 선택지를 지우는 다닐 메드베데프의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
+            ??? ?꾨룄濡?源딆씠瑜??꾩쟻?섍퀬, 由ы꽩怨?肄뷀듃 ?ъ??붾떇?쇰줈 ?곷????좏깮吏瑜?吏?곕뒗 ?ㅻ땺 硫붾뱶踰좊뜲?꾩쓽 ?깆옣, ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜????몄쑝濡?
           </p>
           
           {/* Meta Info */}
@@ -102,13 +102,13 @@ export default function DaniilMedvedevBlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-medium">8분 읽기</span>
+              <span className="font-medium">8遺??쎄린</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className="font-medium">2025년 9월 21일</span>
+              <span className="font-medium">2025??9??21??/span>
             </div>
           </div>
         </div>
@@ -126,45 +126,45 @@ export default function DaniilMedvedevBlogPost() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
               <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
                 <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 다닐 메드베데프(Daniil Medvedev)는 낮은 탄도와 깊은 낙구, 독특한 코트 포지셔닝으로 상대의 선택지를 점점 좁혀 가는 현대 하드코트의 설계자다.
+                <strong className="text-blue-700 dark:text-blue-300">吏곷떟:</strong> ?ㅻ땺 硫붾뱶踰좊뜲??Daniil Medvedev)????? ?꾨룄? 源딆? ?숆뎄, ?낇듅??肄뷀듃 ?ъ??붾떇?쇰줈 ?곷????좏깮吏瑜??먯젏 醫곹? 媛???꾨? ?섎뱶肄뷀듃???ㅺ퀎?먮떎.
               </p>
             </div>
 
-            <h2 id="growth-background-rules-records">성장 배경 — 규칙과 기록으로 만든 안정감</h2>
-            <p>그의 유년기는 실내 코트와 기록 노트로 채워졌다. 코치는 결과보다 과정, 특히 "동작을 줄이고 접점을 앞에 둔다"는 한 문장을 반복했고, 메드베데프는 매일의 훈련이 끝나면 잘된 것과 고칠 점을 각각 세 줄로 요약했다. 낯선 원정지에서도 스트레칭 순서·워밍업 시간·첫 서브 루틴을 거의 바꾸지 않는 생활의 질서가 몸에 배었고, 이 습관이 큰 관중과 긴 랠리 속에서도 표정을 흔들리지 않게 만든다.</p>
+            <h2 id="growth-background-rules-records">?깆옣 諛곌꼍 ??洹쒖튃怨?湲곕줉?쇰줈 留뚮뱺 ?덉젙媛?/h2>
+            <p>洹몄쓽 ?좊뀈湲곕뒗 ?ㅻ궡 肄뷀듃? 湲곕줉 ?명듃濡?梨꾩썙議뚮떎. 肄붿튂??寃곌낵蹂대떎 怨쇱젙, ?뱁엳 "?숈옉??以꾩씠怨??묒젏???욎뿉 ?붾떎"????臾몄옣??諛섎났?덇퀬, 硫붾뱶踰좊뜲?꾨뒗 留ㅼ씪???덈젴???앸굹硫??섎맂 寃껉낵 怨좎튌 ?먯쓣 媛곴컖 ??以꾨줈 ?붿빟?덈떎. ??꽑 ?먯젙吏?먯꽌???ㅽ듃?덉묶 ?쒖꽌쨌?뚮컢???쒓컙쨌泥??쒕툕 猷⑦떞??嫄곗쓽 諛붽씀吏 ?딅뒗 ?앺솢??吏덉꽌媛 紐몄뿉 諛곗뿀怨? ???듦?????愿以묎낵 湲??좊━ ?띿뿉?쒕룄 ?쒖젙???붾뱾由ъ? ?딄쾶 留뚮뱺??</p>
 
-            <h2 id="playing-style-low-trajectory-straight">경기 스타일 — 낮은 탄도, 긴 직선, 늦게 닫히는 각</h2>
-            <p>메드베데데프의 공은 네트를 아슬아슬하게 넘어 깊게 가라앉는다. 포핸드는 큰 회전보다 낮은 탄도와 길이로 압박하며, 백핸드는 양손의 견고함으로 라인을 얇게 긁어 각을 만든다. 그는 베이스라인 뒤에서 한두 걸음 더 물러난 포지션을 즐겨 취하지만, 그만큼 볼의 길이 제어와 시간 훔치기에 능하다. 상대가 무리해 각을 열면 즉시 다운더라인으로 전환해 균형을 흔들고, 짧은 볼에는 하프코트에서 한 박자 늦게 닫히는 각도로 마무리한다. 네트 접근은 과감하기보다 필요할 때만—빈 공간이 명확히 보일 때만 들어가 실수를 줄인다.</p>
+            <h2 id="playing-style-low-trajectory-straight">寃쎄린 ?ㅽ???????? ?꾨룄, 湲?吏곸꽑, ??쾶 ?ロ엳??媛?/h2>
+            <p>硫붾뱶踰좊뜲?고봽??怨듭? ?ㅽ듃瑜??꾩뒳?꾩뒳?섍쾶 ?섏뼱 源딄쾶 媛?쇱븠?붾떎. ?ы빖?쒕뒗 ???뚯쟾蹂대떎 ??? ?꾨룄? 湲몄씠濡??뺣컯?섎ŉ, 諛깊빖?쒕뒗 ?묒넀??寃ш퀬?⑥쑝濡??쇱씤???뉕쾶 湲곸뼱 媛곸쓣 留뚮뱺?? 洹몃뒗 踰좎씠?ㅻ씪???ㅼ뿉???쒕몢 嫄몄쓬 ??臾쇰윭???ъ??섏쓣 利먭꺼 痍⑦븯吏留? 洹몃쭔??蹂쇱쓽 湲몄씠 ?쒖뼱? ?쒓컙 ?붿튂湲곗뿉 ?ν븯?? ?곷?媛 臾대━??媛곸쓣 ?대㈃ 利됱떆 ?ㅼ슫?붾씪?몄쑝濡??꾪솚??洹좏삎???붾뱾怨? 吏㏃? 蹂쇱뿉???섑봽肄뷀듃?먯꽌 ??諛뺤옄 ??쾶 ?ロ엳??媛곷룄濡?留덈Т由ы븳?? ?ㅽ듃 ?묎렐? 怨쇨컧?섍린蹂대떎 ?꾩슂???뚮쭔?붾퉰 怨듦컙??紐낇솗??蹂댁씪 ?뚮쭔 ?ㅼ뼱媛 ?ㅼ닔瑜?以꾩씤??</p>
 
-            <h2 id="return-positioning-start-point">리턴과 포지셔닝 — 출발점을 바꾸는 기술</h2>
-            <p>그의 리턴은 단지 되돌려 보내는 행위가 아니다. 퍼스트 서브에는 한참 뒤에서 출발해 탄도와 길이를 맞춰 상대의 3구 패턴을 지우고, 세컨드 서브에는 전진해 접점을 앞세운다. 바깥에서 안으로 들어오는 이 왕복 동선이 상대의 토스와 코스 선택을 흔들어, 경기 초반부터 심리적 부하를 만든다. 리턴 이후에는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서만 코너를 열어 작은 균열을 만든다.</p>
+            <h2 id="return-positioning-start-point">由ы꽩怨??ъ??붾떇 ??異쒕컻?먯쓣 諛붽씀??湲곗닠</h2>
+            <p>洹몄쓽 由ы꽩? ?⑥? ?섎룎??蹂대궡???됱쐞媛 ?꾨땲?? ?쇱뒪???쒕툕?먮뒗 ?쒖갭 ?ㅼ뿉??異쒕컻???꾨룄? 湲몄씠瑜?留욎떠 ?곷???3援??⑦꽩??吏?곌퀬, ?몄빻???쒕툕?먮뒗 ?꾩쭊???묒젏???욎꽭?대떎. 諛붽묑?먯꽌 ?덉쑝濡??ㅼ뼱?ㅻ뒗 ???뺣났 ?숈꽑???곷????좎뒪? 肄붿뒪 ?좏깮???붾뱾?? 寃쎄린 珥덈컲遺???щ━??遺?섎? 留뚮뱺?? 由ы꽩 ?댄썑?먮뒗 以묒븰 源딆? 蹂쇰줈 媛곸쓣 ?レ븘?먭퀬, ??踰덉㎏ ?ㅽ듃濡쒗겕?먯꽌留?肄붾꼫瑜??댁뼱 ?묒? 洹좎뿴??留뚮뱺??</p>
 
-            <h2 id="rhythm-selection-emotion-procedure">리듬과 선택 — 감정은 낮게, 절차는 일정하게</h2>
-            <p>포인트 사이 그는 라켓 스트링을 훑고 두 번의 깊은 호흡으로 루틴을 고정한다. 스코어가 기울어도 루틴의 길이를 바꾸지 않아 심박이 급등하지 않는다. 타이브레이크 초반에는 네트를 넉넉히 넘기는 구질로 높이·길이를 확인하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던진다. 위험을 회피하지 않되, 근거 없는 도박은 하지 않는 태도가 장기전에서 힘을 낸다.</p>
+            <h2 id="rhythm-selection-emotion-procedure">由щ벉怨??좏깮 ??媛먯젙? ??쾶, ?덉감???쇱젙?섍쾶</h2>
+            <p>?ъ씤???ъ씠 洹몃뒗 ?쇱폆 ?ㅽ듃留곸쓣 ?묎퀬 ??踰덉쓽 源딆? ?명씉?쇰줈 猷⑦떞??怨좎젙?쒕떎. ?ㅼ퐫?닿? 湲곗슱?대룄 猷⑦떞??湲몄씠瑜?諛붽씀吏 ?딆븘 ?щ컯??湲됰벑?섏? ?딅뒗?? ??대툕?덉씠??珥덈컲?먮뒗 ?ㅽ듃瑜??됰꼮???섍린??援ъ쭏濡??믪씠쨌湲몄씠瑜??뺤씤?섍퀬, 3~4?ъ씤??援ш컙?먯꽌留??쇱씤???뉕쾶 ???밸??섎? ?섏쭊?? ?꾪뿕???뚰뵾?섏? ?딅릺, 洹쇨굅 ?녿뒗 ?꾨컯? ?섏? ?딅뒗 ?쒕룄媛 ?κ린?꾩뿉???섏쓣 ?몃떎.</p>
 
-            <h2 id="surface-transition-hard-grass-clay">표면별 전환 — 하드의 직선, 잔디의 간결, 점토의 인내</h2>
-            <p>하드에서는 퍼스트 서브 확률과 리턴 패턴으로 지공의 흐름을 만든다. 잔디에서는 백스윙을 짧게 줄이고 토스를 낮춰 타점을 앞에 고정, 초반 속도를 통제한다. 점토에서는 회전을 조금 더해 낙구를 안정시키고, 네 번째나 다섯 번째 스트로크에서 드롭·슬라이스를 섞어 템포를 비튼 뒤 다시 직선으로 전환한다. 표면이 달라져도 원칙은 동일하다. 흐름을 먼저 안정시키고, 열린 틈에서만 칼을 뽑는다.</p>
+            <h2 id="surface-transition-hard-grass-clay">?쒕㈃蹂??꾪솚 ???섎뱶??吏곸꽑, ?붾뵒??媛꾧껐, ?먰넗???몃궡</h2>
+            <p>?섎뱶?먯꽌???쇱뒪???쒕툕 ?뺣쪧怨?由ы꽩 ?⑦꽩?쇰줈 吏怨듭쓽 ?먮쫫??留뚮뱺?? ?붾뵒?먯꽌??諛깆뒪?숈쓣 吏㏐쾶 以꾩씠怨??좎뒪瑜???떠 ??먯쓣 ?욎뿉 怨좎젙, 珥덈컲 ?띾룄瑜??듭젣?쒕떎. ?먰넗?먯꽌???뚯쟾??議곌툑 ?뷀빐 ?숆뎄瑜??덉젙?쒗궎怨? ??踰덉㎏???ㅼ꽢 踰덉㎏ ?ㅽ듃濡쒗겕?먯꽌 ?쒕∼쨌?щ씪?댁뒪瑜??욎뼱 ?쒗룷瑜?鍮꾪듉 ???ㅼ떆 吏곸꽑?쇰줈 ?꾪솚?쒕떎. ?쒕㈃???щ씪?몃룄 ?먯튃? ?숈씪?섎떎. ?먮쫫??癒쇱? ?덉젙?쒗궎怨? ?대┛ ?덉뿉?쒕쭔 移쇱쓣 戮묐뒗??</p>
 
-            <h2 id="human-aspects-honesty-humor-discipline">인간적인 면모 — 솔직함과 유머, 그리고 규율</h2>
-            <p>메드베데프의 인터뷰는 직설적이지만 책임의 언어가 분명하다. 잘된 날은 준비가 맞았다고, 부족한 날은 수정이 필요하다고 말한다. 코트 밖에서는 장난기 섞인 유머로 분위기를 풀지만, 경기 전후의 절차와 팀과의 약속은 거의 흐트러뜨리지 않는다. 팬에게는 눈맞춤과 짧은 감사 인사를 잊지 않고, 볼퍼슨·코트 스태프에게도 예의를 지킨다.</p>
+            <h2 id="human-aspects-honesty-humor-discipline">?멸컙?곸씤 硫대え ???붿쭅?④낵 ?좊㉧, 洹몃━怨?洹쒖쑉</h2>
+            <p>硫붾뱶踰좊뜲?꾩쓽 ?명꽣酉곕뒗 吏곸꽕?곸씠吏留?梨낆엫???몄뼱媛 遺꾨챸?섎떎. ?섎맂 ?좎? 以鍮꾧? 留욎븯?ㅺ퀬, 遺議깊븳 ?좎? ?섏젙???꾩슂?섎떎怨?留먰븳?? 肄뷀듃 諛뽰뿉?쒕뒗 ?λ궃湲??욎씤 ?좊㉧濡?遺꾩쐞湲곕? ?吏留? 寃쎄린 ?꾪썑???덉감? ?怨쇱쓽 ?쎌냽? 嫄곗쓽 ?먰듃?щ쑉由ъ? ?딅뒗?? ?ъ뿉寃뚮뒗 ?덈쭪異ㅺ낵 吏㏃? 媛먯궗 ?몄궗瑜??딆? ?딄퀬, 蹂쇳띁?㉱룹퐫???ㅽ깭?꾩뿉寃뚮룄 ?덉쓽瑜?吏?⑤떎.</p>
 
-            <h2 id="nationality-culture-belief-rules">국적과 문화 — 규칙을 믿는 끈기</h2>
-            <p>러시아의 훈련 문화는 반복과 규칙을 중시한다. 메드베데프의 테니스에도 이 정신이 뚜렷하다. 화려한 변주보다 정밀한 반복으로 구석을 두드리고, 작은 성공을 중첩해 큰 흐름을 만든다. 대표팀 이벤트에서 보이는 침착함은 개인을 넘어 공동체의 상징으로 확장된다.</p>
+            <h2 id="nationality-culture-belief-rules">援?쟻怨?臾명솕 ??洹쒖튃??誘용뒗 ?덇린</h2>
+            <p>?ъ떆?꾩쓽 ?덈젴 臾명솕??諛섎났怨?洹쒖튃??以묒떆?쒕떎. 硫붾뱶踰좊뜲?꾩쓽 ?뚮땲?ㅼ뿉?????뺤떊???쒕졆?섎떎. ?붾젮??蹂二쇰낫???뺣???諛섎났?쇰줈 援ъ꽍???먮뱶由ш퀬, ?묒? ?깃났??以묒꺽?????먮쫫??留뚮뱺?? ??쒗? ?대깽?몄뿉??蹂댁씠??移⑥갑?⑥? 媛쒖씤???섏뼱 怨듬룞泥댁쓽 ?곸쭠?쇰줈 ?뺤옣?쒕떎.</p>
 
-            <h2 id="relationships-rivals-speed-angle">관계와 라이벌 — 속도의 세대와 각도의 문답</h2>
-            <p>강한 가속으로 초반을 장악하는 신세대와 맞붙을 때 그는 각과 길이로 속도를 상쇄한다. 리턴 포지션을 뒤로 빼 시간을 벌고, 중앙 깊은 볼로 각을 닫아 두며, 세 번째에서만 코너를 열어 반격한다. 네트를 서두르는 유형에겐 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만든다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 스윙 길이를 바꿔 같은 구역을 다른 속도로 찌른다.</p>
+            <h2 id="relationships-rivals-speed-angle">愿怨꾩? ?쇱씠踰????띾룄???몃?? 媛곷룄??臾몃떟</h2>
+            <p>媛뺥븳 媛?띿쑝濡?珥덈컲???μ븙?섎뒗 ?좎꽭?? 留욌텤????洹몃뒗 媛곴낵 湲몄씠濡??띾룄瑜??곸뇙?쒕떎. 由ы꽩 ?ъ??섏쓣 ?ㅻ줈 鍮??쒓컙??踰뚭퀬, 以묒븰 源딆? 蹂쇰줈 媛곸쓣 ?レ븘 ?먮ŉ, ??踰덉㎏?먯꽌留?肄붾꼫瑜??댁뼱 諛섍꺽?쒕떎. ?ㅽ듃瑜??쒕몢瑜대뒗 ?좏삎?먭쾺 ??? ?듦낵?룰낵 源딆? 濡쒕툕瑜?踰덇컝??蹂댁뿬 泥??쒕룄瑜?二쇱??섍쾶 留뚮뱺?? 媛숈? ?⑦꽩????踰??덉슜?섎㈃ ??踰덉㎏?먮뒗 ??먭낵 ?ㅼ쐷 湲몄씠瑜?諛붽퓭 媛숈? 援ъ뿭???ㅻⅨ ?띾룄濡?李뚮Ⅸ??</p>
 
-            <h2 id="famous-scenes-center-twice-line-once">명장면 — 중앙 두 번, 라인 한 번</h2>
-            <p>브레이크 포인트. 그는 중앙 깊은 볼 두 개로 상대 스텝을 뒤로 밀어낸 뒤, 백핸드를 몸 가까이 끌어당겨 라인으로 단호히 접는다. 공이 흰 선을 스치며 빠져나갈 때 관중의 숨이 잠시 멎고, 그는 같은 속도로 베이스라인을 밟는다. 감정이 아니라 절차가 승부를 만든다는 믿음이 응축된 순간이다.</p>
+            <h2 id="famous-scenes-center-twice-line-once">紐낆옣硫???以묒븰 ??踰? ?쇱씤 ??踰?/h2>
+            <p>釉뚮젅?댄겕 ?ъ씤?? 洹몃뒗 以묒븰 源딆? 蹂???媛쒕줈 ?곷? ?ㅽ뀦???ㅻ줈 諛?대궦 ?? 諛깊빖?쒕? 紐?媛源뚯씠 ?뚯뼱?밴꺼 ?쇱씤?쇰줈 ?⑦샇???묐뒗?? 怨듭씠 ???좎쓣 ?ㅼ튂硫?鍮좎졇?섍컝 ??愿以묒쓽 ?⑥씠 ?좎떆 硫롪퀬, 洹몃뒗 媛숈? ?띾룄濡?踰좎씠?ㅻ씪?몄쓣 諛잙뒗?? 媛먯젙???꾨땲???덉감媛 ?밸?瑜?留뚮뱺?ㅻ뒗 誘우쓬???묒텞???쒓컙?대떎.</p>
 
-            <h2 id="equipment-details-tension-balance-contact">장비와 디테일 — 텐션·밸런스·접점의 미세 조정</h2>
-            <p>대회장 기온·습도에 맞춰 스트링 텐션을 소폭 조정하고, 라켓 밸런스는 과도한 헤드 헤비를 피해 스윙 회복을 빠르게 한다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목의 흔들림을 줄인다. 장비가 플레이를 지배하도록 두지 않고, 플레이가 요구하는 만큼만 조정한다는 철학이 일관된다.</p>
+            <h2 id="equipment-details-tension-balance-contact">?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙</h2>
+            <p>??뚯옣 湲곗삩쨌?듬룄??留욎떠 ?ㅽ듃留??먯뀡???뚰룺 議곗젙?섍퀬, ?쇱폆 諛몃윴?ㅻ뒗 怨쇰룄???ㅻ뱶 ?ㅻ퉬瑜??쇳빐 ?ㅼ쐷 ?뚮났??鍮좊Ⅴ寃??쒕떎. ?좊컻? 痢〓㈃ 吏吏? ?묒???洹좏삎??以묒떆??湲됯??띉룰툒?뺤??먯꽌 諛쒕ぉ???붾뱾由쇱쓣 以꾩씤?? ?λ퉬媛 ?뚮젅?대? 吏諛고븯?꾨줉 ?먯? ?딄퀬, ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留?議곗젙?쒕떎??泥좏븰???쇨??쒕떎.</p>
 
-            <h2 id="future-challenges-advance-timing-conclusion">앞으로의 과제 — 전진의 타이밍과 결말의 간결함</h2>
-            <p>그가 더 높이 도약하기 위해 필요한 것은 하프코트에서의 한 박자 빠른 마무리와 세컨드 서브 코스의 소폭 다양화다. 리턴 직후 3구에서 전진 타이밍을 반 박자 앞당기고, 마무리 선택지를 한두 개로 단순화한다면 긴 경기에서도 에너지 관리가 쉬워질 것이다. 이미 갖춘 깊이와 각의 설득력 위에 결말의 속도가 얹히면, 그의 이름은 큰 무대의 마지막 장면에 더 자주 남을 가능성이 크다.</p>
+            <h2 id="future-challenges-advance-timing-conclusion">?욎쑝濡쒖쓽 怨쇱젣 ???꾩쭊????대컢怨?寃곕쭚??媛꾧껐??/h2>
+            <p>洹멸? ???믪씠 ?꾩빟?섍린 ?꾪빐 ?꾩슂??寃껋? ?섑봽肄뷀듃?먯꽌????諛뺤옄 鍮좊Ⅸ 留덈Т由ъ? ?몄빻???쒕툕 肄붿뒪???뚰룺 ?ㅼ뼇?붾떎. 由ы꽩 吏곹썑 3援ъ뿉???꾩쭊 ??대컢??諛?諛뺤옄 ?욌떦湲곌퀬, 留덈Т由??좏깮吏瑜??쒕몢 媛쒕줈 ?⑥닚?뷀븳?ㅻ㈃ 湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?ъ썙吏?寃껋씠?? ?대? 媛뽰텣 源딆씠? 媛곸쓽 ?ㅻ뱷???꾩뿉 寃곕쭚???띾룄媛 ?뱁엳硫? 洹몄쓽 ?대쫫? ??臾대???留덉?留??λ㈃?????먯＜ ?⑥쓣 媛?μ꽦???щ떎.</p>
 
-            <h2 id="fans-community-lasting-trust">팬과 커뮤니티 — 오래 가는 신뢰</h2>
-            <p>메드베데프를 오래 응원하게 만드는 힘은 태도의 일관성이다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말한다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 완성한다. 기록은 표가 되지만, 태도는 기억이 된다. 그래서 그의 테니스는 결과를 넘어 설득으로 남는다.</p>
+            <h2 id="fans-community-lasting-trust">?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː</h2>
+            <p>硫붾뱶踰좊뜲?꾨? ?ㅻ옒 ?묒썝?섍쾶 留뚮뱶???섏? ?쒕룄???쇨??깆씠?? ?닿린???좎뿉??媛먯궗???쒖꽌瑜?吏?ㅺ퀬, 吏???좎뿉??梨낆엫??癒쇱? 留먰븳?? ?묒? ?쒖뒪泥섏? ?뺥솗???좏깮??紐⑥뿬 ???щ엺??珥덉긽???꾩꽦?쒕떎. 湲곕줉? ?쒓? ?섏?留? ?쒕룄??湲곗뼲???쒕떎. 洹몃옒??洹몄쓽 ?뚮땲?ㅻ뒗 寃곌낵瑜??섏뼱 ?ㅻ뱷?쇰줈 ?⑤뒗??</p>
           </div>
 
           {/* Related Links */}
@@ -176,7 +176,7 @@ export default function DaniilMedvedevBlogPost() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
+                愿???먮즺
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -184,13 +184,13 @@ export default function DaniilMedvedevBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
+                    ?대? 留곹겕
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필</span>
+                        <span className="text-xl">?룇</span>
+                        <span className="font-medium">?좎닔 ?꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -198,8 +198,8 @@ export default function DaniilMedvedevBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">실력 테스트</span>
+                        <span className="text-xl">?렞</span>
+                        <span className="font-medium">?ㅻ젰 ?뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -207,8 +207,8 @@ export default function DaniilMedvedevBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">플레이 스타일 테스트</span>
+                        <span className="text-xl">?렱</span>
+                        <span className="font-medium">?뚮젅???ㅽ????뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -221,13 +221,13 @@ export default function DaniilMedvedevBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    외부 자료
+                    ?몃? ?먮즺
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어 공식 사이트</span>
+                        <span className="text-xl">?뙋</span>
+                        <span className="font-medium">ATP ?ъ뼱 怨듭떇 ?ъ씠??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -235,8 +235,8 @@ export default function DaniilMedvedevBlogPost() {
                     </li>
                     <li>
                       <a href="https://en.wikipedia.org/wiki/Daniil_Medvedev" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">📖</span>
-                        <span className="font-medium">위키피디아 프로필</span>
+                        <span className="text-xl">?뱰</span>
+                        <span className="font-medium">?꾪궎?쇰뵒???꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -258,9 +258,9 @@ export default function DaniilMedvedevBlogPost() {
                 <RelatedPosts 
             currentSlug="daniil-medvedev" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '다닐 메드베데프', '선수 프로필', '스토리', '러시아']} 
+            tags={['?뚮땲??, '?ㅻ땺 硫붾뱶踰좊뜲??, '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?ъ떆??]} 
           />
 
           <CTA />

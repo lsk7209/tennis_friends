@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '그리고르 디미트로프 선수 프로필과 스토리',
-  description: '원핸드 백핸드와 노련한 전술로 커리어의 두 번째 전성기를 만든 그리고르 디미트로프의 성장 배경, 경기 스타일, 인간적인 면모와 과제를 정리했습니다.',
-  keywords: ['테니스', '그리고르 디미트로프', '선수 프로필', '스토리', '불가리아'],
+  title: '洹몃━怨좊Ⅴ ?붾??몃줈???좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '?먰빖??諛깊빖?쒖? ?몃젴???꾩닠濡?而ㅻ━?댁쓽 ??踰덉㎏ ?꾩꽦湲곕? 留뚮뱺 洹몃━怨좊Ⅴ ?붾??몃줈?꾩쓽 ?깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜??뺣━?덉뒿?덈떎.',
+  keywords: ['?뚮땲??, '洹몃━怨좊Ⅴ ?붾??몃줈??, '?좎닔 ?꾨줈??, '?ㅽ넗由?, '遺덇?由ъ븘'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/grigor-dimitrov',
   },
   openGraph: {
-    title: '그리고르 디미트로프 선수 프로필과 스토리',
-    description: '원핸드 백핸드와 노련한 전술로 커리어의 두 번째 전성기를 만든 그리고르 디미트로프의 성장 배경, 경기 스타일, 인간적인 면모와 과제를 정리했습니다.',
+    title: '洹몃━怨좊Ⅴ ?붾??몃줈???좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?먰빖??諛깊빖?쒖? ?몃젴???꾩닠濡?而ㅻ━?댁쓽 ??踰덉㎏ ?꾩꽦湲곕? 留뚮뱺 洹몃━怨좊Ⅴ ?붾??몃줈?꾩쓽 ?깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜??뺣━?덉뒿?덈떎.',
     url: 'https://tennisfriends.co.kr/blog/grigor-dimitrov',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '그리고르 디미트로프 선수 프로필과 스토리',
-    description: '원핸드 백핸드와 노련한 전술로 커리어의 두 번째 전성기를 만든 그리고르 디미트로프의 성장 배경, 경기 스타일, 인간적인 면모와 과제를 정리했습니다.',
+    title: '洹몃━怨좊Ⅴ ?붾??몃줈???좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?먰빖??諛깊빖?쒖? ?몃젴???꾩닠濡?而ㅻ━?댁쓽 ??踰덉㎏ ?꾩꽦湲곕? 留뚮뱺 洹몃━怨좊Ⅴ ?붾??몃줈?꾩쓽 ?깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜??뺣━?덉뒿?덈떎.',
   },
   robots: {
     index: true,
@@ -34,39 +34,39 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-small-club-big-dream', text: '성장 배경 — 작은 클럽에서 시작된 큰 꿈', depth: 2 },
-  { id: 'playing-style-onehand-backhand-forward', text: '경기 스타일 — 원핸드 백핸드의 선, 전진의 용기', depth: 2 },
-  { id: 'rhythm-selection-procedure-power-relax-risk', text: '리듬과 선택 — 위험을 누그러뜨리는 절차의 힘', depth: 2 },
-  { id: 'experience-transition-maturity-through-ups-downs', text: '경험과 전환 — 부침을 지나 성숙으로', depth: 2 },
-  { id: 'human-aspects-dignity-care-humor', text: '인간적인 면모 — 품위, 배려, 그리고 유머', depth: 2 },
-  { id: 'nationality-culture-small-country-big-symbol', text: '국적과 문화 — 작은 나라의 큰 상징', depth: 2 },
-  { id: 'relationships-rivals-mirror-like-reflect', text: '관계와 라이벌 — 거울처럼 비추는 경기', depth: 2 },
-  { id: 'famous-scenes-backhand-down-line-opens-window', text: '명장면 — 백핸드 다운더라인이 여는 창', depth: 2 },
-  { id: 'equipment-details-tension-contact-sense', text: '장비와 디테일 — 텐션과 접점의 감각', depth: 2 },
-  { id: 'future-challenges-conclusion-simplicity-stronger', text: '앞으로의 과제 — 결말의 간결함을 더 단단하게', depth: 2 },
-  { id: 'fans-community-lasting-trust', text: '팬과 커뮤니티 — 오래 가는 신뢰', depth: 2 },
+  { id: 'growth-background-small-club-big-dream', text: '?깆옣 諛곌꼍 ???묒? ?대읇?먯꽌 ?쒖옉????轅?, depth: 2 },
+  { id: 'playing-style-onehand-backhand-forward', text: '寃쎄린 ?ㅽ??????먰빖??諛깊빖?쒖쓽 ?? ?꾩쭊???⑷린', depth: 2 },
+  { id: 'rhythm-selection-procedure-power-relax-risk', text: '由щ벉怨??좏깮 ???꾪뿕???꾧렇?щ쑉由щ뒗 ?덉감????, depth: 2 },
+  { id: 'experience-transition-maturity-through-ups-downs', text: '寃쏀뿕怨??꾪솚 ??遺移⑥쓣 吏???깆닕?쇰줈', depth: 2 },
+  { id: 'human-aspects-dignity-care-humor', text: '?멸컙?곸씤 硫대え ???덉쐞, 諛곕젮, 洹몃━怨??좊㉧', depth: 2 },
+  { id: 'nationality-culture-small-country-big-symbol', text: '援?쟻怨?臾명솕 ???묒? ?섎씪?????곸쭠', depth: 2 },
+  { id: 'relationships-rivals-mirror-like-reflect', text: '愿怨꾩? ?쇱씠踰???嫄곗슱泥섎읆 鍮꾩텛??寃쎄린', depth: 2 },
+  { id: 'famous-scenes-backhand-down-line-opens-window', text: '紐낆옣硫???諛깊빖???ㅼ슫?붾씪?몄씠 ?щ뒗 李?, depth: 2 },
+  { id: 'equipment-details-tension-contact-sense', text: '?λ퉬? ?뷀뀒?????먯뀡怨??묒젏??媛먭컖', depth: 2 },
+  { id: 'future-challenges-conclusion-simplicity-stronger', text: '?욎쑝濡쒖쓽 怨쇱젣 ??寃곕쭚??媛꾧껐?⑥쓣 ???⑤떒?섍쾶', depth: 2 },
+  { id: 'fans-community-lasting-trust', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '그리고르 디미트로프의 경기 스타일은 어떤가요?',
-    a: '원핸드 백핸드의 미학과 노련한 전술 운용이 특징입니다. 선명한 곡선을 그리는 백핸드와 상황에 맞춘 포핸드, 하프코트 전진으로 효율을 위한 우아함을 보여주며, 성숙해진 멘탈로 커리어의 두 번째 절정을 만들고 있습니다.'
+    q: '洹몃━怨좊Ⅴ ?붾??몃줈?꾩쓽 寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
+    a: '?먰빖??諛깊빖?쒖쓽 誘명븰怨??몃젴???꾩닠 ?댁슜???뱀쭠?낅땲?? ?좊챸??怨≪꽑??洹몃━??諛깊빖?쒖? ?곹솴??留욎텣 ?ы빖?? ?섑봽肄뷀듃 ?꾩쭊?쇰줈 ?⑥쑉???꾪븳 ?곗븘?⑥쓣 蹂댁뿬二쇰ŉ, ?깆닕?댁쭊 硫섑깉濡?而ㅻ━?댁쓽 ??踰덉㎏ ?덉젙??留뚮뱾怨??덉뒿?덈떎.'
   },
   {
-    q: '디미트로프의 성장 배경은 어떤가요?',
-    a: '불가리아 소도시의 클럽 코트에서 자란 그는 낡은 볼과 울퉁불퉁한 바닥에 익숙했습니다. 타점의 오차를 줄이는 법과 발의 각도를 미세 조정하는 법을 일찍 배웠고, 청소년기 유럽 서킷을 돌며 다양한 표면을 경험했습니다.'
+    q: '?붾??몃줈?꾩쓽 ?깆옣 諛곌꼍? ?대뼡媛??',
+    a: '遺덇?由ъ븘 ?뚮룄?쒖쓽 ?대읇 肄뷀듃?먯꽌 ?먮? 洹몃뒗 ?≪? 蹂쇨낵 ?명뎮遺덊뎮??諛붾떏???듭닕?덉뒿?덈떎. ??먯쓽 ?ㅼ감瑜?以꾩씠??踰뺢낵 諛쒖쓽 媛곷룄瑜?誘몄꽭 議곗젙?섎뒗 踰뺤쓣 ?쇱컢 諛곗썱怨? 泥?냼?꾧린 ?좊읇 ?쒗궥???뚮ŉ ?ㅼ뼇???쒕㈃??寃쏀뿕?덉뒿?덈떎.'
   },
   {
-    q: '디미트로프의 강점은 무엇인가요?',
-    a: '우아함과 근성이 최대 강점입니다. 원핸드 백핸드의 선명한 곡선과 전진의 용기, 절차의 힘으로 위험을 누그러뜨리며, 부침을 지나 성숙으로 도달한 멘탈이 큰 무대 후반 라운드에서 안정적인 경기를 만들어냅니다.'
+    q: '?붾??몃줈?꾩쓽 媛뺤젏? 臾댁뾿?멸???',
+    a: '?곗븘?④낵 洹쇱꽦??理쒕? 媛뺤젏?낅땲?? ?먰빖??諛깊빖?쒖쓽 ?좊챸??怨≪꽑怨??꾩쭊???⑷린, ?덉감???섏쑝濡??꾪뿕???꾧렇?щ쑉由щŉ, 遺移⑥쓣 吏???깆닕?쇰줈 ?꾨떖??硫섑깉????臾대? ?꾨컲 ?쇱슫?쒖뿉???덉젙?곸씤 寃쎄린瑜?留뚮뱾?대깄?덈떎.'
   },
   {
-    q: '디미트로프의 인간적인 면모는 어떤가요?',
-    a: '품위, 배려, 유머가 특징입니다. 인터뷰에서 상대와 팀을 먼저 언급하며, 패배 뒤에도 책임을 자기 쪽으로 당기고, 코트 정리 요원과 볼퍼슨에게 먼저 고개를 숙입니다. 품위가 이미지가 아니라 습관임을 보여주는 선수입니다.'
+    q: '?붾??몃줈?꾩쓽 ?멸컙?곸씤 硫대え???대뼡媛??',
+    a: '?덉쐞, 諛곕젮, ?좊㉧媛 ?뱀쭠?낅땲?? ?명꽣酉곗뿉???곷?? ???癒쇱? ?멸툒?섎ŉ, ?⑤같 ?ㅼ뿉??梨낆엫???먭린 履쎌쑝濡??밴린怨? 肄뷀듃 ?뺣━ ?붿썝怨?蹂쇳띁?⑥뿉寃?癒쇱? 怨좉컻瑜??숈엯?덈떎. ?덉쐞媛 ?대?吏媛 ?꾨땲???듦??꾩쓣 蹂댁뿬二쇰뒗 ?좎닔?낅땲??'
   },
   {
-    q: '디미트로프의 미래 전망은 어떻게 되나요?',
-    a: '결말의 간결함을 더 단단하게 만드는 것이 과제입니다. 하프코트에서 한 박자 빠른 결말, 세컨드 서브 코스 다양화, 리턴 직후 3구에서의 과감한 전진 빈도를 높이면 긴 경기에서도 에너지 관리가 수월해질 것입니다.'
+    q: '?붾??몃줈?꾩쓽 誘몃옒 ?꾨쭩? ?대뼸寃??섎굹??',
+    a: '寃곕쭚??媛꾧껐?⑥쓣 ???⑤떒?섍쾶 留뚮뱶??寃껋씠 怨쇱젣?낅땲?? ?섑봽肄뷀듃?먯꽌 ??諛뺤옄 鍮좊Ⅸ 寃곕쭚, ?몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?? 由ы꽩 吏곹썑 3援ъ뿉?쒖쓽 怨쇨컧???꾩쭊 鍮덈룄瑜??믪씠硫?湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?섏썡?댁쭏 寃껋엯?덈떎.'
   },
 ];
 
@@ -74,24 +74,24 @@ export default function GrigorDimitrovBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article slug="grigor-dimitrov" date="2024-01-01"
-        title="그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌"
-        excerpt="원핸드 백핸드의 미학과 노련한 전술, 성숙한 멘탈로 커리어의 두 번째 절정을 만드는 그리고르 디미트로프의 성장, 스타일, 인간적 면모를 한 편으로."
+        title="洹몃━怨좊Ⅴ ?붾??몃줈?????곗븘?④낵 洹쇱꽦???ㅼ떆 ?뺤쓽??由щ컮?대쾶"
+        excerpt="?먰빖??諛깊빖?쒖쓽 誘명븰怨??몃젴???꾩닠, ?깆닕??硫섑깉濡?而ㅻ━?댁쓽 ??踰덉㎏ ?덉젙??留뚮뱶??洹몃━怨좊Ⅴ ?붾??몃줈?꾩쓽 ?깆옣, ?ㅽ??? ?멸컙??硫대え瑜????몄쑝濡?"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '그리고르 디미트로프', '선수 프로필', '스토리', '불가리아'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
+            {['?뚮땲??, '洹몃━怨좊Ⅴ ?붾??몃줈??, '?좎닔 ?꾨줈??, '?ㅽ넗由?, '遺덇?由ъ븘'].map((tag) => (
+              <Badge key=?뚮땲???좎닔 variant="secondary" className="text-xs">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
 
           {/* Reading Time & Date */}
           <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-8">
-            <span>📖 8분 읽기</span>
-            <span>•</span>
-            <span>2025년 8월 27일</span>
+            <span>?뱰 8遺??쎄린</span>
+            <span>??/span>
+            <span>2025??8??27??/span>
           </div>
 
           {/* Table of Contents */}
@@ -99,63 +99,63 @@ export default function GrigorDimitrovBlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h1 id="grigor-dimitrov-elegance-tenacity-redefined-revival">그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌</h1>
+            <h1 id="grigor-dimitrov-elegance-tenacity-redefined-revival">洹몃━怨좊Ⅴ ?붾??몃줈?????곗븘?④낵 洹쇱꽦???ㅼ떆 ?뺤쓽??由щ컮?대쾶</h1>
 
-            <p><strong>직답:</strong> 그리고르 디미트로프(Grigor Dimitrov)는 원핸드 백핸드의 미학과 노련한 전술 운용, 성숙해진 멘탈로 커리어의 두 번째 절정을 만든 불가리아의 간판 선수다.</p>
+            <p><strong>吏곷떟:</strong> 洹몃━怨좊Ⅴ ?붾??몃줈??Grigor Dimitrov)???먰빖??諛깊빖?쒖쓽 誘명븰怨??몃젴???꾩닠 ?댁슜, ?깆닕?댁쭊 硫섑깉濡?而ㅻ━?댁쓽 ??踰덉㎏ ?덉젙??留뚮뱺 遺덇?由ъ븘??媛꾪뙋 ?좎닔??</p>
 
-            <h2 id="growth-background-small-club-big-dream">성장 배경 — 작은 클럽에서 시작된 큰 꿈</h2>
-            <p>불가리아 소도시의 클럽 코트에서 자란 그는 낡은 볼과 울퉁불퉁한 바닥에 익숙했다. 그래서 일찍부터 타점의 오차를 줄이는 법, 발의 각도를 미세 조정하는 법을 배웠다. 청소년기 유럽 서킷을 돌며 다양한 표면을 경험했고, 이동이 잦은 환경에서도 루틴을 지키는 습관이 자리 잡았다. 하루 훈련이 끝나면 공책에 '잘 된 샷 3개'와 '고칠 점 3개'를 적었고, 이 간단한 기록이 오늘의 침착함을 만들었다.</p>
+            <h2 id="growth-background-small-club-big-dream">?깆옣 諛곌꼍 ???묒? ?대읇?먯꽌 ?쒖옉????轅?/h2>
+            <p>遺덇?由ъ븘 ?뚮룄?쒖쓽 ?대읇 肄뷀듃?먯꽌 ?먮? 洹몃뒗 ?≪? 蹂쇨낵 ?명뎮遺덊뎮??諛붾떏???듭닕?덈떎. 洹몃옒???쇱컢遺????먯쓽 ?ㅼ감瑜?以꾩씠??踰? 諛쒖쓽 媛곷룄瑜?誘몄꽭 議곗젙?섎뒗 踰뺤쓣 諛곗썱?? 泥?냼?꾧린 ?좊읇 ?쒗궥???뚮ŉ ?ㅼ뼇???쒕㈃??寃쏀뿕?덇퀬, ?대룞????? ?섍꼍?먯꽌??猷⑦떞??吏?ㅻ뒗 ?듦????먮━ ?≪븯?? ?섎（ ?덈젴???앸굹硫?怨듭콉??'??????3媛?? '怨좎튌 ??3媛?瑜??곸뿀怨? ??媛꾨떒??湲곕줉???ㅻ뒛??移⑥갑?⑥쓣 留뚮뱾?덈떎.</p>
 
-            <h2 id="playing-style-onehand-backhand-forward">경기 스타일 — 원핸드 백핸드의 선, 전진의 용기</h2>
-            <p>디미트로프의 백핸드는 선명한 곡선을 그리며 코트 구석을 긁어낸다. 높은 타점에서도 손목의 긴장을 최소화해 라켓면을 오래 유지하고, 임팩트 뒤엔 가볍게 상체를 열어 각을 만든다. 포핸드는 회전량을 상황에 맞춰 조절해 크로스로 상대를 밖으로 밀어낸 뒤, 다운더라인으로 결말을 짓는다. 서브는 와이드와 바디의 비율을 바꿔 첫 두 타구의 구조를 설계하고, 짧은 볼이 보이면 하프코트에서 한 걸음 전진해 발리로 마무리한다. 화려함을 위한 장식이 아니라, 효율을 위한 우아함이 그의 핵심이다.</p>
+            <h2 id="playing-style-onehand-backhand-forward">寃쎄린 ?ㅽ??????먰빖??諛깊빖?쒖쓽 ?? ?꾩쭊???⑷린</h2>
+            <p>?붾??몃줈?꾩쓽 諛깊빖?쒕뒗 ?좊챸??怨≪꽑??洹몃━硫?肄뷀듃 援ъ꽍??湲곸뼱?몃떎. ?믪? ??먯뿉?쒕룄 ?먮ぉ??湲댁옣??理쒖냼?뷀빐 ?쇱폆硫댁쓣 ?ㅻ옒 ?좎??섍퀬, ?꾪뙥???ㅼ뿏 媛蹂띻쾶 ?곸껜瑜??댁뼱 媛곸쓣 留뚮뱺?? ?ы빖?쒕뒗 ?뚯쟾?됱쓣 ?곹솴??留욎떠 議곗젅???щ줈?ㅻ줈 ?곷?瑜?諛뽰쑝濡?諛?대궦 ?? ?ㅼ슫?붾씪?몄쑝濡?寃곕쭚??吏볥뒗?? ?쒕툕????대뱶? 諛붾뵒??鍮꾩쑉??諛붽퓭 泥????援ъ쓽 援ъ“瑜??ㅺ퀎?섍퀬, 吏㏃? 蹂쇱씠 蹂댁씠硫??섑봽肄뷀듃?먯꽌 ??嫄몄쓬 ?꾩쭊??諛쒕━濡?留덈Т由ы븳?? ?붾젮?⑥쓣 ?꾪븳 ?μ떇???꾨땲?? ?⑥쑉???꾪븳 ?곗븘?⑥씠 洹몄쓽 ?듭떖?대떎.</p>
 
-            <h2 id="rhythm-selection-procedure-power-relax-risk">리듬과 선택 — 위험을 누그러뜨리는 절차의 힘</h2>
-            <p>그는 포인트 사이의 절차를 엄격하게 반복한다. 라켓 스트링을 훑고, 두 번의 깊은 호흡, 일정한 토스. 스코어가 흔들려도 루틴의 길이를 바꾸지 않아 심박이 급히 오르지 않는다. 타이브레이크 초반에는 네트를 넉넉히 넘기는 구질로 리듬을 확인하고, 3~4포인트 구간에서만 라인을 얇게 쓴다. 이 '미세한 가감' 덕분에 긴 랠리에서도 실수의 폭이 좁다.</p>
+            <h2 id="rhythm-selection-procedure-power-relax-risk">由щ벉怨??좏깮 ???꾪뿕???꾧렇?щ쑉由щ뒗 ?덉감????/h2>
+            <p>洹몃뒗 ?ъ씤???ъ씠???덉감瑜??꾧꺽?섍쾶 諛섎났?쒕떎. ?쇱폆 ?ㅽ듃留곸쓣 ?묎퀬, ??踰덉쓽 源딆? ?명씉, ?쇱젙???좎뒪. ?ㅼ퐫?닿? ?붾뱾?ㅻ룄 猷⑦떞??湲몄씠瑜?諛붽씀吏 ?딆븘 ?щ컯??湲됲엳 ?ㅻⅤ吏 ?딅뒗?? ??대툕?덉씠??珥덈컲?먮뒗 ?ㅽ듃瑜??됰꼮???섍린??援ъ쭏濡?由щ벉???뺤씤?섍퀬, 3~4?ъ씤??援ш컙?먯꽌留??쇱씤???뉕쾶 ?대떎. ??'誘몄꽭??媛媛? ?뺣텇??湲??좊━?먯꽌???ㅼ닔????씠 醫곷떎.</p>
 
-            <h2 id="experience-transition-maturity-through-ups-downs">경험과 전환 — 부침을 지나 성숙으로</h2>
-            <p>초기의 그는 재능으로 칭송받았지만, 기복과 부상, 과감함과 안정 사이의 줄타기가 숙제로 남았다. 최근 몇 시즌 동안 그는 루틴을 생활로 옮겼다. 회복과 수면·식단의 규칙을 먼저 지키고, 경기 플랜은 간결한 문장으로 묶었다. "서브로 공간, 백핸드로 각, 전진으로 결말." 큰 틀은 그대로 두고 디테일만 조정하는 방식이 장기전에서 힘을 냈고, 마침내 큰 무대 후반 라운드에서 안정적으로 자신의 테니스를 꺼내게 했다.</p>
+            <h2 id="experience-transition-maturity-through-ups-downs">寃쏀뿕怨??꾪솚 ??遺移⑥쓣 吏???깆닕?쇰줈</h2>
+            <p>珥덇린??洹몃뒗 ?щ뒫?쇰줈 移?넚諛쏆븯吏留? 湲곕났怨?遺?? 怨쇨컧?④낵 ?덉젙 ?ъ씠??以꾪?湲곌? ?숈젣濡??⑥븯?? 理쒓렐 紐??쒖쫵 ?숈븞 洹몃뒗 猷⑦떞???앺솢濡???꼈?? ?뚮났怨??섎㈃쨌?앸떒??洹쒖튃??癒쇱? 吏?ㅺ퀬, 寃쎄린 ?뚮옖? 媛꾧껐??臾몄옣?쇰줈 臾띠뿀?? "?쒕툕濡?怨듦컙, 諛깊빖?쒕줈 媛? ?꾩쭊?쇰줈 寃곕쭚." ???? 洹몃?濡??먭퀬 ?뷀뀒?쇰쭔 議곗젙?섎뒗 諛⑹떇???κ린?꾩뿉???섏쓣 ?덇퀬, 留덉묠????臾대? ?꾨컲 ?쇱슫?쒖뿉???덉젙?곸쑝濡??먯떊???뚮땲?ㅻ? 爰쇰궡寃??덈떎.</p>
 
-            <h2 id="human-aspects-dignity-care-humor">인간적인 면모 — 품위, 배려, 그리고 유머</h2>
-            <p>디미트로프의 인터뷰는 늘 상대와 팀을 먼저 언급한다. 패배 뒤에도 책임의 방향을 자기 쪽으로 당기고, 승리한 날엔 스태프와 팬에게 차례로 감사를 전한다. 코트 밖에서는 장난기 섞인 유머로 분위기를 풀지만, 경기장에서는 코트 정리 요원과 볼퍼슨에게 먼저 고개를 숙인다. 품위가 이미지가 아니라 습관임을 보여주는 선수다.</p>
+            <h2 id="human-aspects-dignity-care-humor">?멸컙?곸씤 硫대え ???덉쐞, 諛곕젮, 洹몃━怨??좊㉧</h2>
+            <p>?붾??몃줈?꾩쓽 ?명꽣酉곕뒗 ???곷?? ???癒쇱? ?멸툒?쒕떎. ?⑤같 ?ㅼ뿉??梨낆엫??諛⑺뼢???먭린 履쎌쑝濡??밴린怨? ?밸━???좎뿏 ?ㅽ깭?꾩? ?ъ뿉寃?李⑤?濡?媛먯궗瑜??꾪븳?? 肄뷀듃 諛뽰뿉?쒕뒗 ?λ궃湲??욎씤 ?좊㉧濡?遺꾩쐞湲곕? ?吏留? 寃쎄린?μ뿉?쒕뒗 肄뷀듃 ?뺣━ ?붿썝怨?蹂쇳띁?⑥뿉寃?癒쇱? 怨좉컻瑜??숈씤?? ?덉쐞媛 ?대?吏媛 ?꾨땲???듦??꾩쓣 蹂댁뿬二쇰뒗 ?좎닔??</p>
 
-            <h2 id="nationality-culture-small-country-big-symbol">국적과 문화 — 작은 나라의 큰 상징</h2>
-            <p>불가리아의 스포츠는 자주 '끈기'와 '자부심'으로 설명된다. 디미트로프는 개인의 서사를 국가의 상징으로 확장했다. 국기를 달고 코트에 들어설 때 그는 '한 장면이 한 세대를 바꿀 수 있다'는 믿음을 잊지 않는다. 조용한 제스처와 꾸준한 결과는 어린 팬들의 롤모델로 이어졌다.</p>
+            <h2 id="nationality-culture-small-country-big-symbol">援?쟻怨?臾명솕 ???묒? ?섎씪?????곸쭠</h2>
+            <p>遺덇?由ъ븘???ㅽ룷痢좊뒗 ?먯＜ '?덇린'? '?먮????쇰줈 ?ㅻ챸?쒕떎. ?붾??몃줈?꾨뒗 媛쒖씤???쒖궗瑜?援?????곸쭠?쇰줈 ?뺤옣?덈떎. 援?린瑜??ш퀬 肄뷀듃???ㅼ뼱????洹몃뒗 '???λ㈃?????몃?瑜?諛붽? ???덈떎'??誘우쓬???딆? ?딅뒗?? 議곗슜???쒖뒪泥섏? 袁몄???寃곌낵???대┛ ?щ뱾??濡ㅻえ?몃줈 ?댁뼱議뚮떎.</p>
 
-            <h2 id="relationships-rivals-mirror-like-reflect">관계와 라이벌 — 거울처럼 비추는 경기</h2>
-            <p>동시대 강자들과의 승부에서 그는 상대의 강점을 거울처럼 받아 적응한다. 강한 리턴러를 만나면 퍼스트 서브 확률을 끌어올리고 3구 패턴을 단순화한다. 네트를 서둘러 점령하는 유형에겐 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만든다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 속도를 바꿔 같은 구역을 다른 느낌으로 찌른다. 승부가 길어질수록 '작은 수정'이 큰 차이를 만든다.</p>
+            <h2 id="relationships-rivals-mirror-like-reflect">愿怨꾩? ?쇱씠踰???嫄곗슱泥섎읆 鍮꾩텛??寃쎄린</h2>
+            <p>?숈떆? 媛뺤옄?ㅺ낵???밸??먯꽌 洹몃뒗 ?곷???媛뺤젏??嫄곗슱泥섎읆 諛쏆븘 ?곸쓳?쒕떎. 媛뺥븳 由ы꽩?щ? 留뚮굹硫??쇱뒪???쒕툕 ?뺣쪧???뚯뼱?щ━怨?3援??⑦꽩???⑥닚?뷀븳?? ?ㅽ듃瑜??쒕몮???먮졊?섎뒗 ?좏삎?먭쾺 ??? ?듦낵?룰낵 源딆? 濡쒕툕瑜?踰덇컝??蹂댁뿬 泥??쒕룄瑜?二쇱??섍쾶 留뚮뱺?? 媛숈? ?⑦꽩????踰??덉슜?섎㈃ ??踰덉㎏?먮뒗 ??먭낵 ?띾룄瑜?諛붽퓭 媛숈? 援ъ뿭???ㅻⅨ ?먮굦?쇰줈 李뚮Ⅸ?? ?밸?媛 湲몄뼱吏덉닔濡?'?묒? ?섏젙'????李⑥씠瑜?留뚮뱺??</p>
 
-            <h2 id="famous-scenes-backhand-down-line-opens-window">명장면 — 백핸드 다운더라인이 여는 창</h2>
-            <p>브레이크 포인트, 랠리의 호흡이 잠시 멎는 순간. 그는 백핸드를 몸 가까이 끌어당겨 라인을 가른다. 공이 흰 선을 스치며 빠져나가면 관중의 탄성이 터지고, 그는 표정을 바꾸지 않은 채 네트를 향해 두 걸음 전진한다. 준비와 결단, 그리고 설명 가능한 과감함—그의 테니스가 가진 설득력이 한 장면에 응축된다.</p>
+            <h2 id="famous-scenes-backhand-down-line-opens-window">紐낆옣硫???諛깊빖???ㅼ슫?붾씪?몄씠 ?щ뒗 李?/h2>
+            <p>釉뚮젅?댄겕 ?ъ씤?? ?좊━???명씉???좎떆 硫롫뒗 ?쒓컙. 洹몃뒗 諛깊빖?쒕? 紐?媛源뚯씠 ?뚯뼱?밴꺼 ?쇱씤??媛瑜몃떎. 怨듭씠 ???좎쓣 ?ㅼ튂硫?鍮좎졇?섍?硫?愿以묒쓽 ?꾩꽦???곗?怨? 洹몃뒗 ?쒖젙??諛붽씀吏 ?딆? 梨??ㅽ듃瑜??ν빐 ??嫄몄쓬 ?꾩쭊?쒕떎. 以鍮꾩? 寃곕떒, 洹몃━怨??ㅻ챸 媛?ν븳 怨쇨컧?ⓥ붽렇???뚮땲?ㅺ? 媛吏??ㅻ뱷?μ씠 ???λ㈃???묒텞?쒕떎.</p>
 
-            <h2 id="equipment-details-tension-contact-sense">장비와 디테일 — 텐션과 접점의 감각</h2>
-            <p>그는 라켓 텐션을 대회장 기온과 공의 반발에 맞춰 소폭 조정한다. 컨디션이 무거운 날에는 텐션을 낮춰 체공 시간을 확보하고, 실내에서는 텐션을 높여 접점의 흔들림을 줄인다. 신발은 측면 지지력이 강한 모델을 선호해 전진·후퇴의 잦은 전환에서도 발목의 안정성을 확보한다. 장비가 플레이를 지배하지 않도록, 플레이가 요구하는 만큼만 장비를 조정한다는 철학이 일관된다.</p>
+            <h2 id="equipment-details-tension-contact-sense">?λ퉬? ?뷀뀒?????먯뀡怨??묒젏??媛먭컖</h2>
+            <p>洹몃뒗 ?쇱폆 ?먯뀡????뚯옣 湲곗삩怨?怨듭쓽 諛섎컻??留욎떠 ?뚰룺 議곗젙?쒕떎. 而⑤뵒?섏씠 臾닿굅???좎뿉???먯뀡????떠 泥닿났 ?쒓컙???뺣낫?섍퀬, ?ㅻ궡?먯꽌???먯뀡???믪뿬 ?묒젏???붾뱾由쇱쓣 以꾩씤?? ?좊컻? 痢〓㈃ 吏吏?μ씠 媛뺥븳 紐⑤뜽???좏샇???꾩쭊쨌?꾪눜????? ?꾪솚?먯꽌??諛쒕ぉ???덉젙?깆쓣 ?뺣낫?쒕떎. ?λ퉬媛 ?뚮젅?대? 吏諛고븯吏 ?딅룄濡? ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留??λ퉬瑜?議곗젙?쒕떎??泥좏븰???쇨??쒕떎.</p>
 
-            <h2 id="future-challenges-conclusion-simplicity-stronger">앞으로의 과제 — 결말의 간결함을 더 단단하게</h2>
-            <p>그가 더 멀리 가기 위해 필요한 것은 하프코트에서의 '한 박자 빠른' 결말이다. 세컨드 서브 코스의 다양화, 리턴 직후 3구에서의 과감한 전진 빈도를 소폭 높인다면, 긴 경기에서도 에너지 관리가 훨씬 수월해진다. 이미 갖춘 우아함 위에 결말의 속도가 얹히면, 그의 이름은 큰 무대의 마지막 장면에 더 자주 호명될 것이다.</p>
+            <h2 id="future-challenges-conclusion-simplicity-stronger">?욎쑝濡쒖쓽 怨쇱젣 ??寃곕쭚??媛꾧껐?⑥쓣 ???⑤떒?섍쾶</h2>
+            <p>洹멸? ??硫由?媛湲??꾪빐 ?꾩슂??寃껋? ?섑봽肄뷀듃?먯꽌??'??諛뺤옄 鍮좊Ⅸ' 寃곕쭚?대떎. ?몄빻???쒕툕 肄붿뒪???ㅼ뼇?? 由ы꽩 吏곹썑 3援ъ뿉?쒖쓽 怨쇨컧???꾩쭊 鍮덈룄瑜??뚰룺 ?믪씤?ㅻ㈃, 湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?⑥뵮 ?섏썡?댁쭊?? ?대? 媛뽰텣 ?곗븘???꾩뿉 寃곕쭚???띾룄媛 ?뱁엳硫? 洹몄쓽 ?대쫫? ??臾대???留덉?留??λ㈃?????먯＜ ?몃챸??寃껋씠??</p>
 
-            <h2 id="fans-community-lasting-trust">팬과 커뮤니티 — 오래 가는 신뢰</h2>
-            <p>그를 오래 응원하게 만드는 힘은 태도의 일관성이다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 배움을 먼저 말한다. 기록은 표가 되지만, 태도는 기억이 된다. 디미트로프의 이름이 세월을 건너 사랑받을 이유가 여기에 있다.</p>
+            <h2 id="fans-community-lasting-trust">?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː</h2>
+            <p>洹몃? ?ㅻ옒 ?묒썝?섍쾶 留뚮뱶???섏? ?쒕룄???쇨??깆씠?? ?닿린???좎뿉??媛먯궗???쒖꽌瑜?吏?ㅺ퀬, 吏???좎뿉??諛곗???癒쇱? 留먰븳?? 湲곕줉? ?쒓? ?섏?留? ?쒕룄??湲곗뼲???쒕떎. ?붾??몃줈?꾩쓽 ?대쫫???몄썡??嫄대꼫 ?щ옉諛쏆쓣 ?댁쑀媛 ?ш린???덈떎.</p>
           </div>
 
           {/* Related Links */}
           <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
             <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-              📚 관련 자료
+              ?뱴 愿???먮즺
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">내부 링크</h4>
+                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">?대? 留곹겕</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="/players" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🏆 선수 프로필</Link></li>
-                  <li><Link href="/utility/ntrp-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎯 실력 테스트</Link></li>
-                  <li><Link href="/utility/play-style-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎾 플레이 스타일 테스트</Link></li>
+                  <li><Link href="/players" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?룇 ?좎닔 ?꾨줈??/Link></li>
+                  <li><Link href="/utility/ntrp-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?렞 ?ㅻ젰 ?뚯뒪??/Link></li>
+                  <li><Link href="/utility/play-style-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?렱 ?뚮젅???ㅽ????뚯뒪??/Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">외부 자료</h4>
+                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">?몃? ?먮즺</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">ATP 투어 공식 사이트</a></li>
-                  <li><a href="https://en.wikipedia.org/wiki/Grigor_Dimitrov" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">위키피디아 프로필</a></li>
+                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">ATP ?ъ뼱 怨듭떇 ?ъ씠??/a></li>
+                  <li><a href="https://en.wikipedia.org/wiki/Grigor_Dimitrov" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?꾪궎?쇰뵒???꾨줈??/a></li>
                 </ul>
               </div>
             </div>
@@ -171,9 +171,9 @@ export default function GrigorDimitrovBlogPost() {
                 <RelatedPosts 
             currentSlug="grigor-dimitrov" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '그리고르 디미트로프', '선수 프로필', '스토리', '불가리아']} 
+            tags={['?뚮땲??, '洹몃━怨좊Ⅴ ?붾??몃줈??, '?좎닔 ?꾨줈??, '?ㅽ넗由?, '遺덇?由ъ븘']} 
           />
 
           <CTA />

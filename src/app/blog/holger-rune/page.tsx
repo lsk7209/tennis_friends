@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '홀거 루네 선수 프로필과 스토리',
-  description: '덴마크 출신 홀거 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
-  keywords: ['테니스', '홀거 루네', '선수 프로필', '스토리', '덴마크'],
+  title: '?嫄?猷⑤꽕 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '?대쭏??異쒖떊 ?嫄?猷⑤꽕???깆옣 諛곌꼍, 怨듦꺽??由ы꽩怨?蹂二? 媛먯젙쨌由щ벉 愿由? ?쇱씠踰?援щ룄? ?욎쑝濡쒖쓽 怨쇱젣瑜?源딆씠 ?덇쾶 ?ㅻ９?덈떎.',
+  keywords: ['?뚮땲??, '?嫄?猷⑤꽕', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?대쭏??],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/holger-rune',
   },
   openGraph: {
-    title: '홀거 루네 선수 프로필과 스토리',
-    description: '덴마크 출신 홀거 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
+    title: '?嫄?猷⑤꽕 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?대쭏??異쒖떊 ?嫄?猷⑤꽕???깆옣 諛곌꼍, 怨듦꺽??由ы꽩怨?蹂二? 媛먯젙쨌由щ벉 愿由? ?쇱씠踰?援щ룄? ?욎쑝濡쒖쓽 怨쇱젣瑜?源딆씠 ?덇쾶 ?ㅻ９?덈떎.',
     url: 'https://tennisfriends.co.kr/blog/holger-rune',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '홀거 루네 선수 프로필과 스토리',
-    description: '덴마크 출신 홀거 루네의 성장 배경, 공격적 리턴과 변주, 감정·리듬 관리, 라이벌 구도와 앞으로의 과제를 깊이 있게 다룹니다.',
+    title: '?嫄?猷⑤꽕 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?대쭏??異쒖떊 ?嫄?猷⑤꽕???깆옣 諛곌꼍, 怨듦꺽??由ы꽩怨?蹂二? 媛먯젙쨌由щ벉 愿由? ?쇱씠踰?援щ룄? ?욎쑝濡쒖쓽 怨쇱젣瑜?源딆씠 ?덇쾶 ?ㅻ９?덈떎.',
   },
   robots: {
     index: true,
@@ -34,39 +34,39 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-indoor-court-density', text: '성장 배경 — 북유럽의 실내 코트가 만든 밀도', depth: 2 },
-  { id: 'playing-style-return-start-variation-finish', text: '경기 스타일 — 리턴으로 시작해 변주로 마무리', depth: 2 },
-  { id: 'rhythm-emotion-handle-heat-technique', text: '리듬과 감정 — 뜨거움을 다루는 기술', depth: 2 },
-  { id: 'experience-transition-indoor-hard-clay-grass', text: '경험과 전환 — 실내 하드의 속도, 점토의 인내, 잔디의 간결함', depth: 2 },
-  { id: 'human-aspects-honesty-tenacity-made-image', text: '인간적인 면모 — 솔직함과 집요함이 만든 이미지', depth: 2 },
-  { id: 'nationality-culture-calmness-above-boldness', text: '국적과 문화 — 차분함 위의 대담함', depth: 2 },
-  { id: 'relationships-rivals-same-generation-different', text: '관계와 라이벌 — 같은 세대, 다른 문장', depth: 2 },
-  { id: 'famous-scenes-down-line-opens-window', text: '명장면 — 다운더라인이 열어젖히는 창', depth: 2 },
-  { id: 'equipment-details-tension-contact-adjustment', text: '장비와 디테일 — 텐션과 접점의 미세 조정', depth: 2 },
-  { id: 'future-challenges-mistake-range-narrowing', text: '앞으로의 과제 — 실수의 폭을 좁히는 결말의 기술', depth: 2 },
-  { id: 'fans-community-lasting-honesty', text: '팬과 커뮤니티 — 오래 남는 솔직함', depth: 2 },
+  { id: 'growth-background-indoor-court-density', text: '?깆옣 諛곌꼍 ??遺곸쑀?쎌쓽 ?ㅻ궡 肄뷀듃媛 留뚮뱺 諛??, depth: 2 },
+  { id: 'playing-style-return-start-variation-finish', text: '寃쎄린 ?ㅽ?????由ы꽩?쇰줈 ?쒖옉??蹂二쇰줈 留덈Т由?, depth: 2 },
+  { id: 'rhythm-emotion-handle-heat-technique', text: '由щ벉怨?媛먯젙 ???④굅????ㅻ（??湲곗닠', depth: 2 },
+  { id: 'experience-transition-indoor-hard-clay-grass', text: '寃쏀뿕怨??꾪솚 ???ㅻ궡 ?섎뱶???띾룄, ?먰넗???몃궡, ?붾뵒??媛꾧껐??, depth: 2 },
+  { id: 'human-aspects-honesty-tenacity-made-image', text: '?멸컙?곸씤 硫대え ???붿쭅?④낵 吏묒슂?⑥씠 留뚮뱺 ?대?吏', depth: 2 },
+  { id: 'nationality-culture-calmness-above-boldness', text: '援?쟻怨?臾명솕 ??李⑤텇???꾩쓽 ??댄븿', depth: 2 },
+  { id: 'relationships-rivals-same-generation-different', text: '愿怨꾩? ?쇱씠踰???媛숈? ?몃?, ?ㅻⅨ 臾몄옣', depth: 2 },
+  { id: 'famous-scenes-down-line-opens-window', text: '紐낆옣硫????ㅼ슫?붾씪?몄씠 ?댁뼱?뽱엳??李?, depth: 2 },
+  { id: 'equipment-details-tension-contact-adjustment', text: '?λ퉬? ?뷀뀒?????먯뀡怨??묒젏??誘몄꽭 議곗젙', depth: 2 },
+  { id: 'future-challenges-mistake-range-narrowing', text: '?욎쑝濡쒖쓽 怨쇱젣 ???ㅼ닔????쓣 醫곹엳??寃곕쭚??湲곗닠', depth: 2 },
+  { id: 'fans-community-lasting-honesty', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 ?⑤뒗 ?붿쭅??, depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '홀거 루네의 경기 스타일은 어떤가요?',
-    a: '예측 불가한 변주와 공격적인 리턴, 순간 가속이 특징입니다. 리턴으로 시작해 변주로 마무리하며, 공격적인 리턴과 드롭샷, 하프코트 진입으로 흐름을 뒤틀어 큰 무대에서 존재감을 증명합니다.'
+    q: '?嫄?猷⑤꽕??寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
+    a: '?덉륫 遺덇???蹂二쇱? 怨듦꺽?곸씤 由ы꽩, ?쒓컙 媛?띿씠 ?뱀쭠?낅땲?? 由ы꽩?쇰줈 ?쒖옉??蹂二쇰줈 留덈Т由ы븯硫? 怨듦꺽?곸씤 由ы꽩怨??쒕∼?? ?섑봽肄뷀듃 吏꾩엯?쇰줈 ?먮쫫???ㅽ?????臾대??먯꽌 議댁옱媛먯쓣 利앸챸?⑸땲??'
   },
   {
-    q: '루네의 성장 배경은 어떤가요?',
-    a: '북유럽의 긴 겨울과 실내 코트의 규칙 속에서 시작했습니다. 반복과 기록을 중시했고, 하루 훈련을 기술·전술·멘탈로 나누어 체크리스트를 채웠습니다. 표면이 달라져도 자신이 통제할 수 있는 요소에 집중하는 습관을 만들었습니다.'
+    q: '猷⑤꽕???깆옣 諛곌꼍? ?대뼡媛??',
+    a: '遺곸쑀?쎌쓽 湲?寃⑥슱怨??ㅻ궡 肄뷀듃??洹쒖튃 ?띿뿉???쒖옉?덉뒿?덈떎. 諛섎났怨?湲곕줉??以묒떆?덇퀬, ?섎（ ?덈젴??湲곗닠쨌?꾩닠쨌硫섑깉濡??섎늻??泥댄겕由ъ뒪?몃? 梨꾩썱?듬땲?? ?쒕㈃???щ씪?몃룄 ?먯떊???듭젣?????덈뒗 ?붿냼??吏묒쨷?섎뒗 ?듦???留뚮뱾?덉뒿?덈떎.'
   },
   {
-    q: '루네의 강점은 무엇인가요?',
-    a: '불꽃과 계산 사이의 대담함이 최대 강점입니다. 공격적인 리턴과 예측 불가한 변주로 흐름을 흔들며, 백핸드 다운더라인은 결정적 순간마다 칼처럼 들어갑니다. 순간 가속으로 경기를 역전시킬 수 있는 능력이 뛰어납니다.'
+    q: '猷⑤꽕??媛뺤젏? 臾댁뾿?멸???',
+    a: '遺덇퐙怨?怨꾩궛 ?ъ씠????댄븿??理쒕? 媛뺤젏?낅땲?? 怨듦꺽?곸씤 由ы꽩怨??덉륫 遺덇???蹂二쇰줈 ?먮쫫???붾뱾硫? 諛깊빖???ㅼ슫?붾씪?몄? 寃곗젙???쒓컙留덈떎 移쇱쿂???ㅼ뼱媛묐땲?? ?쒓컙 媛?띿쑝濡?寃쎄린瑜???쟾?쒗궗 ???덈뒗 ?λ젰???곗뼱?⑸땲??'
   },
   {
-    q: '루네의 인간적인 면모는 어떤가요?',
-    a: '솔직함과 집요함이 특징입니다. 인터뷰는 직선적이며, 잘된 날엔 준비가 맞았다고 말하고, 부족한 날엔 수정 항목을 또박또박 적습니다. 공격적인 성향과 책임의 언어가 동시에 보이는 지점이 그의 색깔을 선명하게 합니다.'
+    q: '猷⑤꽕???멸컙?곸씤 硫대え???대뼡媛??',
+    a: '?붿쭅?④낵 吏묒슂?⑥씠 ?뱀쭠?낅땲?? ?명꽣酉곕뒗 吏곸꽑?곸씠硫? ?섎맂 ?좎뿏 以鍮꾧? 留욎븯?ㅺ퀬 留먰븯怨? 遺議깊븳 ?좎뿏 ?섏젙 ??ぉ???먮컯?먮컯 ?곸뒿?덈떎. 怨듦꺽?곸씤 ?깊뼢怨?梨낆엫???몄뼱媛 ?숈떆??蹂댁씠??吏?먯씠 洹몄쓽 ?됯퉼???좊챸?섍쾶 ?⑸땲??'
   },
   {
-    q: '루네의 미래 전망은 어떻게 되나요?',
-    a: '실수의 폭을 좁히는 결말의 기술이 과제입니다. 세컨드 서브 코스 다양화, 리턴 직후 3구에서의 전진 타이밍 개선, 하프코트 마무리 선택지를 고정하면 긴 경기에서 에너지 관리가 쉬워질 것입니다.'
+    q: '猷⑤꽕??誘몃옒 ?꾨쭩? ?대뼸寃??섎굹??',
+    a: '?ㅼ닔????쓣 醫곹엳??寃곕쭚??湲곗닠??怨쇱젣?낅땲?? ?몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?? 由ы꽩 吏곹썑 3援ъ뿉?쒖쓽 ?꾩쭊 ??대컢 媛쒖꽑, ?섑봽肄뷀듃 留덈Т由??좏깮吏瑜?怨좎젙?섎㈃ 湲?寃쎄린?먯꽌 ?먮꼫吏 愿由ш? ?ъ썙吏?寃껋엯?덈떎.'
   },
 ];
 
@@ -74,24 +74,24 @@ export default function HolgerRuneBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article slug="holger-rune" date="2024-01-01"
-        title="홀거 루네 — 불꽃과 계산 사이의 대담함"
-        excerpt="공격적인 리턴과 예측 불가한 변주로 흐름을 흔드는 홀거 루네의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
+        title="?嫄?猷⑤꽕 ??遺덇퐙怨?怨꾩궛 ?ъ씠????댄븿"
+        excerpt="怨듦꺽?곸씤 由ы꽩怨??덉륫 遺덇???蹂二쇰줈 ?먮쫫???붾뱶???嫄?猷⑤꽕???깆옣, ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜????몄쑝濡?"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '홀거 루네', '선수 프로필', '스토리', '덴마크'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
+            {['?뚮땲??, '?嫄?猷⑤꽕', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?대쭏??].map((tag) => (
+              <Badge key=?뚮땲???좎닔 variant="secondary" className="text-xs">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
 
           {/* Reading Time & Date */}
           <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-8">
-            <span>📖 8분 읽기</span>
-            <span>•</span>
-            <span>2025년 8월 11일</span>
+            <span>?뱰 8遺??쎄린</span>
+            <span>??/span>
+            <span>2025??8??11??/span>
           </div>
 
           {/* Table of Contents */}
@@ -99,63 +99,63 @@ export default function HolgerRuneBlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h1 id="holger-rune-fire-calculated-boldness">홀거 루네 — 불꽃과 계산 사이의 대담함</h1>
+            <h1 id="holger-rune-fire-calculated-boldness">?嫄?猷⑤꽕 ??遺덇퐙怨?怨꾩궛 ?ъ씠????댄븿</h1>
 
-            <p><strong>직답:</strong> 홀거 루네(Holger Rune)는 예측 불가한 변주와 공격적인 리턴, 순간 가속으로 흐름을 뒤틀며 큰 무대에서 존재감을 증명해 온 덴마크의 간판 선수다.</p>
+            <p><strong>吏곷떟:</strong> ?嫄?猷⑤꽕(Holger Rune)???덉륫 遺덇???蹂二쇱? 怨듦꺽?곸씤 由ы꽩, ?쒓컙 媛?띿쑝濡??먮쫫???ㅽ?硫???臾대??먯꽌 議댁옱媛먯쓣 利앸챸?????대쭏?ъ쓽 媛꾪뙋 ?좎닔??</p>
 
-            <h2 id="growth-background-indoor-court-density">성장 배경 — 북유럽의 실내 코트가 만든 밀도</h2>
-            <p>루네의 어린 시절은 긴 겨울과 실내 코트의 규칙에서 시작됐다. 코칭팀은 반복과 기록을 중시했고, 하루 훈련을 '기술·전술·멘탈' 세 칸으로 나누어 체크리스트를 채웠다. 실내의 균일한 바운드에서 그는 타점의 오차를 줄이고, 라켓면 각도를 미세하게 바꾸는 감각을 익혔다. 야외로 나가 바람과 온도 차가 커지면, 루네는 스윙의 크기를 줄여 타점을 앞에 두는 방식으로 적응했다. 이 경험은 표면이 달라져도 자신이 통제할 수 있는 요소에 집중하는 습관을 만들었다. 승부가 흔들릴 때일수록 그는 기록으로 돌아가 수정 항목을 한 줄로 요약했다. "토스 낮춤, 리듬 간결."</p>
+            <h2 id="growth-background-indoor-court-density">?깆옣 諛곌꼍 ??遺곸쑀?쎌쓽 ?ㅻ궡 肄뷀듃媛 留뚮뱺 諛??/h2>
+            <p>猷⑤꽕???대┛ ?쒖젅? 湲?寃⑥슱怨??ㅻ궡 肄뷀듃??洹쒖튃?먯꽌 ?쒖옉?먮떎. 肄붿묶?? 諛섎났怨?湲곕줉??以묒떆?덇퀬, ?섎（ ?덈젴??'湲곗닠쨌?꾩닠쨌硫섑깉' ??移몄쑝濡??섎늻??泥댄겕由ъ뒪?몃? 梨꾩썱?? ?ㅻ궡??洹좎씪??諛붿슫?쒖뿉??洹몃뒗 ??먯쓽 ?ㅼ감瑜?以꾩씠怨? ?쇱폆硫?媛곷룄瑜?誘몄꽭?섍쾶 諛붽씀??媛먭컖???듯삍?? ?쇱쇅濡??섍? 諛붾엺怨??⑤룄 李④? 而ㅼ?硫? 猷⑤꽕???ㅼ쐷???ш린瑜?以꾩뿬 ??먯쓣 ?욎뿉 ?먮뒗 諛⑹떇?쇰줈 ?곸쓳?덈떎. ??寃쏀뿕? ?쒕㈃???щ씪?몃룄 ?먯떊???듭젣?????덈뒗 ?붿냼??吏묒쨷?섎뒗 ?듦???留뚮뱾?덈떎. ?밸?媛 ?붾뱾由??뚯씪?섎줉 洹몃뒗 湲곕줉?쇰줈 ?뚯븘媛 ?섏젙 ??ぉ????以꾨줈 ?붿빟?덈떎. "?좎뒪 ??땄, 由щ벉 媛꾧껐."</p>
 
-            <h2 id="playing-style-return-start-variation-finish">경기 스타일 — 리턴으로 시작해 변주로 마무리</h2>
-            <p>루네의 경기는 리턴에서 공격이 시작된다. 상대 서브의 궤적을 빠르게 읽어 전진 리턴을 시도하고, 첫 스트로크에서 코스를 과감히 좁힌다. 백핸드 다운더라인은 결정적 순간마다 칼처럼 들어가고, 포핸드는 스핀과 플랫을 섞어 네트를 넉넉히 넘기면서도 깊이를 확보한다. 짧은 볼이 보이면 하프코트 진입을 주저하지 않고, 네트 앞에서 한 박자 빠른 발리로 결말을 앞당긴다. 드롭샷은 단순한 장식이 아니다. 템포를 끊고 리듬을 다시 잡아오는 '전략적 쉼표'로 사용된다. 그래서 루네의 랠리는 길게 간 듯하다가도 갑자기 방향이 꺾이며, 상대는 같은 구역을 서로 다른 속도로 방어해야 한다.</p>
+            <h2 id="playing-style-return-start-variation-finish">寃쎄린 ?ㅽ?????由ы꽩?쇰줈 ?쒖옉??蹂二쇰줈 留덈Т由?/h2>
+            <p>猷⑤꽕??寃쎄린??由ы꽩?먯꽌 怨듦꺽???쒖옉?쒕떎. ?곷? ?쒕툕??沅ㅼ쟻??鍮좊Ⅴ寃??쎌뼱 ?꾩쭊 由ы꽩???쒕룄?섍퀬, 泥??ㅽ듃濡쒗겕?먯꽌 肄붿뒪瑜?怨쇨컧??醫곹엺?? 諛깊빖???ㅼ슫?붾씪?몄? 寃곗젙???쒓컙留덈떎 移쇱쿂???ㅼ뼱媛怨? ?ы빖?쒕뒗 ?ㅽ?怨??뚮옯???욎뼱 ?ㅽ듃瑜??됰꼮???섍린硫댁꽌??源딆씠瑜??뺣낫?쒕떎. 吏㏃? 蹂쇱씠 蹂댁씠硫??섑봽肄뷀듃 吏꾩엯??二쇱??섏? ?딄퀬, ?ㅽ듃 ?욎뿉????諛뺤옄 鍮좊Ⅸ 諛쒕━濡?寃곕쭚???욌떦湲대떎. ?쒕∼?룹? ?⑥닚???μ떇???꾨땲?? ?쒗룷瑜??딄퀬 由щ벉???ㅼ떆 ?≪븘?ㅻ뒗 '?꾨왂???쇳몴'濡??ъ슜?쒕떎. 洹몃옒??猷⑤꽕???좊━??湲멸쾶 媛???븯?ㅺ???媛묒옄湲?諛⑺뼢??爰얠씠硫? ?곷???媛숈? 援ъ뿭???쒕줈 ?ㅻⅨ ?띾룄濡?諛⑹뼱?댁빞 ?쒕떎.</p>
 
-            <h2 id="rhythm-emotion-handle-heat-technique">리듬과 감정 — 뜨거움을 다루는 기술</h2>
-            <p>초창기에는 감정의 진폭이 실수로 이어지는 장면이 적지 않았지만, 최근의 루네는 포인트 사이 루틴으로 파고를 낮춘다. 라켓 스트링을 한 번 훑고 두 번의 깊은 호흡을 고정한 뒤, 베이스라인을 일정한 속도로 밟는다. 스코어가 불리할 때도 루틴의 길이를 바꾸지 않아 심박이 갑자기 치솟지 않는다. 타이브레이크 초반에는 높이·길이를 확인하는 안전한 구질을 선택하고, 세 번째 포인트부터 코스를 얇게 써 균형을 흔든다. 뜨거움은 사라지지 않았지만, 이제는 방향을 가지고 폭발한다.</p>
+            <h2 id="rhythm-emotion-handle-heat-technique">由щ벉怨?媛먯젙 ???④굅????ㅻ（??湲곗닠</h2>
+            <p>珥덉갹湲곗뿉??媛먯젙??吏꾪룺???ㅼ닔濡??댁뼱吏???λ㈃???곸? ?딆븯吏留? 理쒓렐??猷⑤꽕???ъ씤???ъ씠 猷⑦떞?쇰줈 ?뚭퀬瑜???텣?? ?쇱폆 ?ㅽ듃留곸쓣 ??踰??묎퀬 ??踰덉쓽 源딆? ?명씉??怨좎젙???? 踰좎씠?ㅻ씪?몄쓣 ?쇱젙???띾룄濡?諛잙뒗?? ?ㅼ퐫?닿? 遺덈━???뚮룄 猷⑦떞??湲몄씠瑜?諛붽씀吏 ?딆븘 ?щ컯??媛묒옄湲?移섏넖吏 ?딅뒗?? ??대툕?덉씠??珥덈컲?먮뒗 ?믪씠쨌湲몄씠瑜??뺤씤?섎뒗 ?덉쟾??援ъ쭏???좏깮?섍퀬, ??踰덉㎏ ?ъ씤?몃???肄붿뒪瑜??뉕쾶 ??洹좏삎???붾뱺?? ?④굅?? ?щ씪吏吏 ?딆븯吏留? ?댁젣??諛⑺뼢??媛吏怨???컻?쒕떎.</p>
 
-            <h2 id="experience-transition-indoor-hard-clay-grass">경험과 전환 — 실내 하드의 속도, 점토의 인내, 잔디의 간결함</h2>
-            <p>실내 하드에서는 첫 두 타구의 속도를 끌어올려 상대 시간을 빼앗는다. 리턴 포지션을 반 발 앞당기고, 3구 패턴을 단순화해 실수를 줄인다. 점토에서는 회전을 늘려 낙구를 안정시키고, 네 번째나 다섯 번째 스트로크에서 드롭과 슬라이스를 섞어 템포를 뒤틀며 길어진 랠리를 자신에게 유리한 국면으로 끌고 온다. 잔디에서는 낮은 자세와 짧은 백스윙으로 타점을 앞에 고정하고, 슬라이스 리턴을 섞어 초반 속도를 조절한다. 표면이 달라져도 원칙은 같다. 흐름을 먼저 안정시키고, 열린 순간에만 칼을 꺼낸다.</p>
+            <h2 id="experience-transition-indoor-hard-clay-grass">寃쏀뿕怨??꾪솚 ???ㅻ궡 ?섎뱶???띾룄, ?먰넗???몃궡, ?붾뵒??媛꾧껐??/h2>
+            <p>?ㅻ궡 ?섎뱶?먯꽌??泥????援ъ쓽 ?띾룄瑜??뚯뼱?щ젮 ?곷? ?쒓컙??鍮쇱븮?붾떎. 由ы꽩 ?ъ??섏쓣 諛?諛??욌떦湲곌퀬, 3援??⑦꽩???⑥닚?뷀빐 ?ㅼ닔瑜?以꾩씤?? ?먰넗?먯꽌???뚯쟾???섎젮 ?숆뎄瑜??덉젙?쒗궎怨? ??踰덉㎏???ㅼ꽢 踰덉㎏ ?ㅽ듃濡쒗겕?먯꽌 ?쒕∼怨??щ씪?댁뒪瑜??욎뼱 ?쒗룷瑜??ㅽ?硫?湲몄뼱吏??좊━瑜??먯떊?먭쾶 ?좊━??援?㈃?쇰줈 ?뚭퀬 ?⑤떎. ?붾뵒?먯꽌????? ?먯꽭? 吏㏃? 諛깆뒪?숈쑝濡???먯쓣 ?욎뿉 怨좎젙?섍퀬, ?щ씪?댁뒪 由ы꽩???욎뼱 珥덈컲 ?띾룄瑜?議곗젅?쒕떎. ?쒕㈃???щ씪?몃룄 ?먯튃? 媛숇떎. ?먮쫫??癒쇱? ?덉젙?쒗궎怨? ?대┛ ?쒓컙?먮쭔 移쇱쓣 爰쇰궦??</p>
 
-            <h2 id="human-aspects-honesty-tenacity-made-image">인간적인 면모 — 솔직함과 집요함이 만든 이미지</h2>
-            <p>루네의 인터뷰는 직선적이다. 잘된 날엔 준비가 맞았다고 말하고, 부족한 날엔 수정 항목을 또박또박 적는다. 팀과의 대화에서도 근거를 먼저 찾고, 계획을 생활의 규칙으로 만든다. 팬과의 소통에서는 직설 속의 유머가 드러나며, 경기장 스태프를 향한 짧은 인사도 빠지지 않는다. 논란을 부르는 장면이 있을 때에도 그는 해명과 수정을 동시에 가져가려 한다. 공격적인 성향과 책임의 언어가 동시에 보이는 지점이 그의 색깔을 선명하게 한다.</p>
+            <h2 id="human-aspects-honesty-tenacity-made-image">?멸컙?곸씤 硫대え ???붿쭅?④낵 吏묒슂?⑥씠 留뚮뱺 ?대?吏</h2>
+            <p>猷⑤꽕???명꽣酉곕뒗 吏곸꽑?곸씠?? ?섎맂 ?좎뿏 以鍮꾧? 留욎븯?ㅺ퀬 留먰븯怨? 遺議깊븳 ?좎뿏 ?섏젙 ??ぉ???먮컯?먮컯 ?곷뒗?? ?怨쇱쓽 ??붿뿉?쒕룄 洹쇨굅瑜?癒쇱? 李얘퀬, 怨꾪쉷???앺솢??洹쒖튃?쇰줈 留뚮뱺?? ?ш낵???뚰넻?먯꽌??吏곸꽕 ?띿쓽 ?좊㉧媛 ?쒕윭?섎ŉ, 寃쎄린???ㅽ깭?꾨? ?ν븳 吏㏃? ?몄궗??鍮좎?吏 ?딅뒗?? ?쇰???遺瑜대뒗 ?λ㈃???덉쓣 ?뚯뿉??洹몃뒗 ?대챸怨??섏젙???숈떆??媛?멸????쒕떎. 怨듦꺽?곸씤 ?깊뼢怨?梨낆엫???몄뼱媛 ?숈떆??蹂댁씠??吏?먯씠 洹몄쓽 ?됯퉼???좊챸?섍쾶 ?쒕떎.</p>
 
-            <h2 id="nationality-culture-calmness-above-boldness">국적과 문화 — 차분함 위의 대담함</h2>
-            <p>덴마크 스포츠 문화는 절제와 효율을 강조한다. 루네는 이 바탕 위에 대담함을 얹는다. 큰 제스처보다 정확한 실행, 장식보다 결론을 중시하지만, 찬스가 열리면 주저 없이 각을 좁힌다. 관중의 소음이나 상대의 과열된 퍼포먼스에도 루틴을 유지하며, 국기를 달고 코트에 들어설 때는 개인의 승부를 넘어 대표 선수로서의 품격을 잊지 않으려 한다.</p>
+            <h2 id="nationality-culture-calmness-above-boldness">援?쟻怨?臾명솕 ??李⑤텇???꾩쓽 ??댄븿</h2>
+            <p>?대쭏???ㅽ룷痢?臾명솕???덉젣? ?⑥쑉??媛뺤“?쒕떎. 猷⑤꽕????諛뷀깢 ?꾩뿉 ??댄븿???밸뒗?? ???쒖뒪泥섎낫???뺥솗???ㅽ뻾, ?μ떇蹂대떎 寃곕줎??以묒떆?섏?留? 李ъ뒪媛 ?대━硫?二쇱? ?놁씠 媛곸쓣 醫곹엺?? 愿以묒쓽 ?뚯쓬?대굹 ?곷???怨쇱뿴???쇳룷癒쇱뒪?먮룄 猷⑦떞???좎??섎ŉ, 援?린瑜??ш퀬 肄뷀듃???ㅼ뼱???뚮뒗 媛쒖씤???밸?瑜??섏뼱 ????좎닔濡쒖꽌???덇꺽???딆? ?딆쑝???쒕떎.</p>
 
-            <h2 id="relationships-rivals-same-generation-different">관계와 라이벌 — 같은 세대, 다른 문장</h2>
-            <p>동세대 강자들과의 승부에서 루네는 질문과 답의 교환을 즐긴다. 강한 톱스핀으로 밀어붙이는 상대에게는 라켓면을 더 닫아 플랫에 가깝게 맞서고, 네트 대시를 서두르는 유형에겐 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만든다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 속도를 바꿔 같은 구역을 다른 느낌으로 찌른다. 이 미세 조정이 후반으로 갈수록 큰 차이를 만든다. 라이벌의 강점을 인정하되, 그 강점이 통하는 구간을 줄여 가는 과정이 곧 그의 전술 노트다.</p>
+            <h2 id="relationships-rivals-same-generation-different">愿怨꾩? ?쇱씠踰???媛숈? ?몃?, ?ㅻⅨ 臾몄옣</h2>
+            <p>?숈꽭? 媛뺤옄?ㅺ낵???밸??먯꽌 猷⑤꽕??吏덈Ц怨??듭쓽 援먰솚??利먭릿?? 媛뺥븳 ?깆뒪??쇰줈 諛?대텤?대뒗 ?곷??먭쾶???쇱폆硫댁쓣 ???レ븘 ?뚮옯??媛源앷쾶 留욎꽌怨? ?ㅽ듃 ??쒕? ?쒕몢瑜대뒗 ?좏삎?먭쾺 ??? ?듦낵?룰낵 源딆? 濡쒕툕瑜?踰덇컝??蹂댁뿬 泥??쒕룄瑜?二쇱??섍쾶 留뚮뱺?? 媛숈? ?⑦꽩????踰??덉슜?섎㈃ ??踰덉㎏?먮뒗 ??먭낵 ?띾룄瑜?諛붽퓭 媛숈? 援ъ뿭???ㅻⅨ ?먮굦?쇰줈 李뚮Ⅸ?? ??誘몄꽭 議곗젙???꾨컲?쇰줈 媛덉닔濡???李⑥씠瑜?留뚮뱺?? ?쇱씠踰뚯쓽 媛뺤젏???몄젙?섎릺, 洹?媛뺤젏???듯븯??援ш컙??以꾩뿬 媛??怨쇱젙??怨?洹몄쓽 ?꾩닠 ?명듃??</p>
 
-            <h2 id="famous-scenes-down-line-opens-window">명장면 — 다운더라인이 열어젖히는 창</h2>
-            <p>브레이크 포인트, 긴 랠리 끝에 코트 중앙이 잠시 비는 순간. 루네는 백핸드를 몸 가까이 끌어당긴 뒤 라인으로 단호하게 접는다. 공이 흰 선을 스치며 빠져나가면 관중의 숨이 멎는다. 그는 표정을 바꾸지 않은 채 네트를 향해 두 걸음 더 들어간다. 준비와 결단, 그리고 설명 가능한 과감함이 한 장면에 응축된다.</p>
+            <h2 id="famous-scenes-down-line-opens-window">紐낆옣硫????ㅼ슫?붾씪?몄씠 ?댁뼱?뽱엳??李?/h2>
+            <p>釉뚮젅?댄겕 ?ъ씤?? 湲??좊━ ?앹뿉 肄뷀듃 以묒븰???좎떆 鍮꾨뒗 ?쒓컙. 猷⑤꽕??諛깊빖?쒕? 紐?媛源뚯씠 ?뚯뼱?밴릿 ???쇱씤?쇰줈 ?⑦샇?섍쾶 ?묐뒗?? 怨듭씠 ???좎쓣 ?ㅼ튂硫?鍮좎졇?섍?硫?愿以묒쓽 ?⑥씠 硫롫뒗?? 洹몃뒗 ?쒖젙??諛붽씀吏 ?딆? 梨??ㅽ듃瑜??ν빐 ??嫄몄쓬 ???ㅼ뼱媛꾨떎. 以鍮꾩? 寃곕떒, 洹몃━怨??ㅻ챸 媛?ν븳 怨쇨컧?⑥씠 ???λ㈃???묒텞?쒕떎.</p>
 
-            <h2 id="equipment-details-tension-contact-adjustment">장비와 디테일 — 텐션과 접점의 미세 조정</h2>
-            <p>루네는 라켓 텐션을 대회장 기온과 공의 반발에 맞춰 소폭 조정한다. 컨디션이 무거운 날엔 텐션을 낮춰 체공 시간을 확보하고, 상대 스피드가 빠른 실내에서는 텐션을 올려 접점의 흔들림을 줄인다. 신발은 측면 지지력을 중시해 급가속·급정지에서도 발목의 흔들림을 최소화한다. 장비가 플레이를 지배하도록 두지 않고, 플레이가 요구하는 만큼만 장비를 조정한다는 철학이 일관된다.</p>
+            <h2 id="equipment-details-tension-contact-adjustment">?λ퉬? ?뷀뀒?????먯뀡怨??묒젏??誘몄꽭 議곗젙</h2>
+            <p>猷⑤꽕???쇱폆 ?먯뀡????뚯옣 湲곗삩怨?怨듭쓽 諛섎컻??留욎떠 ?뚰룺 議곗젙?쒕떎. 而⑤뵒?섏씠 臾닿굅???좎뿏 ?먯뀡????떠 泥닿났 ?쒓컙???뺣낫?섍퀬, ?곷? ?ㅽ뵾?쒓? 鍮좊Ⅸ ?ㅻ궡?먯꽌???먯뀡???щ젮 ?묒젏???붾뱾由쇱쓣 以꾩씤?? ?좊컻? 痢〓㈃ 吏吏?μ쓣 以묒떆??湲됯??띉룰툒?뺤??먯꽌??諛쒕ぉ???붾뱾由쇱쓣 理쒖냼?뷀븳?? ?λ퉬媛 ?뚮젅?대? 吏諛고븯?꾨줉 ?먯? ?딄퀬, ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留??λ퉬瑜?議곗젙?쒕떎??泥좏븰???쇨??쒕떎.</p>
 
-            <h2 id="future-challenges-mistake-range-narrowing">앞으로의 과제 — 실수의 폭을 좁히는 결말의 기술</h2>
-            <p>루네가 더 높이 도약하기 위한 열쇠는 불필요한 위험을 덜어내는 결말의 간결함이다. 세컨드 서브의 코스 다양화, 리턴 직후 3구에서의 전진 타이밍 개선, 하프코트 마무리의 선택지를 한두 개로 고정한다면, 긴 경기에서 에너지 관리가 쉬워질 것이다. 이미 갖춘 공격성과 대담함 위에 '실수의 폭을 좁히는 기술'이 더해질 때, 그의 이름은 큰 무대의 마지막 장면에 더 자주 자리할 가능성이 크다.</p>
+            <h2 id="future-challenges-mistake-range-narrowing">?욎쑝濡쒖쓽 怨쇱젣 ???ㅼ닔????쓣 醫곹엳??寃곕쭚??湲곗닠</h2>
+            <p>猷⑤꽕媛 ???믪씠 ?꾩빟?섍린 ?꾪븳 ?댁뇿??遺덊븘?뷀븳 ?꾪뿕???쒖뼱?대뒗 寃곕쭚??媛꾧껐?⑥씠?? ?몄빻???쒕툕??肄붿뒪 ?ㅼ뼇?? 由ы꽩 吏곹썑 3援ъ뿉?쒖쓽 ?꾩쭊 ??대컢 媛쒖꽑, ?섑봽肄뷀듃 留덈Т由ъ쓽 ?좏깮吏瑜??쒕몢 媛쒕줈 怨좎젙?쒕떎硫? 湲?寃쎄린?먯꽌 ?먮꼫吏 愿由ш? ?ъ썙吏?寃껋씠?? ?대? 媛뽰텣 怨듦꺽?깃낵 ??댄븿 ?꾩뿉 '?ㅼ닔????쓣 醫곹엳??湲곗닠'???뷀빐吏??? 洹몄쓽 ?대쫫? ??臾대???留덉?留??λ㈃?????먯＜ ?먮━??媛?μ꽦???щ떎.</p>
 
-            <h2 id="fans-community-lasting-honesty">팬과 커뮤니티 — 오래 남는 솔직함</h2>
-            <p>그를 오래 응원하게 만드는 것은 직설과 노력의 결합이다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말한다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 만든다. 기록은 표가 되지만, 태도는 기억이 된다. 루네의 테니스가 오래 사랑받을 이유가 바로 여기에 있다.</p>
+            <h2 id="fans-community-lasting-honesty">?ш낵 而ㅻ??덊떚 ???ㅻ옒 ?⑤뒗 ?붿쭅??/h2>
+            <p>洹몃? ?ㅻ옒 ?묒썝?섍쾶 留뚮뱶??寃껋? 吏곸꽕怨??몃젰??寃고빀?대떎. ?닿린???좎뿉??媛먯궗???쒖꽌瑜?吏?ㅺ퀬, 吏???좎뿉??梨낆엫??癒쇱? 留먰븳?? ?묒? ?쒖뒪泥섏? ?뺥솗???좏깮??紐⑥뿬 ???щ엺??珥덉긽??留뚮뱺?? 湲곕줉? ?쒓? ?섏?留? ?쒕룄??湲곗뼲???쒕떎. 猷⑤꽕???뚮땲?ㅺ? ?ㅻ옒 ?щ옉諛쏆쓣 ?댁쑀媛 諛붾줈 ?ш린???덈떎.</p>
           </div>
 
           {/* Related Links */}
           <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
             <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-              📚 관련 자료
+              ?뱴 愿???먮즺
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">내부 링크</h4>
+                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">?대? 留곹겕</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="/players" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🏆 선수 프로필</Link></li>
-                  <li><Link href="/utility/ntrp-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎯 실력 테스트</Link></li>
-                  <li><Link href="/utility/play-style-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎾 플레이 스타일 테스트</Link></li>
+                  <li><Link href="/players" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?룇 ?좎닔 ?꾨줈??/Link></li>
+                  <li><Link href="/utility/ntrp-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?렞 ?ㅻ젰 ?뚯뒪??/Link></li>
+                  <li><Link href="/utility/play-style-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?렱 ?뚮젅???ㅽ????뚯뒪??/Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">외부 자료</h4>
+                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">?몃? ?먮즺</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">ATP 투어 공식 사이트</a></li>
-                  <li><a href="https://en.wikipedia.org/wiki/Holger_Rune" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">위키피디아 프로필</a></li>
+                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">ATP ?ъ뼱 怨듭떇 ?ъ씠??/a></li>
+                  <li><a href="https://en.wikipedia.org/wiki/Holger_Rune" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?꾪궎?쇰뵒???꾨줈??/a></li>
                 </ul>
               </div>
             </div>
@@ -171,9 +171,9 @@ export default function HolgerRuneBlogPost() {
                 <RelatedPosts 
             currentSlug="holger-rune" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '홀거 루네', '선수 프로필', '스토리', '덴마크']} 
+            tags={['?뚮땲??, '?嫄?猷⑤꽕', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?대쭏??]} 
           />
 
           <CTA />

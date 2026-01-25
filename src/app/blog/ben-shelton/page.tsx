@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '벤 쉘튼 선수 프로필과 스토리',
-  description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 쉘튼의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
-  keywords: ['테니스', '벤 쉘튼', '선수 프로필', '스토리', '미국'],
+  title: '踰??섑듉 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '醫뚯넀 媛뺤꽌釉뚯? ??댄븳 ?꾩쭊?쇰줈 ?섎뱶? ?붾뵒瑜??붾뱶??踰??섑듉???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
+  keywords: ['?뚮땲??, '踰??섑듉', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '誘멸뎅'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/ben-shelton',
   },
   openGraph: {
-    title: '벤 쉘튼 선수 프로필과 스토리',
-    description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 쉘튼의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+    title: '踰??섑듉 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '醫뚯넀 媛뺤꽌釉뚯? ??댄븳 ?꾩쭊?쇰줈 ?섎뱶? ?붾뵒瑜??붾뱶??踰??섑듉???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
     url: 'https://tennisfriends.co.kr/blog/ben-shelton',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '벤 쉘튼 선수 프로필과 스토리',
-    description: '좌손 강서브와 대담한 전진으로 하드와 잔디를 흔드는 벤 쉘튼의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 구도를 정리했습니다.',
+    title: '踰??섑듉 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '醫뚯넀 媛뺤꽌釉뚯? ??댄븳 ?꾩쭊?쇰줈 ?섎뱶? ?붾뵒瑜??붾뱶??踰??섑듉???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え? ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
   },
   robots: {
     index: true,
@@ -34,39 +34,39 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-track-court-speed-language', text: '성장 배경 — 트랙에서 코트로, 속도의 언어를 배우다', depth: 2 },
-  { id: 'playing-style-left-hand-trajectory-outside-inside', text: '경기 스타일 — 왼손 궤적, 바깥에서 안으로 파고드는 힘', depth: 2 },
-  { id: 'rhythm-selection-emotion-hot-procedure-cold', text: '리듬과 선택 — 감정은 뜨겁게, 절차는 차갑게', depth: 2 },
-  { id: 'experience-transition-hard-grass-indoor-expansion', text: '경험과 전환 — 하드에서 잔디·실내로 확장하는 법', depth: 2 },
-  { id: 'human-aspects-brightness-etiquette-team-first', text: '인간적인 면모 — 밝음, 예의, 그리고 팀 퍼스트', depth: 2 },
-  { id: 'nationality-culture-us-hard-tradition-new-generation', text: '국적과 문화 — 미국 하드의 전통을 신세대의 속도로', depth: 2 },
-  { id: 'relationships-rivals-question-speed-answer-angle', text: '관계와 라이벌 — 질문은 속도로, 답은 각도로', depth: 2 },
-  { id: 'famous-scenes-ad-court-wide-empty-space', text: '명장면 — 애드코트 와이드, 그리고 빈 공간', depth: 2 },
-  { id: 'equipment-details-tension-balance-contact-adjustment', text: '장비와 디테일 — 텐션·밸런스·접점의 미세 조정', depth: 2 },
-  { id: 'future-challenges-second-sentence-completeness', text: '앞으로의 과제 — 두 번째 문장의 완성도', depth: 2 },
-  { id: 'fans-community-lasting-trust-way', text: '팬과 커뮤니티 — 오래 가는 신뢰의 방식', depth: 2 },
+  { id: 'growth-background-track-court-speed-language', text: '?깆옣 諛곌꼍 ???몃옓?먯꽌 肄뷀듃濡? ?띾룄???몄뼱瑜?諛곗슦??, depth: 2 },
+  { id: 'playing-style-left-hand-trajectory-outside-inside', text: '寃쎄린 ?ㅽ??????쇱넀 沅ㅼ쟻, 諛붽묑?먯꽌 ?덉쑝濡??뚭퀬?쒕뒗 ??, depth: 2 },
+  { id: 'rhythm-selection-emotion-hot-procedure-cold', text: '由щ벉怨??좏깮 ??媛먯젙? ?④쾪寃? ?덉감??李④컩寃?, depth: 2 },
+  { id: 'experience-transition-hard-grass-indoor-expansion', text: '寃쏀뿕怨??꾪솚 ???섎뱶?먯꽌 ?붾뵒쨌?ㅻ궡濡??뺤옣?섎뒗 踰?, depth: 2 },
+  { id: 'human-aspects-brightness-etiquette-team-first', text: '?멸컙?곸씤 硫대え ??諛앹쓬, ?덉쓽, 洹몃━怨?? ?쇱뒪??, depth: 2 },
+  { id: 'nationality-culture-us-hard-tradition-new-generation', text: '援?쟻怨?臾명솕 ??誘멸뎅 ?섎뱶???꾪넻???좎꽭????띾룄濡?, depth: 2 },
+  { id: 'relationships-rivals-question-speed-answer-angle', text: '愿怨꾩? ?쇱씠踰???吏덈Ц? ?띾룄濡? ?듭? 媛곷룄濡?, depth: 2 },
+  { id: 'famous-scenes-ad-court-wide-empty-space', text: '紐낆옣硫????좊뱶肄뷀듃 ??대뱶, 洹몃━怨?鍮?怨듦컙', depth: 2 },
+  { id: 'equipment-details-tension-balance-contact-adjustment', text: '?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙', depth: 2 },
+  { id: 'future-challenges-second-sentence-completeness', text: '?욎쑝濡쒖쓽 怨쇱젣 ????踰덉㎏ 臾몄옣???꾩꽦??, depth: 2 },
+  { id: 'fans-community-lasting-trust-way', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː??諛⑹떇', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '벤 쉘튼의 경기 스타일은 어떤가요?',
-    a: '좌손의 폭발적 서브와 대담한 전진, 카운터 본능이 특징입니다. 애드코트 와이드로 크게 휘어나가는 킥성 구질로 리턴러를 코트 밖으로 끌어내고, 첫 타에서 공간을 벌리고 두 번째에서 결말을 재촉하는 테니스로 큰 코트의 시간을 압축합니다.'
+    q: '踰??섑듉??寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
+    a: '醫뚯넀????컻???쒕툕? ??댄븳 ?꾩쭊, 移댁슫??蹂몃뒫???뱀쭠?낅땲?? ?좊뱶肄뷀듃 ??대뱶濡??ш쾶 ?섏뼱?섍????μ꽦 援ъ쭏濡?由ы꽩?щ? 肄뷀듃 諛뽰쑝濡??뚯뼱?닿퀬, 泥???먯꽌 怨듦컙??踰뚮━怨???踰덉㎏?먯꽌 寃곕쭚???ъ큺?섎뒗 ?뚮땲?ㅻ줈 ??肄뷀듃???쒓컙???뺤텞?⑸땲??'
   },
   {
-    q: '셸턴의 성장 배경은 어떤가요?',
-    a: '트랙에서 코트로 전환한 그는 빠른 운동 DNA를 가지고 있습니다. 어릴 때부터 단거리 달리기와 점프 동작을 접했고, 대학 무대에서 체계적인 피지컬 트레이닝을 거치며 폭발→회복→재가속의 리듬을 몸에 새겼습니다. 화려한 기술보다 기본기의 견고함과 일상을 강조하는 아버지 코치의 지도 아래 자랐습니다.'
+    q: '?명꽩???깆옣 諛곌꼍? ?대뼡媛??',
+    a: '?몃옓?먯꽌 肄뷀듃濡??꾪솚??洹몃뒗 鍮좊Ⅸ ?대룞 DNA瑜?媛吏怨??덉뒿?덈떎. ?대┫ ?뚮????④굅由??щ━湲곗? ?먰봽 ?숈옉???묓뻽怨? ???臾대??먯꽌 泥닿퀎?곸씤 ?쇱?而??몃젅?대떇??嫄곗튂硫???컻?믫쉶蹂듈넂?ш??띿쓽 由щ벉??紐몄뿉 ?덇꼈?듬땲?? ?붾젮??湲곗닠蹂대떎 湲곕낯湲곗쓽 寃ш퀬?④낵 ?쇱긽??媛뺤“?섎뒗 ?꾨쾭吏 肄붿튂??吏???꾨옒 ?먮옄?듬땲??'
   },
   {
-    q: '셸턴의 강점은 무엇인가요?',
-    a: '폭발적 서브와 대담한 전진이 최대 강점입니다. 좌손 서브의 파괴력으로 첫 타에서 공간을 벌리고, 카운터 본능으로 흐름을 뒤집으며, 감각적인 드롭과 발리를 섞어 경기를 단숨에 뒤집습니다. 신세대의 속도로 큰 무대에서 존재감을 증명합니다.'
+    q: '?명꽩??媛뺤젏? 臾댁뾿?멸???',
+    a: '??컻???쒕툕? ??댄븳 ?꾩쭊??理쒕? 媛뺤젏?낅땲?? 醫뚯넀 ?쒕툕???뚭눼?μ쑝濡?泥???먯꽌 怨듦컙??踰뚮━怨? 移댁슫??蹂몃뒫?쇰줈 ?먮쫫???ㅼ쭛?쇰ŉ, 媛먭컖?곸씤 ?쒕∼怨?諛쒕━瑜??욎뼱 寃쎄린瑜??⑥닲???ㅼ쭛?듬땲?? ?좎꽭????띾룄濡???臾대??먯꽌 議댁옱媛먯쓣 利앸챸?⑸땲??'
   },
   {
-    q: '셸턴의 인간적인 면모는 어떤가요?',
-    a: '밝음, 예의, 팀 퍼스트가 특징입니다. 인터뷰는 짧고 경쾌하며, 잘된 날엔 동료와 스태프의 이름을 먼저 부릅니다. 팬을 대할 때 미소와 눈맞춤을 잊지 않고, 강함을 과시하기보다 다루는 법을 배운 선수입니다.'
+    q: '?명꽩???멸컙?곸씤 硫대え???대뼡媛??',
+    a: '諛앹쓬, ?덉쓽, ? ?쇱뒪?멸? ?뱀쭠?낅땲?? ?명꽣酉곕뒗 吏㏐퀬 寃쎌풄?섎ŉ, ?섎맂 ?좎뿏 ?숇즺? ?ㅽ깭?꾩쓽 ?대쫫??癒쇱? 遺由낅땲?? ?ъ쓣 ?????誘몄냼? ?덈쭪異ㅼ쓣 ?딆? ?딄퀬, 媛뺥븿??怨쇱떆?섍린蹂대떎 ?ㅻ（??踰뺤쓣 諛곗슫 ?좎닔?낅땲??'
   },
   {
-    q: '셸턴의 미래 전망은 어떻게 되나요?',
-    a: '두 번째 문장의 완성도가 과제입니다. 세컨드 서브 코스 다양화, 리턴 직후 3구에서의 전진 타이밍 고정, 하프코트 마무리 선택지를 단순화하면 긴 경기에서도 에너지 관리가 쉬워질 것입니다. 실수의 폭을 좁히는 기술이 더해지면 큰 무대의 마지막 장면에 더 자주 호명될 것입니다.'
+    q: '?명꽩??誘몃옒 ?꾨쭩? ?대뼸寃??섎굹??',
+    a: '??踰덉㎏ 臾몄옣???꾩꽦?꾧? 怨쇱젣?낅땲?? ?몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?? 由ы꽩 吏곹썑 3援ъ뿉?쒖쓽 ?꾩쭊 ??대컢 怨좎젙, ?섑봽肄뷀듃 留덈Т由??좏깮吏瑜??⑥닚?뷀븯硫?湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?ъ썙吏?寃껋엯?덈떎. ?ㅼ닔????쓣 醫곹엳??湲곗닠???뷀빐吏硫???臾대???留덉?留??λ㈃?????먯＜ ?몃챸??寃껋엯?덈떎.'
   },
 ];
 
@@ -74,24 +74,24 @@ export default function BenSheltonBlogPost() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
       <Article slug="ben-shelton" date="2024-01-01"
-        title="벤 쉘튼 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도"
-        excerpt="좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 쉘튼의 성장, 스타일, 인간적인 면모와 과제를 한 편으로."
+        title="踰??섑듉 ????컻???쒕툕? ??댄븳 ?꾩쭊??留뚮뱺 ?좎꽭????띾룄"
+        excerpt="醫뚯넀 ?쒕툕???뚭눼?κ낵 ??댄븳 ?꾩쭊, 媛먭컖?곸씤 ?쒕∼怨?諛쒕━瑜??욎뼱 ?먮쫫???ㅼ쭛??踰??섑듉???깆옣, ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜????몄쑝濡?"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '벤 쉘튼', '선수 프로필', '스토리', '미국'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
+            {['?뚮땲??, '踰??섑듉', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '誘멸뎅'].map((tag) => (
+              <Badge key=?뚮땲???좎닔 variant="secondary" className="text-xs">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
 
           {/* Reading Time & Date */}
           <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-8">
-            <span>📖 8분 읽기</span>
-            <span>•</span>
-            <span>2025년 9월 18일</span>
+            <span>?뱰 8遺??쎄린</span>
+            <span>??/span>
+            <span>2025??9??18??/span>
           </div>
 
           {/* Table of Contents */}
@@ -99,63 +99,63 @@ export default function BenSheltonBlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h1 id="ben-shelton-explosive-serve-bold-advance-new-generation-speed">벤 쉘튼 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도</h1>
+            <h1 id="ben-shelton-explosive-serve-bold-advance-new-generation-speed">踰??섑듉 ????컻???쒕툕? ??댄븳 ?꾩쭊??留뚮뱺 ?좎꽭????띾룄</h1>
 
-            <p><strong>직답:</strong> 벤 쉘튼(Ben Shelton)은 좌손의 폭발적 서브와 대담한 전진, 카운터 본능으로 큰 코트의 시간을 압축하며 경기를 단숨에 뒤집는 미국의 차세대 간판이다.</p>
+            <p><strong>吏곷떟:</strong> 踰??섑듉(Ben Shelton)? 醫뚯넀????컻???쒕툕? ??댄븳 ?꾩쭊, 移댁슫??蹂몃뒫?쇰줈 ??肄뷀듃???쒓컙???뺤텞?섎ŉ 寃쎄린瑜??⑥닲???ㅼ쭛??誘멸뎅??李⑥꽭? 媛꾪뙋?대떎.</p>
 
-            <h2 id="growth-background-track-court-speed-language">성장 배경 — 트랙에서 코트로, 속도의 언어를 배우다</h2>
-            <p>그의 운동 DNA는 빠르다. 어릴 때부터 단거리 달리기와 점프 동작을 접했고, 대학 무대에서 체계적인 피지컬 트레이닝을 거치며 '폭발→회복→재가속'의 리듬을 몸에 새겼다. 코치였던 아버지는 화려한 기술보다 기본기의 견고함과 일상을 강조했다. 훈련 일지에는 샷의 질보다 루틴 이행률이 먼저 적혔고, 원정 중에도 수면·식단·가벼운 코어 루틴을 놓치지 않았다. 이 생활의 질서가 오늘의 '빠르되 무너지지 않는' 셸턴을 만든다.</p>
+            <h2 id="growth-background-track-court-speed-language">?깆옣 諛곌꼍 ???몃옓?먯꽌 肄뷀듃濡? ?띾룄???몄뼱瑜?諛곗슦??/h2>
+            <p>洹몄쓽 ?대룞 DNA??鍮좊Ⅴ?? ?대┫ ?뚮????④굅由??щ━湲곗? ?먰봽 ?숈옉???묓뻽怨? ???臾대??먯꽌 泥닿퀎?곸씤 ?쇱?而??몃젅?대떇??嫄곗튂硫?'??컻?믫쉶蹂듈넂?ш?????由щ벉??紐몄뿉 ?덇꼈?? 肄붿튂????꾨쾭吏???붾젮??湲곗닠蹂대떎 湲곕낯湲곗쓽 寃ш퀬?④낵 ?쇱긽??媛뺤“?덈떎. ?덈젴 ?쇱??먮뒗 ?룹쓽 吏덈낫??猷⑦떞 ?댄뻾瑜좎씠 癒쇱? ?곹삍怨? ?먯젙 以묒뿉???섎㈃쨌?앸떒쨌媛踰쇱슫 肄붿뼱 猷⑦떞???볦튂吏 ?딆븯?? ???앺솢??吏덉꽌媛 ?ㅻ뒛??'鍮좊Ⅴ??臾대꼫吏吏 ?딅뒗' ?명꽩??留뚮뱺??</p>
 
-            <h2 id="playing-style-left-hand-trajectory-outside-inside">경기 스타일 — 왼손 궤적, 바깥에서 안으로 파고드는 힘</h2>
-            <p>셸턴의 시그니처는 좌손 서브다. 애드코트 와이드로 크게 휘어나가는 킥성 구질은 리턴러를 코트 밖으로 끌어내고, 곧장 비는 공간으로 3구 포핸드가 꽂힌다. 바디 서브로 몸통을 묶은 뒤 짧게 떨어지는 공을 하프코트에서 전진 발리로 마무리하는 패턴도 날카롭다. 랠리에서는 포핸드를 직선에 가깝게 밀어 깊이를 확보하고, 백핸드는 면을 단단히 세워 실수를 관리한다. 상대가 뒤로 물러나면 드롭으로 템포를 끊고, 앞으로 달려들면 로브·패싱으로 속도를 되받아친다. 요약하면 첫 타에서 공간을 벌리고, 두 번째에서 결말을 재촉하는 테니스다.</p>
+            <h2 id="playing-style-left-hand-trajectory-outside-inside">寃쎄린 ?ㅽ??????쇱넀 沅ㅼ쟻, 諛붽묑?먯꽌 ?덉쑝濡??뚭퀬?쒕뒗 ??/h2>
+            <p>?명꽩???쒓렇?덉쿂??醫뚯넀 ?쒕툕?? ?좊뱶肄뷀듃 ??대뱶濡??ш쾶 ?섏뼱?섍????μ꽦 援ъ쭏? 由ы꽩?щ? 肄뷀듃 諛뽰쑝濡??뚯뼱?닿퀬, 怨㏃옣 鍮꾨뒗 怨듦컙?쇰줈 3援??ы빖?쒓? 苑귦엺?? 諛붾뵒 ?쒕툕濡?紐명넻??臾띠? ??吏㏐쾶 ?⑥뼱吏??怨듭쓣 ?섑봽肄뷀듃?먯꽌 ?꾩쭊 諛쒕━濡?留덈Т由ы븯???⑦꽩???좎뭅濡?떎. ?좊━?먯꽌???ы빖?쒕? 吏곸꽑??媛源앷쾶 諛??源딆씠瑜??뺣낫?섍퀬, 諛깊빖?쒕뒗 硫댁쓣 ?⑤떒???몄썙 ?ㅼ닔瑜?愿由ы븳?? ?곷?媛 ?ㅻ줈 臾쇰윭?섎㈃ ?쒕∼?쇰줈 ?쒗룷瑜??딄퀬, ?욎쑝濡??щ젮?ㅻ㈃ 濡쒕툕쨌?⑥떛?쇰줈 ?띾룄瑜??섎컺?꾩튇?? ?붿빟?섎㈃ 泥???먯꽌 怨듦컙??踰뚮━怨? ??踰덉㎏?먯꽌 寃곕쭚???ъ큺?섎뒗 ?뚮땲?ㅻ떎.</p>
 
-            <h2 id="rhythm-selection-emotion-hot-procedure-cold">리듬과 선택 — 감정은 뜨겁게, 절차는 차갑게</h2>
-            <p>포인트 사이 그는 간단한 의식을 반복한다. 라켓 스트링을 한 번 훑고, 두 번의 깊은 호흡, 일정한 토스. 스코어가 불리해도 루틴의 길이를 바꾸지 않아 심박이 급하게 치솟지 않는다. 타이브레이크 초반엔 네트를 넉넉히 넘기는 구질로 높이·길이를 확인하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던진다. 관중의 소음은 에너지로 흡수하되, 선택의 기준은 숫자처럼 냉정하다. 리스크를 지더라도 이유가 선명한 선택만 택한다.</p>
+            <h2 id="rhythm-selection-emotion-hot-procedure-cold">由щ벉怨??좏깮 ??媛먯젙? ?④쾪寃? ?덉감??李④컩寃?/h2>
+            <p>?ъ씤???ъ씠 洹몃뒗 媛꾨떒???섏떇??諛섎났?쒕떎. ?쇱폆 ?ㅽ듃留곸쓣 ??踰??묎퀬, ??踰덉쓽 源딆? ?명씉, ?쇱젙???좎뒪. ?ㅼ퐫?닿? 遺덈━?대룄 猷⑦떞??湲몄씠瑜?諛붽씀吏 ?딆븘 ?щ컯??湲됲븯寃?移섏넖吏 ?딅뒗?? ??대툕?덉씠??珥덈컲???ㅽ듃瑜??됰꼮???섍린??援ъ쭏濡??믪씠쨌湲몄씠瑜??뺤씤?섍퀬, 3~4?ъ씤??援ш컙?먯꽌留??쇱씤???뉕쾶 ???밸??섎? ?섏쭊?? 愿以묒쓽 ?뚯쓬? ?먮꼫吏濡??≪닔?섎릺, ?좏깮??湲곗?? ?レ옄泥섎읆 ?됱젙?섎떎. 由ъ뒪?щ? 吏?붾씪???댁쑀媛 ?좊챸???좏깮留??앺븳??</p>
 
-            <h2 id="experience-transition-hard-grass-indoor-expansion">경험과 전환 — 하드에서 잔디·실내로 확장하는 법</h2>
-            <p>하드에서는 퍼스트 서브 확률과 3구 패턴의 속도로 승부한다. 잔디에선 토스를 낮추고 백스윙을 짧게 가져가 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 폭주를 제어한다. 실내 하드에서는 리턴 포지션을 반 발 앞당겨 시간 차를 줄이고, 세컨드 서브 리턴에선 과감히 전진해 상대의 루틴을 깨뜨린다. 점토에서는 회전을 늘려 낙구를 안정시키되, 무리한 하이라이트 샷보다 길이→각도→전진의 3단 구문으로 점수를 조립한다.</p>
+            <h2 id="experience-transition-hard-grass-indoor-expansion">寃쏀뿕怨??꾪솚 ???섎뱶?먯꽌 ?붾뵒쨌?ㅻ궡濡??뺤옣?섎뒗 踰?/h2>
+            <p>?섎뱶?먯꽌???쇱뒪???쒕툕 ?뺣쪧怨?3援??⑦꽩???띾룄濡??밸??쒕떎. ?붾뵒?먯꽑 ?좎뒪瑜???텛怨?諛깆뒪?숈쓣 吏㏐쾶 媛?멸? ??먯쓣 ?욎뿉 怨좎젙, ?щ씪?댁뒪 由ы꽩???욎뼱 珥덈컲 ??＜瑜??쒖뼱?쒕떎. ?ㅻ궡 ?섎뱶?먯꽌??由ы꽩 ?ъ??섏쓣 諛?諛??욌떦寃??쒓컙 李⑤? 以꾩씠怨? ?몄빻???쒕툕 由ы꽩?먯꽑 怨쇨컧???꾩쭊???곷???猷⑦떞??源⑤쑉由곕떎. ?먰넗?먯꽌???뚯쟾???섎젮 ?숆뎄瑜??덉젙?쒗궎?? 臾대━???섏씠?쇱씠???룸낫??湲몄씠?믨컖?꾟넂?꾩쭊??3??援щЦ?쇰줈 ?먯닔瑜?議곕┰?쒕떎.</p>
 
-            <h2 id="human-aspects-brightness-etiquette-team-first">인간적인 면모 — 밝음, 예의, 그리고 팀 퍼스트</h2>
-            <p>셸턴의 인터뷰는 짧고 경쾌하다. 잘된 날엔 동료와 스태프의 이름을 먼저 부르고, 부족했던 날엔 수정 항목을 한두 줄로 또박또박 말한다. 팬을 대할 때는 미소와 눈맞춤을 잊지 않고, 경기장 스태프에게도 고개를 숙이는 제스처가 자연스럽다. 코트 밖에선 음악과 간단한 드릴로 마음을 가볍게 하며, SNS에서도 상대에 대한 존중을 유지한다. 강함을 과시하기보다 다루는 법을 배운 선수다.</p>
+            <h2 id="human-aspects-brightness-etiquette-team-first">?멸컙?곸씤 硫대え ??諛앹쓬, ?덉쓽, 洹몃━怨?? ?쇱뒪??/h2>
+            <p>?명꽩???명꽣酉곕뒗 吏㏐퀬 寃쎌풄?섎떎. ?섎맂 ?좎뿏 ?숇즺? ?ㅽ깭?꾩쓽 ?대쫫??癒쇱? 遺瑜닿퀬, 遺議깊뻽???좎뿏 ?섏젙 ??ぉ???쒕몢 以꾨줈 ?먮컯?먮컯 留먰븳?? ?ъ쓣 ????뚮뒗 誘몄냼? ?덈쭪異ㅼ쓣 ?딆? ?딄퀬, 寃쎄린???ㅽ깭?꾩뿉寃뚮룄 怨좉컻瑜??숈씠???쒖뒪泥섍? ?먯뿰?ㅻ읇?? 肄뷀듃 諛뽰뿉???뚯븙怨?媛꾨떒???쒕┫濡?留덉쓬??媛蹂띻쾶 ?섎ŉ, SNS?먯꽌???곷??????議댁쨷???좎??쒕떎. 媛뺥븿??怨쇱떆?섍린蹂대떎 ?ㅻ（??踰뺤쓣 諛곗슫 ?좎닔??</p>
 
-            <h2 id="nationality-culture-us-hard-tradition-new-generation">국적과 문화 — 미국 하드의 전통을 신세대의 속도로</h2>
-            <p>강서브·퍼스트볼이 강조되는 미국 테니스의 전통을 셸턴은 최신 속도로 번역한다. 무작정 힘을 싣기보다 첫 두 타구의 구조로 득점 확률을 높이고, 리턴 게임에서는 중앙 깊은 볼로 각을 지운 뒤 다음 볼에서 속도를 끌어올린다. 대표팀 이벤트에서 보이는 매너와 에너지는 왜 그가 "스타성 있는 차세대 리더"로 불리는지 설명한다.</p>
+            <h2 id="nationality-culture-us-hard-tradition-new-generation">援?쟻怨?臾명솕 ??誘멸뎅 ?섎뱶???꾪넻???좎꽭????띾룄濡?/h2>
+            <p>媛뺤꽌釉뙿룻띁?ㅽ듃蹂쇱씠 媛뺤“?섎뒗 誘멸뎅 ?뚮땲?ㅼ쓽 ?꾪넻???명꽩? 理쒖떊 ?띾룄濡?踰덉뿭?쒕떎. 臾댁옉???섏쓣 ?ｊ린蹂대떎 泥????援ъ쓽 援ъ“濡??앹젏 ?뺣쪧???믪씠怨? 由ы꽩 寃뚯엫?먯꽌??以묒븰 源딆? 蹂쇰줈 媛곸쓣 吏?????ㅼ쓬 蹂쇱뿉???띾룄瑜??뚯뼱?щ┛?? ??쒗? ?대깽?몄뿉??蹂댁씠??留ㅻ꼫? ?먮꼫吏????洹멸? "?ㅽ????덈뒗 李⑥꽭? 由щ뜑"濡?遺덈━?붿? ?ㅻ챸?쒕떎.</p>
 
-            <h2 id="relationships-rivals-question-speed-answer-angle">관계와 라이벌 — 질문은 속도로, 답은 각도로</h2>
-            <p>동시대 강자들과의 승부에서 셸턴은 속도로 질문한다. 강한 리턴러에겐 바디 서브 비중을 높여 스텝을 묶고, 네트를 서두르는 유형에겐 낮은 통과샷과 몸쪽 강타를 섞어 첫 시도를 주저하게 만든다. 같은 패턴이 두 번 허용되면, 세 번째에는 타점과 스윙 길이를 바꿔 같은 구역을 다른 느낌으로 찌른다. 이 작은 수정들이 후반으로 갈수록 큰 차이를 만든다.</p>
+            <h2 id="relationships-rivals-question-speed-answer-angle">愿怨꾩? ?쇱씠踰???吏덈Ц? ?띾룄濡? ?듭? 媛곷룄濡?/h2>
+            <p>?숈떆? 媛뺤옄?ㅺ낵???밸??먯꽌 ?명꽩? ?띾룄濡?吏덈Ц?쒕떎. 媛뺥븳 由ы꽩?ъ뿉寃?諛붾뵒 ?쒕툕 鍮꾩쨷???믪뿬 ?ㅽ뀦??臾띔퀬, ?ㅽ듃瑜??쒕몢瑜대뒗 ?좏삎?먭쾺 ??? ?듦낵?룰낵 紐몄そ 媛뺥?瑜??욎뼱 泥??쒕룄瑜?二쇱??섍쾶 留뚮뱺?? 媛숈? ?⑦꽩????踰??덉슜?섎㈃, ??踰덉㎏?먮뒗 ??먭낵 ?ㅼ쐷 湲몄씠瑜?諛붽퓭 媛숈? 援ъ뿭???ㅻⅨ ?먮굦?쇰줈 李뚮Ⅸ?? ???묒? ?섏젙?ㅼ씠 ?꾨컲?쇰줈 媛덉닔濡???李⑥씠瑜?留뚮뱺??</p>
 
-            <h2 id="famous-scenes-ad-court-wide-empty-space">명장면 — 애드코트 와이드, 그리고 빈 공간</h2>
-            <p>브레이크 포인트. 애드코트에서 크게 휘는 좌손 와이드 서브가 코트를 벌리고, 리턴이 겨우 넘어오자 그는 한 발 안으로 파고들어 포핸드 직선을 꽂는다. 공이 사이드라인을 스치며 미끄러질 때 관중의 탄성이 터지고, 그는 표정을 바꾸지 않은 채 같은 속도로 베이스라인을 밟는다. 감정의 폭발 뒤에도 절차는 흔들리지 않는다—그의 테니스가 믿음을 주는 이유다.</p>
+            <h2 id="famous-scenes-ad-court-wide-empty-space">紐낆옣硫????좊뱶肄뷀듃 ??대뱶, 洹몃━怨?鍮?怨듦컙</h2>
+            <p>釉뚮젅?댄겕 ?ъ씤?? ?좊뱶肄뷀듃?먯꽌 ?ш쾶 ?섎뒗 醫뚯넀 ??대뱶 ?쒕툕媛 肄뷀듃瑜?踰뚮━怨? 由ы꽩??寃⑥슦 ?섏뼱?ㅼ옄 洹몃뒗 ??諛??덉쑝濡??뚭퀬?ㅼ뼱 ?ы빖??吏곸꽑??苑귣뒗?? 怨듭씠 ?ъ씠?쒕씪?몄쓣 ?ㅼ튂硫?誘몃걚?ъ쭏 ??愿以묒쓽 ?꾩꽦???곗?怨? 洹몃뒗 ?쒖젙??諛붽씀吏 ?딆? 梨?媛숈? ?띾룄濡?踰좎씠?ㅻ씪?몄쓣 諛잙뒗?? 媛먯젙????컻 ?ㅼ뿉???덉감???붾뱾由ъ? ?딅뒗?ㅲ붽렇???뚮땲?ㅺ? 誘우쓬??二쇰뒗 ?댁쑀??</p>
 
-            <h2 id="equipment-details-tension-balance-contact-adjustment">장비와 디테일 — 텐션·밸런스·접점의 미세 조정</h2>
-            <p>그는 라켓 밸런스를 과하게 머리쪽으로 보내지 않아 스윙 회복을 빠르게 하고, 스트링 텐션은 기온과 공의 반발에 맞춰 소폭 조정한다. 더운 날엔 텐션을 올려 반발을 제어하고, 실내에서는 텐션을 낮춰 체공 시간을 확보한다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목의 흔들림을 줄인다. 장비가 플레이를 지배하도록 두지 않고, 플레이가 요구하는 만큼만 장비를 바꾼다.</p>
+            <h2 id="equipment-details-tension-balance-contact-adjustment">?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙</h2>
+            <p>洹몃뒗 ?쇱폆 諛몃윴?ㅻ? 怨쇳븯寃?癒몃━履쎌쑝濡?蹂대궡吏 ?딆븘 ?ㅼ쐷 ?뚮났??鍮좊Ⅴ寃??섍퀬, ?ㅽ듃留??먯뀡? 湲곗삩怨?怨듭쓽 諛섎컻??留욎떠 ?뚰룺 議곗젙?쒕떎. ?붿슫 ?좎뿏 ?먯뀡???щ젮 諛섎컻???쒖뼱?섍퀬, ?ㅻ궡?먯꽌???먯뀡????떠 泥닿났 ?쒓컙???뺣낫?쒕떎. ?좊컻? 痢〓㈃ 吏吏? ?묒???洹좏삎??以묒떆??湲됯??띉룰툒?뺤??먯꽌 諛쒕ぉ???붾뱾由쇱쓣 以꾩씤?? ?λ퉬媛 ?뚮젅?대? 吏諛고븯?꾨줉 ?먯? ?딄퀬, ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留??λ퉬瑜?諛붽씔??</p>
 
-            <h2 id="future-challenges-second-sentence-completeness">앞으로의 과제 — 두 번째 문장의 완성도</h2>
-            <p>셸턴이 한 단계 더 도약하기 위해선 '두 번째 문장'의 완성도가 필요하다. 세컨드 서브 코스의 다양화, 리턴 직후 3구에서의 전진 타이밍 고정, 하프코트 마무리의 선택지를 한두 개로 단순화한다면, 긴 경기에서도 에너지 관리가 쉬워질 것이다. 이미 갖춘 폭발력 위에 실수의 폭을 좁히는 기술이 더해질 때, 그의 이름은 큰 무대의 마지막 장면에 더 자주 호명될 가능성이 크다.</p>
+            <h2 id="future-challenges-second-sentence-completeness">?욎쑝濡쒖쓽 怨쇱젣 ????踰덉㎏ 臾몄옣???꾩꽦??/h2>
+            <p>?명꽩?????④퀎 ???꾩빟?섍린 ?꾪빐??'??踰덉㎏ 臾몄옣'???꾩꽦?꾧? ?꾩슂?섎떎. ?몄빻???쒕툕 肄붿뒪???ㅼ뼇?? 由ы꽩 吏곹썑 3援ъ뿉?쒖쓽 ?꾩쭊 ??대컢 怨좎젙, ?섑봽肄뷀듃 留덈Т由ъ쓽 ?좏깮吏瑜??쒕몢 媛쒕줈 ?⑥닚?뷀븳?ㅻ㈃, 湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?ъ썙吏?寃껋씠?? ?대? 媛뽰텣 ??컻???꾩뿉 ?ㅼ닔????쓣 醫곹엳??湲곗닠???뷀빐吏??? 洹몄쓽 ?대쫫? ??臾대???留덉?留??λ㈃?????먯＜ ?몃챸??媛?μ꽦???щ떎.</p>
 
-            <h2 id="fans-community-lasting-trust-way">팬과 커뮤니티 — 오래 가는 신뢰의 방식</h2>
-            <p>그를 오래 응원하게 만드는 힘은 태도의 일관성이다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말한다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상을 완성한다. 기록은 표가 되지만, 태도는 기억이 된다. 셸턴의 이름이 세월을 건너 사랑받을 이유가 바로 여기에 있다.</p>
+            <h2 id="fans-community-lasting-trust-way">?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː??諛⑹떇</h2>
+            <p>洹몃? ?ㅻ옒 ?묒썝?섍쾶 留뚮뱶???섏? ?쒕룄???쇨??깆씠?? ?닿린???좎뿉??媛먯궗???쒖꽌瑜?吏?ㅺ퀬, 吏???좎뿉??梨낆엫??癒쇱? 留먰븳?? ?묒? ?쒖뒪泥섏? ?뺥솗???좏깮??紐⑥뿬 ???щ엺??珥덉긽???꾩꽦?쒕떎. 湲곕줉? ?쒓? ?섏?留? ?쒕룄??湲곗뼲???쒕떎. ?명꽩???대쫫???몄썡??嫄대꼫 ?щ옉諛쏆쓣 ?댁쑀媛 諛붾줈 ?ш린???덈떎.</p>
           </div>
 
           {/* Related Links */}
           <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
             <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-              📚 관련 자료
+              ?뱴 愿???먮즺
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">내부 링크</h4>
+                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">?대? 留곹겕</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="/players" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🏆 선수 프로필</Link></li>
-                  <li><Link href="/utility/ntrp-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎯 실력 테스트</Link></li>
-                  <li><Link href="/utility/play-style-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">🎾 플레이 스타일 테스트</Link></li>
+                  <li><Link href="/players" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?룇 ?좎닔 ?꾨줈??/Link></li>
+                  <li><Link href="/utility/ntrp-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?렞 ?ㅻ젰 ?뚯뒪??/Link></li>
+                  <li><Link href="/utility/play-style-test" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?렱 ?뚮젅???ㅽ????뚯뒪??/Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">외부 자료</h4>
+                <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">?몃? ?먮즺</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">ATP 투어 공식 사이트</a></li>
-                  <li><a href="https://en.wikipedia.org/wiki/Ben_Shelton" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">위키피디아 프로필</a></li>
+                  <li><a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">ATP ?ъ뼱 怨듭떇 ?ъ씠??/a></li>
+                  <li><a href="https://en.wikipedia.org/wiki/Ben_Shelton" target="_blank" rel="noopener noreferrer" className="text-blue-800 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-100 font-medium underline underline-offset-2">?꾪궎?쇰뵒???꾨줈??/a></li>
                 </ul>
               </div>
             </div>
@@ -171,9 +171,9 @@ export default function BenSheltonBlogPost() {
                 <RelatedPosts 
             currentSlug="ben-shelton" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '벤 쉘튼', '선수 프로필', '스토리', '미국']} 
+            tags={['?뚮땲??, '踰??섑듉', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '誘멸뎅']} 
           />
 
           <CTA />

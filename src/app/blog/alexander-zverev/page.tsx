@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '알렉산더 즈베레프 선수 프로필과 스토리',
-  description: '장벽 같은 서브와 칼같은 양손 백핸드로 흐름을 제어하는 알렉산더 즈베레프의 성장 배경, 경기 스타일, 관계와 과제를 한 편으로.',
-  keywords: ['테니스', '알렉산더 즈베레프', '선수 프로필', '스토리', '독일'],
+  title: '?뚮젆?곕뜑 利덈쿋?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '?λ꼍 媛숈? ?쒕툕? 移쇨컳? ?묒넀 諛깊빖?쒕줈 ?먮쫫???쒖뼱?섎뒗 ?뚮젆?곕뜑 利덈쿋?덊봽???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? 怨쇱젣瑜????몄쑝濡?',
+  keywords: ['?뚮땲??, '?뚮젆?곕뜑 利덈쿋?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?낆씪'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/alexander-zverev',
   },
   openGraph: {
-    title: '알렉산더 즈베레프 선수 프로필과 스토리',
-    description: '장벽 같은 서브와 칼같은 양손 백핸드로 흐름을 제어하는 알렉산더 즈베레프의 성장 배경, 경기 스타일, 관계와 과제를 한 편으로.',
+    title: '?뚮젆?곕뜑 利덈쿋?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?λ꼍 媛숈? ?쒕툕? 移쇨컳? ?묒넀 諛깊빖?쒕줈 ?먮쫫???쒖뼱?섎뒗 ?뚮젆?곕뜑 利덈쿋?덊봽???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? 怨쇱젣瑜????몄쑝濡?',
     url: 'https://tennisfriends.co.kr/blog/alexander-zverev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '알렉산더 즈베레프 선수 프로필과 스토리',
-    description: '장벽 같은 서브와 칼같은 양손 백핸드로 흐름을 제어하는 알렉산더 즈베레프의 성장 배경, 경기 스타일, 관계와 과제를 한 편으로.',
+    title: '?뚮젆?곕뜑 利덈쿋?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?λ꼍 媛숈? ?쒕툕? 移쇨컳? ?묒넀 諛깊빖?쒕줈 ?먮쫫???쒖뼱?섎뒗 ?뚮젆?곕뜑 利덈쿋?덊봽???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? 愿怨꾩? 怨쇱젣瑜????몄쑝濡?',
   },
   robots: {
     index: true,
@@ -34,61 +34,61 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-family-made-court-grammar', text: '성장 배경 — 가족이 만든 코트의 문법', depth: 2 },
-  { id: 'playing-style-first-start-backhand-suture', text: '경기 스타일 — 퍼스트로 시작해 백핸드로 봉합', depth: 2 },
-  { id: 'return-positioning-departure-delay-angle-erase', text: '리턴과 포지셔닝 — 출발점을 늦추고 각을 지우다', depth: 2 },
-  { id: 'rhythm-selection-emotion-low-procedure-constant', text: '리듬과 선택 — 감정은 낮게, 절차는 일정하게', depth: 2 },
-  { id: 'surface-transition-hard-straight-clay-patience-grass', text: '표면별 전환 — 하드의 직선, 점토의 인내, 잔디의 간결', depth: 2 },
-  { id: 'experience-transition-crisis-gained-equilibrium', text: '경험과 전환 — 위기를 지나 얻은 평형감', depth: 2 },
-  { id: 'human-aspects-calm-humor-team-first', text: '인간적인 면모 — 차분함 속의 유머와 팀 퍼스트', depth: 2 },
-  { id: 'nationality-culture-order-accuracy-aesthetics', text: '국적과 문화 — 질서와 정확의 미학', depth: 2 },
-  { id: 'relationships-rivals-speed-generation-angle-answer', text: '관계와 라이벌 — 속도의 세대에 각도로 답하다', depth: 2 },
-  { id: 'famous-scenes-backhand-down-line-opens-narrow-door', text: '명장면 — 백핸드 다운더라인이 여는 좁은 문', depth: 2 },
-  { id: 'equipment-details-tension-balance-contact-adjustment', text: '장비와 디테일 — 텐션·밸런스·접점의 미세 조정', depth: 2 },
-  { id: 'future-challenges-second-serve-halfcourt-conclusion', text: '앞으로의 과제 — 세컨드 서브와 하프코트의 결말', depth: 2 },
-  { id: 'fans-community-lasting-trust', text: '팬과 커뮤니티 — 오래 가는 신뢰', depth: 2 },
+  { id: 'growth-background-family-made-court-grammar', text: '?깆옣 諛곌꼍 ??媛議깆씠 留뚮뱺 肄뷀듃??臾몃쾿', depth: 2 },
+  { id: 'playing-style-first-start-backhand-suture', text: '寃쎄린 ?ㅽ??????쇱뒪?몃줈 ?쒖옉??諛깊빖?쒕줈 遊됲빀', depth: 2 },
+  { id: 'return-positioning-departure-delay-angle-erase', text: '由ы꽩怨??ъ??붾떇 ??異쒕컻?먯쓣 ??텛怨?媛곸쓣 吏?곕떎', depth: 2 },
+  { id: 'rhythm-selection-emotion-low-procedure-constant', text: '由щ벉怨??좏깮 ??媛먯젙? ??쾶, ?덉감???쇱젙?섍쾶', depth: 2 },
+  { id: 'surface-transition-hard-straight-clay-patience-grass', text: '?쒕㈃蹂??꾪솚 ???섎뱶??吏곸꽑, ?먰넗???몃궡, ?붾뵒??媛꾧껐', depth: 2 },
+  { id: 'experience-transition-crisis-gained-equilibrium', text: '寃쏀뿕怨??꾪솚 ???꾧린瑜?吏???살? ?됲삎媛?, depth: 2 },
+  { id: 'human-aspects-calm-humor-team-first', text: '?멸컙?곸씤 硫대え ??李⑤텇???띿쓽 ?좊㉧? ? ?쇱뒪??, depth: 2 },
+  { id: 'nationality-culture-order-accuracy-aesthetics', text: '援?쟻怨?臾명솕 ??吏덉꽌? ?뺥솗??誘명븰', depth: 2 },
+  { id: 'relationships-rivals-speed-generation-angle-answer', text: '愿怨꾩? ?쇱씠踰????띾룄???몃???媛곷룄濡??듯븯??, depth: 2 },
+  { id: 'famous-scenes-backhand-down-line-opens-narrow-door', text: '紐낆옣硫???諛깊빖???ㅼ슫?붾씪?몄씠 ?щ뒗 醫곸? 臾?, depth: 2 },
+  { id: 'equipment-details-tension-balance-contact-adjustment', text: '?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙', depth: 2 },
+  { id: 'future-challenges-second-serve-halfcourt-conclusion', text: '?욎쑝濡쒖쓽 怨쇱젣 ???몄빻???쒕툕? ?섑봽肄뷀듃??寃곕쭚', depth: 2 },
+  { id: 'fans-community-lasting-trust', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '알렉산더 즈베레프의 경기 스타일은 어떤가요?',
-    a: '장신의 서브와 정확한 양손 백핸드, 차분한 포지셔닝이 특징입니다. 서브로 우위를 만들고 백핸드로 질서를 고정하며, 포인트의 속도를 통제합니다.'
+    q: '?뚮젆?곕뜑 利덈쿋?덊봽??寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
+    a: '?μ떊???쒕툕? ?뺥솗???묒넀 諛깊빖?? 李⑤텇???ъ??붾떇???뱀쭠?낅땲?? ?쒕툕濡??곗쐞瑜?留뚮뱾怨?諛깊빖?쒕줈 吏덉꽌瑜?怨좎젙?섎ŉ, ?ъ씤?몄쓽 ?띾룄瑜??듭젣?⑸땲??'
   },
   {
-    q: '즈베레프의 가족들은 모두 테니스를 하나요?',
-    a: '네, 테니스 명문가입니다. 아버지는 소련 국가대표 출신 코치이며, 어머니 역시 프로 선수였습니다. 그의 형인 미샤 즈베레프 또한 ATP 투어에서 활약한 베테랑 선수입니다.'
+    q: '利덈쿋?덊봽??媛議깅뱾? 紐⑤몢 ?뚮땲?ㅻ? ?섎굹??',
+    a: '?? ?뚮땲??紐낅Ц媛?낅땲?? ?꾨쾭吏???뚮젴 援?????異쒖떊 肄붿튂?대ŉ, ?대㉧????떆 ?꾨줈 ?좎닔??듬땲?? 洹몄쓽 ?뺤씤 誘몄깶 利덈쿋?덊봽 ?먰븳 ATP ?ъ뼱?먯꽌 ?쒖빟??踰좏뀒???좎닔?낅땲??'
   },
   {
-    q: '즈베레프가 2022년에 당한 부상이 얼마나 심각했나요?',
-    a: '프랑스 오픈 4강전에서 오른쪽 발목 외측 인대 3개가 완전히 파열되는 중상을 입었습니다. 하지만 7개월간의 혹독한 재활 끝에 성공적으로 복귀하여 다시 정상급 기량을 보여주고 있습니다.'
+    q: '利덈쿋?덊봽媛 2022?꾩뿉 ?뱁븳 遺?곸씠 ?쇰쭏???ш컖?덈굹??',
+    a: '?꾨옉???ㅽ뵂 4媛뺤쟾?먯꽌 ?ㅻⅨ履?諛쒕ぉ ?몄륫 ?몃? 3媛쒓? ?꾩쟾???뚯뿴?섎뒗 以묒긽???낆뿀?듬땲?? ?섏?留?7媛쒖썡媛꾩쓽 ?밸룆???ы솢 ?앹뿉 ?깃났?곸쑝濡?蹂듦??섏뿬 ?ㅼ떆 ?뺤긽湲?湲곕웾??蹂댁뿬二쇨퀬 ?덉뒿?덈떎.'
   },
   {
-    q: '즈베레프의 주무기는 무엇인가요?',
-    a: '강력한 첫 번째 서브와 함께 세계 최고 수준으로 평가받는 투핸드 백핸드가 핵심입니다. 특히 백핸드 다운더라인은 그의 가장 위력적인 결정구입니다.'
+    q: '利덈쿋?덊봽??二쇰Т湲곕뒗 臾댁뾿?멸???',
+    a: '媛뺣젰??泥?踰덉㎏ ?쒕툕? ?④퍡 ?멸퀎 理쒓퀬 ?섏??쇰줈 ?됯?諛쏅뒗 ?ы빖??諛깊빖?쒓? ?듭떖?낅땲?? ?뱁엳 諛깊빖???ㅼ슫?붾씪?몄? 洹몄쓽 媛???꾨젰?곸씤 寃곗젙援ъ엯?덈떎.'
   },
   {
-    q: '즈베레프는 어떤 라켓을 사용하나요?',
-    a: 'Head Gravity Pro 모델을 사용합니다. 넓은 스위트 스폿과 안정적인 타구감이 특징이며, 즈베레프의 공격적인 베이스라인 플레이를 잘 뒷받침합니다.'
+    q: '利덈쿋?덊봽???대뼡 ?쇱폆???ъ슜?섎굹??',
+    a: 'Head Gravity Pro 紐⑤뜽???ъ슜?⑸땲?? ?볦? ?ㅼ쐞???ㅽ뤏怨??덉젙?곸씤 ?援ш컧???뱀쭠?대ŉ, 利덈쿋?덊봽??怨듦꺽?곸씤 踰좎씠?ㅻ씪???뚮젅?대? ???룸컺移⑦빀?덈떎.'
   },
   {
-    q: '즈베레프의 올림픽 성적은?',
-    a: '2021 도쿄 올림픽 남자 단식에서 금메달을 획득했습니다. 이는 독일 남자 테니스 역사상 1988년 보리스 베커 이후 최초의 단식 금메달입니다.'
+    q: '利덈쿋?덊봽???щ┝???깆쟻??',
+    a: '2021 ?꾩퓙 ?щ┝???⑥옄 ?⑥떇?먯꽌 湲덈찓?ъ쓣 ?띾뱷?덉뒿?덈떎. ?대뒗 ?낆씪 ?⑥옄 ?뚮땲????궗??1988??蹂대━??踰좎빱 ?댄썑 理쒖큹???⑥떇 湲덈찓?ъ엯?덈떎.'
   },
   {
-    q: '즈베레프의 별명은 무엇인가요?',
-    a: "주로 'Sascha(사샤)'라는 애칭으로 불립니다. 이는 알렉산더라는 이름의 러시아식 애칭으로, 그의 가족적 배경을 잘 보여줍니다."
+    q: '利덈쿋?덊봽??蹂꾨챸? 臾댁뾿?멸???',
+    a: "二쇰줈 'Sascha(?ъ깶)'?쇰뒗 ?좎묶?쇰줈 遺덈┰?덈떎. ?대뒗 ?뚮젆?곕뜑?쇰뒗 ?대쫫???ъ떆?꾩떇 ?좎묶?쇰줈, 洹몄쓽 媛議깆쟻 諛곌꼍????蹂댁뿬以띾땲??"
   },
   {
-    q: '즈베레프의 테니스 철학은 무엇인가요?',
-    a: '일관성과 규율을 중시합니다. 매일 정해진 루틴을 반복하며, 기술적인 완숙미보다는 포인트 하나하나를 정교하게 쌓아가는 과정을 중요하게 여깁니다.'
+    q: '利덈쿋?덊봽???뚮땲??泥좏븰? 臾댁뾿?멸???',
+    a: '?쇨??깃낵 洹쒖쑉??以묒떆?⑸땲?? 留ㅼ씪 ?뺥빐吏?猷⑦떞??諛섎났?섎ŉ, 湲곗닠?곸씤 ?꾩닕誘몃낫?ㅻ뒗 ?ъ씤???섎굹?섎굹瑜??뺢탳?섍쾶 ?볦븘媛??怨쇱젙??以묒슂?섍쾶 ?ш퉩?덈떎.'
   },
   {
-    q: '즈베레프의 다음 목표는 무엇인가요?',
-    a: '아직 달성하지 못한 그랜드 슬램 우승입니다. 수차례 결승과 4강에 진출하며 문을 두드려온 만큼, 조만간 메이저 트로피를 들어 올릴 것으로 기대받고 있습니다.'
+    q: '利덈쿋?덊봽???ㅼ쓬 紐⑺몴??臾댁뾿?멸???',
+    a: '?꾩쭅 ?ъ꽦?섏? 紐삵븳 洹몃옖???щ옩 ?곗듅?낅땲?? ?섏감濡 寃곗듅怨?4媛뺤뿉 吏꾩텧?섎ŉ 臾몄쓣 ?먮뱶?ㅼ삩 留뚰겮, 議곕쭔媛?硫붿씠? ?몃줈?쇰? ?ㅼ뼱 ?щ┫ 寃껋쑝濡?湲곕?諛쏄퀬 ?덉뒿?덈떎.'
   },
   {
-    q: '독일 테니스에서 즈베레프의 위상은?',
-    a: '보리스 베커, 슈테피 그라프 이후 독일 테니스를 세계 최정상급으로 유지하고 있는 독보적인 존재입니다. 국가 대항전에서도 핵심 주축으로 활약하며 국민적 사랑을 받고 있습니다.'
+    q: '?낆씪 ?뚮땲?ㅼ뿉??利덈쿋?덊봽???꾩긽??',
+    a: '蹂대━??踰좎빱, ?덊뀒??洹몃씪???댄썑 ?낆씪 ?뚮땲?ㅻ? ?멸퀎 理쒖젙?곴툒?쇰줈 ?좎??섍퀬 ?덈뒗 ?낅낫?곸씤 議댁옱?낅땲?? 援?? ???쟾?먯꽌???듭떖 二쇱텞?쇰줈 ?쒖빟?섎ŉ 援?????щ옉??諛쏄퀬 ?덉뒿?덈떎.'
   },
 ];
 
@@ -100,21 +100,21 @@ export default function AlexanderZverevBlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '알렉산더 즈베레프', '선수 프로필', '스토리', '독일'].map((tag) => (
-              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
-                {tag}
+            {['?뚮땲??, '?뚮젆?곕뜑 利덈쿋?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?낆씪'].map((tag) => (
+              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            알렉산더 즈베레프
+            ?뚮젆?곕뜑 利덈쿋?덊봽
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            장벽 같은 서브, 칼같은 백핸드
+            ?λ꼍 媛숈? ?쒕툕, 移쇨컳? 諛깊빖??
           </p>
           <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            장신의 서브와 정확한 양손 백핸드로 코트의 속도를 통제하는 알렉산더 즈베레프의 성장, 전술, 인간적인 면모와 과제를 정리했다.
+            ?μ떊???쒕툕? ?뺥솗???묒넀 諛깊빖?쒕줈 肄뷀듃???띾룄瑜??듭젣?섎뒗 ?뚮젆?곕뜑 利덈쿋?덊봽???깆옣, ?꾩닠, ?멸컙?곸씤 硫대え? 怨쇱젣瑜??뺣━?덈떎.
           </p>
 
           {/* Meta Info */}
@@ -123,13 +123,13 @@ export default function AlexanderZverevBlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-medium">12분 읽기</span>
+              <span className="font-medium">12遺??쎄린</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className="font-medium">2025년 9월 12일</span>
+              <span className="font-medium">2025??9??12??/span>
             </div>
           </div>
         </div>
@@ -147,45 +147,45 @@ export default function AlexanderZverevBlogPost() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
               <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
                 <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 알렉산더 즈베레프(Alexander Zverev)는 2미터에 가까운 압도적인 신장에서 나오는 서브의 각도와 투핸드 백핸드의 견고함을 결합해 코트를 장악하는 '높이의 기술자'입니다. 그의 테니스는 단순한 파워를 넘어, 큰 부상을 극복하며 얻은 정신적 성숙함과 정교한 베이스라인 랠리로 완성된 현대 테니스의 정수입니다.
+                <strong className="text-blue-700 dark:text-blue-300">吏곷떟:</strong> ?뚮젆?곕뜑 利덈쿋?덊봽(Alexander Zverev)??2誘명꽣??媛源뚯슫 ?뺣룄?곸씤 ?좎옣?먯꽌 ?섏삤???쒕툕??媛곷룄? ?ы빖??諛깊빖?쒖쓽 寃ш퀬?⑥쓣 寃고빀??肄뷀듃瑜??μ븙?섎뒗 '?믪씠??湲곗닠???낅땲?? 洹몄쓽 ?뚮땲?ㅻ뒗 ?⑥닚???뚯썙瑜??섏뼱, ??遺?곸쓣 洹밸났?섎ŉ ?살? ?뺤떊???깆닕?④낵 ?뺢탳??踰좎씠?ㅻ씪???좊━濡??꾩꽦???꾨? ?뚮땲?ㅼ쓽 ?뺤닔?낅땲??
               </p>
             </div>
 
-            <h2 id="genetic-environment-tennis-dynasty-pedigree">유전과 환경 — 테니스 가문의 혈통</h2>
-            <p>즈베레프의 테니스는 그의 혈관 속에 흐르는 DNA와 같습니다. 소련 국가대표 출신인 부모님과 형 미샤 즈베레프까지, 온 가족이 테니스계의 최전선에서 활동한 배경은 그에게 기술적인 조기 교육뿐만 아니라 프로로서 갖춰야 할 엄격한 자세를 심어주었습니다. 어린 시절부터 성인 선수들과 부딪히며 배운 '코트 위에서의 생존법'은 그가 차세대 주자들 중 가장 일찍 탑 랭커로 진입할 수 있었던 비결입니다. 그의 스윙 메커니즘은 가문의 연구와 실전 경험이 응축된 결과물이며, 매 경기 그는 가족의 레거시를 어깨에 짊어진 채 코트에 나섭니다.</p>
+            <h2 id="genetic-environment-tennis-dynasty-pedigree">?좎쟾怨??섍꼍 ???뚮땲??媛臾몄쓽 ?덊넻</h2>
+            <p>利덈쿋?덊봽???뚮땲?ㅻ뒗 洹몄쓽 ?덇? ?띿뿉 ?먮Ⅴ??DNA? 媛숈뒿?덈떎. ?뚮젴 援?????異쒖떊??遺紐⑤떂怨???誘몄깶 利덈쿋?덊봽源뚯?, ??媛議깆씠 ?뚮땲?ㅺ퀎??理쒖쟾?좎뿉???쒕룞??諛곌꼍? 洹몄뿉寃?湲곗닠?곸씤 議곌린 援먯쑁肉먮쭔 ?꾨땲???꾨줈濡쒖꽌 媛뽰떠?????꾧꺽???먯꽭瑜??ъ뼱二쇱뿀?듬땲?? ?대┛ ?쒖젅遺???깆씤 ?좎닔?ㅺ낵 遺?ろ엳硫?諛곗슫 '肄뷀듃 ?꾩뿉?쒖쓽 ?앹〈踰?? 洹멸? 李⑥꽭? 二쇱옄??以?媛???쇱컢 ????빱濡?吏꾩엯?????덉뿀??鍮꾧껐?낅땲?? 洹몄쓽 ?ㅼ쐷 硫붿빱?덉쬁? 媛臾몄쓽 ?곌뎄? ?ㅼ쟾 寃쏀뿕???묒텞??寃곌낵臾쇱씠硫? 留?寃쎄린 洹몃뒗 媛議깆쓽 ?덇굅?쒕? ?닿묠??吏딆뼱吏?梨?肄뷀듃???섏꽠?덈떎.</p>
 
-            <h2 id="physical-advantage-height-serve-angle">신체적 이점 — 높이가 만드는 서브의 미학</h2>
-            <p>198cm의 신장은 즈베레프에게 신이 내린 선물입니다. 가공할 만한 시속 220km의 광속 서브는 단순히 속도 때문이 아니라, 높은 타점에서 아래로 강하게 내리꽂는 '수직적 낙차' 때문에 상대에게 더 큰 위협이 됩니다. 첫 번째 서브 성공률이 투어 최상위권을 유지하는 날의 즈베레프는 난공불락의 요새와 같습니다. 서브 게임을 손쉽게 지켜내는 능력은 그가 리턴 게임에서 더 과감한 시도를 할 수 있게 돕는 든든한 토대가 됩니다.</p>
+            <h2 id="physical-advantage-height-serve-angle">?좎껜???댁젏 ???믪씠媛 留뚮뱶???쒕툕??誘명븰</h2>
+            <p>198cm???좎옣? 利덈쿋?덊봽?먭쾶 ?좎씠 ?대┛ ?좊Ъ?낅땲?? 媛怨듯븷 留뚰븳 ?쒖냽 220km??愿묒냽 ?쒕툕???⑥닚???띾룄 ?뚮Ц???꾨땲?? ?믪? ??먯뿉???꾨옒濡?媛뺥븯寃??대━苑귣뒗 '?섏쭅???숈감' ?뚮Ц???곷??먭쾶 ?????꾪삊???⑸땲?? 泥?踰덉㎏ ?쒕툕 ?깃났瑜좎씠 ?ъ뼱 理쒖긽?꾧텒???좎??섎뒗 ?좎쓽 利덈쿋?덊봽???쒓났遺덈씫???붿깉? 媛숈뒿?덈떎. ?쒕툕 寃뚯엫???먯돺寃?吏耳쒕궡???λ젰? 洹멸? 由ы꽩 寃뚯엫?먯꽌 ??怨쇨컧???쒕룄瑜??????덇쾶 ?뺣뒗 ?좊뱺???좊?媛 ?⑸땲??</p>
 
-            <h2 id="backhand-mastery-double-handed-consistency-down-the-line">백핸드의 장인 — 투핸드의 견고함과 다운더라인</h2>
-            <p>즈베레프의 가장 큰 기술적 자부심은 백핸드입니다. 많은 장신 선수들이 백핸드에서 유연성 부족으로 고전하는 것과 달리, 그는 깊게 앉아 하체의 회전을 라켓 끝까지 전달하는 능력이 탁월합니다. 코트 깊숙한 곳에서 예리하게 꺾여 들어가는 크로스 샷과, 상대의 예상을 깨고 라인을 가르는 백핸드 다운더라인은 현대 테니스에서 가장 아름답고 효율적인 샷 중 하나로 평가받습니다. 그의 백핸드 쪽으로 공을 보내는 것은 상대에게 공격의 기회가 아니라 오히려 카운터의 덫이 됩니다.</p>
+            <h2 id="backhand-mastery-double-handed-consistency-down-the-line">諛깊빖?쒖쓽 ?μ씤 ???ы빖?쒖쓽 寃ш퀬?④낵 ?ㅼ슫?붾씪??/h2>
+            <p>利덈쿋?덊봽??媛????湲곗닠???먮??ъ? 諛깊빖?쒖엯?덈떎. 留롮? ?μ떊 ?좎닔?ㅼ씠 諛깊빖?쒖뿉???좎뿰??遺議깆쑝濡?怨좎쟾?섎뒗 寃껉낵 ?щ━, 洹몃뒗 源딄쾶 ?됱븘 ?섏껜???뚯쟾???쇱폆 ?앷퉴吏 ?꾨떖?섎뒗 ?λ젰???곸썡?⑸땲?? 肄뷀듃 源딆닕??怨녹뿉???덈━?섍쾶 爰얠뿬 ?ㅼ뼱媛???щ줈???룰낵, ?곷????덉긽??源④퀬 ?쇱씤??媛瑜대뒗 諛깊빖???ㅼ슫?붾씪?몄? ?꾨? ?뚮땲?ㅼ뿉??媛???꾨쫫?듦퀬 ?⑥쑉?곸씤 ??以??섎굹濡??됯?諛쏆뒿?덈떎. 洹몄쓽 諛깊빖??履쎌쑝濡?怨듭쓣 蹂대궡??寃껋? ?곷??먭쾶 怨듦꺽??湲고쉶媛 ?꾨땲???ㅽ엳??移댁슫?곗쓽 ?レ씠 ?⑸땲??</p>
 
-            <h2 id="mental-evolution-injury-comeback-maturity">정신적 진화 — 부상을 딛고 일어선 성숙함</h2>
-            <p>2022년 프랑스 오픈 4강전, 나달과의 혈투 중 당한 발목 부상은 그의 커리어에서 가장 어두운 순간이었습니다. 휠체어에 의지해 코트를 떠나야 했던 그 장면은 많은 팬을 안타깝게 했습니다. 하지만 긴 재활의 시간은 그를 기술적으로나 정신적으로 더욱 단단하게 만들었습니다. 조급함을 버리고 포인트 하나하나에 집중하는 법을 배웠으며, 부상 복귀 후 보여준 그의 일관된 성적은 단순히 재능의 결과가 아니라 극한의 노력을 통한 '인간 승리'의 기록입니다.</p>
+            <h2 id="mental-evolution-injury-comeback-maturity">?뺤떊??吏꾪솕 ??遺?곸쓣 ?쏄퀬 ?쇱뼱???깆닕??/h2>
+            <p>2022???꾨옉???ㅽ뵂 4媛뺤쟾, ?섎떖怨쇱쓽 ?덊닾 以??뱁븳 諛쒕ぉ 遺?곸? 洹몄쓽 而ㅻ━?댁뿉??媛???대몢???쒓컙?댁뿀?듬땲?? ?좎껜?댁뿉 ?섏???肄뷀듃瑜??좊굹???덈뜕 洹??λ㈃? 留롮? ?ъ쓣 ?덊?源앷쾶 ?덉뒿?덈떎. ?섏?留?湲??ы솢???쒓컙? 洹몃? 湲곗닠?곸쑝濡쒕굹 ?뺤떊?곸쑝濡??붿슧 ?⑤떒?섍쾶 留뚮뱾?덉뒿?덈떎. 議곌툒?⑥쓣 踰꾨━怨??ъ씤???섎굹?섎굹??吏묒쨷?섎뒗 踰뺤쓣 諛곗썱?쇰ŉ, 遺??蹂듦? ??蹂댁뿬以 洹몄쓽 ?쇨????깆쟻? ?⑥닚???щ뒫??寃곌낵媛 ?꾨땲??洹뱁븳???몃젰???듯븳 '?멸컙 ?밸━'??湲곕줉?낅땲??</p>
 
-            <h2 id="tactical-depth-all-court-transition-net-play">전술적 깊이 — 올코트 플레이어로의 전환</h2>
-            <p>과거의 즈베레프가 강력한 서브와 베이스라인 스트로크에만 의존했다면, 현재의 그는 네트 플레이와 슬라이스를 적절히 섞는 영리함을 보여줍니다. 장신을 활용한 넓은 네트 점유율은 상대에게 압박을 주며, 짧아진 볼을 처리하는 정교한 발리는 그의 테니스를 더욱 다채롭게 만듭니다. 수비 상황에서도 단순히 공을 넘기는 것에 그치지 않고, 낮은 슬라이스로 상대의 리듬을 뺏으며 공격 기회를 엿보는 노련미가 돋보입니다.</p>
+            <h2 id="tactical-depth-all-court-transition-net-play">?꾩닠??源딆씠 ???ъ퐫???뚮젅?댁뼱濡쒖쓽 ?꾪솚</h2>
+            <p>怨쇨굅??利덈쿋?덊봽媛 媛뺣젰???쒕툕? 踰좎씠?ㅻ씪???ㅽ듃濡쒗겕?먮쭔 ?섏〈?덈떎硫? ?꾩옱??洹몃뒗 ?ㅽ듃 ?뚮젅?댁? ?щ씪?댁뒪瑜??곸젅???욌뒗 ?곷━?⑥쓣 蹂댁뿬以띾땲?? ?μ떊???쒖슜???볦? ?ㅽ듃 ?먯쑀?⑥? ?곷??먭쾶 ?뺣컯??二쇰ŉ, 吏㏃븘吏?蹂쇱쓣 泥섎━?섎뒗 ?뺢탳??諛쒕━??洹몄쓽 ?뚮땲?ㅻ? ?붿슧 ?ㅼ콈濡?쾶 留뚮벊?덈떎. ?섎퉬 ?곹솴?먯꽌???⑥닚??怨듭쓣 ?섍린??寃껋뿉 洹몄튂吏 ?딄퀬, ??? ?щ씪?댁뒪濡??곷???由щ벉??類륁쑝硫?怨듦꺽 湲고쉶瑜??용낫???몃젴誘멸? ?뗫낫?낅땲??</p>
 
-            <h2 id="rivalry-dynamics-generation-clash-next-gen-leader">라이벌 구도 — 세대 간 충돌의 중심</h2>
-            <p>조코비치라는 거대한 벽과 알카라스, 시너라는 무서운 신예들 사이에서 즈베레프는 가교 역할을 하고 있습니다. 빅3의 노련함과 차세대 스타들의 폭발력을 동시에 상대하며 그는 자신만의 독보적인 위치를 구축했습니다. 특히 큰 대회에서 강한 면모를 보이는 그의 기질은 'ATP 파이널스 2회 우승'과 '도쿄 올림픽 금메달'이라는 화려한 경력으로 증명됩니다. 라이벌과의 승부에서 보여주는 그의 투지는 테니스 팬들에게 전율을 선사합니다.</p>
+            <h2 id="rivalry-dynamics-generation-clash-next-gen-leader">?쇱씠踰?援щ룄 ???몃? 媛?異⑸룎??以묒떖</h2>
+            <p>議곗퐫鍮꾩튂?쇰뒗 嫄곕???踰쎄낵 ?뚯뭅?쇱뒪, ?쒕꼫?쇰뒗 臾댁꽌???좎삁???ъ씠?먯꽌 利덈쿋?덊봽??媛援???븷???섍퀬 ?덉뒿?덈떎. 鍮????몃젴?④낵 李⑥꽭? ?ㅽ??ㅼ쓽 ??컻?μ쓣 ?숈떆???곷??섎ŉ 洹몃뒗 ?먯떊留뚯쓽 ?낅낫?곸씤 ?꾩튂瑜?援ъ텞?덉뒿?덈떎. ?뱁엳 ????뚯뿉??媛뺥븳 硫대え瑜?蹂댁씠??洹몄쓽 湲곗쭏? 'ATP ?뚯씠?먯뒪 2???곗듅'怨?'?꾩퓙 ?щ┝??湲덈찓???대씪???붾젮??寃쎈젰?쇰줈 利앸챸?⑸땲?? ?쇱씠踰뚭낵???밸??먯꽌 蹂댁뿬二쇰뒗 洹몄쓽 ?ъ????뚮땲???щ뱾?먭쾶 ?꾩쑉???좎궗?⑸땲??</p>
 
-            <h2 id="human-story-discipline-behind-the-scenes-care">인간적인 스토리 — 규율 뒤에 숨겨진 배려</h2>
-            <p>코트 위의 차가운 이미지와 달리, 즈베레프는 팀과 가족에게 매우 헌신적입니다. 자신의 승리를 코치진과 가족의 공으로 돌리는 겸손함을 지녔으며, 어려운 환경의 어린 유망주들을 돕는 자선 활동에도 적극적입니다. 철저한 자기 관리와 정해진 훈련 루틴을 단 하루도 빠뜨리지 않는 지독한 규율은 그가 왜 10년 가까이 세계 최정상의 자리를 유지할 수 있는지를 보여주는 증거입니다. </p>
+            <h2 id="human-story-discipline-behind-the-scenes-care">?멸컙?곸씤 ?ㅽ넗由???洹쒖쑉 ?ㅼ뿉 ?④꺼吏?諛곕젮</h2>
+            <p>肄뷀듃 ?꾩쓽 李④????대?吏? ?щ━, 利덈쿋?덊봽???怨?媛議깆뿉寃?留ㅼ슦 ?뚯떊?곸엯?덈떎. ?먯떊???밸━瑜?肄붿튂吏꾧낵 媛議깆쓽 怨듭쑝濡??뚮━??寃몄넀?⑥쓣 吏?붿쑝硫? ?대젮???섍꼍???대┛ ?좊쭩二쇰뱾???뺣뒗 ?먯꽑 ?쒕룞?먮룄 ?곴레?곸엯?덈떎. 泥좎????먭린 愿由ъ? ?뺥빐吏??덈젴 猷⑦떞?????섎（??鍮좊쑉由ъ? ?딅뒗 吏?낇븳 洹쒖쑉? 洹멸? ??10??媛源뚯씠 ?멸퀎 理쒖젙?곸쓽 ?먮━瑜??좎??????덈뒗吏瑜?蹂댁뿬二쇰뒗 利앷굅?낅땲?? </p>
 
-            <h2 id="equipment-details-tension-balance-contact-adjustment">장비와 디테일 — 텐션·밸런스·접점의 미세 조정</h2>
-            <p>대회장 기온·습도에 맞춰 스트링 텐션을 소폭 조정하고, 라켓 밸런스는 과도한 헤드 헤비를 피해 회복 시간을 단축합니다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목의 흔들림을 줄입니다. 즈베레프는 <strong>Head Gravity Pro</strong> 모델을 사용하며, 장비가 플레이를 지배하지 않도록, 플레이가 요구하는 만큼만 조정한다는 태도가 일관됩니다.</p>
+            <h2 id="equipment-details-tension-balance-contact-adjustment">?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙</h2>
+            <p>??뚯옣 湲곗삩쨌?듬룄??留욎떠 ?ㅽ듃留??먯뀡???뚰룺 議곗젙?섍퀬, ?쇱폆 諛몃윴?ㅻ뒗 怨쇰룄???ㅻ뱶 ?ㅻ퉬瑜??쇳빐 ?뚮났 ?쒓컙???⑥텞?⑸땲?? ?좊컻? 痢〓㈃ 吏吏? ?묒???洹좏삎??以묒떆??湲됯??띉룰툒?뺤??먯꽌 諛쒕ぉ???붾뱾由쇱쓣 以꾩엯?덈떎. 利덈쿋?덊봽??<strong>Head Gravity Pro</strong> 紐⑤뜽???ъ슜?섎ŉ, ?λ퉬媛 ?뚮젅?대? 吏諛고븯吏 ?딅룄濡? ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留?議곗젙?쒕떎???쒕룄媛 ?쇨??⑸땲??</p>
 
-            <h2 id="national-pride-germany-boris-becker-legacy-pride">국적의 자부심 — 독일 테니스의 황금기를 잇다</h2>
-            <p>보리스 베커 이후 독일 테니스의 역사를 새로 쓰고 있는 그는 국가 대항전인 데이비스 컵과 올림픽에서 무서운 집중력을 발휘합니다. 독일 국기를 가슴에 달고 뛸 때 그는 평소보다 더 강력한 동기부여를 얻는다고 말합니다. 도쿄 올림픽 당시 금메달을 거머쥔 후 보여준 눈물은 그가 얼마나 자신의 조국을 대표하는 것을 소중히 여기는지 보여준 감동적인 장면이었습니다.</p>
+            <h2 id="national-pride-germany-boris-becker-legacy-pride">援?쟻???먮??????낆씪 ?뚮땲?ㅼ쓽 ?⑷툑湲곕? ?뉖떎</h2>
+            <p>蹂대━??踰좎빱 ?댄썑 ?낆씪 ?뚮땲?ㅼ쓽 ??궗瑜??덈줈 ?곌퀬 ?덈뒗 洹몃뒗 援?? ???쟾???곗씠鍮꾩뒪 而듦낵 ?щ┝?쎌뿉??臾댁꽌??吏묒쨷?μ쓣 諛쒗쐶?⑸땲?? ?낆씪 援?린瑜?媛?댁뿉 ?ш퀬 ????洹몃뒗 ?됱냼蹂대떎 ??媛뺣젰???숆린遺?щ? ?삳뒗?ㅺ퀬 留먰빀?덈떎. ?꾩퓙 ?щ┝???뱀떆 湲덈찓?ъ쓣 嫄곕㉧伊???蹂댁뿬以 ?덈Ъ? 洹멸? ?쇰쭏???먯떊??議곌뎅????쒗븯??寃껋쓣 ?뚯쨷???ш린?붿? 蹂댁뿬以 媛먮룞?곸씤 ?λ㈃?댁뿀?듬땲??</p>
 
-            <h2 id="training-philosophy-consistency-repetition-order">훈련 철학 — 일관성과 반복의 미학</h2>
-            <p>그의 훈련 일지는 한 치의 오차도 없습니다. 기술 훈련만큼이나 체력 단련과 유연성 훈련에 많은 시간을 할애하며, 매일 똑같은 루틴을 반복하는 인내심이야말로 그의 진정한 재능입니다. "천재성은 영감보다 끈기에서 나온다"는 말처럼, 그는 화려한 위너 뒤에 숨겨진 수천 번의 연습 과정을 더 가치 있게 여깁니다.</p>
+            <h2 id="training-philosophy-consistency-repetition-order">?덈젴 泥좏븰 ???쇨??깃낵 諛섎났??誘명븰</h2>
+            <p>洹몄쓽 ?덈젴 ?쇱?????移섏쓽 ?ㅼ감???놁뒿?덈떎. 湲곗닠 ?덈젴留뚰겮?대굹 泥대젰 ?⑤젴怨??좎뿰???덈젴??留롮? ?쒓컙???좎븷?섎ŉ, 留ㅼ씪 ?묎컳? 猷⑦떞??諛섎났?섎뒗 ?몃궡?ъ씠?쇰쭚濡?洹몄쓽 吏꾩젙???щ뒫?낅땲?? "泥쒖옱?깆? ?곴컧蹂대떎 ?덇린?먯꽌 ?섏삩????留먯쿂?? 洹몃뒗 ?붾젮???꾨꼫 ?ㅼ뿉 ?④꺼吏??섏쿇 踰덉쓽 ?곗뒿 怨쇱젙????媛移??덇쾶 ?ш퉩?덈떎.</p>
 
-            <h2 id="future-challenges-second-serve-halfcourt-conclusion">앞으로의 과제 — 세컨드 서브와 하프코트의 결말</h2>
-            <p>더 높이 도약하려면 세컨드 서브 코스 다양화와 하프코트 마무리의 일관성이 관건입니다. 리턴 직후 3구에서 전진 타이밍을 반 박자 앞당기고, 결말의 선택지를 한두 개로 고정하면 장기전에서도 에너지 관리가 한층 수월해질 것입니다. 부상을 이겨낸 그의 단단해진 발목처럼, 그의 테니스 인생도 더욱 단단하게 영글어가고 있습니다.</p>
+            <h2 id="future-challenges-second-serve-halfcourt-conclusion">?욎쑝濡쒖쓽 怨쇱젣 ???몄빻???쒕툕? ?섑봽肄뷀듃??寃곕쭚</h2>
+            <p>???믪씠 ?꾩빟?섎젮硫??몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?붿? ?섑봽肄뷀듃 留덈Т由ъ쓽 ?쇨??깆씠 愿嫄댁엯?덈떎. 由ы꽩 吏곹썑 3援ъ뿉???꾩쭊 ??대컢??諛?諛뺤옄 ?욌떦湲곌퀬, 寃곕쭚???좏깮吏瑜??쒕몢 媛쒕줈 怨좎젙?섎㈃ ?κ린?꾩뿉?쒕룄 ?먮꼫吏 愿由ш? ?쒖링 ?섏썡?댁쭏 寃껋엯?덈떎. 遺?곸쓣 ?닿꺼??洹몄쓽 ?⑤떒?댁쭊 諛쒕ぉ泥섎읆, 洹몄쓽 ?뚮땲???몄깮???붿슧 ?⑤떒?섍쾶 ?곴??닿?怨??덉뒿?덈떎.</p>
 
-            <h2 id="fans-community-lasting-trust">팬과 커뮤니티 — 오래 가는 신뢰</h2>
-            <p>즈베레프의 팬들은 그의 끈기와 성실함을 사랑합니다. 패배 속에서도 배움을 찾고, 승리 속에서도 개선점을 찾는 그의 태도는 많은 이들에게 귀감이 됩니다. 팬들과의 소통에서도 진솔함을 잃지 않으며, 테니스가 주는 즐거움을 더 많은 사람과 나누고자 노력합니다. 그의 이름은 단순히 랭킹 상단에 기록되는 것을 넘어, 포기하지 않는 도전 정신의 상징으로 기억될 것입니다.</p>
+            <h2 id="fans-community-lasting-trust">?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː</h2>
+            <p>利덈쿋?덊봽???щ뱾? 洹몄쓽 ?덇린? ?깆떎?⑥쓣 ?щ옉?⑸땲?? ?⑤같 ?띿뿉?쒕룄 諛곗???李얘퀬, ?밸━ ?띿뿉?쒕룄 媛쒖꽑?먯쓣 李얜뒗 洹몄쓽 ?쒕룄??留롮? ?대뱾?먭쾶 洹媛먯씠 ?⑸땲?? ?щ뱾怨쇱쓽 ?뚰넻?먯꽌??吏꾩넄?⑥쓣 ?껋? ?딆쑝硫? ?뚮땲?ㅺ? 二쇰뒗 利먭굅?????留롮? ?щ엺怨??섎늻怨좎옄 ?몃젰?⑸땲?? 洹몄쓽 ?대쫫? ?⑥닚????궧 ?곷떒??湲곕줉?섎뒗 寃껋쓣 ?섏뼱, ?ш린?섏? ?딅뒗 ?꾩쟾 ?뺤떊???곸쭠?쇰줈 湲곗뼲??寃껋엯?덈떎.</p>
           </div>
 
           {/* Related Links */}
@@ -197,7 +197,7 @@ export default function AlexanderZverevBlogPost() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
+                愿???먮즺
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -205,13 +205,13 @@ export default function AlexanderZverevBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
+                    ?대? 留곹겕
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필</span>
+                        <span className="text-xl">?룇</span>
+                        <span className="font-medium">?좎닔 ?꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -219,8 +219,8 @@ export default function AlexanderZverevBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">실력 테스트</span>
+                        <span className="text-xl">?렞</span>
+                        <span className="font-medium">?ㅻ젰 ?뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -228,8 +228,8 @@ export default function AlexanderZverevBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">플레이 스타일 테스트</span>
+                        <span className="text-xl">?렱</span>
+                        <span className="font-medium">?뚮젅???ㅽ????뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -242,13 +242,13 @@ export default function AlexanderZverevBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    외부 자료
+                    ?몃? ?먮즺
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어 공식 사이트</span>
+                        <span className="text-xl">?뙋</span>
+                        <span className="font-medium">ATP ?ъ뼱 怨듭떇 ?ъ씠??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -256,8 +256,8 @@ export default function AlexanderZverevBlogPost() {
                     </li>
                     <li>
                       <a href="https://en.wikipedia.org/wiki/Alexander_Zverev" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">📖</span>
-                        <span className="font-medium">위키피디아 프로필</span>
+                        <span className="text-xl">?뱰</span>
+                        <span className="font-medium">?꾪궎?쇰뵒???꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -279,9 +279,9 @@ export default function AlexanderZverevBlogPost() {
                     <RelatedPosts 
             currentSlug="alexander-zverev" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '알렉산더 즈베레프', '선수 프로필', '스토리', '독일']} 
+            tags={['?뚮땲??, '?뚮젆?곕뜑 利덈쿋?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?낆씪']} 
           />
 
           <CTA />

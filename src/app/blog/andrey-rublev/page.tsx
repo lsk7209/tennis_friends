@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '안드레이 루블레프 선수 프로필과 스토리',
-  description: '불꽃 같은 포핸드, 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 안드레이 루블레프의 성장 배경과 경기 철학, 라이벌 구도를 정리했습니다.',
-  keywords: ['테니스', '안드레이 루블레프', '선수 프로필', '스토리', '러시아'],
+  title: '?덈뱶?덉씠 猷⑤툝?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '遺덇퐙 媛숈? ?ы빖?? 媛꾧껐??由щ벉, 袁몄???猷⑦떞?쇰줈 ?섎뱶肄뷀듃瑜?吏諛고븯???덈뱶?덉씠 猷⑤툝?덊봽???깆옣 諛곌꼍怨?寃쎄린 泥좏븰, ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
+  keywords: ['?뚮땲??, '?덈뱶?덉씠 猷⑤툝?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?ъ떆??],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/andrey-rublev',
   },
   openGraph: {
-    title: '안드레이 루블레프 선수 프로필과 스토리',
-    description: '불꽃 같은 포핸드, 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 안드레이 루블레프의 성장 배경과 경기 철학, 라이벌 구도를 정리했습니다.',
+    title: '?덈뱶?덉씠 猷⑤툝?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '遺덇퐙 媛숈? ?ы빖?? 媛꾧껐??由щ벉, 袁몄???猷⑦떞?쇰줈 ?섎뱶肄뷀듃瑜?吏諛고븯???덈뱶?덉씠 猷⑤툝?덊봽???깆옣 諛곌꼍怨?寃쎄린 泥좏븰, ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
     url: 'https://tennisfriends.co.kr/blog/andrey-rublev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '안드레이 루블레프 선수 프로필과 스토리',
-    description: '불꽃 같은 포핸드, 간결한 리듬, 꾸준한 루틴으로 하드코트를 지배하는 안드레이 루블레프의 성장 배경과 경기 철학, 라이벌 구도를 정리했습니다.',
+    title: '?덈뱶?덉씠 猷⑤툝?덊봽 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '遺덇퐙 媛숈? ?ы빖?? 媛꾧껐??由щ벉, 袁몄???猷⑦떞?쇰줈 ?섎뱶肄뷀듃瑜?吏諛고븯???덈뱶?덉씠 猷⑤툝?덊봽???깆옣 諛곌꼍怨?寃쎄린 泥좏븰, ?쇱씠踰?援щ룄瑜??뺣━?덉뒿?덈떎.',
   },
   robots: {
     index: true,
@@ -34,40 +34,40 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-repetition-record-created-thrust', text: '성장 배경 — 반복과 기록이 만든 추진력', depth: 2 },
-  { id: 'playing-style-straight-power-cutting-tempo', text: '경기 스타일 — 직선의 파워, 끊어치는 템포', depth: 2 },
-  { id: 'rhythm-selection-emotion-hot-procedure-cold', text: '리듬과 선택 — 감정은 뜨겁게, 절차는 차갑게', depth: 2 },
-  { id: 'return-transition-first-shake-two-beats', text: '리턴과 전환 — 첫 흔들림을 만드는 두 박자', depth: 2 },
-  { id: 'surface-development-hard-straight-clay-patience-grass', text: '표면별 전개 — 하드의 직선, 점토의 인내, 잔디의 간결', depth: 2 },
-  { id: 'human-aspects-heat-care-coexistence', text: '인간적인 면모 — 뜨거움과 배려의 공존', depth: 2 },
-  { id: 'nationality-culture-repetition-believing-discipline', text: '국적과 문화 — 반복을 믿는 규율', depth: 2 },
-  { id: 'relationships-rivals-speed-generation-straight-answer', text: '관계와 라이벌 — 속도의 세대에 직선으로 답하다', depth: 2 },
-  { id: 'famous-scenes-inside-out-closing-door', text: '명장면 — 인사이드-아웃, 그리고 닫히는 문', depth: 2 },
-  { id: 'equipment-details-tension-balance-contact-sense', text: '장비와 디테일 — 텐션·밸런스·접점의 감각', depth: 2 },
-  { id: 'future-challenges-second-sentence-completion', text: '앞으로의 과제 — 두 번째 문장의 완성도', depth: 2 },
-  { id: 'fans-community-lasting-trust-way', text: '팬과 커뮤니티 — 오래 가는 신뢰의 방식', depth: 2 },
+  { id: 'growth-background-repetition-record-created-thrust', text: '?깆옣 諛곌꼍 ??諛섎났怨?湲곕줉??留뚮뱺 異붿쭊??, depth: 2 },
+  { id: 'playing-style-straight-power-cutting-tempo', text: '寃쎄린 ?ㅽ?????吏곸꽑???뚯썙, ?딆뼱移섎뒗 ?쒗룷', depth: 2 },
+  { id: 'rhythm-selection-emotion-hot-procedure-cold', text: '由щ벉怨??좏깮 ??媛먯젙? ?④쾪寃? ?덉감??李④컩寃?, depth: 2 },
+  { id: 'return-transition-first-shake-two-beats', text: '由ы꽩怨??꾪솚 ??泥??붾뱾由쇱쓣 留뚮뱶????諛뺤옄', depth: 2 },
+  { id: 'surface-development-hard-straight-clay-patience-grass', text: '?쒕㈃蹂??꾧컻 ???섎뱶??吏곸꽑, ?먰넗???몃궡, ?붾뵒??媛꾧껐', depth: 2 },
+  { id: 'human-aspects-heat-care-coexistence', text: '?멸컙?곸씤 硫대え ???④굅?怨?諛곕젮??怨듭〈', depth: 2 },
+  { id: 'nationality-culture-repetition-believing-discipline', text: '援?쟻怨?臾명솕 ??諛섎났??誘용뒗 洹쒖쑉', depth: 2 },
+  { id: 'relationships-rivals-speed-generation-straight-answer', text: '愿怨꾩? ?쇱씠踰????띾룄???몃???吏곸꽑?쇰줈 ?듯븯??, depth: 2 },
+  { id: 'famous-scenes-inside-out-closing-door', text: '紐낆옣硫????몄궗?대뱶-?꾩썐, 洹몃━怨??ロ엳??臾?, depth: 2 },
+  { id: 'equipment-details-tension-balance-contact-sense', text: '?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 媛먭컖', depth: 2 },
+  { id: 'future-challenges-second-sentence-completion', text: '?욎쑝濡쒖쓽 怨쇱젣 ????踰덉㎏ 臾몄옣???꾩꽦??, depth: 2 },
+  { id: 'fans-community-lasting-trust-way', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː??諛⑹떇', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '안드레이 루블레프의 경기 스타일은 어떤가요?',
-    a: '폭발적인 포핸드와 높은 템포, 간결한 루틴이 특징입니다. 포핸드 직선 압박으로 상대 시간을 깎아내며, 속도와 직선으로 흐름을 찢는 힘을 보여줍니다.'
+    q: '?덈뱶?덉씠 猷⑤툝?덊봽??寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
+    a: '??컻?곸씤 ?ы빖?쒖? ?믪? ?쒗룷, 媛꾧껐??猷⑦떞???뱀쭠?낅땲?? ?ы빖??吏곸꽑 ?뺣컯?쇰줈 ?곷? ?쒓컙??源롮븘?대ŉ, ?띾룄? 吏곸꽑?쇰줈 ?먮쫫??李?뒗 ?섏쓣 蹂댁뿬以띾땲??'
   },
   {
-    q: '루블레프의 성장 배경은 어떤가요?',
-    a: '어린 시절부터 큰 스윙보다 정확한 접점을 먼저 배웠습니다. 매일 오늘의 수정 한 줄을 기록하고, 원정이 잦아도 워밍업·스트레칭·첫 서브 루틴을 고정해 변수를 줄였습니다.'
+    q: '猷⑤툝?덊봽???깆옣 諛곌꼍? ?대뼡媛??',
+    a: '?대┛ ?쒖젅遺?????ㅼ쐷蹂대떎 ?뺥솗???묒젏??癒쇱? 諛곗썱?듬땲?? 留ㅼ씪 ?ㅻ뒛???섏젙 ??以꾩쓣 湲곕줉?섍퀬, ?먯젙????븘???뚮컢?끒룹뒪?몃젅移?룹껀 ?쒕툕 猷⑦떞??怨좎젙??蹂?섎? 以꾩??듬땲??'
   },
   {
-    q: '루블레프의 강점은 무엇인가요?',
-    a: '불꽃 같은 포핸드가 최대 강점입니다. 폭발적인 포핸드와 높은 템포로 랠리의 공기를 바꾸며, 간결한 루틴으로 승부를 밀어붙입니다.'
+    q: '猷⑤툝?덊봽??媛뺤젏? 臾댁뾿?멸???',
+    a: '遺덇퐙 媛숈? ?ы빖?쒓? 理쒕? 媛뺤젏?낅땲?? ??컻?곸씤 ?ы빖?쒖? ?믪? ?쒗룷濡??좊━??怨듦린瑜?諛붽씀硫? 媛꾧껐??猷⑦떞?쇰줈 ?밸?瑜?諛?대텤?낅땲??'
   },
   {
-    q: '루블레프의 인간적인 면모는 어떤가요?',
-    a: '뜨거움과 배려의 공존이 특징입니다. 인터뷰는 솔직하며, 벤치에선 팀의 짧은 키워드를 반복해 감정의 파고를 낮춥니다. 팬에게는 에너지와 유머로 다가가지만 경기장 안에서는 절차를 우선합니다.'
+    q: '猷⑤툝?덊봽???멸컙?곸씤 硫대え???대뼡媛??',
+    a: '?④굅?怨?諛곕젮??怨듭〈???뱀쭠?낅땲?? ?명꽣酉곕뒗 ?붿쭅?섎ŉ, 踰ㅼ튂?먯꽑 ???吏㏃? ?ㅼ썙?쒕? 諛섎났??媛먯젙???뚭퀬瑜???땅?덈떎. ?ъ뿉寃뚮뒗 ?먮꼫吏? ?좊㉧濡??ㅺ?媛吏留?寃쎄린???덉뿉?쒕뒗 ?덉감瑜??곗꽑?⑸땲??'
   },
   {
-    q: '루블레프의 미래 전망은 어떻게 되나요?',
-    a: '세컨드 서브 코스 다양화와 하프코트 마무리 일관성이 관건입니다. 리턴 직후 3구에서 전진 타이밍 반 박자 앞당김, 결말 선택지를 고정하면 긴 경기에서도 에너지 관리가 쉬워질 것입니다.'
+    q: '猷⑤툝?덊봽??誘몃옒 ?꾨쭩? ?대뼸寃??섎굹??',
+    a: '?몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?붿? ?섑봽肄뷀듃 留덈Т由??쇨??깆씠 愿嫄댁엯?덈떎. 由ы꽩 吏곹썑 3援ъ뿉???꾩쭊 ??대컢 諛?諛뺤옄 ?욌떦源, 寃곕쭚 ?좏깮吏瑜?怨좎젙?섎㈃ 湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?ъ썙吏?寃껋엯?덈떎.'
   },
 ];
 
@@ -79,21 +79,21 @@ export default function AndreyRublevBlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '안드레이 루블레프', '선수 프로필', '스토리', '러시아'].map((tag) => (
-              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
-                {tag}
+            {['?뚮땲??, '?덈뱶?덉씠 猷⑤툝?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?ъ떆??].map((tag) => (
+              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            안드레이 루블레프
+            ?덈뱶?덉씠 猷⑤툝?덊봽
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            불꽃 같은 포핸드로 흐름을 찢는 힘
+            遺덇퐙 媛숈? ?ы빖?쒕줈 ?먮쫫??李?뒗 ??
           </p>
           <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            폭발적인 포핸드와 흐름을 밀어붙이는 템포, 간결한 루틴으로 승부를 조립하는 안드레이 루블레프의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
+            ??컻?곸씤 ?ы빖?쒖? ?먮쫫??諛?대텤?대뒗 ?쒗룷, 媛꾧껐??猷⑦떞?쇰줈 ?밸?瑜?議곕┰?섎뒗 ?덈뱶?덉씠 猷⑤툝?덊봽???깆옣, ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜????몄쑝濡?
           </p>
           
           {/* Meta Info */}
@@ -102,13 +102,13 @@ export default function AndreyRublevBlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-medium">8분 읽기</span>
+              <span className="font-medium">8遺??쎄린</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className="font-medium">2025년 10월 6일</span>
+              <span className="font-medium">2025??10??6??/span>
             </div>
           </div>
         </div>
@@ -126,45 +126,45 @@ export default function AndreyRublevBlogPost() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
               <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
                 <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 안드레이 루블레프(Andrey Rublev)는 폭발적인 포핸드와 높은 템포, 간결한 루틴으로 랠리의 공기를 바꾸며 승부를 밀어붙이는 러시아의 간판입니다.
+                <strong className="text-blue-700 dark:text-blue-300">吏곷떟:</strong> ?덈뱶?덉씠 猷⑤툝?덊봽(Andrey Rublev)????컻?곸씤 ?ы빖?쒖? ?믪? ?쒗룷, 媛꾧껐??猷⑦떞?쇰줈 ?좊━??怨듦린瑜?諛붽씀硫??밸?瑜?諛?대텤?대뒗 ?ъ떆?꾩쓽 媛꾪뙋?낅땲??
               </p>
             </div>
 
-            <h2 id="growth-background-repetition-record-created-thrust">성장 배경 — 반복과 기록이 만든 추진력</h2>
-            <p>어린 시절부터 그는 "큰 스윙보다 정확한 접점"을 먼저 배웠습니다. 훈련 노트에는 매일 '오늘의 수정 한 줄'이 남았고, 다음 날의 첫 드릴은 그 한 줄을 확인하는 것으로 시작됐습니다. 원정이 잦아도 워밍업 순서·스트레칭 시간·첫 서브 루틴을 고정해 변수를 줄였고, 이 생활의 질서가 큰 관중과 긴 랠리 속에서도 감정의 폭발을 통제하는 장치가 되었습니다.</p>
+            <h2 id="growth-background-repetition-record-created-thrust">?깆옣 諛곌꼍 ??諛섎났怨?湲곕줉??留뚮뱺 異붿쭊??/h2>
+            <p>?대┛ ?쒖젅遺??洹몃뒗 "???ㅼ쐷蹂대떎 ?뺥솗???묒젏"??癒쇱? 諛곗썱?듬땲?? ?덈젴 ?명듃?먮뒗 留ㅼ씪 '?ㅻ뒛???섏젙 ??以????⑥븯怨? ?ㅼ쓬 ?좎쓽 泥??쒕┫? 洹???以꾩쓣 ?뺤씤?섎뒗 寃껋쑝濡??쒖옉?먯뒿?덈떎. ?먯젙????븘???뚮컢???쒖꽌쨌?ㅽ듃?덉묶 ?쒓컙쨌泥??쒕툕 猷⑦떞??怨좎젙??蹂?섎? 以꾩?怨? ???앺솢??吏덉꽌媛 ??愿以묎낵 湲??좊━ ?띿뿉?쒕룄 媛먯젙????컻???듭젣?섎뒗 ?μ튂媛 ?섏뿀?듬땲??</p>
 
-            <h2 id="playing-style-straight-power-cutting-tempo">경기 스타일 — 직선의 파워, 끊어치는 템포</h2>
-            <p>루블레프의 시그니처는 포핸드 직선 압박입니다. 준비는 짧고 임팩트는 강하며, 라인을 과하게 노리지 않으면서도 깊이를 확보합니다. 백핸드는 양손의 단단한 면으로 각을 세워 코너를 얇게 긁고, 필요 시 다운더라인으로 균형을 흔듭니다. 서브는 와이드와 바디를 교차해 리턴러의 스텝을 묶고, 3구에서 포핸드 인사이드-아웃으로 공간을 크게 엽니다. 짧은 볼이 보이면 한 걸음 전진해 하프발리·발리로 결말을 재촉하지만, 네트 점유는 '명확한 빈자리'가 보일 때만 선택합니다. 요약하면 속도와 직선으로 상대 시간을 깎아내는 테니스입니다.</p>
+            <h2 id="playing-style-straight-power-cutting-tempo">寃쎄린 ?ㅽ?????吏곸꽑???뚯썙, ?딆뼱移섎뒗 ?쒗룷</h2>
+            <p>猷⑤툝?덊봽???쒓렇?덉쿂???ы빖??吏곸꽑 ?뺣컯?낅땲?? 以鍮꾨뒗 吏㏐퀬 ?꾪뙥?몃뒗 媛뺥븯硫? ?쇱씤??怨쇳븯寃??몃━吏 ?딆쑝硫댁꽌??源딆씠瑜??뺣낫?⑸땲?? 諛깊빖?쒕뒗 ?묒넀???⑤떒??硫댁쑝濡?媛곸쓣 ?몄썙 肄붾꼫瑜??뉕쾶 湲곴퀬, ?꾩슂 ???ㅼ슫?붾씪?몄쑝濡?洹좏삎???붾벊?덈떎. ?쒕툕????대뱶? 諛붾뵒瑜?援먯감??由ы꽩?ъ쓽 ?ㅽ뀦??臾띔퀬, 3援ъ뿉???ы빖???몄궗?대뱶-?꾩썐?쇰줈 怨듦컙???ш쾶 ?쎈땲?? 吏㏃? 蹂쇱씠 蹂댁씠硫???嫄몄쓬 ?꾩쭊???섑봽諛쒕━쨌諛쒕━濡?寃곕쭚???ъ큺?섏?留? ?ㅽ듃 ?먯쑀??'紐낇솗??鍮덉옄由?媛 蹂댁씪 ?뚮쭔 ?좏깮?⑸땲?? ?붿빟?섎㈃ ?띾룄? 吏곸꽑?쇰줈 ?곷? ?쒓컙??源롮븘?대뒗 ?뚮땲?ㅼ엯?덈떎.</p>
 
-            <h2 id="rhythm-selection-emotion-hot-procedure-cold">리듬과 선택 — 감정은 뜨겁게, 절차는 차갑게</h2>
-            <p>그는 포인트 사이 의식처럼 똑같은 순서를 지킵니다. 라켓 스트링을 한 번 훑고, 두 번의 깊은 호흡, 일정한 토스. 스코어가 불리해도 루틴의 길이를 바꾸지 않아 심박이 급히 치솟지 않습니다. 타이브레이크 초반에는 높이·길이를 확인하는 안전한 구질을 택하고, 3~4포인트 구간에서만 라인을 얇게 써 승부수를 던집니다. 격한 제스처가 눈에 띄어도, 선택의 기준은 놀랄 만큼 단순합니다. 확률이 높은 샷을 더 자주, 같은 품질로.</p>
+            <h2 id="rhythm-selection-emotion-hot-procedure-cold">由щ벉怨??좏깮 ??媛먯젙? ?④쾪寃? ?덉감??李④컩寃?/h2>
+            <p>洹몃뒗 ?ъ씤???ъ씠 ?섏떇泥섎읆 ?묎컳? ?쒖꽌瑜?吏?듬땲?? ?쇱폆 ?ㅽ듃留곸쓣 ??踰??묎퀬, ??踰덉쓽 源딆? ?명씉, ?쇱젙???좎뒪. ?ㅼ퐫?닿? 遺덈━?대룄 猷⑦떞??湲몄씠瑜?諛붽씀吏 ?딆븘 ?щ컯??湲됲엳 移섏넖吏 ?딆뒿?덈떎. ??대툕?덉씠??珥덈컲?먮뒗 ?믪씠쨌湲몄씠瑜??뺤씤?섎뒗 ?덉쟾??援ъ쭏???앺븯怨? 3~4?ъ씤??援ш컙?먯꽌留??쇱씤???뉕쾶 ???밸??섎? ?섏쭛?덈떎. 寃⑺븳 ?쒖뒪泥섍? ?덉뿉 ?꾩뼱?? ?좏깮??湲곗?? ???留뚰겮 ?⑥닚?⑸땲?? ?뺣쪧???믪? ?룹쓣 ???먯＜, 媛숈? ?덉쭏濡?</p>
 
-            <h2 id="return-transition-first-shake-two-beats">리턴과 전환 — 첫 흔들림을 만드는 두 박자</h2>
-            <p>퍼스트 서브 리턴은 한두 걸음 뒤에서 시작해 탄도와 길이를 맞추고, 세컨드 서브에는 전진해 접점을 앞세웁니다. 리턴 후에는 중앙 깊은 볼로 각을 닫아두고, 세 번째 스트로크에서 포핸드로 코너를 열어 흐름을 바꿉니다. 수비 국면에서는 낮게 깔린 슬라이스로 시간을 벌고, 바로 다음 볼에서 직선 카운터를 꽂아 랠리의 톤을 자신의 쪽으로 당깁니다.</p>
+            <h2 id="return-transition-first-shake-two-beats">由ы꽩怨??꾪솚 ??泥??붾뱾由쇱쓣 留뚮뱶????諛뺤옄</h2>
+            <p>?쇱뒪???쒕툕 由ы꽩? ?쒕몢 嫄몄쓬 ?ㅼ뿉???쒖옉???꾨룄? 湲몄씠瑜?留욎텛怨? ?몄빻???쒕툕?먮뒗 ?꾩쭊???묒젏???욎꽭?곷땲?? 由ы꽩 ?꾩뿉??以묒븰 源딆? 蹂쇰줈 媛곸쓣 ?レ븘?먭퀬, ??踰덉㎏ ?ㅽ듃濡쒗겕?먯꽌 ?ы빖?쒕줈 肄붾꼫瑜??댁뼱 ?먮쫫??諛붽퓠?덈떎. ?섎퉬 援?㈃?먯꽌????쾶 源붾┛ ?щ씪?댁뒪濡??쒓컙??踰뚭퀬, 諛붾줈 ?ㅼ쓬 蹂쇱뿉??吏곸꽑 移댁슫?곕? 苑귥븘 ?좊━???ㅼ쓣 ?먯떊??履쎌쑝濡??밴퉩?덈떎.</p>
 
-            <h2 id="surface-development-hard-straight-clay-patience-grass">표면별 전개 — 하드의 직선, 점토의 인내, 잔디의 간결</h2>
-            <p>하드에서는 퍼스트 확률과 3구 패턴의 속도로 경기를 압축합니다. 점토에서는 회전을 더해 낙구를 안정시키고, 길어진 랠리 속에서 포핸드의 반박자 빠른 결말로 체력 소모를 관리합니다. 잔디에서는 토스를 낮추고 백스윙을 줄여 타점을 앞에 고정, 슬라이스 리턴을 섞어 초반 속도를 통제합니다. 표면이 달라져도 원칙은 같습니다. 먼저 안정, 틈에서 가속.</p>
+            <h2 id="surface-development-hard-straight-clay-patience-grass">?쒕㈃蹂??꾧컻 ???섎뱶??吏곸꽑, ?먰넗???몃궡, ?붾뵒??媛꾧껐</h2>
+            <p>?섎뱶?먯꽌???쇱뒪???뺣쪧怨?3援??⑦꽩???띾룄濡?寃쎄린瑜??뺤텞?⑸땲?? ?먰넗?먯꽌???뚯쟾???뷀빐 ?숆뎄瑜??덉젙?쒗궎怨? 湲몄뼱吏??좊━ ?띿뿉???ы빖?쒖쓽 諛섎컯??鍮좊Ⅸ 寃곕쭚濡?泥대젰 ?뚮え瑜?愿由ы빀?덈떎. ?붾뵒?먯꽌???좎뒪瑜???텛怨?諛깆뒪?숈쓣 以꾩뿬 ??먯쓣 ?욎뿉 怨좎젙, ?щ씪?댁뒪 由ы꽩???욎뼱 珥덈컲 ?띾룄瑜??듭젣?⑸땲?? ?쒕㈃???щ씪?몃룄 ?먯튃? 媛숈뒿?덈떎. 癒쇱? ?덉젙, ?덉뿉??媛??</p>
 
-            <h2 id="human-aspects-heat-care-coexistence">인간적인 면모 — 뜨거움과 배려의 공존</h2>
-            <p>인터뷰에서 그는 솔직합니다. 잘된 날엔 준비가 맞았다고, 부족한 날엔 수정이 필요하다고 말합니다. 벤치에선 팀의 짧은 키워드를 반복해 감정의 파고를 낮추고, 코트 스태프·볼퍼슨에게 고개를 숙이는 제스처를 잊지 않습니다. 팬에게는 에너지와 유머로 다가가지만, 경기장 안에서는 절차를 우선하는 태도가 두드러집니다.</p>
+            <h2 id="human-aspects-heat-care-coexistence">?멸컙?곸씤 硫대え ???④굅?怨?諛곕젮??怨듭〈</h2>
+            <p>?명꽣酉곗뿉??洹몃뒗 ?붿쭅?⑸땲?? ?섎맂 ?좎뿏 以鍮꾧? 留욎븯?ㅺ퀬, 遺議깊븳 ?좎뿏 ?섏젙???꾩슂?섎떎怨?留먰빀?덈떎. 踰ㅼ튂?먯꽑 ???吏㏃? ?ㅼ썙?쒕? 諛섎났??媛먯젙???뚭퀬瑜???텛怨? 肄뷀듃 ?ㅽ깭?꽷룸낵?쇱뒯?먭쾶 怨좉컻瑜??숈씠???쒖뒪泥섎? ?딆? ?딆뒿?덈떎. ?ъ뿉寃뚮뒗 ?먮꼫吏? ?좊㉧濡??ㅺ?媛吏留? 寃쎄린???덉뿉?쒕뒗 ?덉감瑜??곗꽑?섎뒗 ?쒕룄媛 ?먮뱶?ъ쭛?덈떎.</p>
 
-            <h2 id="nationality-culture-repetition-believing-discipline">국적과 문화 — 반복을 믿는 규율</h2>
-            <p>러시아식 훈련 문화의 핵심은 반복입니다. 루블레프의 테니스도 작은 성공을 중첩해 큰 흐름을 만드는 방식으로 설명됩니다. 화려한 변주보다 같은 품질의 볼을 더 많이, 더 오래 쌓는 설득이 그의 정체성을 단단하게 합니다.</p>
+            <h2 id="nationality-culture-repetition-believing-discipline">援?쟻怨?臾명솕 ??諛섎났??誘용뒗 洹쒖쑉</h2>
+            <p>?ъ떆?꾩떇 ?덈젴 臾명솕???듭떖? 諛섎났?낅땲?? 猷⑤툝?덊봽???뚮땲?ㅻ룄 ?묒? ?깃났??以묒꺽?????먮쫫??留뚮뱶??諛⑹떇?쇰줈 ?ㅻ챸?⑸땲?? ?붾젮??蹂二쇰낫??媛숈? ?덉쭏??蹂쇱쓣 ??留롮씠, ???ㅻ옒 ?볥뒗 ?ㅻ뱷??洹몄쓽 ?뺤껜?깆쓣 ?⑤떒?섍쾶 ?⑸땲??</p>
 
-            <h2 id="relationships-rivals-speed-generation-straight-answer">관계와 라이벌 — 속도의 세대에 직선으로 답하다</h2>
-            <p>폭발적인 가속으로 초반을 장악하는 동세대와 맞붙을 때, 그는 리턴 포지션과 중앙 깊은 볼로 속도를 상쇄한 뒤 포핸드 직선으로 균열을 냅니다. 네트를 서두르는 상대에겐 낮은 통과샷과 깊은 로브를 교차해 첫 시도를 주저하게 만들고, 같은 패턴이 두 번 허용되면 세 번째에는 타점과 스윙 길이를 바꿔 같은 구역을 다른 속도로 찌릅니다.</p>
+            <h2 id="relationships-rivals-speed-generation-straight-answer">愿怨꾩? ?쇱씠踰????띾룄???몃???吏곸꽑?쇰줈 ?듯븯??/h2>
+            <p>??컻?곸씤 媛?띿쑝濡?珥덈컲???μ븙?섎뒗 ?숈꽭?? 留욌텤???? 洹몃뒗 由ы꽩 ?ъ??섍낵 以묒븰 源딆? 蹂쇰줈 ?띾룄瑜??곸뇙?????ы빖??吏곸꽑?쇰줈 洹좎뿴???낅땲?? ?ㅽ듃瑜??쒕몢瑜대뒗 ?곷??먭쾺 ??? ?듦낵?룰낵 源딆? 濡쒕툕瑜?援먯감??泥??쒕룄瑜?二쇱??섍쾶 留뚮뱾怨? 媛숈? ?⑦꽩????踰??덉슜?섎㈃ ??踰덉㎏?먮뒗 ??먭낵 ?ㅼ쐷 湲몄씠瑜?諛붽퓭 媛숈? 援ъ뿭???ㅻⅨ ?띾룄濡?李뚮쫭?덈떎.</p>
 
-            <h2 id="famous-scenes-inside-out-closing-door">명장면 — 인사이드-아웃, 그리고 닫히는 문</h2>
-            <p>브레이크 포인트. 와이드 서브로 코트를 벌린 뒤 돌아온 짧은 리턴을 그는 한 발 안으로 파고들어 포핸드 인사이드-아웃으로 찌릅니다. 상대 스텝이 바깥으로 쏠린 순간, 다음 볼은 인사이드-인 직선으로 닫아버립니다. 관중의 탄성이 터져도 그는 같은 속도로 베이스라인을 밟습니다. 감정의 폭발 뒤에도 절차는 흔들리지 않는 장면입니다.</p>
+            <h2 id="famous-scenes-inside-out-closing-door">紐낆옣硫????몄궗?대뱶-?꾩썐, 洹몃━怨??ロ엳??臾?/h2>
+            <p>釉뚮젅?댄겕 ?ъ씤?? ??대뱶 ?쒕툕濡?肄뷀듃瑜?踰뚮┛ ???뚯븘??吏㏃? 由ы꽩??洹몃뒗 ??諛??덉쑝濡??뚭퀬?ㅼ뼱 ?ы빖???몄궗?대뱶-?꾩썐?쇰줈 李뚮쫭?덈떎. ?곷? ?ㅽ뀦??諛붽묑?쇰줈 ?좊┛ ?쒓컙, ?ㅼ쓬 蹂쇱? ?몄궗?대뱶-??吏곸꽑?쇰줈 ?レ븘踰꾨┰?덈떎. 愿以묒쓽 ?꾩꽦???곗졇??洹몃뒗 媛숈? ?띾룄濡?踰좎씠?ㅻ씪?몄쓣 諛잛뒿?덈떎. 媛먯젙????컻 ?ㅼ뿉???덉감???붾뱾由ъ? ?딅뒗 ?λ㈃?낅땲??</p>
 
-            <h2 id="equipment-details-tension-balance-contact-sense">장비와 디테일 — 텐션·밸런스·접점의 감각</h2>
-            <p>대회장 기온·습도에 맞춰 스트링 텐션을 소폭 조정하고, 라켓 밸런스는 과도한 헤드 헤비를 피해 스윙 회복을 빠르게 합니다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목의 흔들림을 줄입니다. 장비가 플레이를 지배하도록 두지 않고, 플레이가 요구하는 만큼만 조정한다는 철학이 일관됩니다.</p>
+            <h2 id="equipment-details-tension-balance-contact-sense">?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 媛먭컖</h2>
+            <p>??뚯옣 湲곗삩쨌?듬룄??留욎떠 ?ㅽ듃留??먯뀡???뚰룺 議곗젙?섍퀬, ?쇱폆 諛몃윴?ㅻ뒗 怨쇰룄???ㅻ뱶 ?ㅻ퉬瑜??쇳빐 ?ㅼ쐷 ?뚮났??鍮좊Ⅴ寃??⑸땲?? ?좊컻? 痢〓㈃ 吏吏? ?묒???洹좏삎??以묒떆??湲됯??띉룰툒?뺤??먯꽌 諛쒕ぉ???붾뱾由쇱쓣 以꾩엯?덈떎. ?λ퉬媛 ?뚮젅?대? 吏諛고븯?꾨줉 ?먯? ?딄퀬, ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留?議곗젙?쒕떎??泥좏븰???쇨??⑸땲??</p>
 
-            <h2 id="future-challenges-second-sentence-completion">앞으로의 과제 — 두 번째 문장의 완성도</h2>
-            <p>루블레프가 한 단계 더 도약하려면 세컨드 서브 코스의 다양화와 하프코트 마무리의 일관성이 관건입니다. 리턴 직후 3구에서 전진 타이밍을 반 박자 앞당기고, 결말의 선택지를 한두 개로 고정한다면 긴 경기에서도 에너지 관리가 쉬워질 것입니다. 이미 갖춘 포핸드의 설득력 위에 실수의 폭을 좁히는 기술이 더해질 때, 그의 이름은 큰 무대의 마지막 장면에서 더 자주 호명될 가능성이 큽니다.</p>
+            <h2 id="future-challenges-second-sentence-completion">?욎쑝濡쒖쓽 怨쇱젣 ????踰덉㎏ 臾몄옣???꾩꽦??/h2>
+            <p>猷⑤툝?덊봽媛 ???④퀎 ???꾩빟?섎젮硫??몄빻???쒕툕 肄붿뒪???ㅼ뼇?붿? ?섑봽肄뷀듃 留덈Т由ъ쓽 ?쇨??깆씠 愿嫄댁엯?덈떎. 由ы꽩 吏곹썑 3援ъ뿉???꾩쭊 ??대컢??諛?諛뺤옄 ?욌떦湲곌퀬, 寃곕쭚???좏깮吏瑜??쒕몢 媛쒕줈 怨좎젙?쒕떎硫?湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?ъ썙吏?寃껋엯?덈떎. ?대? 媛뽰텣 ?ы빖?쒖쓽 ?ㅻ뱷???꾩뿉 ?ㅼ닔????쓣 醫곹엳??湲곗닠???뷀빐吏??? 洹몄쓽 ?대쫫? ??臾대???留덉?留??λ㈃?먯꽌 ???먯＜ ?몃챸??媛?μ꽦???쎈땲??</p>
 
-            <h2 id="fans-community-lasting-trust-way">팬과 커뮤니티 — 오래 가는 신뢰의 방식</h2>
-            <p>그를 오래 응원하게 만드는 힘은 태도의 일관성입니다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말합니다. 작은 제스처와 정확한 선택이 모여 한 사람의 초상이 완성됩니다. 기록은 표가 되지만, 태도는 기억이 됩니다. 그래서 루블레프의 테니스는 결과를 넘어 이야기로 남습니다.</p>
+            <h2 id="fans-community-lasting-trust-way">?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː??諛⑹떇</h2>
+            <p>洹몃? ?ㅻ옒 ?묒썝?섍쾶 留뚮뱶???섏? ?쒕룄???쇨??깆엯?덈떎. ?닿린???좎뿉??媛먯궗???쒖꽌瑜?吏?ㅺ퀬, 吏???좎뿉??梨낆엫??癒쇱? 留먰빀?덈떎. ?묒? ?쒖뒪泥섏? ?뺥솗???좏깮??紐⑥뿬 ???щ엺??珥덉긽???꾩꽦?⑸땲?? 湲곕줉? ?쒓? ?섏?留? ?쒕룄??湲곗뼲???⑸땲?? 洹몃옒??猷⑤툝?덊봽???뚮땲?ㅻ뒗 寃곌낵瑜??섏뼱 ?댁빞湲곕줈 ?⑥뒿?덈떎.</p>
           </div>
 
           {/* Related Links */}
@@ -176,7 +176,7 @@ export default function AndreyRublevBlogPost() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
+                愿???먮즺
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -184,13 +184,13 @@ export default function AndreyRublevBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
+                    ?대? 留곹겕
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필</span>
+                        <span className="text-xl">?룇</span>
+                        <span className="font-medium">?좎닔 ?꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -198,8 +198,8 @@ export default function AndreyRublevBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">실력 테스트</span>
+                        <span className="text-xl">?렞</span>
+                        <span className="font-medium">?ㅻ젰 ?뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -207,8 +207,8 @@ export default function AndreyRublevBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">플레이 스타일 테스트</span>
+                        <span className="text-xl">?렱</span>
+                        <span className="font-medium">?뚮젅???ㅽ????뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -221,13 +221,13 @@ export default function AndreyRublevBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    외부 자료
+                    ?몃? ?먮즺
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어 공식 사이트</span>
+                        <span className="text-xl">?뙋</span>
+                        <span className="font-medium">ATP ?ъ뼱 怨듭떇 ?ъ씠??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -235,8 +235,8 @@ export default function AndreyRublevBlogPost() {
                     </li>
                     <li>
                       <a href="https://en.wikipedia.org/wiki/Andrey_Rublev" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">📖</span>
-                        <span className="font-medium">위키피디아 프로필</span>
+                        <span className="text-xl">?뱰</span>
+                        <span className="font-medium">?꾪궎?쇰뵒???꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -258,9 +258,9 @@ export default function AndreyRublevBlogPost() {
                 <RelatedPosts 
             currentSlug="andrey-rublev" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '안드레이 루블레프', '선수 프로필', '스토리', '러시아']} 
+            tags={['?뚮땲??, '?덈뱶?덉씠 猷⑤툝?덊봽', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?ъ떆??]} 
           />
 
           <CTA />

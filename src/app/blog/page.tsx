@@ -266,34 +266,6 @@ export default function BlogPage() {
             </Button>
           </div>
         )}
-
-        {/* Coming Soon Section */}
-        <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            준비 중인 콘텐츠
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              '테니스 기초 기술 가이드',
-              '장비 선택 및 관리 팁',
-              '훈련 프로그램 및 계획',
-              '경기 전략 및 멘탈 트레이닝',
-              '부상 예방 및 재활 가이드',
-              '테니스 뉴스 및 트렌드'
-            ].map((topic, index) => (
-              <Card key={index} className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 opacity-75">
-                <CardContent className="p-6">
-                  <h3 className="font-medium text-gray-900 dark:text-white mb-2">
-                    {topic}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    곧 업데이트 예정입니다
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
       </div>
     </div >
   );

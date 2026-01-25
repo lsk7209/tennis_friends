@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '카를로스 알카라스 선수 프로필과 스토리',
-  description: '스페인 출신 테니스 선수 카를로스 알카라스의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
-  keywords: ['테니스', '카를로스 알카라스', '선수 프로필', '스토리', 'ATP'],
+  title: '移대?濡쒖뒪 ?뚯뭅?쇱뒪 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '?ㅽ럹??異쒖떊 ?뚮땲???좎닔 移대?濡쒖뒪 ?뚯뭅?쇱뒪???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙??硫대え? ?쇱씠踰??댁빞湲곕? ?댁븯?듬땲??',
+  keywords: ['?뚮땲??, '移대?濡쒖뒪 ?뚯뭅?쇱뒪', '?좎닔 ?꾨줈??, '?ㅽ넗由?, 'ATP'],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/carlos-alcaraz',
   },
   openGraph: {
-    title: '카를로스 알카라스 선수 프로필과 스토리',
-    description: '스페인 출신 테니스 선수 카를로스 알카라스의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
+    title: '移대?濡쒖뒪 ?뚯뭅?쇱뒪 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?ㅽ럹??異쒖떊 ?뚮땲???좎닔 移대?濡쒖뒪 ?뚯뭅?쇱뒪???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙??硫대え? ?쇱씠踰??댁빞湲곕? ?댁븯?듬땲??',
     url: 'https://tennisfriends.co.kr/blog/carlos-alcaraz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '카를로스 알카라스 선수 프로필과 스토리',
-    description: '스페인 출신 테니스 선수 카를로스 알카라스의 성장 배경, 경기 스타일, 인간적 면모와 라이벌 이야기를 담았습니다.',
+    title: '移대?濡쒖뒪 ?뚯뭅?쇱뒪 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '?ㅽ럹??異쒖떊 ?뚮땲???좎닔 移대?濡쒖뒪 ?뚯뭅?쇱뒪???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙??硫대え? ?쇱씠踰??댁빞湲곕? ?댁븯?듬땲??',
   },
   robots: {
     index: true,
@@ -34,36 +34,36 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-daily-accumulation', text: '성장 배경 — 일상에서 축적된 힘', depth: 2 },
-  { id: 'playing-style-pressure-variation-smile', text: '경기 스타일 — 압박과 변주, 그리고 미소', depth: 2 },
-  { id: 'experience-growth-surface-adaptation', text: '경험과 성장 — 표면을 가리지 않는 적응력', depth: 2 },
-  { id: 'human-aspects-attitude-over-results', text: '인human적인 면모 — 결과보다 태도', depth: 2 },
-  { id: 'nationality-culture-modern-interpretation', text: '국적과 문화 — 스페인 전통 위에 올린 현대적 해석', depth: 2 },
-  { id: 'relationships-rivals-grow-together', text: '관계와 라이벌 — 함께 더 높이', depth: 2 },
-  { id: 'famous-scenes-courage-of-choice', text: '명장면 — 선택의 용기', depth: 2 },
-  { id: 'future-challenges-narrative-over-skill', text: '앞으로의 과제 — 기술보다 서사', depth: 2 },
+  { id: 'growth-background-daily-accumulation', text: '?깆옣 諛곌꼍 ???쇱긽?먯꽌 異뺤쟻????, depth: 2 },
+  { id: 'playing-style-pressure-variation-smile', text: '寃쎄린 ?ㅽ??????뺣컯怨?蹂二? 洹몃━怨?誘몄냼', depth: 2 },
+  { id: 'experience-growth-surface-adaptation', text: '寃쏀뿕怨??깆옣 ???쒕㈃??媛由ъ? ?딅뒗 ?곸쓳??, depth: 2 },
+  { id: 'human-aspects-attitude-over-results', text: '?퇲uman?곸씤 硫대え ??寃곌낵蹂대떎 ?쒕룄', depth: 2 },
+  { id: 'nationality-culture-modern-interpretation', text: '援?쟻怨?臾명솕 ???ㅽ럹???꾪넻 ?꾩뿉 ?щ┛ ?꾨????댁꽍', depth: 2 },
+  { id: 'relationships-rivals-grow-together', text: '愿怨꾩? ?쇱씠踰????④퍡 ???믪씠', depth: 2 },
+  { id: 'famous-scenes-courage-of-choice', text: '紐낆옣硫????좏깮???⑷린', depth: 2 },
+  { id: 'future-challenges-narrative-over-skill', text: '?욎쑝濡쒖쓽 怨쇱젣 ??湲곗닠蹂대떎 ?쒖궗', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '카를로스 알카라스의 주무기는 무엇인가요?',
-    a: '그의 주무기는 공격적인 베이스라인 플레이와 빠른 코트 커버리지입니다. 강력한 스트로크와 탁월한 운동능력으로 상대를 압박합니다.'
+    q: '移대?濡쒖뒪 ?뚯뭅?쇱뒪??二쇰Т湲곕뒗 臾댁뾿?멸???',
+    a: '洹몄쓽 二쇰Т湲곕뒗 怨듦꺽?곸씤 踰좎씠?ㅻ씪???뚮젅?댁? 鍮좊Ⅸ 肄뷀듃 而ㅻ쾭由ъ??낅땲?? 媛뺣젰???ㅽ듃濡쒗겕? ?곸썡???대룞?λ젰?쇰줈 ?곷?瑜??뺣컯?⑸땲??'
   },
   {
-    q: '알카라즈는 어떤 표면에서 가장 강한가요?',
-    a: '모든 표면에서 강력한 모습을 보여주지만, 특히 클레이 코트에서 탁월한 스핀 컨트롤과 전진 플레이로 강점을 발휘합니다.'
+    q: '?뚯뭅?쇱쫰???대뼡 ?쒕㈃?먯꽌 媛??媛뺥븳媛??',
+    a: '紐⑤뱺 ?쒕㈃?먯꽌 媛뺣젰??紐⑥뒿??蹂댁뿬二쇱?留? ?뱁엳 ?대젅??肄뷀듃?먯꽌 ?곸썡???ㅽ? 而⑦듃濡ㅺ낵 ?꾩쭊 ?뚮젅?대줈 媛뺤젏??諛쒗쐶?⑸땲??'
   },
   {
-    q: '알카라즈의 인간적인 면모는 어떤가요?',
-    a: '겸손하고 감사하는 태도를 유지하며, 코트 안에서는 대담하고 코트 밖에서는 따뜻한 성격을 가지고 있습니다.'
+    q: '?뚯뭅?쇱쫰???멸컙?곸씤 硫대え???대뼡媛??',
+    a: '寃몄넀?섍퀬 媛먯궗?섎뒗 ?쒕룄瑜??좎??섎ŉ, 肄뷀듃 ?덉뿉?쒕뒗 ??댄븯怨?肄뷀듃 諛뽰뿉?쒕뒗 ?곕쑜???깃꺽??媛吏怨??덉뒿?덈떎.'
   },
   {
-    q: '알카라즈의 라이벌은 누구인가요?',
-    a: '얀니크 시너와의 라이벌리가 대표적입니다. 서로의 장점을 인정하면서도 치열한 경쟁을 펼치고 있습니다.'
+    q: '?뚯뭅?쇱쫰???쇱씠踰뚯? ?꾧뎄?멸???',
+    a: '??덊겕 ?쒕꼫????쇱씠踰뚮━媛 ??쒖쟻?낅땲?? ?쒕줈???μ젏???몄젙?섎㈃?쒕룄 移섏뿴??寃쎌웳???쇱튂怨??덉뒿?덈떎.'
   },
   {
-    q: '알카라즈의 미래 전망은 어떻게 되나요?',
-    a: '기술적 완성도를 높이고 서사를 쌓는 과정에 있습니다. 이미 많은 기록을 세웠지만, 앞으로 더 큰 업적을 이룰 잠재력을 가지고 있습니다.'
+    q: '?뚯뭅?쇱쫰??誘몃옒 ?꾨쭩? ?대뼸寃??섎굹??',
+    a: '湲곗닠???꾩꽦?꾨? ?믪씠怨??쒖궗瑜??볥뒗 怨쇱젙???덉뒿?덈떎. ?대? 留롮? 湲곕줉???몄썱吏留? ?욎쑝濡??????낆쟻???대０ ?좎옱?μ쓣 媛吏怨??덉뒿?덈떎.'
   },
 ];
 
@@ -75,21 +75,21 @@ export default function CarlosAlcarazBlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '카를로스 알카라스', '선수 프로필', '스토리', 'ATP'].map((tag) => (
-              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
-                {tag}
+            {['?뚮땲??, '移대?濡쒖뒪 ?뚯뭅?쇱뒪', '?좎닔 ?꾨줈??, '?ㅽ넗由?, 'ATP'].map((tag) => (
+              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            카를로스 알카라스
+            移대?濡쒖뒪 ?뚯뭅?쇱뒪
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            '즐기는 재능'으로 시대를 앞당긴 젊은 왕
+            '利먭린???щ뒫'?쇰줈 ?쒕?瑜??욌떦湲??딆? ??
           </p>
           <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            공격적 베이스라인과 변주로 흐름을 장악하는 카를로스 알카라스의 성장, 스타일, 인간미와 라이벌 이야기를 한 편으로.
+            怨듦꺽??踰좎씠?ㅻ씪?멸낵 蹂二쇰줈 ?먮쫫???μ븙?섎뒗 移대?濡쒖뒪 ?뚯뭅?쇱뒪???깆옣, ?ㅽ??? ?멸컙誘몄? ?쇱씠踰??댁빞湲곕? ???몄쑝濡?
           </p>
           
           {/* Meta Info */}
@@ -98,13 +98,13 @@ export default function CarlosAlcarazBlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-medium">6분 읽기</span>
+              <span className="font-medium">6遺??쎄린</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className="font-medium">2025년 11월 1일</span>
+              <span className="font-medium">2025??11??1??/span>
             </div>
           </div>
         </div>
@@ -126,33 +126,33 @@ export default function CarlosAlcarazBlogPost() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
               <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
                 <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 카를로스 알카라스는 스페인 무르시아 엘팔마에서 자란 선수로, 공격적인 베이스라인과 빠른 전환으로 흐름을 틀어쥐는 것이 강점입니다.
+                <strong className="text-blue-700 dark:text-blue-300">吏곷떟:</strong> 移대?濡쒖뒪 ?뚯뭅?쇱뒪???ㅽ럹??臾대Ⅴ?쒖븘 ?섑뙏留덉뿉???먮? ?좎닔濡? 怨듦꺽?곸씤 踰좎씠?ㅻ씪?멸낵 鍮좊Ⅸ ?꾪솚?쇰줈 ?먮쫫????댁쪖??寃껋씠 媛뺤젏?낅땲??
               </p>
             </div>
 
-            <h2 id="growth-background-daily-accumulation">성장 배경 — 일상에서 축적된 힘</h2>
-            <p>그의 시작은 거창하지 않았습니다. 지역 클럽을 운영하던 아버지 곁에서 공을 주고받던 시간이 훈련의 대부분이었고, 스스로 코트를 정리하고 다음 날을 준비하는 루틴이 몸에 배었습니다. 성적을 위한 조급함보다 하루를 충실히 쌓는 태도가 우선이었고, 그 습관은 긴 랠리에서도 표정이 흐트러지지 않는 안정감으로 이어졌습니다. 청소년 시절에는 선배들의 경기를 복기하며 "왜 이 포인트에서 저 선택을 했는가"를 스스로 질문했고, 답을 찾으면 즉시 연습에 반영했습니다. 기술보다 태도, 재능보다 습관이 먼저라는 믿음이 그의 바탕을 만들었습니다.</p>
+            <h2 id="growth-background-daily-accumulation">?깆옣 諛곌꼍 ???쇱긽?먯꽌 異뺤쟻????/h2>
+            <p>洹몄쓽 ?쒖옉? 嫄곗갹?섏? ?딆븯?듬땲?? 吏???대읇???댁쁺?섎뜕 ?꾨쾭吏 怨곸뿉??怨듭쓣 二쇨퀬諛쏅뜕 ?쒓컙???덈젴???遺遺꾩씠?덇퀬, ?ㅼ뒪濡?肄뷀듃瑜??뺣━?섍퀬 ?ㅼ쓬 ?좎쓣 以鍮꾪븯??猷⑦떞??紐몄뿉 諛곗뿀?듬땲?? ?깆쟻???꾪븳 議곌툒?⑤낫???섎（瑜?異⑹떎???볥뒗 ?쒕룄媛 ?곗꽑?댁뿀怨? 洹??듦?? 湲??좊━?먯꽌???쒖젙???먰듃?ъ?吏 ?딅뒗 ?덉젙媛먯쑝濡??댁뼱議뚯뒿?덈떎. 泥?냼???쒖젅?먮뒗 ?좊같?ㅼ쓽 寃쎄린瑜?蹂듦린?섎ŉ "?????ъ씤?몄뿉??? ?좏깮???덈뒗媛"瑜??ㅼ뒪濡?吏덈Ц?덇퀬, ?듭쓣 李얠쑝硫?利됱떆 ?곗뒿??諛섏쁺?덉뒿?덈떎. 湲곗닠蹂대떎 ?쒕룄, ?щ뒫蹂대떎 ?듦???癒쇱??쇰뒗 誘우쓬??洹몄쓽 諛뷀깢??留뚮뱾?덉뒿?덈떎.</p>
 
-            <h2 id="playing-style-pressure-variation-smile">경기 스타일 — 압박과 변주, 그리고 미소</h2>
-            <p>알카라즈의 경기는 '공격'과 '다양성'이 공존합니다. 베이스라인에서 먼저 압박을 걸되, 짧은 볼이 떨어지면 과감히 전진해 발리로 마무리합니다. 카운터 포핸드는 회전과 직선의 비율을 자유롭게 바꾸며, 백핸드는 각도를 열어 코트 폭을 최대한 사용합니다. 상대 리턴이 깊을수록 그는 드롭샷과 로브를 섞어 리듬을 깨뜨리고, 다음 볼에서 다시 강한 스트로크로 속도를 끌어올립니다. 무엇보다 인상적인 것은 위기에서도 나오는 미소입니다. 표정을 다잡는 그 몇 초가 다음 선택을 가볍게 만들고, 과감한 결정을 정당화합니다. 속도와 타이밍을 바꾸는 감각, 코트 전체를 보며 '여기서 한 번 비틀겠다'고 판단하는 상상력이 그를 특별하게 만듭니다.</p>
+            <h2 id="playing-style-pressure-variation-smile">寃쎄린 ?ㅽ??????뺣컯怨?蹂二? 洹몃━怨?誘몄냼</h2>
+            <p>?뚯뭅?쇱쫰??寃쎄린??'怨듦꺽'怨?'?ㅼ뼇????怨듭〈?⑸땲?? 踰좎씠?ㅻ씪?몄뿉??癒쇱? ?뺣컯??嫄몃릺, 吏㏃? 蹂쇱씠 ?⑥뼱吏硫?怨쇨컧???꾩쭊??諛쒕━濡?留덈Т由ы빀?덈떎. 移댁슫???ы빖?쒕뒗 ?뚯쟾怨?吏곸꽑??鍮꾩쑉???먯쑀濡?쾶 諛붽씀硫? 諛깊빖?쒕뒗 媛곷룄瑜??댁뼱 肄뷀듃 ??쓣 理쒕????ъ슜?⑸땲?? ?곷? 由ы꽩??源딆쓣?섎줉 洹몃뒗 ?쒕∼?룰낵 濡쒕툕瑜??욎뼱 由щ벉??源⑤쑉由ш퀬, ?ㅼ쓬 蹂쇱뿉???ㅼ떆 媛뺥븳 ?ㅽ듃濡쒗겕濡??띾룄瑜??뚯뼱?щ┰?덈떎. 臾댁뾿蹂대떎 ?몄긽?곸씤 寃껋? ?꾧린?먯꽌???섏삤??誘몄냼?낅땲?? ?쒖젙???ㅼ옟??洹?紐?珥덇? ?ㅼ쓬 ?좏깮??媛蹂띻쾶 留뚮뱾怨? 怨쇨컧??寃곗젙???뺣떦?뷀빀?덈떎. ?띾룄? ??대컢??諛붽씀??媛먭컖, 肄뷀듃 ?꾩껜瑜?蹂대ŉ '?ш린????踰?鍮꾪?寃좊떎'怨??먮떒?섎뒗 ?곸긽?μ씠 洹몃? ?밸퀎?섍쾶 留뚮벊?덈떎.</p>
 
-            <h2 id="experience-growth-surface-adaptation">경험과 성장 — 표면을 가리지 않는 적응력</h2>
-            <p>하드, 클레이, 잔디 어디서든 자신만의 템포를 갖추려는 노력이 이어졌습니다. 클레이에서는 깊은 스핀과 수비 전환으로 랠리를 길게 가져가고, 하드에서는 퍼스트 서브 확률과 리턴 위치를 미세하게 조정해 초반 주도권을 챙깁니다. 잔디에서는 낮은 바운드에 맞춘 준비 자세와 슬라이스의 빈도를 높여 리듬을 단순화합니다. 표면마다 기술의 비율을 달리하지만 지향점은 같습니다. "상대가 내 계획에 동의하도록 만든다." 이 원칙 덕분에 그는 중요한 경기일수록 평소 루틴을 더 엄격하게 지키며, 컨디션이 완벽하지 않을 때에도 승부의 흐름을 늦추지 않습니다.</p>
+            <h2 id="experience-growth-surface-adaptation">寃쏀뿕怨??깆옣 ???쒕㈃??媛由ъ? ?딅뒗 ?곸쓳??/h2>
+            <p>?섎뱶, ?대젅?? ?붾뵒 ?대뵒?쒕뱺 ?먯떊留뚯쓽 ?쒗룷瑜?媛뽰텛?ㅻ뒗 ?몃젰???댁뼱議뚯뒿?덈떎. ?대젅?댁뿉?쒕뒗 源딆? ?ㅽ?怨??섎퉬 ?꾪솚?쇰줈 ?좊━瑜?湲멸쾶 媛?멸?怨? ?섎뱶?먯꽌???쇱뒪???쒕툕 ?뺣쪧怨?由ы꽩 ?꾩튂瑜?誘몄꽭?섍쾶 議곗젙??珥덈컲 二쇰룄沅뚯쓣 梨숆퉩?덈떎. ?붾뵒?먯꽌????? 諛붿슫?쒖뿉 留욎텣 以鍮??먯꽭? ?щ씪?댁뒪??鍮덈룄瑜??믪뿬 由щ벉???⑥닚?뷀빀?덈떎. ?쒕㈃留덈떎 湲곗닠??鍮꾩쑉???щ━?섏?留?吏?μ젏? 媛숈뒿?덈떎. "?곷?媛 ??怨꾪쉷???숈쓽?섎룄濡?留뚮뱺??" ???먯튃 ?뺣텇??洹몃뒗 以묒슂??寃쎄린?쇱닔濡??됱냼 猷⑦떞?????꾧꺽?섍쾶 吏?ㅻŉ, 而⑤뵒?섏씠 ?꾨꼍?섏? ?딆쓣 ?뚯뿉???밸????먮쫫????텛吏 ?딆뒿?덈떎.</p>
 
-            <h2 id="human-aspects-attitude-over-results">인간적인 면모 — 결과보다 태도</h2>
-            <p>그의 인터뷰에서 반복되는 단어는 '감사'와 '즐거움'입니다. 연습이 지루해질 때면 처음 라켓을 잡던 날의 설렘을 떠올리고, 승리한 날에는 스태프와 가족을 먼저 찾습니다. 패배한 뒤에도 상대의 장점을 먼저 말하는 태도는 코트 밖의 신뢰로 돌아옵니다. 그는 "실수는 누구나 한다. 문제는 다음 공을 어떻게 대하느냐"라고 말하곤 합니다. 이 간단한 문장이야말로 그가 위기에서 표정을 잃지 않는 이유를 설명합니다.</p>
+            <h2 id="human-aspects-attitude-over-results">?멸컙?곸씤 硫대え ??寃곌낵蹂대떎 ?쒕룄</h2>
+            <p>洹몄쓽 ?명꽣酉곗뿉??諛섎났?섎뒗 ?⑥뼱??'媛먯궗'? '利먭굅?'?낅땲?? ?곗뒿??吏猷⑦빐吏??뚮㈃ 泥섏쓬 ?쇱폆???〓뜕 ?좎쓽 ?ㅻ젞???좎삱由ш퀬, ?밸━???좎뿉???ㅽ깭?꾩? 媛議깆쓣 癒쇱? 李얠뒿?덈떎. ?⑤같???ㅼ뿉???곷????μ젏??癒쇱? 留먰븯???쒕룄??肄뷀듃 諛뽰쓽 ?좊ː濡??뚯븘?듬땲?? 洹몃뒗 "?ㅼ닔???꾧뎄???쒕떎. 臾몄젣???ㅼ쓬 怨듭쓣 ?대뼸寃???섎뒓???쇨퀬 留먰븯怨??⑸땲?? ??媛꾨떒??臾몄옣?댁빞留먮줈 洹멸? ?꾧린?먯꽌 ?쒖젙???껋? ?딅뒗 ?댁쑀瑜??ㅻ챸?⑸땲??</p>
 
-            <h2 id="nationality-culture-modern-interpretation">국적과 문화 — 스페인 전통 위에 올린 현대적 해석</h2>
-            <p>스페인 테니스가 이어온 끈기와 회전의 전통은 그의 기반입니다. 여기에 빠른 판단과 전진 성향, 과감한 드롭샷이라는 현대적 해석을 더해 새로운 스타일을 만들었습니다. 감정을 숨기지 않되 상대를 존중하는 제스처를 잊지 않는 태도는 스페인 스포츠 문화의 따뜻함을 닮았습니다. 코트 밖에서는 겸손하고, 코트 안에서는 대담한 이 대비가 그의 서사를 풍성하게 합니다.</p>
+            <h2 id="nationality-culture-modern-interpretation">援?쟻怨?臾명솕 ???ㅽ럹???꾪넻 ?꾩뿉 ?щ┛ ?꾨????댁꽍</h2>
+            <p>?ㅽ럹???뚮땲?ㅺ? ?댁뼱???덇린? ?뚯쟾???꾪넻? 洹몄쓽 湲곕컲?낅땲?? ?ш린??鍮좊Ⅸ ?먮떒怨??꾩쭊 ?깊뼢, 怨쇨컧???쒕∼?룹씠?쇰뒗 ?꾨????댁꽍???뷀빐 ?덈줈???ㅽ??쇱쓣 留뚮뱾?덉뒿?덈떎. 媛먯젙???④린吏 ?딅릺 ?곷?瑜?議댁쨷?섎뒗 ?쒖뒪泥섎? ?딆? ?딅뒗 ?쒕룄???ㅽ럹???ㅽ룷痢?臾명솕???곕쑜?⑥쓣 ??븯?듬땲?? 肄뷀듃 諛뽰뿉?쒕뒗 寃몄넀?섍퀬, 肄뷀듃 ?덉뿉?쒕뒗 ??댄븳 ???鍮꾧? 洹몄쓽 ?쒖궗瑜??띿꽦?섍쾶 ?⑸땲??</p>
 
-            <h2 id="relationships-rivals-grow-together">관계와 라이벌 — 함께 더 높이</h2>
-            <p>그와 동세대인 얀니크 시너와의 만남은 서로의 한계를 끌어올린 대표적 사례입니다. 서로의 강점을 인정하면서도 코트에 서면 한 포인트도 양보하지 않는 관계는 팬들에게 최고의 볼거리를 제공합니다. 한편, 선배 세대의 거물들과 마주할 때 그는 존중을 앞세우되 두려움은 보이지 않습니다. '그들이 만든 기준을 넘어서는 것이 내 역할'이라는 태도는 세대의 경계에서 자신만의 길을 열어가겠다는 선언처럼 들립니다.</p>
+            <h2 id="relationships-rivals-grow-together">愿怨꾩? ?쇱씠踰????④퍡 ???믪씠</h2>
+            <p>洹몄? ?숈꽭?????덊겕 ?쒕꼫???留뚮궓? ?쒕줈???쒓퀎瑜??뚯뼱?щ┛ ??쒖쟻 ?щ??낅땲?? ?쒕줈??媛뺤젏???몄젙?섎㈃?쒕룄 肄뷀듃???쒕㈃ ???ъ씤?몃룄 ?묐낫?섏? ?딅뒗 愿怨꾨뒗 ?щ뱾?먭쾶 理쒓퀬??蹂쇨굅由щ? ?쒓났?⑸땲?? ?쒗렪, ?좊같 ?몃???嫄곕Ъ?ㅺ낵 留덉＜????洹몃뒗 議댁쨷???욎꽭?곕릺 ?먮젮?? 蹂댁씠吏 ?딆뒿?덈떎. '洹몃뱾??留뚮뱺 湲곗????섏뼱?쒕뒗 寃껋씠 ????븷'?대씪???쒕룄???몃???寃쎄퀎?먯꽌 ?먯떊留뚯쓽 湲몄쓣 ?댁뼱媛寃좊떎???좎뼵泥섎읆 ?ㅻ┰?덈떎.</p>
 
-            <h2 id="famous-scenes-courage-of-choice">명장면 — 선택의 용기</h2>
-            <p>기억에 남는 장면들의 공통점은 '결정의 순간'입니다. 디우스에서 맞는 두 번째 서브, 타이브레이크 초반의 첫 랠리, 브레이크 포인트를 내준 직후의 리턴 포인트. 그는 이런 국면에서 항상 코트를 넓게 보고, 가장 단순하면서도 상대가 예상하지 못한 해법을 고릅니다. 드롭샷으로 한 번 접고, 다음 볼에서 완력을 쏟는 식의 구성은 선택의 결과를 스스로 책임지겠다는 태도이자, 관중에게 '테니스는 재미있는 게임'임을 상기시키는 연출이기도 합니다.</p>
+            <h2 id="famous-scenes-courage-of-choice">紐낆옣硫????좏깮???⑷린</h2>
+            <p>湲곗뼲???⑤뒗 ?λ㈃?ㅼ쓽 怨듯넻?먯? '寃곗젙???쒓컙'?낅땲?? ?붿슦?ㅼ뿉??留욌뒗 ??踰덉㎏ ?쒕툕, ??대툕?덉씠??珥덈컲??泥??좊━, 釉뚮젅?댄겕 ?ъ씤?몃? ?댁? 吏곹썑??由ы꽩 ?ъ씤?? 洹몃뒗 ?대윴 援?㈃?먯꽌 ??긽 肄뷀듃瑜??볤쾶 蹂닿퀬, 媛???⑥닚?섎㈃?쒕룄 ?곷?媛 ?덉긽?섏? 紐삵븳 ?대쾿??怨좊쫭?덈떎. ?쒕∼?룹쑝濡???踰??묎퀬, ?ㅼ쓬 蹂쇱뿉???꾨젰???잙뒗 ?앹쓽 援ъ꽦? ?좏깮??寃곌낵瑜??ㅼ뒪濡?梨낆엫吏寃좊떎???쒕룄?댁옄, 愿以묒뿉寃?'?뚮땲?ㅻ뒗 ?щ??덈뒗 寃뚯엫'?꾩쓣 ?곴린?쒗궎???곗텧?닿린???⑸땲??</p>
 
-            <h2 id="future-challenges-narrative-over-skill">앞으로의 과제 — 기술보다 서사</h2>
-            <p>알카라즈에게 남은 과제는 기록보다 '어떤 이야기로 기억될 것인가'에 가깝습니다. 어린 날의 성실함을 잃지 않은 채, 다양한 표면에서 자신의 테니스를 더 간결하게 다듬을 필요가 있습니다. 그는 이미 많은 것을 보여주었습니다. 이제는 중요한 순간마다 선택의 이유를 명료하게 증명하는 일만 남았습니다. 그 증명은 하나의 포인트, 하나의 표정, 하나의 루틴에서 시작될 것입니다.</p>
+            <h2 id="future-challenges-narrative-over-skill">?욎쑝濡쒖쓽 怨쇱젣 ??湲곗닠蹂대떎 ?쒖궗</h2>
+            <p>?뚯뭅?쇱쫰?먭쾶 ?⑥? 怨쇱젣??湲곕줉蹂대떎 '?대뼡 ?댁빞湲곕줈 湲곗뼲??寃껋씤媛'??媛源앹뒿?덈떎. ?대┛ ?좎쓽 ?깆떎?⑥쓣 ?껋? ?딆? 梨? ?ㅼ뼇???쒕㈃?먯꽌 ?먯떊???뚮땲?ㅻ? ??媛꾧껐?섍쾶 ?ㅻ벉???꾩슂媛 ?덉뒿?덈떎. 洹몃뒗 ?대? 留롮? 寃껋쓣 蹂댁뿬二쇱뿀?듬땲?? ?댁젣??以묒슂???쒓컙留덈떎 ?좏깮???댁쑀瑜?紐낅즺?섍쾶 利앸챸?섎뒗 ?쇰쭔 ?⑥븯?듬땲?? 洹?利앸챸? ?섎굹???ъ씤?? ?섎굹???쒖젙, ?섎굹??猷⑦떞?먯꽌 ?쒖옉??寃껋엯?덈떎.</p>
           </div>
 
           {/* Related Links */}
@@ -164,7 +164,7 @@ export default function CarlosAlcarazBlogPost() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
+                愿???먮즺
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -172,13 +172,13 @@ export default function CarlosAlcarazBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
+                    ?대? 留곹겕
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필</span>
+                        <span className="text-xl">?룇</span>
+                        <span className="font-medium">?좎닔 ?꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -186,8 +186,8 @@ export default function CarlosAlcarazBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">실력 테스트</span>
+                        <span className="text-xl">?렞</span>
+                        <span className="font-medium">?ㅻ젰 ?뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -195,8 +195,8 @@ export default function CarlosAlcarazBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">플레이 스타일 테스트</span>
+                        <span className="text-xl">?렱</span>
+                        <span className="font-medium">?뚮젅???ㅽ????뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -209,13 +209,13 @@ export default function CarlosAlcarazBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    외부 자료
+                    ?몃? ?먮즺
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어 공식 사이트</span>
+                        <span className="text-xl">?뙋</span>
+                        <span className="font-medium">ATP ?ъ뼱 怨듭떇 ?ъ씠??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -223,8 +223,8 @@ export default function CarlosAlcarazBlogPost() {
                     </li>
                     <li>
                       <a href="https://en.wikipedia.org/wiki/Carlos_Alcaraz" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">📖</span>
-                        <span className="font-medium">위키피디아 프로필</span>
+                        <span className="text-xl">?뱰</span>
+                        <span className="font-medium">?꾪궎?쇰뵒???꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -246,9 +246,9 @@ export default function CarlosAlcarazBlogPost() {
                 <RelatedPosts 
             currentSlug="carlos-alcaraz" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '카를로스 알카라스', '선수 프로필', '스토리', 'ATP']} 
+            tags={['?뚮땲??, '移대?濡쒖뒪 ?뚯뭅?쇱뒪', '?좎닔 ?꾨줈??, '?ㅽ넗由?, 'ATP']} 
           />
 
           <CTA />

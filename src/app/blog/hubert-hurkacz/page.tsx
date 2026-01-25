@@ -8,15 +8,15 @@ import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: '후베르트 후르카츠 선수 프로필과 스토리',
-  description: '강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대 테니스를 그려내는 후베르트 후르카츠의 성장 배경, 경기 스타일, 인간적인 면모를 담았습니다.',
-  keywords: ['테니스', '후베르트 후르카츠', '선수 프로필', '스토리', '폴란드'],
+  title: '?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+  description: '媛뺣젰???쒕툕? 遺?쒕윭???뗭썙?? ?덉젣???꾪솚?쇰줈 ?꾨? ?뚮땲?ㅻ? 洹몃젮?대뒗 ?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え瑜??댁븯?듬땲??',
+  keywords: ['?뚮땲??, '?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?대???],
   alternates: {
     canonical: 'https://tennisfriends.co.kr/blog/hubert-hurkacz',
   },
   openGraph: {
-    title: '후베르트 후르카츠 선수 프로필과 스토리',
-    description: '강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대 테니스를 그려내는 후베르트 후르카츠의 성장 배경, 경기 스타일, 인간적인 면모를 담았습니다.',
+    title: '?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '媛뺣젰???쒕툕? 遺?쒕윭???뗭썙?? ?덉젣???꾪솚?쇰줈 ?꾨? ?뚮땲?ㅻ? 洹몃젮?대뒗 ?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え瑜??댁븯?듬땲??',
     url: 'https://tennisfriends.co.kr/blog/hubert-hurkacz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -24,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '후베르트 후르카츠 선수 프로필과 스토리',
-    description: '강력한 서브와 부드러운 풋워크, 절제된 전환으로 현대 테니스를 그려내는 후베르트 후르카츠의 성장 배경, 경기 스타일, 인간적인 면모를 담았습니다.',
+    title: '?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩 ?좎닔 ?꾨줈?꾧낵 ?ㅽ넗由?,
+    description: '媛뺣젰???쒕툕? 遺?쒕윭???뗭썙?? ?덉젣???꾪솚?쇰줈 ?꾨? ?뚮땲?ㅻ? 洹몃젮?대뒗 ?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩???깆옣 諛곌꼍, 寃쎄린 ?ㅽ??? ?멸컙?곸씤 硫대え瑜??댁븯?듬땲??',
   },
   robots: {
     index: true,
@@ -34,39 +34,39 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'growth-background-quiet-habit-making-solid', text: '성장 배경 — 단단함을 만드는 조용한 습관', depth: 2 },
-  { id: 'playing-style-serve-start-foot-finish', text: '경기 스타일 — 서브로 출발해, 발로 마무리하다', depth: 2 },
-  { id: 'rhythm-selection-routine-power-erase-noise', text: '리듬과 선택 — 소음을 지우는 루틴의 힘', depth: 2 },
-  { id: 'experience-transition-grass-hard-clay', text: '경험과 전환 — 잔디의 속도, 하드의 질서, 점토의 인내', depth: 2 },
-  { id: 'human-aspects-humor-care-quietness', text: '인간적인 면모 — 조용함 속의 유머와 배려', depth: 2 },
-  { id: 'nationality-culture-poland-tenacity-court', text: '국적과 문화 — 폴란드의 끈기, 코트 위의 품격', depth: 2 },
-  { id: 'relationships-rivals-fast-start-slow-conclusion', text: '관계와 라이벌 — 빠른 시작, 늦은 결론의 미학', depth: 2 },
-  { id: 'famous-scenes-tiebreak-three-lines', text: '명장면 — 타이브레이크에서 그려지는 세 가지 선', depth: 2 },
-  { id: 'equipment-details-tension-balance-contact', text: '장비와 디테일 — 텐션·밸런스·접점의 미세 조정', depth: 2 },
-  { id: 'future-challenges-forward-timing-conclusion-speed', text: '앞으로의 과제 — 전진의 타이밍, 결말의 속도', depth: 2 },
-  { id: 'fans-community-lasting-trust-reason', text: '팬과 커뮤니티 — 오래 가는 신뢰의 이유', depth: 2 },
+  { id: 'growth-background-quiet-habit-making-solid', text: '?깆옣 諛곌꼍 ???⑤떒?⑥쓣 留뚮뱶??議곗슜???듦?', depth: 2 },
+  { id: 'playing-style-serve-start-foot-finish', text: '寃쎄린 ?ㅽ??????쒕툕濡?異쒕컻?? 諛쒕줈 留덈Т由ы븯??, depth: 2 },
+  { id: 'rhythm-selection-routine-power-erase-noise', text: '由щ벉怨??좏깮 ???뚯쓬??吏?곕뒗 猷⑦떞????, depth: 2 },
+  { id: 'experience-transition-grass-hard-clay', text: '寃쏀뿕怨??꾪솚 ???붾뵒???띾룄, ?섎뱶??吏덉꽌, ?먰넗???몃궡', depth: 2 },
+  { id: 'human-aspects-humor-care-quietness', text: '?멸컙?곸씤 硫대え ??議곗슜???띿쓽 ?좊㉧? 諛곕젮', depth: 2 },
+  { id: 'nationality-culture-poland-tenacity-court', text: '援?쟻怨?臾명솕 ???대??쒖쓽 ?덇린, 肄뷀듃 ?꾩쓽 ?덇꺽', depth: 2 },
+  { id: 'relationships-rivals-fast-start-slow-conclusion', text: '愿怨꾩? ?쇱씠踰???鍮좊Ⅸ ?쒖옉, ??? 寃곕줎??誘명븰', depth: 2 },
+  { id: 'famous-scenes-tiebreak-three-lines', text: '紐낆옣硫?????대툕?덉씠?ъ뿉??洹몃젮吏????媛吏 ??, depth: 2 },
+  { id: 'equipment-details-tension-balance-contact', text: '?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙', depth: 2 },
+  { id: 'future-challenges-forward-timing-conclusion-speed', text: '?욎쑝濡쒖쓽 怨쇱젣 ???꾩쭊????대컢, 寃곕쭚???띾룄', depth: 2 },
+  { id: 'fans-community-lasting-trust-reason', text: '?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː???댁쑀', depth: 2 },
 ];
 
 const faqs = [
   {
-    q: '후베르트 후르카츠의 경기 스타일은 어떤가요?',
-    a: '강력한 서브와 유연한 풋워크, 과하지 않은 전환이 특징입니다. 거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓으며, 서브로 출발해 발로 마무리하는 방식으로 하드와 잔디에서 안정적인 승률을 만듭니다.'
+    q: '?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩??寃쎄린 ?ㅽ??쇱? ?대뼡媛??',
+    a: '媛뺣젰???쒕툕? ?좎뿰???뗭썙?? 怨쇳븯吏 ?딆? ?꾪솚???뱀쭠?낅땲?? 嫄곕????ㅼ쐷???꾨땲???뺢탳????대컢怨?洹좏삎?쇰줈 ?먯닔瑜??볦쑝硫? ?쒕툕濡?異쒕컻??諛쒕줈 留덈Т由ы븯??諛⑹떇?쇰줈 ?섎뱶? ?붾뵒?먯꽌 ?덉젙?곸씤 ?밸쪧??留뚮벊?덈떎.'
   },
   {
-    q: '후르카츠의 성장 배경은 어떤가요?',
-    a: '폴란드 브로츠와프에서 자란 그는 어린 시절부터 정확하게 반복하는 것을 훈련의 핵심으로 배웠습니다. 코치의 주문은 간단했고, 실수는 오늘 안에 정리하고, 일관된 루틴으로 묶어 두었습니다.'
+    q: '?꾨Ⅴ移댁툩???깆옣 諛곌꼍? ?대뼡媛??',
+    a: '?대???釉뚮줈痢좎??꾩뿉???먮? 洹몃뒗 ?대┛ ?쒖젅遺???뺥솗?섍쾶 諛섎났?섎뒗 寃껋쓣 ?덈젴???듭떖?쇰줈 諛곗썱?듬땲?? 肄붿튂??二쇰Ц? 媛꾨떒?덇퀬, ?ㅼ닔???ㅻ뒛 ?덉뿉 ?뺣━?섍퀬, ?쇨???猷⑦떞?쇰줈 臾띠뼱 ?먯뿀?듬땲??'
   },
   {
-    q: '후르카츠의 강점은 무엇인가요?',
-    a: '탄력과 절제가 최대 강점입니다. 강력한 서브의 낙구점 정확성으로 리턴러의 시간을 훔치고, 풋워크로 마무리하며, 근거 있는 선택으로 전환합니다. 현대형 서브&발리 스타일의 대표 선수입니다.'
+    q: '?꾨Ⅴ移댁툩??媛뺤젏? 臾댁뾿?멸???',
+    a: '?꾨젰怨??덉젣媛 理쒕? 媛뺤젏?낅땲?? 媛뺣젰???쒕툕???숆뎄???뺥솗?깆쑝濡?由ы꽩?ъ쓽 ?쒓컙???붿튂怨? ?뗭썙?щ줈 留덈Т由ы븯硫? 洹쇨굅 ?덈뒗 ?좏깮?쇰줈 ?꾪솚?⑸땲?? ?꾨????쒕툕&諛쒕━ ?ㅽ??쇱쓽 ????좎닔?낅땲??'
   },
   {
-    q: '후르카츠의 인간적인 면모는 어떤가요?',
-    a: '조용함 속의 유머와 배려가 특징입니다. 인터뷰는 길지 않으며, 팬과 스태프에게 보내는 인사는 일정합니다. 강함을 과시하기보다 강함을 다루는 방식에 집중하는 태도가 인상적입니다.'
+    q: '?꾨Ⅴ移댁툩???멸컙?곸씤 硫대え???대뼡媛??',
+    a: '議곗슜???띿쓽 ?좊㉧? 諛곕젮媛 ?뱀쭠?낅땲?? ?명꽣酉곕뒗 湲몄? ?딆쑝硫? ?ш낵 ?ㅽ깭?꾩뿉寃?蹂대궡???몄궗???쇱젙?⑸땲?? 媛뺥븿??怨쇱떆?섍린蹂대떎 媛뺥븿???ㅻ（??諛⑹떇??吏묒쨷?섎뒗 ?쒕룄媛 ?몄긽?곸엯?덈떎.'
   },
   {
-    q: '후르카츠의 미래 전망은 어떻게 되나요?',
-    a: '전진의 타이밍과 결말의 속도가 과제입니다. 하프코트 마무리 빈도, 리턴 직후 3구에서의 전진 타이밍 반 박자 앞당김, 세컨드 서브 코스 다양화를 통해 긴 경기에서도 에너지 관리를 수월하게 할 수 있습니다.'
+    q: '?꾨Ⅴ移댁툩??誘몃옒 ?꾨쭩? ?대뼸寃??섎굹??',
+    a: '?꾩쭊????대컢怨?寃곕쭚???띾룄媛 怨쇱젣?낅땲?? ?섑봽肄뷀듃 留덈Т由?鍮덈룄, 由ы꽩 吏곹썑 3援ъ뿉?쒖쓽 ?꾩쭊 ??대컢 諛?諛뺤옄 ?욌떦源, ?몄빻???쒕툕 肄붿뒪 ?ㅼ뼇?붾? ?듯빐 湲?寃쎄린?먯꽌???먮꼫吏 愿由щ? ?섏썡?섍쾶 ?????덉뒿?덈떎.'
   },
 ];
 
@@ -78,21 +78,21 @@ export default function HubertHurkaczBlogPost() {
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
           <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '후베르트 후르카츠', '선수 프로필', '스토리', '폴란드'].map((tag) => (
-              <Badge key={tag} className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
-                {tag}
+            {['?뚮땲??, '?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?대???].map((tag) => (
+              <Badge key=?뚮땲???좎닔 className="bg-white/20 text-white border-white/30 backdrop-blur-sm hover:bg-white/30 transition-colors">
+                ?뚮땲???좎닔
               </Badge>
             ))}
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            후베르트 후르카츠
+            ?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            탄력과 절제로 설계하는 현대형 서브&발리
+            ?꾨젰怨??덉젣濡??ㅺ퀎?섎뒗 ?꾨????쒕툕&諛쒕━
           </p>
           <p className="text-lg text-blue-50/90 mb-10 max-w-3xl leading-relaxed">
-            거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓는 후베르트 후르카츠의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.
+            嫄곕????ㅼ쐷???꾨땲???뺢탳????대컢怨?洹좏삎?쇰줈 ?먯닔瑜??볥뒗 ?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩???깆옣, ?ㅽ??? ?멸컙?곸씤 硫대え? 怨쇱젣瑜????몄쑝濡?
           </p>
           
           {/* Meta Info */}
@@ -101,13 +101,13 @@ export default function HubertHurkaczBlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-medium">8분 읽기</span>
+              <span className="font-medium">8遺??쎄린</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className="font-medium">2025년 10월 2일</span>
+              <span className="font-medium">2025??10??2??/span>
             </div>
           </div>
         </div>
@@ -125,42 +125,42 @@ export default function HubertHurkaczBlogPost() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 dark:border-blue-900">
               <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-0">
                 <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3 align-middle" />
-                <strong className="text-blue-700 dark:text-blue-300">직답:</strong> 후베르트 후르카츠(Hubert Hurkacz)는 강력한 서브와 유연한 풋워크, 과하지 않은 전환으로 하드와 잔디에서 안정적인 승률을 만들어내는 폴란드의 간판 선수다.
+                <strong className="text-blue-700 dark:text-blue-300">吏곷떟:</strong> ?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩(Hubert Hurkacz)??媛뺣젰???쒕툕? ?좎뿰???뗭썙?? 怨쇳븯吏 ?딆? ?꾪솚?쇰줈 ?섎뱶? ?붾뵒?먯꽌 ?덉젙?곸씤 ?밸쪧??留뚮뱾?대궡???대??쒖쓽 媛꾪뙋 ?좎닔??
               </p>
             </div>
 
-            <h2 id="growth-background-quiet-habit-making-solid">성장 배경 — 단단함을 만드는 조용한 습관</h2>
-            <p>폴란드 브로츠와프에서 자란 그는 어린 시절부터 "정확하게 반복하는 것"을 훈련의 핵심으로 배웠다. 코치의 주문은 늘 간단했다. 오늘의 실수는 오늘 안에 정리하고, 내일은 같은 실수를 다른 방법으로 막아라. 그래서 그의 연습은 화려하기보다 차분했고, 기록과 메모로 가득했다. 스트레칭의 순서, 워밍업의 시간, 첫 서브의 코스까지 일관된 루틴으로 묶어 두었고, 원정지에서도 그 질서를 거의 바꾸지 않았다. 이 습관은 큰 관중 앞에서도 호흡과 손의 감각을 잃지 않게 해 준다.</p>
+            <h2 id="growth-background-quiet-habit-making-solid">?깆옣 諛곌꼍 ???⑤떒?⑥쓣 留뚮뱶??議곗슜???듦?</h2>
+            <p>?대???釉뚮줈痢좎??꾩뿉???먮? 洹몃뒗 ?대┛ ?쒖젅遺??"?뺥솗?섍쾶 諛섎났?섎뒗 寃????덈젴???듭떖?쇰줈 諛곗썱?? 肄붿튂??二쇰Ц? ??媛꾨떒?덈떎. ?ㅻ뒛???ㅼ닔???ㅻ뒛 ?덉뿉 ?뺣━?섍퀬, ?댁씪? 媛숈? ?ㅼ닔瑜??ㅻⅨ 諛⑸쾿?쇰줈 留됱븘?? 洹몃옒??洹몄쓽 ?곗뒿? ?붾젮?섍린蹂대떎 李⑤텇?덇퀬, 湲곕줉怨?硫붾え濡?媛?앺뻽?? ?ㅽ듃?덉묶???쒖꽌, ?뚮컢?낆쓽 ?쒓컙, 泥??쒕툕??肄붿뒪源뚯? ?쇨???猷⑦떞?쇰줈 臾띠뼱 ?먯뿀怨? ?먯젙吏?먯꽌??洹?吏덉꽌瑜?嫄곗쓽 諛붽씀吏 ?딆븯?? ???듦?? ??愿以??욎뿉?쒕룄 ?명씉怨??먯쓽 媛먭컖???껋? ?딄쾶 ??以??</p>
 
-            <h2 id="playing-style-serve-start-foot-finish">경기 스타일 — 서브로 출발해, 발로 마무리하다</h2>
-            <p>후르카츠의 경기는 서브에서 시작해 풋워크로 완성된다. 퍼스트 서브는 속도뿐 아니라 낙구점의 정확성으로 리턴러의 시간을 훔치고, 세컨드 서브는 스핀과 방향을 섞어 랠리의 출발점을 본인 쪽으로 당긴다. 초구 이후에는 포핸드의 간결한 스윙으로 깊이를 만들고, 백핸드는 면을 곧게 세워 안전을 확보한다. 필요할 때는 하프코트에서 한 걸음 전진해 발리로 결말을 재촉하는데, 이 전환이 과감하기보다는 근거 있는 선택에 가깝다. 네트를 무리하게 점령하기보다는 빈 공간이 열렸을 때만 들어가 실수를 줄인다.</p>
+            <h2 id="playing-style-serve-start-foot-finish">寃쎄린 ?ㅽ??????쒕툕濡?異쒕컻?? 諛쒕줈 留덈Т由ы븯??/h2>
+            <p>?꾨Ⅴ移댁툩??寃쎄린???쒕툕?먯꽌 ?쒖옉???뗭썙?щ줈 ?꾩꽦?쒕떎. ?쇱뒪???쒕툕???띾룄肉??꾨땲???숆뎄?먯쓽 ?뺥솗?깆쑝濡?由ы꽩?ъ쓽 ?쒓컙???붿튂怨? ?몄빻???쒕툕???ㅽ?怨?諛⑺뼢???욎뼱 ?좊━??異쒕컻?먯쓣 蹂몄씤 履쎌쑝濡??밴릿?? 珥덇뎄 ?댄썑?먮뒗 ?ы빖?쒖쓽 媛꾧껐???ㅼ쐷?쇰줈 源딆씠瑜?留뚮뱾怨? 諛깊빖?쒕뒗 硫댁쓣 怨㏐쾶 ?몄썙 ?덉쟾???뺣낫?쒕떎. ?꾩슂???뚮뒗 ?섑봽肄뷀듃?먯꽌 ??嫄몄쓬 ?꾩쭊??諛쒕━濡?寃곕쭚???ъ큺?섎뒗?? ???꾪솚??怨쇨컧?섍린蹂대떎??洹쇨굅 ?덈뒗 ?좏깮??媛源앸떎. ?ㅽ듃瑜?臾대━?섍쾶 ?먮졊?섍린蹂대떎??鍮?怨듦컙???대졇???뚮쭔 ?ㅼ뼱媛 ?ㅼ닔瑜?以꾩씤??</p>
 
-            <h2 id="rhythm-selection-routine-power-erase-noise">리듬과 선택 — 소음을 지우는 루틴의 힘</h2>
-            <p>그의 포인트 사이는 놀랄 만큼 단순하다. 라켓 스트링을 한 번 훑고, 두 번의 깊은 호흡, 일정한 토스. 스코어가 불리해도 루틴의 길이와 순서를 바꾸지 않기에 심박이 갑자기 치솟지 않는다. 타이브레이크에서는 첫 두 포인트로 높이와 길이를 확인하고, 세 번째부터 코스를 얇게 쓰며 균형을 흔든다. 리턴 게임에선 중앙 깊은 볼로 각을 지운 뒤, 다음 스트로크에서 속도를 올려 주도권을 되찾는다. 화려한 하이라이트보다 실수를 관리하는 선택이 우선이고, 이 태도가 장기전에서 빛을 발한다.</p>
+            <h2 id="rhythm-selection-routine-power-erase-noise">由щ벉怨??좏깮 ???뚯쓬??吏?곕뒗 猷⑦떞????/h2>
+            <p>洹몄쓽 ?ъ씤???ъ씠?????留뚰겮 ?⑥닚?섎떎. ?쇱폆 ?ㅽ듃留곸쓣 ??踰??묎퀬, ??踰덉쓽 源딆? ?명씉, ?쇱젙???좎뒪. ?ㅼ퐫?닿? 遺덈━?대룄 猷⑦떞??湲몄씠? ?쒖꽌瑜?諛붽씀吏 ?딄린???щ컯??媛묒옄湲?移섏넖吏 ?딅뒗?? ??대툕?덉씠?ъ뿉?쒕뒗 泥????ъ씤?몃줈 ?믪씠? 湲몄씠瑜??뺤씤?섍퀬, ??踰덉㎏遺??肄붿뒪瑜??뉕쾶 ?곕ŉ 洹좏삎???붾뱺?? 由ы꽩 寃뚯엫?먯꽑 以묒븰 源딆? 蹂쇰줈 媛곸쓣 吏???? ?ㅼ쓬 ?ㅽ듃濡쒗겕?먯꽌 ?띾룄瑜??щ젮 二쇰룄沅뚯쓣 ?섏갼?붾떎. ?붾젮???섏씠?쇱씠?몃낫???ㅼ닔瑜?愿由ы븯???좏깮???곗꽑?닿퀬, ???쒕룄媛 ?κ린?꾩뿉??鍮쏆쓣 諛쒗븳??</p>
 
-            <h2 id="experience-transition-grass-hard-clay">경험과 전환 — 잔디의 속도, 하드의 질서, 점토의 인내</h2>
-            <p>후르카츠는 표면에 따라 구질의 비율을 현실적으로 바꾼다. 잔디에서는 낮은 자세와 짧은 백스윙으로 타점을 앞당기고, 슬라이스 리턴을 섞어 랠리의 템포를 늦춘다. 하드에서는 퍼스트 서브 확률을 끌어올리고 3구 패턴을 단순화해 불필요한 오차를 줄인다. 점토에선 회전을 늘려 낙구를 안정시키고, 네 번째나 다섯 번째 스트로크에서 드롭·슬라이스를 섞어 상대의 리듬을 어지럽힌다. 환경이 달라져도 원칙은 같다. 흐름을 먼저 안정시키고, 열린 순간에만 칼을 빼든다.</p>
+            <h2 id="experience-transition-grass-hard-clay">寃쏀뿕怨??꾪솚 ???붾뵒???띾룄, ?섎뱶??吏덉꽌, ?먰넗???몃궡</h2>
+            <p>?꾨Ⅴ移댁툩???쒕㈃???곕씪 援ъ쭏??鍮꾩쑉???꾩떎?곸쑝濡?諛붽씔?? ?붾뵒?먯꽌????? ?먯꽭? 吏㏃? 諛깆뒪?숈쑝濡???먯쓣 ?욌떦湲곌퀬, ?щ씪?댁뒪 由ы꽩???욎뼱 ?좊━???쒗룷瑜???텣?? ?섎뱶?먯꽌???쇱뒪???쒕툕 ?뺣쪧???뚯뼱?щ━怨?3援??⑦꽩???⑥닚?뷀빐 遺덊븘?뷀븳 ?ㅼ감瑜?以꾩씤?? ?먰넗?먯꽑 ?뚯쟾???섎젮 ?숆뎄瑜??덉젙?쒗궎怨? ??踰덉㎏???ㅼ꽢 踰덉㎏ ?ㅽ듃濡쒗겕?먯꽌 ?쒕∼쨌?щ씪?댁뒪瑜??욎뼱 ?곷???由щ벉???댁??쏀엺?? ?섍꼍???щ씪?몃룄 ?먯튃? 媛숇떎. ?먮쫫??癒쇱? ?덉젙?쒗궎怨? ?대┛ ?쒓컙?먮쭔 移쇱쓣 鍮쇰뱺??</p>
 
-            <h2 id="human-aspects-humor-care-quietness">인간적인 면모 — 조용함 속의 유머와 배려</h2>
-            <p>그의 인터뷰는 길지 않다. 잘된 날에는 준비가 맞아떨어졌다고 말하고, 부족한 날에는 수정할 항목을 짧게 나열한다. 팬과 스태프에게 보내는 인사는 일정하고, 아이에게 사인을 해 줄 때는 눈높이를 맞춘다. 코트 밖에선 농담을 섞어 긴장을 풀지만, 경기 전후의 약속된 절차만큼은 거의 흐트러뜨리지 않는다. 강함을 과시하기보다 강함을 다루는 방식에 집중하는 태도가 인상적이다.</p>
+            <h2 id="human-aspects-humor-care-quietness">?멸컙?곸씤 硫대え ??議곗슜???띿쓽 ?좊㉧? 諛곕젮</h2>
+            <p>洹몄쓽 ?명꽣酉곕뒗 湲몄? ?딅떎. ?섎맂 ?좎뿉??以鍮꾧? 留욎븘?⑥뼱議뚮떎怨?留먰븯怨? 遺議깊븳 ?좎뿉???섏젙????ぉ??吏㏐쾶 ?섏뿴?쒕떎. ?ш낵 ?ㅽ깭?꾩뿉寃?蹂대궡???몄궗???쇱젙?섍퀬, ?꾩씠?먭쾶 ?ъ씤????以??뚮뒗 ?덈넂?대? 留욎텣?? 肄뷀듃 諛뽰뿉???띾떞???욎뼱 湲댁옣???吏留? 寃쎄린 ?꾪썑???쎌냽???덉감留뚰겮? 嫄곗쓽 ?먰듃?щ쑉由ъ? ?딅뒗?? 媛뺥븿??怨쇱떆?섍린蹂대떎 媛뺥븿???ㅻ（??諛⑹떇??吏묒쨷?섎뒗 ?쒕룄媛 ?몄긽?곸씠??</p>
 
-            <h2 id="nationality-culture-poland-tenacity-court">국적과 문화 — 폴란드의 끈기, 코트 위의 품격</h2>
-            <p>폴란드 스포츠의 서사는 절제와 끈기를 말한다. 후르카츠는 이 전통을 현대 테니스의 언어로 번역한다. 큰 제스처보다 차분한 집중으로 승부를 만들고, 대표팀 이벤트에서 보이는 팀워크로 공동체의 자부심을 드러낸다. 국기를 달고 코트에 들어설 때, 그는 개인의 승부를 넘어 팬들의 기억에 남을 장면을 만들겠다는 책임을 잊지 않는다.</p>
+            <h2 id="nationality-culture-poland-tenacity-court">援?쟻怨?臾명솕 ???대??쒖쓽 ?덇린, 肄뷀듃 ?꾩쓽 ?덇꺽</h2>
+            <p>?대????ㅽ룷痢좎쓽 ?쒖궗???덉젣? ?덇린瑜?留먰븳?? ?꾨Ⅴ移댁툩?????꾪넻???꾨? ?뚮땲?ㅼ쓽 ?몄뼱濡?踰덉뿭?쒕떎. ???쒖뒪泥섎낫??李⑤텇??吏묒쨷?쇰줈 ?밸?瑜?留뚮뱾怨? ??쒗? ?대깽?몄뿉??蹂댁씠????뚰겕濡?怨듬룞泥댁쓽 ?먮??ъ쓣 ?쒕윭?몃떎. 援?린瑜??ш퀬 肄뷀듃???ㅼ뼱???? 洹몃뒗 媛쒖씤???밸?瑜??섏뼱 ?щ뱾??湲곗뼲???⑥쓣 ?λ㈃??留뚮뱾寃좊떎??梨낆엫???딆? ?딅뒗??</p>
 
-            <h2 id="relationships-rivals-fast-start-slow-conclusion">관계와 라이벌 — 빠른 시작, 늦은 결론의 미학</h2>
-            <p>동시대 강자들과의 맞대결에서 그는 초반에 위험을 줄이는 출발을 택한다. 라인을 깊게 노리기보다 네트를 충분히 넘기는 구질로 리듬을 맞추고, 세 번째 게임 즈음부터 와이드·바디 서브의 비율을 조정해 리턴 포지션을 흔든다. 네트를 서둘러 점령하는 유형에겐 낮은 통과샷과 깊은 로브를 번갈아 보여 첫 시도를 주저하게 만든다. 같은 패턴이 두 번 허용되면 세 번째에는 타점과 속도를 바꿔 같은 구역을 다른 느낌으로 찌른다. 이 작은 수정들이 후반으로 갈수록 큰 차이를 만든다.</p>
+            <h2 id="relationships-rivals-fast-start-slow-conclusion">愿怨꾩? ?쇱씠踰???鍮좊Ⅸ ?쒖옉, ??? 寃곕줎??誘명븰</h2>
+            <p>?숈떆? 媛뺤옄?ㅺ낵??留욌?寃곗뿉??洹몃뒗 珥덈컲???꾪뿕??以꾩씠??異쒕컻???앺븳?? ?쇱씤??源딄쾶 ?몃━湲곕낫???ㅽ듃瑜?異⑸텇???섍린??援ъ쭏濡?由щ벉??留욎텛怨? ??踰덉㎏ 寃뚯엫 利덉쓬遺????대뱶쨌諛붾뵒 ?쒕툕??鍮꾩쑉??議곗젙??由ы꽩 ?ъ??섏쓣 ?붾뱺?? ?ㅽ듃瑜??쒕몮???먮졊?섎뒗 ?좏삎?먭쾺 ??? ?듦낵?룰낵 源딆? 濡쒕툕瑜?踰덇컝??蹂댁뿬 泥??쒕룄瑜?二쇱??섍쾶 留뚮뱺?? 媛숈? ?⑦꽩????踰??덉슜?섎㈃ ??踰덉㎏?먮뒗 ??먭낵 ?띾룄瑜?諛붽퓭 媛숈? 援ъ뿭???ㅻⅨ ?먮굦?쇰줈 李뚮Ⅸ?? ???묒? ?섏젙?ㅼ씠 ?꾨컲?쇰줈 媛덉닔濡???李⑥씠瑜?留뚮뱺??</p>
 
-            <h2 id="famous-scenes-tiebreak-three-lines">명장면 — 타이브레이크에서 그려지는 세 가지 선</h2>
-            <p>점수가 5-5로 엇갈릴 때, 그의 표정은 변하지 않는다. 첫 포인트는 안전한 코스로 리듬을 확인하고, 두 번째엔 와이드 서브로 코트를 벌린다. 세 번째에서 포핸드 직선을 과감하게 꽂아 균형을 깬다. 관중의 함성이 커져도 그는 같은 속도로 베이스라인을 밟는다. 감정이 아니라 절차가 승부를 만든다는 믿음이 이 장면에 응축돼 있다.</p>
+            <h2 id="famous-scenes-tiebreak-three-lines">紐낆옣硫?????대툕?덉씠?ъ뿉??洹몃젮吏????媛吏 ??/h2>
+            <p>?먯닔媛 5-5濡??뉕컝由??? 洹몄쓽 ?쒖젙? 蹂?섏? ?딅뒗?? 泥??ъ씤?몃뒗 ?덉쟾??肄붿뒪濡?由щ벉???뺤씤?섍퀬, ??踰덉㎏????대뱶 ?쒕툕濡?肄뷀듃瑜?踰뚮┛?? ??踰덉㎏?먯꽌 ?ы빖??吏곸꽑??怨쇨컧?섍쾶 苑귥븘 洹좏삎??源щ떎. 愿以묒쓽 ?⑥꽦??而ㅼ졇??洹몃뒗 媛숈? ?띾룄濡?踰좎씠?ㅻ씪?몄쓣 諛잙뒗?? 媛먯젙???꾨땲???덉감媛 ?밸?瑜?留뚮뱺?ㅻ뒗 誘우쓬?????λ㈃???묒텞???덈떎.</p>
 
-            <h2 id="equipment-details-tension-balance-contact">장비와 디테일 — 텐션·밸런스·접점의 미세 조정</h2>
-            <p>그는 라켓 밸런스를 과하게 머리쪽으로 보내지 않아 빠른 회복을 확보하고, 스트링 텐션은 기온과 공의 반발에 맞춰 소폭 조정한다. 더운 날에는 텐션을 약간 높여 반발을 제어하고, 실내에서는 텐션을 낮춰 체공 시간을 확보한다. 신발은 측면 지지와 접지의 균형을 중시해 급가속·급정지에서 발목의 흔들림을 줄인다. 장비가 플레이를 지배하도록 두지 않고, 플레이가 요구하는 만큼만 장비를 조정한다는 철학이 일관된다.</p>
+            <h2 id="equipment-details-tension-balance-contact">?λ퉬? ?뷀뀒?????먯뀡쨌諛몃윴?ㅒ룹젒?먯쓽 誘몄꽭 議곗젙</h2>
+            <p>洹몃뒗 ?쇱폆 諛몃윴?ㅻ? 怨쇳븯寃?癒몃━履쎌쑝濡?蹂대궡吏 ?딆븘 鍮좊Ⅸ ?뚮났???뺣낫?섍퀬, ?ㅽ듃留??먯뀡? 湲곗삩怨?怨듭쓽 諛섎컻??留욎떠 ?뚰룺 議곗젙?쒕떎. ?붿슫 ?좎뿉???먯뀡???쎄컙 ?믪뿬 諛섎컻???쒖뼱?섍퀬, ?ㅻ궡?먯꽌???먯뀡????떠 泥닿났 ?쒓컙???뺣낫?쒕떎. ?좊컻? 痢〓㈃ 吏吏? ?묒???洹좏삎??以묒떆??湲됯??띉룰툒?뺤??먯꽌 諛쒕ぉ???붾뱾由쇱쓣 以꾩씤?? ?λ퉬媛 ?뚮젅?대? 吏諛고븯?꾨줉 ?먯? ?딄퀬, ?뚮젅?닿? ?붽뎄?섎뒗 留뚰겮留??λ퉬瑜?議곗젙?쒕떎??泥좏븰???쇨??쒕떎.</p>
 
-            <h2 id="future-challenges-forward-timing-conclusion-speed">앞으로의 과제 — 전진의 타이밍, 결말의 속도</h2>
-            <p>후르카츠가 더 높이 가기 위한 열쇠는 하프코트에서의 마무리 빈도다. 리턴 직후 3구에서 전진 타이밍을 반 박자 앞당기고, 세컨드 서브의 코스를 더 다양화한다면 긴 경기에서도 에너지 관리가 쉬워질 것이다. 이미 갖춘 서브의 설득력 위에 결말의 속도가 얹히면, 그의 이름은 큰 무대의 마지막 장면에서 더 자주 호명될 가능성이 크다.</p>
+            <h2 id="future-challenges-forward-timing-conclusion-speed">?욎쑝濡쒖쓽 怨쇱젣 ???꾩쭊????대컢, 寃곕쭚???띾룄</h2>
+            <p>?꾨Ⅴ移댁툩媛 ???믪씠 媛湲??꾪븳 ?댁뇿???섑봽肄뷀듃?먯꽌??留덈Т由?鍮덈룄?? 由ы꽩 吏곹썑 3援ъ뿉???꾩쭊 ??대컢??諛?諛뺤옄 ?욌떦湲곌퀬, ?몄빻???쒕툕??肄붿뒪瑜????ㅼ뼇?뷀븳?ㅻ㈃ 湲?寃쎄린?먯꽌???먮꼫吏 愿由ш? ?ъ썙吏?寃껋씠?? ?대? 媛뽰텣 ?쒕툕???ㅻ뱷???꾩뿉 寃곕쭚???띾룄媛 ?뱁엳硫? 洹몄쓽 ?대쫫? ??臾대???留덉?留??λ㈃?먯꽌 ???먯＜ ?몃챸??媛?μ꽦???щ떎.</p>
 
-            <h2 id="fans-community-lasting-trust-reason">팬과 커뮤니티 — 오래 가는 신뢰의 이유</h2>
-            <p>그를 응원하게 만드는 것은 큰 소리보다 작은 일관성이다. 이기는 날에도 감사의 순서를 지키고, 지는 날에도 책임을 먼저 말한다. 기록은 표가 되지만, 태도는 기억이 된다. 후르카츠의 테니스가 오래 사랑받을 이유가 바로 여기에 있다.</p>
+            <h2 id="fans-community-lasting-trust-reason">?ш낵 而ㅻ??덊떚 ???ㅻ옒 媛???좊ː???댁쑀</h2>
+            <p>洹몃? ?묒썝?섍쾶 留뚮뱶??寃껋? ???뚮━蹂대떎 ?묒? ?쇨??깆씠?? ?닿린???좎뿉??媛먯궗???쒖꽌瑜?吏?ㅺ퀬, 吏???좎뿉??梨낆엫??癒쇱? 留먰븳?? 湲곕줉? ?쒓? ?섏?留? ?쒕룄??湲곗뼲???쒕떎. ?꾨Ⅴ移댁툩???뚮땲?ㅺ? ?ㅻ옒 ?щ옉諛쏆쓣 ?댁쑀媛 諛붾줈 ?ш린???덈떎.</p>
           </div>
 
           {/* Related Links */}
@@ -172,7 +172,7 @@ export default function HubertHurkaczBlogPost() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                관련 자료
+                愿???먮즺
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -180,13 +180,13 @@ export default function HubertHurkaczBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    내부 링크
+                    ?대? 留곹겕
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🏆</span>
-                        <span className="font-medium">선수 프로필</span>
+                        <span className="text-xl">?룇</span>
+                        <span className="font-medium">?좎닔 ?꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -194,8 +194,8 @@ export default function HubertHurkaczBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎯</span>
-                        <span className="font-medium">실력 테스트</span>
+                        <span className="text-xl">?렞</span>
+                        <span className="font-medium">?ㅻ젰 ?뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -203,8 +203,8 @@ export default function HubertHurkaczBlogPost() {
                     </li>
                     <li>
                       <Link href="/utility/play-style-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        <span className="text-xl">🎾</span>
-                        <span className="font-medium">플레이 스타일 테스트</span>
+                        <span className="text-xl">?렱</span>
+                        <span className="font-medium">?뚮젅???ㅽ????뚯뒪??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -217,13 +217,13 @@ export default function HubertHurkaczBlogPost() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 text-lg flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                    외부 자료
+                    ?몃? ?먮즺
                   </h4>
                   <ul className="space-y-3">
                     <li>
                       <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">🌐</span>
-                        <span className="font-medium">ATP 투어 공식 사이트</span>
+                        <span className="text-xl">?뙋</span>
+                        <span className="font-medium">ATP ?ъ뼱 怨듭떇 ?ъ씠??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -231,8 +231,8 @@ export default function HubertHurkaczBlogPost() {
                     </li>
                     <li>
                       <a href="https://en.wikipedia.org/wiki/Hubert_Hurkacz" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                        <span className="text-xl">📖</span>
-                        <span className="font-medium">위키피디아 프로필</span>
+                        <span className="text-xl">?뱰</span>
+                        <span className="font-medium">?꾪궎?쇰뵒???꾨줈??/span>
                         <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -254,9 +254,9 @@ export default function HubertHurkaczBlogPost() {
                 <RelatedPosts 
             currentSlug="hubert-hurkacz" 
             category="
-                {tag}
+                ?뚮땲???좎닔
               " 
-            tags={['테니스', '후베르트 후르카츠', '선수 프로필', '스토리', '폴란드']} 
+            tags={['?뚮땲??, '?꾨쿋瑜댄듃 ?꾨Ⅴ移댁툩', '?좎닔 ?꾨줈??, '?ㅽ넗由?, '?대???]} 
           />
 
           <CTA />

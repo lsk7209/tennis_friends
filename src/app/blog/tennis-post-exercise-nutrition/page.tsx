@@ -35,7 +35,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
     { id: 'glycogen-resynthesis', text: '2. 글리코겐 재합성: 탄수화물과 단백질의 3:1 비율', depth: 2 },
     { id: 'hydration-osmolarity', text: '3. 수분 보충의 과학: 삼투압과 전해질 균형', depth: 2 },
     { id: 'joint-health-nutrients', text: '4. 관절과 인대를 위한 마이크로 영양소', depth: 2 },
-    { id: 'anti-inflammatory-foods', text: '5. 천연 항염증 식품: '테니스 엘보' 예방 식단', depth: 2 },
+    { id: 'anti-inflammatory-foods', text: '5. 천연 항염증 식품: "테니스 엘보" 예방 식단', depth: 2 },
     { id: 'sample-meal-plans', text: '6. 테니스 플레이어 추천 회복 식단 (상황별)', depth: 2 },
     { id: 'conclusion', text: '7. 결론: 음식도 테니스 장비다', depth: 2 },
 ];
