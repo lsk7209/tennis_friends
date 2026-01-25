@@ -36,6 +36,7 @@
     - [x] Fix metadata synchronization to remove dead links
     - [x] Fix generic TOC headers ("Key Point 1") in 13 recent posts
     - [x] Consolidate 31 blog categories into 6 core themes
+    - [x] **Urgent Fix**: Resolve TOC syntax error hindering Vercel build (`6700bc0`)
 
 ## Next Steps
 - [x] Wait for image generation quota reset (~4 hours from session start)
