@@ -209,13 +209,13 @@ export default function BlogPost() {
                   </h4>
                   <ul className="space-y-3">
                     <li>
-                      <Link href="/players" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      <Link href="/players" className="group flex items-center gap-3 text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         <span className="text-xl">🏆</span>
                         <span className="font-medium">선수 프로필 더보기</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      <Link href="/utility/ntrp-test" className="group flex items-center gap-3 text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         <span className="text-xl">🎯</span>
                         <span className="font-medium">NTRP 자가 진단</span>
                       </Link>
@@ -231,7 +231,7 @@ export default function BlogPost() {
                   </h4>
                   <ul className="space-y-3">
                     <li>
-                      <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                      <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         <span className="text-xl">🌐</span>
                         <span className="font-medium">ATP 투어</span>
                       </a>
