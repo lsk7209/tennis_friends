@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { FileText, ChevronLeft, ChevronRight, Search, X, Filter } from 'lucide-react';
 import { allBlogPosts } from '@/data/blog-posts';
 import { BADGE_LABELS, BADGE_COLORS, CATEGORY_COLORS, POSTS_PER_PAGE } from '@/lib/constants';
+import { CATEGORY_GROUPS, getCategoryGroup } from '@/lib/blog-utils';
 import { Input } from '@/components/ui/input';
 import type { BlogPostData } from '@/types/blog';
 
@@ -50,7 +51,16 @@ export default function BlogPage() {
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (post.tags && (post.tags as string[]).some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
 
-      const matchesCategory = !selectedCategory || post.category === selectedCategory;
+      let matchesCategory = true;
+      if (selectedCategory) {
+        // Find which group the selected ID belongs to
+        const group = Object.values(CATEGORY_GROUPS).find(g => g.id === selectedCategory);
+        if (group) {
+          matchesCategory = group.categories.includes(post.category);
+        } else {
+          matchesCategory = post.category === selectedCategory; // Fallback for exact match if needed
+        }
+      }
 
       return matchesSearch && matchesCategory;
     });
@@ -133,25 +143,30 @@ export default function BlogPage() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2">
-              <Button
-                variant={selectedCategory === null ? "default" : "outline"}
-                size="sm"
-                onClick={() => handleCategoryClick(null)}
-                className={`rounded-full px-5 ${selectedCategory === null ? "bg-blue-500 hover:bg-blue-600 shadow-md" : "bg-white/50 dark:bg-gray-800/50"}`}
-              >
-                전체
-              </Button>
-              {categories.map((cat) => (
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
                 <Button
-                  key={cat}
-                  variant={selectedCategory === cat ? "default" : "outline"}
+                  variant={selectedCategory === null ? "default" : "outline"}
                   size="sm"
-                  onClick={() => handleCategoryClick(cat)}
-                  className={`rounded-full px-5 ${selectedCategory === cat ? "bg-blue-500 hover:bg-blue-600 shadow-md" : "bg-white/50 dark:bg-gray-800/50"}`}
+                  onClick={() => handleCategoryClick(null)}
+                  className={`rounded-full px-5 ${selectedCategory === null ? "bg-blue-600 hover:bg-blue-700 shadow-md text-white" : "bg-white/50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-700"}`}
                 >
-                  {cat}
+                  전체
                 </Button>
-              ))}
+                {Object.values(CATEGORY_GROUPS).map((group) => {
+                  const isActive = selectedCategory === group.id;
+                  return (
+                    <Button
+                      key={group.id}
+                      variant={isActive ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => handleCategoryClick(group.id)}
+                      className={`rounded-full px-5 ${isActive ? `bg-blue-600 text-white shadow-md hover:bg-blue-700` : "bg-white/50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-700"}`}
+                    >
+                      {group.label}
+                    </Button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -280,6 +295,6 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
