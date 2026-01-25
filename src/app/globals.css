@@ -253,6 +253,21 @@ a:focus-visible {
   padding-left: 1.1rem;
 }
 
+/* 관련 자료 (Related Links) 섹션 링크 색상 강화 */
+.related-links-container a,
+.related-links-container a .font-medium {
+  color: #000000 !important;
+}
+
+.dark .related-links-container a,
+.dark .related-links-container a .font-medium {
+  color: #ffffff !important;
+}
+
+.related-links-container a:hover {
+  color: var(--accent) !important;
+}
+
 /* FAQ 아코디언: 가독/크롤러 친화 */
 .faq {
   border-top: 1px solid var(--border);
