@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '수비형 로브: "시간을 벌어라"', depth: 2 },
+  { id: 'key-point-2', text: '공격형 탑스핀 로브: "허를 찔러라"', depth: 2 },
+  { id: 'key-point-3', text: '복식 경기에서의 로브 활용', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 

@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '높은 텐션(Tight): '컨트롤'의 정석', depth: 2 },
+  { id: 'key-point-2', text: '낮은 텐션(Loose): '파워'와 '스핀'의 극대화', depth: 2 },
+  { id: 'key-point-3', text: '나에게 맞는 '적정 텐션' 찾는 법', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 

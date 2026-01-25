@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '종류별 특징: 타키(Tacky) vs 드라이(Dry)', depth: 2 },
+  { id: 'key-point-2', text: '교체 주기: 언제 바꿔야 할까?', depth: 2 },
+  { id: 'key-point-3', text: '초보자를 위한 그립 감는 꿀팁', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 

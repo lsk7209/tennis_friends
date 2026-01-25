@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '그립 사이즈 종류와 표기법', depth: 2 },
+  { id: 'key-point-2', text: '집에서 하는 간단 측정법 (지함 측정법)', depth: 2 },
+  { id: 'key-point-3', text: '큰 그립 vs 작은 그립, 무엇이 나쁠까?', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 

@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '푸셔의 심리: "네가 실수할 때까지 기다릴게"', depth: 2 },
+  { id: 'key-point-2', text: '최고의 공략법: 짧은 공으로 네트 호출', depth: 2 },
+  { id: 'key-point-3', text: '높은 궤도와 깊이로 대응하기', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 

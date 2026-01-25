@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '그립과 스윙 경로: "하이 투 로우(High to Low)"', depth: 2 },
+  { id: 'key-point-2', text: '수비에서의 활용: "힘을 중화하라"', depth: 2 },
+  { id: 'key-point-3', text: '공격에서의 활용: "심리적 압박"', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 

@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '왜 하이브리드를 선택하는가?', depth: 2 },
+  { id: 'key-point-2', text: '메인(Main) vs 크로스(Cross): 어디에 무엇을 맬까?', depth: 2 },
+  { id: 'key-point-3', text: '추천하는 하이브리드 조합', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 

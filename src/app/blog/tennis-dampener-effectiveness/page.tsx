@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '진동 감소와 '타구음'의 심리적 효과', depth: 2 },
+  { id: 'key-point-2', text: '테니스 엘보 방지 효과의 진실', depth: 2 },
+  { id: 'key-point-3', text: '나에게 맞는 댐퍼 종류와 선택법', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 

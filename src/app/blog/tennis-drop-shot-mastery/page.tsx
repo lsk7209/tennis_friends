@@ -35,9 +35,9 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '핵심 포인트 1', depth: 2 },
-  { id: 'key-point-2', text: '핵심 포인트 2', depth: 2 },
-  { id: 'key-point-3', text: '핵심 포인트 3', depth: 2 },
+  { id: 'key-point-1', text: '완벽한 위장술(Disguise): "드라이브인 척하라"', depth: 2 },
+  { id: 'key-point-2', text: '기술적 핵심: 하이 투 로우(High to Low)와 무게 중심', depth: 2 },
+  { id: 'key-point-3', text: '언제 던질 것인가? (전술적 타이밍)', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },
 ];
 
