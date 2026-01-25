@@ -114,11 +114,11 @@ const BlogPost: React.FC<BlogPostProps> = ({
               </summary>
               <div className="border-t border-white/10 p-4">
                 <ul className="list-none space-y-2 !p-0">
-                  <li><a className="font-medium hover:text-primary" href="#section1">1. 기본 개념</a></li>
-                  <li><a className="font-medium hover:text-primary" href="#section2">2. 상세 설명</a></li>
-                  <li><a className="font-medium hover:text-primary" href="#section3">3. 실전 적용</a></li>
-                  <li><a className="font-medium hover:text-primary" href="#section4">4. 추가 정보</a></li>
-                  <li><a className="font-medium hover:text-primary" href="#section5">5. FAQ</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section1">1. 기본 개념</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section2">2. 상세 설명</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section3">3. 실전 적용</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section4">4. 추가 정보</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section5">5. FAQ</a></li>
                 </ul>
               </div>
             </details>
@@ -130,11 +130,11 @@ const BlogPost: React.FC<BlogPostProps> = ({
               </summary>
               <div className="border-t border-white/10 p-4">
                 <ul className="list-none space-y-2 !p-0">
-                  <li><a className="font-medium hover:text-primary" href="#section1">1. 기본 개념</a></li>
-                  <li><a className="font-medium hover:text-primary" href="#section2">2. 상세 설명</a></li>
-                  <li><a className="font-medium hover:text-primary" href="#section3">3. 실전 적용</a></li>
-                  <li><a className="font-medium hover:text-primary" href="#section4">4. 추가 정보</a></li>
-                  <li><a className="font-medium hover:text-primary" href="#section5">5. FAQ</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section1">1. 기본 개념</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section2">2. 상세 설명</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section3">3. 실전 적용</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section4">4. 추가 정보</a></li>
+                  <li><a className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }} href="#section5">5. FAQ</a></li>
                 </ul>
               </div>
             </details>

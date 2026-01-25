@@ -215,10 +215,10 @@ export default async function BlogPostPage({ params }: Props) {
             </summary>
             <div className="border-t border-white/10 p-4">
               <ul className="list-none space-y-2">
-                <li><a href="#summary-heading" className="font-medium hover:text-primary">요약</a></li>
-                <li><a href="#article-content" className="font-medium hover:text-primary">본문</a></li>
+                <li><a href="#summary-heading" className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }}>요약</a></li>
+                <li><a href="#article-content" className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }}>본문</a></li>
                 {faqItems.length > 0 && (
-                  <li><a href="#faq" className="font-medium hover:text-primary">자주 묻는 질문</a></li>
+                  <li><a href="#faq" className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }}>자주 묻는 질문</a></li>
                 )}
               </ul>
             </div>

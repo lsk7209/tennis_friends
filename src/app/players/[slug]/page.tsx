@@ -320,15 +320,15 @@ export default async function PlayerProfilePage({ params }: Props) {
                                                 목차
                                             </h4>
                                             <ul className="space-y-2 text-sm font-semibold">
-                                                <li><a href="#why-notable" className="text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors no-underline">1. 왜 주목받는 선수인가?</a></li>
-                                                <li><a href="#play-style" className="text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors no-underline">2. 플레이 스타일 분석</a></li>
-                                                <li><a href="#growth-story" className="text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors no-underline">3. 성장 스토리</a></li>
+                                                <li><a href="#why-notable" className="!text-black dark:!text-white hover:!text-blue-600 transition-colors no-underline block" style={{ color: 'black' }}>1. 왜 주목받는 선수인가?</a></li>
+                                                <li><a href="#play-style" className="!text-black dark:!text-white hover:!text-blue-600 transition-colors no-underline block" style={{ color: 'black' }}>2. 플레이 스타일 분석</a></li>
+                                                <li><a href="#growth-story" className="!text-black dark:!text-white hover:!text-blue-600 transition-colors no-underline block" style={{ color: 'black' }}>3. 성장 스토리</a></li>
                                                 {player.detailedProfile.signatureMatch && (
-                                                    <li><a href="#signature-match" className="text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors no-underline">4. 인생 경기</a></li>
+                                                    <li><a href="#signature-match" className="!text-black dark:!text-white hover:!text-blue-600 transition-colors no-underline block" style={{ color: 'black' }}>4. 인생 경기</a></li>
                                                 )}
-                                                <li><a href="#recent-form" className="text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors no-underline">5. 최근 폼 & 전망</a></li>
+                                                <li><a href="#recent-form" className="!text-black dark:!text-white hover:!text-blue-600 transition-colors no-underline block" style={{ color: 'black' }}>5. 최근 폼 & 전망</a></li>
                                                 {player.detailedProfile.faq && (
-                                                    <li><a href="#faq" className="text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors no-underline">6. 자주 묻는 질문 (FAQ)</a></li>
+                                                    <li><a href="#faq" className="!text-black dark:!text-white hover:!text-blue-600 transition-colors no-underline block" style={{ color: 'black' }}>6. 자주 묻는 질문 (FAQ)</a></li>
                                                 )}
                                             </ul>
                                         </div>
