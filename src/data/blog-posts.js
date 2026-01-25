@@ -1030,92 +1030,92 @@ export const allBlogPosts = [
   , {
     "id": "dayana-yastremska",
     "slug": "dayana-yastremska",
-  "tags": ["선수 프로필"],
-  "title": "다야나 야스트렘스카 — 파워 히터",
-  "excerpt": "예선 통과자의 신화, 우크라이나의 긍지를 짊어진 "파워 히터".",
-  "badge": "최신 글",
-  "category": "선수 프로필",
-  "date": "2026-01-24",
-  "readTime": "8분",
-  "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-  "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+    "tags": ["선수 프로필"],
+    "title": "다야나 야스트렘스카 — 파워 히터",
+    "excerpt": "예선 통과자의 신화, 우크라이나의 긍지를 짊어진 '파워 히터'.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2026-01-24",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
   }
   , {
-  "id": "anna-kalinskaya",
+    "id": "anna-kalinskaya",
     "slug": "anna-kalinskaya",
-      "tags": ["선수 프로필"],
-        "title": "안나 칼린스카야 — 러시아의 얼음공주",
-          "excerpt": "차갑고 매서운 스트로크, 세계 1위를 사로잡은 "러시아의 얼음공주".",
-            "badge": "최신 글",
-              "category": "선수 프로필",
-                "date": "2026-01-24",
-                  "readTime": "8분",
-                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-}
+    "tags": ["선수 프로필"],
+    "title": "안나 칼린스카야 — 러시아의 얼음공주",
+    "excerpt": "차갑고 매서운 스트로크, 세계 1위를 사로잡은 '러시아의 얼음공주'.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2026-01-24",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  }
   , {
-  "id": "jasmine-paolini",
+    "id": "jasmine-paolini",
     "slug": "jasmine-paolini",
-      "tags": ["선수 프로필"],
-        "title": "자스민 파올리니 — 작은 거인",
-          "excerpt": "163cm의 "작은 거인", 롤랑가로스와 윔블던 결승을 동시에 밟은 이탈리아의 기적.",
-            "badge": "최신 글",
-              "category": "선수 프로필",
-                "date": "2026-01-24",
-                  "readTime": "8분",
-                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-}
+    "tags": ["선수 프로필"],
+    "title": "자스민 파올리니 — 작은 거인",
+    "excerpt": "163cm의 '작은 거인', 롤랑가로스와 윔블던 결승을 동시에 밟은 이탈리아의 기적.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2026-01-24",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  }
   , {
-  "id": "sorana-cirstea",
+    "id": "sorana-cirstea",
     "slug": "sorana-cirstea",
-      "tags": ["선수 프로필"],
-        "title": "소라나 크르스테아 — 공격 본능",
-          "excerpt": "30대에 전성기를 맞이한 루마니아의 "공격 본능", 꾸준함의 대명사.",
-            "badge": "최신 글",
-              "category": "선수 프로필",
-                "date": "2026-01-24",
-                  "readTime": "8분",
-                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-}
+    "tags": ["선수 프로필"],
+    "title": "소라나 크르스테아 — 공격 본능",
+    "excerpt": "30대에 전성기를 맞이한 루마니아의 '공격 본능', 꾸준함의 대명사.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2026-01-24",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  }
   , {
-  "id": "anastasia-potapova",
+    "id": "anastasia-potapova",
     "slug": "anastasia-potapova",
-      "tags": ["선수 프로필"],
-        "title": "아나스타샤 포타포바 — 파이터",
-          "excerpt": "주니어 랭킹 1위의 재능, 코트를 지배하는 강렬한 "파이터".",
-            "badge": "최신 글",
-              "category": "선수 프로필",
-                "date": "2026-01-24",
-                  "readTime": "8분",
-                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-}
+    "tags": ["선수 프로필"],
+    "title": "아나스타샤 포타포바 — 파이터",
+    "excerpt": "주니어 랭킹 1위의 재능, 코트를 지배하는 강렬한 '파이터'.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2026-01-24",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  }
   , {
-  "id": "ekaterina-alexandrova",
+    "id": "ekaterina-alexandrova",
     "slug": "ekaterina-alexandrova",
-      "tags": ["선수 프로필"],
-        "title": "에카테리나 알렉산드로바 — 실내 코트의 여왕",
-          "excerpt": "코트 위에 미사일을 쏘는 "실내 코트의 여왕", 예측 불가의 플랫 히터.",
-            "badge": "최신 글",
-              "category": "선수 프로필",
-                "date": "2026-01-24",
-                  "readTime": "8분",
-                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-}
+    "tags": ["선수 프로필"],
+    "title": "에카테리나 알렉산드로바 — 실내 코트의 여왕",
+    "excerpt": "코트 위에 미사일을 쏘는 '실내 코트의 여왕', 예측 불가의 플랫 히터.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2026-01-24",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  }
   , {
-  "id": "liudmila-samsonova",
+    "id": "liudmila-samsonova",
     "slug": "liudmila-samsonova",
-      "tags": ["선수 프로필"],
-        "title": "류드밀라 삼소노바 — 파워 히터",
-          "excerpt": "이탈리아에서 자란 러시아의 "파워 히터", 폭발적인 서브와 포핸드의 소유자.",
-            "badge": "최신 글",
-              "category": "선수 프로필",
-                "date": "2026-01-24",
-                  "readTime": "8분",
-                    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-                      "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-}
+    "tags": ["선수 프로필"],
+    "title": "류드밀라 삼소노바 — 파워 히터",
+    "excerpt": "이탈리아에서 자란 러시아의 '파워 히터', 폭발적인 서브와 포핸드의 소유자.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2026-01-24",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  }
 ];
