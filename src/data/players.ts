@@ -8331,7 +8331,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
 
     // --- Added Female Players (Batch 2 - Enriched) ---
     'dayana-yastremska': {
-        name: '다야나 야스트렘스카', nameEn: 'Dayana Yastremska', country: 'Ukraine', countryFlag: '🇺🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '다야나 야스트렘스카', nameEn: 'Dayana Yastremska', country: 'Ukraine', countryFlag: '🇺🇦', image: '/images/players/dayana-yastremska.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '폭발적인 공격력을 자랑하는 우크라이나의 파워 히터. 2024 호주 오픈에서 예선 통과자 신분으로 4강까지 진출하는 돌풍을 일으키며 세계를 놀라게 했습니다.',
         detailedProfile: {
             oneLineSummary: '예선 통과자의 신화, 우크라이나의 긍지를 짊어진 "파워 히터".',
@@ -8390,7 +8390,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'anna-kalinskaya': {
-        name: '안나 칼린스카야', nameEn: 'Anna Kalinskaya', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '안나 칼린스카야', nameEn: 'Anna Kalinskaya', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/anna-kalinskaya.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '군더더기 없는 깔끔한 스트로크가 특징인 선수. 최근 두바이 챔피언십 결승 진출 등 투어 무대에서 기량이 만개하며 다크호스로 떠올랐습니다.',
         detailedProfile: {
             oneLineSummary: '차갑고 매서운 스트로크, 세계 1위를 사로잡은 "러시아의 얼음공주".',
@@ -8449,7 +8449,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'jasmine-paolini': {
-        name: '자스민 파올리니', nameEn: 'Jasmine Paolini', country: 'Italy', countryFlag: '🇮🇹', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '자스민 파올리니', nameEn: 'Jasmine Paolini', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/jasmine-paolini.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '작은 거인. 163cm의 단신이지만 빠른 발과 지칠 줄 모르는 체력으로 2024년 롤랑가로스와 윔블던 결승에 진출하며 세계 톱 랭커로 도약했습니다.',
         detailedProfile: {
             oneLineSummary: '163cm의 "작은 거인", 롤랑가로스와 윔블던 결승을 동시에 밟은 이탈리아의 기적.',
@@ -8507,7 +8507,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'sorana-cirstea': {
-        name: '소라나 크르스테아', nameEn: 'Sorana Cirstea', country: 'Romania', countryFlag: '🇷🇴', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '소라나 크르스테아', nameEn: 'Sorana Cirstea', country: 'Romania', countryFlag: '🇷🇴', image: '/images/players/sorana-cirstea.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '루마니아의 베테랑. 공격적인 베이스라인 플레이를 구사하며, 투어 경력 내내 꾸준히 상위권을 위협하는 저력을 보여줍니다.',
         detailedProfile: {
             oneLineSummary: '30대에 전성기를 맞이한 루마니아의 "공격 본능", 꾸준함의 대명사.',
@@ -8566,7 +8566,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'anastasia-potapova': {
-        name: '아나스타샤 포타포바', nameEn: 'Anastasia Potapova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '아나스타샤 포타포바', nameEn: 'Anastasia Potapova', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/anastasia-potapova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '주니어 세계 1위 출신의 재능. 강한 승부욕과 파이팅 넘치는 플레이로 코트 위에서 존재감을 발휘하는 영건입니다.',
         detailedProfile: {
             oneLineSummary: '주니어 랭킹 1위의 재능, 코트를 지배하는 강렬한 "파이터".',
@@ -8625,7 +8625,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'ekaterina-alexandrova': {
-        name: '에카테리나 알렉산드로바', nameEn: 'Ekaterina Alexandrova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '에카테리나 알렉산드로바', nameEn: 'Ekaterina Alexandrova', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/ekaterina-alexandrova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '낮고 빠른 플랫성 타구가 일품인 선수. 특히 실내 코트에서 강한 면모를 보이며, 리듬을 탔을 때는 톱 랭커들도 막기 힘든 공격력을 뽐냅니다.',
         detailedProfile: {
             oneLineSummary: '코트 위에 미사일을 쏘는 "실내 코트의 여왕", 예측 불가의 플랫 히터.',
@@ -8684,7 +8684,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'liudmila-samsonova': {
-        name: '류드밀라 삼소노바', nameEn: 'Liudmila Samsonova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '류드밀라 삼소노바', nameEn: 'Liudmila Samsonova', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/liudmila-samsonova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '강력한 서브와 포핸드를 앞세운 공격형 플레이어. 하드 코트에서 특히 위력적이며, WTA 투어 타이틀을 여러 차례 차지한 실력자입니다.',
         detailedProfile: {
             oneLineSummary: '이탈리아에서 자란 러시아의 "파워 히터", 폭발적인 서브와 포핸드의 소유자.',
