@@ -8743,7 +8743,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'veronika-kudermetova': {
-        name: '베로니카 쿠데르메토바', nameEn: 'Veronika Kudermetova', country: 'Russia', countryFlag: '🇷🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '베로니카 쿠데르메토바', nameEn: 'Veronika Kudermetova', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/veronika-kudermetova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '단식과 복식 모두 세계 수준인 올라운더. 안정적인 스트로크와 네트 플레이 능력을 겸비하여 어떤 상황에서도 견고한 경기를 펼칩니다.',
         detailedProfile: {
             oneLineSummary: '단식과 복식 모두 Top 10을 찍어본 "완성형 올라운더", 러시아의 조용한 실력자.',
@@ -8801,7 +8801,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'elise-mertens': {
-        name: '엘리스 메르텐스', nameEn: 'Elise Mertens', country: 'Belgium', countryFlag: '🇧🇪', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '엘리스 메르텐스', nameEn: 'Elise Mertens', country: 'Belgium', countryFlag: '🇧🇪', image: '/images/players/elise-mertens.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '벨기에 테니스의 계보를 잇는 선수. 기복 없는 꾸준함과 뛰어난 수비력이 강점이며, 복식에서는 세계 랭킹 1위를 기록한 바 있습니다.',
         detailedProfile: {
             oneLineSummary: '복식 세계 1위 출신의 테니스 지능 천재, 벨기에의 "무결점 플레이어".',
@@ -8860,7 +8860,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'donna-vekic': {
-        name: '돈나 베키치', nameEn: 'Donna Vekic', country: 'Croatia', countryFlag: '🇭🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '돈나 베키치', nameEn: 'Donna Vekic', country: 'Croatia', countryFlag: '🇭🇷', image: '/images/players/donna-vekic.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '강력한 서브와 포핸드를 겸비한 크로아티아의 스타. 2024 파리 올림픽 은메달리스트로, 오랜 부상을 딛고 제2의 전성기를 맞이했습니다.',
         detailedProfile: {
             oneLineSummary: '2024 파리 올림픽 은메달리스트, 사업가이자 테니스 스타인 크로아티아의 "슈퍼우먼".',
@@ -8918,7 +8918,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'marie-bouzkova': {
-        name: '마리 부즈코바', nameEn: 'Marie Bouzkova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '마리 부즈코바', nameEn: 'Marie Bouzkova', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/marie-bouzkova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '코트 위의 에너자이저. 끈질긴 수비와 지치지 않는 체력으로 상대를 지치게 만들며, 항상 미소를 잃지 않는 스포츠맨십으로 사랑받습니다.',
         detailedProfile: {
             oneLineSummary: '결코 포기하지 않는 체코의 "스마일 에너자이저", 수비 테니스의 진수.',
@@ -8976,7 +8976,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'katerina-siniakova': {
-        name: '카테리나 시니아코바', nameEn: 'Katerina Siniakova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '카테리나 시니아코바', nameEn: 'Katerina Siniakova', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/katerina-siniakova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '현역 최고의 복식 여제 중 한 명. 그랜드슬램 복식 전관왕(골든 슬램)을 달성했으며, 단식에서도 특유의 투지와 네트 플레이로 경쟁력을 보여줍니다.',
         detailedProfile: {
             oneLineSummary: '복식 커리어 골든 슬램 달성, 단식까지 섭렵한 체코의 "파마머리 전사".',
@@ -9034,7 +9034,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'caroline-garcia': {
-        name: '카롤린 가르시아', nameEn: 'Caroline Garcia', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '카롤린 가르시아', nameEn: 'Caroline Garcia', country: 'France', countryFlag: '🇫🇷', image: '/images/players/caroline-garcia.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '공격적인 리턴 포지스("Fly with Caro")과 다이내믹한 플레이가 특징입니다. WTA 파이널스 우승 경험이 있는 프랑스의 에이스입니다.',
         detailedProfile: {
             oneLineSummary: 'WTA 파이널스 챔피언, 코트 안쪽으로 파고드는 "닥공(닥치고 공격)" 테니스의 선봉장.',
@@ -9092,7 +9092,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'anhelina-kalinina': {
-        name: '안헬리나 칼리니나', nameEn: 'Anhelina Kalinina', country: 'Ukraine', countryFlag: '🇺🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '안헬리나 칼리니나', nameEn: 'Anhelina Kalinina', country: 'Ukraine', countryFlag: '🇺🇦', image: '/images/players/anhelina-kalinina.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '우크라이나 테니스의 주축. 클레이 코트에서 강점을 보이며, 탄탄한 기본기를 바탕으로 로마 마스터스 결승에 오르는 저력을 보여주었습니다.',
         detailedProfile: {
             oneLineSummary: '로마 마스터스 준우승의 주인공, 우크라이나의 "굳건한 멘탈".',
@@ -9150,7 +9150,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'lesia-tsurenko': {
-        name: '레시아 추렌코', nameEn: 'Lesia Tsurenko', country: 'Ukraine', countryFlag: '🇺🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '레시아 추렌코', nameEn: 'Lesia Tsurenko', country: 'Ukraine', countryFlag: '🇺🇦', image: '/images/players/lesia-tsurenko.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '투어 경험이 풍부한 베테랑. 부상을 자주 겪으면서도 오뚝이처럼 다시 일어서는 정신력의 소유자로, 카운터 펀치 능력이 뛰어납니다.',
         detailedProfile: {
             oneLineSummary: '부상을 딛고 일어서는 "오뚝이", 우크라이나의 백전노장.',
@@ -9208,7 +9208,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'magda-linette': {
-        name: '마그다 리네트', nameEn: 'Magda Linette', country: 'Poland', countryFlag: '🇵🇱', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '마그다 리네트', nameEn: 'Magda Linette', country: 'Poland', countryFlag: '🇵🇱', image: '/images/players/magda-linette.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '성실함의 대명사. 30대에 접어들어 2023 호주 오픈 4강에 진출하며 커리어 하이를 찍은 대기만성형 플레이어입니다.',
         detailedProfile: {
             oneLineSummary: '30대에 커리어 하이를 찍은 폴란드의 "대기만성", 노력의 아이콘.',
@@ -9266,7 +9266,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'sofia-kenin': {
-        name: '소피아 케닌', nameEn: 'Sofia Kenin', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '소피아 케닌', nameEn: 'Sofia Kenin', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/sofia-kenin.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '2020 호주 오픈 챔피언. 작은 체구에도 불구하고 뛰어난 타이밍과 코트 커버력, 그리고 강한 승부근성이 돋보이는 선수입니다.',
         detailedProfile: {
             oneLineSummary: '2020 호주 오픈 챔피언, 거인들을 쓰러뜨리는 "소닉(Sonic)" 같은 스피드와 기술.',
@@ -9324,7 +9324,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'paula-badosa': {
-        name: '파울라 바도사', nameEn: 'Paula Badosa', country: 'Spain', countryFlag: '🇪🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '파울라 바도사', nameEn: 'Paula Badosa', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/paula-badosa.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '강력한 베이스라인 플레이가 강점인 스페인의 스타. 부상을 딛고 다시 랭킹을 끌어올리고 있는 저력의 선수입니다.',
         detailedProfile: {
             oneLineSummary: '스페인의 열정을 담은 "파워 히터", 부상을 딛고 돌아온 테니스 여신.',
@@ -9382,7 +9382,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'karolina-muchova': {
-        name: '카롤리나 무호바', nameEn: 'Karolina Muchova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '카롤리나 무호바', nameEn: 'Karolina Muchova', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/karolina-muchova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '올라운드 플레이어의 정석. 다양한 구질과 네트 플레이, 슬라이스를 자유자재로 구사하며 "테니스를 가장 예쁘게 치는 선수" 중 한 명으로 꼽힙니다. 2023 롤랑가로스 준우승자.',
         detailedProfile: {
             oneLineSummary: '2023 롤랑가로스 준우승, 테니스를 예술로 승화시키는 체코의 "테크니션".',
@@ -9440,7 +9440,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'ajla-tomljanovic': {
-        name: '아일라 톰얀로비치', nameEn: 'Ajla Tomljanovic', country: 'Australia', countryFlag: '🇦🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '아일라 톰얀로비치', nameEn: 'Ajla Tomljanovic', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/ajla-tomljanovic.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '강력한 그라운드 스트로크를 가진 호주의 간판. 세레나 윌리엄스의 은퇴 경기 상대이자 승자로 역사에 남았으며, 메이저 대회에서 꾸준히 8강권에 도전하는 실력자입니다.',
         detailedProfile: {
             oneLineSummary: '세레나 윌리엄스의 은퇴 경기를 장식한 승자, 윔블던 8강 2회 연속 진출자.',
@@ -9498,7 +9498,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'camila-giorgi': {
-        name: '카밀라 조르지', nameEn: 'Camila Giorgi', country: 'Italy', countryFlag: '🇮🇹', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '카밀라 조르지', nameEn: 'Camila Giorgi', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/camila-giorgi.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '이탈리아의 하드 히터. 작은 체구에서 뿜어져 나오는 폭발적인 스트로크 파워는 투어 최고 수준이며, 공격적인 스타일로 정평이 나 있습니다.',
         detailedProfile: {
             oneLineSummary: '이탈리아의 "패션 아이콘"이자 폭발적인 "하드 히터".',
@@ -9556,7 +9556,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'wang-xinyu': {
-        name: '왕 신유', nameEn: 'Wang Xinyu', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '왕 신유', nameEn: 'Wang Xinyu', country: 'China', countryFlag: '🇨🇳', image: '/images/players/wang-xinyu.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '중국 테니스의 차세대 주자 "중국의 샤라포바". 182cm의 장신에서 나오는 시원한 스트로크가 강점이며, 복식에서도 그랜드슬램 우승을 차지했습니다.',
         detailedProfile: {
             oneLineSummary: '182cm 장신에서 뿜어져 나오는 시원한 스트로크, 복식 그랜드슬램 챔피언.',
@@ -9614,7 +9614,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'wang-xiyu': {
-        name: '왕 시위', nameEn: 'Wang Xiyu', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
+        name: '왕 시위', nameEn: 'Wang Xiyu', country: 'China', countryFlag: '🇨🇳', image: '/images/players/wang-xiyu.png', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '강력한 왼손 포핸드를 가진 중국의 기대주. 2018 US 오픈 주니어 챔피언 출신으로, 파워풀한 테니스를 구사합니다.',
         detailedProfile: {
             oneLineSummary: '2018 US 오픈 주니어 챔피언, 강력한 "왼손 포핸드"를 장착한 파워 히터.',
@@ -9672,7 +9672,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'zhu-lin': {
-        name: '주 린', nameEn: 'Zhu Lin', country: 'China', countryFlag: '🇨🇳', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '주 린', nameEn: 'Zhu Lin', country: 'China', countryFlag: '🇨🇳', image: '/images/players/zhu-lin.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '대기만성형 플레이어. 꾸준한 노력 끝에 2023 호주 오픈 16강, 투어 첫 우승을 달성하며 전성기를 맞이했습니다. ',
         detailedProfile: {
             oneLineSummary: '29세에 만개한 "늦게 핀 꽃", 희곡 "주(Zhu) 변의 서사시".',
