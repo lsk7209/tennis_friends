@@ -35,7 +35,7 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '공포의 '애드 코트' 슬라이스 서브 리턴', depth: 2 },
+  { id: 'key-point-1', text: "공포의 '애드 코트' 슬라이스 서브 리턴", depth: 2 },
   { id: 'key-point-2', text: '백핸드 집요하게 공략하기 (크로스 코트의 함정)', depth: 2 },
   { id: 'key-point-3', text: '역회전 스핀에 적응하는 법', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },

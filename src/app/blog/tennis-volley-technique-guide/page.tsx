@@ -34,7 +34,7 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'volley-essence-hit-not-block', text: '1. 발리의 본질 — \'치지 말고 막는다\'', depth: 2 },
+  { id: 'volley-essence-hit-not-block', text: "1. 발리의 본질 — \'치지 말고 막는다\'", depth: 2 },
   { id: 'volley-positioning-net-1-5m-golden-zone', text: '2. 발리 포지셔닝 — 네트와 1.5m 거리의 황금존', depth: 2 },
   { id: 'forehand-vs-backhand-volley-comparison', text: '3. 포핸드 발리 vs 백핸드 발리 비교', depth: 2 },
   { id: 'regional-volley-position-adjustment', text: '4. 지역별 발리 포지션 조정법', depth: 2 },

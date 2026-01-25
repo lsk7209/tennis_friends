@@ -39,7 +39,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'geo-injury-risk', text: '4. GEO별 부상 리스크 관리', depth: 2 },
   { id: 'recovery-science', text: '5. 회복의 과학 — 24시간 리커버리 사이클', depth: 2 },
   { id: 'injury-habits', text: '6. 부상 예방의 습관 — "Before & After"를 의식하라', depth: 2 },
-  { id: 'conclusion-injury-free', text: '결론 — 부상 없는 테니스는 \'습관\'으로 완성된다', depth: 2 },
+  { id: 'conclusion-injury-free', text: "결론 — 부상 없는 테니스는 \'습관\'으로 완성된다", depth: 2 },
 ];
 
 const faqs = [

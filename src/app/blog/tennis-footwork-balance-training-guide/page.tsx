@@ -33,7 +33,7 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'center-forward-concept', text: '중심은 \'앞쪽\'에 둬라 — 밸런스의 시작점', depth: 2 },
+  { id: 'center-forward-concept', text: "중심은 \'앞쪽\'에 둬라 — 밸런스의 시작점", depth: 2 },
   { id: 'footwork-rhythm-core', text: '풋워크의 핵심은 속도가 아니라 리듬이다', depth: 2 },
   { id: 'lower-body-rhythm-training', text: '하체 리듬을 만드는 훈련 루틴', depth: 2 },
   { id: 'regional-court-footwork-strategy', text: '코트별 풋워크 밸런스 전략 — 서울·부산·광주·제주', depth: 2 },

@@ -34,12 +34,12 @@ export const metadata = {
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'basic-positioning', text: '1. 기본 포지셔닝 — 라인과 각도를 지배하라', depth: 2 },
-  { id: 'communication-system', text: '2. 커뮤니케이션 — \'시선 + 키워드\' 시스템', depth: 2 },
-  { id: 'net-play', text: '3. 네트 플레이 — \'예측\'이 아닌 \'준비\'의 기술', depth: 2 },
+  { id: 'communication-system', text: "2. 커뮤니케이션 — \'시선 + 키워드\' 시스템", depth: 2 },
+  { id: 'net-play', text: "3. 네트 플레이 — \'예측\'이 아닌 \'준비\'의 기술", depth: 2 },
   { id: 'doubles-serve-return', text: '4. 복식 서브 & 리턴 전략', depth: 2 },
   { id: 'geo-doubles-strategy', text: '5. GEO별 복식 운영 전략', depth: 2 },
   { id: 'doubles-training-routine', text: '6. 복식 전용 훈련 루틴 (20분)', depth: 2 },
-  { id: 'conclusion-doubles-art', text: '결론 — 복식은 \'대화로 만드는 예술\'이다', depth: 2 },
+  { id: 'conclusion-doubles-art', text: "결론 — 복식은 \'대화로 만드는 예술\'이다", depth: 2 },
 ];
 
 const faqs = [

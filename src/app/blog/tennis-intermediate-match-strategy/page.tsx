@@ -40,7 +40,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'regional-match-strategy', text: '5. 지역별 경기 운영 전략', depth: 2 },
   { id: 'match-routine-thinking-flow', text: '6. 실전 루틴 — 경기 중 생각의 흐름 정리', depth: 2 },
   { id: 'winning-sentence', text: '7. 승부를 가르는 한 문장', depth: 2 },
-  { id: 'conclusion-intermediate-wall', text: '결론 — 중급자의 벽은 \'생각의 속도\'에서 결정된다', depth: 2 },
+  { id: 'conclusion-intermediate-wall', text: "결론 — 중급자의 벽은 \'생각의 속도\'에서 결정된다", depth: 2 },
 ];
 
 const faqs = [

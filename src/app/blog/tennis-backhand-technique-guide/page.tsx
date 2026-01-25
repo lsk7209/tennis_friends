@@ -37,7 +37,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'backhand-essence-left-hand-leads', text: '1. 백핸드의 본질 — 왼손이 주도하고 오른손이 보조한다', depth: 2 },
   { id: 'grip-selection-continental-eastern-blend', text: '2. 그립 선택 — 콘티넨탈 + 이스턴의 조화', depth: 2 },
   { id: 'impact-contact-point-ahead-waist-height', text: '3. 임팩트 타점 — 공보다 앞, 허리 높이에서', depth: 2 },
-  { id: 'swing-arc-not-straight-line', text: '4. 스윙 궤도 — 직선이 아닌 \'호(Arc)\'의 움직임', depth: 2 },
+  { id: 'swing-arc-not-straight-line', text: "4. 스윙 궤도 — 직선이 아닌 \'호(Arc)\'의 움직임", depth: 2 },
   { id: 'geo-backhand-adjustment', text: '5. GEO별 백핸드 조정법', depth: 2 },
   { id: 'backhand-strengthening-routine-15min', text: '6. 백핸드 강화 루틴 (15분)', depth: 2 },
   { id: 'mistake-correction-common-backhand-errors', text: '7. 실수 교정 — 자주 나오는 백핸드 오류', depth: 2 },

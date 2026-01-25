@@ -33,12 +33,12 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'pattern-analysis-start', text: '1. 패턴 분석의 시작 — 공이 아니라 \'사람\'을 본다', depth: 2 },
+  { id: 'pattern-analysis-start', text: "1. 패턴 분석의 시작 — 공이 아니라 \'사람\'을 본다", depth: 2 },
   { id: 'early-match-reading', text: '2. 경기 초반 — 10포인트 안에 상대의 언어를 해독하라', depth: 2 },
   { id: 'three-pattern-types', text: '3. 패턴 유형 3가지와 대응법', depth: 2 },
   { id: 'counter-strategy-essence', text: '4. 카운터 전략의 본질 — 타이밍의 반 박자', depth: 2 },
   { id: 'geo-match-analysis', text: '5. GEO별 경기 분석 포인트', depth: 2 },
-  { id: 'psychological-warfare', text: '6. 심리전 — \'예상\'을 깨는 예술', depth: 2 },
+  { id: 'psychological-warfare', text: "6. 심리전 — \'예상\'을 깨는 예술", depth: 2 },
   { id: 'data-based-analysis', text: '7. 데이터 기반 분석 — 메모와 영상', depth: 2 },
   { id: 'conclusion-advanced-rhythm-control', text: '결론 — 상급자는 상대의 리듬을 조종하는 사람이다', depth: 2 },
 ];

@@ -35,7 +35,7 @@ export const metadata = {
 
 const tocItems: { id: string; text: string; depth: 2 | 3 }[] = [
   { id: 'introduction', text: '들어가며', depth: 2 },
-  { id: 'key-point-1', text: '바람을 대하는 기본: '여유'와 '잔발'', depth: 2 },
+  { id: 'key-point-1', text: "바람을 대하는 기본: '여유'와 '잔발'", depth: 2 },
   { id: 'key-point-2', text: '맞바람(Against) vs 등바람(With)', depth: 2 },
   { id: 'key-point-3', text: '옆바람(Crosswind) 공략법', depth: 2 },
   { id: 'conclusion', text: '마무리하며', depth: 2 },

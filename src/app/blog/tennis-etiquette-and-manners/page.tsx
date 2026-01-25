@@ -36,7 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'before-match', text: '1. 경기 전 — 인사는 기본, 준비는 예의', depth: 2 },
   { id: 'during-match', text: '2. 경기 중 — 감정은 숨기고, 리듬은 유지하라', depth: 2 },
   { id: 'doubles-match', text: '3. 복식 경기 — 팀워크는 매너의 또 다른 이름', depth: 2 },
-  { id: 'line-calls', text: '4. 라인콜(Line Call) — 공정보다 \'명확함\'', depth: 2 },
+  { id: 'line-calls', text: "4. 라인콜(Line Call) — 공정보다 \'명확함\'", depth: 2 },
   { id: 'geo-club-culture', text: '5. GEO별 클럽 문화 이해하기', depth: 2 },
   { id: 'after-match', text: '6. 경기 후 — 끝이 진짜 매너다', depth: 2 },
   { id: 'club-relationships', text: '7. 클럽 내 관계 매너 — 인간관계가 경기력이다', depth: 2 },

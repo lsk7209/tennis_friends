@@ -34,7 +34,7 @@ export const metadata = {
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'return-starts-from-toss', text: '리턴의 출발점은 토스다', depth: 2 },
-  { id: 'first-step-half-beat-fast', text: '첫 스텝은 \'반 박자 빠르게\'', depth: 2 },
+  { id: 'first-step-half-beat-fast', text: "첫 스텝은 \'반 박자 빠르게\'", depth: 2 },
   { id: 'racket-preparation-angle-minimize-backswing', text: '라켓 준비각과 백스윙 최소화', depth: 2 },
   { id: 'court-specific-return-strategy', text: '코트별 리턴 전략 (GEO 최적화)', depth: 2 },
   { id: 'return-routine-training', text: '20분 리턴 루틴 훈련법', depth: 2 },

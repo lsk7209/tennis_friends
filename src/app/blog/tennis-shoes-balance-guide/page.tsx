@@ -38,7 +38,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'regional-environment-optimization', text: '지역별 환경에 따른 선택', depth: 2 },
   { id: 'sizing-fitting-tips', text: '사이징과 착화 팁', depth: 2 },
   { id: 'replacement-cycle-maintenance', text: '교체 주기와 관리 루틴', depth: 2 },
-  { id: 'conclusion-shoe-science', text: '결론 — \'신발의 과학\'이 경기력을 결정한다', depth: 2 },
+  { id: 'conclusion-shoe-science', text: "결론 — \'신발의 과학\'이 경기력을 결정한다", depth: 2 },
 ];
 
 const faqs = [

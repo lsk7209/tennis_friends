@@ -33,7 +33,7 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'autumn-ball-reaction', text: '가을에는 \'공의 반응\'부터 다르다', depth: 2 },
+  { id: 'autumn-ball-reaction', text: "가을에는 \'공의 반응\'부터 다르다", depth: 2 },
   { id: 'rhythm-footwork', text: '리듬을 만드는 건 스윙이 아니라 풋워크다', depth: 2 },
   { id: 'tempo-strategy', text: '템포 조절이 전략이다 — 리듬을 깨는 플레이', depth: 2 },
   { id: 'regional-court-strategy', text: '지역별 코트 전략 — 서울·부산·제주의 리듬은 다르다', depth: 2 },

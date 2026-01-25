@@ -33,7 +33,7 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'backhand-linear-swing', text: '백핸드의 본질은 \'선형 스윙\'이다', depth: 2 },
+  { id: 'backhand-linear-swing', text: "백핸드의 본질은 \'선형 스윙\'이다", depth: 2 },
   { id: 'racket-face-angle-wrist', text: '라켓면의 각도와 손목 고정', depth: 2 },
   { id: 'lower-body-rhythm-balance', text: '하체 리듬과 중심 이동', depth: 2 },
   { id: 'regional-backhand-strategy', text: '지역별 백핸드 전략', depth: 2 },

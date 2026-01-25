@@ -33,13 +33,13 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'impact-timing-concept', text: '임팩트 타이밍은 \'앞에서, 리듬 안에서\'', depth: 2 },
-  { id: 'contact-point-zone', text: '타점은 고정된 점이 아니라 \'움직이는 구간\'이다', depth: 2 },
+  { id: 'impact-timing-concept', text: "임팩트 타이밍은 \'앞에서, 리듬 안에서\'", depth: 2 },
+  { id: 'contact-point-zone', text: "타점은 고정된 점이 아니라 \'움직이는 구간\'이다", depth: 2 },
   { id: 'lower-body-rhythm', text: '하체 리듬이 임팩트를 만든다', depth: 2 },
   { id: 'follow-through-importance', text: '팔로스루는 임팩트보다 중요하다', depth: 2 },
   { id: 'regional-court-forehand-strategy', text: '코트별 포핸드 전략 — 서울·대구·부산·제주', depth: 2 },
   { id: 'forehand-feel-recovery-routine', text: '포핸드 임팩트 감각을 되찾는 루틴', depth: 2 },
-  { id: 'forehand-body-conversation', text: '포핸드는 결국 \'몸의 대화\'다', depth: 2 },
+  { id: 'forehand-body-conversation', text: "포핸드는 결국 \'몸의 대화\'다", depth: 2 },
   { id: 'forehand-checklist', text: '포핸드 체크리스트', depth: 2 },
 ];
 

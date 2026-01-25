@@ -34,7 +34,7 @@ export const metadata = {
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'mental-collapse-structure', text: '1. 멘탈 붕괴의 구조 — 감정은 신체 반응이다', depth: 2 },
-  { id: '3second-recovery-routine', text: '2. 3초 회복 루틴 — \'인식 → 리셋 → 리듬\'', depth: 2 },
+  { id: '3second-recovery-routine', text: "2. 3초 회복 루틴 — \'인식 → 리셋 → 리듬\'", depth: 2 },
   { id: 'mistake-avoid-actions', text: '3. 실수 후 행동 금지 3가지', depth: 2 },
   { id: 'routine-word-system', text: '4. 루틴 워드 시스템 — 뇌를 다시 세팅하는 말', depth: 2 },
   { id: 'regional-mental-strategy', text: '5. 지역별 멘탈 관리 전략', depth: 2 },

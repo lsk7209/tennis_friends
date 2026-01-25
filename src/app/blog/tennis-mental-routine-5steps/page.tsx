@@ -37,9 +37,9 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'mental-routine-step2', text: '2단계 — 리셋: 호흡으로 신경계를 재부팅하라', depth: 2 },
   { id: 'mental-routine-step3', text: '3단계 — 시선 고정: 외부 자극 차단', depth: 2 },
   { id: 'mental-routine-step4', text: '4단계 — 이미지 트레이닝: 다음 포인트를 시각화', depth: 2 },
-  { id: 'mental-routine-step5', text: '5단계 — 루틴 고정: 자신만의 \'의식\'을 만들어라', depth: 2 },
+  { id: 'mental-routine-step5', text: "5단계 — 루틴 고정: 자신만의 \'의식\'을 만들어라", depth: 2 },
   { id: 'regional-mental-environment', text: '지역별 멘탈 환경 대응', depth: 2 },
-  { id: 'conclusion-mental-routine', text: '결론 — 루틴은 \'심리의 근육\'이다', depth: 2 },
+  { id: 'conclusion-mental-routine', text: "결론 — 루틴은 \'심리의 근육\'이다", depth: 2 },
 ];
 
 const faqs = [

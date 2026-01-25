@@ -34,12 +34,12 @@ export const metadata = {
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'racket-weight', text: '1. 라켓 무게 — 컨트롤과 파워의 첫 번째 기준', depth: 2 },
-  { id: 'balance-point', text: '2. 밸런스 포인트 — 라켓의 \'중심\'을 느껴라', depth: 2 },
+  { id: 'balance-point', text: "2. 밸런스 포인트 — 라켓의 \'중심\'을 느껴라", depth: 2 },
   { id: 'string-pattern', text: '3. 스트링 패턴 — 스핀과 컨트롤의 비밀', depth: 2 },
   { id: 'string-tension', text: '4. 스트링 텐션 — 힘과 감각의 균형점', depth: 2 },
   { id: 'regional-racket-setting', text: '5. 지역별 라켓 세팅 전략', depth: 2 },
   { id: 'racket-replacement', text: '6. 라켓 교체 주기 — 실력보다 먼저 바꾸지 마라', depth: 2 },
-  { id: 'testing-method', text: '7. 테스트 방법 — 매장에서 \'3구 테스트\'', depth: 2 },
+  { id: 'testing-method', text: "7. 테스트 방법 — 매장에서 \'3구 테스트\'", depth: 2 },
   { id: 'conclusion-racket-rhythm', text: '결론 — 라켓은 스펙이 아니라 리듬이다', depth: 2 },
 ];
 

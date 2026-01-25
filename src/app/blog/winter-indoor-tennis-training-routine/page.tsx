@@ -34,9 +34,9 @@ export const metadata = {
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'indoor-court-characteristics', text: '실내 코트의 특성을 이해하라', depth: 2 },
-  { id: 'joint-mobility-warmup', text: '워밍업의 핵심은 \'관절 가동성\'', depth: 2 },
-  { id: 'indoor-lighting-adaptation', text: '실내 조명에 맞는 \'시야 적응\' 훈련', depth: 2 },
-  { id: 'mini-tennis-rhythm-maintenance', text: '리듬 감각을 유지하는 \'미니 테니스 루틴\'', depth: 2 },
+  { id: 'joint-mobility-warmup', text: "워밍업의 핵심은 \'관절 가동성\'", depth: 2 },
+  { id: 'indoor-lighting-adaptation', text: "실내 조명에 맞는 \'시야 적응\' 훈련", depth: 2 },
+  { id: 'mini-tennis-rhythm-maintenance', text: "리듬 감각을 유지하는 \'미니 테니스 루틴\'", depth: 2 },
   { id: 'winter-equipment-setup', text: '겨울용 라켓 세팅과 의류 체크', depth: 2 },
   { id: 'winter-season-training-points', text: '겨울 시즌만의 훈련 포인트', depth: 2 },
   { id: 'mental-routine-strength', text: '멘탈과 루틴이 실력을 만든다', depth: 2 },

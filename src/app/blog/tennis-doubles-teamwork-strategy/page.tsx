@@ -33,9 +33,9 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'doubles-essence-breathing-not-space', text: '1. 복식의 본질 — 공간이 아니라 \'호흡\'을 나누는 경기', depth: 2 },
-  { id: 'communication-structure-signals-over-words', text: '2. 커뮤니케이션의 구조화 — \'말보다 신호\'', depth: 2 },
-  { id: 'positioning-court-as-xy-axes', text: '3. 포지셔닝 — 코트를 \'X축과 Y축\'으로 나눠라', depth: 2 },
+  { id: 'doubles-essence-breathing-not-space', text: "1. 복식의 본질 — 공간이 아니라 \'호흡\'을 나누는 경기", depth: 2 },
+  { id: 'communication-structure-signals-over-words', text: "2. 커뮤니케이션의 구조화 — \'말보다 신호\'", depth: 2 },
+  { id: 'positioning-court-as-xy-axes', text: "3. 포지셔닝 — 코트를 \'X축과 Y축\'으로 나눠라", depth: 2 },
   { id: 'geo-doubles-strategy', text: '4. GEO별 복식 운영 전략', depth: 2 },
   { id: 'mistake-recovery-routine-teamwork-in-crisis', text: '5. 실수 후 루틴 — 팀워크는 위기 때 드러난다', depth: 2 },
   { id: 'doubles-training-routine-20min-example', text: '6. 복식 훈련 루틴 (20분 루틴 예시)', depth: 2 },

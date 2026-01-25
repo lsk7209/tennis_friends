@@ -34,7 +34,7 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'footwork-essence-rhythm-not-ball', text: '1. 풋워크의 본질 — 공이 아니라 \'리듬\'을 잡아라', depth: 2 },
+  { id: 'footwork-essence-rhythm-not-ball', text: "1. 풋워크의 본질 — 공이 아니라 \'리듬\'을 잡아라", depth: 2 },
   { id: 'basic-footwork-pattern-4steps', text: '2. 기본 풋워크 패턴 4단계', depth: 2 },
   { id: 'geo-footwork-adjustment', text: '3. GEO별 풋워크 조정법', depth: 2 },
   { id: 'weight-transfer-science-center-moves-first', text: '4. 체중 이동의 과학 — 중심이 공보다 먼저 움직인다', depth: 2 },

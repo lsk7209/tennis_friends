@@ -33,13 +33,13 @@ export const metadata = {
 };
 
 const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'serve-rhythm-4-beats', text: '1. 리듬은 \'1-2-3-타\'의 4박자', depth: 2 },
+  { id: 'serve-rhythm-4-beats', text: "1. 리듬은 \'1-2-3-타\'의 4박자", depth: 2 },
   { id: 'toss-science', text: '2. 토스의 과학 — 높이와 위치', depth: 2 },
-  { id: 'weight-transfer', text: '3. 체중이동 — \'뒤에서 앞\'으로의 에너지 전달', depth: 2 },
+  { id: 'weight-transfer', text: "3. 체중이동 — \'뒤에서 앞\'으로의 에너지 전달", depth: 2 },
   { id: 'spin-science', text: '4. 회전의 과학 — 플랫, 슬라이스, 킥', depth: 2 },
   { id: 'regional-serve-adjustment', text: '5. 지역별 서브 조정 전략', depth: 2 },
   { id: '15-min-serve-routine', text: '6. 15분 서브 리듬 루틴', depth: 2 },
-  { id: 'conclusion-serve-rhythm', text: '결론 — 서브는 \'박자\'로 완성된다', depth: 2 },
+  { id: 'conclusion-serve-rhythm', text: "결론 — 서브는 \'박자\'로 완성된다", depth: 2 },
 ];
 
 const faqs = [

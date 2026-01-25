@@ -36,11 +36,11 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'serve-speed-essence-muscle-connection', text: '1. 서브 속도의 본질 — 근육보다 연결', depth: 2 },
   { id: 'timing-creation-3step-routine', text: '2. 타이밍을 만드는 3단계 루틴', depth: 2 },
   { id: 'power-vs-control-serve-comparison', text: '3. 파워 서브 vs 컨트롤 서브 비교', depth: 2 },
-  { id: 'toss-science-accuracy-consistency-over-height', text: '4. 토스의 과학 — 정확도는 \'높이\'보다 \'일관성\'', depth: 2 },
+  { id: 'toss-science-accuracy-consistency-over-height', text: "4. 토스의 과학 — 정확도는 \'높이\'보다 \'일관성\'", depth: 2 },
   { id: 'regional-serve-rhythm-adjustment', text: '5. 지역별 서브 리듬 조정법', depth: 2 },
   { id: 'fast-serve-training-routine-15min', text: '6. 빠른 서브를 만드는 훈련 루틴 (15분)', depth: 2 },
   { id: 'serve-mistake-reduction-3second-routine', text: '7. 서브 실패를 줄이는 3초 루틴', depth: 2 },
-  { id: 'conclusion-serve-true-speed-from-harmony', text: '결론 — 서브의 진짜 속도는 \'조화\'에서 나온다', depth: 2 },
+  { id: 'conclusion-serve-true-speed-from-harmony', text: "결론 — 서브의 진짜 속도는 \'조화\'에서 나온다", depth: 2 },
 ];
 
 const faqs = [
