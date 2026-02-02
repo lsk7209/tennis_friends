@@ -83,8 +83,8 @@ const Header: React.FC = () => {
 
   return (
     <header className={`sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition-all duration-300 ${isScrolled
-        ? 'shadow-md dark:shadow-gray-800/50'
-        : ''
+      ? 'shadow-md dark:shadow-gray-800/50'
+      : ''
       }`}>
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         {/* Logo */}
@@ -115,13 +115,15 @@ const Header: React.FC = () => {
               <div key={item.href} className="relative">
                 <Link
                   href={item.href}
-                  className={`font-medium transition-colors text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300`}
+                  className={`font-bold transition-colors text-[#0f172a] opacity-100 dark:text-white hover:text-gray-700 dark:hover:text-gray-300`}
                 >
                   {item.label}
                 </Link>
-                {active && (
-                  <div className="absolute -bottom-2 left-0 h-0.5 w-full bg-primary rounded-full"></div>
-                )}
+                {
+                  active && (
+                    <div className="absolute -bottom-2 left-0 h-0.5 w-full bg-primary rounded-full"></div>
+                  )
+                }
               </div>
             );
           })}
@@ -151,31 +153,33 @@ const Header: React.FC = () => {
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
-      </div>
+      </div >
 
       {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 md:hidden">
-          <nav className="container mx-auto px-4 py-6">
-            <div className="flex flex-col gap-4">
-              {navItems.map((item) => {
-                const active = isActive(item.href);
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`font-medium transition-colors text-gray-900 dark:text-white py-2 px-3 rounded-lg hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </div>
-          </nav>
-        </div>
-      )}
-    </header>
+      {
+        isMobileMenuOpen && (
+          <div className="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 md:hidden">
+            <nav className="container mx-auto px-4 py-6">
+              <div className="flex flex-col gap-4">
+                {navItems.map((item) => {
+                  const active = isActive(item.href);
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`font-bold transition-colors text-[#0f172a] opacity-100 dark:text-white py-2 px-3 rounded-lg hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+            </nav>
+          </div>
+        )
+      }
+    </header >
   );
 };
 
