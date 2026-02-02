@@ -72,7 +72,7 @@ export default function RankingCalculatorPage() {
 
     let totalPoints = currentPts;
     let wins = 0;
-    let totalMatches = matches.length;
+    const totalMatches = matches.length;
 
     matches.forEach(match => {
       const opponentRank = match.opponentRanking;

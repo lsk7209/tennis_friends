@@ -6,17 +6,19 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+
 export const metadata = {
     title: '테니스 스트링 완전 가이드 — 폴리 vs 인조쉽 vs 천연쉽 및 텐션 선택법 2026',
     description: '라켓 성능의 50%는 스트링이 결정합니다. 폴리에스터, 인조쉽, 멀티필라멘트, 천연쉽의 장단점을 비교하고 나에게 맞는 텐션(Tension) 찾는 법을 알려드립니다.',
     keywords: ['테니스 스트링 추천', '테니스 줄 종류', '테니스 텐션 추천', '폴리 스트링', '인조쉽', '천연쉽', '하이브리드 스트링', '테니스 줄 교체 주기'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/blog/tennis-string-guide',
+        canonical: `${siteUrl}/blog/tennis-string-guide`,
     },
     openGraph: {
         title: '테니스 스트링 완전 가이드 — 폴리 vs 인조쉽 vs 천연쉽 및 텐션 선택법 2026',
         description: '라켓 성능의 50%는 스트링이 결정합니다. 재질별 특징과 2026년 트렌드 텐션 가이드.',
-        url: 'https://tennisfriends.co.kr/blog/tennis-string-guide',
+        url: `${siteUrl}/blog/tennis-string-guide`,
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'article',

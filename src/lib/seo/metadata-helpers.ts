@@ -7,22 +7,22 @@
 import type { Metadata } from 'next';
 
 const SITE_NAME = 'TennisFriends';
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
 
 /**
  * Truncates description for Naver (80 char limit) while preserving context
  */
 export function truncateForNaver(description: string, maxLength: number = 80): string {
   if (description.length <= maxLength) return description;
-  
+
   // Try to cut at sentence boundary
   const truncated = description.substring(0, maxLength - 3);
   const lastPeriod = truncated.lastIndexOf('.');
   const lastSpace = truncated.lastIndexOf(' ');
-  
+
   const cutPoint = lastPeriod > maxLength * 0.7 ? lastPeriod + 1 : lastSpace;
-  
-  return cutPoint > 0 
+
+  return cutPoint > 0
     ? description.substring(0, cutPoint) + '...'
     : truncated + '...';
 }
@@ -73,12 +73,12 @@ export function generatePageMetadata({
   const fullTitle = generateTitle(title);
   const canonical = getCanonicalUrl(path);
   const ogImage = image || `${SITE_URL}/opengraph-image`;
-  
+
   // Naver-optimized description (80 chars)
   const naverDescription = truncateForNaver(description);
-  
+
   // Google/AI-optimized description (longer, more context)
-  const googleDescription = description.length > 160 
+  const googleDescription = description.length > 160
     ? description.substring(0, 157) + '...'
     : description;
 

@@ -41,9 +41,9 @@ export default function EnhancedBlogPostSchema({
   keywords = [],
   articleBody,
 }: EnhancedBlogPostSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
   const url = `${siteUrl}/blog/${slug}`;
-  const imageUrl = image 
+  const imageUrl = image
     ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
     : `${siteUrl}/opengraph-image`;
 
@@ -63,7 +63,7 @@ export default function EnhancedBlogPostSchema({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'tennisfriends@tennisfriends.co.kr',
+      email: 'contact@tennisfrens.com',
     },
     sameAs: [], // Add social media links if available
   };
@@ -116,12 +116,12 @@ export default function EnhancedBlogPostSchema({
     { name: '홈', url: '/' },
     { name: '블로그', url: '/blog' },
   ];
-  
+
   const validTitle = title?.trim();
   if (validTitle && validTitle.length > 0) {
     breadcrumbItems.push({ name: validTitle, url: `/blog/${slug}` });
   }
-  
+
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
 
   // Combined schema using @graph (recommended by Google)

@@ -24,7 +24,7 @@ function getSlugsFromDir(dirPath: string): string[] {
 export async function GET(request: NextRequest) {
   // 런타임에 요청 호스트를 사용하거나 환경 변수 사용
   let baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  
+
   // 환경 변수가 없으면 요청 헤더에서 호스트 추출 시도
   if (!baseUrl) {
     const host = request.headers.get('host');
@@ -34,10 +34,10 @@ export async function GET(request: NextRequest) {
       baseUrl = `${protocol}://${host}`;
     } else {
       // 기본값 (실제 도메인으로 변경 필요)
-      baseUrl = 'https://www.tennisfrens.com';
+      baseUrl = 'https://tennisfrens.com';
     }
   }
-  
+
   // baseUrl 정규화 (trailing slash 제거)
   const normalizedBaseUrl = baseUrl.replace(/\/$/, '');
 
@@ -69,7 +69,7 @@ export async function GET(request: NextRequest) {
     .filter(post => !playerSlugs.includes(post.slug))
     .slice(0, 1000)
     .map(post => post.slug);
-  
+
   blogSlugs.forEach(slug => {
     urls.push(`${normalizedBaseUrl}/blog/${slug}`);
   });

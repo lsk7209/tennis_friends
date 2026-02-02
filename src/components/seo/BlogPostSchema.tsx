@@ -21,9 +21,9 @@ export default function BlogPostSchema({
   category = '테니스',
   readingTime,
 }: BlogPostSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
   const url = `${siteUrl}/blog/${slug}`;
-  const imageUrl = image 
+  const imageUrl = image
     ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
     : `${siteUrl}/opengraph-image`;
 
@@ -75,7 +75,7 @@ export default function BlogPostSchema({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'tennisfriends@tennisfriends.co.kr',
+      email: 'contact@tennisfrens.com',
     },
   };
 

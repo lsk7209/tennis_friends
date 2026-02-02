@@ -18,7 +18,7 @@ export default function TennisCourtDiagram({ children, title, className = "" }: 
 
             <div className="relative aspect-[4/3] max-w-[600px] mx-auto bg-green-600 dark:bg-green-900 rounded-lg overflow-hidden border-4 border-green-700 dark:border-green-950 shadow-lg">
                 {/* Court Markings */}
-                <svg viewBox="0 0 100 100" className="w-full h-full stroke-white fill-none" strokeWidth="0.8">
+                <svg viewBox="0 0 100 100" className="w-full h-full stroke-white fill-none" strokeWidth="0.8" role="img" aria-label={title || "테니스 코트 다이어그램"}>
                     {/* Outer Boundary */}
                     <rect x="10" y="5" width="80" height="90" />
 

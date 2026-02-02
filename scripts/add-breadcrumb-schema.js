@@ -94,7 +94,7 @@ playerDirs.forEach(playerSlug => {
     // 2. 컴포넌트 추가
     // PersonSchema 컴포넌트 뒤에 추가
     const playerName = playerNameMap[playerSlug] || playerSlug;
-    const siteUrl = 'https://tennisfriends.co.kr';
+    const siteUrl = 'https://tennisfrens.com';
 
     const breadcrumbComponent = `
       <BreadcrumbSchema

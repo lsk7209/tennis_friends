@@ -14,7 +14,7 @@ export default function OrganizationSchema({
   url,
   logo,
   description = '데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상을 위한 모든 것을 제공합니다.',
-  email = 'tennisfriends@tennisfriends.co.kr',
+  email = 'contact@tennisfrens.com',
   sameAs = [],
 }: OrganizationSchemaProps) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';

@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 환경 변수가 없으면 기본값 사용 (실제 도메인으로 변경 필요)
   if (!baseUrl) {
     // 프로덕션 환경에서는 실제 도메인을 환경 변수로 설정해야 함
-    baseUrl = 'https://www.tennisfrens.com';
+    baseUrl = 'https://tennisfrens.com';
   }
 
   // baseUrl 정규화 (trailing slash 제거)

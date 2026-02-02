@@ -49,7 +49,7 @@ def add_seo_schemas_to_player_page(slug, file_path):
           award={{[
             {', '.join([f"'{award}'" for award in metadata['awards']])}
           ]}}
-          url="https://tennisfriends.co.kr/players/{slug}"
+          url="https://tennisfrens.com/players/{slug}"
         />
         <FAQSchema faqs={{faqs}} />
         '''

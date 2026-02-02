@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -18,6 +18,14 @@ const inter = Inter({
   adjustFontFallback: true,
 });
 
+export const viewport: Viewport = {
+  themeColor: "#34D399",
+  colorScheme: "light dark",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 // Enhanced metadata with Naver and AI optimization
 export const metadata: Metadata = {
   title: {
@@ -29,12 +37,7 @@ export const metadata: Metadata = {
   authors: [{ name: "TennisFriends" }],
   creator: "TennisFriends",
   publisher: "TennisFriends",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com"),
 
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || "",
@@ -77,6 +80,27 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+  },
+  other: {
+    "NaverBot": "index, follow, all",
+    "Yeti": "index, follow, all",
+    "DaumBot": "index, follow, all",
+    "Daumoa": "index, follow, all",
+    "GPTBot": "index, follow",
+    "ChatGPT-User": "index, follow",
+    "Google-Extended": "index, follow",
+    "anthropic-ai": "index, follow",
+    "Claude-Web": "index, follow",
+    "PerplexityBot": "index, follow",
+  },
+  alternates: {
+    types: {
+      "application/rss+xml": "/rss.xml",
+    }
+  }
 };
 
 export default function RootLayout({
@@ -93,48 +117,6 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
           rel="stylesheet"
         />
-        {/* RSS 피드 - 구글, 네이버, 다음 모두 지원 */}
-        <link rel="alternate" type="application/rss+xml" title="TennisFriends RSS Feed" href="/rss.xml" />
-
-        {/* 검색 엔진 사이트 인증 */}
-        {/* 네이버 서치어드바이저 인증 */}
-        {process.env.NAVER_SITE_VERIFICATION && (
-          <meta name="naver-site-verification" content={process.env.NAVER_SITE_VERIFICATION} />
-        )}
-        {/* 다음 검색 등록 인증 */}
-        {process.env.DAUM_SITE_VERIFICATION && (
-          <meta name="daum-site-verification" content={process.env.DAUM_SITE_VERIFICATION} />
-        )}
-        {/* Bing 웹마스터 도구 인증 */}
-        {process.env.BING_SITE_VERIFICATION && (
-          <meta name="msvalidate.01" content={process.env.BING_SITE_VERIFICATION} />
-        )}
-
-        {/* 네이버 검색 최적화 - 크롤러 허용 */}
-        <meta name="NaverBot" content="index, follow, all" />
-        <meta name="Yeti" content="index, follow, all" />
-
-        {/* 다음 검색 최적화 - 크롤러 허용 */}
-        <meta name="DaumBot" content="index, follow, all" />
-        <meta name="Daumoa" content="index, follow, all" />
-        {/* 모바일 최적화 */}
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        {/* AI 크롤러 최적화 */}
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        {/* AI 크롤러 허용 메타 태그 */}
-        <meta name="GPTBot" content="index, follow" />
-        <meta name="ChatGPT-User" content="index, follow" />
-        <meta name="Google-Extended" content="index, follow" />
-        <meta name="anthropic-ai" content="index, follow" />
-        <meta name="Claude-Web" content="index, follow" />
-        <meta name="PerplexityBot" content="index, follow" />
-        {/* 구조화된 데이터 최적화 */}
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="theme-color" content="#34D399" />
-        <meta name="color-scheme" content="light dark" />
       </head>
       <body className={`bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-black font-display text-gray-900 dark:text-gray-100 antialiased`}>
         {/* 전역 구조화된 데이터 */}

@@ -52,80 +52,80 @@ export default function BlogPost() {
 }`;
 
 const posts = {
-    'felix-auger-aliassime': {
-        slug: 'felix-auger-aliassime',
-        meta: {
-            title: '펠릭스 오제-알리아심: 캐나다의 테니스 희망',
-            description: '성실함과 운동 능력을 겸비한 펠릭스 오제-알리아심. 그의 강력한 포핸드와 서비스 게임, 그리고 그랜드 슬램을 향한 도전을 정리합니다.',
-            keywords: ['테니스', '펠릭스 오제-알리아심', 'Felix Auger-Aliassime', '캐나다'],
-            alternates: { canonical: 'https://tennisfriends.co.kr/blog/felix-auger-aliassime' },
-            openGraph: {
-                title: '펠릭스 오제-알리아심: 캐나다의 테니스 희망',
-                description: '성실함과 운동 능력을 겸비한 펠릭스 오제-알리아심. 그의 강력한 포핸드와 서비스 게임, 그리고 그랜드 슬램을 향한 도전을 정리합니다.',
-                url: 'https://tennisfriends.co.kr/blog/felix-auger-aliassime',
-                siteName: 'TennisFriends',
-                locale: 'ko_KR',
-                type: 'article',
-            },
-            twitter: {
-                card: 'summary_large_image',
-                title: '펠릭스 오제-알리아심: 캐나다의 테니스 희망',
-                description: '성실함과 운동 능력을 겸비한 펠릭스 오제-알리아심. 그의 강력한 포핸드와 서비스 게임, 그리고 그랜드 슬램을 향한 도전을 정리합니다.',
-            },
-            robots: { index: true, follow: true },
-        },
-        toc: [
-            { id: 'intro', text: '들어가며', depth: 2 },
-            { id: 'style', text: '경기 스타일', depth: 2 },
-            { id: 'conclusion', text: '마무리', depth: 2 },
-        ],
-        faqs: [
-            { q: '오제-알리아심의 강점은?', a: '강력한 서브와 포핸드, 그리고 성실한 훈련 태도입니다.' },
-        ],
-        content: '<h2 id="intro">들어가며</h2><p>펠릭스 오제-알리아심은 캐나다 테니스의 미래입니다. 성실함과 재능을 겸비한 그는 곧 메이저 우승을 이룰 것으로 기대됩니다.</p><h2 id="style">경기 스타일</h2><p>강력한 서브와 공격적인 포핸드로 주도권을 잡습니다.</p><h2 id="conclusion">마무리</h2><p>그의 여정은 이제 시작입니다.</p>',
+  'felix-auger-aliassime': {
+    slug: 'felix-auger-aliassime',
+    meta: {
+      title: '펠릭스 오제-알리아심: 캐나다의 테니스 희망',
+      description: '성실함과 운동 능력을 겸비한 펠릭스 오제-알리아심. 그의 강력한 포핸드와 서비스 게임, 그리고 그랜드 슬램을 향한 도전을 정리합니다.',
+      keywords: ['테니스', '펠릭스 오제-알리아심', 'Felix Auger-Aliassime', '캐나다'],
+      alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/felix-auger-aliassime` },
+      openGraph: {
+        title: '펠릭스 오제 알리아심 스타일 분석 - 무결점의 테니스, 그러나 숙제는?',
+        description: '캐나다의 차세대 스타 알리아심의 강력한 피지컬과 기술적 완벽함. 그리고 그가 넘어야 할 멘탈과 전략의 산.',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/felix-auger-aliassime`,
+        siteName: 'TennisFriends',
+        locale: 'ko_KR',
+        type: 'article',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: '펠릭스 오제-알리아심: 캐나다의 테니스 희망',
+        description: '성실함과 운동 능력을 겸비한 펠릭스 오제-알리아심. 그의 강력한 포핸드와 서비스 게임, 그리고 그랜드 슬램을 향한 도전을 정리합니다.',
+      },
+      robots: { index: true, follow: true },
     },
-    'denis-shapovalov': {
-        slug: 'denis-shapovalov',
-        meta: {
-            title: '데니스 샤포발로프: 왼손 원핸드 백핸드의 낭만',
-            description: '폭발적인 점프 원핸드 백핸드의 소유자 데니스 샤포발로프. 공격적인 스타일과 화려한 샷 메이킹, 그가 보여주는 낭만 테니스.',
-            keywords: ['테니스', '데니스 샤포발로프', 'Denis Shapovalov', '원핸드 백핸드', '왼손잡이'],
-            alternates: { canonical: 'https://tennisfriends.co.kr/blog/denis-shapovalov' },
-            openGraph: {
-                title: '데니스 샤포발로프: 왼손 원핸드 백핸드의 낭만',
-                description: '폭발적인 점프 원핸드 백핸드의 소유자 데니스 샤포발로프. 공격적인 스타일과 화려한 샷 메이킹, 그가 보여주는 낭만 테니스.',
-                url: 'https://tennisfriends.co.kr/blog/denis-shapovalov',
-                siteName: 'TennisFriends',
-                locale: 'ko_KR',
-                type: 'article',
-            },
-            twitter: {
-                card: 'summary_large_image',
-                title: '데니스 샤포발로프: 왼손 원핸드 백핸드의 낭만',
-                description: '폭발적인 점프 원핸드 백핸드의 소유자 데니스 샤포발로프. 공격적인 스타일과 화려한 샷 메이킹, 그가 보여주는 낭만 테니스.',
-            },
-            robots: { index: true, follow: true },
-        },
-        toc: [
-            { id: 'intro', text: '들어가며', depth: 2 },
-            { id: 'backhand', text: '원핸드 백핸드의 예술', depth: 2 },
-            { id: 'conclusion', text: '마무리', depth: 2 },
-        ],
-        faqs: [
-            { q: '샤포발로프의 백핸드는?', a: '왼손 원핸드 백핸드로, 페더러를 연상시키는 우아함과 파괴력을 자랑합니다.' },
-        ],
-        content: '<h2 id="intro">들어가며</h2><p>데니스 샤포발로프는 현대 테니스에서 보기 드문 왼손 원핸드 백핸드 선수입니다.</p><h2 id="backhand">원핸드 백핸드의 예술</h2><p>그의 백핸드는 페더러를 연상시키는 우아함과 파워를 동시에 지니고 있습니다.</p><h2 id="conclusion">마무리</h2><p>샤포발로프는 테니스의 낭만을 지키는 선수입니다.</p>',
+    toc: [
+      { id: 'intro', text: '들어가며', depth: 2 },
+      { id: 'style', text: '경기 스타일', depth: 2 },
+      { id: 'conclusion', text: '마무리', depth: 2 },
+    ],
+    faqs: [
+      { q: '오제-알리아심의 강점은?', a: '강력한 서브와 포핸드, 그리고 성실한 훈련 태도입니다.' },
+    ],
+    content: '<h2 id="intro">들어가며</h2><p>펠릭스 오제-알리아심은 캐나다 테니스의 미래입니다. 성실함과 재능을 겸비한 그는 곧 메이저 우승을 이룰 것으로 기대됩니다.</p><h2 id="style">경기 스타일</h2><p>강력한 서브와 공격적인 포핸드로 주도권을 잡습니다.</p><h2 id="conclusion">마무리</h2><p>그의 여정은 이제 시작입니다.</p>',
+  },
+  'denis-shapovalov': {
+    slug: 'denis-shapovalov',
+    meta: {
+      title: '데니스 샤포발로프: 왼손 원핸드 백핸드의 낭만',
+      description: '폭발적인 점프 원핸드 백핸드의 소유자 데니스 샤포발로프. 공격적인 스타일과 화려한 샷 메이킹, 그가 보여주는 낭만 테니스.',
+      keywords: ['테니스', '데니스 샤포발로프', 'Denis Shapovalov', '원핸드 백핸드', '왼손잡이'],
+      alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/denis-shapovalov` },
+      openGraph: {
+        title: '데니스 샤포발로프 스타일 분석 - 폭발하는 재능과 위험한 도박',
+        description: '왼손 원핸드 백핸드의 로망, 샤포발로프. 그의 화려한 위닝샷과 잦은 에러 사이의 딜레마를 분석합니다.',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/denis-shapovalov`,
+        siteName: 'TennisFriends',
+        locale: 'ko_KR',
+        type: 'article',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: '데니스 샤포발로프: 왼손 원핸드 백핸드의 낭만',
+        description: '폭발적인 점프 원핸드 백핸드의 소유자 데니스 샤포발로프. 공격적인 스타일과 화려한 샷 메이킹, 그가 보여주는 낭만 테니스.',
+      },
+      robots: { index: true, follow: true },
     },
+    toc: [
+      { id: 'intro', text: '들어가며', depth: 2 },
+      { id: 'backhand', text: '원핸드 백핸드의 예술', depth: 2 },
+      { id: 'conclusion', text: '마무리', depth: 2 },
+    ],
+    faqs: [
+      { q: '샤포발로프의 백핸드는?', a: '왼손 원핸드 백핸드로, 페더러를 연상시키는 우아함과 파괴력을 자랑합니다.' },
+    ],
+    content: '<h2 id="intro">들어가며</h2><p>데니스 샤포발로프는 현대 테니스에서 보기 드문 왼손 원핸드 백핸드 선수입니다.</p><h2 id="backhand">원핸드 백핸드의 예술</h2><p>그의 백핸드는 페더러를 연상시키는 우아함과 파워를 동시에 지니고 있습니다.</p><h2 id="conclusion">마무리</h2><p>샤포발로프는 테니스의 낭만을 지키는 선수입니다.</p>',
+  },
 };
 
 const baseDir = path.join(__dirname, '../src/app/blog');
 let count = 0;
 
 Object.entries(posts).forEach(([slug, data]) => {
-    const filePath = path.join(baseDir, slug, 'page.tsx');
-    fs.writeFileSync(filePath, simpleTemplate(data), 'utf8');
-    count++;
-    console.log(`✅ ${count}. ${slug}`);
+  const filePath = path.join(baseDir, slug, 'page.tsx');
+  fs.writeFileSync(filePath, simpleTemplate(data), 'utf8');
+  count++;
+  console.log(`✅ ${count}. ${slug}`);
 });
 
 console.log(`\n=== Completed ${count} posts ===`);

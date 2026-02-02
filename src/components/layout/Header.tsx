@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     // 다크모드 상태 초기화
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     // 명시적으로 저장된 테마 우선, 없으면 시스템 설정 따름
     let shouldBeDark;
     if (savedTheme === 'dark') {
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
       // 저장된 테마가 없을 때만 시스템 설정 따름
       shouldBeDark = prefersDark;
     }
-    
+
     setIsDark(shouldBeDark);
     document.documentElement.classList.toggle('dark', shouldBeDark);
 
@@ -82,11 +82,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b border-gray-200 bg-white transition-all duration-300 tf-text-black ${
-      isScrolled
-        ? 'shadow-md'
+    <header className={`sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition-all duration-300 ${isScrolled
+        ? 'shadow-md dark:shadow-gray-800/50'
         : ''
-    }`}>
+      }`}>
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center gap-6">
@@ -156,7 +155,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="border-t border-gray-200 bg-white md:hidden tf-text-black">
+        <div className="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 md:hidden">
           <nav className="container mx-auto px-4 py-6">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => {

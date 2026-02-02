@@ -4,7 +4,7 @@ const path = require('path');
 
 // 간단한 템플릿 생성 함수
 const generateBlogContent = (post) => {
-    const baseTemplate = `import Article from '@/components/blog/Article';
+  const baseTemplate = `import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
@@ -17,12 +17,12 @@ export const metadata = {
   description: '${post.description}',
   keywords: [${post.keywords.map(k => `'${k}'`).join(', ')}],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/${post.slug}',
+    canonical: \`\${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/${post.slug}\`,
   },
   openGraph: {
     title: '${post.title}',
-    description: '${post.description}',
-    url: 'https://tennisfriends.co.kr/blog/${post.slug}',
+    description: post.summary,
+    url: \`\${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/${post.slug}\`,
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -141,35 +141,35 @@ ${post.content}
   );
 }`;
 
-    return baseTemplate;
+  return baseTemplate;
 };
 
 // 남은 포스트 데이터
 const remainingPosts = [
-    // 나머지 플레이어들 (Emma Raducanu만 추가)
-    {
-        slug: 'emma-raducanu',
-        title: '엠마 라두카누: 신데렐라 스토리 그 후',
-        description: '예선 통과자 US 오픈 우승. 엠마 라두카누의 기적 같은 스토리와 부상 극복, 재도약의 과정을 다룹니다.',
-        keywords: ['테니스', '엠마 라두카누', 'Emma Raducanu', 'US 오픈', '신데렐라'],
-        toc: [
-            { id: 'introduction', text: '들어가며', depth: 2 },
-            { id: 'us-open-miracle', text: 'US 오픈 2021: 예선부터 우승까지', depth: 2 },
-            { id: 'injury-struggles', text: '부상과의 싸움', depth: 2 },
-            { id: 'comeback', text: '재도약을 향해', depth: 2 },
-            { id: 'conclusion', text: '마무리하며', depth: 2 },
-        ],
-        faqs: [
-            {
-                q: '라두카누의 US 오픈 우승이 역사적인 이유는?',
-                a: '예선 통과자 최초로 그랜드 슬램을 우승했으며, 단 한 세트도 내주지 않는 완벽한 우승을 이뤘습니다.'
-            },
-            {
-                q: '그녀가 겪은 부상은?',
-                a: '손목, 발목 등 다양한 부상으로 고생했으며, 성장통과 그랜드 슬램 챔피언이라는 중압감이 더해져 어려움을 겪었습니다.'
-            },
-        ],
-        content: `<h2 id="introduction">들어가며</h2>
+  // 나머지 플레이어들 (Emma Raducanu만 추가)
+  {
+    slug: 'emma-raducanu',
+    title: '엠마 라두카누: 신데렐라 스토리 그 후',
+    description: '예선 통과자 US 오픈 우승. 엠마 라두카누의 기적 같은 스토리와 부상 극복, 재도약의 과정을 다룹니다.',
+    keywords: ['테니스', '엠마 라두카누', 'Emma Raducanu', 'US 오픈', '신데렐라'],
+    toc: [
+      { id: 'introduction', text: '들어가며', depth: 2 },
+      { id: 'us-open-miracle', text: 'US 오픈 2021: 예선부터 우승까지', depth: 2 },
+      { id: 'injury-struggles', text: '부상과의 싸움', depth: 2 },
+      { id: 'comeback', text: '재도약을 향해', depth: 2 },
+      { id: 'conclusion', text: '마무리하며', depth: 2 },
+    ],
+    faqs: [
+      {
+        q: '라두카누의 US 오픈 우승이 역사적인 이유는?',
+        a: '예선 통과자 최초로 그랜드 슬램을 우승했으며, 단 한 세트도 내주지 않는 완벽한 우승을 이뤘습니다.'
+      },
+      {
+        q: '그녀가 겪은 부상은?',
+        a: '손목, 발목 등 다양한 부상으로 고생했으며, 성장통과 그랜드 슬램 챔피언이라는 중압감이 더해져 어려움을 겪었습니다.'
+      },
+    ],
+    content: `<h2 id="introduction">들어가며</h2>
             <p>
               2021년 US 오픈, 예선부터 시작해 단 한 세트도 떨어뜨리지 않고 우승한 18세 소녀. 그 신데렐라 스토리의 주인공 엠마 라두카누(Emma Raducanu)는 하루아침에 세계적인 스타가 되었습니다. 하지만 그 이후의 길은 순탄하지 않았습니다. 부상과 중압감 속에서 그녀는 여전히 싸우고 있으며, 다시 정상으로 돌아올 날을 준비하고 있습니다.
             </p>
@@ -193,27 +193,27 @@ const remainingPosts = [
             <p>
               신데렐라 스토리는 아직 끝나지 않았습니다. 엠마 라두카누의 다음 챕터를 함께 응원합니다.
             </p>`
-    },
-    // === 전략 글들 ===
-    {
-        slug: 'tennis-strategy-beat-pusher',
-        title: '일명 \'푸셔(Pusher)\'를 이기는 5가지 전략',
-        description: '실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.',
-        keywords: ['테니스 전술', '푸셔', 'Pusher', '연타', '멘탈 관리'],
-        toc: [
-            { id: 'intro', text: '푸셔란 무엇인가?', depth: 2 },
-            { id: 'strategy-1', text: '전략 1: 짧은 공으로 끌어내기', depth: 2 },
-            { id: 'strategy-2', text: '전략 2: 네트 플레이로 압박', depth: 2 },
-            { id: 'strategy-3', text: '전략 3: 각도 활용', depth: 2 },
-            { id: 'mental', text: '멘탈 게임: 인내가 답', depth: 2 },
-        ],
-        faqs: [
-            {
-                q: '푸셔를 상대할 때 가장 흔한 실수는?',
-                a: '조급해져서 무리한 파워샷을 시도하다 실수하는 것입니다. 푸셔는 상대의 실수를 기다리는 스타일이므로, 인내심을 잃으면 그들의 함정에 빠집니다.'
-            },
-        ],
-        content: `<h2 id="intro">푸셔란 무엇인가?</h2>
+  },
+  // === 전략 글들 ===
+  {
+    slug: 'tennis-strategy-beat-pusher',
+    title: '일명 \'푸셔(Pusher)\'를 이기는 5가지 전략',
+    description: '실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.',
+    keywords: ['테니스 전술', '푸셔', 'Pusher', '연타', '멘탈 관리'],
+    toc: [
+      { id: 'intro', text: '푸셔란 무엇인가?', depth: 2 },
+      { id: 'strategy-1', text: '전략 1: 짧은 공으로 끌어내기', depth: 2 },
+      { id: 'strategy-2', text: '전략 2: 네트 플레이로 압박', depth: 2 },
+      { id: 'strategy-3', text: '전략 3: 각도 활용', depth: 2 },
+      { id: 'mental', text: '멘탈 게임: 인내가 답', depth: 2 },
+    ],
+    faqs: [
+      {
+        q: '푸셔를 상대할 때 가장 흔한 실수는?',
+        a: '조급해져서 무리한 파워샷을 시도하다 실수하는 것입니다. 푸셔는 상대의 실수를 기다리는 스타일이므로, 인내심을 잃으면 그들의 함정에 빠집니다.'
+      },
+    ],
+    content: `<h2 id="intro">푸셔란 무엇인가?</h2>
             <p>
               푸셔(Pusher)는 강력한 위너보다는 안정적인 리턴으로 공을 계속 넘기는 스타일의 선수를 말합니다. 그들은 상대의 실수를 유도하며 끈질기게 랠리를 이어갑니다. 동호인 수준에서 가장 많이 마주치는 유형이며, 대응 전략 없이는 매우 답답한 상대입니다.
             </p>
@@ -237,7 +237,7 @@ const remainingPosts = [
             <p>
               푸셔와의 경기는 멘탈 게임입니다. 조급해하지 마세요. 기회가 올 때까지 실수 없이 기다리는 것이 승리의 열쇠입니다.
             </p>`
-    },
+  },
 ];
 
 console.log(`Generating ${remainingPosts.length} blog posts...`);
@@ -245,12 +245,12 @@ console.log(`Generating ${remainingPosts.length} blog posts...`);
 const baseDir = path.join(__dirname, '../src/app/blog');
 
 remainingPosts.forEach(post => {
-    const filePath = path.join(baseDir, post.slug, 'page.tsx');
+  const filePath = path.join(baseDir, post.slug, 'page.tsx');
 
-    if (fs.existsSync(filePath)) {
-        fs.writeFileSync(filePath, generateBlogContent(post), 'utf8');
-        console.log(`✅ Updated: ${post.slug}`);
-    }
+  if (fs.existsSync(filePath)) {
+    fs.writeFileSync(filePath, generateBlogContent(post), 'utf8');
+    console.log(`✅ Updated: ${post.slug}`);
+  }
 });
 
 console.log('=== Bulk Update Complete ===');

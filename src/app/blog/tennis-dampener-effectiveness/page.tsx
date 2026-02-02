@@ -7,17 +7,19 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+
 export const metadata = {
   title: "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
   description: "작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.",
   keywords: ["테니스 장비", "댐퍼", "진동 방지", "엘보링", "타구음"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-dampener-effectiveness',
+    canonical: `${siteUrl}/blog/tennis-dampener-effectiveness`,
   },
   openGraph: {
     title: "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
     description: "작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-dampener-effectiveness',
+    url: `${siteUrl}/blog/tennis-dampener-effectiveness`,
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

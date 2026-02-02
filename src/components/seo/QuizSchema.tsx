@@ -6,37 +6,37 @@ interface QuizSchemaProps {
    * Quiz name/title
    */
   name: string;
-  
+
   /**
    * Quiz description
    */
   description: string;
-  
+
   /**
    * Quiz URL
    */
   url: string;
-  
+
   /**
    * Number of questions
    */
   numberOfQuestions?: number;
-  
+
   /**
    * Estimated time to complete (in minutes)
    */
   timeRequired?: string;
-  
+
   /**
    * Educational level or difficulty
    */
   educationalLevel?: string;
-  
+
   /**
    * Quiz category/subject
    */
   about?: string;
-  
+
   /**
    * Organization that created the quiz
    */
@@ -45,7 +45,7 @@ interface QuizSchemaProps {
     url: string;
     logo?: string;
   };
-  
+
   /**
    * Note: AggregateRating은 제거되었습니다.
    * Quiz 타입은 Google 리뷰 스니펫을 지원하지 않으므로 AggregateRating을 포함하면 오류가 발생합니다.
@@ -73,8 +73,8 @@ export default function QuizSchema({
   about,
   publisher,
 }: QuizSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
-  
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+
   const defaultPublisher = {
     '@type': 'Organization',
     name: publisher?.name || 'TennisFriends',
@@ -82,8 +82,8 @@ export default function QuizSchema({
     ...(publisher?.logo && {
       logo: {
         '@type': 'ImageObject',
-        url: publisher.logo.startsWith('http') 
-          ? publisher.logo 
+        url: publisher.logo.startsWith('http')
+          ? publisher.logo
           : `${siteUrl}${publisher.logo}`,
       },
     }),
@@ -127,12 +127,12 @@ export default function QuizSchema({
     { name: '홈', url: '/' },
     { name: '유틸리티', url: '/utility' },
   ];
-  
+
   const validName = name?.trim();
   if (validName && validName.length > 0) {
     breadcrumbItems.push({ name: validName, url });
   }
-  
+
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
 
   // Combined schema using @graph

@@ -28,7 +28,7 @@ export default function ProfilePageSchema({
     mainEntity,
     breadcrumb
 }: ProfilePageSchemaProps) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
     const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
     const schema = {

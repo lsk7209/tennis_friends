@@ -22,8 +22,8 @@ export default function HowToSchema({
   totalTime,
   image,
 }: HowToSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
-  const imageUrl = image 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const imageUrl = image
     ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
     : `${siteUrl}/opengraph-image`;
 

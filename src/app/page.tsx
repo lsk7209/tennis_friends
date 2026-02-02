@@ -1,18 +1,23 @@
-'use client';
-
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import CTASection from '@/components/CTASection';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import dynamic from 'next/dynamic';
 import { homeBlogPosts } from '@/data/home-blog-posts';
+import type { Metadata } from 'next';
+import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ClientAnimations';
 
-// 애니메이션 컴포넌트는 클라이언트 사이드에서만 로드 (SSR 최적화)
-const FadeIn = dynamic(() => import('@/components/ScrollAnimation').then(mod => mod.FadeIn), { ssr: false });
-const SlideUp = dynamic(() => import('@/components/ScrollAnimation').then(mod => mod.SlideUp), { ssr: false });
-const StaggeredAnimation = dynamic(() => import('@/components/ScrollAnimation').then(mod => mod.StaggeredAnimation), { ssr: false });
-const StaggeredItem = dynamic(() => import('@/components/ScrollAnimation').then(mod => mod.StaggeredItem), { ssr: false });
+// 메인 페이지 SEO 메타데이터
+export const metadata: Metadata = {
+  title: 'TennisFriends - 데이터로 똑똑하게, 테니스를 즐겁게',
+  description: 'NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 도구를 무료로 제공합니다. 10,000명 이상이 이용한 전문가 검증 알고리즘.',
+  keywords: ['테니스', 'NTRP 테스트', '테니스 실력 측정', '스트링 텐션', '테니스 부상 예방', '테니스 커뮤니티'],
+  openGraph: {
+    title: 'TennisFriends - 데이터로 똑똑하게, 테니스를 즐겁게',
+    description: 'NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.',
+    type: 'website',
+  },
+};
 
 export default function Home() {
   const blogPosts = homeBlogPosts;

@@ -27,7 +27,7 @@ export default function SoftwareApplicationSchema({
   aggregateRating,
   featureList = [],
 }: SoftwareApplicationSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
 
   const schema = {
     '@context': 'https://schema.org',

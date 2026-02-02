@@ -72,10 +72,12 @@ export default async function PlayerProfilePage({ params }: Props) {
         notFound();
     }
 
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+
     const breadcrumbItems = [
-        { name: 'Home', item: 'https://tennisfriends.co.kr' },
-        { name: 'Players', item: 'https://tennisfriends.co.kr/players' },
-        { name: player.nameEn, item: `https://tennisfriends.co.kr/players/${resolvedParams.slug}` }
+        { name: 'Home', item: siteUrl },
+        { name: 'Players', item: `${siteUrl}/players` },
+        { name: player.nameEn, item: `${siteUrl}/players/${resolvedParams.slug}` }
     ];
 
     // --- Smart Tag Logic ---

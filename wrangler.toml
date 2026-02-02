@@ -10,4 +10,4 @@ compatibility_flags = ["nodejs_compat"]
 
 # 환경 변수
 [vars]
-NEXT_PUBLIC_SITE_URL = "https://tennisfriends.co.kr"
+NEXT_PUBLIC_SITE_URL = "https://tennisfrens.com"

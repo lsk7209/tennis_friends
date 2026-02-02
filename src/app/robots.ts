@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 export const revalidate = false
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
 
   return {
     rules: [
@@ -21,6 +21,7 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: [
       `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/sitemap-naver.xml`,
     ],
   }
 }

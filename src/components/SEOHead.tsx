@@ -31,10 +31,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={keywords.join(", ")} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
-      
+
       {/* Canonical URL */}
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}
-      
+
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
@@ -43,18 +43,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:site_name" content="TennisFriends" />
       <meta property="og:locale" content="ko_KR" />
-      
+
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
+
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="TennisFriends" />
       <meta name="theme-color" content="#34D399" />
-      
+
       {/* Structured Data */}
       {structuredData && (
         <script
@@ -64,7 +64,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           }}
         />
       )}
-      
+
       {/* Default Structured Data for Website */}
       {!structuredData && (
         <script
@@ -75,10 +75,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
               "@type": "WebSite",
               "name": "TennisFriends",
               "description": description,
-              "url": "https://tennisfriends.co.kr",
+              "url": "https://tennisfrens.com",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://tennisfriends.co.kr/search?q={search_term_string}",
+                "target": "https://tennisfrens.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

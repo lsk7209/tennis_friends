@@ -228,17 +228,19 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+
 export const metadata = {
   title: ${JSON.stringify(post.title)},
   description: ${JSON.stringify(post.description)},
   keywords: ${JSON.stringify(post.keywords)},
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/${post.slug}',
+    canonical: \`\${siteUrl}/blog/${post.slug}\`,
   },
   openGraph: {
     title: ${JSON.stringify(post.title)},
     description: ${JSON.stringify(post.description)},
-    url: 'https://tennisfriends.co.kr/blog/${post.slug}',
+    url: \`\${siteUrl}/blog/${post.slug}\`,
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

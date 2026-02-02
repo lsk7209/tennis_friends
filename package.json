@@ -12,7 +12,8 @@
     "cf-preview": "npm run cf-build && wrangler pages dev .vercel/output/static",
     "deploy": "wrangler pages deploy out",
     "preview": "wrangler pages dev",
-    "gh-pages": "next build && gh-pages -d out"
+    "gh-pages": "next build && gh-pages -d out",
+    "indexnow": "node scripts/submit-indexnow.js"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
@@ -47,7 +48,8 @@
     "recharts": "^3.5.1",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

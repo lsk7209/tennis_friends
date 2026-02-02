@@ -59,7 +59,7 @@ export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
       name: player.nameEn,
       alternateName: nameKo,
     },
-    url: `https://tennisfriends.co.kr/players/${slug}`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/players/${slug}`,
     description: `${nameKo}의 프로필 페이지`,
   };
 }
@@ -71,7 +71,7 @@ export function generateBreadcrumbSchema(player: Player) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
   const playerName = (player.nameKo || player.name || '').trim();
   const playerSlug = (player.slug || '').trim();
-  
+
   // 기본 breadcrumb 항목
   const breadcrumbItems = [
     {
@@ -90,10 +90,10 @@ export function generateBreadcrumbSchema(player: Player) {
 
   // playerName이 유효한 경우에만 마지막 항목 추가
   if (playerName && playerName.length > 0) {
-    const playerUrl = playerSlug && playerSlug.length > 0 
-      ? `${siteUrl}/players/${playerSlug}` 
+    const playerUrl = playerSlug && playerSlug.length > 0
+      ? `${siteUrl}/players/${playerSlug}`
       : `${siteUrl}/players`;
-    
+
     breadcrumbItems.push({
       '@type': 'ListItem',
       position: 3,
