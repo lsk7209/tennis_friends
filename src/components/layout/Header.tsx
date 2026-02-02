@@ -115,7 +115,7 @@ const Header: React.FC = () => {
               <div key={item.href} className="relative">
                 <Link
                   href={item.href}
-                  className={`font-bold transition-colors text-[#0f172a] opacity-100 dark:text-white hover:text-gray-700 dark:hover:text-gray-300`}
+                  className={`font-bold transition-colors !text-black dark:!text-white hover:opacity-70`}
                 >
                   {item.label}
                 </Link>
@@ -167,7 +167,7 @@ const Header: React.FC = () => {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`font-bold transition-colors text-[#0f172a] opacity-100 dark:text-white py-2 px-3 rounded-lg hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800`}
+                      className={`font-bold transition-colors !text-black dark:!text-white py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
