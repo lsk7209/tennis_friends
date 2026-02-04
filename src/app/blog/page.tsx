@@ -190,6 +190,7 @@ export default function BlogPage() {
         )}
 
         {/* Blog Posts */}
+        <h2 className="sr-only">전체 블로그 게시글</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {currentPosts.map((post) => (
             <Card key={post.id} className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
