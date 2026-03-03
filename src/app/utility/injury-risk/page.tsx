@@ -9,6 +9,7 @@ import { Shield, AlertTriangle, Heart, Target, Users, CheckCircle, ArrowRight, S
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 import SoftwareApplicationSchema from '@/components/seo/SoftwareApplicationSchema';
 import FAQSection from '@/components/seo/FAQSection';
+import { SITE_URL } from '@/lib/site';
 
 export default function InjuryRiskIntro() {
   const features = [
@@ -92,7 +93,7 @@ export default function InjuryRiskIntro() {
     }
   ];
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+  const siteUrl = SITE_URL;
   const utilityUrl = `${siteUrl}/utility/injury-risk`;
 
   // FAQ items for AI snippet optimization

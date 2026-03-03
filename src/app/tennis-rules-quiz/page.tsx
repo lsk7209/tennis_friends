@@ -9,6 +9,7 @@ import { Play, BookOpen, Target, Trophy, Clock, Users, CheckCircle, ArrowRight }
 import { FadeIn, SlideUp, SlideDown, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 import QuizSchema from '@/components/seo/QuizSchema';
 import FAQSection from '@/components/seo/FAQSection';
+import { SITE_URL } from '@/lib/site';
 
 export default function TennisRulesQuizIntro() {
   const [dailyTip, setDailyTip] = useState('');
@@ -106,7 +107,7 @@ export default function TennisRulesQuizIntro() {
     }
   ];
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+  const siteUrl = SITE_URL;
   const quizUrl = `${siteUrl}/tennis-rules-quiz`;
 
   // FAQ items for AI snippet optimization

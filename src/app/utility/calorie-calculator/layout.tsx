@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
+import { SITE_URL } from '@/lib/site';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+const siteUrl = SITE_URL;
 
 export const metadata: Metadata = {
     title: '테니스 칼로리 계산기 | 나만의 맞춤 소모량 확인',

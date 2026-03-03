@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import { SITE_URL } from '@/lib/site';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+const siteUrl = SITE_URL;
 
 export const metadata: Metadata = {
   title: '테니스 유틸리티 도구 모음 | TennisFriends',
@@ -19,8 +21,6 @@ export const metadata: Metadata = {
   },
 };
 
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-
 export default function UtilityLayout({
   children,
 }: {
@@ -38,4 +38,3 @@ export default function UtilityLayout({
     </>
   );
 }
-
