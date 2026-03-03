@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';

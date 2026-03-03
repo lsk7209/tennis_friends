@@ -1,10 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = {
