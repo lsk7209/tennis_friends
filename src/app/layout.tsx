@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -10,14 +9,7 @@ import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import { SITE_URL } from '@/lib/site';
 
-// 폰트 최적화 - Inter만 next/font로 로드, Pretendard는 CSS에서 로드
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-  preload: true,
-  adjustFontFallback: true,
-});
+// 폰트는 CSS에서 로드
 
 export const viewport: Viewport = {
   themeColor: "#34D399",
@@ -110,7 +102,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={inter.variable}>
+    <html lang="ko">
       <head>
         {/* Pretendard 폰트 최적화 로드 */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
