@@ -20,7 +20,7 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function NtrpTestIntro() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
   const utilityUrl = `${siteUrl}/utility/ntrp-test`;
 
   const features = [

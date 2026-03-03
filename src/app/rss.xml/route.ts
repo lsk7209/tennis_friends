@@ -1,25 +1,11 @@
-import { NextRequest } from 'next/server';
 import { allBlogPosts } from '@/data/blog-posts';
+import { RSS_EDITOR_EMAIL, SITE_URL } from '@/lib/site';
 
 export const dynamic = 'force-static';
 export const revalidate = 3600; // 1시간마다 재생성
 
-export async function GET(request: NextRequest) {
-  // 런타임에 요청 호스트를 사용하거나 환경 변수 사용
-  let baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  
-  // 환경 변수가 없으면 요청 헤더에서 호스트 추출 시도
-  if (!baseUrl) {
-    const host = request.headers.get('host');
-    if (host) {
-      // 프로토콜 감지 (Vercel은 https 사용)
-      const protocol = request.headers.get('x-forwarded-proto') || 'https';
-      baseUrl = `${protocol}://${host}`;
-    } else {
-      // 기본값 (실제 도메인으로 변경 필요)
-      baseUrl = 'https://www.tennisfrens.com';
-    }
-  }
+export async function GET() {
+  const baseUrl = SITE_URL;
 
   // 최신 블로그 포스트 50개만 RSS에 포함 (날짜순 정렬)
   const sortedPosts = [...allBlogPosts]
@@ -37,7 +23,7 @@ export async function GET(request: NextRequest) {
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
       <pubDate>${pubDate}</pubDate>
-      <author>tennisfriends@tennisfriends.co.kr (TennisFriends)</author>
+      <author>${RSS_EDITOR_EMAIL} (TennisFriends)</author>
       <category><![CDATA[${post.category || '테니스'}]]></category>
       <category><![CDATA[테니스]]></category>
       <category><![CDATA[스포츠]]></category>
@@ -53,8 +39,8 @@ export async function GET(request: NextRequest) {
     <link>${baseUrl}</link>
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml" />
     <language>ko-KR</language>
-    <managingEditor>tennisfriends@tennisfriends.co.kr (TennisFriends)</managingEditor>
-    <webMaster>tennisfriends@tennisfriends.co.kr (TennisFriends)</webMaster>
+    <managingEditor>${RSS_EDITOR_EMAIL} (TennisFriends)</managingEditor>
+    <webMaster>${RSS_EDITOR_EMAIL} (TennisFriends)</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <generator>TennisFriends Blog</generator>
     <ttl>60</ttl>

@@ -12,12 +12,12 @@ export const metadata = {
   description: "선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.",
   keywords: ["테니스 장비", "하이브리드 스트링", "폴리", "인조쉽", "커스텀"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-hybrid-string-setup',
+    canonical: 'https://tennisfrens.com/blog/tennis-hybrid-string-setup',
   },
   openGraph: {
     title: "하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)",
     description: "선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-hybrid-string-setup',
+    url: 'https://tennisfrens.com/blog/tennis-hybrid-string-setup',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

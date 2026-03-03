@@ -12,12 +12,12 @@ export const metadata = {
   description: "TFCC 손상부터 슬개건염까지. 테니스 동호인을 괴롭히는 손목과 무릎 통증의 원인과 예방 스트레칭.",
   keywords: ["테니스 건강", "부상 방지", "손목 통증", "무릎 재활", "스트레칭"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-wrist-knee-pain-care',
+    canonical: 'https://tennisfrens.com/blog/tennis-wrist-knee-pain-care',
   },
   openGraph: {
     title: "테니스 엘보 외의 부상: 손목 및 무릎 통증 관리",
     description: "TFCC 손상부터 슬개건염까지. 테니스 동호인을 괴롭히는 손목과 무릎 통증의 원인과 예방 스트레칭.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-wrist-knee-pain-care',
+    url: 'https://tennisfrens.com/blog/tennis-wrist-knee-pain-care',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

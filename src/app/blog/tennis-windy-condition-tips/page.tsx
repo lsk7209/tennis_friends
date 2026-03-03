@@ -12,12 +12,12 @@ export const metadata = {
   description: "강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.",
   keywords: ["테니스","바람","강풍","테니스 꿀팁","야외 테니스"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-windy-condition-tips',
+    canonical: 'https://tennisfrens.com/blog/tennis-windy-condition-tips',
   },
   openGraph: {
     title: "바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)",
     description: "강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-windy-condition-tips',
+    url: 'https://tennisfrens.com/blog/tennis-windy-condition-tips',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

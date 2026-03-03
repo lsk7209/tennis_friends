@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     description: "아르튀르 필스 (Arthur Fils) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['아르튀르 필스', 'Arthur Fils', '테니스', 'ATP', '플레이스타일', '프랑스 유망주', '넥스트젠', '파워 테니스'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/players/arthur-fils',
+        canonical: 'https://tennisfrens.com/players/arthur-fils',
     },
     openGraph: {
         title: '아르튀르 필스 — 프랑스의 차세대 폭격기 | 플레이스타일·명장면·최근 경기력',
         description: '아르튀르 필스의 폭발적인 피지컬과 포핸드, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfriends.co.kr/players/arthur-fils',
+        url: 'https://tennisfrens.com/players/arthur-fils',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -115,9 +115,9 @@ export default function ArthurFilsPage() {
                 />
                 <BreadcrumbSchema
                     items={[
-                        { name: '홈', item: 'https://tennisfriends.co.kr' },
-                        { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-                        { name: '아르튀르 필스', item: 'https://tennisfriends.co.kr/players/arthur-fils' },
+                        { name: '홈', item: 'https://tennisfrens.com' },
+                        { name: '선수', item: 'https://tennisfrens.com/players' },
+                        { name: '아르튀르 필스', item: 'https://tennisfrens.com/players/arthur-fils' },
                     ]}
                 />
                 <FAQSchema faqs={faqs} />

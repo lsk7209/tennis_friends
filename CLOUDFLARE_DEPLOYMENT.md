@@ -34,12 +34,12 @@ npm run deploy
 클라우드플레어 Pages 대시보드에서 다음 환경 변수 설정:
 
 **Production 환경:**
-- `NEXT_PUBLIC_SITE_URL`: `https://tennisfriends.co.kr`
+- `NEXT_PUBLIC_SITE_URL`: `https://tennisfrens.com`
 - `NEXT_PUBLIC_SUPABASE_URL`: `[Supabase 프로젝트 URL]`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: `[Supabase Anon Key]`
 
 ### 4. 커스텀 도메인 설정
-- 도메인: `tennisfriends.co.kr`
+- 도메인: `tennisfrens.com`
 - SSL/TLS: Full (Strict)
 - DNS 설정: CNAME 레코드 추가
 
@@ -147,4 +147,4 @@ Supabase 환경 변수 설정 후 다음 기능 활성화:
 
 ---
 
-**배포 완료 후 사이트 URL:** https://tennisfriends.co.kr
+**배포 완료 후 사이트 URL:** https://tennisfrens.com

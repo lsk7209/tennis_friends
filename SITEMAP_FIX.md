@@ -2,11 +2,11 @@
 
 ## 문제 상황
 Google Search Console에서 "URL이 허용되지 않음" 오류가 238개 발생했습니다.
-- 사이트맵 URL: `https://www.tennisfrens.com/sitemap.xml`
-- 사이트맵에 포함된 URL: `https://tennisfriends.co.kr` (잘못된 도메인)
+- 사이트맵 URL: `https://tennisfrens.com/sitemap.xml`
+- 사이트맵에 포함된 URL: `https://tennisfrens.com` (잘못된 도메인)
 
 ## 원인
-사이트맵이 `tennisfriends.co.kr` 도메인을 사용하고 있지만, 실제 사이트는 `www.tennisfrens.com`입니다.
+사이트맵이 `tennisfrens.com` 도메인을 사용하고 있지만, 실제 사이트는 `tennisfrens.com`입니다.
 
 ## 해결 방법
 
@@ -16,17 +16,17 @@ Vercel 대시보드에서 다음 환경 변수를 설정하세요:
 
 **Production 환경:**
 ```
-NEXT_PUBLIC_SITE_URL=https://www.tennisfrens.com
+NEXT_PUBLIC_SITE_URL=https://tennisfrens.com
 ```
 
 **Preview 환경:**
 ```
-NEXT_PUBLIC_SITE_URL=https://www.tennisfrens.com
+NEXT_PUBLIC_SITE_URL=https://tennisfrens.com
 ```
 
 **Development 환경:**
 ```
-NEXT_PUBLIC_SITE_URL=https://www.tennisfrens.com
+NEXT_PUBLIC_SITE_URL=https://tennisfrens.com
 ```
 
 ### 2. 환경 변수 설정 방법
@@ -35,13 +35,13 @@ NEXT_PUBLIC_SITE_URL=https://www.tennisfrens.com
 2. 프로젝트 선택
 3. **Settings** → **Environment Variables** 이동
 4. `NEXT_PUBLIC_SITE_URL` 변수 추가/수정
-5. 값: `https://www.tennisfrens.com`
+5. 값: `https://tennisfrens.com`
 6. 모든 환경(Production, Preview, Development)에 적용
 7. **Redeploy** 클릭하여 재배포
 
 ### 3. 코드 변경 사항
 
-다음 파일들의 기본값을 `www.tennisfrens.com`으로 변경했습니다:
+다음 파일들의 기본값을 `tennisfrens.com`으로 변경했습니다:
 
 - `src/app/sitemap.ts`
 - `src/app/sitemap-naver.xml/route.ts`
@@ -51,12 +51,12 @@ NEXT_PUBLIC_SITE_URL=https://www.tennisfrens.com
 ### 4. 재배포 후 확인
 
 1. 재배포 완료 후 다음 URL 확인:
-   - `https://www.tennisfrens.com/sitemap.xml`
-   - `https://www.tennisfrens.com/sitemap-naver.xml`
-   - `https://www.tennisfrens.com/rss.xml`
-   - `https://www.tennisfrens.com/robots.txt`
+   - `https://tennisfrens.com/sitemap.xml`
+   - `https://tennisfrens.com/sitemap-naver.xml`
+   - `https://tennisfrens.com/rss.xml`
+   - `https://tennisfrens.com/robots.txt`
 
-2. 사이트맵의 모든 URL이 `www.tennisfrens.com` 도메인을 사용하는지 확인
+2. 사이트맵의 모든 URL이 `tennisfrens.com` 도메인을 사용하는지 확인
 
 3. Google Search Console에서 사이트맵 재제출:
    - Google Search Console 접속

@@ -1,4 +1,5 @@
 import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site';
 
 interface HowToStep {
   name: string;
@@ -22,7 +23,7 @@ export default function HowToSchema({
   totalTime,
   image,
 }: HowToSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = SITE_URL;
   const imageUrl = image
     ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
     : `${siteUrl}/opengraph-image`;

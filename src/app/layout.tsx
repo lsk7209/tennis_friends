@@ -8,6 +8,7 @@ import Tracking from "@/components/Tracking";
 import AdSense from "@/components/AdSense";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import { SITE_URL } from '@/lib/site';
 
 // 폰트 최적화 - Inter만 next/font로 로드, Pretendard는 CSS에서 로드
 const inter = Inter({
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   authors: [{ name: "TennisFriends" }],
   creator: "TennisFriends",
   publisher: "TennisFriends",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com"),
+  metadataBase: new URL(SITE_URL),
 
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || "",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TennisFriends - 당신의 테니스 파트너",
     description: "데이터로 똑똑하게, 테니스를 즐겁게. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com",
+    url: SITE_URL,
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "website",

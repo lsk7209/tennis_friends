@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "세바스티안 코르다 (Sebastian Korda) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['세바스찬 코르다', 'Sebastian Korda', '테니스', 'ATP', '플레이스타일', '미국 테니스', '테니스 명가', '올라운더'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/sebastian-korda',
+    canonical: 'https://tennisfrens.com/players/sebastian-korda',
   },
   openGraph: {
     title: '세바스찬 코르다 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '세바스찬 코르다의 깔끔한 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/sebastian-korda',
+    url: 'https://tennisfrens.com/players/sebastian-korda',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function SebastianKordaPage() {
           award={[
             'ATP 250 Champion', 'NextGen ATP Finals participant'
           ]}
-          url="https://tennisfriends.co.kr/players/sebastian-korda"
+          url="https://tennisfrens.com/players/sebastian-korda"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '세바스티안 코르다', item: 'https://tennisfriends.co.kr/players/sebastian-korda' },
+          { name: '홈', item: 'https://tennisfrens.com' },
+          { name: '선수', item: 'https://tennisfrens.com/players' },
+          { name: '세바스티안 코르다', item: 'https://tennisfrens.com/players/sebastian-korda' },
         ]}
       />
       <FAQSchema faqs={faqs} />

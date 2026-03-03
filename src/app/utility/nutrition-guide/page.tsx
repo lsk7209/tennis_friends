@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   description: '테니스 선수를 위한 종합 영양 가이드. 경기 전후 영양 섭취, 수분 보충, 에너지 관리, 회복 전략을 과학적으로 안내합니다.',
   keywords: ['테니스 영양', '테니스 식단', '경기 영양', '수분 보충', '에너지 관리', '영양 전략'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/utility/nutrition-guide',
+    canonical: 'https://tennisfrens.com/utility/nutrition-guide',
   },
   openGraph: {
     title: '테니스 영양 가이드 - 경기력 향상 영양 전략 | TennisFriends',
     description: '테니스 선수를 위한 종합 영양 가이드. 경기 전후 영양 섭취, 수분 보충, 에너지 관리, 회복 전략을 과학적으로 안내합니다.',
-    url: 'https://tennisfriends.co.kr/utility/nutrition-guide',
+    url: 'https://tennisfrens.com/utility/nutrition-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

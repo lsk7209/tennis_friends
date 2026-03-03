@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     description: "아드리안 만나리노 (Adrian Mannarino) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['아드리안 만나리노', 'Adrian Mannarino', '테니스', 'ATP', '플레이스타일', '프랑스 테니스', '낮은 텐션', '왼손잡이'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/players/adrian-mannarino',
+        canonical: 'https://tennisfrens.com/players/adrian-mannarino',
     },
     openGraph: {
         title: '아드리안 만나리노 — 코트 위의 마법사 | 플레이스타일·명장면·최근 경기력',
         description: '아드리안 만나리노의 독특한 스윙과 낮은 텐션, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfriends.co.kr/players/adrian-mannarino',
+        url: 'https://tennisfrens.com/players/adrian-mannarino',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -115,9 +115,9 @@ export default function AdrianMannarinoPage() {
                 />
                 <BreadcrumbSchema
                     items={[
-                        { name: '홈', item: 'https://tennisfriends.co.kr' },
-                        { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-                        { name: '아드리안 만나리노', item: 'https://tennisfriends.co.kr/players/adrian-mannarino' },
+                        { name: '홈', item: 'https://tennisfrens.com' },
+                        { name: '선수', item: 'https://tennisfrens.com/players' },
+                        { name: '아드리안 만나리노', item: 'https://tennisfrens.com/players/adrian-mannarino' },
                     ]}
                 />
                 <FAQSchema faqs={faqs} />

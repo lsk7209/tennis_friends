@@ -12,12 +12,12 @@ export const metadata = {
   description: "지칠 줄 모르는 체력과 거미줄 같은 수비력. '데몬(Demon)'이라 불리는 알렉스 드 미노의 성장 배경과 플레이 스타일 분석.",
   keywords: ["테니스","알렉스 드 미노","Alex de Minaur","스피드","호주"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/alex-de-minaur',
+    canonical: 'https://tennisfrens.com/blog/alex-de-minaur',
   },
   openGraph: {
     title: "알렉스 드 미노: 멈추지 않는 호주의 엔진",
     description: "지칠 줄 모르는 체력과 거미줄 같은 수비력. '데몬(Demon)'이라 불리는 알렉스 드 미노의 성장 배경과 플레이 스타일 분석.",
-    url: 'https://tennisfriends.co.kr/blog/alex-de-minaur',
+    url: 'https://tennisfrens.com/blog/alex-de-minaur',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

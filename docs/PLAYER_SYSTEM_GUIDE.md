@@ -38,7 +38,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
 
 ### 2.2 주요 필드 설명
 
-- **key (slug)**: URL에 사용될 고유 ID입니다. (예: `rafael-nadal` -> `tennisfriends.co.kr/players/rafael-nadal`)
+- **key (slug)**: URL에 사용될 고유 ID입니다. (예: `rafael-nadal` -> `tennisfrens.com/players/rafael-nadal`)
 - **image**: 이미지가 준비되지 않았다면 이 줄을 생략하세요. 자동으로 국가 국기가 표시되는 예쁜 플레이스홀더가 적용됩니다.
 - **gender**: 목록 페이지의 'ATP(남자)' / 'WTA(여자)' 탭 필터링에 사용됩니다.
 

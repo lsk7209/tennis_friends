@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         title: '테니스 라켓 & 스트링 추천 - 나에게 딱 맞는 장비 찾기',
         description: '아직도 아무 라켓이나 쓰시나요? 내 스타일과 실력에 딱 맞는 인생 라켓을 찾아드립니다.',
         type: 'website',
-        url: 'https://tennisfriends.co.kr/utility/equipment-recommendation',
+        url: 'https://tennisfrens.com/utility/equipment-recommendation',
     },
 };
 

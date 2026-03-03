@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     description: "자우메 무나르 (Jaume Munar) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['자우메 무나르', 'Jaume Munar', '테니스', 'ATP', '플레이스타일', '스페인 테니스', '클레이 코트', '수비형'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/players/jaume-munar',
+        canonical: 'https://tennisfrens.com/players/jaume-munar',
     },
     openGraph: {
         title: '자우메 무나르 — 클레이 코트 스페셜리스트 | 플레이스타일·명장면·최근 경기력',
         description: '자우메 무나르의 클레이 코트 전문가 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfriends.co.kr/players/jaume-munar',
+        url: 'https://tennisfrens.com/players/jaume-munar',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -99,14 +99,14 @@ export default function JaumeMunarPage() {
                         'ATP Challenger Tour Champion',
                         'Junior Grand Slam Finalist'
                     ]}
-                    url="https://tennisfriends.co.kr/players/jaume-munar"
+                    url="https://tennisfrens.com/players/jaume-munar"
                 />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '자우메 무나르', item: 'https://tennisfriends.co.kr/players/jaume-munar' },
+          { name: '홈', item: 'https://tennisfrens.com' },
+          { name: '선수', item: 'https://tennisfrens.com/players' },
+          { name: '자우메 무나르', item: 'https://tennisfrens.com/players/jaume-munar' },
         ]}
       />
       <FAQSchema faqs={faqs} />

@@ -9,12 +9,12 @@ export const metadata = {
   description: '서브는 서버의 권리지만, 리턴은 승부의 시작입니다. 스플릿 스텝 과학, 짧은 백스윙, 리턴 타겟팅 등 브레이크를 부르는 모든 기술.',
   keywords: ['테니스 리턴', '안드레 아가시 리턴', '서브 공략', '스플릿 스텝', '리턴 전술', '테니스 승리 전략'],
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/tennis-return-of-serve-strategy`,
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/tennis-return-of-serve-strategy`,
   },
   openGraph: {
     title: '서브 리턴 마스터 전략 — 안드레 아가시의 타이밍 비결과 3대 타겟 존',
     description: '서브는 서버의 권리지만, 리턴은 승부의 시작입니다. 스플릿 스텝 과학, 짧은 백스윙, 리턴 타겟팅 등 브레이크를 부르는 모든 기술.',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/tennis-return-of-serve-strategy`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/tennis-return-of-serve-strategy`,
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

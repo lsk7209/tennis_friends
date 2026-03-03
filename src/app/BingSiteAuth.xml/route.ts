@@ -7,7 +7,7 @@ import { NextRequest } from 'next/server';
  * 1. Bing Webmaster Tools에서 XML 파일 인증 방식 선택
  * 2. 파일명: BingSiteAuth.xml
  * 3. 환경 변수에 BING_SITE_VERIFICATION 설정
- * 4. URL: https://tennisfriends.co.kr/BingSiteAuth.xml
+ * 4. URL: https://tennisfrens.com/BingSiteAuth.xml
  */
 export async function GET(request: NextRequest) {
   const verificationCode = process.env.BING_SITE_VERIFICATION || 'your-bing-verification-code';

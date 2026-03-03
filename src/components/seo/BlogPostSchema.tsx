@@ -1,4 +1,5 @@
 import JsonLd from '@/components/JsonLd';
+import { CONTACT_EMAIL, SITE_URL } from '@/lib/site';
 
 interface BlogPostSchemaProps {
   title: string;
@@ -21,7 +22,7 @@ export default function BlogPostSchema({
   category = '테니스',
   readingTime,
 }: BlogPostSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = SITE_URL;
   const url = `${siteUrl}/blog/${slug}`;
   const imageUrl = image
     ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
@@ -75,7 +76,7 @@ export default function BlogPostSchema({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'contact@tennisfrens.com',
+      email: CONTACT_EMAIL,
     },
   };
 

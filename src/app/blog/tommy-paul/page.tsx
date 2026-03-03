@@ -12,12 +12,12 @@ export const metadata = {
   description: "빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.",
   keywords: ["테니스","토미 폴","Tommy Paul","테크니션","미국"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tommy-paul',
+    canonical: 'https://tennisfrens.com/blog/tommy-paul',
   },
   openGraph: {
     title: "토미 폴: 기민한 미국의 테크니션",
     description: "빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.",
-    url: 'https://tennisfriends.co.kr/blog/tommy-paul',
+    url: 'https://tennisfrens.com/blog/tommy-paul',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

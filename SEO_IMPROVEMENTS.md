@@ -46,14 +46,14 @@
 
 2. **속성 추가**
    - URL 접두어 방식 선택
-   - 사이트 URL 입력: `https://tennisfriends.co.kr`
+   - 사이트 URL 입력: `https://tennisfrens.com`
 
 3. **소유권 확인**
    - HTML 태그 방식 선택
    - 제공된 메타 태그를 `src/app/layout.tsx`의 `verification.google`에 추가
 
 4. **사이트맵 제출**
-   - `https://tennisfriends.co.kr/sitemap.xml`
+   - `https://tennisfrens.com/sitemap.xml`
 
 ### 네이버 검색 등록
 
@@ -61,7 +61,7 @@
    - https://searchadvisor.naver.com/
 
 2. **사이트 등록**
-   - 사이트 URL 입력: `https://tennisfriends.co.kr`
+   - 사이트 URL 입력: `https://tennisfrens.com`
 
 3. **소유권 확인**
    - HTML 메타 태그 방식 선택
@@ -69,11 +69,11 @@
    - 현재: `naver-site-verification-code` → 실제 코드로 교체 필요
 
 4. **사이트맵 제출**
-   - `https://tennisfriends.co.kr/sitemap-naver.xml`
-   - 또는 일반 사이트맵: `https://tennisfriends.co.kr/sitemap.xml`
+   - `https://tennisfrens.com/sitemap-naver.xml`
+   - 또는 일반 사이트맵: `https://tennisfrens.com/sitemap.xml`
 
 5. **RSS 피드 등록** (선택사항)
-   - `https://tennisfriends.co.kr/rss.xml`
+   - `https://tennisfrens.com/rss.xml`
 
 ### 다음 검색 등록
 
@@ -81,7 +81,7 @@
    - https://register.search.daum.net/index.daum
 
 2. **사이트 등록**
-   - 사이트 URL 입력: `https://tennisfriends.co.kr`
+   - 사이트 URL 입력: `https://tennisfrens.com`
 
 3. **소유권 확인**
    - HTML 메타 태그 방식 선택
@@ -89,7 +89,7 @@
    - 현재: `daum-site-verification-code` → 실제 코드로 교체 필요
 
 4. **사이트맵 제출**
-   - `https://tennisfriends.co.kr/sitemap.xml`
+   - `https://tennisfrens.com/sitemap.xml`
 
 ## 📊 SEO 최적화 체크리스트
 
@@ -133,7 +133,7 @@
 `.env.local` 파일에 다음 변수들을 설정하세요:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://tennisfriends.co.kr
+NEXT_PUBLIC_SITE_URL=https://tennisfrens.com
 ```
 
 ## 🎯 추가 개선 사항 (완료)

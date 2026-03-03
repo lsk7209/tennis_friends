@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: "주앙 폰세카 (Joao Fonseca) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['주앙 폰세카', 'Joao Fonseca', '테니스', 'ATP', '플레이스타일', '브라질 테니스', '공격형', '강력한 포핸드'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/joao-fonseca',
+    canonical: 'https://tennisfrens.com/players/joao-fonseca',
   },
   openGraph: {
     title: '주앙 폰세카 — 세계랭킹 24위 | 플레이스타일·명장면·최근 경기력',
     description: '주앙 폰세카의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/joao-fonseca',
+    url: 'https://tennisfrens.com/players/joao-fonseca',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -71,9 +71,9 @@ export default function JoaoFonsecaPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '주앙 폰세카', item: 'https://tennisfriends.co.kr/players/joao-fonseca' },
+          { name: '홈', item: 'https://tennisfrens.com' },
+          { name: '선수', item: 'https://tennisfrens.com/players' },
+          { name: '주앙 폰세카', item: 'https://tennisfrens.com/players/joao-fonseca' },
         ]}
       />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">

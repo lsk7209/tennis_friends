@@ -1,4 +1,5 @@
 import JsonLd from '@/components/JsonLd';
+import { CONTACT_EMAIL, SITE_URL } from '@/lib/site';
 
 interface OrganizationSchemaProps {
   name?: string;
@@ -14,10 +15,10 @@ export default function OrganizationSchema({
   url,
   logo,
   description = '데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상을 위한 모든 것을 제공합니다.',
-  email = 'contact@tennisfrens.com',
+  email = CONTACT_EMAIL,
   sameAs = [],
 }: OrganizationSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = SITE_URL;
   const logoUrl = logo || `${siteUrl}/logo.png`;
 
   const schema = {

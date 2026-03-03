@@ -9,12 +9,12 @@ export const metadata = {
     description: '테니스 경기 후 근육 회복과 피로 해소를 위한 영양 섭취 전략. 탄수화물/단백질 비율, 전해질 조절, 관절 건강을 위한 영양소까지 완벽 정리.',
     keywords: ['테니스 영양', '포스트 워크아웃 식단', '글리코겐 회복', '테니스 단백질', '전해질 보충', '염증 완화 음식'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/blog/tennis-post-exercise-nutrition',
+        canonical: 'https://tennisfrens.com/blog/tennis-post-exercise-nutrition',
     },
     openGraph: {
         title: '테니스 영양학: 경기 후 45분, 기적의 회복 골든타임',
         description: '테니스 경기 후 근육 회복과 피로 해소를 위한 영양 섭취 전략. 탄수화물/단백질 비율, 전해질 조절, 관절 건강을 위한 영양소까지 완벽 정리.',
-        url: 'https://tennisfriends.co.kr/blog/tennis-post-exercise-nutrition',
+        url: 'https://tennisfrens.com/blog/tennis-post-exercise-nutrition',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'website',

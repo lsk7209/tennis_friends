@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
 
 export const metadata: Metadata = {
     title: 'AI 테니스화 추천기 | 나에게 딱 맞는 신발 찾기',

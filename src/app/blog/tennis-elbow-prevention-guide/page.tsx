@@ -11,12 +11,12 @@ export const metadata = {
     description: '테니스 동호인의 50%가 겪는다는 테니스 엘보. 팔꿈치 바깥쪽 통증의 원인부터 재활 운동, 라켓/스트링 세팅 변경 팁까지 완벽하게 정리했습니다.',
     keywords: ['테니스 엘보', '테니스 엘보 증상', '테니스 엘보 스트레칭', '테니스 엘보 보호대', '테니스 팔꿈치 통증', '테니스 재활'],
     alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/tennis-elbow-prevention-guide`,
+        canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/tennis-elbow-prevention-guide`,
     },
     openGraph: {
         title: '테니스 엘보 예방과 재활 가이드 — 통증 없이 운동하는 법',
         description: '지긋지긋한 팔꿈치 통증 탈출! 원인 분석과 장비 세팅 솔루션.',
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/tennis-elbow-prevention-guide`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/tennis-elbow-prevention-guide`,
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'article',

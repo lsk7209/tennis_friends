@@ -4,6 +4,7 @@
 
 import { Player, PlayerMetadata } from '@/types/player';
 import { Metadata } from 'next';
+import { SITE_URL } from '@/lib/site';
 
 /**
  * SEO 타이틀 생성 (45-60자)
@@ -105,7 +106,7 @@ export function generatePlayerMetadata(player: Player): PlayerMetadata {
     title: generateTitle(player),
     description: generateDescription(player),
     keywords: generateKeywords(player),
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/players/${player.slug || ''}`,
+    canonical: `${SITE_URL}/players/${player.slug || ''}`,
     ogImage: `/images/players/${player.slug || 'default'}.jpg`,
   };
 }

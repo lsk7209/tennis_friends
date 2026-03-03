@@ -39,10 +39,10 @@
 - `src/app/sitemap-naver.xml/route.ts` - 네이버 사이트맵 생성
 
 ### URL
-- RSS 피드: `https://tennisfriends.co.kr/rss.xml`
-- 사이트맵: `https://tennisfriends.co.kr/sitemap.xml`
-- 네이버 사이트맵: `https://tennisfriends.co.kr/sitemap-naver.xml`
-- robots.txt: `https://tennisfriends.co.kr/robots.txt`
+- RSS 피드: `https://tennisfrens.com/rss.xml`
+- 사이트맵: `https://tennisfrens.com/sitemap.xml`
+- 네이버 사이트맵: `https://tennisfrens.com/sitemap-naver.xml`
+- robots.txt: `https://tennisfrens.com/robots.txt`
 
 ## 🎯 검색 엔진별 최적화 상태
 

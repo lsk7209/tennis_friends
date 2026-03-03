@@ -46,8 +46,8 @@
 ## 🔧 개선 필요 사항
 
 ### 1. 도메인 일관성 ⚠️
-**문제**: `layout.tsx`의 `metadataBase`가 여전히 `tennisfriends.co.kr` 사용
-**해결**: `www.tennisfrens.com`으로 변경 필요
+**문제**: `layout.tsx`의 `metadataBase`가 여전히 `tennisfrens.com` 사용
+**해결**: `tennisfrens.com`으로 변경 필요
 
 ### 2. 다음 검색 최적화 강화
 **현재**: 기본적인 메타 태그만 있음
