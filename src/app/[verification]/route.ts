@@ -19,16 +19,32 @@ function normalizeNaverToken(value: string): string {
     : withoutExt;
 }
 
-function getExpectedGoogleFilename(): string | null {
+function getExpectedGoogleToken(): string | null {
   const envRaw = process.env.GOOGLE_SITE_VERIFICATION?.trim();
   if (!envRaw) return null;
-  return `${normalizeGoogleToken(envRaw)}.html`;
+  return normalizeGoogleToken(envRaw);
 }
 
-function getExpectedNaverFilename(): string | null {
+function getExpectedNaverCode(): string | null {
   const envRaw = process.env.NAVER_SITE_VERIFICATION?.trim();
   if (!envRaw) return null;
-  return `${NAVER_PREFIX}${normalizeNaverToken(envRaw)}.html`;
+  return normalizeNaverToken(envRaw);
+}
+
+function extractGoogleTokenFromPath(verification: string): string | null {
+  if (!/^google[\w-]+\.html$/i.test(verification)) {
+    return null;
+  }
+
+  return stripHtmlExtension(verification);
+}
+
+function extractNaverCodeFromPath(verification: string): string | null {
+  if (!/^naver[\w-]+\.html$/i.test(verification)) {
+    return null;
+  }
+
+  return normalizeNaverToken(verification);
 }
 
 function createVerificationResponse(body: string) {
@@ -46,16 +62,28 @@ export async function GET(
 ) {
   const { verification } = await context.params;
 
-  const expectedGoogleFilename = getExpectedGoogleFilename();
-  if (expectedGoogleFilename && verification === expectedGoogleFilename) {
-    const token = stripHtmlExtension(expectedGoogleFilename);
-    return createVerificationResponse(`google-site-verification: ${token}.html`);
+  const requestedGoogleToken = extractGoogleTokenFromPath(verification);
+  if (requestedGoogleToken) {
+    const expectedGoogleToken = getExpectedGoogleToken();
+
+    // Env가 설정된 경우에는 정확한 파일명만 허용하고,
+    // 설정이 없는 경우에는 요청된 파일명을 그대로 응답해 검증 진행을 돕습니다.
+    if (!expectedGoogleToken || expectedGoogleToken === requestedGoogleToken) {
+      return createVerificationResponse(`google-site-verification: ${requestedGoogleToken}.html`);
+    }
+
+    return new Response('Not Found', { status: 404 });
   }
 
-  const expectedNaverFilename = getExpectedNaverFilename();
-  if (expectedNaverFilename && verification === expectedNaverFilename) {
-    const code = normalizeNaverToken(expectedNaverFilename);
-    return createVerificationResponse(`naver-site-verification: ${code}`);
+  const requestedNaverCode = extractNaverCodeFromPath(verification);
+  if (requestedNaverCode) {
+    const expectedNaverCode = getExpectedNaverCode();
+
+    if (!expectedNaverCode || expectedNaverCode === requestedNaverCode) {
+      return createVerificationResponse(`naver-site-verification: ${requestedNaverCode}`);
+    }
+
+    return new Response('Not Found', { status: 404 });
   }
 
   return new Response('Not Found', { status: 404 });
