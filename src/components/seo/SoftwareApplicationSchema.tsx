@@ -1,4 +1,5 @@
 import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site';
 
 interface SoftwareApplicationSchemaProps {
   name: string;
@@ -27,7 +28,7 @@ export default function SoftwareApplicationSchema({
   aggregateRating,
   featureList = [],
 }: SoftwareApplicationSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = SITE_URL;
 
   const schema = {
     '@context': 'https://schema.org',

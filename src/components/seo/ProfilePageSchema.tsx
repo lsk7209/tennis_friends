@@ -1,4 +1,5 @@
 import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site';
 
 interface ProfilePageSchemaProps {
     name: string;
@@ -28,7 +29,7 @@ export default function ProfilePageSchema({
     mainEntity,
     breadcrumb
 }: ProfilePageSchemaProps) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+    const siteUrl = SITE_URL;
     const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
     const schema = {

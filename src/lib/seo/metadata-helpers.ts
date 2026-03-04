@@ -5,9 +5,9 @@
  */
 
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/site';
 
 const SITE_NAME = 'TennisFriends';
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
 
 /**
  * Truncates description for Naver (80 char limit) while preserving context

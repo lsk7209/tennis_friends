@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
@@ -6,8 +7,9 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { SITE_URL } from '@/lib/site';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+const siteUrl = SITE_URL;
 
 export const metadata = {
   title: "댐퍼(Dampener)의 효과: 진동 감소와 타구감",

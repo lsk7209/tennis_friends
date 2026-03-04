@@ -109,7 +109,7 @@ Cloudflare 대시보드에서:
 NEXT_PUBLIC_ANALYTICS_API_URL=https://tennis-analytics.your-account.workers.dev
 
 # 기타
-NEXT_PUBLIC_SITE_URL=https://tennisfriends.co.kr
+NEXT_PUBLIC_SITE_URL=https://tennisfrens.com
 ```
 
 ### Cloudflare Pages 환경 변수

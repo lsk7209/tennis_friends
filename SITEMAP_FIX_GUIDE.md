@@ -20,20 +20,20 @@
 1. Google Search Console에 로그인
 2. **사이트맵** 메뉴로 이동
 3. 기존 사이트맵 삭제 후 재제출:
-   - `https://tennisfriends.co.kr/sitemap.xml`
-   - `https://tennisfriends.co.kr/sitemap-naver.xml`
+   - `https://tennisfrens.com/sitemap.xml`
+   - `https://tennisfrens.com/sitemap-naver.xml`
 
 ### 2. URL 접근성 확인
 다음 URL들이 실제로 접근 가능한지 확인하세요:
-- `https://tennisfriends.co.kr` ✅
-- `https://tennisfriends.co.kr/blog` ✅
-- `https://tennisfriends.co.kr/utility` ✅
-- `https://tennisfriends.co.kr/about` ✅
-- `https://tennisfriends.co.kr/contact` ✅
-- `https://tennisfriends.co.kr/tennis-rules-quiz` ✅
+- `https://tennisfrens.com` ✅
+- `https://tennisfrens.com/blog` ✅
+- `https://tennisfrens.com/utility` ✅
+- `https://tennisfrens.com/about` ✅
+- `https://tennisfrens.com/contact` ✅
+- `https://tennisfrens.com/tennis-rules-quiz` ✅
 
 ### 3. robots.txt 확인
-`https://tennisfriends.co.kr/robots.txt`에서 다음을 확인:
+`https://tennisfrens.com/robots.txt`에서 다음을 확인:
 - 사이트맵에 포함된 URL들이 차단되지 않았는지
 - `sitemap.xml`과 `sitemap-naver.xml`이 올바르게 지정되었는지
 

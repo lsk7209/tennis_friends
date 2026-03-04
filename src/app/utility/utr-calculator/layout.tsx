@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'UTR 레이팅 계산기 | 나의 테니스 실력 점수는?',
         description: '경기 결과를 입력하면 예상 UTR을 계산해드립니다. 전 세계 500만+ 선수가 사용하는 표준 레이팅 시스템.',
-        url: 'https://tennisfriends.co.kr/utility/utr-calculator',
+        url: 'https://tennisfrens.com/utility/utr-calculator',
         type: 'website',
     },
 };

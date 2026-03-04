@@ -37,7 +37,7 @@
     - [x] Fix generic TOC headers ("Key Point 1") in 13 recent posts
     - [x] Consolidate 31 blog categories into 6 core themes
     - [x] **Urgent Fix**: Resolve TOC syntax error hindering Vercel build (`6700bc0`)
-    - [x] **SEO Fix**: Domain consistency implemented (hardcoded `tennisfriends.co.kr` -> `tennisfrens.com` / environment variables)
+    - [x] **SEO Fix**: Domain consistency implemented (hardcoded `tennisfrens.com` -> `tennisfrens.com` / environment variables)
 
 ## Next Steps
 - [x] Wait for image generation quota reset (~4 hours from session start)

@@ -90,11 +90,11 @@ const posts = {
       title: '데니스 샤포발로프: 왼손 원핸드 백핸드의 낭만',
       description: '폭발적인 점프 원핸드 백핸드의 소유자 데니스 샤포발로프. 공격적인 스타일과 화려한 샷 메이킹, 그가 보여주는 낭만 테니스.',
       keywords: ['테니스', '데니스 샤포발로프', 'Denis Shapovalov', '원핸드 백핸드', '왼손잡이'],
-      alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/denis-shapovalov` },
+      alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/denis-shapovalov` },
       openGraph: {
         title: '데니스 샤포발로프 스타일 분석 - 폭발하는 재능과 위험한 도박',
         description: '왼손 원핸드 백핸드의 로망, 샤포발로프. 그의 화려한 위닝샷과 잦은 에러 사이의 딜레마를 분석합니다.',
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/denis-shapovalov`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/denis-shapovalov`,
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'article',

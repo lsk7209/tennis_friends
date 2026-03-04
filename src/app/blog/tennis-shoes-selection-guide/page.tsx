@@ -11,12 +11,12 @@ export const metadata = {
   description: '테니스화는 단순한 운동화가 아닙니다. 코트 종류별 밑창 선택부터 내 발볼에 딱 맞는 브랜드 추천(아식스 4E 등)까지. 부상 없이 테니스를 즐기기 위한 필수 장비 가이드.',
   keywords: ['테니스화 추천 2026', '발볼 넓은 테니스화', '아식스 젤레졸루션 9', '나이키 베이퍼 프로', '올코트 테니스화', '클레이 코트 신발', '테니스화 사이즈 팁'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-shoes-selection-guide',
+    canonical: 'https://tennisfrens.com/blog/tennis-shoes-selection-guide',
   },
   openGraph: {
     title: '테니스화 선택 완전 가이드 2026 — 올코트 vs 클레이 | 브랜드별 사이즈 팁',
     description: '내 발에 맞는 테니스화는 따로 있습니다. 아식스, 나이키, 아디다스 핏 비교와 코트별 밑창 선택 가이드.',
-    url: 'https://tennisfriends.co.kr/blog/tennis-shoes-selection-guide',
+    url: 'https://tennisfrens.com/blog/tennis-shoes-selection-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

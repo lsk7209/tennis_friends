@@ -12,12 +12,12 @@ export const metadata = {
   description: "'베이비 페더러'에서 진정한 마스터로. 우아한 폼과 다재다능한 샷 메이킹을 가진 디미트로프의 제2의 전성기.",
   keywords: ["테니스","그리고르 디미트로프","Grigor Dimitrov","원핸드 백핸드","불가리아"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/grigor-dimitrov',
+    canonical: 'https://tennisfrens.com/blog/grigor-dimitrov',
   },
   openGraph: {
     title: "그리고르 디미트로프: 원핸드 백핸드의 낭만",
     description: "'베이비 페더러'에서 진정한 마스터로. 우아한 폼과 다재다능한 샷 메이킹을 가진 디미트로프의 제2의 전성기.",
-    url: 'https://tennisfriends.co.kr/blog/grigor-dimitrov',
+    url: 'https://tennisfrens.com/blog/grigor-dimitrov',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

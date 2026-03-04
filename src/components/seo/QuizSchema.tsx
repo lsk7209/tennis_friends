@@ -1,5 +1,6 @@
 import JsonLd from '@/components/JsonLd';
 import { generateBreadcrumbSchema } from '@/lib/seo/metadata-helpers';
+import { SITE_URL } from '@/lib/site';
 
 interface QuizSchemaProps {
   /**
@@ -73,7 +74,7 @@ export default function QuizSchema({
   about,
   publisher,
 }: QuizSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = SITE_URL;
 
   const defaultPublisher = {
     '@type': 'Organization',

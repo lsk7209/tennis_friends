@@ -1,4 +1,5 @@
 import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site';
 
 interface WebSiteSchemaProps {
   name?: string;
@@ -17,7 +18,7 @@ export default function WebSiteSchema({
   description = '데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상을 위한 모든 것을 제공합니다.',
   searchUrl,
 }: WebSiteSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = SITE_URL;
 
   const schema = {
     '@context': 'https://schema.org',

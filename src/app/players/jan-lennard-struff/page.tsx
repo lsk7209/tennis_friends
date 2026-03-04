@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     description: "얀-레나드 스트루프 (Jan-Lennard Struff) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['얀-레나드 스트루프', 'Jan-Lennard Struff', '테니스', 'ATP', '플레이스타일', '독일 테니스', '서브앤발리', '대기만성'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/players/jan-lennard-struff',
+        canonical: 'https://tennisfrens.com/players/jan-lennard-struff',
     },
     openGraph: {
         title: '얀-레나드 스트루프 — 독일의 썬더볼트 | 플레이스타일·명장면·최근 경기력',
         description: '얀-레나드 스트루프의 강력한 서브와 네트 플레이, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfriends.co.kr/players/jan-lennard-struff',
+        url: 'https://tennisfrens.com/players/jan-lennard-struff',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -115,9 +115,9 @@ export default function JanLennardStruffPage() {
                 />
                 <BreadcrumbSchema
                     items={[
-                        { name: '홈', item: 'https://tennisfriends.co.kr' },
-                        { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-                        { name: '얀-레나드 스트루프', item: 'https://tennisfriends.co.kr/players/jan-lennard-struff' },
+                        { name: '홈', item: 'https://tennisfrens.com' },
+                        { name: '선수', item: 'https://tennisfrens.com/players' },
+                        { name: '얀-레나드 스트루프', item: 'https://tennisfrens.com/players/jan-lennard-struff' },
                     ]}
                 />
                 <FAQSchema faqs={faqs} />

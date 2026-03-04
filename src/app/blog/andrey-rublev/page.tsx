@@ -12,12 +12,12 @@ export const metadata = {
   description: "투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. 'Bweh'라는 기합과 함께 뿜어내는 루블레프의 폭발적인 에너지.",
   keywords: ["테니스","안드레이 루블레프","Andrey Rublev","포핸드","러시아"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/andrey-rublev',
+    canonical: 'https://tennisfrens.com/blog/andrey-rublev',
   },
   openGraph: {
     title: "안드레이 루블레프: 포핸드 머신의 열정",
     description: "투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. 'Bweh'라는 기합과 함께 뿜어내는 루블레프의 폭발적인 에너지.",
-    url: 'https://tennisfriends.co.kr/blog/andrey-rublev',
+    url: 'https://tennisfrens.com/blog/andrey-rublev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

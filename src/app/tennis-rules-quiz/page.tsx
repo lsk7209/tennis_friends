@@ -1,18 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Play, BookOpen, Target, Trophy, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
-import { FadeIn, SlideUp, SlideDown, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 import QuizSchema from '@/components/seo/QuizSchema';
 import FAQSection from '@/components/seo/FAQSection';
+import { SITE_URL } from '@/lib/site';
 
 export default function TennisRulesQuizIntro() {
-  const [dailyTip, setDailyTip] = useState('');
-
   const tips = [
     "서브 토스를 잡고 다시 던지는 것은 반칙이 아닙니다. 타격 시도가 없다면 재토스 가능합니다.",
     "타이브레이크에서는 서버-리시버 순서가 중요합니다. 올바른 콜 관행을 따라야 합니다.",
@@ -26,12 +25,9 @@ export default function TennisRulesQuizIntro() {
     "고의적 방해는 기준에 따라 포인트 박탈이 가능합니다."
   ];
 
-  useEffect(() => {
-    // 오늘 날짜를 기반으로 랜덤 팁 선택
-    const today = new Date().getDate();
-    const tipIndex = today % tips.length;
-    setDailyTip(tips[tipIndex]);
-  }, []);
+  const today = new Date().getDate();
+  const tipIndex = today % tips.length;
+  const dailyTip = tips[tipIndex];
 
   const features = [
     {
@@ -106,7 +102,7 @@ export default function TennisRulesQuizIntro() {
     }
   ];
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const siteUrl = SITE_URL;
   const quizUrl = `${siteUrl}/tennis-rules-quiz`;
 
   // FAQ items for AI snippet optimization

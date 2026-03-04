@@ -9,6 +9,7 @@ import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components
 import QuizSchema from '@/components/seo/QuizSchema';
 import FAQSection from '@/components/seo/FAQSection';
 import { generatePageMetadata } from '@/lib/seo/metadata-helpers';
+import { SITE_URL } from '@/lib/site';
 
 // Enhanced metadata with Naver optimization
 export const metadata: Metadata = generatePageMetadata({
@@ -20,7 +21,7 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function NtrpTestIntro() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = SITE_URL;
   const utilityUrl = `${siteUrl}/utility/ntrp-test`;
 
   const features = [

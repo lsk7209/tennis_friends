@@ -12,7 +12,7 @@
 
 ```env
 # 사이트 URL
-NEXT_PUBLIC_SITE_URL=https://tennisfriends.co.kr
+NEXT_PUBLIC_SITE_URL=https://tennisfrens.com
 
 # 구글 Search Console 인증 코드
 GOOGLE_SITE_VERIFICATION=your-google-verification-code
@@ -39,7 +39,7 @@ BING_SITE_VERIFICATION=your-bing-verification-code
 2. **속성 추가**
    - "속성 추가" 클릭
    - "URL 접두어" 방식 선택
-   - 사이트 URL 입력: `https://tennisfriends.co.kr`
+   - 사이트 URL 입력: `https://tennisfrens.com`
 
 ### 2단계: 소유권 확인
 
@@ -64,7 +64,7 @@ BING_SITE_VERIFICATION=your-bing-verification-code
    ```env
    GOOGLE_SITE_VERIFICATION=1234567890
    ```
-4. URL 확인: `https://tennisfriends.co.kr/google1234567890`
+4. URL 확인: `https://tennisfrens.com/google1234567890.html`
 5. 배포 후 "확인" 클릭
 
 ### 3단계: 사이트맵 제출
@@ -73,7 +73,7 @@ BING_SITE_VERIFICATION=your-bing-verification-code
 2. **새 사이트맵 추가** 클릭
 3. 다음 사이트맵 제출:
    ```
-   https://tennisfriends.co.kr/sitemap.xml
+   https://tennisfrens.com/sitemap.xml
    ```
 
 ### 4단계: 추가 설정
@@ -96,7 +96,7 @@ BING_SITE_VERIFICATION=your-bing-verification-code
 
 2. **사이트 등록**
    - "웹마스터 도구" > "사이트 추가"
-   - 사이트 URL 입력: `https://tennisfriends.co.kr`
+   - 사이트 URL 입력: `https://tennisfrens.com`
 
 ### 2단계: 소유권 확인
 
@@ -121,7 +121,7 @@ BING_SITE_VERIFICATION=your-bing-verification-code
    ```env
    NAVER_SITE_VERIFICATION=1234567890
    ```
-4. URL 확인: `https://tennisfriends.co.kr/naver1234567890.html`
+4. URL 확인: `https://tennisfrens.com/naver1234567890.html`
 5. 배포 후 "확인" 클릭
 
 ### 3단계: 사이트맵 제출
@@ -129,11 +129,11 @@ BING_SITE_VERIFICATION=your-bing-verification-code
 1. **요청** > **사이트맵 제출** 메뉴로 이동
 2. 다음 사이트맵 제출:
    ```
-   https://tennisfriends.co.kr/sitemap-naver.xml
+   https://tennisfrens.com/sitemap-naver.xml
    ```
    또는
    ```
-   https://tennisfriends.co.kr/sitemap.xml
+   https://tennisfrens.com/sitemap.xml
    ```
 
 ### 4단계: RSS 피드 등록 (선택)
@@ -141,7 +141,7 @@ BING_SITE_VERIFICATION=your-bing-verification-code
 1. **요청** > **RSS 제출** 메뉴로 이동
 2. RSS 피드 URL 입력:
    ```
-   https://tennisfriends.co.kr/rss.xml
+   https://tennisfrens.com/rss.xml
    ```
 
 ### 5단계: 추가 설정
@@ -191,15 +191,15 @@ BING_SITE_VERIFICATION=your-bing-verification-code
 ## 🔗 생성된 인증 파일 URL
 
 ### 구글
-- HTML 파일: `https://tennisfriends.co.kr/google[verification-code]`
-- 예시: `https://tennisfriends.co.kr/google1234567890`
+- HTML 파일: `https://tennisfrens.com/google<verification-code>.html`
+- 예시: `https://tennisfrens.com/google1234567890.html`
 
 ### 네이버
-- HTML 파일: `https://tennisfriends.co.kr/naver[verification-code].html`
-- 예시: `https://tennisfriends.co.kr/naver1234567890.html`
+- HTML 파일: `https://tennisfrens.com/naver<verification-code>.html`
+- 예시: `https://tennisfrens.com/naver1234567890.html`
 
 ### Bing (선택)
-- XML 파일: `https://tennisfriends.co.kr/BingSiteAuth.xml`
+- XML 파일: `https://tennisfrens.com/BingSiteAuth.xml`
 
 ---
 

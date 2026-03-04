@@ -12,12 +12,12 @@ export const metadata = {
   description: "복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.",
   keywords: ["테니스","복식","팀워크","포칭","발리"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-doubles-teamwork-strategy',
+    canonical: 'https://tennisfrens.com/blog/tennis-doubles-teamwork-strategy',
   },
   openGraph: {
     title: "복식의 신이 되는 팀워크 전략 (Doubles Strategy)",
     description: "복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-doubles-teamwork-strategy',
+    url: 'https://tennisfrens.com/blog/tennis-doubles-teamwork-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

@@ -125,7 +125,7 @@ export default async function Image() {
                     }}
                 >
                     <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#3b82f6' }} />
-                    <div style={{ fontSize: 24, color: '#3b82f6', fontWeight: 600 }}>tennisfriends.co.kr</div>
+                    <div style={{ fontSize: 24, color: '#3b82f6', fontWeight: 600 }}>tennisfrens.com</div>
                 </div>
             </div>
         ),

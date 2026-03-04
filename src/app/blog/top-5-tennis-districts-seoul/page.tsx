@@ -10,12 +10,12 @@ export const metadata = {
     description: '서울에서 테니스 치기 좋은 자치구 TOP 5 선정. 올림픽공원, 봉은테니스장 등 주요 코트 예약 팁과 지역별 동호회 분위기 정리.',
     keywords: ['서울 테니스장', '테니스 코트 예약', '송파 테니스', '강남 테니스', '테니스 동호회 추천', '서울 실내 테니스'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/blog/top-5-tennis-districts-seoul',
+        canonical: 'https://tennisfrens.com/blog/top-5-tennis-districts-seoul',
     },
     openGraph: {
         title: '서울 테니스 성지 TOP 5 — 코트 예약 명당과 지역별 클럽 특징',
         description: '서울에서 테니스 치기 좋은 자치구 TOP 5 선정. 올림픽공원, 봉은테니스장 등 주요 코트 예약 팁과 지역별 동호회 분위기 정리.',
-        url: 'https://tennisfriends.co.kr/blog/top-5-tennis-districts-seoul',
+        url: 'https://tennisfrens.com/blog/top-5-tennis-districts-seoul',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'website',

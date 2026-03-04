@@ -12,12 +12,12 @@ export const metadata = {
   description: "실수 없이 넘기기만 하는 '푸셔' 스타일의 상대를 만나면 답답하셨죠? 말려들지 않고 내 플레이를 하며 승리하는 공략법을 공개합니다.",
   keywords: ["테니스 전술","푸셔","Pusher","테니스 전략","멘탈 관리"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-strategy-beat-pusher',
+    canonical: 'https://tennisfrens.com/blog/tennis-strategy-beat-pusher',
   },
   openGraph: {
     title: "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
     description: "실수 없이 넘기기만 하는 '푸셔' 스타일의 상대를 만나면 답답하셨죠? 말려들지 않고 내 플레이를 하며 승리하는 공략법을 공개합니다.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-strategy-beat-pusher',
+    url: 'https://tennisfrens.com/blog/tennis-strategy-beat-pusher',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

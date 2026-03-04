@@ -3,7 +3,7 @@
 ## 📍 생성된 주소 목록
 
 ### 1. 사이트맵 (Sitemap)
-**URL**: `https://tennisfriends.co.kr/sitemap.xml`
+**URL**: `https://tennisfrens.com/sitemap.xml`
 
 **포함 내용**:
 - 기본 페이지 (홈, 블로그, 유틸리티)
@@ -20,7 +20,7 @@
 ---
 
 ### 2. 네이버 사이트맵 (Naver Sitemap)
-**URL**: `https://tennisfriends.co.kr/sitemap-naver.xml`
+**URL**: `https://tennisfrens.com/sitemap-naver.xml`
 
 **포함 내용**:
 - 기본 페이지
@@ -36,7 +36,7 @@
 ---
 
 ### 3. RSS 피드 (RSS Feed)
-**URL**: `https://tennisfriends.co.kr/rss.xml`
+**URL**: `https://tennisfrens.com/rss.xml`
 
 **포함 내용**:
 - 최신 블로그 포스트 50개 (날짜순 정렬)
@@ -52,7 +52,7 @@
 ---
 
 ### 4. Robots.txt
-**URL**: `https://tennisfriends.co.kr/robots.txt`
+**URL**: `https://tennisfrens.com/robots.txt`
 
 **설정 내용**:
 - 모든 봇 허용 (기본)
@@ -80,10 +80,10 @@ http://localhost:3000/robots.txt
 
 ### 프로덕션 환경에서 확인
 ```
-https://tennisfriends.co.kr/sitemap.xml
-https://tennisfriends.co.kr/sitemap-naver.xml
-https://tennisfriends.co.kr/rss.xml
-https://tennisfriends.co.kr/robots.txt
+https://tennisfrens.com/sitemap.xml
+https://tennisfrens.com/sitemap-naver.xml
+https://tennisfrens.com/rss.xml
+https://tennisfrens.com/robots.txt
 ```
 
 ### 검증 도구
@@ -143,19 +143,19 @@ https://tennisfriends.co.kr/robots.txt
 
 ### 구글 (Google)
 1. Google Search Console 접속
-2. 속성 추가 (https://tennisfriends.co.kr)
-3. 사이트맵 제출: `https://tennisfriends.co.kr/sitemap.xml`
+2. 속성 추가 (https://tennisfrens.com)
+3. 사이트맵 제출: `https://tennisfrens.com/sitemap.xml`
 
 ### 네이버
 1. 네이버 서치어드바이저 접속
 2. 사이트 등록
-3. 사이트맵 제출: `https://tennisfriends.co.kr/sitemap-naver.xml`
-4. RSS 피드 제출 (선택): `https://tennisfriends.co.kr/rss.xml`
+3. 사이트맵 제출: `https://tennisfrens.com/sitemap-naver.xml`
+4. RSS 피드 제출 (선택): `https://tennisfrens.com/rss.xml`
 
 ### 다음
 1. 다음 검색 등록 페이지 접속
 2. 사이트 등록
-3. 사이트맵 제출: `https://tennisfriends.co.kr/sitemap.xml`
+3. 사이트맵 제출: `https://tennisfrens.com/sitemap.xml`
 
 ---
 

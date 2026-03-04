@@ -12,12 +12,12 @@ export const metadata = {
   description: "너무 얇으면 라켓이 돌고, 너무 두꺼우면 손목이 아픕니다. 정확한 그립 사이즈 측정법과 튜닝 팁.",
   keywords: ["테니스 장비", "그립 사이즈", "라켓 그립", "부상 방지", "튜닝"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-grip-size-selection',
+    canonical: 'https://tennisfrens.com/blog/tennis-grip-size-selection',
   },
   openGraph: {
     title: "그립 두께와 사이즈 선택의 중요성",
     description: "너무 얇으면 라켓이 돌고, 너무 두꺼우면 손목이 아픕니다. 정확한 그립 사이즈 측정법과 튜닝 팁.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-grip-size-selection',
+    url: 'https://tennisfrens.com/blog/tennis-grip-size-selection',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

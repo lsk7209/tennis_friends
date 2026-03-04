@@ -18,6 +18,7 @@ import Image from 'next/image';
 import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import TOC from '@/components/blog/TOC';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import { SITE_URL } from '@/lib/site';
 
 // Force static generation for these paths
 export async function generateStaticParams() {
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             images: player.image ? [player.image] : [],
         },
         alternates: {
-            canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/players/${slug}`,
+            canonical: `${SITE_URL}/players/${slug}`,
         }
     };
 }
@@ -72,7 +73,7 @@ export default async function PlayerProfilePage({ params }: Props) {
         notFound();
     }
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+    const siteUrl = SITE_URL;
 
     const breadcrumbItems = [
         { name: 'Home', item: siteUrl },
@@ -193,7 +194,7 @@ export default async function PlayerProfilePage({ params }: Props) {
                         name: player.country
                     },
                     jobTitle: "Professional Tennis Player",
-                    url: `https://tennisfriends.co.kr/players/${resolvedParams.slug}`
+                    url: `https://tennisfrens.com/players/${resolvedParams.slug}`
                 }}
             />
             {player.detailedProfile?.faq && (

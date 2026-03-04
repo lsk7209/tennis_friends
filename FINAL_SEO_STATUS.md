@@ -11,7 +11,7 @@
 - **구글용**: `/sitemap.xml` (표준 형식, 모든 페이지 포함)
 - **네이버용**: `/sitemap-naver.xml` (네이버 최적화)
 - **자동 업데이트**: 블로그, 선수, 유틸리티 페이지 자동 수집
-- **도메인 일관성**: `www.tennisfrens.com`으로 통일
+- **도메인 일관성**: `tennisfrens.com`으로 통일
 
 ### 3. RSS 피드 ✅
 - **위치**: `/rss.xml`
@@ -70,7 +70,7 @@
 
 ### 2. 환경 변수 설정 (Vercel)
 ```
-NEXT_PUBLIC_SITE_URL=https://www.tennisfrens.com
+NEXT_PUBLIC_SITE_URL=https://tennisfrens.com
 NAVER_SITE_VERIFICATION=[네이버 인증 코드]
 DAUM_SITE_VERIFICATION=[다음 인증 코드]
 GOOGLE_SITE_VERIFICATION=[구글 인증 코드]

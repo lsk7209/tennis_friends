@@ -1,5 +1,6 @@
 
 import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site';
 
 interface BreadcrumbItem {
     name: string;
@@ -15,7 +16,7 @@ interface BreadcrumbSchemaProps {
  * 검색 결과에 탐색 경로(Breadcrumb)를 표시하도록 돕습니다.
  */
 export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+    const siteUrl = SITE_URL;
 
     const schema = {
         '@context': 'https://schema.org',

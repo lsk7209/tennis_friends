@@ -12,12 +12,12 @@ export const metadata = {
   description: "198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.",
   keywords: ["테니스","알렉산더 즈베레프","Alexander Zverev","서브","독일"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/alexander-zverev',
+    canonical: 'https://tennisfrens.com/blog/alexander-zverev',
   },
   openGraph: {
     title: "알렉산더 즈베레프: 높이와 기술의 완벽한 조화",
     description: "198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.",
-    url: 'https://tennisfriends.co.kr/blog/alexander-zverev',
+    url: 'https://tennisfrens.com/blog/alexander-zverev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

@@ -1,5 +1,6 @@
 import JsonLd from '@/components/JsonLd';
 import { generateBreadcrumbSchema } from '@/lib/seo/metadata-helpers';
+import { CONTACT_EMAIL, SITE_URL } from '@/lib/site';
 
 interface EnhancedBlogPostSchemaProps {
   title: string;
@@ -41,7 +42,7 @@ export default function EnhancedBlogPostSchema({
   keywords = [],
   articleBody,
 }: EnhancedBlogPostSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = SITE_URL;
   const url = `${siteUrl}/blog/${slug}`;
   const imageUrl = image
     ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
@@ -63,7 +64,7 @@ export default function EnhancedBlogPostSchema({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'contact@tennisfrens.com',
+      email: CONTACT_EMAIL,
     },
     sameAs: [], // Add social media links if available
   };

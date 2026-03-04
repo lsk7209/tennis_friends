@@ -878,5 +878,52 @@ export const allBlogPosts = [
     "readTime": "10분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-counterpuncher-tactics-guide",
+    "slug": "tennis-counterpuncher-tactics-guide",
+    "tags": [
+      "전술 분석"
+    ],
+    "title": "카운터펀처 공략 전술",
+    "excerpt": "수비형 카운터펀처를 상대로 포인트를 설계하는 실전 전술 가이드입니다.",
+    "badge": "최신 글",
+    "category": "경기 운영",
+    "date": "2026-03-04",
+    "readTime": "5분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-hip-mobility-for-serve-power",
+    "slug": "tennis-hip-mobility-for-serve-power",
+    "tags": [
+      "피지컬"
+    ],
+    "title": "서브 파워를 위한 고관절 모빌리티",
+    "excerpt": "고관절 가동성을 개선해 서브 파워와 안정성을 높이는 루틴 가이드입니다.",
+    "badge": "최신 글",
+    "category": "테니스 피트니스",
+    "date": "2026-03-04",
+    "readTime": "5분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-match-journaling-method",
+    "slug": "tennis-match-journaling-method",
+    "tags": [
+      "멘탈",
+      "훈련 계획"
+    ],
+    "title": "경기 저널링 방법론",
+    "excerpt": "경기 후 기록을 통해 개선 포인트를 빠르게 찾는 테니스 저널링 방법입니다.",
+    "badge": "최신 글",
+    "category": "경기 운영",
+    "date": "2026-03-04",
+    "readTime": "5분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
   }
+
 ];

@@ -12,12 +12,12 @@ export const metadata = {
   description: "변칙적인 폼과 천재적인 전술. '문어'라 불리는 긴 팔다리로 모든 공을 받아내는 메드베데프의 독특한 테니스 세계.",
   keywords: ["테니스","다닐 메드베데프","Daniil Medvedev","전술","러시아"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/daniil-medvedev',
+    canonical: 'https://tennisfrens.com/blog/daniil-medvedev',
   },
   openGraph: {
     title: "다닐 메드베데프: 코트 위의 체스 마스터",
     description: "변칙적인 폼과 천재적인 전술. '문어'라 불리는 긴 팔다리로 모든 공을 받아내는 메드베데프의 독특한 테니스 세계.",
-    url: 'https://tennisfriends.co.kr/blog/daniil-medvedev',
+    url: 'https://tennisfrens.com/blog/daniil-medvedev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
