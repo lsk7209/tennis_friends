@@ -10843,7 +10843,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '야쿱 파울(Jakub Paul)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>야쿱 파울는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>야쿱 파울 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -10874,7 +10874,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '야쿱 파울 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -10885,7 +10885,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '달리보르 스브르치나(Dalibor Svrcina)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>달리보르 스브르치나는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>달리보르 스브르치나 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -10916,7 +10916,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '달리보르 스브르치나 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -10927,7 +10927,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '빌리우스 가우바스(Vilius Gaubas)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>빌리우스 가우바스는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>빌리우스 가우바스 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -10958,7 +10958,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '빌리우스 가우바스 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -10969,7 +10969,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '니코 힙플(Nico Hipfl)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>니코 힙플는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>니코 힙플 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11000,7 +11000,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '니코 힙플 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11011,7 +11011,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '엔히키 호샤(Henrique Rocha)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>엔히키 호샤는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>엔히키 호샤 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11042,7 +11042,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '엔히키 호샤 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11053,7 +11053,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '페데리코 코리아(Federico Coria)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>페데리코 코리아는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>페데리코 코리아 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11084,7 +11084,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '페데리코 코리아 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11095,7 +11095,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '치아구 몬테이루(Thiago Monteiro)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>치아구 몬테이루는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>치아구 몬테이루 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11126,7 +11126,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '치아구 몬테이루 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11137,7 +11137,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '후안 마누엘 세룬돌로(Juan Manuel Cerundolo)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>후안 마누엘 세룬돌로는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>후안 마누엘 세룬돌로 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11168,7 +11168,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '후안 마누엘 세룬돌로 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11179,7 +11179,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '파쿤도 디아스 아코스타(Facundo Diaz Acosta)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>파쿤도 디아스 아코스타는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>파쿤도 디아스 아코스타 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11210,7 +11210,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '파쿤도 디아스 아코스타 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11221,7 +11221,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '마르코 트룽헬리티(Marco Trungelliti)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>마르코 트룽헬리티는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>마르코 트룽헬리티 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11252,7 +11252,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '마르코 트룽헬리티 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11263,7 +11263,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '프란체스코 마에스트렐리(Francesco Maestrelli)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>프란체스코 마에스트렐리는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>프란체스코 마에스트렐리 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11294,7 +11294,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '프란체스코 마에스트렐리 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11305,7 +11305,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '루카 반 아슈(Luca Van Assche)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>루카 반 아슈는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>루카 반 아슈 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11336,7 +11336,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '루카 반 아슈 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11347,7 +11347,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '가브리엘 디알로(Gabriel Diallo)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>가브리엘 디알로는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>가브리엘 디알로 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11378,7 +11378,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '가브리엘 디알로 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11389,7 +11389,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '아롤드 마요(Harold Mayot)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>아롤드 마요는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>아롤드 마요 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11420,7 +11420,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '아롤드 마요 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11431,7 +11431,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '테랑스 아트만(Terence Atmane)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>테랑스 아트만는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>테랑스 아트만 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11462,7 +11462,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '테랑스 아트만 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11473,7 +11473,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '키리안 자케(Kyrian Jacquet)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>키리안 자케는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>키리안 자케 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11504,7 +11504,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '키리안 자케 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11515,7 +11515,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '베이비트 주카예프(Beibit Zhukayev)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>베이비트 주카예프는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>베이비트 주카예프 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11546,7 +11546,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '베이비트 주카예프 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11557,7 +11557,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '무르켈 델리엔(Murkel Dellien)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>무르켈 델리엔는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>무르켈 델리엔 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11588,7 +11588,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '무르켈 델리엔 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11599,7 +11599,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '아돌포 다니엘 바예호(Adolfo Daniel Vallejo)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>아돌포 다니엘 바예호는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>아돌포 다니엘 바예호 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11630,7 +11630,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '아돌포 다니엘 바예호 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11641,7 +11641,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '제임스 맥케이브(James McCabe)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>제임스 맥케이브는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>제임스 맥케이브 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11672,7 +11672,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '제임스 맥케이브 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11683,7 +11683,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '리엄 드락슬(Liam Draxl)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>리엄 드락슬는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>리엄 드락슬 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11714,7 +11714,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '리엄 드락슬 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11725,7 +11725,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '알리벡 카치마조프(Alibek Kachmazov)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>알리벡 카치마조프는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>알리벡 카치마조프 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11756,7 +11756,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '알리벡 카치마조프 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11767,7 +11767,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '클레망 치데흐(Clement Chidekh)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>클레망 치데흐는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>클레망 치데흐 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11798,7 +11798,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '클레망 치데흐 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11809,7 +11809,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '마르크 라얄(Mark Lajal)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>마르크 라얄는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>마르크 라얄 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11840,7 +11840,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '마르크 라얄 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11851,7 +11851,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '루카 프레다(Luca Preda)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>루카 프레다는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>루카 프레다 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11882,7 +11882,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '루카 프레다 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11893,7 +11893,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '요엘 슈베르츨러(Joel Schwaerzler)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>요엘 슈베르츨러는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>요엘 슈베르츨러 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11924,7 +11924,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '요엘 슈베르츨러 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11935,7 +11935,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '모에라니 부지그(Moerani Bouzige)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>모에라니 부지그는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>모에라니 부지그 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -11966,7 +11966,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '모에라니 부지그 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -11977,7 +11977,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '레이 사카모토(Rei Sakamoto)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>레이 사카모토는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>레이 사카모토 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12008,7 +12008,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '레이 사카모토 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12019,7 +12019,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '헤이든 존스(Hayden Jones)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>헤이든 존스는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>헤이든 존스 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12050,7 +12050,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '헤이든 존스 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12061,7 +12061,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '안드레스 산타마르타 로익(Andres Santamarta Roig)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>안드레스 산타마르타 로익는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>안드레스 산타마르타 로익 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12092,7 +12092,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '안드레스 산타마르타 로익 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12103,7 +12103,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '타이라 카테리나 그랜트(Tyra Caterina Grant)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>타이라 카테리나 그랜트는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>타이라 카테리나 그랜트 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12134,7 +12134,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '타이라 카테리나 그랜트 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12145,7 +12145,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '줄리에타 파레하(Julieta Pareja)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>줄리에타 파레하는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>줄리에타 파레하 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12176,7 +12176,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '줄리에타 파레하 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12187,7 +12187,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '테오도라 코스토비치(Teodora Kostovic)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>테오도라 코스토비치는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>테오도라 코스토비치 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12218,7 +12218,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '테오도라 코스토비치 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12229,7 +12229,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '셀린 네프(Celine Naef)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>셀린 네프는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>셀린 네프 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12260,7 +12260,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '셀린 네프 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12271,7 +12271,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '해나 클루그먼(Hannah Klugman)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>해나 클루그먼는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>해나 클루그먼 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12302,7 +12302,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '해나 클루그먼 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12313,7 +12313,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '미카 스토이사블레비치(Mika Stojsavljevic)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>미카 스토이사블레비치는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>미카 스토이사블레비치 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12344,7 +12344,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '미카 스토이사블레비치 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12355,7 +12355,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '존스 밍거 쉬(Jones Mingge Xu)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>존스 밍거 쉬는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>존스 밍거 쉬 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12386,7 +12386,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '존스 밍거 쉬 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12397,7 +12397,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '이사벨라 크루거(Isabella Kruger)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>이사벨라 크루거는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>이사벨라 크루거 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12428,7 +12428,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '이사벨라 크루거 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12439,7 +12439,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '페트라 마르친코(Petra Marcinko)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>페트라 마르친코는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>페트라 마르친코 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12470,7 +12470,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '페트라 마르친코 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12481,7 +12481,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '렉시 스티븐스(Lexie Stevens)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>렉시 스티븐스는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>렉시 스티븐스 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12512,7 +12512,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '렉시 스티븐스 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12523,7 +12523,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '탈리아 깁슨(Talia Gibson)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>탈리아 깁슨는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>탈리아 깁슨 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12554,7 +12554,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '탈리아 깁슨 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12565,7 +12565,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '마야 조인트(Maya Joint)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>마야 조인트는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>마야 조인트 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12596,7 +12596,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '마야 조인트 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12607,7 +12607,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '이나 슈미트(Ina Shmidt)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>이나 슈미트는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>이나 슈미트 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12638,7 +12638,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '이나 슈미트 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12649,7 +12649,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '엘리자라 야네바(Elizara Yaneva)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>엘리자라 야네바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>엘리자라 야네바 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12680,7 +12680,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '엘리자라 야네바 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12691,7 +12691,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '레나타 잠리호바(Renata Jamrichova)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>레나타 잠리호바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>레나타 잠리호바 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12722,7 +12722,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '레나타 잠리호바 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12733,7 +12733,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '빅토리아 히메네스 카신체바(Victoria Jimenez Kasintseva)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>빅토리아 히메네스 카신체바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>빅토리아 히메네스 카신체바 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12764,7 +12764,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '빅토리아 히메네스 카신체바 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12775,7 +12775,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '안나 시스코바(Anna Siskova)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>안나 시스코바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>안나 시스코바 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12806,7 +12806,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '안나 시스코바 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12817,7 +12817,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '모니카 에크스트란드(Monika Ekstrand)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>모니카 에크스트란드는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>모니카 에크스트란드 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12848,7 +12848,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '모니카 에크스트란드 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12859,7 +12859,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '라이아 페트레틱(Laia Petretic)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>라이아 페트레틱는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>라이아 페트레틱 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12890,7 +12890,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '라이아 페트레틱 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12901,7 +12901,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '이아나 로레다나 로스카(Iana Loredana Rosca)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>이아나 로레다나 로스카는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>이아나 로레다나 로스카 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12932,7 +12932,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '이아나 로레다나 로스카 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12943,7 +12943,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '프란체스카 존스(Francesca Jones)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>프란체스카 존스는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>프란체스카 존스 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -12974,7 +12974,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '프란체스카 존스 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -12985,7 +12985,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '에미 에마(Emi Ema)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>에미 에마는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>에미 에마 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13016,7 +13016,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '에미 에마 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -13027,7 +13027,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '제시카 퐁셰(Jessika Ponchet)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>제시카 퐁셰는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>제시카 퐁셰 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13058,7 +13058,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '제시카 퐁셰 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -13069,7 +13069,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '시모나 발테르트(Simona Waltert)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>시모나 발테르트는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>시모나 발테르트 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13100,7 +13100,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '시모나 발테르트 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -13111,7 +13111,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '리안 트란(Lian Tran)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>리안 트란는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>리안 트란 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13142,7 +13142,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '리안 트란 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -13153,7 +13153,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '사라 일레브(Sarah Ilev)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>사라 일레브는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>사라 일레브 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13184,7 +13184,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '사라 일레브 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -13195,7 +13195,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '린다 프루흐비르토바(Linda Fruhvirtova)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>린다 프루흐비르토바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>린다 프루흐비르토바 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13226,7 +13226,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '린다 프루흐비르토바 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -13237,7 +13237,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '브렌다 프루흐비르토바(Brenda Fruhvirtova)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>브렌다 프루흐비르토바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>브렌다 프루흐비르토바 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13268,7 +13268,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '브렌다 프루흐비르토바 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -13279,7 +13279,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '빅토리아 음보코(Victoria Mboko)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>빅토리아 음보코는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>빅토리아 음보코 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13310,7 +13310,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '빅토리아 음보코 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
@@ -13321,7 +13321,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
     detailedProfile: {
             oneLineSummary: '리브 호브데(Liv Hovde)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
             whyNotable: `
-                <p>리브 호브데는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>리브 호브데 선수는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
                 <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
             `,
             playStyle: `
@@ -13352,7 +13352,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 },
                 {
                     question: '리브 호브데 선수는 어떤 팬에게 추천되나요?',
-                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                    answer: '전술적인 경기 운영과 성장 스토리를 함께 지켜보는 팬에게 특히 매력적인 선수입니다.'
                 }
             ]
         }
