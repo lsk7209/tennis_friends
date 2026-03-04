@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "카를로스 알카라스 (Carlos Alcaraz) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['카를로스 알카라스', 'Carlos Alcaraz', '테니스', 'ATP', '플레이스타일', '스페인 테니스', '공격형', '차세대 스타'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/carlos-alcaraz',
+    canonical: 'https://www.tennisfrens.com/players/carlos-alcaraz',
   },
   openGraph: {
     title: '카를로스 알카라스 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
     description: '카를로스 알카라스의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/carlos-alcaraz',
+    url: 'https://www.tennisfrens.com/players/carlos-alcaraz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function CarlosAlcarazPage() {
           award={[
             'Grand Slam Singles Champion (4 titles)', 'ATP World No. 1', 'ATP Masters 1000 Champion'
           ]}
-          url="https://tennisfriends.co.kr/players/carlos-alcaraz"
+          url="https://www.tennisfrens.com/players/carlos-alcaraz"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '카를로스 알카라스', item: 'https://tennisfriends.co.kr/players/carlos-alcaraz' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '카를로스 알카라스', item: 'https://www.tennisfrens.com/players/carlos-alcaraz' },
         ]}
       />
       <FAQSchema faqs={faqs} />
