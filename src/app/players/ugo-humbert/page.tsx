@@ -18,12 +18,12 @@ export const metadata: Metadata = {
   description: "우고 움베르 (Ugo Humbert) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['우고 움베르', 'Ugo Humbert', '테니스', 'ATP', '플레이스타일', '프랑스 테니스', '좌완', '공격형'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/ugo-humbert',
+    canonical: 'https://www.tennisfrens.com/players/ugo-humbert',
   },
   openGraph: {
     title: '우고 움베르 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '우고 움베르의 공격적인 좌완 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/ugo-humbert',
+    url: 'https://www.tennisfrens.com/players/ugo-humbert',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -117,9 +117,9 @@ export default function UgoHumbertPage() {
 
         <BreadcrumbSchema
           items={[
-            { name: '홈', item: 'https://tennisfriends.co.kr' },
-            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-            { name: '우고 움베르', item: 'https://tennisfriends.co.kr/players/ugo-humbert' },
+            { name: '홈', item: 'https://www.tennisfrens.com' },
+            { name: '선수', item: 'https://www.tennisfrens.com/players' },
+            { name: '우고 움베르', item: 'https://www.tennisfrens.com/players/ugo-humbert' },
           ]}
         />
         <FAQSchema faqs={faqs} />

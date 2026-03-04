@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     description: "마테오 아르날디 (Matteo Arnaldi) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['마테오 아르날디', 'Matteo Arnaldi', '테니스', 'ATP', '플레이스타일', '이탈리아 유망주', '데이비스컵 우승', '체력'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/players/matteo-arnaldi',
+        canonical: 'https://www.tennisfrens.com/players/matteo-arnaldi',
     },
     openGraph: {
         title: '마테오 아르날디 — 이탈리아의 새로운 엔진 | 플레이스타일·명장면·최근 경기력',
         description: '마테오 아르날디의 지칠 줄 모르는 체력과 끈기, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfriends.co.kr/players/matteo-arnaldi',
+        url: 'https://www.tennisfrens.com/players/matteo-arnaldi',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -115,9 +115,9 @@ export default function MatteoArnaldiPage() {
                 />
                 <BreadcrumbSchema
                     items={[
-                        { name: '홈', item: 'https://tennisfriends.co.kr' },
-                        { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-                        { name: '마테오 아르날디', item: 'https://tennisfriends.co.kr/players/matteo-arnaldi' },
+                        { name: '홈', item: 'https://www.tennisfrens.com' },
+                        { name: '선수', item: 'https://www.tennisfrens.com/players' },
+                        { name: '마테오 아르날디', item: 'https://www.tennisfrens.com/players/matteo-arnaldi' },
                     ]}
                 />
                 <FAQSchema faqs={faqs} />

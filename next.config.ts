@@ -48,6 +48,21 @@ const nextConfig: NextConfig = {
   // 압축
   compress: true,
   
+
+  async redirects() {
+    return [
+      {
+        source: '/players/linner-tien',
+        destination: '/players/lerner-tien',
+        permanent: true,
+      },
+      {
+        source: '/players/arthur-landercknech',
+        destination: '/players/arthur-rinderknech',
+        permanent: true,
+      },
+    ];
+  },
   // 보안 헤더
   async headers() {
     return [

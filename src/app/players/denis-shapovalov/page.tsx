@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: "데니스 샤포발로프 (Denis Shapovalov) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['데니스 샤포발로프', 'Denis Shapovalov', '테니스', 'ATP', '플레이스타일', '캐나다 테니스', '공격형', '좌완 서브'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/denis-shapovalov',
+    canonical: 'https://www.tennisfrens.com/players/denis-shapovalov',
   },
   openGraph: {
     title: '데니스 샤포발로프 — 세계랭킹 23위 | 플레이스타일·명장면·최근 경기력',
     description: '데니스 샤포발로프의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/denis-shapovalov',
+    url: 'https://www.tennisfrens.com/players/denis-shapovalov',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -71,9 +71,9 @@ export default function DenisShapovalovPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '데니스 샤포발로프', item: 'https://tennisfriends.co.kr/players/denis-shapovalov' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '데니스 샤포발로프', item: 'https://www.tennisfrens.com/players/denis-shapovalov' },
         ]}
       />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">

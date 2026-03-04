@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     description: "알렉세이 포피린 (Alexei Popyrin) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['알렉세이 포피린', 'Alexei Popyrin', '테니스', 'ATP', '플레이스타일', '호주 테니스', '마스터스 우승', '빅 서버'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/players/alexei-popyrin',
+        canonical: 'https://www.tennisfrens.com/players/alexei-popyrin',
     },
     openGraph: {
         title: '알렉세이 포피린 — 호주의 거인 | 플레이스타일·명장면·최근 경기력',
         description: '알렉세이 포피린의 강력한 서브와 포핸드, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfriends.co.kr/players/alexei-popyrin',
+        url: 'https://www.tennisfrens.com/players/alexei-popyrin',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -116,9 +116,9 @@ export default function AlexeiPopyrinPage() {
                 />
                 <BreadcrumbSchema
                     items={[
-                        { name: '홈', item: 'https://tennisfriends.co.kr' },
-                        { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-                        { name: '알렉세이 포피린', item: 'https://tennisfriends.co.kr/players/alexei-popyrin' },
+                        { name: '홈', item: 'https://www.tennisfrens.com' },
+                        { name: '선수', item: 'https://www.tennisfrens.com/players' },
+                        { name: '알렉세이 포피린', item: 'https://www.tennisfrens.com/players/alexei-popyrin' },
                     ]}
                 />
                 <FAQSchema faqs={faqs} />
