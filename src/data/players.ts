@@ -10839,243 +10839,2523 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
 
     'jakub-paul': {
         name: '야쿱 파울', nameEn: 'Jakub Paul', country: 'Switzerland', countryFlag: '🇨🇭', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '스위스 출신 선수로 안정적인 베이스라인 플레이와 꾸준한 경기 운영이 강점입니다.'
+        longBio: '스위스 출신 선수로 안정적인 베이스라인 플레이와 꾸준한 경기 운영이 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '야쿱 파울(Jakub Paul)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>야쿱 파울는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '야쿱 파울 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '야쿱 파울 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'dalibor-svrcina': {
         name: '달리보르 스브르치나', nameEn: 'Dalibor Svrcina', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '체코의 유망주로 탄탄한 랠리 능력과 클레이 코트 적응력이 좋습니다.'
+        longBio: '체코의 유망주로 탄탄한 랠리 능력과 클레이 코트 적응력이 좋습니다.',
+    detailedProfile: {
+            oneLineSummary: '달리보르 스브르치나(Dalibor Svrcina)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>달리보르 스브르치나는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '달리보르 스브르치나 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '달리보르 스브르치나 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'vilius-gaubas': {
         name: '빌리우스 가우바스', nameEn: 'Vilius Gaubas', country: 'Lithuania', countryFlag: '🇱🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '리투아니아 출신 선수로 빠른 수비 전환과 점진적인 성장세를 보이고 있습니다.'
+        longBio: '리투아니아 출신 선수로 빠른 수비 전환과 점진적인 성장세를 보이고 있습니다.',
+    detailedProfile: {
+            oneLineSummary: '빌리우스 가우바스(Vilius Gaubas)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>빌리우스 가우바스는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '빌리우스 가우바스 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '빌리우스 가우바스 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'nico-hipfl': {
         name: '니코 힙플', nameEn: 'Nico Hipfl', country: 'Austria', countryFlag: '🇦🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '오스트리아 선수로 안정적인 스트로크와 경기 집중력이 장점입니다.'
+        longBio: '오스트리아 선수로 안정적인 스트로크와 경기 집중력이 장점입니다.',
+    detailedProfile: {
+            oneLineSummary: '니코 힙플(Nico Hipfl)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>니코 힙플는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '니코 힙플 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '니코 힙플 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'henrique-rocha': {
         name: '엔히키 호샤', nameEn: 'Henrique Rocha', country: 'Portugal', countryFlag: '🇵🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '포르투갈 출신의 젊은 선수로 성실한 수비와 클레이 기반 경기 운영이 돋보입니다.'
+        longBio: '포르투갈 출신의 젊은 선수로 성실한 수비와 클레이 기반 경기 운영이 돋보입니다.',
+    detailedProfile: {
+            oneLineSummary: '엔히키 호샤(Henrique Rocha)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>엔히키 호샤는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '엔히키 호샤 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '엔히키 호샤 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'federico-coria': {
         name: '페데리코 코리아', nameEn: 'Federico Coria', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '아르헨티나의 클레이 코트 스페셜리스트로 긴 랠리에서 강점을 보입니다.'
+        longBio: '아르헨티나의 클레이 코트 스페셜리스트로 긴 랠리에서 강점을 보입니다.',
+    detailedProfile: {
+            oneLineSummary: '페데리코 코리아(Federico Coria)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>페데리코 코리아는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '페데리코 코리아 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '페데리코 코리아 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'thiago-monteiro': {
         name: '치아구 몬테이루', nameEn: 'Thiago Monteiro', country: 'Brazil', countryFlag: '🇧🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '브라질 출신 좌완 선수로 묵직한 탑스핀과 클레이 코트 적응력이 뛰어납니다.'
+        longBio: '브라질 출신 좌완 선수로 묵직한 탑스핀과 클레이 코트 적응력이 뛰어납니다.',
+    detailedProfile: {
+            oneLineSummary: '치아구 몬테이루(Thiago Monteiro)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>치아구 몬테이루는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '치아구 몬테이루 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '치아구 몬테이루 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'juan-manuel-cerundolo': {
         name: '후안 마누엘 세룬돌로', nameEn: 'Juan Manuel Cerundolo', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '아르헨티나의 좌완 유망주로 변칙적인 전개와 코트 커버가 강점입니다.'
+        longBio: '아르헨티나의 좌완 유망주로 변칙적인 전개와 코트 커버가 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '후안 마누엘 세룬돌로(Juan Manuel Cerundolo)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>후안 마누엘 세룬돌로는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '후안 마누엘 세룬돌로 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '후안 마누엘 세룬돌로 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'facundo-diaz-acosta': {
         name: '파쿤도 디아스 아코스타', nameEn: 'Facundo Diaz Acosta', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '강한 체력과 끈질긴 수비를 바탕으로 꾸준히 순위를 끌어올리는 선수입니다.'
+        longBio: '강한 체력과 끈질긴 수비를 바탕으로 꾸준히 순위를 끌어올리는 선수입니다.',
+    detailedProfile: {
+            oneLineSummary: '파쿤도 디아스 아코스타(Facundo Diaz Acosta)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>파쿤도 디아스 아코스타는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '파쿤도 디아스 아코스타 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '파쿤도 디아스 아코스타 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'marco-trungelliti': {
         name: '마르코 트룽헬리티', nameEn: 'Marco Trungelliti', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '투어 경험이 풍부한 아르헨티나 선수로 클레이에서 경쟁력이 높습니다.'
+        longBio: '투어 경험이 풍부한 아르헨티나 선수로 클레이에서 경쟁력이 높습니다.',
+    detailedProfile: {
+            oneLineSummary: '마르코 트룽헬리티(Marco Trungelliti)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>마르코 트룽헬리티는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '마르코 트룽헬리티 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '마르코 트룽헬리티 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'francesco-maestrelli': {
         name: '프란체스코 마에스트렐리', nameEn: 'Francesco Maestrelli', country: 'Italy', countryFlag: '🇮🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '이탈리아의 차세대 자원으로 파워와 끈기를 겸비한 플레이가 특징입니다.'
+        longBio: '이탈리아의 차세대 자원으로 파워와 끈기를 겸비한 플레이가 특징입니다.',
+    detailedProfile: {
+            oneLineSummary: '프란체스코 마에스트렐리(Francesco Maestrelli)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>프란체스코 마에스트렐리는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '프란체스코 마에스트렐리 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '프란체스코 마에스트렐리 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'luca-van-assche': {
         name: '루카 반 아슈', nameEn: 'Luca Van Assche', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '프랑스 유망주로 안정적인 백핸드와 기민한 풋워크가 강점입니다.'
+        longBio: '프랑스 유망주로 안정적인 백핸드와 기민한 풋워크가 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '루카 반 아슈(Luca Van Assche)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>루카 반 아슈는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '루카 반 아슈 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '루카 반 아슈 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'gabriel-diallo': {
         name: '가브리엘 디알로', nameEn: 'Gabriel Diallo', country: 'Canada', countryFlag: '🇨🇦', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '캐나다 출신의 장신 선수로 강한 서브와 공격 전개가 인상적입니다.'
+        longBio: '캐나다 출신의 장신 선수로 강한 서브와 공격 전개가 인상적입니다.',
+    detailedProfile: {
+            oneLineSummary: '가브리엘 디알로(Gabriel Diallo)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>가브리엘 디알로는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '가브리엘 디알로 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '가브리엘 디알로 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'harold-mayot': {
         name: '아롤드 마요', nameEn: 'Harold Mayot', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '프랑스 선수로 성실한 수비와 안정적인 경기 운영 능력을 보유하고 있습니다.'
+        longBio: '프랑스 선수로 성실한 수비와 안정적인 경기 운영 능력을 보유하고 있습니다.',
+    detailedProfile: {
+            oneLineSummary: '아롤드 마요(Harold Mayot)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>아롤드 마요는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '아롤드 마요 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '아롤드 마요 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'terence-atmane': {
         name: '테랑스 아트만', nameEn: 'Terence Atmane', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '좌완 특유의 각도와 적극적인 공격 전개를 활용하는 프랑스 선수입니다.'
+        longBio: '좌완 특유의 각도와 적극적인 공격 전개를 활용하는 프랑스 선수입니다.',
+    detailedProfile: {
+            oneLineSummary: '테랑스 아트만(Terence Atmane)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>테랑스 아트만는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '테랑스 아트만 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '테랑스 아트만 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'kyrian-jacquet': {
         name: '키리안 자케', nameEn: 'Kyrian Jacquet', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '프랑스 출신으로 베이스라인에서의 안정감과 끈질긴 수비가 강점입니다.'
+        longBio: '프랑스 출신으로 베이스라인에서의 안정감과 끈질긴 수비가 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '키리안 자케(Kyrian Jacquet)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>키리안 자케는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '키리안 자케 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '키리안 자케 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'beibit-zhukayev': {
         name: '베이비트 주카예프', nameEn: 'Beibit Zhukayev', country: 'Kazakhstan', countryFlag: '🇰🇿', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '카자흐스탄 출신의 장신 선수로 서브와 첫 공격의 완성도가 높습니다.'
+        longBio: '카자흐스탄 출신의 장신 선수로 서브와 첫 공격의 완성도가 높습니다.',
+    detailedProfile: {
+            oneLineSummary: '베이비트 주카예프(Beibit Zhukayev)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>베이비트 주카예프는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '베이비트 주카예프 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '베이비트 주카예프 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'murkel-dellien': {
         name: '무르켈 델리엔', nameEn: 'Murkel Dellien', country: 'Bolivia', countryFlag: '🇧🇴', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '볼리비아 출신 선수로 클레이 코트 적응력과 수비 집중력이 좋습니다.'
+        longBio: '볼리비아 출신 선수로 클레이 코트 적응력과 수비 집중력이 좋습니다.',
+    detailedProfile: {
+            oneLineSummary: '무르켈 델리엔(Murkel Dellien)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>무르켈 델리엔는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '무르켈 델리엔 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '무르켈 델리엔 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'adolfo-daniel-vallejo': {
         name: '아돌포 다니엘 바예호', nameEn: 'Adolfo Daniel Vallejo', country: 'Paraguay', countryFlag: '🇵🇾', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '파라과이 유망주로 공격적인 베이스라인 전개를 선호합니다.'
+        longBio: '파라과이 유망주로 공격적인 베이스라인 전개를 선호합니다.',
+    detailedProfile: {
+            oneLineSummary: '아돌포 다니엘 바예호(Adolfo Daniel Vallejo)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>아돌포 다니엘 바예호는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '아돌포 다니엘 바예호 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '아돌포 다니엘 바예호 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'james-mccabe': {
         name: '제임스 맥케이브', nameEn: 'James McCabe', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '호주 선수로 서브 게임의 완성도와 하드코트 적응력이 강점입니다.'
+        longBio: '호주 선수로 서브 게임의 완성도와 하드코트 적응력이 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '제임스 맥케이브(James McCabe)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>제임스 맥케이브는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '제임스 맥케이브 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '제임스 맥케이브 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'liam-draxl': {
         name: '리엄 드락슬', nameEn: 'Liam Draxl', country: 'Canada', countryFlag: '🇨🇦', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '캐나다 선수로 빠른 템포의 랠리와 공격 전환이 장점입니다.'
+        longBio: '캐나다 선수로 빠른 템포의 랠리와 공격 전환이 장점입니다.',
+    detailedProfile: {
+            oneLineSummary: '리엄 드락슬(Liam Draxl)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>리엄 드락슬는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '리엄 드락슬 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '리엄 드락슬 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'alibek-kachmazov': {
         name: '알리벡 카치마조프', nameEn: 'Alibek Kachmazov', country: 'Russia', countryFlag: '🇷🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '러시아 출신 유망주로 파워 스트로크와 과감한 전개를 구사합니다.'
+        longBio: '러시아 출신 유망주로 파워 스트로크와 과감한 전개를 구사합니다.',
+    detailedProfile: {
+            oneLineSummary: '알리벡 카치마조프(Alibek Kachmazov)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>알리벡 카치마조프는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '알리벡 카치마조프 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '알리벡 카치마조프 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'clement-chidekh': {
         name: '클레망 치데흐', nameEn: 'Clement Chidekh', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '프랑스 선수로 탄탄한 랠리 능력과 성장 가능성이 주목받고 있습니다.'
+        longBio: '프랑스 선수로 탄탄한 랠리 능력과 성장 가능성이 주목받고 있습니다.',
+    detailedProfile: {
+            oneLineSummary: '클레망 치데흐(Clement Chidekh)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>클레망 치데흐는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '클레망 치데흐 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '클레망 치데흐 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'mark-lajal': {
         name: '마르크 라얄', nameEn: 'Mark Lajal', country: 'Estonia', countryFlag: '🇪🇪', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '에스토니아 출신으로 안정적인 스트로크와 경기 운영이 돋보입니다.'
+        longBio: '에스토니아 출신으로 안정적인 스트로크와 경기 운영이 돋보입니다.',
+    detailedProfile: {
+            oneLineSummary: '마르크 라얄(Mark Lajal)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>마르크 라얄는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '마르크 라얄 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '마르크 라얄 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'luca-preda': {
         name: '루카 프레다', nameEn: 'Luca Preda', country: 'Romania', countryFlag: '🇷🇴', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '루마니아 유망주로 꾸준한 수비와 집중력 있는 플레이를 보여줍니다.'
+        longBio: '루마니아 유망주로 꾸준한 수비와 집중력 있는 플레이를 보여줍니다.',
+    detailedProfile: {
+            oneLineSummary: '루카 프레다(Luca Preda)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>루카 프레다는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '루카 프레다 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '루카 프레다 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'joel-schwaerzler': {
         name: '요엘 슈베르츨러', nameEn: 'Joel Schwaerzler', country: 'Austria', countryFlag: '🇦🇹', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '오스트리아 유망주로 좌완 특유의 각도와 공격 전개가 강점입니다.'
+        longBio: '오스트리아 유망주로 좌완 특유의 각도와 공격 전개가 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '요엘 슈베르츨러(Joel Schwaerzler)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>요엘 슈베르츨러는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '요엘 슈베르츨러 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '요엘 슈베르츨러 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'moerani-bouzige': {
         name: '모에라니 부지그', nameEn: 'Moerani Bouzige', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '호주 선수로 하드코트에서의 템포 플레이와 공격성이 돋보입니다.'
+        longBio: '호주 선수로 하드코트에서의 템포 플레이와 공격성이 돋보입니다.',
+    detailedProfile: {
+            oneLineSummary: '모에라니 부지그(Moerani Bouzige)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>모에라니 부지그는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '모에라니 부지그 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '모에라니 부지그 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'rei-sakamoto': {
         name: '레이 사카모토', nameEn: 'Rei Sakamoto', country: 'Japan', countryFlag: '🇯🇵', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '일본의 차세대 유망주로 빠른 발과 안정적인 스트로크가 장점입니다.'
+        longBio: '일본의 차세대 유망주로 빠른 발과 안정적인 스트로크가 장점입니다.',
+    detailedProfile: {
+            oneLineSummary: '레이 사카모토(Rei Sakamoto)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>레이 사카모토는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '레이 사카모토 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '레이 사카모토 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'hayden-jones': {
         name: '헤이든 존스', nameEn: 'Hayden Jones', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '호주 유망주로 공격적인 리턴과 적극적인 경기 운영을 보여줍니다.'
+        longBio: '호주 유망주로 공격적인 리턴과 적극적인 경기 운영을 보여줍니다.',
+    detailedProfile: {
+            oneLineSummary: '헤이든 존스(Hayden Jones)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>헤이든 존스는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '헤이든 존스 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '헤이든 존스 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'andres-santamarta-roig': {
         name: '안드레스 산타마르타 로익', nameEn: 'Andres Santamarta Roig', country: 'Spain', countryFlag: '🇪🇸', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '스페인 선수로 클레이 기반의 탄탄한 베이스라인 플레이가 강점입니다.'
+        longBio: '스페인 선수로 클레이 기반의 탄탄한 베이스라인 플레이가 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '안드레스 산타마르타 로익(Andres Santamarta Roig)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>안드레스 산타마르타 로익는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>안정적인 베이스라인 운영형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '안드레스 산타마르타 로익 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '안드레스 산타마르타 로익 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'tyra-caterina-grant': {
         name: '타이라 카테리나 그랜트', nameEn: 'Tyra Caterina Grant', country: 'Italy', countryFlag: '🇮🇹', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '이탈리아 유망주로 공격적인 스트로크와 빠른 성장세가 기대되는 선수입니다.'
+        longBio: '이탈리아 유망주로 공격적인 스트로크와 빠른 성장세가 기대되는 선수입니다.',
+    detailedProfile: {
+            oneLineSummary: '타이라 카테리나 그랜트(Tyra Caterina Grant)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>타이라 카테리나 그랜트는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '타이라 카테리나 그랜트 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '타이라 카테리나 그랜트 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'julieta-pareja': {
         name: '줄리에타 파레하', nameEn: 'Julieta Pareja', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '미국 출신 유망주로 안정적인 랠리와 적극적인 공격 전환이 강점입니다.'
+        longBio: '미국 출신 유망주로 안정적인 랠리와 적극적인 공격 전환이 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '줄리에타 파레하(Julieta Pareja)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>줄리에타 파레하는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '줄리에타 파레하 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '줄리에타 파레하 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'teodora-kostovic': {
         name: '테오도라 코스토비치', nameEn: 'Teodora Kostovic', country: 'Serbia', countryFlag: '🇷🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '세르비아 유망주로 탄탄한 기본기와 끈기 있는 플레이가 특징입니다.'
+        longBio: '세르비아 유망주로 탄탄한 기본기와 끈기 있는 플레이가 특징입니다.',
+    detailedProfile: {
+            oneLineSummary: '테오도라 코스토비치(Teodora Kostovic)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>테오도라 코스토비치는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '테오도라 코스토비치 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '테오도라 코스토비치 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'celine-naef': {
         name: '셀린 네프', nameEn: 'Celine Naef', country: 'Switzerland', countryFlag: '🇨🇭', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '스위스 선수로 안정적인 경기 운영과 균형 잡힌 샷 구성이 장점입니다.'
+        longBio: '스위스 선수로 안정적인 경기 운영과 균형 잡힌 샷 구성이 장점입니다.',
+    detailedProfile: {
+            oneLineSummary: '셀린 네프(Celine Naef)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>셀린 네프는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '셀린 네프 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '셀린 네프 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'hannah-klugman': {
         name: '해나 클루그먼', nameEn: 'Hannah Klugman', country: 'Great Britain', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '영국 유망주로 빠른 발과 과감한 공격 시도가 돋보입니다.'
+        longBio: '영국 유망주로 빠른 발과 과감한 공격 시도가 돋보입니다.',
+    detailedProfile: {
+            oneLineSummary: '해나 클루그먼(Hannah Klugman)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>해나 클루그먼는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '해나 클루그먼 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '해나 클루그먼 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'mika-stojsavljevic': {
         name: '미카 스토이사블레비치', nameEn: 'Mika Stojsavljevic', country: 'Great Britain', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '영국 유망주로 균형 잡힌 랠리 전개와 성장 잠재력이 높은 선수입니다.'
+        longBio: '영국 유망주로 균형 잡힌 랠리 전개와 성장 잠재력이 높은 선수입니다.',
+    detailedProfile: {
+            oneLineSummary: '미카 스토이사블레비치(Mika Stojsavljevic)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>미카 스토이사블레비치는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '미카 스토이사블레비치 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '미카 스토이사블레비치 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'jones-mingge-xu': {
         name: '존스 밍거 쉬', nameEn: 'Jones Mingge Xu', country: 'Great Britain', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '영국 기반 유망주로 안정적인 스트로크와 침착한 경기 운영이 특징입니다.'
+        longBio: '영국 기반 유망주로 안정적인 스트로크와 침착한 경기 운영이 특징입니다.',
+    detailedProfile: {
+            oneLineSummary: '존스 밍거 쉬(Jones Mingge Xu)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>존스 밍거 쉬는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '존스 밍거 쉬 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '존스 밍거 쉬 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'isabella-kruger': {
         name: '이사벨라 크루거', nameEn: 'Isabella Kruger', country: 'South Africa', countryFlag: '🇿🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '남아공 선수로 힘 있는 스트로크와 근성 있는 수비 플레이를 보입니다.'
+        longBio: '남아공 선수로 힘 있는 스트로크와 근성 있는 수비 플레이를 보입니다.',
+    detailedProfile: {
+            oneLineSummary: '이사벨라 크루거(Isabella Kruger)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>이사벨라 크루거는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '이사벨라 크루거 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '이사벨라 크루거 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'petra-marcinko': {
         name: '페트라 마르친코', nameEn: 'Petra Marcinko', country: 'Croatia', countryFlag: '🇭🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '크로아티아 유망주로 공격 전환 타이밍과 랠리 집중력이 강점입니다.'
+        longBio: '크로아티아 유망주로 공격 전환 타이밍과 랠리 집중력이 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '페트라 마르친코(Petra Marcinko)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>페트라 마르친코는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '페트라 마르친코 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '페트라 마르친코 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'lexie-stevens': {
         name: '렉시 스티븐스', nameEn: 'Lexie Stevens', country: 'Netherlands', countryFlag: '🇳🇱', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '네덜란드 선수로 하드코트 기반의 빠른 템포 경기 운영이 특징입니다.'
+        longBio: '네덜란드 선수로 하드코트 기반의 빠른 템포 경기 운영이 특징입니다.',
+    detailedProfile: {
+            oneLineSummary: '렉시 스티븐스(Lexie Stevens)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>렉시 스티븐스는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '렉시 스티븐스 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '렉시 스티븐스 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'talia-gibson': {
         name: '탈리아 깁슨', nameEn: 'Talia Gibson', country: 'Australia', countryFlag: '🇦🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '호주 선수로 공격적인 베이스라인 플레이와 활동량이 장점입니다.'
+        longBio: '호주 선수로 공격적인 베이스라인 플레이와 활동량이 장점입니다.',
+    detailedProfile: {
+            oneLineSummary: '탈리아 깁슨(Talia Gibson)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>탈리아 깁슨는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '탈리아 깁슨 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '탈리아 깁슨 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'maya-joint': {
         name: '마야 조인트', nameEn: 'Maya Joint', country: 'Australia', countryFlag: '🇦🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '호주 유망주로 빠른 발과 과감한 샷 선택이 눈에 띄는 선수입니다.'
+        longBio: '호주 유망주로 빠른 발과 과감한 샷 선택이 눈에 띄는 선수입니다.',
+    detailedProfile: {
+            oneLineSummary: '마야 조인트(Maya Joint)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>마야 조인트는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '마야 조인트 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '마야 조인트 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'ina-shmidt': {
         name: '이나 슈미트', nameEn: 'Ina Shmidt', country: 'Germany', countryFlag: '🇩🇪', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '독일 선수로 안정적인 랠리와 꾸준한 경기 집중력이 강점입니다.'
+        longBio: '독일 선수로 안정적인 랠리와 꾸준한 경기 집중력이 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '이나 슈미트(Ina Shmidt)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>이나 슈미트는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '이나 슈미트 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '이나 슈미트 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'elizara-yaneva': {
         name: '엘리자라 야네바', nameEn: 'Elizara Yaneva', country: 'Bulgaria', countryFlag: '🇧🇬', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '불가리아 유망주로 부드러운 스트로크 리듬과 경기 운영 능력이 돋보입니다.'
+        longBio: '불가리아 유망주로 부드러운 스트로크 리듬과 경기 운영 능력이 돋보입니다.',
+    detailedProfile: {
+            oneLineSummary: '엘리자라 야네바(Elizara Yaneva)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>엘리자라 야네바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '엘리자라 야네바 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '엘리자라 야네바 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'renata-jamrichova': {
         name: '레나타 잠리호바', nameEn: 'Renata Jamrichova', country: 'Slovakia', countryFlag: '🇸🇰', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '슬로바키아 유망주로 좌완 특유의 각도와 클레이 코트 경쟁력이 좋습니다.'
+        longBio: '슬로바키아 유망주로 좌완 특유의 각도와 클레이 코트 경쟁력이 좋습니다.',
+    detailedProfile: {
+            oneLineSummary: '레나타 잠리호바(Renata Jamrichova)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>레나타 잠리호바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '레나타 잠리호바 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '레나타 잠리호바 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'victoria-jimenez-kasintseva': {
         name: '빅토리아 히메네스 카신체바', nameEn: 'Victoria Jimenez Kasintseva', country: 'Andorra', countryFlag: '🇦🇩', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '안도라 출신의 유망주로 안정적인 수비와 영리한 포인트 운영이 강점입니다.'
+        longBio: '안도라 출신의 유망주로 안정적인 수비와 영리한 포인트 운영이 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '빅토리아 히메네스 카신체바(Victoria Jimenez Kasintseva)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>빅토리아 히메네스 카신체바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '빅토리아 히메네스 카신체바 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '빅토리아 히메네스 카신체바 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'anna-siskova': {
         name: '안나 시스코바', nameEn: 'Anna Siskova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '체코 선수로 복식 경험을 바탕으로 한 네트 감각과 경기 운영이 좋습니다.'
+        longBio: '체코 선수로 복식 경험을 바탕으로 한 네트 감각과 경기 운영이 좋습니다.',
+    detailedProfile: {
+            oneLineSummary: '안나 시스코바(Anna Siskova)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>안나 시스코바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '안나 시스코바 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '안나 시스코바 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'monika-ekstrand': {
         name: '모니카 에크스트란드', nameEn: 'Monika Ekstrand', country: 'Sweden', countryFlag: '🇸🇪', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '스웨덴 출신 유망주로 안정적인 샷 선택과 꾸준한 경기력을 보여줍니다.'
+        longBio: '스웨덴 출신 유망주로 안정적인 샷 선택과 꾸준한 경기력을 보여줍니다.',
+    detailedProfile: {
+            oneLineSummary: '모니카 에크스트란드(Monika Ekstrand)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>모니카 에크스트란드는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '모니카 에크스트란드 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '모니카 에크스트란드 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'laia-petretic': {
         name: '라이아 페트레틱', nameEn: 'Laia Petretic', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '프랑스 유망주로 빠른 수비 전환과 성실한 플레이가 인상적입니다.'
+        longBio: '프랑스 유망주로 빠른 수비 전환과 성실한 플레이가 인상적입니다.',
+    detailedProfile: {
+            oneLineSummary: '라이아 페트레틱(Laia Petretic)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>라이아 페트레틱는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '라이아 페트레틱 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '라이아 페트레틱 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'iana-loredana-rosca': {
         name: '이아나 로레다나 로스카', nameEn: 'Iana Loredana Rosca', country: 'Romania', countryFlag: '🇷🇴', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '루마니아 선수로 꾸준한 랠리 전개와 경기 집중력이 강점입니다.'
+        longBio: '루마니아 선수로 꾸준한 랠리 전개와 경기 집중력이 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '이아나 로레다나 로스카(Iana Loredana Rosca)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>이아나 로레다나 로스카는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '이아나 로레다나 로스카 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '이아나 로레다나 로스카 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'francesca-jones': {
         name: '프란체스카 존스', nameEn: 'Francesca Jones', country: 'Great Britain', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '영국 선수로 강인한 멘탈과 투지 넘치는 경기 운영이 많은 팬의 지지를 받습니다.'
+        longBio: '영국 선수로 강인한 멘탈과 투지 넘치는 경기 운영이 많은 팬의 지지를 받습니다.',
+    detailedProfile: {
+            oneLineSummary: '프란체스카 존스(Francesca Jones)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>프란체스카 존스는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '프란체스카 존스 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '프란체스카 존스 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'emi-ema': {
         name: '에미 에마', nameEn: 'Emi Ema', country: 'Japan', countryFlag: '🇯🇵', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '일본 선수로 기민한 풋워크와 안정적인 베이스라인 전개가 강점입니다.'
+        longBio: '일본 선수로 기민한 풋워크와 안정적인 베이스라인 전개가 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '에미 에마(Emi Ema)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>에미 에마는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '에미 에마 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '에미 에마 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'jessika-ponchet': {
         name: '제시카 퐁셰', nameEn: 'Jessika Ponchet', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '프랑스 선수로 공격 전환 타이밍이 좋고 하드코트에서 경쟁력을 보입니다.'
+        longBio: '프랑스 선수로 공격 전환 타이밍이 좋고 하드코트에서 경쟁력을 보입니다.',
+    detailedProfile: {
+            oneLineSummary: '제시카 퐁셰(Jessika Ponchet)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>제시카 퐁셰는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '제시카 퐁셰 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '제시카 퐁셰 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'simona-waltert': {
         name: '시모나 발테르트', nameEn: 'Simona Waltert', country: 'Switzerland', countryFlag: '🇨🇭', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '스위스 선수로 탄탄한 기본기와 균형 잡힌 경기 운영이 장점입니다.'
+        longBio: '스위스 선수로 탄탄한 기본기와 균형 잡힌 경기 운영이 장점입니다.',
+    detailedProfile: {
+            oneLineSummary: '시모나 발테르트(Simona Waltert)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>시모나 발테르트는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '시모나 발테르트 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '시모나 발테르트 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'lian-tran': {
         name: '리안 트란', nameEn: 'Lian Tran', country: 'Netherlands', countryFlag: '🇳🇱', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
-        longBio: '네덜란드 선수로 좌완 각도 활용과 점진적 경기 운영이 돋보입니다.'
+        longBio: '네덜란드 선수로 좌완 각도 활용과 점진적 경기 운영이 돋보입니다.',
+    detailedProfile: {
+            oneLineSummary: '리안 트란(Lian Tran)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>리안 트란는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '리안 트란 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '리안 트란 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'sarah-ilev': {
         name: '사라 일레브', nameEn: 'Sarah Ilev', country: 'Australia', countryFlag: '🇦🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '호주 유망주로 공격적인 리턴과 에너지 넘치는 플레이가 특징입니다.'
+        longBio: '호주 유망주로 공격적인 리턴과 에너지 넘치는 플레이가 특징입니다.',
+    detailedProfile: {
+            oneLineSummary: '사라 일레브(Sarah Ilev)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>사라 일레브는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '사라 일레브 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '사라 일레브 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'linda-fruhvirtova': {
         name: '린다 프루흐비르토바', nameEn: 'Linda Fruhvirtova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '체코 출신의 대표 유망주로 빠른 템포의 공격 전개와 성장 잠재력이 큽니다.'
+        longBio: '체코 출신의 대표 유망주로 빠른 템포의 공격 전개와 성장 잠재력이 큽니다.',
+    detailedProfile: {
+            oneLineSummary: '린다 프루흐비르토바(Linda Fruhvirtova)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>린다 프루흐비르토바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '린다 프루흐비르토바 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '린다 프루흐비르토바 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'brenda-fruhvirtova': {
         name: '브렌다 프루흐비르토바', nameEn: 'Brenda Fruhvirtova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '체코 유망주로 공격성 높은 스트로크와 자신감 있는 경기 운영이 강점입니다.'
+        longBio: '체코 유망주로 공격성 높은 스트로크와 자신감 있는 경기 운영이 강점입니다.',
+    detailedProfile: {
+            oneLineSummary: '브렌다 프루흐비르토바(Brenda Fruhvirtova)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>브렌다 프루흐비르토바는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '브렌다 프루흐비르토바 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '브렌다 프루흐비르토바 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'victoria-mboko': {
         name: '빅토리아 음보코', nameEn: 'Victoria Mboko', country: 'Canada', countryFlag: '🇨🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '캐나다 유망주로 파워와 스피드를 겸비한 공격적인 플레이를 보여줍니다.'
+        longBio: '캐나다 유망주로 파워와 스피드를 겸비한 공격적인 플레이를 보여줍니다.',
+    detailedProfile: {
+            oneLineSummary: '빅토리아 음보코(Victoria Mboko)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>빅토리아 음보코는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '빅토리아 음보코 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '빅토리아 음보코 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
     'liv-hovde': {
         name: '리브 호브데', nameEn: 'Liv Hovde', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '미국 유망주로 탄탄한 기본기와 빠른 코트 적응력이 주목받고 있습니다.'
+        longBio: '미국 유망주로 탄탄한 기본기와 빠른 코트 적응력이 주목받고 있습니다.',
+    detailedProfile: {
+            oneLineSummary: '리브 호브데(Liv Hovde)의 성장 흐름과 플레이 강점을 빠르게 확인할 수 있는 요약 프로필.',
+            whyNotable: `
+                <p>리브 호브데는 최근 투어/챌린저 무대에서 꾸준히 경험치를 쌓으며 경쟁력을 높이고 있는 선수입니다.</p>
+                <p>핵심은 <strong>랠리 안정성</strong>과 <strong>포인트 운영</strong>입니다. 무리한 한 방보다 전개 완성도를 우선하는 유형으로 평가됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>템포 조절이 좋은 올라운드형</strong></p>
+                <p>기본적으로 서비스 게임에서 리스크를 관리하고, 리턴 게임에서는 긴 랠리를 통해 실수를 유도하는 성향이 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 7.5, description: '첫 서브 성공률 관리에 강점.' },
+                { name: '리턴 (Return)', score: 7.5, description: '리턴 후 랠리 연결이 안정적.' },
+                { name: '수비 (Defense)', score: 7.5, description: '코트 커버와 리듬 유지 능력.' },
+                { name: '공격 전환 (Transition)', score: 7.0, description: '찬스볼에서 전진 압박 시도.' },
+                { name: '멘탈 (Mental)', score: 7.5, description: '접전 상황에서 집중력 유지.' },
+                { name: '체력 (Stamina)', score: 7.5, description: '긴 경기에서 페이스 관리.' }
+            ],
+            growthStory: `
+                <p>주니어-퓨처스-챌린저 단계를 거치며 경기 경험을 축적해온 선수입니다. 최근에는 상위 레벨 대회 출전 빈도를 늘리며 레벨업을 시도하고 있습니다.</p>
+            `,
+            fanAppeal: `
+                <p>과한 감정 기복 없이 플레이 플랜을 유지하는 모습이 장점으로 꼽힙니다. 경기 중 전술 변화를 차분히 가져가는 운영형 매력이 있습니다.</p>
+            `,
+            recentForm: `
+                <p>최근 일정에서는 코트별 적응력과 서브-리턴 밸런스를 개선하는 흐름이 확인됩니다. 랭킹 포인트를 안정적으로 쌓는 단계입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '리브 호브데 선수의 강점은 무엇인가요?',
+                    answer: '기본기 안정성과 랠리 운영 능력이 강점입니다. 무리한 공격보다 포인트 구조를 만들어가는 플레이를 선호합니다.'
+                },
+                {
+                    question: '리브 호브데 선수는 어떤 팬에게 추천되나요?',
+                    answer: '전술적인 경기 운영과 꾸준한 성장 과정을 좋아하는 팬에게 흥미로운 선수입니다.'
+                }
+            ]
+        }
     },
 };
 
