@@ -18,12 +18,12 @@ export const metadata: Metadata = {
   description: "후베르트 후르카츠 (Hubert Hurkacz) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['후베르트 후르카츠', 'Hubert Hurkacz', '테니스', 'ATP', '플레이스타일', '폴란드 테니스', '서브&발리', '탄력과 절제'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/hubert-hurkacz',
+    canonical: 'https://www.tennisfrens.com/players/hubert-hurkacz',
   },
   openGraph: {
     title: '후베르트 후르카츠 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '후베르트 후르카츠의 서브&발리 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/hubert-hurkacz',
+    url: 'https://www.tennisfrens.com/players/hubert-hurkacz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -117,9 +117,9 @@ export default function HubertHurkaczPage() {
 
         <BreadcrumbSchema
           items={[
-            { name: '홈', item: 'https://tennisfriends.co.kr' },
-            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-            { name: '후베르트 후르카츠', item: 'https://tennisfriends.co.kr/players/hubert-hurkacz' },
+            { name: '홈', item: 'https://www.tennisfrens.com' },
+            { name: '선수', item: 'https://www.tennisfrens.com/players' },
+            { name: '후베르트 후르카츠', item: 'https://www.tennisfrens.com/players/hubert-hurkacz' },
           ]}
         />
         <FAQSchema faqs={faqs} />

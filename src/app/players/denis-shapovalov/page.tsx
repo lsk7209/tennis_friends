@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: "데니스 샤포발로프 (Denis Shapovalov) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['데니스 샤포발로프', 'Denis Shapovalov', '테니스', 'ATP', '플레이스타일', '캐나다 테니스', '공격형', '좌완 서브'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/denis-shapovalov',
+    canonical: 'https://www.tennisfrens.com/players/denis-shapovalov',
   },
   openGraph: {
     title: '데니스 샤포발로프 — 세계랭킹 23위 | 플레이스타일·명장면·최근 경기력',
     description: '데니스 샤포발로프의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/denis-shapovalov',
+    url: 'https://www.tennisfrens.com/players/denis-shapovalov',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -71,9 +71,9 @@ export default function DenisShapovalovPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '데니스 샤포발로프', item: 'https://tennisfriends.co.kr/players/denis-shapovalov' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '데니스 샤포발로프', item: 'https://www.tennisfrens.com/players/denis-shapovalov' },
         ]}
       />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
@@ -132,9 +132,17 @@ export default function DenisShapovalovPage() {
             </div>
 
             <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>샤포발로프가 세계 상위권을 유지하는 힘은 강력한 포핸드, 좌완 서브, 그리고 빠른 발에서 나온다.</p>
+            <p>샤포발로프의 상위권 경쟁력은 강력한 포핸드, 좌완 서브, 그리고 빠른 발에서 나온다.</p>
 
-            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
+            
+            <h3>최근 12개월 경기 인사이트</h3>
+            <p>최근 12개월 기준으로 보면, 이 선수의 성과는 단순 승패보다 <strong>서브 게임 유지율, 리턴 게임에서의 브레이크 기회 전환율, 타이브레이크 승률</strong>에서 강하게 드러납니다. 특히 압박 구간(30-30, 듀스, 브레이크 포인트)에서 어떤 선택을 하느냐가 결과를 크게 좌우하며, 상위권 선수일수록 이 구간 의사결정이 안정적입니다.</p>
+            <p>코트별로는 하드 코트에서 템포와 볼 스피드를 주도하고, 클레이에서는 랠리 길이를 늘려 상대의 체력과 패턴을 흔드는 운영이 중요합니다. 잔디에서는 첫 두세 샷의 질이 승부를 결정하는 경우가 많아 <strong>서브+1, 리턴+1 완성도</strong>가 핵심 체크포인트입니다. 이 페이지는 해당 관점으로 경기력을 해석해 실전 이해도를 높이도록 구성했습니다.</p>
+
+            <h3>실전 전술 체크포인트</h3>
+            <p>실전에서는 ‘좋은 샷 하나’보다 <strong>연속된 선택의 일관성</strong>이 더 중요합니다. 예를 들어 1서브 성공률이 내려갈 때는 무리한 에이스 시도보다 리턴을 어렵게 만드는 코스 분산이 효율적이고, 리턴 게임에서는 깊이 확보 후 중앙 회귀 패턴으로 실수를 줄이는 전략이 유효합니다. 이 선수를 분석할 때도 위너 수치만 보지 말고, 언포스드 에러와 포인트당 샷 수를 함께 보는 것이 정확합니다.</p>
+            <p>검색 독자 관점에서 자주 묻는 질문은 ‘어떤 코트에서 강한가’, ‘중요 포인트에서 무엇이 다른가’, ‘지금 폼이 상승세인가’입니다. 이 페이지는 해당 질문에 답할 수 있도록 코트별 패턴·압박 구간 선택·최근 흐름을 묶어 해석하는 기준을 제공합니다.</p>
+<h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
             <p>샤포발로프의 커리어를 상징하는 경기는 최근 몇 시즌의 큰 대회들이다.</p>
 
             <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "카스페르 루드 (Casper Ruud) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['카스페르 루드', 'Casper Ruud', '테니스', 'ATP', '플레이스타일', '노르웨이 테니스', '탑스핀', '클레이 코트'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/casper-ruud',
+    canonical: 'https://www.tennisfrens.com/players/casper-ruud',
   },
   openGraph: {
     title: '카스페르 루드 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '카스페르 루드의 안정적인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/casper-ruud',
+    url: 'https://www.tennisfrens.com/players/casper-ruud',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function CasperRuudPage() {
           award={[
             'Grand Slam Finalist (3 times)', 'ATP 500 Champion (multiple titles)'
           ]}
-          url="https://tennisfriends.co.kr/players/casper-ruud"
+          url="https://www.tennisfrens.com/players/casper-ruud"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '카스페르 루드', item: 'https://tennisfriends.co.kr/players/casper-ruud' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '카스페르 루드', item: 'https://www.tennisfrens.com/players/casper-ruud' },
         ]}
       />
       <FAQSchema faqs={faqs} />
