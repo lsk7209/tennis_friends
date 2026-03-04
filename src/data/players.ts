@@ -10836,6 +10836,247 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
+
+    'jakub-paul': {
+        name: '야쿱 파울', nameEn: 'Jakub Paul', country: 'Switzerland', countryFlag: '🇨🇭', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '스위스 출신 선수로 안정적인 베이스라인 플레이와 꾸준한 경기 운영이 강점입니다.'
+    },
+    'dalibor-svrcina': {
+        name: '달리보르 스브르치나', nameEn: 'Dalibor Svrcina', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '체코의 유망주로 탄탄한 랠리 능력과 클레이 코트 적응력이 좋습니다.'
+    },
+    'vilius-gaubas': {
+        name: '빌리우스 가우바스', nameEn: 'Vilius Gaubas', country: 'Lithuania', countryFlag: '🇱🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '리투아니아 출신 선수로 빠른 수비 전환과 점진적인 성장세를 보이고 있습니다.'
+    },
+    'nico-hipfl': {
+        name: '니코 힙플', nameEn: 'Nico Hipfl', country: 'Austria', countryFlag: '🇦🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '오스트리아 선수로 안정적인 스트로크와 경기 집중력이 장점입니다.'
+    },
+    'henrique-rocha': {
+        name: '엔히키 호샤', nameEn: 'Henrique Rocha', country: 'Portugal', countryFlag: '🇵🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '포르투갈 출신의 젊은 선수로 성실한 수비와 클레이 기반 경기 운영이 돋보입니다.'
+    },
+    'federico-coria': {
+        name: '페데리코 코리아', nameEn: 'Federico Coria', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '아르헨티나의 클레이 코트 스페셜리스트로 긴 랠리에서 강점을 보입니다.'
+    },
+    'thiago-monteiro': {
+        name: '치아구 몬테이루', nameEn: 'Thiago Monteiro', country: 'Brazil', countryFlag: '🇧🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '브라질 출신 좌완 선수로 묵직한 탑스핀과 클레이 코트 적응력이 뛰어납니다.'
+    },
+    'juan-manuel-cerundolo': {
+        name: '후안 마누엘 세룬돌로', nameEn: 'Juan Manuel Cerundolo', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '아르헨티나의 좌완 유망주로 변칙적인 전개와 코트 커버가 강점입니다.'
+    },
+    'facundo-diaz-acosta': {
+        name: '파쿤도 디아스 아코스타', nameEn: 'Facundo Diaz Acosta', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '강한 체력과 끈질긴 수비를 바탕으로 꾸준히 순위를 끌어올리는 선수입니다.'
+    },
+    'marco-trungelliti': {
+        name: '마르코 트룽헬리티', nameEn: 'Marco Trungelliti', country: 'Argentina', countryFlag: '🇦🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '투어 경험이 풍부한 아르헨티나 선수로 클레이에서 경쟁력이 높습니다.'
+    },
+    'francesco-maestrelli': {
+        name: '프란체스코 마에스트렐리', nameEn: 'Francesco Maestrelli', country: 'Italy', countryFlag: '🇮🇹', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '이탈리아의 차세대 자원으로 파워와 끈기를 겸비한 플레이가 특징입니다.'
+    },
+    'luca-van-assche': {
+        name: '루카 반 아슈', nameEn: 'Luca Van Assche', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '프랑스 유망주로 안정적인 백핸드와 기민한 풋워크가 강점입니다.'
+    },
+    'gabriel-diallo': {
+        name: '가브리엘 디알로', nameEn: 'Gabriel Diallo', country: 'Canada', countryFlag: '🇨🇦', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '캐나다 출신의 장신 선수로 강한 서브와 공격 전개가 인상적입니다.'
+    },
+    'harold-mayot': {
+        name: '아롤드 마요', nameEn: 'Harold Mayot', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '프랑스 선수로 성실한 수비와 안정적인 경기 운영 능력을 보유하고 있습니다.'
+    },
+    'terence-atmane': {
+        name: '테랑스 아트만', nameEn: 'Terence Atmane', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '좌완 특유의 각도와 적극적인 공격 전개를 활용하는 프랑스 선수입니다.'
+    },
+    'kyrian-jacquet': {
+        name: '키리안 자케', nameEn: 'Kyrian Jacquet', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '프랑스 출신으로 베이스라인에서의 안정감과 끈질긴 수비가 강점입니다.'
+    },
+    'beibit-zhukayev': {
+        name: '베이비트 주카예프', nameEn: 'Beibit Zhukayev', country: 'Kazakhstan', countryFlag: '🇰🇿', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '카자흐스탄 출신의 장신 선수로 서브와 첫 공격의 완성도가 높습니다.'
+    },
+    'murkel-dellien': {
+        name: '무르켈 델리엔', nameEn: 'Murkel Dellien', country: 'Bolivia', countryFlag: '🇧🇴', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '볼리비아 출신 선수로 클레이 코트 적응력과 수비 집중력이 좋습니다.'
+    },
+    'adolfo-daniel-vallejo': {
+        name: '아돌포 다니엘 바예호', nameEn: 'Adolfo Daniel Vallejo', country: 'Paraguay', countryFlag: '🇵🇾', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '파라과이 유망주로 공격적인 베이스라인 전개를 선호합니다.'
+    },
+    'james-mccabe': {
+        name: '제임스 맥케이브', nameEn: 'James McCabe', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '호주 선수로 서브 게임의 완성도와 하드코트 적응력이 강점입니다.'
+    },
+    'liam-draxl': {
+        name: '리엄 드락슬', nameEn: 'Liam Draxl', country: 'Canada', countryFlag: '🇨🇦', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '캐나다 선수로 빠른 템포의 랠리와 공격 전환이 장점입니다.'
+    },
+    'alibek-kachmazov': {
+        name: '알리벡 카치마조프', nameEn: 'Alibek Kachmazov', country: 'Russia', countryFlag: '🇷🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '러시아 출신 유망주로 파워 스트로크와 과감한 전개를 구사합니다.'
+    },
+    'clement-chidekh': {
+        name: '클레망 치데흐', nameEn: 'Clement Chidekh', country: 'France', countryFlag: '🇫🇷', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '프랑스 선수로 탄탄한 랠리 능력과 성장 가능성이 주목받고 있습니다.'
+    },
+    'mark-lajal': {
+        name: '마르크 라얄', nameEn: 'Mark Lajal', country: 'Estonia', countryFlag: '🇪🇪', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '에스토니아 출신으로 안정적인 스트로크와 경기 운영이 돋보입니다.'
+    },
+    'luca-preda': {
+        name: '루카 프레다', nameEn: 'Luca Preda', country: 'Romania', countryFlag: '🇷🇴', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '루마니아 유망주로 꾸준한 수비와 집중력 있는 플레이를 보여줍니다.'
+    },
+    'joel-schwaerzler': {
+        name: '요엘 슈베르츨러', nameEn: 'Joel Schwaerzler', country: 'Austria', countryFlag: '🇦🇹', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '오스트리아 유망주로 좌완 특유의 각도와 공격 전개가 강점입니다.'
+    },
+    'moerani-bouzige': {
+        name: '모에라니 부지그', nameEn: 'Moerani Bouzige', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '호주 선수로 하드코트에서의 템포 플레이와 공격성이 돋보입니다.'
+    },
+    'rei-sakamoto': {
+        name: '레이 사카모토', nameEn: 'Rei Sakamoto', country: 'Japan', countryFlag: '🇯🇵', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '일본의 차세대 유망주로 빠른 발과 안정적인 스트로크가 장점입니다.'
+    },
+    'hayden-jones': {
+        name: '헤이든 존스', nameEn: 'Hayden Jones', country: 'Australia', countryFlag: '🇦🇺', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '호주 유망주로 공격적인 리턴과 적극적인 경기 운영을 보여줍니다.'
+    },
+    'andres-santamarta-roig': {
+        name: '안드레스 산타마르타 로익', nameEn: 'Andres Santamarta Roig', country: 'Spain', countryFlag: '🇪🇸', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '스페인 선수로 클레이 기반의 탄탄한 베이스라인 플레이가 강점입니다.'
+    },
+    'tyra-caterina-grant': {
+        name: '타이라 카테리나 그랜트', nameEn: 'Tyra Caterina Grant', country: 'Italy', countryFlag: '🇮🇹', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '이탈리아 유망주로 공격적인 스트로크와 빠른 성장세가 기대되는 선수입니다.'
+    },
+    'julieta-pareja': {
+        name: '줄리에타 파레하', nameEn: 'Julieta Pareja', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '미국 출신 유망주로 안정적인 랠리와 적극적인 공격 전환이 강점입니다.'
+    },
+    'teodora-kostovic': {
+        name: '테오도라 코스토비치', nameEn: 'Teodora Kostovic', country: 'Serbia', countryFlag: '🇷🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '세르비아 유망주로 탄탄한 기본기와 끈기 있는 플레이가 특징입니다.'
+    },
+    'celine-naef': {
+        name: '셀린 네프', nameEn: 'Celine Naef', country: 'Switzerland', countryFlag: '🇨🇭', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '스위스 선수로 안정적인 경기 운영과 균형 잡힌 샷 구성이 장점입니다.'
+    },
+    'hannah-klugman': {
+        name: '해나 클루그먼', nameEn: 'Hannah Klugman', country: 'Great Britain', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '영국 유망주로 빠른 발과 과감한 공격 시도가 돋보입니다.'
+    },
+    'mika-stojsavljevic': {
+        name: '미카 스토이사블레비치', nameEn: 'Mika Stojsavljevic', country: 'Great Britain', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '영국 유망주로 균형 잡힌 랠리 전개와 성장 잠재력이 높은 선수입니다.'
+    },
+    'jones-mingge-xu': {
+        name: '존스 밍거 쉬', nameEn: 'Jones Mingge Xu', country: 'Great Britain', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '영국 기반 유망주로 안정적인 스트로크와 침착한 경기 운영이 특징입니다.'
+    },
+    'isabella-kruger': {
+        name: '이사벨라 크루거', nameEn: 'Isabella Kruger', country: 'South Africa', countryFlag: '🇿🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '남아공 선수로 힘 있는 스트로크와 근성 있는 수비 플레이를 보입니다.'
+    },
+    'petra-marcinko': {
+        name: '페트라 마르친코', nameEn: 'Petra Marcinko', country: 'Croatia', countryFlag: '🇭🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '크로아티아 유망주로 공격 전환 타이밍과 랠리 집중력이 강점입니다.'
+    },
+    'lexie-stevens': {
+        name: '렉시 스티븐스', nameEn: 'Lexie Stevens', country: 'Netherlands', countryFlag: '🇳🇱', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '네덜란드 선수로 하드코트 기반의 빠른 템포 경기 운영이 특징입니다.'
+    },
+    'talia-gibson': {
+        name: '탈리아 깁슨', nameEn: 'Talia Gibson', country: 'Australia', countryFlag: '🇦🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '호주 선수로 공격적인 베이스라인 플레이와 활동량이 장점입니다.'
+    },
+    'maya-joint': {
+        name: '마야 조인트', nameEn: 'Maya Joint', country: 'Australia', countryFlag: '🇦🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '호주 유망주로 빠른 발과 과감한 샷 선택이 눈에 띄는 선수입니다.'
+    },
+    'ina-shmidt': {
+        name: '이나 슈미트', nameEn: 'Ina Shmidt', country: 'Germany', countryFlag: '🇩🇪', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '독일 선수로 안정적인 랠리와 꾸준한 경기 집중력이 강점입니다.'
+    },
+    'elizara-yaneva': {
+        name: '엘리자라 야네바', nameEn: 'Elizara Yaneva', country: 'Bulgaria', countryFlag: '🇧🇬', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '불가리아 유망주로 부드러운 스트로크 리듬과 경기 운영 능력이 돋보입니다.'
+    },
+    'renata-jamrichova': {
+        name: '레나타 잠리호바', nameEn: 'Renata Jamrichova', country: 'Slovakia', countryFlag: '🇸🇰', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '슬로바키아 유망주로 좌완 특유의 각도와 클레이 코트 경쟁력이 좋습니다.'
+    },
+    'victoria-jimenez-kasintseva': {
+        name: '빅토리아 히메네스 카신체바', nameEn: 'Victoria Jimenez Kasintseva', country: 'Andorra', countryFlag: '🇦🇩', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '안도라 출신의 유망주로 안정적인 수비와 영리한 포인트 운영이 강점입니다.'
+    },
+    'anna-siskova': {
+        name: '안나 시스코바', nameEn: 'Anna Siskova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '체코 선수로 복식 경험을 바탕으로 한 네트 감각과 경기 운영이 좋습니다.'
+    },
+    'monika-ekstrand': {
+        name: '모니카 에크스트란드', nameEn: 'Monika Ekstrand', country: 'Sweden', countryFlag: '🇸🇪', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '스웨덴 출신 유망주로 안정적인 샷 선택과 꾸준한 경기력을 보여줍니다.'
+    },
+    'laia-petretic': {
+        name: '라이아 페트레틱', nameEn: 'Laia Petretic', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '프랑스 유망주로 빠른 수비 전환과 성실한 플레이가 인상적입니다.'
+    },
+    'iana-loredana-rosca': {
+        name: '이아나 로레다나 로스카', nameEn: 'Iana Loredana Rosca', country: 'Romania', countryFlag: '🇷🇴', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '루마니아 선수로 꾸준한 랠리 전개와 경기 집중력이 강점입니다.'
+    },
+    'francesca-jones': {
+        name: '프란체스카 존스', nameEn: 'Francesca Jones', country: 'Great Britain', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '영국 선수로 강인한 멘탈과 투지 넘치는 경기 운영이 많은 팬의 지지를 받습니다.'
+    },
+    'emi-ema': {
+        name: '에미 에마', nameEn: 'Emi Ema', country: 'Japan', countryFlag: '🇯🇵', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '일본 선수로 기민한 풋워크와 안정적인 베이스라인 전개가 강점입니다.'
+    },
+    'jessika-ponchet': {
+        name: '제시카 퐁셰', nameEn: 'Jessika Ponchet', country: 'France', countryFlag: '🇫🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '프랑스 선수로 공격 전환 타이밍이 좋고 하드코트에서 경쟁력을 보입니다.'
+    },
+    'simona-waltert': {
+        name: '시모나 발테르트', nameEn: 'Simona Waltert', country: 'Switzerland', countryFlag: '🇨🇭', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '스위스 선수로 탄탄한 기본기와 균형 잡힌 경기 운영이 장점입니다.'
+    },
+    'lian-tran': {
+        name: '리안 트란', nameEn: 'Lian Tran', country: 'Netherlands', countryFlag: '🇳🇱', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '네덜란드 선수로 좌완 각도 활용과 점진적 경기 운영이 돋보입니다.'
+    },
+    'sarah-ilev': {
+        name: '사라 일레브', nameEn: 'Sarah Ilev', country: 'Australia', countryFlag: '🇦🇺', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '호주 유망주로 공격적인 리턴과 에너지 넘치는 플레이가 특징입니다.'
+    },
+    'linda-fruhvirtova': {
+        name: '린다 프루흐비르토바', nameEn: 'Linda Fruhvirtova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '체코 출신의 대표 유망주로 빠른 템포의 공격 전개와 성장 잠재력이 큽니다.'
+    },
+    'brenda-fruhvirtova': {
+        name: '브렌다 프루흐비르토바', nameEn: 'Brenda Fruhvirtova', country: 'Czech Republic', countryFlag: '🇨🇿', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '체코 유망주로 공격성 높은 스트로크와 자신감 있는 경기 운영이 강점입니다.'
+    },
+    'victoria-mboko': {
+        name: '빅토리아 음보코', nameEn: 'Victoria Mboko', country: 'Canada', countryFlag: '🇨🇦', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '캐나다 유망주로 파워와 스피드를 겸비한 공격적인 플레이를 보여줍니다.'
+    },
+    'liv-hovde': {
+        name: '리브 호브데', nameEn: 'Liv Hovde', country: 'United States', countryFlag: '🇺🇸', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '미국 유망주로 탄탄한 기본기와 빠른 코트 적응력이 주목받고 있습니다.'
+    },
 };
 
 
