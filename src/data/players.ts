@@ -2376,11 +2376,11 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'linner-tien': {
-        name: '리너 티엔', nameEn: 'Learner Tien', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/linner-tien.png', gender: 'male',
+        name: '리너 티엔', nameEn: 'Lerner Tien', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/linner-tien.png', gender: 'male',
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '미국 테니스의 숨은 보석. 10대 때 두 번이나 US 오픈 주니어 챔피언에 올랐으며, 왼손잡이 특유의 까다로운 구질과 지능적인 플레이가 강점입니다.',
         detailedProfile: {
-            oneLineSummary: '이름처럼 배우는 속도가 빠른 "Learner", US 오픈 주니어를 두 번이나 제패한 왼손 천재.',
+            oneLineSummary: '이름처럼 배우는 속도가 빠른 "Lerner", US 오픈 주니어를 두 번이나 제패한 왼손 천재.',
             whyNotable: `
                 <div class="highlight-box">
                     <div class="highlight-box-title">🏆 "칼라마주(Kalamazoo)의 제왕"</div>
@@ -2409,7 +2409,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
                 { name: '파워 (Power)', score: 7, description: '아직 피지컬 보완 필요.' }
             ],
             growthStory: `
-                <p>캘리포니아 어바인 출신입니다. 베트남인 부모님 밑에서 자랐으며, 수학을 좋아하는 등 학업 성적도 우수했습니다. 'Learner(학습자)'라는 독특한 이름은 어머니가 지어주셨는데, 평생 배우는 자세를 가지라는 뜻이라고 합니다.</p>
+                <p>캘리포니아 어바인 출신입니다. 베트남인 부모님 밑에서 자랐으며, 수학을 좋아하는 등 학업 성적도 우수했습니다. 'Lerner(이름)'라는 독특한 이름은 어머니가 지어주셨는데, 평생 배우는 자세를 가지라는 뜻이라고 합니다.</p>
             `,
             signatureMatch: {
                 title: '2023 윈스턴-세일럼 오픈 1회전',
@@ -2428,7 +2428,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `,
             faq: [
                 {
-                    question: '이름이 진짜 "Learner"인가요?',
+                    question: '이름이 진짜 "Lerner"인가요?',
                     answer: '네, 본명입니다. 부모님이 "인생은 끊임없는 배움의 과정"이라는 철학을 담아 지어주셨다고 합니다. 테니스 선수로서도 정말 배우는 속도가 빠릅니다.'
                 },
                 {

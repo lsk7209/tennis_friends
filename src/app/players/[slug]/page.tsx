@@ -193,7 +193,7 @@ export default async function PlayerProfilePage({ params }: Props) {
                         name: player.country
                     },
                     jobTitle: "Professional Tennis Player",
-                    url: `https://www.tennisfrens.com/players/${resolvedParams.slug}`
+                    url: `${siteUrl}/players/${resolvedParams.slug}`
                 }}
             />
             {player.detailedProfile?.faq && (
