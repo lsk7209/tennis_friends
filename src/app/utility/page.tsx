@@ -579,6 +579,42 @@ export const utilitiesMetadata: UtilityMetadata[] = [
     category: '교육 리소스'
   },
   {
+    id: 'body-composition-tracker',
+    title: '체성분 변화 트래커',
+    description: '체중·체지방·근육량 추이를 기록해 훈련 성과와 회복 상태를 추적합니다.',
+    icon: Activity,
+    status: '완료',
+    features: ['체중/체지방 기록', '근육량 추적', '회복 상태 점검', '성과 비교'],
+    gradient: 'from-emerald-500 via-green-500 to-lime-500',
+    bgColor: 'bg-gradient-to-br from-emerald-50 via-green-50 to-lime-50',
+    iconBg: 'bg-gradient-to-br from-emerald-500 to-green-500',
+    category: '건강 관리'
+  },
+  {
+    id: 'jetlag-adjustment-planner',
+    title: '시차 적응 플래너',
+    description: '원정 전후 취침·식사·훈련 시간대를 조정해 시차 적응을 돕습니다.',
+    icon: Globe,
+    status: '완료',
+    features: ['원정 일정 최적화', '생체리듬 조정', '훈련 강도 배치', '컨디션 회복'],
+    gradient: 'from-cyan-500 via-sky-500 to-blue-500',
+    bgColor: 'bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50',
+    iconBg: 'bg-gradient-to-br from-cyan-500 to-sky-500',
+    category: '컨디션 관리'
+  },
+  {
+    id: 'travel-fatigue-estimator',
+    title: '원정 피로도 추정기',
+    description: '이동 시간과 수면 손실을 바탕으로 경기 전 피로 위험도를 점검합니다.',
+    icon: Clock,
+    status: '완료',
+    features: ['이동 피로 평가', '수면 손실 반영', '경기 전 위험도 점검', '준비 루틴 제안'],
+    gradient: 'from-amber-500 via-orange-500 to-red-500',
+    bgColor: 'bg-gradient-to-br from-amber-50 via-orange-50 to-red-50',
+    iconBg: 'bg-gradient-to-br from-amber-500 to-orange-500',
+    category: '컨디션 관리'
+  },
+  {
     id: 'tennis-quiz-challenge',
     title: '테니스 퀴즈 챌린지',
     description: '테니스 지식을 테스트하는 재미있는 퀴즈 게임입니다.',

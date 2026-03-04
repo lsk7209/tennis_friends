@@ -24,7 +24,7 @@ export default function TennisCounterpuncherTacticsGuidePage() {
         <li>긴 랠리 후 짧은 볼 전환 빈도 높이기</li>
         <li>득점 시도 타이밍을 1~2구 늦춰 범실 최소화</li>
       </ul>
-      <Link href="/utility/matchup-strategy-builder" className="px-4 py-2 rounded-lg bg-primary text-background-dark font-semibold">상대 유형 전략 빌더(예정)</Link>
+      <Link href="/utility/match-analyzer" className="px-4 py-2 rounded-lg bg-primary text-background-dark font-semibold">경기 분석 도구로 전술 점검하기</Link>
     </main>
   );
 }
