@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "노박 조코비치 (Novak Djokovic) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['노박 조코비치', 'Novak Djokovic', '테니스', 'ATP', '플레이스타일', '세르비아 테니스', '전천후', '멘탈', '전술'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/novak-djokovic',
+    canonical: 'https://www.tennisfrens.com/players/novak-djokovic',
   },
   openGraph: {
     title: '노박 조코비치 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
     description: '노박 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/novak-djokovic',
+    url: 'https://www.tennisfrens.com/players/novak-djokovic',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -101,14 +101,14 @@ export default function NovakDjokovicPage() {
             'Olympic Gold Medalist',
             'ATP Finals Champion (7 titles)',
           ]}
-          url="https://tennisfriends.co.kr/players/novak-djokovic"
+          url="https://www.tennisfrens.com/players/novak-djokovic"
         />
 
         <BreadcrumbSchema
           items={[
-            { name: '홈', item: 'https://tennisfriends.co.kr' },
-            { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-            { name: '노박 조코비치', item: 'https://tennisfriends.co.kr/players/novak-djokovic' },
+            { name: '홈', item: 'https://www.tennisfrens.com' },
+            { name: '선수', item: 'https://www.tennisfrens.com/players' },
+            { name: '노박 조코비치', item: 'https://www.tennisfrens.com/players/novak-djokovic' },
           ]}
         />
         <FAQSchema faqs={faqs} />
@@ -200,7 +200,7 @@ export default function NovakDjokovicPage() {
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="growth-story">노박 조코비치는 어떻게 여기까지 왔을까?</h2>
-            <p>조코비치의 성장 배경은 전쟁의 포화 속에서 시작된다. 어린 시절 세르비아 내전을 겪으며 멘탈을 단련했고, 어려운 환경 속에서도 테니스에 대한 열정을 잃지 않았다. 그의 테니스는 화려한 장식보다는 효율을 추구하며, 특히 멘탈과 전술적 완성도가 뛰어나다.</p>
+            <p>조코비치의 성장 배경은 전쟁의 포화 속에서 시작된다. 어린 시절 세르비아 내전을 겪으며 멘탈을 단련했고, 어려운 환경 속에서도 테니스에 대한 열정을 잃지 않았다. 그의 테니스는 점수 상황에 맞춰 전술 우선순위를 즉시 바꾸는 능력이 뛰어나며, 압박 상황에서 의사결정의 질이 높습니다.</p>
             <p>그는 2008년 호주 오픈 우승을 시작으로 그랜드 슬램 우승 행진을 이어갔다. 2011년에는 3개의 그랜드 슬램 타이틀을 휩쓸며 세계랭킹 1위에 올랐다. 이후 페더러, 나달과 함께 '빅3' 시대를 열며 테니스 역사를 새로 썼다. 최근에는 그랜드 슬램 24회 우승이라는 대기록을 달성하며 역대 최고의 선수로 인정받고 있다.</p>
 
             <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "야닉 시너 (Jannik Sinner) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['야닉 시너', 'Jannik Sinner', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '공격형', '서브 앤 발리'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/jannik-sinner',
+    canonical: 'https://www.tennisfrens.com/players/jannik-sinner',
   },
   openGraph: {
     title: '야닉 시너 — 세계랭킹 1위 | 플레이스타일·명장면·최근 경기력',
     description: '야닉 시너의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/jannik-sinner',
+    url: 'https://www.tennisfrens.com/players/jannik-sinner',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function JannikSinnerPage() {
           award={[
             'Grand Slam Singles Champion (2 titles)', 'ATP Finals Champion', 'ATP Masters 1000 Champion'
           ]}
-          url="https://tennisfriends.co.kr/players/jannik-sinner"
+          url="https://www.tennisfrens.com/players/jannik-sinner"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '야닉 시너', item: 'https://tennisfriends.co.kr/players/jannik-sinner' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '야닉 시너', item: 'https://www.tennisfrens.com/players/jannik-sinner' },
         ]}
       />
       <FAQSchema faqs={faqs} />
@@ -190,7 +190,7 @@ export default function JannikSinnerPage() {
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="growth-story">야닉 시너는 어떻게 여기까지 왔을까?</h2>
-            <p>시너의 성장 배경은 스키 선수 출신이라는 독특한 이력에서 시작된다. 어릴 때 스키 챔피언이었으나 테니스로 전향했고, 빠르게 성장하며 세계랭킹 1위를 달성했다. 그의 테니스는 화려한 장식보다는 효율을 추구하며, 특히 탁월한 스트로크 기술이 뛰어나다.</p>
+            <p>시너의 성장 배경은 스키 선수 출신이라는 독특한 이력에서 시작된다. 어릴 때 스키 챔피언이었으나 테니스로 전향했고, 빠르게 성장하며 세계랭킹 1위를 달성했다. 그의 테니스는 불필요한 위험을 줄이고 스트로크 정확도를 극대화하는 방향으로 설계되어 있으며, 장기 랠리에서 특히 강점을 보입니다.</p>
             <p>그는 2024년 호주 오픈 우승을 차지하며 그랜드 슬램 챔피언이 되었고, 같은 해 세계랭킹 1위를 달성했다. 최근 몇 시즌 동안 큰 대회에서도 안정적인 경기력을 보여주고 있으며, 특히 하드 코트에서 강한 면모를 보이고 있다.</p>
 
             <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>

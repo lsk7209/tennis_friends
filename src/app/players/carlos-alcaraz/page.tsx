@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "카를로스 알카라스 (Carlos Alcaraz) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['카를로스 알카라스', 'Carlos Alcaraz', '테니스', 'ATP', '플레이스타일', '스페인 테니스', '공격형', '차세대 스타'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/carlos-alcaraz',
+    canonical: 'https://www.tennisfrens.com/players/carlos-alcaraz',
   },
   openGraph: {
     title: '카를로스 알카라스 — 세계랭킹 2위 | 플레이스타일·명장면·최근 경기력',
     description: '카를로스 알카라스의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/carlos-alcaraz',
+    url: 'https://www.tennisfrens.com/players/carlos-alcaraz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function CarlosAlcarazPage() {
           award={[
             'Grand Slam Singles Champion (4 titles)', 'ATP World No. 1', 'ATP Masters 1000 Champion'
           ]}
-          url="https://tennisfriends.co.kr/players/carlos-alcaraz"
+          url="https://www.tennisfrens.com/players/carlos-alcaraz"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '카를로스 알카라스', item: 'https://tennisfriends.co.kr/players/carlos-alcaraz' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '카를로스 알카라스', item: 'https://www.tennisfrens.com/players/carlos-alcaraz' },
         ]}
       />
       <FAQSchema faqs={faqs} />
@@ -177,12 +177,12 @@ export default function CarlosAlcarazPage() {
                 스페인의 신성
               </Badge>
             </div>
-            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"폭발적인 파워"</strong>, <strong>"젊은 에너지"</strong>, <strong>"스페인의 신성"</strong>이다. 그의 테니스는 화려한 장식보다는 효율을 추구하며, 특히 강력한 포핸드와 탁월한 운동능력으로 상대를 압도하는 능력이 뛰어나다.</p>
+            <p>팬들이 그를 표현할 때 자주 쓰는 말은 <strong>"폭발적인 파워"</strong>, <strong>"젊은 에너지"</strong>, <strong>"스페인의 신성"</strong>이다. 그의 테니스는 장식보다 실전 효율을 우선합니다. 특히 포핸드 결정력과 수비 전환 속도가 결합될 때 상대에게 지속적인 압박을 줍니다.</p>
 
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="growth-story">카를로스 알카라스는 어떻게 여기까지 왔을까?</h2>
-            <p>알카라즈의 성장 배경은 일상에서 축적된 힘으로 요약된다. 어릴 때부터 테니스를 시작했고, 빠르게 성장하며 세계랭킹 1위를 달성했다. 그의 테니스는 화려한 장식보다는 효율을 추구하며, 특히 폭발적인 파워가 뛰어나다.</p>
+            <p>알카라즈의 성장 배경은 일상에서 축적된 힘으로 요약된다. 어릴 때부터 테니스를 시작했고, 빠르게 성장하며 세계랭킹 1위를 달성했다. 그의 테니스는 과감한 공격성과 계산된 코스 공략이 결합된 형태이며, 폭발적인 파워를 실제 득점으로 연결하는 완성도가 높습니다.</p>
             <p>그는 2022년 US 오픈 우승을 차지하며 그랜드 슬램 챔피언이 되었고, 같은 해 세계랭킹 1위를 달성했다. 최근 몇 시즌 동안 큰 대회에서도 안정적인 경기력을 보여주고 있으며, 특히 윔블던에서 우승을 거두며 기록을 계속 갱신하고 있다.</p>
 
             <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
@@ -203,7 +203,7 @@ export default function CarlosAlcarazPage() {
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>알카라즈가 세계 상위권을 유지하는 힘은 폭발적인 포핸드 파워, 탁월한 운동능력, 그리고 빠른 적응력에서 나온다.</p>
+            <p>알카라즈의 상위권 경쟁력은 폭발적인 포핸드 파워, 탁월한 운동능력, 그리고 빠른 적응력에서 나온다.</p>
 
             <h3 className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-purple-600 dark:text-purple-400" />

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "다닐 메드베데프 (Daniil Medvedev) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['다닐 메드베데프', 'Daniil Medvedev', '테니스', 'ATP', '플레이스타일', '러시아 테니스', '카운터펀처', '하드 코트', '라이벌'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/daniil-medvedev',
+    canonical: 'https://www.tennisfrens.com/players/daniil-medvedev',
   },
   openGraph: {
     title: '다닐 메드베데프 — 세계랭킹 4위 | 플레이스타일·명장면·최근 경기력',
     description: '다닐 메드베데프의 카운터펀처 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/daniil-medvedev',
+    url: 'https://www.tennisfrens.com/players/daniil-medvedev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function DaniilMedvedevPage() {
           award={[
             'US Open Champion (2021)', 'ATP Finals Champion (2020)', 'ATP World No. 1'
           ]}
-          url="https://tennisfriends.co.kr/players/daniil-medvedev"
+          url="https://www.tennisfrens.com/players/daniil-medvedev"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '다닐 메드베데프', item: 'https://tennisfriends.co.kr/players/daniil-medvedev' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '다닐 메드베데프', item: 'https://www.tennisfrens.com/players/daniil-medvedev' },
         ]}
       />
       <FAQSchema faqs={faqs} />
@@ -190,7 +190,7 @@ export default function DaniilMedvedevPage() {
             <hr className="my-8 border-gray-200 dark:border-gray-800" />
 
             <h2 id="growth-story">다닐 메드베데프는 어떻게 여기까지 왔을까?</h2>
-            <p>메드베데프의 성장 배경은 늦게 꽃피운 대기만성형이다. 주니어 시절에는 크게 주목받지 못했으나, 프로 전향 후 꾸준히 성장하며 세계랭킹 1위를 달성했다. 그의 테니스는 화려한 장식보다는 효율을 추구하며, 특히 리턴과 수비 능력이 뛰어나다.</p>
+            <p>메드베데프의 성장 배경은 늦게 꽃피운 대기만성형이다. 주니어 시절에는 크게 주목받지 못했으나, 프로 전향 후 꾸준히 성장하며 세계랭킹 1위를 달성했다. 그의 테니스는 리턴 출발점과 수비 포지셔닝이 촘촘해 상대의 공격 효율을 낮추는 데 강점이 있습니다.</p>
             <p>그는 2021년 US 오픈 우승을 차지하며 그랜드 슬램 챔피언이 되었고, 2022년 세계랭킹 1위를 달성했다. 최근 몇 시즌 동안 큰 대회에서도 안정적인 경기력을 보여주고 있으며, 특히 하드 코트에서 강한 면모를 보이고 있다.</p>
 
             <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>

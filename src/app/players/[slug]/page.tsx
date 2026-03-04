@@ -73,6 +73,22 @@ export default async function PlayerProfilePage({ params }: Props) {
     }
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+    const contentUpdatedAt = new Date().toISOString().split('T')[0];
+
+    const seoFaqItems = [
+        ...(player.detailedProfile?.faq || []).map(item => ({
+            question: item.question,
+            answer: item.answer,
+        })),
+        {
+            question: `${player.name} 선수의 최근 12개월 경기력에서 가장 먼저 확인할 지표는 무엇인가요?`,
+            answer: `${player.name} 선수는 서브 게임 유지율, 리턴 게임 브레이크 전환율, 그리고 압박 구간(듀스·브레이크 포인트) 의사결정 품질을 함께 봐야 경기력 흐름을 정확히 읽을 수 있습니다.`,
+        },
+        {
+            question: `${player.name} 선수는 어떤 코트에서 강점을 보이나요?`,
+            answer: `${player.name} 선수는 하드·클레이·잔디에서 서로 다른 승부 패턴을 보입니다. 하드에서는 템포 주도, 클레이에서는 랠리 길이 조절, 잔디에서는 서브+1/리턴+1 완성도가 핵심 체크포인트입니다.`,
+        },
+    ];
 
     const breadcrumbItems = [
         { name: 'Home', item: siteUrl },
@@ -149,6 +165,39 @@ export default async function PlayerProfilePage({ params }: Props) {
     const smartTags = getSmartTags(player);
 
     // Generate generic bio if specific content is missing
+
+
+    const renderSeoInsights = () => {
+        const handKo = player.plays === 'Right-handed' ? '오른손잡이' : '왼손잡이';
+        const backhandKo = player.backhand === 'One-handed' ? '원핸드 백핸드' : '투핸드 백핸드';
+        const tour = player.gender === 'male' ? 'ATP' : 'WTA';
+
+        return (
+            <section className="mt-12 p-6 rounded-2xl border border-blue-100 dark:border-blue-900/40 bg-blue-50/40 dark:bg-blue-900/10">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                    <Target className="w-6 h-6 text-blue-500" />
+                    최근 12개월 경기 인사이트
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                    {player.name} 선수는 최근 12개월 경기에서 <strong>서브 게임 유지율</strong>과 <strong>리턴 게임 브레이크 전환율</strong>의 균형이 핵심 변수로 작동합니다.
+                    {tour} 투어에서는 30-30, 듀스, 브레이크 포인트 같은 압박 구간에서 의사결정의 질이 승패를 가르는 경우가 많으며,
+                    {player.name} 역시 해당 구간에서의 선택 패턴을 통해 경기 흐름을 바꾸는 장면이 자주 나타납니다.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                    기술적으로는 {handKo} + {backhandKo} 조합이 랠리 구조를 결정합니다.
+                    하드 코트에서는 템포 주도, 클레이에서는 랠리 길이 조절, 잔디에서는 서브+1·리턴+1 완성도가 중요하며,
+                    이 페이지는 그 관점으로 플레이 스타일을 읽을 수 있게 구성되어 있습니다.
+                </p>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mt-6 mb-2">실전 전술 체크포인트</h3>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    한 포인트의 하이라이트보다 <strong>연속된 선택의 일관성</strong>이 실제 승률에 더 큰 영향을 줍니다.
+                    1서브 성공률이 흔들릴 때 코스 분산으로 리턴 난이도를 높이는지, 리턴 게임에서 깊이 확보 후 중앙 회귀 패턴으로 실수를 줄이는지,
+                    그리고 긴 랠리에서 공격 전환 타이밍을 언제 가져가는지를 함께 보면 {player.name} 선수의 경기력이 더 정확하게 보입니다.
+                </p>
+            </section>
+        );
+    };
+
     const generateBio = () => {
         return (
             <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -173,6 +222,7 @@ export default async function PlayerProfilePage({ params }: Props) {
                 name={`${player.name} (${player.nameEn}) - 테니스 프로필`}
                 description={`${player.name} 선수의 상세 프로필, 랭킹, 플레이 스타일, 사용 장비 정보.`}
                 image={player.image || '/images/default-player.png'}
+                dateModified={`${contentUpdatedAt}T00:00:00.000Z`}
                 breadcrumb={{
                     "@type": "BreadcrumbList",
                     "itemListElement": breadcrumbItems.map((item, index) => ({
@@ -193,12 +243,12 @@ export default async function PlayerProfilePage({ params }: Props) {
                         name: player.country
                     },
                     jobTitle: "Professional Tennis Player",
-                    url: `https://tennisfriends.co.kr/players/${resolvedParams.slug}`
+                    url: `${siteUrl}/players/${resolvedParams.slug}`
                 }}
             />
-            {player.detailedProfile?.faq && (
+            {seoFaqItems.length > 0 && (
                 <FAQSchema
-                    faqs={player.detailedProfile.faq.map(item => ({
+                    faqs={seoFaqItems.map(item => ({
                         q: item.question,
                         a: item.answer
                     }))}
@@ -243,7 +293,8 @@ export default async function PlayerProfilePage({ params }: Props) {
 
                         <div className="text-center md:text-left flex-1 mb-2">
                             <h1 className="text-4xl md:text-6xl font-bold mb-3 tracking-tight">{player.name}</h1>
-                            <p className="text-xl md:text-2xl text-blue-200 mb-5 font-light">{player.nameEn}</p>
+                            <p className="text-xl md:text-2xl text-blue-200 mb-2 font-light">{player.nameEn}</p>
+                            <p className="text-xs md:text-sm text-blue-100/80 mb-5">콘텐츠 업데이트: {contentUpdatedAt}</p>
 
                             <div className="flex flex-wrap justify-center md:justify-start gap-2">
                                 <Badge variant="secondary" className="bg-blue-600 text-white border-none hover:bg-blue-500 px-3 py-1">
@@ -407,14 +458,17 @@ export default async function PlayerProfilePage({ params }: Props) {
                                         </h2>
                                         <div dangerouslySetInnerHTML={{ __html: player.detailedProfile.recentForm || '' }} />
 
-                                        {player.detailedProfile.faq && player.detailedProfile.faq.length > 0 && (
+                                        {renderSeoInsights()}
+
+
+                                        {seoFaqItems.length > 0 && (
                                             <>
                                                 <h2 id="faq" className="flex items-center gap-2 mt-12 scroll-mt-24">
                                                     <Info className="w-6 h-6 text-gray-500" />
                                                     자주 묻는 질문
                                                 </h2>
                                                 <div className="not-prose space-y-4 mt-6">
-                                                    {player.detailedProfile.faq.map((item, idx) => (
+                                                    {seoFaqItems.map((item, idx) => (
                                                         <div key={idx} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
                                                             <div className="p-4 bg-gray-50 dark:bg-gray-700/50 font-bold text-gray-900 dark:text-gray-100 flex items-start gap-2">
                                                                 <span className="text-blue-600 shrink-0">Q.</span>
@@ -450,6 +504,9 @@ export default async function PlayerProfilePage({ params }: Props) {
                                                 )}
                                             </div>
                                         </section>
+
+                                        {renderSeoInsights()}
+
 
                                         <AdSense />
 
