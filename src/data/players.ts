@@ -1725,7 +1725,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'arthur-landercknech': {
+    'arthur-rinderknech': {
         name: '아르튀르 랑데르크네슈', nameEn: 'Arthur Rinderknech', country: 'France', countryFlag: '🇫🇷', image: '/images/players/arthur-landercknech.png', gender: 'male',
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '미국 대학 테니스(Texas A&M)를 평정하고 프로에 온 늦깍이 스타. 강력한 서브와 포핸드를 앞세운 공격적인 테니스를 구사합니다.',
@@ -2375,7 +2375,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'linner-tien': {
+    'lerner-tien': {
         name: '리너 티엔', nameEn: 'Lerner Tien', country: 'United States', countryFlag: '🇺🇸', image: '/images/players/linner-tien.png', gender: 'male',
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '미국 테니스의 숨은 보석. 10대 때 두 번이나 US 오픈 주니어 챔피언에 올랐으며, 왼손잡이 특유의 까다로운 구질과 지능적인 플레이가 강점입니다.',
