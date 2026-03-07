@@ -12,12 +12,12 @@ export const metadata = {
   description: "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
   keywords: ["테니스","야닉 시너","Jannik Sinner","세계1위","이탈리아"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/jannik-sinner',
+    canonical: 'https://tennisfrens.com/blog/jannik-sinner',
   },
   openGraph: {
     title: "야닉 시너: 이탈리아의 붉은 여우",
     description: "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
-    url: 'https://tennisfriends.co.kr/blog/jannik-sinner',
+    url: 'https://tennisfrens.com/blog/jannik-sinner',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

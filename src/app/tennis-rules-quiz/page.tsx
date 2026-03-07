@@ -106,7 +106,7 @@ export default function TennisRulesQuizIntro() {
     }
   ];
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
   const quizUrl = `${siteUrl}/tennis-rules-quiz`;
 
   // FAQ items for AI snippet optimization

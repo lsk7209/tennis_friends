@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
       baseUrl = `${protocol}://${host}`;
     } else {
       // 기본값 (실제 도메인으로 변경 필요)
-      baseUrl = 'https://www.tennisfrens.com';
+      baseUrl = 'https://tennisfrens.com';
     }
   }
 
@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
       <pubDate>${pubDate}</pubDate>
-      <author>tennisfriends@tennisfriends.co.kr (TennisFriends)</author>
+      <author>tennisfriends@tennisfrens.com (TennisFriends)</author>
       <category><![CDATA[${post.category || '테니스'}]]></category>
       <category><![CDATA[테니스]]></category>
       <category><![CDATA[스포츠]]></category>
@@ -53,8 +53,8 @@ export async function GET(request: NextRequest) {
     <link>${baseUrl}</link>
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml" />
     <language>ko-KR</language>
-    <managingEditor>tennisfriends@tennisfriends.co.kr (TennisFriends)</managingEditor>
-    <webMaster>tennisfriends@tennisfriends.co.kr (TennisFriends)</webMaster>
+    <managingEditor>tennisfriends@tennisfrens.com (TennisFriends)</managingEditor>
+    <webMaster>tennisfriends@tennisfrens.com (TennisFriends)</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <generator>TennisFriends Blog</generator>
     <ttl>60</ttl>

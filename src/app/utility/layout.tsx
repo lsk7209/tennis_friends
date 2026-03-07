@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
 
 export const metadata: Metadata = {
   title: '테니스 유틸리티 도구 모음 | TennisFriends',

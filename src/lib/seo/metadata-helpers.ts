@@ -1,55 +1,36 @@
-/**
- * SEO Metadata Helper Functions
- * 
- * Utilities for generating optimized metadata for Google, Naver, and AI engines
- */
+import type { Metadata } from "next";
+import {
+  DEFAULT_SITE_DESCRIPTION,
+  DEFAULT_SITE_LOCALE,
+  SITE_NAME,
+  getAbsoluteUrl,
+  getSiteUrl,
+} from "@/lib/site";
 
-import type { Metadata } from 'next';
-
-const SITE_NAME = 'TennisFriends';
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
-
-/**
- * Truncates description for Naver (80 char limit) while preserving context
- */
 export function truncateForNaver(description: string, maxLength: number = 80): string {
   if (description.length <= maxLength) return description;
 
-  // Try to cut at sentence boundary
   const truncated = description.substring(0, maxLength - 3);
-  const lastPeriod = truncated.lastIndexOf('.');
-  const lastSpace = truncated.lastIndexOf(' ');
-
+  const lastPeriod = truncated.lastIndexOf(".");
+  const lastSpace = truncated.lastIndexOf(" ");
   const cutPoint = lastPeriod > maxLength * 0.7 ? lastPeriod + 1 : lastSpace;
 
-  return cutPoint > 0
-    ? description.substring(0, cutPoint) + '...'
-    : truncated + '...';
+  return cutPoint > 0 ? `${description.substring(0, cutPoint)}...` : `${truncated}...`;
 }
 
-/**
- * Generates optimized title following "[Content Title] | [Service Name]" pattern
- */
 export function generateTitle(contentTitle: string, serviceName: string = SITE_NAME): string {
   return `${contentTitle} | ${serviceName}`;
 }
 
-/**
- * Creates canonical URL
- */
 export function getCanonicalUrl(path: string): string {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return `${SITE_URL}${cleanPath}`;
+  return getAbsoluteUrl(path);
 }
 
-/**
- * Generates comprehensive metadata for a page
- */
 export interface PageMetadataOptions {
   title: string;
   description: string;
   path: string;
-  type?: 'website' | 'article' | 'profile';
+  type?: "website" | "article" | "profile";
   publishedTime?: string;
   modifiedTime?: string;
   authors?: string[];
@@ -62,43 +43,39 @@ export function generatePageMetadata({
   title,
   description,
   path,
-  type = 'website',
+  type = "website",
   publishedTime,
   modifiedTime,
-  authors = ['TennisFriends'],
+  authors = [SITE_NAME],
   tags = [],
   image,
   noindex = false,
 }: PageMetadataOptions): Metadata {
   const fullTitle = generateTitle(title);
   const canonical = getCanonicalUrl(path);
-  const ogImage = image || `${SITE_URL}/opengraph-image`;
-
-  // Naver-optimized description (80 chars)
+  const siteUrl = getSiteUrl();
+  const ogImage = image || `${siteUrl}/opengraph-image`;
   const naverDescription = truncateForNaver(description);
-
-  // Google/AI-optimized description (longer, more context)
-  const googleDescription = description.length > 160
-    ? description.substring(0, 157) + '...'
-    : description;
+  const googleDescription =
+    description.length > 160 ? `${description.substring(0, 157)}...` : description;
 
   return {
     title: fullTitle,
-    description: googleDescription, // Google uses longer description
+    description: googleDescription || DEFAULT_SITE_DESCRIPTION,
     keywords: tags.length > 0 ? tags : undefined,
-    authors: authors.map(name => ({ name })),
+    authors: authors.map((name) => ({ name })),
     creator: SITE_NAME,
     publisher: SITE_NAME,
-    metadataBase: new URL(SITE_URL),
+    metadataBase: new URL(siteUrl),
     alternates: {
       canonical,
     },
     openGraph: {
       title: fullTitle,
-      description: googleDescription,
+      description: googleDescription || DEFAULT_SITE_DESCRIPTION,
       url: canonical,
       siteName: SITE_NAME,
-      locale: 'ko_KR',
+      locale: DEFAULT_SITE_LOCALE,
       type,
       ...(publishedTime && { publishedTime }),
       ...(modifiedTime && { modifiedTime }),
@@ -114,9 +91,9 @@ export function generatePageMetadata({
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: fullTitle,
-      description: googleDescription,
+      description: googleDescription || DEFAULT_SITE_DESCRIPTION,
       images: [ogImage],
     },
     robots: {
@@ -125,21 +102,17 @@ export function generatePageMetadata({
       googleBot: {
         index: !noindex,
         follow: !noindex,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
-    // Naver-specific optimization (via other meta tags in layout)
     other: {
-      'naver-description': naverDescription, // Will be added to <head> via layout
+      "naver-description": naverDescription,
     },
   };
 }
 
-/**
- * Generates FAQ schema data
- */
 export interface FAQItem {
   question: string;
   answer: string;
@@ -147,48 +120,39 @@ export interface FAQItem {
 
 export function generateFAQSchema(faqs: FAQItem[]) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
-        '@type': 'Answer',
+        "@type": "Answer",
         text: faq.answer,
       },
     })),
   };
 }
 
-/**
- * Generates BreadcrumbList schema
- */
 export interface BreadcrumbItem {
   name: string;
   url: string;
 }
 
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
-  // 유효한 항목만 필터링 (name과 url이 모두 비어있지 않아야 함)
-  const validItems = items.filter(item => {
+  const validItems = items.filter((item) => {
     const name = item.name?.trim();
     const url = item.url?.trim();
-    return name && name.length > 0 && url && url.length > 0;
+    return name && url;
   });
 
-  // 필터링 후 position 재조정
   return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: validItems.map((item, index) => {
-      const itemUrl = item.url.startsWith('http') ? item.url : getCanonicalUrl(item.url);
-      return {
-        '@type': 'ListItem',
-        position: index + 1,
-        name: item.name.trim(), // 공백 제거
-        item: itemUrl, // URL 문자열 (Google 요구사항 준수)
-      };
-    }),
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: validItems.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name.trim(),
+      item: item.url.startsWith("http") ? item.url : getCanonicalUrl(item.url),
+    })),
   };
 }
-

@@ -12,12 +12,12 @@ export const metadata = {
   description: "거침없는 공격 본능과 넘치는 자신감. 알카라스, 시너와 함께 차세대를 이끌어갈 홀거 루네의 잠재력.",
   keywords: ["테니스","홀거 루네","Holger Rune","공격형","덴마크"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/holger-rune',
+    canonical: 'https://tennisfrens.com/blog/holger-rune',
   },
   openGraph: {
     title: "홀거 루네: 덴마크의 당돌한 신성",
     description: "거침없는 공격 본능과 넘치는 자신감. 알카라스, 시너와 함께 차세대를 이끌어갈 홀거 루네의 잠재력.",
-    url: 'https://tennisfriends.co.kr/blog/holger-rune',
+    url: 'https://tennisfrens.com/blog/holger-rune',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

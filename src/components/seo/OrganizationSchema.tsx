@@ -1,4 +1,12 @@
-import JsonLd from '@/components/JsonLd';
+import JsonLd from "@/components/JsonLd";
+import {
+  DEFAULT_CONTACT_EMAIL,
+  DEFAULT_COUNTRY_NAME,
+  DEFAULT_SITE_DESCRIPTION,
+  SITE_NAME,
+  getSiteIconUrl,
+  getSiteUrl,
+} from "@/lib/site";
 
 interface OrganizationSchemaProps {
   name?: string;
@@ -10,41 +18,47 @@ interface OrganizationSchemaProps {
 }
 
 export default function OrganizationSchema({
-  name = 'TennisFriends',
+  name = SITE_NAME,
   url,
   logo,
-  description = '데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상을 위한 모든 것을 제공합니다.',
-  email = 'contact@tennisfrens.com',
+  description = DEFAULT_SITE_DESCRIPTION,
+  email = DEFAULT_CONTACT_EMAIL,
   sameAs = [],
 }: OrganizationSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
-  const logoUrl = logo || `${siteUrl}/logo.png`;
+  const siteUrl = getSiteUrl();
+  const logoUrl = logo || getSiteIconUrl();
 
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: name,
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name,
     url: url || siteUrl,
     logo: {
-      '@type': 'ImageObject',
+      "@type": "ImageObject",
       url: logoUrl,
-      width: 512,
-      height: 512,
+      width: 32,
+      height: 32,
     },
-    description: description,
-    ...(sameAs.length > 0 && { sameAs: sameAs }),
+    description,
+    ...(sameAs.length > 0 && { sameAs }),
     contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      email: email,
-      availableLanguage: ['Korean', 'English'],
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email,
+      availableLanguage: ["Korean", "English"],
     },
     areaServed: {
-      '@type': 'Country',
-      name: 'South Korea',
+      "@type": "Country",
+      name: DEFAULT_COUNTRY_NAME,
     },
+    knowsAbout: [
+      "Tennis",
+      "Tennis coaching",
+      "Tennis equipment",
+      "Tennis analytics",
+      "Tennis training plans",
+    ],
   };
 
   return <JsonLd data={schema} />;
 }
-

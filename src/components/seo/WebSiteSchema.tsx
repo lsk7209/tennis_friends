@@ -1,4 +1,12 @@
-import JsonLd from '@/components/JsonLd';
+import JsonLd from "@/components/JsonLd";
+import {
+  DEFAULT_SITE_DESCRIPTION,
+  DEFAULT_SITE_LANGUAGE,
+  SITE_NAME,
+  getSiteIconUrl,
+  getSiteSearchUrlTemplate,
+  getSiteUrl,
+} from "@/lib/site";
 
 interface WebSiteSchemaProps {
   name?: string;
@@ -7,46 +15,41 @@ interface WebSiteSchemaProps {
   searchUrl?: string;
 }
 
-/**
- * WebSite 스키마 컴포넌트
- * 검색 엔진과 AI 크롤러가 사이트 구조를 이해하는 데 도움
- */
 export default function WebSiteSchema({
-  name = 'TennisFriends',
+  name = SITE_NAME,
   url,
-  description = '데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상을 위한 모든 것을 제공합니다.',
+  description = DEFAULT_SITE_DESCRIPTION,
   searchUrl,
 }: WebSiteSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = getSiteUrl();
 
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: name,
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name,
     url: url || siteUrl,
-    description: description,
-    inLanguage: 'ko-KR',
+    description,
+    inLanguage: DEFAULT_SITE_LANGUAGE,
     potentialAction: {
-      '@type': 'SearchAction',
+      "@type": "SearchAction",
       target: {
-        '@type': 'EntryPoint',
-        urlTemplate: searchUrl || `${siteUrl}/search?q={search_term_string}`,
+        "@type": "EntryPoint",
+        urlTemplate: searchUrl || getSiteSearchUrlTemplate(),
       },
-      'query-input': 'required name=search_term_string',
+      "query-input": "required name=search_term_string",
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'TennisFriends',
+      "@type": "Organization",
+      name: SITE_NAME,
       url: siteUrl,
       logo: {
-        '@type': 'ImageObject',
-        url: `${siteUrl}/logo.png`,
-        width: 512,
-        height: 512,
+        "@type": "ImageObject",
+        url: getSiteIconUrl(),
+        width: 32,
+        height: 32,
       },
     },
   };
 
   return <JsonLd data={schema} />;
 }
-

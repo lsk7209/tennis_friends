@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "세바스티안 바에즈 (Sebastian Baez) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['세바스티안 바에즈', 'Sebastian Baez', '테니스', 'ATP', '플레이스타일', '아르헨티나 테니스', '클레이', '베이스라인'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/sebastian-baez',
+    canonical: 'https://tennisfrens.com/players/sebastian-baez',
   },
   openGraph: {
     title: '세바스티안 바에즈 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '세바스티안 바에즈의 클레이 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/sebastian-baez',
+    url: 'https://tennisfrens.com/players/sebastian-baez',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function SebastianBaezPage() {
           award={[
             'ATP 250 Champion (multiple titles)'
           ]}
-          url="https://tennisfriends.co.kr/players/sebastian-baez"
+          url="https://tennisfrens.com/players/sebastian-baez"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '세바스티안 바에즈', item: 'https://tennisfriends.co.kr/players/sebastian-baez' },
+          { name: '홈', item: 'https://tennisfrens.com' },
+          { name: '선수', item: 'https://tennisfrens.com/players' },
+          { name: '세바스티안 바에즈', item: 'https://tennisfrens.com/players/sebastian-baez' },
         ]}
       />
       <FAQSchema faqs={faqs} />

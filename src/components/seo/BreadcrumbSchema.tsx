@@ -1,32 +1,28 @@
-
-import JsonLd from '@/components/JsonLd';
+import JsonLd from "@/components/JsonLd";
+import { getSiteUrl } from "@/lib/site";
 
 interface BreadcrumbItem {
-    name: string;
-    item: string;
+  name: string;
+  item: string;
 }
 
 interface BreadcrumbSchemaProps {
-    items: BreadcrumbItem[];
+  items: BreadcrumbItem[];
 }
 
-/**
- * BreadcrumbList 스키마 컴포넌트
- * 검색 결과에 탐색 경로(Breadcrumb)를 표시하도록 돕습니다.
- */
 export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+  const siteUrl = getSiteUrl();
 
-    const schema = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: items.map((item, index) => ({
-            '@type': 'ListItem',
-            position: index + 1,
-            name: item.name,
-            item: item.item.startsWith('http') ? item.item : `${siteUrl}${item.item}`,
-        })),
-    };
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.item.startsWith("http") ? item.item : `${siteUrl}${item.item}`,
+    })),
+  };
 
-    return <JsonLd data={schema} />;
+  return <JsonLd data={schema} />;
 }

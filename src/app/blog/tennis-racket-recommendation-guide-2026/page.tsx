@@ -11,12 +11,12 @@ export const metadata = {
     description: '2026년 최신 테니스 라켓 트렌드와 추천 모델 TOP 5를 소개합니다. 윌슨 블레이드 v9, 요넥스 이존, 바볼랏 퓨어드라이브 등 인기 라켓의 장단점을 비교 분석해 드립니다.',
     keywords: ['테니스 라켓 추천 2026', '테니스 라켓 순위', '윌슨 블레이드 v9', '요넥스 이존', '바볼랏 퓨어드라이브', '초보자 테니스 라켓', '여자 테니스 라켓'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/blog/tennis-racket-recommendation-guide-2026',
+        canonical: 'https://tennisfrens.com/blog/tennis-racket-recommendation-guide-2026',
     },
     openGraph: {
         title: '2026년 테니스 라켓 추천 가이드 — 초보자부터 상급자까지 BEST 5',
         description: '2026년 최신 테니스 라켓 트렌드와 추천 모델 TOP 5를 소개합니다. 윌슨 블레이드 v9, 요넥스 이존 등 인기 라켓 비교.',
-        url: 'https://tennisfriends.co.kr/blog/tennis-racket-recommendation-guide-2026',
+        url: 'https://tennisfrens.com/blog/tennis-racket-recommendation-guide-2026',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'article',

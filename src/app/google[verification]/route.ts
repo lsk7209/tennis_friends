@@ -7,11 +7,11 @@ import { NextRequest } from 'next/server';
  * 1. Google Search Console에서 HTML 파일 인증 방식 선택
  * 2. 제공된 파일명을 복사 (예: google1234567890.html)
  * 3. 환경 변수에 GOOGLE_SITE_VERIFICATION 설정
- * 4. URL: https://tennisfriends.co.kr/google[verification-code]
+ * 4. URL: https://tennisfrens.com/google[verification-code]
  * 
  * 예시:
  * - 파일명: google1234567890.html
- * - URL: https://tennisfriends.co.kr/google1234567890
+ * - URL: https://tennisfrens.com/google1234567890
  * - 환경 변수: GOOGLE_SITE_VERIFICATION=1234567890
  */
 export async function GET(

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         title: '테니스 플레이 스타일 테스트 - 나의 테니스 MBTI 찾기',
         description: '당신의 테니스 DNA는 무엇인가요? 14가지 질문으로 알아보는 나의 플레이 스타일과 맞춤형 전략!',
         type: 'website',
-        url: 'https://tennisfriends.co.kr/utility/play-style-test',
+        url: 'https://tennisfrens.com/utility/play-style-test',
     },
 };
 

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "스테파노스 치치파스 (Stefanos Tsitsipas) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['스테파노스 치치파스', 'Stefanos Tsitsipas', '테니스', 'ATP', '플레이스타일', '그리스 테니스', '원핸드 백핸드', '올코트'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/stefanos-tsitsipas',
+    canonical: 'https://tennisfrens.com/players/stefanos-tsitsipas',
   },
   openGraph: {
     title: '스테파노스 치치파스 — 그리스의 테니스 신화 | 플레이스타일·명장면·최근 경기력',
     description: '스테파노스 치치파스의 올코트 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/stefanos-tsitsipas',
+    url: 'https://tennisfrens.com/players/stefanos-tsitsipas',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function StefanosTsitsipasPage() {
           award={[
             'ATP Finals Champion (2019)', 'ATP Masters 1000 Champion (2 titles)'
           ]}
-          url="https://tennisfriends.co.kr/players/stefanos-tsitsipas"
+          url="https://tennisfrens.com/players/stefanos-tsitsipas"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '스테파노스 치치파스', item: 'https://tennisfriends.co.kr/players/stefanos-tsitsipas' },
+          { name: '홈', item: 'https://tennisfrens.com' },
+          { name: '선수', item: 'https://tennisfrens.com/players' },
+          { name: '스테파노스 치치파스', item: 'https://tennisfrens.com/players/stefanos-tsitsipas' },
         ]}
       />
       <FAQSchema faqs={faqs} />

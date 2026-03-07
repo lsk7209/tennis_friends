@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     description: "마테오 베레티니 (Matteo Berrettini) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['마테오 베레티니', 'Matteo Berrettini', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '강서브', '포핸드'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/players/matteo-berrettini',
+        canonical: 'https://tennisfrens.com/players/matteo-berrettini',
     },
     openGraph: {
         title: '마테오 베레티니 — 이탈리아의 망치 | 플레이스타일·명장면·최근 경기력',
         description: '마테오 베레티니의 강력한 서브와 포핸드, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfriends.co.kr/players/matteo-berrettini',
+        url: 'https://tennisfrens.com/players/matteo-berrettini',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -115,9 +115,9 @@ export default function MatteoBerrettiniPage() {
                 />
                 <BreadcrumbSchema
                     items={[
-                        { name: '홈', item: 'https://tennisfriends.co.kr' },
-                        { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-                        { name: '마테오 베레티니', item: 'https://tennisfriends.co.kr/players/matteo-berrettini' },
+                        { name: '홈', item: 'https://tennisfrens.com' },
+                        { name: '선수', item: 'https://tennisfrens.com/players' },
+                        { name: '마테오 베레티니', item: 'https://tennisfrens.com/players/matteo-berrettini' },
                     ]}
                 />
                 <FAQSchema faqs={faqs} />

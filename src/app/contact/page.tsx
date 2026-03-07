@@ -37,7 +37,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: '이메일',
-      content: 'contact@tennisfriends.co.kr',
+      content: 'contact@tennisfrens.com',
       description: '24시간 내 답변 드립니다'
     },
     {

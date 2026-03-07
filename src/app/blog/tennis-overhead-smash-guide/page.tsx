@@ -12,12 +12,12 @@ export const metadata = {
   description: "가장 강력하지만 가장 실수하기 쉬운 샷. 스매싱의 타점 잡기, 왼손의 역할, 그리고 자신감 있게 마무리하는 비결.",
   keywords: ["테니스 기술", "스매싱", "오버헤드", "Smash", "결정구"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-overhead-smash-guide',
+    canonical: 'https://tennisfrens.com/blog/tennis-overhead-smash-guide',
   },
   openGraph: {
     title: "스매싱 실수 줄이는 법 (오버헤드 스매시 가이드)",
     description: "가장 강력하지만 가장 실수하기 쉬운 샷. 스매싱의 타점 잡기, 왼손의 역할, 그리고 자신감 있게 마무리하는 비결.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-overhead-smash-guide',
+    url: 'https://tennisfrens.com/blog/tennis-overhead-smash-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

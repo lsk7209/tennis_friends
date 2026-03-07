@@ -12,12 +12,12 @@ export const metadata = {
   description: "클레이 코트의 강자에서 올라운더로. 성실함과 꾸준함으로 세계 랭킹 2위까지 올랐던 카스퍼 루드의 테니스 철학.",
   keywords: ["테니스","카스퍼 루드","Casper Ruud","클레이","노르웨이"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/casper-ruud',
+    canonical: 'https://tennisfrens.com/blog/casper-ruud',
   },
   openGraph: {
     title: "카스퍼 루드: 노르웨이의 차분한 암살자",
     description: "클레이 코트의 강자에서 올라운더로. 성실함과 꾸준함으로 세계 랭킹 2위까지 올랐던 카스퍼 루드의 테니스 철학.",
-    url: 'https://tennisfriends.co.kr/blog/casper-ruud',
+    url: 'https://tennisfrens.com/blog/casper-ruud',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

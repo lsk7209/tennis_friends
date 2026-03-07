@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "로렌조 무세티 (Lorenzo Musetti) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['로렌조 무세티', 'Lorenzo Musetti', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '원핸드 백핸드', '예술적'],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/players/lorenzo-musetti',
+    canonical: 'https://tennisfrens.com/players/lorenzo-musetti',
   },
   openGraph: {
     title: '로렌조 무세티 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '로렌조 무세티의 예술적인 원핸드 백핸드 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfriends.co.kr/players/lorenzo-musetti',
+    url: 'https://tennisfrens.com/players/lorenzo-musetti',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -97,14 +97,14 @@ export default function LorenzoMusettiPage() {
           award={[
             'Olympic Bronze Medalist', 'ATP 500 Champion'
           ]}
-          url="https://tennisfriends.co.kr/players/lorenzo-musetti"
+          url="https://tennisfrens.com/players/lorenzo-musetti"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfriends.co.kr' },
-          { name: '선수', item: 'https://tennisfriends.co.kr/players' },
-          { name: '로렌조 무세티', item: 'https://tennisfriends.co.kr/players/lorenzo-musetti' },
+          { name: '홈', item: 'https://tennisfrens.com' },
+          { name: '선수', item: 'https://tennisfrens.com/players' },
+          { name: '로렌조 무세티', item: 'https://tennisfrens.com/players/lorenzo-musetti' },
         ]}
       />
       <FAQSchema faqs={faqs} />

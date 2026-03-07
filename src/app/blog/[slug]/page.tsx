@@ -15,6 +15,7 @@ import EnhancedBlogPostSchema from '@/components/seo/EnhancedBlogPostSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FAQSection from '@/components/seo/FAQSection';
 import { blogContentMap } from '@/data/blog-content';
+import { getSiteUrl } from '@/lib/site';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -40,10 +41,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: ['TennisFriends'],
       tags: post.category ? [post.category] : [],
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/${post.slug}`,
+      url: `${getSiteUrl()}/blog/${post.slug}`,
     },
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/${post.slug}`,
+      canonical: `${getSiteUrl()}/blog/${post.slug}`,
     },
   };
 }
@@ -107,9 +108,9 @@ export default async function BlogPostPage({ params }: Props) {
   })) : [];
 
   const breadcrumbItems = [
-    { name: 'Home', item: 'https://tennisfriends.co.kr' },
-    { name: 'Blog', item: 'https://tennisfriends.co.kr/blog' },
-    { name: post.title, item: `https://tennisfriends.co.kr/blog/${post.slug}` }
+    { name: 'Home', item: getSiteUrl() },
+    { name: 'Blog', item: `${getSiteUrl()}/blog` },
+    { name: post.title, item: `${getSiteUrl()}/blog/${post.slug}` }
   ];
 
   return (

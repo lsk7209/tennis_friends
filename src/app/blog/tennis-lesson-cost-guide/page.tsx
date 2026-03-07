@@ -11,12 +11,12 @@ export const metadata = {
     description: '테니스 레슨 비용이 궁금하신가요? 서울, 경기 및 전국 평균 실내/실외 테니스장 레슨비를 1:1, 그룹 레슨별로 상세하게 비교해드립니다. 숨겨진 비용까지 확인하세요.',
     keywords: ['테니스 레슨 비용', '실내 테니스 가격', '테니스 레슨비', '테니스 강습료', '테니스 그룹 레슨', '테니스장 이용료', '테니스 비용'],
     alternates: {
-        canonical: 'https://tennisfriends.co.kr/blog/tennis-lesson-cost-guide',
+        canonical: 'https://tennisfrens.com/blog/tennis-lesson-cost-guide',
     },
     openGraph: {
         title: '2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교',
         description: '테니스 레슨 비용이 궁금하신가요? 서울, 경기 및 전국 평균 실내/실외 테니스장 레슨비를 1:1, 그룹 레슨별로 상세하게 비교해드립니다.',
-        url: 'https://tennisfriends.co.kr/blog/tennis-lesson-cost-guide',
+        url: 'https://tennisfrens.com/blog/tennis-lesson-cost-guide',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'article',

@@ -18,6 +18,7 @@ import Image from 'next/image';
 import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 import TOC from '@/components/blog/TOC';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import { getSiteUrl } from '@/lib/site';
 
 // Force static generation for these paths
 export async function generateStaticParams() {
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             images: player.image ? [player.image] : [],
         },
         alternates: {
-            canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/players/${slug}`,
+            canonical: `${getSiteUrl()}/players/${slug}`,
         }
     };
 }
@@ -72,7 +73,7 @@ export default async function PlayerProfilePage({ params }: Props) {
         notFound();
     }
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+    const siteUrl = getSiteUrl();
 
     const breadcrumbItems = [
         { name: 'Home', item: siteUrl },
@@ -172,7 +173,7 @@ export default async function PlayerProfilePage({ params }: Props) {
             <ProfilePageSchema
                 name={`${player.name} (${player.nameEn}) - 테니스 프로필`}
                 description={`${player.name} 선수의 상세 프로필, 랭킹, 플레이 스타일, 사용 장비 정보.`}
-                image={player.image || '/images/default-player.png'}
+                image={player.image || '/images/players/placeholder-tennis-player.svg'}
                 breadcrumb={{
                     "@type": "BreadcrumbList",
                     "itemListElement": breadcrumbItems.map((item, index) => ({
@@ -187,13 +188,13 @@ export default async function PlayerProfilePage({ params }: Props) {
                     name: player.nameEn,
                     alternateName: player.name,
                     description: `${player.name} 테니스 선수 프로필`,
-                    image: player.image || '/images/default-player.png',
+                    image: player.image || '/images/players/placeholder-tennis-player.svg',
                     nationality: {
                         '@type': 'Country',
                         name: player.country
                     },
                     jobTitle: "Professional Tennis Player",
-                    url: `https://tennisfriends.co.kr/players/${resolvedParams.slug}`
+                    url: `${siteUrl}/players/${resolvedParams.slug}`
                 }}
             />
             {player.detailedProfile?.faq && (

@@ -12,12 +12,12 @@ export const metadata = {
   description: "텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법.",
   keywords: ["테니스 장비", "스트링 텐션", "라켓 수리", "컨트롤", "파워"],
   alternates: {
-    canonical: 'https://tennisfriends.co.kr/blog/tennis-string-tension-guide',
+    canonical: 'https://tennisfrens.com/blog/tennis-string-tension-guide',
   },
   openGraph: {
     title: "스트링 텐션의 비밀: 높게? 낮게?",
     description: "텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법.",
-    url: 'https://tennisfriends.co.kr/blog/tennis-string-tension-guide',
+    url: 'https://tennisfrens.com/blog/tennis-string-tension-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

@@ -6,7 +6,7 @@ import { NextRequest } from 'next/server';
  * Google-Extended, GPTBot 등이 이 파일을 확인
  */
 export async function GET(request: NextRequest) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
   
   const aiTxt = `# ai.txt for TennisFriends
 
@@ -51,7 +51,7 @@ Sitemap: ${baseUrl}/sitemap-naver.xml
 RSS: ${baseUrl}/rss.xml
 
 # 연락처
-Contact: tennisfriends@tennisfriends.co.kr
+Contact: tennisfriends@tennisfrens.com
 `;
 
   return new Response(aiTxt, {

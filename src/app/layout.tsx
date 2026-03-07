@@ -8,8 +8,18 @@ import Tracking from "@/components/Tracking";
 import AdSense from "@/components/AdSense";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import {
+  DEFAULT_CONTACT_EMAIL,
+  DEFAULT_PLACENAME,
+  DEFAULT_REGION,
+  DEFAULT_SITE_DESCRIPTION,
+  DEFAULT_SITE_LANGUAGE,
+  DEFAULT_SITE_LOCALE,
+  SITE_NAME,
+  getAbsoluteUrl,
+  getSiteUrl,
+} from "@/lib/site";
 
-// 폰트 최적화 - Inter만 next/font로 로드, Pretendard는 CSS에서 로드
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -26,19 +36,31 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-// Enhanced metadata with Naver and AI optimization
 export const metadata: Metadata = {
   title: {
-    default: "TennisFriends - 당신의 테니스 파트너",
-    template: "%s | TennisFriends", // Ensures consistent title format
+    default: `${SITE_NAME} - 테니스 실력 향상 플랫폼`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description: "데이터로 똑똑하게, 테니스를 즐겁게. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.",
-  keywords: ["테니스", "NTRP", "실력테스트", "스트링텐션", "부상예방", "테니스커뮤니티"],
-  authors: [{ name: "TennisFriends" }],
-  creator: "TennisFriends",
-  publisher: "TennisFriends",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com"),
-
+  description: DEFAULT_SITE_DESCRIPTION,
+  keywords: [
+    "테니스",
+    "NTRP",
+    "테니스 테스트",
+    "테니스 전략",
+    "테니스 훈련",
+    "테니스 장비",
+    "테니스 블로그",
+  ],
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  metadataBase: new URL(getSiteUrl()),
+  alternates: {
+    canonical: getAbsoluteUrl("/"),
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
+  },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || "",
     other: {
@@ -48,25 +70,25 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "TennisFriends - 당신의 테니스 파트너",
-    description: "데이터로 똑똑하게, 테니스를 즐겁게. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com",
-    siteName: "TennisFriends",
-    locale: "ko_KR",
+    title: `${SITE_NAME} - 테니스 실력 향상 플랫폼`,
+    description: DEFAULT_SITE_DESCRIPTION,
+    url: getAbsoluteUrl("/"),
+    siteName: SITE_NAME,
+    locale: DEFAULT_SITE_LOCALE,
     type: "website",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Tennis Friends - 테니스 친구들",
+        alt: `${SITE_NAME} 대표 이미지`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TennisFriends - 당신의 테니스 파트너",
-    description: "데이터로 똑똑하게, 테니스를 즐겁게. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.",
+    title: `${SITE_NAME} - 테니스 실력 향상 플랫폼`,
+    description: DEFAULT_SITE_DESCRIPTION,
     images: ["/opengraph-image"],
   },
   robots: {
@@ -85,22 +107,23 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
   },
   other: {
-    "NaverBot": "index, follow, all",
-    "Yeti": "index, follow, all",
-    "DaumBot": "index, follow, all",
-    "Daumoa": "index, follow, all",
-    "GPTBot": "index, follow",
+    "geo.region": DEFAULT_REGION,
+    "geo.placename": DEFAULT_PLACENAME,
+    "geo.position": "37.5665;126.9780",
+    ICBM: "37.5665, 126.9780",
+    language: DEFAULT_SITE_LANGUAGE,
+    "contact:email": DEFAULT_CONTACT_EMAIL,
+    NaverBot: "index, follow, all",
+    Yeti: "index, follow, all",
+    DaumBot: "index, follow, all",
+    Daumoa: "index, follow, all",
+    GPTBot: "index, follow",
     "ChatGPT-User": "index, follow",
     "Google-Extended": "index, follow",
     "anthropic-ai": "index, follow",
     "Claude-Web": "index, follow",
-    "PerplexityBot": "index, follow",
+    PerplexityBot: "index, follow",
   },
-  alternates: {
-    types: {
-      "application/rss+xml": "/rss.xml",
-    }
-  }
 };
 
 export default function RootLayout({
@@ -111,23 +134,21 @@ export default function RootLayout({
   return (
     <html lang="ko" className={inter.variable}>
       <head>
-        {/* Pretendard 폰트 최적화 로드 */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
           rel="stylesheet"
         />
       </head>
-      <body className={`bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-black font-display text-gray-900 dark:text-gray-100 antialiased`}>
-        {/* 전역 구조화된 데이터 */}
+      <body
+        className="bg-gradient-to-br from-gray-50 via-white to-gray-100 font-display text-gray-900 antialiased dark:from-gray-950 dark:via-gray-900 dark:to-black dark:text-gray-100"
+      >
         <OrganizationSchema />
         <WebSiteSchema />
-        <div className="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div className="group/design-root relative flex min-h-screen w-full flex-col overflow-x-hidden">
           <div className="layout-container flex h-full grow flex-col">
             <Header />
-            <main className="flex-1">
-              {children}
-            </main>
+            <main className="flex-1">{children}</main>
             <Footer />
           </div>
         </div>
