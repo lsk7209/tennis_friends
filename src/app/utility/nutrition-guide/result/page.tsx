@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Apple, Droplets, Clock, ArrowRight, RotateCcw, Share2, CheckCircle, Zap, Target } from 'lucide-react';
 import { NutritionResult, Meal, Supplement, Timing } from '@/lib/nutritionGuide';
+import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
 function NutritionResultContent() {
@@ -24,12 +25,12 @@ function NutritionResultContent() {
     const timer = setTimeout(() => {
       const planName = searchParams.get('planName') || '';
       const totalCalories = Number(searchParams.get('totalCalories') || 0);
-      const macronutrients = JSON.parse(searchParams.get('macronutrients') || '{}');
-      const hydration = JSON.parse(searchParams.get('hydration') || '{}');
-      const mealPlan = JSON.parse(searchParams.get('mealPlan') || '{}');
-      const supplements = JSON.parse(searchParams.get('supplements') || '[]') as Supplement[];
-      const timing = JSON.parse(searchParams.get('timing') || '[]') as Timing[];
-      const recommendations = JSON.parse(searchParams.get('recommendations') || '{}');
+      const macronutrients = safeJsonParse(searchParams.get('macronutrients'), {});
+      const hydration = safeJsonParse(searchParams.get('hydration'), {});
+      const mealPlan = safeJsonParse(searchParams.get('mealPlan'), {});
+      const supplements = safeJsonParse(searchParams.get('supplements'), []) as Supplement[];
+      const timing = safeJsonParse(searchParams.get('timing'), []) as Timing[];
+      const recommendations = safeJsonParse(searchParams.get('recommendations'), {});
       
       setResult({
         plan: mealPlan,

@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Shield, AlertTriangle, CheckCircle, ArrowRight, RotateCcw, Share2, Sparkles } from 'lucide-react';
 import { getRiskLevelInfo } from '@/lib/injuryRiskCalc';
+import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
 function InjuryRiskResultContent() {
@@ -19,11 +20,11 @@ function InjuryRiskResultContent() {
   
   const riskScore = Number(searchParams.get('riskScore') || 0);
   const riskLevel = searchParams.get('riskLevel') || 'medium';
-  const riskFactors = JSON.parse(searchParams.get('riskFactors') || '[]');
-  const preventionTips = JSON.parse(searchParams.get('preventionTips') || '[]');
-  const equipmentRecommendations = JSON.parse(searchParams.get('equipmentRecommendations') || '[]');
-  const trainingAdjustments = JSON.parse(searchParams.get('trainingAdjustments') || '[]');
-  const warningSigns = JSON.parse(searchParams.get('warningSigns') || '[]');
+  const riskFactors = safeJsonParse(searchParams.get('riskFactors'), []);
+  const preventionTips = safeJsonParse(searchParams.get('preventionTips'), []);
+  const equipmentRecommendations = safeJsonParse(searchParams.get('equipmentRecommendations'), []);
+  const trainingAdjustments = safeJsonParse(searchParams.get('trainingAdjustments'), []);
+  const warningSigns = safeJsonParse(searchParams.get('warningSigns'), []);
 
   const riskInfo = getRiskLevelInfo(riskLevel);
 

@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Calculator, Calendar, Target, ArrowRight, RotateCcw, Share2, CheckCircle, Clock, Users, ArrowLeft } from 'lucide-react';
 import { TrainingPlanResult, WeeklySchedule, TrainingSession, FocusArea, Milestone } from '@/lib/trainingPlanner';
+import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
 function TrainingPlannerResultContent() {
@@ -24,12 +25,12 @@ function TrainingPlannerResultContent() {
     const timer = setTimeout(() => {
       const planName = searchParams.get('planName') || '';
       const duration = Number(searchParams.get('duration') || 0);
-      const weeklySchedule = JSON.parse(searchParams.get('weeklySchedule') || '[]') as WeeklySchedule[];
-      const focusAreas = JSON.parse(searchParams.get('focusAreas') || '[]') as FocusArea[];
-      const progressMilestones = JSON.parse(searchParams.get('progressMilestones') || '[]') as Milestone[];
-      const recommendations = JSON.parse(searchParams.get('recommendations') || '{}');
-      const equipment = JSON.parse(searchParams.get('equipment') || '[]');
-      const nextSteps = JSON.parse(searchParams.get('nextSteps') || '[]');
+      const weeklySchedule = safeJsonParse(searchParams.get('weeklySchedule'), []) as WeeklySchedule[];
+      const focusAreas = safeJsonParse(searchParams.get('focusAreas'), []) as FocusArea[];
+      const progressMilestones = safeJsonParse(searchParams.get('progressMilestones'), []) as Milestone[];
+      const recommendations = safeJsonParse(searchParams.get('recommendations'), {});
+      const equipment = safeJsonParse(searchParams.get('equipment'), []);
+      const nextSteps = safeJsonParse(searchParams.get('nextSteps'), []);
       
       setResult({
         planName,

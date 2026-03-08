@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, RotateCcw, Share2, ShoppingCart, Star, CheckCircle, Target, Sparkles, ArrowLeft } from 'lucide-react';
 import { EquipmentResult, RacketRecommendation, StringRecommendation } from '@/lib/equipmentRecommendation';
+import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
 function EquipmentRecommendationResultContent() {
@@ -19,10 +20,10 @@ function EquipmentRecommendationResultContent() {
   
   useEffect(() => {
     const timer = setTimeout(() => {
-      const rackets = JSON.parse(searchParams.get('rackets') || '[]') as RacketRecommendation[];
-      const strings = JSON.parse(searchParams.get('strings') || '[]') as StringRecommendation[];
-      const accessories = JSON.parse(searchParams.get('accessories') || '{}');
-      const totalBudget = JSON.parse(searchParams.get('totalBudget') || '{}');
+      const rackets = safeJsonParse(searchParams.get('rackets'), []) as RacketRecommendation[];
+      const strings = safeJsonParse(searchParams.get('strings'), []) as StringRecommendation[];
+      const accessories = safeJsonParse(searchParams.get('accessories'), {});
+      const totalBudget = safeJsonParse(searchParams.get('totalBudget'), {});
       
       setResult({
         rackets,

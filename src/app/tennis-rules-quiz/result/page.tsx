@@ -11,6 +11,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Trophy, Share2, Download, RotateCcw, Target, BookOpen, CheckCircle, XCircle, Clock, ArrowRight } from 'lucide-react';
 import { getGradeInfo, getTopWeakAreas, CATEGORY_LABELS, CATEGORY_COLORS, QuizAnswer, Question } from '@/lib/tennisQuiz';
+import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, SlideDown, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -22,9 +23,9 @@ function TennisRulesQuizResultContent() {
   const score = Number(searchParams.get('score') || 0);
   const grade = searchParams.get('grade') || 'Beginner';
   const timeSpent = Number(searchParams.get('timeSpent') || 0);
-  const wrongByCat = JSON.parse(searchParams.get('wrongByCat') || '{}');
-  const answers = JSON.parse(searchParams.get('answers') || '[]') as QuizAnswer[];
-  const questions = JSON.parse(searchParams.get('questions') || '[]') as Question[];
+  const wrongByCat = safeJsonParse(searchParams.get('wrongByCat'), {});
+  const answers = safeJsonParse(searchParams.get('answers'), []) as QuizAnswer[];
+  const questions = safeJsonParse(searchParams.get('questions'), []) as Question[];
   
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);

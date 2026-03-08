@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { BarChart3, TrendingUp, Target, ArrowRight, RotateCcw, Share2, CheckCircle, AlertTriangle, ArrowLeft } from 'lucide-react';
 import { MatchAnalysisResult } from '@/lib/matchAnalyzer';
+import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
 function MatchAnalyzerResultContent() {
@@ -23,12 +24,12 @@ function MatchAnalyzerResultContent() {
     const timer = setTimeout(() => {
       const overallScore = Number(searchParams.get('overallScore') || 0);
       const grade = searchParams.get('grade') || 'C';
-      const strengths = JSON.parse(searchParams.get('strengths') || '[]');
-      const weaknesses = JSON.parse(searchParams.get('weaknesses') || '[]');
-      const improvements = JSON.parse(searchParams.get('improvements') || '[]');
-      const statistics = JSON.parse(searchParams.get('statistics') || '{}');
-      const recommendations = JSON.parse(searchParams.get('recommendations') || '{}');
-      const nextMatchGoals = JSON.parse(searchParams.get('nextMatchGoals') || '[]');
+      const strengths = safeJsonParse(searchParams.get('strengths'), []);
+      const weaknesses = safeJsonParse(searchParams.get('weaknesses'), []);
+      const improvements = safeJsonParse(searchParams.get('improvements'), []);
+      const statistics = safeJsonParse(searchParams.get('statistics'), {});
+      const recommendations = safeJsonParse(searchParams.get('recommendations'), {});
+      const nextMatchGoals = safeJsonParse(searchParams.get('nextMatchGoals'), []);
       
       setResult({
         overallScore,
