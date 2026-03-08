@@ -22,22 +22,22 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: '김테니스',
-      role: '프로 테니스 코치',
-      experience: '15년 경력',
-      specialty: 'NTRP 레벨별 코칭'
+      name: '테니스 코칭팀',
+      role: '프로 테니스 코치진',
+      experience: '다년간 코칭 경력',
+      specialty: 'NTRP 레벨별 맞춤 코칭'
     },
     {
-      name: '이스트링',
-      role: '장비 전문가',
-      experience: '10년 경력',
-      specialty: '라켓 & 스트링 분석'
+      name: '장비 분석팀',
+      role: '장비 전문가 그룹',
+      experience: '현장 장비 테스트',
+      specialty: '라켓 & 스트링 심층 분석'
     },
     {
-      name: '박헬스',
-      role: '스포츠 의학 전문가',
-      experience: '12년 경력',
-      specialty: '부상 예방 & 재활'
+      name: '스포츠 의학팀',
+      role: '스포츠 의학 자문단',
+      experience: '운동 과학 기반',
+      specialty: '부상 예방 & 재활 가이드'
     }
   ];
 
