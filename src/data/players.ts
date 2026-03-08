@@ -10837,7 +10837,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'lorenzo-sonego': {
-        name: '로렌초 소네고', nameEn: 'Lorenzo Sonego', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '로렌초 소네고', nameEn: 'Lorenzo Sonego', country: 'Italy', countryFlag: '🇮🇹', image: '/images/players/lorenzo-sonego.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '로렌초 소네고는 이탈리아 출신의 남자 프로 테니스 선수다. 빠른 코트에서 분위기를 끌어올리는 경기 운영으로 존재감을 드러낸다. 에너지 넘치는 공격 전개와 빠른 템포를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '이탈리아 출신의 남자 프로 선수로, 에너지 넘치는 공격 전개와 빠른 템포가 돋보이는 투어 자원이다.',
@@ -10872,7 +10872,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'marcos-giron': {
-        name: '마르코스 기론', nameEn: 'Marcos Giron', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '마르코스 기론', nameEn: 'Marcos Giron', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/marcos-giron.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '마르코스 기론는 미국 출신의 남자 프로 테니스 선수다. 기본기 완성도가 높아 투어에서 꾸준히 경쟁력을 유지한다. 군더더기 없는 스트로크와 안정적인 밸런스를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '미국 출신의 남자 프로 선수로, 군더더기 없는 스트로크와 안정적인 밸런스가 돋보이는 투어 자원이다.',
@@ -10907,7 +10907,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'alejandro-tabilo': {
-        name: '알레한드로 타빌로', nameEn: 'Alejandro Tabilo', country: 'Chile', countryFlag: '🇨🇱', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
+        name: '알레한드로 타빌로', nameEn: 'Alejandro Tabilo', country: 'Chile', countryFlag: '🇨🇱', image: '/images/players/alejandro-tabilo.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '알레한드로 타빌로는 칠레 출신의 남자 프로 테니스 선수다. 차분하게 리듬을 바꾸며 상대를 불편하게 만드는 능력이 좋다. 왼손 각도와 묵직한 패턴 전개를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '칠레 출신의 남자 프로 선수로, 왼손 각도와 묵직한 패턴 전개가 돋보이는 투어 자원이다.',
@@ -10942,7 +10942,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'tomas-martin-etcheverry': {
-        name: '토마스 마르틴 에체베리', nameEn: 'Tomas Martin Etcheverry', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '토마스 마르틴 에체베리', nameEn: 'Tomas Martin Etcheverry', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/tomas-martin-etcheverry.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '토마스 마르틴 에체베리는 아르헨티나 출신의 남자 프로 테니스 선수다. 클레이 기반의 반복형 테니스로 경기 흐름을 길게 끌고 간다. 긴 랠리와 높은 볼 견딤 능력을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '아르헨티나 출신의 남자 프로 선수로, 긴 랠리와 높은 볼 견딤 능력이 돋보이는 투어 자원이다.',
@@ -10977,7 +10977,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'pedro-martinez': {
-        name: '페드로 마르티네스', nameEn: 'Pedro Martinez', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '페드로 마르티네스', nameEn: 'Pedro Martinez', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/pedro-martinez.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '페드로 마르티네스는 스페인 출신의 남자 프로 테니스 선수다. 무리하지 않는 운영과 기본기로 승부하는 타입이다. 정돈된 포인트 설계와 실수 관리를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '스페인 출신의 남자 프로 선수로, 정돈된 포인트 설계와 실수 관리가 돋보이는 투어 자원이다.',
@@ -11012,7 +11012,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'sebastian-ofner': {
-        name: '제바스티안 오프너', nameEn: 'Sebastian Ofner', country: 'Austria', countryFlag: '🇦🇹', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '제바스티안 오프너', nameEn: 'Sebastian Ofner', country: 'Austria', countryFlag: '🇦🇹', image: '/images/players/sebastian-ofner.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '제바스티안 오프너는 오스트리아 출신의 남자 프로 테니스 선수다. 첫 스트라이크의 질이 높을 때 위력이 크게 살아난다. 서브 이후 빠른 선공과 직선적인 공격을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '오스트리아 출신의 남자 프로 선수로, 서브 이후 빠른 선공과 직선적인 공격이 돋보이는 투어 자원이다.',
@@ -11047,7 +11047,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'alexandre-muller': {
-        name: '알렉상드르 뮐러', nameEn: 'Alexandre Muller', country: 'France', countryFlag: '🇫🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '알렉상드르 뮐러', nameEn: 'Alexandre Muller', country: 'France', countryFlag: '🇫🇷', image: '/images/players/alexandre-muller.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '알렉상드르 뮐러는 프랑스 출신의 남자 프로 테니스 선수다. 한 포인트씩 쌓아가는 경기 설계가 안정적인 편이다. 차분한 스트로크와 끈질긴 포인트 운영을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '프랑스 출신의 남자 프로 선수로, 차분한 스트로크와 끈질긴 포인트 운영이 돋보이는 투어 자원이다.',
@@ -11082,7 +11082,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'francisco-comesana': {
-        name: '프란시스코 코메사냐', nameEn: 'Francisco Comesana', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '프란시스코 코메사냐', nameEn: 'Francisco Comesana', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/francisco-comesana.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '프란시스코 코메사냐는 아르헨티나 출신의 남자 프로 테니스 선수다. 성장세가 꾸준해 상위 레벨 적응이 기대되는 선수다. 클레이 기반 수비력과 리듬 유지를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '아르헨티나 출신의 남자 프로 선수로, 클레이 기반 수비력과 리듬 유지가 돋보이는 투어 자원이다.',
@@ -11117,7 +11117,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'camilo-ugo-carabelli': {
-        name: '카밀로 우고 카라벨리', nameEn: 'Camilo Ugo Carabelli', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '카밀로 우고 카라벨리', nameEn: 'Camilo Ugo Carabelli', country: 'Argentina', countryFlag: '🇦🇷', image: '/images/players/camilo-ugo-carabelli.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '카밀로 우고 카라벨리는 아르헨티나 출신의 남자 프로 테니스 선수다. 클레이에서 버티는 힘과 포인트 인내심이 돋보인다. 끈질긴 커버와 타이밍 위주의 랠리를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '아르헨티나 출신의 남자 프로 선수로, 끈질긴 커버와 타이밍 위주의 랠리가 돋보이는 투어 자원이다.',
@@ -11152,7 +11152,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'zizou-bergs': {
-        name: '지주 베르그스', nameEn: 'Zizou Bergs', country: 'Belgium', countryFlag: '🇧🇪', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '지주 베르그스', nameEn: 'Zizou Bergs', country: 'Belgium', countryFlag: '🇧🇪', image: '/images/players/zizou-bergs.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '지주 베르그스는 벨기에 출신의 남자 프로 테니스 선수다. 에너지 레벨이 높고 분위기 반전 능력이 있는 선수다. 활발한 발과 적극적인 압박을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '벨기에 출신의 남자 프로 선수로, 활발한 발과 적극적인 압박이 돋보이는 투어 자원이다.',
@@ -11187,7 +11187,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'hamad-medjedovic': {
-        name: '하마드 메제도비치', nameEn: 'Hamad Medjedovic', country: 'Serbia', countryFlag: '🇷🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '하마드 메제도비치', nameEn: 'Hamad Medjedovic', country: 'Serbia', countryFlag: '🇷🇸', image: '/images/players/hamad-medjedovic.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '하마드 메제도비치는 세르비아 출신의 남자 프로 테니스 선수다. 차세대 세르비아 유망주로 자주 언급되는 자원이다. 파워 중심의 공격과 높은 성장 여지를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '세르비아 출신의 남자 프로 선수로, 파워 중심의 공격과 높은 성장 여지가 돋보이는 투어 자원이다.',
@@ -11222,7 +11222,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'jacob-fearnley': {
-        name: '제이컵 펀리', nameEn: 'Jacob Fearnley', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '제이컵 펀리', nameEn: 'Jacob Fearnley', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/jacob-fearnley.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '제이컵 펀리는 영국 출신의 남자 프로 테니스 선수다. 개발 속도가 빠르고 전술 이해도가 좋은 편이다. 균형 잡힌 올라운드 전개를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '영국 출신의 남자 프로 선수로, 균형 잡힌 올라운드 전개가 돋보이는 투어 자원이다.',
@@ -11257,7 +11257,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'billy-harris': {
-        name: '빌리 해리스', nameEn: 'Billy Harris', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '빌리 해리스', nameEn: 'Billy Harris', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/billy-harris.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '빌리 해리스는 영국 출신의 남자 프로 테니스 선수다. 늦은 성장세로 투어에서 존재감을 넓혀가는 사례다. 실전형 운영과 끈질긴 경쟁력을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '영국 출신의 남자 프로 선수로, 실전형 운영과 끈질긴 경쟁력이 돋보이는 투어 자원이다.',
@@ -11292,7 +11292,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'thiago-seyboth-wild': {
-        name: '치아구 세이보치 빌드', nameEn: 'Thiago Seyboth Wild', country: 'Brazil', countryFlag: '🇧🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '치아구 세이보치 빌드', nameEn: 'Thiago Seyboth Wild', country: 'Brazil', countryFlag: '🇧🇷', image: '/images/players/thiago-seyboth-wild.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '치아구 세이보치 빌드는 브라질 출신의 남자 프로 테니스 선수다. 리듬을 한 번에 바꿀 수 있는 공격성이 강한 선수다. 폭발적인 샷 메이킹과 과감한 타이밍을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '브라질 출신의 남자 프로 선수로, 폭발적인 샷 메이킹과 과감한 타이밍이 돋보이는 투어 자원이다.',
@@ -11327,7 +11327,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'joao-lucas-reis-da-silva': {
-        name: '주앙 루카스 헤이스 다 시우바', nameEn: 'Joao Lucas Reis da Silva', country: 'Brazil', countryFlag: '🇧🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
+        name: '주앙 루카스 헤이스 다 시우바', nameEn: 'Joao Lucas Reis da Silva', country: 'Brazil', countryFlag: '🇧🇷', image: '/images/players/joao-lucas-reis-da-silva.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '주앙 루카스 헤이스 다 시우바는 브라질 출신의 남자 프로 테니스 선수다. 투어 레벨 적응력을 키워 가는 과정이 중요한 자원이다. 왼손 각도와 현대적인 베이스라인 패턴을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '브라질 출신의 남자 프로 선수로, 왼손 각도와 현대적인 베이스라인 패턴이 돋보이는 투어 자원이다.',
@@ -11362,7 +11362,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'nishesh-basavareddy': {
-        name: '니셰시 바사바레디', nameEn: 'Nishesh Basavareddy', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
+        name: '니셰시 바사바레디', nameEn: 'Nishesh Basavareddy', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/nishesh-basavareddy.png', gender: 'male', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '니셰시 바사바레디는 미국 출신의 남자 프로 테니스 선수다. 주니어에서 프로로 이어지는 전환이 매끄러운 유망주다. 정제된 볼 컨트롤과 발전 속도를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '미국 출신의 남자 프로 선수로, 정제된 볼 컨트롤과 발전 속도가 돋보이는 투어 자원이다.',
@@ -11397,7 +11397,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'clara-tauson': {
-        name: '클라라 타우손', nameEn: 'Clara Tauson', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '클라라 타우손', nameEn: 'Clara Tauson', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/clara-tauson.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '클라라 타우손는 덴마크 출신의 여자 프로 테니스 선수다. WTA에서 파워 테니스의 존재감을 보여주는 선수다. 강한 볼 스피드와 직선적인 선공을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '덴마크 출신의 여자 프로 선수로, 강한 볼 스피드와 직선적인 선공이 돋보이는 투어 자원이다.',
@@ -11432,7 +11432,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'lulu-sun': {
-        name: '룰루 선', nameEn: 'Lulu Sun', country: 'New Zealand', countryFlag: '🇳🇿', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
+        name: '룰루 선', nameEn: 'Lulu Sun', country: 'New Zealand', countryFlag: '🇳🇿', image: '/images/players/lulu-sun.png', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '룰루 선는 뉴질랜드 출신의 여자 프로 테니스 선수다. 코트별로 전술 폭을 조절하는 능력이 좋은 편이다. 왼손 변형 패턴과 다양한 전개를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '뉴질랜드 출신의 여자 프로 선수로, 왼손 변형 패턴과 다양한 전개가 돋보이는 투어 자원이다.',
@@ -11467,7 +11467,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'mccartney-kessler': {
-        name: '맥카트니 케슬러', nameEn: 'McCartney Kessler', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '맥카트니 케슬러', nameEn: 'McCartney Kessler', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/mccartney-kessler.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '맥카트니 케슬러는 미국 출신의 여자 프로 테니스 선수다. WTA 레벨에서 점진적으로 경쟁력을 키우는 흐름이 보인다. 콤팩트한 공격과 기본기 안정감을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '미국 출신의 여자 프로 선수로, 콤팩트한 공격과 기본기 안정감이 돋보이는 투어 자원이다.',
@@ -11502,7 +11502,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'ashlyn-krueger': {
-        name: '애슐린 크루거', nameEn: 'Ashlyn Krueger', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '애슐린 크루거', nameEn: 'Ashlyn Krueger', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/ashlyn-krueger.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '애슐린 크루거는 미국 출신의 여자 프로 테니스 선수다. 미국 차세대 자원으로 꾸준히 거론되는 이름이다. 운동 능력과 파워가 살아 있는 현대적 공격형을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '미국 출신의 여자 프로 선수로, 운동 능력과 파워가 살아 있는 현대적 공격형이 돋보이는 투어 자원이다.',
@@ -11537,7 +11537,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'peyton-stearns': {
-        name: '페이턴 스턴스', nameEn: 'Peyton Stearns', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '페이턴 스턴스', nameEn: 'Peyton Stearns', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/peyton-stearns.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '페이턴 스턴스는 미국 출신의 여자 프로 테니스 선수다. 긴 경기에서 경쟁력이 좋은 베이스라이너로 평가된다. 묵직한 랠리와 체력 기반 압박을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '미국 출신의 여자 프로 선수로, 묵직한 랠리와 체력 기반 압박이 돋보이는 투어 자원이다.',
@@ -11572,7 +11572,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'alycia-parks': {
-        name: '알리시아 파크스', nameEn: 'Alycia Parks', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '알리시아 파크스', nameEn: 'Alycia Parks', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/alycia-parks.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '알리시아 파크스는 미국 출신의 여자 프로 테니스 선수다. 서비스 게임의 파괴력이 매우 눈에 띄는 유형이다. 강서브와 빠른 마무리를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '미국 출신의 여자 프로 선수로, 강서브와 빠른 마무리가 돋보이는 투어 자원이다.',
@@ -11607,7 +11607,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'sonay-kartal': {
-        name: '소나이 카르탈', nameEn: 'Sonay Kartal', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '소나이 카르탈', nameEn: 'Sonay Kartal', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/sonay-kartal.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '소나이 카르탈는 영국 출신의 여자 프로 테니스 선수다. 투어 경험을 쌓으면서 경기 완성도를 끌어올리고 있다. 규율 있는 랠리와 흔들림 적은 템포를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '영국 출신의 여자 프로 선수로, 규율 있는 랠리와 흔들림 적은 템포가 돋보이는 투어 자원이다.',
@@ -11642,7 +11642,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'olga-danilovic': {
-        name: '올가 다닐로비치', nameEn: 'Olga Danilovic', country: 'Serbia', countryFlag: '🇷🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
+        name: '올가 다닐로비치', nameEn: 'Olga Danilovic', country: 'Serbia', countryFlag: '🇷🇸', image: '/images/players/olga-danilovic.png', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '올가 다닐로비치는 세르비아 출신의 여자 프로 테니스 선수다. 한 번 흐름을 잡으면 상대를 몰아붙이는 능력이 좋다. 왼손 파워와 과감한 패턴 전환을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '세르비아 출신의 여자 프로 선수로, 왼손 파워와 과감한 패턴 전환이 돋보이는 투어 자원이다.',
@@ -11677,7 +11677,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'yulia-putintseva': {
-        name: '율리야 푸틴체바', nameEn: 'Yulia Putintseva', country: 'Kazakhstan', countryFlag: '🇰🇿', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '율리야 푸틴체바', nameEn: 'Yulia Putintseva', country: 'Kazakhstan', countryFlag: '🇰🇿', image: '/images/players/yulia-putintseva.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '율리야 푸틴체바는 카자흐스탄 출신의 여자 프로 테니스 선수다. 상대 입장에서 매우 불편한 투쟁형 선수로 통한다. 집요한 수비와 까다로운 경기 리듬을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '카자흐스탄 출신의 여자 프로 선수로, 집요한 수비와 까다로운 경기 리듬이 돋보이는 투어 자원이다.',
@@ -11712,7 +11712,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'rebeka-masarova': {
-        name: '레베카 마사로바', nameEn: 'Rebeka Masarova', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '레베카 마사로바', nameEn: 'Rebeka Masarova', country: 'Spain', countryFlag: '🇪🇸', image: '/images/players/rebeka-masarova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '레베카 마사로바는 스페인 출신의 여자 프로 테니스 선수다. 피지컬 장점을 바탕으로 투어 적응력을 키우는 중이다. 긴 리치와 묵직한 전개를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '스페인 출신의 여자 프로 선수로, 긴 리치와 묵직한 전개가 돋보이는 투어 자원이다.',
@@ -11747,7 +11747,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'elena-avanesyan': {
-        name: '엘레나 아바네샨', nameEn: 'Elena Avanesyan', country: 'Armenia', countryFlag: '🇦🇲', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '엘레나 아바네샨', nameEn: 'Elena Avanesyan', country: 'Armenia', countryFlag: '🇦🇲', image: '/images/players/elena-avanesyan.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '엘레나 아바네샨는 아르메니아 출신의 여자 프로 테니스 선수다. 한 단계씩 성장 폭을 넓혀가는 투어형 선수다. 끈질긴 랠리와 집중력 있는 수비를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '아르메니아 출신의 여자 프로 선수로, 끈질긴 랠리와 집중력 있는 수비가 돋보이는 투어 자원이다.',
@@ -11782,7 +11782,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'moyuka-uchijima': {
-        name: '모유카 우치지마', nameEn: 'Moyuka Uchijima', country: 'Japan', countryFlag: '🇯🇵', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '모유카 우치지마', nameEn: 'Moyuka Uchijima', country: 'Japan', countryFlag: '🇯🇵', image: '/images/players/moyuka-uchijima.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '모유카 우치지마는 일본 출신의 여자 프로 테니스 선수다. 견고한 밸런스로 여러 대회에서 꾸준함을 보이는 타입이다. 안정적인 템포와 실수 억제력을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '일본 출신의 여자 프로 선수로, 안정적인 템포와 실수 억제력이 돋보이는 투어 자원이다.',
@@ -11817,7 +11817,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'eva-lys': {
-        name: '에바 리스', nameEn: 'Eva Lys', country: 'Germany', countryFlag: '🇩🇪', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
+        name: '에바 리스', nameEn: 'Eva Lys', country: 'Germany', countryFlag: '🇩🇪', image: '/images/players/eva-lys.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '에바 리스는 독일 출신의 여자 프로 테니스 선수다. 젊은 세대 가운데 성장 흐름이 뚜렷한 선수다. 공격 전환 타이밍과 스트로크 완성도를 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '독일 출신의 여자 프로 선수로, 공격 전환 타이밍과 스트로크 완성도가 돋보이는 투어 자원이다.',
@@ -11852,7 +11852,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'robin-montgomery': {
-        name: '로빈 몽고메리', nameEn: 'Robin Montgomery', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/placeholder-tennis-player.svg', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
+        name: '로빈 몽고메리', nameEn: 'Robin Montgomery', country: 'USA', countryFlag: '🇺🇸', image: '/images/players/robin-montgomery.png', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '로빈 몽고메리는 미국 출신의 여자 프로 테니스 선수다. 미국의 차세대 왼손 유망주로 주목받는 이름이다. 왼손 패턴과 전방 압박의 조합을 앞세워 투어 무대에서 경쟁력을 넓혀가고 있다.',
         detailedProfile: {
             oneLineSummary: '미국 출신의 여자 프로 선수로, 왼손 패턴과 전방 압박의 조합이 돋보이는 투어 자원이다.',
@@ -11887,7 +11887,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'soonwoo-kwon': {
-        name: '권순우', nameEn: 'Soonwoo Kwon', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male',
+        name: '권순우', nameEn: 'Soonwoo Kwon', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/soonwoo-kwon.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '권순우는 정현 이후 한국 남자 테니스의 간판으로, 2022년 ATP 투어 아스타나 오픈 단식 우승을 달성한 한국 테니스의 에이스입니다. 끈질긴 수비와 날카로운 리턴으로 세계 무대에서 경쟁력을 증명하고 있습니다.',
         detailedProfile: {
@@ -12142,7 +12142,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'emma-raducanu': {
-        name: '엠마 라두카누', nameEn: 'Emma Raducanu', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '엠마 라두카누', nameEn: 'Emma Raducanu', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/emma-raducanu.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '엠마 라두카누는 2021년 US오픈에서 예선부터 본선 우승까지 단 한 세트도 내주지 않는 전무후무한 기록을 세우며 테니스 역사를 새로 쓴 선수입니다. 루마니아와 중국 혈통을 가진 영국 선수로, 공격적이면서도 다채로운 테니스를 구사합니다.',
         detailedProfile: {
@@ -12206,7 +12206,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'mirra-andreeva': {
-        name: '미라 안드레바', nameEn: 'Mirra Andreeva', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '미라 안드레바', nameEn: 'Mirra Andreeva', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/mirra-andreeva.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '미라 안드레바는 WTA 투어에서 가장 주목받는 10대 선수로, 17세의 나이에 이미 톱 선수들을 격파하며 차세대 여자 테니스의 아이콘으로 떠올랐습니다. 뛰어난 코트 센스와 대담한 플레이가 돋보이는 러시아 출신의 신성입니다.',
         detailedProfile: {
@@ -12334,7 +12334,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'linda-noskova': {
-        name: '린다 노스코바', nameEn: 'Linda Noskova', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '린다 노스코바', nameEn: 'Linda Noskova', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/linda-noskova.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '린다 노스코바는 체코 테니스의 찬란한 전통을 이어갈 차세대 스타로, 강력한 서브와 공격적인 베이스라인 플레이가 특징인 선수입니다. 2024년 호주오픈에서 세계 1위를 꺾으며 큰 주목을 받았습니다.',
         detailedProfile: {
@@ -12398,7 +12398,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'donna-vekic': {
-        name: '도나 베키치', nameEn: 'Donna Vekic', country: 'Croatia', countryFlag: '🇭🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '도나 베키치', nameEn: 'Donna Vekic', country: 'Croatia', countryFlag: '🇭🇷', image: '/images/players/donna-vekic.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '도나 베키치는 크로아티아를 대표하는 여자 테니스 선수로, 2024년 파리 올림픽 은메달리스트입니다. 강력한 포핸드와 안정적인 올코트 플레이로 WTA 톱 20에 안정적으로 자리잡고 있으며, 오랜 경력의 경험이 돋보이는 선수입니다.',
         detailedProfile: {
@@ -12526,7 +12526,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'marta-kostyuk': {
-        name: '마르타 코스튜크', nameEn: 'Marta Kostyuk', country: 'Ukraine', countryFlag: '🇺🇦', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '마르타 코스튜크', nameEn: 'Marta Kostyuk', country: 'Ukraine', countryFlag: '🇺🇦', image: '/images/players/marta-kostyuk.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '마르타 코스튜크는 우크라이나를 대표하는 여자 테니스 선수로, 15세에 호주오픈 본선 3라운드에 진출하며 일찍이 재능을 인정받았습니다. 전쟁이라는 어려운 환경 속에서도 조국을 대표해 코트에 서는 강인한 선수입니다.',
         detailedProfile: {
@@ -12590,7 +12590,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'leylah-fernandez': {
-        name: '레일라 페르난데스', nameEn: 'Leylah Fernandez', country: 'Canada', countryFlag: '🇨🇦', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '레일라 페르난데스', nameEn: 'Leylah Fernandez', country: 'Canada', countryFlag: '🇨🇦', image: '/images/players/leylah-fernandez.png', gender: 'female',
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '레일라 페르난데스는 2021년 US오픈 준우승으로 세계적인 주목을 받은 캐나다의 좌완 테니스 선수입니다. 에콰도르 출신 아버지와 필리핀-캐나다 어머니 사이에서 태어나 다문화적 배경을 가지고 있으며, 화려한 좌완 플레이와 관중을 사로잡는 에너지로 사랑받고 있습니다.',
         detailedProfile: {
@@ -12654,7 +12654,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'maria-sakkari': {
-        name: '마리아 사카리', nameEn: 'Maria Sakkari', country: 'Greece', countryFlag: '🇬🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '마리아 사카리', nameEn: 'Maria Sakkari', country: 'Greece', countryFlag: '🇬🇷', image: '/images/players/maria-sakkari.png', gender: 'female',
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '마리아 사카리는 그리스 여자 테니스의 간판 선수로, 뛰어난 체력과 공격적인 플레이로 WTA 톱 10까지 올랐던 실력파입니다. 스포츠 명문 가문 출신으로, 그리스 테니스의 위상을 세계 무대에서 높이고 있습니다.',
         detailedProfile: {
@@ -12718,7 +12718,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'caroline-garcia': {
-        name: '카롤린 가르시아', nameEn: 'Caroline Garcia', country: 'France', countryFlag: '🇫🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '카롤린 가르시아', nameEn: 'Caroline Garcia', country: 'France', countryFlag: '🇫🇷', image: '/images/players/caroline-garcia.png', gender: 'female',
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '카롤린 가르시아는 프랑스를 대표하는 여자 테니스 선수로, 2022년 WTA 파이널스 우승을 비롯해 다수의 WTA 타이틀을 보유한 실력파입니다. 한 손 백핸드와 공격적인 네트 플레이가 돋보이는 올코트 플레이어입니다.',
         detailedProfile: {
