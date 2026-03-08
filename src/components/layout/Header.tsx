@@ -148,7 +148,9 @@ const Header: React.FC = () => {
             size="icon"
             onClick={toggleMobileMenu}
             className="h-10 w-10 text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 md:hidden focus-ring"
-            aria-label="메뉴 열기"
+            aria-label={isMobileMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
@@ -158,7 +160,7 @@ const Header: React.FC = () => {
       {/* Mobile Navigation */}
       {
         isMobileMenuOpen && (
-          <div className="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 md:hidden">
+          <div id="mobile-menu" className="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 md:hidden">
             <nav className="container mx-auto px-4 py-6">
               <div className="flex flex-col gap-4">
                 {navItems.map((item) => {

@@ -4,7 +4,7 @@
 
 import type { StatsData } from '@/types/admin';
 
-export const ADMIN_PASSWORD = '1234';
+export const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || '';
 export const AUTO_REFRESH_INTERVAL = 30000; // 30초
 export const MAX_RECENT_VISITORS = 100;
 export const MAX_DAILY_STATS_DAYS = 30;
