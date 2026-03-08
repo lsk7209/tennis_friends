@@ -3350,7 +3350,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'soonwoo-kwon': {
+    'soonwoo-kwon-legacy': {
         name: '권순우', nameEn: 'Soonwoo Kwon', country: 'Korea', countryFlag: '🇰🇷', image: '/images/players/soonwoo-kwon.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '대한민국 테니스의 새로운 역사를 쓴 "코리안 썬더". 이형택 이후 18년 만에 ATP 투어 우승을 차지했으며, 한국 선수 최초로 ATP 투어 2회 우승이라는 금자탑을 쌓은 명실상부한 한국 테니스의 에이스입니다.',
@@ -5994,7 +5994,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'maria-sakkari': {
+    'maria-sakkari-legacy': {
         image: '/images/players/maria-sakkari.png',
         name: '마리아 사카리', nameEn: 'Maria Sakkari', country: 'Greece', countryFlag: '🇬🇷', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '그리스의 스파르탄. 투어 최고 수준의 근육질 몸매에서 나오는 파워풀한 테니스와 쉽게 포기하지 않는 강인한 멘탈이 트레이드마크입니다.',
@@ -7073,7 +7073,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'emma-raducanu': {
+    'emma-raducanu-legacy': {
         image: '/images/players/emma-raducanu.png',
         name: '엠마 라두카누', nameEn: 'Emma Raducanu', country: 'United Kingdom', countryFlag: '🇬🇧', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '기적의 아이콘. 2021 US 오픈에서 예선 통과자 최초로 무실세트 우승이라는 신화를 썼습니다. 깔끔한 기술과 스타성을 겸비한 영국의 희망입니다.',
@@ -7138,7 +7138,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'leylah-fernandez': {
+    'leylah-fernandez-legacy': {
         name: '레일라 페르난데스', nameEn: 'Leylah Fernandez', country: 'Canada', countryFlag: '🇨🇦', image: '/images/players/leylah-fernandez.png', gender: 'female', plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '작은 고추가 맵다. 왜소한 체격에도 불구하고 빠른 발과 영리한 플레이, 그리고 지치지 않는 투지로 2021 US 오픈 준우승을 차지했습니다.',
         detailedProfile: {
@@ -7202,7 +7202,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'mirra-andreeva': {
+    'mirra-andreeva-legacy': {
         name: '미라 안드레예바', nameEn: 'Mirra Andreeva', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/mirra-andreeva.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: 'WTA의 슈퍼 틴에이저. 16세의 나이에 윔블던 16강, 롤랑가로스 4강(2024)에 오르며 천재성을 입증한, 여자 테니스의 차세대 지배자 후보입니다.',
         detailedProfile: {
@@ -7262,7 +7262,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             `
         }
     },
-    'linda-noskova': {
+    'linda-noskova-legacy': {
         name: '린다 노스코바', nameEn: 'Linda Noskova', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/linda-noskova.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '체코의 10대 돌풍 주역. 2024 호주 오픈에서 세계 1위 시비옹테크를 꺾으며 파란을 일으킨 선수로, 강력한 포핸드와 침착한 경기 운영이 강점입니다.',
         detailedProfile: {
@@ -7319,7 +7319,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'marta-kostyuk': {
+    'marta-kostyuk-legacy': {
         name: '마르타 코스튜크', nameEn: 'Marta Kostyuk', country: 'Ukraine', countryFlag: '🇺🇦', image: '/images/players/marta-kostyuk.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '우크라이나의 차세대 에이스. 주니어 시절부터 두각을 나타냈으며, 공격적인 플레이와 감정을 솔직하게 드러내는 스타성으로 주목받고 있습니다.',
         detailedProfile: {
@@ -8859,7 +8859,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'donna-vekic': {
+    'donna-vekic-legacy': {
         name: '돈나 베키치', nameEn: 'Donna Vekic', country: 'Croatia', countryFlag: '🇭🇷', image: '/images/players/donna-vekic.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '강력한 서브와 포핸드를 겸비한 크로아티아의 스타. 2024 파리 올림픽 은메달리스트로, 오랜 부상을 딛고 제2의 전성기를 맞이했습니다.',
         detailedProfile: {
@@ -9033,7 +9033,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-    'caroline-garcia': {
+    'caroline-garcia-legacy': {
         name: '카롤린 가르시아', nameEn: 'Caroline Garcia', country: 'France', countryFlag: '🇫🇷', image: '/images/players/caroline-garcia.png', gender: 'female', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '공격적인 리턴 포지스("Fly with Caro")과 다이내믹한 플레이가 특징입니다. WTA 파이널스 우승 경험이 있는 프랑스의 에이스입니다.',
         detailedProfile: {

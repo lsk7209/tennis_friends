@@ -17,13 +17,26 @@ function EquipmentRecommendationResultContent() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState<EquipmentResult | null>(null);
+
+  const emptyAccessories: EquipmentResult['accessories'] = {
+    grip: [],
+    overgrip: [],
+    dampener: [],
+    bag: []
+  };
+
+  const emptyBudget: EquipmentResult['totalBudget'] = {
+    min: 0,
+    max: 0,
+    recommended: 0
+  };
   
   useEffect(() => {
     const timer = setTimeout(() => {
-      const rackets = safeJsonParse(searchParams.get('rackets'), []) as RacketRecommendation[];
-      const strings = safeJsonParse(searchParams.get('strings'), []) as StringRecommendation[];
-      const accessories = safeJsonParse(searchParams.get('accessories'), {});
-      const totalBudget = safeJsonParse(searchParams.get('totalBudget'), {});
+      const rackets = safeJsonParse<RacketRecommendation[]>(searchParams.get('rackets'), []);
+      const strings = safeJsonParse<StringRecommendation[]>(searchParams.get('strings'), []);
+      const accessories = safeJsonParse<EquipmentResult['accessories']>(searchParams.get('accessories'), emptyAccessories);
+      const totalBudget = safeJsonParse<EquipmentResult['totalBudget']>(searchParams.get('totalBudget'), emptyBudget);
       
       setResult({
         rackets,

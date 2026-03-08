@@ -19,18 +19,25 @@ function TrainingPlannerResultContent() {
   const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState<TrainingPlanResult | null>(null);
   const [selectedWeek, setSelectedWeek] = useState(1);
+
+  const emptyRecommendations: TrainingPlanResult['recommendations'] = {
+    technical: [],
+    tactical: [],
+    physical: [],
+    mental: []
+  };
   
   useEffect(() => {
     // 로딩 시뮬레이션
     const timer = setTimeout(() => {
       const planName = searchParams.get('planName') || '';
       const duration = Number(searchParams.get('duration') || 0);
-      const weeklySchedule = safeJsonParse(searchParams.get('weeklySchedule'), []) as WeeklySchedule[];
-      const focusAreas = safeJsonParse(searchParams.get('focusAreas'), []) as FocusArea[];
-      const progressMilestones = safeJsonParse(searchParams.get('progressMilestones'), []) as Milestone[];
-      const recommendations = safeJsonParse(searchParams.get('recommendations'), {});
-      const equipment = safeJsonParse(searchParams.get('equipment'), []);
-      const nextSteps = safeJsonParse(searchParams.get('nextSteps'), []);
+      const weeklySchedule = safeJsonParse<WeeklySchedule[]>(searchParams.get('weeklySchedule'), []);
+      const focusAreas = safeJsonParse<FocusArea[]>(searchParams.get('focusAreas'), []);
+      const progressMilestones = safeJsonParse<Milestone[]>(searchParams.get('progressMilestones'), []);
+      const recommendations = safeJsonParse<TrainingPlanResult['recommendations']>(searchParams.get('recommendations'), emptyRecommendations);
+      const equipment = safeJsonParse<string[]>(searchParams.get('equipment'), []);
+      const nextSteps = safeJsonParse<string[]>(searchParams.get('nextSteps'), []);
       
       setResult({
         planName,

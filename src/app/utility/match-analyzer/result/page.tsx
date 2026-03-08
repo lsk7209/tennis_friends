@@ -18,18 +18,33 @@ function MatchAnalyzerResultContent() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState<MatchAnalysisResult | null>(null);
+
+  const emptyStatistics: MatchAnalysisResult['statistics'] = {
+    servePercentage: 0,
+    returnPercentage: 0,
+    winnerErrorRatio: 0,
+    netPlaySuccess: 0,
+    breakPointConversion: 0
+  };
+
+  const emptyRecommendations: MatchAnalysisResult['recommendations'] = {
+    technical: [],
+    tactical: [],
+    mental: [],
+    physical: []
+  };
   
   useEffect(() => {
     // 로딩 시뮬레이션
     const timer = setTimeout(() => {
       const overallScore = Number(searchParams.get('overallScore') || 0);
       const grade = searchParams.get('grade') || 'C';
-      const strengths = safeJsonParse(searchParams.get('strengths'), []);
-      const weaknesses = safeJsonParse(searchParams.get('weaknesses'), []);
-      const improvements = safeJsonParse(searchParams.get('improvements'), []);
-      const statistics = safeJsonParse(searchParams.get('statistics'), {});
-      const recommendations = safeJsonParse(searchParams.get('recommendations'), {});
-      const nextMatchGoals = safeJsonParse(searchParams.get('nextMatchGoals'), []);
+      const strengths = safeJsonParse<string[]>(searchParams.get('strengths'), []);
+      const weaknesses = safeJsonParse<string[]>(searchParams.get('weaknesses'), []);
+      const improvements = safeJsonParse<string[]>(searchParams.get('improvements'), []);
+      const statistics = safeJsonParse<MatchAnalysisResult['statistics']>(searchParams.get('statistics'), emptyStatistics);
+      const recommendations = safeJsonParse<MatchAnalysisResult['recommendations']>(searchParams.get('recommendations'), emptyRecommendations);
+      const nextMatchGoals = safeJsonParse<string[]>(searchParams.get('nextMatchGoals'), []);
       
       setResult({
         overallScore,

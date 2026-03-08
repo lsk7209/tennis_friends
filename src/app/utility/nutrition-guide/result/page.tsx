@@ -19,28 +19,80 @@ function NutritionResultContent() {
   const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState<NutritionResult | null>(null);
   const [selectedPhase, setSelectedPhase] = useState('preSession');
+
+  const emptyPlan: NutritionResult['plan'] = {
+    pre: {
+      title: '',
+      summary: '',
+      foods: [],
+      hydration: '',
+      macros: {
+        carbs: 0,
+        protein: 0,
+        fat: 0
+      }
+    },
+    post: {
+      title: '',
+      summary: '',
+      foods: [],
+      hydration: '',
+      macros: {
+        carbs: 0,
+        protein: 0,
+        fat: 0
+      }
+    }
+  };
+
+  const emptyRecommendations: NonNullable<NutritionResult['recommendations']> & {
+    keyWords?: string[];
+    avoidWords?: string[];
+  } = {
+    general: [],
+    hydration: [],
+    recovery: [],
+    performance: [],
+    keyWords: [],
+    avoidWords: []
+  };
   
   useEffect(() => {
     // 로딩 시뮬레이션
     const timer = setTimeout(() => {
       const planName = searchParams.get('planName') || '';
       const totalCalories = Number(searchParams.get('totalCalories') || 0);
-      const macronutrients = safeJsonParse(searchParams.get('macronutrients'), {});
-      const hydration = safeJsonParse(searchParams.get('hydration'), {});
-      const mealPlan = safeJsonParse(searchParams.get('mealPlan'), {});
-      const supplements = safeJsonParse(searchParams.get('supplements'), []) as Supplement[];
-      const timing = safeJsonParse(searchParams.get('timing'), []) as Timing[];
-      const recommendations = safeJsonParse(searchParams.get('recommendations'), {});
+      const macronutrients = safeJsonParse<NutritionResult['macronutrients'] | null>(searchParams.get('macronutrients'), null);
+      const hydration = safeJsonParse<NutritionResult['hydration'] | { total?: string } | null>(searchParams.get('hydration'), null);
+      const meals = safeJsonParse<Meal[]>(searchParams.get('mealPlan'), []);
+      const supplements = safeJsonParse<Supplement[]>(searchParams.get('supplements'), []);
+      const timing = safeJsonParse<Timing[]>(searchParams.get('timing'), []);
+      const recommendations = safeJsonParse<NonNullable<NutritionResult['recommendations']> & { keyWords?: string[]; avoidWords?: string[] }>(
+        searchParams.get('recommendations'),
+        emptyRecommendations
+      );
+      const normalizedHydration = hydration && 'waterIntake' in hydration
+        ? hydration
+        : undefined;
+      const totalHydration = hydration && 'total' in hydration
+        ? hydration.total || '0ml'
+        : `${normalizedHydration?.waterIntake || 0}ml`;
       
       setResult({
-        plan: mealPlan,
-        totalHydration: hydration.total || '0ml',
+        plan: emptyPlan,
+        totalHydration,
         totalCalories: String(totalCalories),
         keyWords: recommendations.keyWords || [],
         avoidWords: recommendations.avoidWords || [],
         duration: searchParams.get('duration') || '',
         activityType: searchParams.get('activityType') || '',
-        goal: searchParams.get('goal') || ''
+        goal: searchParams.get('goal') || '',
+        macronutrients: macronutrients || undefined,
+        hydration: normalizedHydration,
+        meals,
+        supplements,
+        timing,
+        recommendations
       });
       setIsLoading(false);
     }, 2000);
