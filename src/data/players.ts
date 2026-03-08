@@ -11886,6 +11886,261 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
+    'soonwoo-kwon': {
+        name: '권순우', nameEn: 'Soonwoo Kwon', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '권순우는 정현 이후 한국 남자 테니스의 간판으로, 2022년 ATP 투어 아스타나 오픈 단식 우승을 달성한 한국 테니스의 에이스입니다. 끈질긴 수비와 날카로운 리턴으로 세계 무대에서 경쟁력을 증명하고 있습니다.',
+        detailedProfile: {
+            oneLineSummary: '정현 이후 한국 남자 테니스의 새로운 에이스, ATP 투어 첫 우승의 주인공.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🏆 한국 남자 테니스 ATP 투어 우승자</div>
+                    <p>2022년 아스타나 오픈에서 우승하며 이형택 이후 한국 남자 선수로서 ATP 투어 단식 타이틀을 획득했습니다. 이는 한국 테니스의 새로운 이정표가 된 역사적인 순간이었습니다.</p>
+                </div>
+                <p>꾸준한 투어 활동으로 세계 랭킹 57위(2022년 최고)까지 올랐으며, 한국 데이비스컵 대표팀의 핵심 멤버로 활약하고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"끈질긴 카운터 펀처 (The Persistent Counter-Puncher)"</strong></p>
+                <p>권순우의 가장 큰 무기는 뛰어난 수비력과 정확한 리턴입니다. 상대의 강한 서브를 정확하게 돌려보내는 능력이 탁월하며, 긴 랠리에서 인내심을 가지고 기회를 만들어냅니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>탄탄한 리턴 게임:</strong> 상대 서브를 무력화시키는 리턴 능력</li>
+                        <li><strong>안정적인 백핸드:</strong> 양손 백핸드의 일관성이 뛰어남</li>
+                        <li><strong>코트 커버리지:</strong> 빠른 발과 끈기 있는 수비</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '리턴 (Return)', score: 9, description: '투어에서도 상위권에 드는 리턴 능력.' },
+                { name: '수비 (Defense)', score: 8.5, description: '끈질기게 공을 돌려보내는 수비력.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정적이고 정확한 양손 백핸드.' },
+                { name: '체력 (Stamina)', score: 8.5, description: '긴 경기에서도 지치지 않는 투지.' },
+                { name: '서브 (Serve)', score: 7, description: '약점으로 꼽히지만 꾸준히 개선 중.' },
+                { name: '포핸드 (Forehand)', score: 7.5, description: '공격 전환 시 위력적인 포핸드.' }
+            ],
+            growthStory: `
+                <p>대전 출신으로 어릴 때부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 무대에서 활약했으며, 꾸준한 성장으로 한국 테니스의 미래로 주목받았습니다.</p>
+                <p>정현 선수의 부상 이탈 이후 한국 남자 테니스의 간판을 물려받아, 데이비스컵과 ATP 투어에서 태극기를 대표하고 있습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2022 아스타나 오픈 결승 vs 크비트닌스키',
+                date: '2022. 10. 09',
+                description: '결승전에서 <strong>7-6, 6-3</strong>으로 승리하며 ATP 투어 첫 단식 타이틀을 획득했습니다. 한국 남자 테니스에 새 역사를 쓴 감동적인 순간이었습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🇰🇷 한국 테니스의 자부심</div>
+                    <p>묵묵히 투어를 돌며 한국 테니스의 위상을 높이고 있는 권순우. 화려한 플레이보다 성실함과 끈기로 팬들의 사랑을 받고 있습니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"랭킹 재도약을 위한 도전"</strong></p>
+                <p>부상과 슬럼프를 극복하며 랭킹 상승을 위해 챌린저와 ATP 투어를 병행하고 있습니다. 경험이 쌓일수록 더 강해지는 타입으로, 꾸준한 성장이 기대됩니다.</p>
+            `,
+            faq: [
+                {
+                    question: '권순우 선수의 ATP 최고 랭킹은?',
+                    answer: '2022년 8월 세계 랭킹 57위를 기록했으며, 이는 정현 이후 한국 남자 선수 중 최고 랭킹입니다.'
+                },
+                {
+                    question: '권순우 선수의 주요 성적은?',
+                    answer: '2022년 아스타나 오픈 우승, 그랜드슬램 본선 다수 진출, 데이비스컵 한국 대표 등이 주요 성적입니다.'
+                }
+            ]
+        }
+    },
+    'narae-han': {
+        name: '한나래', nameEn: 'Narae Han', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '한나래는 한국 여자 테니스의 대표 선수로, WTA 투어와 그랜드슬램 본선에 꾸준히 출전하며 한국 여자 테니스의 위상을 높여온 선수입니다. 안정적인 스트로크와 강한 정신력이 강점입니다.',
+        detailedProfile: {
+            oneLineSummary: '한국 여자 테니스의 간판, 꾸준함으로 세계 무대에 도전하는 투지의 선수.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🇰🇷 한국 여자 테니스의 개척자</div>
+                    <p>WTA 투어와 그랜드슬램 본선에 꾸준히 출전하며 한국 여자 테니스의 가능성을 세계에 알린 선수입니다. 데이비스컵/빌리진킹컵 한국 대표로 오랜 기간 활약해왔습니다.</p>
+                </div>
+            `,
+            playStyle: `
+                <p><strong>"안정감의 끝판왕 (The Steady Force)"</strong></p>
+                <p>한나래의 테니스는 '실수를 줄이는 것'에 초점이 맞춰져 있습니다. 안정적인 양손 백핸드와 정확한 볼 배치로 상대의 실수를 유도하는 스타일입니다.</p>
+            `,
+            hexagonStats: [
+                { name: '안정성 (Consistency)', score: 9, description: '비강제 에러를 최소화하는 안정적인 스트로크.' },
+                { name: '멘탈 (Mental)', score: 8.5, description: '경기 후반에도 흔들리지 않는 강한 정신력.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '일관성 있는 양손 백핸드.' },
+                { name: '리턴 (Return)', score: 8, description: '상대 서브를 안정적으로 돌려보내는 능력.' },
+                { name: '포핸드 (Forehand)', score: 7.5, description: '필요할 때 공격적으로 전환 가능.' },
+                { name: '서브 (Serve)', score: 7, description: '안정적이지만 위력이 더 필요한 부분.' }
+            ],
+            growthStory: `
+                <p>어릴 때부터 테니스에 재능을 보였으며, 국내 대회를 석권한 뒤 국제 무대로 진출했습니다.</p>
+                <p>한국 여자 테니스가 세계 무대에서 주목받기 어려운 환경 속에서도 묵묵히 투어를 돌며 후배들에게 길을 열어주고 있습니다.</p>
+            `,
+            signatureMatch: {
+                title: '그랜드슬램 본선 첫 승리',
+                description: '한국 여자 선수로서 그랜드슬램 본선에서 승리를 거두며, 한국 여자 테니스의 새로운 가능성을 보여주었습니다.'
+            },
+            recentForm: `
+                <p><strong>"경험과 노하우의 원숙한 시기"</strong></p>
+                <p>풍부한 투어 경험을 바탕으로 후배 양성에도 힘쓰며, 한국 여자 테니스의 발전에 기여하고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '한나래 선수의 주요 성적은?',
+                    answer: 'WTA 투어 본선 다수 진출, 그랜드슬램 본선 출전, 빌리진킹컵 한국 대표 등이 주요 성적입니다.'
+                }
+            ]
+        }
+    },
+    'seongchan-hong': {
+        name: '홍성찬', nameEn: 'Seongchan Hong', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '홍성찬은 한국 남자 테니스의 차세대 유망주로, ATP 챌린저 대회에서 활발히 활동하며 투어 진입을 노리는 떠오르는 신성입니다.',
+        detailedProfile: {
+            oneLineSummary: '한국 남자 테니스의 미래, ATP 투어 진입을 향해 도약하는 차세대 에이스.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🌟 한국 테니스의 넥스트 제너레이션</div>
+                    <p>ATP 챌린저 대회에서 꾸준히 성적을 올리며 한국 남자 테니스의 미래를 이끌어갈 선수로 주목받고 있습니다. 공격적인 베이스라인 테니스와 강한 서브가 특징입니다.</p>
+                </div>
+            `,
+            playStyle: `
+                <p><strong>"공격형 베이스라이너 (The Aggressive Baseliner)"</strong></p>
+                <p>강한 포핸드를 중심으로 공격적인 테니스를 구사합니다. 선배 세대보다 파워풀한 플레이가 특징이며, 서브 능력도 발전하고 있습니다.</p>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 8, description: '공격의 핵심 무기인 강력한 포핸드.' },
+                { name: '서브 (Serve)', score: 7.5, description: '한국 선수치고 위력적인 서브.' },
+                { name: '체력 (Stamina)', score: 8, description: '젊은 나이답게 풍부한 체력.' },
+                { name: '백핸드 (Backhand)', score: 7.5, description: '안정적이며 성장 중인 백핸드.' },
+                { name: '멘탈 (Mental)', score: 7, description: '경험이 쌓이며 점점 강해지는 중.' },
+                { name: '네트 플레이 (Net Play)', score: 7, description: '다양한 상황 대처 능력 성장 중.' }
+            ],
+            growthStory: `
+                <p>한국 주니어 대회에서 두각을 나타낸 뒤 국제 무대로 진출, 챌린저 대회를 중심으로 경험을 쌓고 있습니다.</p>
+                <p>권순우, 정현의 뒤를 잇는 한국 남자 테니스의 차세대 주자로 기대를 모으고 있습니다.</p>
+            `,
+            recentForm: `
+                <p><strong>"챌린저에서 투어로, 도약의 시기"</strong></p>
+                <p>ATP 챌린저 대회에서 성적을 올리며 본투어 진입을 위한 랭킹 포인트를 쌓고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '홍성찬 선수의 목표는?',
+                    answer: 'ATP 본투어 안착과 그랜드슬램 본선 출전이 단기 목표이며, 한국 남자 테니스의 새로운 역사를 쓰는 것이 장기 목표입니다.'
+                }
+            ]
+        }
+    },
+    'sujeong-jang': {
+        name: '장수정', nameEn: 'Sujeong Jang', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '장수정은 한국 여자 테니스의 떠오르는 유망주로, ITF 서킷과 WTA 챌린저에서 활발히 활동하며 세계 무대 진출을 준비하고 있는 기대주입니다.',
+        detailedProfile: {
+            oneLineSummary: '한국 여자 테니스의 미래를 이끌 차세대 유망주.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🌸 한국 여자 테니스의 새로운 희망</div>
+                    <p>ITF 서킷에서 꾸준한 성적을 올리며 WTA 투어 진입을 노리고 있습니다. 공격적이고 현대적인 테니스를 구사하며, 한국 여자 테니스의 새로운 가능성을 보여주고 있습니다.</p>
+                </div>
+            `,
+            playStyle: `
+                <p><strong>"현대적 공격 테니스 (The Modern Attacker)"</strong></p>
+                <p>빠른 스윙 스피드와 적극적인 코트 장악력이 특징입니다. 한국 여자 선수 중에서도 공격적인 스타일로 차별화되며, 포핸드의 파워와 각도가 주무기입니다.</p>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 8, description: '공격적이고 각도 있는 포핸드가 주무기.' },
+                { name: '체력 (Stamina)', score: 8, description: '젊은 에너지로 긴 경기에도 강함.' },
+                { name: '스피드 (Speed)', score: 7.5, description: '빠른 발로 넓은 코트 커버리지.' },
+                { name: '백핸드 (Backhand)', score: 7.5, description: '성장 중인 안정적 백핸드.' },
+                { name: '서브 (Serve)', score: 7, description: '꾸준히 발전 중인 서브.' },
+                { name: '멘탈 (Mental)', score: 7, description: '경험과 함께 성장할 멘탈.' }
+            ],
+            growthStory: `
+                <p>어린 시절부터 테니스에 두각을 나타내며 한국 주니어 대회를 석권했습니다.</p>
+                <p>ITF 서킷을 중심으로 국제 경험을 쌓으며, WTA 본무대를 향해 한 걸음씩 나아가고 있습니다.</p>
+            `,
+            recentForm: `
+                <p><strong>"ITF에서 WTA로, 성장의 계단"</strong></p>
+                <p>ITF 대회에서 우승 경험을 쌓으며 WTA 투어 진입을 위한 랭킹을 올리고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '장수정 선수의 목표는?',
+                    answer: 'WTA 본투어 안착과 그랜드슬램 예선 돌파가 단기 목표이며, 한국 여자 테니스를 세계에 알리는 것이 꿈입니다.'
+                }
+            ]
+        }
+    },
+    'duckhee-lee': {
+        name: '이덕희', nameEn: 'Duckhee Lee', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '이덕희는 청각 장애를 가진 한국의 프로 테니스 선수로, 2019년 윈스턴-세일럼 오픈에서 ATP 투어 본선 첫 승리를 거두며 전 세계에 감동을 선사한 영감의 아이콘입니다.',
+        detailedProfile: {
+            oneLineSummary: '소리 없는 코트 위의 전사, 청각 장애를 넘어 ATP 무대에 선 한국의 영웅.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🏆 역사를 쓴 순간</div>
+                    <p>2019년 윈스턴-세일럼 오픈에서 ATP 투어 본선 첫 승리를 거두며, 청각 장애 선수로서는 사상 처음으로 ATP 투어 본선 승리라는 역사를 썼습니다. 전 세계 테니스 팬들에게 감동과 영감을 준 순간이었습니다.</p>
+                </div>
+                <p>심판의 콜이나 공의 소리를 듣지 못하는 불리함 속에서도 시각적 감각과 집중력으로 이를 극복하며, 불가능을 가능으로 만드는 선수입니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"시각의 테니스 (The Visual Player)"</strong></p>
+                <p>소리를 듣지 못하기 때문에 공의 궤적, 상대의 몸동작, 라켓 면의 각도를 일반 선수보다 훨씬 섬세하게 관찰합니다. 이 과정에서 발달된 놀라운 시각적 집중력이 그만의 독특한 강점이 되었습니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>초인적 집중력:</strong> 소리 없는 환경에서 단련된 극도의 시각적 집중</li>
+                        <li><strong>강력한 포핸드:</strong> 파워와 정확성을 겸비한 주무기</li>
+                        <li><strong>끈질긴 투지:</strong> 어떤 상황에서도 포기하지 않는 정신력</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '집중력 (Focus)', score: 10, description: '청각 장애로 단련된 초인적 시각 집중력.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '파워풀하고 정확한 주무기.' },
+                { name: '멘탈 (Mental)', score: 9.5, description: '장애를 극복한 강철 같은 정신력.' },
+                { name: '체력 (Stamina)', score: 8, description: '꾸준한 체력 관리와 강인한 피지컬.' },
+                { name: '백핸드 (Backhand)', score: 7.5, description: '안정적인 양손 백핸드.' },
+                { name: '서브 (Serve)', score: 7, description: '소리 피드백 없이도 일관된 서브 모션.' }
+            ],
+            growthStory: `
+                <p>선천적 청각 장애를 가지고 태어났지만, 부모님의 헌신적인 지원과 본인의 강한 의지로 테니스의 길을 걸었습니다.</p>
+                <blockquote>
+                    "나는 소리가 없는 세계에서 테니스를 한다. 하지만 공이 라켓에 맞는 순간의 감각은 누구보다 선명하게 느낀다."
+                </blockquote>
+                <p>주니어 시절부터 국제 대회에서 활약하며, 청각 장애 선수로서 한계를 넘는 모습을 보여주었습니다. 2019년 ATP 투어 본선 승리는 전 세계 스포츠 팬들에게 큰 감동을 주었습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2019 윈스턴-세일럼 오픈 1라운드 vs 헨리 라크소넨',
+                date: '2019. 08. 19',
+                description: 'ATP 투어 본선 데뷔전에서 <strong>7-6, 6-1</strong>로 승리하며 청각 장애 선수 최초의 ATP 투어 본선 승리라는 역사를 썼습니다. 경기 후 관중의 기립박수는 이 특별한 순간의 감동을 더했습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">💪 불가능은 없다</div>
+                    <p>이덕희의 이야기는 단순한 스포츠를 넘어, 장애를 극복하고 꿈을 이루는 인간 승리의 이야기입니다. 그의 경기를 보는 것만으로도 많은 사람들이 용기와 희망을 얻습니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"끊임없는 도전"</strong></p>
+                <p>챌린저 대회와 ATP 투어를 오가며 꾸준히 경쟁력을 유지하고 있습니다. 청각 장애라는 핸디캡 속에서도 프로 선수로서 활동하는 것 자체가 대단한 성취입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '이덕희 선수는 어떻게 심판 콜을 확인하나요?',
+                    answer: '경기 중 심판의 판정은 시각적 신호와 스코어보드를 통해 확인합니다. 또한 라인 콜의 경우 호크아이 시스템의 도입으로 더 공정한 환경이 되었습니다.'
+                },
+                {
+                    question: '청각 장애가 경기에 미치는 영향은?',
+                    answer: '공이 라켓에 맞는 소리, 바운드 소리를 듣지 못하는 불리함이 있지만, 대신 시각적 집중력이 극도로 발달하여 상대의 스윙 궤적과 볼의 회전을 더 잘 읽어냅니다.'
+                }
+            ]
+        }
+    },
 };
 export const getPlayerSlugs = () => Object.keys(PLAYERS_DB);
 
