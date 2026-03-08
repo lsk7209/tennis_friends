@@ -27,23 +27,30 @@ function getSlugsFromDir(dirPath: string): string[] {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
+  const buildDate = new Date("2026-03-08");
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: buildDate,
       changeFrequency: "daily",
       priority: 1,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: buildDate,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/utility`,
-      lastModified: new Date(),
+      lastModified: buildDate,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/players`,
+      lastModified: buildDate,
       changeFrequency: "weekly",
       priority: 0.9,
     },
@@ -51,14 +58,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const utilityPages: MetadataRoute.Sitemap = getSlugsFromDir("utility").map((slug) => ({
     url: `${baseUrl}/utility/${slug}`,
-    lastModified: new Date(),
+    lastModified: buildDate,
     changeFrequency: "monthly",
     priority: 0.9,
   }));
 
   const playerPages: MetadataRoute.Sitemap = Object.keys(PLAYERS_DB).map((slug) => ({
     url: `${baseUrl}/players/${slug}`,
-    lastModified: new Date(),
+    lastModified: buildDate,
     changeFrequency: "weekly",
     priority: 0.8,
   }));
@@ -73,31 +80,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const additionalPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: buildDate,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: buildDate,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
+      lastModified: buildDate,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: buildDate,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/tennis-rules-quiz`,
-      lastModified: new Date(),
+      lastModified: buildDate,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/search`,
-      lastModified: new Date(),
+      lastModified: buildDate,
       changeFrequency: "weekly",
       priority: 0.5,
     },

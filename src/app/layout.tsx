@@ -57,6 +57,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   alternates: {
     canonical: getAbsoluteUrl("/"),
+    languages: {
+      "ko-KR": getAbsoluteUrl("/"),
+    },
     types: {
       "application/rss+xml": "/rss.xml",
     },
