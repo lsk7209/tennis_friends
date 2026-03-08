@@ -13,6 +13,7 @@ import { getStats as getCloudflareStats, getRealtimeStats, clearData as clearClo
 import type { VisitorData, StatsData, DataStatus, CloudflareStatus } from '@/types/admin';
 import { calculateStats } from '@/lib/admin/statistics';
 import { EMPTY_STATS_DATA, ADMIN_PASSWORD, AUTO_REFRESH_INTERVAL } from '@/lib/admin/constants';
+import { toast } from 'sonner';
 import { getReferrerDisplay, extractKeyword, formatDate } from '@/lib/admin/helpers';
 
 export default function AdminPage() {
@@ -38,7 +39,7 @@ export default function AdminPage() {
       setIsAuthenticated(true);
       fetchStats();
     } else {
-      alert('비밀번호가 올바르지 않습니다.');
+      toast.error('비밀번호가 올바르지 않습니다.');
     }
   };
 
@@ -1386,9 +1387,9 @@ export default function AdminPage() {
                         };
                         console.log('데이터 검증 결과:', validation);
 
-                        alert(`콘솔에 데이터를 출력했습니다. 개발자 도구(F12)를 확인하세요.\n\n데이터 개수: ${data.length}건\n유효 레코드: ${validation.유효레코드}건\n최신 기록: ${validation.최신기록}`);
+                        toast.success(`콘솔에 데이터를 출력했습니다. 개발자 도구(F12)를 확인하세요. 데이터 개수: ${data.length}건, 유효 레코드: ${validation.유효레코드}건, 최신 기록: ${validation.최신기록}`);
                       } else {
-                        alert('localStorage에 데이터가 없습니다.\n\n다른 페이지를 방문하면 데이터가 수집됩니다.');
+                        toast.error('localStorage에 데이터가 없습니다. 다른 페이지를 방문하면 데이터가 수집됩니다.');
                       }
                     }}
                     variant="outline"
@@ -1401,7 +1402,7 @@ export default function AdminPage() {
                       // 실제 데이터인지 확인하는 테스트
                       const rawData = localStorage.getItem('visitorData');
                       if (!rawData || rawData === '[]') {
-                        alert('데이터가 없습니다. 다른 페이지를 방문하거나 테스트 데이터를 생성하세요.');
+                        toast.error('데이터가 없습니다. 다른 페이지를 방문하거나 테스트 데이터를 생성하세요.');
                         return;
                       }
 
@@ -1423,7 +1424,7 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
 - localStorage: ${rawData ? '데이터 있음' : '데이터 없음'}
                       `.trim();
 
-                      alert(message);
+                      toast.info(message);
                     }}
                     variant="outline"
                     size="sm"
@@ -1439,7 +1440,7 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                         if (apiUrl) {
                           try {
                             await clearCloudflareData(password || '1234');
-                            alert('Cloudflare 데이터가 삭제되었습니다.');
+                            toast.success('Cloudflare 데이터가 삭제되었습니다.');
                           } catch (error) {
                             console.error('Cloudflare 데이터 삭제 실패:', error);
                           }
@@ -1459,7 +1460,7 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                           localStorage.removeItem(`test_completion_${testType}`);
                         });
 
-                        alert('데이터가 삭제되었습니다. 페이지를 새로고침합니다.');
+                        toast.success('데이터가 삭제되었습니다. 페이지를 새로고침합니다.');
                         window.location.reload();
                       }
                     }}
@@ -1476,15 +1477,15 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                         if (apiUrl) {
                           const realtime = await getRealtimeStats(password || '1234');
                           if (realtime) {
-                            alert(`실시간 통계:\n\n마지막 업데이트: ${realtime.lastUpdate || '없음'}\n오늘 방문자: ${realtime.todayCount}명`);
+                            toast.success(`실시간 통계: 마지막 업데이트: ${realtime.lastUpdate || '없음'}, 오늘 방문자: ${realtime.todayCount}명`);
                           } else {
-                            alert('실시간 통계를 가져올 수 없습니다.');
+                            toast.error('실시간 통계를 가져올 수 없습니다.');
                           }
                         } else {
-                          alert('Cloudflare Analytics API가 설정되지 않았습니다.\n환경 변수 NEXT_PUBLIC_ANALYTICS_API_URL를 확인하세요.');
+                          toast.error('Cloudflare Analytics API가 설정되지 않았습니다. 환경 변수 NEXT_PUBLIC_ANALYTICS_API_URL를 확인하세요.');
                         }
                       } catch (error) {
-                        alert(`실시간 통계 조회 실패: ${error}`);
+                        toast.error(`실시간 통계 조회 실패: ${error}`);
                       }
                     }}
                     variant="outline"
@@ -1561,7 +1562,7 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                         link.download = `visitor-data-raw-${new Date().toISOString().split('T')[0]}.json`;
                         link.click();
                       } else {
-                        alert('원본 데이터가 없습니다.');
+                        toast.error('원본 데이터가 없습니다.');
                       }
                     }}
                     variant="outline"
