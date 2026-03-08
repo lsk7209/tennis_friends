@@ -368,7 +368,23 @@ function ResultContent() {
                 </div>
                 
                 <div className="space-y-4 mb-6">
-                  <Button 
+                  <Button
+                    onClick={() => {
+                      const url = `${window.location.origin}/utility/ntrp-test/result?score=${score}&q13=${encodeURIComponent(q13)}`;
+                      const text = `🎾 내 테니스 실력은 NTRP ${level} (${character} 스타일)이에요! 나의 실력을 확인해보세요!`;
+                      if (typeof navigator.share === 'function') {
+                        navigator.share({ title: 'NTRP 테스트 결과', text, url }).catch(() => {});
+                      } else {
+                        navigator.clipboard.writeText(`${text}\n${url}`);
+                        toast.success('카카오톡에 붙여넣기할 내용이 복사되었습니다!');
+                      }
+                    }}
+                    className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 py-3 font-bold"
+                  >
+                    <span className="mr-2">💬</span>
+                    카카오톡 / 메신저 공유
+                  </Button>
+                  <Button
                     onClick={() => shareToSocial('twitter')}
                     className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3"
                   >

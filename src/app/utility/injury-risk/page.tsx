@@ -37,6 +37,22 @@ export default function InjuryRiskPage() {
       />
 
       <main className="min-h-screen bg-[linear-gradient(180deg,_#fff7ed_0%,_#ffffff_34%,_#f8fafc_100%)]">
+        {/* 의료 면책 고지 */}
+        <div className="mx-auto max-w-6xl px-4 pt-6 sm:px-6 lg:px-8">
+          <div className="rounded-xl border-l-4 border-red-500 bg-red-50 p-4">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-bold text-red-900 text-sm">의료 면책 고지</p>
+                <p className="text-sm text-red-800 mt-1">
+                  본 도구는 교육 및 참고 목적이며 의학적 진단을 대체하지 않습니다.
+                  실제 통증이나 부상이 의심되면 반드시 의사 또는 스포츠 의학 전문가와 상담하세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="rounded-[32px] bg-gradient-to-r from-red-600 to-orange-500 px-8 py-10 text-white shadow-xl">

@@ -23,6 +23,20 @@ const cards = [
 export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      {/* 의료 면책 고지 */}
+      <div className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-4 mb-8">
+        <div className="flex items-start gap-3">
+          <Zap className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" />
+          <div>
+            <p className="font-bold text-amber-900 text-sm">영양 정보 안내</p>
+            <p className="text-sm text-amber-800 mt-1">
+              본 가이드는 일반적인 참고 정보이며, 개인별 영양 상담을 대체하지 않습니다.
+              특정 질환이나 알레르기가 있는 경우 전문 영양사와 상담하세요.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <section className="grid gap-6 lg:grid-cols-[1fr_1fr]">
         <Card className="border-green-100 bg-gradient-to-br from-green-50 via-white to-yellow-50">
           <CardHeader>
