@@ -558,13 +558,38 @@ export default async function PlayerProfilePage({ params }: Props) {
                 })()}
             </div>
 
-            <div className="max-w-4xl mx-auto px-4 mt-12 text-center">
-                <Link href="/utility/play-style-test">
-                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 transition-all rounded-full px-8 h-12 text-base font-bold">
-                        <Activity className="w-5 h-5 mr-2" />
-                        내 플레이 스타일과 비슷한 선수는? (테스트)
-                    </Button>
-                </Link>
+            <div className="max-w-4xl mx-auto px-4 mt-12">
+                <Card className="bg-gradient-to-r from-blue-50 via-white to-purple-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 border-blue-200 dark:border-gray-700">
+                    <CardContent className="p-8">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">
+                            🎾 {player.name}처럼 플레이하고 싶으신가요?
+                        </h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-6">나의 실력과 스타일을 분석해보세요</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <Link href="/utility/play-style-test" className="group">
+                                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-400 hover:shadow-md transition-all text-center">
+                                    <div className="text-2xl mb-2">✨</div>
+                                    <div className="font-semibold text-sm group-hover:text-purple-600 transition-colors">플레이 스타일 진단</div>
+                                    <p className="text-xs text-gray-500 mt-1">7가지 스타일 분석</p>
+                                </div>
+                            </Link>
+                            <Link href="/utility/ntrp-test" className="group">
+                                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:shadow-md transition-all text-center">
+                                    <div className="text-2xl mb-2">📊</div>
+                                    <div className="font-semibold text-sm group-hover:text-blue-600 transition-colors">NTRP 실력 테스트</div>
+                                    <p className="text-xs text-gray-500 mt-1">정확한 레벨 측정</p>
+                                </div>
+                            </Link>
+                            <Link href="/utility/equipment-recommendation" className="group">
+                                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-400 hover:shadow-md transition-all text-center">
+                                    <div className="text-2xl mb-2">🏸</div>
+                                    <div className="font-semibold text-sm group-hover:text-green-600 transition-colors">장비 추천</div>
+                                    <p className="text-xs text-gray-500 mt-1">맞춤 장비 분석</p>
+                                </div>
+                            </Link>
+                        </div>
+                    </CardContent>
+                </Card>
             </div>
         </div >
     );
