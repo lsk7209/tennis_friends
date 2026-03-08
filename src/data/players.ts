@@ -12141,6 +12141,646 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
+    'emma-raducanu': {
+        name: '엠마 라두카누', nameEn: 'Emma Raducanu', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '엠마 라두카누는 2021년 US오픈에서 예선부터 본선 우승까지 단 한 세트도 내주지 않는 전무후무한 기록을 세우며 테니스 역사를 새로 쓴 선수입니다. 루마니아와 중국 혈통을 가진 영국 선수로, 공격적이면서도 다채로운 테니스를 구사합니다.',
+        detailedProfile: {
+            oneLineSummary: '예선에서 시작해 US오픈 정상에 오른, 테니스 역사상 가장 드라마틱한 우승의 주인공.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🏆 역사상 최초 예선 출전 그랜드슬램 우승자</div>
+                    <p>2021년 US오픈에서 예선 3경기, 본선 7경기 총 10경기를 단 한 세트도 내주지 않고 우승하며, 오픈 시대 최초로 예선 출전자가 그랜드슬램 타이틀을 거머쥔 전설적인 기록을 세웠습니다.</p>
+                </div>
+                <p>당시 세계 랭킹 150위 밖이었던 18세 소녀가 이룬 이 업적은 테니스 역사상 가장 놀라운 동화 같은 이야기로 회자됩니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"다재다능한 올라운더 (The Versatile All-Rounder)"</strong></p>
+                <p>라두카누의 테니스는 다양한 샷 선택과 뛰어난 볼 스트라이킹이 특징입니다. 강력한 포핸드와 정확한 백핸드를 기반으로 공격적인 베이스라인 테니스를 구사하며, 필요할 때 네트 플레이도 소화할 수 있는 다재다능함을 갖추고 있습니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>볼 스트라이킹:</strong> 깨끗하고 정확한 타구감</li>
+                        <li><strong>다양한 샷 레퍼토리:</strong> 드롭샷, 슬라이스, 앵글 샷 등 다채로운 기술</li>
+                        <li><strong>빠른 적응력:</strong> 상대의 스타일에 맞춰 전술을 변화시키는 능력</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '볼 스트라이킹 (Ball Striking)', score: 9, description: '깨끗하고 파워풀한 타구가 최대 강점.' },
+                { name: '다양성 (Versatility)', score: 8.5, description: '다양한 샷과 전술을 구사하는 능력.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '강력하고 정확한 포핸드 위너.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정적이고 공격 전환이 가능한 백핸드.' },
+                { name: '서브 (Serve)', score: 7.5, description: '꾸준히 개선 중인 서브 게임.' },
+                { name: '체력 (Fitness)', score: 7, description: '부상 이력으로 인해 지속적인 관리가 필요.' }
+            ],
+            growthStory: `
+                <p>런던 브롬리에서 태어난 라두카누는 루마니아인 아버지와 중국인 어머니 사이에서 자라며 다문화적 배경 속에서 테니스를 시작했습니다. 어린 시절부터 뛰어난 운동 능력을 보였으며, 학업과 테니스를 병행하며 A레벨 시험에서도 우수한 성적을 거뒀습니다.</p>
+                <p>2021년 윔블던에서 4라운드까지 진출하며 주목받기 시작했고, 불과 두 달 뒤 US오픈에서 동화 같은 우승을 달성했습니다. 이후 부상과 컨디션 조절에 어려움을 겪었지만, 꾸준한 재활과 노력으로 투어 복귀를 이어가고 있습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2021 US오픈 결승 vs 레일라 페르난데스',
+                date: '2021. 09. 11',
+                description: '결승전에서 <strong>6-4, 6-3</strong>으로 승리하며 오픈 시대 최초 예선 출전 그랜드슬램 챔피언이 되었습니다. 10경기 연속 스트레이트 승리라는 경이로운 기록으로 테니스 역사에 이름을 새겼습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🌟 동화 같은 신데렐라 스토리</div>
+                    <p>무명의 예선 출전자에서 그랜드슬램 챔피언으로 — 라두카누의 2021년 US오픈 우승은 스포츠 역사상 가장 감동적인 이야기 중 하나입니다. 밝고 긍정적인 성격과 다문화적 배경은 전 세계 팬들에게 큰 영감을 주고 있습니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"재기를 향한 여정"</strong></p>
+                <p>손목과 발목 부상으로 어려운 시기를 보냈지만, 꾸준한 재활을 통해 투어에 복귀하며 다시 한 번 상위권 도약을 노리고 있습니다. 여전히 뛰어난 잠재력을 가진 선수로 평가받고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '라두카누의 2021 US오픈 우승이 특별한 이유는?',
+                    answer: '오픈 시대 역사상 최초로 예선에서 시작해 그랜드슬램을 우승한 선수이며, 10경기 모두 스트레이트로 승리한 전무후무한 기록입니다.'
+                },
+                {
+                    question: '라두카누 선수의 국적과 배경은?',
+                    answer: '영국 국적으로 루마니아인 아버지와 중국인 어머니를 두고 있습니다. 런던에서 태어나 자랐으며, A레벨 시험에서도 뛰어난 성적을 거둔 수재이기도 합니다.'
+                }
+            ]
+        }
+    },
+    'mirra-andreeva': {
+        name: '미라 안드레바', nameEn: 'Mirra Andreeva', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '미라 안드레바는 WTA 투어에서 가장 주목받는 10대 선수로, 17세의 나이에 이미 톱 선수들을 격파하며 차세대 여자 테니스의 아이콘으로 떠올랐습니다. 뛰어난 코트 센스와 대담한 플레이가 돋보이는 러시아 출신의 신성입니다.',
+        detailedProfile: {
+            oneLineSummary: '17세에 세계를 놀라게 한 WTA 차세대 에이스, 러시아 테니스의 새로운 희망.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🌟 WTA 차세대 에이스</div>
+                    <p>2023년부터 WTA 투어에서 돌풍을 일으키며, 톱 10 선수들을 연이어 격파하는 파란을 일으켰습니다. 2024년 롤랑가로스 준결승 진출은 그녀의 잠재력을 전 세계에 확인시켜준 순간이었습니다.</p>
+                </div>
+                <p>10대 선수 중 가장 빠르게 성장하고 있으며, 미래의 그랜드슬램 챔피언 후보로 꼽히고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"대담한 올코트 플레이어 (The Fearless All-Court Player)"</strong></p>
+                <p>안드레바의 테니스는 나이답지 않은 전술적 성숙함이 특징입니다. 다양한 스핀과 변화구를 활용하며, 드롭샷과 앵글 플레이에서 뛰어난 감각을 보여줍니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>코트 센스:</strong> 나이에 비해 놀라운 전술적 판단력</li>
+                        <li><strong>다양한 기술:</strong> 드롭샷, 슬라이스, 로브 등 풍부한 샷 메이킹</li>
+                        <li><strong>대담함:</strong> 큰 무대에서도 위축되지 않는 정신력</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '코트 센스 (Court Sense)', score: 9, description: '전술적 이해도가 10대 선수 중 최고 수준.' },
+                { name: '다양성 (Versatility)', score: 8.5, description: '드롭샷, 슬라이스 등 다양한 기술 보유.' },
+                { name: '멘탈 (Mental)', score: 8.5, description: '큰 무대에서 더 빛나는 대담한 정신력.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '양손 백핸드의 안정성과 변화구가 뛰어남.' },
+                { name: '포핸드 (Forehand)', score: 7.5, description: '파워보다 정확성에 초점을 맞춘 포핸드.' },
+                { name: '서브 (Serve)', score: 7, description: '아직 발전 중이지만 꾸준히 개선되고 있음.' }
+            ],
+            growthStory: `
+                <p>러시아 크라스노야르스크 출신으로, 언니 에리카 안드레바와 함께 테니스를 시작했습니다. 어린 시절부터 뛰어난 재능을 보이며 주니어 대회에서 두각을 나타냈습니다.</p>
+                <p>2023년 WTA 투어 데뷔 직후부터 톱 선수들을 꺾으며 주목받기 시작했고, 2024년에는 롤랑가로스 준결승에 진출하며 차세대 스타로서의 입지를 확고히 했습니다. 자매가 함께 투어를 돌며 서로 자극을 주고받는 모습도 팬들의 관심을 끌고 있습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2024 롤랑가로스 4라운드 vs 사발렌카',
+                date: '2024. 06. 02',
+                description: '세계 랭킹 2위 사발렌카를 <strong>6-7, 6-4, 6-4</strong>로 꺾으며 10대 소녀의 대담함을 전 세계에 보여준 경기입니다. 이후 준결승까지 진출하며 대회의 주인공이 되었습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">✨ 두려움 없는 10대의 도전</div>
+                    <p>코트 위에서 보여주는 대담한 플레이와 밝은 에너지로 팬들을 사로잡고 있습니다. 언니 에리카와의 자매 스토리도 큰 관심을 받으며, WTA의 미래를 이끌어갈 스타로 주목받고 있습니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"끝없는 성장 곡선"</strong></p>
+                <p>매 대회마다 발전하는 모습을 보여주며 랭킹을 꾸준히 끌어올리고 있습니다. 그랜드슬램 깊은 라운드 진출 경험이 쌓이면서 더욱 완성도 높은 테니스를 보여주고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '미라 안드레바는 몇 살인가요?',
+                    answer: '2007년생으로, WTA 투어에서 가장 어린 톱 선수 중 한 명입니다. 10대의 나이에 그랜드슬램 준결승에 진출한 소수의 선수 중 하나입니다.'
+                },
+                {
+                    question: '안드레바 자매는 둘 다 프로 선수인가요?',
+                    answer: '네, 언니 에리카 안드레바도 WTA 투어에서 활동하는 프로 선수입니다. 두 자매가 함께 투어를 돌며 서로 경쟁하고 응원하는 모습이 화제가 되고 있습니다.'
+                }
+            ]
+        }
+    },
+    'diana-shnaider': {
+        name: '다이아나 슈나이더', nameEn: 'Diana Shnaider', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '다이아나 슈나이더는 강력한 좌완 스트로크로 WTA 투어에서 급부상하고 있는 러시아의 신예입니다. 왼손잡이 특유의 각도 있는 서브와 공격적인 포핸드로 상대를 압도하며, 빠른 속도로 랭킹을 끌어올리고 있습니다.',
+        detailedProfile: {
+            oneLineSummary: '강력한 좌완 스트로크로 WTA 투어를 휩쓸고 있는 러시아의 떠오르는 강자.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🔥 WTA 급부상 좌완 파워 플레이어</div>
+                    <p>2024시즌 WTA 투어에서 복수의 타이틀을 획득하며 급격한 랭킹 상승을 이뤘습니다. 왼손잡이 특유의 독특한 각도와 강력한 파워는 투어의 모든 선수에게 위협적인 존재로 자리잡았습니다.</p>
+                </div>
+                <p>20대 초반의 나이에 이미 WTA 투어 다승을 기록하며 러시아 테니스의 새로운 세대를 대표하고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"좌완의 파워하우스 (The Left-Handed Powerhouse)"</strong></p>
+                <p>슈나이더의 최대 강점은 왼손잡이 특유의 각도를 살린 강력한 스트로크입니다. 특히 포핸드의 파워가 뛰어나며, 서브에서도 왼손잡이 특유의 슬라이스로 상대의 리턴을 무력화시킵니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>좌완 서브:</strong> 독특한 각도의 슬라이스 서브로 에이스 양산</li>
+                        <li><strong>강력한 포핸드:</strong> 왼손잡이 포핸드의 파워와 각도</li>
+                        <li><strong>공격적 성향:</strong> 주도권을 잡으면 놓지 않는 적극적 플레이</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 9, description: '좌완 포핸드의 파워와 각도가 최대 무기.' },
+                { name: '서브 (Serve)', score: 8.5, description: '왼손잡이 특유의 각도 있는 서브.' },
+                { name: '공격성 (Aggression)', score: 8.5, description: '주도적으로 경기를 이끄는 공격 성향.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '양손 백핸드로 안정적인 랠리 유지.' },
+                { name: '체력 (Fitness)', score: 8, description: '젊은 나이답게 뛰어난 체력과 활동량.' },
+                { name: '수비 (Defense)', score: 7, description: '공격에 비해 수비 전환이 발전 중.' }
+            ],
+            growthStory: `
+                <p>러시아 모스크바 출신으로 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절 우수한 성적을 거둔 뒤 프로 전향하여 빠르게 WTA 투어에 안착했습니다.</p>
+                <p>2024시즌 폭발적인 성장을 이루며 여러 대회에서 우승을 차지했고, 이를 통해 톱 30 안에 진입하는 데 성공했습니다. 왼손잡이라는 독특한 강점을 최대한 활용하며 계속 발전하고 있습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2024 바드 홈부르크 오픈 결승',
+                date: '2024. 06. 22',
+                description: '잔디 코트에서의 결승전에서 우승을 차지하며 다양한 서피스에서 경쟁할 수 있는 능력을 증명했습니다. 좌완의 강력한 서브와 포핸드가 잔디 위에서 더욱 빛을 발한 대회였습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">💪 좌완의 매력</div>
+                    <p>왼손잡이 특유의 독특한 볼 궤적은 관전의 재미를 더합니다. 공격적이고 적극적인 플레이 스타일은 관중들에게 흥미진진한 경기를 선사하며, 젊은 에너지와 자신감이 코트 위에서 빛나는 선수입니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"멈추지 않는 상승세"</strong></p>
+                <p>매 시즌 눈에 띄는 성장을 보여주며, WTA 투어에서 입지를 다져가고 있습니다. 복수의 타이틀을 획득하며 톱 20 진입을 목표로 하고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '슈나이더 선수가 왼손잡이인 것이 어떤 장점이 있나요?',
+                    answer: '왼손잡이 선수는 오른손잡이가 다수인 투어에서 상대에게 익숙하지 않은 각도와 스핀을 제공합니다. 특히 서브에서 애드 코트 와이드 서브의 각도가 독특하고, 포핸드 크로스코트의 궤적이 일반적인 것과 달라 상대에게 큰 위협이 됩니다.'
+                },
+                {
+                    question: '슈나이더의 2024시즌 성적은?',
+                    answer: '2024시즌 여러 WTA 대회에서 우승하며 급격한 랭킹 상승을 이뤘고, 톱 30에 진입하는 브레이크스루 시즌을 보냈습니다.'
+                }
+            ]
+        }
+    },
+    'linda-noskova': {
+        name: '린다 노스코바', nameEn: 'Linda Noskova', country: 'Czech Republic', countryFlag: '🇨🇿', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '린다 노스코바는 체코 테니스의 찬란한 전통을 이어갈 차세대 스타로, 강력한 서브와 공격적인 베이스라인 플레이가 특징인 선수입니다. 2024년 호주오픈에서 세계 1위를 꺾으며 큰 주목을 받았습니다.',
+        detailedProfile: {
+            oneLineSummary: '체코 테니스의 전통을 잇는 넥스트젠 스타, 강력한 서브와 대담한 플레이의 소유자.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🇨🇿 체코 테니스의 새로운 희망</div>
+                    <p>2024년 호주오픈에서 당시 세계 1위 이가 시비옹텍을 꺾는 파란을 일으키며 세계 테니스 팬들에게 이름을 알렸습니다. 체코의 풍부한 테니스 유산을 물려받아 미래가 촉망되는 선수입니다.</p>
+                </div>
+                <p>크바르토바, 무호바 등 체코 선배들의 뒤를 이어 차세대 체코 테니스를 이끌어갈 핵심 선수로 기대받고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격형 빅 서버 (The Aggressive Big Server)"</strong></p>
+                <p>노스코바의 가장 큰 무기는 강력한 서브입니다. 10대 선수답지 않은 서브 파워와 정확성을 갖추고 있으며, 이를 기반으로 공격적인 베이스라인 테니스를 전개합니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>강력한 서브:</strong> 동세대 선수 중 최고 수준의 서브 파워</li>
+                        <li><strong>공격적 포핸드:</strong> 서브 이후 포핸드로 이어지는 공격 패턴</li>
+                        <li><strong>빅 매치 기질:</strong> 큰 무대에서 실력을 발휘하는 담대함</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 9, description: '연령대 대비 최고 수준의 서브 파워와 정확성.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '서브와 연계된 강력한 포핸드 공격.' },
+                { name: '멘탈 (Mental)', score: 8, description: '세계 1위도 꺾을 수 있는 대담한 정신력.' },
+                { name: '파워 (Power)', score: 8.5, description: '전반적으로 파워풀한 샷을 구사.' },
+                { name: '백핸드 (Backhand)', score: 7.5, description: '양손 백핸드로 안정적인 랠리 가능.' },
+                { name: '수비 (Defense)', score: 7, description: '공격에 비해 수비력은 발전이 필요.' }
+            ],
+            growthStory: `
+                <p>체코 프레로프 출신으로, 체코의 풍부한 테니스 인프라 속에서 성장했습니다. 주니어 시절 2021년 롤랑가로스 주니어 대회 우승을 차지하며 일찌감치 재능을 인정받았습니다.</p>
+                <p>프로 전향 후 빠르게 WTA 투어에 적응했으며, 2024년 호주오픈에서 시비옹텍을 꺾는 대이변을 연출하며 톱 선수로의 도약을 알렸습니다. 체코 테니스의 전통적인 강점인 기술적 완성도에 현대적인 파워를 결합한 스타일이 특징입니다.</p>
+            `,
+            signatureMatch: {
+                title: '2024 호주오픈 3라운드 vs 시비옹텍',
+                date: '2024. 01. 20',
+                description: '당시 세계 1위 이가 시비옹텍을 <strong>6-3, 6-4</strong>로 꺾는 대이변을 연출했습니다. 강력한 서브와 대담한 공격 플레이로 세계 최고의 선수를 완전히 압도한 경기였습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🌟 체코 테니스의 미래</div>
+                    <p>체코는 나브라틸로바부터 크바르토바까지 위대한 여자 테니스 선수를 배출해온 나라입니다. 노스코바는 이 전통을 이어갈 차세대 스타로, 강력한 서브와 대담한 플레이로 팬들의 기대를 모으고 있습니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"그랜드슬램 타이틀을 향한 도전"</strong></p>
+                <p>꾸준히 랭킹을 올리며 톱 30에 안착했습니다. 서브를 중심으로 한 공격적 테니스가 더욱 완성되고 있으며, 그랜드슬램 깊은 라운드 진출이 기대되는 선수입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '노스코바가 시비옹텍을 꺾은 경기가 왜 중요한가요?',
+                    answer: '2024 호주오픈에서 당시 압도적인 세계 1위였던 시비옹텍을 스트레이트로 꺾으며, 젊은 세대가 톱 선수들과 충분히 경쟁할 수 있음을 증명한 상징적인 경기입니다.'
+                },
+                {
+                    question: '체코가 테니스 강국인 이유는?',
+                    answer: '체코는 나브라틸로바, 랜들, 크바르토바, 사파르쥬바 등 수많은 전설적 선수를 배출한 테니스 강국입니다. 뛰어난 유소년 시스템과 테니스 문화가 깊이 뿌리내린 나라입니다.'
+                }
+            ]
+        }
+    },
+    'donna-vekic': {
+        name: '도나 베키치', nameEn: 'Donna Vekic', country: 'Croatia', countryFlag: '🇭🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '도나 베키치는 크로아티아를 대표하는 여자 테니스 선수로, 2024년 파리 올림픽 은메달리스트입니다. 강력한 포핸드와 안정적인 올코트 플레이로 WTA 톱 20에 안정적으로 자리잡고 있으며, 오랜 경력의 경험이 돋보이는 선수입니다.',
+        detailedProfile: {
+            oneLineSummary: '파리 올림픽 은메달의 주인공, 크로아티아 여자 테니스의 간판 스타.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🥈 2024 파리 올림픽 은메달리스트</div>
+                    <p>2024년 파리 올림픽 여자 단식에서 결승까지 진출하며 은메달을 획득했습니다. 크로아티아 테니스 역사에 새로운 장을 열었으며, 올림픽 무대에서의 활약은 전 국민적 감동을 선사했습니다.</p>
+                </div>
+                <p>16세에 WTA 투어 첫 우승을 달성한 이후 꾸준히 톱 선수로 활약하며, 2024시즌 커리어 하이를 기록했습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"파워풀한 올라운더 (The Powerful All-Rounder)"</strong></p>
+                <p>베키치는 강력한 포핸드를 중심으로 공격적인 테니스를 구사합니다. 서브 파워도 뛰어나며, 경험에서 오는 전술적 유연성이 큰 강점입니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>강력한 포핸드:</strong> 위너를 만들어내는 파워풀한 포핸드</li>
+                        <li><strong>경험:</strong> 10년 이상의 투어 경험에서 오는 안정감</li>
+                        <li><strong>빅 매치 집중력:</strong> 올림픽 결승 등 큰 무대에서 빛나는 집중력</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '포핸드 (Forehand)', score: 9, description: '공격의 핵심 무기인 강력한 포핸드.' },
+                { name: '경험 (Experience)', score: 9, description: '10년 이상의 투어 경력에서 오는 노하우.' },
+                { name: '서브 (Serve)', score: 8, description: '파워와 정확성을 겸비한 서브.' },
+                { name: '멘탈 (Mental)', score: 8.5, description: '올림픽 은메달이 증명하는 정신력.' },
+                { name: '백핸드 (Backhand)', score: 7.5, description: '안정적이지만 포핸드에 비해 약한 편.' },
+                { name: '이동속도 (Movement)', score: 7.5, description: '코트 커버리지는 평균 이상 수준.' }
+            ],
+            growthStory: `
+                <p>크로아티아 오시예크 출신으로, 16세에 WTA 투어 대회 우승을 달성하며 일찌감치 재능을 인정받았습니다. 이는 당시 WTA 투어 최연소 우승 기록 중 하나였습니다.</p>
+                <p>이후 부상과 기복으로 어려운 시기도 있었지만, 꾸준한 노력으로 톱 20 안에 복귀했습니다. 2024년 파리 올림픽 은메달은 그녀의 커리어에서 가장 빛나는 순간으로, 오랜 인내의 결실이었습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2024 파리 올림픽 준결승 vs 슈미드로바',
+                date: '2024. 08. 02',
+                description: '올림픽 준결승에서 승리하며 최소 은메달을 확정지은 순간은 베키치 커리어 최고의 하이라이트였습니다. 크로아티아 국기를 두르고 기쁨의 눈물을 흘린 모습은 전 세계 팬들에게 깊은 감동을 주었습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🇭🇷 크로아티아의 자부심</div>
+                    <p>올림픽 은메달로 크로아티아 전체의 영웅이 된 베키치. 화려한 외모와 파워풀한 플레이, 그리고 고국에 대한 깊은 애정은 팬들에게 큰 사랑을 받는 이유입니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"커리어 최전성기"</strong></p>
+                <p>올림픽 은메달 이후 자신감이 더해져 안정적인 성적을 유지하고 있습니다. 경험과 체력이 조화를 이루며, 톱 20 안착을 굳건히 하고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '베키치의 올림픽 은메달은 크로아티아에 어떤 의미인가요?',
+                    answer: '크로아티아 테니스 역사상 올림픽 단식 메달은 매우 드문 성취입니다. 베키치의 은메달은 크로아티아 스포츠 전체에 큰 자부심을 선사했으며, 차세대 테니스 선수들에게도 영감을 주고 있습니다.'
+                },
+                {
+                    question: '베키치는 언제 프로에 데뷔했나요?',
+                    answer: '2012년 프로에 데뷔했으며, 2014년 타슈켄트 오픈에서 16세의 나이로 WTA 투어 첫 우승을 달성했습니다. 10년 이상의 프로 경력을 자랑하는 베테랑 선수입니다.'
+                }
+            ]
+        }
+    },
+    'katie-boulter': {
+        name: '케이티 볼터', nameEn: 'Katie Boulter', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '케이티 볼터는 영국 여자 테니스의 에이스로, 강력한 서브와 공격적인 포핸드를 무기로 WTA 투어에서 꾸준히 성장하고 있는 선수입니다. 홈 관중 앞에서 특히 강한 면모를 보이며 영국 팬들의 큰 사랑을 받고 있습니다.',
+        detailedProfile: {
+            oneLineSummary: '영국 여자 테니스의 간판, 강력한 서브와 공격적 플레이로 성장 중인 에이스.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🇬🇧 영국 여자 테니스의 새로운 얼굴</div>
+                    <p>조핸나 콘타 이후 영국 여자 테니스의 간판으로 떠오르며, WTA 투어에서 꾸준히 랭킹을 올리고 있습니다. 2024시즌 커리어 하이 랭킹을 기록하며 톱 플레이어로의 도약을 알렸습니다.</p>
+                </div>
+                <p>알렉스 드 미노르와의 커플로도 유명하며, 테니스 안팎에서 큰 관심을 받고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 서브 앤 포핸드 (The Serve-and-Forehand Attacker)"</strong></p>
+                <p>볼터의 테니스는 강력한 서브와 포핸드를 축으로 합니다. 키(178cm)에서 나오는 서브 파워가 뛰어나며, 서브 이후 공격적인 포핸드로 포인트를 마무리하는 패턴이 주 전술입니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>파워 서브:</strong> 신장을 활용한 강력한 서브</li>
+                        <li><strong>공격적 포핸드:</strong> 위너를 양산하는 포핸드</li>
+                        <li><strong>홈 어드밴티지:</strong> 영국 관중 앞에서 특히 강한 집중력</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '서브 (Serve)', score: 8.5, description: '신장에서 나오는 강력한 서브가 핵심 무기.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '공격 전환의 핵심인 파워풀한 포핸드.' },
+                { name: '멘탈 (Mental)', score: 8, description: '홈 관중 앞에서 빛나는 정신력.' },
+                { name: '체력 (Fitness)', score: 8, description: '부상 극복 후 꾸준한 체력 관리.' },
+                { name: '백핸드 (Backhand)', score: 7.5, description: '안정적이지만 더 발전이 기대되는 부분.' },
+                { name: '수비 (Defense)', score: 7, description: '공격 위주 스타일로 수비력은 보통.' }
+            ],
+            growthStory: `
+                <p>레스터셔 출신으로 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절 영국 내 주요 대회에서 활약한 뒤 프로에 전향했습니다.</p>
+                <p>허리 부상으로 한때 큰 위기를 겪었지만, 인내심을 갖고 재활에 전념하여 성공적으로 투어에 복귀했습니다. 이후 꾸준한 성장세를 이어가며 영국 여자 테니스 랭킹 1위로 올라섰습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2024 노팅엄 오픈 결승',
+                date: '2024. 06. 16',
+                description: '홈 관중 앞에서 우승을 차지하며 잔디 시즌의 강자임을 증명했습니다. 영국 팬들의 뜨거운 응원 속에서 경기를 즐기며 최고의 퍼포먼스를 보여준 감동적인 대회였습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">💜 영국 팬들의 사랑</div>
+                    <p>윔블던과 영국 내 대회에서 보여주는 열정적인 플레이로 영국 팬들의 절대적 지지를 받고 있습니다. 밝고 친근한 성격과 함께 알렉스 드 미노르와의 커플 스토리도 팬들에게 큰 관심을 받고 있습니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"꾸준한 상승세"</strong></p>
+                <p>매 시즌 랭킹을 끌어올리며 톱 30에 안착했습니다. 특히 잔디 시즌에서 좋은 성적을 거두며, 윔블던에서의 깊은 라운드 진출이 기대됩니다.</p>
+            `,
+            faq: [
+                {
+                    question: '케이티 볼터의 남자친구는 누구인가요?',
+                    answer: '호주의 ATP 톱 선수 알렉스 드 미노르와 교제 중입니다. 두 사람은 투어를 함께 돌며 서로를 응원하는 모습으로 테니스 팬들에게 큰 사랑을 받는 커플입니다.'
+                },
+                {
+                    question: '볼터 선수의 장점은 무엇인가요?',
+                    answer: '178cm의 신장에서 나오는 강력한 서브가 최대 무기이며, 이를 기반으로 한 공격적인 포핸드로 포인트를 마무리하는 능력이 뛰어납니다.'
+                }
+            ]
+        }
+    },
+    'marta-kostyuk': {
+        name: '마르타 코스튜크', nameEn: 'Marta Kostyuk', country: 'Ukraine', countryFlag: '🇺🇦', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'Two-handed',
+        longBio: '마르타 코스튜크는 우크라이나를 대표하는 여자 테니스 선수로, 15세에 호주오픈 본선 3라운드에 진출하며 일찍이 재능을 인정받았습니다. 전쟁이라는 어려운 환경 속에서도 조국을 대표해 코트에 서는 강인한 선수입니다.',
+        detailedProfile: {
+            oneLineSummary: '전쟁 속에서도 조국의 국기를 들고 코트에 서는 우크라이나 여자 테니스의 자존심.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🇺🇦 우크라이나 테니스의 상징</div>
+                    <p>15세에 호주오픈 본선 3라운드에 진출하며 신동으로 주목받았고, 이후 꾸준한 성장으로 WTA 톱 30에 진입했습니다. 러시아-우크라이나 전쟁 속에서도 우크라이나를 대표해 투어에 참가하며 조국의 희망이 되고 있습니다.</p>
+                </div>
+                <p>코트 위에서 보여주는 투지와 결단력은 어려운 환경을 극복해온 그녀의 삶을 반영합니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"투지의 카운터 펀처 (The Gritty Counter-Puncher)"</strong></p>
+                <p>코스튜크는 뛰어난 수비력을 바탕으로 상대의 실수를 유도하며, 기회가 오면 날카로운 카운터 공격을 펼치는 스타일입니다. 빠른 발과 끈질긴 수비로 긴 랠리를 버텨내는 능력이 뛰어납니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>뛰어난 수비력:</strong> 빠른 발과 끈기로 어려운 볼도 살려냄</li>
+                        <li><strong>카운터 어택:</strong> 수비에서 공격으로 전환하는 능력</li>
+                        <li><strong>강한 투지:</strong> 어떤 상황에서도 포기하지 않는 정신력</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '수비 (Defense)', score: 9, description: '투어 최상위급의 수비력과 코트 커버리지.' },
+                { name: '멘탈 (Mental)', score: 9, description: '전쟁이라는 상황에서도 흔들리지 않는 강인함.' },
+                { name: '이동속도 (Movement)', score: 8.5, description: '빠른 발과 뛰어난 반응속도.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '안정적인 양손 백핸드로 랠리 유지.' },
+                { name: '포핸드 (Forehand)', score: 7.5, description: '카운터 공격 시 위력적인 포핸드.' },
+                { name: '서브 (Serve)', score: 7, description: '꾸준히 개선 중인 서브 게임.' }
+            ],
+            growthStory: `
+                <p>우크라이나 키이우 출신으로, 어린 시절부터 테니스에 재능을 보이며 주니어 무대에서 두각을 나타냈습니다. 15세에 호주오픈 본선에서 활약하며 세계적인 주목을 받았습니다.</p>
+                <p>2022년 러시아-우크라이나 전쟁 발발 이후, 조국을 떠나 투어를 이어가야 하는 힘든 상황에서도 꺾이지 않고 경기에 임하며 우크라이나의 자존심을 지키고 있습니다. 경기 후 러시아 선수와의 악수를 거부하며 자신의 입장을 분명히 한 모습도 화제가 되었습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2023 US오픈 4라운드 진출',
+                date: '2023. 09',
+                description: '그랜드슬램에서 4라운드까지 진출하며 톱 선수들과 경쟁할 수 있는 실력을 증명했습니다. 어려운 환경에서도 최고의 경기력을 보여준 의미 있는 대회였습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">💙💛 조국을 위한 투혼</div>
+                    <p>전쟁이라는 극한 상황에서도 코트 위에 서서 우크라이나의 이름을 알리는 코스튜크는 단순한 스포츠 선수를 넘어선 존재입니다. 그녀의 매 경기는 우크라이나 국민들에게 희망과 용기를 전달합니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"어려움을 딛고 선 우크라이나의 전사"</strong></p>
+                <p>전쟁 속에서도 투어를 이어가며 톱 30 안에서 안정적인 성적을 유지하고 있습니다. 정신적으로 더 강해진 모습을 보이며 그랜드슬램에서의 더 큰 성과가 기대됩니다.</p>
+            `,
+            faq: [
+                {
+                    question: '코스튜크 선수는 전쟁에 대해 어떤 입장인가요?',
+                    answer: '우크라이나의 입장을 강력히 지지하며, 경기 후 러시아/벨라루스 선수와의 악수를 거부하는 등 분명한 입장을 보이고 있습니다. 상금의 일부를 우크라이나 지원에 기부하기도 합니다.'
+                },
+                {
+                    question: '코스튜크 선수의 주요 성적은?',
+                    answer: '15세에 호주오픈 본선 3라운드 진출, WTA 톱 30 진입, 다수의 그랜드슬램 4라운드 진출 등이 주요 성적입니다.'
+                }
+            ]
+        }
+    },
+    'leylah-fernandez': {
+        name: '레일라 페르난데스', nameEn: 'Leylah Fernandez', country: 'Canada', countryFlag: '🇨🇦', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Left-handed', backhand: 'Two-handed',
+        longBio: '레일라 페르난데스는 2021년 US오픈 준우승으로 세계적인 주목을 받은 캐나다의 좌완 테니스 선수입니다. 에콰도르 출신 아버지와 필리핀-캐나다 어머니 사이에서 태어나 다문화적 배경을 가지고 있으며, 화려한 좌완 플레이와 관중을 사로잡는 에너지로 사랑받고 있습니다.',
+        detailedProfile: {
+            oneLineSummary: '2021 US오픈에서 동화를 쓴 캐나다의 좌완 파이터, 관중을 사로잡는 에너지의 소유자.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🏆 2021 US오픈 준우승 — 19세의 기적</div>
+                    <p>2021년 US오픈에서 오사카, 사발렌카, 스비톨리나 등 톱 시드 선수들을 연달아 꺾고 결승에 올라 준우승을 차지했습니다. 당시 19세의 나이로 보여준 대담한 플레이와 뜨거운 투지는 테니스 팬들에게 깊은 인상을 남겼습니다.</p>
+                </div>
+                <p>캐나다 여자 테니스의 새로운 얼굴로, 비앙카 안드레스쿠와 함께 캐나다 테니스의 황금 세대를 이끌고 있습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"좌완의 파이터 (The Left-Handed Fighter)"</strong></p>
+                <p>페르난데스의 테니스는 좌완 특유의 각도와 불타는 투지로 정의됩니다. 탑스핀이 강한 포핸드와 날카로운 백핸드 다운더라인이 주요 무기이며, 관중의 에너지를 자신의 힘으로 전환하는 능력이 탁월합니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>좌완 포핸드:</strong> 독특한 각도의 탑스핀 포핸드</li>
+                        <li><strong>투지:</strong> 경기가 어려울수록 더 강해지는 정신력</li>
+                        <li><strong>관중 소통:</strong> 관중의 에너지를 끌어모으는 카리스마</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '투지 (Fighting Spirit)', score: 9.5, description: '경기가 어려울수록 더 강해지는 불굴의 정신.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '좌완 특유의 각도와 탑스핀이 무기.' },
+                { name: '관중 소통 (Crowd Energy)', score: 9, description: '관중을 하나로 만드는 카리스마.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '날카로운 다운더라인이 특기.' },
+                { name: '이동속도 (Movement)', score: 8, description: '빠른 발과 코트 커버리지.' },
+                { name: '서브 (Serve)', score: 7, description: '좌완 서브의 각도는 좋지만 파워는 보통.' }
+            ],
+            growthStory: `
+                <p>캐나다 몬트리올에서 태어나 에콰도르인 아버지의 지도 아래 테니스를 시작했습니다. 아버지 호르헤 페르난데스가 코치로서 함께하며 성장을 이끌었습니다.</p>
+                <p>2019년 롤랑가로스 주니어 우승으로 주목받기 시작했고, 2021년 US오픈에서 톱 선수들을 연달아 꺾으며 결승에 진출하는 신데렐라 스토리를 썼습니다. 이후 부상으로 어려운 시기를 보냈지만, 다시 랭킹을 끌어올리며 복귀에 성공했습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2021 US오픈 8강 vs 스비톨리나',
+                date: '2021. 09. 07',
+                description: '8강에서 5번 시드 스비톨리나를 <strong>6-3, 3-6, 7-6</strong>으로 꺾은 경기입니다. 3세트 타이브레이크에서 관중의 뜨거운 응원을 등에 업고 역전승을 거두며, 페르난데스의 투지와 관중 소통 능력이 빛난 명경기였습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🔥 관중을 사로잡는 에너지</div>
+                    <p>코트 위에서 보여주는 뜨거운 투지와 관중을 향한 소통은 페르난데스만의 매력입니다. 주먹을 불끈 쥐며 포효하는 모습, 관중에게 박수를 요청하는 모습은 경기를 축제로 만들어냅니다. 다문화적 배경은 다양한 국가의 팬들에게 공감을 불러일으킵니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"재기를 향한 좌완의 투혼"</strong></p>
+                <p>부상에서 회복한 뒤 꾸준히 투어에 복귀하여 경기력을 끌어올리고 있습니다. 2021년의 마법 같은 순간을 다시 재현하기 위해 매 경기 최선을 다하고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '페르난데스의 2021 US오픈이 특별한 이유는?',
+                    answer: '대회 기간 중 오사카(3번 시드), 사발렌카(2번 시드), 스비톨리나(5번 시드), 케르버(전 세계 1위) 등 톱 시드를 연이어 격파하며 결승에 올랐습니다. 19세의 나이로 보여준 이 도전은 테니스 역사에 길이 남을 순간입니다.'
+                },
+                {
+                    question: '페르난데스의 가족 배경은?',
+                    answer: '에콰도르 출신 아버지 호르헤와 필리핀-캐나다인 어머니 사이에서 태어났습니다. 아버지가 코치를 맡고 있으며, 여동생 비앙카도 테니스 선수입니다.'
+                }
+            ]
+        }
+    },
+    'maria-sakkari': {
+        name: '마리아 사카리', nameEn: 'Maria Sakkari', country: 'Greece', countryFlag: '🇬🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'One-handed',
+        longBio: '마리아 사카리는 그리스 여자 테니스의 간판 선수로, 뛰어난 체력과 공격적인 플레이로 WTA 톱 10까지 올랐던 실력파입니다. 스포츠 명문 가문 출신으로, 그리스 테니스의 위상을 세계 무대에서 높이고 있습니다.',
+        detailedProfile: {
+            oneLineSummary: '그리스 여자 테니스 역사상 최고의 선수, 철인 같은 체력과 투지의 아이콘.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🇬🇷 그리스 여자 테니스의 역사를 쓰다</div>
+                    <p>세계 랭킹 3위까지 올랐던 사카리는 그리스 여자 테니스 역사상 최고 랭킹을 기록한 선수입니다. 그랜드슬램 준결승에 여러 차례 진출하며 그리스 테니스의 위상을 전 세계에 알렸습니다.</p>
+                </div>
+                <p>어머니 안젤리키 카넬로풀루가 전 그리스 대표 테니스 선수였으며, 스포츠 명문 가문의 DNA를 이어받아 정상급 선수로 성장했습니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"철인 파이터 (The Iron Fighter)"</strong></p>
+                <p>사카리의 가장 큰 강점은 투어 최고 수준의 체력과 피트니스입니다. 한 손 백핸드를 구사하는 여자 선수로서 독특한 존재감을 가지고 있으며, 강력한 서브와 공격적인 포핸드로 상대를 압박합니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>체력:</strong> WTA 투어 최고 수준의 피트니스와 지구력</li>
+                        <li><strong>한 손 백핸드:</strong> 여자 투어에서 희귀한 한 손 백핸드의 소유자</li>
+                        <li><strong>서브 파워:</strong> 강력한 서브로 프리 포인트 확보</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '체력 (Fitness)', score: 9.5, description: 'WTA 투어 최정상급의 체력과 피트니스.' },
+                { name: '서브 (Serve)', score: 8.5, description: '파워풀한 서브로 에이스를 양산.' },
+                { name: '포핸드 (Forehand)', score: 8.5, description: '공격적이고 강력한 포핸드 위너.' },
+                { name: '투지 (Fighting Spirit)', score: 9, description: '절대 포기하지 않는 투지와 근성.' },
+                { name: '백핸드 (Backhand)', score: 7.5, description: '한 손 백핸드로 독특한 변화구 보유.' },
+                { name: '안정성 (Consistency)', score: 7, description: '가끔 기복이 있지만 전반적으로 안정.' }
+            ],
+            growthStory: `
+                <p>그리스 아테네 출신으로, 어머니 안젤리키 카넬로풀루가 전 그리스 대표 테니스 선수이자 체조 선수였습니다. 스포츠 명문 가문에서 자라며 자연스럽게 테니스를 시작했습니다.</p>
+                <p>2010년대 후반부터 WTA 투어에서 두각을 나타내기 시작했고, 2021-2022시즌에 폭발적으로 성장하며 세계 랭킹 3위까지 올랐습니다. 롤랑가로스와 US오픈 준결승 진출 등 그랜드슬램에서도 좋은 성적을 거두며 그리스 테니스의 아이콘이 되었습니다.</p>
+            `,
+            signatureMatch: {
+                title: '2021 롤랑가로스 준결승 vs 크레이치코바',
+                date: '2021. 06. 10',
+                description: '그리스 여자 선수 최초로 그랜드슬램 준결승에 진출한 역사적인 순간이었습니다. 비록 패했지만, 그리스 테니스의 새로운 가능성을 보여준 의미 있는 대회였습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🏛️ 그리스의 테니스 여전사</div>
+                    <p>코트 위에서 보여주는 전사 같은 투지와 철인 같은 체력은 고대 그리스 운동선수를 연상시킵니다. SNS에서도 활발히 활동하며 팬들과 소통하고, 뛰어난 패션 센스로도 주목받는 선수입니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"경험을 무기로 한 재도약"</strong></p>
+                <p>톱 10에서 내려온 뒤 다시 랭킹을 끌어올리기 위해 노력하고 있습니다. 풍부한 그랜드슬램 경험과 뛰어난 체력을 바탕으로 언제든 톱 10에 복귀할 수 있는 잠재력을 가지고 있습니다.</p>
+            `,
+            faq: [
+                {
+                    question: '사카리 선수가 한 손 백핸드를 쓰는 이유는?',
+                    answer: '여자 투어에서 한 손 백핸드는 매우 드문데, 사카리는 어린 시절부터 자연스럽게 한 손 백핸드를 익혔습니다. 이는 그녀의 독특한 강점 중 하나로, 슬라이스와 변화구에서 큰 장점이 됩니다.'
+                },
+                {
+                    question: '사카리 선수의 어머니도 운동선수였나요?',
+                    answer: '네, 어머니 안젤리키 카넬로풀루는 전 그리스 대표 테니스 선수이자 체조 선수였습니다. 스포츠 명문 가문의 DNA를 이어받아 뛰어난 운동 능력과 체력을 갖추게 되었습니다.'
+                }
+            ]
+        }
+    },
+    'caroline-garcia': {
+        name: '카롤린 가르시아', nameEn: 'Caroline Garcia', country: 'France', countryFlag: '🇫🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        plays: 'Right-handed', backhand: 'One-handed',
+        longBio: '카롤린 가르시아는 프랑스를 대표하는 여자 테니스 선수로, 2022년 WTA 파이널스 우승을 비롯해 다수의 WTA 타이틀을 보유한 실력파입니다. 한 손 백핸드와 공격적인 네트 플레이가 돋보이는 올코트 플레이어입니다.',
+        detailedProfile: {
+            oneLineSummary: 'WTA 파이널스 챔피언, 프랑스 여자 테니스의 자존심이자 올코트 마스터.',
+            whyNotable: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🏆 2022 WTA 파이널스 챔피언</div>
+                    <p>2022년 WTA 파이널스에서 우승하며 시즌 최강자임을 증명했습니다. 그해 리옹, 바드 홈부르크, 시드니에서도 우승하며 시즌 4관왕을 달성한 최고의 해를 보냈습니다.</p>
+                </div>
+                <p>프랑스 여자 테니스의 간판으로, 복식에서도 그랜드슬램 우승 경험이 있는 만능 선수입니다. 롤랑가로스에서 프랑스 관중의 열렬한 응원을 받는 선수이기도 합니다.</p>
+            `,
+            playStyle: `
+                <p><strong>"공격적 올코트 마스터 (The Aggressive All-Court Master)"</strong></p>
+                <p>가르시아의 테니스는 공격적인 올코트 플레이가 특징입니다. 한 손 백핸드를 구사하며, 네트 플레이에서도 뛰어난 능력을 보여줍니다. 특히 서브 앤 발리 전술을 현대 여자 테니스에서 효과적으로 활용하는 몇 안 되는 선수입니다.</p>
+                <div class="highlight-box">
+                    <div class="highlight-box-title">⚡ 핵심 강점</div>
+                    <ul class="list-disc pl-5 my-0 space-y-2">
+                        <li><strong>네트 플레이:</strong> 현대 여자 테니스에서 보기 드문 뛰어난 발리 기술</li>
+                        <li><strong>한 손 백핸드:</strong> 우아하면서도 공격적인 한 손 백핸드</li>
+                        <li><strong>서브:</strong> 파워와 변화를 겸비한 효과적인 서브</li>
+                    </ul>
+                </div>
+            `,
+            hexagonStats: [
+                { name: '네트 플레이 (Net Play)', score: 9, description: 'WTA 최고 수준의 발리와 네트 감각.' },
+                { name: '서브 (Serve)', score: 8.5, description: '파워와 코스 변화를 겸비한 서브.' },
+                { name: '공격성 (Aggression)', score: 9, description: '주도적으로 공격을 전개하는 적극적 성향.' },
+                { name: '다양성 (Versatility)', score: 8.5, description: '베이스라인과 네트를 넘나드는 올코트 능력.' },
+                { name: '백핸드 (Backhand)', score: 8, description: '한 손 백핸드로 다양한 변화구 구사.' },
+                { name: '안정성 (Consistency)', score: 7, description: '공격적 성향으로 인한 기복이 존재.' }
+            ],
+            growthStory: `
+                <p>프랑스 리옹 출신으로, 아버지 루이-폴 가르시아의 지도 아래 어린 시절부터 테니스를 시작했습니다. 아버지가 코치 역할을 하며 독특한 올코트 스타일을 발전시켰습니다.</p>
+                <p>2019년 한때 세계 랭킹 4위까지 올랐으나 이후 슬럼프를 겪었습니다. 하지만 2022년 놀라운 부활을 이루며 WTA 파이널스 우승을 차지, 시즌 최강자로 군림했습니다. 기복이 있는 커리어 속에서도 항상 최고 수준으로 돌아오는 회복력이 인상적입니다.</p>
+            `,
+            signatureMatch: {
+                title: '2022 WTA 파이널스 결승 vs 사발렌카',
+                date: '2022. 11. 07',
+                description: '결승에서 사발렌카를 <strong>7-6, 6-4</strong>로 꺾고 WTA 파이널스 챔피언에 올랐습니다. 시즌 내내 보여준 공격적인 올코트 테니스의 결정체를 보여준 경기로, 가르시아 커리어 최고의 순간이었습니다.'
+            },
+            fanAppeal: `
+                <div class="highlight-box">
+                    <div class="highlight-box-title">🇫🇷 프랑스 테니스의 엘레강스</div>
+                    <p>한 손 백핸드와 네트 플레이로 대표되는 우아한 테니스 스타일은 프랑스 테니스의 전통을 잇는 것입니다. 롤랑가로스에서 프랑스 관중의 열렬한 응원을 받으며 경기하는 모습은 항상 특별한 장면을 만들어냅니다.</p>
+                </div>
+            `,
+            recentForm: `
+                <p><strong>"파이널스 챔피언의 저력"</strong></p>
+                <p>2022년의 정점 이후 다소 성적이 하락했지만, 경험과 실력을 바탕으로 언제든 톱 10에 복귀할 수 있는 저력을 갖추고 있습니다. 올코트 능력은 여전히 투어 최고 수준입니다.</p>
+            `,
+            faq: [
+                {
+                    question: '가르시아의 WTA 파이널스 우승이 중요한 이유는?',
+                    answer: 'WTA 파이널스는 시즌 상위 8명만 출전할 수 있는 최고 권위의 대회입니다. 이 대회 우승은 시즌 최강자임을 의미하며, 가르시아의 2022시즌 부활을 완벽하게 마무리한 업적입니다.'
+                },
+                {
+                    question: '가르시아 선수의 복식 성적은?',
+                    answer: '복식에서도 뛰어난 능력을 보유하고 있으며, 롤랑가로스 혼합복식 우승 등 그랜드슬램 복식 타이틀을 보유하고 있습니다. 네트 플레이 능력이 복식에서 큰 강점이 됩니다.'
+                }
+            ]
+        }
+    },
 };
 export const getPlayerSlugs = () => Object.keys(PLAYERS_DB);
 
