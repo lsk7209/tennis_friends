@@ -11951,7 +11951,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'narae-han': {
-        name: '한나래', nameEn: 'Narae Han', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '한나래', nameEn: 'Narae Han', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/narae-han.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '한나래는 한국 여자 테니스의 대표 선수로, WTA 투어와 그랜드슬램 본선에 꾸준히 출전하며 한국 여자 테니스의 위상을 높여온 선수입니다. 안정적인 스트로크와 강한 정신력이 강점입니다.',
         detailedProfile: {
@@ -11995,7 +11995,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'seongchan-hong': {
-        name: '홍성찬', nameEn: 'Seongchan Hong', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male',
+        name: '홍성찬', nameEn: 'Seongchan Hong', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/seongchan-hong.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '홍성찬은 한국 남자 테니스의 차세대 유망주로, ATP 챌린저 대회에서 활발히 활동하며 투어 진입을 노리는 떠오르는 신성입니다.',
         detailedProfile: {
@@ -12035,7 +12035,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'sujeong-jang': {
-        name: '장수정', nameEn: 'Sujeong Jang', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '장수정', nameEn: 'Sujeong Jang', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/sujeong-jang.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '장수정은 한국 여자 테니스의 떠오르는 유망주로, ITF 서킷과 WTA 챌린저에서 활발히 활동하며 세계 무대 진출을 준비하고 있는 기대주입니다.',
         detailedProfile: {
@@ -12075,7 +12075,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'duckhee-lee': {
-        name: '이덕희', nameEn: 'Duckhee Lee', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/placeholder-tennis-player.svg', gender: 'male',
+        name: '이덕희', nameEn: 'Duckhee Lee', country: 'South Korea', countryFlag: '🇰🇷', image: '/images/players/duckhee-lee.png', gender: 'male',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '이덕희는 청각 장애를 가진 한국의 프로 테니스 선수로, 2019년 윈스턴-세일럼 오픈에서 ATP 투어 본선 첫 승리를 거두며 전 세계에 감동을 선사한 영감의 아이콘입니다.',
         detailedProfile: {
@@ -12270,7 +12270,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'diana-shnaider': {
-        name: '다이아나 슈나이더', nameEn: 'Diana Shnaider', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '다이아나 슈나이더', nameEn: 'Diana Shnaider', country: 'Russia', countryFlag: '🇷🇺', image: '/images/players/diana-shnaider.png', gender: 'female',
         plays: 'Left-handed', backhand: 'Two-handed',
         longBio: '다이아나 슈나이더는 강력한 좌완 스트로크로 WTA 투어에서 급부상하고 있는 러시아의 신예입니다. 왼손잡이 특유의 각도 있는 서브와 공격적인 포핸드로 상대를 압도하며, 빠른 속도로 랭킹을 끌어올리고 있습니다.',
         detailedProfile: {
@@ -12462,7 +12462,7 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
         }
     },
     'katie-boulter': {
-        name: '케이티 볼터', nameEn: 'Katie Boulter', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/placeholder-tennis-player.svg', gender: 'female',
+        name: '케이티 볼터', nameEn: 'Katie Boulter', country: 'Great Britain', countryFlag: '🇬🇧', image: '/images/players/katie-boulter.png', gender: 'female',
         plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '케이티 볼터는 영국 여자 테니스의 에이스로, 강력한 서브와 공격적인 포핸드를 무기로 WTA 투어에서 꾸준히 성장하고 있는 선수입니다. 홈 관중 앞에서 특히 강한 면모를 보이며 영국 팬들의 큰 사랑을 받고 있습니다.',
         detailedProfile: {
