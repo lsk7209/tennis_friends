@@ -4,67 +4,83 @@ import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "장비 관리 스케줄러",
-  description: "장비 관리 스케줄러 utility for tennis players who want a clearer workflow and faster decisions.",
+  description:
+    "라켓, 스트링, 오버그립, 테니스화의 점검 주기를 정리하는 장비 관리 스케줄 가이드입니다.",
   path: "/utility/equipment-maintenance-scheduler",
   type: "website",
-  tags: ["tennis utility", "Equipment", "장비 관리 스케줄러"],
+  tags: ["테니스 장비 관리", "스트링 교체", "오버그립 관리"],
 });
 
-const sections = [
+const schedules = [
   {
-    "id": "overview",
-    "heading": "What It Does",
-    "body": "장비 관리 스케줄러 is designed to turn a vague tennis problem into a clear next action. Instead of broad advice, it focuses on one decision area and gives the user a practical frame to work with."
+    label: "매 경기 후",
+    tasks: ["그립 젖음 상태 확인", "라켓 프레임 크랙 여부 확인", "신발 밑창 이물질 제거"],
   },
   {
-    "id": "inputs",
-    "heading": "Recommended Inputs",
-    "body": "The most useful version of 장비 관리 스케줄러 starts with realistic inputs: current level, recent playing volume, surface context, and the match or training goal. That keeps the output useful rather than generic."
+    label: "매주",
+    tasks: ["스트링 텐션 체감 변화 기록", "오버그립 마모 체크", "가방 안 소모품 재정비"],
   },
   {
-    "id": "use-cases",
-    "heading": "Best Use Cases",
-    "body": "장비 관리 스케줄러 is most valuable before training, before match play, or during weekly review. It works best when used as part of a repeatable process instead of a one-time check."
+    label: "매월",
+    tasks: ["신발 쿠셔닝 저하 점검", "라켓 밸런스 이상 여부 확인", "예비 스트링과 그립 재고 확인"],
   },
-  {
-    "id": "next-step",
-    "heading": "Next Step",
-    "body": "After using 장비 관리 스케줄러, the next step should be simple: update one plan, change one practice focus, or test one tactical decision. That is how a utility in the Equipment category creates measurable improvement."
-  }
 ] as const;
 
-export default function Page() {
+const signals = [
+  "스트링이 예전보다 쉽게 밀리거나 탄도가 높게 뜬다.",
+  "오버그립이 미끄럽거나 손에 걸리는 부분이 생긴다.",
+  "신발 바깥쪽 밑창 마모가 심해 급정지 때 불안하다.",
+  "라켓 프레임에 미세한 균열이나 소리가 느껴진다.",
+] as const;
+
+export default function EquipmentMaintenanceSchedulerPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-12">
-      <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Equipment</p>
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">장비 관리 스케줄러</h1>
-        <p className="max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-300">
-          장비 관리 스케줄러 is now available as part of the TennisFriends utility expansion set. This first version is structured to help users understand the workflow, expected inputs, and practical next actions.
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+      <section className="rounded-3xl border border-amber-100 bg-gradient-to-br from-amber-50 via-white to-lime-50 p-8 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">Equipment Utility</p>
+        <h1 className="mt-3 text-3xl font-bold text-gray-900">장비 관리 스케줄러</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-gray-700">
+          장비 관리는 경기력 유지와 부상 예방에 직접 연결됩니다. 이 페이지는 어떤 주기로 무엇을 확인해야
+          하는지 빠르게 정리할 수 있도록 만든 기준표입니다.
         </p>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
-            <article key={section.id} className="rounded-2xl border border-gray-200 p-5 dark:border-gray-700">
-              <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">{section.heading}</h2>
-              <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">{section.body}</p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/utility/string-replacement-reminder"
+            className="rounded-full bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white"
+          >
+            스트링 교체 기준 보기
+          </Link>
+          <Link
+            href="/utility/shoe-wear-tracker"
+            className="rounded-full border border-amber-600 px-5 py-2.5 text-sm font-semibold text-amber-700"
+          >
+            신발 마모 체크 보기
+          </Link>
+        </div>
+      </section>
+
+      <section className="grid gap-6 md:grid-cols-3">
+        {schedules.map((schedule) => (
+          <article key={schedule.label} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-bold text-gray-900">{schedule.label}</h2>
+            <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+              {schedule.tasks.map((task) => (
+                <li key={task}>{task}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </section>
+
+      <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900">바로 점검해야 하는 신호</h2>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          {signals.map((signal) => (
+            <article key={signal} className="rounded-2xl bg-gray-50 p-4 text-sm leading-6 text-gray-700">
+              {signal}
             </article>
           ))}
-        </div>
-
-        <div className="mt-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-800">
-          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Suggested Follow-Up</h2>
-          <p className="mb-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
-            Pair this utility with a planning or analysis tool so the result turns into a repeatable training action.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/utility/training-planner" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white">
-              Training Planner
-            </Link>
-            <Link href="/utility/match-analyzer" className="rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600">
-              Match Analyzer
-            </Link>
-          </div>
         </div>
       </section>
     </main>

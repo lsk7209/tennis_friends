@@ -1,370 +1,76 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calculator, Target, Settings, Zap, Shield, TrendingUp, ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
-import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
-import SoftwareApplicationSchema from '@/components/seo/SoftwareApplicationSchema';
-import FAQSection from '@/components/seo/FAQSection';
-import { generatePageMetadata } from '@/lib/seo/metadata-helpers';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, Calculator, Shield, Target } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 
-// Enhanced metadata with Naver optimization
 export const metadata: Metadata = generatePageMetadata({
-  title: '스트링 텐션 계산기',
-  description: '스트링 텐션 계산기로 당신에게 맞는 최적 텐션을 찾아보세요. 라켓 무게, 플레이 스타일, 실력을 고려한 과학적 텐션 추천.',
-  path: '/utility/string-tension',
-  type: 'website',
-  tags: ['스트링 텐션', '텐션 계산기', '테니스 스트링', '라켓 텐션', '스트링 장력', '테니스 장비'],
+  title: "스트링 텐션 계산기",
+  description: "라켓, 플레이 스타일, 타구 감각 기준으로 추천 스트링 텐션을 확인합니다.",
+  path: "/utility/string-tension",
+  type: "website",
+  tags: ["스트링 텐션", "테니스 라켓", "테니스 장비"],
 });
 
-export default function StringTensionIntro() {
-  const features = [
-    {
-      icon: Calculator,
-      title: '정확한 계산',
-      description: '라켓, 스트링, 플레이 스타일을 종합 분석하여 최적의 텐션을 추천합니다.',
-      gradient: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Target,
-      title: '맞춤형 추천',
-      description: '당신의 NTRP 레벨과 환경에 맞는 개인화된 텐션 설정을 제공합니다.',
-      gradient: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Settings,
-      title: '실전 가이드',
-      description: '계절별, 지역별 환경을 고려한 실전적인 텐션 조정 팁을 제공합니다.',
-      gradient: 'from-purple-500 to-pink-500'
-    }
-  ];
+const reasons = [
+  "너무 낮으면 공이 뜨고, 너무 높으면 팔 부담이 커질 수 있습니다.",
+  "실력보다 타구 감각과 선호 플레이 스타일이 더 중요할 때도 많습니다.",
+  "계절과 코트 환경에 따라 텐션 보정이 필요합니다.",
+];
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: '즉시 결과 확인',
-      description: '6가지 간단한 질문으로 바로 최적 텐션을 확인하세요.',
-      gradient: 'from-yellow-400 to-orange-500'
-    },
-    {
-      icon: Shield,
-      title: '부상 예방',
-      description: '적절한 텐션으로 테니스 엘보우 등 부상을 예방할 수 있습니다.',
-      gradient: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: TrendingUp,
-      title: '실력 향상',
-      description: '몸에 맞는 텐션으로 더 정확하고 강력한 샷을 구사하세요.',
-      gradient: 'from-blue-500 to-indigo-500'
-    }
-  ];
-
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
-  const utilityUrl = `${siteUrl}/utility/string-tension`;
-
-  // FAQ items for AI snippet optimization
-  const faqItems = [
-    {
-      question: '스트링 텐션은 무엇인가요?',
-      answer: '스트링 텐션은 라켓 프레임에 스트링을 얼마나 팽팽하게 당겨서 끼우는지를 나타내는 수치입니다. 적절한 텐션은 플레이 스타일, 실력, 환경에 따라 달라집니다.',
-    },
-    {
-      question: '최적의 텐션은 어떻게 결정되나요?',
-      answer: '라켓 헤드 사이즈, 스트링 종류, 플레이 스타일, NTRP 레벨, 환경(온도, 습도) 등을 종합적으로 고려하여 결정됩니다. 이 계산기는 이러한 요소들을 분석하여 최적의 텐션을 추천합니다.',
-    },
-    {
-      question: '텐션이 너무 높거나 낮으면 어떻게 되나요?',
-      answer: '텐션이 너무 높으면 컨트롤은 좋아지지만 파워와 스핀이 줄어들고, 너무 낮으면 파워는 좋아지지만 컨트롤이 어려워집니다. 또한 부적절한 텐션은 부상 위험을 증가시킬 수 있습니다.',
-    },
-    {
-      question: '계절에 따라 텐션을 조정해야 하나요?',
-      answer: '네, 온도와 습도에 따라 텐션을 조정하는 것이 좋습니다. 여름에는 약간 낮추고, 겨울에는 약간 높이는 것이 일반적입니다. 계산기에서 환경 조건을 선택하면 이를 고려한 추천을 받을 수 있습니다.',
-    },
-    {
-      question: '이 계산기는 무료인가요?',
-      answer: '네, 100% 무료로 제공됩니다. 언제든지 반복해서 사용하여 최적의 텐션을 찾을 수 있습니다.',
-    },
-  ];
-
+export default function Page() {
   return (
-    <>
-      {/* SoftwareApplication Schema for Calculator Tool */}
-      <SoftwareApplicationSchema
-        name="스트링 텐션 계산기"
-        description="라켓, 스트링, 플레이 스타일을 종합 분석하여 최적의 스트링 텐션을 추천하는 웹 도구입니다."
-        url={utilityUrl}
-        applicationCategory="WebApplication"
-        featureList={[
-          '정확한 텐션 계산',
-          '맞춤형 추천',
-          '실전 가이드',
-          '부상 예방',
-        ]}
-        offers={{
-          price: '0',
-          priceCurrency: 'KRW',
-        }}
-      />
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-emerald-50 to-teal-50">
-      {/* Hero Section */}
-      <section 
-        className="relative overflow-hidden py-20 md:py-32"
-        aria-label="스트링 텐션 계산기 소개"
-      >
-        {/* Background Decoration */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-emerald-500/5 to-teal-500/5"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto max-w-6xl px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <FadeIn delay={0.2}>
-              <Badge className="bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 px-6 py-2 mb-8 text-sm font-semibold shadow-lg">
-                <Sparkles className="h-4 w-4 mr-2 inline" />
-                스트링 텐션 계산기
-              </Badge>
-            </FadeIn>
-            
-            <SlideUp delay={0.4}>
-              <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-8 leading-tight">
-                나에게 딱 맞는{' '}
-                <span className="bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                  스트링 텐션
-                </span>
-                은?
-              </h1>
-            </SlideUp>
-            
-            <SlideUp delay={0.6}>
-              <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto font-medium">
-                라켓, 스트링, 플레이 스타일에 따라 적정 텐션은 달라집니다.<br />
-                <span className="text-gray-600">간단한 테스트로 나에게 맞는 텐션을 알아보세요.</span>
-              </p>
-            </SlideUp>
-            
-            <SlideUp delay={0.8}>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <Link href="/utility/string-tension/test">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white w-full sm:w-auto px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                    <Calculator className="h-5 w-5 mr-2" />
-                    텐션 계산 시작하기
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </Button>
-                </Link>
-                <Link href="/utility/ntrp-test">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/80 backdrop-blur-sm border-2 border-gray-300 hover:border-blue-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                    <Target className="h-5 w-5 mr-2" />
-                    NTRP 실력 테스트
-                  </Button>
-                </Link>
-              </div>
-            </SlideUp>
-            
-            {/* Trust indicators */}
-            <FadeIn delay={1.0}>
-              <div className="flex flex-wrap items-center justify-center gap-6 text-gray-700 text-base font-medium">
-                <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
-                  <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
-                  <span>5,000+ 텐션 계산 완료</span>
-                </div>
-                <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
-                  <Shield className="h-4 w-4 text-blue-600" />
-                  <span>전문가 검증된 알고리즘</span>
-                </div>
-                <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
-                  <Zap className="h-4 w-4 text-yellow-500" />
-                  <span>100% 무료 서비스</span>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section 
-        className="py-20 bg-white"
-        aria-labelledby="features-heading"
-      >
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="text-center mb-16">
-            <h2 id="features-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-              왜 TennisFriends 텐션 계산기인가?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              과학적 분석과 전문가의 경험을 바탕으로 한 정확한 텐션 추천
+    <main className="mx-auto max-w-6xl px-4 py-12">
+      <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <Card className="border-sky-100 bg-gradient-to-br from-sky-50 via-white to-emerald-50">
+          <CardHeader>
+            <Badge className="w-fit bg-sky-600 text-white">Equipment Utility</Badge>
+            <CardTitle className="mt-3 text-4xl">스트링 텐션 계산기</CardTitle>
+            <p className="text-base leading-7 text-muted-foreground">
+              라켓 성향과 플레이 스타일이 같아도 텐션이 다르면 타구 느낌이 크게 달라집니다. 내게 맞는 시작점을 먼저 잡는 도구입니다.
             </p>
-          </div>
-          
-          <StaggeredAnimation staggerDelay={0.2}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <StaggeredItem key={index}>
-                    <Card className="h-full bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group cursor-pointer overflow-hidden relative">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-                      <CardContent className="p-8 text-center relative z-10">
-                        <div className={`w-20 h-20 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                          <IconComponent className="h-10 w-10 text-white" />
-                        </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                        <p className="text-gray-600 leading-relaxed text-base">{feature.description}</p>
-                      </CardContent>
-                    </Card>
-                  </StaggeredItem>
-                );
-              })}
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {reasons.map((reason) => (
+              <div key={reason} className="rounded-xl border bg-white p-4 text-sm leading-6">
+                {reason}
+              </div>
+            ))}
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Link href="/utility/string-tension/test">
+                <Button className="bg-sky-600 hover:bg-sky-700">
+                  <Calculator className="mr-2 h-4 w-4" />
+                  계산 시작
+                </Button>
+              </Link>
+              <Link href="/utility/equipment-recommendation">
+                <Button variant="outline">
+                  <ArrowRight className="mr-2 h-4 w-4" />
+                  장비 추천 보기
+                </Button>
+              </Link>
             </div>
-          </StaggeredAnimation>
-        </div>
-      </section>
+          </CardContent>
+        </Card>
 
-      {/* Benefits Section */}
-      <section 
-        className="py-20 bg-gradient-to-br from-gray-50 to-slate-100"
-        aria-labelledby="benefits-heading"
-      >
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="text-center mb-16">
-            <h2 id="benefits-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-              텐션 계산의 장점
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              적절한 텐션 설정으로 더 나은 테니스 경험을 만들어보세요
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-8 text-center">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${benefit.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-                      <IconComponent className="h-10 w-10 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-base">{benefit.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* How it Works Section */}
-      <section 
-        className="py-20 bg-white"
-        aria-labelledby="how-it-works-heading"
-      >
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="text-center mb-16">
-            <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-              간단한 3단계로 완성
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              복잡한 계산은 우리가, 당신은 질문에만 답하면 됩니다
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer">
-              <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-3xl flex items-center justify-center mx-auto mb-8 text-3xl font-extrabold shadow-xl group-hover:scale-110 transition-transform duration-300">
-                  1
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">라켓 정보 입력</h3>
-                <p className="text-gray-600 leading-relaxed text-base">
-                  라켓 헤드 크기, 스트링 종류, 플레이 스타일을 선택하세요.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer">
-              <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-emerald-500 to-teal-500 text-white rounded-3xl flex items-center justify-center mx-auto mb-8 text-3xl font-extrabold shadow-xl group-hover:scale-110 transition-transform duration-300">
-                  2
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">환경 설정</h3>
-                <p className="text-gray-600 leading-relaxed text-base">
-                  실내/실외 환경, 기온, 선호하는 타구감을 선택하세요.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer">
-              <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-3xl flex items-center justify-center mx-auto mb-8 text-3xl font-extrabold shadow-xl group-hover:scale-110 transition-transform duration-300">
-                  3
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">결과 확인</h3>
-                <p className="text-gray-600 leading-relaxed text-base">
-                  당신에게 최적화된 텐션과 실전 팁을 확인하세요.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section - AI Snippet Optimization */}
-      <section 
-        className="py-20 bg-white"
-        aria-labelledby="faq-heading"
-      >
-        <div className="container mx-auto max-w-4xl px-4">
-          <FAQSection 
-            items={faqItems}
-            id="faq"
-            title="자주 묻는 질문"
-          />
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section 
-        className="py-20 bg-gradient-to-br from-blue-600 via-emerald-600 to-teal-600 relative overflow-hidden"
-        aria-label="계산기 시작하기"
-      >
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto max-w-4xl px-4 text-center relative z-10">
-          <Card className="bg-white/95 backdrop-blur-md border-0 shadow-2xl">
-            <CardContent className="p-12">
-              <div className="max-w-3xl mx-auto">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-xl">
-                  <Calculator className="h-12 w-12 text-white" />
-                </div>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-                  지금 바로 시작해보세요!
-                </h2>
-                <p className="text-xl text-gray-700 mb-10 leading-relaxed font-medium">
-                  단 2분이면 당신에게 최적화된 스트링 텐션을 찾을 수 있습니다.<br />
-                  <span className="text-gray-600">과학적 분석과 전문가의 조언이 기다립니다.</span>
-                </p>
-                <div className="flex justify-center">
-                  <Link href="/utility/string-tension/test">
-                    <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                      <Calculator className="h-5 w-5 mr-2" />
-                      텐션 계산 시작하기
-                      <ArrowRight className="h-5 w-5 ml-2" />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl">이 계산기가 보는 기준</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex gap-3 rounded-xl border p-4">
+              <Target className="mt-0.5 h-5 w-5 text-sky-600" />
+              <p className="text-sm leading-6">컨트롤형인지 파워형인지에 따른 시작 텐션</p>
+            </div>
+            <div className="flex gap-3 rounded-xl border p-4">
+              <Shield className="mt-0.5 h-5 w-5 text-sky-600" />
+              <p className="text-sm leading-6">팔 부담과 타구 안정감을 함께 고려한 보정</p>
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </main>
-    </>
   );
 }

@@ -4,68 +4,81 @@ import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "쿨다운 루틴 빌더",
-  description: "쿨다운 루틴 빌더 utility for tennis players who want a clearer workflow and faster decisions.",
+  description:
+    "훈련 뒤 피로를 줄이고 다음 세션 회복 속도를 높이기 위한 테니스 쿨다운 루틴 가이드입니다.",
   path: "/utility/cooldown-routine-builder",
   type: "website",
-  tags: ["tennis utility", "Recovery", "쿨다운 루틴 빌더"],
+  tags: ["테니스 회복", "쿨다운 루틴", "훈련 후 스트레칭"],
 });
 
-const sections = [
+const steps = [
   {
-    "id": "overview",
-    "heading": "What It Does",
-    "body": "쿨다운 루틴 빌더 is designed to turn a vague tennis problem into a clear next action. Instead of broad advice, it focuses on one decision area and gives the user a practical frame to work with."
+    title: "심박수 내리기",
+    detail: "강한 랠리나 경기 뒤에는 바로 멈추지 말고 3분 정도 천천히 걷거나 가볍게 움직입니다.",
   },
   {
-    "id": "inputs",
-    "heading": "Recommended Inputs",
-    "body": "The most useful version of 쿨다운 루틴 빌더 starts with realistic inputs: current level, recent playing volume, surface context, and the match or training goal. That keeps the output useful rather than generic."
+    title: "하체 중심 스트레칭",
+    detail: "종아리, 햄스트링, 둔근, 고관절 주변을 중심으로 긴장을 풀어줍니다.",
   },
   {
-    "id": "use-cases",
-    "heading": "Best Use Cases",
-    "body": "쿨다운 루틴 빌더 is most valuable before training, before match play, or during weekly review. It works best when used as part of a repeatable process instead of a one-time check."
+    title: "어깨와 전완 정리",
+    detail: "서브와 포핸드 사용량이 많았다면 어깨 회전근개와 전완 스트레칭을 꼭 넣습니다.",
   },
   {
-    "id": "next-step",
-    "heading": "Next Step",
-    "body": "After using 쿨다운 루틴 빌더, the next step should be simple: update one plan, change one practice focus, or test one tactical decision. That is how a utility in the Recovery category creates measurable improvement."
-  }
+    title: "수분과 기록",
+    detail: "수분을 보충하고 몸 상태를 한 줄이라도 기록해 두면 다음 훈련 조절에 도움이 됩니다.",
+  },
 ] as const;
 
-export default function Page() {
+const tips = [
+  "시합 직후 다리가 무거우면 강한 스트레칭보다 가벼운 워킹부터 시작합니다.",
+  "팔꿈치와 손목 피로가 큰 날은 전완 이완 시간을 조금 더 확보합니다.",
+  "하드코트에서 오래 뛰었다면 발바닥과 종아리 케어를 우선합니다.",
+] as const;
+
+export default function CooldownRoutineBuilderPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-12">
-      <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Recovery</p>
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">쿨다운 루틴 빌더</h1>
-        <p className="max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-300">
-          쿨다운 루틴 빌더 is now available as part of the TennisFriends utility expansion set. This first version is structured to help users understand the workflow, expected inputs, and practical next actions.
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+      <section className="rounded-3xl border border-cyan-100 bg-gradient-to-br from-cyan-50 via-white to-sky-50 p-8 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-700">Recovery Utility</p>
+        <h1 className="mt-3 text-3xl font-bold text-gray-900">쿨다운 루틴 빌더</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-gray-700">
+          쿨다운은 운동이 끝난 뒤의 부가 동작이 아니라 다음 세션 컨디션을 만드는 과정입니다. 경기나 훈련 강도에
+          따라 최소한의 정리 루틴을 유지하면 피로 누적을 크게 줄일 수 있습니다.
         </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/utility/recovery-routine-generator"
+            className="rounded-full bg-cyan-600 px-5 py-2.5 text-sm font-semibold text-white"
+          >
+            회복 루틴 보기
+          </Link>
+          <Link
+            href="/utility/warmup-routine-builder"
+            className="rounded-full border border-cyan-600 px-5 py-2.5 text-sm font-semibold text-cyan-700"
+          >
+            워밍업 루틴 보기
+          </Link>
+        </div>
+      </section>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
-            <article key={section.id} className="rounded-2xl border border-gray-200 p-5 dark:border-gray-700">
-              <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">{section.heading}</h2>
-              <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">{section.body}</p>
-            </article>
+      <section className="grid gap-6 md:grid-cols-2">
+        {steps.map((step, index) => (
+          <article key={step.title} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+            <p className="text-sm font-semibold text-cyan-700">Step {index + 1}</p>
+            <h2 className="mt-2 text-xl font-bold text-gray-900">{step.title}</h2>
+            <p className="mt-4 text-sm leading-6 text-gray-700">{step.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="rounded-3xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900">상황별 팁</h2>
+        <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+          {tips.map((tip) => (
+            <li key={tip}>{tip}</li>
           ))}
-        </div>
-
-        <div className="mt-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-800">
-          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Suggested Follow-Up</h2>
-          <p className="mb-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
-            Pair this utility with a planning or analysis tool so the result turns into a repeatable training action.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/utility/training-planner" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white">
-              Training Planner
-            </Link>
-            <Link href="/utility/match-analyzer" className="rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600">
-              Match Analyzer
-            </Link>
-          </div>
-        </div>
+        </ul>
       </section>
     </main>
   );

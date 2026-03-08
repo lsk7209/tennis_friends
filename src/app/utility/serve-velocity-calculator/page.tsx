@@ -1,242 +1,118 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Zap, Calculator, BarChart3, Target, TrendingUp } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { BarChart3, Calculator, Target, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function ServeVelocityCalculatorPage() {
-  const [serveData, setServeData] = useState({
-    ballWeight: 57, // 그램
-    airDensity: 1.225, // kg/m³ (표준 대기압)
-    dragCoefficient: 0.47, // 테니스공 항력 계수
-    ballRadius: 0.0335, // 미터
-    launchAngle: 5, // 도
-    launchSpeed: 40, // m/s
-  });
+  const [distance, setDistance] = useState(18.5);
+  const [time, setTime] = useState(0.62);
+  const [height, setHeight] = useState(2.6);
+  const [angle, setAngle] = useState(6);
+  const [showResult, setShowResult] = useState(false);
 
-  const [calculatedResult, setCalculatedResult] = useState<any>(null);
+  const result = useMemo(() => {
+    const speedMps = time > 0 ? distance / time : 0;
+    const speedKmh = speedMps * 3.6;
+    const adjustedSpeed = speedKmh + Math.max(0, height - 2.3) * 4 + angle * 0.8;
 
-  const calculateTrajectory = () => {
-    // 간단한 물리학 계산 시뮬레이션
-    const g = 9.81; // 중력 가속도
-    const dt = 0.01; // 시간 간격
-    let t = 0;
-    let x = 0;
-    let y = 2.5; // 네트 높이
-    let vx = serveData.launchSpeed * Math.cos(serveData.launchAngle * Math.PI / 180);
-    let vy = serveData.launchSpeed * Math.sin(serveData.launchAngle * Math.PI / 180);
+    let grade = '입문';
+    if (adjustedSpeed >= 170) grade = '상급';
+    else if (adjustedSpeed >= 140) grade = '중상급';
+    else if (adjustedSpeed >= 110) grade = '중급';
 
-    let maxHeight = y;
-    let landingTime = 0;
-
-    // 공 궤적 계산 (단순화된 버전)
-    while (y > 0 && t < 5) {
-      t += dt;
-      const dragForce = 0.5 * serveData.dragCoefficient * serveData.airDensity * Math.PI * serveData.ballRadius * serveData.ballRadius * (vx * vx + vy * vy);
-      const dragAccelX = -dragForce * vx / (serveData.ballWeight / 1000) / Math.sqrt(vx * vx + vy * vy);
-      const dragAccelY = -dragForce * vy / (serveData.ballWeight / 1000) / Math.sqrt(vx * vx + vy * vy) - g;
-
-      vx += dragAccelX * dt;
-      vy += dragAccelY * dt;
-      x += vx * dt;
-      y += vy * dt;
-
-      if (y > maxHeight) maxHeight = y;
-
-      if (y <= 0) {
-        landingTime = t;
-        break;
-      }
-    }
-
-    setCalculatedResult({
-      maxHeight: maxHeight,
-      landingTime: landingTime,
-      finalSpeed: Math.sqrt(vx * vx + vy * vy),
-      spinEffect: '톱스핀',
-      recommendations: [
-        '발사 각도를 3-7도 사이로 유지하세요',
-        '공의 회전을 더 많이 주어 안정성을 높이세요',
-        '팔로우 스루를 충분히 하여 속도를 유지하세요'
-      ]
-    });
-  };
+    return {
+      speedMps: Math.round(speedMps * 10) / 10,
+      speedKmh: Math.round(speedKmh),
+      adjustedSpeed: Math.round(adjustedSpeed),
+      grade,
+    };
+  }, [angle, distance, height, time]);
 
   return (
-    <div className="min-h-screen utility-page">
-      {/* 헤더 */}
-      <div className="bg-gradient-to-br from-orange-50 via-red-50 to-rose-50 py-16">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full mb-6">
-              <Zap className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              서브 속도 계산기
-            </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              서브 속도를 측정하고 개선 방법을 제시합니다. 공의 궤적, 회전, 속도를 분석하여 서브 기술을 향상시키세요.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[linear-gradient(180deg,_#fff7ed_0%,_#ffffff_35%,_#f8fafc_100%)]">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="rounded-[32px] bg-gradient-to-r from-orange-500 to-red-500 px-8 py-10 text-white shadow-xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">서브 속도 추정 계산기</h1>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-orange-50">
+            거리와 시간, 타점 높이, 발사 각도를 바탕으로 서브 속도를 간단히 추정합니다. 정확한 레이더 측정값은 아니고, 연습용 비교 지표로 보는 편이 맞습니다.
+          </p>
+        </section>
 
-      {/* 메인 컨텐츠 */}
-      <div className="container mx-auto max-w-4xl px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* 입력 섹션 */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <Calculator className="w-6 h-6 text-orange-500" />
-              서브 데이터 입력
-            </h2>
-
-            <div className="space-y-6">
+        <section className="mt-8 grid gap-8 lg:grid-cols-[360px_minmax(0,1fr)]">
+          <Card className="border-slate-200 bg-white shadow-sm">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Calculator className="h-5 w-5 text-orange-600" />
+                입력값
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-5">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  발사 속도 (m/s)
-                </label>
-                <input
-                  type="range"
-                  min="20"
-                  max="60"
-                  value={serveData.launchSpeed}
-                  onChange={(e) => setServeData({...serveData, launchSpeed: Number(e.target.value)})}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                />
-                <div className="text-center mt-2 font-semibold text-orange-600">
-                  {serveData.launchSpeed} m/s
-                </div>
+                <Label htmlFor="distance">비행 거리 (m)</Label>
+                <Input id="distance" type="number" step="0.1" value={distance} onChange={(e) => setDistance(Number(e.target.value) || 0)} />
               </div>
-
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  발사 각도 (°)
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="15"
-                  value={serveData.launchAngle}
-                  onChange={(e) => setServeData({...serveData, launchAngle: Number(e.target.value)})}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                />
-                <div className="text-center mt-2 font-semibold text-orange-600">
-                  {serveData.launchAngle}°
-                </div>
+                <Label htmlFor="time">비행 시간 (초)</Label>
+                <Input id="time" type="number" step="0.01" value={time} onChange={(e) => setTime(Number(e.target.value) || 0)} />
               </div>
-
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  공 무게 (g)
-                </label>
-                <select
-                  value={serveData.ballWeight}
-                  onChange={(e) => setServeData({...serveData, ballWeight: Number(e.target.value)})}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                >
-                  <option value="56.7">표준 테니스공 (56.7g)</option>
-                  <option value="57">일반 테니스공 (57g)</option>
-                  <option value="58">무거운 테니스공 (58g)</option>
-                </select>
+                <Label htmlFor="height">타점 높이 (m)</Label>
+                <Input id="height" type="number" step="0.1" value={height} onChange={(e) => setHeight(Number(e.target.value) || 0)} />
               </div>
-
-              <Button
-                onClick={calculateTrajectory}
-                className="w-full bg-orange-600 hover:bg-orange-700"
-              >
-                <TrendingUp className="w-4 h-4 mr-2" />
-                궤적 계산하기
+              <div>
+                <Label htmlFor="angle">발사 각도 (도)</Label>
+                <Input id="angle" type="number" step="1" value={angle} onChange={(e) => setAngle(Number(e.target.value) || 0)} />
+              </div>
+              <Button className="w-full bg-orange-500 text-white hover:bg-orange-600" onClick={() => setShowResult(true)}>
+                <Zap className="mr-2 h-4 w-4" />
+                속도 계산
               </Button>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
 
-          {/* 결과 섹션 */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <BarChart3 className="w-6 h-6 text-orange-500" />
-              분석 결과
-            </h2>
-
-            {calculatedResult ? (
-              <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-orange-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-orange-600 mb-1">
-                      {calculatedResult.distance.toFixed(1)}m
-                    </div>
-                    <div className="text-sm text-gray-600">비행 거리</div>
-                  </div>
-                  <div className="bg-red-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-red-600 mb-1">
-                      {calculatedResult.maxHeight.toFixed(1)}m
-                    </div>
-                    <div className="text-sm text-gray-600">최고 높이</div>
-                  </div>
-                  <div className="bg-blue-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">
-                      {calculatedResult.finalSpeed.toFixed(1)}m/s
-                    </div>
-                    <div className="text-sm text-gray-600">착지 속도</div>
-                  </div>
-                  <div className="bg-green-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-green-600 mb-1">
-                      {calculatedResult.spinEffect}
-                    </div>
-                    <div className="text-sm text-gray-600">회전 효과</div>
-                  </div>
+          <div className="space-y-6">
+            {showResult ? (
+              <>
+                <div className="grid gap-4 md:grid-cols-3">
+                  <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">추정 속도</p><p className="mt-2 text-2xl font-bold text-orange-600">{result.speedKmh} km/h</p></CardContent></Card>
+                  <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">기본 환산</p><p className="mt-2 text-2xl font-bold text-slate-900">{result.speedMps} m/s</p></CardContent></Card>
+                  <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">서브 등급</p><p className="mt-2 text-2xl font-bold text-slate-900">{result.grade}</p></CardContent></Card>
                 </div>
 
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                    <Target className="w-5 h-5 text-orange-500" />
-                    개선 권장사항
-                  </h3>
-                  <ul className="space-y-3">
-                    {calculatedResult.recommendations.map((rec: string, index: number) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-xs font-semibold text-orange-600">{index + 1}</span>
-                        </div>
-                        <span className="text-gray-700">{rec}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+                <Card className="border-slate-200 bg-white shadow-sm">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <BarChart3 className="h-5 w-5 text-orange-600" />
+                      해석
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3 text-sm leading-6 text-slate-600">
+                    <p>기본 계산 속도는 시간과 거리만으로 구한 값이고, 보정 속도는 타점 높이와 발사 각도를 약하게 반영한 값입니다.</p>
+                    <p>같은 속도라도 코스 정확도와 세컨드 서브 안정성이 더 중요할 수 있으니, 숫자만으로 서브 품질을 판단하지 않는 편이 좋습니다.</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-slate-200 bg-slate-50">
+                  <CardContent className="grid gap-4 p-6 md:grid-cols-3">
+                    <div><div className="flex items-center gap-2 text-slate-900"><Target className="h-4 w-4 text-orange-600" />타점 높이</div><p className="mt-2 text-sm leading-6 text-slate-600">타점이 높을수록 같은 스피드에서도 더 공격적인 궤적을 만들기 쉽습니다.</p></div>
+                    <div><div className="flex items-center gap-2 text-slate-900"><Zap className="h-4 w-4 text-orange-600" />발사 각도</div><p className="mt-2 text-sm leading-6 text-slate-600">각도가 너무 낮으면 네트 위험이 커지고, 너무 높으면 속도 손실이 큽니다.</p></div>
+                    <div><div className="flex items-center gap-2 text-slate-900"><Calculator className="h-4 w-4 text-orange-600" />기록 습관</div><p className="mt-2 text-sm leading-6 text-slate-600">같은 세팅으로 반복 측정하면 폼 변화 추이를 보는 데 유용합니다.</p></div>
+                  </CardContent>
+                </Card>
+              </>
             ) : (
-              <div className="text-center py-12">
-                <Calculator className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">좌측에서 서브 데이터를 입력하고 계산해보세요</p>
-              </div>
+              <Card className="border-dashed border-slate-300 bg-white">
+                <CardContent className="p-10 text-center text-slate-600">
+                  왼쪽 입력값을 넣고 계산을 누르면 서브 속도 추정 결과가 표시됩니다.
+                </CardContent>
+              </Card>
             )}
           </div>
-        </div>
-
-        {/* 추가 정보 */}
-        <div className="mt-12 bg-white rounded-xl shadow-lg p-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-6">서브 속도 향상 팁</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3">물리학적 요소</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li>• 공의 초기 속도 증가</li>
-                <li>• 최적의 발사 각도 유지</li>
-                <li>• 공 회전으로 안정성 확보</li>
-                <li>• 공기 저항 최소화</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3">기술적 요소</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li>• 팔꿈치 높이 유지</li>
-                <li>• 몸통 회전 활용</li>
-                <li>• 타이밍 개선</li>
-                <li>• 팔로우 스루 연장</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   );

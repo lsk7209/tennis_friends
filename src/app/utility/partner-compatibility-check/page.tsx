@@ -4,68 +4,76 @@ import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "파트너 적합도 체크",
-  description: "파트너 적합도 체크 utility for tennis players who want a clearer workflow and faster decisions.",
+  description:
+    "복식 파트너와의 플레이 속도, 소통 방식, 전술 선호도를 점검하는 적합도 체크 가이드입니다.",
   path: "/utility/partner-compatibility-check",
   type: "website",
-  tags: ["tennis utility", "Doubles", "파트너 적합도 체크"],
+  tags: ["복식 파트너", "테니스 적합도", "복식 체크"],
 });
 
-const sections = [
+const categories = [
   {
-    "id": "overview",
-    "heading": "What It Does",
-    "body": "파트너 적합도 체크 is designed to turn a vague tennis problem into a clear next action. Instead of broad advice, it focuses on one decision area and gives the user a practical frame to work with."
+    title: "플레이 템포",
+    detail: "한 명은 빠른 전개를 원하고 다른 한 명은 안정적인 랠리를 원하면 충돌이 생기기 쉽습니다.",
   },
   {
-    "id": "inputs",
-    "heading": "Recommended Inputs",
-    "body": "The most useful version of 파트너 적합도 체크 starts with realistic inputs: current level, recent playing volume, surface context, and the match or training goal. That keeps the output useful rather than generic."
+    title: "커뮤니케이션 방식",
+    detail: "포인트 사이 대화량과 피드백 스타일이 맞는지 확인해야 분위기 관리가 쉬워집니다.",
   },
   {
-    "id": "use-cases",
-    "heading": "Best Use Cases",
-    "body": "파트너 적합도 체크 is most valuable before training, before match play, or during weekly review. It works best when used as part of a repeatable process instead of a one-time check."
+    title: "전술 선호",
+    detail: "포칭 빈도, 로브 사용, 서브 방향 선호가 비슷한지 보면 실전 적응 속도를 알 수 있습니다.",
   },
-  {
-    "id": "next-step",
-    "heading": "Next Step",
-    "body": "After using 파트너 적합도 체크, the next step should be simple: update one plan, change one practice focus, or test one tactical decision. That is how a utility in the Doubles category creates measurable improvement."
-  }
 ] as const;
 
-export default function Page() {
+const checkpoints = [
+  "서로 강점이 겹치는지, 보완되는지 확인한다.",
+  "중요 포인트에서 누가 결정하는 편한지 미리 정한다.",
+  "경기 전 기본 포메이션을 간단히 공유한다.",
+] as const;
+
+export default function PartnerCompatibilityCheckPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-12">
-      <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Doubles</p>
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">파트너 적합도 체크</h1>
-        <p className="max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-300">
-          파트너 적합도 체크 is now available as part of the TennisFriends utility expansion set. This first version is structured to help users understand the workflow, expected inputs, and practical next actions.
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+      <section className="rounded-3xl border border-rose-100 bg-gradient-to-br from-rose-50 via-white to-orange-50 p-8 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-rose-700">Doubles Utility</p>
+        <h1 className="mt-3 text-3xl font-bold text-gray-900">파트너 적합도 체크</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-gray-700">
+          파트너 적합도는 친분과 별개입니다. 경기 템포, 소통 방식, 전술 선호가 맞아야 실제 복식에서 안정감이
+          생기고 실점 뒤 회복도 빨라집니다.
         </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/utility/doubles-chemistry-test"
+            className="rounded-full bg-rose-600 px-5 py-2.5 text-sm font-semibold text-white"
+          >
+            복식 궁합 가이드 보기
+          </Link>
+          <Link
+            href="/utility/goal-setting"
+            className="rounded-full border border-rose-600 px-5 py-2.5 text-sm font-semibold text-rose-700"
+          >
+            팀 목표 정리하기
+          </Link>
+        </div>
+      </section>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
-            <article key={section.id} className="rounded-2xl border border-gray-200 p-5 dark:border-gray-700">
-              <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">{section.heading}</h2>
-              <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">{section.body}</p>
-            </article>
+      <section className="grid gap-6 md:grid-cols-3">
+        {categories.map((category) => (
+          <article key={category.title} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-bold text-gray-900">{category.title}</h2>
+            <p className="mt-4 text-sm leading-6 text-gray-700">{category.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="rounded-3xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900">경기 전 체크포인트</h2>
+        <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+          {checkpoints.map((checkpoint) => (
+            <li key={checkpoint}>{checkpoint}</li>
           ))}
-        </div>
-
-        <div className="mt-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-800">
-          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Suggested Follow-Up</h2>
-          <p className="mb-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
-            Pair this utility with a planning or analysis tool so the result turns into a repeatable training action.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/utility/training-planner" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white">
-              Training Planner
-            </Link>
-            <Link href="/utility/match-analyzer" className="rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600">
-              Match Analyzer
-            </Link>
-          </div>
-        </div>
+        </ul>
       </section>
     </main>
   );

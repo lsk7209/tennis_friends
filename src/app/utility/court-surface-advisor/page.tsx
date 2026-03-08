@@ -3,44 +3,44 @@ import Link from "next/link";
 import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "코트 표면 추천기",
-  description: "코트 표면 추천기 utility for tennis players who want a clearer workflow and faster decisions.",
+  title: "코트 표면 추천 가이드",
+  description: "플레이 스타일과 연습 목적에 맞춰 어떤 코트 표면이 잘 맞는지 정리하는 테니스 코트 표면 추천 가이드입니다.",
   path: "/utility/court-surface-advisor",
   type: "website",
-  tags: ["tennis utility", "Strategy", "코트 표면 추천기"],
+  tags: ["tennis utility", "court surface", "코트 표면 추천"],
 });
 
 const sections = [
   {
-    "id": "overview",
-    "heading": "What It Does",
-    "body": "코트 표면 추천기 is designed to turn a vague tennis problem into a clear next action. Instead of broad advice, it focuses on one decision area and gives the user a practical frame to work with."
+    id: "hard",
+    heading: "하드코트",
+    body: "가장 범용적인 표면입니다. 바운드가 비교적 일정해 기본 패턴을 점검하기 좋고, 경기 준비용 훈련에도 잘 맞습니다.",
   },
   {
-    "id": "inputs",
-    "heading": "Recommended Inputs",
-    "body": "The most useful version of 코트 표면 추천기 starts with realistic inputs: current level, recent playing volume, surface context, and the match or training goal. That keeps the output useful rather than generic."
+    id: "clay",
+    heading: "클레이코트",
+    body: "긴 랠리, 풋워크, 인내심을 훈련하기 좋습니다. 스핀과 높이 변화에 적응하는 감각을 기르기에도 유리합니다.",
   },
   {
-    "id": "use-cases",
-    "heading": "Best Use Cases",
-    "body": "코트 표면 추천기 is most valuable before training, before match play, or during weekly review. It works best when used as part of a repeatable process instead of a one-time check."
+    id: "grass",
+    heading: "잔디코트",
+    body: "낮고 빠른 바운드에 적응해야 하므로 반응 속도와 첫 스텝, 짧은 포인트 운영을 점검하는 데 적합합니다.",
   },
   {
-    "id": "next-step",
-    "heading": "Next Step",
-    "body": "After using 코트 표면 추천기, the next step should be simple: update one plan, change one practice focus, or test one tactical decision. That is how a utility in the Strategy category creates measurable improvement."
-  }
-] as const;
+    id: "indoor",
+    heading: "실내코트",
+    body: "날씨와 바람 변수가 적어 폼 교정이나 특정 기술 반복 훈련에 특히 유리합니다.",
+  },
+];
 
 export default function Page() {
   return (
     <main className="mx-auto w-full max-w-5xl px-4 py-12">
       <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Strategy</p>
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">코트 표면 추천기</h1>
+        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">코트 표면 추천 가이드</h1>
         <p className="max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-300">
-          코트 표면 추천기 is now available as part of the TennisFriends utility expansion set. This first version is structured to help users understand the workflow, expected inputs, and practical next actions.
+          연습 목적과 플레이 스타일에 따라 잘 맞는 코트 표면은 달라집니다. 이 페이지는 각 표면의 특징과 어떤 상황에 활용하면 좋은지 빠르게 정리합니다.
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -53,16 +53,18 @@ export default function Page() {
         </div>
 
         <div className="mt-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-800">
-          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Suggested Follow-Up</h2>
-          <p className="mb-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
-            Pair this utility with a planning or analysis tool so the result turns into a repeatable training action.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/utility/training-planner" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white">
-              Training Planner
+          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">추천 활용 예시</h2>
+          <div className="space-y-2 text-sm leading-6 text-gray-600 dark:text-gray-300">
+            <p>폼 교정: 실내코트 또는 하드코트</p>
+            <p>풋워크와 지구력: 클레이코트</p>
+            <p>반응 속도와 짧은 포인트 대응: 잔디 또는 빠른 하드코트</p>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link href="/utility/court-conditions" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white">
+              Court Conditions
             </Link>
-            <Link href="/utility/match-analyzer" className="rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600">
-              Match Analyzer
+            <Link href="/utility/training-planner" className="rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600">
+              Training Planner
             </Link>
           </div>
         </div>

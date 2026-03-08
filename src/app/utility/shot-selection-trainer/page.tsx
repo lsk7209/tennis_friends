@@ -4,68 +4,76 @@ import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "샷 선택 트레이너",
-  description: "샷 선택 트레이너 utility for tennis players who want a clearer workflow and faster decisions.",
+  description:
+    "공 높이, 위치, 밸런스 상태에 따라 어떤 샷을 선택해야 하는지 정리하는 테니스 전략 가이드입니다.",
   path: "/utility/shot-selection-trainer",
   type: "website",
-  tags: ["tennis utility", "Strategy", "샷 선택 트레이너"],
+  tags: ["샷 선택", "테니스 전략", "의사결정 훈련"],
 });
 
-const sections = [
+const decisions = [
   {
-    "id": "overview",
-    "heading": "What It Does",
-    "body": "샷 선택 트레이너 is designed to turn a vague tennis problem into a clear next action. Instead of broad advice, it focuses on one decision area and gives the user a practical frame to work with."
+    title: "높은 볼",
+    detail: "시간이 있으면 깊게 밀어 주도권을 잡고, 무리한 라인 공략보다 상대를 뒤로 보내는 선택이 안전합니다.",
   },
   {
-    "id": "inputs",
-    "heading": "Recommended Inputs",
-    "body": "The most useful version of 샷 선택 트레이너 starts with realistic inputs: current level, recent playing volume, surface context, and the match or training goal. That keeps the output useful rather than generic."
+    title: "낮은 볼",
+    detail: "네트를 크게 넘기는 안전 마진을 두고 크로스로 연결하는 편이 실수 확률을 줄입니다.",
   },
   {
-    "id": "use-cases",
-    "heading": "Best Use Cases",
-    "body": "샷 선택 트레이너 is most valuable before training, before match play, or during weekly review. It works best when used as part of a repeatable process instead of a one-time check."
+    title: "짧은 볼",
+    detail: "진입이 늦었으면 강타보다 깊은 어프로치가 낫고, 진입이 좋으면 빈 공간을 먼저 봅니다.",
   },
-  {
-    "id": "next-step",
-    "heading": "Next Step",
-    "body": "After using 샷 선택 트레이너, the next step should be simple: update one plan, change one practice focus, or test one tactical decision. That is how a utility in the Strategy category creates measurable improvement."
-  }
 ] as const;
 
-export default function Page() {
+const principles = [
+  "좋은 샷보다 다음 볼까지 연결되는 샷을 우선합니다.",
+  "균형이 무너진 상태에서는 강한 공격보다 시간 벌기 선택이 더 효율적입니다.",
+  "상대 약점이 보여도 내 자세가 준비되지 않았으면 무리하지 않습니다.",
+] as const;
+
+export default function ShotSelectionTrainerPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-12">
-      <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Strategy</p>
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">샷 선택 트레이너</h1>
-        <p className="max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-300">
-          샷 선택 트레이너 is now available as part of the TennisFriends utility expansion set. This first version is structured to help users understand the workflow, expected inputs, and practical next actions.
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+      <section className="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-cyan-50 p-8 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Strategy Utility</p>
+        <h1 className="mt-3 text-3xl font-bold text-gray-900">샷 선택 트레이너</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-gray-700">
+          경기에서 범실이 많다면 기술보다 선택 문제일 때가 많습니다. 이 페이지는 볼 높이, 위치, 준비 상태에 따라
+          어떤 샷이 합리적인지 정리하는 기준표입니다.
         </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/utility/opponent-analyzer"
+            className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white"
+          >
+            상대 분석과 연결
+          </Link>
+          <Link
+            href="/utility/unforced-error-audit"
+            className="rounded-full border border-blue-600 px-5 py-2.5 text-sm font-semibold text-blue-700"
+          >
+            범실 분석 보기
+          </Link>
+        </div>
+      </section>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
-            <article key={section.id} className="rounded-2xl border border-gray-200 p-5 dark:border-gray-700">
-              <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">{section.heading}</h2>
-              <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">{section.body}</p>
-            </article>
+      <section className="grid gap-6 md:grid-cols-3">
+        {decisions.map((decision) => (
+          <article key={decision.title} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-bold text-gray-900">{decision.title}</h2>
+            <p className="mt-4 text-sm leading-6 text-gray-700">{decision.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="rounded-3xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900">선택 원칙</h2>
+        <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+          {principles.map((principle) => (
+            <li key={principle}>{principle}</li>
           ))}
-        </div>
-
-        <div className="mt-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-800">
-          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Suggested Follow-Up</h2>
-          <p className="mb-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
-            Pair this utility with a planning or analysis tool so the result turns into a repeatable training action.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/utility/training-planner" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white">
-              Training Planner
-            </Link>
-            <Link href="/utility/match-analyzer" className="rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600">
-              Match Analyzer
-            </Link>
-          </div>
-        </div>
+        </ul>
       </section>
     </main>
   );

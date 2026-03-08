@@ -1,600 +1,219 @@
-"use client"
+"use client";
 
-import React, { useState, useMemo } from 'react';
-import { Target, Plus, Calendar, TrendingUp, Award, CheckCircle, Clock, Star, Edit, Trash2, BarChart3 } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Calendar, CheckCircle2, Plus, Target, Trash2 } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// 메타데이터는 layout.tsx에서 처리
+type GoalCategory = '기술' | '체력' | '멘탈' | '경기' | '기타';
 
-interface Goal {
+interface GoalItem {
   id: string;
   title: string;
   description: string;
-  category: 'technical' | 'physical' | 'mental' | 'competitive' | 'general';
-  type: 'short_term' | 'medium_term' | 'long_term';
-  targetValue: number;
-  currentValue: number;
+  category: GoalCategory;
+  current: number;
+  target: number;
   unit: string;
   deadline: string;
-  priority: 'high' | 'medium' | 'low';
-  status: 'active' | 'completed' | 'paused';
-  createdAt: string;
-  milestones: Milestone[];
 }
-
-interface Milestone {
-  id: string;
-  title: string;
-  targetValue: number;
-  completed: boolean;
-  completedAt?: string;
-}
-
-const goalCategories = {
-  technical: { label: '기술 향상', color: 'bg-blue-500', icon: Target },
-  physical: { label: '체력 향상', color: 'bg-green-500', icon: TrendingUp },
-  mental: { label: '멘탈 강화', color: 'bg-purple-500', icon: Star },
-  competitive: { label: '경기력 향상', color: 'bg-red-500', icon: Award },
-  general: { label: '일반 목표', color: 'bg-gray-500', icon: CheckCircle }
-};
-
-const goalTemplates = [
-  {
-    title: '서브 정확도 80% 달성',
-    description: '첫 서브 성공률을 80%까지 끌어올리기',
-    category: 'technical' as const,
-    type: 'short_term' as const,
-    targetValue: 80,
-    unit: '%'
-  },
-  {
-    title: '주 4회 테니스 훈련',
-    description: '주당 4회 이상 정기적인 테니스 훈련 실시',
-    category: 'general' as const,
-    type: 'medium_term' as const,
-    targetValue: 16,
-    unit: '회'
-  },
-  {
-    title: '체력 테스트 점수 향상',
-    description: '종합 체력 테스트에서 20점 이상 향상',
-    category: 'physical' as const,
-    type: 'medium_term' as const,
-    targetValue: 20,
-    unit: '점'
-  },
-  {
-    title: 'NTRP 등급 상승',
-    description: '현재 NTRP 등급에서 한 단계 상승',
-    category: 'competitive' as const,
-    type: 'long_term' as const,
-    targetValue: 1,
-    unit: '등급'
-  },
-  {
-    title: '연속 경기 승리',
-    description: '연속 5경기 승리 달성',
-    category: 'competitive' as const,
-    type: 'short_term' as const,
-    targetValue: 5,
-    unit: '승'
-  }
-];
 
 export default function GoalSettingPage() {
-  const [goals, setGoals] = useState<Goal[]>([]);
-  const [isAddingGoal, setIsAddingGoal] = useState(false);
-  const [editingGoal, setEditingGoal] = useState<string | null>(null);
-  const [newGoal, setNewGoal] = useState<Partial<Goal>>({
-    title: '',
-    description: '',
-    category: 'general',
-    type: 'short_term',
-    targetValue: 0,
-    currentValue: 0,
-    unit: '',
-    deadline: '',
-    priority: 'medium',
-    status: 'active'
-  });
-
-  const addGoal = () => {
-    if (!newGoal.title || !newGoal.targetValue || !newGoal.deadline) return;
-
-    const goal: Goal = {
-      id: Date.now().toString(),
-      title: newGoal.title,
-      description: newGoal.description || '',
-      category: newGoal.category || 'general',
-      type: newGoal.type || 'short_term',
-      targetValue: newGoal.targetValue,
-      currentValue: newGoal.currentValue || 0,
-      unit: newGoal.unit || '',
-      deadline: newGoal.deadline,
-      priority: newGoal.priority || 'medium',
-      status: 'active',
-      createdAt: new Date().toISOString(),
-      milestones: []
-    };
-
-    setGoals(prev => [...prev, goal]);
-    setNewGoal({
-      title: '',
-      description: '',
-      category: 'general',
-      type: 'short_term',
-      targetValue: 0,
-      currentValue: 0,
-      unit: '',
-      deadline: '',
-      priority: 'medium',
-      status: 'active'
-    });
-    setIsAddingGoal(false);
-  };
-
-  const updateGoalProgress = (goalId: string, newValue: number) => {
-    setGoals(prev => prev.map(goal => {
-      if (goal.id === goalId) {
-        const updatedGoal = { ...goal, currentValue: newValue };
-        if (newValue >= goal.targetValue) {
-          updatedGoal.status = 'completed';
-        }
-        return updatedGoal;
-      }
-      return goal;
-    }));
-  };
-
-  const deleteGoal = (goalId: string) => {
-    setGoals(prev => prev.filter(goal => goal.id !== goalId));
-  };
-
-  const toggleGoalStatus = (goalId: string) => {
-    setGoals(prev => prev.map(goal => {
-      if (goal.id === goalId) {
-        return {
-          ...goal,
-          status: goal.status === 'active' ? 'paused' : 'active'
-        };
-      }
-      return goal;
-    }));
-  };
-
-  const useTemplate = (template: typeof goalTemplates[0]) => {
-    setNewGoal({
-      title: template.title,
-      description: template.description,
-      category: template.category,
-      type: template.type,
-      targetValue: template.targetValue,
-      currentValue: 0,
-      unit: template.unit,
-      deadline: '',
-      priority: 'medium',
-      status: 'active'
-    });
-    setIsAddingGoal(true);
-  };
+  const [goals, setGoals] = useState<GoalItem[]>([]);
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState<GoalCategory>('기술');
+  const [current, setCurrent] = useState(0);
+  const [target, setTarget] = useState(10);
+  const [unit, setUnit] = useState('회');
+  const [deadline, setDeadline] = useState('');
 
   const stats = useMemo(() => {
-    const total = goals.length;
-    const completed = goals.filter(g => g.status === 'completed').length;
-    const active = goals.filter(g => g.status === 'active').length;
-    const paused = goals.filter(g => g.status === 'paused').length;
-
-    const completionRate = total > 0 ? Math.round((completed / total) * 100) : 0;
-
-    const categoryStats = Object.keys(goalCategories).map(category => ({
-      category,
-      total: goals.filter(g => g.category === category).length,
-      completed: goals.filter(g => g.category === category && g.status === 'completed').length
-    }));
-
-    return {
-      total,
-      completed,
-      active,
-      paused,
-      completionRate,
-      categoryStats
-    };
+    const completed = goals.filter((goal) => goal.current >= goal.target).length;
+    const rate = goals.length ? Math.round((completed / goals.length) * 100) : 0;
+    return { completed, rate };
   }, [goals]);
 
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'high': return 'text-red-600 bg-red-50 border-red-200';
-      case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
-      default: return 'text-green-600 bg-green-50 border-green-200';
-    }
+  const addGoal = () => {
+    if (!title.trim() || !deadline) return;
+    setGoals((prev) => [
+      ...prev,
+      { id: crypto.randomUUID(), title, description, category, current, target, unit, deadline },
+    ]);
+    setTitle('');
+    setDescription('');
+    setCategory('기술');
+    setCurrent(0);
+    setTarget(10);
+    setUnit('회');
+    setDeadline('');
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed': return 'text-green-600 bg-green-50 border-green-200';
-      case 'active': return 'text-blue-600 bg-blue-50 border-blue-200';
-      default: return 'text-gray-600 bg-gray-50 border-gray-200';
-    }
+  const updateProgress = (id: string, nextValue: number) => {
+    setGoals((prev) => prev.map((goal) => (goal.id === id ? { ...goal, current: Math.min(nextValue, goal.target) } : goal)));
   };
 
-  const getStatusText = (status: string) => {
-    switch (status) {
-      case 'completed': return '완료';
-      case 'active': return '진행중';
-      default: return '일시정지';
-    }
+  const removeGoal = (id: string) => {
+    setGoals((prev) => prev.filter((goal) => goal.id !== id));
   };
 
   return (
-    <div className="min-h-screen utility-page">
-      {/* 헤더 */}
-      <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-16">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full mb-6">
-              <Target className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              목표 설정 도구
-            </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              SMART 목표 설정 방식으로 테니스 목표를 설정하고 달성도를 추적하세요.
-              체계적인 목표 관리를 통해 꾸준한 발전을 이루세요.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[linear-gradient(180deg,_#eef2ff_0%,_#ffffff_35%,_#f8fafc_100%)]">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="rounded-[32px] bg-gradient-to-r from-indigo-600 to-violet-500 px-8 py-10 text-white shadow-xl">
+          <Badge className="bg-white/15 text-white hover:bg-white/15">목표 설정</Badge>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">실행 가능한 테니스 목표를 만들기</h1>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-indigo-50">
+            좋은 목표는 막연한 다짐보다 훨씬 구체적이어야 합니다. 현재 값, 목표 값, 기한을 함께 적어 두면
+            연습 루틴과 경기 준비가 훨씬 선명해집니다.
+          </p>
+        </section>
 
-      {/* 메인 컨텐츠 */}
-      <div className="container mx-auto max-w-4xl px-4 py-12">
-        {/* 통계 대시보드 */}
-        <div className="grid md:grid-cols-4 gap-4 mb-8">
-          <Card>
-            <CardContent className="p-4 text-center">
-              <div className="text-2xl font-bold text-indigo-600">{stats.total}</div>
-              <div className="text-sm text-gray-600">전체 목표</div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="p-4 text-center">
-              <div className="text-2xl font-bold text-green-600">{stats.completed}</div>
-              <div className="text-sm text-gray-600">완료 목표</div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="p-4 text-center">
-              <div className="text-2xl font-bold text-blue-600">{stats.active}</div>
-              <div className="text-sm text-gray-600">진행중</div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="p-4 text-center">
-              <div className="text-2xl font-bold text-purple-600">{stats.completionRate}%</div>
-              <div className="text-sm text-gray-600">달성률</div>
-            </CardContent>
-          </Card>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">전체 목표</p><p className="mt-2 text-2xl font-bold text-slate-900">{goals.length}</p></CardContent></Card>
+          <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">완료 목표</p><p className="mt-2 text-2xl font-bold text-emerald-600">{stats.completed}</p></CardContent></Card>
+          <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">완료율</p><p className="mt-2 text-2xl font-bold text-indigo-600">{stats.rate}%</p></CardContent></Card>
         </div>
 
-        <Tabs defaultValue="goals" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="goals">목표 관리</TabsTrigger>
-            <TabsTrigger value="templates">템플릿</TabsTrigger>
-            <TabsTrigger value="analytics">분석</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="goals" className="space-y-6">
-            {/* 목표 추가 버튼 */}
-            <div className="flex justify-between items-center">
-              <h2 className="text-2xl font-bold text-gray-900">나의 목표들</h2>
-              <Button onClick={() => setIsAddingGoal(true)} className="bg-indigo-600 hover:bg-indigo-700">
-                <Plus className="w-4 h-4 mr-2" />
-                새 목표 추가
+        <section className="mt-8 grid gap-8 lg:grid-cols-[360px_minmax(0,1fr)]">
+          <Card className="border-slate-200 bg-white shadow-sm">
+            <CardHeader>
+              <CardTitle>새 목표 추가</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-5">
+              <div>
+                <Label htmlFor="goal-title">목표 제목</Label>
+                <Input id="goal-title" value={title} onChange={(event) => setTitle(event.target.value)} placeholder="예: 세컨드 서브 성공률 60% 만들기" />
+              </div>
+              <div>
+                <Label htmlFor="goal-desc">설명</Label>
+                <Textarea id="goal-desc" value={description} onChange={(event) => setDescription(event.target.value)} placeholder="왜 필요한지, 어떤 루틴으로 달성할지 적어두세요." rows={4} />
+              </div>
+              <div>
+                <Label className="mb-2 block">카테고리</Label>
+                <Select value={category} onValueChange={(value: GoalCategory) => setCategory(value)}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="기술">기술</SelectItem>
+                    <SelectItem value="체력">체력</SelectItem>
+                    <SelectItem value="멘탈">멘탈</SelectItem>
+                    <SelectItem value="경기">경기</SelectItem>
+                    <SelectItem value="기타">기타</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="grid grid-cols-3 gap-3">
+                <div>
+                  <Label htmlFor="goal-current">현재</Label>
+                  <Input id="goal-current" type="number" value={current} onChange={(event) => setCurrent(Number(event.target.value) || 0)} />
+                </div>
+                <div>
+                  <Label htmlFor="goal-target">목표</Label>
+                  <Input id="goal-target" type="number" value={target} onChange={(event) => setTarget(Number(event.target.value) || 0)} />
+                </div>
+                <div>
+                  <Label htmlFor="goal-unit">단위</Label>
+                  <Input id="goal-unit" value={unit} onChange={(event) => setUnit(event.target.value)} />
+                </div>
+              </div>
+              <div>
+                <Label htmlFor="goal-deadline">기한</Label>
+                <Input id="goal-deadline" type="date" value={deadline} onChange={(event) => setDeadline(event.target.value)} />
+              </div>
+              <Button onClick={addGoal} className="w-full bg-indigo-600 text-white hover:bg-indigo-700">
+                <Plus className="mr-2 h-4 w-4" />
+                목표 추가
               </Button>
-            </div>
+            </CardContent>
+          </Card>
 
-            {/* 목표 추가 폼 */}
-            {isAddingGoal && (
-              <Card className="border-2 border-indigo-200">
-                <CardHeader>
-                  <CardTitle>새 목표 설정</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="title">목표 제목</Label>
-                      <Input
-                        id="title"
-                        placeholder="목표를 입력하세요"
-                        value={newGoal.title}
-                        onChange={(e) => setNewGoal(prev => ({ ...prev, title: e.target.value }))}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="category">카테고리</Label>
-                      <Select value={newGoal.category} onValueChange={(value: Goal['category']) => setNewGoal(prev => ({ ...prev, category: value }))}>
-                        <SelectTrigger>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {Object.entries(goalCategories).map(([key, category]) => (
-                            <SelectItem key={key} value={key}>
-                              <div className="flex items-center gap-2">
-                                <category.icon className="w-4 h-4" />
-                                {category.label}
-                              </div>
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="targetValue">목표 값</Label>
-                      <Input
-                        id="targetValue"
-                        type="number"
-                        placeholder="100"
-                        value={newGoal.targetValue || ''}
-                        onChange={(e) => setNewGoal(prev => ({ ...prev, targetValue: parseInt(e.target.value) || 0 }))}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="unit">단위</Label>
-                      <Input
-                        id="unit"
-                        placeholder="회, %, 점 등"
-                        value={newGoal.unit}
-                        onChange={(e) => setNewGoal(prev => ({ ...prev, unit: e.target.value }))}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="deadline">마감일</Label>
-                      <Input
-                        id="deadline"
-                        type="date"
-                        value={newGoal.deadline}
-                        onChange={(e) => setNewGoal(prev => ({ ...prev, deadline: e.target.value }))}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="description">상세 설명</Label>
-                    <Textarea
-                      id="description"
-                      placeholder="목표에 대한 자세한 설명을 입력하세요"
-                      value={newGoal.description}
-                      onChange={(e) => setNewGoal(prev => ({ ...prev, description: e.target.value }))}
-                    />
-                  </div>
-
-                  <div className="flex gap-4">
-                    <Button onClick={addGoal} className="bg-indigo-600 hover:bg-indigo-700">
-                      목표 추가
-                    </Button>
-                    <Button variant="outline" onClick={() => setIsAddingGoal(false)}>
-                      취소
-                    </Button>
-                  </div>
+          <div className="space-y-6">
+            {goals.length === 0 ? (
+              <Card className="border-dashed border-slate-300 bg-white">
+                <CardContent className="p-10 text-center text-slate-600">
+                  아직 등록된 목표가 없습니다. 왼쪽 폼에서 첫 목표를 만들어 보세요.
                 </CardContent>
               </Card>
-            )}
-
-            {/* 목표 목록 */}
-            <div className="space-y-4">
-              {goals.map(goal => {
-                const progress = Math.min((goal.currentValue / goal.targetValue) * 100, 100);
-                const categoryInfo = goalCategories[goal.category];
+            ) : (
+              goals.map((goal) => {
+                const progress = goal.target > 0 ? Math.min(Math.round((goal.current / goal.target) * 100), 100) : 0;
+                const completed = goal.current >= goal.target;
 
                 return (
-                  <Card key={goal.id} className="hover:shadow-md transition-shadow">
+                  <Card key={goal.id} className="border-slate-200 bg-white shadow-sm">
                     <CardContent className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex items-start gap-3">
-                          <div className={`w-10 h-10 ${categoryInfo.color} rounded-full flex items-center justify-center`}>
-                            <categoryInfo.icon className="w-5 h-5 text-white" />
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <h2 className="text-xl font-semibold text-slate-900">{goal.title}</h2>
+                            <Badge variant="outline">{goal.category}</Badge>
+                            {completed && (
+                              <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">
+                                <CheckCircle2 className="mr-1 h-3 w-3" />
+                                완료
+                              </Badge>
+                            )}
                           </div>
-                          <div>
-                            <h3 className="text-lg font-semibold text-gray-900">{goal.title}</h3>
-                            <p className="text-gray-600 text-sm">{goal.description}</p>
-                          </div>
+                          <p className="mt-3 text-sm leading-6 text-slate-600">{goal.description || '설명이 없는 목표입니다.'}</p>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Badge className={getStatusColor(goal.status)}>
-                            {getStatusText(goal.status)}
-                          </Badge>
-                          <Badge className={getPriorityColor(goal.priority)}>
-                            {goal.priority === 'high' ? '높음' : goal.priority === 'medium' ? '중간' : '낮음'}
-                          </Badge>
-                        </div>
+                        <Button variant="ghost" size="icon" onClick={() => removeGoal(goal.id)}>
+                          <Trash2 className="h-4 w-4 text-rose-600" />
+                        </Button>
                       </div>
 
-                      <div className="space-y-3">
-                        <div className="flex justify-between items-center text-sm">
-                          <span>진척도</span>
-                          <span className="font-medium">
-                            {goal.currentValue} / {goal.targetValue} {goal.unit}
-                            ({Math.round(progress)}%)
-                          </span>
+                      <div className="mt-5 space-y-3">
+                        <div className="flex items-center justify-between text-sm text-slate-600">
+                          <span>{goal.current} / {goal.target} {goal.unit}</span>
+                          <span>{progress}%</span>
                         </div>
                         <Progress value={progress} className="h-3" />
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-4 text-sm text-gray-600">
-                            <div className="flex items-center gap-1">
-                              <Calendar className="w-4 h-4" />
-                              {new Date(goal.deadline).toLocaleDateString('ko-KR')}
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <Clock className="w-4 h-4" />
-                              {goal.type === 'short_term' ? '단기' : goal.type === 'medium_term' ? '중기' : '장기'}
-                            </div>
+                        <div className="flex flex-wrap items-center justify-between gap-3">
+                          <div className="flex items-center gap-2 text-sm text-slate-500">
+                            <Calendar className="h-4 w-4" />
+                            {goal.deadline}
                           </div>
-
-                          <div className="flex items-center gap-2">
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => updateGoalProgress(goal.id, Math.min(goal.currentValue + 1, goal.targetValue))}
-                              disabled={goal.status === 'completed'}
-                            >
-                              +1
-                            </Button>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => toggleGoalStatus(goal.id)}
-                            >
-                              {goal.status === 'active' ? '일시정지' : '재개'}
-                            </Button>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => deleteGoal(goal.id)}
-                              className="text-red-600 hover:text-red-700"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </Button>
+                          <div className="flex gap-2">
+                            <Button variant="outline" size="sm" onClick={() => updateProgress(goal.id, goal.current + 1)}>+1</Button>
+                            <Button variant="outline" size="sm" onClick={() => updateProgress(goal.id, goal.current + 5)}>+5</Button>
                           </div>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 );
-              })}
-            </div>
-
-            {goals.length === 0 && (
-              <div className="text-center py-12">
-                <Target className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">설정된 목표가 없습니다.</p>
-                <p className="text-sm text-gray-500 mt-2">새 목표를 추가해보세요!</p>
-              </div>
+              })
             )}
-          </TabsContent>
 
-          <TabsContent value="templates" className="space-y-6">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">목표 템플릿</h2>
-              <p className="text-gray-600 mb-6">미리 준비된 목표 템플릿을 활용하여 빠르게 목표를 설정하세요.</p>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                {goalTemplates.map((template, index) => {
-                  const categoryInfo = goalCategories[template.category];
-                  return (
-                    <Card key={index} className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => useTemplate(template)}>
-                      <CardContent className="p-4">
-                        <div className="flex items-start gap-3">
-                          <div className={`w-8 h-8 ${categoryInfo.color} rounded-full flex items-center justify-center flex-shrink-0`}>
-                            <categoryInfo.icon className="w-4 h-4 text-white" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-gray-900">{template.title}</h3>
-                            <p className="text-gray-600 text-sm mt-1">{template.description}</p>
-                            <div className="flex items-center gap-2 mt-2">
-                              <Badge variant="outline" className="text-xs">
-                                {template.targetValue} {template.unit}
-                              </Badge>
-                              <Badge variant="outline" className="text-xs">
-                                {template.type === 'short_term' ? '단기' : template.type === 'medium_term' ? '중기' : '장기'}
-                              </Badge>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="analytics" className="space-y-6">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">목표 분석</h2>
-
-              {/* 카테고리별 분석 */}
-              <Card className="mb-6">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <BarChart3 className="w-5 h-5" />
-                    카테고리별 목표 현황
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {stats.categoryStats.map(stat => {
-                      const categoryInfo = goalCategories[stat.category as keyof typeof goalCategories];
-                      const completionRate = stat.total > 0 ? Math.round((stat.completed / stat.total) * 100) : 0;
-
-                      return (
-                        <div key={stat.category} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                          <div className="flex items-center gap-3">
-                            <div className={`w-8 h-8 ${categoryInfo.color} rounded-full flex items-center justify-center`}>
-                              <categoryInfo.icon className="w-4 h-4 text-white" />
-                            </div>
-                            <div>
-                              <div className="font-medium">{categoryInfo.label}</div>
-                              <div className="text-sm text-gray-600">
-                                {stat.completed}/{stat.total} 완료
-                              </div>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-lg font-bold text-gray-900">{completionRate}%</div>
-                            <Progress value={completionRate} className="w-20 h-2 mt-1" />
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* SMART 목표 가이드 */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>SMART 목표 설정 가이드</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">S - Specific (구체적)</h4>
-                      <p className="text-gray-600 text-sm">목표가 명확하고 구체적이어야 합니다.</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">M - Measurable (측정 가능)</h4>
-                      <p className="text-gray-600 text-sm">목표 달성 여부를 측정할 수 있어야 합니다.</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">A - Achievable (달성 가능)</h4>
-                      <p className="text-gray-600 text-sm">현실적이고 달성 가능한 목표여야 합니다.</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">R - Relevant (관련성)</h4>
-                      <p className="text-gray-600 text-sm">테니스 실력 향상에 도움이 되는 목표여야 합니다.</p>
-                    </div>
-                    <div className="md:col-span-2">
-                      <h4 className="font-semibold text-gray-900 mb-2">T - Time-bound (시간 제한)</h4>
-                      <p className="text-gray-600 text-sm">목표를 달성할 기간이 명확히 설정되어야 합니다.</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>
-        </Tabs>
+            <Card className="border-slate-200 bg-slate-50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-slate-900">
+                  <Target className="h-5 w-5 text-indigo-600" />
+                  목표 작성 팁
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="grid gap-4 md:grid-cols-3">
+                <div>
+                  <p className="font-semibold text-slate-900">숫자로 적기</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">좋은 목표는 서브 향상보다 세컨드 서브 성공률 60%처럼 숫자가 들어갑니다.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">기한 정하기</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">기한이 있어야 연습 빈도와 체크 시점을 잡을 수 있습니다.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">하나씩 좁히기</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">동시에 여러 기술을 고치려 하기보다 한 달에 한 가지씩 밀어 붙이는 편이 효과적입니다.</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
       </div>
     </div>
   );

@@ -1,575 +1,196 @@
-"use client"
+"use client";
 
-import React, { useState, useMemo } from 'react';
-import { MapPin, Cloud, Sun, CloudRain, Wind, Eye, Thermometer, Droplets, Zap, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { AlertTriangle, CheckCircle2, Cloud, Eye, MapPin, Thermometer, Wind } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Slider } from '@/components/ui/slider';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// 메타데이터는 layout.tsx에서 처리
-
-interface CourtCondition {
-  surface: 'hard' | 'clay' | 'grass' | 'carpet';
-  condition: 'excellent' | 'good' | 'fair' | 'poor';
-  temperature: number;
-  humidity: number;
-  windSpeed: number;
-  lighting: 'excellent' | 'good' | 'fair' | 'poor';
-  weather: 'clear' | 'cloudy' | 'rain' | 'windy' | 'hot' | 'cold';
-  timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
-}
-
-interface AnalysisResult {
-  overallScore: number;
-  playability: 'excellent' | 'good' | 'fair' | 'poor' | 'dangerous';
-  recommendations: string[];
-  risks: string[];
-  optimalStrategies: string[];
-}
-
-const surfaceTypes = {
-  hard: { name: '하드 코트', bounce: '빠름', slipperiness: '낮음', durability: '높음' },
-  clay: { name: '클레이 코트', bounce: '중간', slipperiness: '높음', durability: '중간' },
-  grass: { name: '잔디 코트', bounce: '느림', slipperiness: '매우 높음', durability: '낮음' },
-  carpet: { name: '카펫 코트', bounce: '빠름', slipperiness: '중간', durability: '높음' }
-};
-
-const weatherIcons = {
-  clear: Sun,
-  cloudy: Cloud,
-  rain: CloudRain,
-  windy: Wind,
-  hot: Thermometer,
-  cold: Thermometer
-};
-
-const playabilityColors = {
-  excellent: 'text-green-600 bg-green-50 border-green-200',
-  good: 'text-blue-600 bg-blue-50 border-blue-200',
-  fair: 'text-yellow-600 bg-yellow-50 border-yellow-200',
-  poor: 'text-orange-600 bg-orange-50 border-orange-200',
-  dangerous: 'text-red-600 bg-red-50 border-red-200'
-};
+type Surface = 'hard' | 'clay' | 'grass' | 'indoor';
+type Condition = 'excellent' | 'good' | 'fair' | 'poor';
 
 export default function CourtConditionsPage() {
-  const [conditions, setConditions] = useState<CourtCondition>({
-    surface: 'hard',
-    condition: 'good',
-    temperature: 22,
-    humidity: 60,
-    windSpeed: 5,
-    lighting: 'good',
-    weather: 'clear',
-    timeOfDay: 'afternoon'
-  });
+  const [surface, setSurface] = useState<Surface>('hard');
+  const [condition, setCondition] = useState<Condition>('good');
+  const [temperature, setTemperature] = useState(22);
+  const [humidity, setHumidity] = useState(55);
+  const [wind, setWind] = useState(5);
+  const [lighting, setLighting] = useState('good');
 
-  const [showAnalysis, setShowAnalysis] = useState(false);
-
-  const analysis = useMemo((): AnalysisResult => {
+  const analysis = useMemo(() => {
     let score = 100;
-    const recommendations: string[] = [];
+    const tips: string[] = [];
     const risks: string[] = [];
-    const optimalStrategies: string[] = [];
 
-    // 코트 표면 분석
-    switch (conditions.surface) {
-      case 'grass':
-        if (conditions.weather === 'rain') {
-          score -= 40;
-          risks.push('잔디 코트가 젖어 미끄러운 상태');
-          recommendations.push('경기 취소 또는 연기 고려');
-        } else {
-          score -= 10;
-          recommendations.push('잔디 코트 특성상 낮은 바운스에 적응');
-        }
-        optimalStrategies.push('슬라이스 샷 활용', '네트 플레이 강화');
-        break;
-      case 'clay':
-        if (conditions.weather === 'rain') {
-          score -= 30;
-          risks.push('클레이 코트가 질척거림');
-        }
-        optimalStrategies.push('톱스핀 샷 강화', '인내심 있는 랠리');
-        break;
-      case 'hard':
-        optimalStrategies.push('강력한 타격', '빠른 이동');
-        break;
-    }
-
-    // 코트 상태 분석
-    switch (conditions.condition) {
-      case 'poor':
-        score -= 30;
-        risks.push('코트 상태가 좋지 않아 부상 위험 증가');
-        recommendations.push('코트 점검 및 수리 요청');
-        break;
-      case 'fair':
-        score -= 15;
-        recommendations.push('안전한 플레이 우선');
-        break;
-    }
-
-    // 온도 분석
-    if (conditions.temperature < 10) {
-      score -= 20;
-      risks.push('추운 날씨로 근육 경직 및 부상 위험');
-      recommendations.push('워밍업 충분히 실시', '보온 장비 착용');
-      optimalStrategies.push('짧은 랠리 위주', '실내 경기 고려');
-    } else if (conditions.temperature > 30) {
-      score -= 25;
-      risks.push('더운 날씨로 탈수 및 열사병 위험');
-      recommendations.push('수분 보충 필수', '그늘 휴식 취하기');
-      optimalStrategies.push('피로 관리', '스트로크 정확성 유지');
-    } else if (conditions.temperature > 25) {
-      score -= 10;
-      recommendations.push('충분한 수분 섭취');
-    }
-
-    // 습도 분석
-    if (conditions.humidity > 80) {
+    if (condition === 'fair') {
       score -= 15;
-      risks.push('고습도로 땀 흡수가 어려움');
-      recommendations.push('흡습성 좋은 의류 착용');
-    } else if (conditions.humidity < 30) {
-      score -= 10;
-      risks.push('저습도로 호흡기 불편');
-      recommendations.push('수분 보충 주의');
+      risks.push('코트 표면이 고르지 않아 풋워크 안정감이 떨어질 수 있습니다.');
     }
-
-    // 풍속 분석
-    if (conditions.windSpeed > 15) {
-      score -= 25;
-      risks.push('강풍으로 공의 궤적 예측 어려움');
-      recommendations.push('샷 조절 필요');
-      optimalStrategies.push('로빙과 드롭 샷 활용', '네트 플레이 강화');
-    } else if (conditions.windSpeed > 10) {
-      score -= 15;
-      recommendations.push('풍향 고려한 샷 선택');
+    if (condition === 'poor') {
+      score -= 30;
+      risks.push('코트 상태가 좋지 않아 미끄러짐과 발목 부담이 커질 수 있습니다.');
     }
-
-    // 조명 분석
-    switch (conditions.lighting) {
-      case 'poor':
-        score -= 30;
-        risks.push('조명이 불충분하여 시야 확보 어려움');
-        recommendations.push('야간 경기 조명 점검');
-        break;
-      case 'fair':
-        score -= 15;
-        recommendations.push('안전한 플레이 우선');
-        break;
-    }
-
-    // 날씨 분석
-    switch (conditions.weather) {
-      case 'rain':
-        score -= 50;
-        risks.push('우천으로 미끄러짐 및 부상 위험');
-        recommendations.push('경기 취소 또는 실내 이동');
-        break;
-      case 'windy':
-        score -= 20;
-        risks.push('강풍으로 공 제어 어려움');
-        break;
-      case 'hot':
-        score -= 20;
-        risks.push('고온으로 체력 소모 증가');
-        break;
-      case 'cold':
-        score -= 15;
-        risks.push('저온으로 근육 긴장');
-        break;
-    }
-
-    // 시간대 분석
-    if (conditions.timeOfDay === 'night' && conditions.lighting !== 'excellent') {
+    if (temperature < 8 || temperature > 30) {
       score -= 20;
-      recommendations.push('야간 조명 상태 확인');
+      risks.push('기온 조건이 극단적이라 경기 집중력과 체력 유지가 어렵습니다.');
+    }
+    if (humidity > 80) {
+      score -= 10;
+      risks.push('습도가 높아 땀 관리와 그립 유지가 어려울 수 있습니다.');
+    }
+    if (wind > 14 && surface !== 'indoor') {
+      score -= 20;
+      risks.push('바람이 강해 토스와 높은 탄도의 샷이 흔들릴 수 있습니다.');
+    }
+    if (lighting === 'fair') {
+      score -= 10;
+      risks.push('조명이 애매해 야간 볼 추적이 불편할 수 있습니다.');
+    }
+    if (lighting === 'poor') {
+      score -= 20;
+      risks.push('조명이 부족해 안전한 플레이가 우선입니다.');
     }
 
-    // 최종 점수 및 등급 결정
-    let playability: AnalysisResult['playability'];
-    if (score >= 80) playability = 'excellent';
-    else if (score >= 60) playability = 'good';
-    else if (score >= 40) playability = 'fair';
-    else if (score >= 20) playability = 'poor';
-    else playability = 'dangerous';
+    if (surface === 'clay') tips.push('클레이는 슬라이딩 여유를 감안해 스텝을 넓게 준비하세요.');
+    if (surface === 'grass') tips.push('잔디에서는 낮고 빠른 바운드를 대비해 준비 자세를 낮추는 편이 좋습니다.');
+    if (surface === 'hard') tips.push('하드코트는 무릎과 발목 부담이 크므로 워밍업을 길게 잡으세요.');
+    if (surface === 'indoor') tips.push('실내 코트는 바람 변수는 적지만 리듬이 빨라질 수 있습니다.');
+    if (score >= 70) tips.push('현재 조건에서는 평소 패턴을 유지해도 무리가 크지 않습니다.');
+    else tips.push('무리한 위닝샷보다 안전한 전개와 풋워크 안정이 먼저입니다.');
 
-    // 기본 추천사항 추가
-    if (score > 60) {
-      recommendations.push('정상적인 플레이 가능');
-      optimalStrategies.push('자신의 플레이 스타일 유지');
-    }
-
-    return {
-      overallScore: Math.max(0, Math.min(100, score)),
-      playability,
-      recommendations,
-      risks,
-      optimalStrategies
-    };
-  }, [conditions]);
-
-  const analyzeConditions = () => {
-    setShowAnalysis(true);
-  };
-
-  const resetAnalysis = () => {
-    setShowAnalysis(false);
-    setConditions({
-      surface: 'hard',
-      condition: 'good',
-      temperature: 22,
-      humidity: 60,
-      windSpeed: 5,
-      lighting: 'good',
-      weather: 'clear',
-      timeOfDay: 'afternoon'
-    });
-  };
-
-  const getPlayabilityIcon = (playability: string) => {
-    switch (playability) {
-      case 'excellent': return <CheckCircle className="w-6 h-6 text-green-500" />;
-      case 'good': return <CheckCircle className="w-6 h-6 text-blue-500" />;
-      case 'fair': return <AlertTriangle className="w-6 h-6 text-yellow-500" />;
-      case 'poor': return <XCircle className="w-6 h-6 text-orange-500" />;
-      case 'dangerous': return <XCircle className="w-6 h-6 text-red-500" />;
-      default: return <AlertTriangle className="w-6 h-6 text-gray-500" />;
-    }
-  };
-
-  const getPlayabilityText = (playability: string) => {
-    switch (playability) {
-      case 'excellent': return '최적의 플레이 환경';
-      case 'good': return '좋은 플레이 환경';
-      case 'fair': return '보통 플레이 환경';
-      case 'poor': return '나쁜 플레이 환경';
-      case 'dangerous': return '위험한 플레이 환경';
-      default: return '알 수 없음';
-    }
-  };
+    return { score: Math.max(0, score), tips, risks };
+  }, [condition, humidity, lighting, surface, temperature, wind]);
 
   return (
-    <div className="min-h-screen utility-page">
-      {/* 헤더 */}
-      <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-16">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-6">
-              <MapPin className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              코트 상태 확인 도구
-            </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              테니스 코트의 상태, 날씨 조건, 조명 등을 종합적으로 분석하여
-              최적의 플레이 환경을 평가하고 안전한 경기를 위한 가이드를 제공합니다.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[linear-gradient(180deg,_#ecfdf5_0%,_#ffffff_34%,_#f8fafc_100%)]">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="rounded-[32px] bg-gradient-to-r from-emerald-600 to-green-500 px-8 py-10 text-white shadow-xl">
+          <Badge className="bg-white/15 text-white hover:bg-white/15">코트 상태 체크</Badge>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">오늘 코트 환경에서 어떻게 플레이할지 판단하기</h1>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-emerald-50">
+            코트 표면과 날씨가 바뀌면 평소와 같은 전술이 잘 안 통할 수 있습니다. 간단한 환경 조건을 넣어 현재 플레이 적합도를 확인하세요.
+          </p>
+        </section>
 
-      {/* 메인 컨텐츠 */}
-      <div className="container mx-auto max-w-4xl px-4 py-12">
-        {!showAnalysis ? (
-          <div className="space-y-8">
-            {/* 코트 정보 입력 */}
-            <Card>
+        <section className="mt-8 grid gap-8 lg:grid-cols-[340px_minmax(0,1fr)]">
+          <Card className="border-slate-200 bg-white shadow-sm">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-emerald-600" />
+                환경 입력
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-5">
+              <div>
+                <Label className="mb-2 block">코트 종류</Label>
+                <Select value={surface} onValueChange={(value: Surface) => setSurface(value)}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="hard">하드</SelectItem>
+                    <SelectItem value="clay">클레이</SelectItem>
+                    <SelectItem value="grass">잔디</SelectItem>
+                    <SelectItem value="indoor">실내</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <Label className="mb-2 block">표면 상태</Label>
+                <Select value={condition} onValueChange={(value: Condition) => setCondition(value)}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="excellent">매우 좋음</SelectItem>
+                    <SelectItem value="good">좋음</SelectItem>
+                    <SelectItem value="fair">보통</SelectItem>
+                    <SelectItem value="poor">나쁨</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div><Label htmlFor="temp">기온</Label><Input id="temp" type="number" value={temperature} onChange={(e) => setTemperature(Number(e.target.value) || 0)} /></div>
+                <div><Label htmlFor="humidity">습도</Label><Input id="humidity" type="number" value={humidity} onChange={(e) => setHumidity(Number(e.target.value) || 0)} /></div>
+                <div><Label htmlFor="wind">바람</Label><Input id="wind" type="number" value={wind} onChange={(e) => setWind(Number(e.target.value) || 0)} /></div>
+                <div>
+                  <Label className="mb-2 block">조명</Label>
+                  <Select value={lighting} onValueChange={setLighting}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="excellent">매우 좋음</SelectItem>
+                      <SelectItem value="good">좋음</SelectItem>
+                      <SelectItem value="fair">보통</SelectItem>
+                      <SelectItem value="poor">나쁨</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="space-y-6">
+            <div className="grid gap-4 md:grid-cols-3">
+              <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">적합 점수</p><p className="mt-2 text-2xl font-bold text-emerald-700">{analysis.score}점</p></CardContent></Card>
+              <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">코트</p><p className="mt-2 text-2xl font-bold text-slate-900">{surface}</p></CardContent></Card>
+              <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">표면 상태</p><p className="mt-2 text-2xl font-bold text-slate-900">{condition}</p></CardContent></Card>
+            </div>
+
+            <Card className="border-slate-200 bg-white shadow-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5" />
-                  코트 및 환경 정보 입력
+                  <Cloud className="h-5 w-5 text-emerald-600" />
+                  환경 요약
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <Label>코트 표면</Label>
-                      <Select value={conditions.surface} onValueChange={(value: CourtCondition['surface']) => setConditions(prev => ({ ...prev, surface: value }))}>
-                        <SelectTrigger>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="hard">하드 코트</SelectItem>
-                          <SelectItem value="clay">클레이 코트</SelectItem>
-                          <SelectItem value="grass">잔디 코트</SelectItem>
-                          <SelectItem value="carpet">카펫 코트</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label>코트 상태</Label>
-                      <Select value={conditions.condition} onValueChange={(value: CourtCondition['condition']) => setConditions(prev => ({ ...prev, condition: value }))}>
-                        <SelectTrigger>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="excellent">매우 좋음 (새 코트)</SelectItem>
-                          <SelectItem value="good">좋음 (일반 상태)</SelectItem>
-                          <SelectItem value="fair">보통 (약간 마모)</SelectItem>
-                          <SelectItem value="poor">나쁨 (수리 필요)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label>시간대</Label>
-                      <Select value={conditions.timeOfDay} onValueChange={(value: CourtCondition['timeOfDay']) => setConditions(prev => ({ ...prev, timeOfDay: value }))}>
-                        <SelectTrigger>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="morning">아침 (6-12시)</SelectItem>
-                          <SelectItem value="afternoon">오후 (12-18시)</SelectItem>
-                          <SelectItem value="evening">저녁 (18-22시)</SelectItem>
-                          <SelectItem value="night">밤 (22시 이후)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <Label>날씨</Label>
-                      <Select value={conditions.weather} onValueChange={(value: CourtCondition['weather']) => setConditions(prev => ({ ...prev, weather: value }))}>
-                        <SelectTrigger>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="clear">맑음</SelectItem>
-                          <SelectItem value="cloudy">흐림</SelectItem>
-                          <SelectItem value="rain">비</SelectItem>
-                          <SelectItem value="windy">바람</SelectItem>
-                          <SelectItem value="hot">더움</SelectItem>
-                          <SelectItem value="cold">추움</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label>조명 상태</Label>
-                      <Select value={conditions.lighting} onValueChange={(value: CourtCondition['lighting']) => setConditions(prev => ({ ...prev, lighting: value }))}>
-                        <SelectTrigger>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="excellent">매우 좋음</SelectItem>
-                          <SelectItem value="good">좋음</SelectItem>
-                          <SelectItem value="fair">보통</SelectItem>
-                          <SelectItem value="poor">나쁨</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 슬라이더 컨트롤들 */}
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <Label>기온: {conditions.temperature}°C</Label>
-                    <Slider
-                      value={[conditions.temperature]}
-                      onValueChange={(value) => setConditions(prev => ({ ...prev, temperature: value[0] }))}
-                      max={40}
-                      min={-10}
-                      step={1}
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label>습도: {conditions.humidity}%</Label>
-                    <Slider
-                      value={[conditions.humidity]}
-                      onValueChange={(value) => setConditions(prev => ({ ...prev, humidity: value[0] }))}
-                      max={100}
-                      min={0}
-                      step={5}
-                      className="w-full"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label>풍속: {conditions.windSpeed} km/h</Label>
-                    <Slider
-                      value={[conditions.windSpeed]}
-                      onValueChange={(value) => setConditions(prev => ({ ...prev, windSpeed: value[0] }))}
-                      max={30}
-                      min={0}
-                      step={1}
-                      className="w-full"
-                    />
-                  </div>
-                </div>
+              <CardContent className="grid gap-4 md:grid-cols-4">
+                <div className="rounded-2xl bg-slate-50 p-4"><p className="text-sm text-slate-500">기온</p><p className="mt-2 flex items-center gap-2 font-semibold text-slate-900"><Thermometer className="h-4 w-4" />{temperature}도</p></div>
+                <div className="rounded-2xl bg-slate-50 p-4"><p className="text-sm text-slate-500">습도</p><p className="mt-2 font-semibold text-slate-900">{humidity}%</p></div>
+                <div className="rounded-2xl bg-slate-50 p-4"><p className="text-sm text-slate-500">바람</p><p className="mt-2 flex items-center gap-2 font-semibold text-slate-900"><Wind className="h-4 w-4" />{wind}km/h</p></div>
+                <div className="rounded-2xl bg-slate-50 p-4"><p className="text-sm text-slate-500">조명</p><p className="mt-2 flex items-center gap-2 font-semibold text-slate-900"><Eye className="h-4 w-4" />{lighting}</p></div>
               </CardContent>
             </Card>
 
-            {/* 코트 정보 요약 */}
-            <Card className="bg-gray-50">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-semibold mb-4">현재 설정된 코트 정보</h3>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl mb-1">{surfaceTypes[conditions.surface].name}</div>
-                    <div className="text-sm text-gray-600">코트 표면</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl mb-1">{conditions.temperature}°C</div>
-                    <div className="text-sm text-gray-600">기온</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl mb-1">{conditions.humidity}%</div>
-                    <div className="text-sm text-gray-600">습도</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl mb-1">{conditions.windSpeed} km/h</div>
-                    <div className="text-sm text-gray-600">풍속</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="flex justify-center">
-              <Button
-                onClick={analyzeConditions}
-                size="lg"
-                className="px-8 py-3 bg-green-600 hover:bg-green-700"
-              >
-                <Eye className="w-5 h-5 mr-2" />
-                코트 상태 분석하기
-              </Button>
-            </div>
-          </div>
-        ) : (
-          <div className="space-y-8">
-            {/* 분석 결과 헤더 */}
-            <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-green-200">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-6">
-                  {getPlayabilityIcon(analysis.playability)}
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900">코트 상태 분석 결과</h2>
-                    <p className="text-gray-600">플레이 환경 평가 및 추천사항</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-green-600 mb-1">{analysis.overallScore}</div>
-                    <div className="text-sm text-gray-600">종합 점수</div>
-                  </div>
-                  <div className="text-center">
-                    <Badge className={`text-lg px-4 py-2 ${playabilityColors[analysis.playability]}`}>
-                      {getPlayabilityText(analysis.playability)}
-                    </Badge>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">
-                      {analysis.recommendations.length + analysis.optimalStrategies.length}
-                    </div>
-                    <div className="text-sm text-gray-600">제공 팁</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Tabs defaultValue="recommendations" className="space-y-6">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="recommendations">추천사항</TabsTrigger>
-                <TabsTrigger value="risks">주의사항</TabsTrigger>
-                <TabsTrigger value="strategies">전략 팁</TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="recommendations" className="space-y-4">
-                {analysis.recommendations.map((rec, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-4">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                        <p className="text-gray-700">{rec}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </TabsContent>
-
-              <TabsContent value="risks" className="space-y-4">
-                {analysis.risks.length > 0 ? (
-                  analysis.risks.map((risk, index) => (
-                    <Card key={index} className="border-red-200 bg-red-50">
-                      <CardContent className="p-4">
-                        <div className="flex items-start gap-3">
-                          <AlertTriangle className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
-                          <p className="text-red-800">{risk}</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))
-                ) : (
-                  <Card>
-                    <CardContent className="p-8 text-center">
-                      <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
-                      <p className="text-gray-600">현재 코트 상태에서 큰 위험 요소가 발견되지 않았습니다.</p>
-                    </CardContent>
-                  </Card>
-                )}
-              </TabsContent>
-
-              <TabsContent value="strategies" className="space-y-4">
-                {analysis.optimalStrategies.map((strategy, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-4">
-                      <div className="flex items-start gap-3">
-                        <Zap className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                        <p className="text-gray-700">{strategy}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </TabsContent>
-            </Tabs>
-
-            {/* 코트 특성 정보 */}
-            <Card>
+            <Card className="border-slate-200 bg-white shadow-sm">
               <CardHeader>
-                <CardTitle>코트 표면 특성</CardTitle>
+                <CardTitle className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-emerald-600" />
+                  추천 전략
+                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="font-semibold text-gray-900 mb-1">바운스</div>
-                    <div className="text-gray-600">{surfaceTypes[conditions.surface].bounce}</div>
+              <CardContent className="space-y-3">
+                {analysis.tips.map((tip) => (
+                  <div key={tip} className="rounded-2xl bg-emerald-50 p-4 text-sm leading-6 text-emerald-900">
+                    {tip}
                   </div>
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="font-semibold text-gray-900 mb-1">미끄러움</div>
-                    <div className="text-gray-600">{surfaceTypes[conditions.surface].slipperiness}</div>
-                  </div>
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="font-semibold text-gray-900 mb-1">내구성</div>
-                    <div className="text-gray-600">{surfaceTypes[conditions.surface].durability}</div>
-                  </div>
-                </div>
+                ))}
               </CardContent>
             </Card>
 
-            <div className="flex justify-center gap-4">
-              <Button onClick={resetAnalysis} variant="outline" size="lg">
-                새로운 분석
-              </Button>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
-                분석 결과 저장
-              </Button>
+            <Card className="border-slate-200 bg-white shadow-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <AlertTriangle className="h-5 w-5 text-amber-600" />
+                  주의 사항
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {analysis.risks.length === 0 ? (
+                  <div className="rounded-2xl bg-slate-50 p-4 text-sm text-slate-600">현재 조건에서 큰 위험 신호는 많지 않습니다.</div>
+                ) : (
+                  analysis.risks.map((risk) => (
+                    <div key={risk} className="rounded-2xl bg-amber-50 p-4 text-sm leading-6 text-amber-900">
+                      {risk}
+                    </div>
+                  ))
+                )}
+              </CardContent>
+            </Card>
+
+            <div>
+              <Button className="bg-emerald-600 text-white hover:bg-emerald-700">현재 조건 저장하기</Button>
             </div>
           </div>
-        )}
+        </section>
       </div>
     </div>
   );

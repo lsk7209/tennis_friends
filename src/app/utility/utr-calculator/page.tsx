@@ -1,390 +1,218 @@
 'use client';
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import { useMemo, useState } from 'react';
+import { ArrowLeft, ArrowRight, Calculator, CheckCircle2, Sparkles, Trophy } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import {
-    Calculator,
-    Target,
-    TrendingUp,
-    ArrowRight,
-    ArrowLeft,
-    Sparkles,
-    CheckCircle,
-    Info,
-    Trophy,
-    Users,
-    BarChart3
-} from 'lucide-react';
 
 interface MatchResult {
-    opponentUTR: string;
-    myScore: string;
-    opponentScore: string;
-    matchType: 'singles' | 'doubles';
+  opponentUTR: string;
+  myGames: string;
+  opponentGames: string;
 }
 
 export default function UTRCalculatorPage() {
-    const [step, setStep] = useState<'intro' | 'input' | 'result'>('intro');
-    const [matches, setMatches] = useState<MatchResult[]>([
-        { opponentUTR: '', myScore: '', opponentScore: '', matchType: 'singles' }
-    ]);
-    const [calculatedUTR, setCalculatedUTR] = useState<number | null>(null);
+  const [step, setStep] = useState<'intro' | 'input' | 'result'>('intro');
+  const [matches, setMatches] = useState<MatchResult[]>([{ opponentUTR: '', myGames: '', opponentGames: '' }]);
 
-    const addMatch = () => {
-        if (matches.length < 10) {
-            setMatches([...matches, { opponentUTR: '', myScore: '', opponentScore: '', matchType: 'singles' }]);
-        }
-    };
+  const calculatedUTR = useMemo(() => {
+    let totalWeight = 0;
+    let weightedSum = 0;
 
-    const removeMatch = (index: number) => {
-        if (matches.length > 1) {
-            setMatches(matches.filter((_, i) => i !== index));
-        }
-    };
+    matches.forEach((match) => {
+      const opponentUTR = Number(match.opponentUTR);
+      const myGames = Number(match.myGames);
+      const opponentGames = Number(match.opponentGames);
+      const totalGames = myGames + opponentGames;
 
-    const updateMatch = (index: number, field: keyof MatchResult, value: string) => {
-        const updated = [...matches];
-        updated[index] = { ...updated[index], [field]: value };
-        setMatches(updated);
-    };
+      if (opponentUTR > 0 && totalGames > 0) {
+        const winRatio = myGames / totalGames;
+        const estimate = Math.max(1, Math.min(16, opponentUTR + (winRatio - 0.5) * 2));
+        weightedSum += estimate * totalGames;
+        totalWeight += totalGames;
+      }
+    });
 
-    const calculateUTR = () => {
-        // UTR 계산 알고리즘 (간소화 버전)
-        let totalWeight = 0;
-        let weightedSum = 0;
+    return totalWeight > 0 ? Math.round((weightedSum / totalWeight) * 100) / 100 : null;
+  }, [matches]);
 
-        matches.forEach(match => {
-            const oppUTR = parseFloat(match.opponentUTR);
-            const myScore = parseInt(match.myScore);
-            const oppScore = parseInt(match.opponentScore);
+  const addMatch = () => {
+    if (matches.length < 10) {
+      setMatches((prev) => [...prev, { opponentUTR: '', myGames: '', opponentGames: '' }]);
+    }
+  };
 
-            if (!isNaN(oppUTR) && !isNaN(myScore) && !isNaN(oppScore)) {
-                const totalGames = myScore + oppScore;
-                if (totalGames > 0) {
-                    const winRatio = myScore / totalGames;
-                    // 승리 시 상대방 UTR + 보너스, 패배 시 상대방 UTR - 페널티
-                    let estimatedUTR = oppUTR;
-                    if (winRatio > 0.5) {
-                        estimatedUTR = oppUTR + (winRatio - 0.5) * 2;
-                    } else {
-                        estimatedUTR = oppUTR - (0.5 - winRatio) * 2;
-                    }
-                    // 최소 1.0, 최대 16.0 제한
-                    estimatedUTR = Math.max(1.0, Math.min(16.0, estimatedUTR));
+  const updateMatch = (index: number, field: keyof MatchResult, value: string) => {
+    setMatches((prev) => prev.map((match, i) => (i === index ? { ...match, [field]: value } : match)));
+  };
 
-                    const weight = totalGames; // 게임 수에 비례한 가중치
-                    weightedSum += estimatedUTR * weight;
-                    totalWeight += weight;
-                }
-            }
-        });
+  const removeMatch = (index: number) => {
+    if (matches.length > 1) {
+      setMatches((prev) => prev.filter((_, i) => i !== index));
+    }
+  };
 
-        if (totalWeight > 0) {
-            const result = weightedSum / totalWeight;
-            setCalculatedUTR(Math.round(result * 100) / 100);
-            setStep('result');
-        }
-    };
+  const level = calculatedUTR === null
+    ? null
+    : calculatedUTR >= 11
+      ? '상위 경쟁자'
+      : calculatedUTR >= 8
+        ? '상급'
+        : calculatedUTR >= 5
+          ? '중급'
+          : '입문';
 
-    const getUTRLevel = (utr: number): { level: string; description: string; color: string } => {
-        if (utr >= 14) return { level: 'Professional', description: '프로 수준', color: 'from-purple-500 to-pink-500' };
-        if (utr >= 12) return { level: 'Elite', description: '엘리트 수준', color: 'from-red-500 to-orange-500' };
-        if (utr >= 10) return { level: 'Advanced', description: '상급자', color: 'from-orange-500 to-yellow-500' };
-        if (utr >= 8) return { level: 'Intermediate+', description: '중상급자', color: 'from-green-500 to-emerald-500' };
-        if (utr >= 6) return { level: 'Intermediate', description: '중급자', color: 'from-teal-500 to-cyan-500' };
-        if (utr >= 4) return { level: 'Beginner+', description: '초중급자', color: 'from-blue-500 to-indigo-500' };
-        return { level: 'Beginner', description: '초보자', color: 'from-gray-500 to-slate-500' };
-    };
+  if (step === 'intro') {
+    return (
+      <main className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)]">
+        <section className="px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-5xl">
+            <div className="rounded-[32px] bg-gradient-to-r from-blue-600 to-violet-500 px-8 py-10 text-white shadow-xl">
+              <Badge className="bg-white/15 text-white hover:bg-white/15">
+                <Sparkles className="mr-2 h-4 w-4" />
+                UTR 계산기
+              </Badge>
+              <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">경기 결과로 예상 UTR 흐름 보기</h1>
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-blue-50">
+                최근 경기 결과를 기반으로 현재 실력대가 어느 정도인지 대략적인 흐름을 확인할 수 있습니다.
+                공식 수치가 아니라 추정용 도구로 보면 됩니다.
+              </p>
+              <div className="mt-8">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50" onClick={() => setStep('input')}>
+                  <Calculator className="mr-2 h-5 w-5" />
+                  계산 시작
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+            </div>
 
-    const isFormValid = matches.every(m =>
-        m.opponentUTR && m.myScore && m.opponentScore &&
-        !isNaN(parseFloat(m.opponentUTR)) && !isNaN(parseInt(m.myScore)) && !isNaN(parseInt(m.opponentScore))
+            <div className="mt-10 grid gap-4 md:grid-cols-4">
+              {[
+                ['1-4', '입문'],
+                ['5-7', '중급'],
+                ['8-10', '상급'],
+                ['11+', '경쟁 레벨'],
+              ].map(([range, label]) => (
+                <Card key={range} className="border-slate-200 bg-white shadow-sm">
+                  <CardContent className="p-6 text-center">
+                    <p className="text-3xl font-bold text-blue-600">{range}</p>
+                    <p className="mt-2 font-semibold text-slate-900">{label}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
     );
+  }
 
-    // 인트로 화면
-    if (step === 'intro') {
-        return (
-            <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-                {/* Hero Section */}
-                <section className="relative overflow-hidden py-20 md:py-32">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl"></div>
+  if (step === 'input') {
+    return (
+      <main className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)] py-12">
+        <div className="mx-auto max-w-3xl px-4">
+          <Button variant="ghost" onClick={() => setStep('intro')} className="mb-6">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            돌아가기
+          </Button>
 
-                    <div className="container mx-auto max-w-6xl px-4 relative z-10">
-                        <div className="text-center max-w-4xl mx-auto">
-                            <Badge className="bg-white/80 backdrop-blur-sm border border-blue-200 text-blue-700 px-6 py-2 mb-8 text-sm font-semibold shadow-lg">
-                                <Sparkles className="h-4 w-4 mr-2 inline" />
-                                UTR 레이팅 계산기
-                            </Badge>
+          <Card className="border-slate-200 bg-white shadow-xl">
+            <CardContent className="p-8">
+              <div className="text-center">
+                <h1 className="text-3xl font-bold text-slate-900">경기 결과 입력</h1>
+                <p className="mt-2 text-slate-600">최근 경기 1~10개를 입력해 예상 UTR을 계산합니다.</p>
+              </div>
 
-                            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-8 leading-tight">
-                                나의 UTR 레이팅은{' '}
-                                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                                    얼마일까?
-                                </span>
-                            </h1>
-
-                            <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto font-medium">
-                                경기 결과를 입력하면 예상 UTR(Universal Tennis Rating)을 계산해드립니다.<br />
-                                <span className="text-gray-600">전 세계 표준 테니스 레이팅 시스템으로 실력을 객관화하세요.</span>
-                            </p>
-
-                            <Button
-                                onClick={() => setStep('input')}
-                                size="lg"
-                                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-                            >
-                                <Calculator className="h-5 w-5 mr-2" />
-                                UTR 계산 시작하기
-                                <ArrowRight className="h-5 w-5 ml-2" />
-                            </Button>
-
-                            {/* Trust Indicators */}
-                            <div className="flex flex-wrap items-center justify-center gap-6 text-gray-700 text-base font-medium mt-12">
-                                <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
-                                    <Trophy className="h-4 w-4 text-yellow-500" />
-                                    <span>전 세계 표준</span>
-                                </div>
-                                <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
-                                    <Users className="h-4 w-4 text-blue-500" />
-                                    <span>500만+ 선수 사용</span>
-                                </div>
-                                <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
-                                    <BarChart3 className="h-4 w-4 text-green-500" />
-                                    <span>정확한 분석</span>
-                                </div>
-                            </div>
+              <div className="mt-8 space-y-5">
+                {matches.map((match, index) => (
+                  <Card key={index} className="border-slate-200 bg-slate-50">
+                    <CardContent className="p-5">
+                      <div className="flex items-center justify-between">
+                        <Badge variant="outline">경기 {index + 1}</Badge>
+                        {matches.length > 1 && (
+                          <Button variant="ghost" size="sm" onClick={() => removeMatch(index)}>
+                            삭제
+                          </Button>
+                        )}
+                      </div>
+                      <div className="mt-4 grid gap-4 md:grid-cols-3">
+                        <div>
+                          <Label htmlFor={`utr-${index}`}>상대 UTR</Label>
+                          <Input id={`utr-${index}`} type="number" step="0.01" value={match.opponentUTR} onChange={(e) => updateMatch(index, 'opponentUTR', e.target.value)} />
                         </div>
-                    </div>
-                </section>
-
-                {/* UTR 레벨 설명 */}
-                <section className="py-20 bg-white">
-                    <div className="container mx-auto max-w-6xl px-4">
-                        <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-12">
-                            UTR 레벨 시스템
-                        </h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            {[
-                                { range: '1-4', label: '초급', desc: '기본기 학습 단계' },
-                                { range: '5-7', label: '중급', desc: '안정적인 랠리 가능' },
-                                { range: '8-10', label: '상급', desc: '대회 출전 가능' },
-                                { range: '11+', label: '엘리트', desc: '프로 수준' },
-                            ].map((level, i) => (
-                                <Card key={i} className="text-center p-6 hover:shadow-lg transition-shadow">
-                                    <div className="text-3xl font-bold text-blue-600 mb-2">{level.range}</div>
-                                    <div className="font-semibold text-gray-900 mb-1">{level.label}</div>
-                                    <div className="text-sm text-gray-600">{level.desc}</div>
-                                </Card>
-                            ))}
+                        <div>
+                          <Label htmlFor={`my-${index}`}>내 게임 수</Label>
+                          <Input id={`my-${index}`} type="number" value={match.myGames} onChange={(e) => updateMatch(index, 'myGames', e.target.value)} />
                         </div>
-                    </div>
-                </section>
-            </main>
-        );
-    }
-
-    // 입력 화면
-    if (step === 'input') {
-        return (
-            <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12">
-                <div className="container mx-auto max-w-3xl px-4">
-                    <Button
-                        variant="ghost"
-                        onClick={() => setStep('intro')}
-                        className="mb-6"
-                    >
-                        <ArrowLeft className="h-4 w-4 mr-2" />
-                        돌아가기
-                    </Button>
-
-                    <Card className="shadow-xl">
-                        <CardContent className="p-8">
-                            <div className="text-center mb-8">
-                                <h1 className="text-3xl font-bold text-gray-900 mb-2">경기 결과 입력</h1>
-                                <p className="text-gray-600">최근 경기 결과를 입력해주세요 (최대 10경기)</p>
-                            </div>
-
-                            <div className="space-y-6">
-                                {matches.map((match, index) => (
-                                    <Card key={index} className="bg-gray-50 border-2 border-gray-100">
-                                        <CardContent className="p-6">
-                                            <div className="flex justify-between items-center mb-4">
-                                                <Badge variant="outline" className="font-semibold">
-                                                    경기 {index + 1}
-                                                </Badge>
-                                                {matches.length > 1 && (
-                                                    <Button
-                                                        variant="ghost"
-                                                        size="sm"
-                                                        onClick={() => removeMatch(index)}
-                                                        className="text-red-500 hover:text-red-700"
-                                                    >
-                                                        삭제
-                                                    </Button>
-                                                )}
-                                            </div>
-
-                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                                <div>
-                                                    <Label htmlFor={`opp-utr-${index}`} className="text-sm font-medium">
-                                                        상대방 UTR
-                                                    </Label>
-                                                    <Input
-                                                        id={`opp-utr-${index}`}
-                                                        type="number"
-                                                        step="0.01"
-                                                        min="1"
-                                                        max="16"
-                                                        placeholder="예: 6.5"
-                                                        value={match.opponentUTR}
-                                                        onChange={(e) => updateMatch(index, 'opponentUTR', e.target.value)}
-                                                        className="mt-1"
-                                                    />
-                                                </div>
-                                                <div>
-                                                    <Label htmlFor={`my-score-${index}`} className="text-sm font-medium">
-                                                        내 게임 수
-                                                    </Label>
-                                                    <Input
-                                                        id={`my-score-${index}`}
-                                                        type="number"
-                                                        min="0"
-                                                        placeholder="예: 6"
-                                                        value={match.myScore}
-                                                        onChange={(e) => updateMatch(index, 'myScore', e.target.value)}
-                                                        className="mt-1"
-                                                    />
-                                                </div>
-                                                <div>
-                                                    <Label htmlFor={`opp-score-${index}`} className="text-sm font-medium">
-                                                        상대 게임 수
-                                                    </Label>
-                                                    <Input
-                                                        id={`opp-score-${index}`}
-                                                        type="number"
-                                                        min="0"
-                                                        placeholder="예: 4"
-                                                        value={match.opponentScore}
-                                                        onChange={(e) => updateMatch(index, 'opponentScore', e.target.value)}
-                                                        className="mt-1"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                ))}
-
-                                {matches.length < 10 && (
-                                    <Button
-                                        variant="outline"
-                                        onClick={addMatch}
-                                        className="w-full border-dashed border-2"
-                                    >
-                                        + 경기 추가
-                                    </Button>
-                                )}
-
-                                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start gap-3">
-                                    <Info className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                                    <div className="text-sm text-blue-800">
-                                        <strong>팁:</strong> 더 많은 경기를 입력할수록 정확한 UTR을 계산할 수 있습니다.
-                                        상대방의 UTR을 모른다면 대략적인 실력(초급 3-4, 중급 5-7, 상급 8-10)으로 입력하세요.
-                                    </div>
-                                </div>
-
-                                <Button
-                                    onClick={calculateUTR}
-                                    disabled={!isFormValid}
-                                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-lg font-bold rounded-xl shadow-xl"
-                                >
-                                    <Calculator className="h-5 w-5 mr-2" />
-                                    UTR 계산하기
-                                </Button>
-                            </div>
-                        </CardContent>
-                    </Card>
-                </div>
-            </main>
-        );
-    }
-
-    // 결과 화면
-    if (step === 'result' && calculatedUTR !== null) {
-        const levelInfo = getUTRLevel(calculatedUTR);
-
-        return (
-            <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12">
-                <div className="container mx-auto max-w-3xl px-4">
-                    <Card className="shadow-2xl overflow-hidden">
-                        <div className={`bg-gradient-to-r ${levelInfo.color} p-8 text-white text-center`}>
-                            <h1 className="text-2xl font-bold mb-2">예상 UTR 레이팅</h1>
-                            <div className="text-7xl font-extrabold mb-4">{calculatedUTR}</div>
-                            <Badge className="bg-white/20 text-white text-lg px-4 py-2">
-                                {levelInfo.level} - {levelInfo.description}
-                            </Badge>
+                        <div>
+                          <Label htmlFor={`opp-${index}`}>상대 게임 수</Label>
+                          <Input id={`opp-${index}`} type="number" value={match.opponentGames} onChange={(e) => updateMatch(index, 'opponentGames', e.target.value)} />
                         </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
 
-                        <CardContent className="p-8">
-                            <div className="text-center mb-8">
-                                <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                                <h2 className="text-2xl font-bold text-gray-900 mb-2">계산 완료!</h2>
-                                <p className="text-gray-600">
-                                    입력하신 {matches.length}개의 경기 결과를 분석했습니다.
-                                </p>
-                            </div>
+                {matches.length < 10 && (
+                  <Button variant="outline" className="w-full border-dashed" onClick={addMatch}>
+                    경기 추가
+                  </Button>
+                )}
 
-                            <div className="bg-gray-50 rounded-lg p-6 mb-8">
-                                <h3 className="font-semibold text-gray-900 mb-4">UTR 레벨 참고</h3>
-                                <div className="space-y-2 text-sm">
-                                    <div className="flex justify-between">
-                                        <span>1-4점</span>
-                                        <span className="text-gray-600">초급 (레슨 단계)</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span>5-7점</span>
-                                        <span className="text-gray-600">중급 (동호회 수준)</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span>8-10점</span>
-                                        <span className="text-gray-600">상급 (대회 출전 가능)</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span>11점 이상</span>
-                                        <span className="text-gray-600">엘리트/프로 수준</span>
-                                    </div>
-                                </div>
-                            </div>
+                <Button className="w-full bg-blue-600 text-white hover:bg-blue-700" onClick={() => setStep('result')}>
+                  <Calculator className="mr-2 h-5 w-5" />
+                  계산하기
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+    );
+  }
 
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    onClick={() => {
-                                        setMatches([{ opponentUTR: '', myScore: '', opponentScore: '', matchType: 'singles' }]);
-                                        setStep('input');
-                                    }}
-                                    variant="outline"
-                                    className="flex-1"
-                                >
-                                    다시 계산하기
-                                </Button>
-                                <Link href="/utility" className="flex-1">
-                                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-                                        다른 유틸리티 보기
-                                    </Button>
-                                </Link>
-                            </div>
-                        </CardContent>
-                    </Card>
-                </div>
-            </main>
-        );
-    }
+  return (
+    <main className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)] py-12">
+      <div className="mx-auto max-w-3xl px-4">
+        <Card className="overflow-hidden border-slate-200 bg-white shadow-2xl">
+          <div className="bg-gradient-to-r from-blue-600 to-violet-500 p-8 text-center text-white">
+            <p className="text-sm uppercase tracking-[0.2em] text-blue-100">Estimated UTR</p>
+            <div className="mt-3 text-6xl font-extrabold">{calculatedUTR ?? '-'}</div>
+            {level && <Badge className="mt-4 bg-white/15 text-white hover:bg-white/15">{level}</Badge>}
+          </div>
 
-    return null;
+          <CardContent className="p-8">
+            <div className="text-center">
+              <CheckCircle2 className="mx-auto h-14 w-14 text-emerald-500" />
+              <h2 className="mt-4 text-2xl font-bold text-slate-900">계산 완료</h2>
+              <p className="mt-2 text-slate-600">입력한 {matches.length}개 경기 결과를 바탕으로 대략적인 UTR을 추정했습니다.</p>
+            </div>
+
+            <div className="mt-8 rounded-2xl bg-slate-50 p-6">
+              <div className="flex items-center gap-2 text-slate-900">
+                <Trophy className="h-5 w-5 text-amber-500" />
+                <p className="font-semibold">참고</p>
+              </div>
+              <div className="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+                <p>이 값은 공식 UTR과 다를 수 있으며, 실력 흐름을 대략적으로 보는 용도로 적합합니다.</p>
+                <p>상대 UTR 값이 정확할수록 결과도 더 현실적으로 나옵니다.</p>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Button variant="outline" className="flex-1" onClick={() => setStep('input')}>
+                다시 계산
+              </Button>
+              <Button className="flex-1 bg-blue-600 text-white hover:bg-blue-700" onClick={() => setStep('intro')}>
+                처음으로
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </main>
+  );
 }

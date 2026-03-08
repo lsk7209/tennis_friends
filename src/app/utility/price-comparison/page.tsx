@@ -1,471 +1,206 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { useMemo, useState } from 'react';
+import { ExternalLink, Search, Star, TrendingDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { TrendingDown, TrendingUp, Star, ExternalLink, Search } from 'lucide-react';
 
 interface Product {
   id: string;
   name: string;
   brand: string;
   category: string;
+  store: string;
   price: number;
   originalPrice?: number;
   rating: number;
   reviews: number;
-  store: string;
-  image: string;
-  url: string;
-  inStock: boolean;
-  features: string[];
+  status: 'in-stock' | 'low-stock' | 'sold-out';
 }
 
-const sampleProducts: Product[] = [
-  {
-    id: '1',
-    name: 'Wilson Pro Staff RF97 Autograph',
-    brand: 'Wilson',
-    category: '라켓',
-    price: 350000,
-    originalPrice: 380000,
-    rating: 4.8,
-    reviews: 1247,
-    store: '테니스프렌즈',
-    image: '/images/racket-wilson.jpg',
-    url: '#',
-    inStock: true,
-    features: ['프로급', '컨트롤 지향', '가벼운 무게']
-  },
-  {
-    id: '2',
-    name: 'Wilson Pro Staff RF97 Autograph',
-    brand: 'Wilson',
-    category: '라켓',
-    price: 365000,
-    rating: 4.7,
-    reviews: 892,
-    store: '테니스365',
-    image: '/images/racket-wilson.jpg',
-    url: '#',
-    inStock: true,
-    features: ['프로급', '컨트롤 지향', '가벼운 무게']
-  },
-  {
-    id: '3',
-    name: 'Wilson Pro Staff RF97 Autograph',
-    brand: 'Wilson',
-    category: '라켓',
-    price: 340000,
-    originalPrice: 360000,
-    rating: 4.9,
-    reviews: 2156,
-    store: '스포츠몰',
-    image: '/images/racket-wilson.jpg',
-    url: '#',
-    inStock: false,
-    features: ['프로급', '컨트롤 지향', '가벼운 무게']
-  },
-  {
-    id: '4',
-    name: 'Nike Air Zoom Vapor Pro',
-    brand: 'Nike',
-    category: '신발',
-    price: 189000,
-    rating: 4.6,
-    reviews: 756,
-    store: '테니스프렌즈',
-    image: '/images/shoes-nike.jpg',
-    url: '#',
-    inStock: true,
-    features: ['쿠션성', '반응성', '통풍성']
-  },
-  {
-    id: '5',
-    name: 'Nike Air Zoom Vapor Pro',
-    brand: 'Nike',
-    category: '신발',
-    price: 195000,
-    originalPrice: 210000,
-    rating: 4.5,
-    reviews: 623,
-    store: '나이키스토어',
-    image: '/images/shoes-nike.jpg',
-    url: '#',
-    inStock: true,
-    features: ['쿠션성', '반응성', '통풍성']
-  },
-  {
-    id: '6',
-    name: 'Babolat Boost Drive',
-    brand: 'Babolat',
-    category: '라켓',
-    price: 280000,
-    rating: 4.4,
-    reviews: 445,
-    store: '테니스프렌즈',
-    image: '/images/racket-babolat.jpg',
-    url: '#',
-    inStock: true,
-    features: ['파워 지향', '편안함', '내구성']
-  },
-  {
-    id: '7',
-    name: 'Babolat Boost Drive',
-    brand: 'Babolat',
-    category: '라켓',
-    price: 275000,
-    originalPrice: 290000,
-    rating: 4.3,
-    reviews: 387,
-    store: '바볼랏코리아',
-    image: '/images/racket-babolat.jpg',
-    url: '#',
-    inStock: true,
-    features: ['파워 지향', '편안함', '내구성']
-  }
+const products: Product[] = [
+  { id: '1', name: 'Wilson Clash 100 V3', brand: 'Wilson', category: '라켓', store: '테니스프렌즈 스토어', price: 329000, originalPrice: 359000, rating: 4.8, reviews: 214, status: 'in-stock' },
+  { id: '2', name: 'Wilson Clash 100 V3', brand: 'Wilson', category: '라켓', store: '라켓존', price: 339000, rating: 4.7, reviews: 168, status: 'low-stock' },
+  { id: '3', name: 'Babolat Pure Drive', brand: 'Babolat', category: '라켓', store: '테니스허브', price: 315000, originalPrice: 345000, rating: 4.9, reviews: 301, status: 'in-stock' },
+  { id: '4', name: 'Nike Vapor Pro 2', brand: 'Nike', category: '신발', store: '스포츠몰', price: 179000, originalPrice: 199000, rating: 4.6, reviews: 132, status: 'in-stock' },
+  { id: '5', name: 'ASICS Gel Resolution', brand: 'ASICS', category: '신발', store: '코트기어', price: 189000, rating: 4.8, reviews: 97, status: 'low-stock' },
+  { id: '6', name: 'Yonex Poly Tour Pro 1.25', brand: 'Yonex', category: '스트링', store: '스트링랩', price: 19000, originalPrice: 23000, rating: 4.7, reviews: 255, status: 'in-stock' },
 ];
 
 export default function PriceComparisonPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedBrand, setSelectedBrand] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('price-low');
+  const [category, setCategory] = useState('all');
+  const [brand, setBrand] = useState('all');
+  const [query, setQuery] = useState('');
+  const [sort, setSort] = useState('price-asc');
 
-  const categories = [
-    { value: 'all', label: '전체' },
-    { value: '라켓', label: '라켓' },
-    { value: '신발', label: '신발' },
-    { value: '의류', label: '의류' },
-    { value: '스트링', label: '스트링' },
-    { value: '액세서리', label: '액세서리' }
-  ];
+  const visibleProducts = useMemo(() => {
+    const filtered = products.filter((product) => {
+      if (category !== 'all' && product.category !== category) return false;
+      if (brand !== 'all' && product.brand !== brand) return false;
+      if (query.trim()) {
+        const lowerQuery = query.toLowerCase();
+        return product.name.toLowerCase().includes(lowerQuery) || product.store.toLowerCase().includes(lowerQuery);
+      }
+      return true;
+    });
 
-  const brands = [
-    { value: 'all', label: '전체 브랜드' },
-    { value: 'Wilson', label: 'Wilson' },
-    { value: 'Babolat', label: 'Babolat' },
-    { value: 'Nike', label: 'Nike' },
-    { value: 'Head', label: 'Head' },
-    { value: 'Yonex', label: 'Yonex' }
-  ];
-
-  const sortOptions = [
-    { value: 'price-low', label: '가격 낮은 순' },
-    { value: 'price-high', label: '가격 높은 순' },
-    { value: 'rating', label: '평점 높은 순' },
-    { value: 'reviews', label: '리뷰 많은 순' }
-  ];
-
-  const filteredAndSortedProducts = useMemo(() => {
-    let filtered = sampleProducts;
-
-    // 카테고리 필터링
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(product => product.category === selectedCategory);
-    }
-
-    // 브랜드 필터링
-    if (selectedBrand !== 'all') {
-      filtered = filtered.filter(product => product.brand === selectedBrand);
-    }
-
-    // 검색 필터링
-    if (searchQuery.trim()) {
-      filtered = filtered.filter(product =>
-        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        product.brand.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-
-    // 정렬
-    const sorted = [...filtered].sort((a, b) => {
-      switch (sortBy) {
-        case 'price-low':
-          return a.price - b.price;
-        case 'price-high':
+    return [...filtered].sort((a, b) => {
+      switch (sort) {
+        case 'price-desc':
           return b.price - a.price;
         case 'rating':
           return b.rating - a.rating;
         case 'reviews':
           return b.reviews - a.reviews;
         default:
-          return 0;
+          return a.price - b.price;
       }
     });
+  }, [brand, category, query, sort]);
 
-    return sorted;
-  }, [selectedCategory, selectedBrand, searchQuery, sortBy]);
+  const prices = visibleProducts.map((product) => product.price);
+  const minPrice = prices.length ? Math.min(...prices) : 0;
+  const maxPrice = prices.length ? Math.max(...prices) : 0;
 
-  const priceRange = useMemo(() => {
-    if (filteredAndSortedProducts.length === 0) return { min: 0, max: 0 };
-
-    const prices = filteredAndSortedProducts.map(p => p.price);
-    return {
-      min: Math.min(...prices),
-      max: Math.max(...prices)
-    };
-  }, [filteredAndSortedProducts]);
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('ko-KR', {
-      style: 'currency',
-      currency: 'KRW',
-      minimumFractionDigits: 0
-    }).format(price);
-  };
-
-  const getPriceChange = (product: Product) => {
-    if (!product.originalPrice) return null;
-    const change = ((product.originalPrice - product.price) / product.originalPrice) * 100;
-    return change;
-  };
+  const formatPrice = (price: number) =>
+    new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW', maximumFractionDigits: 0 }).format(price);
 
   return (
-    <div className="container mx-auto max-w-7xl px-4 py-12">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-text-light mb-4">테니스 용품 가격 비교</h1>
-        <p className="text-text-muted text-lg max-w-2xl mx-auto">
-          다양한 온라인 스토어의 테니스 용품 가격을 비교하고 최저가로 구매하세요.
-        </p>
-      </div>
+    <div className="min-h-screen bg-[linear-gradient(180deg,_#f0fdf4_0%,_#ffffff_32%,_#f8fafc_100%)]">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="rounded-[32px] bg-gradient-to-r from-emerald-600 to-teal-500 px-8 py-10 text-white shadow-xl">
+          <Badge className="bg-white/15 text-white hover:bg-white/15">가격 비교</Badge>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">테니스 장비 가격을 한 번에 비교하기</h1>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-emerald-50">
+            가격만 보는 대신 할인율, 리뷰 수, 재고 상태까지 함께 보세요. 같은 제품도 판매처에 따라 체감 가치가 크게 달라집니다.
+          </p>
+        </section>
 
-      {/* Filters */}
-      <Card className="mb-8 bg-content-dark border-white/10">
-        <CardContent className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            {/* Category Filter */}
+        <Card className="mt-8 border-slate-200 bg-white shadow-sm">
+          <CardContent className="grid gap-4 p-6 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <Label className="text-text-light font-medium mb-2 block">카테고리</Label>
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="bg-background-dark border-white/10">
-                  <SelectValue />
-                </SelectTrigger>
+              <Label className="mb-2 block">카테고리</Label>
+              <Select value={category} onValueChange={setCategory}>
+                <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  {categories.map(category => (
-                    <SelectItem key={category.value} value={category.value}>
-                      {category.label}
-                    </SelectItem>
-                  ))}
+                  <SelectItem value="all">전체</SelectItem>
+                  <SelectItem value="라켓">라켓</SelectItem>
+                  <SelectItem value="신발">신발</SelectItem>
+                  <SelectItem value="스트링">스트링</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            {/* Brand Filter */}
             <div>
-              <Label className="text-text-light font-medium mb-2 block">브랜드</Label>
-              <Select value={selectedBrand} onValueChange={setSelectedBrand}>
-                <SelectTrigger className="bg-background-dark border-white/10">
-                  <SelectValue />
-                </SelectTrigger>
+              <Label className="mb-2 block">브랜드</Label>
+              <Select value={brand} onValueChange={setBrand}>
+                <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  {brands.map(brand => (
-                    <SelectItem key={brand.value} value={brand.value}>
-                      {brand.label}
-                    </SelectItem>
-                  ))}
+                  <SelectItem value="all">전체</SelectItem>
+                  <SelectItem value="Wilson">Wilson</SelectItem>
+                  <SelectItem value="Babolat">Babolat</SelectItem>
+                  <SelectItem value="Nike">Nike</SelectItem>
+                  <SelectItem value="ASICS">ASICS</SelectItem>
+                  <SelectItem value="Yonex">Yonex</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            {/* Search */}
             <div>
-              <Label className="text-text-light font-medium mb-2 block">상품 검색</Label>
+              <Label className="mb-2 block">검색</Label>
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-muted w-4 h-4" />
-                <Input
-                  placeholder="상품명 또는 브랜드"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-background-dark border-white/10"
-                />
+                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                <Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="제품명 또는 스토어" className="pl-10" />
               </div>
             </div>
 
-            {/* Sort */}
             <div>
-              <Label className="text-text-light font-medium mb-2 block">정렬</Label>
-              <Select value={sortBy} onValueChange={setSortBy}>
-                <SelectTrigger className="bg-background-dark border-white/10">
-                  <SelectValue />
-                </SelectTrigger>
+              <Label className="mb-2 block">정렬</Label>
+              <Select value={sort} onValueChange={setSort}>
+                <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  {sortOptions.map(option => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
+                  <SelectItem value="price-asc">낮은 가격순</SelectItem>
+                  <SelectItem value="price-desc">높은 가격순</SelectItem>
+                  <SelectItem value="rating">평점순</SelectItem>
+                  <SelectItem value="reviews">리뷰 많은 순</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-          </div>
-
-          {/* Price Range Info */}
-          {filteredAndSortedProducts.length > 0 && (
-            <div className="flex items-center gap-4 text-sm text-text-muted">
-              <span>가격 범위: {formatPrice(priceRange.min)} - {formatPrice(priceRange.max)}</span>
-              <span>총 {filteredAndSortedProducts.length}개 상품</span>
-            </div>
-          )}
-        </CardContent>
-      </Card>
-
-      {/* Results */}
-      {filteredAndSortedProducts.length === 0 ? (
-        <Card className="bg-content-dark border-white/10">
-          <CardContent className="p-12 text-center">
-            <Search className="w-16 h-16 text-text-muted mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-text-light mb-2">검색 결과가 없습니다</h3>
-            <p className="text-text-muted">
-              다른 검색어로 시도하거나 필터 조건을 조정해 보세요.
-            </p>
           </CardContent>
         </Card>
-      ) : (
-        <div className="space-y-6">
-          {/* Summary Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Card className="bg-content-dark border-white/10">
-              <CardContent className="p-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-text-muted text-sm">최저가</p>
-                    <p className="text-2xl font-bold text-green-400">{formatPrice(priceRange.min)}</p>
-                  </div>
-                  <TrendingDown className="w-8 h-8 text-green-400" />
-                </div>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-content-dark border-white/10">
-              <CardContent className="p-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-text-muted text-sm">평균 가격</p>
-                    <p className="text-2xl font-bold text-text-light">
-                      {formatPrice(Math.round(filteredAndSortedProducts.reduce((sum, p) => sum + p.price, 0) / filteredAndSortedProducts.length))}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">최저가</p><p className="mt-2 text-2xl font-bold text-emerald-600">{formatPrice(minPrice)}</p></CardContent></Card>
+          <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">최고가</p><p className="mt-2 text-2xl font-bold text-slate-900">{formatPrice(maxPrice)}</p></CardContent></Card>
+          <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">검색 결과</p><p className="mt-2 text-2xl font-bold text-slate-900">{visibleProducts.length}개</p></CardContent></Card>
+        </div>
 
-            <Card className="bg-content-dark border-white/10">
-              <CardContent className="p-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-text-muted text-sm">최고 평점</p>
-                    <p className="text-2xl font-bold text-yellow-400">
-                      {Math.max(...filteredAndSortedProducts.map(p => p.rating)).toFixed(1)}
-                    </p>
-                  </div>
-                  <Star className="w-8 h-8 text-yellow-400" />
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Products Table */}
-          <Card className="bg-content-dark border-white/10">
-            <CardHeader>
-              <CardTitle className="text-text-light">가격 비교 결과</CardTitle>
-            </CardHeader>
-            <CardContent>
+        <Card className="mt-6 border-slate-200 bg-white shadow-sm">
+          <CardHeader><CardTitle>비교 결과</CardTitle></CardHeader>
+          <CardContent>
+            {visibleProducts.length === 0 ? (
+              <div className="rounded-2xl border border-dashed border-slate-300 p-10 text-center text-slate-600">
+                현재 조건에는 결과가 없습니다. 카테고리나 브랜드 조건을 조금 넓혀 보세요.
+              </div>
+            ) : (
               <Table>
                 <TableHeader>
-                  <TableRow className="border-white/10">
-                    <TableHead className="text-text-light">상품</TableHead>
-                    <TableHead className="text-text-light">가격</TableHead>
-                    <TableHead className="text-text-light">평점</TableHead>
-                    <TableHead className="text-text-light">스토어</TableHead>
-                    <TableHead className="text-text-light">상태</TableHead>
-                    <TableHead className="text-text-light">구매</TableHead>
+                  <TableRow>
+                    <TableHead>제품</TableHead>
+                    <TableHead>가격</TableHead>
+                    <TableHead>평점</TableHead>
+                    <TableHead>스토어</TableHead>
+                    <TableHead>재고</TableHead>
+                    <TableHead>이동</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {filteredAndSortedProducts.map((product) => {
-                    const priceChange = getPriceChange(product);
+                  {visibleProducts.map((product) => {
+                    const discount = product.originalPrice ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100) : null;
+
                     return (
-                      <TableRow key={product.id} className="border-white/5">
+                      <TableRow key={product.id}>
                         <TableCell>
-                          <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-background-dark rounded-lg flex items-center justify-center">
-                              <span className="text-xs text-text-muted">IMG</span>
-                            </div>
-                            <div>
-                              <p className="font-medium text-text-light">{product.name}</p>
-                              <p className="text-sm text-text-muted">{product.brand}</p>
-                              <div className="flex flex-wrap gap-1 mt-1">
-                                {product.features.slice(0, 2).map(feature => (
-                                  <Badge key={feature} variant="outline" className="text-xs bg-background-dark border-white/5">
-                                    {feature}
-                                  </Badge>
-                                ))}
-                              </div>
-                            </div>
+                          <div>
+                            <p className="font-medium text-slate-900">{product.name}</p>
+                            <p className="text-sm text-slate-500">{product.brand} · {product.category}</p>
                           </div>
                         </TableCell>
                         <TableCell>
-                          <div className="flex flex-col">
-                            <span className="font-bold text-text-light">{formatPrice(product.price)}</span>
-                            {product.originalPrice && (
-                              <div className="flex items-center gap-1">
-                                <span className="text-sm text-text-muted line-through">
-                                  {formatPrice(product.originalPrice)}
-                                </span>
-                                {priceChange && (
-                                  <Badge className="bg-green-500/20 text-green-400 text-xs">
-                                    <TrendingDown className="w-3 h-3 mr-1" />
-                                    {priceChange.toFixed(0)}%
-                                  </Badge>
-                                )}
+                          <div>
+                            <p className="font-semibold text-slate-900">{formatPrice(product.price)}</p>
+                            {discount !== null && (
+                              <div className="mt-1 flex items-center gap-2">
+                                <span className="text-xs text-slate-400 line-through">{formatPrice(product.originalPrice!)}</span>
+                                <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">
+                                  <TrendingDown className="mr-1 h-3 w-3" />
+                                  {discount}% 할인
+                                </Badge>
                               </div>
                             )}
                           </div>
                         </TableCell>
                         <TableCell>
-                          <div className="flex items-center gap-2">
-                            <div className="flex items-center">
-                              {[...Array(5)].map((_, i) => (
-                                <Star
-                                  key={i}
-                                  className={`w-4 h-4 ${
-                                    i < Math.floor(product.rating)
-                                      ? 'text-yellow-400 fill-current'
-                                      : 'text-gray-600'
-                                  }`}
-                                />
-                              ))}
-                            </div>
-                            <span className="text-sm text-text-muted">
-                              {product.rating} ({product.reviews})
-                            </span>
+                          <div className="flex items-center gap-2 text-sm text-slate-600">
+                            <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+                            {product.rating} ({product.reviews})
                           </div>
                         </TableCell>
+                        <TableCell>{product.store}</TableCell>
                         <TableCell>
-                          <Badge variant="outline" className="bg-background-dark border-white/5">
-                            {product.store}
-                          </Badge>
+                          {product.status === 'in-stock' && <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">재고 충분</Badge>}
+                          {product.status === 'low-stock' && <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-100">재고 적음</Badge>}
+                          {product.status === 'sold-out' && <Badge className="bg-rose-100 text-rose-700 hover:bg-rose-100">품절</Badge>}
                         </TableCell>
                         <TableCell>
-                          <Badge className={product.inStock ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}>
-                            {product.inStock ? '재고 있음' : '품절'}
-                          </Badge>
-                        </TableCell>
-                        <TableCell>
-                          <Button
-                            size="sm"
-                            className="bg-primary text-background-dark hover:bg-primary/90"
-                            disabled={!product.inStock}
-                          >
-                            <ExternalLink className="w-4 h-4 mr-1" />
-                            구매하기
+                          <Button size="sm" className="bg-emerald-600 text-white hover:bg-emerald-700">
+                            <ExternalLink className="mr-1 h-4 w-4" />
+                            보기
                           </Button>
                         </TableCell>
                       </TableRow>
@@ -473,51 +208,19 @@ export default function PriceComparisonPage() {
                   })}
                 </TableBody>
               </Table>
-            </CardContent>
-          </Card>
-        </div>
-      )}
+            )}
+          </CardContent>
+        </Card>
 
-      {/* Tips */}
-      <Card className="mt-8 bg-content-dark border-white/10">
-        <CardHeader>
-          <CardTitle className="text-text-light">가격 비교 팁</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">시즌 세일 활용</h4>
-              <p className="text-text-muted text-sm">
-                봄/가을 시즌이나 연말 세일 기간에 큰 폭의 할인을 받을 수 있습니다.
-                정기적으로 가격을 확인하세요.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">리뷰 확인</h4>
-              <p className="text-text-muted text-sm">
-                가격만 보고 구매하지 말고 실제 사용자들의 리뷰를 확인하세요.
-                특히 내 플레이 스타일에 맞는지 확인하는 것이 중요합니다.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">배송비 고려</h4>
-              <p className="text-text-muted text-sm">
-                상품 가격만 비교하지 말고 배송비, 반품 정책, A/S 조건까지
-                종합적으로 고려하세요.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">신뢰할 수 있는 스토어</h4>
-              <p className="text-text-muted text-sm">
-                검증된 스토어에서 구매하세요. 특히 테니스 전문 스토어는
-                품질 보증과 전문 상담을 제공합니다.
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+        <Card className="mt-6 border-slate-200 bg-slate-50">
+          <CardHeader><CardTitle>비교 팁</CardTitle></CardHeader>
+          <CardContent className="grid gap-4 md:grid-cols-3">
+            <div><p className="font-semibold text-slate-900">할인율만 보지 않기</p><p className="mt-2 text-sm leading-6 text-slate-600">스트링이나 신발은 배송비, 묶음 할인, 사은품까지 포함해 최종가를 보는 편이 정확합니다.</p></div>
+            <div><p className="font-semibold text-slate-900">리뷰 수 확인</p><p className="mt-2 text-sm leading-6 text-slate-600">평점이 높아도 리뷰가 적으면 편차가 클 수 있습니다. 최소 리뷰 수를 함께 보는 습관이 좋습니다.</p></div>
+            <div><p className="font-semibold text-slate-900">재고 상태 확인</p><p className="mt-2 text-sm leading-6 text-slate-600">대회 직전 구매라면 최저가보다 당장 배송 가능한 판매처가 더 가치 있을 수 있습니다.</p></div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
-
-

@@ -4,68 +4,86 @@ import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "워밍업 루틴 빌더",
-  description: "워밍업 루틴 빌더 utility for tennis players who want a clearer workflow and faster decisions.",
+  description:
+    "경기 전과 훈련 전 상황에 맞춰 이동, 가동성, 임팩트 감각 루틴을 구성하는 테니스 워밍업 가이드입니다.",
   path: "/utility/warmup-routine-builder",
   type: "website",
-  tags: ["tennis utility", "Training", "워밍업 루틴 빌더"],
+  tags: ["테니스 워밍업", "경기 전 준비", "훈련 루틴"],
 });
 
-const sections = [
+const routine = [
   {
-    "id": "overview",
-    "heading": "What It Does",
-    "body": "워밍업 루틴 빌더 is designed to turn a vague tennis problem into a clear next action. Instead of broad advice, it focuses on one decision area and gives the user a practical frame to work with."
+    phase: "1단계",
+    title: "몸 온도 올리기",
+    detail: "가벼운 조깅, 스킵, 사이드 스텝으로 3~5분 정도 체온을 올립니다.",
   },
   {
-    "id": "inputs",
-    "heading": "Recommended Inputs",
-    "body": "The most useful version of 워밍업 루틴 빌더 starts with realistic inputs: current level, recent playing volume, surface context, and the match or training goal. That keeps the output useful rather than generic."
+    phase: "2단계",
+    title: "가동성 열기",
+    detail: "어깨 회전, 엉덩이 회전, 햄스트링 동작을 넣어 큰 관절부터 열어줍니다.",
   },
   {
-    "id": "use-cases",
-    "heading": "Best Use Cases",
-    "body": "워밍업 루틴 빌더 is most valuable before training, before match play, or during weekly review. It works best when used as part of a repeatable process instead of a one-time check."
+    phase: "3단계",
+    title: "테니스 움직임 연결",
+    detail: "스플릿 스텝, 첫 발 반응, 짧은 스윙 그림자로 경기 동작에 가까워지게 만듭니다.",
   },
   {
-    "id": "next-step",
-    "heading": "Next Step",
-    "body": "After using 워밍업 루틴 빌더, the next step should be simple: update one plan, change one practice focus, or test one tactical decision. That is how a utility in the Training category creates measurable improvement."
-  }
+    phase: "4단계",
+    title: "임팩트 감각 맞추기",
+    detail: "미니테니스, 짧은 랠리, 서브 모션 리허설로 손 감각과 리듬을 맞춥니다.",
+  },
 ] as const;
 
-export default function Page() {
+const situations = [
+  "아침 첫 경기라 몸이 무겁다면 가동성과 첫 발 반응 시간을 늘립니다.",
+  "추운 날씨에는 정적 스트레칭보다 계속 움직이는 동작 위주가 좋습니다.",
+  "서브 감각이 불안하면 마지막 단계에서 토스와 리듬 체크를 따로 넣습니다.",
+] as const;
+
+export default function WarmupRoutineBuilderPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-12">
-      <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Training</p>
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">워밍업 루틴 빌더</h1>
-        <p className="max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-300">
-          워밍업 루틴 빌더 is now available as part of the TennisFriends utility expansion set. This first version is structured to help users understand the workflow, expected inputs, and practical next actions.
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+      <section className="rounded-3xl border border-rose-100 bg-gradient-to-br from-rose-50 via-white to-orange-50 p-8 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-rose-700">Training Utility</p>
+        <h1 className="mt-3 text-3xl font-bold text-gray-900">워밍업 루틴 빌더</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-gray-700">
+          좋은 워밍업은 단순히 몸을 푸는 과정이 아니라 첫 게임의 집중력과 발 반응을 끌어올리는 준비 과정입니다.
+          이 페이지는 훈련 전이나 경기 전에 바로 적용할 수 있는 기본 루틴을 정리합니다.
         </p>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
-            <article key={section.id} className="rounded-2xl border border-gray-200 p-5 dark:border-gray-700">
-              <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">{section.heading}</h2>
-              <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">{section.body}</p>
-            </article>
-          ))}
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/utility/cooldown-routine-builder"
+            className="rounded-full bg-rose-600 px-5 py-2.5 text-sm font-semibold text-white"
+          >
+            쿨다운 루틴 보기
+          </Link>
+          <Link
+            href="/utility/focus-training"
+            className="rounded-full border border-rose-600 px-5 py-2.5 text-sm font-semibold text-rose-700"
+          >
+            집중 훈련과 연결
+          </Link>
         </div>
+      </section>
 
-        <div className="mt-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-800">
-          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Suggested Follow-Up</h2>
-          <p className="mb-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
-            Pair this utility with a planning or analysis tool so the result turns into a repeatable training action.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/utility/training-planner" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white">
-              Training Planner
-            </Link>
-            <Link href="/utility/match-analyzer" className="rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600">
-              Match Analyzer
-            </Link>
-          </div>
-        </div>
+      <section className="grid gap-6 md:grid-cols-2">
+        {routine.map((step) => (
+          <article key={step.phase} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+            <p className="text-sm font-semibold text-rose-700">{step.phase}</p>
+            <h2 className="mt-2 text-xl font-bold text-gray-900">{step.title}</h2>
+            <p className="mt-4 text-sm leading-6 text-gray-700">{step.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="rounded-3xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900">상황별 조정 팁</h2>
+        <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+          {situations.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </section>
     </main>
   );

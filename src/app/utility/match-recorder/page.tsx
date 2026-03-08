@@ -1,281 +1,127 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
+import { BarChart3, Calendar, CheckCircle2, MapPin, Plus, Target, Trophy, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Plus, Trophy, Target, TrendingUp, Calendar, Users, Clock, MapPin, BarChart3, ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
-import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
-export default function MatchRecorderIntro() {
-  const features = [
-    {
-      icon: Plus,
-      title: '경기 기록',
-      description: '상대 정보, 날짜, 코트 타입, 세트별 점수를 체계적으로 기록합니다.',
-      gradient: 'from-amber-500 to-yellow-500'
-    },
-    {
-      icon: Target,
-      title: '성과 추적',
-      description: '승률, 평균 득점, 주요 플레이 패턴을 분석하여 실력 향상을 추적합니다.',
-      gradient: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: BarChart3,
-      title: '통계 분석',
-      description: '상대별 성적, 코트별 강점, 시간대별 퍼포먼스를 시각적으로 분석합니다.',
-      gradient: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: TrendingUp,
-      title: '개선 포인트',
-      description: '경기 후 개선할 점을 기록하고 추적하여 체계적인 발전을 이룹니다.',
-      gradient: 'from-purple-500 to-indigo-500'
-    }
-  ];
+const features = [
+  {
+    icon: <Plus className="h-5 w-5 text-amber-600" />,
+    title: '경기 기록',
+    description: '상대, 스코어, 코트 종류, 메모를 한 번에 남겨 다음 복기에 바로 활용할 수 있습니다.',
+  },
+  {
+    icon: <BarChart3 className="h-5 w-5 text-sky-600" />,
+    title: '패턴 복기',
+    description: '어떤 유형의 상대에게 흔들렸는지, 어떤 코트에서 강했는지 정리하기 좋습니다.',
+  },
+  {
+    icon: <Target className="h-5 w-5 text-emerald-600" />,
+    title: '개선 포인트',
+    description: '서브, 리턴, 멘탈처럼 경기 후 바로 남겨야 할 포인트를 습관화할 수 있습니다.',
+  },
+];
 
-  const benefits = [
-    {
-      icon: CheckCircle,
-      title: '체계적인 관리',
-      description: '모든 경기를 한 곳에서 관리하고 언제든지 조회할 수 있습니다.',
-      gradient: 'from-blue-400 to-cyan-400'
-    },
-    {
-      icon: Users,
-      title: '상대 분석',
-      description: '자주 만나는 상대의 플레이 패턴과 약점을 파악하세요.',
-      gradient: 'from-green-400 to-emerald-400'
-    },
-    {
-      icon: Calendar,
-      title: '경기 히스토리',
-      description: '과거 경기 결과를 바탕으로 현재 실력을 객관적으로 평가합니다.',
-      gradient: 'from-purple-400 to-pink-400'
-    },
-    {
-      icon: Sparkles,
-      title: '성장 추적',
-      description: '장기적인 실력 향상을 그래프로 시각화하여 동기부여를 얻으세요.',
-      gradient: 'from-orange-400 to-red-400'
-    }
-  ];
+const examples = [
+  { date: '2026-03-05', opponent: '김현우', score: '6-4, 6-3 승', court: '하드', note: '세컨드 서브 안정감이 좋았고, 포핸드 깊이가 유지됨' },
+  { date: '2026-03-02', opponent: '박지훈', score: '4-6, 7-6, 5-7 패', court: '클레이', note: '긴 랠리 이후 체력 저하와 리턴 위치 흔들림' },
+  { date: '2026-02-26', opponent: '이도윤', score: '6-1, 6-2 승', court: '실내 하드', note: '짧은 볼 처리와 네트 접근 타이밍이 잘 맞음' },
+];
 
-  const sampleMatchData = [
-    {
-      date: '2024-11-01',
-      opponent: '김철수',
-      result: '6-3, 6-4 승',
-      court: '하드',
-      notes: '포핸드 컨트롤이 향상됨'
-    },
-    {
-      date: '2024-10-28',
-      opponent: '박영희',
-      result: '4-6, 6-3, 6-2 승',
-      court: '클레이',
-      notes: '체력 관리가 중요함'
-    },
-    {
-      date: '2024-10-25',
-      opponent: '이민수',
-      result: '3-6, 6-7 패',
-      court: '하드',
-      notes: '서브 리턴 개선 필요'
-    }
-  ];
-
+export default function MatchRecorderPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 dark:from-amber-950 dark:via-yellow-950 dark:to-orange-950">
-      {/* Hero Section */}
-      <FadeIn>
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-white rounded-full text-sm font-medium mb-6">
-              <Trophy className="w-4 h-4" />
-              경기 기록 시스템
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              테니스 경기
-              <span className="bg-gradient-to-r from-amber-500 to-yellow-500 bg-clip-text text-transparent"> 기록 & 분석</span>
-            </h1>
-
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              모든 경기를 체계적으로 기록하고 분석하세요. 승패 패턴, 상대별 성적, 개선 포인트를 추적하여
-              과학적인 실력 향상을 이루세요.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/utility/match-recorder/test">
-                <Button size="lg" className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white px-8 py-3 text-lg">
-                  <Plus className="w-5 h-5 mr-2" />
-                  경기 기록하기
-                </Button>
-              </Link>
-              <Link href="#features">
-                <Button variant="outline" size="lg" className="border-amber-500 text-amber-700 dark:text-amber-300 hover:bg-amber-50 dark:hover:bg-amber-950 px-8 py-3 text-lg">
-                  자세히 보기
-                </Button>
-              </Link>
-            </div>
+    <div className="min-h-screen bg-[linear-gradient(180deg,_#fffbeb_0%,_#ffffff_35%,_#f8fafc_100%)]">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="rounded-[32px] bg-gradient-to-r from-amber-500 to-yellow-400 px-8 py-10 text-white shadow-xl">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-medium">
+            <Trophy className="h-4 w-4" />
+            경기 기록
+          </div>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">테니스 경기를 기록하고 다음 경기력으로 연결하기</h1>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-amber-50">
+            경기 직후 3분만 투자해도 복기 품질이 달라집니다. 스코어만 남기지 말고, 잘 된 패턴과 흔들린 순간을 같이 기록해 두세요.
+          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Link href="/utility/match-recorder/test">
+              <Button size="lg" className="bg-white text-amber-600 hover:bg-amber-50">
+                <Plus className="mr-2 h-5 w-5" />
+                경기 기록 시작
+              </Button>
+            </Link>
+            <Link href="/utility/match-analyzer">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                분석 도구 보기
+              </Button>
+            </Link>
           </div>
         </section>
-      </FadeIn>
 
-      {/* Features Section */}
-      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto">
-          <SlideUp>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                주요 기능
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                체계적인 경기 관리를 위한 다양한 기능들
-              </p>
-            </div>
-          </SlideUp>
+        <section className="mt-10 grid gap-6 md:grid-cols-3">
+          {features.map((feature) => (
+            <Card key={feature.title} className="border-slate-200 bg-white shadow-sm">
+              <CardContent className="p-6">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-slate-100">{feature.icon}</div>
+                <h2 className="text-lg font-semibold text-slate-900">{feature.title}</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{feature.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </section>
 
-          <StaggeredAnimation className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <StaggeredItem key={index}>
-                <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all group">
-                  <CardContent className="p-6">
-                    <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${feature.gradient} text-white mb-4 group-hover:scale-110 transition-transform`}>
-                      <feature.icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </StaggeredItem>
-            ))}
-          </StaggeredAnimation>
-        </div>
-      </section>
+        <section className="mt-10 rounded-[28px] bg-slate-900 px-8 py-8 text-white shadow-xl">
+          <h2 className="text-2xl font-semibold">기록에 남기면 좋은 항목</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-4">
+            <div><p className="text-sm text-slate-300">상대</p><p className="mt-2 font-semibold">플레이 스타일, 손잡이, 강점</p></div>
+            <div><p className="text-sm text-slate-300">환경</p><p className="mt-2 font-semibold">코트 종류, 날씨, 시간대</p></div>
+            <div><p className="text-sm text-slate-300">내용</p><p className="mt-2 font-semibold">서브, 리턴, 랠리 패턴</p></div>
+            <div><p className="text-sm text-slate-300">후속 액션</p><p className="mt-2 font-semibold">다음 연습에서 확인할 과제 1개</p></div>
+          </div>
+        </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <SlideUp>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                기대 효과
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                경기 기록이 가져다주는 실질적인 혜택들
-              </p>
-            </div>
-          </SlideUp>
-
-          <StaggeredAnimation className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <StaggeredItem key={index}>
-                <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
-                  <CardContent className="p-6">
-                    <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${benefit.gradient} text-white mb-4`}>
-                      <benefit.icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </StaggeredItem>
-            ))}
-          </StaggeredAnimation>
-        </div>
-      </section>
-
-      {/* Sample Data Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto">
-          <SlideUp>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                기록 예시
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                이렇게 체계적으로 경기를 기록하고 분석할 수 있습니다
-              </p>
-            </div>
-          </SlideUp>
-
-          <div className="space-y-4">
-            {sampleMatchData.map((match, index) => (
-              <Card key={index} className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+        <section className="mt-10">
+          <div className="flex items-center gap-2">
+            <Calendar className="h-5 w-5 text-amber-600" />
+            <h2 className="text-2xl font-semibold text-slate-900">기록 예시</h2>
+          </div>
+          <div className="mt-6 space-y-4">
+            {examples.map((match) => (
+              <Card key={`${match.date}-${match.opponent}`} className="border-slate-200 bg-white shadow-sm">
                 <CardContent className="p-6">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                        <Calendar className="w-4 h-4" />
-                        {match.date}
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                        <Users className="w-4 h-4" />
-                        vs {match.opponent}
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                        <MapPin className="w-4 h-4" />
-                        {match.court}
-                      </div>
+                  <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                    <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
+                      <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{match.date}</span>
+                      <span className="flex items-center gap-1"><Users className="h-4 w-4" />vs {match.opponent}</span>
+                      <span className="flex items-center gap-1"><MapPin className="h-4 w-4" />{match.court}</span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <Badge className={match.result.includes('승') ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'}>
-                        {match.result}
-                      </Badge>
-                    </div>
+                    <span className={`rounded-full px-3 py-1 text-sm font-medium ${match.score.includes('승') ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                      {match.score}
+                    </span>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      <strong>메모:</strong> {match.notes}
-                    </p>
-                  </div>
+                  <p className="mt-4 text-sm leading-6 text-slate-600"><span className="font-semibold text-slate-900">메모</span> {match.note}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <Card className="bg-gradient-to-r from-amber-500 to-yellow-500 border-0 text-white">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">
-                지금 바로 시작하세요
-              </h3>
-              <p className="text-amber-100 mb-6 text-lg">
-                체계적인 경기 기록으로 테니스 실력을 한 단계 업그레이드하세요
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/utility/match-recorder/test">
-                  <Button size="lg" className="bg-white text-amber-600 hover:bg-gray-50 px-8 py-3">
-                    <Plus className="w-5 h-5 mr-2" />
-                    첫 경기 기록하기
-                  </Button>
-                </Link>
-                <Link href="/utility">
-                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 px-8 py-3">
-                    다른 도구 둘러보기
-                  </Button>
-                </Link>
+        <section className="mt-10">
+          <Card className="border-0 bg-amber-50 shadow-sm">
+            <CardContent className="flex flex-col gap-4 p-8 md:flex-row md:items-center md:justify-between">
+              <div>
+                <div className="flex items-center gap-2 text-amber-700">
+                  <CheckCircle2 className="h-5 w-5" />
+                  <p className="font-semibold">추천 습관</p>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-amber-900">경기 직후 3줄 메모만 남겨도 다음 연습의 방향이 선명해집니다.</p>
               </div>
+              <Link href="/utility/match-recorder/test">
+                <Button className="bg-amber-500 text-white hover:bg-amber-600">지금 기록하러 가기</Button>
+              </Link>
             </CardContent>
           </Card>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

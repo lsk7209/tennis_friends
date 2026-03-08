@@ -1,383 +1,285 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { useMemo, useState } from 'react';
+import { Cloud, Glasses, Shirt, Sun, Thermometer, Wind } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { Shirt, Glasses, Thermometer, Sun, Cloud, Wind } from 'lucide-react';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
-interface ApparelRecommendation {
+interface ApparelItem {
   category: string;
-  item: string;
-  description: string;
+  name: string;
+  summary: string;
   price: string;
-  brands: string[];
-  features: string[];
-  suitableFor: string[];
+  tags: string[];
+  weather: string[];
+  levels: string[];
   icon: React.ReactNode;
 }
 
-const apparelData: ApparelRecommendation[] = [
+const apparelItems: ApparelItem[] = [
   {
     category: '상의',
-    item: '테니스 폴로 셔츠',
-    description: '흡습속건 기능이 뛰어난 테니스 전용 폴로 셔츠',
-    price: '₩50,000 - ₩150,000',
-    brands: ['Wilson', 'Head', 'Babolat', 'Nike', 'Adidas'],
-    features: ['흡습속건', 'UV 차단', '편안한 착용감', '스트레치 소재'],
-    suitableFor: ['전체', '초보자', '중급자', '상급자'],
-    icon: <Shirt className="w-5 h-5" />
-  },
-  {
-    category: '상의',
-    item: '테니스 탱크 탑',
-    description: '통풍이 잘 되는 민소매 상의로 여름철에 최적',
-    price: '₩30,000 - ₩80,000',
-    brands: ['Nike', 'Adidas', 'Under Armour', 'New Balance'],
-    features: ['최대 통풍', '가벼운 무게', '자외선 차단', '스트레치'],
-    suitableFor: ['여름', '초보자', '중급자', '상급자'],
-    icon: <Shirt className="w-5 h-5" />
+    name: '흡습속건 경기 셔츠',
+    summary: '땀 배출이 빠르고 움직임이 편한 기본 경기용 상의입니다.',
+    price: '4만~9만원',
+    tags: ['통기성', '빠른 건조', '스트레치'],
+    weather: ['sunny', 'hot', 'cloudy'],
+    levels: ['beginner', 'intermediate', 'advanced'],
+    icon: <Shirt className="w-5 h-5" />,
   },
   {
     category: '하의',
-    item: '테니스 스커트',
-    description: '움직임이 자유로운 테니스 전용 스커트',
-    price: '₩40,000 - ₩120,000',
-    brands: ['Nike', 'Adidas', 'Wilson', 'Babolat', 'Fila'],
-    features: ['편안한 착용감', '통풍성', 'UV 차단', '스트레치 소재'],
-    suitableFor: ['여성', '전체', '초보자', '중급자', '상급자'],
-    icon: <Shirt className="w-5 h-5" />
-  },
-  {
-    category: '하의',
-    item: '테니스 쇼츠',
-    description: '가볍고 통풍이 좋은 테니스 전용 쇼츠',
-    price: '₩35,000 - ₩90,000',
-    brands: ['Nike', 'Adidas', 'Under Armour', 'Puma', 'ASICS'],
-    features: ['가벼운 무게', '빠른 건조', '편안한 핏', '통풍 패널'],
-    suitableFor: ['남성', '전체', '초보자', '중급자', '상급자'],
-    icon: <Shirt className="w-5 h-5" />
+    name: '포켓 포함 쇼츠',
+    summary: '공 보관이 편하고 발이 많이 움직이는 플레이에 잘 맞는 하의입니다.',
+    price: '4만~8만원',
+    tags: ['볼 포켓', '경량', '유연성'],
+    weather: ['sunny', 'hot', 'windy'],
+    levels: ['beginner', 'intermediate', 'advanced'],
+    icon: <Shirt className="w-5 h-5" />,
   },
   {
     category: '신발',
-    item: '하드코트 전용 신발',
-    description: '하드코트 표면에 최적화된 쿠션과 그립력',
-    price: '₩120,000 - ₩250,000',
-    brands: ['Nike', 'Adidas', 'ASICS', 'New Balance', 'Puma'],
-    features: ['쿠션 시스템', '내구성 아웃솔', '안정성', '통풍성'],
-    suitableFor: ['하드코트', '전체', '초보자', '중급자', '상급자'],
-    icon: <Shirt className="w-5 h-5" />
+    name: '하드코트 안정화 슈즈',
+    summary: '옆 움직임이 많은 하드코트 플레이에서 발목 안정감이 좋은 모델입니다.',
+    price: '11만~19만원',
+    tags: ['안정감', '쿠셔닝', '내구성'],
+    weather: ['sunny', 'cloudy', 'windy'],
+    levels: ['intermediate', 'advanced'],
+    icon: <Shirt className="w-5 h-5" />,
   },
   {
     category: '신발',
-    item: '클레이코트 전용 신발',
-    description: '클레이 코트의 미끄러운 표면에 특화된 디자인',
-    price: '₩130,000 - ₩260,000',
-    brands: ['ASICS', 'Babolat', 'Head', 'Wilson', 'K-Swiss'],
-    features: ['미끄럼 방지', '내구성', '통풍성', '편안함'],
-    suitableFor: ['클레이코트', '전체', '초보자', '중급자', '상급자'],
-    icon: <Shirt className="w-5 h-5" />
+    name: '올코트 입문형 슈즈',
+    summary: '첫 장비를 맞추는 단계에서 부담 없이 고르기 좋은 균형형 모델입니다.',
+    price: '7만~12만원',
+    tags: ['입문용', '편안함', '범용성'],
+    weather: ['sunny', 'cloudy', 'windy'],
+    levels: ['beginner'],
+    icon: <Shirt className="w-5 h-5" />,
   },
   {
     category: '액세서리',
-    item: '테니스 선글라스',
-    description: '자외선과 눈부심으로부터 눈을 보호하는 스포츠 선글라스',
-    price: '₩80,000 - ₩200,000',
-    brands: ['Oakley', 'Tifosi', 'Suncloud', 'Native', 'Goodr'],
-    features: ['편광 렌즈', 'UV 차단', '가벼운 무게', '충격 흡수'],
-    suitableFor: ['햇빛 강한 날', '전체', '초보자', '중급자', '상급자'],
-    icon: <Glasses className="w-5 h-5" />
+    name: '챙 넓은 캡 또는 바이저',
+    summary: '햇빛이 강한 날 시야 확보와 땀 관리에 도움이 됩니다.',
+    price: '2만~5만원',
+    tags: ['자외선 차단', '시야 확보', '땀 흡수'],
+    weather: ['sunny', 'hot'],
+    levels: ['beginner', 'intermediate', 'advanced'],
+    icon: <Sun className="w-5 h-5" />,
   },
   {
     category: '액세서리',
-    item: '테니스 모자',
-    description: '햇볕과 땀을 막아주는 기능성 테니스 모자',
-    price: '₩25,000 - ₩60,000',
-    brands: ['Nike', 'Adidas', 'New Era', 'Wilson', 'Babolat'],
-    features: ['UV 차단', '흡습속건', '가벼운 무게', '조절 가능한 사이즈'],
-    suitableFor: ['햇빛 강한 날', '전체', '초보자', '중급자', '상급자'],
-    icon: <Sun className="w-5 h-5" />
-  }
+    name: '스포츠 선글라스',
+    summary: '강한 햇빛과 눈부심이 심한 환경에서 눈 피로를 줄여 줍니다.',
+    price: '6만~18만원',
+    tags: ['눈부심 감소', 'UV 차단', '가벼운 착용감'],
+    weather: ['sunny'],
+    levels: ['intermediate', 'advanced'],
+    icon: <Glasses className="w-5 h-5" />,
+  },
 ];
+
+const categories = ['상의', '하의', '신발', '액세서리'];
 
 export default function ApparelRecommendationPage() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [selectedWeather, setSelectedWeather] = useState<string>('sunny');
-  const [selectedSkill, setSelectedSkill] = useState<string>('intermediate');
-  const [budget, setBudget] = useState<string>('medium');
+  const [weather, setWeather] = useState('sunny');
+  const [level, setLevel] = useState('intermediate');
+  const [budget, setBudget] = useState('medium');
 
-  const categories = ['상의', '하의', '신발', '액세서리'];
-  const weatherOptions = [
-    { value: 'sunny', label: '화창함', icon: <Sun className="w-4 h-4" /> },
-    { value: 'cloudy', label: '흐림', icon: <Cloud className="w-4 h-4" /> },
-    { value: 'windy', label: '바람', icon: <Wind className="w-4 h-4" /> },
-    { value: 'hot', label: '더움', icon: <Thermometer className="w-4 h-4" /> }
-  ];
+  const filteredItems = useMemo(() => {
+    return apparelItems.filter((item) => {
+      const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(item.category);
+      const weatherMatch = item.weather.includes(weather);
+      const levelMatch = item.levels.includes(level);
 
-  const skillLevels = [
-    { value: 'beginner', label: '초보자' },
-    { value: 'intermediate', label: '중급자' },
-    { value: 'advanced', label: '상급자' }
-  ];
+      if (!categoryMatch || !weatherMatch || !levelMatch) {
+        return false;
+      }
 
-  const budgetOptions = [
-    { value: 'low', label: '저예산 (₩100,000 이하)' },
-    { value: 'medium', label: '중간 (₩100,000 - ₩200,000)' },
-    { value: 'high', label: '고예산 (₩200,000 이상)' }
-  ];
+      if (budget === 'low') {
+        return !item.price.includes('19만') && !item.price.includes('18만');
+      }
 
-  const recommendations = useMemo(() => {
-    let filtered = apparelData;
+      if (budget === 'high') {
+        return item.category === '신발' || item.category === '액세서리';
+      }
 
-    // 카테고리 필터링
-    if (selectedCategories.length > 0) {
-      filtered = filtered.filter(item => selectedCategories.includes(item.category));
-    }
+      return true;
+    });
+  }, [selectedCategories, weather, level, budget]);
 
-    // 날씨 기반 필터링
-    if (selectedWeather === 'hot') {
-      filtered = filtered.filter(item =>
-        item.features.includes('최대 통풍') ||
-        item.features.includes('통풍성') ||
-        item.category === '액세서리'
-      );
-    } else if (selectedWeather === 'sunny') {
-      filtered = filtered.filter(item =>
-        item.features.includes('UV 차단') ||
-        item.category === '액세서리'
-      );
-    }
-
-    // 실력 기반 필터링
-    if (selectedSkill === 'beginner') {
-      filtered = filtered.filter(item => item.suitableFor.includes('초보자'));
-    } else if (selectedSkill === 'advanced') {
-      filtered = filtered.filter(item => item.suitableFor.includes('상급자'));
-    }
-
-    // 예산 기반 필터링
-    if (budget === 'low') {
-      filtered = filtered.filter(item => {
-        const maxPrice = parseInt(item.price.split(' - ')[1].replace(/[^\d]/g, ''));
-        return maxPrice <= 100000;
-      });
-    } else if (budget === 'high') {
-      filtered = filtered.filter(item => {
-        const minPrice = parseInt(item.price.split(' - ')[0].replace(/[^\d]/g, ''));
-        return minPrice >= 150000;
-      });
-    }
-
-    return filtered;
-  }, [selectedCategories, selectedWeather, selectedSkill, budget]);
-
-  const handleCategoryChange = (category: string, checked: boolean) => {
-    if (checked) {
-      setSelectedCategories([...selectedCategories, category]);
-    } else {
-      setSelectedCategories(selectedCategories.filter(c => c !== category));
-    }
+  const toggleCategory = (category: string, checked: boolean) => {
+    setSelectedCategories((prev) => (checked ? [...prev, category] : prev.filter((item) => item !== category)));
   };
 
   return (
-    <div className="container mx-auto max-w-6xl px-4 py-12">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-text-light mb-4">테니스 의류 추천</h1>
-        <p className="text-text-muted text-lg max-w-2xl mx-auto">
-          플레이 스타일, 날씨, 예산에 맞는 최적의 테니스 의류를 추천해드립니다.
-        </p>
-      </div>
+    <div className="min-h-screen bg-[linear-gradient(180deg,_#fff7ed_0%,_#ffffff_35%,_#f8fafc_100%)]">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="rounded-[32px] bg-gradient-to-r from-orange-500 to-amber-400 px-8 py-10 text-white shadow-xl">
+          <Badge className="bg-white/15 text-white hover:bg-white/15">의류 추천</Badge>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">날씨와 경기 스타일에 맞는 테니스 의류 고르기</h1>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-orange-50">
+            브랜드보다 먼저 확인할 것은 코트 환경, 움직임, 땀 배출, 신발 안정감입니다. 조건을 고르면
+            현재 상황에 맞는 의류와 액세서리를 빠르게 추릴 수 있습니다.
+          </p>
+        </section>
 
-      {/* Filters */}
-      <Card className="mb-8 bg-content-dark border-white/10">
-        <CardHeader>
-          <CardTitle className="text-text-light">추천 조건 설정</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          {/* Category Selection */}
-          <div>
-            <Label className="text-text-light font-medium mb-3 block">원하는 카테고리</Label>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {categories.map(category => (
-                <div key={category} className="flex items-center space-x-2">
-                  <Checkbox
-                    id={category}
-                    checked={selectedCategories.includes(category)}
-                    onCheckedChange={(checked) => handleCategoryChange(category, checked as boolean)}
-                  />
-                  <Label htmlFor={category} className="text-text-muted cursor-pointer">
-                    {category}
-                  </Label>
+        <section className="mt-8 grid gap-8 lg:grid-cols-[320px_minmax(0,1fr)]">
+          <Card className="border-slate-200 bg-white shadow-sm">
+            <CardHeader>
+              <CardTitle>추천 조건</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div>
+                <p className="mb-3 text-sm font-medium text-slate-500">카테고리</p>
+                <div className="space-y-3">
+                  {categories.map((category) => (
+                    <div key={category} className="flex items-center gap-2">
+                      <Checkbox
+                        id={category}
+                        checked={selectedCategories.includes(category)}
+                        onCheckedChange={(checked) => toggleCategory(category, checked === true)}
+                      />
+                      <Label htmlFor={category}>{category}</Label>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Weather Selection */}
-          <div>
-            <Label className="text-text-light font-medium mb-3 block">날씨 조건</Label>
-            <RadioGroup value={selectedWeather} onValueChange={setSelectedWeather}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {weatherOptions.map(option => (
-                  <div key={option.value} className="flex items-center space-x-2">
-                    <RadioGroupItem value={option.value} id={option.value} />
-                    <Label htmlFor={option.value} className="text-text-muted cursor-pointer flex items-center gap-2">
-                      {option.icon}
-                      {option.label}
-                    </Label>
-                  </div>
-                ))}
               </div>
-            </RadioGroup>
-          </div>
 
-          {/* Skill Level */}
-          <div>
-            <Label className="text-text-light font-medium mb-3 block">실력 수준</Label>
-            <RadioGroup value={selectedSkill} onValueChange={setSelectedSkill}>
-              <div className="grid grid-cols-3 gap-3">
-                {skillLevels.map(option => (
-                  <div key={option.value} className="flex items-center space-x-2">
-                    <RadioGroupItem value={option.value} id={`skill-${option.value}`} />
-                    <Label htmlFor={`skill-${option.value}`} className="text-text-muted cursor-pointer">
-                      {option.label}
-                    </Label>
+              <div>
+                <p className="mb-3 text-sm font-medium text-slate-500">날씨</p>
+                <RadioGroup value={weather} onValueChange={setWeather} className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="sunny" id="weather-sunny" />
+                    <Label htmlFor="weather-sunny" className="flex items-center gap-2"><Sun className="w-4 h-4" />맑음</Label>
                   </div>
-                ))}
-              </div>
-            </RadioGroup>
-          </div>
-
-          {/* Budget */}
-          <div>
-            <Label className="text-text-light font-medium mb-3 block">예산 범위</Label>
-            <RadioGroup value={budget} onValueChange={setBudget}>
-              <div className="space-y-2">
-                {budgetOptions.map(option => (
-                  <div key={option.value} className="flex items-center space-x-2">
-                    <RadioGroupItem value={option.value} id={`budget-${option.value}`} />
-                    <Label htmlFor={`budget-${option.value}`} className="text-text-muted cursor-pointer">
-                      {option.label}
-                    </Label>
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="cloudy" id="weather-cloudy" />
+                    <Label htmlFor="weather-cloudy" className="flex items-center gap-2"><Cloud className="w-4 h-4" />흐림</Label>
                   </div>
-                ))}
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="windy" id="weather-windy" />
+                    <Label htmlFor="weather-windy" className="flex items-center gap-2"><Wind className="w-4 h-4" />바람 강함</Label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="hot" id="weather-hot" />
+                    <Label htmlFor="weather-hot" className="flex items-center gap-2"><Thermometer className="w-4 h-4" />무더움</Label>
+                  </div>
+                </RadioGroup>
               </div>
-            </RadioGroup>
-          </div>
-        </CardContent>
-      </Card>
 
-      {/* Results */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold text-text-light mb-4">
-          추천 의류 ({recommendations.length}개)
-        </h2>
+              <div>
+                <p className="mb-3 text-sm font-medium text-slate-500">실력 수준</p>
+                <RadioGroup value={level} onValueChange={setLevel} className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="beginner" id="level-beginner" />
+                    <Label htmlFor="level-beginner">입문</Label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="intermediate" id="level-intermediate" />
+                    <Label htmlFor="level-intermediate">중급</Label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="advanced" id="level-advanced" />
+                    <Label htmlFor="level-advanced">상급</Label>
+                  </div>
+                </RadioGroup>
+              </div>
 
-        {recommendations.length === 0 ? (
-          <Card className="bg-content-dark border-white/10">
-            <CardContent className="p-8 text-center">
-              <p className="text-text-muted">
-                선택한 조건에 맞는 의류가 없습니다. 조건을 조정해 보세요.
-              </p>
+              <div>
+                <p className="mb-3 text-sm font-medium text-slate-500">예산</p>
+                <RadioGroup value={budget} onValueChange={setBudget} className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="low" id="budget-low" />
+                    <Label htmlFor="budget-low">가성비 우선</Label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="medium" id="budget-medium" />
+                    <Label htmlFor="budget-medium">균형형</Label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="high" id="budget-high" />
+                    <Label htmlFor="budget-high">성능 우선</Label>
+                  </div>
+                </RadioGroup>
+              </div>
             </CardContent>
           </Card>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recommendations.map((item, index) => (
-              <Card key={index} className="bg-content-dark border-white/10 hover:border-primary/50 transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="text-primary">
-                      {item.icon}
-                    </div>
-                    <div className="flex-1">
-                      <Badge className="bg-primary/20 text-primary mb-2">
-                        {item.category}
-                      </Badge>
-                      <h3 className="text-lg font-semibold text-text-light mb-2">
-                        {item.item}
-                      </h3>
-                      <p className="text-text-muted text-sm mb-3">
-                        {item.description}
-                      </p>
-                      <p className="text-primary font-medium mb-3">
-                        {item.price}
-                      </p>
-                    </div>
-                  </div>
 
-                  <div className="space-y-3">
-                    <div>
-                      <p className="text-sm text-text-muted mb-1">추천 브랜드</p>
-                      <div className="flex flex-wrap gap-1">
-                        {item.brands.slice(0, 3).map(brand => (
-                          <Badge key={brand} variant="outline" className="text-xs bg-background-dark border-white/5">
-                            {brand}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-bold text-slate-900">추천 결과</h2>
+              <Badge variant="outline">{filteredItems.length}개 항목</Badge>
+            </div>
 
-                    <div>
-                      <p className="text-sm text-text-muted mb-1">주요 특징</p>
-                      <div className="flex flex-wrap gap-1">
-                        {item.features.slice(0, 3).map(feature => (
-                          <Badge key={feature} variant="outline" className="text-xs bg-background-dark border-white/5">
-                            {feature}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <Button className="w-full mt-4 bg-primary text-background-dark hover:bg-primary/90">
-                    자세히 보기
-                  </Button>
+            {filteredItems.length === 0 ? (
+              <Card className="border-dashed border-slate-300 bg-white">
+                <CardContent className="p-10 text-center text-slate-600">
+                  현재 조건에는 맞는 추천이 없습니다. 카테고리를 줄이거나 예산 조건을 넓혀 보세요.
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        )}
-      </div>
+            ) : (
+              <div className="grid gap-6 md:grid-cols-2">
+                {filteredItems.map((item) => (
+                  <Card key={item.name} className="border-slate-200 bg-white shadow-sm">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-100 text-orange-600">
+                          {item.icon}
+                        </div>
+                        <div className="flex-1">
+                          <Badge className="bg-slate-100 text-slate-700 hover:bg-slate-100">{item.category}</Badge>
+                          <h3 className="mt-3 text-lg font-semibold text-slate-900">{item.name}</h3>
+                          <p className="mt-2 text-sm leading-6 text-slate-600">{item.summary}</p>
+                          <p className="mt-3 font-semibold text-orange-600">{item.price}</p>
+                        </div>
+                      </div>
 
-      {/* Tips */}
-      <Card className="bg-content-dark border-white/10">
-        <CardHeader>
-          <CardTitle className="text-text-light">테니스 의류 선택 팁</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">기능성 우선</h4>
-              <p className="text-text-muted text-sm">
-                테니스 의류는 패션보다 기능이 중요합니다. 흡습속건, UV 차단, 통풍성 등을 우선 고려하세요.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">코트별 선택</h4>
-              <p className="text-text-muted text-sm">
-                플레이하는 코트 표면에 맞는 의류를 선택하세요. 클레이 코트는 밝은 색, 하드 코트는 편안한 착용감을 우선하세요.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">계절 고려</h4>
-              <p className="text-text-muted text-sm">
-                여름에는 가벼운 소재, 겨울에는 보온성과 흡습속건 기능이 좋은 의류를 선택하세요.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">품질 확인</h4>
-              <p className="text-text-muted text-sm">
-                유명 브랜드나 검증된 품질의 제품을 선택하세요. 처음에는 저렴한 제품으로 시작해 점차 업그레이드하세요.
-              </p>
-            </div>
+                      <div className="mt-5">
+                        <p className="mb-2 text-sm font-medium text-slate-500">핵심 포인트</p>
+                        <div className="flex flex-wrap gap-2">
+                          {item.tags.map((tag) => (
+                            <Badge key={tag} variant="outline">{tag}</Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      <Button className="mt-5 w-full bg-orange-500 text-white hover:bg-orange-600">
+                        이 조건으로 기억해두기
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+
+            <Card className="border-slate-200 bg-slate-50">
+              <CardHeader>
+                <CardTitle>선택 팁</CardTitle>
+              </CardHeader>
+              <CardContent className="grid gap-4 md:grid-cols-3">
+                <div>
+                  <p className="font-semibold text-slate-900">상의</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">더운 날에는 디자인보다 통기성과 땀 배출 속도를 먼저 보세요.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">신발</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">신발은 코트 타입과 발목 안정성이 우선이며, 입문자는 과한 스펙보다 편안함이 중요합니다.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">액세서리</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">햇빛이 강한 날은 모자와 선글라스만으로도 체감 집중력이 크게 달라집니다.</p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </CardContent>
-      </Card>
+        </section>
+      </div>
     </div>
   );
 }

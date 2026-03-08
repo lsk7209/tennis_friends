@@ -15,11 +15,11 @@
 13. 벽치기 드릴 플래너 | practice-wall-drill-planner | Training
 14. 대회 예산 계산기 | tournament-budget-calculator | Planning
 15. 코트 표면 추천기 | court-surface-advisor | Strategy
-16. 랠리 일관성 트래커 | rally-consistency-tracker | Analysis
+16. 랠리 일관성 트래커 | rally-consistency-tracker | Training
 17. 범실 분석기 | unforced-error-audit | Analysis
 18. 경기 영상 리뷰 템플릿 | match-video-review-template | Analysis
-19. 목표 연속 달성 트래커 | tennis-goal-streak-tracker | Habit
-20. 장비 관리 스케줄러 | equipment-maintenance-scheduler | Equipment
+19. 테니스 목표 연속 달성 트래커 | tennis-goal-streak-tracker | Training
+20. 장비 관리 스케줄러 | equipment-maintenance-scheduler | Planning
 21. 그립 사이즈 체커 | grip-size-checker | Equipment
 22. 오버그립 교체 알림 | overgrip-replacement-reminder | Equipment
 23. 스트링 교체 알림 | string-replacement-reminder | Equipment

@@ -3,69 +3,77 @@ import Link from "next/link";
 import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "복식 포지셔닝 시뮬레이터",
-  description: "복식 포지셔닝 시뮬레이터 utility for tennis players who want a clearer workflow and faster decisions.",
+  title: "복식 포지셔닝 가이드",
+  description:
+    "서브 상황, 리턴 상황, 로브 대응에서 복식 포지셔닝 원칙을 정리한 테니스 전술 가이드입니다.",
   path: "/utility/doubles-positioning-simulator",
   type: "website",
-  tags: ["tennis utility", "Doubles", "복식 포지셔닝 시뮬레이터"],
+  tags: ["복식 포지셔닝", "복식 전술", "테니스 복식"],
 });
 
-const sections = [
+const patterns = [
   {
-    "id": "overview",
-    "heading": "What It Does",
-    "body": "복식 포지셔닝 시뮬레이터 is designed to turn a vague tennis problem into a clear next action. Instead of broad advice, it focuses on one decision area and gives the user a practical frame to work with."
+    title: "서브 상황",
+    detail: "서버 파트너는 전위 압박 타이밍을 잡고, 서버는 첫 볼 방향까지 같이 설계해야 합니다.",
   },
   {
-    "id": "inputs",
-    "heading": "Recommended Inputs",
-    "body": "The most useful version of 복식 포지셔닝 시뮬레이터 starts with realistic inputs: current level, recent playing volume, surface context, and the match or training goal. That keeps the output useful rather than generic."
+    title: "리턴 상황",
+    detail: "리턴 후에는 중앙 회복 위치를 빨리 잡아야 다음 전위 움직임에 대응할 수 있습니다.",
   },
   {
-    "id": "use-cases",
-    "heading": "Best Use Cases",
-    "body": "복식 포지셔닝 시뮬레이터 is most valuable before training, before match play, or during weekly review. It works best when used as part of a repeatable process instead of a one-time check."
+    title: "로브 대응",
+    detail: "뒤로 물러날 사람과 중앙 커버를 맡을 사람을 즉시 나눠야 공백이 생기지 않습니다.",
   },
-  {
-    "id": "next-step",
-    "heading": "Next Step",
-    "body": "After using 복식 포지셔닝 시뮬레이터, the next step should be simple: update one plan, change one practice focus, or test one tactical decision. That is how a utility in the Doubles category creates measurable improvement."
-  }
 ] as const;
 
-export default function Page() {
+const rules = [
+  "두 선수 간 거리가 너무 벌어지지 않도록 중앙 커버를 우선한다.",
+  "전위가 움직일 때 후위는 빈 공간을 메우는 습관을 갖는다.",
+  "포인트 전 한 가지 신호만 맞춰도 포칭 성공률이 올라간다.",
+] as const;
+
+export default function DoublesPositioningSimulatorPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-12">
-      <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Doubles</p>
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">복식 포지셔닝 시뮬레이터</h1>
-        <p className="max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-300">
-          복식 포지셔닝 시뮬레이터 is now available as part of the TennisFriends utility expansion set. This first version is structured to help users understand the workflow, expected inputs, and practical next actions.
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+      <section className="rounded-3xl border border-indigo-100 bg-gradient-to-br from-indigo-50 via-white to-sky-50 p-8 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-700">Doubles Utility</p>
+        <h1 className="mt-3 text-3xl font-bold text-gray-900">복식 포지셔닝 가이드</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-gray-700">
+          복식에서는 샷 하나보다 두 사람이 어디를 지키고 있는지가 더 중요할 때가 많습니다. 이 페이지는 서브,
+          리턴, 로브 상황에서 기본적으로 지켜야 할 포지셔닝 원칙을 정리합니다.
         </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/utility/doubles-chemistry-test"
+            className="rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white"
+          >
+            복식 궁합 보기
+          </Link>
+          <Link
+            href="/utility/partner-compatibility-check"
+            className="rounded-full border border-indigo-600 px-5 py-2.5 text-sm font-semibold text-indigo-700"
+          >
+            파트너 체크 보기
+          </Link>
+        </div>
+      </section>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
-            <article key={section.id} className="rounded-2xl border border-gray-200 p-5 dark:border-gray-700">
-              <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">{section.heading}</h2>
-              <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">{section.body}</p>
-            </article>
+      <section className="grid gap-6 md:grid-cols-3">
+        {patterns.map((pattern) => (
+          <article key={pattern.title} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-bold text-gray-900">{pattern.title}</h2>
+            <p className="mt-4 text-sm leading-6 text-gray-700">{pattern.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="rounded-3xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900">포지셔닝 원칙</h2>
+        <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+          {rules.map((rule) => (
+            <li key={rule}>{rule}</li>
           ))}
-        </div>
-
-        <div className="mt-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-800">
-          <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Suggested Follow-Up</h2>
-          <p className="mb-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
-            Pair this utility with a planning or analysis tool so the result turns into a repeatable training action.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/utility/training-planner" className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white">
-              Training Planner
-            </Link>
-            <Link href="/utility/match-analyzer" className="rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600">
-              Match Analyzer
-            </Link>
-          </div>
-        </div>
+        </ul>
       </section>
     </main>
   );

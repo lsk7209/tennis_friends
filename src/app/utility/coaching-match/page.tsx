@@ -1,532 +1,292 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { useMemo, useState } from 'react';
+import { Award, Calendar, MapPin, MessageCircle, Star, Users } from 'lucide-react';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Star, MapPin, Clock, Users, Award, MessageCircle, Calendar } from 'lucide-react';
 
 interface Coach {
   id: string;
   name: string;
-  image: string;
+  location: string;
   rating: number;
   reviews: number;
-  location: string;
   experience: number;
   specialties: string[];
-  certifications: string[];
-  languages: string[];
+  lessonType: string[];
   pricePerHour: number;
-  availability: string[];
-  description: string;
-  achievements: string[];
+  intro: string;
 }
 
-const sampleCoaches: Coach[] = [
+const coaches: Coach[] = [
   {
-    id: '1',
-    name: '김프로 코치',
-    image: '/images/coach-kim.jpg',
+    id: 'kim',
+    name: '김도윤 코치',
+    location: '서울 강남',
     rating: 4.9,
-    reviews: 247,
-    location: '서울 강남구',
-    experience: 15,
-    specialties: ['포핸드 기술', '전략 지도', '토너먼트 준비'],
-    certifications: ['USPTA 인증', '코리아 테니스 협회'],
-    languages: ['한국어', '영어'],
+    reviews: 128,
+    experience: 14,
+    specialties: ['서브', '경기 운영', '입문 교정'],
+    lessonType: ['평일 저녁', '주말 오전'],
     pricePerHour: 80000,
-    availability: ['주중 오전', '주말 오후'],
-    description: '15년 경력의 프로 코치입니다. 초보자부터 프로 선수까지 다양한 레벨의 선수들을 지도해왔습니다.',
-    achievements: ['전국 대회 우승 5회', '국가대표 코치 경력', '수많은 프로 선수 배출']
+    intro: '서브 리듬과 랠리 패턴 교정에 강한 코치로, 성인 입문자와 동호인 레슨 비중이 높습니다.',
   },
   {
-    id: '2',
-    name: '박테니스 코치',
-    image: '/images/coach-park.jpg',
-    rating: 4.7,
-    reviews: 189,
-    location: '서울 송파구',
-    experience: 12,
-    specialties: ['백핸드 기술', '체력 트레이닝', '멘탈 코칭'],
-    certifications: ['PTR 인증', '스포츠 심리학 자격증'],
-    languages: ['한국어', '일본어'],
-    pricePerHour: 70000,
-    availability: ['주중 오후', '주말 종일'],
-    description: '선수 출신 코치로 현장 경험을 바탕으로 실전 중심의 지도를 제공합니다.',
-    achievements: ['아시안게임 동메달', '대학 테니스 감독', '청소년 선수 육성 전문']
-  },
-  {
-    id: '3',
-    name: '이코칭 코치',
-    image: '/images/coach-lee.jpg',
+    id: 'lee',
+    name: '이서준 코치',
+    location: '분당',
     rating: 4.8,
-    reviews: 156,
-    location: '부산 해운대구',
+    reviews: 96,
     experience: 10,
-    specialties: ['서브 기술', '풋워크', '초보자 지도'],
-    certifications: ['USPTA 인증', '테니스 코칭 자격증'],
-    languages: ['한국어'],
-    pricePerHour: 60000,
-    availability: ['주중 종일', '주말 오전'],
-    description: '친절하고 세심한 지도로 초보자들에게 특히 인기가 많습니다.',
-    achievements: ['지역 대회 우승', '초보자 교육 전문', '5년 연속 우수 코치 선정']
+    specialties: ['백핸드', '풋워크', '주니어 육성'],
+    lessonType: ['평일 오전', '주말 오후'],
+    pricePerHour: 70000,
+    intro: '기본기와 발 움직임을 정리하는 수업이 강점이며, 영상 피드백을 함께 제공합니다.',
   },
   {
-    id: '4',
-    name: '최프로 코치',
-    image: '/images/coach-choi.jpg',
-    rating: 5.0,
-    reviews: 98,
-    location: '인천 남동구',
+    id: 'park',
+    name: '박하린 코치',
+    location: '송파',
+    rating: 4.7,
+    reviews: 84,
     experience: 8,
-    specialties: ['더블스 전략', '대회 준비', '기술 분석'],
-    certifications: ['ITF 코치 자격증', '데이터 분석 인증'],
-    languages: ['한국어', '영어', '중국어'],
+    specialties: ['복식 포지션', '네트 플레이', '여성 레슨'],
+    lessonType: ['평일 저녁', '주말 종일'],
+    pricePerHour: 65000,
+    intro: '복식 포메이션과 실전 의사결정 훈련을 세밀하게 잡아 주는 스타일입니다.',
+  },
+  {
+    id: 'choi',
+    name: '최민재 코치',
+    location: '인천',
+    rating: 5.0,
+    reviews: 41,
+    experience: 12,
+    specialties: ['대회 준비', '멘탈 루틴', '전술 분석'],
+    lessonType: ['주말 종일', '평일 오후'],
     pricePerHour: 90000,
-    availability: ['주말 종일', '공휴일'],
-    description: '데이터 기반 분석을 활용한 현대적인 코칭을 제공합니다.',
-    achievements: ['국제 대회 입상', '코칭 앱 개발', '연구 논문 발표']
-  }
+    intro: '시합 준비 루틴과 패턴 분석에 강하며, 대회 직전 단기 집중 코칭 수요가 많습니다.',
+  },
 ];
 
 export default function CoachingMatchPage() {
-  const [selectedLocation, setSelectedLocation] = useState<string>('all');
-  const [selectedSpecialty, setSelectedSpecialty] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [selectedExperience, setSelectedExperience] = useState<string>('all');
-  const [selectedAvailability, setSelectedAvailability] = useState<string>('all');
-  const [coachingGoals, setCoachingGoals] = useState<string>('');
+  const [region, setRegion] = useState('all');
+  const [focus, setFocus] = useState('all');
+  const [budget, setBudget] = useState('all');
+  const [time, setTime] = useState('all');
+  const [goalNote, setGoalNote] = useState('');
 
-  const locations = [
-    { value: 'all', label: '전체 지역' },
-    { value: '서울', label: '서울' },
-    { value: '부산', label: '부산' },
-    { value: '인천', label: '인천' },
-    { value: '경기', label: '경기' }
-  ];
-
-  const specialties = [
-    { value: 'all', label: '전체 전문 분야' },
-    { value: '포핸드 기술', label: '포핸드 기술' },
-    { value: '백핸드 기술', label: '백핸드 기술' },
-    { value: '서브 기술', label: '서브 기술' },
-    { value: '전략 지도', label: '전략 지도' },
-    { value: '체력 트레이닝', label: '체력 트레이닝' },
-    { value: '초보자 지도', label: '초보자 지도' }
-  ];
-
-  const priceRanges = [
-    { value: 'all', label: '전체 가격' },
-    { value: '50000', label: '5만원 이하' },
-    { value: '50000-70000', label: '5-7만원' },
-    { value: '70000-90000', label: '7-9만원' },
-    { value: '90000', label: '9만원 이상' }
-  ];
-
-  const experienceLevels = [
-    { value: 'all', label: '전체 경력' },
-    { value: '5', label: '5년 이하' },
-    { value: '5-10', label: '5-10년' },
-    { value: '10', label: '10년 이상' }
-  ];
-
-  const availabilityOptions = [
-    { value: 'all', label: '전체 시간' },
-    { value: 'weekday-morning', label: '주중 오전' },
-    { value: 'weekday-afternoon', label: '주중 오후' },
-    { value: 'weekend', label: '주말' },
-    { value: 'evening', label: '저녁' }
-  ];
-
-  const filteredCoaches = useMemo(() => {
-    return sampleCoaches.filter(coach => {
-      // 지역 필터
-      if (selectedLocation !== 'all' && !coach.location.includes(selectedLocation)) {
-        return false;
-      }
-
-      // 전문 분야 필터
-      if (selectedSpecialty !== 'all' && !coach.specialties.includes(selectedSpecialty)) {
-        return false;
-      }
-
-      // 가격 범위 필터
-      if (selectedPriceRange !== 'all') {
-        const price = coach.pricePerHour;
-        switch (selectedPriceRange) {
-          case '50000':
-            if (price > 50000) return false;
-            break;
-          case '50000-70000':
-            if (price < 50000 || price > 70000) return false;
-            break;
-          case '70000-90000':
-            if (price < 70000 || price > 90000) return false;
-            break;
-          case '90000':
-            if (price < 90000) return false;
-            break;
-        }
-      }
-
-      // 경력 필터
-      if (selectedExperience !== 'all') {
-        const exp = coach.experience;
-        switch (selectedExperience) {
-          case '5':
-            if (exp > 5) return false;
-            break;
-          case '5-10':
-            if (exp < 5 || exp > 10) return false;
-            break;
-          case '10':
-            if (exp < 10) return false;
-            break;
-        }
-      }
-
-      // 시간대 필터
-      if (selectedAvailability !== 'all') {
-        const hasMatchingTime = coach.availability.some(time => {
-          switch (selectedAvailability) {
-            case 'weekday-morning':
-              return time.includes('주중 오전');
-            case 'weekday-afternoon':
-              return time.includes('주중 오후');
-            case 'weekend':
-              return time.includes('주말');
-            case 'evening':
-              return time.includes('저녁');
-            default:
-              return false;
-          }
-        });
-        if (!hasMatchingTime) return false;
-      }
-
+  const filtered = useMemo(() => {
+    return coaches.filter((coach) => {
+      if (region !== 'all' && !coach.location.includes(region)) return false;
+      if (focus !== 'all' && !coach.specialties.includes(focus)) return false;
+      if (budget === 'under70' && coach.pricePerHour > 70000) return false;
+      if (budget === '70to80' && (coach.pricePerHour < 70000 || coach.pricePerHour > 80000)) return false;
+      if (budget === 'over80' && coach.pricePerHour < 80000) return false;
+      if (time !== 'all' && !coach.lessonType.some((slot) => slot.includes(time))) return false;
       return true;
     });
-  }, [selectedLocation, selectedSpecialty, selectedPriceRange, selectedExperience, selectedAvailability]);
+  }, [budget, focus, region, time]);
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('ko-KR', {
-      style: 'currency',
-      currency: 'KRW',
-      minimumFractionDigits: 0
-    }).format(price);
-  };
+  const formatPrice = (price: number) =>
+    new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW', maximumFractionDigits: 0 }).format(price);
 
   return (
-    <div className="container mx-auto max-w-7xl px-4 py-12">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-text-light mb-4">테니스 코칭 매칭</h1>
-        <p className="text-text-muted text-lg max-w-2xl mx-auto">
-          당신의 목표와 스타일에 맞는 최고의 테니스 코치를 찾아보세요.
-          전문 코치들과의 1:1 매칭 서비스입니다.
-        </p>
-      </div>
+    <div className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)]">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="rounded-[32px] bg-slate-900 px-8 py-10 text-white shadow-2xl">
+          <Badge className="bg-white/10 text-white hover:bg-white/10">코칭 매칭</Badge>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">내 목표에 맞는 테니스 코치 찾기</h1>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+            레슨은 유명한 코치를 고르는 것보다 내 목표와 시간대, 예산에 맞는 코치를 찾는 것이 더 중요합니다.
+            조건을 좁혀 현재 상황에 맞는 후보를 빠르게 확인해 보세요.
+          </p>
+        </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Filters Sidebar */}
-        <div className="space-y-6">
-          <Card className="bg-content-dark border-white/10">
+        <section className="mt-8 grid gap-8 lg:grid-cols-[320px_minmax(0,1fr)]">
+          <Card className="border-slate-200 bg-white shadow-sm">
             <CardHeader>
-              <CardTitle className="text-text-light">코칭 조건 설정</CardTitle>
+              <CardTitle>매칭 조건</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              {/* Location */}
               <div>
-                <Label className="text-text-light font-medium mb-2 block">지역</Label>
-                <Select value={selectedLocation} onValueChange={setSelectedLocation}>
-                  <SelectTrigger className="bg-background-dark border-white/10">
-                    <SelectValue />
-                  </SelectTrigger>
+                <Label className="mb-2 block">지역</Label>
+                <Select value={region} onValueChange={setRegion}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
-                    {locations.map(location => (
-                      <SelectItem key={location.value} value={location.value}>
-                        {location.label}
-                      </SelectItem>
-                    ))}
+                    <SelectItem value="all">전체</SelectItem>
+                    <SelectItem value="서울">서울</SelectItem>
+                    <SelectItem value="분당">분당</SelectItem>
+                    <SelectItem value="송파">송파</SelectItem>
+                    <SelectItem value="인천">인천</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
-              {/* Specialty */}
               <div>
-                <Label className="text-text-light font-medium mb-2 block">전문 분야</Label>
-                <Select value={selectedSpecialty} onValueChange={setSelectedSpecialty}>
-                  <SelectTrigger className="bg-background-dark border-white/10">
-                    <SelectValue />
-                  </SelectTrigger>
+                <Label className="mb-2 block">집중 분야</Label>
+                <Select value={focus} onValueChange={setFocus}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
-                    {specialties.map(specialty => (
-                      <SelectItem key={specialty.value} value={specialty.value}>
-                        {specialty.label}
-                      </SelectItem>
-                    ))}
+                    <SelectItem value="all">전체</SelectItem>
+                    <SelectItem value="서브">서브</SelectItem>
+                    <SelectItem value="백핸드">백핸드</SelectItem>
+                    <SelectItem value="복식 포지션">복식 포지션</SelectItem>
+                    <SelectItem value="대회 준비">대회 준비</SelectItem>
+                    <SelectItem value="입문 교정">입문 교정</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
-              {/* Price Range */}
               <div>
-                <Label className="text-text-light font-medium mb-2 block">시간당 가격</Label>
-                <RadioGroup value={selectedPriceRange} onValueChange={setSelectedPriceRange}>
-                  <div className="space-y-2">
-                    {priceRanges.map(range => (
-                      <div key={range.value} className="flex items-center space-x-2">
-                        <RadioGroupItem value={range.value} id={`price-${range.value}`} />
-                        <Label htmlFor={`price-${range.value}`} className="text-text-muted cursor-pointer">
-                          {range.label}
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
-                </RadioGroup>
+                <Label className="mb-2 block">예산</Label>
+                <Select value={budget} onValueChange={setBudget}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">전체</SelectItem>
+                    <SelectItem value="under70">7만원 이하</SelectItem>
+                    <SelectItem value="70to80">7만~8만원</SelectItem>
+                    <SelectItem value="over80">8만원 이상</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
-              {/* Experience */}
               <div>
-                <Label className="text-text-light font-medium mb-2 block">코치 경력</Label>
-                <RadioGroup value={selectedExperience} onValueChange={setSelectedExperience}>
-                  <div className="space-y-2">
-                    {experienceLevels.map(level => (
-                      <div key={level.value} className="flex items-center space-x-2">
-                        <RadioGroupItem value={level.value} id={`exp-${level.value}`} />
-                        <Label htmlFor={`exp-${level.value}`} className="text-text-muted cursor-pointer">
-                          {level.label}
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
-                </RadioGroup>
+                <Label className="mb-2 block">가능 시간</Label>
+                <Select value={time} onValueChange={setTime}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">전체</SelectItem>
+                    <SelectItem value="평일 오전">평일 오전</SelectItem>
+                    <SelectItem value="평일 오후">평일 오후</SelectItem>
+                    <SelectItem value="평일 저녁">평일 저녁</SelectItem>
+                    <SelectItem value="주말">주말</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
-              {/* Availability */}
               <div>
-                <Label className="text-text-light font-medium mb-2 block">선호 시간대</Label>
-                <RadioGroup value={selectedAvailability} onValueChange={setSelectedAvailability}>
-                  <div className="space-y-2">
-                    {availabilityOptions.map(option => (
-                      <div key={option.value} className="flex items-center space-x-2">
-                        <RadioGroupItem value={option.value} id={`avail-${option.value}`} />
-                        <Label htmlFor={`avail-${option.value}`} className="text-text-muted cursor-pointer">
-                          {option.label}
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
-                </RadioGroup>
-              </div>
-
-              {/* Goals */}
-              <div>
-                <Label className="text-text-light font-medium mb-2 block">코칭 목표 (선택)</Label>
+                <Label htmlFor="goal-note" className="mb-2 block">코칭 목표 메모</Label>
                 <Textarea
-                  placeholder="예: 포핸드 개선, 대회 준비, 체력 향상 등"
-                  value={coachingGoals}
-                  onChange={(e) => setCoachingGoals(e.target.value)}
-                  className="bg-background-dark border-white/10"
-                  rows={3}
+                  id="goal-note"
+                  value={goalNote}
+                  onChange={(event) => setGoalNote(event.target.value)}
+                  placeholder="예: 세컨드 서브 불안, 복식 포지션 정리, 대회 전 4주 집중"
+                  rows={4}
                 />
               </div>
             </CardContent>
           </Card>
-        </div>
 
-        {/* Coaches List */}
-        <div className="lg:col-span-2">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-text-light mb-2">
-              추천 코치 ({filteredCoaches.length}명)
-            </h2>
-            {filteredCoaches.length > 0 && (
-              <p className="text-text-muted">
-                조건에 맞는 코치를 찾았습니다. 프로필을 확인하고 문의해보세요.
-              </p>
-            )}
-          </div>
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-bold text-slate-900">추천 코치</h2>
+              <Badge variant="outline">{filtered.length}명</Badge>
+            </div>
 
-          {filteredCoaches.length === 0 ? (
-            <Card className="bg-content-dark border-white/10">
-              <CardContent className="p-12 text-center">
-                <Users className="w-16 h-16 text-text-muted mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-text-light mb-2">조건에 맞는 코치가 없습니다</h3>
-                <p className="text-text-muted">
-                  검색 조건을 조정하거나 다른 지역의 코치를 확인해보세요.
-                </p>
-              </CardContent>
-            </Card>
-          ) : (
-            <div className="space-y-6">
-              {filteredCoaches.map((coach) => (
-                <Card key={coach.id} className="bg-content-dark border-white/10 hover:border-primary/50 transition-all duration-300">
+            {filtered.length === 0 ? (
+              <Card className="border-dashed border-slate-300 bg-white">
+                <CardContent className="p-10 text-center text-slate-600">
+                  현재 조건에 맞는 코치가 없습니다. 예산이나 시간대를 조금 넓혀 보세요.
+                </CardContent>
+              </Card>
+            ) : (
+              filtered.map((coach) => (
+                <Card key={coach.id} className="border-slate-200 bg-white shadow-sm">
                   <CardContent className="p-6">
-                    <div className="flex flex-col md:flex-row gap-6">
-                      {/* Coach Info */}
-                      <div className="flex-1">
-                        <div className="flex items-start gap-4 mb-4">
-                          <Avatar className="w-16 h-16">
-                            <AvatarImage src={coach.image} alt={coach.name} />
-                            <AvatarFallback className="bg-primary text-background-dark">
-                              {coach.name.charAt(0)}
-                            </AvatarFallback>
-                          </Avatar>
-                          <div className="flex-1">
-                            <h3 className="text-xl font-bold text-text-light mb-1">{coach.name}</h3>
-                            <div className="flex items-center gap-4 mb-2">
-                              <div className="flex items-center gap-1">
-                                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                                <span className="text-text-light font-medium">{coach.rating}</span>
-                                <span className="text-text-muted">({coach.reviews})</span>
-                              </div>
-                              <div className="flex items-center gap-1 text-text-muted">
-                                <MapPin className="w-4 h-4" />
-                                {coach.location}
-                              </div>
-                              <div className="flex items-center gap-1 text-text-muted">
-                                <Award className="w-4 h-4" />
-                                {coach.experience}년
-                              </div>
-                            </div>
-                            <p className="text-text-muted text-sm mb-3">{coach.description}</p>
-                            <div className="flex flex-wrap gap-1 mb-3">
-                              {coach.specialties.slice(0, 3).map(specialty => (
-                                <Badge key={specialty} className="bg-primary/20 text-primary">
-                                  {specialty}
-                                </Badge>
-                              ))}
+                    <div className="flex flex-col gap-6 md:flex-row">
+                      <div className="flex flex-1 gap-4">
+                        <Avatar className="h-16 w-16">
+                          <AvatarFallback className="bg-sky-100 text-sky-700">{coach.name.slice(0, 1)}</AvatarFallback>
+                        </Avatar>
+                        <div className="flex-1">
+                          <div className="flex flex-wrap items-center gap-3">
+                            <h3 className="text-xl font-semibold text-slate-900">{coach.name}</h3>
+                            <div className="flex items-center gap-1 text-sm text-slate-600">
+                              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+                              {coach.rating} ({coach.reviews})
                             </div>
                           </div>
-                        </div>
-
-                        {/* Achievements */}
-                        <div className="mb-4">
-                          <h4 className="text-sm font-medium text-text-light mb-2">주요 성과</h4>
-                          <ul className="text-sm text-text-muted space-y-1">
-                            {coach.achievements.slice(0, 2).map((achievement, index) => (
-                              <li key={index} className="flex items-center gap-2">
-                                <div className="w-1 h-1 bg-primary rounded-full"></div>
-                                {achievement}
-                              </li>
+                          <div className="mt-2 flex flex-wrap gap-3 text-sm text-slate-600">
+                            <span className="flex items-center gap-1"><MapPin className="h-4 w-4" />{coach.location}</span>
+                            <span className="flex items-center gap-1"><Award className="h-4 w-4" />경력 {coach.experience}년</span>
+                          </div>
+                          <p className="mt-3 text-sm leading-6 text-slate-600">{coach.intro}</p>
+                          <div className="mt-4 flex flex-wrap gap-2">
+                            {coach.specialties.map((item) => (
+                              <Badge key={item} className="bg-sky-100 text-sky-700 hover:bg-sky-100">{item}</Badge>
                             ))}
-                          </ul>
-                        </div>
-
-                        {/* Certifications & Languages */}
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                          <div>
-                            <p className="text-text-muted mb-1">자격증</p>
-                            <div className="flex flex-wrap gap-1">
-                              {coach.certifications.slice(0, 2).map(cert => (
-                                <Badge key={cert} variant="outline" className="text-xs bg-background-dark border-white/5">
-                                  {cert}
-                                </Badge>
-                              ))}
-                            </div>
                           </div>
-                          <div>
-                            <p className="text-text-muted mb-1">언어</p>
-                            <div className="flex flex-wrap gap-1">
-                              {coach.languages.map(lang => (
-                                <Badge key={lang} variant="outline" className="text-xs bg-background-dark border-white/5">
-                                  {lang}
-                                </Badge>
-                              ))}
-                            </div>
+                          <div className="mt-4 flex flex-wrap gap-2">
+                            {coach.lessonType.map((slot) => (
+                              <Badge key={slot} variant="outline">{slot}</Badge>
+                            ))}
                           </div>
                         </div>
                       </div>
 
-                      {/* Booking Info */}
-                      <div className="md:w-64 flex flex-col justify-between">
-                        <div className="space-y-4">
-                          <div>
-                            <p className="text-2xl font-bold text-text-light mb-1">
-                              {formatPrice(coach.pricePerHour)}
+                      <div className="flex w-full flex-col justify-between rounded-2xl bg-slate-50 p-5 md:w-64">
+                        <div>
+                          <p className="text-sm text-slate-500">1시간 레슨</p>
+                          <p className="mt-2 text-2xl font-bold text-slate-900">{formatPrice(coach.pricePerHour)}</p>
+                          {goalNote.trim() ? (
+                            <p className="mt-4 text-sm leading-6 text-slate-600">
+                              메모 반영 포인트: <span className="font-medium text-slate-900">{goalNote}</span>
                             </p>
-                            <p className="text-sm text-text-muted">시간당</p>
-                          </div>
-
-                          <div>
-                            <h4 className="text-sm font-medium text-text-light mb-2">가능 시간대</h4>
-                            <div className="flex flex-wrap gap-1">
-                              {coach.availability.slice(0, 2).map(time => (
-                                <Badge key={time} variant="outline" className="text-xs bg-background-dark border-white/5">
-                                  {time}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
+                          ) : (
+                            <p className="mt-4 text-sm leading-6 text-slate-600">
+                              목표 메모를 적으면 상담 시 질문을 더 구체적으로 정리할 수 있습니다.
+                            </p>
+                          )}
                         </div>
 
-                        <div className="space-y-2 mt-6">
-                          <Button className="w-full bg-primary text-background-dark hover:bg-primary/90">
-                            <Calendar className="w-4 h-4 mr-2" />
-                            코칭 신청
+                        <div className="mt-6 space-y-2">
+                          <Button className="w-full bg-sky-600 text-white hover:bg-sky-700">
+                            <Calendar className="mr-2 h-4 w-4" />
+                            레슨 문의
                           </Button>
-                          <Button variant="outline" className="w-full border-white/10 hover:border-primary/50">
-                            <MessageCircle className="w-4 h-4 mr-2" />
-                            문의하기
+                          <Button variant="outline" className="w-full">
+                            <MessageCircle className="mr-2 h-4 w-4" />
+                            상담 메모 준비
                           </Button>
                         </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
+              ))
+            )}
 
-      {/* Tips */}
-      <Card className="mt-12 bg-content-dark border-white/10">
-        <CardHeader>
-          <CardTitle className="text-text-light">코치 선택 팁</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">첫 코칭은 짧게</h4>
-              <p className="text-text-muted text-sm">
-                처음에는 30분 또는 1시간 코칭부터 시작하세요. 서로 맞는지 확인하고
-                장기적인 관계를 구축하는 것이 중요합니다.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">목표 명확히 하기</h4>
-              <p className="text-text-muted text-sm">
-                코칭을 받기 전에 자신의 목표를 명확히 하세요. 기술 향상, 체력 강화,
-                멘탈 코칭 등 구체적인 목표가 있어야 효과적입니다.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">리뷰 확인하기</h4>
-              <p className="text-text-muted text-sm">
-                코치의 이전 학생 리뷰를 확인하세요. 비슷한 레벨의 학생들이 어떤
-                발전을 했는지 확인하는 것이 좋습니다.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-text-light mb-2">정기적 코칭</h4>
-              <p className="text-text-muted text-sm">
-                테니스 실력 향상을 위해서는 정기적인 코칭이 필요합니다.
-                주 1-2회 꾸준한 코칭을 추천합니다.
-              </p>
-            </div>
+            <Card className="border-slate-200 bg-slate-50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-slate-900">
+                  <Users className="h-5 w-5 text-sky-600" />
+                  코치 선택 팁
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="grid gap-4 md:grid-cols-3">
+                <div>
+                  <p className="font-semibold text-slate-900">한 번에 너무 많은 목표를 잡지 않기</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">첫 4주는 서브, 리턴, 풋워크처럼 우선순위 하나만 정하는 편이 좋습니다.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">시간대와 코트 접근성 확인</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">실력이 비슷해도 이동 부담이 적은 코치가 실제 지속률은 더 높습니다.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">상담 전 질문 3개 준비</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">레슨 방식, 숙제 유무, 영상 피드백 여부를 먼저 확인하면 판단이 빨라집니다.</p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </CardContent>
-      </Card>
+        </section>
+      </div>
     </div>
   );
 }
-
-
