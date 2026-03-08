@@ -17,6 +17,29 @@ import FAQSection from '@/components/seo/FAQSection';
 import { blogContentMap } from '@/data/blog-content';
 import { getSiteUrl } from '@/lib/site';
 
+const toolMap = [
+  { keywords: ['서브', 'serve', '서빙'], emoji: '🎯', name: 'NTRP 실력 테스트', href: '/utility/ntrp-test', desc: '나의 테니스 레벨 확인' },
+  { keywords: ['스트링', 'string', '텐션', '라켓'], emoji: '⚙️', name: '스트링 텐션 계산기', href: '/utility/string-tension', desc: '최적 텐션 찾기' },
+  { keywords: ['부상', '통증', '엘보', '재활', '예방'], emoji: '🛡️', name: '부상 위험 점검', href: '/utility/injury-risk', desc: '부상 위험도 체크' },
+  { keywords: ['훈련', '연습', '계획', 'training'], emoji: '📋', name: '훈련 계획 수립', href: '/utility/training-planner', desc: '맞춤 훈련 플랜' },
+  { keywords: ['영양', '식단', '수분', '음식'], emoji: '🥗', name: '테니스 영양 가이드', href: '/utility/nutrition-guide', desc: '경기력 영양 관리' },
+  { keywords: ['장비', '라켓', '추천', '선택'], emoji: '🏸', name: '장비 추천 시스템', href: '/utility/equipment-recommendation', desc: '맞춤 장비 추천' },
+  { keywords: ['스타일', '플레이', '유형', '성향'], emoji: '✨', name: '플레이 스타일 진단', href: '/utility/play-style-test', desc: '나의 플레이 스타일' },
+  { keywords: ['복식', '더블', '파트너'], emoji: '👥', name: '복식 궁합 테스트', href: '/utility/doubles-chemistry-test', desc: '파트너 궁합 점검' },
+  { keywords: ['경기', '분석', '전술', '전략'], emoji: '📊', name: '경기 분석 도구', href: '/utility/match-analyzer', desc: '경기 데이터 분석' },
+  { keywords: ['멘탈', '집중', '심리', '루틴'], emoji: '🧠', name: '멘탈 트레이닝', href: '/utility/mental-training', desc: '경기 중 멘탈 강화' },
+];
+
+function getRelatedTools(post: any) {
+  const text = `${post.title || ''} ${post.category || ''} ${(post.tags || []).join(' ')} ${post.content || ''}`.toLowerCase();
+  const scored = toolMap.map(tool => ({
+    ...tool,
+    score: tool.keywords.reduce((s, kw) => s + (text.includes(kw) ? 1 : 0), 0),
+  }));
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, 3);
+}
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -271,27 +294,22 @@ export default async function BlogPostPage({ params }: Props) {
         />
       </section>
 
-      {/* CTA Section */}
-      <section aria-label="추가 액션" className="mt-16">
-        <Card className="bg-primary/10 border-primary/20">
-          <CardContent className="p-8 text-center">
-            <h3 className="text-xl font-bold text-text-light mb-4">
-              더 많은 테니스 정보가 필요하신가요?
-            </h3>
-            <p className="text-text-muted mb-6">
-              TennisFriends의 다양한 도구와 정보를 확인해보세요
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/utility/ntrp-test">
-                <Button className="bg-primary text-background-dark">
-                  NTRP 실력 테스트
-                </Button>
-              </Link>
-              <Link href="/utility/string-tension">
-                <Button variant="outline" className="bg-content-dark border-white/10">
-                  스트링 텐션 계산기
-                </Button>
-              </Link>
+      {/* 관련 유틸리티 추천 */}
+      <section aria-label="관련 도구" className="mt-12">
+        <Card className="bg-gradient-to-r from-blue-50 via-white to-indigo-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 border-blue-200 dark:border-gray-700">
+          <CardContent className="p-8">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">🎯 이 글과 관련된 도구</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">직접 테스트하고 분석해보세요</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {getRelatedTools(typedPost).map((tool) => (
+                <Link key={tool.href} href={tool.href} className="group">
+                  <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:shadow-md transition-all">
+                    <div className="text-2xl mb-2">{tool.emoji}</div>
+                    <div className="font-semibold text-gray-900 dark:text-white text-sm group-hover:text-blue-600 transition-colors">{tool.name}</div>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{tool.desc}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </CardContent>
         </Card>

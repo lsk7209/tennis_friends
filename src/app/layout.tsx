@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import MobileNav from "@/components/layout/MobileNav";
 import { Toaster } from "@/components/ui/sonner";
 import Tracking from "@/components/Tracking";
 import AdSense from "@/components/AdSense";
@@ -151,8 +152,9 @@ export default function RootLayout({
         <div className="group/design-root relative flex min-h-screen w-full flex-col overflow-x-hidden">
           <div className="layout-container flex h-full grow flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 pb-16 md:pb-0">{children}</main>
             <Footer />
+            <MobileNav />
           </div>
         </div>
         <Toaster />
