@@ -202,8 +202,33 @@ export default function Home() {
             </Card>
           </FadeIn>
 
-          <FadeIn delay={0.2}>
+          <FadeIn delay={0.15}>
             <div className="mt-16 pt-12 border-t border-gray-200">
+              <h3 className="text-center text-sm font-bold text-gray-500 uppercase tracking-wider mb-8">
+                사용자 후기
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+                {[
+                  { stars: 5, text: 'NTRP 테스트로 제 실력을 정확히 알았어요! 지금은 3.5 목표로 훈련 중입니다.', author: '박○○', info: '서울, 30대' },
+                  { stars: 5, text: '스트링 텐션 계산기 덕분에 라켓 세팅이 훨씬 편해졌어요. 팔도 덜 아프고요!', author: '김○○', info: '부산, 20대' },
+                  { stars: 5, text: '플레이 스타일 진단 결과 보고 훈련 방향을 잡았습니다. 복식 궁합 테스트도 재밌어요.', author: '이○○', info: '대전, 40대' },
+                ].map((review, i) => (
+                  <Card key={i} className="bg-white border border-gray-200 shadow-sm">
+                    <CardContent className="p-6">
+                      <div className="text-yellow-400 text-sm mb-3">{'★'.repeat(review.stars)}</div>
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">&ldquo;{review.text}&rdquo;</p>
+                      <div className="text-xs text-gray-500">
+                        <span className="font-semibold text-gray-700">{review.author}</span> · {review.info}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className="pt-8 border-t border-gray-200">
               <h3 className="text-center text-sm font-bold text-gray-500 uppercase tracking-wider mb-6">
                 인기 검색어 & 추천 토픽
               </h3>
@@ -218,6 +243,8 @@ export default function Home() {
                   { name: "조코비치 그랜드슬램", href: "/players/novak-djokovic" },
                   { name: "시너 포핸드", href: "/players/jannik-sinner" },
                   { name: "알카라스 경기 일정", href: "/players/carlos-alcaraz" },
+                  { name: "권순우 프로필", href: "/players/soonwoo-kwon" },
+                  { name: "이덕희 ATP 도전", href: "/players/duckhee-lee" },
                   { name: "테니스 룰 퀴즈", href: "/tennis-rules-quiz" },
                   { name: "테니스 입문 가이드", href: "/blog" },
                   { name: "테니스화 추천", href: "/blog" },
