@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -42,7 +43,7 @@ export default function CourtBookingTest() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.agreeTerms) {
-      alert('이용약관에 동의해주세요.');
+      toast.error('이용약관에 동의해주세요.');
       return;
     }
     // 실제로는 API 호출 후 결과 페이지로 이동

@@ -3,6 +3,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -123,7 +124,7 @@ function TennisRulesQuizResultContent() {
   const copyToClipboard = () => {
     const url = `${window.location.origin}/tennis-rules-quiz`;
     navigator.clipboard.writeText(url);
-    alert('퀴즈 링크가 복사되었습니다! 📎');
+    toast.success('퀴즈 링크가 복사되었습니다! 📎');
   };
 
   return (

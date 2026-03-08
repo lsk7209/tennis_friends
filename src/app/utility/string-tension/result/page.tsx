@@ -3,6 +3,7 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -65,7 +66,7 @@ function StringTensionResultContent() {
     if (result) {
       const text = `🎾 TennisFriends 스트링 텐션 계산 결과\n\n추천 텐션: ${result.range}\n플레이 스타일: ${result.style}\n\n${result.summary}\n\n더 자세한 정보: https://tennisfrens.com/utility/string-tension`;
       navigator.clipboard.writeText(text);
-      alert('결과가 클립보드에 복사되었습니다! 📋');
+      toast.success('결과가 클립보드에 복사되었습니다! 📋');
     }
   };
 

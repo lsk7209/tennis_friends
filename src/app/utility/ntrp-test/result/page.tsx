@@ -3,6 +3,7 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -191,7 +192,7 @@ function ResultContent() {
     if (platform === 'instagram') {
       // Instagram은 URL만 복사
       navigator.clipboard.writeText(`${text}\n\n${url}`);
-      alert('인스타그램에 붙여넣기할 내용이 복사되었습니다! 📱');
+      toast.success('인스타그램에 붙여넣기할 내용이 복사되었습니다! 📱');
     } else {
       window.open(shareUrls[platform as keyof typeof shareUrls], '_blank');
     }

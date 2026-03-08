@@ -23,10 +23,17 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // 실제 구현에서는 API 호출
-    // 폼 제출 완료 (프로덕션에서는 로그 제거)
+    const categoryLabel = formData.category ? `[${formData.category}] ` : '';
+    const subject = encodeURIComponent(`${categoryLabel}${formData.subject}`);
+    const body = encodeURIComponent(
+      `이름: ${formData.name}\n이메일: ${formData.email}\n문의 유형: ${formData.category || '미선택'}\n\n${formData.message}`
+    );
+    window.open(`mailto:contact@tennisfrens.com?subject=${subject}&body=${body}`, '_self');
     setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({ name: '', email: '', subject: '', category: '', message: '' });
+    }, 3000);
   };
 
   const handleChange = (field: string, value: string) => {

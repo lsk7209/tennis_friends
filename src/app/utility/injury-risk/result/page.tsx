@@ -3,6 +3,7 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -46,7 +47,7 @@ function InjuryRiskResultContent() {
       });
     } else {
       navigator.clipboard.writeText(window.location.href);
-      alert('링크가 복사되었습니다!');
+      toast.success('링크가 복사되었습니다!');
     }
   };
 
