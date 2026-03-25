@@ -12781,7 +12781,1411 @@ export const PLAYERS_DB: Record<string, PlayerData> = {
             ]
         }
     },
-};
-export const getPlayerSlugs = () => Object.keys(PLAYERS_DB);
 
-export const getPlayerBySlug = (slug: string) => PLAYERS_DB[slug];
+  "carlos-taberner": {
+    name: "카를로스 타베르네르",
+    nameEn: "Carlos Taberner",
+    country: "스페인",
+    countryFlag: "🇪🇸",
+    image: "/images/players/carlos-taberner.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "클레이 코트에서 강한 스페인의 베이스라이너",
+    detailedProfile: {
+      oneLineSummary: "클레이 코트에서 강한 스페인의 베이스라이너",
+      whyNotable: `<p>Carlos Taberner(카를로스 타베르네르) 선수는 스페인 출신의 프로 테니스 선수로, 끈질긴 랠리와 높은 탑스핀 포핸드이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>클레이 코트에서 강한 스페인의 베이스라이너. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>카를로스 타베르네르 선수의 플레이 스타일은 끈질긴 랠리와 높은 탑스핀 포핸드입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 끈질긴 랠리와 높은 탑스핀 포핸드</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 5, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 8, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 8, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>카를로스 타베르네르(Carlos Taberner) 선수는 스페인에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Carlos Taberner의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 끈질긴 랠리와 높은 탑스핀 포핸드을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>카를로스 타베르네르 선수는 코트 위에서의 끈질긴 랠리와 높은 탑스핀 포핸드뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>카를로스 타베르네르 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 끈질긴 랠리와 높은 탑스핀 포핸드이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "카를로스 타베르네르의 국적은?", answer: "스페인 출신의 프로 테니스 선수입니다." },
+        { question: "카를로스 타베르네르의 플레이 스타일은?", answer: "끈질긴 랠리와 높은 탑스핀 포핸드이 특징인 ATP 투어 선수입니다." },
+        { question: "카를로스 타베르네르의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "tomas-barrios": {
+    name: "토마스 바리오스",
+    nameEn: "Tomas Barrios",
+    country: "칠레",
+    countryFlag: "🇨🇱",
+    image: "/images/players/tomas-barrios.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "남미 테니스의 차세대 주자",
+    detailedProfile: {
+      oneLineSummary: "남미 테니스의 차세대 주자",
+      whyNotable: `<p>Tomas Barrios(토마스 바리오스) 선수는 칠레 출신의 프로 테니스 선수로, 안정적인 베이스라인 플레이와 슬라이스 활용이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>남미 테니스의 차세대 주자. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>토마스 바리오스 선수의 플레이 스타일은 안정적인 베이스라인 플레이와 슬라이스 활용입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 안정적인 베이스라인 플레이와 슬라이스 활용</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 6, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 6, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 7, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 7, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>토마스 바리오스(Tomas Barrios) 선수는 칠레에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Tomas Barrios의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 안정적인 베이스라인 플레이와 슬라이스 활용을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>토마스 바리오스 선수는 코트 위에서의 안정적인 베이스라인 플레이와 슬라이스 활용뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>토마스 바리오스 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 안정적인 베이스라인 플레이와 슬라이스 활용이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "토마스 바리오스의 국적은?", answer: "칠레 출신의 프로 테니스 선수입니다." },
+        { question: "토마스 바리오스의 플레이 스타일은?", answer: "안정적인 베이스라인 플레이와 슬라이스 활용이 특징인 ATP 투어 선수입니다." },
+        { question: "토마스 바리오스의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "yibing-wu": {
+    name: "우이빙",
+    nameEn: "Yibing Wu",
+    country: "중국",
+    countryFlag: "🇨🇳",
+    image: "/images/players/yibing-wu.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "중국 남자 테니스의 개척자",
+    detailedProfile: {
+      oneLineSummary: "중국 남자 테니스의 개척자",
+      whyNotable: `<p>Yibing Wu(우이빙) 선수는 중국 출신의 프로 테니스 선수로, 빠른 풋워크와 정확한 리턴이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>중국 남자 테니스의 개척자. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>우이빙 선수의 플레이 스타일은 빠른 풋워크와 정확한 리턴입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 빠른 풋워크와 정확한 리턴</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 7, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 6, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 4, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 8, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>우이빙(Yibing Wu) 선수는 중국에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Yibing Wu의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 빠른 풋워크와 정확한 리턴을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>우이빙 선수는 코트 위에서의 빠른 풋워크와 정확한 리턴뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>우이빙 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 빠른 풋워크와 정확한 리턴이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "우이빙의 국적은?", answer: "중국 출신의 프로 테니스 선수입니다." },
+        { question: "우이빙의 플레이 스타일은?", answer: "빠른 풋워크와 정확한 리턴이 특징인 ATP 투어 선수입니다." },
+        { question: "우이빙의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "luca-van-assche": {
+    name: "루카 반 아셰",
+    nameEn: "Luca Van Assche",
+    country: "프랑스",
+    countryFlag: "🇫🇷",
+    image: "/images/players/luca-van-assche.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "프랑스 주니어 출신의 올라운더",
+    detailedProfile: {
+      oneLineSummary: "프랑스 주니어 출신의 올라운더",
+      whyNotable: `<p>Luca Van Assche(루카 반 아셰) 선수는 프랑스 출신의 프로 테니스 선수로, 공격적인 베이스라인 플레이이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>프랑스 주니어 출신의 올라운더. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>루카 반 아셰 선수의 플레이 스타일은 공격적인 베이스라인 플레이입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 공격적인 베이스라인 플레이</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 7, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 8, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 6, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>루카 반 아셰(Luca Van Assche) 선수는 프랑스에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Luca Van Assche의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 공격적인 베이스라인 플레이을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>루카 반 아셰 선수는 코트 위에서의 공격적인 베이스라인 플레이뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>루카 반 아셰 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 공격적인 베이스라인 플레이이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "루카 반 아셰의 국적은?", answer: "프랑스 출신의 프로 테니스 선수입니다." },
+        { question: "루카 반 아셰의 플레이 스타일은?", answer: "공격적인 베이스라인 플레이이 특징인 ATP 투어 선수입니다." },
+        { question: "루카 반 아셰의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "martin-landaluce": {
+    name: "마르틴 란달루세",
+    nameEn: "Martin Landaluce",
+    country: "스페인",
+    countryFlag: "🇪🇸",
+    image: "/images/players/martin-landaluce.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "스페인의 차세대 클레이 스페셜리스트",
+    detailedProfile: {
+      oneLineSummary: "스페인의 차세대 클레이 스페셜리스트",
+      whyNotable: `<p>Martin Landaluce(마르틴 란달루세) 선수는 스페인 출신의 프로 테니스 선수로, 뛰어난 수비력과 카운터 펀치이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>스페인의 차세대 클레이 스페셜리스트. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>마르틴 란달루세 선수의 플레이 스타일은 뛰어난 수비력과 카운터 펀치입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 뛰어난 수비력과 카운터 펀치</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 5, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 7, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 6, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 7, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>마르틴 란달루세(Martin Landaluce) 선수는 스페인에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Martin Landaluce의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 뛰어난 수비력과 카운터 펀치을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>마르틴 란달루세 선수는 코트 위에서의 뛰어난 수비력과 카운터 펀치뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>마르틴 란달루세 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 뛰어난 수비력과 카운터 펀치이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "마르틴 란달루세의 국적은?", answer: "스페인 출신의 프로 테니스 선수입니다." },
+        { question: "마르틴 란달루세의 플레이 스타일은?", answer: "뛰어난 수비력과 카운터 펀치이 특징인 ATP 투어 선수입니다." },
+        { question: "마르틴 란달루세의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "alex-blockx": {
+    name: "알렉스 블록스",
+    nameEn: "Alex Blockx",
+    country: "벨기에",
+    countryFlag: "🇧🇪",
+    image: "/images/players/alex-blockx.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "벨기에의 떠오르는 신예",
+    detailedProfile: {
+      oneLineSummary: "벨기에의 떠오르는 신예",
+      whyNotable: `<p>Alex Blockx(알렉스 블록스) 선수는 벨기에 출신의 프로 테니스 선수로, 빠른 전환과 네트 플레이이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>벨기에의 떠오르는 신예. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>알렉스 블록스 선수의 플레이 스타일은 빠른 전환과 네트 플레이입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 빠른 전환과 네트 플레이</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 7, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 7, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 8, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 4, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 8, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 5, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>알렉스 블록스(Alex Blockx) 선수는 벨기에에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Alex Blockx의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 빠른 전환과 네트 플레이을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>알렉스 블록스 선수는 코트 위에서의 빠른 전환과 네트 플레이뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>알렉스 블록스 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 빠른 전환과 네트 플레이이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "알렉스 블록스의 국적은?", answer: "벨기에 출신의 프로 테니스 선수입니다." },
+        { question: "알렉스 블록스의 플레이 스타일은?", answer: "빠른 전환과 네트 플레이이 특징인 ATP 투어 선수입니다." },
+        { question: "알렉스 블록스의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "erika-andreeva": {
+    name: "에리카 안드레에바",
+    nameEn: "Erika Andreeva",
+    country: "러시아",
+    countryFlag: "🇷🇺",
+    image: "/images/players/erika-andreeva.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "미르라의 언니, 또 다른 재능",
+    detailedProfile: {
+      oneLineSummary: "미르라의 언니, 또 다른 재능",
+      whyNotable: `<p>Erika Andreeva(에리카 안드레에바) 선수는 러시아 출신의 프로 테니스 선수로, 안정적 스트로크와 경기 운영이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>미르라의 언니, 또 다른 재능. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>에리카 안드레에바 선수의 플레이 스타일은 안정적 스트로크와 경기 운영입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 안정적 스트로크와 경기 운영</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 8, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 4, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 8, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 6, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>에리카 안드레에바(Erika Andreeva) 선수는 러시아에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Erika Andreeva의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 안정적 스트로크와 경기 운영을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>에리카 안드레에바 선수는 코트 위에서의 안정적 스트로크와 경기 운영뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>에리카 안드레에바 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 안정적 스트로크와 경기 운영이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "에리카 안드레에바의 국적은?", answer: "러시아 출신의 프로 테니스 선수입니다." },
+        { question: "에리카 안드레에바의 플레이 스타일은?", answer: "안정적 스트로크와 경기 운영이 특징인 WTA 투어 선수입니다." },
+        { question: "에리카 안드레에바의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "brenda-fruhvirtova": {
+    name: "브렌다 프루비르토바",
+    nameEn: "Brenda Fruhvirtova",
+    country: "체코",
+    countryFlag: "🇨🇿",
+    image: "/images/players/brenda-fruhvirtova.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "체코의 10대 천재 소녀",
+    detailedProfile: {
+      oneLineSummary: "체코의 10대 천재 소녀",
+      whyNotable: `<p>Brenda Fruhvirtova(브렌다 프루비르토바) 선수는 체코 출신의 프로 테니스 선수로, 빠른 볼 스피드와 정확도이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>체코의 10대 천재 소녀. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>브렌다 프루비르토바 선수의 플레이 스타일은 빠른 볼 스피드와 정확도입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 빠른 볼 스피드와 정확도</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 7, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 6, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 5, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 5, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>브렌다 프루비르토바(Brenda Fruhvirtova) 선수는 체코에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Brenda Fruhvirtova의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 빠른 볼 스피드와 정확도을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>브렌다 프루비르토바 선수는 코트 위에서의 빠른 볼 스피드와 정확도뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>브렌다 프루비르토바 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 빠른 볼 스피드와 정확도이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "브렌다 프루비르토바의 국적은?", answer: "체코 출신의 프로 테니스 선수입니다." },
+        { question: "브렌다 프루비르토바의 플레이 스타일은?", answer: "빠른 볼 스피드와 정확도이 특징인 WTA 투어 선수입니다." },
+        { question: "브렌다 프루비르토바의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "sara-errani": {
+    name: "사라 에라니",
+    nameEn: "Sara Errani",
+    country: "이탈리아",
+    countryFlag: "🇮🇹",
+    image: "/images/players/sara-errani.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "이탈리아의 클레이 코트 베테랑",
+    detailedProfile: {
+      oneLineSummary: "이탈리아의 클레이 코트 베테랑",
+      whyNotable: `<p>Sara Errani(사라 에라니) 선수는 이탈리아 출신의 프로 테니스 선수로, 다양한 스핀과 전술적 플레이이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>이탈리아의 클레이 코트 베테랑. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>사라 에라니 선수의 플레이 스타일은 다양한 스핀과 전술적 플레이입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 다양한 스핀과 전술적 플레이</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 5, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 8, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 6, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 6, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>사라 에라니(Sara Errani) 선수는 이탈리아에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Sara Errani의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 다양한 스핀과 전술적 플레이을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>사라 에라니 선수는 코트 위에서의 다양한 스핀과 전술적 플레이뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>사라 에라니 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 다양한 스핀과 전술적 플레이이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "사라 에라니의 국적은?", answer: "이탈리아 출신의 프로 테니스 선수입니다." },
+        { question: "사라 에라니의 플레이 스타일은?", answer: "다양한 스핀과 전술적 플레이이 특징인 WTA 투어 선수입니다." },
+        { question: "사라 에라니의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "xinyu-wang": {
+    name: "왕신위",
+    nameEn: "Xinyu Wang",
+    country: "중국",
+    countryFlag: "🇨🇳",
+    image: "/images/players/xinyu-wang.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "중국 여자 테니스의 파워 히터",
+    detailedProfile: {
+      oneLineSummary: "중국 여자 테니스의 파워 히터",
+      whyNotable: `<p>Xinyu Wang(왕신위) 선수는 중국 출신의 프로 테니스 선수로, 강력한 서브와 포핸드이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>중국 여자 테니스의 파워 히터. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>왕신위 선수의 플레이 스타일은 강력한 서브와 포핸드입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 강력한 서브와 포핸드</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 7, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 4, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 7, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 6, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>왕신위(Xinyu Wang) 선수는 중국에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Xinyu Wang의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 강력한 서브와 포핸드을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>왕신위 선수는 코트 위에서의 강력한 서브와 포핸드뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>왕신위 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 강력한 서브와 포핸드이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "왕신위의 국적은?", answer: "중국 출신의 프로 테니스 선수입니다." },
+        { question: "왕신위의 플레이 스타일은?", answer: "강력한 서브와 포핸드이 특징인 WTA 투어 선수입니다." },
+        { question: "왕신위의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "viktoriya-tomova": {
+    name: "빅토리야 토모바",
+    nameEn: "Viktoriya Tomova",
+    country: "불가리아",
+    countryFlag: "🇧🇬",
+    image: "/images/players/viktoriya-tomova.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "불가리아의 끈질긴 투사",
+    detailedProfile: {
+      oneLineSummary: "불가리아의 끈질긴 투사",
+      whyNotable: `<p>Viktoriya Tomova(빅토리야 토모바) 선수는 불가리아 출신의 프로 테니스 선수로, 강한 정신력과 수비적 플레이이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>불가리아의 끈질긴 투사. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>빅토리야 토모바 선수의 플레이 스타일은 강한 정신력과 수비적 플레이입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 강한 정신력과 수비적 플레이</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 8, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 7, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 8, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 6, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>빅토리야 토모바(Viktoriya Tomova) 선수는 불가리아에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Viktoriya Tomova의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 강한 정신력과 수비적 플레이을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>빅토리야 토모바 선수는 코트 위에서의 강한 정신력과 수비적 플레이뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>빅토리야 토모바 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 강한 정신력과 수비적 플레이이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "빅토리야 토모바의 국적은?", answer: "불가리아 출신의 프로 테니스 선수입니다." },
+        { question: "빅토리야 토모바의 플레이 스타일은?", answer: "강한 정신력과 수비적 플레이이 특징인 WTA 투어 선수입니다." },
+        { question: "빅토리야 토모바의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "arantxa-rus": {
+    name: "아란차 루스",
+    nameEn: "Arantxa Rus",
+    country: "네덜란드",
+    countryFlag: "🇳🇱",
+    image: "/images/players/arantxa-rus.svg",
+    gender: "female",
+    plays: "Left-handed",
+    backhand: "Two-handed",
+    longBio: "네덜란드의 왼손잡이 베테랑",
+    detailedProfile: {
+      oneLineSummary: "네덜란드의 왼손잡이 베테랑",
+      whyNotable: `<p>Arantxa Rus(아란차 루스) 선수는 네덜란드 출신의 프로 테니스 선수로, 왼손잡이 특유의 각도와 변화이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>네덜란드의 왼손잡이 베테랑. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>아란차 루스 선수의 플레이 스타일은 왼손잡이 특유의 각도와 변화입니다. 왼손잡이 특유의 각도와 스핀으로 상대를 혼란에 빠뜨립니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 왼손잡이 특유의 각도와 변화</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 6, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 6, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 4, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 7, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>아란차 루스(Arantxa Rus) 선수는 네덜란드에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Arantxa Rus의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 왼손잡이 특유의 각도와 변화을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>아란차 루스 선수는 코트 위에서의 왼손잡이 특유의 각도와 변화뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>아란차 루스 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 왼손잡이 특유의 각도와 변화이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "아란차 루스의 국적은?", answer: "네덜란드 출신의 프로 테니스 선수입니다." },
+        { question: "아란차 루스의 플레이 스타일은?", answer: "왼손잡이 특유의 각도와 변화이 특징인 WTA 투어 선수입니다." },
+        { question: "아란차 루스의 주손은?", answer: "왼손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "yue-yuan": {
+    name: "위안 위에",
+    nameEn: "Yue Yuan",
+    country: "중국",
+    countryFlag: "🇨🇳",
+    image: "/images/players/yue-yuan.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "중국 테니스의 꾸준한 성장주",
+    detailedProfile: {
+      oneLineSummary: "중국 테니스의 꾸준한 성장주",
+      whyNotable: `<p>Yue Yuan(위안 위에) 선수는 중국 출신의 프로 테니스 선수로, 안정적 베이스라인과 멘탈이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>중국 테니스의 꾸준한 성장주. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>위안 위에 선수의 플레이 스타일은 안정적 베이스라인과 멘탈입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 안정적 베이스라인과 멘탈</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 8, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 8, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 8, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 5, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>위안 위에(Yue Yuan) 선수는 중국에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Yue Yuan의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 안정적 베이스라인과 멘탈을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>위안 위에 선수는 코트 위에서의 안정적 베이스라인과 멘탈뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>위안 위에 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 안정적 베이스라인과 멘탈이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "위안 위에의 국적은?", answer: "중국 출신의 프로 테니스 선수입니다." },
+        { question: "위안 위에의 플레이 스타일은?", answer: "안정적 베이스라인과 멘탈이 특징인 WTA 투어 선수입니다." },
+        { question: "위안 위에의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "renata-zarazua": {
+    name: "레나타 사라수아",
+    nameEn: "Renata Zarazua",
+    country: "멕시코",
+    countryFlag: "🇲🇽",
+    image: "/images/players/renata-zarazua.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "멕시코 여자 테니스의 선구자",
+    detailedProfile: {
+      oneLineSummary: "멕시코 여자 테니스의 선구자",
+      whyNotable: `<p>Renata Zarazua(레나타 사라수아) 선수는 멕시코 출신의 프로 테니스 선수로, 투지와 근성의 플레이이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>멕시코 여자 테니스의 선구자. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>레나타 사라수아 선수의 플레이 스타일은 투지와 근성의 플레이입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 투지와 근성의 플레이</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 8, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 8, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 7, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 5, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>레나타 사라수아(Renata Zarazua) 선수는 멕시코에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Renata Zarazua의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 투지와 근성의 플레이을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>레나타 사라수아 선수는 코트 위에서의 투지와 근성의 플레이뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>레나타 사라수아 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 투지와 근성의 플레이이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "레나타 사라수아의 국적은?", answer: "멕시코 출신의 프로 테니스 선수입니다." },
+        { question: "레나타 사라수아의 플레이 스타일은?", answer: "투지와 근성의 플레이이 특징인 WTA 투어 선수입니다." },
+        { question: "레나타 사라수아의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "timofei-skatov": {
+    name: "티모페이 스카토프",
+    nameEn: "Timofei Skatov",
+    country: "카자흐스탄",
+    countryFlag: "🇰🇿",
+    image: "/images/players/timofei-skatov.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "중앙아시아의 떠오르는 재능",
+    detailedProfile: {
+      oneLineSummary: "중앙아시아의 떠오르는 재능",
+      whyNotable: `<p>Timofei Skatov(티모페이 스카토프) 선수는 카자흐스탄 출신의 프로 테니스 선수로, 꾸준한 스트로크와 체력이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>중앙아시아의 떠오르는 재능. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>티모페이 스카토프 선수의 플레이 스타일은 꾸준한 스트로크와 체력입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 꾸준한 스트로크와 체력</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 5, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 6, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 8, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 5, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 6, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 6, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>티모페이 스카토프(Timofei Skatov) 선수는 카자흐스탄에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Timofei Skatov의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 꾸준한 스트로크와 체력을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>티모페이 스카토프 선수는 코트 위에서의 꾸준한 스트로크와 체력뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>티모페이 스카토프 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 꾸준한 스트로크와 체력이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "티모페이 스카토프의 국적은?", answer: "카자흐스탄 출신의 프로 테니스 선수입니다." },
+        { question: "티모페이 스카토프의 플레이 스타일은?", answer: "꾸준한 스트로크와 체력이 특징인 ATP 투어 선수입니다." },
+        { question: "티모페이 스카토프의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "gabriel-diallo": {
+    name: "가브리엘 디알로",
+    nameEn: "Gabriel Diallo",
+    country: "캐나다",
+    countryFlag: "🇨🇦",
+    image: "/images/players/gabriel-diallo.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "캐나다의 빅서버 신예",
+    detailedProfile: {
+      oneLineSummary: "캐나다의 빅서버 신예",
+      whyNotable: `<p>Gabriel Diallo(가브리엘 디알로) 선수는 캐나다 출신의 프로 테니스 선수로, 장신의 강력한 서브이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>캐나다의 빅서버 신예. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>가브리엘 디알로 선수의 플레이 스타일은 장신의 강력한 서브입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 장신의 강력한 서브</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 7, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 8, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 5, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>가브리엘 디알로(Gabriel Diallo) 선수는 캐나다에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Gabriel Diallo의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 장신의 강력한 서브을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>가브리엘 디알로 선수는 코트 위에서의 장신의 강력한 서브뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>가브리엘 디알로 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 장신의 강력한 서브이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "가브리엘 디알로의 국적은?", answer: "캐나다 출신의 프로 테니스 선수입니다." },
+        { question: "가브리엘 디알로의 플레이 스타일은?", answer: "장신의 강력한 서브이 특징인 ATP 투어 선수입니다." },
+        { question: "가브리엘 디알로의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "harold-mayot": {
+    name: "아롤드 마요",
+    nameEn: "Harold Mayot",
+    country: "프랑스",
+    countryFlag: "🇫🇷",
+    image: "/images/players/harold-mayot.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "프랑스 테니스의 미래 주자",
+    detailedProfile: {
+      oneLineSummary: "프랑스 테니스의 미래 주자",
+      whyNotable: `<p>Harold Mayot(아롤드 마요) 선수는 프랑스 출신의 프로 테니스 선수로, 공격적 베이스라인과 드롭샷이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>프랑스 테니스의 미래 주자. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>아롤드 마요 선수의 플레이 스타일은 공격적 베이스라인과 드롭샷입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 공격적 베이스라인과 드롭샷</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 7, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 8, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 8, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 7, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 8, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 5, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>아롤드 마요(Harold Mayot) 선수는 프랑스에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Harold Mayot의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 공격적 베이스라인과 드롭샷을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>아롤드 마요 선수는 코트 위에서의 공격적 베이스라인과 드롭샷뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>아롤드 마요 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 공격적 베이스라인과 드롭샷이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "아롤드 마요의 국적은?", answer: "프랑스 출신의 프로 테니스 선수입니다." },
+        { question: "아롤드 마요의 플레이 스타일은?", answer: "공격적 베이스라인과 드롭샷이 특징인 ATP 투어 선수입니다." },
+        { question: "아롤드 마요의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "alex-ritschard": {
+    name: "알렉스 리차드",
+    nameEn: "Alex Ritschard",
+    country: "스위스",
+    countryFlag: "🇨🇭",
+    image: "/images/players/alex-ritschard.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "One-handed",
+    longBio: "스위스의 원핸드 백핸드 계승자",
+    detailedProfile: {
+      oneLineSummary: "스위스의 원핸드 백핸드 계승자",
+      whyNotable: `<p>Alex Ritschard(알렉스 리차드) 선수는 스위스 출신의 프로 테니스 선수로, 클래식한 원핸드 백핸드이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>스위스의 원핸드 백핸드 계승자. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>알렉스 리차드 선수의 플레이 스타일은 클래식한 원핸드 백핸드입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 클래식한 원핸드 백핸드는 그의 트레이드마크입니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 클래식한 원핸드 백핸드</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 5, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 4, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 6, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>알렉스 리차드(Alex Ritschard) 선수는 스위스에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Alex Ritschard의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 클래식한 원핸드 백핸드을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>알렉스 리차드 선수는 코트 위에서의 클래식한 원핸드 백핸드뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>알렉스 리차드 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 클래식한 원핸드 백핸드이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "알렉스 리차드의 국적은?", answer: "스위스 출신의 프로 테니스 선수입니다." },
+        { question: "알렉스 리차드의 플레이 스타일은?", answer: "클래식한 원핸드 백핸드이 특징인 ATP 투어 선수입니다." },
+        { question: "알렉스 리차드의 주손은?", answer: "오른손잡이이며, 원핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "hailey-baptiste": {
+    name: "헤일리 밥티스트",
+    nameEn: "Hailey Baptiste",
+    country: "미국",
+    countryFlag: "🇺🇸",
+    image: "/images/players/hailey-baptiste.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "미국 여자 테니스의 신예",
+    detailedProfile: {
+      oneLineSummary: "미국 여자 테니스의 신예",
+      whyNotable: `<p>Hailey Baptiste(헤일리 밥티스트) 선수는 미국 출신의 프로 테니스 선수로, 빠른 스윙과 공격적 리턴이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>미국 여자 테니스의 신예. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>헤일리 밥티스트 선수의 플레이 스타일은 빠른 스윙과 공격적 리턴입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 빠른 스윙과 공격적 리턴</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 6, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 4, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 7, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 6, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>헤일리 밥티스트(Hailey Baptiste) 선수는 미국에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Hailey Baptiste의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 빠른 스윙과 공격적 리턴을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>헤일리 밥티스트 선수는 코트 위에서의 빠른 스윙과 공격적 리턴뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>헤일리 밥티스트 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 빠른 스윙과 공격적 리턴이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "헤일리 밥티스트의 국적은?", answer: "미국 출신의 프로 테니스 선수입니다." },
+        { question: "헤일리 밥티스트의 플레이 스타일은?", answer: "빠른 스윙과 공격적 리턴이 특징인 WTA 투어 선수입니다." },
+        { question: "헤일리 밥티스트의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "marina-stakusic": {
+    name: "마리나 스타쿠식",
+    nameEn: "Marina Stakusic",
+    country: "캐나다",
+    countryFlag: "🇨🇦",
+    image: "/images/players/marina-stakusic.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "캐나다의 차세대 여성 선수",
+    detailedProfile: {
+      oneLineSummary: "캐나다의 차세대 여성 선수",
+      whyNotable: `<p>Marina Stakusic(마리나 스타쿠식) 선수는 캐나다 출신의 프로 테니스 선수로, 공격적 포핸드와 서브이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>캐나다의 차세대 여성 선수. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>마리나 스타쿠식 선수의 플레이 스타일은 공격적 포핸드와 서브입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 공격적 포핸드와 서브</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 5, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 7, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 7, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 6, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 7, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>마리나 스타쿠식(Marina Stakusic) 선수는 캐나다에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Marina Stakusic의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 공격적 포핸드와 서브을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>마리나 스타쿠식 선수는 코트 위에서의 공격적 포핸드와 서브뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>마리나 스타쿠식 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 공격적 포핸드와 서브이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "마리나 스타쿠식의 국적은?", answer: "캐나다 출신의 프로 테니스 선수입니다." },
+        { question: "마리나 스타쿠식의 플레이 스타일은?", answer: "공격적 포핸드와 서브이 특징인 WTA 투어 선수입니다." },
+        { question: "마리나 스타쿠식의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "emina-bektas": {
+    name: "에미나 벡타스",
+    nameEn: "Emina Bektas",
+    country: "미국",
+    countryFlag: "🇺🇸",
+    image: "/images/players/emina-bektas.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "늦깎이 프로 전향의 성공 스토리",
+    detailedProfile: {
+      oneLineSummary: "늦깎이 프로 전향의 성공 스토리",
+      whyNotable: `<p>Emina Bektas(에미나 벡타스) 선수는 미국 출신의 프로 테니스 선수로, 경험에서 나오는 안정적 플레이이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>늦깎이 프로 전향의 성공 스토리. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>에미나 벡타스 선수의 플레이 스타일은 경험에서 나오는 안정적 플레이입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 경험에서 나오는 안정적 플레이</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 6, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 6, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>에미나 벡타스(Emina Bektas) 선수는 미국에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Emina Bektas의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 경험에서 나오는 안정적 플레이을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>에미나 벡타스 선수는 코트 위에서의 경험에서 나오는 안정적 플레이뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>에미나 벡타스 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 경험에서 나오는 안정적 플레이이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "에미나 벡타스의 국적은?", answer: "미국 출신의 프로 테니스 선수입니다." },
+        { question: "에미나 벡타스의 플레이 스타일은?", answer: "경험에서 나오는 안정적 플레이이 특징인 WTA 투어 선수입니다." },
+        { question: "에미나 벡타스의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "sara-bejlek": {
+    name: "사라 베일렉",
+    nameEn: "Sara Bejlek",
+    country: "체코",
+    countryFlag: "🇨🇿",
+    image: "/images/players/sara-bejlek.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "체코의 10대 유망주",
+    detailedProfile: {
+      oneLineSummary: "체코의 10대 유망주",
+      whyNotable: `<p>Sara Bejlek(사라 베일렉) 선수는 체코 출신의 프로 테니스 선수로, 공격적 스트로크와 승부 근성이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>체코의 10대 유망주. WTA 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>사라 베일렉 선수의 플레이 스타일은 공격적 스트로크와 승부 근성입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 공격적 스트로크와 승부 근성</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 5, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 7, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 4, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 8, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>사라 베일렉(Sara Bejlek) 선수는 체코에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>WTA 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Sara Bejlek의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 공격적 스트로크와 승부 근성을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>사라 베일렉 선수는 코트 위에서의 공격적 스트로크와 승부 근성뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>사라 베일렉 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. WTA 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 공격적 스트로크와 승부 근성이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "사라 베일렉의 국적은?", answer: "체코 출신의 프로 테니스 선수입니다." },
+        { question: "사라 베일렉의 플레이 스타일은?", answer: "공격적 스트로크와 승부 근성이 특징인 WTA 투어 선수입니다." },
+        { question: "사라 베일렉의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+  "alibek-kachmazov": {
+    name: "알리벡 카치마조프",
+    nameEn: "Alibek Kachmazov",
+    country: "러시아",
+    countryFlag: "🇷🇺",
+    image: "/images/players/alibek-kachmazov.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "러시아의 하드코트 스페셜리스트",
+    detailedProfile: {
+      oneLineSummary: "러시아의 하드코트 스페셜리스트",
+      whyNotable: `<p>Alibek Kachmazov(알리벡 카치마조프) 선수는 러시아 출신의 프로 테니스 선수로, 파워풀한 포핸드와 서브이 특징입니다.</p>
+        <div class="highlight-box">
+          <div class="highlight-box-title">🎾 주목 포인트</div>
+          <p>러시아의 하드코트 스페셜리스트. ATP 투어에서 꾸준한 성장세를 보이며 팬들의 기대를 모으고 있습니다.</p>
+        </div>`,
+      playStyle: `<p>알리벡 카치마조프 선수의 플레이 스타일은 파워풀한 포핸드와 서브입니다. 안정적인 오른손 스트로크를 기반으로 경기를 운영합니다. 투핸드 백핸드로 안정적인 수비와 공격을 병행합니다.</p>
+        <p><strong>시그니처 기술:</strong></p>
+        <ul>
+          <li><strong>스트로크:</strong> 파워풀한 포핸드와 서브</li>
+          <li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li>
+          <li><strong>전술:</strong> 상황에 맞는 유연한 경기 운영</li>
+        </ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임의 안정성과 파괴력" },
+        { name: "리턴력", score: 7, description: "상대 서브에 대한 대응 능력" },
+        { name: "스트로크", score: 6, description: "베이스라인에서의 스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 앞에서의 터치와 판단력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력의 조화" },
+        { name: "경기운영", score: 6, description: "전술적 판단과 경기 흐름 제어" }
+      ],
+      growthStory: `<p>알리벡 카치마조프(Alibek Kachmazov) 선수는 러시아에서 태어나 어린 시절부터 테니스에 재능을 보였습니다. 주니어 시절부터 국제 대회에서 두각을 나타내며 프로 전향 후에도 꾸준한 성장세를 이어가고 있습니다.</p>
+        <p>ATP 투어에서 경험을 쌓으며 자신만의 플레이 스타일을 확립해 나가고 있으며, 앞으로의 성장이 기대되는 선수입니다.</p>`,
+      signatureMatch: {
+        title: "Alibek Kachmazov의 커리어 베스트 매치",
+        date: "2025",
+        description: "투어 대회에서 상위 랭커를 꺾으며 잠재력을 증명한 경기. 파워풀한 포핸드와 서브을 유감없이 발휘하며 승리를 거머쥐었습니다."
+      },
+      fanAppeal: `<div class="highlight-box">
+        <div class="highlight-box-title">💫 팬 어필 포인트</div>
+        <p>알리벡 카치마조프 선수는 코트 위에서의 파워풀한 포핸드와 서브뿐만 아니라, 코트 밖에서의 겸손하고 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p>
+      </div>`,
+      recentForm: `<p>알리벡 카치마조프 선수는 최근 시즌에서 꾸준한 경기력을 보여주고 있습니다. ATP 투어 대회에서 안정적인 성적을 거두며 랭킹 상승을 노리고 있습니다. 특히 파워풀한 포핸드와 서브이 더욱 발전하면서 향후 더 큰 무대에서의 활약이 기대됩니다.</p>`,
+      faq: [
+        { question: "알리벡 카치마조프의 국적은?", answer: "러시아 출신의 프로 테니스 선수입니다." },
+        { question: "알리벡 카치마조프의 플레이 스타일은?", answer: "파워풀한 포핸드와 서브이 특징인 ATP 투어 선수입니다." },
+        { question: "알리벡 카치마조프의 주손은?", answer: "오른손잡이이며, 투핸드 백핸드를 사용합니다." }
+      ]
+    }
+  },
+
+  "jiri-vesely": {
+    name: "이르지 베셀리",
+    nameEn: "Jiri Vesely",
+    country: "체코",
+    countryFlag: "🇨🇿",
+    image: "/images/players/jiri-vesely.svg",
+    gender: "male",
+    plays: "Left-handed",
+    backhand: "Two-handed",
+    longBio: "체코의 왼손잡이 빅서버",
+    detailedProfile: {
+      oneLineSummary: "체코의 왼손잡이 빅서버",
+      whyNotable: `<p>Jiri Vesely(이르지 베셀리) 선수는 체코 출신으로 강력한 왼손 서브와 탑스핀 포핸드이 특징입니다.</p><div class="highlight-box"><div class="highlight-box-title">🎾 주목 포인트</div><p>체코의 왼손잡이 빅서버. ATP 투어에서 성장세를 보이고 있습니다.</p></div>`,
+      playStyle: `<p>이르지 베셀리 선수의 스타일은 강력한 왼손 서브와 탑스핀 포핸드입니다. 왼손잡이 특유의 각도로 상대를 압박합니다.</p><ul><li><strong>스트로크:</strong> 강력한 왼손 서브와 탑스핀 포핸드</li><li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li><li><strong>전술:</strong> 유연한 경기 운영</li></ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임 능력" },
+        { name: "리턴력", score: 5, description: "리턴 대응 능력" },
+        { name: "스트로크", score: 8, description: "스트로크 능력" },
+        { name: "네트플레이", score: 8, description: "네트 플레이 능력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력" },
+        { name: "경기운영", score: 8, description: "전술적 경기 운영" }
+      ],
+      growthStory: `<p>이르지 베셀리(Jiri Vesely) 선수는 체코에서 성장하며 테니스에 재능을 보였습니다. 프로 전향 후 꾸준한 성장세를 이어가고 있습니다.</p>`,
+      signatureMatch: { title: "Jiri Vesely의 베스트 매치", date: "2025", description: "상위 랭커를 꺾으며 잠재력을 증명한 경기." },
+      fanAppeal: `<div class="highlight-box"><div class="highlight-box-title">💫 팬 어필</div><p>이르지 베셀리 선수는 코트 안팎에서 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p></div>`,
+      recentForm: `<p>최근 시즌에서 안정적인 경기력을 보이며 랭킹 상승을 노리고 있습니다.</p>`,
+      faq: [
+        { question: "이르지 베셀리의 국적은?", answer: "체코 출신입니다." },
+        { question: "이르지 베셀리의 플레이 스타일은?", answer: "강력한 왼손 서브와 탑스핀 포핸드이 특징입니다." },
+        { question: "이르지 베셀리의 주손은?", answer: "왼손잡이입니다." }
+      ]
+    }
+  },
+  "anna-bondar": {
+    name: "안나 본다르",
+    nameEn: "Anna Bondar",
+    country: "헝가리",
+    countryFlag: "🇭🇺",
+    image: "/images/players/anna-bondar.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "헝가리의 끈질긴 올라운더",
+    detailedProfile: {
+      oneLineSummary: "헝가리의 끈질긴 올라운더",
+      whyNotable: `<p>Anna Bondar(안나 본다르) 선수는 헝가리 출신으로 수비적 안정성과 정확한 스트로크이 특징입니다.</p><div class="highlight-box"><div class="highlight-box-title">🎾 주목 포인트</div><p>헝가리의 끈질긴 올라운더. WTA 투어에서 성장세를 보이고 있습니다.</p></div>`,
+      playStyle: `<p>안나 본다르 선수의 스타일은 수비적 안정성과 정확한 스트로크입니다. 안정적인 오른손 스트로크를 기반으로 합니다.</p><ul><li><strong>스트로크:</strong> 수비적 안정성과 정확한 스트로크</li><li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li><li><strong>전술:</strong> 유연한 경기 운영</li></ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임 능력" },
+        { name: "리턴력", score: 7, description: "리턴 대응 능력" },
+        { name: "스트로크", score: 8, description: "스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 플레이 능력" },
+        { name: "체력/멘탈", score: 7, description: "체력과 정신력" },
+        { name: "경기운영", score: 7, description: "전술적 경기 운영" }
+      ],
+      growthStory: `<p>안나 본다르(Anna Bondar) 선수는 헝가리에서 성장하며 테니스에 재능을 보였습니다. 프로 전향 후 꾸준한 성장세를 이어가고 있습니다.</p>`,
+      signatureMatch: { title: "Anna Bondar의 베스트 매치", date: "2025", description: "상위 랭커를 꺾으며 잠재력을 증명한 경기." },
+      fanAppeal: `<div class="highlight-box"><div class="highlight-box-title">💫 팬 어필</div><p>안나 본다르 선수는 코트 안팎에서 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p></div>`,
+      recentForm: `<p>최근 시즌에서 안정적인 경기력을 보이며 랭킹 상승을 노리고 있습니다.</p>`,
+      faq: [
+        { question: "안나 본다르의 국적은?", answer: "헝가리 출신입니다." },
+        { question: "안나 본다르의 플레이 스타일은?", answer: "수비적 안정성과 정확한 스트로크이 특징입니다." },
+        { question: "안나 본다르의 주손은?", answer: "오른손잡이입니다." }
+      ]
+    }
+  },
+  "hugo-dellien": {
+    name: "우고 델리엔",
+    nameEn: "Hugo Dellien",
+    country: "볼리비아",
+    countryFlag: "🇧🇴",
+    image: "/images/players/hugo-dellien.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "볼리비아 테니스의 개척자",
+    detailedProfile: {
+      oneLineSummary: "볼리비아 테니스의 개척자",
+      whyNotable: `<p>Hugo Dellien(우고 델리엔) 선수는 볼리비아 출신으로 클레이 코트에서의 끈질긴 랠리이 특징입니다.</p><div class="highlight-box"><div class="highlight-box-title">🎾 주목 포인트</div><p>볼리비아 테니스의 개척자. ATP 투어에서 성장세를 보이고 있습니다.</p></div>`,
+      playStyle: `<p>우고 델리엔 선수의 스타일은 클레이 코트에서의 끈질긴 랠리입니다. 안정적인 오른손 스트로크를 기반으로 합니다.</p><ul><li><strong>스트로크:</strong> 클레이 코트에서의 끈질긴 랠리</li><li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li><li><strong>전술:</strong> 유연한 경기 운영</li></ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임 능력" },
+        { name: "리턴력", score: 7, description: "리턴 대응 능력" },
+        { name: "스트로크", score: 5, description: "스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 플레이 능력" },
+        { name: "체력/멘탈", score: 6, description: "체력과 정신력" },
+        { name: "경기운영", score: 5, description: "전술적 경기 운영" }
+      ],
+      growthStory: `<p>우고 델리엔(Hugo Dellien) 선수는 볼리비아에서 성장하며 테니스에 재능을 보였습니다. 프로 전향 후 꾸준한 성장세를 이어가고 있습니다.</p>`,
+      signatureMatch: { title: "Hugo Dellien의 베스트 매치", date: "2025", description: "상위 랭커를 꺾으며 잠재력을 증명한 경기." },
+      fanAppeal: `<div class="highlight-box"><div class="highlight-box-title">💫 팬 어필</div><p>우고 델리엔 선수는 코트 안팎에서 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p></div>`,
+      recentForm: `<p>최근 시즌에서 안정적인 경기력을 보이며 랭킹 상승을 노리고 있습니다.</p>`,
+      faq: [
+        { question: "우고 델리엔의 국적은?", answer: "볼리비아 출신입니다." },
+        { question: "우고 델리엔의 플레이 스타일은?", answer: "클레이 코트에서의 끈질긴 랠리이 특징입니다." },
+        { question: "우고 델리엔의 주손은?", answer: "오른손잡이입니다." }
+      ]
+    }
+  },
+  "oceane-dodin": {
+    name: "오세안 도댕",
+    nameEn: "Oceane Dodin",
+    country: "프랑스",
+    countryFlag: "🇫🇷",
+    image: "/images/players/oceane-dodin.svg",
+    gender: "female",
+    plays: "Left-handed",
+    backhand: "Two-handed",
+    longBio: "프랑스의 왼손잡이 파워 히터",
+    detailedProfile: {
+      oneLineSummary: "프랑스의 왼손잡이 파워 히터",
+      whyNotable: `<p>Oceane Dodin(오세안 도댕) 선수는 프랑스 출신으로 왼손 특유의 각도와 폭발적 포핸드이 특징입니다.</p><div class="highlight-box"><div class="highlight-box-title">🎾 주목 포인트</div><p>프랑스의 왼손잡이 파워 히터. WTA 투어에서 성장세를 보이고 있습니다.</p></div>`,
+      playStyle: `<p>오세안 도댕 선수의 스타일은 왼손 특유의 각도와 폭발적 포핸드입니다. 왼손잡이 특유의 각도로 상대를 압박합니다.</p><ul><li><strong>스트로크:</strong> 왼손 특유의 각도와 폭발적 포핸드</li><li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li><li><strong>전술:</strong> 유연한 경기 운영</li></ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 8, description: "서비스 게임 능력" },
+        { name: "리턴력", score: 5, description: "리턴 대응 능력" },
+        { name: "스트로크", score: 6, description: "스트로크 능력" },
+        { name: "네트플레이", score: 8, description: "네트 플레이 능력" },
+        { name: "체력/멘탈", score: 6, description: "체력과 정신력" },
+        { name: "경기운영", score: 6, description: "전술적 경기 운영" }
+      ],
+      growthStory: `<p>오세안 도댕(Oceane Dodin) 선수는 프랑스에서 성장하며 테니스에 재능을 보였습니다. 프로 전향 후 꾸준한 성장세를 이어가고 있습니다.</p>`,
+      signatureMatch: { title: "Oceane Dodin의 베스트 매치", date: "2025", description: "상위 랭커를 꺾으며 잠재력을 증명한 경기." },
+      fanAppeal: `<div class="highlight-box"><div class="highlight-box-title">💫 팬 어필</div><p>오세안 도댕 선수는 코트 안팎에서 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p></div>`,
+      recentForm: `<p>최근 시즌에서 안정적인 경기력을 보이며 랭킹 상승을 노리고 있습니다.</p>`,
+      faq: [
+        { question: "오세안 도댕의 국적은?", answer: "프랑스 출신입니다." },
+        { question: "오세안 도댕의 플레이 스타일은?", answer: "왼손 특유의 각도와 폭발적 포핸드이 특징입니다." },
+        { question: "오세안 도댕의 주손은?", answer: "왼손잡이입니다." }
+      ]
+    }
+  },
+  "lucrezia-stefanini": {
+    name: "루크레치아 스테파니니",
+    nameEn: "Lucrezia Stefanini",
+    country: "이탈리아",
+    countryFlag: "🇮🇹",
+    image: "/images/players/lucrezia-stefanini.svg",
+    gender: "female",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "이탈리아의 클레이코트 스페셜리스트",
+    detailedProfile: {
+      oneLineSummary: "이탈리아의 클레이코트 스페셜리스트",
+      whyNotable: `<p>Lucrezia Stefanini(루크레치아 스테파니니) 선수는 이탈리아 출신으로 뛰어난 슬라이스와 드롭샷 터치이 특징입니다.</p><div class="highlight-box"><div class="highlight-box-title">🎾 주목 포인트</div><p>이탈리아의 클레이코트 스페셜리스트. WTA 투어에서 성장세를 보이고 있습니다.</p></div>`,
+      playStyle: `<p>루크레치아 스테파니니 선수의 스타일은 뛰어난 슬라이스와 드롭샷 터치입니다. 안정적인 오른손 스트로크를 기반으로 합니다.</p><ul><li><strong>스트로크:</strong> 뛰어난 슬라이스와 드롭샷 터치</li><li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li><li><strong>전술:</strong> 유연한 경기 운영</li></ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임 능력" },
+        { name: "리턴력", score: 7, description: "리턴 대응 능력" },
+        { name: "스트로크", score: 8, description: "스트로크 능력" },
+        { name: "네트플레이", score: 5, description: "네트 플레이 능력" },
+        { name: "체력/멘탈", score: 8, description: "체력과 정신력" },
+        { name: "경기운영", score: 6, description: "전술적 경기 운영" }
+      ],
+      growthStory: `<p>루크레치아 스테파니니(Lucrezia Stefanini) 선수는 이탈리아에서 성장하며 테니스에 재능을 보였습니다. 프로 전향 후 꾸준한 성장세를 이어가고 있습니다.</p>`,
+      signatureMatch: { title: "Lucrezia Stefanini의 베스트 매치", date: "2025", description: "상위 랭커를 꺾으며 잠재력을 증명한 경기." },
+      fanAppeal: `<div class="highlight-box"><div class="highlight-box-title">💫 팬 어필</div><p>루크레치아 스테파니니 선수는 코트 안팎에서 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p></div>`,
+      recentForm: `<p>최근 시즌에서 안정적인 경기력을 보이며 랭킹 상승을 노리고 있습니다.</p>`,
+      faq: [
+        { question: "루크레치아 스테파니니의 국적은?", answer: "이탈리아 출신입니다." },
+        { question: "루크레치아 스테파니니의 플레이 스타일은?", answer: "뛰어난 슬라이스와 드롭샷 터치이 특징입니다." },
+        { question: "루크레치아 스테파니니의 주손은?", answer: "오른손잡이입니다." }
+      ]
+    }
+  },
+  "chun-hsin-tseng": {
+    name: "쩡춘신",
+    nameEn: "Chun-hsin Tseng",
+    country: "대만",
+    countryFlag: "🇹🇼",
+    image: "/images/players/chun-hsin-tseng.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "대만 테니스의 자존심",
+    detailedProfile: {
+      oneLineSummary: "대만 테니스의 자존심",
+      whyNotable: `<p>Chun-hsin Tseng(쩡춘신) 선수는 대만 출신으로 소체구의 민첩한 코트 커버링이 특징입니다.</p><div class="highlight-box"><div class="highlight-box-title">🎾 주목 포인트</div><p>대만 테니스의 자존심. ATP 투어에서 성장세를 보이고 있습니다.</p></div>`,
+      playStyle: `<p>쩡춘신 선수의 스타일은 소체구의 민첩한 코트 커버링입니다. 안정적인 오른손 스트로크를 기반으로 합니다.</p><ul><li><strong>스트로크:</strong> 소체구의 민첩한 코트 커버링</li><li><strong>서브:</strong> 경기 흐름을 주도하는 서비스 게임</li><li><strong>전술:</strong> 유연한 경기 운영</li></ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "서비스 게임 능력" },
+        { name: "리턴력", score: 7, description: "리턴 대응 능력" },
+        { name: "스트로크", score: 6, description: "스트로크 능력" },
+        { name: "네트플레이", score: 6, description: "네트 플레이 능력" },
+        { name: "체력/멘탈", score: 5, description: "체력과 정신력" },
+        { name: "경기운영", score: 8, description: "전술적 경기 운영" }
+      ],
+      growthStory: `<p>쩡춘신(Chun-hsin Tseng) 선수는 대만에서 성장하며 테니스에 재능을 보였습니다. 프로 전향 후 꾸준한 성장세를 이어가고 있습니다.</p>`,
+      signatureMatch: { title: "Chun-hsin Tseng의 베스트 매치", date: "2025", description: "상위 랭커를 꺾으며 잠재력을 증명한 경기." },
+      fanAppeal: `<div class="highlight-box"><div class="highlight-box-title">💫 팬 어필</div><p>쩡춘신 선수는 코트 안팎에서 성실한 모습으로 팬들의 사랑을 받고 있습니다.</p></div>`,
+      recentForm: `<p>최근 시즌에서 안정적인 경기력을 보이며 랭킹 상승을 노리고 있습니다.</p>`,
+      faq: [
+        { question: "쩡춘신의 국적은?", answer: "대만 출신입니다." },
+        { question: "쩡춘신의 플레이 스타일은?", answer: "소체구의 민첩한 코트 커버링이 특징입니다." },
+        { question: "쩡춘신의 주손은?", answer: "오른손잡이입니다." }
+      ]
+    }
+  },
+
+  "pedro-cachin": {
+    name: "페드로 카친",
+    nameEn: "Pedro Cachin",
+    country: "아르헨티나",
+    countryFlag: "🇦🇷",
+    image: "/images/players/pedro-cachin.svg",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio: "아르헨티나 클레이코트의 끈질긴 투사",
+    detailedProfile: {
+      oneLineSummary: "아르헨티나 클레이코트의 끈질긴 투사",
+      whyNotable: `<p>Pedro Cachin(페드로 카친) 선수는 아르헨티나 출신의 프로 테니스 선수로, 클레이 코트에서의 끈질긴 랠리와 정확한 톱스핀이 특징입니다.</p><div class="highlight-box"><div class="highlight-box-title">🎾 주목 포인트</div><p>남미 특유의 클레이코트 전투력으로 ATP 투어에서 경쟁력을 보이고 있습니다.</p></div>`,
+      playStyle: `<p>페드로 카친 선수의 스타일은 끈질긴 베이스라인 랠리와 정확한 탑스핀입니다.</p><ul><li><strong>스트로크:</strong> 클레이 코트에서의 깊은 탑스핀 랠리</li><li><strong>서브:</strong> 안정적인 서비스 게임</li><li><strong>전술:</strong> 인내심 있는 포인트 구성</li></ul>`,
+      hexagonStats: [
+        { name: "서브력", score: 6, description: "안정적 서브" },
+        { name: "리턴력", score: 7, description: "뛰어난 리턴" },
+        { name: "스트로크", score: 7, description: "강한 탑스핀" },
+        { name: "네트플레이", score: 5, description: "기본적 네트" },
+        { name: "체력/멘탈", score: 8, description: "뛰어난 체력" },
+        { name: "경기운영", score: 7, description: "인내심 있는 운영" }
+      ],
+      growthStory: `<p>아르헨티나에서 성장한 카친은 남미 클레이코트 서킷에서 경험을 쌓으며 ATP 투어에 진출했습니다.</p>`,
+      signatureMatch: { title: "카친의 베스트 매치", date: "2025", description: "ATP 대회에서 시드를 꺾으며 잠재력을 증명." },
+      fanAppeal: `<div class="highlight-box"><div class="highlight-box-title">💫 팬 어필</div><p>끈질긴 투지와 겸손한 성격으로 팬들의 사랑을 받고 있습니다.</p></div>`,
+      recentForm: `<p>최근 클레이 시즌에서 좋은 성적을 내며 랭킹 상승 중입니다.</p>`,
+      faq: [
+        { question: "카친의 국적은?", answer: "아르헨티나 출신입니다." },
+        { question: "카친의 스타일은?", answer: "클레이코트에서의 끈질긴 랠리가 특징입니다." },
+        { question: "카친의 주손은?", answer: "오른손잡이, 투핸드 백핸드입니다." }
+      ]
+    }
+  },
+};
