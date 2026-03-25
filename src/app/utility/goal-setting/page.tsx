@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -23,6 +25,14 @@ interface GoalItem {
   unit: string;
   deadline: string;
 }
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "테니스 목표 설정",
+  description: "단계별 테니스 목표를 설정하고 달성 계획을 세웁니다.",
+  path: "/utility/goal-setting",
+  type: "website",
+  tags: ["목표 설정", "성장 계획", "동기부여"],
+});
 
 export default function GoalSettingPage() {
   const [goals, setGoals] = useState<GoalItem[]>([]);

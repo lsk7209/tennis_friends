@@ -12,6 +12,7 @@ const sections = [
   { title: '체력 / 집중력', description: '후반으로 갈수록 샷 질이 떨어졌는지 흐름으로 확인합니다.' },
 ];
 
+
 export default function MatchAnalyzerPage() {
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)]">

@@ -103,6 +103,7 @@ const EXERCISES: Exercise[] = [
 
 /* ──────────────────────────── routine generator ──────────────── */
 
+
 function generateRoutine(
   time: TimeOption,
   matchType: MatchType,

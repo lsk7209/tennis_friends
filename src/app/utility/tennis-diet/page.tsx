@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -13,6 +15,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 type Goal = 'maintain' | 'lose' | 'gain';
 type ActivityLevel = 'light' | 'moderate' | 'active';
 type TennisDays = '1-2' | '3-4' | '5+';
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "테니스 식단 가이드",
+  description: "테니스 선수를 위한 경기 전후 영양 관리와 식단을 제안합니다.",
+  path: "/utility/tennis-diet",
+  type: "website",
+  tags: ["식단", "영양", "체력 관리"],
+});
 
 export default function TennisDietPage() {
   const [height, setHeight] = useState(170);

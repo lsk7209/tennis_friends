@@ -1,19 +1,20 @@
-import React from 'react';
-
 /**
  * Enhanced JsonLd Component for SEO/AEO Optimization
- * 
+ *
  * Features:
  * - Type-safe schema support
  * - Multiple schema support via @graph
  * - Automatic validation
  * - Naver/Google/AI bot optimization
  */
+
+type SchemaData = Record<string, unknown>;
+
 interface JsonLdProps {
     /**
      * Schema data - can be a single schema or @graph array
      */
-    data: Record<string, any> | { '@graph': Array<Record<string, any>> };
+    data: SchemaData | { '@graph': SchemaData[] };
     
     /**
      * Optional ID for the script tag (useful for multiple schemas on same page)
@@ -29,7 +30,7 @@ interface JsonLdProps {
 /**
  * Validates basic schema structure (development helper)
  */
-function validateSchema(data: Record<string, any>): boolean {
+function validateSchema(data: SchemaData): boolean {
     if (process.env.NODE_ENV !== 'development') return true;
     
     // Basic validation: must have @context and @type (or @graph)
@@ -42,7 +43,7 @@ function validateSchema(data: Record<string, any>): boolean {
 
 export default function JsonLd({ data, id, validate = false }: JsonLdProps) {
     // Validate in development mode
-    if (validate && !validateSchema(data as Record<string, any>)) {
+    if (validate && !validateSchema(data as SchemaData)) {
         console.warn('[JsonLd] Schema validation failed:', data);
     }
 

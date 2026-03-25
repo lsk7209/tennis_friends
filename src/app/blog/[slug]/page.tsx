@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';
@@ -7,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Clock, ArrowLeft, ArrowRight, Share2 } from 'lucide-react';
 import { allBlogPosts } from '@/data/blog-posts';
-import type { BlogPost } from '@/types/blog';
+import type { BlogPostData } from '@/types/blog';
 import RelatedContent from '@/components/RelatedContent';
 import { getRelatedBlogPosts } from '@/lib/related-content';
 import type { RelatedContentItem } from '@/components/RelatedContent';
@@ -30,7 +29,14 @@ const toolMap = [
   { keywords: ['멘탈', '집중', '심리', '루틴'], emoji: '🧠', name: '멘탈 트레이닝', href: '/utility/mental-training', desc: '경기 중 멘탈 강화' },
 ];
 
-function getRelatedTools(post: any) {
+// BlogPostData에 blogContentMap에서 병합되는 필드를 추가한 확장 타입
+interface EnrichedBlogPost extends BlogPostData {
+  content?: string;
+  summary?: string;
+  highlight?: string;
+}
+
+function getRelatedTools(post: EnrichedBlogPost) {
   const text = `${post.title || ''} ${post.category || ''} ${(post.tags || []).join(' ')} ${post.content || ''}`.toLowerCase();
   const scored = toolMap.map(tool => ({
     ...tool,
@@ -80,20 +86,15 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  // Type assertion since blog posts from JS might not strictly match TS interface
-  const typedPost: any = post;
-
   // Merge content from blogContentMap if available
   const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
-  if (contentData) {
-    typedPost.content = contentData.content;
-    typedPost.tags = contentData.tags;
-    typedPost.summary = contentData.summary;
-    typedPost.highlight = contentData.highlight;
-    if (contentData.faq) {
-      // We'll handle FAQ merging later in the component
-    }
-  }
+  const enrichedPost: EnrichedBlogPost = {
+    ...post,
+    content: contentData?.content ?? '',
+    tags: contentData?.tags ?? post.tags ?? [],
+    summary: contentData?.summary ?? post.excerpt,
+    highlight: contentData?.highlight ?? post.excerpt,
+  };
 
   // Transform blog posts to RelatedItem type with safe fallbacks
   const allPostsForRelated: RelatedContentItem[] = allBlogPosts.map(p => ({
@@ -102,7 +103,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: p.excerpt,
     excerpt: p.excerpt,
     category: p.category,
-    tags: (p as any).tags || [], // tags might be missing in JS data
+    tags: p.tags ?? [],
     href: `/blog/${p.slug}`,
     date: p.date,
     readTime: p.readTime,
@@ -115,7 +116,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.excerpt,
     excerpt: post.excerpt,
     category: post.category,
-    tags: (post as any).tags || [],
+    tags: enrichedPost.tags ?? [],
     href: `/blog/${post.slug}`,
     date: post.date,
     readTime: post.readTime,
@@ -125,9 +126,9 @@ export default async function BlogPostPage({ params }: Props) {
   const relatedPosts = getRelatedBlogPosts(currentRelatedItem, allPostsForRelated, 6);
 
   // FAQ Items
-  const faqItems: any[] = contentData?.faq ? contentData.faq.map(item => ({
+  const faqItems = contentData?.faq ? contentData.faq.map((item: { question: string; answer: string }) => ({
     question: item.question,
-    acceptedAnswer: { text: item.answer }
+    answer: item.answer,
   })) : [];
 
   const breadcrumbItems = [
@@ -148,8 +149,8 @@ export default async function BlogPostPage({ params }: Props) {
         author="TennisFriends"
         category={post.category}
         readingTime={post.readTime}
-        keywords={(post as any).tags || []} // Cast to any for now
-        articleBody={(post as any).content || ''}
+        keywords={enrichedPost.tags ?? []}
+        articleBody={enrichedPost.content ?? ''}
       />
 
       {/* Navigation */}
@@ -219,7 +220,7 @@ export default async function BlogPostPage({ params }: Props) {
           <h2 id="summary-heading" className="text-lg font-bold text-primary mb-3">
             요약
           </h2>
-          <p className="text-text-light">{(post as any).summary || post.excerpt}</p>
+          <p className="text-text-light">{enrichedPost.summary}</p>
         </section>
 
         {/* Highlight Section */}
@@ -227,7 +228,7 @@ export default async function BlogPostPage({ params }: Props) {
           className="bg-primary/10 border-2 border-primary/80 rounded-lg p-6 mb-8"
           aria-label="핵심 포인트"
         >
-          <p className="text-text-light font-medium">{(post as any).highlight || post.excerpt}</p>
+          <p className="text-text-light font-medium">{enrichedPost.highlight}</p>
         </section>
 
         {/* Table of Contents */}
@@ -254,13 +255,13 @@ export default async function BlogPostPage({ params }: Props) {
           id="article-content"
           className="prose prose-invert max-w-none"
           itemProp="articleBody"
-          dangerouslySetInnerHTML={{ __html: (post as any).content || '' }}
+          dangerouslySetInnerHTML={{ __html: enrichedPost.content ?? '' }}
         />
 
         {/* Tags Section */}
-        {(post as any).tags && (post as any).tags.length > 0 && (
+        {enrichedPost.tags && enrichedPost.tags.length > 0 && (
           <section aria-label="태그" className="flex flex-wrap gap-2 mt-8">
-            {(post as any).tags.map((tag: string, index: number) => (
+            {enrichedPost.tags.map((tag: string, index: number) => (
               <Badge
                 key={index}
                 variant="outline"
@@ -301,7 +302,7 @@ export default async function BlogPostPage({ params }: Props) {
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">🎯 이 글과 관련된 도구</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">직접 테스트하고 분석해보세요</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {getRelatedTools(typedPost).map((tool) => (
+              {getRelatedTools(enrichedPost).map((tool) => (
                 <Link key={tool.href} href={tool.href} className="group">
                   <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:shadow-md transition-all">
                     <div className="text-2xl mb-2">{tool.emoji}</div>

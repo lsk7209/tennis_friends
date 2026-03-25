@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -82,6 +84,14 @@ const categoryMeta: Record<Category, { label: string; color: string }> = {
   confidence: { label: '자신감', color: 'bg-amber-100 text-amber-700' },
   reset: { label: '리셋', color: 'bg-rose-100 text-rose-700' },
 };
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "멘탈 트레이닝",
+  description: "경기 중 집중력과 멘탈을 강화하는 훈련 프로그램입니다.",
+  path: "/utility/mental-training",
+  type: "website",
+  tags: ["멘탈", "집중력", "심리 훈련"],
+});
 
 export default function MentalTrainingPage() {
   const [selectedCategory, setSelectedCategory] = useState<Category | 'all'>('all');

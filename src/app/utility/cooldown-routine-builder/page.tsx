@@ -142,6 +142,7 @@ const EXERCISES: Exercise[] = [
 
 /* ──────────────────────────── routine generator ──────────────── */
 
+
 function formatDuration(seconds: number): string {
   if (seconds >= 60) {
     const mins = Math.floor(seconds / 60);

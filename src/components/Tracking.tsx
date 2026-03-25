@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { safeJsonParse } from '@/lib/safe-json';
 
 interface VisitorData {
   id: string;
@@ -27,15 +28,15 @@ interface VisitorData {
   visitDuration?: number; // 페이지 체류 시간
   // 테스트 관련 데이터
   testCompleted?: string; // 완료한 테스트 ID
-  testResult?: any; // 테스트 결과 데이터
+  testResult?: Record<string, unknown>; // 테스트 결과 데이터
   testType?: string; // 테스트 종류
 }
 
 // 테스트 완료 이벤트 추적 함수
-export const trackTestCompletion = (testType: string, testResult?: any) => {
+export const trackTestCompletion = (testType: string, testResult?: Record<string, unknown>) => {
   try {
     const testData: VisitorData = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: Math.random().toString(36).substring(2, 11),
       timestamp: new Date().toISOString(),
       referrer: document.referrer || '',
       userAgent: navigator.userAgent || '',
@@ -62,7 +63,7 @@ export const trackTestCompletion = (testType: string, testResult?: any) => {
     };
 
     // 기존 방문자 데이터 가져오기
-    const existingData = JSON.parse(localStorage.getItem('visitorData') || '[]');
+    const existingData: VisitorData[] = safeJsonParse(localStorage.getItem('visitorData'), []);
 
     // 테스트 완료 데이터 추가
     existingData.push(testData);
@@ -124,7 +125,7 @@ export default function Tracking() {
         const deviceInfo = parseUserAgent(navigator.userAgent);
 
         const visitorData: VisitorData = {
-          id: Math.random().toString(36).substr(2, 9),
+          id: Math.random().toString(36).substring(2, 11),
           timestamp: new Date().toISOString(),
           referrer: document.referrer || '',
           userAgent: navigator.userAgent || '',
@@ -147,7 +148,7 @@ export default function Tracking() {
         };
 
         // 기존 방문자 데이터 가져오기
-        const existingData = JSON.parse(localStorage.getItem('visitorData') || '[]');
+        const existingData: VisitorData[] = safeJsonParse(localStorage.getItem('visitorData'), []);
 
         // 새로운 데이터 추가 (최근 1000개만 유지)
         existingData.push(visitorData);
@@ -230,7 +231,7 @@ function getOrCreateSessionId(): string {
   let sessionId = localStorage.getItem(sessionKey);
 
   if (!sessionId) {
-    sessionId = Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+    sessionId = Math.random().toString(36).substring(2, 11) + Date.now().toString(36);
     localStorage.setItem(sessionKey, sessionId);
 
     // 세션 만료 시간 설정 (24시간)
@@ -241,7 +242,7 @@ function getOrCreateSessionId(): string {
     const expiry = parseInt(localStorage.getItem('tennis_session_expiry') || '0');
     if (Date.now() > expiry) {
       // 세션 만료됨, 새로운 세션 생성
-      sessionId = Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+      sessionId = Math.random().toString(36).substring(2, 11) + Date.now().toString(36);
       localStorage.setItem(sessionKey, sessionId);
       const newExpiry = Date.now() + (24 * 60 * 60 * 1000);
       localStorage.setItem('tennis_session_expiry', newExpiry.toString());

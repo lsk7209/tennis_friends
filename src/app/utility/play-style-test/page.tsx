@@ -4,6 +4,8 @@ import { ArrowRight, Sparkles, Swords } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "테니스 플레이 스타일 테스트 | TennisFriends",
@@ -21,6 +23,11 @@ const styles = ["공격 주도형", "안정 수비형", "패턴 운영형", "올
 export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <BreadcrumbSchema items={[
+        { name: '홈', item: getSiteUrl() },
+        { name: '유틸리티', item: `${getSiteUrl()}/utility` },
+        { name: '플레이 스타일 테스트', item: `${getSiteUrl()}/utility/play-style-test` }
+      ]} />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <Card className="border-pink-100 bg-gradient-to-br from-pink-50 via-white to-orange-50">
           <CardHeader>

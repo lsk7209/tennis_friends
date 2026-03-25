@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "코트 표면 추천 가이드",
@@ -36,6 +38,11 @@ const sections = [
 export default function Page() {
   return (
     <main className="mx-auto w-full max-w-5xl px-4 py-12">
+      <BreadcrumbSchema items={[
+        { name: '홈', item: getSiteUrl() },
+        { name: '유틸리티', item: `${getSiteUrl()}/utility` },
+        { name: '코트 표면 추천 가이드', item: `${getSiteUrl()}/utility/court-surface-advisor` }
+      ]} />
       <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Strategy</p>
         <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">코트 표면 추천 가이드</h1>

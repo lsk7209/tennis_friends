@@ -64,6 +64,7 @@ interface Grade {
   advice: string;
 }
 
+
 function getGrade(score: number): Grade {
   if (score >= 26)
     return {

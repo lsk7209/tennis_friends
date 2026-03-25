@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Heart, Target, Users, Award } from 'lucide-react';
@@ -177,16 +178,16 @@ export default function AboutPage() {
             언제든지 연락주세요!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact">
+            <Link href="/contact">
               <button className="bg-primary text-background-dark px-6 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors">
                 문의하기
               </button>
-            </a>
-            <a href="/blog">
+            </Link>
+            <Link href="/blog/">
               <button className="bg-content-dark text-text-light px-6 py-2 rounded-lg font-medium hover:bg-content-dark/80 transition-colors border border-white/10">
                 블로그 보기
               </button>
-            </a>
+            </Link>
           </div>
         </CardContent>
       </Card>

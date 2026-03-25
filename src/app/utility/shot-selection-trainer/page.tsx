@@ -104,6 +104,7 @@ const SCORE_PER_BEST = 3;
 const SCORE_PER_SUBOPTIMAL = 1;
 const MAX_SCORE = SITUATIONS.length * SCORE_PER_BEST; // 24
 
+
 function getRating(score: number): { label: string; color: string; comment: string } {
   const pct = score / MAX_SCORE;
   if (pct >= 0.9) return { label: "프로급 전술가", color: "text-yellow-400", comment: "코트 위의 체스 마스터! 거의 모든 상황에서 최적의 판단을 내렸습니다." };
