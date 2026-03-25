@@ -7,6 +7,7 @@ import { homeBlogPosts } from '@/data/home-blog-posts';
 import type { Metadata } from 'next';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ClientAnimations';
 import JsonLd from '@/components/JsonLd';
+import FAQSection from '@/components/seo/FAQSection';
 import { getSiteUrl } from '@/lib/site';
 
 // 메인 페이지 SEO 메타데이터
@@ -296,6 +297,68 @@ export default function Home() {
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Popular Utilities Grid - Additional Internal Links */}
+      <section className="section-padding bg-white">
+        <div className="container mx-auto max-w-7xl container-padding">
+          <SlideUp>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                인기 테니스 도구 모음
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                61개 이상의 무료 테니스 분석 도구로 실력을 한 단계 끌어올리세요
+              </p>
+            </div>
+          </SlideUp>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { name: "복식 궁합 테스트", href: "/utility/doubles-chemistry-test", emoji: "👥" },
+              { name: "반응 속도 테스트", href: "/utility/reaction-test", emoji: "⚡" },
+              { name: "유연성 테스트", href: "/utility/flexibility-test", emoji: "🤸" },
+              { name: "칼로리 계산기", href: "/utility/calorie-calculator", emoji: "🔥" },
+              { name: "테니스 용어 사전", href: "/utility/tennis-dictionary", emoji: "📖" },
+              { name: "멘탈 트레이닝", href: "/utility/mental-training", emoji: "🧠" },
+              { name: "상대 분석기", href: "/utility/opponent-analyzer", emoji: "🔍" },
+              { name: "워밍업 루틴", href: "/utility/warmup-routine-builder", emoji: "🏃" },
+              { name: "코트 컨디션 체크", href: "/utility/court-conditions", emoji: "🌤️" },
+              { name: "랭킹 계산기", href: "/utility/ranking-calculator", emoji: "📈" },
+              { name: "테니스화 추천", href: "/utility/shoe-recommender", emoji: "👟" },
+              { name: "스윙 분석기", href: "/utility/swing-analyzer", emoji: "🎯" },
+            ].map((tool, i) => (
+              <Link key={i} href={tool.href}>
+                <div className="p-4 bg-gray-50 hover:bg-blue-50 rounded-xl border border-gray-200 hover:border-blue-300 transition-all text-center group">
+                  <div className="text-2xl mb-2">{tool.emoji}</div>
+                  <div className="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">{tool.name}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/utility">
+              <Button variant="outline" className="bg-white border-gray-300 hover:border-blue-500 px-8 py-3 text-lg font-semibold">
+                전체 도구 보기 (61개+)
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section for Google Rich Snippets */}
+      <section className="section-padding bg-gray-50">
+        <div className="container mx-auto max-w-4xl container-padding">
+          <FAQSection
+            title="테니스 실력 향상 FAQ"
+            items={[
+              { question: "NTRP 테니스 등급이란 무엇인가요?", answer: "NTRP(National Tennis Rating Program)는 1.0부터 7.0까지의 숫자로 테니스 실력을 객관적으로 평가하는 국제 표준 등급 시스템입니다. 1.0은 완전 초보자, 3.0은 중급 동호인, 5.0 이상은 프로 수준입니다. TennisFriends의 무료 NTRP 테스트로 10개 질문에 답하면 나의 등급을 확인할 수 있습니다." },
+              { question: "테니스 스트링 텐션은 어떻게 정해야 하나요?", answer: "스트링 텐션은 라켓 헤드 크기, 플레이 스타일, 선호하는 타구감에 따라 달라집니다. 일반적으로 파워를 원하면 낮은 텐션(48-52lbs), 컨트롤을 원하면 높은 텐션(54-60lbs)을 선택합니다. TennisFriends 스트링 텐션 계산기에서 5가지 요소를 입력하면 맞춤 텐션을 추천받을 수 있습니다." },
+              { question: "테니스 엘보를 예방하려면 어떻게 해야 하나요?", answer: "테니스 엘보 예방의 핵심은 3가지입니다: 1) 올바른 그립 사이즈 선택, 2) 경기 전후 팔꿈치·전완근 스트레칭, 3) 라켓 진동 흡수력이 좋은 장비 사용. 또한 폴리에스터 스트링 대신 멀티필라멘트나 내추럴 거트를 사용하면 팔에 가해지는 충격을 줄일 수 있습니다." },
+              { question: "테니스 초보자가 처음 사야 할 장비는 무엇인가요?", answer: "초보자에게 필요한 필수 장비는 라켓, 테니스화, 오버그립입니다. 라켓은 헤드 크기 100sq.in 이상의 가벼운 모델(270-285g)을 추천합니다. 테니스화는 일반 운동화와 달리 측면 지지력이 중요하므로 반드시 테니스 전용 신발을 구입하세요. 예산은 라켓 15-25만원, 신발 8-15만원 정도입니다." },
+              { question: "복식 경기에서 가장 중요한 전략은 무엇인가요?", answer: "복식의 핵심은 커뮤니케이션과 포지셔닝입니다. 서브 시 I-포메이션이나 오스트레일리안 포메이션을 활용하고, 네트 플레이어는 항상 볼의 방향을 따라 이동해야 합니다. 파트너 간의 시선 교환과 사전 사인 시스템을 만들면 승률이 크게 올라갑니다." },
+            ]}
+          />
         </div>
       </section>
     </div>
