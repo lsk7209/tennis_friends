@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import EquipmentRecommendationClient from "./EquipmentRecommendationClient";
 import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "테니스 장비 추천",
@@ -11,5 +13,14 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function EquipmentRecommendationPage() {
-  return <EquipmentRecommendationClient />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: '홈', item: getSiteUrl() },
+        { name: '유틸리티', item: `${getSiteUrl()}/utility` },
+        { name: '테니스 장비 추천', item: `${getSiteUrl()}/utility/equipment-recommendation` }
+      ]} />
+      <EquipmentRecommendationClient />
+    </>
+  );
 }

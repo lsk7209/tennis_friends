@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "테니스 영양 가이드",
@@ -23,6 +25,11 @@ const cards = [
 export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <BreadcrumbSchema items={[
+        { name: '홈', item: getSiteUrl() },
+        { name: '유틸리티', item: `${getSiteUrl()}/utility` },
+        { name: '테니스 영양 가이드', item: `${getSiteUrl()}/utility/nutrition-guide` }
+      ]} />
       {/* 의료 면책 고지 */}
       <div className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-4 mb-8">
         <div className="flex items-start gap-3">

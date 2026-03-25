@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "스트링 텐션 계산기",
@@ -23,6 +25,11 @@ const reasons = [
 export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <BreadcrumbSchema items={[
+        { name: '홈', item: getSiteUrl() },
+        { name: '유틸리티', item: `${getSiteUrl()}/utility` },
+        { name: '스트링 텐션 계산기', item: `${getSiteUrl()}/utility/string-tension` }
+      ]} />
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <Card className="border-sky-100 bg-gradient-to-br from-sky-50 via-white to-emerald-50">
           <CardHeader>

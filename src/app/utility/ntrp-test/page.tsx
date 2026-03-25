@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "NTRP 실력 테스트",
@@ -23,6 +25,11 @@ const points = [
 export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
+      <BreadcrumbSchema items={[
+        { name: '홈', item: getSiteUrl() },
+        { name: '유틸리티', item: `${getSiteUrl()}/utility` },
+        { name: 'NTRP 실력 테스트', item: `${getSiteUrl()}/utility/ntrp-test` }
+      ]} />
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <Card className="border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
           <CardHeader>
