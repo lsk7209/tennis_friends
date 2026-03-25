@@ -6,13 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, AreaChart, Area, Legend } from 'recharts';
-import { Eye, Users, TrendingUp, Search, Globe, Calendar, Monitor, Smartphone, Tablet, Globe2, Clock, FileText, Timer, ExternalLink, Activity, BarChart3, ArrowRight, ArrowLeft, Download, Filter, MapPin, Target, Zap, TrendingDown, CheckCircle, AlertTriangle, Map } from 'lucide-react';
-import { getTestCompletionCount, getPopularTests } from '@/components/Tracking';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, AreaChart, Area } from 'recharts';
+import { Eye, Users, TrendingUp, Search, Globe, Calendar, Monitor, Smartphone, Globe2, Clock, FileText, Timer, ExternalLink, Activity, BarChart3, ArrowRight, ArrowLeft, Download, MapPin, Target, Zap, TrendingDown, CheckCircle, AlertTriangle, Map } from 'lucide-react';
+import { getPopularTests } from '@/components/Tracking';
 import { getStats as getCloudflareStats, getRealtimeStats, clearData as clearCloudflareData } from '@/lib/cloudflare-analytics';
 import type { VisitorData, StatsData, DataStatus, CloudflareStatus } from '@/types/admin';
 import { calculateStats } from '@/lib/admin/statistics';
-import { EMPTY_STATS_DATA, ADMIN_PASSWORD, AUTO_REFRESH_INTERVAL } from '@/lib/admin/constants';
+import { EMPTY_STATS_DATA, ADMIN_PASSWORD } from '@/lib/admin/constants';
 import { toast } from 'sonner';
 import { getReferrerDisplay, extractKeyword, formatDate } from '@/lib/admin/helpers';
 
@@ -52,7 +52,8 @@ export default function AdminPage() {
     }, 30000); // 30초마다 업데이트
 
     return () => clearInterval(interval);
-  }, [isAuthenticated, password]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuthenticated]);
 
   const fetchStats = async () => {
     setLoading(true);
@@ -671,7 +672,7 @@ export default function AdminPage() {
                       <YAxis />
                       <Tooltip
                         labelFormatter={(value) => `${value}시`}
-                        formatter={(value: any) => [`${value}명`, '방문자']}
+                        formatter={(value: number) => [`${value}명`, '방문자']}
                       />
                       <Area type="monotone" dataKey="visitors" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.6} />
                     </AreaChart>
@@ -721,7 +722,7 @@ export default function AdminPage() {
                         outerRadius={80}
                         fill="#8884d8"
                         dataKey="count"
-                        label={({ category, percent }: any) => `${category} ${((percent as number) * 100).toFixed(0)}%`}
+                        label={(props) => `${(props as { category?: string }).category ?? ''} ${(((props as { percent?: number }).percent ?? 0) * 100).toFixed(0)}%`}
                       >
                         {stats.referrerCategoryStats.map((entry, index) => {
                           const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444'];
@@ -832,7 +833,7 @@ export default function AdminPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {stats.detailedReferrerStats.searchEngines.map((engine, index) => (
+                    {stats.detailedReferrerStats.searchEngines.map((engine) => (
                       <div key={engine.name} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
                         <div className="flex items-center justify-between mb-2">
                           <span className="font-semibold">{engine.name}</span>
@@ -1371,19 +1372,19 @@ export default function AdminPage() {
                         // 데이터 검증 결과 출력
                         const validation = {
                           총레코드: data.length,
-                          유효레코드: data.filter((v: any) => v.timestamp && v.page && v.sessionId).length,
+                          유효레코드: data.filter((v: VisitorData) => v.timestamp && v.page && v.sessionId).length,
                           최신기록: data.length > 0 ? new Date(data[data.length - 1].timestamp).toLocaleString('ko-KR') : '없음',
-                          페이지타입분포: data.reduce((acc: any, v: any) => {
+                          페이지타입분포: data.reduce((acc: Record<string, number>, v: VisitorData) => {
                             acc[v.pageType || 'other'] = (acc[v.pageType || 'other'] || 0) + 1;
                             return acc;
                           }, {}),
-                          검색엔진분포: data.reduce((acc: any, v: any) => {
+                          검색엔진분포: data.reduce((acc: Record<string, number>, v: VisitorData) => {
                             if (v.searchEngine) {
                               acc[v.searchEngine] = (acc[v.searchEngine] || 0) + 1;
                             }
                             return acc;
                           }, {}),
-                          테스트완료: data.filter((v: any) => v.testCompleted).length
+                          테스트완료: data.filter((v: VisitorData) => v.testCompleted).length
                         };
                         console.log('데이터 검증 결과:', validation);
 
@@ -1407,7 +1408,7 @@ export default function AdminPage() {
                       }
 
                       const data = JSON.parse(rawData);
-                      const testDataCount = data.filter((v: any) => v.id && v.id.startsWith('test-')).length;
+                      const testDataCount = data.filter((v: VisitorData) => v.id && v.id.startsWith('test-')).length;
                       const realDataCount = data.length - testDataCount;
 
                       const message = `

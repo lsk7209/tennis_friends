@@ -24,7 +24,7 @@ export interface VisitorData {
   isNewVisitor: boolean;
   visitDuration?: number;
   testCompleted?: string;
-  testResult?: any;
+  testResult?: Record<string, unknown>;
   testType?: string;
 }
 
