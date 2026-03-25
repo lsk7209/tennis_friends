@@ -27,7 +27,7 @@ function getSlugsFromDir(dirPath: string): string[] {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
-  const buildDate = new Date("2026-03-08");
+  const buildDate = new Date("2026-03-25");
 
   const staticPages: MetadataRoute.Sitemap = [
     {

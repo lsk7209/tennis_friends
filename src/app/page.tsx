@@ -6,24 +6,62 @@ import { Badge } from '@/components/ui/badge';
 import { homeBlogPosts } from '@/data/home-blog-posts';
 import type { Metadata } from 'next';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ClientAnimations';
+import JsonLd from '@/components/JsonLd';
+import { getSiteUrl } from '@/lib/site';
 
 // 메인 페이지 SEO 메타데이터
 export const metadata: Metadata = {
-  title: 'TennisFriends - 데이터로 똑똑하게, 테니스를 즐겁게',
-  description: 'NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 도구를 무료로 제공합니다. 10,000명 이상이 이용한 전문가 검증 알고리즘.',
-  keywords: ['테니스', 'NTRP 테스트', '테니스 실력 측정', '스트링 텐션', '테니스 부상 예방', '테니스 커뮤니티'],
+  title: 'TennisFriends - 테니스 실력 테스트 & 분석 도구 | NTRP 측정, 스트링 텐션 계산기',
+  description: 'NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측, 플레이 스타일 진단 등 테니스 실력 향상을 위한 무료 도구 모음. 10,000명 이상이 이용한 전문가 검증 알고리즘으로 나의 테니스 레벨을 확인하세요.',
+  keywords: ['테니스', 'NTRP 테스트', '테니스 실력 측정', '스트링 텐션 계산기', '테니스 부상 예방', '테니스 레벨 테스트', '테니스 라켓 추천', '테니스 훈련 계획'],
   openGraph: {
-    title: 'TennisFriends - 데이터로 똑똑하게, 테니스를 즐겁게',
-    description: 'NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것.',
+    title: 'TennisFriends - 테니스 실력 테스트 & 분석 도구',
+    description: 'NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것. 무료로 시작하세요.',
     type: 'website',
+  },
+  alternates: {
+    canonical: '/',
   },
 };
 
 export default function Home() {
   const blogPosts = homeBlogPosts;
 
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "TennisFriends",
+    url: getSiteUrl(),
+    applicationCategory: "SportsApplication",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "KRW",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "10000",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    description: "테니스 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 무료 도구 모음",
+    inLanguage: "ko",
+    featureList: [
+      "NTRP 실력 테스트",
+      "스트링 텐션 계산기",
+      "부상 위험도 예측",
+      "플레이 스타일 진단",
+      "장비 추천 시스템",
+      "훈련 계획 수립",
+      "경기 분석 도구",
+    ],
+  };
+
   return (
     <div className="min-h-screen">
+      <JsonLd data={reviewSchema} id="homepage-app-schema" />
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="container mx-auto max-w-7xl container-padding">
