@@ -1,10 +1,7 @@
 import Article from '@/components/blog/Article';
-import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
@@ -33,11 +30,6 @@ export const metadata = {
   },
 };
 
-const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'section-1', text: '1. 주요 특징', depth: 2 },
-  { id: 'section-2', text: '2. 플레이 스타일', depth: 2 },
-  { id: 'conclusion', text: '결론', depth: 2 },
-];
 
 const faqs = [
   {

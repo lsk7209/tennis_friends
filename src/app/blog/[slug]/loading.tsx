@@ -1,4 +1,5 @@
 export default function Loading() {
+  const widths = [100, 95, 88, 92, 85, 97, 90, 93];
   return (
     <main className="container mx-auto max-w-4xl px-4 py-12 animate-pulse">
       <div className="h-4 w-32 bg-gray-200 dark:bg-gray-700 rounded mb-8" />
@@ -12,8 +13,8 @@ export default function Loading() {
         <div className="h-5 w-2/3 bg-gray-200 dark:bg-gray-700 rounded" />
       </div>
       <div className="space-y-4">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <div key={i} className="h-4 bg-gray-200 dark:bg-gray-700 rounded" style={{ width: `${85 + Math.random() * 15}%` }} />
+        {widths.map((w, i) => (
+          <div key={i} className="h-4 bg-gray-200 dark:bg-gray-700 rounded" style={{ width: `${w}%` }} />
         ))}
       </div>
     </main>

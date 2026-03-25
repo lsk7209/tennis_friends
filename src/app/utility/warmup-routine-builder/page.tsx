@@ -111,7 +111,7 @@ function generateRoutine(
   focus: Focus,
 ): RoutineStep[] {
   // Score and filter exercises by relevance
-  let pool = EXERCISES.map((ex) => {
+  const pool = EXERCISES.map((ex) => {
     let score = 0;
     if (ex.tags.includes(focus)) score += 3;
     if (focus === "전신") score += 1; // slight boost for full-body focus
