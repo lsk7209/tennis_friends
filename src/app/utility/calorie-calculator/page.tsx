@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from "react";
@@ -14,13 +12,6 @@ const metsMap = {
   doubles: { light: 4, moderate: 5.2, hard: 6.2 },
 } as const;
 
-export const metadata: Metadata = generatePageMetadata({
-  title: "테니스 칼로리 계산기",
-  description: "테니스 경기 시간과 강도에 따른 칼로리 소모량을 계산합니다.",
-  path: "/utility/calorie-calculator",
-  type: "website",
-  tags: ["칼로리", "테니스 운동량", "다이어트"],
-});
 
 export default function Page() {
   const [weight, setWeight] = useState("70");

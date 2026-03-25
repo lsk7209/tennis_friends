@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -14,13 +12,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 type Surface = 'hard' | 'clay' | 'grass' | 'indoor';
 type Condition = 'excellent' | 'good' | 'fair' | 'poor';
 
-export const metadata: Metadata = generatePageMetadata({
-  title: "코트 컨디션 체크",
-  description: "날씨와 코트 상태에 따른 경기 전략을 제안합니다.",
-  path: "/utility/court-conditions",
-  type: "website",
-  tags: ["코트 컨디션", "날씨", "경기 전략"],
-});
 
 export default function CourtConditionsPage() {
   const [surface, setSurface] = useState<Surface>('hard');

@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -11,13 +9,6 @@ import { Input } from '@/components/ui/input';
 import RelatedUtilitiesSection from '@/components/RelatedUtilitiesSection';
 import { tennisTerms } from '@/data/tennis-terms';
 
-export const metadata: Metadata = generatePageMetadata({
-  title: "테니스 용어 사전",
-  description: "테니스 관련 용어를 쉽게 찾고 이해할 수 있는 용어 사전입니다.",
-  path: "/utility/tennis-dictionary",
-  type: "website",
-  tags: ["용어 사전", "테니스 용어", "입문"],
-});
 
 export default function TennisDictionaryPage() {
   const [query, setQuery] = useState('');

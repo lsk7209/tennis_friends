@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -29,13 +27,6 @@ const patterns: Pattern[] = [
   { name: '16x15', density: 'open', bestFor: ['파워 우선', '입문자'], pros: ['쉽게 공이 나감', '편한 타구감'], cons: ['내구성과 방향성이 아쉬울 수 있음'], tension: '48-54 lbs', baseScore: 76 },
 ];
 
-export const metadata: Metadata = generatePageMetadata({
-  title: "스트링 패턴 분석기",
-  description: "라켓 스트링 패턴에 따른 스핀과 컨트롤 특성을 분석합니다.",
-  path: "/utility/string-pattern-analyzer",
-  type: "website",
-  tags: ["스트링 패턴", "라켓", "스핀"],
-});
 
 export default function StringPatternAnalyzerPage() {
   const [pattern, setPattern] = useState('16x19');

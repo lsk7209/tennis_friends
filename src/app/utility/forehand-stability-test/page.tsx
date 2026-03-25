@@ -1,18 +1,9 @@
-import type { Metadata } from "next";
-import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import React, { useState } from 'react';
 import { Target, TrendingUp, BarChart3, CheckCircle, XCircle, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-export const metadata: Metadata = generatePageMetadata({
-  title: "포핸드 안정성 테스트",
-  description: "포핸드 스트로크의 일관성과 안정성을 점검합니다.",
-  path: "/utility/forehand-stability-test",
-  type: "website",
-  tags: ["포핸드", "안정성", "스트로크"],
-});
 
 export default function ForehandStabilityTestPage() {
   const [currentStep, setCurrentStep] = useState(0);

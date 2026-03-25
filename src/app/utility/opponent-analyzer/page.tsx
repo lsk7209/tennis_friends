@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -14,13 +12,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 type Style = 'aggressive' | 'defensive' | 'all-court' | 'net-rusher';
 type Mental = 'stable' | 'average' | 'shaky';
 
-export const metadata: Metadata = generatePageMetadata({
-  title: "상대 분석기",
-  description: "상대 플레이어의 스타일과 약점을 분석하여 맞춤 전략을 제안합니다.",
-  path: "/utility/opponent-analyzer",
-  type: "website",
-  tags: ["상대 분석", "전술", "경기 전략"],
-});
 
 export default function OpponentAnalyzerPage() {
   const [name, setName] = useState('');
