@@ -29,6 +29,7 @@ interface MatchInfo {
 
 /* ──────────────────────────── initial data ──────────────────────── */
 
+
 function createCategories(): ReviewCategory[] {
   return [
     {

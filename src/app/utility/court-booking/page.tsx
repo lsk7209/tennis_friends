@@ -12,6 +12,7 @@ const courts = [
   { name: "실내 카펫코트", location: "서울 송파권", price: "45,000원 / 시간", status: "대기 필요" },
 ];
 
+
 export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">

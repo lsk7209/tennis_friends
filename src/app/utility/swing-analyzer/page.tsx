@@ -23,6 +23,7 @@ const highlights = [
   },
 ];
 
+
 export default function SwingAnalyzerPage() {
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,_#f5f3ff_0%,_#ffffff_35%,_#f8fafc_100%)]">

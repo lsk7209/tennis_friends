@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -6,6 +8,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "서브 속도 계산기",
+  description: "서브 스피드를 측정하고 개선 방향을 제안합니다.",
+  path: "/utility/serve-velocity-calculator",
+  type: "website",
+  tags: ["서브 속도", "서비스", "파워"],
+});
 
 export default function ServeVelocityCalculatorPage() {
   const [distance, setDistance] = useState(18.5);

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from 'react';
@@ -8,6 +10,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "날씨 확인",
+  description: "테니스 경기에 적합한 날씨 조건을 확인합니다.",
+  path: "/utility/weather-check",
+  type: "website",
+  tags: ["날씨", "야외 코트", "경기 조건"],
+});
 
 export default function WeatherCheckPage() {
   const [location, setLocation] = useState('서울');

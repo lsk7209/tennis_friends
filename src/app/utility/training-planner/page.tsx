@@ -12,6 +12,7 @@ const steps = [
   "실행 가능한 주간 루틴으로 정리하고 결과 점검",
 ];
 
+
 export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">

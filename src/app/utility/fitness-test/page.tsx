@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata-helpers";
 "use client";
 
 import { useMemo, useState } from "react";
@@ -24,6 +26,14 @@ const fields: FitnessField[] = [
   { id: "power", label: "제자리 점프", unit: "cm", weight: 16, placeholder: "예: 38" },
   { id: "balance", label: "한 발 균형 유지", unit: "초", weight: 16, placeholder: "예: 35" },
 ];
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "체력 테스트",
+  description: "테니스에 필요한 기초 체력을 측정하고 약점을 파악합니다.",
+  path: "/utility/fitness-test",
+  type: "website",
+  tags: ["체력 테스트", "피트니스", "기초 체력"],
+});
 
 function normalizeScore(id: string, value: number) {
   if (!value || value < 0) return 0;

@@ -25,6 +25,7 @@ interface ScheduleItem {
 
 /* ──────────────────────────── schedule logic ──────────────────── */
 
+
 function generateSchedule(equipment: Equipment, frequency: number): ScheduleItem[] {
   const items: ScheduleItem[] = [];
 
