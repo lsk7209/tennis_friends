@@ -1,15 +1,15 @@
 /**
- * 자동 블로그 콘텐츠 생성 스크립트
+ * 자동 블로그 콘텐츠 생성 스크립트 (Gemini API)
  * 실행: node scripts/auto-content.js
- * 환경변수: ANTHROPIC_API_KEY (필수), DAILY_AI_BUDGET (선택, 기본 $0.5)
+ * 환경변수: GEMINI_API_KEY (필수), DAILY_AI_BUDGET (선택, 기본 $0.5)
  */
 const fs = require("fs");
 const https = require("https");
 const path = require("path");
 
-const API_KEY = process.env.ANTHROPIC_API_KEY;
+const API_KEY = process.env.GEMINI_API_KEY;
 const DAILY_BUDGET = parseFloat(process.env.DAILY_AI_BUDGET || "0.5");
-const COST_PER_POST = 0.02; // claude-haiku 기준 추정
+const COST_PER_POST = 0.002; // gemini-2.0-flash 기준 추정
 
 // 테니스 롱테일 키워드 주제 큐
 const TOPIC_QUEUE = [
@@ -57,22 +57,19 @@ const TOPIC_QUEUE = [
   },
 ];
 
-function callClaude(prompt) {
+function callGemini(prompt) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 2500,
-      messages: [{ role: "user", content: prompt }],
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: { maxOutputTokens: 2500, temperature: 0.7 },
     });
 
     const options = {
-      hostname: "api.anthropic.com",
-      path: "/v1/messages",
+      hostname: "generativelanguage.googleapis.com",
+      path: `/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": API_KEY,
-        "anthropic-version": "2023-06-01",
         "Content-Length": Buffer.byteLength(body),
       },
     };
@@ -86,7 +83,7 @@ function callClaude(prompt) {
           if (parsed.error) {
             reject(new Error(parsed.error.message));
           } else {
-            resolve(parsed.content[0].text);
+            resolve(parsed.candidates[0].content.parts[0].text);
           }
         } catch (e) {
           reject(new Error("JSON parse error: " + data.slice(0, 200)));
@@ -197,12 +194,12 @@ async function generatePost(topic) {
 
 HTML 본문만 출력하세요. 다른 설명은 없이 HTML만.`;
 
-  return await callClaude(prompt);
+  return await callGemini(prompt);
 }
 
 async function main() {
   if (!API_KEY) {
-    console.error("❌ ANTHROPIC_API_KEY 환경변수 필요");
+    console.error("❌ GEMINI_API_KEY 환경변수 필요");
     process.exit(1);
   }
 
