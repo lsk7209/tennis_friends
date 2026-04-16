@@ -1,0 +1,53 @@
+name: Auto Content Generation
+
+on:
+  schedule:
+    # 매일 KST 06:00 = UTC 21:00 (전날)
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '강제 실행 (기존 파일 덮어쓰기 없음)'
+        type: boolean
+        default: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 자동 콘텐츠 생성
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DAILY_AI_BUDGET: '0.5'
+        run: node scripts/auto-content.js
+
+      - name: 변경사항 확인
+        id: check_changes
+        run: |
+          if git diff --quiet && git ls-files --others --exclude-standard | grep -q .; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          elif ! git diff --quiet; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 커밋 & 푸시
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/app/blog/ src/data/blog-posts.js
+          git commit -m "feat(content): auto-generated blog posts [$(date +%Y-%m-%d)]"
+          git push
