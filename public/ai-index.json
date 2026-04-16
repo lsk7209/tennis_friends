@@ -1,0 +1,1125 @@
+{
+  "site": "TennisFriends",
+  "url": "https://tennisfrens.com",
+  "language": "ko-KR",
+  "description": "한국어 테니스 실력 향상 플랫폼",
+  "lastUpdated": "2026-04-16",
+  "stats": {
+    "totalPages": 222,
+    "tools": 63,
+    "articles": 100,
+    "playerProfiles": 54
+  },
+  "pages": [
+    {
+      "url": "https://tennisfrens.com",
+      "description": "TennisFriends 홈 - 테니스 실력 향상 플랫폼",
+      "type": "homepage"
+    },
+    {
+      "url": "https://tennisfrens.com/utility",
+      "description": "테니스 도구 모음 - NTRP 테스트·계산기·분석 도구",
+      "type": "index"
+    },
+    {
+      "url": "https://tennisfrens.com/blog",
+      "description": "테니스 블로그 - 기술·전략·장비·훈련 전문 콘텐츠",
+      "type": "index"
+    },
+    {
+      "url": "https://tennisfrens.com/players",
+      "description": "테니스 선수 프로필 - ATP·WTA 선수 218명",
+      "type": "index"
+    },
+    {
+      "url": "https://tennisfrens.com/tennis-rules-quiz",
+      "description": "테니스 규칙 퀴즈",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/adult-beginner-roadmap",
+      "description": "테니스 adult beginner roadmap",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/apparel-recommendation",
+      "description": "테니스 apparel recommendation",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/calorie-calculator",
+      "description": "칼로리 계산기",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/coaching-match",
+      "description": "테니스 coaching match",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/cooldown-routine-builder",
+      "description": "테니스 cooldown routine builder",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/court-booking",
+      "description": "테니스 court booking",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/court-conditions",
+      "description": "테니스 court conditions",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/court-surface-advisor",
+      "description": "테니스 court surface advisor",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/doubles-chemistry-test",
+      "description": "테니스 doubles chemistry test",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/doubles-positioning-simulator",
+      "description": "테니스 doubles positioning simulator",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/equipment-maintenance-scheduler",
+      "description": "테니스 equipment maintenance scheduler",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/equipment-recommendation",
+      "description": "테니스 장비 추천",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/fitness-test",
+      "description": "피트니스 테스트",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/flexibility-test",
+      "description": "테니스 flexibility test",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/focus-training",
+      "description": "테니스 focus training",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/forehand-stability-test",
+      "description": "테니스 forehand stability test",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/goal-setting",
+      "description": "테니스 goal setting",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/grip-size-checker",
+      "description": "테니스 grip size checker",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/hydration-planner",
+      "description": "테니스 hydration planner",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/injury-risk",
+      "description": "부상 리스크 예측기",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/junior-development-roadmap",
+      "description": "테니스 junior development roadmap",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/match-analyzer",
+      "description": "경기 분석 도구",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/match-recorder",
+      "description": "테니스 match recorder",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/match-video-review-template",
+      "description": "테니스 match video review template",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/matchday-packing-checklist",
+      "description": "테니스 matchday packing checklist",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/mental-training",
+      "description": "멘탈 트레이닝 가이드",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/ntrp-test",
+      "description": "NTRP 테니스 실력 측정 테스트",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/nutrition-guide",
+      "description": "테니스 영양 가이드",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/opponent-analyzer",
+      "description": "테니스 opponent analyzer",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/overgrip-replacement-reminder",
+      "description": "테니스 overgrip replacement reminder",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/partner-compatibility-check",
+      "description": "테니스 partner compatibility check",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/play-style-test",
+      "description": "플레이 스타일 진단",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/practice-drill-generator",
+      "description": "테니스 practice drill generator",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/practice-wall-drill-planner",
+      "description": "테니스 practice wall drill planner",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/price-comparison",
+      "description": "테니스 price comparison",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/rally-consistency-tracker",
+      "description": "테니스 rally consistency tracker",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/ranking-calculator",
+      "description": "랭킹 포인트 계산기",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/reaction-test",
+      "description": "테니스 reaction test",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/recovery-routine-generator",
+      "description": "테니스 recovery routine generator",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/return-position-calculator",
+      "description": "테니스 return position calculator",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/serve-placement-mapper",
+      "description": "테니스 serve placement mapper",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/serve-velocity-calculator",
+      "description": "서브 속도 계산기",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/shoe-recommender",
+      "description": "테니스 shoe recommender",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/shoe-wear-tracker",
+      "description": "테니스 shoe wear tracker",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/shot-selection-trainer",
+      "description": "테니스 shot selection trainer",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/sleep-readiness-check",
+      "description": "테니스 sleep readiness check",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/string-pattern-analyzer",
+      "description": "테니스 string pattern analyzer",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/string-replacement-reminder",
+      "description": "테니스 string replacement reminder",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/string-tension",
+      "description": "스트링 텐션 계산기",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/swing-analyzer",
+      "description": "테니스 swing analyzer",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/tennis-dictionary",
+      "description": "테니스 tennis dictionary",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/tennis-diet",
+      "description": "테니스 tennis diet",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/tennis-goal-streak-tracker",
+      "description": "테니스 tennis goal streak tracker",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/tennis-time-availability-planner",
+      "description": "테니스 tennis time availability planner",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/tiebreak-pressure-simulator",
+      "description": "테니스 tiebreak pressure simulator",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/tournament-budget-calculator",
+      "description": "테니스 tournament budget calculator",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/tournament-schedule",
+      "description": "테니스 tournament schedule",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/training-planner",
+      "description": "훈련 계획 수립기",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/travel-pack-planner",
+      "description": "테니스 travel pack planner",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/unforced-error-audit",
+      "description": "테니스 unforced error audit",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/utr-calculator",
+      "description": "UTR 레이팅 계산기",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/warmup-routine-builder",
+      "description": "테니스 warmup routine builder",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/utility/weather-check",
+      "description": "테니스 weather check",
+      "type": "tool"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/alex-de-minaur",
+      "description": "테니스 블로그: alex de minaur",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/alexander-zverev",
+      "description": "테니스 블로그: alexander zverev",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/andrey-rublev",
+      "description": "테니스 블로그: andrey rublev",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/autumn-tennis-rhythm-guide",
+      "description": "테니스 블로그: autumn tennis rhythm guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/backhand-accuracy-full-guide",
+      "description": "테니스 블로그: backhand accuracy full guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/ben-shelton",
+      "description": "테니스 블로그: ben shelton",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/carlos-alcaraz",
+      "description": "테니스 블로그: carlos alcaraz",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/casper-ruud",
+      "description": "테니스 블로그: casper ruud",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/daniil-medvedev",
+      "description": "테니스 블로그: daniil medvedev",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/frances-tiafoe",
+      "description": "테니스 블로그: frances tiafoe",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/grigor-dimitrov",
+      "description": "테니스 블로그: grigor dimitrov",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/holger-rune",
+      "description": "테니스 블로그: holger rune",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/hubert-hurkacz",
+      "description": "테니스 블로그: hubert hurkacz",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/jannik-sinner",
+      "description": "테니스 블로그: jannik sinner",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/novak-djokovic",
+      "description": "테니스 블로그: novak djokovic",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/rainy-day-tennis-tips-guide",
+      "description": "테니스 블로그: rainy day tennis tips guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/serve-return-prediction-guide",
+      "description": "테니스 블로그: serve return prediction guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/stefanos-tsitsipas",
+      "description": "테니스 블로그: stefanos tsitsipas",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/taylor-fritz",
+      "description": "테니스 블로그: taylor fritz",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-adult-beginner-first-90-days",
+      "description": "테니스 블로그: tennis adult beginner first 90 days",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-advanced-pattern-analysis",
+      "description": "테니스 블로그: tennis advanced pattern analysis",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-approach-shot-guide",
+      "description": "테니스 블로그: tennis approach shot guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-backhand-return-guide",
+      "description": "테니스 블로그: tennis backhand return guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-backhand-technique-guide",
+      "description": "테니스 블로그: tennis backhand technique guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-beginner-30day-growth-plan",
+      "description": "테니스 블로그: tennis beginner 30day growth plan",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-beginner-30day-training-plan",
+      "description": "테니스 블로그: tennis beginner 30day training plan",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-clay-court-sliding-guide",
+      "description": "테니스 블로그: tennis clay court sliding guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-cold-weather-match-guide",
+      "description": "테니스 블로그: tennis cold weather match guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-cooldown-stretching-routine",
+      "description": "테니스 블로그: tennis cooldown stretching routine",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-dampener-effectiveness",
+      "description": "테니스 블로그: tennis dampener effectiveness",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-doubles-net-player-guide",
+      "description": "테니스 블로그: tennis doubles net player guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-doubles-serve-formation-guide",
+      "description": "테니스 블로그: tennis doubles serve formation guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-doubles-strategy-guide",
+      "description": "테니스 블로그: tennis doubles strategy guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-doubles-teamwork-strategy",
+      "description": "테니스 블로그: tennis doubles teamwork strategy",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-drop-shot-mastery",
+      "description": "테니스 블로그: tennis drop shot mastery",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-elbow-prevention-guide",
+      "description": "테니스 블로그: tennis elbow prevention guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-etiquette-and-manners",
+      "description": "테니스 블로그: tennis etiquette and manners",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-footwork-balance-training-guide",
+      "description": "테니스 블로그: tennis footwork balance training guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-footwork-science",
+      "description": "테니스 블로그: tennis footwork science",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-forehand-depth-control-guide",
+      "description": "테니스 블로그: tennis forehand depth control guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-forehand-impact-timing-guide",
+      "description": "테니스 블로그: tennis forehand impact timing guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-grass-court-movement-guide",
+      "description": "테니스 블로그: tennis grass court movement guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-grip-size-selection",
+      "description": "테니스 블로그: tennis grip size selection",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-hard-court-recovery-guide",
+      "description": "테니스 블로그: tennis hard court recovery guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-hot-weather-match-guide",
+      "description": "테니스 블로그: tennis hot weather match guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-hybrid-string-setup",
+      "description": "테니스 블로그: tennis hybrid string setup",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-hydration-electrolyte-guide",
+      "description": "테니스 블로그: tennis hydration electrolyte guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-injury-prevention-full-guide",
+      "description": "테니스 블로그: tennis injury prevention full guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-injury-prevention-recovery",
+      "description": "테니스 블로그: tennis injury prevention recovery",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-inmatch-condition-management",
+      "description": "테니스 블로그: tennis inmatch condition management",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-intermediate-match-strategy",
+      "description": "테니스 블로그: tennis intermediate match strategy",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-intermediate-to-advanced-transition",
+      "description": "테니스 블로그: tennis intermediate to advanced transition",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-junior-training-roadmap",
+      "description": "테니스 블로그: tennis junior training roadmap",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-kick-serve-guide",
+      "description": "테니스 블로그: tennis kick serve guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-lesson-cost-guide",
+      "description": "테니스 블로그: tennis lesson cost guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-lob-defense-offense",
+      "description": "테니스 블로그: tennis lob defense offense",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-match-video-review-guide",
+      "description": "테니스 블로그: tennis match video review guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-matchday-warmup-routine",
+      "description": "테니스 블로그: tennis matchday warmup routine",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-mental-focus-recovery",
+      "description": "테니스 블로그: tennis mental focus recovery",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-mental-reset-between-points",
+      "description": "테니스 블로그: tennis mental reset between points",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-mental-routine-5steps",
+      "description": "테니스 블로그: tennis mental routine 5steps",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-mental-routine-control-guide",
+      "description": "테니스 블로그: tennis mental routine control guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-overgrip-guide",
+      "description": "테니스 블로그: tennis overgrip guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-overhead-smash-guide",
+      "description": "테니스 블로그: tennis overhead smash guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-partner-practice-drills",
+      "description": "테니스 블로그: tennis partner practice drills",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-post-exercise-nutrition",
+      "description": "테니스 블로그: tennis post exercise nutrition",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-postmatch-recovery-routine",
+      "description": "테니스 블로그: tennis postmatch recovery routine",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-power-of-routine",
+      "description": "테니스 블로그: tennis power of routine",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-practice-journal-guide",
+      "description": "테니스 블로그: tennis practice journal guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-racket-recommendation-guide-2026",
+      "description": "테니스 블로그: tennis racket recommendation guide 2026",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-racket-selection-guide",
+      "description": "테니스 블로그: tennis racket selection guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-return-of-serve-strategy",
+      "description": "테니스 블로그: tennis return of serve strategy",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-return-positioning-by-surface",
+      "description": "테니스 블로그: tennis return positioning by surface",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-scoring-system-guide",
+      "description": "테니스 블로그: tennis scoring system guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-second-serve-confidence-guide",
+      "description": "테니스 블로그: tennis second serve confidence guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-serve-plus-one-patterns",
+      "description": "테니스 블로그: tennis serve plus one patterns",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-serve-rhythm-science",
+      "description": "테니스 블로그: tennis serve rhythm science",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-serve-speed-science",
+      "description": "테니스 블로그: tennis serve speed science",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-serve-timing-and-spin-guide",
+      "description": "테니스 블로그: tennis serve timing and spin guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-shoes-balance-guide",
+      "description": "테니스 블로그: tennis shoes balance guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-shoes-selection-guide",
+      "description": "테니스 블로그: tennis shoes selection guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-sleep-recovery-guide",
+      "description": "테니스 블로그: tennis sleep recovery guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-slice-backhand-mastery",
+      "description": "테니스 블로그: tennis slice backhand mastery",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-slice-serve-guide",
+      "description": "테니스 블로그: tennis slice serve guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-split-step-timing-guide",
+      "description": "테니스 블로그: tennis split step timing guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-starting-complete-guide",
+      "description": "테니스 블로그: tennis starting complete guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-strategy-beat-pusher",
+      "description": "테니스 블로그: tennis strategy beat pusher",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-strategy-vs-lefty",
+      "description": "테니스 블로그: tennis strategy vs lefty",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-string-guide",
+      "description": "테니스 블로그: tennis string guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-string-tension-guide",
+      "description": "테니스 블로그: tennis string tension guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-tiebreak-strategy-guide",
+      "description": "테니스 블로그: tennis tiebreak strategy guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-tournament-preparation-checklist",
+      "description": "테니스 블로그: tennis tournament preparation checklist",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-unforced-error-reduction-guide",
+      "description": "테니스 블로그: tennis unforced error reduction guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-volley-technique-guide",
+      "description": "테니스 블로그: tennis volley technique guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-wall-practice-guide",
+      "description": "테니스 블로그: tennis wall practice guide",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-windy-condition-tips",
+      "description": "테니스 블로그: tennis windy condition tips",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tennis-wrist-knee-pain-care",
+      "description": "테니스 블로그: tennis wrist knee pain care",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tommy-paul",
+      "description": "테니스 블로그: tommy paul",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/top-5-tennis-districts-seoul",
+      "description": "테니스 블로그: top 5 tennis districts seoul",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/winter-indoor-tennis-training-routine",
+      "description": "테니스 블로그: winter indoor tennis training routine",
+      "type": "article"
+    },
+    {
+      "url": "https://tennisfrens.com/players/adrian-mannarino",
+      "description": "선수 프로필: adrian mannarino",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/alejandro-davidovich-fokina",
+      "description": "선수 프로필: alejandro davidovich fokina",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/alex-de-minaur",
+      "description": "선수 프로필: alex de minaur",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/alex-michelsen",
+      "description": "선수 프로필: alex michelsen",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/alexander-bublik",
+      "description": "선수 프로필: alexander bublik",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/alexander-zverev",
+      "description": "선수 프로필: alexander zverev",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/alexei-popyrin",
+      "description": "선수 프로필: alexei popyrin",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/andrey-rublev",
+      "description": "선수 프로필: andrey rublev",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/arthur-fils",
+      "description": "선수 프로필: arthur fils",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/arthur-landercknech",
+      "description": "선수 프로필: arthur landercknech",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/ben-shelton",
+      "description": "선수 프로필: ben shelton",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/brandon-nakashima",
+      "description": "선수 프로필: brandon nakashima",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/cameron-norrie",
+      "description": "선수 프로필: cameron norrie",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/carlos-alcaraz",
+      "description": "선수 프로필: carlos alcaraz",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/casper-ruud",
+      "description": "선수 프로필: casper ruud",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/corentin-moutet",
+      "description": "선수 프로필: corentin moutet",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/daniil-medvedev",
+      "description": "선수 프로필: daniil medvedev",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/denis-shapovalov",
+      "description": "선수 프로필: denis shapovalov",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/felix-auger-aliassime",
+      "description": "선수 프로필: felix auger aliassime",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/flavio-cobolli",
+      "description": "선수 프로필: flavio cobolli",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/frances-tiafoe",
+      "description": "선수 프로필: frances tiafoe",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/francisco-cerundolo",
+      "description": "선수 프로필: francisco cerundolo",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/gael-monfils",
+      "description": "선수 프로필: gael monfils",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/giovanni-mpetshi-perricard",
+      "description": "선수 프로필: giovanni mpetshi perricard",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/grigor-dimitrov",
+      "description": "선수 프로필: grigor dimitrov",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/holger-rune",
+      "description": "선수 프로필: holger rune",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/hubert-hurkacz",
+      "description": "선수 프로필: hubert hurkacz",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/jack-draper",
+      "description": "선수 프로필: jack draper",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/jakub-mensik",
+      "description": "선수 프로필: jakub mensik",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/jan-lennard-struff",
+      "description": "선수 프로필: jan lennard struff",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/jannik-sinner",
+      "description": "선수 프로필: jannik sinner",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/jaume-munar",
+      "description": "선수 프로필: jaume munar",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/jiri-lehecka",
+      "description": "선수 프로필: jiri lehecka",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/joao-fonseca",
+      "description": "선수 프로필: joao fonseca",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/jordan-thompson",
+      "description": "선수 프로필: jordan thompson",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/karen-khachanov",
+      "description": "선수 프로필: karen khachanov",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/linner-tien",
+      "description": "선수 프로필: linner tien",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/lorenzo-musetti",
+      "description": "선수 프로필: lorenzo musetti",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/luciano-darderi",
+      "description": "선수 프로필: luciano darderi",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/matteo-arnaldi",
+      "description": "선수 프로필: matteo arnaldi",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/matteo-berrettini",
+      "description": "선수 프로필: matteo berrettini",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/nicolas-jarry",
+      "description": "선수 프로필: nicolas jarry",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/novak-djokovic",
+      "description": "선수 프로필: novak djokovic",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/sebastian-baez",
+      "description": "선수 프로필: sebastian baez",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/sebastian-korda",
+      "description": "선수 프로필: sebastian korda",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/stefanos-tsitsipas",
+      "description": "선수 프로필: stefanos tsitsipas",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/tallon-griekspoor",
+      "description": "선수 프로필: tallon griekspoor",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/taylor-fritz",
+      "description": "선수 프로필: taylor fritz",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/tomas-machac",
+      "description": "선수 프로필: tomas machac",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/tommy-paul",
+      "description": "선수 프로필: tommy paul",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/ugo-humbert",
+      "description": "선수 프로필: ugo humbert",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/valentin-vacherot",
+      "description": "선수 프로필: valentin vacherot",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/zhizhen-zhang",
+      "description": "선수 프로필: zhizhen zhang",
+      "type": "player"
+    },
+    {
+      "url": "https://tennisfrens.com/players/[slug]",
+      "description": "선수 프로필: [slug]",
+      "type": "player"
+    }
+  ]
+}

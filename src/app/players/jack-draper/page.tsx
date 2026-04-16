@@ -8,14 +8,14 @@ import { Metadata } from 'next';
 import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '잭 드레이퍼 — 세계랭킹 10위 | 플레이스타일·명장면·최근 경기력',
+  title: '잭 드레이퍼 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
   description: "잭 드레이퍼 (Jack Draper) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['잭 드레이퍼', 'Jack Draper', '테니스', 'ATP', '플레이스타일', '영국 테니스', '공격형', '강력한 포핸드'],
   alternates: {
     canonical: 'https://tennisfrens.com/players/jack-draper',
   },
   openGraph: {
-    title: '잭 드레이퍼 — 세계랭킹 10위 | 플레이스타일·명장면·최근 경기력',
+    title: '잭 드레이퍼 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
     description: '잭 드레이퍼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://tennisfrens.com/players/jack-draper',
     siteName: 'TennisFriends',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '잭 드레이퍼 — 세계랭킹 10위 | 플레이스타일·명장면·최근 경기력',
+    title: '잭 드레이퍼 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
     description: '잭 드레이퍼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {

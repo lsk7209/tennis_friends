@@ -13,14 +13,14 @@ import PersonSchema from '@/components/seo/PersonSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
-  title: '다닐 메드베데프 — 세계랭킹 4위 | 플레이스타일·명장면·최근 경기력',
+  title: '다닐 메드베데프 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
   description: "다닐 메드베데프 (Daniil Medvedev) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['다닐 메드베데프', 'Daniil Medvedev', '테니스', 'ATP', '플레이스타일', '러시아 테니스', '카운터펀처', '하드 코트', '라이벌'],
   alternates: {
     canonical: 'https://tennisfrens.com/players/daniil-medvedev',
   },
   openGraph: {
-    title: '다닐 메드베데프 — 세계랭킹 4위 | 플레이스타일·명장면·최근 경기력',
+    title: '다닐 메드베데프 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
     description: '다닐 메드베데프의 카운터펀처 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
     url: 'https://tennisfrens.com/players/daniil-medvedev',
     siteName: 'TennisFriends',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '다닐 메드베데프 — 세계랭킹 4위 | 플레이스타일·명장면·최근 경기력',
+    title: '다닐 메드베데프 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
     description: '다닐 메드베데프의 카운터펀처 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
   },
   robots: {

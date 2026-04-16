@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd D:/web/tennisfrens && node -e \\\"\\nconst fs = require('fs');\\nconst path = require('path');\\n\\nconst PLAYERS = [\\n  { slug: 'miomir-kecmanovic' },\\n  { slug: 'sebastian-ofner' },\\n  { sl...",
+  "error": "Exit code 127\n/usr/bin/bash: line 149: ${player.name}: command not found\n/usr/bin/bash: line 149: 플레이: command not found\n/usr/bin/bash: command substitution: line 149: syntax error near unexpected token `('\n/usr/bin/bash: command substitution: line 149: `\\${oneLiner} \\${player.name}(\\${player.nameEn})의 플레이 스타일, 강점·약점, 라켓·스트링 정보를 한눈에. \\${player.country} 출신 \\${tour} 프로 선수 완전 분석.\\\\'\n/usr/bin/bash: command substitution: line 149: syntax error near unexpected token `\\${player.nameEn}'\n/usr/bin/bash: ...",
+  "timestamp": "2026-04-16T21:57:07.081Z",
+  "retry_count": 1
+}

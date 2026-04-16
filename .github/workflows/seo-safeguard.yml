@@ -1,0 +1,69 @@
+name: SEO Safeguard
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  seo-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: robots.txt — Disallow 전체 차단 없음 확인
+        run: |
+          if grep -r "Disallow: /$" src/app/robots.ts; then
+            echo "❌ robots.ts에 'Disallow: /' 전체 차단 발견!"
+            exit 1
+          fi
+          echo "✅ robots.ts 정상"
+
+      - name: Bytespider 차단 확인
+        run: |
+          if ! grep -q "Bytespider" src/app/robots.ts; then
+            echo "❌ Bytespider 차단 누락!"
+            exit 1
+          fi
+          echo "✅ Bytespider 차단 확인"
+
+      - name: llms.txt 존재 확인
+        run: |
+          if [ ! -f public/llms.txt ]; then
+            echo "❌ public/llms.txt 없음 — GEO 최적화 파일 필요"
+            exit 1
+          fi
+          echo "✅ llms.txt 존재"
+
+      - name: ai-index.json 존재 확인
+        run: |
+          if [ ! -f public/ai-index.json ]; then
+            echo "❌ public/ai-index.json 없음"
+            exit 1
+          fi
+          echo "✅ ai-index.json 존재"
+
+      - name: layout.tsx — html lang 속성 확인
+        run: |
+          if ! grep -q 'lang="ko"' src/app/layout.tsx; then
+            echo "❌ <html lang=\"ko\"> 없음!"
+            exit 1
+          fi
+          echo "✅ html lang 확인"
+
+      - name: 메타데이터 기본 구조 확인
+        run: |
+          if ! grep -q "metadataBase" src/app/layout.tsx; then
+            echo "❌ metadataBase 없음 — OG 이미지 URL 절대경로 필요"
+            exit 1
+          fi
+          echo "✅ metadataBase 확인"
+
+      - name: aggregateRating 하드코딩 감지
+        run: |
+          if grep -rn '"reviewCount": *"[0-9]' src/app/page.tsx 2>/dev/null; then
+            echo "❌ 하드코딩된 aggregateRating 감지 — Google 정책 위반 가능성"
+            exit 1
+          fi
+          echo "✅ aggregateRating 정상"

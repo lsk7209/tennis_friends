@@ -9,11 +9,19 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "NTRP 실력 테스트",
-  description: "질문 기반으로 현재 테니스 실력 구간을 점검하고 다음 훈련 방향을 확인합니다.",
+  title: "NTRP 테니스 실력 테스트 — 내 테니스 레벨 무료 측정",
+  description:
+    "NTRP 기준으로 나의 테니스 실력을 정확히 측정하세요. 10문항으로 1.0~5.0 레벨 진단 후 맞춤 훈련 방향을 제안합니다. 10,000명+ 이용한 무료 테스트.",
   path: "/utility/ntrp-test",
   type: "website",
-  tags: ["NTRP", "테니스 실력 테스트", "테니스 등급"],
+  tags: [
+    "NTRP",
+    "테니스 실력 테스트",
+    "테니스 등급",
+    "테니스 레벨 측정",
+    "NTRP 측정",
+    "테니스 실력 진단",
+  ],
 });
 
 const points = [
@@ -25,24 +33,35 @@ const points = [
 export default function Page() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
-      <BreadcrumbSchema items={[
-        { name: '홈', item: getSiteUrl() },
-        { name: '유틸리티', item: `${getSiteUrl()}/utility` },
-        { name: 'NTRP 실력 테스트', item: `${getSiteUrl()}/utility/ntrp-test` }
-      ]} />
+      <BreadcrumbSchema
+        items={[
+          { name: "홈", item: getSiteUrl() },
+          { name: "유틸리티", item: `${getSiteUrl()}/utility` },
+          {
+            name: "NTRP 실력 테스트",
+            item: `${getSiteUrl()}/utility/ntrp-test`,
+          },
+        ]}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <Card className="border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
           <CardHeader>
-            <Badge className="w-fit bg-emerald-600 text-white">Popular Utility</Badge>
+            <Badge className="w-fit bg-emerald-600 text-white">
+              Popular Utility
+            </Badge>
             <CardTitle className="mt-3 text-4xl">NTRP 실력 테스트</CardTitle>
             <p className="text-base leading-7 text-muted-foreground">
-              지금 내 테니스가 어느 구간에 있는지 빠르게 확인하고, 다음 연습에서 무엇을 우선해야 하는지 잡을 수 있습니다.
+              지금 내 테니스가 어느 구간에 있는지 빠르게 확인하고, 다음 연습에서
+              무엇을 우선해야 하는지 잡을 수 있습니다.
             </p>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-3">
               {points.map((point) => (
-                <div key={point} className="flex items-start gap-3 rounded-xl border bg-white p-4">
+                <div
+                  key={point}
+                  className="flex items-start gap-3 rounded-xl border bg-white p-4"
+                >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 text-emerald-600" />
                   <p className="text-sm leading-6">{point}</p>
                 </div>

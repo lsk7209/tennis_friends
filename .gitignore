@@ -38,3 +38,10 @@ next-env.d.ts
 
 # Cloudflare
 .wrangler/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
