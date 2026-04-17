@@ -9,7 +9,7 @@ const path = require("path");
 
 const API_KEY = process.env.GEMINI_API_KEY;
 const DAILY_BUDGET = parseFloat(process.env.DAILY_AI_BUDGET || "0.5");
-const COST_PER_POST = 0.002; // gemini-2.0-flash 기준 추정
+const COST_PER_POST = 0.002; // gemini-2.5-flash-lite 기준 추정
 
 // 테니스 롱테일 키워드 주제 큐
 const TOPIC_QUEUE = [
@@ -66,7 +66,7 @@ function callGemini(prompt) {
 
     const options = {
       hostname: "generativelanguage.googleapis.com",
-      path: `/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`,
+      path: `/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${API_KEY}`,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
