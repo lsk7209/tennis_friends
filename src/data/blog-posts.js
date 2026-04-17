@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-doubles-communication",
+    "slug": "tennis-doubles-communication",
+    "tags": ["복식","파트너 소통","복식 전술","복식 포메이션"],
+    "title": "복식 파트너 소통법 — 시그널·포메이션·전술 결정",
+    "excerpt": "복식 파트너 소통법 — 시그널·포메이션·전술 결정에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "복식 전략",
+    "date": "2026-04-17",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-topspin-forehand-guide",
+    "slug": "tennis-topspin-forehand-guide",
+    "tags": ["탑스핀","포핸드","회전","테니스 기술","포핸드 연습"],
+    "title": "탑스핀 포핸드 완전 분석 — 회전·파워·코스 컨트롤",
+    "excerpt": "탑스핀 포핸드 완전 분석 — 회전·파워·코스 컨트롤에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-04-17",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "jannik-sinner",
     "slug": "jannik-sinner",
     "tags": ["선수 프로필", "ATP"],
