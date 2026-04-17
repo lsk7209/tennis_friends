@@ -1,13 +1,13 @@
 # Status | 마지막: 2026-04-17
 ## 현재 작업
-GSC 기반 SEO 개선 완료
+3단계 심층 개선 완료 (선수 페이지 + 자동화 파이프라인 + 스크립트 정리)
 
 ## 최근 변경 (최근 5개)
-- 04-17: 동적 player route 메타 개선 — 163개 선수 페이지 CTR 최적화
-- 04-17: xinyu-wang 중복 페이지 제거 (duplicate content), martin-landaluce male.ts로 이동
-- 04-17: 정적 선수 페이지 23개 "세계랭킹 N위" 일괄 제거 + NTRP 메타 강화
-- 04-17: vercel.json — www→non-www 301 리다이렉트
-- 04-17: GSC 연동 + 알카라스 긴급 메타 수정
+- 04-17: 저CTR 선수 5명 전용 정적 페이지 생성 (케크마노비치·오프너·부즈코바·왕신유·란달루세)
+- 04-17: auto-content.js + GitHub Actions cron 자동 콘텐츠 파이프라인 구축
+- 04-17: scripts/maintenance/ 일회성 스크립트 9개 삭제
+- 04-17: 정적 선수 페이지 23개 stale 랭킹 제거 + www→non-www 리다이렉트
+- 04-17: players.ts/blog-content.ts 분리 + GEO 파일 생성
 
 ## TODO
 - [ ] 자동 콘텐츠 파이프라인 (GitHub Actions 크론) 구현

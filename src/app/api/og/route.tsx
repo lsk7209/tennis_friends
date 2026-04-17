@@ -2,10 +2,26 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
+// Noto Sans KR 폰트 로드 (한글 지원)
+async function loadKoreanFont(): Promise<ArrayBuffer | null> {
+  try {
+    const res = await fetch(
+      "https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3iLIm13lTS1-7wl2A47.woff2",
+      { next: { revalidate: 86400 } }, // 1일 캐시
+    );
+    if (!res.ok) return null;
+    return res.arrayBuffer();
+  } catch {
+    return null;
+  }
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const title = searchParams.get("title") ?? "TennisFriends";
   const sub = searchParams.get("sub") ?? "테니스 실력 향상 플랫폼";
+
+  const fontData = await loadKoreanFont();
 
   return new ImageResponse(
     <div
@@ -18,7 +34,7 @@ export async function GET(request: Request) {
         alignItems: "center",
         justifyContent: "center",
         padding: "60px",
-        fontFamily: "sans-serif",
+        fontFamily: fontData ? '"Noto Sans KR", sans-serif' : "sans-serif",
       }}
     >
       {/* 로고 */}
@@ -76,6 +92,16 @@ export async function GET(request: Request) {
     {
       width: 1200,
       height: 630,
+      ...(fontData && {
+        fonts: [
+          {
+            name: "Noto Sans KR",
+            data: fontData,
+            style: "normal",
+            weight: 400,
+          },
+        ],
+      }),
     },
   );
 }

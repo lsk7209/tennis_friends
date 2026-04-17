@@ -39,6 +39,10 @@ next-env.d.ts
 # Cloudflare
 .wrangler/
 
+# Development tools state
+.bkit/
+.omc/
+
 # Python
 __pycache__/
 *.pyc

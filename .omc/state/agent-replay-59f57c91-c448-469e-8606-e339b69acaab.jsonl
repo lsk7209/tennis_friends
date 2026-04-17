@@ -1,5 +1,0 @@
-{"t":0,"agent":"a607f44","agent_type":"unknown","event":"agent_stop","success":true}
-{"t":0,"agent":"system","event":"skill_invoked","skill_name":"superpowers:writing-plans"}
-{"t":0,"agent":"a264702","agent_type":"Explore","event":"agent_start","parent_mode":"none"}
-{"t":0,"agent":"aa5d473","agent_type":"unknown","event":"agent_stop","success":true}
-{"t":0,"agent":"a264702","agent_type":"Explore","event":"agent_stop","success":true,"duration_ms":148611}
