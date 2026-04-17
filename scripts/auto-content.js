@@ -194,7 +194,14 @@ async function generatePost(topic) {
 
 HTML 본문만 출력하세요. 다른 설명은 없이 HTML만.`;
 
-  return await callGemini(prompt);
+  const raw = await callGemini(prompt);
+  // Gemini가 ```html 코드블록으로 감쌀 경우 제거
+  return raw
+    .trim()
+    .replace(/^```html\n?/, "")
+    .replace(/^```\n?/, "")
+    .replace(/\n?```$/, "")
+    .trim();
 }
 
 async function main() {
