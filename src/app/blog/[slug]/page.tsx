@@ -1,32 +1,92 @@
-import Link from 'next/link';
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, Clock, ArrowLeft, ArrowRight, Share2 } from 'lucide-react';
-import { allBlogPosts } from '@/data/blog-posts';
-import type { BlogPostData } from '@/types/blog';
-import RelatedContent from '@/components/RelatedContent';
-import { getRelatedBlogPosts } from '@/lib/related-content';
-import type { RelatedContentItem } from '@/components/RelatedContent';
-import EnhancedBlogPostSchema from '@/components/seo/EnhancedBlogPostSchema';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FAQSection from '@/components/seo/FAQSection';
-import { blogContentMap } from '@/data/blog-content';
-import { getSiteUrl } from '@/lib/site';
+import Link from "next/link";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Calendar, Clock, ArrowLeft, ArrowRight, Share2 } from "lucide-react";
+import { allBlogPosts } from "@/data/blog-posts";
+import type { BlogPostData } from "@/types/blog";
+import RelatedContent from "@/components/RelatedContent";
+import { getRelatedBlogPosts } from "@/lib/related-content";
+import type { RelatedContentItem } from "@/components/RelatedContent";
+import EnhancedBlogPostSchema from "@/components/seo/EnhancedBlogPostSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import FAQSection from "@/components/seo/FAQSection";
+import { blogContentMap } from "@/data/blog-content";
+import { getSiteUrl } from "@/lib/site";
 
 const toolMap = [
-  { keywords: ['서브', 'serve', '서빙'], emoji: '🎯', name: 'NTRP 실력 테스트', href: '/utility/ntrp-test', desc: '나의 테니스 레벨 확인' },
-  { keywords: ['스트링', 'string', '텐션', '라켓'], emoji: '⚙️', name: '스트링 텐션 계산기', href: '/utility/string-tension', desc: '최적 텐션 찾기' },
-  { keywords: ['부상', '통증', '엘보', '재활', '예방'], emoji: '🛡️', name: '부상 위험 점검', href: '/utility/injury-risk', desc: '부상 위험도 체크' },
-  { keywords: ['훈련', '연습', '계획', 'training'], emoji: '📋', name: '훈련 계획 수립', href: '/utility/training-planner', desc: '맞춤 훈련 플랜' },
-  { keywords: ['영양', '식단', '수분', '음식'], emoji: '🥗', name: '테니스 영양 가이드', href: '/utility/nutrition-guide', desc: '경기력 영양 관리' },
-  { keywords: ['장비', '라켓', '추천', '선택'], emoji: '🏸', name: '장비 추천 시스템', href: '/utility/equipment-recommendation', desc: '맞춤 장비 추천' },
-  { keywords: ['스타일', '플레이', '유형', '성향'], emoji: '✨', name: '플레이 스타일 진단', href: '/utility/play-style-test', desc: '나의 플레이 스타일' },
-  { keywords: ['복식', '더블', '파트너'], emoji: '👥', name: '복식 궁합 테스트', href: '/utility/doubles-chemistry-test', desc: '파트너 궁합 점검' },
-  { keywords: ['경기', '분석', '전술', '전략'], emoji: '📊', name: '경기 분석 도구', href: '/utility/match-analyzer', desc: '경기 데이터 분석' },
-  { keywords: ['멘탈', '집중', '심리', '루틴'], emoji: '🧠', name: '멘탈 트레이닝', href: '/utility/mental-training', desc: '경기 중 멘탈 강화' },
+  {
+    keywords: ["서브", "serve", "서빙"],
+    emoji: "🎯",
+    name: "NTRP 실력 테스트",
+    href: "/utility/ntrp-test",
+    desc: "나의 테니스 레벨 확인",
+  },
+  {
+    keywords: ["스트링", "string", "텐션", "라켓"],
+    emoji: "⚙️",
+    name: "스트링 텐션 계산기",
+    href: "/utility/string-tension",
+    desc: "최적 텐션 찾기",
+  },
+  {
+    keywords: ["부상", "통증", "엘보", "재활", "예방"],
+    emoji: "🛡️",
+    name: "부상 위험 점검",
+    href: "/utility/injury-risk",
+    desc: "부상 위험도 체크",
+  },
+  {
+    keywords: ["훈련", "연습", "계획", "training"],
+    emoji: "📋",
+    name: "훈련 계획 수립",
+    href: "/utility/training-planner",
+    desc: "맞춤 훈련 플랜",
+  },
+  {
+    keywords: ["영양", "식단", "수분", "음식"],
+    emoji: "🥗",
+    name: "테니스 영양 가이드",
+    href: "/utility/nutrition-guide",
+    desc: "경기력 영양 관리",
+  },
+  {
+    keywords: ["장비", "라켓", "추천", "선택"],
+    emoji: "🏸",
+    name: "장비 추천 시스템",
+    href: "/utility/equipment-recommendation",
+    desc: "맞춤 장비 추천",
+  },
+  {
+    keywords: ["스타일", "플레이", "유형", "성향"],
+    emoji: "✨",
+    name: "플레이 스타일 진단",
+    href: "/utility/play-style-test",
+    desc: "나의 플레이 스타일",
+  },
+  {
+    keywords: ["복식", "더블", "파트너"],
+    emoji: "👥",
+    name: "복식 궁합 테스트",
+    href: "/utility/doubles-chemistry-test",
+    desc: "파트너 궁합 점검",
+  },
+  {
+    keywords: ["경기", "분석", "전술", "전략"],
+    emoji: "📊",
+    name: "경기 분석 도구",
+    href: "/utility/match-analyzer",
+    desc: "경기 데이터 분석",
+  },
+  {
+    keywords: ["멘탈", "집중", "심리", "루틴"],
+    emoji: "🧠",
+    name: "멘탈 트레이닝",
+    href: "/utility/mental-training",
+    desc: "경기 중 멘탈 강화",
+  },
 ];
 
 // BlogPostData에 blogContentMap에서 병합되는 필드를 추가한 확장 타입
@@ -37,8 +97,9 @@ interface EnrichedBlogPost extends BlogPostData {
 }
 
 function getRelatedTools(post: EnrichedBlogPost) {
-  const text = `${post.title || ''} ${post.category || ''} ${(post.tags || []).join(' ')} ${post.content || ''}`.toLowerCase();
-  const scored = toolMap.map(tool => ({
+  const text =
+    `${post.title || ""} ${post.category || ""} ${(post.tags || []).join(" ")} ${post.content || ""}`.toLowerCase();
+  const scored = toolMap.map((tool) => ({
     ...tool,
     score: tool.keywords.reduce((s, kw) => s + (text.includes(kw) ? 1 : 0), 0),
   }));
@@ -56,7 +117,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return {
-      title: 'Post Not Found',
+      title: "Post Not Found",
     };
   }
 
@@ -66,11 +127,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      type: 'article',
+      type: "article",
       publishedTime: post.date,
-      authors: ['TennisFriends'],
+      authors: ["TennisFriends"],
       tags: post.category ? [post.category] : [],
       url: `${getSiteUrl()}/blog/${post.slug}`,
+      images: [
+        {
+          url: `${getSiteUrl()}/api/og?title=${encodeURIComponent(post.title)}&sub=${encodeURIComponent(post.category ?? "테니스 가이드")}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     alternates: {
       canonical: `${getSiteUrl()}/blog/${post.slug}`,
@@ -90,14 +159,14 @@ export default async function BlogPostPage({ params }: Props) {
   const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
   const enrichedPost: EnrichedBlogPost = {
     ...post,
-    content: contentData?.content ?? '',
+    content: contentData?.content ?? "",
     tags: contentData?.tags ?? post.tags ?? [],
     summary: contentData?.summary ?? post.excerpt,
     highlight: contentData?.highlight ?? post.excerpt,
   };
 
   // Transform blog posts to RelatedItem type with safe fallbacks
-  const allPostsForRelated: RelatedContentItem[] = allBlogPosts.map(p => ({
+  const allPostsForRelated: RelatedContentItem[] = allBlogPosts.map((p) => ({
     id: p.id,
     title: p.title,
     description: p.excerpt,
@@ -107,7 +176,7 @@ export default async function BlogPostPage({ params }: Props) {
     href: `/blog/${p.slug}`,
     date: p.date,
     readTime: p.readTime,
-    badge: p.badge
+    badge: p.badge,
   }));
 
   const currentRelatedItem: RelatedContentItem = {
@@ -120,21 +189,27 @@ export default async function BlogPostPage({ params }: Props) {
     href: `/blog/${post.slug}`,
     date: post.date,
     readTime: post.readTime,
-    badge: post.badge
+    badge: post.badge,
   };
 
-  const relatedPosts = getRelatedBlogPosts(currentRelatedItem, allPostsForRelated, 6);
+  const relatedPosts = getRelatedBlogPosts(
+    currentRelatedItem,
+    allPostsForRelated,
+    6,
+  );
 
   // FAQ Items
-  const faqItems = contentData?.faq ? contentData.faq.map((item: { question: string; answer: string }) => ({
-    question: item.question,
-    answer: item.answer,
-  })) : [];
+  const faqItems = contentData?.faq
+    ? contentData.faq.map((item: { question: string; answer: string }) => ({
+        question: item.question,
+        answer: item.answer,
+      }))
+    : [];
 
   const breadcrumbItems = [
-    { name: 'Home', item: getSiteUrl() },
-    { name: 'Blog', item: `${getSiteUrl()}/blog` },
-    { name: post.title, item: `${getSiteUrl()}/blog/${post.slug}` }
+    { name: "Home", item: getSiteUrl() },
+    { name: "Blog", item: `${getSiteUrl()}/blog` },
+    { name: post.title, item: `${getSiteUrl()}/blog/${post.slug}` },
   ];
 
   return (
@@ -143,14 +218,14 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Enhanced Structured Data */}
       <EnhancedBlogPostSchema
         title={post.title}
-        description={post.excerpt || ''}
+        description={post.excerpt || ""}
         slug={post.slug}
         date={post.date}
         author="TennisFriends"
         category={post.category}
         readingTime={post.readTime}
         keywords={enrichedPost.tags ?? []}
-        articleBody={enrichedPost.content ?? ''}
+        articleBody={enrichedPost.content ?? ""}
       />
 
       {/* Navigation */}
@@ -166,11 +241,21 @@ export default async function BlogPostPage({ params }: Props) {
       </nav>
 
       {/* Main Article */}
-      <article itemScope itemType="https://schema.org/BlogPosting" className="prose prose-invert max-w-none">
+      <article
+        itemScope
+        itemType="https://schema.org/BlogPosting"
+        className="prose prose-invert max-w-none"
+      >
         {/* Article Header */}
         <header className="mb-8">
-          <section className="flex items-center gap-2 mb-4" aria-label="게시글 메타 정보">
-            <Badge className="bg-primary/20 text-primary" itemProp="articleSection">
+          <section
+            className="flex items-center gap-2 mb-4"
+            aria-label="게시글 메타 정보"
+          >
+            <Badge
+              className="bg-primary/20 text-primary"
+              itemProp="articleSection"
+            >
               {post.category}
             </Badge>
             <div className="flex items-center gap-4 text-sm text-text-muted">
@@ -183,7 +268,10 @@ export default async function BlogPostPage({ params }: Props) {
                 {post.date}
               </time>
               {post.readTime && (
-                <span className="flex items-center gap-1" itemProp="timeRequired">
+                <span
+                  className="flex items-center gap-1"
+                  itemProp="timeRequired"
+                >
                   <Clock className="w-4 h-4" />
                   {post.readTime}
                 </span>
@@ -191,7 +279,10 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </section>
 
-          <h1 className="text-4xl font-bold text-text-light mb-4" itemProp="headline">
+          <h1
+            className="text-4xl font-bold text-text-light mb-4"
+            itemProp="headline"
+          >
             {post.title}
           </h1>
 
@@ -201,11 +292,19 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="flex items-center justify-between">
             <div className="text-sm text-text-muted">
-              <span itemProp="author" itemScope itemType="https://schema.org/Person">
+              <span
+                itemProp="author"
+                itemScope
+                itemType="https://schema.org/Person"
+              >
                 <span itemProp="name">작성자: TennisFriends</span>
               </span>
             </div>
-            <Button variant="outline" size="sm" className="bg-content-dark border-white/10">
+            <Button
+              variant="outline"
+              size="sm"
+              className="bg-content-dark border-white/10"
+            >
               <Share2 className="w-4 h-4 mr-2" />
               공유하기
             </Button>
@@ -217,7 +316,10 @@ export default async function BlogPostPage({ params }: Props) {
           className="bg-content-dark border border-white/10 rounded-lg p-6 mb-8"
           aria-labelledby="summary-heading"
         >
-          <h2 id="summary-heading" className="text-lg font-bold text-primary mb-3">
+          <h2
+            id="summary-heading"
+            className="text-lg font-bold text-primary mb-3"
+          >
             요약
           </h2>
           <p className="text-text-light">{enrichedPost.summary}</p>
@@ -228,7 +330,9 @@ export default async function BlogPostPage({ params }: Props) {
           className="bg-primary/10 border-2 border-primary/80 rounded-lg p-6 mb-8"
           aria-label="핵심 포인트"
         >
-          <p className="text-text-light font-medium">{enrichedPost.highlight}</p>
+          <p className="text-text-light font-medium">
+            {enrichedPost.highlight}
+          </p>
         </section>
 
         {/* Table of Contents */}
@@ -240,10 +344,34 @@ export default async function BlogPostPage({ params }: Props) {
             </summary>
             <div className="border-t border-white/10 p-4">
               <ul className="list-none space-y-2">
-                <li><a href="#summary-heading" className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }}>요약</a></li>
-                <li><a href="#article-content" className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }}>본문</a></li>
+                <li>
+                  <a
+                    href="#summary-heading"
+                    className="!text-white hover:!text-primary transition-colors no-underline block"
+                    style={{ color: "white" }}
+                  >
+                    요약
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#article-content"
+                    className="!text-white hover:!text-primary transition-colors no-underline block"
+                    style={{ color: "white" }}
+                  >
+                    본문
+                  </a>
+                </li>
                 {faqItems.length > 0 && (
-                  <li><a href="#faq" className="!text-white hover:!text-primary transition-colors no-underline block" style={{ color: 'white' }}>자주 묻는 질문</a></li>
+                  <li>
+                    <a
+                      href="#faq"
+                      className="!text-white hover:!text-primary transition-colors no-underline block"
+                      style={{ color: "white" }}
+                    >
+                      자주 묻는 질문
+                    </a>
+                  </li>
                 )}
               </ul>
             </div>
@@ -255,7 +383,7 @@ export default async function BlogPostPage({ params }: Props) {
           id="article-content"
           className="prose prose-invert max-w-none"
           itemProp="articleBody"
-          dangerouslySetInnerHTML={{ __html: enrichedPost.content ?? '' }}
+          dangerouslySetInnerHTML={{ __html: enrichedPost.content ?? "" }}
         />
 
         {/* Tags Section */}
@@ -299,15 +427,23 @@ export default async function BlogPostPage({ params }: Props) {
       <section aria-label="관련 도구" className="mt-12">
         <Card className="bg-gradient-to-r from-blue-50 via-white to-indigo-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 border-blue-200 dark:border-gray-700">
           <CardContent className="p-8">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">🎯 이 글과 관련된 도구</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">직접 테스트하고 분석해보세요</p>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              🎯 이 글과 관련된 도구
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+              직접 테스트하고 분석해보세요
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {getRelatedTools(enrichedPost).map((tool) => (
                 <Link key={tool.href} href={tool.href} className="group">
                   <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:shadow-md transition-all">
                     <div className="text-2xl mb-2">{tool.emoji}</div>
-                    <div className="font-semibold text-gray-900 dark:text-white text-sm group-hover:text-blue-600 transition-colors">{tool.name}</div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{tool.desc}</p>
+                    <div className="font-semibold text-gray-900 dark:text-white text-sm group-hover:text-blue-600 transition-colors">
+                      {tool.name}
+                    </div>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      {tool.desc}
+                    </p>
                   </div>
                 </Link>
               ))}

@@ -86,7 +86,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: "profile",
-      images: player.image ? [player.image] : [],
+      images: [
+        {
+          url: `${getSiteUrl()}/api/og?title=${encodeURIComponent(player.name)}&sub=${encodeURIComponent(player.nameEn + " · " + tour + " 프로 선수 프로필")}`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     alternates: {
       canonical: `${getSiteUrl()}/players/${slug}`,
