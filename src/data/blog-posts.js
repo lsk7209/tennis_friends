@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-string-tension-selection",
+    "slug": "tennis-string-tension-selection",
+    "tags": ["스트링","테니스 줄","폴리에스터","텐션","장비 선택"],
+    "title": "스트링 선택 완전 가이드 — 폴리·나일론·텐션별 특성",
+    "excerpt": "스트링 선택 완전 가이드 — 폴리·나일론·텐션별 특성에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "장비 가이드",
+    "date": "2026-04-18",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-tiebreak-strategy",
+    "slug": "tennis-tiebreak-strategy",
+    "tags": ["타이브레이크","테니스 전술","멘탈","서브 전략"],
+    "title": "타이브레이크 전략 완전 가이드 — 멘탈·서브 순서·포인트 관리",
+    "excerpt": "타이브레이크 전략 완전 가이드 — 멘탈·서브 순서·포인트 관리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-04-18",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-doubles-communication",
     "slug": "tennis-doubles-communication",
     "tags": ["복식","파트너 소통","복식 전술","복식 포메이션"],
