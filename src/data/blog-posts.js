@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-serve-and-volley-tactics",
+    "slug": "tennis-serve-and-volley-tactics",
+    "tags": ["서브앤발리","네트 어프로치","테니스 전술","잔디코트"],
+    "title": "서브앤발리 전술 가이드 — 잔디·실내 코트 공략법",
+    "excerpt": "서브앤발리 전술 가이드 — 잔디·실내 코트 공략법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-04-19",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-grip-types-guide",
+    "slug": "tennis-grip-types-guide",
+    "tags": ["그립","이스턴 그립","웨스턴 그립","컨티넨탈","테니스 기본"],
+    "title": "테니스 그립 종류 완전 정리 — 이스턴·웨스턴·컨티넨탈",
+    "excerpt": "테니스 그립 종류 완전 정리 — 이스턴·웨스턴·컨티넨탈에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-04-19",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-string-tension-selection",
     "slug": "tennis-string-tension-selection",
     "tags": ["스트링","테니스 줄","폴리에스터","텐션","장비 선택"],
