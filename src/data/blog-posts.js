@@ -99,7 +99,7 @@ export const allBlogPosts = [
     "excerpt": "강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.",
     "badge": "최신 글",
     "category": "선수 프로필",
-    "date": "2025-10-15",
+    "date": "2026-04-19",
     "readTime": "8분",
     "badgeColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
@@ -218,7 +218,7 @@ export const allBlogPosts = [
     "excerpt": "폭발적인 스텝과 감각적인 터치, 변주를 두려워하지 않는 전진으로 흐름을 뒤집는 프란시스 티아포의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
     "badge": "최신 글",
     "category": "선수 프로필",
-    "date": "2025-10-12",
+    "date": "2026-04-19",
     "readTime": "8분",
     "badgeColor": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
