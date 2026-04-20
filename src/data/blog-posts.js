@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-injury-prevention-stretching",
+    "slug": "tennis-injury-prevention-stretching",
+    "tags": ["부상 예방","스트레칭","테니스 엘보","어깨 부상","무릎"],
+    "title": "테니스 부상 예방 스트레칭 — 어깨·팔꿈치·무릎 보호",
+    "excerpt": "테니스 부상 예방 스트레칭 — 어깨·팔꿈치·무릎 보호에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "부상 예방",
+    "date": "2026-04-20",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-fitness-training-guide",
+    "slug": "tennis-fitness-training-guide",
+    "tags": ["테니스 체력","훈련","스피드 훈련","근력","지구력"],
+    "title": "테니스 체력 훈련 완전 가이드 — 스피드·근력·지구력",
+    "excerpt": "테니스 체력 훈련 완전 가이드 — 스피드·근력·지구력에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-04-20",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-serve-and-volley-tactics",
     "slug": "tennis-serve-and-volley-tactics",
     "tags": ["서브앤발리","네트 어프로치","테니스 전술","잔디코트"],
