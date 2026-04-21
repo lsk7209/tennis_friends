@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-beginner-first-month",
+    "slug": "tennis-beginner-first-month",
+    "tags": ["테니스 입문","초보자","테니스 기초","처음 배우기","NTRP 1.0"],
+    "title": "테니스 입문 첫 한 달 — 초보자가 꼭 배워야 할 기초",
+    "excerpt": "테니스 입문 첫 한 달 — 초보자가 꼭 배워야 할 기초에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "초보자 가이드",
+    "date": "2026-04-21",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-grass-court-strategy",
+    "slug": "tennis-grass-court-strategy",
+    "tags": ["잔디코트","테니스 전술","코트별 전략","윔블던","낮은 바운드"],
+    "title": "잔디 코트 전략 완전 가이드 — 낮은 바운드·서브·네트 전술",
+    "excerpt": "잔디 코트 전략 완전 가이드 — 낮은 바운드·서브·네트 전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-04-21",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-injury-prevention-stretching",
     "slug": "tennis-injury-prevention-stretching",
     "tags": ["부상 예방","스트레칭","테니스 엘보","어깨 부상","무릎"],
