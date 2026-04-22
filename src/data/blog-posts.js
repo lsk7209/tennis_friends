@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-drop-shot-timing",
+    "slug": "tennis-drop-shot-timing",
+    "tags": ["드롭샷","테니스 기술","터치","네트 앞 샷","전술"],
+    "title": "드롭샷 완벽 타이밍 — 언제 어떻게 구사하는가",
+    "excerpt": "드롭샷 완벽 타이밍 — 언제 어떻게 구사하는가에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-04-22",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-lob-shot-guide",
+    "slug": "tennis-lob-shot-guide",
+    "tags": ["로브","테니스 기술","수비 로브","탑스핀 로브","네트 공략"],
+    "title": "로브샷 마스터 가이드 — 수비 로브·공격 로브·타이밍",
+    "excerpt": "로브샷 마스터 가이드 — 수비 로브·공격 로브·타이밍에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-04-22",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-beginner-first-month",
     "slug": "tennis-beginner-first-month",
     "tags": ["테니스 입문","초보자","테니스 기초","처음 배우기","NTRP 1.0"],
