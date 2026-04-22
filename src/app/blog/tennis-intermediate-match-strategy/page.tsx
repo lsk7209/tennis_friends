@@ -3,7 +3,6 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
 
 export const metadata = {
   title: '테니스 중급자 승리 전략 — 코트 기하학과 포인트 설계의 기술 | 하이 퍼포먼스 전략 가이드',

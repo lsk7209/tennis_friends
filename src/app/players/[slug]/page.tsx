@@ -4,27 +4,8 @@ import { notFound } from "next/navigation";
 import { PLAYERS_DB } from "@/data/players";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Info,
-  Trophy,
-  Activity,
-  ArrowLeft,
-  ExternalLink,
-  Star,
-  Target,
-  Zap,
-  Crown,
-  MapPin,
-  Hand,
-  CheckCircle,
-  Shield,
-  Award,
-  Brain,
-  List,
-  Heart,
-} from "lucide-react";
+import {Info, Trophy, Activity, ArrowLeft, Star, Target, Zap, Crown, Hand, CheckCircle, Shield, Award, Brain, List, Heart} from "lucide-react";
 import Link from "next/link";
 import ProfilePageSchema from "@/components/seo/ProfilePageSchema";
 import { allBlogPosts } from "@/data/blog-posts";
@@ -33,7 +14,7 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import AdSense from "@/components/AdSense";
 import Image from "next/image";
 import PlayerHexagonStats from "@/components/players/PlayerHexagonStats";
-import TOC from "@/components/blog/TOC";
+
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { getSiteUrl } from "@/lib/site";
 

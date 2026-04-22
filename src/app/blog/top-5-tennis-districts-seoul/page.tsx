@@ -3,7 +3,6 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
 
 export const metadata = {
     title: '서울 테니스 성지 TOP 5 — 코트 예약 명당과 지역별 클럽 특징 | 송파·강남·서초·마포·노원 완전 분석',

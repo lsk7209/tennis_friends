@@ -4,10 +4,9 @@ import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import PlayerProfileCard from '@/components/players/PlayerProfileCard';
 import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
-import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
+
 import { Metadata } from 'next';
-import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Flame, Crown } from 'lucide-react';
+import {Target, Award, Brain, Shield, Star, Crown} from 'lucide-react';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import PersonSchema from '@/components/seo/PersonSchema';
 import FAQSchema from '@/components/seo/FAQSchema';

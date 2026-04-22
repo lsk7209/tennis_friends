@@ -4,7 +4,6 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
     title: '2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교 | 레슨비 아끼는 꿀팁',

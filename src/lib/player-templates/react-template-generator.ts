@@ -4,7 +4,7 @@
  * 선수 데이터를 기반으로 PlayerPageTemplate에 전달할 props를 생성
  */
 
-import { Player, TemplateType, PlayerMetadata, PlayerFAQ } from '@/types/player';
+import {Player} from '@/types/player';
 
 interface TemplateSections {
   introduction: {

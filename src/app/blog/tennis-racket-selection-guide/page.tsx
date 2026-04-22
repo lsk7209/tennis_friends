@@ -4,7 +4,6 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 라켓 선택 완전 가이드 — 무게·밸런스·스트링 세팅으로 결정되는 퍼포먼스 차이 | 당신의 플레이 스타일에 맞는 최적의 라켓 찾기',

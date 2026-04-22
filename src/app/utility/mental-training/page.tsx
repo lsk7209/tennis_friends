@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from 'react';
-import { AlertTriangle, Brain, CheckCircle2, Clock3, Sparkles, Wind } from 'lucide-react';
+import {AlertTriangle, Brain, CheckCircle2, Clock3, Sparkles} from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';

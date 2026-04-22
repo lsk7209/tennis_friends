@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { BarChart3, Settings, Shield, Trophy, BookOpen, TrendingUp, Calculator, Target, Sparkles } from 'lucide-react';
+import {BarChart3, Settings, Shield, BookOpen, TrendingUp, Calculator, Target, Sparkles} from 'lucide-react';
 
 const CTASection: React.FC = () => {
   const utilities = [

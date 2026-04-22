@@ -27,7 +27,10 @@ function getSlugsFromDir(dirPath: string): string[] {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
-  const buildDate = new Date("2026-03-25");
+  const buildDate = new Date();
+  const utilityDate = new Date("2026-04-01");
+  const playerDate = new Date("2026-04-22");
+  const staticInfoDate = new Date("2026-01-01");
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -56,19 +59,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const utilityPages: MetadataRoute.Sitemap = getSlugsFromDir("utility").map((slug) => ({
-    url: `${baseUrl}/utility/${slug}`,
-    lastModified: buildDate,
-    changeFrequency: "monthly",
-    priority: 0.9,
-  }));
+  const utilityPages: MetadataRoute.Sitemap = getSlugsFromDir("utility").map(
+    (slug) => ({
+      url: `${baseUrl}/utility/${slug}`,
+      lastModified: utilityDate,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    }),
+  );
 
-  const playerPages: MetadataRoute.Sitemap = Object.keys(PLAYERS_DB).map((slug) => ({
-    url: `${baseUrl}/players/${slug}`,
-    lastModified: buildDate,
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
+  const playerPages: MetadataRoute.Sitemap = Object.keys(PLAYERS_DB).map(
+    (slug) => ({
+      url: `${baseUrl}/players/${slug}`,
+      lastModified: playerDate,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }),
+  );
 
   const blogPages: MetadataRoute.Sitemap = allBlogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -80,25 +87,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const additionalPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/about`,
-      lastModified: buildDate,
+      lastModified: staticInfoDate,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: buildDate,
+      lastModified: staticInfoDate,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: buildDate,
+      lastModified: staticInfoDate,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: buildDate,
+      lastModified: staticInfoDate,
       changeFrequency: "monthly",
       priority: 0.5,
     },
@@ -116,5 +123,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...staticPages, ...utilityPages, ...playerPages, ...blogPages, ...additionalPages];
+  return [
+    ...staticPages,
+    ...utilityPages,
+    ...playerPages,
+    ...blogPages,
+    ...additionalPages,
+  ];
 }

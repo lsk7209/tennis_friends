@@ -1,10 +1,7 @@
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
-import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 부상 예방 루틴 | 10분 워밍업·가동성·쿨다운 완전 정리',

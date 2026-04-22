@@ -4,7 +4,6 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 경기 중 멘탈 붕괴 방지법 — 실수 후 3초 회복 루틴의 힘 | 흔들리지 않는 플레이어의 비밀',

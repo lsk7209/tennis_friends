@@ -4,7 +4,6 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
 

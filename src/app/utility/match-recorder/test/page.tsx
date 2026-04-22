@@ -10,21 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
-import {
-  ArrowLeft,
-  Plus,
-  Minus,
-  Trophy,
-  Calendar,
-  Users,
-  MapPin,
-  Clock,
-  Target,
-  Save,
-  CheckCircle,
-  AlertCircle
-} from 'lucide-react';
-
+import {ArrowLeft, Plus, Minus, Trophy, Users, Target, Save, CheckCircle} from 'lucide-react';
 
 interface MatchData {
   date: string;

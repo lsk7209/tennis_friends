@@ -7,20 +7,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { 
-  Calculator, 
-  Share2, 
-  RotateCcw, 
-  Target, 
-  Settings, 
-  TrendingUp,
-  AlertCircle,
-  Info,
-  ArrowRight,
-  CheckCircle,
-  Sparkles
-} from 'lucide-react';
+import {Calculator, Share2, RotateCcw, Target, Settings, TrendingUp, AlertCircle, ArrowRight, CheckCircle, Sparkles} from 'lucide-react';
 import { calculateTension, getTensionComparison, TensionInput, TensionResult } from '@/lib/tensionCalc';
 
 function StringTensionResultContent() {

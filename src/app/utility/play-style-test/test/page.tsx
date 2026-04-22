@@ -1,12 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import {useState} from 'react';
 import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, ArrowRight, Sparkles, Zap, Brain, Shield, RotateCcw, Target, Flame } from 'lucide-react';
+import {CheckCircle, Sparkles} from 'lucide-react';
 import { toast } from 'sonner';
 import { playStyleQuestions, calculatePlayStyle } from '@/lib/playStyleTest';
 

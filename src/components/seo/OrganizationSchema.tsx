@@ -51,13 +51,7 @@ export default function OrganizationSchema({
       "@type": "Country",
       name: DEFAULT_COUNTRY_NAME,
     },
-    knowsAbout: [
-      "Tennis",
-      "Tennis coaching",
-      "Tennis equipment",
-      "Tennis analytics",
-      "Tennis training plans",
-    ],
+    knowsAbout: ["테니스", "NTRP", "테니스 장비", "테니스 훈련", "스트링 텐션"],
   };
 
   return <JsonLd data={schema} />;

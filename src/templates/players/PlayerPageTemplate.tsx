@@ -14,13 +14,9 @@ import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import {
-  Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap,
-  Star, CheckCircle, Crown, Users, BookOpen, ArrowRight
-} from 'lucide-react';
-import { Player, TemplateType, PlayerMetadata, PlayerFAQ } from '@/types/player';
+
+import {Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle, Crown} from 'lucide-react';
+import {Player, PlayerMetadata, PlayerFAQ} from '@/types/player';
 import RelatedPlayerContent from '@/components/RelatedPlayerContent';
 
 interface PlayerPageTemplateProps {

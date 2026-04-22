@@ -11,19 +11,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
-import {
-  Calendar,
-  Clock,
-  User,
-  Phone,
-  Mail,
-  Users,
-  CreditCard,
-  ArrowLeft,
-  CheckCircle,
-  CalendarIcon,
-  ClockIcon
-} from 'lucide-react';
+import {Calendar, User, CreditCard, ArrowLeft} from 'lucide-react';
 
 export default function CourtBookingTest() {
   const router = useRouter();

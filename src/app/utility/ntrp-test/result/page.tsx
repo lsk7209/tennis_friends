@@ -7,32 +7,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Trophy, 
-  Share2, 
-  RotateCcw, 
-  Star, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  Award,
-  Zap,
-  Heart,
-  MessageCircle,
-  Instagram,
-  Twitter,
-  Facebook,
-  Copy,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  Calendar,
-  Clock,
-  Settings,
-  Shield,
-  BarChart3
-} from 'lucide-react';
+import {Trophy, Share2, RotateCcw, Star, TrendingUp, Target, Award, Zap, Instagram, Twitter, Facebook, Copy, CheckCircle, ArrowRight, BookOpen, Settings, Shield, BarChart3} from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
 import { trackTestCompletion } from '@/components/Tracking';
 

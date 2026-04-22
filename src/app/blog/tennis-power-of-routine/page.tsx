@@ -4,7 +4,6 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스에서 루틴의 힘 — 일관된 습관이 경기력을 만든다 | 반복이 만들어내는 집중과 자신감의 과학',

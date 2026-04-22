@@ -49,6 +49,10 @@ export default function WebSiteSchema({
         height: 32,
       },
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".article-summary", "h2"],
+    },
   };
 
   return <JsonLd data={schema} />;

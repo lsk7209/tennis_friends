@@ -5,7 +5,7 @@ import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Metadata } from 'next';
-import { Trophy, Target, TrendingUp, Award, Heart, Brain, Shield, Zap, Star, CheckCircle } from 'lucide-react';
+import {Trophy, Target, TrendingUp, Zap, Star, CheckCircle} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '알레한드로 다비노비치 포키나 완전 분석 | 플레이 스타일·명경기·ATP 프로필',

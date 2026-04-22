@@ -1,24 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import {useState} from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import {
-  CheckCircle,
-  Calendar,
-  Clock,
-  MapPin,
-  CreditCard,
-  Download,
-  Share2,
-  ArrowRight,
-  Home,
-  CalendarIcon,
-  ClockIcon,
-  MapPinIcon
-} from 'lucide-react';
+import {CheckCircle, Calendar, Clock, MapPin, CreditCard, Download, Share2, Home, CalendarIcon} from 'lucide-react';
 
 export default function CourtBookingResult() {
   const [bookingData] = useState({

@@ -6,22 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import {
-  ArrowLeft,
-  Play,
-  Square,
-  RotateCcw,
-  Trophy,
-  Target,
-  Clock,
-  Zap,
-  CheckCircle,
-  AlertTriangle,
-  TrendingUp,
-  Award,
-  Timer
-} from 'lucide-react';
-
+import {ArrowLeft, RotateCcw, Trophy, Target, Clock, CheckCircle, AlertTriangle, TrendingUp} from 'lucide-react';
 
 type GameState = 'waiting' | 'ready' | 'active' | 'clicked' | 'result' | 'finished';
 

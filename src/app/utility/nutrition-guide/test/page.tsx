@@ -8,9 +8,9 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { ArrowRight, ArrowLeft, Apple, CheckCircle } from 'lucide-react';
+import {ArrowRight, ArrowLeft} from 'lucide-react';
 import { NutritionInput, generateNutritionPlan } from '@/lib/nutritionGuide';
-import { FadeIn, SlideUp } from '@/components/ScrollAnimation';
+import {FadeIn} from '@/components/ScrollAnimation';
 
 export default function NutritionGuideTest() {
   const router = useRouter();

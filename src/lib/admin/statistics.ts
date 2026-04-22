@@ -19,7 +19,7 @@ import {
   REFERRER_CATEGORIES,
   EMPTY_STATS_DATA,
 } from './constants';
-import { getReferrerDisplay, getSearchEngine, extractKeyword } from './helpers';
+import {getReferrerDisplay, getSearchEngine} from './helpers';
 
 /**
  * 통계 데이터 계산

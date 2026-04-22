@@ -5,14 +5,12 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {Card, CardContent} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Trophy, Share2, Download, RotateCcw, Target, BookOpen, CheckCircle, XCircle, Clock, ArrowRight } from 'lucide-react';
+import {Trophy, Share2, Download, RotateCcw, Target, BookOpen, CheckCircle, XCircle, Clock} from 'lucide-react';
 import { getGradeInfo, getTopWeakAreas, CATEGORY_LABELS, CATEGORY_COLORS, QuizAnswer, Question } from '@/lib/tennisQuiz';
 import { safeJsonParse } from '@/lib/safe-json';
-import { FadeIn, SlideUp, SlideDown, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import {FadeIn, SlideUp, StaggeredAnimation, StaggeredItem} from '@/components/ScrollAnimation';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 

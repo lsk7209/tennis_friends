@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Shield, AlertTriangle, CheckCircle, ArrowRight, RotateCcw, Share2, Sparkles } from 'lucide-react';
+import {Shield, AlertTriangle, CheckCircle, ArrowRight, RotateCcw, Share2} from 'lucide-react';
 import { getRiskLevelInfo } from '@/lib/injuryRiskCalc';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';

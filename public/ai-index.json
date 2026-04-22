@@ -3,12 +3,12 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 플랫폼",
-  "lastUpdated": "2026-04-16",
+  "lastUpdated": "2026-04-22",
   "stats": {
-    "totalPages": 222,
-    "tools": 63,
+    "totalPages": 230,
+    "tools": 65,
     "articles": 100,
-    "playerProfiles": 54
+    "playerProfiles": 218
   },
   "pages": [
     {
@@ -38,12 +38,12 @@
     },
     {
       "url": "https://tennisfrens.com/utility/adult-beginner-roadmap",
-      "description": "테니스 adult beginner roadmap",
+      "description": "성인 테니스 입문 로드맵 - 단계별 학습 가이드",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/apparel-recommendation",
-      "description": "테니스 apparel recommendation",
+      "description": "테니스 의류 추천 - 코트 종류·날씨·실력별 맞춤 추천",
       "type": "tool"
     },
     {
@@ -58,37 +58,37 @@
     },
     {
       "url": "https://tennisfrens.com/utility/cooldown-routine-builder",
-      "description": "테니스 cooldown routine builder",
+      "description": "쿨다운 루틴 빌더 - 운동 후 맞춤 스트레칭 루틴 생성",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/court-booking",
-      "description": "테니스 court booking",
+      "description": "코트 예약 가이드 - 지역별 테니스 코트 예약 안내",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/court-conditions",
-      "description": "테니스 court conditions",
+      "description": "코트 컨디션 체크 - 날씨·코트 상태별 플레이 조정 가이드",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/court-surface-advisor",
-      "description": "테니스 court surface advisor",
+      "description": "코트 서피스 어드바이저 - 하드·클레이·잔디 코트별 전략 추천",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/doubles-chemistry-test",
-      "description": "테니스 doubles chemistry test",
+      "description": "복식 케미스트리 테스트 - 파트너와의 복식 궁합 진단",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/doubles-positioning-simulator",
-      "description": "테니스 doubles positioning simulator",
+      "description": "복식 포지셔닝 시뮬레이터 - 상황별 최적 복식 포지션 안내",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/equipment-maintenance-scheduler",
-      "description": "테니스 equipment maintenance scheduler",
+      "description": "장비 유지보수 스케줄러 - 라켓·스트링·신발 교체 주기 관리",
       "type": "tool"
     },
     {
@@ -103,32 +103,32 @@
     },
     {
       "url": "https://tennisfrens.com/utility/flexibility-test",
-      "description": "테니스 flexibility test",
+      "description": "유연성 테스트 - 테니스에 필요한 관절 가동 범위 진단",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/focus-training",
-      "description": "테니스 focus training",
+      "description": "집중력 훈련 - 시합 중 멘탈 집중력 향상 훈련 도구",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/forehand-stability-test",
-      "description": "테니스 forehand stability test",
+      "description": "포핸드 안정성 테스트 - 포핸드 일관성·안정성 자가 진단",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/goal-setting",
-      "description": "테니스 goal setting",
+      "description": "목표 설정 도구 - 단기·중기·장기 테니스 목표 수립",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/grip-size-checker",
-      "description": "테니스 grip size checker",
+      "description": "그립 사이즈 체커 - 손 크기 기반 최적 그립 사이즈 추천",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/hydration-planner",
-      "description": "테니스 hydration planner",
+      "description": "수분 보충 플래너 - 운동 강도·날씨별 수분 섭취량 계획",
       "type": "tool"
     },
     {
@@ -138,7 +138,7 @@
     },
     {
       "url": "https://tennisfrens.com/utility/junior-development-roadmap",
-      "description": "테니스 junior development roadmap",
+      "description": "주니어 개발 로드맵 - 어린이·청소년 테니스 단계별 성장 가이드",
       "type": "tool"
     },
     {
@@ -148,17 +148,17 @@
     },
     {
       "url": "https://tennisfrens.com/utility/match-recorder",
-      "description": "테니스 match recorder",
+      "description": "경기 기록기 - 경기 스코어·통계 실시간 기록 도구",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/match-video-review-template",
-      "description": "테니스 match video review template",
+      "description": "경기 영상 리뷰 템플릿 - 셀프 영상 분석을 위한 구조화된 체크리스트",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/matchday-packing-checklist",
-      "description": "테니스 matchday packing checklist",
+      "description": "경기날 준비물 체크리스트 - 시합 당일 필수 준비물 확인",
       "type": "tool"
     },
     {
@@ -178,17 +178,17 @@
     },
     {
       "url": "https://tennisfrens.com/utility/opponent-analyzer",
-      "description": "테니스 opponent analyzer",
+      "description": "상대방 분석기 - 상대 플레이 스타일 약점 분석 및 전략 도출",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/overgrip-replacement-reminder",
-      "description": "테니스 overgrip replacement reminder",
+      "description": "오버그립 교체 알림 - 사용 횟수 기반 오버그립 교체 시기 안내",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/partner-compatibility-check",
-      "description": "테니스 partner compatibility check",
+      "description": "파트너 궁합 체크 - 복식 파트너와의 플레이 스타일 호환성 진단",
       "type": "tool"
     },
     {
@@ -198,22 +198,22 @@
     },
     {
       "url": "https://tennisfrens.com/utility/practice-drill-generator",
-      "description": "테니스 practice drill generator",
+      "description": "연습 드릴 생성기 - 실력·목표에 맞는 맞춤형 드릴 생성",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/practice-wall-drill-planner",
-      "description": "테니스 practice wall drill planner",
+      "description": "벽 연습 드릴 플래너 - 혼자 할 수 있는 벽 활용 연습 계획",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/price-comparison",
-      "description": "테니스 price comparison",
+      "description": "테니스 용품 가격 비교 - 라켓·스트링·신발 가격 비교 가이드",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/rally-consistency-tracker",
-      "description": "테니스 rally consistency tracker",
+      "description": "랠리 일관성 트래커 - 연속 랠리 횟수 기록·분석 도구",
       "type": "tool"
     },
     {
@@ -223,22 +223,22 @@
     },
     {
       "url": "https://tennisfrens.com/utility/reaction-test",
-      "description": "테니스 reaction test",
+      "description": "반응 속도 테스트 - 테니스에 필요한 시각 반응 속도 측정",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/recovery-routine-generator",
-      "description": "테니스 recovery routine generator",
+      "description": "회복 루틴 생성기 - 운동 강도별 맞춤 회복 루틴 제안",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/return-position-calculator",
-      "description": "테니스 return position calculator",
+      "description": "리턴 포지션 계산기 - 상대 서브 특성별 최적 리턴 위치 안내",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/serve-placement-mapper",
-      "description": "테니스 serve placement mapper",
+      "description": "서브 배치 맵퍼 - 서브 코스 전략 및 배치 패턴 시각화",
       "type": "tool"
     },
     {
@@ -248,32 +248,32 @@
     },
     {
       "url": "https://tennisfrens.com/utility/shoe-recommender",
-      "description": "테니스 shoe recommender",
+      "description": "테니스화 추천기 - 코트 종류·발 형태·플레이 스타일별 신발 추천",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/shoe-wear-tracker",
-      "description": "테니스 shoe wear tracker",
+      "description": "신발 마모 트래커 - 착용 시간 기반 테니스화 교체 시기 알림",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/shot-selection-trainer",
-      "description": "테니스 shot selection trainer",
+      "description": "샷 선택 트레이너 - 상황별 최적 샷 판단력 향상 훈련",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/sleep-readiness-check",
-      "description": "테니스 sleep readiness check",
+      "description": "수면 컨디션 체크 - 경기·훈련 전날 수면 준비도 자가 진단",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/string-pattern-analyzer",
-      "description": "테니스 string pattern analyzer",
+      "description": "스트링 패턴 분석기 - 16×19·18×20 등 패턴별 특성 비교",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/string-replacement-reminder",
-      "description": "테니스 string replacement reminder",
+      "description": "스트링 교체 알림 - 사용량 기반 스트링 교체 적정 시기 안내",
       "type": "tool"
     },
     {
@@ -283,42 +283,42 @@
     },
     {
       "url": "https://tennisfrens.com/utility/swing-analyzer",
-      "description": "테니스 swing analyzer",
+      "description": "스윙 분석기 - 스윙 동작 자가 분석 및 개선 포인트 제안",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/tennis-dictionary",
-      "description": "테니스 tennis dictionary",
+      "description": "테니스 용어 사전 - NTRP·에이스·탑스핀 등 300개+ 테니스 용어 해설",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/tennis-diet",
-      "description": "테니스 tennis diet",
+      "description": "테니스 식단 가이드 - 경기 전·중·후 최적 식단 및 영양 전략",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/tennis-goal-streak-tracker",
-      "description": "테니스 tennis goal streak tracker",
+      "description": "목표 연속 달성 트래커 - 훈련 목표 연속 달성 기록 관리",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/tennis-time-availability-planner",
-      "description": "테니스 tennis time availability planner",
+      "description": "테니스 시간 플래너 - 생활 패턴 기반 최적 훈련 시간 배분 계획",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/tiebreak-pressure-simulator",
-      "description": "테니스 tiebreak pressure simulator",
+      "description": "타이브레이크 압박감 시뮬레이터 - 고압 상황 멘탈 훈련 도구",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/tournament-budget-calculator",
-      "description": "테니스 tournament budget calculator",
+      "description": "대회 예산 계산기 - 참가비·교통·숙박 포함 대회 비용 계산",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/tournament-schedule",
-      "description": "테니스 tournament schedule",
+      "description": "대회 일정 안내 - ATP·WTA·국내 주요 대회 일정 및 정보",
       "type": "tool"
     },
     {
@@ -328,12 +328,12 @@
     },
     {
       "url": "https://tennisfrens.com/utility/travel-pack-planner",
-      "description": "테니스 travel pack planner",
+      "description": "원정 경기 준비물 플래너 - 원정·여행 시 테니스 용품 패킹 체크리스트",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/unforced-error-audit",
-      "description": "테니스 unforced error audit",
+      "description": "비강제 실수 분석기 - 경기 중 자책 실수 패턴 파악 및 개선 가이드",
       "type": "tool"
     },
     {
@@ -343,782 +343,777 @@
     },
     {
       "url": "https://tennisfrens.com/utility/warmup-routine-builder",
-      "description": "테니스 warmup routine builder",
+      "description": "워밍업 루틴 빌더 - 경기·훈련 전 맞춤 워밍업 루틴 생성",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/utility/weather-check",
-      "description": "테니스 weather check",
+      "description": "날씨 체크 - 야외 테니스 가능 여부 및 날씨별 플레이 조정 팁",
       "type": "tool"
     },
     {
       "url": "https://tennisfrens.com/blog/alex-de-minaur",
-      "description": "테니스 블로그: alex de minaur",
+      "description": "알렉스 드 미노르 분석 - 수비형 베이스라이너의 기술과 전략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/alexander-zverev",
-      "description": "테니스 블로그: alexander zverev",
+      "description": "알렉산더 즈베레프 분석 - 강력한 서브와 포핸드 기술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/andrey-rublev",
-      "description": "테니스 블로그: andrey rublev",
+      "description": "안드레이 루블레프 분석 - 공격적 베이스라이너의 플레이 스타일",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/autumn-tennis-rhythm-guide",
-      "description": "테니스 블로그: autumn tennis rhythm guide",
+      "description": "가을 테니스 리듬 가이드 - 환절기 컨디션 조절 및 훈련 팁",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/backhand-accuracy-full-guide",
-      "description": "테니스 블로그: backhand accuracy full guide",
+      "description": "백핸드 정확도 완전 가이드 - 양손·한손 백핸드 교정법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/ben-shelton",
-      "description": "테니스 블로그: ben shelton",
+      "description": "벤 셸튼 분석 - 강력한 왼손 서브와 공격적 플레이",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/carlos-alcaraz",
-      "description": "테니스 블로그: carlos alcaraz",
+      "description": "카를로스 알카라스 분석 - 최연소 세계 1위의 기술과 전술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/casper-ruud",
-      "description": "테니스 블로그: casper ruud",
+      "description": "카스퍼 루드 분석 - 클레이 코트 스페셜리스트의 전략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/daniil-medvedev",
-      "description": "테니스 블로그: daniil medvedev",
+      "description": "다닐 메드베데프 분석 - 독특한 수비 스타일과 리턴 기술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/frances-tiafoe",
-      "description": "테니스 블로그: frances tiafoe",
+      "description": "프란시스 티아포 분석 - 폭발적인 에너지와 공격적 테니스",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/grigor-dimitrov",
-      "description": "테니스 블로그: grigor dimitrov",
+      "description": "그리고르 디미트로프 분석 - 우아한 올라운더 스타일",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/holger-rune",
-      "description": "테니스 블로그: holger rune",
+      "description": "홀거 루네 분석 - 차세대 강자의 공격적 플레이 스타일",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/hubert-hurkacz",
-      "description": "테니스 블로그: hubert hurkacz",
+      "description": "후베르트 후르카츠 분석 - 강력한 서브와 네트 플레이",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/jannik-sinner",
-      "description": "테니스 블로그: jannik sinner",
+      "description": "야닉 시너 분석 - ATP 세계 1위의 정확한 베이스라인 플레이",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/novak-djokovic",
-      "description": "테니스 블로그: novak djokovic",
+      "description": "노박 조코비치 분석 - 그랜드슬램 24회 우승자의 무결점 테니스",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/rainy-day-tennis-tips-guide",
-      "description": "테니스 블로그: rainy day tennis tips guide",
+      "description": "우천 시 테니스 팁 가이드 - 빗속 경기 대처법과 실내 훈련",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/serve-return-prediction-guide",
-      "description": "테니스 블로그: serve return prediction guide",
+      "description": "서브 리턴 예측 가이드 - 상대 서브 패턴 읽기와 포지셔닝",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/stefanos-tsitsipas",
-      "description": "테니스 블로그: stefanos tsitsipas",
+      "description": "스테파노스 치치파스 분석 - 원핸드 백핸드와 네트 공략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/taylor-fritz",
-      "description": "테니스 블로그: taylor fritz",
+      "description": "테일러 프리츠 분석 - 강력한 서브와 공격적 베이스라인 게임",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-adult-beginner-first-90-days",
-      "description": "테니스 블로그: tennis adult beginner first 90 days",
+      "description": "성인 테니스 입문 첫 90일 가이드 - 단계별 실력 향상 로드맵",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-advanced-pattern-analysis",
-      "description": "테니스 블로그: tennis advanced pattern analysis",
+      "description": "고급 테니스 패턴 분석 - 전술적 패턴과 득점 루트",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-approach-shot-guide",
-      "description": "테니스 블로그: tennis approach shot guide",
+      "description": "어프로치 샷 가이드 - 네트로 전진하는 공격 전환 기술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-backhand-return-guide",
-      "description": "테니스 블로그: tennis backhand return guide",
+      "description": "백핸드 리턴 가이드 - 강서브를 백핸드로 안전하게 리턴하는 법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-backhand-technique-guide",
-      "description": "테니스 블로그: tennis backhand technique guide",
+      "description": "백핸드 기술 완전 가이드 - 폼·타이밍·회전 완벽 정리",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-beginner-30day-growth-plan",
-      "description": "테니스 블로그: tennis beginner 30day growth plan",
+      "description": "테니스 초보 30일 성장 플랜 - 한 달 만에 기초 완성",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-beginner-30day-training-plan",
-      "description": "테니스 블로그: tennis beginner 30day training plan",
+      "description": "테니스 초보 30일 훈련 플랜 - 일별 구체적 훈련 메뉴",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-clay-court-sliding-guide",
-      "description": "테니스 블로그: tennis clay court sliding guide",
+      "description": "클레이 코트 슬라이딩 가이드 - 흙 코트 이동 기술과 안전한 슬라이딩",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-cold-weather-match-guide",
-      "description": "테니스 블로그: tennis cold weather match guide",
+      "description": "추운 날씨 경기 가이드 - 겨울·저온 환경에서의 테니스 대처법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-cooldown-stretching-routine",
-      "description": "테니스 블로그: tennis cooldown stretching routine",
+      "description": "쿨다운 스트레칭 루틴 - 운동 후 부상 예방 스트레칭 완전 가이드",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-dampener-effectiveness",
-      "description": "테니스 블로그: tennis dampener effectiveness",
+      "description": "테니스 댐퍼 효과 분석 - 진동 흡수기의 과학적 효과와 선택법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-doubles-net-player-guide",
-      "description": "테니스 블로그: tennis doubles net player guide",
+      "description": "복식 네트 플레이어 가이드 - 전위 역할과 포치 타이밍",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-doubles-serve-formation-guide",
-      "description": "테니스 블로그: tennis doubles serve formation guide",
+      "description": "복식 서브 포메이션 가이드 - I 포메이션·오스트레일리안 포메이션 전략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-doubles-strategy-guide",
-      "description": "테니스 블로그: tennis doubles strategy guide",
+      "description": "복식 전략 완전 가이드 - 포메이션·시그널·포치 전술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-doubles-teamwork-strategy",
-      "description": "테니스 블로그: tennis doubles teamwork strategy",
+      "description": "복식 팀워크 전략 - 파트너와의 소통과 협력 플레이",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-drop-shot-mastery",
-      "description": "테니스 블로그: tennis drop shot mastery",
+      "description": "드롭샷 마스터리 - 백스핀 각도와 터치 훈련법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-elbow-prevention-guide",
-      "description": "테니스 블로그: tennis elbow prevention guide",
+      "description": "테니스 엘보우 예방 가이드 - 원인·예방 운동·재활 완전 정리",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-etiquette-and-manners",
-      "description": "테니스 블로그: tennis etiquette and manners",
+      "description": "테니스 에티켓과 매너 - 코트 예절과 스포츠맨십",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-footwork-balance-training-guide",
-      "description": "테니스 블로그: tennis footwork balance training guide",
+      "description": "풋워크 균형 훈련 가이드 - 코트 커버리지와 밸런스 향상",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-footwork-science",
-      "description": "테니스 블로그: tennis footwork science",
+      "description": "풋워크 과학 - 스플릿 스텝 타이밍·리커버리 스텝 완전 분석",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-forehand-depth-control-guide",
-      "description": "테니스 블로그: tennis forehand depth control guide",
+      "description": "포핸드 깊이 컨트롤 가이드 - 탑스핀 양 조절과 발 위치",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-forehand-impact-timing-guide",
-      "description": "테니스 블로그: tennis forehand impact timing guide",
+      "description": "포핸드 임팩트 타이밍 가이드 - 정확한 타점과 스윙 타이밍",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-grass-court-movement-guide",
-      "description": "테니스 블로그: tennis grass court movement guide",
+      "description": "잔디 코트 움직임 가이드 - 윔블던 스타일 풋워크와 슬라이딩",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-grip-size-selection",
-      "description": "테니스 블로그: tennis grip size selection",
+      "description": "테니스 그립 사이즈 선택 - 손 크기별 최적 그립 선택법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-hard-court-recovery-guide",
-      "description": "테니스 블로그: tennis hard court recovery guide",
+      "description": "하드 코트 회복 가이드 - 딱딱한 코트로 인한 피로·부상 관리",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-hot-weather-match-guide",
-      "description": "테니스 블로그: tennis hot weather match guide",
+      "description": "더운 날씨 경기 가이드 - 폭염 속 체온 관리와 수분 전략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-hybrid-string-setup",
-      "description": "테니스 블로그: tennis hybrid string setup",
+      "description": "하이브리드 스트링 셋업 - 메인·크로스 혼합 조합 완전 가이드",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-hydration-electrolyte-guide",
-      "description": "테니스 블로그: tennis hydration electrolyte guide",
+      "description": "테니스 수분·전해질 가이드 - 경기 중 최적 수분 보충 전략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-injury-prevention-full-guide",
-      "description": "테니스 블로그: tennis injury prevention full guide",
+      "description": "테니스 부상 예방 완전 가이드 - 주요 부상 유형별 예방법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-injury-prevention-recovery",
-      "description": "테니스 블로그: tennis injury prevention recovery",
+      "description": "테니스 부상 예방과 재활 - 부상 후 복귀까지 단계별 가이드",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-inmatch-condition-management",
-      "description": "테니스 블로그: tennis inmatch condition management",
+      "description": "경기 중 컨디션 관리 - 세트 간 회복과 체력 배분 전략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-intermediate-match-strategy",
-      "description": "테니스 블로그: tennis intermediate match strategy",
+      "description": "중급자 경기 전략 - NTRP 3.0~4.0을 위한 실전 전술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-intermediate-to-advanced-transition",
-      "description": "테니스 블로그: tennis intermediate to advanced transition",
+      "description": "중급에서 고급으로 전환 - 다음 레벨 도달을 위한 핵심 과제",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-junior-training-roadmap",
-      "description": "테니스 블로그: tennis junior training roadmap",
+      "description": "주니어 테니스 훈련 로드맵 - 연령별 발달 단계와 훈련 방향",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-kick-serve-guide",
-      "description": "테니스 블로그: tennis kick serve guide",
+      "description": "킥 서브 완전 가이드 - 높게 튀어오르는 서브 마스터하기",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-lesson-cost-guide",
-      "description": "테니스 블로그: tennis lesson cost guide",
+      "description": "테니스 레슨 비용 가이드 - 레슨 유형별 비용과 선택 기준",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-lob-defense-offense",
-      "description": "테니스 블로그: tennis lob defense offense",
+      "description": "로브 공격과 수비 가이드 - 상황별 로브 전략과 대처법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-match-video-review-guide",
-      "description": "테니스 블로그: tennis match video review guide",
+      "description": "경기 영상 리뷰 가이드 - 자기 경기 분석으로 빠르게 실력 향상",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-matchday-warmup-routine",
-      "description": "테니스 블로그: tennis matchday warmup routine",
+      "description": "경기날 워밍업 루틴 - 시합 전 최적 준비 루틴 완전 가이드",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-mental-focus-recovery",
-      "description": "테니스 블로그: tennis mental focus recovery",
+      "description": "멘탈 집중력 회복 - 실점 후 빠르게 집중력 되찾는 방법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-mental-reset-between-points",
-      "description": "테니스 블로그: tennis mental reset between points",
+      "description": "포인트 사이 멘탈 리셋 - 15초 루틴으로 마음 다스리기",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-mental-routine-5steps",
-      "description": "테니스 블로그: tennis mental routine 5steps",
+      "description": "테니스 멘탈 루틴 5단계 - 집중력 유지를 위한 실전 루틴",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-mental-routine-control-guide",
-      "description": "테니스 블로그: tennis mental routine control guide",
+      "description": "멘탈 루틴 컨트롤 가이드 - 압박 상황에서 평정심 유지법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-overgrip-guide",
-      "description": "테니스 블로그: tennis overgrip guide",
+      "description": "오버그립 완전 가이드 - 종류·교체 시기·감는 방법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-overhead-smash-guide",
-      "description": "테니스 블로그: tennis overhead smash guide",
+      "description": "오버헤드 스매시 가이드 - 로브 대응 스매시 완성하기",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-partner-practice-drills",
-      "description": "테니스 블로그: tennis partner practice drills",
+      "description": "파트너 연습 드릴 - 둘이서 할 수 있는 효과적인 훈련 메뉴",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-post-exercise-nutrition",
-      "description": "테니스 블로그: tennis post exercise nutrition",
+      "description": "운동 후 영양 섭취 - 테니스 회복을 위한 식사·보충제 가이드",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-postmatch-recovery-routine",
-      "description": "테니스 블로그: tennis postmatch recovery routine",
+      "description": "경기 후 회복 루틴 - 빠른 피로 회복을 위한 단계별 루틴",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-power-of-routine",
-      "description": "테니스 블로그: tennis power of routine",
+      "description": "루틴의 힘 - 일관된 루틴이 테니스 실력에 미치는 영향",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-practice-journal-guide",
-      "description": "테니스 블로그: tennis practice journal guide",
+      "description": "연습 일지 작성 가이드 - 기록으로 실력 향상 속도 높이기",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-racket-recommendation-guide-2026",
-      "description": "테니스 블로그: tennis racket recommendation guide 2026",
+      "description": "2026년 테니스 라켓 추천 가이드 - 실력별·스타일별 최신 추천",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-racket-selection-guide",
-      "description": "테니스 블로그: tennis racket selection guide",
+      "description": "테니스 라켓 선택 가이드 - 헤드 사이즈·무게·밸런스 완전 정리",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-return-of-serve-strategy",
-      "description": "테니스 블로그: tennis return of serve strategy",
+      "description": "서브 리턴 전략 - 상대 서브 유형별 최적 리턴 전술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-return-positioning-by-surface",
-      "description": "테니스 블로그: tennis return positioning by surface",
+      "description": "코트 서피스별 리턴 포지셔닝 - 하드·클레이·잔디 코트 차이",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-scoring-system-guide",
-      "description": "테니스 블로그: tennis scoring system guide",
+      "description": "테니스 스코어링 시스템 가이드 - 포인트·게임·세트·타이브레이크 규칙",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-second-serve-confidence-guide",
-      "description": "테니스 블로그: tennis second serve confidence guide",
+      "description": "2서브 자신감 가이드 - 더블폴트 없애는 안정적인 2서브 전략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-serve-plus-one-patterns",
-      "description": "테니스 블로그: tennis serve plus one patterns",
+      "description": "서브 플러스 원 패턴 - 서브 후 첫 번째 샷 전술 완전 가이드",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-serve-rhythm-science",
-      "description": "테니스 블로그: tennis serve rhythm science",
+      "description": "서브 리듬의 과학 - 일관된 서브 루틴과 타이밍 최적화",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-serve-speed-science",
-      "description": "테니스 블로그: tennis serve speed science",
+      "description": "서브 속도의 과학 - 라켓 헤드 스피드와 서브 속도 향상 원리",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-serve-timing-and-spin-guide",
-      "description": "테니스 블로그: tennis serve timing and spin guide",
+      "description": "서브 타이밍과 스핀 가이드 - 킥·슬라이스·플랫 서브 마스터",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-shoes-balance-guide",
-      "description": "테니스 블로그: tennis shoes balance guide",
+      "description": "테니스화 균형 가이드 - 안정성과 움직임을 동시에 잡는 신발 선택",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-shoes-selection-guide",
-      "description": "테니스 블로그: tennis shoes selection guide",
+      "description": "테니스화 선택 가이드 - 코트 종류별 최적 신발 완전 정리",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-sleep-recovery-guide",
-      "description": "테니스 블로그: tennis sleep recovery guide",
+      "description": "테니스 수면 회복 가이드 - 최적 수면으로 운동 능력 극대화",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-slice-backhand-mastery",
-      "description": "테니스 블로그: tennis slice backhand mastery",
+      "description": "슬라이스 백핸드 마스터리 - 낮은 바운드 활용 전술과 기술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-slice-serve-guide",
-      "description": "테니스 블로그: tennis slice serve guide",
+      "description": "슬라이스 서브 가이드 - 사이드스핀 서브로 상대 몸쪽 공략",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-split-step-timing-guide",
-      "description": "테니스 블로그: tennis split step timing guide",
+      "description": "스플릿 스텝 타이밍 가이드 - 반응 속도를 높이는 핵심 기술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-starting-complete-guide",
-      "description": "테니스 블로그: tennis starting complete guide",
+      "description": "테니스 입문 완전 가이드 - 처음 시작하는 분을 위한 A to Z",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-strategy-beat-pusher",
-      "description": "테니스 블로그: tennis strategy beat pusher",
+      "description": "푸셔 상대 전략 - 수비형 플레이어를 이기는 공략법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-strategy-vs-lefty",
-      "description": "테니스 블로그: tennis strategy vs lefty",
+      "description": "왼손 선수 상대 전략 - 왼손잡이 테니스 플레이어 공략법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-string-guide",
-      "description": "테니스 블로그: tennis string guide",
+      "description": "테니스 스트링 완전 가이드 - 종류·소재·특성별 선택법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-string-tension-guide",
-      "description": "테니스 블로그: tennis string tension guide",
+      "description": "스트링 텐션 가이드 - 텐션별 타구감 차이와 최적 텐션 설정법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-tiebreak-strategy-guide",
-      "description": "테니스 블로그: tennis tiebreak strategy guide",
+      "description": "타이브레이크 전략 가이드 - 7-6 승부처에서 이기는 전술",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-tournament-preparation-checklist",
-      "description": "테니스 블로그: tennis tournament preparation checklist",
+      "description": "대회 준비 체크리스트 - 시합 전주·전날·당일 준비 완전 가이드",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-unforced-error-reduction-guide",
-      "description": "테니스 블로그: tennis unforced error reduction guide",
+      "description": "비강제 실수 줄이기 가이드 - 자책 실수를 줄이는 실전 방법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-volley-technique-guide",
-      "description": "테니스 블로그: tennis volley technique guide",
+      "description": "발리 기술 가이드 - 네트에서 확실하게 득점하는 발리 완성",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-wall-practice-guide",
-      "description": "테니스 블로그: tennis wall practice guide",
+      "description": "벽 연습 가이드 - 혼자서도 효과적으로 실력 올리는 벽 훈련법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-windy-condition-tips",
-      "description": "테니스 블로그: tennis windy condition tips",
+      "description": "바람 속 테니스 팁 - 강풍 환경에서의 게임 플랜과 샷 조정",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-wrist-knee-pain-care",
-      "description": "테니스 블로그: tennis wrist knee pain care",
+      "description": "손목·무릎 통증 관리 - 테니스로 인한 관절 통증 예방과 케어",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/tommy-paul",
-      "description": "테니스 블로그: tommy paul",
+      "description": "토미 폴 분석 - 미국 차세대 강자의 공격적 베이스라인 게임",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/top-5-tennis-districts-seoul",
-      "description": "테니스 블로그: top 5 tennis districts seoul",
+      "description": "서울 테니스 명소 TOP 5 - 서울 최고의 테니스 구장과 코트 안내",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/blog/winter-indoor-tennis-training-routine",
-      "description": "테니스 블로그: winter indoor tennis training routine",
+      "description": "겨울 실내 테니스 훈련 루틴 - 추운 계절 실내에서 실력 유지법",
       "type": "article"
     },
     {
       "url": "https://tennisfrens.com/players/adrian-mannarino",
-      "description": "선수 프로필: adrian mannarino",
+      "description": "아드리안 마나리노 프로필 - 독특한 플랫 스윙과 좌완 전술",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/alejandro-davidovich-fokina",
-      "description": "선수 프로필: alejandro davidovich fokina",
+      "description": "알레한드로 다비도비치 포키나 프로필 - 스페인 클레이 코트 전사",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/alex-de-minaur",
-      "description": "선수 프로필: alex de minaur",
+      "description": "알렉스 드 미노르 프로필 - 호주의 수비형 스피드 플레이어",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/alex-michelsen",
-      "description": "선수 프로필: alex michelsen",
+      "description": "알렉스 미첼슨 프로필 - 미국 유망주의 공격적 베이스라인 게임",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/alexander-bublik",
-      "description": "선수 프로필: alexander bublik",
+      "description": "알렉산더 부블리크 프로필 - 예측 불가 서브앤발리어 전술",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/alexander-zverev",
-      "description": "선수 프로필: alexander zverev",
+      "description": "알렉산더 즈베레프 프로필 - 독일의 강력한 서브와 포핸드",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/alexei-popyrin",
-      "description": "선수 프로필: alexei popyrin",
+      "description": "알렉세이 포피린 프로필 - 호주의 빅 서버 파워 플레이어",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/andrey-rublev",
-      "description": "선수 프로필: andrey rublev",
+      "description": "안드레이 루블레프 프로필 - 러시아의 공격적 베이스라이너",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/arthur-fils",
-      "description": "선수 프로필: arthur fils",
+      "description": "아르튀르 피스 프로필 - 프랑스 차세대 강자의 폭발적 포핸드",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/arthur-landercknech",
-      "description": "선수 프로필: arthur landercknech",
+      "description": "아르튀르 랑데르크네슈 프로필 - 프랑스의 빅 서버",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/ben-shelton",
-      "description": "선수 프로필: ben shelton",
+      "description": "벤 셸튼 프로필 - 미국의 강력한 왼손 서브와 공격적 플레이",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/brandon-nakashima",
-      "description": "선수 프로필: brandon nakashima",
+      "description": "브랜든 나카시마 프로필 - 미국의 일관된 베이스라인 플레이어",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/cameron-norrie",
-      "description": "선수 프로필: cameron norrie",
+      "description": "캐머런 노리 프로필 - 영국의 수비형 베이스라이너",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/carlos-alcaraz",
-      "description": "선수 프로필: carlos alcaraz",
+      "description": "카를로스 알카라스 프로필 - 최연소 ATP 세계 1위, 그랜드슬램 4회 우승",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/casper-ruud",
-      "description": "선수 프로필: casper ruud",
+      "description": "카스퍼 루드 프로필 - 노르웨이의 클레이 코트 스페셜리스트",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/corentin-moutet",
-      "description": "선수 프로필: corentin moutet",
+      "description": "코랑탱 무테 프로필 - 프랑스의 창의적인 좌완 플레이어",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/daniil-medvedev",
-      "description": "선수 프로필: daniil medvedev",
+      "description": "다닐 메드베데프 프로필 - 러시아의 독특한 수비 스타일과 리턴",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/denis-shapovalov",
-      "description": "선수 프로필: denis shapovalov",
+      "description": "데니스 샤포발로프 프로필 - 캐나다의 좌완 공격수",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/felix-auger-aliassime",
-      "description": "선수 프로필: felix auger aliassime",
+      "description": "펠릭스 오제-알리아심 프로필 - 캐나다의 올라운더 빅 서버",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/flavio-cobolli",
-      "description": "선수 프로필: flavio cobolli",
+      "description": "플라비오 코볼리 프로필 - 이탈리아 유망주의 공격적 플레이",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/frances-tiafoe",
-      "description": "선수 프로필: frances tiafoe",
+      "description": "프란시스 티아포 프로필 - 미국의 폭발적 에너지와 공격 테니스",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/francisco-cerundolo",
-      "description": "선수 프로필: francisco cerundolo",
+      "description": "프란시스코 세룬돌로 프로필 - 아르헨티나의 클레이 코트 강자",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/gael-monfils",
-      "description": "선수 프로필: gael monfils",
+      "description": "가엘 몽피스 프로필 - 프랑스의 전설적인 쇼맨십과 운동 능력",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/giovanni-mpetshi-perricard",
-      "description": "선수 프로필: giovanni mpetshi perricard",
+      "description": "지오반니 음페치 페리카르 프로필 - 프랑스의 거대한 빅 서버",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/grigor-dimitrov",
-      "description": "선수 프로필: grigor dimitrov",
+      "description": "그리고르 디미트로프 프로필 - 불가리아의 우아한 올라운더",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/holger-rune",
-      "description": "선수 프로필: holger rune",
+      "description": "홀거 루네 프로필 - 덴마크의 공격적 차세대 강자",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/hubert-hurkacz",
-      "description": "선수 프로필: hubert hurkacz",
+      "description": "후베르트 후르카츠 프로필 - 폴란드의 강력한 서브와 네트 플레이",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/jack-draper",
-      "description": "선수 프로필: jack draper",
+      "description": "잭 드레이퍼 프로필 - 영국의 강력한 좌완 베이스라이너",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/jakub-mensik",
-      "description": "선수 프로필: jakub mensik",
+      "description": "야쿠프 멘시크 프로필 - 체코의 10대 유망주 빅 서버",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/jan-lennard-struff",
-      "description": "선수 프로필: jan lennard struff",
+      "description": "얀 레너드 슈트루프 프로필 - 독일의 파워 서버 베테랑",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/jannik-sinner",
-      "description": "선수 프로필: jannik sinner",
+      "description": "야닉 시너 프로필 - ATP 세계 1위, 이탈리아의 정밀한 베이스라이너",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/jaume-munar",
-      "description": "선수 프로필: jaume munar",
+      "description": "하우메 무나르 프로필 - 스페인의 클레이 코트 전술가",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/jiri-lehecka",
-      "description": "선수 프로필: jiri lehecka",
+      "description": "지리 레헤츠카 프로필 - 체코의 빠른 발과 공격적 테니스",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/joao-fonseca",
-      "description": "선수 프로필: joao fonseca",
+      "description": "주앙 폰세카 프로필 - 브라질의 폭발적 유망주",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/jordan-thompson",
-      "description": "선수 프로필: jordan thompson",
+      "description": "조던 톰슨 프로필 - 호주의 전술적 베이스라이너",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/karen-khachanov",
-      "description": "선수 프로필: karen khachanov",
+      "description": "카렌 카차노프 프로필 - 러시아의 강력한 파워 플레이어",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/linner-tien",
-      "description": "선수 프로필: linner tien",
+      "description": "리너 티엔 프로필 - 미국의 차세대 유망주",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/lorenzo-musetti",
-      "description": "선수 프로필: lorenzo musetti",
+      "description": "로렌초 무세티 프로필 - 이탈리아의 우아한 원핸드 백핸드",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/luciano-darderi",
-      "description": "선수 프로필: luciano darderi",
+      "description": "루치아노 다르데리 프로필 - 이탈리아의 클레이 코트 강자",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/matteo-arnaldi",
-      "description": "선수 프로필: matteo arnaldi",
+      "description": "마테오 아르날디 프로필 - 이탈리아의 공격적 올라운더",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/matteo-berrettini",
-      "description": "선수 프로필: matteo berrettini",
+      "description": "마테오 베레티니 프로필 - 이탈리아의 강력한 서브와 포핸드",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/nicolas-jarry",
-      "description": "선수 프로필: nicolas jarry",
+      "description": "니콜라스 자리 프로필 - 칠레의 빅 서버 베이스라이너",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/novak-djokovic",
-      "description": "선수 프로필: novak djokovic",
+      "description": "노박 조코비치 프로필 - 그랜드슬램 24회 최다 우승, 역대 최강자",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/sebastian-baez",
-      "description": "선수 프로필: sebastian baez",
+      "description": "세바스티안 바에스 프로필 - 아르헨티나의 클레이 코트 투사",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/sebastian-korda",
-      "description": "선수 프로필: sebastian korda",
+      "description": "세바스티안 코르다 프로필 - 미국의 공격적 베이스라이너",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/stefanos-tsitsipas",
-      "description": "선수 프로필: stefanos tsitsipas",
+      "description": "스테파노스 치치파스 프로필 - 그리스의 원핸드 백핸드와 네트 공략",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/tallon-griekspoor",
-      "description": "선수 프로필: tallon griekspoor",
+      "description": "탈론 그리크스포르 프로필 - 네덜란드의 강력한 서브 플레이어",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/taylor-fritz",
-      "description": "선수 프로필: taylor fritz",
+      "description": "테일러 프리츠 프로필 - 미국의 강력한 서브와 공격적 베이스라인",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/tomas-machac",
-      "description": "선수 프로필: tomas machac",
+      "description": "토마스 마착 프로필 - 체코의 폭발적 포핸드 유망주",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/tommy-paul",
-      "description": "선수 프로필: tommy paul",
+      "description": "토미 폴 프로필 - 미국의 공격적 베이스라이너",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/ugo-humbert",
-      "description": "선수 프로필: ugo humbert",
+      "description": "우고 엉베르 프로필 - 프랑스의 좌완 공격수",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/valentin-vacherot",
-      "description": "선수 프로필: valentin vacherot",
+      "description": "발랑탱 바슈로 프로필 - 프랑스의 클레이 코트 전문가",
       "type": "player"
     },
     {
       "url": "https://tennisfrens.com/players/zhizhen-zhang",
-      "description": "선수 프로필: zhizhen zhang",
-      "type": "player"
-    },
-    {
-      "url": "https://tennisfrens.com/players/[slug]",
-      "description": "선수 프로필: [slug]",
+      "description": "장즈전 프로필 - 중국의 올라운더 베이스라이너",
       "type": "player"
     }
   ]

@@ -147,7 +147,10 @@ export default function Home() {
       </section>
 
       {/* Blog Section */}
-      <section className="section-padding bg-gray-50">
+      <section
+        className="section-padding bg-gray-50"
+        style={{ contentVisibility: "auto", containIntrinsicSize: "0 500px" }}
+      >
         <div className="container mx-auto max-w-7xl container-padding">
           <SlideUp>
             <div className="text-center mb-16">
@@ -224,7 +227,10 @@ export default function Home() {
       </section>
 
       {/* Community Section */}
-      <section className="section-padding bg-gradient-to-r from-blue-50 via-white to-green-50">
+      <section
+        className="section-padding bg-gradient-to-r from-blue-50 via-white to-green-50"
+        style={{ contentVisibility: "auto", containIntrinsicSize: "0 500px" }}
+      >
         <div className="container mx-auto max-w-7xl container-padding">
           <FadeIn>
             <Card className="bg-white border-gray-200 shadow-lg">

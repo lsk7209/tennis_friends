@@ -5,21 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Zap, 
-  Brain, 
-  Shield, 
-  RotateCcw, 
-  Sparkles, 
-  Flame, 
-  Target,
-  ArrowRight,
-  Users,
-  Trophy,
-  Star,
-  CheckCircle,
-  BarChart3
-} from 'lucide-react';
+import {Zap, Brain, Shield, RotateCcw, Sparkles, Flame, Target, ArrowRight, Users, Trophy, Star} from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
 const playStyles = [

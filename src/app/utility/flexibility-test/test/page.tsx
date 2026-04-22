@@ -8,19 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
-import {
-  ArrowLeft,
-  Activity,
-  CheckCircle,
-  AlertTriangle,
-  TrendingUp,
-  RotateCcw,
-  Target,
-  Award,
-  ArrowRight,
-  RefreshCw
-} from 'lucide-react';
-
+import {ArrowLeft, Activity, CheckCircle, TrendingUp, Award, ArrowRight, RefreshCw} from 'lucide-react';
 
 interface FlexibilityData {
   shoulderRotation: number;

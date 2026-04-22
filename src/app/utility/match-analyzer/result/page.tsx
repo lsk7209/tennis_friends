@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { BarChart3, TrendingUp, Target, ArrowRight, RotateCcw, Share2, CheckCircle, AlertTriangle, ArrowLeft } from 'lucide-react';
+import {BarChart3, Target, ArrowRight, RotateCcw, Share2, CheckCircle, AlertTriangle, ArrowLeft} from 'lucide-react';
 import { MatchAnalysisResult } from '@/lib/matchAnalyzer';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';

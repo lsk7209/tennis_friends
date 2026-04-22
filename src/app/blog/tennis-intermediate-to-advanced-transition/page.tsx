@@ -4,7 +4,6 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '중급자에서 상급자로 가는 전환 포인트 — 스윙 일관성과 경기 운영력의 분기점 | 안정에서 전략으로 진화하는 5가지 변화',

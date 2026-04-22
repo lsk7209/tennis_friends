@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { BarChart3, CheckCircle2, Target, TrendingUp, Upload, Video } from 'lucide-react';
+import {CheckCircle2, Target, TrendingUp, Upload, Video} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 

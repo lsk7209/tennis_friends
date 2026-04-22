@@ -8,9 +8,9 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { ArrowRight, ArrowLeft, Shield, AlertTriangle } from 'lucide-react';
+import {ArrowRight, ArrowLeft} from 'lucide-react';
 import { InjuryRiskInput, calculateInjuryRisk } from '@/lib/injuryRiskCalc';
-import { FadeIn, SlideUp } from '@/components/ScrollAnimation';
+import {FadeIn} from '@/components/ScrollAnimation';
 
 export default function InjuryRiskTest() {
   const router = useRouter();

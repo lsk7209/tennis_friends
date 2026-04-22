@@ -4,7 +4,6 @@ import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
   title: '테니스 경기 중 컨디션 유지법 — 체력과 집중력을 끝까지 지키는 루틴 | 후반에도 무너지지 않는 경기력의 비밀',

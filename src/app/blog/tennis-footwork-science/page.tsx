@@ -2,9 +2,8 @@ import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
-import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
+
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {

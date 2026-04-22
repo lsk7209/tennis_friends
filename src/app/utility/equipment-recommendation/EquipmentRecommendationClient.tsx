@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Target, Zap, Star, Users, CheckCircle, ArrowRight, Award, Sparkles, Shield } from 'lucide-react';
+import {Target, Zap, Star, Users, CheckCircle, ArrowRight, Award, Shield} from 'lucide-react';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
 export default function EquipmentRecommendationIntro() {

@@ -3,8 +3,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import {Card, CardContent} from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import {
@@ -18,11 +17,10 @@ import {
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
-import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import {FadeIn, StaggeredAnimation, StaggeredItem} from '@/components/ScrollAnimation';
 import { PLAYERS_PER_PAGE } from '@/lib/constants';
 
 import { PLAYERS_DB } from '@/data/players';
-import { PlayerData } from '@/types/player';
 
 export default function PlayersPage() {
   const [searchQuery, setSearchQuery] = useState('');

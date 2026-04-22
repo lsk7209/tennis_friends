@@ -1,13 +1,13 @@
-import { NextRequest } from 'next/server';
+import { NextRequest } from "next/server";
 
 /**
  * ai.txt
  * AI 크롤러를 위한 명시적 허용 정책
  * Google-Extended, GPTBot 등이 이 파일을 확인
  */
-export async function GET(request: NextRequest) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
-  
+export async function GET(_request: NextRequest) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
+
   const aiTxt = `# ai.txt for TennisFriends
 
 # AI 크롤러 정책
@@ -45,7 +45,6 @@ Disallow: /admin/
 
 # 사이트맵
 Sitemap: ${baseUrl}/sitemap.xml
-Sitemap: ${baseUrl}/sitemap-naver.xml
 
 # RSS 피드
 RSS: ${baseUrl}/rss.xml
@@ -56,9 +55,8 @@ Contact: tennisfriends@tennisfrens.com
 
   return new Response(aiTxt, {
     headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, max-age=86400, s-maxage=86400",
     },
   });
 }
-

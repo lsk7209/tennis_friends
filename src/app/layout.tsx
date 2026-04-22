@@ -138,15 +138,27 @@ export default function RootLayout({
   return (
     <html lang="ko" className={inter.variable}>
       <head>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link
+          rel="preconnect"
+          href="https://cdn.jsdelivr.net"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
         <link
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
           rel="stylesheet"
+          media="print"
+          // @ts-expect-error onload attr for non-blocking font load
+          onLoad="this.media='all'"
         />
+        <noscript>
+          <link
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+            rel="stylesheet"
+          />
+        </noscript>
       </head>
-      <body
-        className="bg-gradient-to-br from-gray-50 via-white to-gray-100 font-display text-gray-900 antialiased dark:from-gray-950 dark:via-gray-900 dark:to-black dark:text-gray-100"
-      >
+      <body className="bg-gradient-to-br from-gray-50 via-white to-gray-100 font-display text-gray-900 antialiased dark:from-gray-950 dark:via-gray-900 dark:to-black dark:text-gray-100">
         <OrganizationSchema />
         <WebSiteSchema />
         <div className="group/design-root relative flex min-h-screen w-full flex-col overflow-x-hidden">

@@ -7,7 +7,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, RotateCcw, Share2, ShoppingCart, Star, CheckCircle, Target, Sparkles, ArrowLeft } from 'lucide-react';
+import {ArrowRight, RotateCcw, Share2, ShoppingCart, Star, CheckCircle, Target, ArrowLeft} from 'lucide-react';
 import { EquipmentResult, RacketRecommendation, StringRecommendation } from '@/lib/equipmentRecommendation';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';

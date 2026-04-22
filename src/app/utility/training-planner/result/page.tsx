@@ -7,9 +7,8 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Calculator, Calendar, Target, ArrowRight, RotateCcw, Share2, CheckCircle, Clock, Users, ArrowLeft } from 'lucide-react';
-import { TrainingPlanResult, WeeklySchedule, TrainingSession, FocusArea, Milestone } from '@/lib/trainingPlanner';
+import {Calendar, Target, ArrowRight, RotateCcw, Share2, CheckCircle, Users, ArrowLeft} from 'lucide-react';
+import {TrainingPlanResult, WeeklySchedule, FocusArea, Milestone} from '@/lib/trainingPlanner';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 

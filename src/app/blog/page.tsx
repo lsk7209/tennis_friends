@@ -1,27 +1,32 @@
-'use client';
+"use client";
 
-import React, { useState, useMemo } from 'react';
-import Link from 'next/link';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { FileText, ChevronLeft, ChevronRight, Search, X, Filter } from 'lucide-react';
-import { allBlogPosts } from '@/data/blog-posts';
-import { BADGE_LABELS, BADGE_COLORS, CATEGORY_COLORS, POSTS_PER_PAGE } from '@/lib/constants';
-import { CATEGORY_GROUPS, getCategoryGroup } from '@/lib/blog-utils';
-import { Input } from '@/components/ui/input';
-import type { BlogPostData } from '@/types/blog';
+import React, { useState, useMemo } from "react";
+import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { FileText, ChevronLeft, ChevronRight, Search, X } from "lucide-react";
+import { allBlogPosts } from "@/data/blog-posts";
+import {
+  BADGE_LABELS,
+  BADGE_COLORS,
+  CATEGORY_COLORS,
+  POSTS_PER_PAGE,
+} from "@/lib/constants";
+import { CATEGORY_GROUPS } from "@/lib/blog-utils";
+import { Input } from "@/components/ui/input";
+import type { BlogPostData } from "@/types/blog";
 
 export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // 모든 블로그 글 데이터 (다양한 배지와 색상 적용) - useMemo로 최적화
   const blogPosts = useMemo(() => {
     return allBlogPosts.map((post, index) => {
       // 날짜를 다양하게 설정 (최근 3개월 내)
-      const baseDate = new Date('2025-09-01');
+      const baseDate = new Date("2025-09-01");
       const daysToAdd = Math.floor(index * 2.3); // 글마다 다른 날짜
       const postDate = new Date(baseDate);
       postDate.setDate(baseDate.getDate() + daysToAdd);
@@ -31,30 +36,34 @@ export default function BlogPage() {
         badge: BADGE_LABELS[index % BADGE_LABELS.length],
         badgeColor: BADGE_COLORS[index % BADGE_COLORS.length],
         categoryColor: CATEGORY_COLORS[index % CATEGORY_COLORS.length],
-        date: post.date || postDate.toISOString().split('T')[0],
-        readTime: post.readTime || `${8 + (index % 5) * 2}분` // 8분, 10분, 12분, 14분, 16분 반복
-      } as BlogPostData & { badge: string; badgeColor: string; categoryColor: string; readTime: string };
+        date: post.date || postDate.toISOString().split("T")[0],
+        readTime: post.readTime || `${8 + (index % 5) * 2}분`, // 8분, 10분, 12분, 14분, 16분 반복
+      } as BlogPostData & {
+        badge: string;
+        badgeColor: string;
+        categoryColor: string;
+        readTime: string;
+      };
     });
   }, []);
 
-  // 모든 고유 카테고리 추출
-  const categories = useMemo(() => {
-    const cats = new Set(blogPosts.map(post => post.category));
-    return Array.from(cats).filter(Boolean);
-  }, [blogPosts]);
-
   // 필터링 및 검색 로직
   const filteredBlogPosts = useMemo(() => {
-    return blogPosts.filter(post => {
+    return blogPosts.filter((post) => {
       const matchesSearch =
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (post.tags && (post.tags as string[]).some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+        (post.tags &&
+          (post.tags as string[]).some((tag) =>
+            tag.toLowerCase().includes(searchQuery.toLowerCase()),
+          ));
 
       let matchesCategory = true;
       if (selectedCategory) {
         // Find which group the selected ID belongs to
-        const group = Object.values(CATEGORY_GROUPS).find(g => g.id === selectedCategory);
+        const group = Object.values(CATEGORY_GROUPS).find(
+          (g) => g.id === selectedCategory,
+        );
         if (group) {
           matchesCategory = group.categories.includes(post.category);
         } else {
@@ -84,7 +93,7 @@ export default function BlogPage() {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,7 +107,7 @@ export default function BlogPage() {
   };
 
   const clearSearch = () => {
-    setSearchQuery('');
+    setSearchQuery("");
   };
 
   return (
@@ -113,12 +122,16 @@ export default function BlogPage() {
 
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             테니스
-            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> 지식 & 팁</span>
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              {" "}
+              지식 & 팁
+            </span>
           </h1>
 
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             테니스 실력 향상을 위한 전문적인 가이드와 최신 정보를 제공합니다.
-            초보자부터 프로 선수까지 모두가 즐길 수 있는 콘텐츠를 준비하고 있습니다.
+            초보자부터 프로 선수까지 모두가 즐길 수 있는 콘텐츠를 준비하고
+            있습니다.
           </p>
 
           {/* Search and Filters */}
@@ -177,11 +190,18 @@ export default function BlogPage() {
             <div className="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
               <Search className="w-8 h-8 text-gray-400" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">검색 결과가 없습니다</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">다른 키워드로 검색해보시거나 필터를 변경해보세요.</p>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              검색 결과가 없습니다
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              다른 키워드로 검색해보시거나 필터를 변경해보세요.
+            </p>
             <Button
               variant="outline"
-              onClick={() => { clearSearch(); handleCategoryClick(null); }}
+              onClick={() => {
+                clearSearch();
+                handleCategoryClick(null);
+              }}
               className="rounded-full"
             >
               초기화하기
@@ -193,15 +213,14 @@ export default function BlogPage() {
         <h2 className="sr-only">전체 블로그 게시글</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {currentPosts.map((post) => (
-            <Card key={post.id} className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+            <Card
+              key={post.id}
+              className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all"
+            >
               <CardContent className="p-8">
                 <div className="flex items-center gap-2 mb-4">
-                  <Badge className={post.badgeColor}>
-                    {post.badge}
-                  </Badge>
-                  <Badge className={post.categoryColor}>
-                    {post.category}
-                  </Badge>
+                  <Badge className={post.badgeColor}>{post.badge}</Badge>
+                  <Badge className={post.categoryColor}>{post.category}</Badge>
                 </div>
 
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -218,7 +237,10 @@ export default function BlogPage() {
                     <span>•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <Link href={`/blog/${post.slug || post.id}`} aria-label={`${post.title} 자세히 보기`}>
+                  <Link
+                    href={`/blog/${post.slug || post.id}`}
+                    aria-label={`${post.title} 자세히 보기`}
+                  >
                     <Button className="bg-blue-500 hover:bg-blue-600">
                       자세히 보기
                     </Button>
@@ -249,7 +271,9 @@ export default function BlogPage() {
                 variant={page === currentPage ? "default" : "outline"}
                 size="sm"
                 onClick={() => handlePageChange(page)}
-                className={page === currentPage ? "bg-blue-500 hover:bg-blue-600" : ""}
+                className={
+                  page === currentPage ? "bg-blue-500 hover:bg-blue-600" : ""
+                }
               >
                 {page}
               </Button>
@@ -268,6 +292,6 @@ export default function BlogPage() {
           </div>
         )}
       </div>
-    </div >
+    </div>
   );
 }
