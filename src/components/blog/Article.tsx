@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import BlogPostSchema from "@/components/seo/BlogPostSchema";
 import YmylDisclaimer from "@/components/YmylDisclaimer";
+import AuthorByline from "@/components/AuthorByline";
 
 interface ArticleProps {
   title: string;
@@ -66,6 +67,7 @@ export default function Article({
           </div>
         )}
       </header>
+      {date && <AuthorByline author={author} publishedAt={date} />}
       {ymylTopic && <YmylDisclaimer topic={ymylTopic} />}
       <div className="max-w-none">{children}</div>
     </article>
