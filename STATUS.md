@@ -3,6 +3,11 @@
 애드센스 심사 준비 — 유지보수 모드
 
 ## 최근 변경 (최근 5개)
+- 04-24: 신규 콘텐츠 대량 배치 (Option B 1차): 선수 30명 + 블로그 10개
+  - 선수: 신규 30명 (WTA 톱·전설·ATP 은퇴 등) → new-30.ts, [slug] 동적 라우트 활용
+  - 블로그: 한국 특화 10개 (NTRP 매핑, 여름/겨울/봄 가이드, 직장인 루틴, 엘보 등)
+  - part4-new30.ts 신규 + blog-posts.js 10개 entry 추가
+  - 빌드 성공, 총 블로그 127개 / 총 선수 89명
 - 04-23: 중복 canonical 이관 + 유틸 63개 전수 SEO 보강 (64파일)
   - /blog/tennis-drop-shot-timing → canonical: /tennis-drop-shot-mastery
   - /blog/tennis-return-of-serve-guide → canonical: /serve-return-prediction-guide

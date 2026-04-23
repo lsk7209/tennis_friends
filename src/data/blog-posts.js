@@ -1,9 +1,185 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-korean-ntrp-mapping-guide",
+    "slug": "tennis-korean-ntrp-mapping-guide",
+    "tags": [
+      "NTRP",
+      "한국 동호회",
+      "레벨"
+    ],
+    "title": "한국 동호회 레벨 ↔ NTRP 숫자 매핑 완전 가이드",
+    "excerpt": "한국 '초중·초고·중초' 구조를 NTRP 1.5~4.5로 정확히 환산하는 방법.",
+    "badge": "신규",
+    "category": "실력 진단",
+    "date": "2026-04-24",
+    "readTime": "7분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-korea-summer-humidity",
+    "slug": "tennis-korea-summer-humidity",
+    "tags": [
+      "여름 테니스",
+      "습도",
+      "컨디셔닝"
+    ],
+    "title": "한국 여름 습도 테니스 가이드 — 70~90% 환경 대응",
+    "excerpt": "한국 6~8월 고습 환경에서 경기력 유지하는 체온·수분 관리.",
+    "badge": "신규",
+    "category": "한국 특화",
+    "date": "2026-04-24",
+    "readTime": "8분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-korea-winter-indoor-routine",
+    "slug": "tennis-korea-winter-indoor-routine",
+    "tags": [
+      "겨울 테니스",
+      "실내 코트",
+      "훈련"
+    ],
+    "title": "한국 겨울 테니스 — 실내 코트 12주 훈련 플랜",
+    "excerpt": "영하 기온 시즌 실내 코트 특성 이해와 효과적 훈련 루틴.",
+    "badge": "신규",
+    "category": "한국 특화",
+    "date": "2026-04-24",
+    "readTime": "7분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-korea-spring-fine-dust",
+    "slug": "tennis-korea-spring-fine-dust",
+    "tags": [
+      "봄 테니스",
+      "미세먼지",
+      "황사"
+    ],
+    "title": "한국 봄 미세먼지·황사와 실외 테니스 판단 기준",
+    "excerpt": "PM2.5 수치별 실외 경기 가이드와 호흡기 관리.",
+    "badge": "신규",
+    "category": "한국 특화",
+    "date": "2026-04-24",
+    "readTime": "6분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-office-worker-evening-routine",
+    "slug": "tennis-office-worker-evening-routine",
+    "tags": [
+      "직장인 테니스",
+      "평일 훈련",
+      "1시간"
+    ],
+    "title": "직장인 평일 1시간 테니스 훈련 루틴",
+    "excerpt": "퇴근 후 1시간으로 NTRP 0.3~0.5 상승시키는 구조화된 훈련.",
+    "badge": "신규",
+    "category": "훈련",
+    "date": "2026-04-24",
+    "readTime": "7분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-racket-100k-beginner",
+    "slug": "tennis-racket-100k-beginner",
+    "tags": [
+      "테니스 라켓",
+      "입문자",
+      "2026"
+    ],
+    "title": "10만원대 입문자 테니스 라켓 추천 2026",
+    "excerpt": "무게·헤드사이즈 기준과 2026 주요 모델 비교.",
+    "badge": "신규",
+    "category": "장비",
+    "date": "2026-04-24",
+    "readTime": "6분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-ntrp-2-to-3",
+    "slug": "tennis-ntrp-2-to-3",
+    "tags": [
+      "NTRP",
+      "레벨업",
+      "훈련 플랜"
+    ],
+    "title": "NTRP 2.0 → 3.0 레벨업 8주 훈련 플랜",
+    "excerpt": "입문자에서 중급자 진입 구간 — 실수 줄이기가 핵심.",
+    "badge": "신규",
+    "category": "실력 진단",
+    "date": "2026-04-24",
+    "readTime": "7분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-ntrp-3-to-3-5",
+    "slug": "tennis-ntrp-3-to-3-5",
+    "tags": [
+      "NTRP",
+      "전술",
+      "중급자"
+    ],
+    "title": "NTRP 3.0 → 3.5 12주 전술 플랜",
+    "excerpt": "중급자 정체 구간 돌파 — 샷을 '고르는' 능력 기르기.",
+    "badge": "신규",
+    "category": "실력 진단",
+    "date": "2026-04-24",
+    "readTime": "8분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-doubles-partner-finding",
+    "slug": "tennis-doubles-partner-finding",
+    "tags": [
+      "복식",
+      "파트너",
+      "동호회"
+    ],
+    "title": "복식 파트너 찾기 실전 가이드",
+    "excerpt": "실력보다 성향 궁합이 70% — 파트너십 오래 유지하는 법.",
+    "badge": "신규",
+    "category": "복식",
+    "date": "2026-04-24",
+    "readTime": "6분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-tennis-elbow-early-signs",
+    "slug": "tennis-tennis-elbow-early-signs",
+    "tags": [
+      "테니스 엘보",
+      "부상 예방",
+      "재활"
+    ],
+    "title": "테니스 엘보 조기 발견 체크리스트",
+    "excerpt": "동호인 50%가 겪는 테니스 엘보 — 초기 신호와 예방 장비 세팅.",
+    "badge": "신규",
+    "category": "부상 관리",
+    "date": "2026-04-24",
+    "readTime": "8분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-second-serve-strategy",
     "slug": "tennis-second-serve-strategy",
-    "tags": ["세컨드서브","서브","킥서브","안정성","더블폴트 방지"],
+    "tags": [
+      "세컨드서브",
+      "서브",
+      "킥서브",
+      "안정성",
+      "더블폴트 방지"
+    ],
     "title": "세컨드 서브 전략 — 안정성과 파워의 균형 찾기",
     "excerpt": "세컨드 서브 전략 — 안정성과 파워의 균형 찾기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -16,7 +192,13 @@ export const allBlogPosts = [
   {
     "id": "tennis-forehand-inside-out",
     "slug": "tennis-forehand-inside-out",
-    "tags": ["인사이드아웃","포핸드","테니스 기술","크로스코트","다운더라인"],
+    "tags": [
+      "인사이드아웃",
+      "포핸드",
+      "테니스 기술",
+      "크로스코트",
+      "다운더라인"
+    ],
     "title": "인사이드아웃 포핸드 완전 정복 — 코스·파워·전술",
     "excerpt": "인사이드아웃 포핸드 완전 정복 — 코스·파워·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
