@@ -155,18 +155,14 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
+          rel="preload"
+          as="style"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-          rel="stylesheet"
-          media="print"
-          // @ts-expect-error onload attr for non-blocking font load
-          onLoad="this.media='all'"
         />
-        <noscript>
-          <link
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-            rel="stylesheet"
-          />
-        </noscript>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        />
       </head>
       <body className="bg-gradient-to-br from-gray-50 via-white to-gray-100 font-display text-gray-900 antialiased dark:from-gray-950 dark:via-gray-900 dark:to-black dark:text-gray-100">
         <OrganizationSchema />

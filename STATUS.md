@@ -3,6 +3,11 @@
 애드센스 심사 준비 — 유지보수 모드
 
 ## 최근 변경 (최근 5개)
+- 04-23: Scaled FAQ 제거 + DB 동기화 + 성능 개선 (35파일)
+  - 30개 블로그 중복 FAQ 템플릿 제거 (scaled abuse 신호 해소)
+  - blog-posts.js 고아 30건 제거 + 누락 5건 추가 (117 = 실제 디렉토리와 매치)
+  - AdSense lazyOnload 전환 (INP/TBT 개선)
+  - Pretendard preload + stylesheet (ts-expect-error 해킹 제거)
 - 04-23: YMYL disclaimer 12개 블로그 일괄 적용 + BlogPostSchema inLanguage 추가
   - Article 컴포넌트에 ymylTopic prop 추가 → 4개 자동 적용
   - 8개는 </h1> 뒤에 YmylDisclaimer 직접 주입 (inject-ymyl-inline.js)

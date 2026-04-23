@@ -67,16 +67,7 @@ const content = {
     "슬라이스 후 오픈코트 활용률을 확인할 기록 기준을 정했다.",
     "마지막 10분은 점수 조건을 걸고 실전 전환까지 확인했다."
   ],
-  "faq": [
-    {
-      "question": "슬라이스 서브 가이드는 얼마나 자주 연습해야 하나요?",
-      "answer": "짧게라도 주 2~3회 반복하는 편이 좋습니다. 특히 슬라이스 후 오픈코트 활용률을 같이 기록하면 감각이 아니라 실제 변화를 추적하기 쉽습니다."
-    },
-    {
-      "question": "경기 중 갑자기 흔들릴 때는 무엇부터 점검해야 하나요?",
-      "answer": "한 번에 모든 것을 바꾸지 말고 준비 타이밍, 목표 구역, 템포 중 하나만 먼저 되돌리세요. 대부분의 무너짐은 기준이 동시에 많아질 때 시작됩니다."
-    }
-  ],
+  "faq": [],
   "nextAction": "다음 세션에서는 와이드와 바디 슬라이스 반복을 20분만 실행하고, 끝난 뒤 슬라이스 후 오픈코트 활용률 하나만 기록해 보세요.",
   "utility": "/utility/serve-placement-mapper",
   "utilityLabel": "서브 코스 매퍼"
@@ -134,10 +125,11 @@ export default function Page() {
           </ul>
         </section>
 
-        <section className="mt-10">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">자주 묻는 질문</h2>
-          <div className="space-y-4">
-            {content.faq.map((item) => (
+        {content.faq.length > 0 && (
+          <section className="mt-10">
+            <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">자주 묻는 질문</h2>
+            <div className="space-y-4">
+              {content.faq.map((item) => (
               <div key={item.question} className="rounded-2xl border border-gray-100 p-5 dark:border-gray-800">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">{item.question}</h3>
                 <p className="leading-7 text-gray-700 dark:text-gray-300">{item.answer}</p>

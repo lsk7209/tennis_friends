@@ -1,9 +1,90 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-clay-court-tactics",
+    "slug": "tennis-clay-court-tactics",
+    "tags": [
+      "테니스"
+    ],
+    "title": "클레이 코트 전술 완전 가이드 — 스핀·슬라이딩·포지셔닝 | TennisFriends",
+    "excerpt": "클레이 코트 전술 완전 가이드 — 스핀·슬라이딩·포지셔닝에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
+    "badge": "가이드",
+    "category": "기술 가이드",
+    "date": "2026-04-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-kick-serve-technique",
+    "slug": "tennis-kick-serve-technique",
+    "tags": [
+      "테니스"
+    ],
+    "title": "킥 서브 완전 마스터 가이드 — 스핀·바운드·구사법 | TennisFriends",
+    "excerpt": "킥 서브 완전 마스터 가이드 — 스핀·바운드·구사법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
+    "badge": "가이드",
+    "category": "기술 가이드",
+    "date": "2026-04-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-mental-pressure-points",
+    "slug": "tennis-mental-pressure-points",
+    "tags": [
+      "테니스"
+    ],
+    "title": "중요한 포인트에서 멘탈 강화법 — 30-40·타이브레이크·챔피언십 포인트 | TennisFriends",
+    "excerpt": "중요한 포인트에서 멘탈 강화법 — 30-40·타이브레이크·챔피언십 포인트에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
+    "badge": "가이드",
+    "category": "기술 가이드",
+    "date": "2026-04-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-net-approach-shots",
+    "slug": "tennis-net-approach-shots",
+    "tags": [
+      "테니스"
+    ],
+    "title": "어프로치샷 마스터 — 네트로 나가는 타이밍과 코스 | TennisFriends",
+    "excerpt": "어프로치샷 마스터 — 네트로 나가는 타이밍과 코스에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
+    "badge": "가이드",
+    "category": "기술 가이드",
+    "date": "2026-04-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-return-of-serve-guide",
+    "slug": "tennis-return-of-serve-guide",
+    "tags": [
+      "테니스"
+    ],
+    "title": "서브 리턴 완전 가이드 — 위치·타이밍·전술 | TennisFriends",
+    "excerpt": "서브 리턴 완전 가이드 — 위치·타이밍·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
+    "badge": "가이드",
+    "category": "기술 가이드",
+    "date": "2026-04-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-drop-shot-timing",
     "slug": "tennis-drop-shot-timing",
-    "tags": ["드롭샷","테니스 기술","터치","네트 앞 샷","전술"],
+    "tags": [
+      "드롭샷",
+      "테니스 기술",
+      "터치",
+      "네트 앞 샷",
+      "전술"
+    ],
     "title": "드롭샷 완벽 타이밍 — 언제 어떻게 구사하는가",
     "excerpt": "드롭샷 완벽 타이밍 — 언제 어떻게 구사하는가에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -16,7 +97,13 @@ export const allBlogPosts = [
   {
     "id": "tennis-lob-shot-guide",
     "slug": "tennis-lob-shot-guide",
-    "tags": ["로브","테니스 기술","수비 로브","탑스핀 로브","네트 공략"],
+    "tags": [
+      "로브",
+      "테니스 기술",
+      "수비 로브",
+      "탑스핀 로브",
+      "네트 공략"
+    ],
     "title": "로브샷 마스터 가이드 — 수비 로브·공격 로브·타이밍",
     "excerpt": "로브샷 마스터 가이드 — 수비 로브·공격 로브·타이밍에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -29,7 +116,13 @@ export const allBlogPosts = [
   {
     "id": "tennis-beginner-first-month",
     "slug": "tennis-beginner-first-month",
-    "tags": ["테니스 입문","초보자","테니스 기초","처음 배우기","NTRP 1.0"],
+    "tags": [
+      "테니스 입문",
+      "초보자",
+      "테니스 기초",
+      "처음 배우기",
+      "NTRP 1.0"
+    ],
     "title": "테니스 입문 첫 한 달 — 초보자가 꼭 배워야 할 기초",
     "excerpt": "테니스 입문 첫 한 달 — 초보자가 꼭 배워야 할 기초에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -42,7 +135,13 @@ export const allBlogPosts = [
   {
     "id": "tennis-grass-court-strategy",
     "slug": "tennis-grass-court-strategy",
-    "tags": ["잔디코트","테니스 전술","코트별 전략","윔블던","낮은 바운드"],
+    "tags": [
+      "잔디코트",
+      "테니스 전술",
+      "코트별 전략",
+      "윔블던",
+      "낮은 바운드"
+    ],
     "title": "잔디 코트 전략 완전 가이드 — 낮은 바운드·서브·네트 전술",
     "excerpt": "잔디 코트 전략 완전 가이드 — 낮은 바운드·서브·네트 전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -55,7 +154,13 @@ export const allBlogPosts = [
   {
     "id": "tennis-injury-prevention-stretching",
     "slug": "tennis-injury-prevention-stretching",
-    "tags": ["부상 예방","스트레칭","테니스 엘보","어깨 부상","무릎"],
+    "tags": [
+      "부상 예방",
+      "스트레칭",
+      "테니스 엘보",
+      "어깨 부상",
+      "무릎"
+    ],
     "title": "테니스 부상 예방 스트레칭 — 어깨·팔꿈치·무릎 보호",
     "excerpt": "테니스 부상 예방 스트레칭 — 어깨·팔꿈치·무릎 보호에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -68,7 +173,13 @@ export const allBlogPosts = [
   {
     "id": "tennis-fitness-training-guide",
     "slug": "tennis-fitness-training-guide",
-    "tags": ["테니스 체력","훈련","스피드 훈련","근력","지구력"],
+    "tags": [
+      "테니스 체력",
+      "훈련",
+      "스피드 훈련",
+      "근력",
+      "지구력"
+    ],
     "title": "테니스 체력 훈련 완전 가이드 — 스피드·근력·지구력",
     "excerpt": "테니스 체력 훈련 완전 가이드 — 스피드·근력·지구력에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -81,7 +192,12 @@ export const allBlogPosts = [
   {
     "id": "tennis-serve-and-volley-tactics",
     "slug": "tennis-serve-and-volley-tactics",
-    "tags": ["서브앤발리","네트 어프로치","테니스 전술","잔디코트"],
+    "tags": [
+      "서브앤발리",
+      "네트 어프로치",
+      "테니스 전술",
+      "잔디코트"
+    ],
     "title": "서브앤발리 전술 가이드 — 잔디·실내 코트 공략법",
     "excerpt": "서브앤발리 전술 가이드 — 잔디·실내 코트 공략법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -94,7 +210,13 @@ export const allBlogPosts = [
   {
     "id": "tennis-grip-types-guide",
     "slug": "tennis-grip-types-guide",
-    "tags": ["그립","이스턴 그립","웨스턴 그립","컨티넨탈","테니스 기본"],
+    "tags": [
+      "그립",
+      "이스턴 그립",
+      "웨스턴 그립",
+      "컨티넨탈",
+      "테니스 기본"
+    ],
     "title": "테니스 그립 종류 완전 정리 — 이스턴·웨스턴·컨티넨탈",
     "excerpt": "테니스 그립 종류 완전 정리 — 이스턴·웨스턴·컨티넨탈에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
@@ -105,100 +227,12 @@ export const allBlogPosts = [
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
   },
   {
-    "id": "tennis-string-tension-selection",
-    "slug": "tennis-string-tension-selection",
-    "tags": ["스트링","테니스 줄","폴리에스터","텐션","장비 선택"],
-    "title": "스트링 선택 완전 가이드 — 폴리·나일론·텐션별 특성",
-    "excerpt": "스트링 선택 완전 가이드 — 폴리·나일론·텐션별 특성에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-    "badge": "최신 글",
-    "category": "장비 가이드",
-    "date": "2026-04-18",
-    "readTime": "10분",
-    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
-  },
-  {
-    "id": "tennis-tiebreak-strategy",
-    "slug": "tennis-tiebreak-strategy",
-    "tags": ["타이브레이크","테니스 전술","멘탈","서브 전략"],
-    "title": "타이브레이크 전략 완전 가이드 — 멘탈·서브 순서·포인트 관리",
-    "excerpt": "타이브레이크 전략 완전 가이드 — 멘탈·서브 순서·포인트 관리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-    "badge": "최신 글",
-    "category": "전술 가이드",
-    "date": "2026-04-18",
-    "readTime": "10분",
-    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
-  },
-  {
-    "id": "tennis-doubles-communication",
-    "slug": "tennis-doubles-communication",
-    "tags": ["복식","파트너 소통","복식 전술","복식 포메이션"],
-    "title": "복식 파트너 소통법 — 시그널·포메이션·전술 결정",
-    "excerpt": "복식 파트너 소통법 — 시그널·포메이션·전술 결정에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-    "badge": "최신 글",
-    "category": "복식 전략",
-    "date": "2026-04-17",
-    "readTime": "10분",
-    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
-  },
-  {
-    "id": "tennis-topspin-forehand-guide",
-    "slug": "tennis-topspin-forehand-guide",
-    "tags": ["탑스핀","포핸드","회전","테니스 기술","포핸드 연습"],
-    "title": "탑스핀 포핸드 완전 분석 — 회전·파워·코스 컨트롤",
-    "excerpt": "탑스핀 포핸드 완전 분석 — 회전·파워·코스 컨트롤에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-    "badge": "최신 글",
-    "category": "기술 가이드",
-    "date": "2026-04-17",
-    "readTime": "10분",
-    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
-  },
-  {
-    "id": "jannik-sinner",
-    "slug": "jannik-sinner",
-    "tags": ["선수 프로필", "ATP"],
-    "title": "야닉 시너: 이탈리아의 붉은 여우",
-    "excerpt": "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
-    "badge": "인기 글",
-    "category": "선수 프로필",
-    "date": "2025-11-01",
-    "readTime": "10분",
-    "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
-  },
-  {
-    "id": "novak-djokovic",
-    "slug": "novak-djokovic",
-    "tags": ["선수 프로필", "GOAT"],
-    "title": "노박 조코비치: 기록의 파괴자, GOAT",
-    "excerpt": "테니스 역사상 가장 위대한 선수. 24회 그랜드 슬램 우승에 빛나는 조코비치의 무결점 플레이와 철저한 자기 관리.",
-    "badge": "인기 글",
-    "category": "선수 프로필",
-    "date": "2025-11-05",
-    "readTime": "12분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
-  },
-  {
-    "id": "stefanos-tsitsipas",
-    "slug": "stefanos-tsitsipas",
-    "tags": ["선수 프로필", "ATP"],
-    "title": "스테파노스 치치파스: 그리스 조각상의 테니스",
-    "excerpt": "긴 머리를 휘날리며 코트를 누비는 그리스의 신. 강력한 포핸드와 네트 플레이를 겸비한 치치파스의 스타일.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-10-20",
-    "readTime": "9분",
-    "badgeColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
-  },
-  {
     "id": "taylor-fritz",
     "slug": "taylor-fritz",
-    "tags": ["선수 프로필", "ATP"],
+    "tags": [
+      "선수 프로필",
+      "ATP"
+    ],
     "title": "테일러 프리츠: 미국 테니스의 자존심",
     "excerpt": "강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.",
     "badge": "최신 글",
@@ -207,110 +241,6 @@ export const allBlogPosts = [
     "readTime": "8분",
     "badgeColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
-  },
-  {
-    "id": "tommy-paul",
-    "slug": "tommy-paul",
-    "tags": ["선수 프로필", "ATP"],
-    "title": "토미 폴: 기민한 미국의 테크니션",
-    "excerpt": "빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-10-18",
-    "readTime": "8분",
-    "badgeColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
-  },
-  {
-    "id": "tennis-elbow-prevention-guide",
-    "slug": "tennis-elbow-prevention-guide",
-    "tags": ["테니스 엘보", "부상 예방", "재활"],
-    "title": "테니스 엘보 예방과 재활 가이드 — 통증 없이 운동하는 법",
-    "excerpt": "테니스 동호인의 50%가 겪는다는 테니스 엘보. 팔꿈치 바깥쪽 통증의 원인부터 재활 운동, 라켓/스트링 세팅 변경 팁까지 완벽하게 정리했습니다.",
-    "badge": "필독",
-    "category": "테니스 부상",
-    "date": "2026-01-15",
-    "readTime": "10분",
-    "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
-    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
-  },
-  {
-    "id": "tennis-lesson-cost-guide",
-    "slug": "tennis-lesson-cost-guide",
-    "tags": ["레슨비", "테니스 비용", "입문"],
-    "title": "2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교",
-    "excerpt": "테니스 레슨 비용이 궁금하신가요? 서울, 경기 및 전국 평균 실내/실외 테니스장 레슨비를 1:1, 그룹 레슨별로 상세하게 비교해드립니다.",
-    "badge": "인기 글",
-    "category": "테니스 초보자",
-    "date": "2026-02-10",
-    "readTime": "8분",
-    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-post-exercise-nutrition",
-    "slug": "tennis-post-exercise-nutrition",
-    "tags": ["영양", "회복", "식단"],
-    "title": "테니스 영양학: 경기 후 45분, 기적의 회복 골든타임",
-    "excerpt": "테니스 경기 후 근육 회복과 피로 해소를 위한 영양 섭취 전략. 탄수화물/단백질 비율, 전해질 조절, 관절 건강을 위한 영양소까지 완벽 정리.",
-    "badge": "최신 글",
-    "category": "테니스 영양",
-    "date": "2026-01-20",
-    "readTime": "7분",
-    "badgeColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300",
-    "categoryColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
-  },
-  {
-    "id": "tennis-racket-recommendation-guide-2026",
-    "slug": "tennis-racket-recommendation-guide-2026",
-    "tags": ["라켓 추천", "장비", "2026"],
-    "title": "2026년 테니스 라켓 추천 가이드 — 초보자부터 상급자까지 BEST 5",
-    "excerpt": "2026년 최신 테니스 라켓 트렌드와 추천 모델 TOP 5를 소개합니다. 윌슨 블레이드 v9, 요넥스 이존, 바볼랏 퓨어드라이브 등 인기 라켓 비교 분석.",
-    "badge": "인기 글",
-    "category": "테니스 장비",
-    "date": "2026-03-01",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-starting-complete-guide",
-    "slug": "tennis-starting-complete-guide",
-    "tags": ["입문", "테린이", "가이드"],
-    "title": "테니스 시작하기 완벽 가이드 2026 — 비용, 준비물, 레슨, 용어 총정리",
-    "excerpt": "테린이 탈출을 위한 A to Z. 라켓 구매 비용부터 레슨비, 필수 용어, 코트 매너, 그리고 1년 성장 로드맵까지.",
-    "badge": "필독",
-    "category": "테니스 초보자",
-    "date": "2026-02-20",
-    "readTime": "15분",
-    "badgeColor": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-string-guide",
-    "slug": "tennis-string-guide",
-    "tags": ["스트링", "텐션", "장비"],
-    "title": "테니스 스트링 완전 가이드 — 폴리 vs 인조쉽 vs 천연쉽 및 텐션 선택법 2026",
-    "excerpt": "라켓 성능의 50%는 스트링이 결정합니다. 폴리에스터, 인조쉽, 멀티필라멘트, 천연쉽의 장단점을 비교하고 나에게 맞는 텐션 찾는 법을 알려드립니다.",
-    "badge": "최신 글",
-    "category": "테니스 장비",
-    "date": "2026-02-05",
-    "readTime": "9분",
-    "badgeColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "top-5-tennis-districts-seoul",
-    "slug": "top-5-tennis-districts-seoul",
-    "tags": ["서울 테니스", "코트 예약", "동호회"],
-    "title": "서울 테니스 성지 TOP 5 — 코트 예약 명당과 지역별 클럽 특징",
-    "excerpt": "서울에서 테니스 치기 좋은 자치구 TOP 5 선정. 올림픽공원, 봉은테니스장 등 주요 코트 예약 팁과 지역별 동호회 분위기 정리.",
-    "badge": "인기 글",
-    "category": "테니스 코트",
-    "date": "2026-03-10",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300"
   },
   {
     "id": "frances-tiafoe",
@@ -328,141 +258,803 @@ export const allBlogPosts = [
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
   },
   {
-    "id": "ben-shelton",
-    "slug": "ben-shelton",
+    "id": "tennis-string-tension-selection",
+    "slug": "tennis-string-tension-selection",
     "tags": [
-      "선수 프로필"
+      "스트링",
+      "테니스 줄",
+      "폴리에스터",
+      "텐션",
+      "장비 선택"
     ],
-    "title": "벤 쉘튼 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도",
-    "excerpt": "좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 쉘튼의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "title": "스트링 선택 완전 가이드 — 폴리·나일론·텐션별 특성",
+    "excerpt": "스트링 선택 완전 가이드 — 폴리·나일론·텐션별 특성에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-09-18",
-    "readTime": "8분",
-    "badgeColor": "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "category": "장비 가이드",
+    "date": "2026-04-18",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
   },
   {
-    "id": "grigor-dimitrov",
-    "slug": "grigor-dimitrov",
+    "id": "tennis-tiebreak-strategy",
+    "slug": "tennis-tiebreak-strategy",
     "tags": [
-      "선수 프로필"
+      "타이브레이크",
+      "테니스 전술",
+      "멘탈",
+      "서브 전략"
     ],
-    "title": "그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌",
-    "excerpt": "원핸드 백핸드의 미학과 노련한 전술, 성숙한 멘탈로 커리어의 두 번째 절정을 만드는 그리고르 디미트로프의 성장, 스타일, 인간적 면모를 한 편으로.",
+    "title": "타이브레이크 전략 완전 가이드 — 멘탈·서브 순서·포인트 관리",
+    "excerpt": "타이브레이크 전략 완전 가이드 — 멘탈·서브 순서·포인트 관리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
     "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-08-27",
-    "readTime": "8분",
-    "badgeColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+    "category": "전술 가이드",
+    "date": "2026-04-18",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
   },
   {
-    "id": "holger-rune",
-    "title": "홀거 루네 — 불꽃과 계산 사이의 대담함",
-    "excerpt": "공격적인 리턴과 예측 불가한 변주로 흐름을 흔드는 홀거 루네의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-08-11",
-    "readTime": "8분",
-    "badgeColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "holger-rune",
+    "id": "tennis-doubles-communication",
+    "slug": "tennis-doubles-communication",
     "tags": [
-      "선수 프로필",
-      "서브"
-    ]
+      "복식",
+      "파트너 소통",
+      "복식 전술",
+      "복식 포메이션"
+    ],
+    "title": "복식 파트너 소통법 — 시그널·포메이션·전술 결정",
+    "excerpt": "복식 파트너 소통법 — 시그널·포메이션·전술 결정에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "복식 전략",
+    "date": "2026-04-17",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
   },
   {
-    "id": "hubert-hurkacz",
-    "title": "후베르트 후르카츠 — 탄력과 절제로 설계하는 현대형 서브&발리",
-    "excerpt": "거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓는 후베르트 후르카츠의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-10-02",
-    "readTime": "8분",
-    "badgeColor": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "hubert-hurkacz",
+    "id": "tennis-topspin-forehand-guide",
+    "slug": "tennis-topspin-forehand-guide",
     "tags": [
-      "선수 프로필",
-      "서브"
-    ]
+      "탑스핀",
+      "포핸드",
+      "회전",
+      "테니스 기술",
+      "포핸드 연습"
+    ],
+    "title": "탑스핀 포핸드 완전 분석 — 회전·파워·코스 컨트롤",
+    "excerpt": "탑스핀 포핸드 완전 분석 — 회전·파워·코스 컨트롤에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-04-17",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
   },
   {
-    "id": "alex-de-minaur",
-    "title": "알렉스 드 미노 — 스피드와 담대함으로 시간을 훔치는 기술",
-    "excerpt": "폭발적인 풋워크와 끈질긴 수비·카운터로 리듬을 빼앗는 알렉스 드 미노의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-10-08",
+    "id": "top-5-tennis-districts-seoul",
+    "slug": "top-5-tennis-districts-seoul",
+    "tags": [
+      "서울 테니스",
+      "코트 예약",
+      "동호회"
+    ],
+    "title": "서울 테니스 성지 TOP 5 — 코트 예약 명당과 지역별 클럽 특징",
+    "excerpt": "서울에서 테니스 치기 좋은 자치구 TOP 5 선정. 올림픽공원, 봉은테니스장 등 주요 코트 예약 팁과 지역별 동호회 분위기 정리.",
+    "badge": "인기 글",
+    "category": "테니스 코트",
+    "date": "2026-03-10",
+    "readTime": "8분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300"
+  },
+  {
+    "id": "tennis-tiebreak-strategy-guide",
+    "slug": "tennis-tiebreak-strategy-guide",
+    "title": "타이브레이크 운영 가이드",
+    "excerpt": "타이브레이크에서 실수를 줄이고 득점 확률을 높이는 전술, 루틴, 리스크 관리 원칙을 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 전술",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-second-serve-confidence-guide",
+    "slug": "tennis-second-serve-confidence-guide",
+    "title": "세컨드 서브 자신감 가이드",
+    "excerpt": "더블폴트를 줄이면서도 공격성을 잃지 않는 세컨드 서브 설계법을 다룹니다.",
+    "badge": "신규",
+    "category": "테니스 전술",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-clay-court-sliding-guide",
+    "slug": "tennis-clay-court-sliding-guide",
+    "title": "클레이 코트 슬라이딩 입문",
+    "excerpt": "클레이 코트에서 미끄러지듯 움직이는 기본 원리와 안전하게 익히는 훈련법을 소개합니다.",
+    "badge": "신규",
+    "category": "테니스 기술",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-hard-court-recovery-guide",
+    "slug": "tennis-hard-court-recovery-guide",
+    "title": "하드코트 경기 후 회복 가이드",
+    "excerpt": "하드코트에서 누적되는 충격을 줄이기 위한 회복 루틴과 관리 포인트를 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 회복",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-grass-court-movement-guide",
+    "slug": "tennis-grass-court-movement-guide",
+    "title": "잔디 코트 움직임 가이드",
+    "excerpt": "잔디 코트 특유의 낮은 바운드와 미끄러운 움직임에 적응하는 방법을 설명합니다.",
+    "badge": "신규",
+    "category": "테니스 기술",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-doubles-serve-formation-guide",
+    "slug": "tennis-doubles-serve-formation-guide",
+    "title": "복식 서브 포메이션 가이드",
+    "excerpt": "복식에서 자주 쓰이는 서브 포메이션과 상황별 선택 기준을 실전 중심으로 다룹니다.",
+    "badge": "신규",
+    "category": "테니스 복식",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-return-positioning-by-surface",
+    "slug": "tennis-return-positioning-by-surface",
+    "title": "코트별 리턴 포지션 가이드",
+    "excerpt": "하드, 클레이, 잔디 코트에서 리턴 위치를 어떻게 다르게 잡아야 하는지 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 전술",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-matchday-warmup-routine",
+    "slug": "tennis-matchday-warmup-routine",
+    "title": "경기 당일 워밍업 루틴",
+    "excerpt": "경기 전 몸과 집중력을 함께 끌어올리는 워밍업 구성법을 소개합니다.",
+    "badge": "신규",
+    "category": "테니스 훈련",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-cooldown-stretching-routine",
+    "slug": "tennis-cooldown-stretching-routine",
+    "title": "경기 후 쿨다운 스트레칭 루틴",
+    "excerpt": "근육 긴장을 줄이고 다음 훈련에 지장을 남기지 않도록 돕는 회복 루틴입니다.",
+    "badge": "신규",
+    "category": "테니스 회복",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-sleep-recovery-guide",
+    "slug": "tennis-sleep-recovery-guide",
+    "title": "수면과 경기력 회복 가이드",
+    "excerpt": "테니스 경기력 유지에 필요한 수면 습관과 회복 품질 관리법을 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 회복",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-hydration-electrolyte-guide",
+    "slug": "tennis-hydration-electrolyte-guide",
+    "title": "수분과 전해질 관리 가이드",
+    "excerpt": "경기 중 탈수와 집중력 저하를 막기 위한 수분·전해질 전략을 설명합니다.",
+    "badge": "신규",
+    "category": "테니스 영양",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-hot-weather-match-guide",
+    "slug": "tennis-hot-weather-match-guide",
+    "title": "폭염 경기 대처 가이드",
+    "excerpt": "더운 날씨에서 체력 손실을 줄이고 경기 운영을 안정시키는 방법을 다룹니다.",
+    "badge": "신규",
+    "category": "테니스 컨디셔닝",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-cold-weather-match-guide",
+    "slug": "tennis-cold-weather-match-guide",
+    "title": "추운 날 경기 운영 가이드",
+    "excerpt": "기온이 낮은 환경에서 몸을 보호하고 감각을 유지하는 실전 팁을 소개합니다.",
+    "badge": "신규",
+    "category": "테니스 컨디셔닝",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-practice-journal-guide",
+    "slug": "tennis-practice-journal-guide",
+    "title": "테니스 연습일지 작성 가이드",
+    "excerpt": "훈련 내용을 기록하고 개선 포인트를 찾는 연습일지 작성법을 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 훈련",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-unforced-error-reduction-guide",
+    "slug": "tennis-unforced-error-reduction-guide",
+    "title": "범실 줄이기 훈련 가이드",
+    "excerpt": "불필요한 실수를 줄이기 위해 점검해야 할 전술, 루틴, 타점 원칙을 설명합니다.",
+    "badge": "신규",
+    "category": "테니스 기술",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-approach-shot-guide",
+    "slug": "tennis-approach-shot-guide",
+    "title": "어프로치샷 가이드",
+    "excerpt": "상대를 밀어낸 뒤 네트 플레이로 연결하는 어프로치샷 운영법을 다룹니다.",
+    "badge": "신규",
+    "category": "테니스 기술",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-split-step-timing-guide",
+    "slug": "tennis-split-step-timing-guide",
+    "title": "스플릿스텝 타이밍 가이드",
+    "excerpt": "풋워크의 출발점인 스플릿스텝 타이밍을 상황별로 이해할 수 있도록 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 풋워크",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-serve-plus-one-patterns",
+    "slug": "tennis-serve-plus-one-patterns",
+    "title": "서브 플러스 원 패턴 가이드",
+    "excerpt": "서브 이후 다음 한 샷까지 설계하는 패턴 플레이의 기본 구조를 설명합니다.",
+    "badge": "신규",
+    "category": "테니스 전술",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-mental-reset-between-points",
+    "slug": "tennis-mental-reset-between-points",
+    "title": "포인트 사이 멘탈 리셋 가이드",
+    "excerpt": "흐름이 흔들릴 때 짧은 루틴으로 감정과 집중을 회복하는 방법을 소개합니다.",
+    "badge": "신규",
+    "category": "테니스 멘탈",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-junior-training-roadmap",
+    "slug": "tennis-junior-training-roadmap",
+    "title": "주니어 테니스 성장 로드맵",
+    "excerpt": "주니어 선수가 단계별로 무엇을 우선 학습해야 하는지 로드맵 형태로 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 훈련",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-adult-beginner-first-90-days",
+    "slug": "tennis-adult-beginner-first-90-days",
+    "title": "성인 입문자 90일 가이드",
+    "excerpt": "성인 초보가 첫 3개월 동안 안정적으로 실력을 올리는 학습 순서를 제안합니다.",
+    "badge": "신규",
+    "category": "테니스 초보자",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-partner-practice-drills",
+    "slug": "tennis-partner-practice-drills",
+    "title": "파트너 연습 드릴 가이드",
+    "excerpt": "코치 없이도 둘이서 효율적으로 진행할 수 있는 파트너 드릴을 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 훈련",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-wall-practice-guide",
+    "slug": "tennis-wall-practice-guide",
+    "title": "벽치기 훈련 가이드",
+    "excerpt": "혼자서도 반복 훈련 효과를 얻을 수 있는 벽치기 루틴과 목표 설정법을 다룹니다.",
+    "badge": "신규",
+    "category": "테니스 훈련",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-doubles-net-player-guide",
+    "slug": "tennis-doubles-net-player-guide",
+    "title": "복식 네트 플레이어 가이드",
+    "excerpt": "복식에서 네트 플레이어가 위치, 리액션, 마무리를 어떻게 가져가야 하는지 설명합니다.",
+    "badge": "신규",
+    "category": "테니스 복식",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-kick-serve-guide",
+    "slug": "tennis-kick-serve-guide",
+    "title": "킥서브 입문 가이드",
+    "excerpt": "안정성과 바운드 변화를 동시에 노릴 수 있는 킥서브의 기본 원리를 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 서브",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-slice-serve-guide",
+    "slug": "tennis-slice-serve-guide",
+    "title": "슬라이스 서브 가이드",
+    "excerpt": "코스와 리턴 각도를 흔드는 슬라이스 서브 활용법을 실전 중심으로 설명합니다.",
+    "badge": "신규",
+    "category": "테니스 서브",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-forehand-depth-control-guide",
+    "slug": "tennis-forehand-depth-control-guide",
+    "title": "포핸드 깊이 조절 가이드",
+    "excerpt": "포핸드를 더 깊고 안정적으로 보내기 위한 스윙 길이, 타점, 목표 설정법을 다룹니다.",
+    "badge": "신규",
+    "category": "테니스 포핸드",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-backhand-return-guide",
+    "slug": "tennis-backhand-return-guide",
+    "title": "백핸드 리턴 가이드",
+    "excerpt": "강한 서브를 백핸드로 안정적으로 받아내는 준비 자세와 리턴 패턴을 소개합니다.",
+    "badge": "신규",
+    "category": "테니스 백핸드",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-match-video-review-guide",
+    "slug": "tennis-match-video-review-guide",
+    "title": "경기 영상 복기 가이드",
+    "excerpt": "경기 영상을 단순 시청이 아닌 개선 도구로 활용하는 리뷰 구조를 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 분석",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-tournament-preparation-checklist",
+    "slug": "tennis-tournament-preparation-checklist",
+    "title": "대회 준비 체크리스트",
+    "excerpt": "대회 전 준비물을 포함해 일정, 루틴, 컨디션 점검 항목을 한 번에 정리했습니다.",
+    "badge": "신규",
+    "category": "테니스 대회",
+    "date": "2026-03-07",
+    "readTime": "6분",
+    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
+  },
+  {
+    "id": "tennis-racket-recommendation-guide-2026",
+    "slug": "tennis-racket-recommendation-guide-2026",
+    "tags": [
+      "라켓 추천",
+      "장비",
+      "2026"
+    ],
+    "title": "2026년 테니스 라켓 추천 가이드 — 초보자부터 상급자까지 BEST 5",
+    "excerpt": "2026년 최신 테니스 라켓 트렌드와 추천 모델 TOP 5를 소개합니다. 윌슨 블레이드 v9, 요넥스 이존, 바볼랏 퓨어드라이브 등 인기 라켓 비교 분석.",
+    "badge": "인기 글",
+    "category": "테니스 장비",
+    "date": "2026-03-01",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
+  },
+  {
+    "id": "tennis-starting-complete-guide",
+    "slug": "tennis-starting-complete-guide",
+    "tags": [
+      "입문",
+      "테린이",
+      "가이드"
+    ],
+    "title": "테니스 시작하기 완벽 가이드 2026 — 비용, 준비물, 레슨, 용어 총정리",
+    "excerpt": "테린이 탈출을 위한 A to Z. 라켓 구매 비용부터 레슨비, 필수 용어, 코트 매너, 그리고 1년 성장 로드맵까지.",
+    "badge": "필독",
+    "category": "테니스 초보자",
+    "date": "2026-02-20",
+    "readTime": "15분",
+    "badgeColor": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300",
+    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
+  },
+  {
+    "id": "tennis-lesson-cost-guide",
+    "slug": "tennis-lesson-cost-guide",
+    "tags": [
+      "레슨비",
+      "테니스 비용",
+      "입문"
+    ],
+    "title": "2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교",
+    "excerpt": "테니스 레슨 비용이 궁금하신가요? 서울, 경기 및 전국 평균 실내/실외 테니스장 레슨비를 1:1, 그룹 레슨별로 상세하게 비교해드립니다.",
+    "badge": "인기 글",
+    "category": "테니스 초보자",
+    "date": "2026-02-10",
     "readTime": "8분",
     "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "alex-de-minaur",
-    "tags": [
-      "선수 프로필"
-    ]
+    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
   },
   {
-    "id": "casper-ruud",
-    "title": "카스페르 루드 — 점토 위에서 증명한 질서와 끈기",
-    "excerpt": "꾸준함과 규율로 흐름을 쌓는 카스페르 루드의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 이야기를 한 편으로.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-09-29",
-    "readTime": "7분",
-    "badgeColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "casper-ruud",
+    "id": "tennis-string-guide",
+    "slug": "tennis-string-guide",
     "tags": [
-      "선수 프로필"
-    ]
+      "스트링",
+      "텐션",
+      "장비"
+    ],
+    "title": "테니스 스트링 완전 가이드 — 폴리 vs 인조쉽 vs 천연쉽 및 텐션 선택법 2026",
+    "excerpt": "라켓 성능의 50%는 스트링이 결정합니다. 폴리에스터, 인조쉽, 멀티필라멘트, 천연쉽의 장단점을 비교하고 나에게 맞는 텐션 찾는 법을 알려드립니다.",
+    "badge": "최신 글",
+    "category": "테니스 장비",
+    "date": "2026-02-05",
+    "readTime": "9분",
+    "badgeColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
   },
   {
-    "id": "andrey-rublev",
-    "title": "안드레이 루블레프 — 불꽃 같은 포핸드, 절제된 규율",
-    "excerpt": "강력한 포핸드와 끊임없는 전진 의지로 랠리의 톤을 올리는 안드레이 루블레프의 성장, 스타일, 인간미와 과제를 한 편으로.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-09-07",
-    "readTime": "8분",
-    "badgeColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "andrey-rublev",
+    "id": "tennis-strategy-beat-pusher",
+    "slug": "tennis-strategy-beat-pusher",
     "tags": [
-      "선수 프로필"
-    ]
-  },
-  {
-    "id": "alexander-zverev",
-    "title": "알렉산더 즈베레프 — 균형과 리듬으로 구축한 장기전의 기술",
-    "excerpt": "길고 무거운 랠리에서 균형을 잃지 않는 알렉산더 즈베레프의 성장, 플레이 철학, 인간적인 면모와 라이벌 이야기를 한 편으로.",
+      "테니스 전술"
+    ],
+    "title": "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
+    "excerpt": "실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.",
     "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-08-23",
-    "readTime": "8분",
+    "category": "테니스 전술",
+    "date": "2026-01-24",
+    "readTime": "10분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "alexander-zverev",
-    "tags": [
-      "선수 프로필"
-    ]
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
   },
   {
-    "id": "daniil-medvedev",
-    "title": "다닐 메드베데프 — 각도와 깊이로 짜는 지공의 미학",
-    "excerpt": "낮은 탄도로 깊이를 누적하고, 리턴과 코트 포지셔닝으로 상대의 선택지를 지우는 다닐 메드베데프의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-    "badge": "최신 글",
-    "category": "선수 프로필",
-    "date": "2025-09-21",
-    "readTime": "8분",
-    "badgeColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300",
-    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "slug": "daniil-medvedev",
+    "id": "tennis-strategy-vs-lefty",
+    "slug": "tennis-strategy-vs-lefty",
     "tags": [
-      "선수 프로필"
-    ]
+      "테니스 전술"
+    ],
+    "title": "왼손잡이 상대 공략법 (Lefty 대응 전술)",
+    "excerpt": "반대 회전 서브와 낯선 각도. 왼손잡이(Lefty) 선수를 상대로 당황하지 않고 유리한 고지를 점하는 전술적 팁.",
+    "badge": "최신 글",
+    "category": "테니스 전술",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-windy-condition-tips",
+    "slug": "tennis-windy-condition-tips",
+    "tags": [
+      "테니스 전술"
+    ],
+    "title": "바람 부는 날 테니스 잘 치는 법",
+    "excerpt": "불규칙한 바람은 누구에게나 fair하지 않습니다. 바람을 이용하는 풋워크, 타점 조절, 그리고 심리적 우위를 점하는 방법.",
+    "badge": "최신 글",
+    "category": "테니스 전술",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-drop-shot-mastery",
+    "slug": "tennis-drop-shot-mastery",
+    "tags": [
+      "테니스 전술"
+    ],
+    "title": "드롭샷 마스터하기: 타이밍과 위장술",
+    "excerpt": "상대의 허를 찌르는 드롭샷. 성공률을 높이는 그립, 터치 감각, 그리고 무엇보다 중요한 타이밍과 위장(Disguise) 기술.",
+    "badge": "최신 글",
+    "category": "테니스 전술",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-lob-defense-offense",
+    "slug": "tennis-lob-defense-offense",
+    "tags": [
+      "테니스 기술"
+    ],
+    "title": "로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브",
+    "excerpt": "위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.",
+    "badge": "최신 글",
+    "category": "테니스 기술",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-overhead-smash-guide",
+    "slug": "tennis-overhead-smash-guide",
+    "tags": [
+      "테니스 기술",
+      "백핸드"
+    ],
+    "title": "스매싱 실수 줄이는 법 (오버헤드 스매시 가이드)",
+    "excerpt": "가장 강력하지만 가장 실수하기 쉬운 샷. 스매싱의 타점 잡기, 왼손의 역할, 그리고 자신감 있게 마무리하는 비결.",
+    "badge": "최신 글",
+    "category": "테니스 기술",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-slice-backhand-mastery",
+    "slug": "tennis-slice-backhand-mastery",
+    "tags": [
+      "테니스 기술",
+      "서브"
+    ],
+    "title": "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)",
+    "excerpt": "낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.",
+    "badge": "최신 글",
+    "category": "테니스 기술",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-return-of-serve-strategy",
+    "slug": "tennis-return-of-serve-strategy",
+    "tags": [
+      "테니스 전술"
+    ],
+    "title": "서브 리턴 전략: 서버의 구질 읽는 법",
+    "excerpt": "게임의 시작은 서브지만, 브레이크의 시작은 리턴입니다. 스플릿 스텝 타이밍, 그립 전환, 그리고 서버의 루틴을 읽는 법.",
+    "badge": "최신 글",
+    "category": "테니스 전술",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-string-tension-guide",
+    "slug": "tennis-string-tension-guide",
+    "tags": [
+      "테니스 장비",
+      "스트링"
+    ],
+    "title": "스트링 텐션의 비밀: 높게? 낮게?",
+    "excerpt": "텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법.",
+    "badge": "최신 글",
+    "category": "테니스 장비",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-hybrid-string-setup",
+    "slug": "tennis-hybrid-string-setup",
+    "tags": [
+      "테니스 장비"
+    ],
+    "title": "하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)",
+    "excerpt": "선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.",
+    "badge": "최신 글",
+    "category": "테니스 장비",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-grip-size-selection",
+    "slug": "tennis-grip-size-selection",
+    "tags": [
+      "테니스 장비"
+    ],
+    "title": "그립 두께와 사이즈 선택의 중요성",
+    "excerpt": "너무 얇으면 라켓이 돌고, 너무 두꺼우면 손목이 아픕니다. 정확한 그립 사이즈 측정법과 튜닝 팁.",
+    "badge": "최신 글",
+    "category": "테니스 장비",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-overgrip-guide",
+    "slug": "tennis-overgrip-guide",
+    "tags": [
+      "테니스 장비"
+    ],
+    "title": "오버그립 교체 주기와 종류(건식/습식) 추천",
+    "excerpt": "손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍.",
+    "badge": "최신 글",
+    "category": "테니스 장비",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-dampener-effectiveness",
+    "slug": "tennis-dampener-effectiveness",
+    "tags": [
+      "테니스 장비",
+      "경기 운영"
+    ],
+    "title": "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
+    "excerpt": "작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.",
+    "badge": "최신 글",
+    "category": "테니스 장비",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-wrist-knee-pain-care",
+    "slug": "tennis-wrist-knee-pain-care",
+    "tags": [
+      "테니스 지식"
+    ],
+    "title": "테니스 엘보 외의 부상: 손목 및 무릎 통증 관리",
+    "excerpt": "TFCC 손상부터 슬개건염까지. 테니스 동호인을 괴롭히는 손목과 무릎 통증의 원인과 예방 스트레칭.",
+    "badge": "최신 글",
+    "category": "테니스 건강",
+    "date": "2026-01-24",
+    "readTime": "10분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+  },
+  {
+    "id": "tennis-post-exercise-nutrition",
+    "slug": "tennis-post-exercise-nutrition",
+    "tags": [
+      "영양",
+      "회복",
+      "식단"
+    ],
+    "title": "테니스 영양학: 경기 후 45분, 기적의 회복 골든타임",
+    "excerpt": "테니스 경기 후 근육 회복과 피로 해소를 위한 영양 섭취 전략. 탄수화물/단백질 비율, 전해질 조절, 관절 건강을 위한 영양소까지 완벽 정리.",
+    "badge": "최신 글",
+    "category": "테니스 영양",
+    "date": "2026-01-20",
+    "readTime": "7분",
+    "badgeColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300",
+    "categoryColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
+  },
+  {
+    "id": "tennis-elbow-prevention-guide",
+    "slug": "tennis-elbow-prevention-guide",
+    "tags": [
+      "테니스 엘보",
+      "부상 예방",
+      "재활"
+    ],
+    "title": "테니스 엘보 예방과 재활 가이드 — 통증 없이 운동하는 법",
+    "excerpt": "테니스 동호인의 50%가 겪는다는 테니스 엘보. 팔꿈치 바깥쪽 통증의 원인부터 재활 운동, 라켓/스트링 세팅 변경 팁까지 완벽하게 정리했습니다.",
+    "badge": "필독",
+    "category": "테니스 부상",
+    "date": "2026-01-15",
+    "readTime": "10분",
+    "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
+    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
+  },
+  {
+    "id": "novak-djokovic",
+    "slug": "novak-djokovic",
+    "tags": [
+      "선수 프로필",
+      "GOAT"
+    ],
+    "title": "노박 조코비치: 기록의 파괴자, GOAT",
+    "excerpt": "테니스 역사상 가장 위대한 선수. 24회 그랜드 슬램 우승에 빛나는 조코비치의 무결점 플레이와 철저한 자기 관리.",
+    "badge": "인기 글",
+    "category": "선수 프로필",
+    "date": "2025-11-05",
+    "readTime": "12분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+  },
+  {
+    "id": "jannik-sinner",
+    "slug": "jannik-sinner",
+    "tags": [
+      "선수 프로필",
+      "ATP"
+    ],
+    "title": "야닉 시너: 이탈리아의 붉은 여우",
+    "excerpt": "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
+    "badge": "인기 글",
+    "category": "선수 프로필",
+    "date": "2025-11-01",
+    "readTime": "10분",
+    "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
   },
   {
     "id": "carlos-alcaraz",
@@ -978,967 +1570,172 @@ export const allBlogPosts = [
     ]
   },
   {
-    "id": "tennis-strategy-beat-pusher",
-    "slug": "tennis-strategy-beat-pusher",
+    "id": "stefanos-tsitsipas",
+    "slug": "stefanos-tsitsipas",
     "tags": [
-      "테니스 전술"
+      "선수 프로필",
+      "ATP"
     ],
-    "title": "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
-    "excerpt": "실수 없이 넘기기만 하는 상대에게 말려들지 않는 법. 인내심을 유지하며 결정적인 찬스를 만드는 푸셔 공략 가이드.",
+    "title": "스테파노스 치치파스: 그리스 조각상의 테니스",
+    "excerpt": "긴 머리를 휘날리며 코트를 누비는 그리스의 신. 강력한 포핸드와 네트 플레이를 겸비한 치치파스의 스타일.",
     "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+    "category": "선수 프로필",
+    "date": "2025-10-20",
+    "readTime": "9분",
+    "badgeColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
   },
   {
-    "id": "tennis-strategy-vs-lefty",
-    "slug": "tennis-strategy-vs-lefty",
+    "id": "tommy-paul",
+    "slug": "tommy-paul",
     "tags": [
-      "테니스 전술"
+      "선수 프로필",
+      "ATP"
     ],
-    "title": "왼손잡이 상대 공략법 (Lefty 대응 전술)",
-    "excerpt": "반대 회전 서브와 낯선 각도. 왼손잡이(Lefty) 선수를 상대로 당황하지 않고 유리한 고지를 점하는 전술적 팁.",
+    "title": "토미 폴: 기민한 미국의 테크니션",
+    "excerpt": "빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.",
     "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+    "category": "선수 프로필",
+    "date": "2025-10-18",
+    "readTime": "8분",
+    "badgeColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
   },
   {
-    "id": "tennis-windy-condition-tips",
-    "slug": "tennis-windy-condition-tips",
-    "tags": [
-      "테니스 전술"
-    ],
-    "title": "바람 부는 날 테니스 잘 치는 법",
-    "excerpt": "불규칙한 바람은 누구에게나 fair하지 않습니다. 바람을 이용하는 풋워크, 타점 조절, 그리고 심리적 우위를 점하는 방법.",
+    "id": "alex-de-minaur",
+    "title": "알렉스 드 미노 — 스피드와 담대함으로 시간을 훔치는 기술",
+    "excerpt": "폭발적인 풋워크와 끈질긴 수비·카운터로 리듬을 빼앗는 알렉스 드 미노의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
     "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+    "category": "선수 프로필",
+    "date": "2025-10-08",
+    "readTime": "8분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "alex-de-minaur",
+    "tags": [
+      "선수 프로필"
+    ]
   },
   {
-    "id": "tennis-drop-shot-mastery",
-    "slug": "tennis-drop-shot-mastery",
-    "tags": [
-      "테니스 전술"
-    ],
-    "title": "드롭샷 마스터하기: 타이밍과 위장술",
-    "excerpt": "상대의 허를 찌르는 드롭샷. 성공률을 높이는 그립, 터치 감각, 그리고 무엇보다 중요한 타이밍과 위장(Disguise) 기술.",
+    "id": "hubert-hurkacz",
+    "title": "후베르트 후르카츠 — 탄력과 절제로 설계하는 현대형 서브&발리",
+    "excerpt": "거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓는 후베르트 후르카츠의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
     "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-lob-defense-offense",
-    "slug": "tennis-lob-defense-offense",
+    "category": "선수 프로필",
+    "date": "2025-10-02",
+    "readTime": "8분",
+    "badgeColor": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "hubert-hurkacz",
     "tags": [
-      "테니스 기술"
-    ],
-    "title": "로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브",
-    "excerpt": "위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-overhead-smash-guide",
-    "slug": "tennis-overhead-smash-guide",
-    "tags": [
-      "테니스 기술",
-      "백핸드"
-    ],
-    "title": "스매싱 실수 줄이는 법 (오버헤드 스매시 가이드)",
-    "excerpt": "가장 강력하지만 가장 실수하기 쉬운 샷. 스매싱의 타점 잡기, 왼손의 역할, 그리고 자신감 있게 마무리하는 비결.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-slice-backhand-mastery",
-    "slug": "tennis-slice-backhand-mastery",
-    "tags": [
-      "테니스 기술",
+      "선수 프로필",
       "서브"
-    ],
-    "title": "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)",
-    "excerpt": "낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+    ]
   },
   {
-    "id": "tennis-return-of-serve-strategy",
-    "slug": "tennis-return-of-serve-strategy",
+    "id": "casper-ruud",
+    "title": "카스페르 루드 — 점토 위에서 증명한 질서와 끈기",
+    "excerpt": "꾸준함과 규율로 흐름을 쌓는 카스페르 루드의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 이야기를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-09-29",
+    "readTime": "7분",
+    "badgeColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "casper-ruud",
     "tags": [
-      "테니스 전술"
-    ],
-    "title": "서브 리턴 전략: 서버의 구질 읽는 법",
-    "excerpt": "게임의 시작은 서브지만, 브레이크의 시작은 리턴입니다. 스플릿 스텝 타이밍, 그립 전환, 그리고 서버의 루틴을 읽는 법.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+      "선수 프로필"
+    ]
   },
   {
-    "id": "tennis-string-tension-guide",
-    "slug": "tennis-string-tension-guide",
+    "id": "daniil-medvedev",
+    "title": "다닐 메드베데프 — 각도와 깊이로 짜는 지공의 미학",
+    "excerpt": "낮은 탄도로 깊이를 누적하고, 리턴과 코트 포지셔닝으로 상대의 선택지를 지우는 다닐 메드베데프의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-09-21",
+    "readTime": "8분",
+    "badgeColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "daniil-medvedev",
     "tags": [
-      "테니스 장비",
-      "스트링"
-    ],
-    "title": "스트링 텐션의 비밀: 높게? 낮게?",
-    "excerpt": "텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법.",
-    "badge": "최신 글",
-    "category": "테니스 장비",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
+      "선수 프로필"
+    ]
   },
   {
-    "id": "tennis-hybrid-string-setup",
-    "slug": "tennis-hybrid-string-setup",
+    "id": "ben-shelton",
+    "slug": "ben-shelton",
     "tags": [
-      "테니스 장비"
+      "선수 프로필"
     ],
-    "title": "하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)",
-    "excerpt": "선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.",
+    "title": "벤 쉘튼 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도",
+    "excerpt": "좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 쉘튼의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
     "badge": "최신 글",
-    "category": "테니스 장비",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-grip-size-selection",
-    "slug": "tennis-grip-size-selection",
-    "tags": [
-      "테니스 장비"
-    ],
-    "title": "그립 두께와 사이즈 선택의 중요성",
-    "excerpt": "너무 얇으면 라켓이 돌고, 너무 두꺼우면 손목이 아픕니다. 정확한 그립 사이즈 측정법과 튜닝 팁.",
-    "badge": "최신 글",
-    "category": "테니스 장비",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-overgrip-guide",
-    "slug": "tennis-overgrip-guide",
-    "tags": [
-      "테니스 장비"
-    ],
-    "title": "오버그립 교체 주기와 종류(건식/습식) 추천",
-    "excerpt": "손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍.",
-    "badge": "최신 글",
-    "category": "테니스 장비",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-dampener-effectiveness",
-    "slug": "tennis-dampener-effectiveness",
-    "tags": [
-      "테니스 장비",
-      "경기 운영"
-    ],
-    "title": "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
-    "excerpt": "작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.",
-    "badge": "최신 글",
-    "category": "테니스 장비",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-wrist-knee-pain-care",
-    "slug": "tennis-wrist-knee-pain-care",
-    "tags": [
-      "테니스 지식"
-    ],
-    "title": "테니스 엘보 외의 부상: 손목 및 무릎 통증 관리",
-    "excerpt": "TFCC 손상부터 슬개건염까지. 테니스 동호인을 괴롭히는 손목과 무릎 통증의 원인과 예방 스트레칭.",
-    "badge": "최신 글",
-    "category": "테니스 건강",
-    "date": "2026-01-24",
-    "readTime": "10분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-tiebreak-strategy-guide",
-    "slug": "tennis-tiebreak-strategy-guide",
-    "title": "타이브레이크 운영 가이드",
-    "excerpt": "타이브레이크에서 실수를 줄이고 득점 확률을 높이는 전술, 루틴, 리스크 관리 원칙을 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 전술",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-second-serve-confidence-guide",
-    "slug": "tennis-second-serve-confidence-guide",
-    "title": "세컨드 서브 자신감 가이드",
-    "excerpt": "더블폴트를 줄이면서도 공격성을 잃지 않는 세컨드 서브 설계법을 다룹니다.",
-    "badge": "신규",
-    "category": "테니스 전술",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-clay-court-sliding-guide",
-    "slug": "tennis-clay-court-sliding-guide",
-    "title": "클레이 코트 슬라이딩 입문",
-    "excerpt": "클레이 코트에서 미끄러지듯 움직이는 기본 원리와 안전하게 익히는 훈련법을 소개합니다.",
-    "badge": "신규",
-    "category": "테니스 기술",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-hard-court-recovery-guide",
-    "slug": "tennis-hard-court-recovery-guide",
-    "title": "하드코트 경기 후 회복 가이드",
-    "excerpt": "하드코트에서 누적되는 충격을 줄이기 위한 회복 루틴과 관리 포인트를 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 회복",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-grass-court-movement-guide",
-    "slug": "tennis-grass-court-movement-guide",
-    "title": "잔디 코트 움직임 가이드",
-    "excerpt": "잔디 코트 특유의 낮은 바운드와 미끄러운 움직임에 적응하는 방법을 설명합니다.",
-    "badge": "신규",
-    "category": "테니스 기술",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-doubles-serve-formation-guide",
-    "slug": "tennis-doubles-serve-formation-guide",
-    "title": "복식 서브 포메이션 가이드",
-    "excerpt": "복식에서 자주 쓰이는 서브 포메이션과 상황별 선택 기준을 실전 중심으로 다룹니다.",
-    "badge": "신규",
-    "category": "테니스 복식",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-return-positioning-by-surface",
-    "slug": "tennis-return-positioning-by-surface",
-    "title": "코트별 리턴 포지션 가이드",
-    "excerpt": "하드, 클레이, 잔디 코트에서 리턴 위치를 어떻게 다르게 잡아야 하는지 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 전술",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-matchday-warmup-routine",
-    "slug": "tennis-matchday-warmup-routine",
-    "title": "경기 당일 워밍업 루틴",
-    "excerpt": "경기 전 몸과 집중력을 함께 끌어올리는 워밍업 구성법을 소개합니다.",
-    "badge": "신규",
-    "category": "테니스 훈련",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-cooldown-stretching-routine",
-    "slug": "tennis-cooldown-stretching-routine",
-    "title": "경기 후 쿨다운 스트레칭 루틴",
-    "excerpt": "근육 긴장을 줄이고 다음 훈련에 지장을 남기지 않도록 돕는 회복 루틴입니다.",
-    "badge": "신규",
-    "category": "테니스 회복",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-sleep-recovery-guide",
-    "slug": "tennis-sleep-recovery-guide",
-    "title": "수면과 경기력 회복 가이드",
-    "excerpt": "테니스 경기력 유지에 필요한 수면 습관과 회복 품질 관리법을 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 회복",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-hydration-electrolyte-guide",
-    "slug": "tennis-hydration-electrolyte-guide",
-    "title": "수분과 전해질 관리 가이드",
-    "excerpt": "경기 중 탈수와 집중력 저하를 막기 위한 수분·전해질 전략을 설명합니다.",
-    "badge": "신규",
-    "category": "테니스 영양",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-hot-weather-match-guide",
-    "slug": "tennis-hot-weather-match-guide",
-    "title": "폭염 경기 대처 가이드",
-    "excerpt": "더운 날씨에서 체력 손실을 줄이고 경기 운영을 안정시키는 방법을 다룹니다.",
-    "badge": "신규",
-    "category": "테니스 컨디셔닝",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-cold-weather-match-guide",
-    "slug": "tennis-cold-weather-match-guide",
-    "title": "추운 날 경기 운영 가이드",
-    "excerpt": "기온이 낮은 환경에서 몸을 보호하고 감각을 유지하는 실전 팁을 소개합니다.",
-    "badge": "신규",
-    "category": "테니스 컨디셔닝",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-practice-journal-guide",
-    "slug": "tennis-practice-journal-guide",
-    "title": "테니스 연습일지 작성 가이드",
-    "excerpt": "훈련 내용을 기록하고 개선 포인트를 찾는 연습일지 작성법을 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 훈련",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-unforced-error-reduction-guide",
-    "slug": "tennis-unforced-error-reduction-guide",
-    "title": "범실 줄이기 훈련 가이드",
-    "excerpt": "불필요한 실수를 줄이기 위해 점검해야 할 전술, 루틴, 타점 원칙을 설명합니다.",
-    "badge": "신규",
-    "category": "테니스 기술",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-approach-shot-guide",
-    "slug": "tennis-approach-shot-guide",
-    "title": "어프로치샷 가이드",
-    "excerpt": "상대를 밀어낸 뒤 네트 플레이로 연결하는 어프로치샷 운영법을 다룹니다.",
-    "badge": "신규",
-    "category": "테니스 기술",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-split-step-timing-guide",
-    "slug": "tennis-split-step-timing-guide",
-    "title": "스플릿스텝 타이밍 가이드",
-    "excerpt": "풋워크의 출발점인 스플릿스텝 타이밍을 상황별로 이해할 수 있도록 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 풋워크",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-serve-plus-one-patterns",
-    "slug": "tennis-serve-plus-one-patterns",
-    "title": "서브 플러스 원 패턴 가이드",
-    "excerpt": "서브 이후 다음 한 샷까지 설계하는 패턴 플레이의 기본 구조를 설명합니다.",
-    "badge": "신규",
-    "category": "테니스 전술",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-mental-reset-between-points",
-    "slug": "tennis-mental-reset-between-points",
-    "title": "포인트 사이 멘탈 리셋 가이드",
-    "excerpt": "흐름이 흔들릴 때 짧은 루틴으로 감정과 집중을 회복하는 방법을 소개합니다.",
-    "badge": "신규",
-    "category": "테니스 멘탈",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-junior-training-roadmap",
-    "slug": "tennis-junior-training-roadmap",
-    "title": "주니어 테니스 성장 로드맵",
-    "excerpt": "주니어 선수가 단계별로 무엇을 우선 학습해야 하는지 로드맵 형태로 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 훈련",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-adult-beginner-first-90-days",
-    "slug": "tennis-adult-beginner-first-90-days",
-    "title": "성인 입문자 90일 가이드",
-    "excerpt": "성인 초보가 첫 3개월 동안 안정적으로 실력을 올리는 학습 순서를 제안합니다.",
-    "badge": "신규",
-    "category": "테니스 초보자",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-partner-practice-drills",
-    "slug": "tennis-partner-practice-drills",
-    "title": "파트너 연습 드릴 가이드",
-    "excerpt": "코치 없이도 둘이서 효율적으로 진행할 수 있는 파트너 드릴을 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 훈련",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-wall-practice-guide",
-    "slug": "tennis-wall-practice-guide",
-    "title": "벽치기 훈련 가이드",
-    "excerpt": "혼자서도 반복 훈련 효과를 얻을 수 있는 벽치기 루틴과 목표 설정법을 다룹니다.",
-    "badge": "신규",
-    "category": "테니스 훈련",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-doubles-net-player-guide",
-    "slug": "tennis-doubles-net-player-guide",
-    "title": "복식 네트 플레이어 가이드",
-    "excerpt": "복식에서 네트 플레이어가 위치, 리액션, 마무리를 어떻게 가져가야 하는지 설명합니다.",
-    "badge": "신규",
-    "category": "테니스 복식",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-kick-serve-guide",
-    "slug": "tennis-kick-serve-guide",
-    "title": "킥서브 입문 가이드",
-    "excerpt": "안정성과 바운드 변화를 동시에 노릴 수 있는 킥서브의 기본 원리를 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 서브",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-slice-serve-guide",
-    "slug": "tennis-slice-serve-guide",
-    "title": "슬라이스 서브 가이드",
-    "excerpt": "코스와 리턴 각도를 흔드는 슬라이스 서브 활용법을 실전 중심으로 설명합니다.",
-    "badge": "신규",
-    "category": "테니스 서브",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-forehand-depth-control-guide",
-    "slug": "tennis-forehand-depth-control-guide",
-    "title": "포핸드 깊이 조절 가이드",
-    "excerpt": "포핸드를 더 깊고 안정적으로 보내기 위한 스윙 길이, 타점, 목표 설정법을 다룹니다.",
-    "badge": "신규",
-    "category": "테니스 포핸드",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-backhand-return-guide",
-    "slug": "tennis-backhand-return-guide",
-    "title": "백핸드 리턴 가이드",
-    "excerpt": "강한 서브를 백핸드로 안정적으로 받아내는 준비 자세와 리턴 패턴을 소개합니다.",
-    "badge": "신규",
-    "category": "테니스 백핸드",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-match-video-review-guide",
-    "slug": "tennis-match-video-review-guide",
-    "title": "경기 영상 복기 가이드",
-    "excerpt": "경기 영상을 단순 시청이 아닌 개선 도구로 활용하는 리뷰 구조를 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 분석",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-tournament-preparation-checklist",
-    "slug": "tennis-tournament-preparation-checklist",
-    "title": "대회 준비 체크리스트",
-    "excerpt": "대회 전 준비물을 포함해 일정, 루틴, 컨디션 점검 항목을 한 번에 정리했습니다.",
-    "badge": "신규",
-    "category": "테니스 대회",
-    "date": "2026-03-07",
-    "readTime": "6분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
-  {
-    "id": "tennis-grip-pressure-guide",
-    "slug": "tennis-grip-pressure-guide",
-    "tags": ["그립", "기술"],
-    "title": "그립 압력 가이드: 최적의 힘 조절법",
-    "excerpt": "그립을 너무 세게 잡으면 팔에 무리가 오고, 너무 약하면 컨트롤을 잃습니다. 상황별 최적의 그립 압력을 알아봅니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-03-10",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-deuce-court-strategy",
-    "slug": "tennis-deuce-court-strategy",
-    "tags": ["전술", "듀스코트"],
-    "title": "듀스코트 전략: 포인트를 지배하는 법",
-    "excerpt": "듀스코트에서의 서브 방향, 리턴 위치, 랠리 패턴까지 포인트를 유리하게 이끄는 전술을 정리했습니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-10",
+    "category": "선수 프로필",
+    "date": "2025-09-18",
     "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-ad-court-strategy",
-    "slug": "tennis-ad-court-strategy",
-    "tags": ["전술", "어드코트"],
-    "title": "어드코트 전략: 브레이크 포인트를 잡는 법",
-    "excerpt": "어드코트에서의 핵심 전술과 브레이크 포인트 상황에서의 서브·리턴 전략을 다룹니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-11",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-singles-positioning",
-    "slug": "tennis-singles-positioning",
-    "tags": ["전술", "단식", "포지셔닝"],
-    "title": "단식 포지셔닝: 코트 커버리지 극대화",
-    "excerpt": "단식에서 공을 친 후 어디에 서야 하는지, 상황별 최적의 포지션을 그림과 함께 설명합니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-11",
-    "readTime": "9분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-first-serve-percentage",
-    "slug": "tennis-first-serve-percentage",
-    "tags": ["서브", "확률"],
-    "title": "퍼스트 서브 확률 높이기: 65% 이상 유지하는 비결",
-    "excerpt": "퍼스트 서브 확률이 경기 결과에 미치는 영향과 확률을 올리는 구체적인 연습법을 소개합니다.",
-    "badge": "최신 글",
-    "category": "테니스 서브",
-    "date": "2026-03-12",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300"
-  },
-  {
-    "id": "tennis-net-approach-timing",
-    "slug": "tennis-net-approach-timing",
-    "tags": ["네트플레이", "어프로치"],
-    "title": "네트 어프로치 타이밍: 언제 전진해야 할까",
-    "excerpt": "네트로 나가는 최적의 타이밍과 어프로치샷 선택 기준을 실전 예시와 함께 정리했습니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-12",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-passing-shot-guide",
-    "slug": "tennis-passing-shot-guide",
-    "tags": ["패싱샷", "기술"],
-    "title": "패싱샷 가이드: 네트 플레이어를 무력화하는 법",
-    "excerpt": "상대가 네트로 올라왔을 때 효과적으로 패싱샷을 구사하는 기술과 코스 선택법을 알아봅니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-03-13",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-high-ball-handling",
-    "slug": "tennis-high-ball-handling",
-    "tags": ["하이볼", "기술"],
-    "title": "하이볼 처리법: 높이 튀는 공 완벽 대응",
-    "excerpt": "어깨 위로 올라오는 하이볼을 효과적으로 처리하는 스탠스, 스윙, 타이밍 기술을 정리했습니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-03-13",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-low-ball-technique",
-    "slug": "tennis-low-ball-technique",
-    "tags": ["로우볼", "기술"],
-    "title": "로우볼 기술: 낮은 공을 안정적으로 처리하기",
-    "excerpt": "무릎 아래의 낮은 공을 안정적으로 리턴하기 위한 자세, 라켓면 조절, 풋워크를 설명합니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-03-14",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-inside-out-forehand",
-    "slug": "tennis-inside-out-forehand",
-    "tags": ["포핸드", "인사이드아웃"],
-    "title": "인사이드아웃 포핸드: 공격의 핵심 무기",
-    "excerpt": "백핸드 쪽으로 온 공을 포핸드로 돌아가 치는 인사이드아웃 기술의 풋워크와 타이밍을 다룹니다.",
-    "badge": "최신 글",
-    "category": "테니스 포핸드",
-    "date": "2026-03-14",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
-  },
-  {
-    "id": "tennis-cross-court-rally",
-    "slug": "tennis-cross-court-rally",
-    "tags": ["크로스코트", "랠리", "전술"],
-    "title": "크로스코트 랠리 전략: 왜 크로스가 기본인가",
-    "excerpt": "크로스코트 랠리가 테니스 전술의 기본인 이유와 효과적인 크로스코트 패턴을 분석합니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-15",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-down-the-line-timing",
-    "slug": "tennis-down-the-line-timing",
-    "tags": ["다운더라인", "타이밍"],
-    "title": "다운더라인 타이밍: 승부를 가르는 한 방",
-    "excerpt": "다운더라인을 언제, 어떤 상황에서 쳐야 효과적인지 타이밍과 리스크 관리법을 정리했습니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-15",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-moon-ball-counter",
-    "slug": "tennis-moon-ball-counter",
-    "tags": ["문볼", "대처법"],
-    "title": "문볼 대처법: 느리고 높은 공에 당하지 않기",
-    "excerpt": "문볼(Moon Ball)을 치는 상대에게 당하지 않는 포지셔닝, 타이밍, 공격 전환법을 소개합니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-16",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-serve-and-volley-modern",
-    "slug": "tennis-serve-and-volley-modern",
-    "tags": ["서브앤발리", "전술"],
-    "title": "현대 서브앤발리: 2026년에도 통하는 전략",
-    "excerpt": "현대 테니스에서 서브앤발리가 여전히 유효한 이유와 효과적인 실행 방법을 분석합니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-16",
-    "readTime": "9분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-chip-and-charge",
-    "slug": "tennis-chip-and-charge",
-    "tags": ["칩앤차지", "전술"],
-    "title": "칩앤차지 전략: 리턴 후 네트 장악하기",
-    "excerpt": "리턴을 슬라이스로 깊게 보내고 네트로 전진하는 칩앤차지 전술의 핵심을 정리했습니다.",
-    "badge": "최신 글",
-    "category": "테니스 전술",
-    "date": "2026-03-17",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"
-  },
-  {
-    "id": "tennis-two-handed-backhand-power",
-    "slug": "tennis-two-handed-backhand-power",
-    "tags": ["백핸드", "투핸드", "파워"],
-    "title": "투핸드 백핸드 파워: 강력한 양손 백핸드 만들기",
-    "excerpt": "투핸드 백핸드에서 파워를 끌어내는 체중 이동, 회전, 팔로스루 테크닉을 상세히 설명합니다.",
-    "badge": "최신 글",
-    "category": "테니스 백핸드",
-    "date": "2026-03-17",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-one-handed-backhand-guide",
-    "slug": "tennis-one-handed-backhand-guide",
-    "tags": ["백핸드", "원핸드"],
-    "title": "원핸드 백핸드 가이드: 우아함과 파워의 조화",
-    "excerpt": "원핸드 백핸드의 그립, 준비 자세, 임팩트 포인트, 그리고 슬라이스 변환까지 완벽 가이드입니다.",
-    "badge": "최신 글",
-    "category": "테니스 백핸드",
-    "date": "2026-03-18",
-    "readTime": "9분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300"
-  },
-  {
-    "id": "tennis-topspin-generation",
-    "slug": "tennis-topspin-generation",
-    "tags": ["탑스핀", "스핀", "기술"],
-    "title": "탑스핀 생성법: 회전의 과학",
-    "excerpt": "탑스핀을 만드는 라켓 궤도, 손목 사용법, 스트링 세팅까지 회전의 모든 것을 다룹니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-03-18",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-flat-shot-when-to-use",
-    "slug": "tennis-flat-shot-when-to-use",
-    "tags": ["플랫샷", "전술"],
-    "title": "플랫샷 활용 타이밍: 언제 플랫으로 칠까",
-    "excerpt": "탑스핀 위주의 현대 테니스에서 플랫샷이 빛나는 순간과 효과적인 활용법을 분석합니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-03-19",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-angle-shot-technique",
-    "slug": "tennis-angle-shot-technique",
-    "tags": ["앵글샷", "기술"],
-    "title": "앵글샷 기술: 상대를 코트 밖으로 밀어내기",
-    "excerpt": "날카로운 앵글샷으로 상대를 코트 밖으로 끌어내는 라켓면 조절과 타점 기술을 설명합니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-03-19",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-defensive-lob-mastery",
-    "slug": "tennis-defensive-lob-mastery",
-    "tags": ["로브", "수비"],
-    "title": "수비형 로브 마스터: 위기를 기회로 바꾸기",
-    "excerpt": "수비 상황에서 로브를 활용해 시간을 벌고 포지션을 회복하는 기술과 전략을 다룹니다.",
-    "badge": "최신 글",
-    "category": "테니스 기술",
-    "date": "2026-03-20",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
-  {
-    "id": "tennis-between-sets-recovery",
-    "slug": "tennis-between-sets-recovery",
-    "tags": ["회복", "세트"],
-    "title": "세트 사이 회복법: 90초를 200% 활용하기",
-    "excerpt": "체인지오버 시간에 체력과 멘탈을 효과적으로 회복하는 루틴과 호흡법을 소개합니다.",
-    "badge": "최신 글",
-    "category": "테니스 회복",
-    "date": "2026-03-20",
-    "readTime": "6분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
-  },
-  {
-    "id": "tennis-pre-match-nutrition",
-    "slug": "tennis-pre-match-nutrition",
-    "tags": ["영양", "경기 준비"],
-    "title": "경기 전 식단: 최적의 에너지를 위한 식사법",
-    "excerpt": "경기 3시간 전부터 직전까지의 식단 구성과 수분 섭취 전략을 시간대별로 정리했습니다.",
-    "badge": "최신 글",
-    "category": "테니스 영양",
-    "date": "2026-03-21",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300"
-  },
-  {
-    "id": "tennis-core-strength-training",
-    "slug": "tennis-core-strength-training",
-    "tags": ["코어", "근력", "훈련"],
-    "title": "코어 근력 훈련: 테니스 파워의 원천",
-    "excerpt": "테니스에 필요한 코어 근육을 강화하는 10가지 운동과 주간 훈련 프로그램을 소개합니다.",
-    "badge": "최신 글",
-    "category": "테니스 훈련",
-    "date": "2026-03-21",
-    "readTime": "8분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300"
-  },
-  {
-    "id": "tennis-shoulder-mobility",
-    "slug": "tennis-shoulder-mobility",
-    "tags": ["어깨", "가동성", "부상 예방"],
-    "title": "어깨 가동성 운동: 서브 파워와 부상 예방",
-    "excerpt": "테니스 서브와 오버헤드에 필수적인 어깨 가동성을 높이는 스트레칭과 운동법입니다.",
-    "badge": "최신 글",
-    "category": "테니스 부상",
-    "date": "2026-03-22",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300"
-  },
-  {
-    "id": "tennis-ankle-stability",
-    "slug": "tennis-ankle-stability",
-    "tags": ["발목", "안정성", "풋워크"],
-    "title": "발목 안정성 훈련: 민첩한 풋워크의 기초",
-    "excerpt": "빠른 방향 전환에 필수적인 발목 안정성을 높이는 훈련법과 테이핑 요령을 알아봅니다.",
-    "badge": "최신 글",
-    "category": "테니스 풋워크",
-    "date": "2026-03-22",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300"
-  },
-  {
-    "id": "tennis-eye-tracking-training",
-    "slug": "tennis-eye-tracking-training",
-    "tags": ["시선", "추적", "훈련"],
-    "title": "시선 추적 훈련: 공을 끝까지 보는 기술",
-    "excerpt": "프로 선수들이 공을 추적하는 방법과 임팩트 순간까지 시선을 유지하는 훈련법을 다룹니다.",
-    "badge": "최신 글",
-    "category": "테니스 훈련",
-    "date": "2026-03-23",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300"
-  },
-  {
-    "id": "tennis-breathing-technique",
-    "slug": "tennis-breathing-technique",
-    "tags": ["호흡법", "멘탈"],
-    "title": "호흡법과 경기력: 숨쉬기로 퍼포먼스 올리기",
-    "excerpt": "스트로크 시 호흡 타이밍, 포인트 사이 호흡법, 긴장 해소를 위한 호흡 테크닉을 소개합니다.",
-    "badge": "최신 글",
-    "category": "테니스 멘탈",
-    "date": "2026-03-23",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "badgeColor": "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
   },
   {
-    "id": "tennis-self-talk-strategy",
-    "slug": "tennis-self-talk-strategy",
-    "tags": ["셀프토크", "멘탈"],
-    "title": "셀프토크 전략: 혼잣말로 경기력 높이기",
-    "excerpt": "경기 중 긍정적인 셀프토크가 집중력과 자신감에 미치는 효과와 실전 활용법을 정리했습니다.",
+    "id": "andrey-rublev",
+    "title": "안드레이 루블레프 — 불꽃 같은 포핸드, 절제된 규율",
+    "excerpt": "강력한 포핸드와 끊임없는 전진 의지로 랠리의 톤을 올리는 안드레이 루블레프의 성장, 스타일, 인간미와 과제를 한 편으로.",
     "badge": "최신 글",
-    "category": "테니스 멘탈",
-    "date": "2026-03-24",
-    "readTime": "7분",
-    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "category": "선수 프로필",
+    "date": "2025-09-07",
+    "readTime": "8분",
+    "badgeColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "andrey-rublev",
+    "tags": [
+      "선수 프로필"
+    ]
+  },
+  {
+    "id": "grigor-dimitrov",
+    "slug": "grigor-dimitrov",
+    "tags": [
+      "선수 프로필"
+    ],
+    "title": "그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌",
+    "excerpt": "원핸드 백핸드의 미학과 노련한 전술, 성숙한 멘탈로 커리어의 두 번째 절정을 만드는 그리고르 디미트로프의 성장, 스타일, 인간적 면모를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-08-27",
+    "readTime": "8분",
+    "badgeColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
   },
   {
-    "id": "tennis-match-journal-template",
-    "slug": "tennis-match-journal-template",
-    "tags": ["경기 일지", "분석"],
-    "title": "경기 일지 템플릿: 체계적인 경기 복기법",
-    "excerpt": "경기 후 복기를 위한 일지 작성법과 템플릿을 제공합니다. 기록이 실력 향상의 시작입니다.",
+    "id": "alexander-zverev",
+    "title": "알렉산더 즈베레프 — 균형과 리듬으로 구축한 장기전의 기술",
+    "excerpt": "길고 무거운 랠리에서 균형을 잃지 않는 알렉산더 즈베레프의 성장, 플레이 철학, 인간적인 면모와 라이벌 이야기를 한 편으로.",
     "badge": "최신 글",
-    "category": "테니스 훈련",
-    "date": "2026-03-24",
+    "category": "선수 프로필",
+    "date": "2025-08-23",
     "readTime": "8분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-    "categoryColor": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300"
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "alexander-zverev",
+    "tags": [
+      "선수 프로필"
+    ]
+  },
+  {
+    "id": "holger-rune",
+    "title": "홀거 루네 — 불꽃과 계산 사이의 대담함",
+    "excerpt": "공격적인 리턴과 예측 불가한 변주로 흐름을 흔드는 홀거 루네의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
+    "badge": "최신 글",
+    "category": "선수 프로필",
+    "date": "2025-08-11",
+    "readTime": "8분",
+    "badgeColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+    "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+    "slug": "holger-rune",
+    "tags": [
+      "선수 프로필",
+      "서브"
+    ]
   }
 ];
