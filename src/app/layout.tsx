@@ -7,6 +7,7 @@ import MobileNav from "@/components/layout/MobileNav";
 import { Toaster } from "@/components/ui/sonner";
 import Tracking from "@/components/Tracking";
 import AdSense from "@/components/AdSense";
+import GAProvider from "@/components/analytics/GAProvider";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import {
@@ -170,6 +171,7 @@ export default function RootLayout({
           </div>
         </div>
         <Toaster />
+        <GAProvider />
         <Tracking />
         <AdSense />
       </body>
