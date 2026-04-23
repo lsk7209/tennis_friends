@@ -3,6 +3,9 @@
 애드센스 심사 준비 — 유지보수 모드
 
 ## 최근 변경 (최근 5개)
+- 04-23: 전수조사 — UTF-8 손상 문자 73건 복원 (17개 블로그)
+  - scripts/fix-utf8-corruptions.js (2차 패스)
+  - "샷입니다", "수비적", "구사", "코트", "가이드라인" 등 컨텍스트 복원
 - 04-23: 5인팀 검토 기반 Tier1+2 일괄 보완 (43파일)
   - 블로그 25개 템플릿 치환 조사 오류 일괄 교정 (fix-template-particles.js)
   - /blog↔/players 선수 16명 canonical 이관 (fix-player-blog-canonicals.js)
