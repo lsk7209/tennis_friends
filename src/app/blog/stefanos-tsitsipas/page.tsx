@@ -9,12 +9,12 @@ export const metadata = {
   description: "긴 머리를 휘날리며 코트를 누비는 그리스의 신. 강력한 포핸드와 네트 플레이를 겸비한 치치파스의 스타일.",
   keywords: ["테니스","스테파노스 치치파스","Stefanos Tsitsipas","그리스","원핸드 백핸드"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/stefanos-tsitsipas',
+    canonical: 'https://tennisfrens.com/players/stefanos-tsitsipas',
   },
   openGraph: {
     title: "스테파노스 치치파스: 그리스 조각상의 테니스",
     description: "긴 머리를 휘날리며 코트를 누비는 그리스의 신. 강력한 포핸드와 네트 플레이를 겸비한 치치파스의 스타일.",
-    url: 'https://tennisfrens.com/blog/stefanos-tsitsipas',
+    url: 'https://tennisfrens.com/players/stefanos-tsitsipas',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

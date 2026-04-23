@@ -9,12 +9,12 @@ export const metadata = {
   description: "강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.",
   keywords: ["테니스","테일러 프리츠","Taylor Fritz","미국","하드 히터"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/taylor-fritz',
+    canonical: 'https://tennisfrens.com/players/taylor-fritz',
   },
   openGraph: {
     title: "테일러 프리츠: 미국 테니스의 자존심",
     description: "강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.",
-    url: 'https://tennisfrens.com/blog/taylor-fritz',
+    url: 'https://tennisfrens.com/players/taylor-fritz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

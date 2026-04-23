@@ -9,12 +9,12 @@ export const metadata = {
   description: "대학교 테니스에서 혜성처럼 등장한 왼손잡이 거포. 벤 쉘튼의 폭발적인 서브와 다이내믹한 플레이 스타일.",
   keywords: ["테니스","벤 쉘튼","Ben Shelton","서브","미국"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/ben-shelton',
+    canonical: 'https://tennisfrens.com/players/ben-shelton',
   },
   openGraph: {
     title: "벤 쉘튼: 미국의 새로운 서브 킹",
     description: "대학교 테니스에서 혜성처럼 등장한 왼손잡이 거포. 벤 쉘튼의 폭발적인 서브와 다이내믹한 플레이 스타일.",
-    url: 'https://tennisfrens.com/blog/ben-shelton',
+    url: 'https://tennisfrens.com/players/ben-shelton',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

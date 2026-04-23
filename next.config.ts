@@ -61,6 +61,19 @@ const nextConfig: NextConfig = {
   // 압축
   compress: true,
 
+  // URL 정규화 리다이렉트
+  async redirects() {
+    return [
+      // GSC 데이터 기준 올바른 철자 "Rinderknech" 로 들어오는 트래픽을
+      // 기존 색인된 URL(arthur-landercknech)로 이관
+      {
+        source: "/players/arthur-rinderknech",
+        destination: "/players/arthur-landercknech",
+        permanent: true,
+      },
+    ];
+  },
+
   // 보안 헤더
   async headers() {
     return [

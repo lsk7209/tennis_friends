@@ -9,12 +9,12 @@ export const metadata = {
   description: "코트 위를 무대로 만드는 쇼맨십. 미국 테니스의 희망 프란시스 티아포의 에너지 넘치는 플레이와 인생 스토리.",
   keywords: ["테니스","프란시스 티아포","Frances Tiafoe","쇼맨십","미국"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/frances-tiafoe',
+    canonical: 'https://tennisfrens.com/players/frances-tiafoe',
   },
   openGraph: {
     title: "프란시스 티아포: 흥이 넘치는 빅 포(Big Foe)",
     description: "코트 위를 무대로 만드는 쇼맨십. 미국 테니스의 희망 프란시스 티아포의 에너지 넘치는 플레이와 인생 스토리.",
-    url: 'https://tennisfrens.com/blog/frances-tiafoe',
+    url: 'https://tennisfrens.com/players/frances-tiafoe',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

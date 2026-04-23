@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { SITE_AUTHOR, SITE_AUTHOR_BIO, SITE_AUTHOR_URL } from "@/lib/site";
 
 interface AuthorBylineProps {
   author?: string;
@@ -10,9 +11,9 @@ interface AuthorBylineProps {
 }
 
 const AuthorByline: React.FC<AuthorBylineProps> = ({
-  author = "TennisFriends 편집팀",
-  authorHref = "/about",
-  bio = "테니스 실력 향상과 경기력 분석 자료를 정리하는 편집팀입니다.",
+  author = SITE_AUTHOR,
+  authorHref = SITE_AUTHOR_URL,
+  bio = SITE_AUTHOR_BIO,
   publishedAt,
   updatedAt,
 }) => {

@@ -10,9 +10,15 @@
  */
 
 // GA4 Measurement ID
-// 환경변수 미설정 시 기본값 사용. Vercel 환경변수로 override 가능.
+// 프로덕션에서만 기본값 사용. 로컬/프리뷰 빌드는 환경변수 필수.
+// 이렇게 해야 프리뷰·포크·로컬 실수 트래픽이 프로덕션 속성에 오염되지 않음.
+const PROD_GA_MEASUREMENT_ID = "G-W1K51D8SBX";
 export const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-W1K51D8SBX";
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
+  (process.env.NODE_ENV === "production" &&
+  process.env.VERCEL_ENV === "production"
+    ? PROD_GA_MEASUREMENT_ID
+    : "");
 
 export const isGAEnabled = (): boolean =>
   typeof window !== "undefined" &&
@@ -30,8 +36,10 @@ export function trackEvent(eventName: string, params: GtagParams = {}): void {
   if (!isGAEnabled()) return;
   try {
     window.gtag("event", eventName, params);
-  } catch {
-    // 트래킹 실패는 조용히 무시
+  } catch (e) {
+    if (process.env.NODE_ENV === "development") {
+      console.warn("[analytics] trackEvent failed", eventName, e);
+    }
   }
 }
 
@@ -63,14 +71,11 @@ export const TRACKING_EVENTS = {
   PLAYER_PROFILE_VIEWED: "player_profile_viewed",
 } as const;
 
-// 전역 gtag 타입 선언
+// 전역 gtag 타입 선언 (GA4 공식 시그니처 포괄)
+// gtag('js', new Date()) / gtag('config', id, params) / gtag('event', name, params) 등 모두 지원
 declare global {
   interface Window {
-    gtag: (
-      command: "config" | "event" | "set" | "consent",
-      targetId: string,
-      params?: GtagParams,
-    ) => void;
+    gtag: (...args: unknown[]) => void;
     dataLayer: unknown[];
   }
 }

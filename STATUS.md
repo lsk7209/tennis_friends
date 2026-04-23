@@ -3,14 +3,16 @@
 애드센스 심사 준비 — 유지보수 모드
 
 ## 최근 변경 (최근 5개)
+- 04-23: 5인팀 검토 기반 Tier1+2 일괄 보완 (43파일)
+  - 블로그 25개 템플릿 치환 조사 오류 일괄 교정 (fix-template-particles.js)
+  - /blog↔/players 선수 16명 canonical 이관 (fix-player-blog-canonicals.js)
+  - arthur-rinderknech → arthur-landercknech 301 리다이렉트
+  - GA4 ID fallback 프로덕션 한정(프리뷰 오염 방지), gtag 타입 시그니처 확장
+  - AuthorByline이 SITE_AUTHOR 상수 참조(Single Source of Truth)
+  - AdSense·GTM preconnect 추가, YmylDisclaimer 컴포넌트 신규
+  - 미사용 BlogPost.tsx 삭제
 - 04-23: GA4 공식 통합 (`G-W1K51D8SBX`)
-  - GAProvider + lib/analytics.ts (trackEvent 유틸)
-  - layout.tsx 통합 (AdSense/Tracking과 공존)
-  - 테스트 완료 이벤트 자동 전송 (AdSense 전환 신호)
-- 04-23: 애드센스 최적화 7건 (빌드 성공)
-  - public/ads.txt + Contact 가짜정보 제거 + About 허위통계 제거
-  - Privacy Google AdSense·DART 쿠키 조항 신설
-  - BlogPost 정리, AuthorByline 추가, Footer disclaimer + 연도 동적화
+- 04-23: 애드센스 최적화 7건 (ads.txt, Contact·About 허위정보 제거, Privacy 쿠키조항 등)
 - 04-22: scripts 정리 — 일회성 스크립트 삭제
 - 04-22: GSC 기반 콘텐츠 갭 개선 (야닉 한프만 신규 + Arthur Rinderknech 재작성)
 - 04-22: 사이트 전체 최적화 (성능·보안·SEO·AEO/GEO 5인팀 작업)
