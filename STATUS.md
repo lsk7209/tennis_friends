@@ -3,6 +3,11 @@
 애드센스 심사 준비 — 유지보수 모드
 
 ## 최근 변경 (최근 5개)
+- 04-23: YMYL disclaimer 12개 블로그 일괄 적용 + BlogPostSchema inLanguage 추가
+  - Article 컴포넌트에 ymylTopic prop 추가 → 4개 자동 적용
+  - 8개는 </h1> 뒤에 YmylDisclaimer 직접 주입 (inject-ymyl-inline.js)
+  - medical/nutrition/fitness 3개 주제 분류로 맥락별 disclaimer 표시
+  - BlogPostSchema에 `inLanguage: ko-KR`, `isAccessibleForFree: true` 추가
 - 04-23: 전수조사 — UTF-8 손상 문자 73건 복원 (17개 블로그)
   - scripts/fix-utf8-corruptions.js (2차 패스)
   - "샷입니다", "수비적", "구사", "코트", "가이드라인" 등 컨텍스트 복원

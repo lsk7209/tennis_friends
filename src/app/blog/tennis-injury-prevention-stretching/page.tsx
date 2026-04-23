@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getSiteUrl } from '@/lib/site';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import YmylDisclaimer from "@/components/YmylDisclaimer";
 
 export const metadata: Metadata = {
   title: '테니스 부상 예방 스트레칭 — 어깨·팔꿈치·무릎 보호 | TennisFriends',
@@ -22,6 +23,7 @@ export default function Page() {
       ]} />
       <article className="container mx-auto max-w-3xl px-4 py-12">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">테니스 부상 예방 스트레칭 — 어깨·팔꿈치·무릎 보호</h1>
+        <YmylDisclaimer topic="medical" />
         <div
           className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{

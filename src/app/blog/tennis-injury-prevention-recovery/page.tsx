@@ -67,7 +67,8 @@ export default function TennisInjuryPreventionRecoveryPage() {
   const excerpt = '부상은 실력이 아니라 루틴의 문제다. 어깨·무릎·손목을 지키는 습관만 만들어도 경기력은 2배로 오래간다.';
 
   return (
-    <Article slug="tennis-injury-prevention-recovery" date="2024-01-01" title={title} excerpt={excerpt}>
+    <Article ymylTopic="medical"
+      slug="tennis-injury-prevention-recovery" date="2024-01-01" title={title} excerpt={excerpt}>
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 p-6 rounded-lg mb-8">
         <div className="flex items-center gap-2 mb-3">
           <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">

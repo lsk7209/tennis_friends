@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import YmylDisclaimer from "@/components/YmylDisclaimer";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
 
@@ -88,6 +89,7 @@ export default function Page() {
       <article className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Conditioning</p>
         <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">추운 날 경기 운영 가이드</h1>
+        <YmylDisclaimer topic="medical" />
         <p className="mb-6 text-base leading-7 text-gray-600 dark:text-gray-300">낮은 기온에서도 몸을 보호하고 타이밍을 유지하는 실전 운영법을 소개합니다.</p>
 
         <div className="mb-8 rounded-2xl bg-emerald-50 p-6 dark:bg-emerald-950/30">

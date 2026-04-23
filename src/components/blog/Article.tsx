@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import BlogPostSchema from "@/components/seo/BlogPostSchema";
+import YmylDisclaimer from "@/components/YmylDisclaimer";
 
 interface ArticleProps {
   title: string;
@@ -10,26 +11,29 @@ interface ArticleProps {
   slug?: string;
   category?: string;
   readingTime?: string;
+  /** YMYL 주제면 topic 지정. 글 상단에 전문가 상담 권장 disclaimer 자동 노출. */
+  ymylTopic?: "medical" | "nutrition" | "fitness";
   children: ReactNode;
 }
 
-export default function Article({ 
-  title, 
-  excerpt, 
-  date, 
-  author = "TennisFriends", 
-  image, 
-  slug, 
+export default function Article({
+  title,
+  excerpt,
+  date,
+  author = "TennisFriends",
+  image,
+  slug,
   category,
   readingTime,
-  children 
+  ymylTopic,
+  children,
 }: ArticleProps) {
   return (
     <article className="prose prose-lg dark:prose-invert max-w-[1380px] mx-auto px-4 sm:px-6 py-8">
       {slug && date && (
         <BlogPostSchema
           title={title}
-          description={excerpt || ''}
+          description={excerpt || ""}
           slug={slug}
           date={date}
           author={author}
@@ -39,9 +43,19 @@ export default function Article({
         />
       )}
       <header className="mb-10 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 !leading-tight">{title}</h1>
-        {excerpt ? <p className="text-xl text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{excerpt}</p> : null}
-        {date && <time className="block text-sm text-gray-500" dateTime={date}>{date}</time>}
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 !leading-tight">
+          {title}
+        </h1>
+        {excerpt ? (
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+            {excerpt}
+          </p>
+        ) : null}
+        {date && (
+          <time className="block text-sm text-gray-500" dateTime={date}>
+            {date}
+          </time>
+        )}
         {image && (
           <div className="relative w-full h-[400px] md:h-[500px] mt-8 mb-12 rounded-2xl overflow-hidden shadow-2xl">
             <img
@@ -52,10 +66,8 @@ export default function Article({
           </div>
         )}
       </header>
-      <div className="max-w-none">
-        {children}
-      </div>
+      {ymylTopic && <YmylDisclaimer topic={ymylTopic} />}
+      <div className="max-w-none">{children}</div>
     </article>
   );
 }
-

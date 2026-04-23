@@ -1,4 +1,4 @@
-import JsonLd from '@/components/JsonLd';
+import JsonLd from "@/components/JsonLd";
 
 interface BlogPostSchemaProps {
   title: string;
@@ -16,36 +16,38 @@ export default function BlogPostSchema({
   description,
   slug,
   date,
-  author = 'TennisFriends',
+  author = "TennisFriends",
   image,
-  category = '테니스',
+  category = "테니스",
   readingTime,
 }: BlogPostSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
   const url = `${siteUrl}/blog/${slug}`;
   const imageUrl = image
-    ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
+    ? image.startsWith("http")
+      ? image
+      : `${siteUrl}${image}`
     : `${siteUrl}/opengraph-image`;
 
   // 블로그 포스트 구조화된 데이터
   const blogPostSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
     headline: title,
     description: description,
     image: imageUrl,
     datePublished: date,
     dateModified: date,
     author: {
-      '@type': 'Person',
+      "@type": "Person",
       name: author,
       url: siteUrl,
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'TennisFriends',
+      "@type": "Organization",
+      name: "TennisFriends",
       logo: {
-        '@type': 'ImageObject',
+        "@type": "ImageObject",
         url: `${siteUrl}/logo.png`,
         width: 512,
         height: 512,
@@ -53,29 +55,32 @@ export default function BlogPostSchema({
       url: siteUrl,
     },
     mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': url,
+      "@type": "WebPage",
+      "@id": url,
     },
     articleSection: category,
-    keywords: [category, '테니스', '스포츠'],
-    ...(readingTime && { timeRequired: `PT${readingTime.replace('분', 'M')}` }),
+    keywords: [category, "테니스", "스포츠"],
+    inLanguage: "ko-KR",
+    isAccessibleForFree: true,
+    ...(readingTime && { timeRequired: `PT${readingTime.replace("분", "M")}` }),
   };
 
   // Organization 스키마 (사이트 전체)
   const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'TennisFriends',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "TennisFriends",
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
-    description: '데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상을 위한 모든 것을 제공합니다.',
+    description:
+      "데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상을 위한 모든 것을 제공합니다.",
     sameAs: [
       // 소셜 미디어 링크가 있다면 추가
     ],
     contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      email: 'contact@tennisfrens.com',
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email: "contact@tennisfrens.com",
     },
   };
 
@@ -83,15 +88,15 @@ export default function BlogPostSchema({
   // title이 유효한 경우에만 마지막 항목 추가
   const breadcrumbItems = [
     {
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: 1,
-      name: '홈',
+      name: "홈",
       item: siteUrl,
     },
     {
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: 2,
-      name: '블로그',
+      name: "블로그",
       item: `${siteUrl}/blog`,
     },
   ];
@@ -100,7 +105,7 @@ export default function BlogPostSchema({
   const validTitle = title?.trim();
   if (validTitle && validTitle.length > 0) {
     breadcrumbItems.push({
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: 3,
       name: validTitle,
       item: url,
@@ -108,21 +113,16 @@ export default function BlogPostSchema({
   }
 
   const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: breadcrumbItems,
   };
 
   // 통합 스키마 (네이버/다음 최적화)
   const combinedSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      organizationSchema,
-      blogPostSchema,
-      breadcrumbSchema,
-    ],
+    "@context": "https://schema.org",
+    "@graph": [organizationSchema, blogPostSchema, breadcrumbSchema],
   };
 
   return <JsonLd data={combinedSchema} />;
 }
-

@@ -56,7 +56,8 @@ export default function TennisPostExerciseNutritionPage() {
     const excerpt = '스윙만큼 중요한 것이 먹는 것입니다. 테니스 코트에서 소진된 에너지를 어떻게 채우느냐가 내일의 경기력을 결정합니다.';
 
     return (
-        <Article slug="tennis-post-exercise-nutrition" date="2024-01-01" title={title} excerpt={excerpt}>
+        <Article ymylTopic="nutrition"
+      slug="tennis-post-exercise-nutrition" date="2024-01-01" title={title} excerpt={excerpt}>
             <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 p-6 rounded-lg mb-8 text-center text-sm">
                 <div className="flex justify-center gap-2 mb-3">
                     <Badge className="bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">스포츠 영양</Badge>

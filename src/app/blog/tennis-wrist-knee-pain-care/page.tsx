@@ -91,7 +91,8 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-wrist-knee-pain-care" date="2026-01-24" title="테니스 엘보 외의 부상: 손목 및 무릎 통증 관리" excerpt="TFCC 손상부터 슬개건염까지. 테니스 동호인을 괴롭히는 손목과 무릎 통증의 원인과 예방 스트레칭.">
+      <Article ymylTopic="medical"
+      slug="tennis-wrist-knee-pain-care" date="2026-01-24" title="테니스 엘보 외의 부상: 손목 및 무릎 통증 관리" excerpt="TFCC 손상부터 슬개건염까지. 테니스 동호인을 괴롭히는 손목과 무릎 통증의 원인과 예방 스트레칭.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">
