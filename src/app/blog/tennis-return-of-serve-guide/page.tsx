@@ -1,27 +1,42 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getSiteUrl } from "@/lib/site";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: '서브 리턴 완전 가이드 — 위치·타이밍·전술 | TennisFriends',
-  description: '서브 리턴 완전 가이드 — 위치·타이밍·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["리턴","서브 리턴","테니스 전술","리턴 포지션"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-return-of-serve-guide` },
-  openGraph: { title: '서브 리턴 완전 가이드 — 위치·타이밍·전술', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title: "서브 리턴 완전 가이드 — 위치·타이밍·전술 | TennisFriends",
+  description:
+    "서브 리턴 완전 가이드 — 위치·타이밍·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
+  keywords: ["리턴", "서브 리턴", "테니스 전술", "리턴 포지션"],
+  alternates: {
+    canonical: `${getSiteUrl()}/blog/serve-return-prediction-guide`,
+  },
+  openGraph: {
+    title: "서브 리턴 완전 가이드 — 위치·타이밍·전술",
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+  },
 };
 
 export default function Page() {
   const siteUrl = getSiteUrl();
   return (
     <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '서브 리턴 완전 가이드 — 위치·타이밍·전술', item: `${siteUrl}/blog/tennis-return-of-serve-guide` },
-      ]} />
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          {
+            name: "서브 리턴 완전 가이드 — 위치·타이밍·전술",
+            item: `${siteUrl}/blog/tennis-return-of-serve-guide`,
+          },
+        ]}
+      />
       <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">서브 리턴 완전 가이드 — 위치·타이밍·전술</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          서브 리턴 완전 가이드 — 위치·타이밍·전술
+        </h1>
         <div
           className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{
@@ -93,7 +108,9 @@ export default function Page() {
           }}
         />
         <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
+          <p className="font-semibold text-blue-900 mb-2">
+            내 테니스 실력 측정하기
+          </p>
           <Link href="/utility/ntrp-test" className="text-blue-600 underline">
             무료 NTRP 실력 테스트 →
           </Link>

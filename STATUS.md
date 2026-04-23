@@ -3,6 +3,11 @@
 애드센스 심사 준비 — 유지보수 모드
 
 ## 최근 변경 (최근 5개)
+- 04-23: 중복 canonical 이관 + 유틸 63개 전수 SEO 보강 (64파일)
+  - /blog/tennis-drop-shot-timing → canonical: /tennis-drop-shot-mastery
+  - /blog/tennis-return-of-serve-guide → canonical: /serve-return-prediction-guide
+  - 유틸 63개 canonical 누락 전수 수정 (28개 layout 신규 + 33개 alternates 주입)
+  - Players 59개 전수 감사: 전부 통과(metadata, canonical, content, schema)
 - 04-23: Scaled FAQ 제거 + DB 동기화 + 성능 개선 (35파일)
   - 30개 블로그 중복 FAQ 템플릿 제거 (scaled abuse 신호 해소)
   - blog-posts.js 고아 30건 제거 + 누락 5건 추가 (117 = 실제 디렉토리와 매치)
