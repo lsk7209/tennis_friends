@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-second-serve-strategy",
+    "slug": "tennis-second-serve-strategy",
+    "tags": ["세컨드서브","서브","킥서브","안정성","더블폴트 방지"],
+    "title": "세컨드 서브 전략 — 안정성과 파워의 균형 찾기",
+    "excerpt": "세컨드 서브 전략 — 안정성과 파워의 균형 찾기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-04-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-forehand-inside-out",
+    "slug": "tennis-forehand-inside-out",
+    "tags": ["인사이드아웃","포핸드","테니스 기술","크로스코트","다운더라인"],
+    "title": "인사이드아웃 포핸드 완전 정복 — 코스·파워·전술",
+    "excerpt": "인사이드아웃 포핸드 완전 정복 — 코스·파워·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-04-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-clay-court-tactics",
     "slug": "tennis-clay-court-tactics",
     "tags": [
