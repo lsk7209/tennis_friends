@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-one-handed-backhand-guide",
+    "slug": "tennis-one-handed-backhand-guide",
+    "tags": ["한손백핸드","백핸드","원핸드","테니스 기술","클래식 백핸드"],
+    "title": "한손 백핸드 완전 마스터 — 그립·스윙·장단점",
+    "excerpt": "한손 백핸드 완전 마스터 — 그립·스윙·장단점에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-04-24",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-hard-court-tactics",
+    "slug": "tennis-hard-court-tactics",
+    "tags": ["하드코트","테니스 전술","코트별 전략","바운드","포지셔닝"],
+    "title": "하드 코트 전술 완전 가이드 — 바운드·포지셔닝·템포",
+    "excerpt": "하드 코트 전술 완전 가이드 — 바운드·포지셔닝·템포에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-04-24",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-korean-ntrp-mapping-guide",
     "slug": "tennis-korean-ntrp-mapping-guide",
     "tags": [
