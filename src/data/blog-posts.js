@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-ranking-improvement-plan",
+    "slug": "tennis-ranking-improvement-plan",
+    "tags": ["테니스 랭킹","토너먼트","포인트","실력 향상","대회 전략"],
+    "title": "테니스 랭킹 올리기 — 토너먼트 선택과 포인트 전략",
+    "excerpt": "테니스 랭킹 올리기 — 토너먼트 선택과 포인트 전략에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전략 가이드",
+    "date": "2026-04-25",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-match-nerves-control",
+    "slug": "tennis-match-nerves-control",
+    "tags": ["멘탈","경기 긴장","루틴","호흡법","테니스 심리"],
+    "title": "테니스 경기 긴장감 컨트롤 — 루틴·호흡·집중력",
+    "excerpt": "테니스 경기 긴장감 컨트롤 — 루틴·호흡·집중력에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "멘탈 트레이닝",
+    "date": "2026-04-25",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-one-handed-backhand-guide",
     "slug": "tennis-one-handed-backhand-guide",
     "tags": ["한손백핸드","백핸드","원핸드","테니스 기술","클래식 백핸드"],
