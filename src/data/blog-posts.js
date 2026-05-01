@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-footwork-training",
+    "slug": "tennis-footwork-training",
+    "tags": ["풋워크","훈련","사이드스텝","테니스 체력"],
+    "title": "테니스 풋워크 훈련 — 사이드스텝·크로스스텝·리커버리",
+    "excerpt": "테니스 풋워크 훈련 — 사이드스텝·크로스스텝·리커버리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-05-01",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-split-step-guide",
+    "slug": "tennis-split-step-guide",
+    "tags": ["스플릿스텝","풋워크","테니스 기술","반응속도"],
+    "title": "스플릿 스텝 완전 정복 — 타이밍·리듬·발 위치",
+    "excerpt": "스플릿 스텝 완전 정복 — 타이밍·리듬·발 위치에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-01",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-ranking-improvement-plan",
     "slug": "tennis-ranking-improvement-plan",
     "tags": ["테니스 랭킹","토너먼트","포인트","실력 향상","대회 전략"],
