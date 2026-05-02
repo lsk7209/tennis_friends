@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-ace-serve-placement",
+    "slug": "tennis-ace-serve-placement",
+    "tags": ["에이스","서브 코스","테니스 서브","서브 전략"],
+    "title": "에이스 서브 코스 공략 — T존·와이드·보디 서브",
+    "excerpt": "에이스 서브 코스 공략 — T존·와이드·보디 서브에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-02",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-serve-toss-technique",
+    "slug": "tennis-serve-toss-technique",
+    "tags": ["서브 토스","서브","테니스 기술","서브 연습"],
+    "title": "서브 토스 완벽하게 — 높이·위치·일관성 잡기",
+    "excerpt": "서브 토스 완벽하게 — 높이·위치·일관성 잡기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-02",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-footwork-training",
     "slug": "tennis-footwork-training",
     "tags": ["풋워크","훈련","사이드스텝","테니스 체력"],
