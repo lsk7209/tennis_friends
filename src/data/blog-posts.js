@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-doubles-receive-formation",
+    "slug": "tennis-doubles-receive-formation",
+    "tags": ["복식 리시브","포메이션","복식 전술","리시브"],
+    "title": "복식 리시브 포메이션 — I포메이션·호주 포메이션",
+    "excerpt": "복식 리시브 포메이션 — I포메이션·호주 포메이션에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "복식 전략",
+    "date": "2026-05-03",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-doubles-poach-strategy",
+    "slug": "tennis-doubles-poach-strategy",
+    "tags": ["포치","복식","네트 플레이","복식 전술"],
+    "title": "복식 포치 전략 완전 가이드 — 타이밍·시그널·포지션",
+    "excerpt": "복식 포치 전략 완전 가이드 — 타이밍·시그널·포지션에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "복식 전략",
+    "date": "2026-05-03",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-ace-serve-placement",
     "slug": "tennis-ace-serve-placement",
     "tags": ["에이스","서브 코스","테니스 서브","서브 전략"],
