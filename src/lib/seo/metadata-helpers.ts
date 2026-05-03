@@ -37,6 +37,7 @@ export interface PageMetadataOptions {
   tags?: string[];
   image?: string;
   noindex?: boolean;
+  alternates?: Metadata["alternates"];
 }
 
 export function generatePageMetadata({
@@ -50,6 +51,7 @@ export function generatePageMetadata({
   tags = [],
   image,
   noindex = false,
+  alternates,
 }: PageMetadataOptions): Metadata {
   const fullTitle = generateTitle(title);
   const canonical = getCanonicalUrl(path);
@@ -68,6 +70,7 @@ export function generatePageMetadata({
     publisher: SITE_NAME,
     metadataBase: new URL(siteUrl),
     alternates: {
+      ...alternates,
       canonical,
     },
     openGraph: {

@@ -67,7 +67,7 @@ const content = {
     "연속 성공 횟수를 확인할 기록 기준을 정했다.",
     "마지막 10분은 점수 조건을 걸고 실전 전환까지 확인했다."
   ],
-  "faq": [],
+  "faq": [] as Array<{ question: string; answer: string }>,
   "nextAction": "다음 세션에서는 포핸드·백핸드·전환 루틴을 20분만 실행하고, 끝난 뒤 연속 성공 횟수 하나만 기록해 보세요.",
   "utility": "/utility/practice-wall-drill-planner",
   "utilityLabel": "벽치기 드릴 플래너"
@@ -137,7 +137,7 @@ export default function Page() {
             ))}
           </div>
         </section>
-
+        )}
         <div className="mt-10 rounded-2xl bg-emerald-50 p-5 dark:bg-emerald-950/30">
           <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">다음 액션</h2>
           <p className="mb-4 text-sm leading-6 text-gray-700 dark:text-gray-300">{content.nextAction}</p>

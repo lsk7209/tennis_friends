@@ -67,7 +67,7 @@ const content = {
     "3구 내 주도권 유지율을 확인할 기록 기준을 정했다.",
     "마지막 10분은 점수 조건을 걸고 실전 전환까지 확인했다."
   ],
-  "faq": [],
+  "faq": [] as Array<{ question: string; answer: string }>,
   "nextAction": "다음 세션에서는 코스별 다음 볼 루틴을 20분만 실행하고, 끝난 뒤 3구 내 주도권 유지율 하나만 기록해 보세요.",
   "utility": "/utility/serve-placement-mapper",
   "utilityLabel": "서브 코스 매퍼"
@@ -137,7 +137,7 @@ export default function Page() {
             ))}
           </div>
         </section>
-
+        )}
         <div className="mt-10 rounded-2xl bg-emerald-50 p-5 dark:bg-emerald-950/30">
           <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">다음 액션</h2>
           <p className="mb-4 text-sm leading-6 text-gray-700 dark:text-gray-300">{content.nextAction}</p>

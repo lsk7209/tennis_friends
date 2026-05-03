@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
 import { Toaster } from "@/components/ui/sonner";
+import CacheReset from "@/components/CacheReset";
 import Tracking from "@/components/Tracking";
 import AdSense from "@/components/AdSense";
 import GAProvider from "@/components/analytics/GAProvider";
@@ -21,6 +22,23 @@ import {
   getAbsoluteUrl,
   getSiteUrl,
 } from "@/lib/site";
+
+const PROD_GA_MEASUREMENT_ID = "G-W1K51D8SBX";
+
+function getGaMeasurementId(): string {
+  if (process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) {
+    return process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  }
+
+  if (
+    process.env.NODE_ENV === "production" &&
+    process.env.VERCEL_ENV === "production"
+  ) {
+    return PROD_GA_MEASUREMENT_ID;
+  }
+
+  return "";
+}
 
 const inter = Inter({
   subsets: ["latin"],
@@ -136,6 +154,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaMeasurementId = getGaMeasurementId();
+
   return (
     <html lang="ko" className={inter.variable}>
       <head>
@@ -176,7 +196,8 @@ export default function RootLayout({
           </div>
         </div>
         <Toaster />
-        <GAProvider />
+        <CacheReset />
+        <GAProvider measurementId={gaMeasurementId} />
         <Tracking />
         <AdSense />
       </body>

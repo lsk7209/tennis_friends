@@ -12,18 +12,8 @@
 // GA4 Measurement ID
 // 프로덕션에서만 기본값 사용. 로컬/프리뷰 빌드는 환경변수 필수.
 // 이렇게 해야 프리뷰·포크·로컬 실수 트래픽이 프로덕션 속성에 오염되지 않음.
-const PROD_GA_MEASUREMENT_ID = "G-W1K51D8SBX";
-export const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
-  (process.env.NODE_ENV === "production" &&
-  process.env.VERCEL_ENV === "production"
-    ? PROD_GA_MEASUREMENT_ID
-    : "");
-
 export const isGAEnabled = (): boolean =>
-  typeof window !== "undefined" &&
-  GA_MEASUREMENT_ID.startsWith("G-") &&
-  typeof window.gtag === "function";
+  typeof window !== "undefined" && typeof window.gtag === "function";
 
 type GtagParams = Record<string, string | number | boolean | null | undefined>;
 
@@ -46,10 +36,10 @@ export function trackEvent(eventName: string, params: GtagParams = {}): void {
 /**
  * 페이지뷰 수동 전송 (SPA 전환 시 사용)
  */
-export function trackPageView(url: string): void {
+export function trackPageView(url: string, measurementId: string): void {
   if (!isGAEnabled()) return;
   try {
-    window.gtag("config", GA_MEASUREMENT_ID, {
+    window.gtag("config", measurementId, {
       page_path: url,
     });
   } catch {

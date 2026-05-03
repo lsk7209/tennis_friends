@@ -67,7 +67,7 @@ const content = {
     "리뷰 후 실제 반영률을 확인할 기록 기준을 정했다.",
     "마지막 10분은 점수 조건을 걸고 실전 전환까지 확인했다."
   ],
-  "faq": [],
+  "faq": [] as Array<{ question: string; answer: string }>,
   "nextAction": "다음 세션에서는 서브·리턴·중립·압박 구간 복기을 20분만 실행하고, 끝난 뒤 리뷰 후 실제 반영률 하나만 기록해 보세요.",
   "utility": "/utility/match-video-review-template",
   "utilityLabel": "경기 영상 리뷰 템플릿"
@@ -137,7 +137,7 @@ export default function Page() {
             ))}
           </div>
         </section>
-
+        )}
         <div className="mt-10 rounded-2xl bg-emerald-50 p-5 dark:bg-emerald-950/30">
           <h2 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">다음 액션</h2>
           <p className="mb-4 text-sm leading-6 text-gray-700 dark:text-gray-300">{content.nextAction}</p>
