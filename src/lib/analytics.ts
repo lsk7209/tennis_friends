@@ -39,10 +39,11 @@ export function trackEvent(eventName: string, params: GtagParams = {}): void {
 export function trackPageView(url: string, measurementId: string): void {
   if (!isGAEnabled()) return;
   try {
-    window.gtag("config", measurementId, {
+    window.gtag("event", "page_view", {
       page_path: url,
       page_location: window.location.href,
       page_title: document.title,
+      send_to: measurementId,
     });
   } catch {
     // noop
