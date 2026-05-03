@@ -1363,7 +1363,7 @@ export const allBlogPosts = [
     "excerpt": "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
     "badge": "인기 글",
     "category": "선수 프로필",
-    "date": "2025-11-01",
+    "date": "2026-05-03",
     "readTime": "10분",
     "badgeColor": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
