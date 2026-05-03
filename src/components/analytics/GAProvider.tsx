@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { trackPageView } from "@/lib/analytics";
 
 /**
@@ -17,12 +17,13 @@ type GAProviderProps = {
 
 export default function GAProvider({ measurementId = "" }: GAProviderProps) {
   const pathname = usePathname();
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    if (!measurementId || !pathname) return;
+    if (!isReady || !measurementId || !pathname) return;
     if (pathname.startsWith("/admin")) return;
     trackPageView(pathname, measurementId);
-  }, [measurementId, pathname]);
+  }, [isReady, measurementId, pathname]);
 
   // 환경변수 없거나 관리자 페이지면 스크립트 자체를 로드하지 않음
   if (!measurementId) return null;
@@ -34,7 +35,11 @@ export default function GAProvider({ measurementId = "" }: GAProviderProps) {
         src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
         strategy="afterInteractive"
       />
-      <Script id="ga4-init" strategy="afterInteractive">
+      <Script
+        id="ga4-init"
+        strategy="afterInteractive"
+        onReady={() => setIsReady(true)}
+      >
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

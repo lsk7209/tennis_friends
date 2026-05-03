@@ -41,6 +41,8 @@ export function trackPageView(url: string, measurementId: string): void {
   try {
     window.gtag("config", measurementId, {
       page_path: url,
+      page_location: window.location.href,
+      page_title: document.title,
     });
   } catch {
     // noop
