@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-shoulder-strengthening",
+    "slug": "tennis-shoulder-strengthening",
+    "tags": ["어깨 운동","로테이터 커프","부상 예방","테니스 어깨"],
+    "title": "테니스 어깨 강화 운동 — 로테이터 커프·부상 예방",
+    "excerpt": "테니스 어깨 강화 운동 — 로테이터 커프·부상 예방에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "부상 예방",
+    "date": "2026-05-04",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-core-exercise-guide",
+    "slug": "tennis-core-exercise-guide",
+    "tags": ["코어 운동","테니스 체력","근력","회전력"],
+    "title": "테니스를 위한 코어 운동 — 회전력·안정성·파워",
+    "excerpt": "테니스를 위한 코어 운동 — 회전력·안정성·파워에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-05-04",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-doubles-receive-formation",
     "slug": "tennis-doubles-receive-formation",
     "tags": ["복식 리시브","포메이션","복식 전술","리시브"],
