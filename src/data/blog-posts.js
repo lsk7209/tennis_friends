@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-hydration-guide",
+    "slug": "tennis-hydration-guide",
+    "tags": ["수분 보충","테니스 건강","전해질","경기 컨디션"],
+    "title": "테니스 수분 보충 완전 가이드 — 경기 전·중·후",
+    "excerpt": "테니스 수분 보충 완전 가이드 — 경기 전·중·후에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "건강 가이드",
+    "date": "2026-05-05",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-nutrition-diet-guide",
+    "slug": "tennis-nutrition-diet-guide",
+    "tags": ["테니스 식단","영양","탄수화물","단백질","경기 전 식사"],
+    "title": "테니스 선수를 위한 영양 식단 가이드",
+    "excerpt": "테니스 선수를 위한 영양 식단 가이드에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "건강 가이드",
+    "date": "2026-05-05",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-shoulder-strengthening",
     "slug": "tennis-shoulder-strengthening",
     "tags": ["어깨 운동","로테이터 커프","부상 예방","테니스 어깨"],
