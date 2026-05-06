@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-post-match-recovery",
+    "slug": "tennis-post-match-recovery",
+    "tags": ["회복","쿨다운","아이싱","테니스 회복"],
+    "title": "경기 후 회복 루틴 — 쿨다운·아이싱·수면",
+    "excerpt": "경기 후 회복 루틴 — 쿨다운·아이싱·수면에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "건강 가이드",
+    "date": "2026-05-06",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-pre-match-routine",
+    "slug": "tennis-pre-match-routine",
+    "tags": ["경기 전 루틴","워밍업","멘탈 준비","테니스 루틴"],
+    "title": "경기 전 루틴 완전 가이드 — 워밍업·멘탈 준비",
+    "excerpt": "경기 전 루틴 완전 가이드 — 워밍업·멘탈 준비에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "멘탈 트레이닝",
+    "date": "2026-05-06",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-hydration-guide",
     "slug": "tennis-hydration-guide",
     "tags": ["수분 보충","테니스 건강","전해질","경기 컨디션"],
