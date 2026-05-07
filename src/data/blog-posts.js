@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-practice-planning",
+    "slug": "tennis-practice-planning",
+    "tags": ["연습 계획","훈련 플랜","테니스 연습","체계적 훈련"],
+    "title": "효과적인 테니스 연습 계획 수립 — 주간·월간 플랜",
+    "excerpt": "효과적인 테니스 연습 계획 수립 — 주간·월간 플랜에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-05-07",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-video-analysis-guide",
+    "slug": "tennis-video-analysis-guide",
+    "tags": ["영상 분석","경기 분석","패턴","자기 분석"],
+    "title": "내 경기 영상 분석법 — 포인트 패턴·약점 파악",
+    "excerpt": "내 경기 영상 분석법 — 포인트 패턴·약점 파악에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전략 가이드",
+    "date": "2026-05-07",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-post-match-recovery",
     "slug": "tennis-post-match-recovery",
     "tags": ["회복","쿨다운","아이싱","테니스 회복"],
