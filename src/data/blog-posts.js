@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-ball-machine-drills",
+    "slug": "tennis-ball-machine-drills",
+    "tags": ["볼머신","훈련","드릴","반복 연습"],
+    "title": "볼머신 활용 훈련법 — 반복·패턴·실전 드릴",
+    "excerpt": "볼머신 활용 훈련법 — 반복·패턴·실전 드릴에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-05-08",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-wall-practice-drills",
+    "slug": "tennis-wall-practice-drills",
+    "tags": ["벽치기","혼자 연습","테니스 훈련","드릴"],
+    "title": "벽치기 테니스 훈련 — 혼자 하는 효과적인 연습법",
+    "excerpt": "벽치기 테니스 훈련 — 혼자 하는 효과적인 연습법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-05-08",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-practice-planning",
     "slug": "tennis-practice-planning",
     "tags": ["연습 계획","훈련 플랜","테니스 연습","체계적 훈련"],
