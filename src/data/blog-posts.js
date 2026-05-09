@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-forehand-error-correction",
+    "slug": "tennis-forehand-error-correction",
+    "tags": ["포핸드 교정","에러 줄이기","테니스 실수","스윙 교정"],
+    "title": "포핸드 에러 줄이기 — 흔한 실수와 교정법",
+    "excerpt": "포핸드 에러 줄이기 — 흔한 실수와 교정법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-09",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-serve-practice-routine",
+    "slug": "tennis-serve-practice-routine",
+    "tags": ["서브 연습","루틴","훈련","서브 구조"],
+    "title": "서브 연습 루틴 — 50개 서브로 완성하는 구조화 훈련",
+    "excerpt": "서브 연습 루틴 — 50개 서브로 완성하는 구조화 훈련에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-05-09",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-ball-machine-drills",
     "slug": "tennis-ball-machine-drills",
     "tags": ["볼머신","훈련","드릴","반복 연습"],
