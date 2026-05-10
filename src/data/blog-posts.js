@@ -1529,7 +1529,7 @@ export const allBlogPosts = [
     "excerpt": "테니스 역사상 가장 위대한 선수. 24회 그랜드 슬램 우승에 빛나는 조코비치의 무결점 플레이와 철저한 자기 관리.",
     "badge": "인기 글",
     "category": "선수 프로필",
-    "date": "2025-11-05",
+    "date": "2026-05-10",
     "readTime": "12분",
     "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
