@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-shoe-selection-guide",
+    "slug": "tennis-shoe-selection-guide",
+    "tags": ["테니스화","신발 선택","코트별 신발","장비"],
+    "title": "테니스화 선택 완전 가이드 — 코트별·발 유형별",
+    "excerpt": "테니스화 선택 완전 가이드 — 코트별·발 유형별에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "장비 가이드",
+    "date": "2026-05-10",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-backhand-error-correction",
+    "slug": "tennis-backhand-error-correction",
+    "tags": ["백핸드 교정","에러","테니스 교정","드릴"],
+    "title": "백핸드 에러 줄이기 — 교정 포인트와 드릴",
+    "excerpt": "백핸드 에러 줄이기 — 교정 포인트와 드릴에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-10",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-forehand-error-correction",
     "slug": "tennis-forehand-error-correction",
     "tags": ["포핸드 교정","에러 줄이기","테니스 실수","스윙 교정"],
