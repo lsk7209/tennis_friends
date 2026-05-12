@@ -1,6 +1,32 @@
 // 블로그 글 메타데이터 - 자동 생성됨
 export const allBlogPosts = [
   {
+    "id": "tennis-elbow-treatment-guide",
+    "slug": "tennis-elbow-treatment-guide",
+    "tags": ["테니스 엘보","팔꿈치 통증","재활","부상 치료"],
+    "title": "테니스 엘보 치료와 예방 — 통증 원인과 재활",
+    "excerpt": "테니스 엘보 치료와 예방 — 통증 원인과 재활에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "부상 예방",
+    "date": "2026-05-12",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-string-pattern-16x19-vs-18x20",
+    "slug": "tennis-string-pattern-16x19-vs-18x20",
+    "tags": ["스트링 패턴","16x19","18x20","라켓 선택","장비"],
+    "title": "스트링 패턴 16x19 vs 18x20 — 차이점과 선택법",
+    "excerpt": "스트링 패턴 16x19 vs 18x20 — 차이점과 선택법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "장비 가이드",
+    "date": "2026-05-12",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-restringing-timing-guide",
     "slug": "tennis-restringing-timing-guide",
     "tags": ["리스트링","스트링 교체","라켓 관리","장비"],
