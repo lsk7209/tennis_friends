@@ -13,14 +13,12 @@ function getBlogSlug(pathname: string) {
     return null;
   }
 
-  const slug = pathname
-    .slice(BLOG_PATH_PREFIX.length)
-    .replace(/\/$/, "");
+  const slug = pathname.slice(BLOG_PATH_PREFIX.length).replace(/\/$/, "");
 
   return slug && !slug.includes("/") ? decodeURIComponent(slug) : null;
 }
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const slug = getBlogSlug(request.nextUrl.pathname);
 
   if (!slug) {
