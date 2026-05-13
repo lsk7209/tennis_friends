@@ -7,7 +7,7 @@ import { NextRequest } from 'next/server';
  * 1. 네이버 서치어드바이저에서 HTML 파일 인증 방식 선택
  * 2. 제공된 파일명을 복사 (예: naver1234567890.html)
  * 3. 환경 변수에 NAVER_SITE_VERIFICATION 설정
- * 4. URL: https://tennisfrens.com/naver[verification-code].html
+ * 4. URL: https://www.tennisfrens.com/naver[verification-code].html
  */
 export async function GET(
   request: NextRequest,

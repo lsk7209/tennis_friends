@@ -9,7 +9,7 @@ export async function GET(_request: NextRequest) {
   const securityTxt = `Contact: mailto:tennisfriends@tennisfrens.com
 Expires: 2026-12-31T23:59:59.000Z
 Preferred-Languages: ko, en
-Canonical: https://tennisfrens.com/.well-known/security.txt
+Canonical: https://www.tennisfrens.com/.well-known/security.txt
 `;
 
   return new Response(securityTxt, {

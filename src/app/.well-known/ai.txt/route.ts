@@ -1,12 +1,12 @@
-import { NextRequest } from "next/server";
+import { DEFAULT_CONTACT_EMAIL, getSiteUrl } from "@/lib/site";
 
 /**
  * ai.txt
  * AI 크롤러를 위한 명시적 허용 정책
  * Google-Extended, GPTBot 등이 이 파일을 확인
  */
-export async function GET(_request: NextRequest) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
+export function GET() {
+  const baseUrl = getSiteUrl();
 
   const aiTxt = `# ai.txt for TennisFriends
 
@@ -20,7 +20,13 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: CCBot
@@ -45,12 +51,18 @@ Disallow: /admin/
 
 # 사이트맵
 Sitemap: ${baseUrl}/sitemap.xml
+Sitemap: ${baseUrl}/sitemap-naver.xml
 
 # RSS 피드
 RSS: ${baseUrl}/rss.xml
 
+# LLM 문서
+LLMs: ${baseUrl}/llms.txt
+LLMs-Full: ${baseUrl}/llms-full.txt
+AI-Index: ${baseUrl}/ai-index.json
+
 # 연락처
-Contact: tennisfriends@tennisfrens.com
+Contact: ${DEFAULT_CONTACT_EMAIL}
 `;
 
   return new Response(aiTxt, {

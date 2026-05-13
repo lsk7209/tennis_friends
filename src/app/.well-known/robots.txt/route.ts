@@ -1,21 +1,53 @@
-import { NextRequest } from "next/server";
+import { getSiteUrl } from "@/lib/site";
 
 /**
  * .well-known/robots.txt
- * 일부 크롤러가 이 경로에서 robots.txt를 찾을 수 있도록 제공
+ * 일부 크롤러가 이 경로에서 robots.txt를 찾을 수 있도록 제공.
+ * 메인 /robots.txt 정책과 같은 허용/차단 기준을 유지한다.
  */
-export async function GET(_request: NextRequest) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
+export function GET() {
+  const baseUrl = getSiteUrl();
 
-  const robotsTxt = `# TennisFriends Robots.txt
-# 이 파일은 /robots.txt로 리다이렉트됩니다.
+  const robotsTxt = `User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/auth/
 
 User-agent: *
 Allow: /
 Disallow: /private/
 Disallow: /admin/
+Disallow: /api/auth/
+
+User-agent: Yeti
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/auth/
+
+User-agent: Daumoa
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/auth/
+
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: Google-Extended
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
+Sitemap: ${baseUrl}/sitemap-naver.xml
 `;
 
   return new Response(robotsTxt, {
