@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const SITE_URL = "https://www.tennisfrens.com";
@@ -15,6 +16,9 @@ const LLMS_FULL_PATH = path.join(ROOT, "public", "llms-full.txt");
 
 function readBlogPosts() {
   const source = fs.readFileSync(BLOG_POSTS_PATH, "utf8");
+  const evaluatedPosts = readBlogPostsByEvaluation(source);
+  if (evaluatedPosts.length > 0) return evaluatedPosts;
+
   const objectMatches = source.matchAll(/\{\s*(?:id|"id"):\s*["']([^"']+)["'][\s\S]*?\n\s*\}/g);
   const slugMatches = source.matchAll(/slug\s*:\s*["']([^"']+)["'][\s\S]*?title\s*:\s*["']([^"']+)["'][\s\S]*?excerpt\s*:\s*["']([^"']*)["'][\s\S]*?date\s*:\s*["']([^"']+)["']/g);
   const posts = [];
@@ -61,6 +65,37 @@ function readBlogPosts() {
   }
 
   return posts;
+}
+
+function readBlogPostsByEvaluation(source) {
+  try {
+    if (source.includes("import ")) return [];
+
+    const executable = source.replace(
+      /export\s+const\s+allBlogPosts\s*=/,
+      "globalThis.allBlogPosts =",
+    );
+    const context = { globalThis: {} };
+    vm.createContext(context);
+    vm.runInContext(executable, context, { timeout: 1000 });
+
+    const posts = context.globalThis.allBlogPosts;
+    if (!Array.isArray(posts)) return [];
+
+    return posts
+      .map((post) => ({
+        id: post.id || post.slug,
+        slug: post.slug || post.id,
+        title: post.title || "",
+        excerpt: post.excerpt || post.title || "",
+        category: post.category || "테니스 가이드",
+        date: post.date || "",
+        scheduledAt: post.scheduledAt || "",
+      }))
+      .filter((post) => post.slug && post.title && post.date);
+  } catch {
+    return [];
+  }
 }
 
 function readStringField(block, field) {

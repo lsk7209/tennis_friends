@@ -10,6 +10,7 @@ import { BLOG_CONTENT_PART8_BULK_02 } from "./part8-bulk-02";
 import { BLOG_CONTENT_PART8_BULK_03 } from "./part8-bulk-03";
 import { BLOG_CONTENT_PART8_BULK_04 } from "./part8-bulk-04";
 import { BLOG_CONTENT_PART9_SCHEDULED_100 } from "./part9-scheduled-100";
+import { BLOG_CONTENT_PART10_SCHEDULED_300 } from "./part10-scheduled-300";
 
 export const blogContentMap = {
   ...BLOG_CONTENT_PART1,
@@ -24,4 +25,5 @@ export const blogContentMap = {
   ...BLOG_CONTENT_PART8_BULK_03,
   ...BLOG_CONTENT_PART8_BULK_04,
   ...BLOG_CONTENT_PART9_SCHEDULED_100,
+  ...BLOG_CONTENT_PART10_SCHEDULED_300,
 };
