@@ -4988,6 +4988,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 });
 
 export const allBlogPosts = [
+  {
+    "id": "tennis-wrist-injury-prevention",
+    "slug": "tennis-wrist-injury-prevention",
+    "tags": ["손목 부상","부상 예방","손목 보호","테니스 건강"],
+    "title": "테니스 손목 부상 예방 — 스윙·장비·보호대",
+    "excerpt": "테니스 손목 부상 예방 — 스윙·장비·보호대에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "부상 예방",
+    "date": "2026-05-13",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-ankle-injury-prevention",
+    "slug": "tennis-ankle-injury-prevention",
+    "tags": ["발목 부상","테이핑","부상 예방","테니스 건강"],
+    "title": "테니스 발목 부상 예방 — 테이핑·강화 운동·신발",
+    "excerpt": "테니스 발목 부상 예방 — 테이핑·강화 운동·신발에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "부상 예방",
+    "date": "2026-05-13",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
   ...scheduledBlogPosts,
   {
     "id": "tennis-elbow-treatment-guide",
