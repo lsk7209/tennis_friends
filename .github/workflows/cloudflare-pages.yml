@@ -23,10 +23,11 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Build (next-on-pages)
-      run: npx @cloudflare/next-on-pages@1
+    - name: Build static export
+      run: npm run build
       env:
-        NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://tennisfriends.co.kr' }}
+        STATIC_EXPORT: 'true'
+        NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com' }}
         NEXT_PUBLIC_ANALYTICS_API_URL: ${{ secrets.NEXT_PUBLIC_ANALYTICS_API_URL }}
         
     - name: Deploy to Cloudflare Pages
@@ -35,6 +36,11 @@ jobs:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         projectName: ${{ secrets.CLOUDFLARE_PAGES_PROJECT || 'tennis-friends' }}
-        directory: .vercel/output/static
+        directory: out
         wranglerVersion: '3'
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: IndexNow 제출 (Bing·Naver)
+      if: github.event_name == 'push'
+      run: node scripts/submit-indexnow.js
+      continue-on-error: true

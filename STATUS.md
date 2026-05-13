@@ -1,19 +1,18 @@
 # Status | 마지막: 2026-05-13
 ## 현재 작업
-저품질 블로그 색인 보호와 내부링크 수정 후 GitHub 배포 진행 중.
+저품질 블로그 색인 보호, 내부링크 점검, 배포 워크플로우 수정 완료 검증 중
 ## 최근 변경 (최근 5개만)
-- 05-13: 저품질 블로그 113개를 목록/RSS/사이트맵에서 제외하고 noindex 적용
-- 05-13: 깨진 내부링크 5개를 현재 /blog 경로로 수정
+- 05-13: 저품질 블로그 113개를 목록/RSS/사이트맵/AI 인덱스에서 제외하고 noindex 적용
+- 05-13: 깨진 내부링크 5개를 현재 존재하는 /blog 경로로 수정
 - 05-13: 테스트 답변 클릭 시 자동 다음 문항 이동 구현 및 브라우저 검증
-- 05-13: persona.yml 자동 생성
-- 05-13: titles.json 293개 제목 생성
+- 05-13: GitHub Pages 정적 export 빌드 호환 수정
+- 05-13: Cloudflare Pages 배포를 next-on-pages에서 정적 export(out) 방식으로 전환
 ## TODO
-- [ ] 저품질 글은 재작성 후 품질 기준 통과 시 색인 복구
-- [ ] 로컬 실행 오류 해결 후 node tools/generate_remaining_articles.mjs 실행
-- [ ] 50/293, 150/293 진행 보고
+- [ ] GitHub Pages는 저장소 Pages 설정에서 GitHub Actions 배포 활성화 필요
+- [ ] 저품질 글 113개는 추후 실제 보강 후 색인 복귀 검토
 ## 결정사항
-- 저품질 대응: 즉시 삭제가 아니라 noindex + 목록/RSS/사이트맵 제외로 검색 품질 리스크를 먼저 차단
-- 배포 방식: GitHub push로 원격 배포 파이프라인을 트리거
+- 저품질 대응: 즉시 삭제 대신 noindex + 목록/RSS/사이트맵/AI 인덱스 제외로 검색 노출 리스크 차단
+- Cloudflare 배포: next-on-pages 빌드 오류 회피를 위해 STATIC_EXPORT=true + out 배포 사용
 ## 주의
 - lint/type-check/build 통과. lint는 기존 경고 77개 유지.
 - 내부링크 스캔 결과 문제 0개.

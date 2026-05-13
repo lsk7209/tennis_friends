@@ -1,23 +1,28 @@
 import type { NextConfig } from "next";
 
+const isGitHubPages =
+  process.env.GITHUB_ACTIONS && process.env.GITHUB_PAGES === "true";
+const isStaticExport = isGitHubPages || process.env.STATIC_EXPORT === "true";
+const repositoryBasePath =
+  process.env.GITHUB_PAGES_BASE_PATH ||
+  (process.env.GITHUB_REPOSITORY
+    ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
+    : "/tennis_friends");
+
 const nextConfig: NextConfig = {
   // Vercel 환경에서는 기본값(serverless) 사용
   // GitHub Pages 배포 시에만 export 사용
-  ...(process.env.GITHUB_ACTIONS && process.env.GITHUB_PAGES === "true"
+  ...(isStaticExport
     ? {
         output: "export",
         distDir: "out",
         // basePath는 환경 변수로 설정 가능, 기본값은 저장소 이름 기반
-        basePath:
-          process.env.GITHUB_PAGES_BASE_PATH ||
-          (process.env.GITHUB_REPOSITORY
-            ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
-            : "/tennis_friends"),
-        assetPrefix:
-          process.env.GITHUB_PAGES_BASE_PATH ||
-          (process.env.GITHUB_REPOSITORY
-            ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
-            : "/tennis_friends"),
+        ...(isGitHubPages
+          ? {
+              basePath: repositoryBasePath,
+              assetPrefix: repositoryBasePath,
+            }
+          : {}),
         images: {
           unoptimized: true,
         },
