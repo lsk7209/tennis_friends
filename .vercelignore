@@ -1,0 +1,10 @@
+.next
+out
+node_modules
+.git
+.omx
+.omc
+.bkit
+__pycache__
+*.log
+*.tsbuildinfo

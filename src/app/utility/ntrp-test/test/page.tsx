@@ -84,7 +84,7 @@ export default function NtrpTestPage() {
       {/* Header Section */}
       <section className="relative overflow-hidden py-8 md:py-12 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600">
         {/* Background Decoration */}
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         

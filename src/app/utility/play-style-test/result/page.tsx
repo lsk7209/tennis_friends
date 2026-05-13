@@ -149,7 +149,7 @@ function PlayStyleResultContent() {
 
       {/* Result Hero */}
       <section className="relative overflow-hidden py-12 md:py-20">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
           <Card className={`bg-gradient-to-br ${gradient} border-0 shadow-2xl overflow-hidden mb-12`}>
             <CardContent className="p-12 md:p-16 text-center text-white relative">

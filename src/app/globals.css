@@ -510,6 +510,10 @@ a:focus-visible {
     border-image: linear-gradient(135deg, oklch(0.7 0.16 165) 0%, oklch(0.65 0.18 180) 100%) 1;
   }
 
+  .bg-grid-pattern {
+    background-image: url(/grid.svg);
+  }
+
   /* Button improvements */
   .btn-primary {
     background: linear-gradient(135deg, oklch(0.7 0.16 165) 0%, oklch(0.65 0.18 180) 100%);
