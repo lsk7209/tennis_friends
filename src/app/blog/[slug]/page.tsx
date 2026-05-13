@@ -13,8 +13,17 @@ import type { RelatedContentItem } from "@/components/RelatedContent";
 import EnhancedBlogPostSchema from "@/components/seo/EnhancedBlogPostSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FAQSection from "@/components/seo/FAQSection";
+import { AdSenseSlot } from "@/components/AdSense";
 import { blogContentMap } from "@/data/blog-content";
 import { getSiteUrl } from "@/lib/site";
+import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
+import { isIndexableBlogSlug } from "@/lib/blog-quality";
+
+export const revalidate = 3600;
+
+const ARTICLE_TOP_AD_SLOT = process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_TOP_SLOT;
+const ARTICLE_BOTTOM_AD_SLOT =
+  process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_BOTTOM_SLOT;
 
 const toolMap = [
   {
@@ -113,22 +122,33 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-  const post = allBlogPosts.find((p) => p.slug === resolvedParams.slug);
+  const post = getPublishedBlogPosts(allBlogPosts).find(
+    (p) => p.slug === resolvedParams.slug,
+  );
 
   if (!post) {
-    return {
-      title: "Post Not Found",
-    };
+    notFound();
   }
+
+  const publishedTime = getBlogPublishDate(post).toISOString();
+  const indexable = isIndexableBlogSlug(post.slug);
 
   return {
     title: post.title,
     description: post.excerpt,
+    robots: {
+      index: indexable,
+      follow: true,
+      googleBot: {
+        index: indexable,
+        follow: true,
+      },
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
-      publishedTime: post.date,
+      publishedTime,
       authors: ["TennisFriends"],
       tags: post.category ? [post.category] : [],
       url: `${getSiteUrl()}/blog/${post.slug}`,
@@ -149,11 +169,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const resolvedParams = await params;
-  const post = allBlogPosts.find((p) => p.slug === resolvedParams.slug);
+  const publishedBlogPosts = getPublishedBlogPosts(allBlogPosts);
+  const post = publishedBlogPosts.find((p) => p.slug === resolvedParams.slug);
 
   if (!post) {
     notFound();
   }
+
+  const publishedTime = getBlogPublishDate(post).toISOString();
 
   // Merge content from blogContentMap if available
   const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
@@ -166,7 +189,7 @@ export default async function BlogPostPage({ params }: Props) {
   };
 
   // Transform blog posts to RelatedItem type with safe fallbacks
-  const allPostsForRelated: RelatedContentItem[] = allBlogPosts.map((p) => ({
+  const allPostsForRelated: RelatedContentItem[] = publishedBlogPosts.map((p) => ({
     id: p.id,
     title: p.title,
     description: p.excerpt,
@@ -220,7 +243,8 @@ export default async function BlogPostPage({ params }: Props) {
         title={post.title}
         description={post.excerpt || ""}
         slug={post.slug}
-        date={post.date}
+        date={publishedTime}
+        dateModified={publishedTime}
         author="TennisFriends"
         category={post.category}
         readingTime={post.readTime}
@@ -335,6 +359,8 @@ export default async function BlogPostPage({ params }: Props) {
           </p>
         </section>
 
+        <AdSenseSlot slot={ARTICLE_TOP_AD_SLOT} label="본문 상단 광고" />
+
         {/* Table of Contents */}
         <nav aria-label="목차" className="mb-8">
           <details className="group rounded-lg border border-white/10 bg-content-dark">
@@ -385,6 +411,8 @@ export default async function BlogPostPage({ params }: Props) {
           itemProp="articleBody"
           dangerouslySetInnerHTML={{ __html: enrichedPost.content ?? "" }}
         />
+
+        <AdSenseSlot slot={ARTICLE_BOTTOM_AD_SLOT} label="본문 하단 광고" />
 
         {/* Tags Section */}
         {enrichedPost.tags && enrichedPost.tags.length > 0 && (

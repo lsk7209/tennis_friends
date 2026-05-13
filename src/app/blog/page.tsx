@@ -14,6 +14,11 @@ import {
   POSTS_PER_PAGE,
 } from "@/lib/constants";
 import { CATEGORY_GROUPS } from "@/lib/blog-utils";
+import {
+  getPublishedBlogPosts,
+  sortBlogPostsByPublishTime,
+} from "@/lib/blog-publish";
+import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { Input } from "@/components/ui/input";
 import type { BlogPostData } from "@/types/blog";
 
@@ -24,7 +29,9 @@ export default function BlogPage() {
 
   // 모든 블로그 글 데이터 (다양한 배지와 색상 적용) - useMemo로 최적화
   const blogPosts = useMemo(() => {
-    return allBlogPosts.map((post, index) => {
+    return getPublishedBlogPosts(allBlogPosts)
+      .filter((post) => isIndexableBlogSlug(post.slug))
+      .map((post, index) => {
       // 날짜를 다양하게 설정 (최근 3개월 내)
       const baseDate = new Date("2025-09-01");
       const daysToAdd = Math.floor(index * 2.3); // 글마다 다른 날짜
@@ -77,9 +84,7 @@ export default function BlogPage() {
 
   // 작성일자 기준으로 최신순 정렬
   const sortedBlogPosts = useMemo(() => {
-    return [...filteredBlogPosts].sort((a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    });
+    return sortBlogPostsByPublishTime(filteredBlogPosts);
   }, [filteredBlogPosts]);
 
   // Pagination 계산 - useMemo로 최적화

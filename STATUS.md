@@ -1,27 +1,19 @@
-# Status | 마지막: 2026-05-03
+# Status | 마지막: 2026-05-13
 ## 현재 작업
-모바일 옛 사이트 캐시 제거 및 GA4 실시간 수집 복구 완료
-
+저품질 블로그 색인 보호 구현 및 GitHub 배포 진행 완료 대기.
 ## 최근 변경 (최근 5개만)
-- 05-03: GA4 Data API 연결 확인: `properties/534356101`, stream `G-W1K51D8SBX`
-- 05-03: `page_view`를 명시적 GA4 이벤트로 전송하도록 수정 및 Vercel 배포
-- 05-03: GA4 초기화 완료 후 페이지뷰를 보내도록 `GAProvider` 타이밍 보정
-- 05-03: 모바일 옛 화면 방지를 위해 서비스워커/Cache API 초기화 및 `Clear-Site-Data` 헤더 추가
-- 05-03: GSC 연결 확인: `sc-domain:tennisfrens.com` siteOwner 권한 정상
-
+- 05-13: 저품질 블로그 113개를 목록/RSS/사이트맵에서 제외하고 noindex 적용
+- 05-13: 테스트 답변 클릭 시 자동 다음 문항 이동 구현 및 브라우저 검증
+- 05-13: persona.yml 자동 생성
+- 05-13: titles.json 293개 제목 생성
+- 05-13: research_cache 5개 생성
 ## TODO
-- [ ] GA4 Data API 일반 보고서에 `page_view` 반영 확인
-- [ ] 1~2일 뒤 `Clear-Site-Data` 헤더 제거 검토
-- [ ] 기존 전체 lint 오류 정리
-
+- [ ] 저품질 글은 재작성 후 품질 기준 통과 시 색인 복구
+- [ ] 로컬 실행 오류 해결 후 node tools/generate_remaining_articles.mjs 실행
+- [ ] 50/293, 150/293 진행 보고
 ## 결정사항
-- GA4 property: `534356101`
-- GA4 stream: `G-W1K51D8SBX`, `https://tennisfrens.com`
-- GA4 페이지뷰: `send_page_view:false` 초기화 후 수동 `event: page_view` 전송
-- GSC 대표 속성: `sc-domain:tennisfrens.com`
-
+- 저품질 대응: 즉시 삭제가 아니라 noindex + 목록/RSS/사이트맵 제외로 검색 품질 리스크를 먼저 차단
+- 배포 방식: GitHub push로 원격 배포 파이프라인을 트리거
 ## 주의
-- `npm run build` 통과
-- 수정 파일 lint 통과
-- 라이브 브라우저에서 `g/collect ... en=page_view` 204 확인
-- Data API realtime은 `activeUsers=1` 확인, `page_view`는 지연/표시 차이 가능
+- lint/type-check/build 통과. lint는 기존 경고 77개 유지.
+- dev 서버 http://localhost:3004 에서 noindex 헤더와 sitemap 제외 확인.

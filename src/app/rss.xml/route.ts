@@ -1,13 +1,16 @@
 import { NextRequest } from 'next/server';
 import { allBlogPosts } from '@/data/blog-posts';
+import { getBlogPublishDate, getPublishedBlogPosts, sortBlogPostsByPublishTime } from '@/lib/blog-publish';
+import { isIndexableBlogSlug } from '@/lib/blog-quality';
+import { DEFAULT_CONTACT_EMAIL, SITE_NAME } from '@/lib/site';
 
 export const dynamic = 'force-static';
 export const revalidate = 3600; // 1시간마다 재생성
 
-export async function GET(request: NextRequest) {
+export function getRssBaseUrl(request: NextRequest) {
   // 런타임에 요청 호스트를 사용하거나 환경 변수 사용
   let baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  
+
   // 환경 변수가 없으면 요청 헤더에서 호스트 추출 시도
   if (!baseUrl) {
     const host = request.headers.get('host');
@@ -17,18 +20,25 @@ export async function GET(request: NextRequest) {
       baseUrl = `${protocol}://${host}`;
     } else {
       // 기본값 (실제 도메인으로 변경 필요)
-      baseUrl = 'https://tennisfrens.com';
+      baseUrl = 'https://www.tennisfrens.com';
     }
   }
 
+  return baseUrl.replace(/\/$/, '');
+}
+
+export function buildRssXml(baseUrl: string, selfPath = '/rss.xml') {
   // 최신 블로그 포스트 50개만 RSS에 포함 (날짜순 정렬)
-  const sortedPosts = [...allBlogPosts]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  const sortedPosts = sortBlogPostsByPublishTime(
+    getPublishedBlogPosts(allBlogPosts).filter((post) =>
+      isIndexableBlogSlug(post.slug),
+    ),
+  )
     .slice(0, 50);
 
   const rssItems = sortedPosts.map((post) => {
     const postUrl = `${baseUrl}/blog/${post.slug}`;
-    const pubDate = new Date(post.date).toUTCString();
+    const pubDate = getBlogPublishDate(post).toUTCString();
 
     return `
     <item>
@@ -37,7 +47,7 @@ export async function GET(request: NextRequest) {
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
       <pubDate>${pubDate}</pubDate>
-      <author>tennisfriends@tennisfrens.com (TennisFriends)</author>
+      <author>${DEFAULT_CONTACT_EMAIL} (${SITE_NAME})</author>
       <category><![CDATA[${post.category || '테니스'}]]></category>
       <category><![CDATA[테니스]]></category>
       <category><![CDATA[스포츠]]></category>
@@ -51,10 +61,10 @@ export async function GET(request: NextRequest) {
     <title><![CDATA[TennisFriends - 테니스 블로그]]></title>
     <description><![CDATA[데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상과 관련된 전문적인 가이드와 최신 정보를 제공합니다. NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것을 제공합니다.]]></description>
     <link>${baseUrl}</link>
-    <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="${baseUrl}${selfPath}" rel="self" type="application/rss+xml" />
     <language>ko-KR</language>
-    <managingEditor>tennisfriends@tennisfrens.com (TennisFriends)</managingEditor>
-    <webMaster>tennisfriends@tennisfrens.com (TennisFriends)</webMaster>
+    <managingEditor>${DEFAULT_CONTACT_EMAIL} (${SITE_NAME})</managingEditor>
+    <webMaster>${DEFAULT_CONTACT_EMAIL} (${SITE_NAME})</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <generator>TennisFriends Blog</generator>
     <ttl>60</ttl>
@@ -70,10 +80,16 @@ export async function GET(request: NextRequest) {
   </channel>
 </rss>`;
 
+  return rss;
+}
+
+export async function GET(request: NextRequest) {
+  const rss = buildRssXml(getRssBaseUrl(request));
+
   return new Response(rss, {
     headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600',
+      'Content-Type': 'application/rss+xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
     },
   });
 }

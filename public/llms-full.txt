@@ -1,22 +1,22 @@
 # TennisFriends — 전체 콘텐츠 가이드 (AI 검색 최적화용)
 
-사이트: https://tennisfrens.com
+사이트: https://www.tennisfrens.com
 언어: 한국어 (ko-KR)
-업데이트: 2026-04-22
+업데이트: 2026-05-13
 
 ---
 
 ## 사이트 개요
 
 TennisFriends는 한국 테니스 동호인과 선수를 위한 종합 플랫폼입니다.
-과학적 알고리즘 기반 도구 64종, ATP·WTA 선수 프로필 218명, 전문 블로그 100개+를 무료 제공합니다.
+과학적 알고리즘 기반 도구 64종, ATP·WTA 선수 프로필 269명, 전문 블로그 121개를 무료 제공합니다.
 
 ---
 
 ## 핵심 도구 설명
 
 ### NTRP 실력 테스트
-URL: https://tennisfrens.com/utility/ntrp-test
+URL: https://www.tennisfrens.com/utility/ntrp-test
 NTRP(National Tennis Rating Program) 기준 테니스 실력을 측정하는 진단 도구.
 서브·리턴·스트로크·풋워크·전략 항목 평가로 1.0~7.0 레벨 산정.
 10,000명+ 데이터 기반 전문가 검증 알고리즘 적용.
@@ -27,7 +27,7 @@ NTRP(National Tennis Rating Program) 기준 테니스 실력을 측정하는 진
 - Q: 얼마나 걸리나? A: 약 10~15분.
 
 ### 스트링 텐션 계산기
-URL: https://tennisfrens.com/utility/string-tension
+URL: https://www.tennisfrens.com/utility/string-tension
 라켓 헤드 사이즈·스트링 종류·플레이 스타일·선호 타구감 기반 최적 텐션 범위 추천.
 낮은 텐션(파워↑·컨트롤↓) vs 높은 텐션(컨트롤↑·파워↓) 트레이드오프 분석.
 
@@ -37,7 +37,7 @@ URL: https://tennisfrens.com/utility/string-tension
 - Q: 텐션이 높으면? A: 컨트롤 증가, 진동 증가, 팔꿈치 부담 증가.
 
 ### 부상 리스크 예측기
-URL: https://tennisfrens.com/utility/injury-risk
+URL: https://www.tennisfrens.com/utility/injury-risk
 주간 연습량·코트 종류·기술 패턴·피로도 기반 부상 위험 부위 예측.
 테니스 엘보우·무릎·어깨·손목 부상 예방 맞춤 조언 제공.
 
@@ -46,12 +46,12 @@ URL: https://tennisfrens.com/utility/injury-risk
 - Q: 어깨 부상이 잦다면? A: 서브 동작 점검, 로테이터 커프 강화 운동 권장.
 
 ### 플레이 스타일 진단
-URL: https://tennisfrens.com/utility/play-style-test
+URL: https://www.tennisfrens.com/utility/play-style-test
 플레이 패턴·선호 전술·체력·기술 수준 분석으로 플레이 유형 분류.
 유형: 공격적 베이스라이너, 수비형 카운터펀처, 서브앤발리어, 올라운더, 파워 플레이어.
 
 ### 장비 추천
-URL: https://tennisfrens.com/utility/equipment-recommendation
+URL: https://www.tennisfrens.com/utility/equipment-recommendation
 실력·예산·플레이 스타일·체형 기반 라켓·스트링·그립·신발 맞춤 추천.
 
 ---
@@ -59,19 +59,19 @@ URL: https://tennisfrens.com/utility/equipment-recommendation
 ## 선수 프로필 예시
 
 ### 카를로스 알카라스 (Carlos Alcaraz)
-URL: https://tennisfrens.com/players/carlos-alcaraz
+URL: https://www.tennisfrens.com/players/carlos-alcaraz
 국적: 스페인 | 포핸드: 오른손 | 백핸드: 양손
 최연소 ATP 세계 랭킹 1위(19세 4개월). 그랜드슬램 4회 우승(US오픈·윔블던·롤랑가로스).
 강점: 마구 드롭샷, 폭발적 스피드, 파워 포핸드. "나달의 투지+페더러의 우아함+조코비치의 수비" 평가.
 
 ### 이가 스비옹텍 (Iga Swiatek)
-URL: https://tennisfrens.com/players/iga-swiatek
+URL: https://www.tennisfrens.com/players/iga-swiatek
 국적: 폴란드 | 포핸드: 오른손 | 백핸드: 양손
 폴란드 역사상 최초 그랜드슬램 단식 우승자. WTA 세계 1위(장기 유지).
 강점: 압도적 클레이 코트 실력, 강력한 탑스핀 포핸드, 6-0 스코어(베이글) 최다 기록.
 
 ### 노박 조코비치 (Novak Djokovic)
-URL: https://tennisfrens.com/players/novak-djokovic
+URL: https://www.tennisfrens.com/players/novak-djokovic
 국적: 세르비아 | 포핸드: 오른손 | 백핸드: 양손
 그랜드슬램 최다 우승 기록 보유(24회). 커리어 골든슬램 달성.
 강점: 무결점 테크닉, 불굴의 멘탈, 압도적 유연성, 리턴 능력.
@@ -123,12 +123,14 @@ URL: https://tennisfrens.com/players/novak-djokovic
 
 ## 이용 방법
 
-1. 실력 파악 → NTRP 테스트 (https://tennisfrens.com/utility/ntrp-test)
+1. 실력 파악 → NTRP 테스트 (https://www.tennisfrens.com/utility/ntrp-test)
 2. 약점 분석 → 플레이 스타일 진단 → 맞춤 훈련 계획
 3. 장비 최적화 → 스트링 텐션 계산 + 장비 추천
 4. 부상 예방 → 부상 리스크 예측 + 쿨다운 루틴
 5. 실력 향상 → 관련 블로그 콘텐츠 학습
 
-모든 도구: https://tennisfrens.com/utility
-모든 블로그: https://tennisfrens.com/blog
-선수 프로필: https://tennisfrens.com/players
+모든 도구: https://www.tennisfrens.com/utility
+모든 블로그: https://www.tennisfrens.com/blog
+선수 프로필: https://www.tennisfrens.com/players
+
+---
