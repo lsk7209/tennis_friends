@@ -83,7 +83,7 @@ const CTASection: React.FC = () => {
       {utilities.map((utility, index) => {
         const IconComponent = utility.icon;
         return (
-          <Link key={index} href={utility.href}>
+          <Link key={index} href={utility.href} prefetch={false}>
             <Card className="h-full bg-white border-gray-200 hover:border-blue-300 transition-all duration-300 card-hover group cursor-pointer overflow-hidden shadow-sm hover:shadow-lg">
               <CardContent className="p-6 flex flex-col h-full relative">
                 {/* Background gradient */}

@@ -12,12 +12,12 @@ export const metadata = {
   description: "선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.",
   keywords: ["테니스 장비", "하이브리드 스트링", "폴리", "인조쉽", "커스텀"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-hybrid-string-setup',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-hybrid-string-setup',
   },
   openGraph: {
     title: "하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)",
     description: "선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.",
-    url: 'https://tennisfrens.com/blog/tennis-hybrid-string-setup',
+    url: 'https://www.tennisfrens.com/blog/tennis-hybrid-string-setup',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -93,7 +93,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-hybrid-string-setup" date="2026-01-24" title="하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)" excerpt="선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.">
+      <Article showHeader={false} slug="tennis-hybrid-string-setup" date="2026-01-24" title="하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)" excerpt="선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

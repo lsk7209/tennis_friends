@@ -33,7 +33,9 @@ export default function Page() {
         <Card className="border-orange-100 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
           <CardHeader>
             <Badge className="w-fit bg-orange-600 text-white">Energy Utility</Badge>
-            <CardTitle className="mt-3 text-4xl">테니스 칼로리 계산기</CardTitle>
+            <h1 className="mt-3 text-4xl font-semibold leading-none">
+              테니스 칼로리 계산기
+            </h1>
             <p className="text-base leading-7 text-muted-foreground">
               단식과 복식, 운동 강도, 플레이 시간 기준으로 예상 칼로리 소모량을 계산합니다.
             </p>

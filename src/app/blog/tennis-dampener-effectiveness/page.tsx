@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
 
 export const metadata = {
   title: "댐퍼(Dampener)의 효과: 진동 감소와 타구감",
@@ -96,7 +96,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-dampener-effectiveness" date="2026-01-24" title="댐퍼(Dampener)의 효과: 진동 감소와 타구감" excerpt="작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.">
+      <Article showHeader={false} slug="tennis-dampener-effectiveness" date="2026-01-24" title="댐퍼(Dampener)의 효과: 진동 감소와 타구감" excerpt="작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

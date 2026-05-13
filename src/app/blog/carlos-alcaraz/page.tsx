@@ -9,12 +9,12 @@ export const metadata = {
   description: "최연소 세계 랭킹 1위. 페더러, 나달, 조코비치의 장점만 합친 것 같은 알카라스의 천재적인 플레이.",
   keywords: ["테니스","카를로스 알카라스","Carlos Alcaraz","스페인","차세대 황제"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/carlos-alcaraz',
+    canonical: 'https://www.tennisfrens.com/blog/carlos-alcaraz',
   },
   openGraph: {
     title: "카를로스 알카라스: 테니스의 새로운 황제",
     description: "최연소 세계 랭킹 1위. 페더러, 나달, 조코비치의 장점만 합친 것 같은 알카라스의 천재적인 플레이.",
-    url: 'https://tennisfrens.com/players/carlos-alcaraz',
+    url: 'https://www.tennisfrens.com/blog/carlos-alcaraz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="carlos-alcaraz" date="2026-01-24" title="카를로스 알카라스: 테니스의 새로운 황제" excerpt="최연소 세계 랭킹 1위. 페더러, 나달, 조코비치의 장점만 합친 것 같은 알카라스의 천재적인 플레이.">
+      <Article showHeader={false} slug="carlos-alcaraz" date="2026-01-24" title="카를로스 알카라스: 테니스의 새로운 황제" excerpt="최연소 세계 랭킹 1위. 페더러, 나달, 조코비치의 장점만 합친 것 같은 알카라스의 천재적인 플레이.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

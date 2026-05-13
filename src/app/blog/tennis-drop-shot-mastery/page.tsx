@@ -12,12 +12,12 @@ export const metadata = {
   description: "상대의 허를 찌르는 드롭샷. 성공률을 높이는 그립, 터치 감각, 그리고 무엇보다 중요한 타이밍과 위장(Disguise) 기술.",
   keywords: ["테니스 기술", "드롭샷", "전술", "터치", "슬라이스"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-drop-shot-mastery',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-drop-shot-mastery',
   },
   openGraph: {
     title: "드롭샷 마스터하기: 타이밍과 위장술",
     description: "상대의 허를 찌르는 드롭샷. 성공률을 높이는 그립, 터치 감각, 그리고 무엇보다 중요한 타이밍과 위장(Disguise) 기술.",
-    url: 'https://tennisfrens.com/blog/tennis-drop-shot-mastery',
+    url: 'https://www.tennisfrens.com/blog/tennis-drop-shot-mastery',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -91,7 +91,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-drop-shot-mastery" date="2026-01-24" title="드롭샷 마스터하기: 타이밍과 위장술" excerpt="상대의 허를 찌르는 드롭샷. 성공률을 높이는 그립, 터치 감각, 그리고 무엇보다 중요한 타이밍과 위장(Disguise) 기술.">
+      <Article showHeader={false} slug="tennis-drop-shot-mastery" date="2026-01-24" title="드롭샷 마스터하기: 타이밍과 위장술" excerpt="상대의 허를 찌르는 드롭샷. 성공률을 높이는 그립, 터치 감각, 그리고 무엇보다 중요한 타이밍과 위장(Disguise) 기술.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

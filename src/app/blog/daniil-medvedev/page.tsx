@@ -9,12 +9,12 @@ export const metadata = {
   description: "변칙적인 폼과 천재적인 전술. '문어'라 불리는 긴 팔다리로 모든 공을 받아내는 메드베데프의 독특한 테니스 세계.",
   keywords: ["테니스","다닐 메드베데프","Daniil Medvedev","전술","러시아"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/daniil-medvedev',
+    canonical: 'https://www.tennisfrens.com/blog/daniil-medvedev',
   },
   openGraph: {
     title: "다닐 메드베데프: 코트 위의 체스 마스터",
     description: "변칙적인 폼과 천재적인 전술. '문어'라 불리는 긴 팔다리로 모든 공을 받아내는 메드베데프의 독특한 테니스 세계.",
-    url: 'https://tennisfrens.com/players/daniil-medvedev',
+    url: 'https://www.tennisfrens.com/blog/daniil-medvedev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="daniil-medvedev" date="2026-01-24" title="다닐 메드베데프: 코트 위의 체스 마스터" excerpt="변칙적인 폼과 천재적인 전술. '문어'라 불리는 긴 팔다리로 모든 공을 받아내는 메드베데프의 독특한 테니스 세계.">
+      <Article showHeader={false} slug="daniil-medvedev" date="2026-01-24" title="다닐 메드베데프: 코트 위의 체스 마스터" excerpt="변칙적인 폼과 천재적인 전술. '문어'라 불리는 긴 팔다리로 모든 공을 받아내는 메드베데프의 독특한 테니스 세계.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

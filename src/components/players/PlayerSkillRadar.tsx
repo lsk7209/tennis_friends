@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import {RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer, Tooltip} from 'recharts';
 
+const CHART_HEIGHT = 400;
+const CHART_INITIAL_DIMENSION = { width: 320, height: CHART_HEIGHT };
+
 interface SkillAttribute {
     name: string;
     score: number; // 0 to 10
@@ -14,10 +17,10 @@ interface PlayerSkillRadarProps {
 }
 
 export default function PlayerSkillRadar({ attributes }: PlayerSkillRadarProps) {
-    // 클라이언트 사이드에서만 차트 렌더링 (SSR에서 컨테이너 크기 계산 문제 방지)
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
-        setIsMounted(true);
+        const frameId = requestAnimationFrame(() => setIsMounted(true));
+        return () => cancelAnimationFrame(frameId);
     }, []);
 
     // Recharts용 데이터 변환
@@ -38,9 +41,15 @@ export default function PlayerSkillRadar({ attributes }: PlayerSkillRadarProps) 
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 {/* 레이더 차트 */}
-                <div className="w-full h-[400px] bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700">
+                <div className="w-full h-[400px] min-w-0 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700">
                     {isMounted ? (
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer
+                            width="100%"
+                            height="100%"
+                            minWidth={240}
+                            minHeight={CHART_HEIGHT}
+                            initialDimension={CHART_INITIAL_DIMENSION}
+                        >
                             <RadarChart data={chartData}>
                             <PolarGrid stroke="#94a3b8" strokeDasharray="3 3" />
                             <PolarAngleAxis

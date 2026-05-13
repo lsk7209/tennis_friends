@@ -21,7 +21,7 @@ export default function BlogPostSchema({
   category = "테니스",
   readingTime,
 }: BlogPostSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com";
   const url = `${siteUrl}/blog/${slug}`;
   const imageUrl = image
     ? image.startsWith("http")

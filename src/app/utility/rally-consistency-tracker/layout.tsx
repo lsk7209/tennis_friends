@@ -4,12 +4,12 @@ export const metadata: Metadata = {
   title: "Rally Consistency Tracker",
   description: "Rally Consistency Tracker — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
   alternates: {
-    canonical: "https://tennisfrens.com/utility/rally-consistency-tracker",
+    canonical: "https://www.tennisfrens.com/utility/rally-consistency-tracker",
   },
   openGraph: {
     title: "Rally Consistency Tracker | TennisFriends",
     description: "Rally Consistency Tracker — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
-    url: "https://tennisfrens.com/utility/rally-consistency-tracker",
+    url: "https://www.tennisfrens.com/utility/rally-consistency-tracker",
     type: "website",
     locale: "ko_KR",
     siteName: "TennisFriends",

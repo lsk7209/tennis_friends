@@ -66,7 +66,9 @@ export default function Page() {
         <Card className="border-red-100 bg-gradient-to-br from-red-50 via-white to-orange-50">
           <CardHeader>
             <Badge className="w-fit bg-red-600 text-white">Physical Test</Badge>
-            <CardTitle className="mt-3 text-4xl">테니스 피트니스 테스트</CardTitle>
+            <h1 className="mt-3 text-4xl font-semibold leading-none">
+              테니스 피트니스 테스트
+            </h1>
             <p className="text-base leading-7 text-muted-foreground">
               민첩성, 스피드, 지구력, 근력, 파워, 균형을 간단히 입력해 현재 체력 상태를 점검합니다.
             </p>

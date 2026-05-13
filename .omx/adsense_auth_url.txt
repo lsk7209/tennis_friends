@@ -1,0 +1,1 @@
+https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=CjG3EpGT1B0Hg59qS4Yg&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadsense.readonly&state=UpiYxhaGY7VVrYsYRjmfXv9sZxXHhU&code_challenge=wKEWcrg4Fb-hl46cBC3MbJVbWYRBpTQvqjnttcX75WU&code_challenge_method=S256&access_type=offline&include_granted_scopes=true&prompt=consent

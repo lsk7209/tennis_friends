@@ -9,12 +9,12 @@ export const metadata = {
   description: "198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.",
   keywords: ["테니스","알렉산더 즈베레프","Alexander Zverev","서브","독일"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/alexander-zverev',
+    canonical: 'https://www.tennisfrens.com/blog/alexander-zverev',
   },
   openGraph: {
     title: "알렉산더 즈베레프: 높이와 기술의 완벽한 조화",
     description: "198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.",
-    url: 'https://tennisfrens.com/players/alexander-zverev',
+    url: 'https://www.tennisfrens.com/blog/alexander-zverev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="alexander-zverev" date="2026-01-24" title="알렉산더 즈베레프: 높이와 기술의 완벽한 조화" excerpt="198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.">
+      <Article showHeader={false} slug="alexander-zverev" date="2026-01-24" title="알렉산더 즈베레프: 높이와 기술의 완벽한 조화" excerpt="198cm의 장신에서 나오는 광속 서브와 투어 최고의 백핸드. 부상을 이겨내고 다시 정상에 선 즈베레프의 이야기.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

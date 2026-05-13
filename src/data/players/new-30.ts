@@ -972,4 +972,41 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
       ],
     },
   },
+  "martin-landaluce": {
+    name: "마르틴 란달루세",
+    nameEn: "Martin Landaluce",
+    country: "Spain",
+    countryFlag: "🇪🇸",
+    gender: "male",
+    plays: "Right-handed",
+    backhand: "Two-handed",
+    longBio:
+      "스페인 테니스가 기대하는 차세대 선수. 주니어 무대에서 두각을 보인 뒤 프로 투어 적응 과정을 밟고 있으며, 강한 포핸드와 공격적인 베이스라인 전개가 장점입니다.",
+    detailedProfile: {
+      oneLineSummary:
+        "스페인 차세대 라인에서 주목받는 공격형 베이스라이너.",
+      playStyle:
+        "<p>란달루세는 높은 타점의 포핸드로 먼저 주도권을 잡고, 백핸드 크로스 랠리에서 버틴 뒤 짧은 공을 공격하는 패턴을 선호합니다. 아직 투어 경험을 쌓는 단계라 경기 운영의 기복은 있지만, 볼 스피드와 코트 커버 범위는 성장성이 큽니다.</p>",
+      hexagonStats: [
+        { name: "포핸드", score: 8.5 },
+        { name: "파워", score: 8 },
+        { name: "풋워크", score: 8 },
+        { name: "백핸드", score: 7.5 },
+        { name: "서브", score: 7 },
+        { name: "경험", score: 6.5 },
+      ],
+      faq: [
+        {
+          question: "마르틴 란달루세는 어떤 유형의 선수인가요?",
+          answer:
+            "포핸드로 랠리 주도권을 잡는 스페인식 공격형 베이스라이너입니다. 성장 단계의 선수라 경험 축적에 따라 경기 운영 완성도가 더 올라갈 수 있습니다.",
+        },
+        {
+          question: "란달루세를 주목해야 하는 이유는?",
+          answer:
+            "스페인 주니어 계보를 잇는 유망주로 평가받고, 강한 그라운드스트로크와 신체 조건을 바탕으로 프로 투어 경쟁력을 키우고 있기 때문입니다.",
+        },
+      ],
+    },
+  },
 };

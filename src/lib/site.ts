@@ -1,5 +1,5 @@
 export const SITE_NAME = "TennisFriends";
-export const DEFAULT_SITE_URL = "https://tennisfrens.com";
+export const DEFAULT_SITE_URL = "https://www.tennisfrens.com";
 export const DEFAULT_SITE_DESCRIPTION =
   "테니스 실력 향상과 경기력 분석을 돕는 테니스 콘텐츠 및 도구 플랫폼입니다.";
 export const DEFAULT_SITE_LOCALE = "ko_KR";

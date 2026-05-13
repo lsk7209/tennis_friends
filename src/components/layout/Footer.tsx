@@ -21,25 +21,29 @@ const Footer: React.FC = () => {
           <div className="flex gap-x-6 gap-y-2 flex-wrap justify-center">
             <Link
               href="/about"
-              className="text-sm text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+              prefetch={false}
+              className="text-sm !text-gray-900 dark:!text-white hover:!text-gray-700 dark:hover:!text-gray-300 transition-colors"
             >
               소개
             </Link>
             <Link
               href="/contact"
-              className="text-sm text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+              prefetch={false}
+              className="text-sm !text-gray-900 dark:!text-white hover:!text-gray-700 dark:hover:!text-gray-300 transition-colors"
             >
               문의하기
             </Link>
             <Link
               href="/terms"
-              className="text-sm text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+              prefetch={false}
+              className="text-sm !text-gray-900 dark:!text-white hover:!text-gray-700 dark:hover:!text-gray-300 transition-colors"
             >
               이용 약관
             </Link>
             <Link
               href="/privacy"
-              className="text-sm text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+              prefetch={false}
+              className="text-sm !text-gray-900 dark:!text-white hover:!text-gray-700 dark:hover:!text-gray-300 transition-colors"
             >
               개인정보 처리방침
             </Link>

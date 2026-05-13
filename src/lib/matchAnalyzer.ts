@@ -68,6 +68,8 @@ export interface MatchAnalysisResult {
   nextMatchGoals: string[];
 }
 
+type MatchStatistics = MatchAnalysisResult['statistics'];
+
 export function analyzeMatch(input: MatchAnalysisInput): MatchAnalysisResult {
   const stats = calculateStatistics(input);
   const score = calculateOverallScore(stats);
@@ -85,7 +87,7 @@ export function analyzeMatch(input: MatchAnalysisInput): MatchAnalysisResult {
   };
 }
 
-function calculateStatistics(input: MatchAnalysisInput) {
+function calculateStatistics(input: MatchAnalysisInput): MatchStatistics {
   const servePercentage = input.serves.firstServeTotal > 0 
     ? (input.serves.firstServeIn / input.serves.firstServeTotal) * 100 
     : 0;
@@ -116,7 +118,7 @@ function calculateStatistics(input: MatchAnalysisInput) {
   };
 }
 
-function calculateOverallScore(stats: any): number {
+function calculateOverallScore(stats: MatchStatistics): number {
   let score = 0;
   
   // 서브 성공률 (25점 만점)
@@ -165,7 +167,7 @@ function getGrade(score: number): 'A' | 'B' | 'C' | 'D' | 'F' {
   return 'F';
 }
 
-function getStrengths(stats: any): string[] {
+function getStrengths(stats: MatchStatistics): string[] {
   const strengths: string[] = [];
   
   if (stats.servePercentage >= 65) {
@@ -187,7 +189,7 @@ function getStrengths(stats: any): string[] {
   return strengths.length > 0 ? strengths : ['기본기가 탄탄함'];
 }
 
-function getWeaknesses(stats: any): string[] {
+function getWeaknesses(stats: MatchStatistics): string[] {
   const weaknesses: string[] = [];
   
   if (stats.servePercentage < 55) {
@@ -209,7 +211,7 @@ function getWeaknesses(stats: any): string[] {
   return weaknesses.length > 0 ? weaknesses : ['전반적인 안정성 향상'];
 }
 
-function getImprovements(stats: any): string[] {
+function getImprovements(stats: MatchStatistics): string[] {
   const improvements: string[] = [];
   
   if (stats.servePercentage < 60) {
@@ -231,7 +233,7 @@ function getImprovements(stats: any): string[] {
   return improvements.length > 0 ? improvements : ['전반적인 기술 향상'];
 }
 
-function getRecommendations(stats: any) {
+function getRecommendations(stats: MatchStatistics): MatchAnalysisResult['recommendations'] {
   return {
     technical: getTechnicalRecommendations(stats),
     tactical: getTacticalRecommendations(stats),
@@ -240,7 +242,7 @@ function getRecommendations(stats: any) {
   };
 }
 
-function getTechnicalRecommendations(stats: any): string[] {
+function getTechnicalRecommendations(stats: MatchStatistics): string[] {
   const recommendations: string[] = [];
   
   if (stats.servePercentage < 60) {
@@ -259,7 +261,7 @@ function getTechnicalRecommendations(stats: any): string[] {
   return recommendations.length > 0 ? recommendations : ['기본기 정교화'];
 }
 
-function getTacticalRecommendations(stats: any): string[] {
+function getTacticalRecommendations(stats: MatchStatistics): string[] {
   const recommendations: string[] = [];
   
   if (stats.netPlaySuccess < 70) {
@@ -274,7 +276,7 @@ function getTacticalRecommendations(stats: any): string[] {
   return recommendations.length > 0 ? recommendations : ['전술적 사고 개발'];
 }
 
-function getMentalRecommendations(stats: any): string[] {
+function getMentalRecommendations(stats: MatchStatistics): string[] {
   const recommendations: string[] = [];
   
   if (stats.breakPointConversion < 50) {
@@ -288,7 +290,7 @@ function getMentalRecommendations(stats: any): string[] {
   return recommendations;
 }
 
-function getPhysicalRecommendations(stats: any): string[] {
+function getPhysicalRecommendations(_stats: MatchStatistics): string[] {
   return [
     '지구력 향상을 위한 유산소 운동',
     '코트 커버리지 향상을 위한 민첩성 훈련',
@@ -297,7 +299,7 @@ function getPhysicalRecommendations(stats: any): string[] {
   ];
 }
 
-function getNextMatchGoals(stats: any): string[] {
+function getNextMatchGoals(stats: MatchStatistics): string[] {
   const goals: string[] = [];
   
   if (stats.servePercentage < 60) {

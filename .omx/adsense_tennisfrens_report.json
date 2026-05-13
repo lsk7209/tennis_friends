@@ -1,0 +1,3959 @@
+{
+  "accounts": [
+    {
+      "account": "accounts/pub-3050601904412736",
+      "adunits": [
+        {
+          "client": "ca-pub-3050601904412736",
+          "status": 200,
+          "data": {
+            "adUnits": [
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/0584397186",
+                "reportingDimensionId": "ca-pub-3050601904412736:0584397186",
+                "displayName": "300x250, 작성됨 10. 11. 5",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1101699122",
+                "reportingDimensionId": "ca-pub-3050601904412736:1101699122",
+                "displayName": "드라마_모바일_하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x100",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1259946721",
+                "reportingDimensionId": "ca-pub-3050601904412736:1259946721",
+                "displayName": "mailyo상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1262833923",
+                "reportingDimensionId": "ca-pub-3050601904412736:1262833923",
+                "displayName": "픽사베이 사이드바광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1277379125",
+                "reportingDimensionId": "ca-pub-3050601904412736:1277379125",
+                "displayName": "워드프레스오른쪽위젯",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1283500322",
+                "reportingDimensionId": "ca-pub-3050601904412736:1283500322",
+                "displayName": "마케팅피플 컨텐츠 하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1304703128",
+                "reportingDimensionId": "ca-pub-3050601904412736:1304703128",
+                "displayName": "픽사베이 풋터",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1348384263",
+                "reportingDimensionId": "ca-pub-3050601904412736:1348384263",
+                "displayName": "300x250, 작성됨 11. 5. 1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1399547520",
+                "reportingDimensionId": "ca-pub-3050601904412736:1399547520",
+                "displayName": "ourpekr",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "160x600",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1459606322",
+                "reportingDimensionId": "ca-pub-3050601904412736:1459606322",
+                "displayName": "minys하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1474561922",
+                "reportingDimensionId": "ca-pub-3050601904412736:1474561922",
+                "displayName": "라이프맵티스토리",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1487261523",
+                "reportingDimensionId": "ca-pub-3050601904412736:1487261523",
+                "displayName": "블로그파티반응형",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1602220327",
+                "reportingDimensionId": "ca-pub-3050601904412736:1602220327",
+                "displayName": "재테크요리사모바일상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "200x200",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1629859923",
+                "reportingDimensionId": "ca-pub-3050601904412736:1629859923",
+                "displayName": "ff판타지_상단광고",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1676406619",
+                "reportingDimensionId": "ca-pub-3050601904412736:1676406619",
+                "displayName": "호텔몬스터_하단광고",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1762045925",
+                "reportingDimensionId": "ca-pub-3050601904412736:1762045925",
+                "displayName": "구글블로그1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1783501218",
+                "reportingDimensionId": "ca-pub-3050601904412736:1783501218",
+                "displayName": "라이프111상단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1818034321",
+                "reportingDimensionId": "ca-pub-3050601904412736:1818034321",
+                "displayName": "마포구pc본문상단왼쪽",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1822530724",
+                "reportingDimensionId": "ca-pub-3050601904412736:1822530724",
+                "displayName": "dietco유튜브",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/1892386324",
+                "reportingDimensionId": "ca-pub-3050601904412736:1892386324",
+                "displayName": "kmans 위젯",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2002091524",
+                "reportingDimensionId": "ca-pub-3050601904412736:2002091524",
+                "displayName": "사이드바위젯",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "160x600",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2044576325",
+                "reportingDimensionId": "ca-pub-3050601904412736:2044576325",
+                "displayName": "이미지베이_카테고리탑",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2101763522",
+                "reportingDimensionId": "ca-pub-3050601904412736:2101763522",
+                "displayName": "세로_120240",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "120x240",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2185801927",
+                "reportingDimensionId": "ca-pub-3050601904412736:2185801927",
+                "displayName": "제로보드 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2226613929",
+                "reportingDimensionId": "ca-pub-3050601904412736:2226613929",
+                "displayName": "funfuns모바일",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2228743922",
+                "reportingDimensionId": "ca-pub-3050601904412736:2228743922",
+                "displayName": "텍스트레포트",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2269650722",
+                "reportingDimensionId": "ca-pub-3050601904412736:2269650722",
+                "displayName": "auto상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2317877523",
+                "reportingDimensionId": "ca-pub-3050601904412736:2317877523",
+                "displayName": "제로보드모바일상단공통",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2492391700",
+                "reportingDimensionId": "ca-pub-3050601904412736:2492391700",
+                "displayName": "180x150, 작성됨 10. 10. 4",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "180x150",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2513219259",
+                "reportingDimensionId": "ca-pub-3050601904412736:2513219259",
+                "displayName": "테니스_텍스트만",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "FEED"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2530462013",
+                "reportingDimensionId": "ca-pub-3050601904412736:2530462013",
+                "displayName": "okwhere16도메인",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2711661942",
+                "reportingDimensionId": "ca-pub-3050601904412736:2711661942",
+                "displayName": "336x280, 작성됨 10. 9. 2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2736679925",
+                "reportingDimensionId": "ca-pub-3050601904412736:2736679925",
+                "displayName": "mailyo하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2754112320",
+                "reportingDimensionId": "ca-pub-3050601904412736:2754112320",
+                "displayName": "워드프레스위젯1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x600",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2760233524",
+                "reportingDimensionId": "ca-pub-3050601904412736:2760233524",
+                "displayName": "마케팅피플 컨텐츠 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2781436323",
+                "reportingDimensionId": "ca-pub-3050601904412736:2781436323",
+                "displayName": "픽사베이 중앙",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2796797464",
+                "reportingDimensionId": "ca-pub-3050601904412736:2796797464",
+                "displayName": "300x250, 작성됨 10. 9. 2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2855913401",
+                "reportingDimensionId": "ca-pub-3050601904412736:2855913401",
+                "displayName": "300x250, 작성됨 10. 7. 10",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2876280728",
+                "reportingDimensionId": "ca-pub-3050601904412736:2876280728",
+                "displayName": "ourpekr하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "160x600",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2891011281",
+                "reportingDimensionId": "ca-pub-3050601904412736:2891011281",
+                "displayName": "정보큐레이션_컨텐츠자동삽입광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2929114327",
+                "reportingDimensionId": "ca-pub-3050601904412736:2929114327",
+                "displayName": "티스토리위젯",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x600",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2936339526",
+                "reportingDimensionId": "ca-pub-3050601904412736:2936339526",
+                "displayName": "minys모바일상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/2963994729",
+                "reportingDimensionId": "ca-pub-3050601904412736:2963994729",
+                "displayName": "블로그파티하단반응형",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3032998321",
+                "reportingDimensionId": "ca-pub-3050601904412736:3032998321",
+                "displayName": "마포구상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "468x60",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3053041508",
+                "reportingDimensionId": "ca-pub-3050601904412736:3053041508",
+                "displayName": "워프_자동삽입",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3065207030",
+                "reportingDimensionId": "ca-pub-3050601904412736:3065207030",
+                "displayName": "ireports.kr",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3078953525",
+                "reportingDimensionId": "ca-pub-3050601904412736:3078953525",
+                "displayName": "라이프맵상단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3106593120",
+                "reportingDimensionId": "ca-pub-3050601904412736:3106593120",
+                "displayName": "ff판타지_하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3130950941",
+                "reportingDimensionId": "ca-pub-3050601904412736:3130950941",
+                "displayName": "728x90, 작성됨 10. 9. 2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3294767527",
+                "reportingDimensionId": "ca-pub-3050601904412736:3294767527",
+                "displayName": "마포구pc본문상단오른쪽",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3299263924",
+                "reportingDimensionId": "ca-pub-3050601904412736:3299263924",
+                "displayName": "dietcokr유튜브하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3306930722",
+                "reportingDimensionId": "ca-pub-3050601904412736:3306930722",
+                "displayName": "마포구모바일상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3358675923",
+                "reportingDimensionId": "ca-pub-3050601904412736:3358675923",
+                "displayName": "블로그파티 중간 광고",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3486570726",
+                "reportingDimensionId": "ca-pub-3050601904412736:3486570726",
+                "displayName": "마인드7오른쪽광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3521309520",
+                "reportingDimensionId": "ca-pub-3050601904412736:3521309520",
+                "displayName": "이미지베이_카테고리중간",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3521625120",
+                "reportingDimensionId": "ca-pub-3050601904412736:3521625120",
+                "displayName": "리서벌티스토리_상단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3582156727",
+                "reportingDimensionId": "ca-pub-3050601904412736:3582156727",
+                "displayName": "텍스트",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3642089522",
+                "reportingDimensionId": "ca-pub-3050601904412736:3642089522",
+                "displayName": "supe모바일상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x100",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3662535127",
+                "reportingDimensionId": "ca-pub-3050601904412736:3662535127",
+                "displayName": "제로보드하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3709212000",
+                "reportingDimensionId": "ca-pub-3050601904412736:3709212000",
+                "displayName": "라이프맵_호텔스컴바인",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "MATCHED_CONTENT"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3711367410",
+                "reportingDimensionId": "ca-pub-3050601904412736:3711367410",
+                "displayName": "728x90, 작성됨 10. 9. 2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3746383922",
+                "reportingDimensionId": "ca-pub-3050601904412736:3746383922",
+                "displayName": "auto중단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3793869127",
+                "reportingDimensionId": "ca-pub-3050601904412736:3793869127",
+                "displayName": "마포구모바일배너320",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3794610721",
+                "reportingDimensionId": "ca-pub-3050601904412736:3794610721",
+                "displayName": "제로보드모바일하단공통",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3824426483",
+                "reportingDimensionId": "ca-pub-3050601904412736:3824426483",
+                "displayName": "워프_사이드바",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/3973493524",
+                "reportingDimensionId": "ca-pub-3050601904412736:3973493524",
+                "displayName": "워드프레스486",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "468x60",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4093623675",
+                "reportingDimensionId": "ca-pub-3050601904412736:4093623675",
+                "displayName": "300x250, 작성됨 10. 10. 4",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4093750347",
+                "reportingDimensionId": "ca-pub-3050601904412736:4093750347",
+                "displayName": "캣워프_유튜브",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4109057356",
+                "reportingDimensionId": "ca-pub-3050601904412736:4109057356",
+                "displayName": "태스코자동",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4194766326",
+                "reportingDimensionId": "ca-pub-3050601904412736:4194766326",
+                "displayName": "드라마",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4213413128",
+                "reportingDimensionId": "ca-pub-3050601904412736:4213413128",
+                "displayName": "mailyo상단모바일",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4236966725",
+                "reportingDimensionId": "ca-pub-3050601904412736:4236966725",
+                "displayName": "마케팅피플 모바일 상단광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4329773503",
+                "reportingDimensionId": "ca-pub-3050601904412736:4329773503",
+                "displayName": "블로그하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4340298720",
+                "reportingDimensionId": "ca-pub-3050601904412736:4340298720",
+                "displayName": "티스토리상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4353013929",
+                "reportingDimensionId": "ca-pub-3050601904412736:4353013929",
+                "displayName": "ourpe상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4378839122",
+                "reportingDimensionId": "ca-pub-3050601904412736:4378839122",
+                "displayName": "워드프레스상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4413072720",
+                "reportingDimensionId": "ca-pub-3050601904412736:4413072720",
+                "displayName": "minys모바일하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4424463120",
+                "reportingDimensionId": "ca-pub-3050601904412736:4424463120",
+                "displayName": "이미지베이_메인상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4425331955",
+                "reportingDimensionId": "ca-pub-3050601904412736:4425331955",
+                "displayName": "캣워프_2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4428028320",
+                "reportingDimensionId": "ca-pub-3050601904412736:4428028320",
+                "displayName": "멘탈케어티스토리",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4444072325",
+                "reportingDimensionId": "ca-pub-3050601904412736:4444072325",
+                "displayName": "mind7오른쪽상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4524800652",
+                "reportingDimensionId": "ca-pub-3050601904412736:4524800652",
+                "displayName": "300x250, 작성됨 11. 9. 21",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4555686722",
+                "reportingDimensionId": "ca-pub-3050601904412736:4555686722",
+                "displayName": "라이프맵모바일메인상단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "200x200",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4641203180",
+                "reportingDimensionId": "ca-pub-3050601904412736:4641203180",
+                "displayName": "티스토리_제목상단광고",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4766121123",
+                "reportingDimensionId": "ca-pub-3050601904412736:4766121123",
+                "displayName": "마포구 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "468x60",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4775997123",
+                "reportingDimensionId": "ca-pub-3050601904412736:4775997123",
+                "displayName": "dietcokr목록상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4783663922",
+                "reportingDimensionId": "ca-pub-3050601904412736:4783663922",
+                "displayName": "마포구모바일하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4809500982",
+                "reportingDimensionId": "ca-pub-3050601904412736:4809500982",
+                "displayName": "테니스NTRP 광고",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4811413922",
+                "reportingDimensionId": "ca-pub-3050601904412736:4811413922",
+                "displayName": "license1_main_Blog1_300x250_as",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4858441929",
+                "reportingDimensionId": "ca-pub-3050601904412736:4858441929",
+                "displayName": "이미지베이 하단 애프터 카테고리",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4891621108",
+                "reportingDimensionId": "ca-pub-3050601904412736:4891621108",
+                "displayName": "라이프맵 하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "MATCHED_CONTENT"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4892375524",
+                "reportingDimensionId": "ca-pub-3050601904412736:4892375524",
+                "displayName": "라이프맵오른쪽상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "250x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4907772721",
+                "reportingDimensionId": "ca-pub-3050601904412736:4907772721",
+                "displayName": "홈요1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4955557923",
+                "reportingDimensionId": "ca-pub-3050601904412736:4955557923",
+                "displayName": "사이드바1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "120x240",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4998042720",
+                "reportingDimensionId": "ca-pub-3050601904412736:4998042720",
+                "displayName": "이미지베이_카테고리하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/4998358324",
+                "reportingDimensionId": "ca-pub-3050601904412736:4998358324",
+                "displayName": "리서벌티스토리_하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5102904725",
+                "reportingDimensionId": "ca-pub-3050601904412736:5102904725",
+                "displayName": "마인드7메인광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5118822725",
+                "reportingDimensionId": "ca-pub-3050601904412736:5118822725",
+                "displayName": "supe모바일하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x100",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5139268329",
+                "reportingDimensionId": "ca-pub-3050601904412736:5139268329",
+                "displayName": "제로보드중간",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5223117129",
+                "reportingDimensionId": "ca-pub-3050601904412736:5223117129",
+                "displayName": "auto하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5350788049",
+                "reportingDimensionId": "ca-pub-3050601904412736:5350788049",
+                "displayName": "호텔몬스터_광고",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "468x80",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5442683582",
+                "reportingDimensionId": "ca-pub-3050601904412736:5442683582",
+                "displayName": "NTRP상단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5515059386",
+                "reportingDimensionId": "ca-pub-3050601904412736:5515059386",
+                "displayName": "라이프맵",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5671499522",
+                "reportingDimensionId": "ca-pub-3050601904412736:5671499522",
+                "displayName": "드라마하단1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5674957764",
+                "reportingDimensionId": "ca-pub-3050601904412736:5674957764",
+                "displayName": "라이프맵상단2개",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5690146320",
+                "reportingDimensionId": "ca-pub-3050601904412736:5690146320",
+                "displayName": "mailyo하단모바일",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5692147232",
+                "reportingDimensionId": "ca-pub-3050601904412736:5692147232",
+                "displayName": "300x250, 작성됨 11. 9. 21",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5713699929",
+                "reportingDimensionId": "ca-pub-3050601904412736:5713699929",
+                "displayName": "마케팅피플 모바일 메인 하단광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5744053102",
+                "reportingDimensionId": "ca-pub-3050601904412736:5744053102",
+                "displayName": "300x250, 작성됨 11. 9. 21",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5817031925",
+                "reportingDimensionId": "ca-pub-3050601904412736:5817031925",
+                "displayName": "티스토리하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5829747124",
+                "reportingDimensionId": "ca-pub-3050601904412736:5829747124",
+                "displayName": "ourpe하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5853768279",
+                "reportingDimensionId": "ca-pub-3050601904412736:5853768279",
+                "displayName": "테니스결과_2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "FEED"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5855572322",
+                "reportingDimensionId": "ca-pub-3050601904412736:5855572322",
+                "displayName": "워드프레스 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5901196322",
+                "reportingDimensionId": "ca-pub-3050601904412736:5901196322",
+                "displayName": "이미지베이 메인 중단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5920805529",
+                "reportingDimensionId": "ca-pub-3050601904412736:5920805529",
+                "displayName": "mind7위젝",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/5970450204",
+                "reportingDimensionId": "ca-pub-3050601904412736:5970450204",
+                "displayName": "워프_유튜브_반응형",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6001281935",
+                "reportingDimensionId": "ca-pub-3050601904412736:6001281935",
+                "displayName": "워프_유튜브자동광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6119802722",
+                "reportingDimensionId": "ca-pub-3050601904412736:6119802722",
+                "displayName": "dietco모바일하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6134752380",
+                "reportingDimensionId": "ca-pub-3050601904412736:6134752380",
+                "displayName": "180x150, 작성됨 10. 10. 4",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "180x150",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6156939490",
+                "reportingDimensionId": "ca-pub-3050601904412736:6156939490",
+                "displayName": "300x250, 작성됨 10. 11. 5",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6242854322",
+                "reportingDimensionId": "ca-pub-3050601904412736:6242854322",
+                "displayName": "마포구하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "468x60",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6252730323",
+                "reportingDimensionId": "ca-pub-3050601904412736:6252730323",
+                "displayName": "dietcokr모바일상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6288147127",
+                "reportingDimensionId": "ca-pub-3050601904412736:6288147127",
+                "displayName": "license1_sidebar-right-1_AdSense1_200x200_as",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "200x200",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6288668843",
+                "reportingDimensionId": "ca-pub-3050601904412736:6288668843",
+                "displayName": "캣_워프유튜브1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6289978285",
+                "reportingDimensionId": "ca-pub-3050601904412736:6289978285",
+                "displayName": "336x280, 작성됨 10. 9. 12",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6290734326",
+                "reportingDimensionId": "ca-pub-3050601904412736:6290734326",
+                "displayName": "사이드바",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6327481947",
+                "reportingDimensionId": "ca-pub-3050601904412736:6327481947",
+                "displayName": "300x250, 작성됨 10. 7. 14",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6384505928",
+                "reportingDimensionId": "ca-pub-3050601904412736:6384505928",
+                "displayName": "홈요텍스트",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6386235773",
+                "reportingDimensionId": "ca-pub-3050601904412736:6386235773",
+                "displayName": "300x250, 작성됨 10. 11. 5",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6432291129",
+                "reportingDimensionId": "ca-pub-3050601904412736:6432291129",
+                "displayName": "사이드버튼",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "125x125",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6474775929",
+                "reportingDimensionId": "ca-pub-3050601904412736:6474775929",
+                "displayName": "웰페이퍼 애프터_하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6475091526",
+                "reportingDimensionId": "ca-pub-3050601904412736:6475091526",
+                "displayName": "리서벌_티스토리_상단_플러그인",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6508709524",
+                "reportingDimensionId": "ca-pub-3050601904412736:6508709524",
+                "displayName": "마포구상단336",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6535623121",
+                "reportingDimensionId": "ca-pub-3050601904412736:6535623121",
+                "displayName": "a1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6572507524",
+                "reportingDimensionId": "ca-pub-3050601904412736:6572507524",
+                "displayName": "블로그파티 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6579637926",
+                "reportingDimensionId": "ca-pub-3050601904412736:6579637926",
+                "displayName": "마인드7메인광고1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6595555928",
+                "reportingDimensionId": "ca-pub-3050601904412736:6595555928",
+                "displayName": "supepc상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6652684516",
+                "reportingDimensionId": "ca-pub-3050601904412736:6652684516",
+                "displayName": "라이프맵 중간",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6671563924",
+                "reportingDimensionId": "ca-pub-3050601904412736:6671563924",
+                "displayName": "세로_160에600",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "160x600",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6887677928",
+                "reportingDimensionId": "ca-pub-3050601904412736:6887677928",
+                "displayName": "제로보드공통상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/6939405531",
+                "reportingDimensionId": "ca-pub-3050601904412736:6939405531",
+                "displayName": "캣워프3",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7148232724",
+                "reportingDimensionId": "ca-pub-3050601904412736:7148232724",
+                "displayName": "드라마하단2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7157969161",
+                "reportingDimensionId": "ca-pub-3050601904412736:7157969161",
+                "displayName": "디스1_워프_글내용전",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7182817229",
+                "reportingDimensionId": "ca-pub-3050601904412736:7182817229",
+                "displayName": "워프_반응_자동삽입_중간",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7190433127",
+                "reportingDimensionId": "ca-pub-3050601904412736:7190433127",
+                "displayName": "마케팅피플 모바일 본문 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7273209129",
+                "reportingDimensionId": "ca-pub-3050601904412736:7273209129",
+                "displayName": "마케팅피플우측광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7306480322",
+                "reportingDimensionId": "ca-pub-3050601904412736:7306480322",
+                "displayName": "ourpe상단모바일",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7365577911",
+                "reportingDimensionId": "ca-pub-3050601904412736:7365577911",
+                "displayName": "336x280, 작성됨 10. 9. 2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7377929529",
+                "reportingDimensionId": "ca-pub-3050601904412736:7377929529",
+                "displayName": "이미지베이 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7382025722",
+                "reportingDimensionId": "ca-pub-3050601904412736:7382025722",
+                "displayName": "300x250, 작성됨 11. 9. 21",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7446807129",
+                "reportingDimensionId": "ca-pub-3050601904412736:7446807129",
+                "displayName": "라이프맵하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7491815522",
+                "reportingDimensionId": "ca-pub-3050601904412736:7491815522",
+                "displayName": "블로그파티위젯반응형",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7509153128",
+                "reportingDimensionId": "ca-pub-3050601904412736:7509153128",
+                "displayName": "블로그파티하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7596535929",
+                "reportingDimensionId": "ca-pub-3050601904412736:7596535929",
+                "displayName": "livese pc 메인 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7648753922",
+                "reportingDimensionId": "ca-pub-3050601904412736:7648753922",
+                "displayName": "jaeyori 오른쪽",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7676393528",
+                "reportingDimensionId": "ca-pub-3050601904412736:7676393528",
+                "displayName": "ff판타지중간광고",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7861239128",
+                "reportingDimensionId": "ca-pub-3050601904412736:7861239128",
+                "displayName": "홈요2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7892949124",
+                "reportingDimensionId": "ca-pub-3050601904412736:7892949124",
+                "displayName": "정보큐레이션_티스토리_상단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7938919920",
+                "reportingDimensionId": "ca-pub-3050601904412736:7938919920",
+                "displayName": "kmans상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7951509127",
+                "reportingDimensionId": "ca-pub-3050601904412736:7951509127",
+                "displayName": "웰페이퍼 싱글_중간",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/7951824723",
+                "reportingDimensionId": "ca-pub-3050601904412736:7951824723",
+                "displayName": "리서벌티스토리_하단_플러그임왼쪽",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8012356328",
+                "reportingDimensionId": "ca-pub-3050601904412736:8012356328",
+                "displayName": "aa",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8013823926",
+                "reportingDimensionId": "ca-pub-3050601904412736:8013823926",
+                "displayName": "이메일티스토리_상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8043766325",
+                "reportingDimensionId": "ca-pub-3050601904412736:8043766325",
+                "displayName": "워드프레스하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8072289128",
+                "reportingDimensionId": "ca-pub-3050601904412736:8072289128",
+                "displayName": "supepc하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8154418327",
+                "reportingDimensionId": "ca-pub-3050601904412736:8154418327",
+                "displayName": "mind7상단1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8209949529",
+                "reportingDimensionId": "ca-pub-3050601904412736:8209949529",
+                "displayName": "simrynet",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8269018514",
+                "reportingDimensionId": "ca-pub-3050601904412736:8269018514",
+                "displayName": "라이프맵1",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8276379447",
+                "reportingDimensionId": "ca-pub-3050601904412736:8276379447",
+                "displayName": "300x250, 작성됨 10. 7. 14",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8364411127",
+                "reportingDimensionId": "ca-pub-3050601904412736:8364411127",
+                "displayName": "제로보드공통하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8401172421",
+                "reportingDimensionId": "ca-pub-3050601904412736:8401172421",
+                "displayName": "워프_자동_반응형_글하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8552062650",
+                "reportingDimensionId": "ca-pub-3050601904412736:8552062650",
+                "displayName": "NTRP_하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8584847529",
+                "reportingDimensionId": "ca-pub-3050601904412736:8584847529",
+                "displayName": "마포구상단1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "468x60",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8624965928",
+                "reportingDimensionId": "ca-pub-3050601904412736:8624965928",
+                "displayName": "드라마_모바일_상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x100",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8667166320",
+                "reportingDimensionId": "ca-pub-3050601904412736:8667166320",
+                "displayName": "마케팅피플 모바일 본문 하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8783213529",
+                "reportingDimensionId": "ca-pub-3050601904412736:8783213529",
+                "displayName": "ourpe하단모바일",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "320x50",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8827969925",
+                "reportingDimensionId": "ca-pub-3050601904412736:8827969925",
+                "displayName": "픽사베이 상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/8982873125",
+                "reportingDimensionId": "ca-pub-3050601904412736:8982873125",
+                "displayName": "minys상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9056815841",
+                "reportingDimensionId": "ca-pub-3050601904412736:9056815841",
+                "displayName": "300x250, 작성됨 10. 10. 4",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9073269124",
+                "reportingDimensionId": "ca-pub-3050601904412736:9073269124",
+                "displayName": "livese pc 하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9125487121",
+                "reportingDimensionId": "ca-pub-3050601904412736:9125487121",
+                "displayName": "재테크요리사상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9158001122",
+                "reportingDimensionId": "ca-pub-3050601904412736:9158001122",
+                "displayName": "마인드7세로광고",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "160x600",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9161385098",
+                "reportingDimensionId": "ca-pub-3050601904412736:9161385098",
+                "displayName": "정보큐레이션_글 가운데_텍스트",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9191074603",
+                "reportingDimensionId": "ca-pub-3050601904412736:9191074603",
+                "displayName": "336x280, 작성됨 10. 9. 2",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9238409700",
+                "reportingDimensionId": "ca-pub-3050601904412736:9238409700",
+                "displayName": "테니스 네이티브_하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "ARTICLE"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9337972320",
+                "reportingDimensionId": "ca-pub-3050601904412736:9337972320",
+                "displayName": "11",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9341301125",
+                "reportingDimensionId": "ca-pub-3050601904412736:9341301125",
+                "displayName": "마포구오른쪽상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9369682320",
+                "reportingDimensionId": "ca-pub-3050601904412736:9369682320",
+                "displayName": "정보큐레이션_티스토리_하단",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9415653125",
+                "reportingDimensionId": "ca-pub-3050601904412736:9415653125",
+                "displayName": "kmans하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9428242329",
+                "reportingDimensionId": "ca-pub-3050601904412736:9428242329",
+                "displayName": "이미지베이 사이드바 싱글",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9428557925",
+                "reportingDimensionId": "ca-pub-3050601904412736:9428557925",
+                "displayName": "리서벌티스토리_하단_플러그인오른쪽",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "336x280",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9489089520",
+                "reportingDimensionId": "ca-pub-3050601904412736:9489089520",
+                "displayName": "aa1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "728x90",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9489760958",
+                "reportingDimensionId": "ca-pub-3050601904412736:9489760958",
+                "displayName": "테니스_결과페이지_1",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "FEED"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9490557121",
+                "reportingDimensionId": "ca-pub-3050601904412736:9490557121",
+                "displayName": "이메일티스토리_하단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9561671897",
+                "reportingDimensionId": "ca-pub-3050601904412736:9561671897",
+                "displayName": "300x250, 작성됨 11. 9. 21",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9579375122",
+                "reportingDimensionId": "ca-pub-3050601904412736:9579375122",
+                "displayName": "워드프레스수직",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "120x240",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9590529696",
+                "reportingDimensionId": "ca-pub-3050601904412736:9590529696",
+                "displayName": "워프중간_자동",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9631508987",
+                "reportingDimensionId": "ca-pub-3050601904412736:9631508987",
+                "displayName": "테니스결과3",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9672705129",
+                "reportingDimensionId": "ca-pub-3050601904412736:9672705129",
+                "displayName": "마인드7상단",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "468x60",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9701958170",
+                "reportingDimensionId": "ca-pub-3050601904412736:9701958170",
+                "displayName": "티스토리_본문상단광고",
+                "state": "ACTIVE",
+                "contentAdsSettings": {
+                  "size": "1x3",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9749880724",
+                "reportingDimensionId": "ca-pub-3050601904412736:9749880724",
+                "displayName": "funfuns300250",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              },
+              {
+                "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736/adunits/9771635286",
+                "reportingDimensionId": "ca-pub-3050601904412736:9771635286",
+                "displayName": "300x250, 작성됨 10. 10. 4",
+                "state": "ARCHIVED",
+                "contentAdsSettings": {
+                  "size": "300x250",
+                  "type": "DISPLAY"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "reports": {
+        "format": {
+          "totalMatchedRows": "7",
+          "headers": [
+            {
+              "name": "AD_FORMAT_NAME",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "광고 의도 칩"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "3"
+                },
+                {
+                  "value": "0.5"
+                },
+                {
+                  "value": "2509"
+                },
+                {
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "광고 인텐트 앵커"
+                },
+                {
+                  "value": "9"
+                },
+                {
+                  "value": "12"
+                },
+                {
+                  "value": "11"
+                },
+                {
+                  "value": "11"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "335"
+                },
+                {
+                  "value": "0.9167"
+                },
+                {
+                  "value": "37192"
+                },
+                {
+                  "value": "0.8182"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "모바일 전면"
+                },
+                {
+                  "value": "1325"
+                },
+                {
+                  "value": "1325"
+                },
+                {
+                  "value": "1117"
+                },
+                {
+                  "value": "703"
+                },
+                {
+                  "value": "42"
+                },
+                {
+                  "value": "4356"
+                },
+                {
+                  "value": "0.843"
+                },
+                {
+                  "value": "3288"
+                },
+                {
+                  "value": "0.7875"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "사이드 레일 광고"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "638"
+                },
+                {
+                  "value": "260"
+                },
+                {
+                  "value": "225"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "97"
+                },
+                {
+                  "value": "0.4075"
+                },
+                {
+                  "value": "96928"
+                },
+                {
+                  "value": "0.9911"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "앵커"
+                },
+                {
+                  "value": "199"
+                },
+                {
+                  "value": "1538"
+                },
+                {
+                  "value": "1100"
+                },
+                {
+                  "value": "1045"
+                },
+                {
+                  "value": "19"
+                },
+                {
+                  "value": "2317"
+                },
+                {
+                  "value": "0.7152"
+                },
+                {
+                  "value": "11646"
+                },
+                {
+                  "value": "0.8973"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "인페이지"
+                },
+                {
+                  "value": "9"
+                },
+                {
+                  "value": "3583"
+                },
+                {
+                  "value": "2433"
+                },
+                {
+                  "value": "2357"
+                },
+                {
+                  "value": "32"
+                },
+                {
+                  "value": "1448"
+                },
+                {
+                  "value": "0.679"
+                },
+                {
+                  "value": "160859"
+                },
+                {
+                  "value": "0.5381"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "채워지지 않은 대체 용어"
+                },
+                {
+                  "value": "16"
+                },
+                {
+                  "value": "36"
+                },
+                {
+                  "value": "17"
+                },
+                {
+                  "value": "17"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "62"
+                },
+                {
+                  "value": "0.4722"
+                },
+                {
+                  "value": "3884"
+                },
+                {
+                  "value": "0.8824"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "1560"
+              },
+              {
+                "value": "7134"
+              },
+              {
+                "value": "4939"
+              },
+              {
+                "value": "4359"
+              },
+              {
+                "value": "95"
+              },
+              {
+                "value": "8618"
+              },
+              {
+                "value": "0.6923"
+              },
+              {
+                "value": "5524"
+              },
+              {
+                "value": "0.6831"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "222"
+              },
+              {
+                "value": "1019"
+              },
+              {
+                "value": "705"
+              },
+              {
+                "value": "622"
+              },
+              {
+                "value": "13"
+              },
+              {
+                "value": "1231"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        },
+        "platform": {
+          "totalMatchedRows": "3",
+          "headers": [
+            {
+              "name": "PLATFORM_TYPE_NAME",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "고급형 휴대기기"
+                },
+                {
+                  "value": "985"
+                },
+                {
+                  "value": "4165"
+                },
+                {
+                  "value": "3590"
+                },
+                {
+                  "value": "3233"
+                },
+                {
+                  "value": "83"
+                },
+                {
+                  "value": "7237"
+                },
+                {
+                  "value": "0.8619"
+                },
+                {
+                  "value": "7347"
+                },
+                {
+                  "value": "0.6409"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "데스크톱"
+                },
+                {
+                  "value": "550"
+                },
+                {
+                  "value": "2863"
+                },
+                {
+                  "value": "1262"
+                },
+                {
+                  "value": "1053"
+                },
+                {
+                  "value": "11"
+                },
+                {
+                  "value": "1270"
+                },
+                {
+                  "value": "0.4408"
+                },
+                {
+                  "value": "2308"
+                },
+                {
+                  "value": "0.8034"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "태블릿"
+                },
+                {
+                  "value": "25"
+                },
+                {
+                  "value": "106"
+                },
+                {
+                  "value": "87"
+                },
+                {
+                  "value": "73"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "111"
+                },
+                {
+                  "value": "0.8208"
+                },
+                {
+                  "value": "4438"
+                },
+                {
+                  "value": "0.6552"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "1560"
+              },
+              {
+                "value": "7134"
+              },
+              {
+                "value": "4939"
+              },
+              {
+                "value": "4359"
+              },
+              {
+                "value": "95"
+              },
+              {
+                "value": "8618"
+              },
+              {
+                "value": "0.6923"
+              },
+              {
+                "value": "5524"
+              },
+              {
+                "value": "0.6831"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "520"
+              },
+              {
+                "value": "2378"
+              },
+              {
+                "value": "1646"
+              },
+              {
+                "value": "1453"
+              },
+              {
+                "value": "31"
+              },
+              {
+                "value": "2873"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        },
+        "placement": {
+          "totalMatchedRows": "2",
+          "headers": [
+            {
+              "name": "AD_PLACEMENT_NAME",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "수동"
+                },
+                {
+                  "value": "17"
+                },
+                {
+                  "value": "15"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "23"
+                },
+                {
+                  "value": "0.0667"
+                },
+                {
+                  "value": "1369"
+                },
+                {
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "자동 광고"
+                },
+                {
+                  "value": "1543"
+                },
+                {
+                  "value": "7119"
+                },
+                {
+                  "value": "4938"
+                },
+                {
+                  "value": "4358"
+                },
+                {
+                  "value": "95"
+                },
+                {
+                  "value": "8595"
+                },
+                {
+                  "value": "0.6936"
+                },
+                {
+                  "value": "5570"
+                },
+                {
+                  "value": "0.683"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "1560"
+              },
+              {
+                "value": "7134"
+              },
+              {
+                "value": "4939"
+              },
+              {
+                "value": "4359"
+              },
+              {
+                "value": "95"
+              },
+              {
+                "value": "8618"
+              },
+              {
+                "value": "0.6923"
+              },
+              {
+                "value": "5524"
+              },
+              {
+                "value": "0.6831"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "780"
+              },
+              {
+                "value": "3567"
+              },
+              {
+                "value": "2469"
+              },
+              {
+                "value": "2179"
+              },
+              {
+                "value": "47"
+              },
+              {
+                "value": "4309"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        },
+        "date": {
+          "totalMatchedRows": "30",
+          "headers": [
+            {
+              "name": "DATE",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "2026-04-03"
+                },
+                {
+                  "value": "20"
+                },
+                {
+                  "value": "114"
+                },
+                {
+                  "value": "72"
+                },
+                {
+                  "value": "66"
+                },
+                {
+                  "value": "3"
+                },
+                {
+                  "value": "53"
+                },
+                {
+                  "value": "0.6316"
+                },
+                {
+                  "value": "2647"
+                },
+                {
+                  "value": "0.8727"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-04"
+                },
+                {
+                  "value": "16"
+                },
+                {
+                  "value": "67"
+                },
+                {
+                  "value": "60"
+                },
+                {
+                  "value": "56"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "87"
+                },
+                {
+                  "value": "0.8955"
+                },
+                {
+                  "value": "5441"
+                },
+                {
+                  "value": "0.6222"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-05"
+                },
+                {
+                  "value": "30"
+                },
+                {
+                  "value": "135"
+                },
+                {
+                  "value": "102"
+                },
+                {
+                  "value": "83"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "122"
+                },
+                {
+                  "value": "0.7556"
+                },
+                {
+                  "value": "4052"
+                },
+                {
+                  "value": "0.55"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-06"
+                },
+                {
+                  "value": "27"
+                },
+                {
+                  "value": "160"
+                },
+                {
+                  "value": "122"
+                },
+                {
+                  "value": "113"
+                },
+                {
+                  "value": "5"
+                },
+                {
+                  "value": "85"
+                },
+                {
+                  "value": "0.7625"
+                },
+                {
+                  "value": "3151"
+                },
+                {
+                  "value": "0.8073"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-07"
+                },
+                {
+                  "value": "30"
+                },
+                {
+                  "value": "149"
+                },
+                {
+                  "value": "95"
+                },
+                {
+                  "value": "81"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "163"
+                },
+                {
+                  "value": "0.6376"
+                },
+                {
+                  "value": "5423"
+                },
+                {
+                  "value": "0.5974"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-08"
+                },
+                {
+                  "value": "16"
+                },
+                {
+                  "value": "91"
+                },
+                {
+                  "value": "79"
+                },
+                {
+                  "value": "74"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "94"
+                },
+                {
+                  "value": "0.8681"
+                },
+                {
+                  "value": "5874"
+                },
+                {
+                  "value": "0.6"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-09"
+                },
+                {
+                  "value": "39"
+                },
+                {
+                  "value": "175"
+                },
+                {
+                  "value": "151"
+                },
+                {
+                  "value": "136"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "426"
+                },
+                {
+                  "value": "0.8629"
+                },
+                {
+                  "value": "10918"
+                },
+                {
+                  "value": "0.7295"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-10"
+                },
+                {
+                  "value": "24"
+                },
+                {
+                  "value": "112"
+                },
+                {
+                  "value": "68"
+                },
+                {
+                  "value": "60"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "76"
+                },
+                {
+                  "value": "0.6071"
+                },
+                {
+                  "value": "3171"
+                },
+                {
+                  "value": "0.6327"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-11"
+                },
+                {
+                  "value": "36"
+                },
+                {
+                  "value": "132"
+                },
+                {
+                  "value": "98"
+                },
+                {
+                  "value": "81"
+                },
+                {
+                  "value": "4"
+                },
+                {
+                  "value": "275"
+                },
+                {
+                  "value": "0.7424"
+                },
+                {
+                  "value": "7640"
+                },
+                {
+                  "value": "0.7215"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-12"
+                },
+                {
+                  "value": "29"
+                },
+                {
+                  "value": "147"
+                },
+                {
+                  "value": "126"
+                },
+                {
+                  "value": "115"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "177"
+                },
+                {
+                  "value": "0.8571"
+                },
+                {
+                  "value": "6095"
+                },
+                {
+                  "value": "0.6449"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-13"
+                },
+                {
+                  "value": "33"
+                },
+                {
+                  "value": "229"
+                },
+                {
+                  "value": "180"
+                },
+                {
+                  "value": "167"
+                },
+                {
+                  "value": "3"
+                },
+                {
+                  "value": "138"
+                },
+                {
+                  "value": "0.786"
+                },
+                {
+                  "value": "4173"
+                },
+                {
+                  "value": "0.7329"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-14"
+                },
+                {
+                  "value": "137"
+                },
+                {
+                  "value": "524"
+                },
+                {
+                  "value": "136"
+                },
+                {
+                  "value": "112"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "331"
+                },
+                {
+                  "value": "0.2595"
+                },
+                {
+                  "value": "2413"
+                },
+                {
+                  "value": "0.7041"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-15"
+                },
+                {
+                  "value": "43"
+                },
+                {
+                  "value": "227"
+                },
+                {
+                  "value": "161"
+                },
+                {
+                  "value": "135"
+                },
+                {
+                  "value": "3"
+                },
+                {
+                  "value": "261"
+                },
+                {
+                  "value": "0.7093"
+                },
+                {
+                  "value": "6058"
+                },
+                {
+                  "value": "0.837"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-16"
+                },
+                {
+                  "value": "40"
+                },
+                {
+                  "value": "214"
+                },
+                {
+                  "value": "180"
+                },
+                {
+                  "value": "161"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "284"
+                },
+                {
+                  "value": "0.8411"
+                },
+                {
+                  "value": "7101"
+                },
+                {
+                  "value": "0.5882"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-17"
+                },
+                {
+                  "value": "11"
+                },
+                {
+                  "value": "64"
+                },
+                {
+                  "value": "48"
+                },
+                {
+                  "value": "40"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "71"
+                },
+                {
+                  "value": "0.75"
+                },
+                {
+                  "value": "6451"
+                },
+                {
+                  "value": "0.6667"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-18"
+                },
+                {
+                  "value": "131"
+                },
+                {
+                  "value": "540"
+                },
+                {
+                  "value": "138"
+                },
+                {
+                  "value": "120"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "169"
+                },
+                {
+                  "value": "0.2556"
+                },
+                {
+                  "value": "1286"
+                },
+                {
+                  "value": "0.6604"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-19"
+                },
+                {
+                  "value": "29"
+                },
+                {
+                  "value": "145"
+                },
+                {
+                  "value": "120"
+                },
+                {
+                  "value": "107"
+                },
+                {
+                  "value": "6"
+                },
+                {
+                  "value": "221"
+                },
+                {
+                  "value": "0.8276"
+                },
+                {
+                  "value": "7613"
+                },
+                {
+                  "value": "0.7476"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-20"
+                },
+                {
+                  "value": "47"
+                },
+                {
+                  "value": "238"
+                },
+                {
+                  "value": "212"
+                },
+                {
+                  "value": "176"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "220"
+                },
+                {
+                  "value": "0.8908"
+                },
+                {
+                  "value": "4688"
+                },
+                {
+                  "value": "0.6626"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-21"
+                },
+                {
+                  "value": "104"
+                },
+                {
+                  "value": "519"
+                },
+                {
+                  "value": "161"
+                },
+                {
+                  "value": "124"
+                },
+                {
+                  "value": "3"
+                },
+                {
+                  "value": "220"
+                },
+                {
+                  "value": "0.3102"
+                },
+                {
+                  "value": "2118"
+                },
+                {
+                  "value": "0.7025"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-22"
+                },
+                {
+                  "value": "40"
+                },
+                {
+                  "value": "175"
+                },
+                {
+                  "value": "140"
+                },
+                {
+                  "value": "120"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "301"
+                },
+                {
+                  "value": "0.8"
+                },
+                {
+                  "value": "7537"
+                },
+                {
+                  "value": "0.7"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-23"
+                },
+                {
+                  "value": "28"
+                },
+                {
+                  "value": "137"
+                },
+                {
+                  "value": "116"
+                },
+                {
+                  "value": "101"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "141"
+                },
+                {
+                  "value": "0.8467"
+                },
+                {
+                  "value": "5040"
+                },
+                {
+                  "value": "0.701"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-24"
+                },
+                {
+                  "value": "17"
+                },
+                {
+                  "value": "89"
+                },
+                {
+                  "value": "77"
+                },
+                {
+                  "value": "69"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "126"
+                },
+                {
+                  "value": "0.8652"
+                },
+                {
+                  "value": "7433"
+                },
+                {
+                  "value": "0.6866"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-25"
+                },
+                {
+                  "value": "27"
+                },
+                {
+                  "value": "115"
+                },
+                {
+                  "value": "97"
+                },
+                {
+                  "value": "85"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "158"
+                },
+                {
+                  "value": "0.8435"
+                },
+                {
+                  "value": "5844"
+                },
+                {
+                  "value": "0.6049"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-26"
+                },
+                {
+                  "value": "52"
+                },
+                {
+                  "value": "206"
+                },
+                {
+                  "value": "153"
+                },
+                {
+                  "value": "128"
+                },
+                {
+                  "value": "4"
+                },
+                {
+                  "value": "410"
+                },
+                {
+                  "value": "0.7427"
+                },
+                {
+                  "value": "7892"
+                },
+                {
+                  "value": "0.6923"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-27"
+                },
+                {
+                  "value": "68"
+                },
+                {
+                  "value": "250"
+                },
+                {
+                  "value": "190"
+                },
+                {
+                  "value": "158"
+                },
+                {
+                  "value": "4"
+                },
+                {
+                  "value": "765"
+                },
+                {
+                  "value": "0.76"
+                },
+                {
+                  "value": "11250"
+                },
+                {
+                  "value": "0.7872"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-28"
+                },
+                {
+                  "value": "57"
+                },
+                {
+                  "value": "218"
+                },
+                {
+                  "value": "183"
+                },
+                {
+                  "value": "170"
+                },
+                {
+                  "value": "5"
+                },
+                {
+                  "value": "478"
+                },
+                {
+                  "value": "0.8394"
+                },
+                {
+                  "value": "8386"
+                },
+                {
+                  "value": "0.7301"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-29"
+                },
+                {
+                  "value": "193"
+                },
+                {
+                  "value": "754"
+                },
+                {
+                  "value": "633"
+                },
+                {
+                  "value": "574"
+                },
+                {
+                  "value": "9"
+                },
+                {
+                  "value": "987"
+                },
+                {
+                  "value": "0.8395"
+                },
+                {
+                  "value": "5113"
+                },
+                {
+                  "value": "0.6585"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-30"
+                },
+                {
+                  "value": "68"
+                },
+                {
+                  "value": "311"
+                },
+                {
+                  "value": "255"
+                },
+                {
+                  "value": "220"
+                },
+                {
+                  "value": "5"
+                },
+                {
+                  "value": "485"
+                },
+                {
+                  "value": "0.8199"
+                },
+                {
+                  "value": "7140"
+                },
+                {
+                  "value": "0.6893"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-05-01"
+                },
+                {
+                  "value": "107"
+                },
+                {
+                  "value": "575"
+                },
+                {
+                  "value": "510"
+                },
+                {
+                  "value": "470"
+                },
+                {
+                  "value": "13"
+                },
+                {
+                  "value": "730"
+                },
+                {
+                  "value": "0.887"
+                },
+                {
+                  "value": "6826"
+                },
+                {
+                  "value": "0.6432"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-05-02"
+                },
+                {
+                  "value": "61"
+                },
+                {
+                  "value": "322"
+                },
+                {
+                  "value": "276"
+                },
+                {
+                  "value": "257"
+                },
+                {
+                  "value": "5"
+                },
+                {
+                  "value": "564"
+                },
+                {
+                  "value": "0.8571"
+                },
+                {
+                  "value": "9253"
+                },
+                {
+                  "value": "0.639"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "1560"
+              },
+              {
+                "value": "7134"
+              },
+              {
+                "value": "4939"
+              },
+              {
+                "value": "4359"
+              },
+              {
+                "value": "95"
+              },
+              {
+                "value": "8618"
+              },
+              {
+                "value": "0.6923"
+              },
+              {
+                "value": "5524"
+              },
+              {
+                "value": "0.6831"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "52"
+              },
+              {
+                "value": "237"
+              },
+              {
+                "value": "164"
+              },
+              {
+                "value": "145"
+              },
+              {
+                "value": "3"
+              },
+              {
+                "value": "287"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        }
+      }
+    }
+  ]
+}

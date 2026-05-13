@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   description: "노박 조코비치 (Novak Djokovic) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['노박 조코비치', 'Novak Djokovic', '테니스', 'ATP', '플레이스타일', '세르비아 테니스', '전천후', '멘탈', '전술'],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/novak-djokovic',
+    canonical: 'https://www.tennisfrens.com/players/novak-djokovic',
   },
   openGraph: {
     title: '노박 조코비치 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
     description: '노박 조코비치의 전천후 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfrens.com/players/novak-djokovic',
+    url: 'https://www.tennisfrens.com/players/novak-djokovic',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -100,14 +100,14 @@ export default function NovakDjokovicPage() {
             'Olympic Gold Medalist',
             'ATP Finals Champion (7 titles)',
           ]}
-          url="https://tennisfrens.com/players/novak-djokovic"
+          url="https://www.tennisfrens.com/players/novak-djokovic"
         />
 
         <BreadcrumbSchema
           items={[
-            { name: '홈', item: 'https://tennisfrens.com' },
-            { name: '선수', item: 'https://tennisfrens.com/players' },
-            { name: '노박 조코비치', item: 'https://tennisfrens.com/players/novak-djokovic' },
+            { name: '홈', item: 'https://www.tennisfrens.com' },
+            { name: '선수', item: 'https://www.tennisfrens.com/players' },
+            { name: '노박 조코비치', item: 'https://www.tennisfrens.com/players/novak-djokovic' },
           ]}
         />
         <FAQSchema faqs={faqs} />

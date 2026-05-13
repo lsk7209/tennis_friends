@@ -9,12 +9,12 @@ export const metadata = {
   description: '중급자에서 상급자로 가는 핵심은 스윙이 아니라 전략입니다. 코트 기하학, 인사이드 아웃 포핸드, 빅 포인트 심리학까지 승률을 높이는 모든 기술.',
   keywords: ['테니스 전략', '중급자 테니스', '코트 기하학', '인사이드 아웃 포핸드', '포인트 설계', '테니스 승리 비결'],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-intermediate-match-strategy',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-intermediate-match-strategy',
   },
   openGraph: {
     title: '테니스 중급자 승리 전략 — 코트 기하학과 포인트 설계의 기술',
     description: '중급자에서 상급자로 가는 핵심은 스윙이 아니라 전략입니다. 코트 기하학, 인사이드 아웃 포핸드, 빅 포인트 심리학까지 승률을 높이는 모든 기술.',
-    url: 'https://tennisfrens.com/blog/tennis-intermediate-match-strategy',
+    url: 'https://www.tennisfrens.com/blog/tennis-intermediate-match-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

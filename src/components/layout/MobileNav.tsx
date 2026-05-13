@@ -29,10 +29,11 @@ export default function MobileNav() {
             <Link
               key={item.href}
               href={item.href}
+              prefetch={false}
               className={`flex flex-col items-center justify-center flex-1 py-2 transition-colors ${
                 active
-                  ? 'text-blue-600 dark:text-blue-400'
-                  : 'text-gray-500 dark:text-gray-400'
+                  ? '!text-blue-600 dark:!text-blue-400'
+                  : '!text-gray-500 dark:!text-gray-300'
               }`}
             >
               <Icon className="w-5 h-5" />

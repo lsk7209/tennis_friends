@@ -9,6 +9,8 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, ArrowLeft, Clock } from 'lucide-react';
 import { QUESTION_BANK, CATEGORY_COLORS, CATEGORY_LABELS, pickQuestions, gradeQuiz, QuizAnswer, Question } from '@/lib/tennisQuiz';
 
+const AUTO_ADVANCE_DELAY_MS = 500;
+
 export default function TennisRulesQuiz() {
   const router = useRouter();
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -54,7 +56,8 @@ export default function TennisRulesQuiz() {
       timeSpent: answerTime
     };
     
-    setAnswers(prev => [...prev, newAnswer]);
+    const nextAnswers = [...answers, newAnswer];
+    setAnswers(nextAnswers);
     
     // 답변 선택 후 자동으로 다음 문항으로 이동 (마지막 문항이 아닌 경우)
     if (!isLastQuestion) {
@@ -62,23 +65,31 @@ export default function TennisRulesQuiz() {
         setCurrentQuestionIndex(prev => prev + 1);
         setSelectedAnswer(null);
         setQuestionStartTime(Date.now());
-      }, 500); // 0.5초 후 자동 이동
+      }, AUTO_ADVANCE_DELAY_MS); // 0.5초 후 자동 이동
+    } else {
+      setTimeout(() => {
+        handleFinish(nextAnswers);
+      }, AUTO_ADVANCE_DELAY_MS);
     }
+  };
+
+  const handleFinish = (nextAnswers = answers) => {
+    // 퀴즈 완료 - 결과 페이지로 이동
+    const result = gradeQuiz(nextAnswers);
+    const params = new URLSearchParams();
+    params.append('score', result.score.toString());
+    params.append('grade', result.grade);
+    params.append('timeSpent', result.timeSpent.toString());
+    params.append('wrongByCat', JSON.stringify(result.wrongByCat));
+    params.append('answers', JSON.stringify(result.answers));
+    params.append('questions', JSON.stringify(questions));
+    
+    router.push(`/tennis-rules-quiz/result?${params.toString()}`);
   };
 
   const handleNext = () => {
     if (isLastQuestion) {
-      // 퀴즈 완료 - 결과 페이지로 이동
-      const result = gradeQuiz(answers);
-      const params = new URLSearchParams();
-      params.append('score', result.score.toString());
-      params.append('grade', result.grade);
-      params.append('timeSpent', result.timeSpent.toString());
-      params.append('wrongByCat', JSON.stringify(result.wrongByCat));
-      params.append('answers', JSON.stringify(result.answers));
-      params.append('questions', JSON.stringify(questions));
-      
-      router.push(`/tennis-rules-quiz/result?${params.toString()}`);
+      handleFinish();
     }
   };
 

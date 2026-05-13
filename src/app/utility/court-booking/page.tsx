@@ -20,7 +20,9 @@ export default function Page() {
         <Card className="border-blue-100 bg-gradient-to-br from-blue-50 via-white to-green-50">
           <CardHeader>
             <Badge className="w-fit bg-blue-600 text-white">Court Utility</Badge>
-            <CardTitle className="mt-3 text-4xl">테니스 코트 예약</CardTitle>
+            <h1 className="mt-3 text-4xl font-semibold leading-none">
+              테니스 코트 예약
+            </h1>
             <p className="text-base leading-7 text-muted-foreground">
               지역, 코트 타입, 시간대 기준으로 예약 흐름을 빠르게 확인하는 데모 페이지입니다.
             </p>

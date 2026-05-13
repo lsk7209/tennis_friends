@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer } from 'recharts';
 
+const CHART_HEIGHT = 350;
+const CHART_INITIAL_DIMENSION = { width: 320, height: CHART_HEIGHT };
+
 interface SkillAttribute {
     name: string;
     score: number; // 0 to 10
@@ -15,10 +18,10 @@ interface PlayerHexagonStatsProps {
 }
 
 export default function PlayerHexagonStats({ attributes, playerName }: PlayerHexagonStatsProps) {
-    // 클라이언트 사이드에서만 차트 렌더링 (SSR에서 컨테이너 크기 계산 문제 방지)
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
-        setIsMounted(true);
+        const frameId = requestAnimationFrame(() => setIsMounted(true));
+        return () => cancelAnimationFrame(frameId);
     }, []);
 
     // Recharts용 데이터 변환
@@ -74,10 +77,15 @@ export default function PlayerHexagonStats({ attributes, playerName }: PlayerHex
                         </div>
                     </div>
 
-                    {/* Hexagon 레이더 차트 */}
-                    <div className="w-full h-[350px] relative">
+                    <div className="w-full h-[350px] min-w-0 relative">
                         {isMounted ? (
-                            <ResponsiveContainer width="100%" height="100%">
+                            <ResponsiveContainer
+                                width="100%"
+                                height="100%"
+                                minWidth={240}
+                                minHeight={CHART_HEIGHT}
+                                initialDimension={CHART_INITIAL_DIMENSION}
+                            >
                                 <RadarChart data={chartData}>
                                     <PolarGrid
                                         stroke="#475569"

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "테니스 플레이 스타일 테스트",
     description: "내 플레이 성향을 파악하고 어울리는 훈련 방향을 확인합니다.",
     type: "website",
-    url: "https://tennisfrens.com/utility/play-style-test",
+    url: "https://www.tennisfrens.com/utility/play-style-test",
   },
 };
 
@@ -32,7 +32,9 @@ export default function Page() {
         <Card className="border-pink-100 bg-gradient-to-br from-pink-50 via-white to-orange-50">
           <CardHeader>
             <Badge className="w-fit bg-pink-600 text-white">Play Style</Badge>
-            <CardTitle className="mt-3 text-4xl">테니스 플레이 스타일 테스트</CardTitle>
+            <h1 className="mt-3 text-4xl font-semibold leading-none">
+              테니스 플레이 스타일 테스트
+            </h1>
             <p className="text-base leading-7 text-muted-foreground">
               같은 실력이라도 경기 운영은 완전히 다릅니다. 내 성향을 알면 맞는 훈련과 전술이 더 빨리 보입니다.
             </p>

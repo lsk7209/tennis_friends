@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: "플라비오 코볼리 (Flavio Cobolli) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['플라비오 코볼리', 'Flavio Cobolli', '테니스', 'ATP', '플레이스타일', '이탈리아 테니스', '공격형', '강력한 포핸드'],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/flavio-cobolli',
+    canonical: 'https://www.tennisfrens.com/players/flavio-cobolli',
   },
   openGraph: {
     title: '플라비오 코볼리 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
     description: '플라비오 코볼리의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfrens.com/players/flavio-cobolli',
+    url: 'https://www.tennisfrens.com/players/flavio-cobolli',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -71,9 +71,9 @@ export default function FlavioCobolliPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfrens.com' },
-          { name: '선수', item: 'https://tennisfrens.com/players' },
-          { name: '플라비오 코볼리', item: 'https://tennisfrens.com/players/flavio-cobolli' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '플라비오 코볼리', item: 'https://www.tennisfrens.com/players/flavio-cobolli' },
         ]}
       />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">

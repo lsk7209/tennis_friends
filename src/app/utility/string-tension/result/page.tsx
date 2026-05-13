@@ -51,7 +51,7 @@ function StringTensionResultContent() {
 
   const copyToClipboard = () => {
     if (result) {
-      const text = `🎾 TennisFriends 스트링 텐션 계산 결과\n\n추천 텐션: ${result.range}\n플레이 스타일: ${result.style}\n\n${result.summary}\n\n더 자세한 정보: https://tennisfrens.com/utility/string-tension`;
+      const text = `🎾 TennisFriends 스트링 텐션 계산 결과\n\n추천 텐션: ${result.range}\n플레이 스타일: ${result.style}\n\n${result.summary}\n\n더 자세한 정보: https://www.tennisfrens.com/utility/string-tension`;
       navigator.clipboard.writeText(text);
       toast.success('결과가 클립보드에 복사되었습니다! 📋');
     }

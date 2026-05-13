@@ -9,13 +9,15 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "NTRP 테니스 실력 테스트 — 내 테니스 레벨 무료 측정",
+  title: "NTRP 테스트 | 테니스 실력 등급 무료 측정",
   description:
-    "NTRP 기준으로 나의 테니스 실력을 정확히 측정하세요. 10문항으로 1.0~5.0 레벨 진단 후 맞춤 훈련 방향을 제안합니다. 10,000명+ 이용한 무료 테스트.",
+    "NTRP 뜻과 테니스 실력 등급을 10문항으로 확인하세요. 초보·동호인·중급자 레벨 진단과 다음 훈련 방향을 무료로 제안합니다.",
   path: "/utility/ntrp-test",
   type: "website",
   tags: [
     "NTRP",
+    "NTRP 뜻",
+    "NTRP 등급",
     "테니스 실력 테스트",
     "테니스 등급",
     "테니스 레벨 측정",
@@ -32,7 +34,7 @@ const points = [
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <BreadcrumbSchema
         items={[
           { name: "홈", item: getSiteUrl() },
@@ -49,7 +51,9 @@ export default function Page() {
             <Badge className="w-fit bg-emerald-600 text-white">
               Popular Utility
             </Badge>
-            <CardTitle className="mt-3 text-4xl">NTRP 실력 테스트</CardTitle>
+            <h1 className="mt-3 text-4xl font-semibold leading-none tracking-tight">
+              NTRP 실력 테스트
+            </h1>
             <p className="text-base leading-7 text-muted-foreground">
               지금 내 테니스가 어느 구간에 있는지 빠르게 확인하고, 다음 연습에서
               무엇을 우선해야 하는지 잡을 수 있습니다.
@@ -95,6 +99,15 @@ export default function Page() {
           </CardContent>
         </Card>
       </section>
-    </main>
+
+      <section className="mt-8 rounded-2xl border border-emerald-100 bg-emerald-50 p-6 text-sm leading-7 text-emerald-950">
+        <h2 className="mb-2 text-xl font-semibold">NTRP 뜻과 등급 기준</h2>
+        <p>
+          NTRP는 테니스 실력을 1.0부터 7.0까지 나누는 등급 기준입니다.
+          이 테스트는 동호인이 자주 헷갈리는 초보, 입문, 중급, 상급 구간을
+          질문형으로 정리해 현재 레벨과 다음 훈련 우선순위를 함께 보여줍니다.
+        </p>
+      </section>
+    </div>
   );
 }

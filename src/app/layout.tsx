@@ -53,7 +53,6 @@ export const viewport: Viewport = {
   colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export const metadata: Metadata = {
@@ -159,10 +158,21 @@ export default function RootLayout({
   return (
     <html lang="ko" className={inter.variable}>
       <head>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-3050601904412736"
+        />
         <link
-          rel="preconnect"
-          href="https://cdn.jsdelivr.net"
-          crossOrigin="anonymous"
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${SITE_NAME} RSS Feed`}
+          href={getAbsoluteUrl("/feed")}
+        />
+        <link
+          rel="search"
+          type="application/opensearchdescription+xml"
+          title={`${SITE_NAME} Search`}
+          href={getAbsoluteUrl("/opensearch.xml")}
         />
         <link
           rel="preconnect"
@@ -173,15 +183,6 @@ export default function RootLayout({
           rel="preconnect"
           href="https://www.googletagmanager.com"
           crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="style"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
         />
       </head>
       <body className="bg-gradient-to-br from-gray-50 via-white to-gray-100 font-display text-gray-900 antialiased dark:from-gray-950 dark:via-gray-900 dark:to-black dark:text-gray-100">

@@ -1,10 +1,12 @@
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import Article from "@/components/blog/Article";
+import PlayerSearchAliasSection from '@/components/players/PlayerSearchAliasSection';
 import TOC from "@/components/blog/TOC";
 import { FAQ } from "@/components/blog/FAQ";
 import CTA from "@/components/blog/CTA";
 import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
+import { getPlayerSearchSeo } from '@/lib/player-search-seo';
 import {
   Trophy,
   Target,
@@ -17,11 +19,15 @@ import {
   Music,
 } from "lucide-react";
 
+const SLUG = 'arthur-landercknech';
+const playerSearchSeo = getPlayerSearchSeo(SLUG);
+
 export const metadata: Metadata = {
-  title: "아르튀르 랭데르크네슈 완전 분석 | 플레이 스타일·서브·ATP 프로필",
+  title: playerSearchSeo?.title ?? "아르튀르 랭데르크네슈 프로필 | 서브·전적",
   description:
-    "아르튀르 랭데르크네슈(Arthur Rinderknech)의 강력한 서브·포핸드 비결, 텍사스 A&M 출신 늦깎이 스타의 커리어, ATP 투어 성적, 사용 라켓 정보를 한눈에 정리.",
+    playerSearchSeo?.description ?? ("아르튀르 랭데르크네슈(Arthur Rinderknech)의 ATP 랭킹, 서브 강점, 주요 전적, 플레이 스타일과 라켓 정보를 한눈에 정리했습니다."),
   keywords: [
+    ...(playerSearchSeo?.aliases ?? []),
     "아르튀르 랭데르크네슈",
     "랭데르크네슈",
     "Arthur Rinderknech",
@@ -36,22 +42,22 @@ export const metadata: Metadata = {
     "늦깎이 선수",
   ],
   alternates: {
-    canonical: "https://tennisfrens.com/players/arthur-landercknech",
+    canonical: "https://www.tennisfrens.com/players/arthur-landercknech",
   },
   openGraph: {
-    title: "아르튀르 랭데르크네슈 완전 분석 | 플레이 스타일·서브·ATP 프로필",
+    title: "아르튀르 랭데르크네슈 프로필 | 서브·전적",
     description:
-      "텍사스 A&M 출신 프랑스 늦깎이 스타. 랭데르크네슈의 강력한 서브·포핸드 비결, ATP 투어 성적, 라켓 세팅까지 한 번에.",
-    url: "https://tennisfrens.com/players/arthur-landercknech",
+      "아르튀르 랭데르크네슈의 ATP 랭킹, 서브 강점, 주요 전적, 플레이 스타일과 라켓 정보를 한눈에 정리했습니다.",
+    url: "https://www.tennisfrens.com/players/arthur-landercknech",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "profile",
   },
   twitter: {
     card: "summary_large_image",
-    title: "아르튀르 랭데르크네슈 완전 분석 | 플레이 스타일·서브·ATP 프로필",
+    title: "아르튀르 랭데르크네슈 프로필 | 서브·전적",
     description:
-      "텍사스 A&M 출신 프랑스 늦깎이 스타. 랭데르크네슈의 강력한 서브·포핸드 비결, ATP 투어 성적까지.",
+      "아르튀르 랭데르크네슈의 ATP 랭킹, 서브 강점, 주요 전적, 플레이 스타일과 라켓 정보를 한눈에 정리했습니다.",
   },
   robots: {
     index: true,
@@ -136,15 +142,16 @@ export default function ArthurLandercknechPage() {
       >
         <BreadcrumbSchema
           items={[
-            { name: "홈", item: "https://tennisfrens.com" },
-            { name: "선수", item: "https://tennisfrens.com/players" },
+            { name: "홈", item: "https://www.tennisfrens.com" },
+            { name: "선수", item: "https://www.tennisfrens.com/players" },
             {
               name: "아르튀르 랭데르크네슈",
-              item: "https://tennisfrens.com/players/arthur-landercknech",
+              item: "https://www.tennisfrens.com/players/arthur-landercknech",
             },
           ]}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerSearchAliasSection slug={SLUG} />
           <div className="flex flex-wrap gap-2 mb-6">
             {[
               "테니스",

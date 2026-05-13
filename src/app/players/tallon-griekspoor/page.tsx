@@ -1,4 +1,5 @@
 import Article from '@/components/blog/Article';
+import PlayerSearchAliasSection from '@/components/players/PlayerSearchAliasSection';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
@@ -6,22 +7,28 @@ import PlayerProfileCard from '@/components/players/PlayerProfileCard';
 import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 
 import { Metadata } from 'next';
+import { getPlayerSearchSeo } from '@/lib/player-search-seo';
 import {Target, Award, Brain, Shield, Star, Crown} from 'lucide-react';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import PersonSchema from '@/components/seo/PersonSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 
+const SLUG = 'tallon-griekspoor';
+const playerSearchSeo = getPlayerSearchSeo(SLUG);
+
 export const metadata: Metadata = {
-  title: '탈론 크리에크스푸르 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: "탈론 크리에크스푸르 (Tallon Griekspoor) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
-  keywords: ['탈론 크리에크스푸르', 'Tallon Griekspoor', '테니스', 'ATP', '플레이스타일', '네덜란드 테니스', '서브', '그라운드 스트로크'],
+  title: playerSearchSeo?.title ?? '탈론 크리에크스푸르 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
+  description: playerSearchSeo?.description ?? ("탈론 크리에크스푸르 (Tallon Griekspoor) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다."),
+  keywords: [
+    ...(playerSearchSeo?.aliases ?? []),
+    '탈론 크리에크스푸르', 'Tallon Griekspoor', '테니스', 'ATP', '플레이스타일', '네덜란드 테니스', '서브', '그라운드 스트로크'],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/tallon-griekspoor',
+    canonical: 'https://www.tennisfrens.com/players/tallon-griekspoor',
   },
   openGraph: {
     title: '탈론 크리에크스푸르 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '탈론 크리에크스푸르의 강력한 서브와 그라운드 스트로크 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfrens.com/players/tallon-griekspoor',
+    url: 'https://www.tennisfrens.com/players/tallon-griekspoor',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -96,18 +103,19 @@ export default function TallonGriekspoorPage() {
           award={[
             'ATP 250 Champion', 'Davis Cup Champion'
           ]}
-          url="https://tennisfrens.com/players/tallon-griekspoor"
+          url="https://www.tennisfrens.com/players/tallon-griekspoor"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfrens.com' },
-          { name: '선수', item: 'https://tennisfrens.com/players' },
-          { name: '탈론 크리에크스푸르', item: 'https://tennisfrens.com/players/tallon-griekspoor' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '탈론 크리에크스푸르', item: 'https://www.tennisfrens.com/players/tallon-griekspoor' },
         ]}
       />
       <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerSearchAliasSection slug={SLUG} />
           <PlayerProfileCard
             name="Tallon Griekspoor"
             country="Netherlands"

@@ -1,0 +1,3113 @@
+{
+  "accounts": [
+    {
+      "name": "accounts/pub-3050601904412736",
+      "displayName": "Sub Kyu Lim",
+      "state": "READY",
+      "timeZone": {
+        "id": "Asia/Seoul"
+      },
+      "sites": [
+        {
+          "name": "accounts/pub-3050601904412736/sites/2mlab.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:2mlab.kr",
+          "domain": "2mlab.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/askore.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:askore.kr",
+          "domain": "askore.kr",
+          "state": "NEEDS_ATTENTION"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/autoscares.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:autoscares.com",
+          "domain": "autoscares.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/bojo24.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:bojo24.kr",
+          "domain": "bojo24.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/cartain.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:cartain.kr",
+          "domain": "cartain.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/chatgipt.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:chatgipt.kr",
+          "domain": "chatgipt.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/coinyo.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:coinyo.kr",
+          "domain": "coinyo.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/crepika.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:crepika.com",
+          "domain": "crepika.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/discparty.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:discparty.com",
+          "domain": "discparty.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/dogspang.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:dogspang.kr",
+          "domain": "dogspang.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/dogswhere.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:dogswhere.com",
+          "domain": "dogswhere.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/ehon365.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:ehon365.kr",
+          "domain": "ehon365.kr",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/esgyo.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:esgyo.kr",
+          "domain": "esgyo.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/estat.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:estat.kr",
+          "domain": "estat.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/etique.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:etique.kr",
+          "domain": "etique.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/ezfunnel.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:ezfunnel.kr",
+          "domain": "ezfunnel.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/fastjob.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:fastjob.kr",
+          "domain": "fastjob.kr",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/finan.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:finan.kr",
+          "domain": "finan.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/goesku.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:goesku.com",
+          "domain": "goesku.com",
+          "state": "NEEDS_ATTENTION"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/gong365.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:gong365.kr",
+          "domain": "gong365.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/gover.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:gover.kr",
+          "domain": "gover.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/haemongdream.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:haemongdream.com",
+          "domain": "haemongdream.com",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/healfood.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:healfood.kr",
+          "domain": "healfood.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/healthgotoo.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:healthgotoo.com",
+          "domain": "healthgotoo.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/homeimer.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:homeimer.com",
+          "domain": "homeimer.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/insupang.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:insupang.com",
+          "domain": "insupang.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/kang4.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:kang4.com",
+          "domain": "kang4.com",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/klick.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:klick.kr",
+          "domain": "klick.kr",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/knewstory.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:knewstory.kr",
+          "domain": "knewstory.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/lawer.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:lawer.kr",
+          "domain": "lawer.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/legalser.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:legalser.com",
+          "domain": "legalser.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/lifemap.tistory.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:lifemap.tistory.com",
+          "domain": "lifemap.tistory.com",
+          "state": "REQUIRES_REVIEW",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/luckyday.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:luckyday.kr",
+          "domain": "luckyday.kr",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/luxurytraver.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:luxurytraver.com",
+          "domain": "luxurytraver.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/marketingcookie.tistory.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:marketingcookie.tistory.com",
+          "domain": "marketingcookie.tistory.com",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/nekau.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:nekau.com",
+          "domain": "nekau.com",
+          "state": "NEEDS_ATTENTION",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/nexttech7.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:nexttech7.com",
+          "domain": "nexttech7.com",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/nicewomen.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:nicewomen.kr",
+          "domain": "nicewomen.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/petinsuer.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:petinsuer.com",
+          "domain": "petinsuer.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/richyou.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:richyou.kr",
+          "domain": "richyou.kr",
+          "state": "NEEDS_ATTENTION"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/roadways.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:roadways.kr",
+          "domain": "roadways.kr",
+          "state": "NEEDS_ATTENTION"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/runmania.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:runmania.kr",
+          "domain": "runmania.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/sellerpit.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:sellerpit.kr",
+          "domain": "sellerpit.kr",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/softwa.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:softwa.kr",
+          "domain": "softwa.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/spinkorea.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:spinkorea.kr",
+          "domain": "spinkorea.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/tasko.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:tasko.kr",
+          "domain": "tasko.kr",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/temon.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:temon.kr",
+          "domain": "temon.kr",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/tennisfrens.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:tennisfrens.com",
+          "domain": "tennisfrens.com",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/texturb.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:texturb.com",
+          "domain": "texturb.com",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/today2424.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:today2424.kr",
+          "domain": "today2424.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/todaypharm.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:todaypharm.kr",
+          "domain": "todaypharm.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/todayshops.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:todayshops.kr",
+          "domain": "todayshops.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/tourguide.tistory.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:tourguide.tistory.com",
+          "domain": "tourguide.tistory.com",
+          "state": "READY",
+          "autoAdsEnabled": true
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/trave.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:trave.kr",
+          "domain": "trave.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/travelpang.kr",
+          "reportingDimensionId": "ca-pub-3050601904412736:travelpang.kr",
+          "domain": "travelpang.kr",
+          "state": "GETTING_READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/sites/write0666.tistory.com",
+          "reportingDimensionId": "ca-pub-3050601904412736:write0666.tistory.com",
+          "domain": "write0666.tistory.com",
+          "state": "READY",
+          "autoAdsEnabled": true
+        }
+      ],
+      "adClients": [
+        {
+          "name": "accounts/pub-3050601904412736/adclients/ca-pub-3050601904412736",
+          "reportingDimensionId": "ca-pub-3050601904412736",
+          "productCode": "AFC",
+          "state": "READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/adclients/ca-yt-host-pub-3050601904412736",
+          "state": "READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/adclients/ca-yt-pub-3050601904412736",
+          "state": "READY"
+        },
+        {
+          "name": "accounts/pub-3050601904412736/adclients/partner-pub-3050601904412736",
+          "reportingDimensionId": "partner-pub-3050601904412736",
+          "productCode": "AFS",
+          "state": "REQUIRES_REVIEW"
+        }
+      ],
+      "reports": {
+        "byDomain": {
+          "totalMatchedRows": "18",
+          "headers": [
+            {
+              "name": "DOMAIN_NAME",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "blogsample2.nexttech7.com"
+                },
+                {
+                  "value": "8"
+                },
+                {
+                  "value": "16"
+                },
+                {
+                  "value": "16"
+                },
+                {
+                  "value": "8"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "223"
+                },
+                {
+                  "value": "0.5"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "ehon365.kr"
+                },
+                {
+                  "value": "230"
+                },
+                {
+                  "value": "1190"
+                },
+                {
+                  "value": "1119"
+                },
+                {
+                  "value": "962"
+                },
+                {
+                  "value": "6"
+                },
+                {
+                  "value": "1344"
+                },
+                {
+                  "value": "0.9403"
+                },
+                {
+                  "value": "5844"
+                },
+                {
+                  "value": "0.5097"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "fastjob.kr"
+                },
+                {
+                  "value": "272"
+                },
+                {
+                  "value": "2547"
+                },
+                {
+                  "value": "1582"
+                },
+                {
+                  "value": "1343"
+                },
+                {
+                  "value": "6"
+                },
+                {
+                  "value": "587"
+                },
+                {
+                  "value": "0.6211"
+                },
+                {
+                  "value": "2157"
+                },
+                {
+                  "value": "0.6281"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "gpt.nexttech7.com"
+                },
+                {
+                  "value": "15"
+                },
+                {
+                  "value": "54"
+                },
+                {
+                  "value": "20"
+                },
+                {
+                  "value": "9"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "0.3704"
+                },
+                {
+                  "value": "121"
+                },
+                {
+                  "value": "0.6667"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "haemongdream.com"
+                },
+                {
+                  "value": "4116"
+                },
+                {
+                  "value": "42596"
+                },
+                {
+                  "value": "41754"
+                },
+                {
+                  "value": "38017"
+                },
+                {
+                  "value": "569"
+                },
+                {
+                  "value": "34982"
+                },
+                {
+                  "value": "0.9802"
+                },
+                {
+                  "value": "8499"
+                },
+                {
+                  "value": "0.5922"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "kang4.com"
+                },
+                {
+                  "value": "662"
+                },
+                {
+                  "value": "4308"
+                },
+                {
+                  "value": "3084"
+                },
+                {
+                  "value": "2643"
+                },
+                {
+                  "value": "22"
+                },
+                {
+                  "value": "3165"
+                },
+                {
+                  "value": "0.7159"
+                },
+                {
+                  "value": "4781"
+                },
+                {
+                  "value": "0.5905"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "klick.kr"
+                },
+                {
+                  "value": "1733"
+                },
+                {
+                  "value": "14128"
+                },
+                {
+                  "value": "10205"
+                },
+                {
+                  "value": "8932"
+                },
+                {
+                  "value": "82"
+                },
+                {
+                  "value": "13018"
+                },
+                {
+                  "value": "0.7223"
+                },
+                {
+                  "value": "7512"
+                },
+                {
+                  "value": "0.6044"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "luckyday.kr"
+                },
+                {
+                  "value": "156"
+                },
+                {
+                  "value": "1109"
+                },
+                {
+                  "value": "370"
+                },
+                {
+                  "value": "274"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "309"
+                },
+                {
+                  "value": "0.3336"
+                },
+                {
+                  "value": "1983"
+                },
+                {
+                  "value": "0.5149"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "marketingcookie.tistory.com"
+                },
+                {
+                  "value": "58"
+                },
+                {
+                  "value": "164"
+                },
+                {
+                  "value": "90"
+                },
+                {
+                  "value": "30"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "5"
+                },
+                {
+                  "value": "0.5488"
+                },
+                {
+                  "value": "78"
+                },
+                {
+                  "value": "0.2667"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "nexttech7.com"
+                },
+                {
+                  "value": "73"
+                },
+                {
+                  "value": "466"
+                },
+                {
+                  "value": "238"
+                },
+                {
+                  "value": "210"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "46"
+                },
+                {
+                  "value": "0.5107"
+                },
+                {
+                  "value": "626"
+                },
+                {
+                  "value": "0.299"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "sellerpit.kr"
+                },
+                {
+                  "value": "21"
+                },
+                {
+                  "value": "136"
+                },
+                {
+                  "value": "102"
+                },
+                {
+                  "value": "83"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "37"
+                },
+                {
+                  "value": "0.75"
+                },
+                {
+                  "value": "1746"
+                },
+                {
+                  "value": "0.4337"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "tasko.kr"
+                },
+                {
+                  "value": "350"
+                },
+                {
+                  "value": "3006"
+                },
+                {
+                  "value": "722"
+                },
+                {
+                  "value": "615"
+                },
+                {
+                  "value": "11"
+                },
+                {
+                  "value": "677"
+                },
+                {
+                  "value": "0.2402"
+                },
+                {
+                  "value": "1933"
+                },
+                {
+                  "value": "0.6143"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "tourguide.tistory.com"
+                },
+                {
+                  "value": "6"
+                },
+                {
+                  "value": "41"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "write0666.tistory.com"
+                },
+                {
+                  "value": "23"
+                },
+                {
+                  "value": "124"
+                },
+                {
+                  "value": "98"
+                },
+                {
+                  "value": "59"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "8"
+                },
+                {
+                  "value": "0.7903"
+                },
+                {
+                  "value": "353"
+                },
+                {
+                  "value": "0.2542"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "www.ehon365.kr"
+                },
+                {
+                  "value": "69"
+                },
+                {
+                  "value": "340"
+                },
+                {
+                  "value": "272"
+                },
+                {
+                  "value": "254"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "298"
+                },
+                {
+                  "value": "0.8"
+                },
+                {
+                  "value": "4323"
+                },
+                {
+                  "value": "0.4664"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "www.kang4.com"
+                },
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "10"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "www.kang4.com.nexttech7.com"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "4"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "www.tennisfrens.com"
+                },
+                {
+                  "value": "1560"
+                },
+                {
+                  "value": "7134"
+                },
+                {
+                  "value": "4939"
+                },
+                {
+                  "value": "4359"
+                },
+                {
+                  "value": "95"
+                },
+                {
+                  "value": "8618"
+                },
+                {
+                  "value": "0.6923"
+                },
+                {
+                  "value": "5524"
+                },
+                {
+                  "value": "0.6831"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "9355"
+              },
+              {
+                "value": "77373"
+              },
+              {
+                "value": "64611"
+              },
+              {
+                "value": "57798"
+              },
+              {
+                "value": "794"
+              },
+              {
+                "value": "63096"
+              },
+              {
+                "value": "0.8351"
+              },
+              {
+                "value": "6745"
+              },
+              {
+                "value": "0.5976"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "519"
+              },
+              {
+                "value": "4298"
+              },
+              {
+                "value": "3589"
+              },
+              {
+                "value": "3211"
+              },
+              {
+                "value": "44"
+              },
+              {
+                "value": "3505"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        },
+        "byPlatform": {
+          "totalMatchedRows": "3",
+          "headers": [
+            {
+              "name": "PLATFORM_TYPE_NAME",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "고급형 휴대기기"
+                },
+                {
+                  "value": "6515"
+                },
+                {
+                  "value": "56749"
+                },
+                {
+                  "value": "52985"
+                },
+                {
+                  "value": "48588"
+                },
+                {
+                  "value": "760"
+                },
+                {
+                  "value": "54665"
+                },
+                {
+                  "value": "0.9337"
+                },
+                {
+                  "value": "8391"
+                },
+                {
+                  "value": "0.5744"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "데스크톱"
+                },
+                {
+                  "value": "2712"
+                },
+                {
+                  "value": "19651"
+                },
+                {
+                  "value": "10759"
+                },
+                {
+                  "value": "8470"
+                },
+                {
+                  "value": "30"
+                },
+                {
+                  "value": "7427"
+                },
+                {
+                  "value": "0.5475"
+                },
+                {
+                  "value": "2739"
+                },
+                {
+                  "value": "0.7237"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "태블릿"
+                },
+                {
+                  "value": "128"
+                },
+                {
+                  "value": "973"
+                },
+                {
+                  "value": "867"
+                },
+                {
+                  "value": "740"
+                },
+                {
+                  "value": "4"
+                },
+                {
+                  "value": "1003"
+                },
+                {
+                  "value": "0.8911"
+                },
+                {
+                  "value": "7839"
+                },
+                {
+                  "value": "0.6465"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "9355"
+              },
+              {
+                "value": "77373"
+              },
+              {
+                "value": "64611"
+              },
+              {
+                "value": "57798"
+              },
+              {
+                "value": "794"
+              },
+              {
+                "value": "63096"
+              },
+              {
+                "value": "0.8351"
+              },
+              {
+                "value": "6745"
+              },
+              {
+                "value": "0.5976"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "3118"
+              },
+              {
+                "value": "25791"
+              },
+              {
+                "value": "21537"
+              },
+              {
+                "value": "19266"
+              },
+              {
+                "value": "264"
+              },
+              {
+                "value": "21032"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        },
+        "byAdFormat": {
+          "totalMatchedRows": "9",
+          "headers": [
+            {
+              "name": "AD_FORMAT_NAME",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "광고 의도 칩"
+                },
+                {
+                  "value": "15"
+                },
+                {
+                  "value": "26"
+                },
+                {
+                  "value": "15"
+                },
+                {
+                  "value": "15"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "262"
+                },
+                {
+                  "value": "0.5769"
+                },
+                {
+                  "value": "17454"
+                },
+                {
+                  "value": "0.8571"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "광고 인텐트 링크"
+                },
+                {
+                  "value": "4"
+                },
+                {
+                  "value": "6"
+                },
+                {
+                  "value": "4"
+                },
+                {
+                  "value": "4"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "159"
+                },
+                {
+                  "value": "0.6667"
+                },
+                {
+                  "value": "39741"
+                },
+                {
+                  "value": "0.75"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "광고 인텐트 앵커"
+                },
+                {
+                  "value": "26"
+                },
+                {
+                  "value": "37"
+                },
+                {
+                  "value": "26"
+                },
+                {
+                  "value": "25"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "621"
+                },
+                {
+                  "value": "0.7027"
+                },
+                {
+                  "value": "23891"
+                },
+                {
+                  "value": "0.6818"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "모바일 전면"
+                },
+                {
+                  "value": "8575"
+                },
+                {
+                  "value": "8575"
+                },
+                {
+                  "value": "7670"
+                },
+                {
+                  "value": "4192"
+                },
+                {
+                  "value": "142"
+                },
+                {
+                  "value": "17328"
+                },
+                {
+                  "value": "0.8945"
+                },
+                {
+                  "value": "2021"
+                },
+                {
+                  "value": "0.6727"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "사이드 레일 광고"
+                },
+                {
+                  "value": "5"
+                },
+                {
+                  "value": "3800"
+                },
+                {
+                  "value": "2023"
+                },
+                {
+                  "value": "1532"
+                },
+                {
+                  "value": "5"
+                },
+                {
+                  "value": "541"
+                },
+                {
+                  "value": "0.5324"
+                },
+                {
+                  "value": "108245"
+                },
+                {
+                  "value": "0.9706"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "앵커"
+                },
+                {
+                  "value": "635"
+                },
+                {
+                  "value": "9126"
+                },
+                {
+                  "value": "7504"
+                },
+                {
+                  "value": "6785"
+                },
+                {
+                  "value": "80"
+                },
+                {
+                  "value": "13296"
+                },
+                {
+                  "value": "0.8223"
+                },
+                {
+                  "value": "20939"
+                },
+                {
+                  "value": "0.89"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "인아티클"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "34891"
+                },
+                {
+                  "value": "31761"
+                },
+                {
+                  "value": "30672"
+                },
+                {
+                  "value": "459"
+                },
+                {
+                  "value": "20084"
+                },
+                {
+                  "value": "0.9103"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "value": "0.5844"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "인페이지"
+                },
+                {
+                  "value": "73"
+                },
+                {
+                  "value": "20864"
+                },
+                {
+                  "value": "15590"
+                },
+                {
+                  "value": "14556"
+                },
+                {
+                  "value": "104"
+                },
+                {
+                  "value": "10742"
+                },
+                {
+                  "value": "0.7472"
+                },
+                {
+                  "value": "147156"
+                },
+                {
+                  "value": "0.4334"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "채워지지 않은 대체 용어"
+                },
+                {
+                  "value": "22"
+                },
+                {
+                  "value": "48"
+                },
+                {
+                  "value": "18"
+                },
+                {
+                  "value": "17"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "62"
+                },
+                {
+                  "value": "0.375"
+                },
+                {
+                  "value": "2825"
+                },
+                {
+                  "value": "0.8824"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "9355"
+              },
+              {
+                "value": "77373"
+              },
+              {
+                "value": "64611"
+              },
+              {
+                "value": "57798"
+              },
+              {
+                "value": "794"
+              },
+              {
+                "value": "63096"
+              },
+              {
+                "value": "0.8351"
+              },
+              {
+                "value": "6745"
+              },
+              {
+                "value": "0.5976"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "1039"
+              },
+              {
+                "value": "8597"
+              },
+              {
+                "value": "7179"
+              },
+              {
+                "value": "6422"
+              },
+              {
+                "value": "88"
+              },
+              {
+                "value": "7011"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        },
+        "byPlacement": {
+          "totalMatchedRows": "2",
+          "headers": [
+            {
+              "name": "AD_PLACEMENT_NAME",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "수동"
+                },
+                {
+                  "value": "41"
+                },
+                {
+                  "value": "1827"
+                },
+                {
+                  "value": "1536"
+                },
+                {
+                  "value": "1364"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "value": "605"
+                },
+                {
+                  "value": "0.8407"
+                },
+                {
+                  "value": "14760"
+                },
+                {
+                  "value": "0.3097"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "자동 광고"
+                },
+                {
+                  "value": "9314"
+                },
+                {
+                  "value": "75546"
+                },
+                {
+                  "value": "63075"
+                },
+                {
+                  "value": "56434"
+                },
+                {
+                  "value": "793"
+                },
+                {
+                  "value": "62490"
+                },
+                {
+                  "value": "0.8349"
+                },
+                {
+                  "value": "6709"
+                },
+                {
+                  "value": "0.6046"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "9355"
+              },
+              {
+                "value": "77373"
+              },
+              {
+                "value": "64611"
+              },
+              {
+                "value": "57798"
+              },
+              {
+                "value": "794"
+              },
+              {
+                "value": "63096"
+              },
+              {
+                "value": "0.8351"
+              },
+              {
+                "value": "6745"
+              },
+              {
+                "value": "0.5976"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "4677"
+              },
+              {
+                "value": "38686"
+              },
+              {
+                "value": "32305"
+              },
+              {
+                "value": "28899"
+              },
+              {
+                "value": "397"
+              },
+              {
+                "value": "31548"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        },
+        "byDate": {
+          "totalMatchedRows": "30",
+          "headers": [
+            {
+              "name": "DATE",
+              "type": "DIMENSION"
+            },
+            {
+              "name": "PAGE_VIEWS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "MATCHED_AD_REQUESTS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "IMPRESSIONS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "CLICKS",
+              "type": "METRIC_TALLY"
+            },
+            {
+              "name": "ESTIMATED_EARNINGS",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "AD_REQUESTS_COVERAGE",
+              "type": "METRIC_RATIO"
+            },
+            {
+              "name": "PAGE_VIEWS_RPM",
+              "type": "METRIC_CURRENCY",
+              "currencyCode": "KRW"
+            },
+            {
+              "name": "ACTIVE_VIEW_VIEWABILITY",
+              "type": "METRIC_RATIO"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "value": "2026-04-03"
+                },
+                {
+                  "value": "320"
+                },
+                {
+                  "value": "2827"
+                },
+                {
+                  "value": "2300"
+                },
+                {
+                  "value": "2055"
+                },
+                {
+                  "value": "40"
+                },
+                {
+                  "value": "2011"
+                },
+                {
+                  "value": "0.8136"
+                },
+                {
+                  "value": "6284"
+                },
+                {
+                  "value": "0.5785"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-04"
+                },
+                {
+                  "value": "264"
+                },
+                {
+                  "value": "2393"
+                },
+                {
+                  "value": "2101"
+                },
+                {
+                  "value": "1904"
+                },
+                {
+                  "value": "50"
+                },
+                {
+                  "value": "2512"
+                },
+                {
+                  "value": "0.878"
+                },
+                {
+                  "value": "9516"
+                },
+                {
+                  "value": "0.5938"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-05"
+                },
+                {
+                  "value": "258"
+                },
+                {
+                  "value": "2194"
+                },
+                {
+                  "value": "1990"
+                },
+                {
+                  "value": "1781"
+                },
+                {
+                  "value": "46"
+                },
+                {
+                  "value": "1585"
+                },
+                {
+                  "value": "0.907"
+                },
+                {
+                  "value": "6143"
+                },
+                {
+                  "value": "0.5703"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-06"
+                },
+                {
+                  "value": "318"
+                },
+                {
+                  "value": "2795"
+                },
+                {
+                  "value": "2427"
+                },
+                {
+                  "value": "2123"
+                },
+                {
+                  "value": "44"
+                },
+                {
+                  "value": "1703"
+                },
+                {
+                  "value": "0.8683"
+                },
+                {
+                  "value": "5355"
+                },
+                {
+                  "value": "0.5878"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-07"
+                },
+                {
+                  "value": "319"
+                },
+                {
+                  "value": "2647"
+                },
+                {
+                  "value": "2197"
+                },
+                {
+                  "value": "1925"
+                },
+                {
+                  "value": "42"
+                },
+                {
+                  "value": "1569"
+                },
+                {
+                  "value": "0.83"
+                },
+                {
+                  "value": "4918"
+                },
+                {
+                  "value": "0.5843"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-08"
+                },
+                {
+                  "value": "249"
+                },
+                {
+                  "value": "2171"
+                },
+                {
+                  "value": "1826"
+                },
+                {
+                  "value": "1589"
+                },
+                {
+                  "value": "21"
+                },
+                {
+                  "value": "1079"
+                },
+                {
+                  "value": "0.8411"
+                },
+                {
+                  "value": "4332"
+                },
+                {
+                  "value": "0.5922"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-09"
+                },
+                {
+                  "value": "312"
+                },
+                {
+                  "value": "2621"
+                },
+                {
+                  "value": "2304"
+                },
+                {
+                  "value": "2049"
+                },
+                {
+                  "value": "31"
+                },
+                {
+                  "value": "2744"
+                },
+                {
+                  "value": "0.8791"
+                },
+                {
+                  "value": "8795"
+                },
+                {
+                  "value": "0.5886"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-10"
+                },
+                {
+                  "value": "280"
+                },
+                {
+                  "value": "2391"
+                },
+                {
+                  "value": "1953"
+                },
+                {
+                  "value": "1748"
+                },
+                {
+                  "value": "31"
+                },
+                {
+                  "value": "1851"
+                },
+                {
+                  "value": "0.8168"
+                },
+                {
+                  "value": "6610"
+                },
+                {
+                  "value": "0.6142"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-11"
+                },
+                {
+                  "value": "283"
+                },
+                {
+                  "value": "2449"
+                },
+                {
+                  "value": "2209"
+                },
+                {
+                  "value": "2036"
+                },
+                {
+                  "value": "51"
+                },
+                {
+                  "value": "2287"
+                },
+                {
+                  "value": "0.902"
+                },
+                {
+                  "value": "8080"
+                },
+                {
+                  "value": "0.5687"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-12"
+                },
+                {
+                  "value": "322"
+                },
+                {
+                  "value": "2841"
+                },
+                {
+                  "value": "2425"
+                },
+                {
+                  "value": "2174"
+                },
+                {
+                  "value": "23"
+                },
+                {
+                  "value": "2161"
+                },
+                {
+                  "value": "0.8536"
+                },
+                {
+                  "value": "6710"
+                },
+                {
+                  "value": "0.6096"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-13"
+                },
+                {
+                  "value": "341"
+                },
+                {
+                  "value": "2876"
+                },
+                {
+                  "value": "2336"
+                },
+                {
+                  "value": "2055"
+                },
+                {
+                  "value": "21"
+                },
+                {
+                  "value": "1703"
+                },
+                {
+                  "value": "0.8122"
+                },
+                {
+                  "value": "4995"
+                },
+                {
+                  "value": "0.614"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-14"
+                },
+                {
+                  "value": "359"
+                },
+                {
+                  "value": "2470"
+                },
+                {
+                  "value": "1791"
+                },
+                {
+                  "value": "1575"
+                },
+                {
+                  "value": "28"
+                },
+                {
+                  "value": "1805"
+                },
+                {
+                  "value": "0.7251"
+                },
+                {
+                  "value": "5029"
+                },
+                {
+                  "value": "0.5603"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-15"
+                },
+                {
+                  "value": "332"
+                },
+                {
+                  "value": "2888"
+                },
+                {
+                  "value": "2207"
+                },
+                {
+                  "value": "1924"
+                },
+                {
+                  "value": "24"
+                },
+                {
+                  "value": "1896"
+                },
+                {
+                  "value": "0.7642"
+                },
+                {
+                  "value": "5711"
+                },
+                {
+                  "value": "0.6136"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-16"
+                },
+                {
+                  "value": "314"
+                },
+                {
+                  "value": "2463"
+                },
+                {
+                  "value": "2059"
+                },
+                {
+                  "value": "1778"
+                },
+                {
+                  "value": "28"
+                },
+                {
+                  "value": "1779"
+                },
+                {
+                  "value": "0.836"
+                },
+                {
+                  "value": "5666"
+                },
+                {
+                  "value": "0.581"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-17"
+                },
+                {
+                  "value": "296"
+                },
+                {
+                  "value": "2552"
+                },
+                {
+                  "value": "2175"
+                },
+                {
+                  "value": "1959"
+                },
+                {
+                  "value": "30"
+                },
+                {
+                  "value": "2597"
+                },
+                {
+                  "value": "0.8523"
+                },
+                {
+                  "value": "8775"
+                },
+                {
+                  "value": "0.6087"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-18"
+                },
+                {
+                  "value": "336"
+                },
+                {
+                  "value": "2422"
+                },
+                {
+                  "value": "1838"
+                },
+                {
+                  "value": "1706"
+                },
+                {
+                  "value": "31"
+                },
+                {
+                  "value": "1556"
+                },
+                {
+                  "value": "0.7589"
+                },
+                {
+                  "value": "4631"
+                },
+                {
+                  "value": "0.6108"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-19"
+                },
+                {
+                  "value": "282"
+                },
+                {
+                  "value": "2391"
+                },
+                {
+                  "value": "2168"
+                },
+                {
+                  "value": "1965"
+                },
+                {
+                  "value": "38"
+                },
+                {
+                  "value": "3048"
+                },
+                {
+                  "value": "0.9067"
+                },
+                {
+                  "value": "10808"
+                },
+                {
+                  "value": "0.6081"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-20"
+                },
+                {
+                  "value": "366"
+                },
+                {
+                  "value": "3022"
+                },
+                {
+                  "value": "2485"
+                },
+                {
+                  "value": "2198"
+                },
+                {
+                  "value": "12"
+                },
+                {
+                  "value": "2493"
+                },
+                {
+                  "value": "0.8223"
+                },
+                {
+                  "value": "6810"
+                },
+                {
+                  "value": "0.6276"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-21"
+                },
+                {
+                  "value": "331"
+                },
+                {
+                  "value": "2552"
+                },
+                {
+                  "value": "1751"
+                },
+                {
+                  "value": "1547"
+                },
+                {
+                  "value": "9"
+                },
+                {
+                  "value": "1907"
+                },
+                {
+                  "value": "0.6861"
+                },
+                {
+                  "value": "5762"
+                },
+                {
+                  "value": "0.6055"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-22"
+                },
+                {
+                  "value": "331"
+                },
+                {
+                  "value": "2857"
+                },
+                {
+                  "value": "2383"
+                },
+                {
+                  "value": "2115"
+                },
+                {
+                  "value": "19"
+                },
+                {
+                  "value": "2286"
+                },
+                {
+                  "value": "0.8341"
+                },
+                {
+                  "value": "6907"
+                },
+                {
+                  "value": "0.6162"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-23"
+                },
+                {
+                  "value": "311"
+                },
+                {
+                  "value": "2685"
+                },
+                {
+                  "value": "2197"
+                },
+                {
+                  "value": "1976"
+                },
+                {
+                  "value": "28"
+                },
+                {
+                  "value": "1903"
+                },
+                {
+                  "value": "0.8182"
+                },
+                {
+                  "value": "6118"
+                },
+                {
+                  "value": "0.5909"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-24"
+                },
+                {
+                  "value": "255"
+                },
+                {
+                  "value": "2259"
+                },
+                {
+                  "value": "1949"
+                },
+                {
+                  "value": "1733"
+                },
+                {
+                  "value": "17"
+                },
+                {
+                  "value": "1686"
+                },
+                {
+                  "value": "0.8628"
+                },
+                {
+                  "value": "6611"
+                },
+                {
+                  "value": "0.5488"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-25"
+                },
+                {
+                  "value": "294"
+                },
+                {
+                  "value": "2584"
+                },
+                {
+                  "value": "2268"
+                },
+                {
+                  "value": "2075"
+                },
+                {
+                  "value": "13"
+                },
+                {
+                  "value": "2336"
+                },
+                {
+                  "value": "0.8777"
+                },
+                {
+                  "value": "7945"
+                },
+                {
+                  "value": "0.6"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-26"
+                },
+                {
+                  "value": "276"
+                },
+                {
+                  "value": "2300"
+                },
+                {
+                  "value": "1968"
+                },
+                {
+                  "value": "1758"
+                },
+                {
+                  "value": "12"
+                },
+                {
+                  "value": "1713"
+                },
+                {
+                  "value": "0.8557"
+                },
+                {
+                  "value": "6208"
+                },
+                {
+                  "value": "0.6379"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-27"
+                },
+                {
+                  "value": "340"
+                },
+                {
+                  "value": "2722"
+                },
+                {
+                  "value": "2242"
+                },
+                {
+                  "value": "2004"
+                },
+                {
+                  "value": "17"
+                },
+                {
+                  "value": "2621"
+                },
+                {
+                  "value": "0.8237"
+                },
+                {
+                  "value": "7709"
+                },
+                {
+                  "value": "0.6174"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-28"
+                },
+                {
+                  "value": "330"
+                },
+                {
+                  "value": "2730"
+                },
+                {
+                  "value": "2361"
+                },
+                {
+                  "value": "2161"
+                },
+                {
+                  "value": "15"
+                },
+                {
+                  "value": "2783"
+                },
+                {
+                  "value": "0.8648"
+                },
+                {
+                  "value": "8434"
+                },
+                {
+                  "value": "0.6189"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-29"
+                },
+                {
+                  "value": "445"
+                },
+                {
+                  "value": "2969"
+                },
+                {
+                  "value": "2448"
+                },
+                {
+                  "value": "2182"
+                },
+                {
+                  "value": "15"
+                },
+                {
+                  "value": "2853"
+                },
+                {
+                  "value": "0.8245"
+                },
+                {
+                  "value": "6411"
+                },
+                {
+                  "value": "0.5939"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-04-30"
+                },
+                {
+                  "value": "307"
+                },
+                {
+                  "value": "2478"
+                },
+                {
+                  "value": "1989"
+                },
+                {
+                  "value": "1765"
+                },
+                {
+                  "value": "10"
+                },
+                {
+                  "value": "1459"
+                },
+                {
+                  "value": "0.8027"
+                },
+                {
+                  "value": "4752"
+                },
+                {
+                  "value": "0.5803"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-05-01"
+                },
+                {
+                  "value": "305"
+                },
+                {
+                  "value": "2465"
+                },
+                {
+                  "value": "2183"
+                },
+                {
+                  "value": "2029"
+                },
+                {
+                  "value": "23"
+                },
+                {
+                  "value": "2297"
+                },
+                {
+                  "value": "0.8856"
+                },
+                {
+                  "value": "7531"
+                },
+                {
+                  "value": "0.602"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "value": "2026-05-02"
+                },
+                {
+                  "value": "279"
+                },
+                {
+                  "value": "2359"
+                },
+                {
+                  "value": "2081"
+                },
+                {
+                  "value": "1909"
+                },
+                {
+                  "value": "25"
+                },
+                {
+                  "value": "2873"
+                },
+                {
+                  "value": "0.8822"
+                },
+                {
+                  "value": "10298"
+                },
+                {
+                  "value": "0.5859"
+                }
+              ]
+            }
+          ],
+          "totals": {
+            "cells": [
+              {},
+              {
+                "value": "9355"
+              },
+              {
+                "value": "77373"
+              },
+              {
+                "value": "64611"
+              },
+              {
+                "value": "57798"
+              },
+              {
+                "value": "794"
+              },
+              {
+                "value": "63096"
+              },
+              {
+                "value": "0.8351"
+              },
+              {
+                "value": "6745"
+              },
+              {
+                "value": "0.5976"
+              }
+            ]
+          },
+          "averages": {
+            "cells": [
+              {},
+              {
+                "value": "311"
+              },
+              {
+                "value": "2579"
+              },
+              {
+                "value": "2153"
+              },
+              {
+                "value": "1926"
+              },
+              {
+                "value": "26"
+              },
+              {
+                "value": "2103"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              },
+              {
+                "value": "0"
+              }
+            ]
+          },
+          "startDate": {
+            "year": 2026,
+            "month": 4,
+            "day": 3
+          },
+          "endDate": {
+            "year": 2026,
+            "month": 5,
+            "day": 2
+          }
+        }
+      }
+    }
+  ]
+}

@@ -16,13 +16,13 @@ export const metadata = {
     "예측 기술",
   ],
   alternates: {
-    canonical: "https://tennisfrens.com/blog/serve-return-prediction-guide",
+    canonical: "https://www.tennisfrens.com/blog/serve-return-prediction-guide",
   },
   openGraph: {
     title: "테니스 서브 리턴 완전정복 | 토스 읽기·첫 스텝 타이밍·라켓 각도",
     description:
       "서브 리턴은 예측의 기술이다. 토스 패턴, 발 리듬, 라켓 준비각, 코트별 리턴 전략과 훈련 루틴까지 완전 정리.",
-    url: "https://tennisfrens.com/blog/serve-return-prediction-guide",
+    url: "https://www.tennisfrens.com/blog/serve-return-prediction-guide",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "website",

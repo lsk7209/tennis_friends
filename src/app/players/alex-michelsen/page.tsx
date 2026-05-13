@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     description: "알렉스 미첼슨 (Alex Michelsen) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['알렉스 미첼슨', 'Alex Michelsen', '테니스', 'ATP', '플레이스타일', '미국 테니스', '차세대', '공격형'],
     alternates: {
-        canonical: 'https://tennisfrens.com/players/alex-michelsen',
+        canonical: 'https://www.tennisfrens.com/players/alex-michelsen',
     },
     openGraph: {
         title: '알렉스 미첼슨 — 차세대 미국 테니스 | 플레이스타일·명장면·최근 경기력',
         description: '알렉스 미첼슨의 공격적인 베이스라인 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfrens.com/players/alex-michelsen',
+        url: 'https://www.tennisfrens.com/players/alex-michelsen',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -98,14 +98,14 @@ export default function AlexMichelsenPage() {
                         'ATP Challenger Tour Champion',
                         'NCAA Division I Singles Champion'
                     ]}
-                    url="https://tennisfrens.com/players/alex-michelsen"
+                    url="https://www.tennisfrens.com/players/alex-michelsen"
                 />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfrens.com' },
-          { name: '선수', item: 'https://tennisfrens.com/players' },
-          { name: '알렉스 미첼슨', item: 'https://tennisfrens.com/players/alex-michelsen' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '알렉스 미첼슨', item: 'https://www.tennisfrens.com/players/alex-michelsen' },
         ]}
       />
       <FAQSchema faqs={faqs} />

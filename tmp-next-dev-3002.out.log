@@ -1,0 +1,26 @@
+
+> tennis-friends@0.1.0 dev
+> next dev --port 3002
+
+   ▲ Next.js 16.0.7 (Turbopack)
+   - Local:         http://localhost:3002
+   - Network:       http://172.30.1.67:3002
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+ ✓ Starting...
+ ✓ Ready in 1445ms
+ GET /blog 200 in 3.0s (compile: 2.7s, render: 281ms)
+ GET /blog 200 in 119ms (compile: 4ms, render: 114ms)
+ GET /icon?f1fbb56339e1b3c4 200 in 1165ms
+ GET /blog/tennis-club-fee-split-guide 200 in 1222ms (compile: 1049ms, render: 173ms)
+ GET /sitemap.xml 200 in 473ms (compile: 442ms, render: 30ms)
+ GET /sitemap-naver.xml 200 in 151ms (compile: 140ms, render: 11ms)
+ GET /rss.xml 200 in 131ms (compile: 122ms, render: 9ms)
+ GET /search?q=%ED%85%8C%EB%8B%88%EC%8A%A4%20%EB%8F%99%ED%98%B8%ED%9A%8C%20%ED%9A%8C%EB%B9%84 200 in 725ms (compile: 641ms, render: 84ms)
+ GET /blog/tennis-club-fee-split-guide 200 in 414ms (compile: 219ms, render: 195ms)
+ GET /blog/tennis-club-fee-split-guide 200 in 2.2s (compile: 1037ms, render: 1191ms)
+ GET /blog/tennis-club-fee-split-guide 200 in 2.1s (compile: 1943ms, render: 176ms)
+ GET /blog/tennis-club-fee-split-guide 200 in 484ms (compile: 137ms, render: 347ms)
+ GET /blog/tennis-club-fee-split-guide 200 in 367ms (compile: 115ms, render: 252ms)
+ GET /icon?f1fbb56339e1b3c4 200 in 257ms

@@ -7,6 +7,7 @@ export interface BlogPostData {
   badge?: string;
   category: string;
   date: string;
+  scheduledAt?: string;
   readTime: string;
   badgeColor?: string;
   categoryColor?: string;

@@ -44,7 +44,9 @@ export default function SleepReadinessCheckClient() {
         <Card>
           <CardHeader>
             <Badge className="w-fit bg-indigo-600 text-white">Recovery Utility</Badge>
-            <CardTitle className="mt-3 text-3xl">테니스 수면 준비도 체크</CardTitle>
+            <h1 className="mt-3 text-3xl font-semibold leading-none">
+              테니스 수면 준비도 체크
+            </h1>
             <p className="text-sm leading-6 text-muted-foreground">
               오늘 몸 상태에 맞춰 훈련 강도를 조절할 수 있게 간단한 회복 점수를 계산합니다.
             </p>

@@ -59,7 +59,7 @@ export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
       name: player.nameEn,
       alternateName: nameKo,
     },
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/players/${slug}`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/players/${slug}`,
     description: `${nameKo}의 프로필 페이지`,
   };
 }
@@ -68,7 +68,7 @@ export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
  * BreadcrumbList 스키마 생성
  */
 export function generateBreadcrumbSchema(player: Player) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
   const playerName = (player.nameKo || player.name || '').trim();
   const playerSlug = (player.slug || '').trim();
 

@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "테니스 도구",
   ],
   alternates: {
-    canonical: "https://tennisfrens.com/about",
+    canonical: "https://www.tennisfrens.com/about",
   },
   openGraph: {
     title: "TennisFriends 소개 | 테니스 실력 향상을 위한 종합 플랫폼",
     description:
       "데이터 기반의 정확한 분석과 전문적인 정보로 테니스 실력 향상을 돕는 종합 플랫폼입니다.",
-    url: "https://tennisfrens.com/about",
+    url: "https://www.tennisfrens.com/about",
     type: "website",
   },
 };

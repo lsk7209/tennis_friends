@@ -1,0 +1,25 @@
+name: Scheduled Search Indexing
+
+on:
+  schedule:
+    # 예약 글은 KST 기준 유동 발행되므로 약 5시간마다 사이트맵 URL을 재제출합니다.
+    - cron: '15 */5 * * *'
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: 의존성 설치
+        run: npm ci
+
+      - name: IndexNow 제출 (Bing·Naver)
+        run: node scripts/submit-indexnow.js

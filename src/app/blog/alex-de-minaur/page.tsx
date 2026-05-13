@@ -9,12 +9,12 @@ export const metadata = {
   description: "지칠 줄 모르는 체력과 거미줄 같은 수비력. '데몬(Demon)'이라 불리는 알렉스 드 미노의 성장 배경과 플레이 스타일 분석.",
   keywords: ["테니스","알렉스 드 미노","Alex de Minaur","스피드","호주"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/alex-de-minaur',
+    canonical: 'https://www.tennisfrens.com/blog/alex-de-minaur',
   },
   openGraph: {
     title: "알렉스 드 미노: 멈추지 않는 호주의 엔진",
     description: "지칠 줄 모르는 체력과 거미줄 같은 수비력. '데몬(Demon)'이라 불리는 알렉스 드 미노의 성장 배경과 플레이 스타일 분석.",
-    url: 'https://tennisfrens.com/players/alex-de-minaur',
+    url: 'https://www.tennisfrens.com/blog/alex-de-minaur',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="alex-de-minaur" date="2026-01-24" title="알렉스 드 미노: 멈추지 않는 호주의 엔진" excerpt="지칠 줄 모르는 체력과 거미줄 같은 수비력. '데몬(Demon)'이라 불리는 알렉스 드 미노의 성장 배경과 플레이 스타일 분석.">
+      <Article showHeader={false} slug="alex-de-minaur" date="2026-01-24" title="알렉스 드 미노: 멈추지 않는 호주의 엔진" excerpt="지칠 줄 모르는 체력과 거미줄 같은 수비력. '데몬(Demon)'이라 불리는 알렉스 드 미노의 성장 배경과 플레이 스타일 분석.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

@@ -12,6 +12,8 @@ import {ArrowRight, ArrowLeft} from 'lucide-react';
 import { InjuryRiskInput, calculateInjuryRisk } from '@/lib/injuryRiskCalc';
 import {FadeIn} from '@/components/ScrollAnimation';
 
+const AUTO_ADVANCE_DELAY_MS = 300;
+
 export default function InjuryRiskTest() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(0);
@@ -152,19 +154,22 @@ export default function InjuryRiskTest() {
   const progress = Math.round(((currentStep + 1) / steps.length) * 100);
   const currentQuestion = questions[currentStep];
 
-  const handleAnswer = (value: any) => {
-    setFormData(prev => ({
-      ...prev,
+  const handleAnswer = (value: string) => {
+    const nextFormData = {
+      ...formData,
       [currentQuestion.id]: value
-    }));
+    };
+
+    setFormData(nextFormData);
+    window.setTimeout(() => handleNext(nextFormData), AUTO_ADVANCE_DELAY_MS);
   };
 
-  const handleNext = () => {
+  const handleNext = (nextFormData = formData) => {
     if (currentStep < questions.length - 1) {
       setCurrentStep(prev => prev + 1);
     } else {
       // 모든 질문 완료 - 결과 계산
-      const result = calculateInjuryRisk(formData as InjuryRiskInput);
+      const result = calculateInjuryRisk(nextFormData as InjuryRiskInput);
       
       // 결과 페이지로 이동
       const params = new URLSearchParams();
@@ -288,7 +293,7 @@ export default function InjuryRiskTest() {
                   </div>
 
                   <Button
-                    onClick={handleNext}
+                    onClick={() => handleNext()}
                     disabled={!isAnswerSelected()}
                     className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 text-sm"
                   >

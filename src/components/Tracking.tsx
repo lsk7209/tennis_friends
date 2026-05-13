@@ -5,6 +5,10 @@ import { usePathname } from "next/navigation";
 import { safeJsonParse } from "@/lib/safe-json";
 import { trackEvent, TRACKING_EVENTS } from "@/lib/analytics";
 
+const MAX_STORED_VISITOR_EVENTS = 200;
+const CONTENT_READ_THRESHOLD = 0.75;
+const CONTENT_READ_MIN_SECONDS = 45;
+
 interface VisitorData {
   id: string;
   timestamp: string;
@@ -74,7 +78,7 @@ export const trackTestCompletion = (
 
     // 테스트 완료 데이터 추가
     existingData.push(testData);
-    const recentData = existingData.slice(-1000);
+    const recentData = existingData.slice(-MAX_STORED_VISITOR_EVENTS);
 
     // 로컬 스토리지에 저장
     localStorage.setItem("visitorData", JSON.stringify(recentData));
@@ -177,13 +181,19 @@ export default function Tracking() {
 
         // 새로운 데이터 추가 (최근 1000개만 유지)
         existingData.push(visitorData);
-        const recentData = existingData.slice(-1000);
+        const recentData = existingData.slice(-MAX_STORED_VISITOR_EVENTS);
 
         // 로컬 스토리지에 저장 (백업용)
         localStorage.setItem("visitorData", JSON.stringify(recentData));
 
         // Cloudflare Workers API 호출
         const apiUrl = process.env.NEXT_PUBLIC_ANALYTICS_API_URL;
+        if (pathname.startsWith("/blog/")) {
+          trackEvent(TRACKING_EVENTS.BLOG_POST_VIEWED, {
+            page_path: pathname,
+          });
+        }
+
         if (apiUrl) {
           fetch(`${apiUrl}/api/track`, {
             method: "POST",
@@ -214,9 +224,57 @@ export default function Tracking() {
     };
 
     // 페이지 로드 시 트래킹 (관리자 페이지는 제외)
-    if (!pathname.startsWith("/admin") && typeof window !== "undefined") {
-      trackVisit();
+    if (pathname.startsWith("/admin") || typeof window === "undefined") return;
+
+    let idleId: number | null = null;
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+    if (typeof window.requestIdleCallback === "function") {
+      idleId = window.requestIdleCallback(trackVisit, { timeout: 3000 });
+    } else {
+      timeoutId = globalThis.setTimeout(trackVisit, 2000);
     }
+
+    return () => {
+      if (idleId !== null) window.cancelIdleCallback(idleId);
+      if (timeoutId !== null) globalThis.clearTimeout(timeoutId);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!pathname.startsWith("/blog/") || typeof window === "undefined") return;
+
+    let didTrack = false;
+    const startedAt = Date.now();
+
+    const trackReadComplete = () => {
+      if (didTrack) return;
+
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollableHeight <= 0) return;
+
+      const scrollRatio = window.scrollY / scrollableHeight;
+      const durationSeconds = (Date.now() - startedAt) / 1000;
+
+      if (
+        scrollRatio >= CONTENT_READ_THRESHOLD &&
+        durationSeconds >= CONTENT_READ_MIN_SECONDS
+      ) {
+        didTrack = true;
+        trackEvent(TRACKING_EVENTS.CONTENT_READ_COMPLETE, {
+          page_path: pathname,
+          read_seconds: Math.round(durationSeconds),
+        });
+        window.removeEventListener("scroll", trackReadComplete);
+      }
+    };
+
+    window.addEventListener("scroll", trackReadComplete, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", trackReadComplete);
+    };
   }, [pathname]);
 
   return null; // UI를 렌더링하지 않음

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com";
 
 export const metadata: Metadata = {
   title: "주니어 테니스 성장 로드맵",

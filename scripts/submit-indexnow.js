@@ -1,13 +1,15 @@
 const https = require('https');
-const fs = require('fs');
-const path = require('path');
-const { parseStringPromise } = require('xml2js'); // Assuming xml2js might be needed, or regex
 
 // Configurations
 const API_KEY = '46d9a30e05e90f665fa353387fa67c4c';
-const HOST = 'tennisfrens.com';
+const HOST = 'www.tennisfrens.com';
 const KEY_LOCATION = `https://${HOST}/${API_KEY}.txt`;
 const SITEMAP_URL = `https://${HOST}/sitemap.xml`;
+const INDEXNOW_ENDPOINTS = [
+    { name: 'IndexNow', hostname: 'api.indexnow.org', path: '/indexnow', includeKeyLocation: true },
+    { name: 'Bing', hostname: 'www.bing.com', path: '/indexnow', includeKeyLocation: true },
+    { name: 'Naver', hostname: 'searchadvisor.naver.com', path: '/indexnow', includeKeyLocation: false },
+];
 
 // Function to fetch URLs from Sitemap
 async function fetchUrls() {
@@ -31,23 +33,10 @@ async function fetchUrls() {
     });
 }
 
-// Function to submit to IndexNow
-async function submitToIndexNow(urls) {
-    if (urls.length === 0) {
-        console.log('No URLs found to submit.');
-        return;
-    }
-
-    const payload = JSON.stringify({
-        host: HOST,
-        key: API_KEY,
-        keyLocation: KEY_LOCATION,
-        urlList: urls
-    });
-
+async function submitToEndpoint(endpoint, payload) {
     const options = {
-        hostname: 'api.indexnow.org',
-        path: '/indexnow',
+        hostname: endpoint.hostname,
+        path: endpoint.path,
         method: 'POST',
         headers: {
             'Content-Type': 'application/json; charset=utf-8',
@@ -61,24 +50,64 @@ async function submitToIndexNow(urls) {
             res.on('data', (chunk) => responseData += chunk);
             res.on('end', () => {
                 if (res.statusCode >= 200 && res.statusCode < 300) {
-                    console.log(`Successfully submitted ${urls.length} URLs to IndexNow.`);
+                    console.log(`Successfully submitted to ${endpoint.name}.`);
                     resolve(responseData);
                 } else {
-                    console.error(`Error submitting to IndexNow: ${res.statusCode} ${res.statusMessage}`);
+                    console.error(`Error submitting to ${endpoint.name}: ${res.statusCode} ${res.statusMessage}`);
                     console.error(responseData);
-                    reject(new Error(`IndexNow API Error: ${res.statusCode}`));
+                    reject(new Error(`${endpoint.name} API Error: ${res.statusCode}`));
                 }
             });
         });
 
         req.on('error', (e) => {
-            console.error(`Request error: ${e.message}`);
+            console.error(`${endpoint.name} request error: ${e.message}`);
             reject(e);
         });
 
         req.write(payload);
         req.end();
     });
+}
+
+// Function to submit to IndexNow-compatible engines
+function createPayload(urls, includeKeyLocation) {
+    const payload = {
+        host: HOST,
+        key: API_KEY,
+        urlList: urls
+    };
+
+    if (includeKeyLocation) {
+        payload.keyLocation = KEY_LOCATION;
+    }
+
+    return JSON.stringify(payload);
+}
+
+async function submitToIndexNow(urls) {
+    if (urls.length === 0) {
+        console.log('No URLs found to submit.');
+        return;
+    }
+
+    const results = await Promise.allSettled(
+        INDEXNOW_ENDPOINTS.map((endpoint) =>
+            submitToEndpoint(
+                endpoint,
+                createPayload(urls, endpoint.includeKeyLocation),
+            ),
+        ),
+    );
+    const failed = results.filter((result) => result.status === 'rejected');
+
+    if (failed.length === INDEXNOW_ENDPOINTS.length) {
+        throw new Error('All IndexNow-compatible submissions failed.');
+    }
+
+    if (failed.length > 0) {
+        console.warn(`${failed.length} IndexNow-compatible endpoint(s) failed, but at least one submission succeeded.`);
+    }
 }
 
 // Main Execution

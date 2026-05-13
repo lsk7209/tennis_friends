@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     description: "조던 톰슨 (Jordan Thompson) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
     keywords: ['조던 톰슨', 'Jordan Thompson', '테니스', 'ATP', '플레이스타일', '호주 테니스', '콧수염', '근성'],
     alternates: {
-        canonical: 'https://tennisfrens.com/players/jordan-thompson',
+        canonical: 'https://www.tennisfrens.com/players/jordan-thompson',
     },
     openGraph: {
         title: '조던 톰슨 — 호주의 콧수염 파이터 | 플레이스타일·명장면·최근 경기력',
         description: '조던 톰슨의 끈질긴 수비와 투지, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-        url: 'https://tennisfrens.com/players/jordan-thompson',
+        url: 'https://www.tennisfrens.com/players/jordan-thompson',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'profile',
@@ -115,9 +115,9 @@ export default function JordanThompsonPage() {
                 />
                 <BreadcrumbSchema
                     items={[
-                        { name: '홈', item: 'https://tennisfrens.com' },
-                        { name: '선수', item: 'https://tennisfrens.com/players' },
-                        { name: '조던 톰슨', item: 'https://tennisfrens.com/players/jordan-thompson' },
+                        { name: '홈', item: 'https://www.tennisfrens.com' },
+                        { name: '선수', item: 'https://www.tennisfrens.com/players' },
+                        { name: '조던 톰슨', item: 'https://www.tennisfrens.com/players/jordan-thompson' },
                     ]}
                 />
                 <FAQSchema faqs={faqs} />

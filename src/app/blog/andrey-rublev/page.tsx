@@ -9,12 +9,12 @@ export const metadata = {
   description: "투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. 'Bweh'라는 기합과 함께 뿜어내는 루블레프의 폭발적인 에너지.",
   keywords: ["테니스","안드레이 루블레프","Andrey Rublev","포핸드","러시아"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/andrey-rublev',
+    canonical: 'https://www.tennisfrens.com/blog/andrey-rublev',
   },
   openGraph: {
     title: "안드레이 루블레프: 포핸드 머신의 열정",
     description: "투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. 'Bweh'라는 기합과 함께 뿜어내는 루블레프의 폭발적인 에너지.",
-    url: 'https://tennisfrens.com/players/andrey-rublev',
+    url: 'https://www.tennisfrens.com/blog/andrey-rublev',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="andrey-rublev" date="2026-01-24" title="안드레이 루블레프: 포핸드 머신의 열정" excerpt="투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. 'Bweh'라는 기합과 함께 뿜어내는 루블레프의 폭발적인 에너지.">
+      <Article showHeader={false} slug="andrey-rublev" date="2026-01-24" title="안드레이 루블레프: 포핸드 머신의 열정" excerpt="투어에서 가장 강력한 포핸드를 가진 선수 중 한 명. 'Bweh'라는 기합과 함께 뿜어내는 루블레프의 폭발적인 에너지.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

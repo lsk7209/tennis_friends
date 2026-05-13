@@ -44,6 +44,8 @@ export interface TrainingSession {
   intensity: 'low' | 'medium' | 'high';
 }
 
+type TrainingSessionType = TrainingSession['type'];
+
 export interface Exercise {
   name: string;
   duration: number;
@@ -156,8 +158,8 @@ function generateSessionsForWeek(input: TrainingPlanInput, week: number): Traini
   return sessions;
 }
 
-function getSessionTypes(input: TrainingPlanInput, week: number): string[] {
-  const baseTypes = ['technical', 'tactical', 'physical'];
+function getSessionTypes(_input: TrainingPlanInput, week: number): TrainingSessionType[] {
+  const baseTypes: TrainingSessionType[] = ['technical', 'tactical', 'physical'];
   
   if (week % 2 === 0) {
     baseTypes.push('match');
@@ -170,7 +172,7 @@ function getSessionTypes(input: TrainingPlanInput, week: number): string[] {
   return baseTypes;
 }
 
-function generateSession(input: TrainingPlanInput, type: string, week: number, sessionNumber: number): TrainingSession {
+function generateSession(input: TrainingPlanInput, type: TrainingSessionType, week: number, sessionNumber: number): TrainingSession {
   const sessionTemplates = {
     technical: {
       title: '기술 훈련',
@@ -209,7 +211,7 @@ function generateSession(input: TrainingPlanInput, type: string, week: number, s
   return {
     day: getDayOfWeek(sessionNumber),
     duration: input.availableTime.sessionLength,
-    type: type as any,
+    type,
     title: template.title,
     description: template.description,
     exercises: template.exercises,
@@ -217,7 +219,7 @@ function generateSession(input: TrainingPlanInput, type: string, week: number, s
   };
 }
 
-function generateTechnicalExercises(input: TrainingPlanInput, week: number): Exercise[] {
+function generateTechnicalExercises(input: TrainingPlanInput, _week: number): Exercise[] {
   const exercises: Exercise[] = [];
   
   if (input.currentLevel === 'beginner') {
@@ -253,7 +255,7 @@ function generateTechnicalExercises(input: TrainingPlanInput, week: number): Exe
   return exercises;
 }
 
-function generateTacticalExercises(input: TrainingPlanInput, week: number): Exercise[] {
+function generateTacticalExercises(input: TrainingPlanInput, _week: number): Exercise[] {
   const exercises: Exercise[] = [];
   
   exercises.push({
@@ -275,7 +277,7 @@ function generateTacticalExercises(input: TrainingPlanInput, week: number): Exer
   return exercises;
 }
 
-function generatePhysicalExercises(input: TrainingPlanInput, week: number): Exercise[] {
+function generatePhysicalExercises(_input: TrainingPlanInput, _week: number): Exercise[] {
   const exercises: Exercise[] = [];
   
   exercises.push({
@@ -295,7 +297,7 @@ function generatePhysicalExercises(input: TrainingPlanInput, week: number): Exer
   return exercises;
 }
 
-function generateMatchExercises(input: TrainingPlanInput, week: number): Exercise[] {
+function generateMatchExercises(input: TrainingPlanInput, _week: number): Exercise[] {
   const exercises: Exercise[] = [];
   
   exercises.push({
@@ -308,7 +310,7 @@ function generateMatchExercises(input: TrainingPlanInput, week: number): Exercis
   return exercises;
 }
 
-function generateRecoveryExercises(input: TrainingPlanInput, week: number): Exercise[] {
+function generateRecoveryExercises(_input: TrainingPlanInput, _week: number): Exercise[] {
   const exercises: Exercise[] = [];
   
   exercises.push({
@@ -363,7 +365,7 @@ function getWeeklyGoals(input: TrainingPlanInput, week: number): string[] {
   return [goals[(week - 1) % goals.length]];
 }
 
-function generateFocusAreas(input: TrainingPlanInput): FocusArea[] {
+function generateFocusAreas(_input: TrainingPlanInput): FocusArea[] {
   const areas: FocusArea[] = [];
   
   areas.push({
@@ -424,7 +426,7 @@ function generateMilestones(input: TrainingPlanInput, duration: number): Milesto
   return milestones;
 }
 
-function generateRecommendations(input: TrainingPlanInput) {
+function generateRecommendations(_input: TrainingPlanInput): TrainingPlanResult['recommendations'] {
   return {
     technical: [
       '기본 동작의 정확성을 우선시하세요',
@@ -463,7 +465,7 @@ function generateEquipmentList(input: TrainingPlanInput): string[] {
   return equipment;
 }
 
-function generateNextSteps(input: TrainingPlanInput): string[] {
+function generateNextSteps(_input: TrainingPlanInput): string[] {
   return [
     '훈련 계획을 일정에 맞춰 실행하세요',
     '정기적으로 진도를 점검하세요',

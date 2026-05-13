@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { allBlogPosts } from '@/data/blog-posts';
+import { getPublishedBlogPosts } from '@/lib/blog-publish';
 import { ChevronRight } from 'lucide-react';
 
 interface RelatedPostsProps {
@@ -13,7 +14,7 @@ interface RelatedPostsProps {
 
 export default function RelatedPosts({ currentSlug, category, tags = [], maxCount = 3 }: RelatedPostsProps) {
     // 관련 글 찾기 로직
-    const related = allBlogPosts
+    const related = getPublishedBlogPosts(allBlogPosts)
         .filter(post => post.slug !== currentSlug) // 현재 글 제외
         .map(post => {
             let score = 0;

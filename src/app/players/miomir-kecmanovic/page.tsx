@@ -2,9 +2,11 @@ import { PLAYERS_DB } from '@/data/players';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getSiteUrl } from '@/lib/site';
+import { buildPlayerSeoKeywords, getPlayerSearchSeo } from '@/lib/player-search-seo';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
+import PlayerSearchAliasSection from '@/components/players/PlayerSearchAliasSection';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -17,16 +19,14 @@ export function generateMetadata(): Metadata {
   if (!player) return { title: '선수를 찾을 수 없습니다' };
 
   const tour = player.gender === 'male' ? 'ATP' : 'WTA';
-  const oneLiner = player.detailedProfile?.oneLineSummary?.slice(0, 60) ?? '';
-  const title = `${player.name} 완전 분석 | 플레이 스타일·강점·${tour} 프로필`;
-  const description = oneLiner
-    ? `${oneLiner} ${player.name}(${player.nameEn})의 플레이 스타일, 강점·약점, 라켓·스트링 정보를 한눈에. ${player.country} 출신 ${tour} 프로 선수 완전 분석.`
-    : `${player.name}(${player.nameEn})의 플레이 스타일, 강점·약점, 라켓·스트링 정보를 한눈에. ${player.country} 출신 ${tour} 프로 선수 완전 분석.`;
+  const searchSeo = getPlayerSearchSeo(SLUG);
+  const title = searchSeo?.title ?? `${player.name} tennis player profile`;
+  const description = searchSeo?.description ?? `${player.name}(${player.nameEn}) profile, ranking, match record and playing style.`;
 
   return {
     title,
     description,
-    keywords: [player.name, player.nameEn, `${player.name} 프로필`, `${player.name} 플레이 스타일`, '테니스', tour, player.country],
+    keywords: buildPlayerSeoKeywords(SLUG, player, tour),
     alternates: { canonical: `${getSiteUrl()}/players/${SLUG}` },
     openGraph: { title, description, type: 'profile', locale: 'ko_KR', siteName: 'TennisFriends' },
     twitter: { card: 'summary_large_image', title, description },
@@ -76,6 +76,8 @@ export default function PlayerPage() {
           )}
           <p className="mt-3 text-gray-500 text-sm">{player.plays} · {player.backhand} backhand</p>
         </div>
+
+        <PlayerSearchAliasSection slug={SLUG} />
 
         {player.detailedProfile?.hexagonStats && player.detailedProfile.hexagonStats.length > 0 && (
           <div className="bg-white rounded-2xl p-8 shadow-sm mb-6">

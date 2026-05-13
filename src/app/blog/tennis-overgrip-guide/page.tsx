@@ -12,12 +12,12 @@ export const metadata = {
   description: "손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍.",
   keywords: ["테니스 장비", "오버그립", "그립 테이프", "손땀", "용품 추천"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-overgrip-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-overgrip-guide',
   },
   openGraph: {
     title: "오버그립 교체 주기와 종류(건식/습식) 추천",
     description: "손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍.",
-    url: 'https://tennisfrens.com/blog/tennis-overgrip-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-overgrip-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -93,7 +93,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-overgrip-guide" date="2026-01-24" title="오버그립 교체 주기와 종류(건식/습식) 추천" excerpt="손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍.">
+      <Article showHeader={false} slug="tennis-overgrip-guide" date="2026-01-24" title="오버그립 교체 주기와 종류(건식/습식) 추천" excerpt="손에 땀이 많다면? 쫀쫀한 그립감을 원한다면? 건식(Dry)과 습식(Tacky) 오버그립의 차이와 최적의 교체 타이밍.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

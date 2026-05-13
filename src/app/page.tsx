@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title:
     "TennisFriends - 테니스 실력 테스트 & 분석 도구 | NTRP 측정, 스트링 텐션 계산기",
   description:
-    "NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측, 플레이 스타일 진단 등 테니스 실력 향상을 위한 무료 도구 모음. 10,000명 이상이 이용한 전문가 검증 알고리즘으로 나의 테니스 레벨을 확인하세요.",
+    "NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측, 플레이 스타일 진단 등 테니스 실력 향상을 위한 무료 도구와 테니스 가이드를 제공합니다.",
   keywords: [
     "테니스",
     "NTRP 테스트",
@@ -44,6 +44,46 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const blogPosts = homeBlogPosts;
+  const sitePrinciples = [
+    {
+      title: "직접 작성한 테니스 콘텐츠",
+      description:
+        "라켓, 스트링, 훈련, 경기 전략처럼 동호인이 실제로 검색하는 주제를 기준으로 가이드와 도구를 정리합니다.",
+    },
+    {
+      title: "명확한 탐색 구조",
+      description:
+        "도구, 블로그, 선수 정보, 문의, 약관과 개인정보 처리방침까지 홈에서 빠르게 이동할 수 있게 구성했습니다.",
+    },
+    {
+      title: "광고와 콘텐츠 분리",
+      description:
+        "광고 클릭을 유도하지 않고, 본문과 탐색 요소가 광고처럼 보이지 않도록 콘텐츠 영역을 분명히 구분합니다.",
+    },
+  ];
+
+  const navigationHubs = [
+    {
+      label: "실력 진단",
+      description: "NTRP, 플레이 스타일, 반응 속도처럼 현재 상태를 확인하는 도구",
+      href: "/utility",
+    },
+    {
+      label: "훈련 가이드",
+      description: "기술, 멘탈, 부상 예방, 장비 선택을 다루는 읽을거리",
+      href: "/blog",
+    },
+    {
+      label: "선수 정보",
+      description: "주요 선수 프로필과 경기 스타일을 비교해보는 데이터 페이지",
+      href: "/players",
+    },
+    {
+      label: "사이트 정보",
+      description: "운영 목적, 문의, 이용 약관, 개인정보 처리 기준 확인",
+      href: "/about",
+    },
+  ];
 
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -80,20 +120,20 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             <FadeIn delay={0.2}>
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-6">
-                데이터로 똑똑하게,{" "}
+                데이터로 똑똑하게,{"\u00a0"}
                 <span className="text-blue-600">테니스를 즐겁게</span>
               </h1>
             </FadeIn>
             <SlideUp delay={0.4}>
               <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
                 당신의 테니스 실력 향상을 위한 모든 것, TennisFriends와 함께
-                시작하세요. 과학적 분석과 전문가의 조언으로 더 나은 테니스
-                플레이어가 되어보세요.
+                시작하세요. 실력 진단, 장비 선택, 훈련 계획, 경기 복습을 한곳에서
+                확인할 수 있습니다.
               </p>
             </SlideUp>
             <SlideUp delay={0.6}>
               <div className="flex items-center justify-center mb-12">
-                <Link href="/utility">
+                <Link href="/utility" prefetch={false}>
                   <Button
                     size="lg"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-xl font-bold rounded-2xl focus-ring shadow-lg hover:shadow-xl transition-all duration-300"
@@ -109,18 +149,85 @@ export default function Home() {
               <div className="flex flex-wrap items-center justify-center gap-8 text-gray-500 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span>10,000+ 실력 테스트 완료</span>
+                  <span>무료 테니스 도구 제공</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span>전문가 검증된 알고리즘</span>
+                  <span>블로그·도구·선수 정보 통합</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span>100% 무료 서비스</span>
+                  <span>광고와 콘텐츠 구분 운영</span>
                 </div>
               </div>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-12">
+        <div className="container mx-auto max-w-7xl container-padding">
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+            <div>
+              <Badge className="mb-4 bg-blue-100 px-3 py-1 text-blue-800">
+                사이트 안내
+              </Badge>
+              <h2 className="mb-4 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
+                테니스 도구와 가이드를 한곳에서 찾는 홈
+              </h2>
+              <p className="text-base leading-7 text-gray-600">
+                TennisFriends는 테니스 실력 진단, 장비 선택, 훈련 계획, 선수
+                정보를 연결해 초보자와 동호인이 다음 행동을 쉽게 고를 수 있도록
+                만든 정보형 플랫폼입니다.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/privacy" prefetch={false}>
+                  <Button variant="outline" className="bg-white">
+                    개인정보 처리방침
+                  </Button>
+                </Link>
+                <Link href="/terms" prefetch={false}>
+                  <Button variant="outline" className="bg-white">
+                    이용 약관
+                  </Button>
+                </Link>
+                <Link href="/contact" prefetch={false}>
+                  <Button variant="outline" className="bg-white">
+                    문의하기
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-3">
+              {sitePrinciples.map((item) => (
+                <Card key={item.title} className="border-gray-200 bg-gray-50">
+                  <CardContent className="p-5">
+                    <h3 className="mb-2 text-base font-bold text-gray-900">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-6 text-gray-600">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-3 md:grid-cols-4">
+            {navigationHubs.map((hub) => (
+              <Link key={hub.href} href={hub.href} prefetch={false}>
+                <div className="h-full rounded-xl border border-gray-200 bg-white p-5 transition-colors hover:border-blue-300 hover:bg-blue-50">
+                  <div className="mb-2 text-sm font-bold text-blue-700">
+                    {hub.label}
+                  </div>
+                  <p className="text-sm leading-6 text-gray-600">
+                    {hub.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -131,7 +238,7 @@ export default function Home() {
           <SlideUp>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                테니스 실력 향상을 위한{" "}
+                  테니스 실력 향상을 위한{"\u00a0"}
                 <span className="text-blue-600">스마트 도구</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -166,7 +273,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
                 <StaggeredItem key={index}>
-                  <Link href={post.href}>
+                  <Link href={post.href} prefetch={false}>
                     <Card className="h-full bg-white border-gray-200 hover:border-blue-300 transition-all duration-300 card-hover group cursor-pointer shadow-sm hover:shadow-lg">
                       <CardContent className="p-6 flex flex-col h-full">
                         <div className="flex items-center justify-between mb-4">
@@ -213,7 +320,7 @@ export default function Home() {
 
           <FadeIn delay={0.3}>
             <div className="text-center mt-12">
-              <Link href="/blog">
+              <Link href="/blog" prefetch={false}>
                 <Button
                   variant="outline"
                   className="bg-white border-gray-300 hover:border-blue-500 px-8 py-3 text-lg font-semibold focus-ring"
@@ -255,12 +362,12 @@ export default function Home() {
                   </SlideUp>
                   <SlideUp delay={0.8}>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Link href="/about">
+                      <Link href="/about" prefetch={false}>
                         <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold focus-ring">
                           커뮤니티 알아보기
                         </Button>
                       </Link>
-                      <Link href="/contact">
+                      <Link href="/contact" prefetch={false}>
                         <Button
                           variant="outline"
                           className="bg-white border-gray-300 hover:border-blue-500 px-8 py-3 text-lg font-semibold focus-ring"
@@ -278,46 +385,34 @@ export default function Home() {
           <FadeIn delay={0.15}>
             <div className="mt-16 pt-12 border-t border-gray-200">
               <h3 className="text-center text-sm font-bold text-gray-500 uppercase tracking-wider mb-8">
-                사용자 후기
+                운영 기준
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
                 {[
                   {
-                    stars: 5,
-                    text: "NTRP 테스트로 제 실력을 정확히 알았어요! 지금은 3.5 목표로 훈련 중입니다.",
-                    author: "박○○",
-                    info: "서울, 30대",
+                    title: "출처와 한계 표시",
+                    text: "NTRP, 부상, 영양처럼 해석이 필요한 내용에는 참고 정보라는 한계를 명확히 표시합니다.",
                   },
                   {
-                    stars: 5,
-                    text: "스트링 텐션 계산기 덕분에 라켓 세팅이 훨씬 편해졌어요. 팔도 덜 아프고요!",
-                    author: "김○○",
-                    info: "부산, 20대",
+                    title: "직접 실행 가능한 구성",
+                    text: "도구와 글은 선택 기준, 체크리스트, 다음 행동을 중심으로 구성합니다.",
                   },
                   {
-                    stars: 5,
-                    text: "플레이 스타일 진단 결과 보고 훈련 방향을 잡았습니다. 복식 궁합 테스트도 재밌어요.",
-                    author: "이○○",
-                    info: "대전, 40대",
+                    title: "광고와 본문 분리",
+                    text: "광고 클릭을 유도하지 않고, 본문·도구·탐색 영역과 광고 영역을 구분합니다.",
                   },
-                ].map((review, i) => (
+                ].map((principle) => (
                   <Card
-                    key={i}
+                    key={principle.title}
                     className="bg-white border border-gray-200 shadow-sm"
                   >
                     <CardContent className="p-6">
-                      <div className="text-yellow-400 text-sm mb-3">
-                        {"★".repeat(review.stars)}
-                      </div>
+                      <h4 className="mb-3 text-base font-bold text-gray-900">
+                        {principle.title}
+                      </h4>
                       <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                        &ldquo;{review.text}&rdquo;
+                        {principle.text}
                       </p>
-                      <div className="text-xs text-gray-500">
-                        <span className="font-semibold text-gray-700">
-                          {review.author}
-                        </span>{" "}
-                        · {review.info}
-                      </div>
                     </CardContent>
                   </Card>
                 ))}
@@ -335,18 +430,18 @@ export default function Home() {
                   { name: "테니스 라켓 추천", href: "/blog" },
                   {
                     name: "NTRP 레벨 테스트",
-                    href: "/utility/ntrp-calculator",
+                    href: "/utility/ntrp-test",
                   },
                   {
                     name: "테니스 스트링 텐션",
-                    href: "/utility/string-tension-calculator",
+                    href: "/utility/string-tension",
                   },
                   {
                     name: "테니스 엘보 예방",
-                    href: "/utility/injury-risk-test",
+                    href: "/utility/injury-risk",
                   },
-                  { name: "페더러 프로필", href: "/players/roger-federer" },
-                  { name: "나달 클레이 코트", href: "/players/rafael-nadal" },
+                  { name: "조코비치 프로필", href: "/players/novak-djokovic" },
+                  { name: "알카라스 프로필", href: "/players/carlos-alcaraz" },
                   {
                     name: "조코비치 그랜드슬램",
                     href: "/players/novak-djokovic",
@@ -356,13 +451,13 @@ export default function Home() {
                     name: "알카라스 경기 일정",
                     href: "/players/carlos-alcaraz",
                   },
-                  { name: "권순우 프로필", href: "/players/soonwoo-kwon" },
-                  { name: "이덕희 ATP 도전", href: "/players/duckhee-lee" },
+                  { name: "프리츠 프로필", href: "/players/taylor-fritz" },
+                  { name: "루블레프 프로필", href: "/players/andrey-rublev" },
                   { name: "테니스 룰 퀴즈", href: "/tennis-rules-quiz" },
                   { name: "테니스 입문 가이드", href: "/blog" },
                   { name: "테니스화 추천", href: "/blog" },
                 ].map((topic, index) => (
-                  <Link key={index} href={topic.href}>
+                  <Link key={index} href={topic.href} prefetch={false}>
                     <Badge
                       variant="secondary"
                       className="bg-white hover:bg-blue-50 text-gray-600 hover:text-blue-600 border border-gray-200 px-4 py-2 text-sm transition-all cursor-pointer"
@@ -386,7 +481,7 @@ export default function Home() {
                 인기 테니스 도구 모음
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                61개 이상의 무료 테니스 분석 도구로 실력을 한 단계 끌어올리세요
+                  63개 이상의 무료 테니스 분석 도구로 실력을 한 단계 끌어올리세요
               </p>
             </div>
           </SlideUp>
@@ -453,7 +548,7 @@ export default function Home() {
                 emoji: "🎯",
               },
             ].map((tool, i) => (
-              <Link key={i} href={tool.href}>
+              <Link key={i} href={tool.href} prefetch={false}>
                 <div className="p-4 bg-gray-50 hover:bg-blue-50 rounded-xl border border-gray-200 hover:border-blue-300 transition-all text-center group">
                   <div className="text-2xl mb-2">{tool.emoji}</div>
                   <div className="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">
@@ -464,12 +559,12 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link href="/utility">
+            <Link href="/utility" prefetch={false}>
               <Button
                 variant="outline"
                 className="bg-white border-gray-300 hover:border-blue-500 px-8 py-3 text-lg font-semibold"
               >
-                전체 도구 보기 (61개+)
+                    전체 도구 보기 (63개+)
               </Button>
             </Link>
           </div>

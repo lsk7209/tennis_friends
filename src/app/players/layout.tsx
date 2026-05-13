@@ -2,13 +2,13 @@ import { Metadata } from 'next';
 import { getSiteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
-    title: '테니스 선수 프로필 및 랭킹 분석 | Tennis Friends',
+    title: '테니스 선수 프로필 및 랭킹 분석',
     description: 'ATP 및 WTA 테니스 선수들의 상세 프로필, 경기 스타일, 최신 랭킹 및 전적 정보를 확인하세요.',
     alternates: {
         canonical: `${getSiteUrl()}/players`,
     },
     openGraph: {
-        title: '테니스 선수 프로필 및 랭킹 분석 | Tennis Friends',
+        title: '테니스 선수 프로필 및 랭킹 분석',
         description: 'ATP 및 WTA 테니스 선수들의 상세 프로필, 경기 스타일, 최신 랭킹 및 전적 정보를 확인하세요.',
         url: `${getSiteUrl()}/players`,
         images: [{
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: '테니스 선수 프로필 및 랭킹 분석 | Tennis Friends',
+        title: '테니스 선수 프로필 및 랭킹 분석',
         description: 'ATP 및 WTA 테니스 선수들의 상세 프로필, 경기 스타일, 최신 랭킹 및 전적 정보.',
         images: [`${getSiteUrl()}/opengraph-image`],
     },

@@ -5,24 +5,24 @@ import { Badge } from '@/components/ui/badge';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
 export const metadata = {
-  title: "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
-  description: "실수 없이 넘기기만 하는 '푸셔' 스타일의 상대를 만나면 답답하셨죠? 말려들지 않고 내 플레이를 하며 승리하는 공략법을 공개합니다.",
-  keywords: ["테니스 전술","푸셔","Pusher","테니스 전략","멘탈 관리"],
+  title: "테니스 푸셔 상대법 5가지 | 문볼 공략",
+  description: "푸셔·문볼 상대에게 말려 실수한다면 타점 유지, 짧은 볼, 각도 전개, 네트 압박으로 이기는 실전 전략을 정리했습니다.",
+  keywords: ["테니스 푸셔 상대법","문볼 공략","테니스 전술","푸셔","Pusher","테니스 전략","멘탈 관리"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-strategy-beat-pusher',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-strategy-beat-pusher',
   },
   openGraph: {
-    title: "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
-    description: "실수 없이 넘기기만 하는 '푸셔' 스타일의 상대를 만나면 답답하셨죠? 말려들지 않고 내 플레이를 하며 승리하는 공략법을 공개합니다.",
-    url: 'https://tennisfrens.com/blog/tennis-strategy-beat-pusher',
+    title: "테니스 푸셔 상대법 5가지 | 문볼 공략",
+    description: "푸셔·문볼 상대에게 말려 실수한다면 타점 유지, 짧은 볼, 각도 전개, 네트 압박으로 이기는 실전 전략을 정리했습니다.",
+    url: 'https://www.tennisfrens.com/blog/tennis-strategy-beat-pusher',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "일명 '푸셔(Pusher)'를 이기는 5가지 전략",
-    description: "실수 없이 넘기기만 하는 '푸셔' 스타일의 상대를 만나면 답답하셨죠? 말려들지 않고 내 플레이를 하며 승리하는 공략법을 공개합니다.",
+    title: "테니스 푸셔 상대법 5가지 | 문볼 공략",
+    description: "푸셔·문볼 상대에게 말려 실수한다면 타점 유지, 짧은 볼, 각도 전개, 네트 압박으로 이기는 실전 전략을 정리했습니다.",
   },
   robots: {
     index: true,
@@ -56,15 +56,15 @@ export default function BlogPost() {
             ))}
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            일명 '푸셔(Pusher)'를 이기는 5가지 전략
+            테니스 푸셔 상대법 5가지
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed font-light">
-            실수 없이 넘기기만 하는 '푸셔' 스타일의 상대를 만나면 답답하셨죠? 말려들지 않고 내 플레이를 하며 승리하는 공략법을 공개합니다.
+            푸셔·문볼 상대에게 말려 실수한다면 타점 유지, 짧은 볼, 각도 전개, 네트 압박으로 흐름을 바꾸세요.
           </p>
         </div>
       </div>
 
-      <Article slug="tennis-strategy-beat-pusher" date="2026-01-24" title="일명 '푸셔(Pusher)'를 이기는 5가지 전략" excerpt="실수 없이 넘기기만 하는 '푸셔' 스타일의 상대를 만나면 답답하셨죠? 말려들지 않고 내 플레이를 하며 승리하는 공략법을 공개합니다.">
+      <Article slug="tennis-strategy-beat-pusher" date="2026-01-24" title="테니스 푸셔 상대법 5가지" excerpt="푸셔·문볼 상대에게 말려 실수한다면 타점 유지, 짧은 볼, 각도 전개, 네트 압박으로 흐름을 바꾸세요." showHeader={false}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

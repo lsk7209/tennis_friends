@@ -20,7 +20,9 @@ export default function Page() {
         <Card className="border-violet-100 bg-gradient-to-br from-violet-50 via-white to-fuchsia-50">
           <CardHeader>
             <Badge className="w-fit bg-violet-600 text-white">Planning Utility</Badge>
-            <CardTitle className="mt-3 text-4xl">테니스 훈련 플래너</CardTitle>
+            <h1 className="mt-3 text-4xl font-semibold leading-none">
+              테니스 훈련 플래너
+            </h1>
             <p className="text-base leading-7 text-muted-foreground">
               막연하게 많이 하는 연습보다, 이번 주에 실제로 실행 가능한 루틴을 만드는 것이 더 중요합니다.
             </p>

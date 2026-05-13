@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   description: "니콜라스 자리 (Nicolas Jarry) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['니콜라스 자리', 'Nicolas Jarry', '테니스', 'ATP', '플레이스타일', '칠레 테니스', '장신', '서브'],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/nicolas-jarry',
+    canonical: 'https://www.tennisfrens.com/players/nicolas-jarry',
   },
   openGraph: {
     title: '니콜라스 자리 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
     description: '니콜라스 자리의 장신 서브와 파워풀한 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfrens.com/players/nicolas-jarry',
+    url: 'https://www.tennisfrens.com/players/nicolas-jarry',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -96,14 +96,14 @@ export default function NicolasJarryPage() {
           award={[
             'ATP 250 Champion (multiple titles)'
           ]}
-          url="https://tennisfrens.com/players/nicolas-jarry"
+          url="https://www.tennisfrens.com/players/nicolas-jarry"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfrens.com' },
-          { name: '선수', item: 'https://tennisfrens.com/players' },
-          { name: '니콜라스 자리', item: 'https://tennisfrens.com/players/nicolas-jarry' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '니콜라스 자리', item: 'https://www.tennisfrens.com/players/nicolas-jarry' },
         ]}
       />
       <FAQSchema faqs={faqs} />

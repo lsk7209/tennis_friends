@@ -9,12 +9,12 @@ export const metadata = {
   description: "강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.",
   keywords: ["테니스","바람","강풍","테니스 꿀팁","야외 테니스"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-windy-condition-tips',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-windy-condition-tips',
   },
   openGraph: {
     title: "바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)",
     description: "강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.",
-    url: 'https://tennisfrens.com/blog/tennis-windy-condition-tips',
+    url: 'https://www.tennisfrens.com/blog/tennis-windy-condition-tips',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -64,7 +64,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-windy-condition-tips" date="2026-01-24" title="바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)" excerpt="강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.">
+      <Article showHeader={false} slug="tennis-windy-condition-tips" date="2026-01-24" title="바람 부는 날 테니스 잘 치는 법 (강풍 대응 가이드)" excerpt="강풍은 테니스에서 가장 까다로운 변수입니다. 바람을 등지거나 안고 칠 때의 타점 조절, 풋워크 변화, 그리고 멘탈 관리까지 완벽하게 정리했습니다.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

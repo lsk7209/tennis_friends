@@ -9,12 +9,12 @@ export const metadata = {
   description: "복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.",
   keywords: ["테니스","복식","팀워크","포칭","발리"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-doubles-teamwork-strategy',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-doubles-teamwork-strategy',
   },
   openGraph: {
     title: "복식의 신이 되는 팀워크 전략 (Doubles Strategy)",
     description: "복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.",
-    url: 'https://tennisfrens.com/blog/tennis-doubles-teamwork-strategy',
+    url: 'https://www.tennisfrens.com/blog/tennis-doubles-teamwork-strategy',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -64,7 +64,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-doubles-teamwork-strategy" date="2026-01-24" title="복식의 신이 되는 팀워크 전략 (Doubles Strategy)" excerpt="복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.">
+      <Article showHeader={false} slug="tennis-doubles-teamwork-strategy" date="2026-01-24" title="복식의 신이 되는 팀워크 전략 (Doubles Strategy)" excerpt="복식은 단식과 다른 게임입니다. 1+1이 3이 되는 파트너십의 비밀, 포칭 타이밍, 그리고 진형(Formation) 운영법을 다룹니다.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

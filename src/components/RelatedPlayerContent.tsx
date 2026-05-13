@@ -12,6 +12,7 @@ import React, { useMemo } from 'react';
 import { allBlogPosts } from '@/data/blog-posts';
 import RelatedContent from '@/components/RelatedContent';
 import { getRelatedBlogPosts } from '@/lib/related-content';
+import { getPublishedBlogPosts } from '@/lib/blog-publish';
 import type { RelatedContentItem } from '@/components/RelatedContent';
 
 interface RelatedPlayerContentProps {
@@ -26,8 +27,10 @@ export default function RelatedPlayerContent({
   maxItems = 6 
 }: RelatedPlayerContentProps) {
   const relatedContent = useMemo(() => {
+    const publishedBlogPosts = getPublishedBlogPosts(allBlogPosts);
+
     // 선수 프로필 카테고리의 블로그 글 찾기
-    const playerBlogPosts = allBlogPosts.filter(post => 
+    const playerBlogPosts = publishedBlogPosts.filter(post => 
       post.category === '선수 프로필' && 
       (post.title.includes(playerName) || 
        post.slug === playerSlug ||
@@ -56,7 +59,7 @@ export default function RelatedPlayerContent({
     };
 
     // 모든 블로그 글을 RelatedContentItem으로 변환
-    const allItems: RelatedContentItem[] = allBlogPosts.map(post => ({
+    const allItems: RelatedContentItem[] = publishedBlogPosts.map(post => ({
       id: post.id,
       title: post.title,
       description: post.excerpt,

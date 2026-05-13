@@ -12,12 +12,12 @@ export const metadata = {
   description: "낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.",
   keywords: ["테니스 기술", "슬라이스", "백핸드", "Slice", "페이스 조절"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-slice-backhand-mastery',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-slice-backhand-mastery',
   },
   openGraph: {
     title: "슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)",
     description: "낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.",
-    url: 'https://tennisfrens.com/blog/tennis-slice-backhand-mastery',
+    url: 'https://www.tennisfrens.com/blog/tennis-slice-backhand-mastery',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -91,7 +91,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-slice-backhand-mastery" date="2026-01-24" title="슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)" excerpt="낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.">
+      <Article showHeader={false} slug="tennis-slice-backhand-mastery" date="2026-01-24" title="슬라이스 백핸드 제대로 구사하기 (방어와 리듬 뺏기)" excerpt="낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

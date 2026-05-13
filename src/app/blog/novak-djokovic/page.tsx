@@ -10,13 +10,13 @@ export const metadata = {
     "테니스 역사상 가장 위대한 선수. 24회 그랜드 슬램 우승에 빛나는 조코비치의 무결점 플레이와 철저한 자기 관리.",
   keywords: ["테니스", "노박 조코비치", "Novak Djokovic", "GOAT", "세르비아"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/novak-djokovic',
+    canonical: 'https://www.tennisfrens.com/blog/novak-djokovic',
   },
   openGraph: {
     title: "노박 조코비치: 기록의 파괴자, GOAT",
     description:
       "테니스 역사상 가장 위대한 선수. 24회 그랜드 슬램 우승에 빛나는 조코비치의 무결점 플레이와 철저한 자기 관리.",
-    url: 'https://tennisfrens.com/players/novak-djokovic',
+    url: 'https://www.tennisfrens.com/blog/novak-djokovic',
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "article",
@@ -72,7 +72,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article
+      <Article showHeader={false}
         slug="novak-djokovic"
         date="2026-01-24"
         title="노박 조코비치: 기록의 파괴자, GOAT"

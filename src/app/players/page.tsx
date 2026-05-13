@@ -22,10 +22,18 @@ import { PLAYERS_PER_PAGE } from '@/lib/constants';
 
 import { PLAYERS_DB } from '@/data/players';
 
+const SORT_OPTIONS = ['name', 'country'] as const;
+type SortOption = (typeof SORT_OPTIONS)[number];
+type GenderFilter = 'all' | 'male' | 'female';
+
+function isSortOption(value: string): value is SortOption {
+  return SORT_OPTIONS.includes(value as SortOption);
+}
+
 export default function PlayersPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'country'>('name');
-  const [genderFilter, setGenderFilter] = useState<'all' | 'male' | 'female'>('male'); // Default to male since we mostly have male players
+  const [sortBy, setSortBy] = useState<SortOption>('name');
+  const [genderFilter, setGenderFilter] = useState<GenderFilter>('male');
   const [currentPage, setCurrentPage] = useState(1);
 
   // 필터링 및 정렬된 선수 목록
@@ -78,6 +86,12 @@ export default function PlayersPage() {
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery, sortBy, genderFilter]);
+
+  const handleSortChange = (value: string) => {
+    if (isSortOption(value)) {
+      setSortBy(value);
+    }
+  };
 
   const getPlayerCard = (player: { slug: string; name: string; nameEn: string; country: string; countryFlag: string; image?: string }) => {
     return (
@@ -132,7 +146,7 @@ export default function PlayersPage() {
               <Link href={`/players/${player.slug}`}>
                 <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white">
                   <Target className="w-4 h-4 mr-2" />
-                  자세히 보기
+                  {player.name} 자세히 보기
                 </Button>
               </Link>
             </div>
@@ -205,21 +219,25 @@ export default function PlayersPage() {
         <div className="container mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Gender Filter Tabs */}
-            <div className="flex bg-gray-100 dark:bg-gray-700 p-1 rounded-lg mb-4 md:mb-0">
+            <div className="flex bg-gray-100 dark:bg-gray-700 p-1 rounded-lg mb-4 md:mb-0" aria-label="선수 성별 필터">
               <button
+                type="button"
                 onClick={() => setGenderFilter('male')}
+                aria-pressed={genderFilter === 'male'}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${genderFilter === 'male'
-                  ? 'bg-white dark:bg-gray-600 text-blue-600 dark:text-blue-400 shadow-sm'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                  ? 'bg-white dark:bg-gray-950 text-blue-700 dark:text-blue-200 shadow-sm'
+                  : 'text-gray-700 dark:text-gray-200 hover:text-gray-950 dark:hover:text-white'
                   }`}
               >
                 ATP (남자)
               </button>
               <button
+                type="button"
                 onClick={() => setGenderFilter('female')}
+                aria-pressed={genderFilter === 'female'}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${genderFilter === 'female'
-                  ? 'bg-white dark:bg-gray-600 text-pink-600 dark:text-pink-400 shadow-sm'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                  ? 'bg-white dark:bg-gray-950 text-pink-700 dark:text-pink-200 shadow-sm'
+                  : 'text-gray-700 dark:text-gray-200 hover:text-gray-950 dark:hover:text-white'
                   }`}
               >
                 WTA (여자)
@@ -240,8 +258,8 @@ export default function PlayersPage() {
 
             {/* Sort */}
             <div className="flex gap-3">
-              <Select value={sortBy} onValueChange={(value: any) => setSortBy(value)}>
-                <SelectTrigger className="w-40">
+              <Select value={sortBy} onValueChange={handleSortChange}>
+                <SelectTrigger className="w-40" aria-label="선수 정렬 기준">
                   <TrendingUp className="h-4 w-4 mr-2" />
                   <SelectValue placeholder="정렬" />
                 </SelectTrigger>
@@ -263,6 +281,7 @@ export default function PlayersPage() {
       {/* Players Grid */}
       <section className="py-12 bg-white dark:bg-gray-900">
         <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="sr-only">선수 목록</h2>
           <StaggeredAnimation>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {paginatedPlayers.map((player, index) => (
@@ -296,7 +315,8 @@ export default function PlayersPage() {
                   size="sm"
                   onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                   disabled={currentPage === 1}
-                  className="flex items-center gap-1"
+                  className="flex items-center gap-1 !text-gray-900 dark:!text-gray-100"
+                  aria-label="이전 선수 목록 페이지"
                 >
                   <ChevronLeft className="h-4 w-4" />
                   이전
@@ -316,9 +336,11 @@ export default function PlayersPage() {
                           variant={currentPage === page ? "default" : "outline"}
                           size="sm"
                           onClick={() => setCurrentPage(page)}
+                          aria-label={`선수 목록 ${page}페이지로 이동`}
+                          aria-current={currentPage === page ? 'page' : undefined}
                           className={`min-w-[40px] ${currentPage === page
                             ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0"
-                            : ""
+                            : "bg-white !text-gray-900 hover:bg-gray-50 dark:bg-gray-950 dark:!text-gray-100 dark:hover:bg-gray-800"
                             }`}
                         >
                           {page}
@@ -343,7 +365,8 @@ export default function PlayersPage() {
                   size="sm"
                   onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                   disabled={currentPage === totalPages}
-                  className="flex items-center gap-1"
+                  className="flex items-center gap-1 !text-gray-900 dark:!text-gray-100"
+                  aria-label="다음 선수 목록 페이지"
                 >
                   다음
                   <ChevronRight className="h-4 w-4" />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com";
 
 export const metadata: Metadata = {
   title: "성인 입문자 첫 90일 가이드",

@@ -10,12 +10,12 @@ export const metadata = {
     description: '테린이 탈출을 위한 A to Z. 라켓 구매 비용부터 레슨비, 필수 용어, 코트 매너, 그리고 1년 성장 로드맵까지. 테니스 입문의 모든 궁금증을 해결해 드립니다.',
     keywords: ['테니스 입문 비용', '테니스 레슨비', '테니스 준비물', '테니스 용어', '테니스 점수 계산', '테니스 에티켓', '테니스 라켓 추천'],
     alternates: {
-        canonical: 'https://tennisfrens.com/blog/tennis-starting-complete-guide',
+        canonical: 'https://www.tennisfrens.com/blog/tennis-starting-complete-guide',
     },
     openGraph: {
         title: '테니스 시작하기 완벽 가이드 2026 — 비용, 준비물, 레슨, 용어 총정리',
         description: '테린이 탈출을 위한 A to Z. 라켓 구매 비용부터 레슨비, 필수 용어, 코트 매너, 그리고 1년 성장 로드맵까지.',
-        url: 'https://tennisfrens.com/blog/tennis-starting-complete-guide',
+        url: 'https://www.tennisfrens.com/blog/tennis-starting-complete-guide',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'article',

@@ -1,0 +1,15 @@
+
+> tennis-friends@0.1.0 dev
+> next dev --port 3100
+
+   ▲ Next.js 16.0.7 (Turbopack)
+   - Local:         http://localhost:3100
+   - Network:       http://172.30.1.67:3100
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+ ✓ Starting...
+ ✓ Ready in 1555ms
+ GET /.well-known/ai.txt 200 in 325ms (compile: 298ms, render: 27ms)
+ GET /.well-known/ai.txt 200 in 11ms (compile: 6ms, render: 5ms)
+[?25h

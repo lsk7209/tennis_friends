@@ -9,12 +9,12 @@ export const metadata = {
   description: '테니스 점수가 왜 15 단위인지 아시나요? 타이브레이크 7포인트와 10포인트의 차이, 노애드(No-Ad) 유의점, 그리고 점수 호출 에티켓까지 완벽 정리.',
   keywords: ['테니스 점수 규칙', '타이브레이크 규칙', '슈퍼 타이브레이크', '노애드 경기', '테니스 점수 부르는 법', '테니스 에티켓'],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-scoring-system-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-scoring-system-guide',
   },
   openGraph: {
     title: '테니스 점수 체계 완벽 가이드 — 15-30-40의 유래부터 타이브레이크 마스터까지',
     description: '테니스 점수가 왜 15 단위인지 아시나요? 타이브레이크 7포인트와 10포인트의 차이, 노애드(No-Ad) 유의점, 그리고 점수 호출 에티켓까지 완벽 정리.',
-    url: 'https://tennisfrens.com/blog/tennis-scoring-system-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-scoring-system-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

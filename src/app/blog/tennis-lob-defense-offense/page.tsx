@@ -12,12 +12,12 @@ export const metadata = {
   description: "위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.",
   keywords: ["테니스 기술", "로브", "Lob", "탑스핀 로브", "수비"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-lob-defense-offense',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-lob-defense-offense',
   },
   openGraph: {
     title: "로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브",
     description: "위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.",
-    url: 'https://tennisfrens.com/blog/tennis-lob-defense-offense',
+    url: 'https://www.tennisfrens.com/blog/tennis-lob-defense-offense',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -91,7 +91,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tennis-lob-defense-offense" date="2026-01-24" title="로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브" excerpt="위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.">
+      <Article showHeader={false} slug="tennis-lob-defense-offense" date="2026-01-24" title="로브(Lob)의 기술: 수비형 로브와 공격형 탑스핀 로브" excerpt="위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Table of Contents */}
           <div className="mb-12">

@@ -9,12 +9,12 @@ export const metadata = {
   description: "빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.",
   keywords: ["테니스","토미 폴","Tommy Paul","테크니션","미국"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/tommy-paul',
+    canonical: 'https://www.tennisfrens.com/blog/tommy-paul',
   },
   openGraph: {
     title: "토미 폴: 기민한 미국의 테크니션",
     description: "빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.",
-    url: 'https://tennisfrens.com/players/tommy-paul',
+    url: 'https://www.tennisfrens.com/blog/tommy-paul',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="tommy-paul" date="2026-01-24" title="토미 폴: 기민한 미국의 테크니션" excerpt="빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.">
+      <Article showHeader={false} slug="tommy-paul" date="2026-01-24" title="토미 폴: 기민한 미국의 테크니션" excerpt="빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

@@ -11,12 +11,17 @@ import ProfilePageSchema from "@/components/seo/ProfilePageSchema";
 import { allBlogPosts } from "@/data/blog-posts";
 import RelatedContent from "@/components/RelatedContent";
 import FAQSchema from "@/components/seo/FAQSchema";
-import AdSense from "@/components/AdSense";
 import Image from "next/image";
 import PlayerHexagonStats from "@/components/players/PlayerHexagonStats";
+import PlayerSearchAliasSection from "@/components/players/PlayerSearchAliasSection";
 
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getPublishedBlogPosts } from "@/lib/blog-publish";
 import { getSiteUrl } from "@/lib/site";
+import {
+  buildPlayerSeoKeywords,
+  getPlayerSearchSeo,
+} from "@/lib/player-search-seo";
 
 // Force static generation for these paths
 export async function generateStaticParams() {
@@ -29,59 +34,81 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const SEARCH_METADATA_OVERRIDES: Record<
+  string,
+  { title: string; description: string; keywords: string[] }
+> = {};
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const player = PLAYERS_DB[slug];
 
   if (!player) {
     return {
-      title: "선수를 찾을 수 없습니다",
+      title: "Player not found",
     };
   }
 
   const tour = player.gender === "male" ? "ATP" : "WTA";
-  const title = `${player.name} 테니스 선수 | 플레이 스타일·강점·${tour} 프로필`;
+  const canonical = `${getSiteUrl()}/players/${slug}`;
+  const metadataOverride = SEARCH_METADATA_OVERRIDES[slug];
+  const searchSeo = getPlayerSearchSeo(slug);
   const oneLiner = player.detailedProfile?.oneLineSummary
     ? player.detailedProfile.oneLineSummary.slice(0, 60)
     : "";
-  const description = oneLiner
-    ? `${oneLiner} ${player.name}(${player.nameEn})의 플레이 스타일, 강점·약점, 사용 라켓·스트링 정보를 한눈에. ${player.country} 출신 ${tour} 프로 선수 완전 분석.`
-    : `${player.name}(${player.nameEn})의 플레이 스타일, 강점·약점, 사용 라켓·스트링 정보를 한눈에. ${player.country} 출신 ${tour} 프로 선수 완전 분석.`;
+  const baseTitle = `${player.name} tennis player | ranking, profile, ${tour}`;
+  const baseDescription = oneLiner
+    ? `${oneLiner} ${player.name}(${player.nameEn}) profile with playing style, strengths, ranking and match record.`
+    : `${player.name}(${player.nameEn}) profile with playing style, strengths, ranking and match record.`;
+  const title = metadataOverride?.title ?? searchSeo?.title ?? baseTitle;
+  const description =
+    metadataOverride?.description ?? searchSeo?.description ?? baseDescription;
+  const keywords = metadataOverride
+    ? [
+        player.name,
+        player.nameEn,
+        `${player.name} profile`,
+        `${player.name} ranking`,
+        ...metadataOverride.keywords,
+        "tennis",
+        tour,
+        player.country,
+      ]
+    : buildPlayerSeoKeywords(slug, player, tour, [
+        `${player.name} playing style`,
+        "tennis profile",
+        "racket",
+        "tennis",
+      ]);
 
   return {
     title,
     description,
-    keywords: [
-      player.name,
-      player.nameEn,
-      `${player.name} 프로필`,
-      `${player.name} 플레이 스타일`,
-      "테니스 선수",
-      tour,
-      player.country,
-      "테니스 프로필",
-      "라켓",
-      "스트링",
-    ],
+    keywords,
+    alternates: { canonical },
     openGraph: {
       title,
       description,
+      url: canonical,
       type: "profile",
+      siteName: "TennisFriends",
+      locale: "ko_KR",
       images: [
         {
-          url: `${getSiteUrl()}/api/og?title=${encodeURIComponent(player.name)}&sub=${encodeURIComponent(player.nameEn + " · " + tour + " 프로 선수 프로필")}`,
+          url: `${getSiteUrl()}/api/og?title=${encodeURIComponent(player.name)}&sub=${encodeURIComponent(`${player.nameEn} · ${tour} profile`)}`,
           width: 1200,
           height: 630,
           alt: title,
         },
       ],
     },
-    alternates: {
-      canonical: `${getSiteUrl()}/players/${slug}`,
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
+    robots: { index: true, follow: true },
   };
 }
-
 export default async function PlayerProfilePage({ params }: Props) {
   const resolvedParams = await params;
   const player = PLAYERS_DB[resolvedParams.slug];
@@ -554,8 +581,6 @@ export default async function PlayerProfilePage({ params }: Props) {
                       }}
                     />
 
-                    <AdSense />
-
                     <h2
                       id="play-style"
                       className="flex items-center gap-2 mt-12 scroll-mt-24"
@@ -711,8 +736,6 @@ export default async function PlayerProfilePage({ params }: Props) {
                       </div>
                     </section>
 
-                    <AdSense />
-
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                       <div className="border border-gray-100 dark:border-gray-700 rounded-xl p-6 hover:shadow-md transition-shadow">
                         <h3 className="font-bold text-lg mb-3 flex items-center">
@@ -810,10 +833,14 @@ export default async function PlayerProfilePage({ params }: Props) {
         </Card>
       </div>
 
+      <div className="max-w-4xl mx-auto px-4 mt-6">
+        <PlayerSearchAliasSection slug={resolvedParams.slug} />
+      </div>
+
       {/* Related Blog Posts Section */}
       <div className="max-w-4xl mx-auto px-4 mt-8">
         {(() => {
-          const relatedPosts = allBlogPosts
+          const relatedPosts = getPublishedBlogPosts(allBlogPosts)
             .filter(
               (post) =>
                 post.title.includes(player?.name || "") ||

@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     "커리어 하이",
   ],
   alternates: {
-    canonical: "https://tennisfrens.com/players/yannick-hanfmann",
+    canonical: "https://www.tennisfrens.com/players/yannick-hanfmann",
   },
   openGraph: {
     title: "야닉 한프만 완전 분석 | 청각 장애 극복·플레이 스타일·ATP 프로필",
     description:
       "청각 장애를 극복한 독일의 빅 서버 야닉 한프만. 커리어 하이 45위, 로마 마스터스 8강, 강력한 서브·포핸드까지 한 번에.",
-    url: "https://tennisfrens.com/players/yannick-hanfmann",
+    url: "https://www.tennisfrens.com/players/yannick-hanfmann",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "profile",
@@ -130,11 +130,11 @@ export default function YannickHanfmannPage() {
       >
         <BreadcrumbSchema
           items={[
-            { name: "홈", item: "https://tennisfrens.com" },
-            { name: "선수", item: "https://tennisfrens.com/players" },
+            { name: "홈", item: "https://www.tennisfrens.com" },
+            { name: "선수", item: "https://www.tennisfrens.com/players" },
             {
               name: "야닉 한프만",
-              item: "https://tennisfrens.com/players/yannick-hanfmann",
+              item: "https://www.tennisfrens.com/players/yannick-hanfmann",
             },
           ]}
         />

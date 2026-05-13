@@ -1,4 +1,5 @@
 import Article from '@/components/blog/Article';
+import PlayerSearchAliasSection from '@/components/players/PlayerSearchAliasSection';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
@@ -6,30 +7,36 @@ import PlayerProfileCard from '@/components/players/PlayerProfileCard';
 import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
 
 import { Metadata } from 'next';
+import { getPlayerSearchSeo } from '@/lib/player-search-seo';
 import {Target, Award, Brain, Shield, Star, Crown} from 'lucide-react';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import PersonSchema from '@/components/seo/PersonSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 
+const SLUG = 'tommy-paul';
+const playerSearchSeo = getPlayerSearchSeo(SLUG);
+
 export const metadata: Metadata = {
-  title: '토미 폴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: "토미 폴 (Tommy Paul) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
-  keywords: ['토미 폴', 'Tommy Paul', '테니스', 'ATP', '플레이스타일', '미국 테니스', '하드 전문', '속도와 각도'],
+  title: playerSearchSeo?.title ?? '토미 폴 프로필 | 랭킹·전적',
+  description: playerSearchSeo?.description ?? ("토미 폴(Tommy Paul)의 ATP 랭킹, 하드코트 플레이, 주요 전적, 최근 경기 흐름과 강점·약점을 한눈에 정리했습니다."),
+  keywords: [
+    ...(playerSearchSeo?.aliases ?? []),
+    '토미 폴', 'Tommy Paul', '테니스', 'ATP', '플레이스타일', '미국 테니스', '하드 전문', '속도와 각도'],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/tommy-paul',
+    canonical: 'https://www.tennisfrens.com/players/tommy-paul',
   },
   openGraph: {
-    title: '토미 폴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '토미 폴의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfrens.com/players/tommy-paul',
+    title: '토미 폴 프로필 | 랭킹·전적',
+    description: '토미 폴의 ATP 랭킹, 하드코트 플레이, 주요 전적, 최근 경기 흐름과 강점·약점을 한눈에 정리했습니다.',
+    url: 'https://www.tennisfrens.com/players/tommy-paul',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '토미 폴 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '토미 폴의 하드 전문 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '토미 폴 프로필 | 랭킹·전적',
+    description: '토미 폴의 ATP 랭킹, 하드코트 플레이, 주요 전적, 최근 경기 흐름과 강점·약점을 한눈에 정리했습니다.',
   },
   robots: {
     index: true,
@@ -96,18 +103,19 @@ export default function TommyPaulPage() {
           award={[
             'Australian Open Semifinalist', 'ATP 500 Champion'
           ]}
-          url="https://tennisfrens.com/players/tommy-paul"
+          url="https://www.tennisfrens.com/players/tommy-paul"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfrens.com' },
-          { name: '선수', item: 'https://tennisfrens.com/players' },
-          { name: '토미 폴', item: 'https://tennisfrens.com/players/tommy-paul' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '토미 폴', item: 'https://www.tennisfrens.com/players/tommy-paul' },
         ]}
       />
       <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerSearchAliasSection slug={SLUG} />
           <PlayerProfileCard
             name="Tommy Paul"
             country="United States"

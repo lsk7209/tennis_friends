@@ -48,7 +48,9 @@ export default function Page() {
         <Card className="border-green-100 bg-gradient-to-br from-green-50 via-white to-yellow-50">
           <CardHeader>
             <Badge className="w-fit bg-green-600 text-white">Nutrition Utility</Badge>
-            <CardTitle className="mt-3 text-4xl">테니스 영양 가이드</CardTitle>
+            <h1 className="mt-3 text-4xl font-semibold leading-none">
+              테니스 영양 가이드
+            </h1>
             <p className="text-base leading-7 text-muted-foreground">
               경기력은 기술만으로 만들어지지 않습니다. 경기 전, 경기 중, 경기 후에 무엇을 먹고 마시는지가 집중력과 회복 속도를 바꿉니다.
             </p>

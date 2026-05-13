@@ -8,7 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import FAQSection from '@/components/seo/FAQSection';
 import SoftwareApplicationSchema from '@/components/seo/SoftwareApplicationSchema';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
 const utilityUrl = `${siteUrl}/utility/injury-risk`;
 
 const factors = [

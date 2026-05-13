@@ -1,4 +1,5 @@
 import Article from "@/components/blog/Article";
+import PlayerSearchAliasSection from '@/components/players/PlayerSearchAliasSection';
 import TOC from "@/components/blog/TOC";
 import { FAQ } from "@/components/blog/FAQ";
 import CTA from "@/components/blog/CTA";
@@ -7,16 +8,21 @@ import PlayerHexagonStats from "@/components/players/PlayerHexagonStats";
 import { Badge } from "@/components/ui/badge";
 
 import { Metadata } from "next";
+import { getPlayerSearchSeo } from '@/lib/player-search-seo';
 import {Trophy, Target, Award, Zap, Star, Crown} from "lucide-react";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import PersonSchema from "@/components/seo/PersonSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
+const SLUG = 'carlos-alcaraz';
+const playerSearchSeo = getPlayerSearchSeo(SLUG);
+
 export const metadata: Metadata = {
-  title: "카를로스 알카라스 완전 분석 | 플레이 스타일·그랜드슬램·사용 장비",
+  title: playerSearchSeo?.title ?? "카를로스 알카라스 완전 분석 | 플레이 스타일·그랜드슬램·사용 장비",
   description:
-    "카를로스 알카라스(Carlos Alcaraz)의 폭발적 스피드·드롭샷·포핸드 비결, 그랜드슬램 4회 우승 과정, 사용 라켓·스트링 정보를 한눈에 정리한 선수 완전 분석.",
+    playerSearchSeo?.description ?? ("카를로스 알카라스(Carlos Alcaraz)의 폭발적 스피드·드롭샷·포핸드 비결, 그랜드슬램 4회 우승 과정, 사용 라켓·스트링 정보를 한눈에 정리한 선수 완전 분석."),
   keywords: [
+    ...(playerSearchSeo?.aliases ?? []),
     "카를로스 알카라스",
     "Carlos Alcaraz",
     "알카라스",
@@ -29,13 +35,13 @@ export const metadata: Metadata = {
     "알카라스 장비",
   ],
   alternates: {
-    canonical: "https://tennisfrens.com/players/carlos-alcaraz",
+    canonical: "https://www.tennisfrens.com/players/carlos-alcaraz",
   },
   openGraph: {
     title: "카를로스 알카라스 완전 분석 | 플레이 스타일·그랜드슬램·사용 장비",
     description:
       "알카라스의 드롭샷·스피드·포핸드 비결, 4개 그랜드슬램 우승 과정, 라켓·스트링 세팅까지 한 번에.",
-    url: "https://tennisfrens.com/players/carlos-alcaraz",
+    url: "https://www.tennisfrens.com/players/carlos-alcaraz",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "profile",
@@ -142,21 +148,22 @@ export default function CarlosAlcarazPage() {
             "ATP World No. 1",
             "ATP Masters 1000 Champion",
           ]}
-          url="https://tennisfrens.com/players/carlos-alcaraz"
+          url="https://www.tennisfrens.com/players/carlos-alcaraz"
         />
 
         <BreadcrumbSchema
           items={[
-            { name: "홈", item: "https://tennisfrens.com" },
-            { name: "선수", item: "https://tennisfrens.com/players" },
+            { name: "홈", item: "https://www.tennisfrens.com" },
+            { name: "선수", item: "https://www.tennisfrens.com/players" },
             {
               name: "카를로스 알카라스",
-              item: "https://tennisfrens.com/players/carlos-alcaraz",
+              item: "https://www.tennisfrens.com/players/carlos-alcaraz",
             },
           ]}
         />
         <FAQSchema faqs={faqs} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerSearchAliasSection slug={SLUG} />
           <PlayerProfileCard
             name="Carlos Alcaraz"
             country="Spain"

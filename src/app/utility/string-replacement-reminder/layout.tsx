@@ -4,12 +4,12 @@ export const metadata: Metadata = {
   title: "String Replacement Reminder",
   description: "String Replacement Reminder — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
   alternates: {
-    canonical: "https://tennisfrens.com/utility/string-replacement-reminder",
+    canonical: "https://www.tennisfrens.com/utility/string-replacement-reminder",
   },
   openGraph: {
     title: "String Replacement Reminder | TennisFriends",
     description: "String Replacement Reminder — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
-    url: "https://tennisfrens.com/utility/string-replacement-reminder",
+    url: "https://www.tennisfrens.com/utility/string-replacement-reminder",
     type: "website",
     locale: "ko_KR",
     siteName: "TennisFriends",

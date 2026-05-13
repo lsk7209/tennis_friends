@@ -12,24 +12,24 @@ import PersonSchema from '@/components/seo/PersonSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
-  title: '벤 쉘튼 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-  description: "벤 쉘튼 (Ben Shelton) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
+  title: '벤 쉘튼 프로필 | 좌손 서브·랭킹',
+  description: "벤 쉘튼(Ben Shelton)의 ATP 랭킹, 왼손 서브와 공격형 플레이, 주요 전적, 강점과 약점을 한눈에 정리했습니다.",
   keywords: ['벤 쉘튼', 'Ben Shelton', '테니스', 'ATP', '플레이스타일', '미국 테니스', '공격형', '좌손 서브', '차세대'],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/ben-shelton',
+    canonical: 'https://www.tennisfrens.com/players/ben-shelton',
   },
   openGraph: {
-    title: '벤 쉘튼 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '벤 쉘튼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfrens.com/players/ben-shelton',
+    title: '벤 쉘튼 프로필 | 좌손 서브·랭킹',
+    description: '벤 쉘튼의 ATP 랭킹, 왼손 서브와 공격형 플레이, 주요 전적, 강점과 약점을 한눈에 정리했습니다.',
+    url: 'https://www.tennisfrens.com/players/ben-shelton',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '벤 쉘튼 — 세계랭킹 상위권 | 플레이스타일·명장면·최근 경기력',
-    description: '벤 쉘튼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '벤 쉘튼 프로필 | 좌손 서브·랭킹',
+    description: '벤 쉘튼의 ATP 랭킹, 왼손 서브와 공격형 플레이, 주요 전적, 강점과 약점을 한눈에 정리했습니다.',
   },
   robots: {
     index: true,
@@ -96,14 +96,14 @@ export default function BenSheltonPage() {
           award={[
             'US Open Semifinalist', 'ATP 250 Champion'
           ]}
-          url="https://tennisfrens.com/players/ben-shelton"
+          url="https://www.tennisfrens.com/players/ben-shelton"
         />
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfrens.com' },
-          { name: '선수', item: 'https://tennisfrens.com/players' },
-          { name: '벤 쉘튼', item: 'https://tennisfrens.com/players/ben-shelton' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '벤 쉘튼', item: 'https://www.tennisfrens.com/players/ben-shelton' },
         ]}
       />
       <FAQSchema faqs={faqs} />

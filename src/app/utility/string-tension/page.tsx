@@ -34,7 +34,9 @@ export default function Page() {
         <Card className="border-sky-100 bg-gradient-to-br from-sky-50 via-white to-emerald-50">
           <CardHeader>
             <Badge className="w-fit bg-sky-600 text-white">Equipment Utility</Badge>
-            <CardTitle className="mt-3 text-4xl">스트링 텐션 계산기</CardTitle>
+            <h1 className="mt-3 text-4xl font-semibold leading-none">
+              스트링 텐션 계산기
+            </h1>
             <p className="text-base leading-7 text-muted-foreground">
               라켓 성향과 플레이 스타일이 같아도 텐션이 다르면 타구 느낌이 크게 달라집니다. 내게 맞는 시작점을 먼저 잡는 도구입니다.
             </p>

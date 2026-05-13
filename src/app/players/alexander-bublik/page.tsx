@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: "알렉산더 부블리크 (Alexander Bublik) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
   keywords: ['알렉산데르 부블리크', 'Alexander Bublik', '테니스', 'ATP', '플레이스타일', '카자흐스탄 테니스', '공격형', '강력한 서브'],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/alexander-bublik',
+    canonical: 'https://www.tennisfrens.com/players/alexander-bublik',
   },
   openGraph: {
     title: '알렉산데르 부블리크 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
     description: '알렉산데르 부블리크의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfrens.com/players/alexander-bublik',
+    url: 'https://www.tennisfrens.com/players/alexander-bublik',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
@@ -75,9 +75,9 @@ export default function AlexanderBublikPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfrens.com' },
-          { name: '선수', item: 'https://tennisfrens.com/players' },
-          { name: '알렉산더 부블리크', item: 'https://tennisfrens.com/players/alexander-bublik' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '알렉산더 부블리크', item: 'https://www.tennisfrens.com/players/alexander-bublik' },
         ]}
       />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">

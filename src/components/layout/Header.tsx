@@ -31,7 +31,9 @@ const Header: React.FC = () => {
       shouldBeDark = prefersDark;
     }
 
-    setIsDark(shouldBeDark);
+    window.requestAnimationFrame(() => {
+      setIsDark(shouldBeDark);
+    });
     document.documentElement.classList.toggle('dark', shouldBeDark);
 
     // 스크롤 감지 (throttle 적용)
@@ -89,7 +91,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" prefetch={false} className="flex items-center gap-3 group">
             <div className="relative">
               <svg className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-200" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_6_330)">
@@ -115,6 +117,7 @@ const Header: React.FC = () => {
               <div key={item.href} className="relative">
                 <Link
                   href={item.href}
+                  prefetch={false}
                   className={`font-bold transition-colors !text-black dark:!text-white hover:opacity-70`}
                 >
                   {item.label}
@@ -164,11 +167,11 @@ const Header: React.FC = () => {
             <nav className="container mx-auto px-4 py-6">
               <div className="flex flex-col gap-4">
                 {navItems.map((item) => {
-                  const active = isActive(item.href);
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
+                      prefetch={false}
                       className={`font-bold transition-colors !text-black dark:!text-white py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >

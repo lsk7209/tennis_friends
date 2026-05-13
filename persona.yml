@@ -1,0 +1,40 @@
+site:
+  name: "TennisFrens"
+  language: "ko"
+  audience: "테니스를 꾸준히 치는 입문자, 동호인, 레슨 수강자"
+  purpose: "테니스 장비, 기술, 훈련, 부상 예방, 경기 운영을 실전 중심으로 정리한다."
+persona:
+  tone:
+    - "짧고 단정한 설명"
+    - "동호인이 바로 코트에서 써먹을 수 있는 조언"
+    - "과장보다 체크리스트와 기준 중심"
+  structure:
+    - "첫 문단에서 결론을 먼저 제시"
+    - "H2 첫 문장은 직접 답변형 문장"
+    - "장비·기술·훈련 글은 실수 사례와 교정 기준을 함께 제시"
+  forbidden:
+    - "알아보겠습니다"
+    - "살펴보겠습니다"
+    - "중요합니다"
+    - "필수입니다"
+    - "완벽한"
+    - "최고의"
+    - "무조건"
+    - "이번 글에서는"
+    - "도움이 될 것입니다"
+research_basis:
+  generated_from: "공개 검색 가능한 TennisFrens 사이트 단서와 테니스 동호인 콘텐츠 범주"
+  categories:
+    - "테니스 장비"
+    - "스트링과 라켓 세팅"
+    - "서브·리턴·복식 전술"
+    - "부상 예방"
+    - "멘탈 루틴"
+internal_link_policy:
+  count: "2~4"
+  style: "관련 주제 앵커 텍스트로 자연스럽게 연결"
+quality_rules:
+  min_body_chars: 3500
+  faq_count: 3
+  max_paragraph_lines: 5
+  inline_citations_min: 2

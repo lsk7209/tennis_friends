@@ -1,31 +1,38 @@
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import Article from '@/components/blog/Article';
+import PlayerSearchAliasSection from '@/components/players/PlayerSearchAliasSection';
 import TOC from '@/components/blog/TOC';
 import { FAQ } from '@/components/blog/FAQ';
 import CTA from '@/components/blog/CTA';
 import { Badge } from '@/components/ui/badge';
 import { Metadata } from 'next';
+import { getPlayerSearchSeo } from '@/lib/player-search-seo';
 import {Trophy, Target, TrendingUp, Zap, Star, CheckCircle} from 'lucide-react';
 
+const SLUG = 'tomas-machac';
+const playerSearchSeo = getPlayerSearchSeo(SLUG);
+
 export const metadata: Metadata = {
-  title: '토마시 마하치 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
-  description: "토마스 마하츠 (Tomas Machac) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다.",
-  keywords: ['토마시 마하치', 'Tomas Machac', '테니스', 'ATP', '플레이스타일', '체코 테니스', '공격형', '강력한 포핸드'],
+  title: playerSearchSeo?.title ?? '토마시 마하치 프로필 | 랭킹·전적',
+  description: playerSearchSeo?.description ?? ("토마시 마하치(Tomas Machac)의 ATP 랭킹, 빠른 템포의 공격형 플레이, 주요 전적과 최근 경기 흐름을 한눈에 정리했습니다."),
+  keywords: [
+    ...(playerSearchSeo?.aliases ?? []),
+    '토마시 마하치', 'Tomas Machac', '테니스', 'ATP', '플레이스타일', '체코 테니스', '공격형', '강력한 포핸드'],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/tomas-machac',
+    canonical: 'https://www.tennisfrens.com/players/tomas-machac',
   },
   openGraph: {
-    title: '토마시 마하치 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
-    description: '토마시 마하치의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://tennisfrens.com/players/tomas-machac',
+    title: '토마시 마하치 프로필 | 랭킹·전적',
+    description: '토마시 마하치의 ATP 랭킹, 빠른 템포의 공격형 플레이, 주요 전적과 최근 경기 흐름을 한눈에 정리했습니다.',
+    url: 'https://www.tennisfrens.com/players/tomas-machac',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '토마시 마하치 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
-    description: '토마시 마하치의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    title: '토마시 마하치 프로필 | 랭킹·전적',
+    description: '토마시 마하치의 ATP 랭킹, 빠른 템포의 공격형 플레이, 주요 전적과 최근 경기 흐름을 한눈에 정리했습니다.',
   },
   robots: {
     index: true,
@@ -71,12 +78,13 @@ export default function TomasMachacPage() {
 
       <BreadcrumbSchema
         items={[
-          { name: '홈', item: 'https://tennisfrens.com' },
-          { name: '선수', item: 'https://tennisfrens.com/players' },
-          { name: '토마스 마하츠', item: 'https://tennisfrens.com/players/tomas-machac' },
+          { name: '홈', item: 'https://www.tennisfrens.com' },
+          { name: '선수', item: 'https://www.tennisfrens.com/players' },
+          { name: '토마스 마하츠', item: 'https://www.tennisfrens.com/players/tomas-machac' },
         ]}
       />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <PlayerSearchAliasSection slug={SLUG} />
           <div className="flex flex-wrap gap-2 mb-6">
             {['테니스', '토마시 마하치', '선수 프로필', '체코', '공격형', '강력한 포핸드'].map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">

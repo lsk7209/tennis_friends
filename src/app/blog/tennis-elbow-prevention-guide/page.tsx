@@ -19,12 +19,12 @@ export const metadata = {
     "테니스 재활",
   ],
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com"}/blog/tennis-elbow-prevention-guide`,
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com"}/blog/tennis-elbow-prevention-guide`,
   },
   openGraph: {
     title: "테니스 엘보 예방과 재활 가이드 — 통증 없이 운동하는 법",
     description: "지긋지긋한 팔꿈치 통증 탈출! 원인 분석과 장비 세팅 솔루션.",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com"}/blog/tennis-elbow-prevention-guide`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com"}/blog/tennis-elbow-prevention-guide`,
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "article",

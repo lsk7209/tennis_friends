@@ -9,12 +9,12 @@ export const metadata = {
   description: "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
   keywords: ["테니스","야닉 시너","Jannik Sinner","세계1위","이탈리아"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/jannik-sinner',
+    canonical: 'https://www.tennisfrens.com/blog/jannik-sinner',
   },
   openGraph: {
     title: "야닉 시너: 이탈리아의 붉은 여우",
     description: "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
-    url: 'https://tennisfrens.com/players/jannik-sinner',
+    url: 'https://www.tennisfrens.com/blog/jannik-sinner',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="jannik-sinner" date="2026-01-24" title="야닉 시너: 이탈리아의 붉은 여우" excerpt="스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.">
+      <Article showHeader={false} slug="jannik-sinner" date="2026-01-24" title="야닉 시너: 이탈리아의 붉은 여우" excerpt="스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

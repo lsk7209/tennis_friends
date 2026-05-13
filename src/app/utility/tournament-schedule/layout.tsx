@@ -4,12 +4,12 @@ export const metadata: Metadata = {
   title: "Tournament Schedule",
   description: "Tournament Schedule — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
   alternates: {
-    canonical: "https://tennisfrens.com/utility/tournament-schedule",
+    canonical: "https://www.tennisfrens.com/utility/tournament-schedule",
   },
   openGraph: {
     title: "Tournament Schedule | TennisFriends",
     description: "Tournament Schedule — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
-    url: "https://tennisfrens.com/utility/tournament-schedule",
+    url: "https://www.tennisfrens.com/utility/tournament-schedule",
     type: "website",
     locale: "ko_KR",
     siteName: "TennisFriends",

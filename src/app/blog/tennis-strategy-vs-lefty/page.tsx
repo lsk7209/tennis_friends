@@ -9,12 +9,12 @@ export const metadata = {
   description: "전체 선수의 10%에 불과한 왼손잡이와의 대결, 낯선 서브 궤적과 스핀에 당황하지 마세요. 왼손잡이의 장점을 무력화하고 승리할 수 있는 4가지 필승 전술을 공개합니다.",
   keywords: ["테니스 전술", "왼손잡이", "Lefty", "테니스", "공략법", "테니스 서브 리턴", "테니스 멘탈"],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-strategy-vs-lefty',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-strategy-vs-lefty',
   },
   openGraph: {
     title: "왼손잡이 상대 공략법 (Lefty 대응 전술) - 테니스 필승 전략 및 팁",
     description: "전체 선수의 10%에 불과한 왼손잡이와의 대결, 낯선 서브 궤적과 스핀에 당황하지 마세요. 왼손잡이의 장점을 무력화하는 필승 전술.",
-    url: 'https://tennisfrens.com/blog/tennis-strategy-vs-lefty',
+    url: 'https://www.tennisfrens.com/blog/tennis-strategy-vs-lefty',
     siteName: 'Tennis Friends',
     locale: 'ko_KR',
     type: 'article',

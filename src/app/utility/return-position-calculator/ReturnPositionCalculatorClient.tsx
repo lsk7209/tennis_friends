@@ -78,7 +78,9 @@ export default function ReturnPositionCalculatorClient() {
         <Card>
           <CardHeader>
             <Badge className="w-fit bg-sky-600 text-white">Return Utility</Badge>
-            <CardTitle className="mt-3 text-3xl">테니스 리턴 위치 계산기</CardTitle>
+            <h1 className="mt-3 text-3xl font-semibold leading-none">
+              테니스 리턴 위치 계산기
+            </h1>
             <p className="text-sm leading-6 text-muted-foreground">
               상대 서브 유형에 맞춰 베이스라인 기준 리턴 시작 위치를 잡습니다.
             </p>

@@ -39,9 +39,10 @@ export function trackEvent(eventName: string, params: GtagParams = {}): void {
 export function trackPageView(url: string, measurementId: string): void {
   if (!isGAEnabled()) return;
   try {
+    const pageLocation = `${window.location.origin}${window.location.pathname}`;
     window.gtag("event", "page_view", {
       page_path: url,
-      page_location: window.location.href,
+      page_location: pageLocation,
       page_title: document.title,
       send_to: measurementId,
     });

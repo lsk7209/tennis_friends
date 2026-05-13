@@ -56,7 +56,9 @@ export default function TournamentBudgetCalculatorClient() {
         <Card className="border-slate-200">
           <CardHeader>
             <Badge className="w-fit bg-slate-900 text-white">Planning Utility</Badge>
-            <CardTitle className="mt-3 text-3xl">테니스 대회 예산 계산기</CardTitle>
+            <h1 className="mt-3 text-3xl font-semibold leading-none">
+              테니스 대회 예산 계산기
+            </h1>
             <p className="text-sm leading-6 text-muted-foreground">
               원정 대회 전에 총액과 비상 버퍼까지 한 번에 계산합니다.
             </p>

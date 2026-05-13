@@ -59,7 +59,9 @@ export default function HydrationPlannerClient() {
         <Card className="border-emerald-100 bg-gradient-to-br from-emerald-50 to-cyan-50">
           <CardHeader>
             <Badge className="w-fit bg-emerald-600 text-white">Recovery Utility</Badge>
-            <CardTitle className="mt-3 text-3xl">테니스 수분 섭취 플래너</CardTitle>
+            <h1 className="mt-3 text-3xl font-semibold leading-none">
+              테니스 수분 섭취 플래너
+            </h1>
             <p className="text-sm leading-6 text-muted-foreground">
               경기 전, 경기 중, 경기 후 필요한 수분과 전해질 양을 빠르게 계산합니다.
             </p>

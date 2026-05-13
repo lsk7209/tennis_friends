@@ -1,0 +1,84 @@
+{
+  "requested_count": 293,
+  "completed_count": 5,
+  "failed_count": 0,
+  "checkpoint": "5/293",
+  "last_completed_title": "경기 중 멘탈이 흔들릴 때 쓰는 포인트 사이 루틴",
+  "items": [
+    {
+      "index": 1,
+      "title": "테니스 입문자가 라켓을 고를 때 먼저 봐야 할 7가지",
+      "file": "articles/001-beginner-racket.md",
+      "research_cache": "research_cache/001-racket-beginner.json",
+      "status": "completed",
+      "validation": {
+        "forbidden_words": 0,
+        "max_paragraph_lines_over_5": 0,
+        "inline_citations": 3,
+        "ai_phrase_violations": 0,
+        "faq_count": 3,
+        "min_body_chars": "pass"
+      }
+    },
+    {
+      "index": 2,
+      "title": "동호인 서브 토스가 흔들릴 때 바로 고치는 기준",
+      "file": "articles/002-serve-toss.md",
+      "research_cache": "research_cache/002-serve-toss.json",
+      "status": "completed",
+      "validation": {
+        "forbidden_words": 0,
+        "max_paragraph_lines_over_5": 0,
+        "inline_citations": 3,
+        "ai_phrase_violations": 0,
+        "faq_count": 3,
+        "min_body_chars": "pass"
+      }
+    },
+    {
+      "index": 3,
+      "title": "테니스 엘보를 줄이는 준비운동과 라켓 세팅 체크리스트",
+      "file": "articles/003-tennis-elbow.md",
+      "research_cache": "research_cache/003-tennis-elbow.json",
+      "status": "completed",
+      "validation": {
+        "forbidden_words": 0,
+        "max_paragraph_lines_over_5": 0,
+        "inline_citations": 3,
+        "ai_phrase_violations": 0,
+        "faq_count": 3,
+        "min_body_chars": "pass"
+      }
+    },
+    {
+      "index": 4,
+      "title": "복식에서 전위가 공을 못 잡는 이유와 위치 교정법",
+      "file": "articles/004-doubles-net-position.md",
+      "research_cache": "research_cache/004-doubles-net.json",
+      "status": "completed",
+      "validation": {
+        "forbidden_words": 0,
+        "max_paragraph_lines_over_5": 0,
+        "inline_citations": 3,
+        "ai_phrase_violations": 0,
+        "faq_count": 3,
+        "min_body_chars": "pass"
+      }
+    },
+    {
+      "index": 5,
+      "title": "경기 중 멘탈이 흔들릴 때 쓰는 포인트 사이 루틴",
+      "file": "articles/005-mental-routine.md",
+      "research_cache": "research_cache/005-mental-routine.json",
+      "status": "completed",
+      "validation": {
+        "forbidden_words": 0,
+        "max_paragraph_lines_over_5": 0,
+        "inline_citations": 3,
+        "ai_phrase_violations": 0,
+        "faq_count": 3,
+        "min_body_chars": "pass"
+      }
+    }
+  ]
+}

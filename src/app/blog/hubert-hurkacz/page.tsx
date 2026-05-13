@@ -9,12 +9,12 @@ export const metadata = {
   description: "조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.",
   keywords: ["테니스","후베르트 후르카츠","Hubert Hurkacz","서브 앤 발리","폴란드"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/hubert-hurkacz',
+    canonical: 'https://www.tennisfrens.com/blog/hubert-hurkacz',
   },
   openGraph: {
     title: "후베르트 후르카츠: 폴란드의 서브 머신",
     description: "조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.",
-    url: 'https://tennisfrens.com/players/hubert-hurkacz',
+    url: 'https://www.tennisfrens.com/blog/hubert-hurkacz',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="hubert-hurkacz" date="2026-01-24" title="후베르트 후르카츠: 폴란드의 서브 머신" excerpt="조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.">
+      <Article showHeader={false} slug="hubert-hurkacz" date="2026-01-24" title="후베르트 후르카츠: 폴란드의 서브 머신" excerpt="조용하지만 강력하다. 투어 최고의 서브 능력과 부드러운 터치를 겸비한 후르카츠의 매력.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

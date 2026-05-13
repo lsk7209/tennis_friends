@@ -1,7 +1,7 @@
 
 import { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
 
 export const metadata: Metadata = {
     title: '테니스 용어 사전 | 50+ 필수 용어 완벽 정리',

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "개인정보처리방침 | 테니스프렌즈",
   description:
     "테니스프렌즈의 개인정보처리방침을 확인하세요. 회원의 개인정보 보호를 위한 정책과 권리를 안내합니다.",
+  alternates: {
+    canonical: "https://www.tennisfrens.com/privacy",
+  },
   robots: {
     index: true,
     follow: true,

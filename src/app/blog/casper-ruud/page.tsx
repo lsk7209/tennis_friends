@@ -9,12 +9,12 @@ export const metadata = {
   description: "클레이 코트의 강자에서 올라운더로. 성실함과 꾸준함으로 세계 랭킹 2위까지 올랐던 카스퍼 루드의 테니스 철학.",
   keywords: ["테니스","카스퍼 루드","Casper Ruud","클레이","노르웨이"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/casper-ruud',
+    canonical: 'https://www.tennisfrens.com/blog/casper-ruud',
   },
   openGraph: {
     title: "카스퍼 루드: 노르웨이의 차분한 암살자",
     description: "클레이 코트의 강자에서 올라운더로. 성실함과 꾸준함으로 세계 랭킹 2위까지 올랐던 카스퍼 루드의 테니스 철학.",
-    url: 'https://tennisfrens.com/players/casper-ruud',
+    url: 'https://www.tennisfrens.com/blog/casper-ruud',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="casper-ruud" date="2026-01-24" title="카스퍼 루드: 노르웨이의 차분한 암살자" excerpt="클레이 코트의 강자에서 올라운더로. 성실함과 꾸준함으로 세계 랭킹 2위까지 올랐던 카스퍼 루드의 테니스 철학.">
+      <Article showHeader={false} slug="casper-ruud" date="2026-01-24" title="카스퍼 루드: 노르웨이의 차분한 암살자" excerpt="클레이 코트의 강자에서 올라운더로. 성실함과 꾸준함으로 세계 랭킹 2위까지 올랐던 카스퍼 루드의 테니스 철학.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

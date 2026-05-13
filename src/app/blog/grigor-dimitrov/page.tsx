@@ -9,12 +9,12 @@ export const metadata = {
   description: "'베이비 페더러'에서 진정한 마스터로. 우아한 폼과 다재다능한 샷 메이킹을 가진 디미트로프의 제2의 전성기.",
   keywords: ["테니스","그리고르 디미트로프","Grigor Dimitrov","원핸드 백핸드","불가리아"],
   alternates: {
-    canonical: 'https://tennisfrens.com/players/grigor-dimitrov',
+    canonical: 'https://www.tennisfrens.com/blog/grigor-dimitrov',
   },
   openGraph: {
     title: "그리고르 디미트로프: 원핸드 백핸드의 낭만",
     description: "'베이비 페더러'에서 진정한 마스터로. 우아한 폼과 다재다능한 샷 메이킹을 가진 디미트로프의 제2의 전성기.",
-    url: 'https://tennisfrens.com/players/grigor-dimitrov',
+    url: 'https://www.tennisfrens.com/blog/grigor-dimitrov',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',
@@ -60,7 +60,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Article slug="grigor-dimitrov" date="2026-01-24" title="그리고르 디미트로프: 원핸드 백핸드의 낭만" excerpt="'베이비 페더러'에서 진정한 마스터로. 우아한 폼과 다재다능한 샷 메이킹을 가진 디미트로프의 제2의 전성기.">
+      <Article showHeader={false} slug="grigor-dimitrov" date="2026-01-24" title="그리고르 디미트로프: 원핸드 백핸드의 낭만" excerpt="'베이비 페더러'에서 진정한 마스터로. 우아한 폼과 다재다능한 샷 메이킹을 가진 디미트로프의 제2의 전성기.">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             

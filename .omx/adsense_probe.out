@@ -1,0 +1,2 @@
+AUTH_URL_FILE .omx\adsense_auth_url.txt
+AUTH_URL: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=CjG3EpGT1B0Hg59qS4Yg&redirect_uri=http%3A%2F%2Flocalhost%3A8765%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadsense.readonly&state=WIeHhosxjbHVeXQ3BblmMxPSW08rV9&code_challenge=wKEWcrg4Fb-hl46cBC3MbJVbWYRBpTQvqjnttcX75WU&code_challenge_method=S256&access_type=offline

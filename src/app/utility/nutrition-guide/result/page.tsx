@@ -12,50 +12,74 @@ import { NutritionResult, Meal, Supplement, Timing } from '@/lib/nutritionGuide'
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
+type MacroValue = { grams: number; percentage: number };
+type MealView = Meal & { description?: string };
+type SupplementView = Supplement & {
+  dosage?: string;
+  purpose?: string;
+  timing?: string;
+  notes?: string;
+};
+type TimingView = Timing & {
+  phase?: string;
+  time?: string;
+  importance?: string;
+  recommendation?: string;
+};
+type NutritionResultView = Omit<
+  NutritionResult,
+  'plan' | 'macronutrients' | 'hydration' | 'meals' | 'supplements' | 'timing' | 'recommendations'
+> & {
+  plan: NutritionResult['plan'] & Partial<Record<string, MealView[]>>;
+  macronutrients?: NutritionResult['macronutrients'] & {
+    carbohydrates?: MacroValue;
+  };
+  hydration?: NutritionResult['hydration'];
+  meals?: MealView[];
+  supplements?: SupplementView[];
+  timing?: TimingView[];
+  recommendations?: NonNullable<NutritionResult['recommendations']> & {
+    keyWords?: string[];
+    avoidWords?: string[];
+  };
+};
+
+const EMPTY_PLAN: NutritionResult['plan'] = {
+  pre: {
+    title: '',
+    summary: '',
+    foods: [],
+    hydration: '',
+    macros: { carbs: 0, protein: 0, fat: 0 }
+  },
+  post: {
+    title: '',
+    summary: '',
+    foods: [],
+    hydration: '',
+    macros: { carbs: 0, protein: 0, fat: 0 }
+  }
+};
+
+const EMPTY_RECOMMENDATIONS: NonNullable<NutritionResult['recommendations']> & {
+  keyWords?: string[];
+  avoidWords?: string[];
+} = {
+  general: [],
+  hydration: [],
+  recovery: [],
+  performance: [],
+  keyWords: [],
+  avoidWords: []
+};
+
 function NutritionResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
-  const [result, setResult] = useState<NutritionResult | null>(null);
+  const [result, setResult] = useState<NutritionResultView | null>(null);
   const [selectedPhase, setSelectedPhase] = useState('preSession');
 
-  const emptyPlan: NutritionResult['plan'] = {
-    pre: {
-      title: '',
-      summary: '',
-      foods: [],
-      hydration: '',
-      macros: {
-        carbs: 0,
-        protein: 0,
-        fat: 0
-      }
-    },
-    post: {
-      title: '',
-      summary: '',
-      foods: [],
-      hydration: '',
-      macros: {
-        carbs: 0,
-        protein: 0,
-        fat: 0
-      }
-    }
-  };
-
-  const emptyRecommendations: NonNullable<NutritionResult['recommendations']> & {
-    keyWords?: string[];
-    avoidWords?: string[];
-  } = {
-    general: [],
-    hydration: [],
-    recovery: [],
-    performance: [],
-    keyWords: [],
-    avoidWords: []
-  };
-  
   useEffect(() => {
     // 로딩 시뮬레이션
     const timer = setTimeout(() => {
@@ -68,7 +92,7 @@ function NutritionResultContent() {
       const timing = safeJsonParse<Timing[]>(searchParams.get('timing'), []);
       const recommendations = safeJsonParse<NonNullable<NutritionResult['recommendations']> & { keyWords?: string[]; avoidWords?: string[] }>(
         searchParams.get('recommendations'),
-        emptyRecommendations
+        EMPTY_RECOMMENDATIONS
       );
       const normalizedHydration = hydration && 'waterIntake' in hydration
         ? hydration
@@ -78,7 +102,8 @@ function NutritionResultContent() {
         : `${normalizedHydration?.waterIntake || 0}ml`;
       
       setResult({
-        plan: emptyPlan,
+        planName,
+        plan: EMPTY_PLAN as NutritionResultView['plan'],
         totalHydration,
         totalCalories: String(totalCalories),
         keyWords: recommendations.keyWords || [],
@@ -169,7 +194,11 @@ function NutritionResultContent() {
     );
   }
 
-  const currentPhaseMeals = (result.plan as any)?.[selectedPhase] as Meal[] || [];
+  const selectedPhaseMeals = result.plan[selectedPhase];
+  const currentPhaseMeals = Array.isArray(selectedPhaseMeals) ? selectedPhaseMeals : [];
+  const carbs = result.macronutrients?.carbohydrates ?? result.macronutrients?.carbs;
+  const protein = result.macronutrients?.protein;
+  const fat = result.macronutrients?.fat;
 
   return (
     <div className="min-h-screen bg-white">
@@ -181,7 +210,7 @@ function NutritionResultContent() {
               🍎 영양 계획 완성
             </Badge>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {(result as any).planName || '맞춤형 영양 계획'}
+              {result.planName || '맞춤형 영양 계획'}
             </h1>
             <p className="text-gray-600 text-lg">
               과학적 근거에 기반한 맞춤형 영양 계획이 완성되었습니다
@@ -209,7 +238,7 @@ function NutritionResultContent() {
                     <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl">🍞</span>
                     </div>
-                     <div className="text-2xl font-bold text-gray-900 mb-2">{(result as any).macronutrients?.carbohydrates?.grams || 0}g</div>
+                     <div className="text-2xl font-bold text-gray-900 mb-2">{carbs?.grams || 0}g</div>
                     <div className="text-gray-600">탄수화물</div>
                   </div>
                   
@@ -217,7 +246,7 @@ function NutritionResultContent() {
                     <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl">🥩</span>
                     </div>
-                     <div className="text-2xl font-bold text-gray-900 mb-2">{(result as any).macronutrients?.protein?.grams || 0}g</div>
+                     <div className="text-2xl font-bold text-gray-900 mb-2">{protein?.grams || 0}g</div>
                     <div className="text-gray-600">단백질</div>
                   </div>
                   
@@ -225,7 +254,7 @@ function NutritionResultContent() {
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl">🥑</span>
                     </div>
-                     <div className="text-2xl font-bold text-gray-900 mb-2">{(result as any).macronutrients?.fat?.grams || 0}g</div>
+                     <div className="text-2xl font-bold text-gray-900 mb-2">{fat?.grams || 0}g</div>
                     <div className="text-gray-600">지방</div>
                   </div>
                 </div>
@@ -258,10 +287,10 @@ function NutritionResultContent() {
                       <span className="text-2xl">🍞</span>
                     </div>
                     <div className="text-3xl font-bold text-orange-600 mb-2">
-                       {(result as any).macronutrients?.carbohydrates?.percentage || 0}%
+                       {carbs?.percentage || 0}%
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">탄수화물</h3>
-                    <p className="text-gray-600 text-sm">{(result as any).macronutrients?.carbohydrates?.grams || 0}g</p>
+                    <p className="text-gray-600 text-sm">{carbs?.grams || 0}g</p>
                     <p className="text-gray-500 text-xs mt-2">에너지의 주요 공급원</p>
                   </CardContent>
                 </Card>
@@ -274,10 +303,10 @@ function NutritionResultContent() {
                       <span className="text-2xl">🥩</span>
                     </div>
                     <div className="text-3xl font-bold text-red-600 mb-2">
-                       {(result as any).macronutrients?.protein?.percentage || 0}%
+                       {protein?.percentage || 0}%
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">단백질</h3>
-                    <p className="text-gray-600 text-sm">{(result as any).macronutrients?.protein?.grams || 0}g</p>
+                    <p className="text-gray-600 text-sm">{protein?.grams || 0}g</p>
                     <p className="text-gray-500 text-xs mt-2">근육 회복과 성장</p>
                   </CardContent>
                 </Card>
@@ -290,10 +319,10 @@ function NutritionResultContent() {
                       <span className="text-2xl">🥑</span>
                     </div>
                     <div className="text-3xl font-bold text-purple-600 mb-2">
-                       {(result as any).macronutrients?.fat?.percentage || 0}%
+                       {fat?.percentage || 0}%
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">지방</h3>
-                    <p className="text-gray-600 text-sm">{(result as any).macronutrients?.fat?.grams || 0}g</p>
+                    <p className="text-gray-600 text-sm">{fat?.grams || 0}g</p>
                     <p className="text-gray-500 text-xs mt-2">호르몬 생성과 항염</p>
                   </CardContent>
                 </Card>
@@ -326,7 +355,7 @@ function NutritionResultContent() {
                       <Droplets className="h-10 w-10 text-blue-600" />
                     </div>
                     <div className="text-3xl font-bold text-blue-600 mb-2">
-                       {(result as any).hydration?.waterIntake || result.totalHydration || '0'}ml
+                       {result.hydration?.waterIntake || result.totalHydration || '0'}ml
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">일일 수분 섭취량</h3>
                     <p className="text-gray-600 text-sm">체중과 활동량을 고려한 권장량</p>
@@ -335,7 +364,7 @@ function NutritionResultContent() {
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-4">필요한 전해질</h3>
                     <div className="space-y-2">
-                       {((result as any).hydration?.electrolyteNeeds || []).map((electrolyte: string, index: number) => (
+                      {(result.hydration?.electrolyteNeeds || []).map((electrolyte, index) => (
                         <div key={index} className="flex items-center gap-2 text-gray-700">
                           <CheckCircle className="h-4 w-4 text-green-600" />
                           <span>{electrolyte}</span>
@@ -392,7 +421,7 @@ function NutritionResultContent() {
                       <div className="flex items-start justify-between mb-4">
                         <div>
                           <h3 className="text-lg font-bold text-gray-900 mb-2">{meal.name}</h3>
-                           <p className="text-gray-600 text-sm mb-3">{(meal as any).description || meal.name}</p>
+                          <p className="text-gray-600 text-sm mb-3">{meal.description || meal.name}</p>
                           <Badge className="bg-green-100 text-green-800 text-xs">
                             {meal.calories} 칼로리
                           </Badge>
@@ -403,15 +432,15 @@ function NutritionResultContent() {
                         <h4 className="text-sm font-semibold text-gray-900 mb-2">영양소 구성:</h4>
                         <div className="grid grid-cols-3 gap-2 text-xs">
                           <div className="text-center">
-                            <div className="font-bold text-orange-600">{(meal as any).macronutrients?.carbs || 0}g</div>
+                            <div className="font-bold text-orange-600">{meal.macronutrients?.carbs || 0}g</div>
                             <div className="text-gray-500">탄수화물</div>
                           </div>
                           <div className="text-center">
-                            <div className="font-bold text-red-600">{(meal as any).macronutrients?.protein || 0}g</div>
+                            <div className="font-bold text-red-600">{meal.macronutrients?.protein || 0}g</div>
                             <div className="text-gray-500">단백질</div>
                           </div>
                           <div className="text-center">
-                            <div className="font-bold text-purple-600">{(meal as any).macronutrients?.fat || 0}g</div>
+                            <div className="font-bold text-purple-600">{meal.macronutrients?.fat || 0}g</div>
                             <div className="text-gray-500">지방</div>
                           </div>
                         </div>
@@ -420,7 +449,7 @@ function NutritionResultContent() {
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-gray-900 mb-2">주요 재료:</h4>
                         <div className="flex flex-wrap gap-1">
-                           {((meal as any).ingredients || []).map((ingredient: string, ingIndex: number) => (
+                          {(meal.ingredients || []).map((ingredient, ingIndex) => (
                             <Badge key={ingIndex} className="bg-gray-100 text-gray-800 text-xs">
                               {ingredient}
                             </Badge>
@@ -430,13 +459,13 @@ function NutritionResultContent() {
                       
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-gray-900 mb-2">섭취 시기:</h4>
-                         <p className="text-sm text-gray-600">{(meal as any).timing || '적절한 시기'}</p>
+                        <p className="text-sm text-gray-600">{meal.timing || '적절한 시기'}</p>
                       </div>
                       
                       <div>
                         <h4 className="text-sm font-semibold text-gray-900 mb-2">주요 효과:</h4>
                         <div className="space-y-1">
-                           {((meal as any).benefits || []).map((benefit: string, benefitIndex: number) => (
+                          {(meal.benefits || []).map((benefit, benefitIndex) => (
                             <div key={benefitIndex} className="flex items-center gap-2 text-xs text-gray-600">
                               <div className="w-1.5 h-1.5 bg-green-600 rounded-full"></div>
                               <span>{benefit}</span>
@@ -454,7 +483,7 @@ function NutritionResultContent() {
       </section>
 
       {/* Supplements Section */}
-       {(result as any).supplements?.length > 0 && (
+      {result.supplements && result.supplements.length > 0 && (
         <section className="section-padding bg-white">
           <div className="container mx-auto max-w-6xl container-padding">
             <SlideUp>
@@ -470,7 +499,7 @@ function NutritionResultContent() {
             
             <StaggeredAnimation staggerDelay={0.1}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                 {((result as any).supplements || []).map((supplement: any, index: number) => (
+                {(result.supplements || []).map((supplement, index) => (
                   <StaggeredItem key={index}>
                     <Card className="bg-white border-gray-200 hover:border-green-300 transition-all duration-300 hover:shadow-lg">
                       <CardContent className="p-6">
@@ -491,7 +520,7 @@ function NutritionResultContent() {
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-gray-900 mb-2">주요 효과:</h4>
                           <div className="space-y-1">
-                             {(supplement.benefits || []).map((benefit: string, benefitIndex: number) => (
+                             {(supplement.benefits || []).map((benefit, benefitIndex) => (
                               <div key={benefitIndex} className="flex items-center gap-2 text-xs text-gray-600">
                                 <CheckCircle className="h-3 w-3 text-green-600" />
                                 <span>{benefit}</span>
@@ -532,7 +561,7 @@ function NutritionResultContent() {
           
           <StaggeredAnimation staggerDelay={0.1}>
             <div className="space-y-4">
-               {((result as any).timing || []).map((timing: any, index: number) => (
+               {(result.timing || []).map((timing, index) => (
                 <StaggeredItem key={index}>
                   <Card className="bg-white border-gray-200 hover:border-green-300 transition-all duration-300 hover:shadow-lg">
                     <CardContent className="p-6">
@@ -547,8 +576,8 @@ function NutritionResultContent() {
                               <Badge className="bg-blue-100 text-blue-800 text-xs">
                                 {timing.time}
                               </Badge>
-                              <Badge className={getImportanceColor(timing.importance)}>
-                                {timing.importance} 중요도
+                              <Badge className={getImportanceColor(timing.importance || 'medium')}>
+                                {timing.importance || 'medium'} 중요도
                               </Badge>
                             </div>
                           </div>
@@ -587,7 +616,7 @@ function NutritionResultContent() {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
-                       {((result as any).recommendations?.general || []).map((rec: string, index: number) => (
+                       {(result.recommendations?.general || []).map((rec, index) => (
                         <li key={index} className="flex items-start gap-2 text-gray-700">
                           <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{rec}</span>
@@ -605,7 +634,7 @@ function NutritionResultContent() {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
-                       {((result as any).recommendations?.hydration || []).map((rec: string, index: number) => (
+                       {(result.recommendations?.hydration || []).map((rec, index) => (
                         <li key={index} className="flex items-start gap-2 text-gray-700">
                           <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{rec}</span>
@@ -623,7 +652,7 @@ function NutritionResultContent() {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
-                       {((result as any).recommendations?.recovery || []).map((rec: string, index: number) => (
+                       {(result.recommendations?.recovery || []).map((rec, index) => (
                         <li key={index} className="flex items-start gap-2 text-gray-700">
                           <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{rec}</span>
@@ -641,7 +670,7 @@ function NutritionResultContent() {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
-                       {((result as any).recommendations?.performance || []).map((rec: string, index: number) => (
+                       {(result.recommendations?.performance || []).map((rec, index) => (
                         <li key={index} className="flex items-start gap-2 text-gray-700">
                           <div className="w-2 h-2 bg-orange-600 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{rec}</span>

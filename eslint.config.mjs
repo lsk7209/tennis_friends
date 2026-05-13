@@ -7,20 +7,24 @@ const eslintConfig = defineConfig([
   ...nextTs,
   {
     rules: {
-      // 한국어 콘텐츠에서 따옴표 이스케이프 불필요
       "react/no-unescaped-entities": "off",
-      // _prefix 변수는 unused-vars 경고 제외
-      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-require-imports": "warn",
+      "react-hooks/purity": "warn",
+      "react-hooks/set-state-in-effect": "warn",
     },
   },
-  // Override default ignores of eslint-config-next.
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
     "scripts/**",
     "next-env.d.ts",
+    "update-novak-attributes.js",
   ]),
 ]);
 

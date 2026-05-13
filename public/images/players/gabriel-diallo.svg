@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">가브리엘 디알로 프로필 이미지</title>
+  <desc id="desc">캐나다 테니스 선수 가브리엘 디알로를 나타내는 기본 프로필 이미지</desc>
+  <rect width="320" height="320" rx="160" fill="#dc2626"/>
+  <circle cx="160" cy="122" r="58" fill="#fee2e2"/>
+  <path d="M68 285c16-66 52-102 92-102s76 36 92 102" fill="#fee2e2"/>
+  <path d="M160 37l12 35 37-1-30 22 12 35-31-21-31 21 12-35-30-22 37 1 12-35z" fill="#ffffff" opacity="0.9"/>
+  <text x="160" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#991b1b">GD</text>
+</svg>

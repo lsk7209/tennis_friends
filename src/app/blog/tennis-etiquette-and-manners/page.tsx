@@ -9,12 +9,12 @@ export const metadata = {
   description: '테니스 코트에서 환영받는 사람이 되는 법. 라인콜, 볼 공급, 복식 파트너십 등 10가지 불문율과 지역별 클럽 문화 완벽 정리.',
   keywords: ['테니스 예절', '테니스 매너', '코트 불문율', '라인콜', '테니스 동호회', '클럽 매너', '스포츠맨십'],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-etiquette-and-manners',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-etiquette-and-manners',
   },
   openGraph: {
     title: '테니스 코트 매너와 10가지 불문율 — 실력보다 빛나는 품격의 기술 | 진짜 고수들의 커뮤니티 생존 전략',
     description: '테니스 코트에서 환영받는 사람이 되는 법. 라인콜, 볼 공급, 복식 파트너십 등 10가지 불문율과 지역별 클럽 문화 완벽 정리.',
-    url: 'https://tennisfrens.com/blog/tennis-etiquette-and-manners',
+    url: 'https://www.tennisfrens.com/blog/tennis-etiquette-and-manners',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',

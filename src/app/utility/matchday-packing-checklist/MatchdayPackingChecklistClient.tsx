@@ -52,7 +52,9 @@ export default function MatchdayPackingChecklistClient() {
         <Card>
           <CardHeader>
             <Badge className="w-fit bg-amber-500 text-black">Planning Utility</Badge>
-            <CardTitle className="mt-3 text-3xl">테니스 경기일 준비물 체크리스트</CardTitle>
+            <h1 className="mt-3 text-3xl font-semibold leading-none">
+              테니스 경기일 준비물 체크리스트
+            </h1>
             <p className="text-sm leading-6 text-muted-foreground">
               날씨와 경기 유형에 맞게 챙길 물건을 자동으로 추천합니다.
             </p>
