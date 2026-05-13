@@ -18,14 +18,14 @@ export const metadata = {
     "스트링",
   ],
   alternates: {
-    canonical: "https://tennisfrens.com/blog/rainy-day-tennis-tips-guide",
+    canonical: "https://www.tennisfrens.com/blog/rainy-day-tennis-tips-guide",
   },
   openGraph: {
     title:
       "비 오는 날 테니스 루틴 | 감각 유지·실내 훈련·장비 관리법 완전 가이드",
     description:
       "비 오는 날 테니스 감각 유지법 6가지. 실내 대체 훈련, 스트링 관리, 리듬 감각 훈련까지 완벽 정리.",
-    url: "https://tennisfrens.com/blog/rainy-day-tennis-tips-guide",
+    url: "https://www.tennisfrens.com/blog/rainy-day-tennis-tips-guide",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "website",
@@ -463,7 +463,7 @@ export default function RainyDayTennisTipsGuidePage() {
               </CardContent>
             </Card>
           </Link>
-          <Link href="/guide/tennis-racket-tension-string-guide">
+          <Link href="/blog/tennis-string-guide">
             <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
               <CardContent className="p-4">
                 <Badge className="bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-300 mb-2">

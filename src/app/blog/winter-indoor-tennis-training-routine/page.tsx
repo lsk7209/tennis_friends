@@ -10,12 +10,12 @@ export const metadata = {
   description: '겨울 테니스 실내 코트에서 스윙 감각과 스피드를 유지하는 7가지 루틴. 장비, 워밍업, 리듬 훈련, 컨디션 관리까지 완벽 가이드.',
   keywords: ['겨울 테니스', '실내 코트', '테니스 루틴', '스피드 유지', '감각 훈련', '겨울 훈련'],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/winter-indoor-tennis-training-routine',
+    canonical: 'https://www.tennisfrens.com/blog/winter-indoor-tennis-training-routine',
   },
   openGraph: {
     title: '겨울 테니스 실내 훈련 루틴 | 스피드·감각 유지법 완전정리',
     description: '겨울 테니스 실내 코트에서 스윙 감각과 스피드를 유지하는 7가지 루틴. 장비, 워밍업, 리듬 훈련, 컨디션 관리까지 완벽 가이드.',
-    url: 'https://tennisfrens.com/blog/winter-indoor-tennis-training-routine',
+    url: 'https://www.tennisfrens.com/blog/winter-indoor-tennis-training-routine',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -325,7 +325,7 @@ export default function WinterIndoorTennisTrainingRoutinePage() {
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
         <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link href="/guide/tennis-footwork-tips">
+          <Link href="/blog/tennis-footwork-training">
             <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
               <CardContent className="p-4">
                 <Badge className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 mb-2">

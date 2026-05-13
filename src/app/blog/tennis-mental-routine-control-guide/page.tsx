@@ -10,12 +10,12 @@ export const metadata = {
   description: '테니스 경기 중 흔들리지 않는 멘탈 루틴. 호흡, 시선, 루틴, 리듬을 통해 자신감과 집중력을 높이는 심리 관리법.',
   keywords: ['테니스 멘탈', '집중력 훈련', '심리 관리', '루틴', '긴장감 제어', '자신감'],
   alternates: {
-    canonical: 'https://tennisfrens.com/blog/tennis-mental-routine-control-guide',
+    canonical: 'https://www.tennisfrens.com/blog/tennis-mental-routine-control-guide',
   },
   openGraph: {
     title: '테니스 멘탈 루틴 5단계 | 집중력 유지·긴장감 제어법 완전 가이드',
     description: '테니스 경기 중 흔들리지 않는 멘탈 루틴. 호흡, 시선, 루틴, 리듬을 통해 자신감과 집중력을 높이는 심리 관리법.',
-    url: 'https://tennisfrens.com/blog/tennis-mental-routine-control-guide',
+    url: 'https://www.tennisfrens.com/blog/tennis-mental-routine-control-guide',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'website',
@@ -319,7 +319,7 @@ export default function TennisMentalRoutineControlGuidePage() {
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8">
         <h3 className="font-bold text-gray-900 dark:text-white mb-3">관련 글 더보기</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link href="/guide/tennis-footwork-balance-training">
+          <Link href="/blog/tennis-footwork-balance-training-guide">
             <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-400 transition-all group cursor-pointer">
               <CardContent className="p-4">
                 <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 mb-2">
