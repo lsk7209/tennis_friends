@@ -5,9 +5,9 @@
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
   "lastUpdated": "2026-05-13",
   "stats": {
-    "totalPages": 463,
+    "totalPages": 464,
     "tools": 64,
-    "articles": 121,
+    "articles": 122,
     "playerProfiles": 269
   },
   "pages": [
@@ -375,6 +375,11 @@
       "url": "https://www.tennisfrens.com/utility/weather-check",
       "description": "테니스 weather-check 도구",
       "type": "tool"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/serve-placement-over-speed-match-strategy",
+      "description": "서브는 빠르기보다 목표 코스와 다음 샷이 중요합니다. 와이드, 바디, T 코스를 경기 상황별로 쓰는 기준을 정리했습니다.",
+      "type": "article"
     },
     {
       "url": "https://www.tennisfrens.com/blog/backhand-wrist-pain-posture-beginner-intermediate",
