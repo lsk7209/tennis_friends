@@ -1,5 +1,8 @@
 import { NextRequest } from 'next/server';
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 /**
  * 구글 Search Console HTML 인증 파일
  * 

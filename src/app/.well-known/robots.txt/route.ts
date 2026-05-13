@@ -1,5 +1,8 @@
 import { getSiteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 /**
  * .well-known/robots.txt
  * 일부 크롤러가 이 경로에서 robots.txt를 찾을 수 있도록 제공.

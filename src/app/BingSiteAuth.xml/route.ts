@@ -1,5 +1,8 @@
 import { NextRequest } from "next/server";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 /**
  * Bing 웹마스터 도구 인증 파일
  *

@@ -1,5 +1,8 @@
 import { NextRequest } from 'next/server';
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 /**
  * 네이버 서치어드바이저 HTML 인증 파일
  * 

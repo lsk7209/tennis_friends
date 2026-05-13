@@ -120,6 +120,12 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+export function generateStaticParams() {
+  return getPublishedBlogPosts(allBlogPosts).map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
   const post = getPublishedBlogPosts(allBlogPosts).find(

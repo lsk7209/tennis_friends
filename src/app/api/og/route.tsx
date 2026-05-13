@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
+export const dynamic = "force-static";
+export const revalidate = false;
 
 // Noto Sans KR 폰트 로드 (한글 지원)
 async function loadKoreanFont(): Promise<ArrayBuffer | null> {

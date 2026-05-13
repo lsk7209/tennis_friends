@@ -1,5 +1,8 @@
 import { DEFAULT_CONTACT_EMAIL, getSiteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 /**
  * ai.txt
  * AI 크롤러를 위한 명시적 허용 정책

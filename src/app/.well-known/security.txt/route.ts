@@ -1,5 +1,8 @@
 import { NextRequest } from "next/server";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 /**
  * security.txt
  * 보안 정책 및 연락처 정보 제공
