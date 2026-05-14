@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-cooldown-routine-guide",
+    "slug": "tennis-cooldown-routine-guide",
+    "tags": ["쿨다운","정적 스트레칭","근육 이완","회복"],
+    "title": "테니스 쿨다운 루틴 — 근육 이완·정적 스트레칭",
+    "excerpt": "테니스 쿨다운 루틴 — 근육 이완·정적 스트레칭에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-05-14",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-warmup-routine-guide",
+    "slug": "tennis-warmup-routine-guide",
+    "tags": ["준비운동","워밍업","동적 스트레칭","활성화"],
+    "title": "테니스 준비운동 완전 루틴 — 동적 스트레칭·활성화",
+    "excerpt": "테니스 준비운동 완전 루틴 — 동적 스트레칭·활성화에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "훈련 가이드",
+    "date": "2026-05-14",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-wrist-injury-prevention",
     "slug": "tennis-wrist-injury-prevention",
     "tags": ["손목 부상","부상 예방","손목 보호","테니스 건강"],
