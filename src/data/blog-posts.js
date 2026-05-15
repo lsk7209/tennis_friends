@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-senior-guide",
+    "slug": "tennis-senior-guide",
+    "tags": ["시니어 테니스","50대 테니스","부상 예방","페이스 조절"],
+    "title": "시니어 테니스 완전 가이드 — 부상 예방·페이스 조절",
+    "excerpt": "시니어 테니스 완전 가이드 — 부상 예방·페이스 조절에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "시니어 가이드",
+    "date": "2026-05-15",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-mixed-doubles-strategy",
+    "slug": "tennis-mixed-doubles-strategy",
+    "tags": ["혼합복식","복식 전략","포메이션","역할 분담"],
+    "title": "혼합복식 전략 완전 가이드 — 포메이션·역할 분담",
+    "excerpt": "혼합복식 전략 완전 가이드 — 포메이션·역할 분담에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "복식 전략",
+    "date": "2026-05-15",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-cooldown-routine-guide",
     "slug": "tennis-cooldown-routine-guide",
     "tags": ["쿨다운","정적 스트레칭","근육 이완","회복"],
