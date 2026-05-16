@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-children-beginner-guide",
+    "slug": "tennis-children-beginner-guide",
+    "tags": ["어린이 테니스","주니어","입문","나이별 훈련"],
+    "title": "어린이 테니스 입문 — 나이별 훈련과 장비 선택",
+    "excerpt": "어린이 테니스 입문 — 나이별 훈련과 장비 선택에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "초보자 가이드",
+    "date": "2026-05-16",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-women-beginner-guide",
+    "slug": "tennis-women-beginner-guide",
+    "tags": ["여성 테니스","입문","라켓 선택","기초 기술"],
+    "title": "여성 테니스 입문 가이드 — 라켓 선택·기초 기술",
+    "excerpt": "여성 테니스 입문 가이드 — 라켓 선택·기초 기술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "초보자 가이드",
+    "date": "2026-05-16",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-senior-guide",
     "slug": "tennis-senior-guide",
     "tags": ["시니어 테니스","50대 테니스","부상 예방","페이스 조절"],
