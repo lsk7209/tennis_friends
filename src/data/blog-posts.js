@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-rainy-weather-tips",
+    "slug": "tennis-rainy-weather-tips",
+    "tags": ["우천시 테니스","비 오는 날","슬라이드","그립 관리"],
+    "title": "비 오는 날 테니스 팁 — 슬라이드·그립·전략",
+    "excerpt": "비 오는 날 테니스 팁 — 슬라이드·그립·전략에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-05-17",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-etiquette-complete-guide",
+    "slug": "tennis-etiquette-complete-guide",
+    "tags": ["테니스 에티켓","코트 매너","규칙","테니스 문화"],
+    "title": "테니스 에티켓 완전 가이드 — 코트 매너·규칙",
+    "excerpt": "테니스 에티켓 완전 가이드 — 코트 매너·규칙에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "테니스 문화",
+    "date": "2026-05-17",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-children-beginner-guide",
     "slug": "tennis-children-beginner-guide",
     "tags": ["어린이 테니스","주니어","입문","나이별 훈련"],
