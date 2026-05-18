@@ -77,10 +77,10 @@ export default function AboutPage() {
     <div className="container mx-auto max-w-6xl px-4 py-12">
       {/* Hero Section */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-text-light mb-4">
+        <h1 className="text-4xl font-bold text-foreground mb-4">
           TennisFriends 소개
         </h1>
-        <p className="text-text-muted text-lg max-w-3xl mx-auto">
+        <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
           테니스 실력 향상을 위한 모든 것을 한 곳에서 제공하는 종합
           플랫폼입니다. 데이터 기반의 정확한 분석과 전문적인 정보로 당신의
           테니스 여정을 함께합니다.
@@ -88,9 +88,9 @@ export default function AboutPage() {
       </div>
 
       {/* Mission Section */}
-      <Card className="bg-content-dark border-white/10 mb-16">
+      <Card className="bg-card border-white/10 mb-16">
         <CardContent className="p-8">
-          <h2 className="text-2xl font-bold text-text-light mb-6 text-center">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
             우리의 미션
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -98,7 +98,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold text-primary mb-4">
                 데이터로 똑똑하게
               </h3>
-              <p className="text-text-muted">
+              <p className="text-muted-foreground">
                 NTRP 실력 테스트, 스트링 텐션 계산기, 부상 위험도 평가 등
                 과학적이고 객관적인 데이터를 바탕으로 당신의 테니스 실력을
                 정확히 측정하고 개선 방향을 제시합니다.
@@ -108,7 +108,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold text-primary mb-4">
                 함께 성장하는 커뮤니티
               </h3>
-              <p className="text-text-muted">
+              <p className="text-muted-foreground">
                 테니스는 혼자보다 함께할 때 더욱 즐겁고 의미있습니다.
                 동호인들과의 소통과 경험 공유를 통해 서로가 서로의 성장을 돕는
                 따뜻한 커뮤니티를 만들어갑니다.
@@ -120,25 +120,24 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <div className="mb-16">
-        <h2 className="text-2xl font-bold text-text-light mb-8 text-center">
+        <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
           핵심 가치
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, index) => {
             const IconComponent = value.icon;
             return (
-              <Card
-                key={index}
-                className="bg-content-dark border-white/10 text-center"
-              >
+              <Card key={index} className="bg-card border-white/10 text-center">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-text-light mb-2">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-text-muted text-sm">{value.description}</p>
+                  <p className="text-muted-foreground text-sm">
+                    {value.description}
+                  </p>
                 </CardContent>
               </Card>
             );
@@ -148,21 +147,21 @@ export default function AboutPage() {
 
       {/* Editorial Standards Section */}
       <div className="mb-16">
-        <h2 className="text-2xl font-bold text-text-light mb-4 text-center">
+        <h2 className="text-2xl font-bold text-foreground mb-4 text-center">
           편집 기준
         </h2>
-        <p className="text-text-muted text-center max-w-2xl mx-auto mb-8">
+        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
           TennisFriends는 테니스 동호인을 위한 온라인 콘텐츠·도구 사이트입니다.
           모든 콘텐츠는 아래 기준을 따라 작성·관리됩니다.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {editorialStandards.map((item, index) => (
-            <Card key={index} className="bg-content-dark border-white/10">
+            <Card key={index} className="bg-card border-white/10">
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-text-light mb-3">
+                <h3 className="text-lg font-semibold text-foreground mb-3">
                   {item.title}
                 </h3>
-                <p className="text-text-muted text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {item.description}
                 </p>
               </CardContent>
@@ -172,12 +171,12 @@ export default function AboutPage() {
       </div>
 
       {/* Disclaimer Section */}
-      <Card className="bg-content-dark border-white/10 mb-16">
+      <Card className="bg-card border-white/10 mb-16">
         <CardContent className="p-8">
-          <h2 className="text-2xl font-bold text-text-light mb-4 text-center">
+          <h2 className="text-2xl font-bold text-foreground mb-4 text-center">
             면책 고지
           </h2>
-          <div className="text-text-muted text-sm leading-relaxed space-y-3 max-w-3xl mx-auto">
+          <div className="text-muted-foreground text-sm leading-relaxed space-y-3 max-w-3xl mx-auto">
             <p>
               본 사이트의 NTRP 진단, 부상 위험 평가, 장비 추천, 영양 가이드 등
               모든 도구와 콘텐츠는 일반적인 참고 자료로 제공됩니다.
@@ -194,10 +193,10 @@ export default function AboutPage() {
       {/* Contact CTA */}
       <Card className="bg-primary/10 border-primary/20">
         <CardContent className="p-8 text-center">
-          <h2 className="text-2xl font-bold text-text-light mb-4">
+          <h2 className="text-2xl font-bold text-foreground mb-4">
             함께 만들어가는 TennisFriends
           </h2>
-          <p className="text-text-muted mb-6">
+          <p className="text-muted-foreground mb-6">
             여러분의 피드백과 제안이 TennisFriends를 더욱 발전시킵니다. 언제든지
             연락주세요!
           </p>
@@ -208,7 +207,7 @@ export default function AboutPage() {
               </button>
             </Link>
             <Link href="/blog/">
-              <button className="bg-content-dark text-text-light px-6 py-2 rounded-lg font-medium hover:bg-content-dark/80 transition-colors border border-white/10">
+              <button className="bg-card text-foreground px-6 py-2 rounded-lg font-medium hover:bg-card/80 transition-colors border border-white/10">
                 블로그 보기
               </button>
             </Link>

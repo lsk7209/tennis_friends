@@ -68,8 +68,8 @@ export default function ContactPage() {
     <div className="container mx-auto max-w-6xl px-4 py-12">
       {/* Header */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-text-light mb-4">문의하기</h1>
-        <p className="text-text-muted text-lg max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold text-foreground mb-4">문의하기</h1>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           TennisFriends에 대한 문의사항이나 제안사항이 있으시면 언제든지
           연락주세요. 빠른 시일 내에 답변드리겠습니다.
         </p>
@@ -77,9 +77,9 @@ export default function ContactPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Form */}
-        <Card className="bg-content-dark border-white/10">
+        <Card className="bg-card border-white/10">
           <CardHeader>
-            <CardTitle className="text-text-light flex items-center gap-2">
+            <CardTitle className="text-foreground flex items-center gap-2">
               <Send className="w-5 h-5" />
               문의 양식
             </CardTitle>
@@ -88,10 +88,10 @@ export default function ContactPage() {
             {isSubmitted ? (
               <div className="text-center py-8">
                 <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-text-light mb-2">
+                <h3 className="text-xl font-semibold text-foreground mb-2">
                   문의가 접수되었습니다!
                 </h3>
-                <p className="text-text-muted">
+                <p className="text-muted-foreground">
                   빠른 시일 내에 답변드리겠습니다.
                 </p>
               </div>
@@ -99,19 +99,19 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-text-light">
+                    <Label htmlFor="name" className="text-foreground">
                       이름 *
                     </Label>
                     <Input
                       id="name"
                       value={formData.name}
                       onChange={(e) => handleChange("name", e.target.value)}
-                      className="bg-background-dark border-white/10"
+                      className="bg-background border-white/10"
                       required
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-text-light">
+                    <Label htmlFor="email" className="text-foreground">
                       이메일 *
                     </Label>
                     <Input
@@ -119,21 +119,21 @@ export default function ContactPage() {
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleChange("email", e.target.value)}
-                      className="bg-background-dark border-white/10"
+                      className="bg-background border-white/10"
                       required
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="category" className="text-text-light">
+                  <Label htmlFor="category" className="text-foreground">
                     문의 유형
                   </Label>
                   <Select
                     value={formData.category}
                     onValueChange={(value) => handleChange("category", value)}
                   >
-                    <SelectTrigger className="bg-background-dark border-white/10">
+                    <SelectTrigger className="bg-background border-white/10">
                       <SelectValue placeholder="문의 유형을 선택하세요" />
                     </SelectTrigger>
                     <SelectContent>
@@ -148,27 +148,27 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-text-light">
+                  <Label htmlFor="subject" className="text-foreground">
                     제목 *
                   </Label>
                   <Input
                     id="subject"
                     value={formData.subject}
                     onChange={(e) => handleChange("subject", e.target.value)}
-                    className="bg-background-dark border-white/10"
+                    className="bg-background border-white/10"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-text-light">
+                  <Label htmlFor="message" className="text-foreground">
                     메시지 *
                   </Label>
                   <Textarea
                     id="message"
                     value={formData.message}
                     onChange={(e) => handleChange("message", e.target.value)}
-                    className="bg-background-dark border-white/10 min-h-[120px]"
+                    className="bg-background border-white/10 min-h-[120px]"
                     placeholder="문의사항을 자세히 적어주세요..."
                     required
                   />
@@ -194,9 +194,9 @@ export default function ContactPage() {
 
         {/* Contact Information */}
         <div className="space-y-6">
-          <Card className="bg-content-dark border-white/10">
+          <Card className="bg-card border-white/10">
             <CardHeader>
-              <CardTitle className="text-text-light">연락처 정보</CardTitle>
+              <CardTitle className="text-foreground">연락처 정보</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               {contactInfo.map((info, index) => {
@@ -207,11 +207,11 @@ export default function ContactPage() {
                       <IconComponent className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-text-light">
+                      <h3 className="font-semibold text-foreground">
                         {info.title}
                       </h3>
-                      <p className="text-text-light">{info.content}</p>
-                      <p className="text-text-muted text-sm">
+                      <p className="text-foreground">{info.content}</p>
+                      <p className="text-muted-foreground text-sm">
                         {info.description}
                       </p>
                     </div>
@@ -221,35 +221,35 @@ export default function ContactPage() {
             </CardContent>
           </Card>
 
-          <Card className="bg-content-dark border-white/10">
+          <Card className="bg-card border-white/10">
             <CardHeader>
-              <CardTitle className="text-text-light">자주 묻는 질문</CardTitle>
+              <CardTitle className="text-foreground">자주 묻는 질문</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h4 className="font-semibold text-text-light mb-2">
+                <h4 className="font-semibold text-foreground mb-2">
                   NTRP 테스트는 얼마나 정확한가요?
                 </h4>
-                <p className="text-text-muted text-sm">
+                <p className="text-muted-foreground text-sm">
                   우리의 NTRP 테스트는 전문 코치들과 함께 개발된 알고리즘을
                   사용하여 높은 정확도를 제공합니다. 다만 참고용으로 사용하시기
                   바랍니다.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-text-light mb-2">
+                <h4 className="font-semibold text-foreground mb-2">
                   스트링 텐션 계산기는 무료인가요?
                 </h4>
-                <p className="text-text-muted text-sm">
+                <p className="text-muted-foreground text-sm">
                   네, 모든 유틸리티 도구는 완전히 무료로 제공됩니다. 언제든지
                   자유롭게 사용하실 수 있습니다.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-text-light mb-2">
+                <h4 className="font-semibold text-foreground mb-2">
                   부상 위험도 평가 결과를 신뢰할 수 있나요?
                 </h4>
-                <p className="text-text-muted text-sm">
+                <p className="text-muted-foreground text-sm">
                   평가 결과는 참고용이며, 실제 부상이 의심되면 반드시 전문의와
                   상담하시기 바랍니다.
                 </p>
@@ -259,17 +259,17 @@ export default function ContactPage() {
 
           <Card className="bg-primary/10 border-primary/20">
             <CardContent className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-text-light mb-2">
+              <h3 className="text-lg font-semibold text-foreground mb-2">
                 운영 안내
               </h3>
-              <p className="text-text-muted text-sm mb-4">
+              <p className="text-muted-foreground text-sm mb-4">
                 TennisFriends는 온라인 테니스 콘텐츠·도구 사이트로, 별도의
                 오프라인 상담 창구는 운영하지 않습니다. 모든 문의는 이메일로
                 접수해 주세요.
               </p>
               <a
                 href="mailto:contact@tennisfrens.com"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-content-dark border border-white/10 px-4 py-2 text-sm text-text-light hover:bg-content-dark/80 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-card border border-white/10 px-4 py-2 text-sm text-foreground hover:bg-card/80 transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 contact@tennisfrens.com

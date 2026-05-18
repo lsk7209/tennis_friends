@@ -69,6 +69,13 @@ const nextConfig: NextConfig = {
   // URL 정규화 리다이렉트
   async redirects() {
     return [
+      // no-www → www 정규화 (GSC 카니발리제이션 방지: 동일 URL이 두 호스트로 분산 인덱싱되는 문제)
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "tennisfrens.com" }],
+        destination: "https://www.tennisfrens.com/:path*",
+        permanent: true,
+      },
       // GSC 데이터 기준 올바른 철자 "Rinderknech" 로 들어오는 트래픽을
       // 기존 색인된 URL(arthur-landercknech)로 이관
       {

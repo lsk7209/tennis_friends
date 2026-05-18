@@ -206,18 +206,20 @@ export default async function BlogPostPage({ params }: Props) {
   };
 
   // Transform blog posts to RelatedItem type with safe fallbacks
-  const allPostsForRelated: RelatedContentItem[] = publishedBlogPosts.map((p) => ({
-    id: p.id,
-    title: p.title,
-    description: p.excerpt,
-    excerpt: p.excerpt,
-    category: p.category,
-    tags: p.tags ?? [],
-    href: `/blog/${p.slug}`,
-    date: p.date,
-    readTime: p.readTime,
-    badge: p.badge,
-  }));
+  const allPostsForRelated: RelatedContentItem[] = publishedBlogPosts.map(
+    (p) => ({
+      id: p.id,
+      title: p.title,
+      description: p.excerpt,
+      excerpt: p.excerpt,
+      category: p.category,
+      tags: p.tags ?? [],
+      href: `/blog/${p.slug}`,
+      date: p.date,
+      readTime: p.readTime,
+      badge: p.badge,
+    }),
+  );
 
   const currentRelatedItem: RelatedContentItem = {
     id: post.id,
@@ -273,7 +275,7 @@ export default async function BlogPostPage({ params }: Props) {
       <nav aria-label="Breadcrumb" className="mb-8">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-text-muted hover:text-text-light transition-colors"
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           aria-label="블로그 목록으로 돌아가기"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -285,7 +287,7 @@ export default async function BlogPostPage({ params }: Props) {
       <article
         itemScope
         itemType="https://schema.org/BlogPosting"
-        className="prose prose-invert max-w-none"
+        className="prose dark:prose-invert max-w-none"
       >
         {/* Article Header */}
         <header className="mb-8">
@@ -299,7 +301,7 @@ export default async function BlogPostPage({ params }: Props) {
             >
               {post.category}
             </Badge>
-            <div className="flex items-center gap-4 text-sm text-text-muted">
+            <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <time
                 dateTime={post.date}
                 itemProp="datePublished"
@@ -321,18 +323,21 @@ export default async function BlogPostPage({ params }: Props) {
           </section>
 
           <h1
-            className="text-4xl font-bold text-text-light mb-4"
+            className="text-4xl font-bold text-foreground mb-4"
             itemProp="headline"
           >
             {post.title}
           </h1>
 
-          <p className="text-lg text-text-muted mb-6" itemProp="description">
+          <p
+            className="text-lg text-muted-foreground mb-6"
+            itemProp="description"
+          >
             {post.excerpt}
           </p>
 
           <div className="flex items-center justify-between">
-            <div className="text-sm text-text-muted">
+            <div className="text-sm text-muted-foreground">
               <span
                 itemProp="author"
                 itemScope
@@ -344,7 +349,7 @@ export default async function BlogPostPage({ params }: Props) {
             <Button
               variant="outline"
               size="sm"
-              className="bg-content-dark border-white/10"
+              className="bg-card border-white/10"
             >
               <Share2 className="w-4 h-4 mr-2" />
               공유하기
@@ -354,7 +359,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Summary Section */}
         <section
-          className="bg-content-dark border border-white/10 rounded-lg p-6 mb-8"
+          className="bg-card border border-white/10 rounded-lg p-6 mb-8"
           aria-labelledby="summary-heading"
         >
           <h2
@@ -363,7 +368,7 @@ export default async function BlogPostPage({ params }: Props) {
           >
             요약
           </h2>
-          <p className="text-text-light">{enrichedPost.summary}</p>
+          <p className="text-foreground">{enrichedPost.summary}</p>
         </section>
 
         {/* Highlight Section */}
@@ -371,7 +376,7 @@ export default async function BlogPostPage({ params }: Props) {
           className="bg-primary/10 border-2 border-primary/80 rounded-lg p-6 mb-8"
           aria-label="핵심 포인트"
         >
-          <p className="text-text-light font-medium">
+          <p className="text-foreground font-medium">
             {enrichedPost.highlight}
           </p>
         </section>
@@ -380,8 +385,8 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Table of Contents */}
         <nav aria-label="목차" className="mb-8">
-          <details className="group rounded-lg border border-white/10 bg-content-dark">
-            <summary className="flex cursor-pointer list-none items-center justify-between p-4 font-bold text-text-light">
+          <details className="group rounded-lg border border-white/10 bg-card">
+            <summary className="flex cursor-pointer list-none items-center justify-between p-4 font-bold text-foreground">
               <span>목차</span>
               <ArrowRight className="w-4 h-4 transform transition-transform duration-200 group-open:rotate-90" />
             </summary>
@@ -424,7 +429,7 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Article Content */}
         <section
           id="article-content"
-          className="prose prose-invert max-w-none"
+          className="prose dark:prose-invert max-w-none"
           itemProp="articleBody"
           dangerouslySetInnerHTML={{ __html: enrichedPost.content ?? "" }}
         />
@@ -438,7 +443,7 @@ export default async function BlogPostPage({ params }: Props) {
               <Badge
                 key={index}
                 variant="outline"
-                className="bg-background-dark border-white/5"
+                className="bg-background border-white/5"
                 itemProp="keywords"
               >
                 {tag}
