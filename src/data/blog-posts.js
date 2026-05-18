@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-windy-day-strategy",
+    "slug": "tennis-windy-day-strategy",
+    "tags": ["바람","야외 테니스","전술","탑스핀"],
+    "title": "바람 부는 날 테니스 전략 — 탑스핀·로브·서브",
+    "excerpt": "바람 부는 날 테니스 전략 — 탑스핀·로브·서브에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-05-18",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-hot-weather-performance",
+    "slug": "tennis-hot-weather-performance",
+    "tags": ["더운 날씨","여름 테니스","컨디션","페이스 조절"],
+    "title": "더운 날씨 테니스 — 컨디션 관리·페이스 조절",
+    "excerpt": "더운 날씨 테니스 — 컨디션 관리·페이스 조절에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "건강 가이드",
+    "date": "2026-05-18",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-rainy-weather-tips",
     "slug": "tennis-rainy-weather-tips",
     "tags": ["우천시 테니스","비 오는 날","슬라이드","그립 관리"],
