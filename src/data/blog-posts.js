@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-ntrp-25-to-30-guide",
+    "slug": "tennis-ntrp-25-to-30-guide",
+    "tags": ["NTRP 2.5","NTRP 3.0","레벨업","실력 향상"],
+    "title": "NTRP 2.5→3.0 레벨업 완전 가이드",
+    "excerpt": "NTRP 2.5→3.0 레벨업 완전 가이드에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "레벨업 가이드",
+    "date": "2026-05-19",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-night-match-tips",
+    "slug": "tennis-night-match-tips",
+    "tags": ["야간 경기","야간 테니스","집중력","시야"],
+    "title": "야간 테니스 경기 팁 — 시야·집중력·조명 적응",
+    "excerpt": "야간 테니스 경기 팁 — 시야·집중력·조명 적응에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-05-19",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-windy-day-strategy",
     "slug": "tennis-windy-day-strategy",
     "tags": ["바람","야외 테니스","전술","탑스핀"],
