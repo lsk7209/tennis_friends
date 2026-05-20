@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-ntrp-35-to-40-guide",
+    "slug": "tennis-ntrp-35-to-40-guide",
+    "tags": ["NTRP 3.5","NTRP 4.0","레벨업","고급 기술"],
+    "title": "NTRP 3.5→4.0 레벨업 — 고급 기술과 전략 전환",
+    "excerpt": "NTRP 3.5→4.0 레벨업 — 고급 기술과 전략 전환에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "레벨업 가이드",
+    "date": "2026-05-20",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-ntrp-30-to-35-guide",
+    "slug": "tennis-ntrp-30-to-35-guide",
+    "tags": ["NTRP 3.0","NTRP 3.5","레벨업","실력 향상"],
+    "title": "NTRP 3.0→3.5 레벨업 — 넘어야 할 벽과 해결책",
+    "excerpt": "NTRP 3.0→3.5 레벨업 — 넘어야 할 벽과 해결책에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "레벨업 가이드",
+    "date": "2026-05-20",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-ntrp-25-to-30-guide",
     "slug": "tennis-ntrp-25-to-30-guide",
     "tags": ["NTRP 2.5","NTRP 3.0","레벨업","실력 향상"],
