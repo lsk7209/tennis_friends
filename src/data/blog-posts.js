@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-error-reduction-guide",
+    "slug": "tennis-error-reduction-guide",
+    "tags": ["언포스드 에러","에러 줄이기","실수","안정성"],
+    "title": "언포스드 에러 줄이기 — 원인 분석과 교정법",
+    "excerpt": "언포스드 에러 줄이기 — 원인 분석과 교정법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-21",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-baseline-rally-strategy",
+    "slug": "tennis-baseline-rally-strategy",
+    "tags": ["베이스라인","랠리","전략","깊이","템포"],
+    "title": "베이스라인 랠리 전략 — 깊이·방향·템포 변화",
+    "excerpt": "베이스라인 랠리 전략 — 깊이·방향·템포 변화에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-05-21",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-ntrp-35-to-40-guide",
     "slug": "tennis-ntrp-35-to-40-guide",
     "tags": ["NTRP 3.5","NTRP 4.0","레벨업","고급 기술"],
