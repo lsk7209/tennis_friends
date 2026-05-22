@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-match-flow-reading",
+    "slug": "tennis-match-flow-reading",
+    "tags": ["경기 흐름","모멘텀","전술 변화","경기 읽기"],
+    "title": "경기 흐름 읽기 — 모멘텀·전환점·전술 변화",
+    "excerpt": "경기 흐름 읽기 — 모멘텀·전환점·전술 변화에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-05-22",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-winner-production-guide",
+    "slug": "tennis-winner-production-guide",
+    "tags": ["위너","코스","타이밍","공격 테니스"],
+    "title": "위너 생산 늘리기 — 코스 공략과 타이밍",
+    "excerpt": "위너 생산 늘리기 — 코스 공략과 타이밍에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-22",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-error-reduction-guide",
     "slug": "tennis-error-reduction-guide",
     "tags": ["언포스드 에러","에러 줄이기","실수","안정성"],
