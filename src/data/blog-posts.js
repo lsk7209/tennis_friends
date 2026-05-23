@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-forehand-inside-in-guide",
+    "slug": "tennis-forehand-inside-in-guide",
+    "tags": ["인사이드인","포핸드","크로스코트","위너"],
+    "title": "인사이드인 포핸드 — 크로스코트 결정타 만들기",
+    "excerpt": "인사이드인 포핸드 — 크로스코트 결정타 만들기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-slump-recovery-guide",
+    "slug": "tennis-slump-recovery-guide",
+    "tags": ["슬럼프","극복","멘탈","회복"],
+    "title": "테니스 슬럼프 극복 — 원인 파악과 회복 루틴",
+    "excerpt": "테니스 슬럼프 극복 — 원인 파악과 회복 루틴에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "멘탈 트레이닝",
+    "date": "2026-05-23",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-match-flow-reading",
     "slug": "tennis-match-flow-reading",
     "tags": ["경기 흐름","모멘텀","전술 변화","경기 읽기"],
