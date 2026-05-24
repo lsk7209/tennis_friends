@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-second-serve-kick-topspin",
+    "slug": "tennis-second-serve-kick-topspin",
+    "tags": ["세컨드서브","킥서브","탑스핀","안정성"],
+    "title": "세컨드 서브 킥·탑스핀 완전 정복",
+    "excerpt": "세컨드 서브 킥·탑스핀 완전 정복에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-24",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-backhand-slice-low-ball",
+    "slug": "tennis-backhand-slice-low-ball",
+    "tags": ["슬라이스","낮은공","백핸드","어프로치"],
+    "title": "낮은 공 슬라이스 백핸드 처리 — 어프로치와 방어",
+    "excerpt": "낮은 공 슬라이스 백핸드 처리 — 어프로치와 방어에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-24",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-forehand-inside-in-guide",
     "slug": "tennis-forehand-inside-in-guide",
     "tags": ["인사이드인","포핸드","크로스코트","위너"],
