@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-backhand-crosscourt",
+    "slug": "tennis-backhand-crosscourt",
+    "tags": ["백핸드","크로스코트","각도","회전"],
+    "title": "백핸드 크로스코트 — 각도·회전·깊이 완전 분석",
+    "excerpt": "백핸드 크로스코트 — 각도·회전·깊이 완전 분석에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-25",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-forehand-down-the-line",
+    "slug": "tennis-forehand-down-the-line",
+    "tags": ["다운더라인","포핸드","코스","공격"],
+    "title": "포핸드 다운더라인 — 코스·타이밍·리스크 관리",
+    "excerpt": "포핸드 다운더라인 — 코스·타이밍·리스크 관리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-05-25",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-second-serve-kick-topspin",
     "slug": "tennis-second-serve-kick-topspin",
     "tags": ["세컨드서브","킥서브","탑스핀","안정성"],
