@@ -15,7 +15,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FAQSection from "@/components/seo/FAQSection";
 import { AdSenseSlot } from "@/components/AdSense";
 import { blogContentMap } from "@/data/blog-content";
-import { getSiteUrl } from "@/lib/site";
+import { DEFAULT_SITE_LOCALE, SITE_NAME, getSiteUrl } from "@/lib/site";
 import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 
@@ -138,6 +138,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const publishedTime = getBlogPublishDate(post).toISOString();
   const indexable = isIndexableBlogSlug(post.slug);
+  const siteUrl = getSiteUrl();
+  const canonical = `${siteUrl}/blog/${post.slug}`;
+  const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(post.title)}&sub=${encodeURIComponent(post.category ?? "테니스 가이드")}`;
 
   return {
     title: post.title,
@@ -154,21 +157,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.excerpt,
       type: "article",
+      siteName: SITE_NAME,
+      locale: DEFAULT_SITE_LOCALE,
       publishedTime,
       authors: ["TennisFriends"],
       tags: post.category ? [post.category] : [],
-      url: `${getSiteUrl()}/blog/${post.slug}`,
+      url: canonical,
       images: [
         {
-          url: `${getSiteUrl()}/api/og?title=${encodeURIComponent(post.title)}&sub=${encodeURIComponent(post.category ?? "테니스 가이드")}`,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: post.title,
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImage],
+    },
     alternates: {
-      canonical: `${getSiteUrl()}/blog/${post.slug}`,
+      canonical,
     },
   };
 }

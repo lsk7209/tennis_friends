@@ -101,6 +101,10 @@ const nextConfig: NextConfig = {
             key: "X-XSS-Protection",
             value: "1; mode=block",
           },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains; preload",
+          },
           // 크롤러 최적화 헤더
           {
             key: "X-Robots-Tag",

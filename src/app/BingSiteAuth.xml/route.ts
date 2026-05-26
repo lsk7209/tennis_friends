@@ -13,8 +13,17 @@ export const revalidate = false;
  * 4. URL: https://www.tennisfrens.com/BingSiteAuth.xml
  */
 export async function GET(_request: NextRequest) {
-  const verificationCode =
-    process.env.BING_SITE_VERIFICATION || "your-bing-verification-code";
+  const verificationCode = process.env.BING_SITE_VERIFICATION;
+
+  if (!verificationCode) {
+    return new Response("Bing verification code is not configured.", {
+      status: 404,
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
 
   const xml = `<?xml version="1.0"?>
 <users>

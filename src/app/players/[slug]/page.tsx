@@ -49,7 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const tour = player.gender === "male" ? "ATP" : "WTA";
-  const canonical = `${getSiteUrl()}/players/${slug}`;
+  const siteUrl = getSiteUrl();
+  const canonical = `${siteUrl}/players/${slug}`;
   const metadataOverride = SEARCH_METADATA_OVERRIDES[slug];
   const searchSeo = getPlayerSearchSeo(slug);
   const oneLiner = player.detailedProfile?.oneLineSummary
@@ -62,6 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = metadataOverride?.title ?? searchSeo?.title ?? baseTitle;
   const description =
     metadataOverride?.description ?? searchSeo?.description ?? baseDescription;
+  const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(player.name)}&sub=${encodeURIComponent(`${player.nameEn} · ${tour} profile`)}`;
   const keywords = metadataOverride
     ? [
         player.name,
@@ -94,7 +96,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: "ko_KR",
       images: [
         {
-          url: `${getSiteUrl()}/api/og?title=${encodeURIComponent(player.name)}&sub=${encodeURIComponent(`${player.nameEn} · ${tour} profile`)}`,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: title,
@@ -105,6 +107,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImage],
     },
     robots: { index: true, follow: true },
   };

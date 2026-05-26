@@ -1,130 +1,63 @@
-import { PLAYERS_DB } from '@/data/players';
-import { notFound } from 'next/navigation';
-import type { Metadata } from 'next';
-import { getSiteUrl } from '@/lib/site';
-import { buildPlayerSeoKeywords, getPlayerSearchSeo } from '@/lib/player-search-seo';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FAQSchema from '@/components/seo/FAQSchema';
-import PlayerHexagonStats from '@/components/players/PlayerHexagonStats';
-import PlayerSearchAliasSection from '@/components/players/PlayerSearchAliasSection';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowLeft } from 'lucide-react';
+import { Metadata } from "next";
+import { PLAYERS_DB } from "@/data/players";
+import { getSiteUrl } from "@/lib/site";
+import { getPlayerSearchSeo, buildPlayerSeoKeywords } from "@/lib/player-search-seo";
+import PlayerArticlePage from "@/components/players/PlayerArticlePage";
 
-const SLUG = 'martin-landaluce';
+const SLUG = "martin-landaluce";
+const _player = PLAYERS_DB[SLUG];
+const _searchSeo = getPlayerSearchSeo(SLUG);
+const _tour = _player?.gender === "male" ? "ATP" : "WTA";
+const _siteUrl = "https://www.tennisfrens.com";
+const _canonical = `${_siteUrl}/players/${SLUG}`;
+const _oneLiner = _player?.detailedProfile?.oneLineSummary?.slice(0, 120) ?? _player?.longBio?.slice(0, 120) ?? "";
 
-export function generateMetadata(): Metadata {
-  const player = PLAYERS_DB[SLUG];
-  if (!player) return { title: '선수를 찾을 수 없습니다' };
+export const metadata: Metadata = {
+  title:
+    _searchSeo?.title ??
+    `${_player?.name ?? SLUG} 선수 완전 분석 | 플레이 스타일·경력·${_tour}`,
+  description:
+    _searchSeo?.description ??
+    `${_player?.name}(${_player?.nameEn})의 플레이 스타일, 경력 하이라이트, 대표 경기를 한눈에 정리한 ${_tour} 선수 완전 분석. ${_oneLiner}`.trim(),
+  keywords: _player
+    ? buildPlayerSeoKeywords(SLUG, _player, _tour, [
+        `${_player.name} 플레이스타일`,
+        `${_player.name} 경력`,
+        `${_player.nameEn} tennis`,
+        "테니스",
+        _tour,
+        _player.country,
+      ])
+    : [],
+  alternates: { canonical: _canonical },
+  openGraph: {
+    title:
+      _searchSeo?.title ??
+      `${_player?.name} 선수 완전 분석 | ${_tour}`,
+    description:
+      _searchSeo?.description ?? _oneLiner,
+    url: _canonical,
+    siteName: "TennisFriends",
+    locale: "ko_KR",
+    type: "profile",
+    images: [
+      {
+        url: `${_siteUrl}/api/og?title=${encodeURIComponent(_player?.name ?? SLUG)}&sub=${encodeURIComponent(`${_player?.nameEn} · ${_tour}`)}`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      _searchSeo?.title ??
+      `${_player?.name} 선수 완전 분석 | ${_tour}`,
+    description: _searchSeo?.description ?? _oneLiner,
+  },
+  robots: { index: true, follow: true },
+};
 
-  const tour = player.gender === 'male' ? 'ATP' : 'WTA';
-  const searchSeo = getPlayerSearchSeo(SLUG);
-  const title = searchSeo?.title ?? `${player.name} tennis player profile`;
-  const description = searchSeo?.description ?? `${player.name}(${player.nameEn}) profile, ranking, match record and playing style.`;
-
-  return {
-    title,
-    description,
-    keywords: buildPlayerSeoKeywords(SLUG, player, tour),
-    alternates: { canonical: `${getSiteUrl()}/players/${SLUG}` },
-    openGraph: { title, description, type: 'profile', locale: 'ko_KR', siteName: 'TennisFriends' },
-    twitter: { card: 'summary_large_image', title, description },
-    robots: { index: true, follow: true },
-  };
-}
-
-export default function PlayerPage() {
-  const player = PLAYERS_DB[SLUG];
-  if (!player) notFound();
-
-  const tour = player.gender === 'male' ? 'ATP' : 'WTA';
-  const siteUrl = getSiteUrl();
-
-  const breadcrumbs = [
-    { name: 'TennisFriends', item: siteUrl },
-    { name: '선수 프로필', item: `${siteUrl}/players` },
-    { name: player.name, item: `${siteUrl}/players/${SLUG}` },
-  ];
-
-  const faqItems = (player.detailedProfile?.faq ?? []).map((f) => ({
-    q: f.question,
-    a: f.answer,
-  }));
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={breadcrumbs} />
-      {faqItems.length > 0 && <FAQSchema faqs={faqItems} />}
-
-      <div className="container mx-auto max-w-4xl px-4 py-8">
-        <Link href="/players" className="inline-flex items-center gap-2 text-blue-600 hover:underline mb-6">
-          <ArrowLeft className="w-4 h-4" /> 선수 목록
-        </Link>
-
-        <div className="bg-white rounded-2xl p-8 shadow-sm mb-6">
-          <div className="flex items-center gap-4 mb-4">
-            <Badge variant="secondary">{tour}</Badge>
-            <Badge variant="outline">{player.countryFlag} {player.country}</Badge>
-          </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            {player.name}{' '}
-            <span className="text-lg font-normal text-gray-500">({player.nameEn})</span>
-          </h1>
-          {player.detailedProfile?.oneLineSummary && (
-            <p className="text-lg text-gray-600 mt-2">{player.detailedProfile.oneLineSummary}</p>
-          )}
-          <p className="mt-3 text-gray-500 text-sm">{player.plays} · {player.backhand} backhand</p>
-        </div>
-
-        <PlayerSearchAliasSection slug={SLUG} />
-
-        {player.detailedProfile?.hexagonStats && player.detailedProfile.hexagonStats.length > 0 && (
-          <div className="bg-white rounded-2xl p-8 shadow-sm mb-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">능력치 분석</h2>
-            <PlayerHexagonStats
-              attributes={player.detailedProfile.hexagonStats}
-              playerName={player.name}
-            />
-          </div>
-        )}
-
-        {player.detailedProfile?.playStyle && (
-          <div className="bg-white rounded-2xl p-8 shadow-sm mb-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">플레이 스타일</h2>
-            <div className="prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: player.detailedProfile.playStyle }} />
-          </div>
-        )}
-
-        {player.detailedProfile?.growthStory && (
-          <div className="bg-white rounded-2xl p-8 shadow-sm mb-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">성장 스토리</h2>
-            <div className="prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: player.detailedProfile.growthStory }} />
-          </div>
-        )}
-
-        {faqItems.length > 0 && (
-          <div className="bg-white rounded-2xl p-8 shadow-sm mb-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">자주 묻는 질문</h2>
-            <div className="space-y-4">
-              {faqItems.map((item, i) => (
-                <div key={i} className="border-b pb-4 last:border-0">
-                  <p className="font-semibold text-gray-900 mb-1">{item.q}</p>
-                  <p className="text-gray-600">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <div className="bg-blue-600 rounded-2xl p-8 text-white text-center">
-          <h2 className="text-xl font-bold mb-2">나의 테니스 실력은?</h2>
-          <p className="mb-4 opacity-90">NTRP 실력 테스트로 내 레벨을 확인해보세요.</p>
-          <Link href="/utility/ntrp-test">
-            <Button variant="secondary" size="lg">무료 실력 테스트</Button>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+export default function MartinLandalucePage() {
+  return <PlayerArticlePage slug={SLUG} />;
 }

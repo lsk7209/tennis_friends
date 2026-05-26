@@ -1,4 +1,40 @@
 @import "tailwindcss";
+
+@theme {
+  /* Court Palette */
+  --color-court-ink:    #0A0E1A;
+  --color-court-ink-2:  #11162A;
+  --color-court-ink-3:  #1A2138;
+  --color-court-bg:     #F4F4F0;
+  --color-accent-volt:  #DFFF1C;
+  --color-accent-clay:  #E8552B;
+  --color-accent-grass: #2F7A3E;
+  --color-accent-hard:  #1E63B8;
+
+  /* Type */
+  --font-sans:           var(--font-pretendard), "Inter", sans-serif;
+  --font-display-latin:  var(--font-archivo-black), sans-serif;
+  --font-display-ko:     var(--font-pretendard), sans-serif;
+  --font-condensed:      var(--font-inter-tight), sans-serif;
+  --font-mono:           var(--font-jetbrains), ui-monospace, monospace;
+
+  --tracking-display:    -0.045em;
+  --tracking-h1:         -0.035em;
+  --tracking-caps:       0.18em;
+
+  /* Radii */
+  --radius-chip:   2px;
+  --radius-card:   4px;
+  --radius-image:  8px;
+  --radius-pill:   999px;
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast:    200ms;
+  --dur-base:    500ms;
+  --dur-rise:    700ms;
+}
+
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));

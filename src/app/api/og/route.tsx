@@ -1,7 +1,6 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const dynamic = "force-static";
 export const revalidate = false;
 
 // Noto Sans KR 폰트 로드 (한글 지원)
@@ -45,7 +44,7 @@ export async function GET(request: Request) {
           fontSize: 28,
           color: "#86efac",
           marginBottom: 24,
-          letterSpacing: "0.05em",
+          letterSpacing: 0,
         }}
       >
         🎾 TennisFriends

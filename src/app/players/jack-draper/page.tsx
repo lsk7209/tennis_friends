@@ -1,170 +1,63 @@
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import Article from '@/components/blog/Article';
-import PlayerSearchAliasSection from '@/components/players/PlayerSearchAliasSection';
-import TOC from '@/components/blog/TOC';
-import { FAQ } from '@/components/blog/FAQ';
-import CTA from '@/components/blog/CTA';
-import { Badge } from '@/components/ui/badge';
-import { Metadata } from 'next';
-import { getPlayerSearchSeo } from '@/lib/player-search-seo';
-import {Trophy, Target, TrendingUp, Zap, Star, CheckCircle} from 'lucide-react';
+import { Metadata } from "next";
+import { PLAYERS_DB } from "@/data/players";
+import { getSiteUrl } from "@/lib/site";
+import { getPlayerSearchSeo, buildPlayerSeoKeywords } from "@/lib/player-search-seo";
+import PlayerArticlePage from "@/components/players/PlayerArticlePage";
 
-const SLUG = 'jack-draper';
-const playerSearchSeo = getPlayerSearchSeo(SLUG);
+const SLUG = "jack-draper";
+const _player = PLAYERS_DB[SLUG];
+const _searchSeo = getPlayerSearchSeo(SLUG);
+const _tour = _player?.gender === "male" ? "ATP" : "WTA";
+const _siteUrl = "https://www.tennisfrens.com";
+const _canonical = `${_siteUrl}/players/${SLUG}`;
+const _oneLiner = _player?.detailedProfile?.oneLineSummary?.slice(0, 120) ?? _player?.longBio?.slice(0, 120) ?? "";
 
 export const metadata: Metadata = {
-  title: playerSearchSeo?.title ?? '잭 드레이퍼 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
-  description: playerSearchSeo?.description ?? ("잭 드레이퍼 (Jack Draper) 선수의 테니스 프로필, 랭킹, 플레이 스타일 분석. 강점과 약점, 사용 장비(라켓, 신발), 최신 경기 성적 및 통계 정보를 제공합니다."),
-  keywords: [
-    ...(playerSearchSeo?.aliases ?? []),
-    '잭 드레이퍼', 'Jack Draper', '테니스', 'ATP', '플레이스타일', '영국 테니스', '공격형', '강력한 포핸드'],
-  alternates: {
-    canonical: 'https://www.tennisfrens.com/players/jack-draper',
-  },
+  title:
+    _searchSeo?.title ??
+    `${_player?.name ?? SLUG} 선수 완전 분석 | 플레이 스타일·경력·${_tour}`,
+  description:
+    _searchSeo?.description ??
+    `${_player?.name}(${_player?.nameEn})의 플레이 스타일, 경력 하이라이트, 대표 경기를 한눈에 정리한 ${_tour} 선수 완전 분석. ${_oneLiner}`.trim(),
+  keywords: _player
+    ? buildPlayerSeoKeywords(SLUG, _player, _tour, [
+        `${_player.name} 플레이스타일`,
+        `${_player.name} 경력`,
+        `${_player.nameEn} tennis`,
+        "테니스",
+        _tour,
+        _player.country,
+      ])
+    : [],
+  alternates: { canonical: _canonical },
   openGraph: {
-    title: '잭 드레이퍼 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
-    description: '잭 드레이퍼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
-    url: 'https://www.tennisfrens.com/players/jack-draper',
-    siteName: 'TennisFriends',
-    locale: 'ko_KR',
-    type: 'profile',
+    title:
+      _searchSeo?.title ??
+      `${_player?.name} 선수 완전 분석 | ${_tour}`,
+    description:
+      _searchSeo?.description ?? _oneLiner,
+    url: _canonical,
+    siteName: "TennisFriends",
+    locale: "ko_KR",
+    type: "profile",
+    images: [
+      {
+        url: `${_siteUrl}/api/og?title=${encodeURIComponent(_player?.name ?? SLUG)}&sub=${encodeURIComponent(`${_player?.nameEn} · ${_tour}`)}`,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: '잭 드레이퍼 완전 분석 | 플레이 스타일·명경기·ATP 프로필',
-    description: '잭 드레이퍼의 공격형 스타일, 강점, 대표 경기, 최근 흐름을 한 번에 정리한 선수 프로필.',
+    card: "summary_large_image",
+    title:
+      _searchSeo?.title ??
+      `${_player?.name} 선수 완전 분석 | ${_tour}`,
+    description: _searchSeo?.description ?? _oneLiner,
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  robots: { index: true, follow: true },
 };
 
-const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
-  { id: 'why-again-notable', text: '잭 드레이퍼, 왜 주목받는 선수인가?', depth: 2 },
-  { id: 'what-type-of-player', text: '이 선수는 어떤 유형의 플레이어인가?', depth: 2 },
-  { id: 'what-keeps-top-ranking', text: '이 선수가 세계 상위권을 지키는 힘은 무엇인가?', depth: 2 },
-  { id: 'what-proves-player', text: '이 선수를 가장 잘 보여주는 경기는 무엇일까?', depth: 2 },
-  { id: 'what-attracts-fans', text: '팬들은 이 선수의 어떤 점에 끌릴까?', depth: 2 },
-  { id: 'recent-form', text: '요즘 잭 드레이퍼의 경기력 흐름은 어떤가?', depth: 2 },
-  { id: 'one-sentence-summary', text: '잭 드레이퍼, 한 문장으로 정리하면?', depth: 2 },
-];
-
-const faqs = [
-  {
-    q: '잭 드레이퍼의 경기 스타일은 어떤가요?',
-    a: '공격형 스타일로, 강력한 포핸드와 서브가 특징입니다. 좌완의 강력한 서브로 경기를 주도합니다.',
-  },
-  {
-    q: '드레이퍼의 최고 랭킹과 현재 랭킹은 어떻게 되나요?',
-    a: '최고 랭킹은 10위권이며, 현재도 10위권을 유지하고 있습니다. 특히 최근 빠르게 상위권으로 올라왔습니다.',
-  },
-  {
-    q: '드레이퍼의 강점은 무엇인가요?',
-    a: '강력한 포핸드와 서브가 최대 강점입니다. 좌완의 강력한 서브로 경기를 주도하는 능력이 뛰어납니다.',
-  },
-];
-
 export default function JackDraperPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
-      <Article
-        title="잭 드레이퍼"
-        excerpt="강력한 포핸드와 서브로 ATP 투어를 지배하는 영국의 차세대 스타"
-      >
-
-      <BreadcrumbSchema
-        items={[
-          { name: '홈', item: 'https://www.tennisfrens.com' },
-          { name: '선수', item: 'https://www.tennisfrens.com/players' },
-          { name: '잭 드레이퍼', item: 'https://www.tennisfrens.com/players/jack-draper' },
-        ]}
-      />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-          <PlayerSearchAliasSection slug={SLUG} />
-          <div className="flex flex-wrap gap-2 mb-6">
-            {['테니스', '잭 드레이퍼', '선수 프로필', '영국', '공격형', '강력한 포핸드'].map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-
-          <TOC items={tocItems} />
-
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <h2 id="why-again-notable">잭 드레이퍼, 왜 주목받는 선수인가?</h2>
-            <blockquote className="not-prose my-6 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg">
-              <div className="flex items-start gap-3">
-                <Star className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                <p className="text-base font-medium text-gray-800 dark:text-gray-200 mb-0">
-                  강력한 포핸드와 서브로 ATP 투어를 지배하는 영국의 차세대 스타
-                </p>
-              </div>
-            </blockquote>
-            <p>잭 드레이퍼는 영국 출신의 세계랭킹 10위권 테니스 선수로, 강력한 포핸드와 서브로 ATP 투어를 지배하고 있다. 세계랭킹 10위권을 유지하며, 특히 최근 빠르게 상위권으로 올라왔다. 좌완의 강력한 서브로 경기를 주도하는 그의 테니스는 차세대 스타의 설계자로 평가받는다.</p>
-
-            <h2 id="what-type-of-player">이 선수는 어떤 유형의 플레이어인가?</h2>
-            <p>잭 드레이퍼는 영국 출신의 세계랭킹 10위권 선수로, 공격형 스타일과 강력한 포핸드, 서브가 특징인 ATP 투어의 차세대 스타다.</p>
-            
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">국적:</strong> <span className="text-gray-600 dark:text-gray-400">영국</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">최고 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">10위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">현재 랭킹:</strong> <span className="text-gray-600 dark:text-gray-400">10위권</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Zap className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">플레이 스타일:</strong> <span className="text-gray-600 dark:text-gray-400">공격형</span></span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Target className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-gray-700 dark:text-gray-300">시그니처 무기:</strong> <span className="text-gray-600 dark:text-gray-400">강력한 포핸드</span></span>
-                </li>
-              </ul>
-            </div>
-
-            <h2 id="what-keeps-top-ranking">이 선수가 세계 상위권을 지키는 힘은 무엇인가?</h2>
-            <p>드레이퍼가 세계 상위권을 유지하는 힘은 강력한 포핸드, 서브, 그리고 빠른 발에서 나온다.</p>
-
-            <h2 id="what-proves-player">이 선수를 가장 잘 보여주는 경기는 무엇일까?</h2>
-            <p>드레이퍼의 커리어를 상징하는 경기는 최근 몇 시즌의 큰 대회들이다.</p>
-
-            <h2 id="what-attracts-fans">팬들은 이 선수의 어떤 점에 끌릴까?</h2>
-            <p>드레이퍼는 경기력뿐 아니라 겸손하고 성실한 태도 덕분에 팬층이 두텁다.</p>
-
-            <h2 id="recent-form">요즘 잭 드레이퍼의 경기력 흐름은 어떤가?</h2>
-            <p>최근 몇 시즌 동안 드레이퍼는 빠르게 성장하고 있으며, 큰 대회에서도 안정적인 경기력을 보여주고 있다.</p>
-
-            <h2 id="one-sentence-summary">잭 드레이퍼, 한 문장으로 정리하면?</h2>
-            <p>잭 드레이퍼는 강력한 포핸드와 서브로 ATP 투어를 지배하는 영국의 차세대 스타다.</p>
-          </div>
-
-          <FAQ items={faqs} />
-
-          <CTA />
-        </div>
-      </Article>
-    </div>
-  );
+  return <PlayerArticlePage slug={SLUG} />;
 }
-

@@ -21,8 +21,9 @@ export default function RelatedPosts({ currentSlug, category, tags = [], maxCoun
             if (post.category === category) score += 5; // 같은 카테고리 가점
 
             // 태그 매칭 가점
-            if (tags.length > 0 && post.tags) {
-                const commonTags = tags.filter(tag => post.tags.includes(tag));
+            const postTags = post.tags ?? [];
+            if (tags.length > 0 && postTags.length > 0) {
+                const commonTags = tags.filter(tag => postTags.includes(tag));
                 score += commonTags.length * 2;
             }
 

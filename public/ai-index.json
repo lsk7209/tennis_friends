@@ -3,2343 +3,3428 @@
   "url": "https://www.tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-05-13",
+  "lastUpdated": "2026-05-15",
   "stats": {
-    "totalPages": 466,
+    "totalPages": 471,
     "tools": 64,
-    "articles": 124,
+    "articles": 128,
     "playerProfiles": 269
   },
   "pages": [
     {
       "url": "https://www.tennisfrens.com",
-      "description": "TennisFriends 홈 - 테니스 실력 향상 도구와 가이드",
+      "title": "TennisFriends",
+      "description": "테니스 실력 향상 도구와 가이드",
       "type": "homepage"
     },
     {
       "url": "https://www.tennisfrens.com/utility",
-      "description": "테니스 도구 모음",
+      "title": "테니스 도구 모음",
+      "description": "무료 테니스 진단·계산 도구",
       "type": "index"
     },
     {
       "url": "https://www.tennisfrens.com/blog",
-      "description": "테니스 블로그",
+      "title": "테니스 블로그",
+      "description": "테니스 기술·전략·장비 가이드",
       "type": "index"
     },
     {
       "url": "https://www.tennisfrens.com/players",
-      "description": "테니스 선수 프로필",
+      "title": "테니스 선수 프로필",
+      "description": "ATP·WTA 선수 프로필",
       "type": "index"
     },
     {
       "url": "https://www.tennisfrens.com/tennis-rules-quiz",
-      "description": "테니스 규칙 퀴즈",
+      "title": "테니스 규칙 퀴즈",
+      "description": "테니스 규칙 학습 도구",
       "type": "tool"
     },
     {
       "url": "https://www.tennisfrens.com/about",
+      "title": "TennisFriends 소개",
       "description": "TennisFriends 소개와 운영 기준",
       "type": "static"
     },
     {
       "url": "https://www.tennisfrens.com/contact",
+      "title": "TennisFriends 문의",
       "description": "TennisFriends 문의",
       "type": "static"
     },
     {
       "url": "https://www.tennisfrens.com/privacy",
+      "title": "개인정보 처리방침",
       "description": "개인정보 처리방침",
       "type": "static"
     },
     {
       "url": "https://www.tennisfrens.com/terms",
+      "title": "이용 약관",
       "description": "이용 약관",
       "type": "static"
     },
     {
       "url": "https://www.tennisfrens.com/search",
-      "description": "TennisFriends 검색",
+      "title": "TennisFriends 검색",
+      "description": "사이트 콘텐츠 검색",
       "type": "static"
     },
     {
       "url": "https://www.tennisfrens.com/utility/adult-beginner-roadmap",
+      "title": "adult-beginner-roadmap",
       "description": "테니스 adult-beginner-roadmap 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/apparel-recommendation",
+      "title": "apparel-recommendation",
       "description": "테니스 apparel-recommendation 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/calorie-calculator",
+      "title": "calorie-calculator",
       "description": "테니스 calorie-calculator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/coaching-match",
+      "title": "coaching-match",
       "description": "테니스 coaching-match 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/cooldown-routine-builder",
+      "title": "cooldown-routine-builder",
       "description": "테니스 cooldown-routine-builder 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/court-booking",
+      "title": "court-booking",
       "description": "테니스 court-booking 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/court-conditions",
+      "title": "court-conditions",
       "description": "테니스 court-conditions 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/court-surface-advisor",
+      "title": "court-surface-advisor",
       "description": "테니스 court-surface-advisor 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/doubles-chemistry-test",
+      "title": "doubles-chemistry-test",
       "description": "테니스 doubles-chemistry-test 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/doubles-positioning-simulator",
+      "title": "doubles-positioning-simulator",
       "description": "테니스 doubles-positioning-simulator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/equipment-maintenance-scheduler",
+      "title": "equipment-maintenance-scheduler",
       "description": "테니스 equipment-maintenance-scheduler 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/equipment-recommendation",
+      "title": "equipment-recommendation",
       "description": "테니스 equipment-recommendation 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/fitness-test",
+      "title": "fitness-test",
       "description": "테니스 fitness-test 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/flexibility-test",
+      "title": "flexibility-test",
       "description": "테니스 flexibility-test 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/focus-training",
+      "title": "focus-training",
       "description": "테니스 focus-training 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/forehand-stability-test",
+      "title": "forehand-stability-test",
       "description": "테니스 forehand-stability-test 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/goal-setting",
+      "title": "goal-setting",
       "description": "테니스 goal-setting 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/grip-size-checker",
+      "title": "grip-size-checker",
       "description": "테니스 grip-size-checker 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/hydration-planner",
+      "title": "hydration-planner",
       "description": "테니스 hydration-planner 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/injury-risk",
+      "title": "injury-risk",
       "description": "테니스 injury-risk 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/junior-development-roadmap",
+      "title": "junior-development-roadmap",
       "description": "테니스 junior-development-roadmap 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/match-analyzer",
+      "title": "match-analyzer",
       "description": "테니스 match-analyzer 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/match-recorder",
+      "title": "match-recorder",
       "description": "테니스 match-recorder 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/match-video-review-template",
+      "title": "match-video-review-template",
       "description": "테니스 match-video-review-template 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/matchday-packing-checklist",
+      "title": "matchday-packing-checklist",
       "description": "테니스 matchday-packing-checklist 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/mental-training",
+      "title": "mental-training",
       "description": "테니스 mental-training 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/ntrp-test",
+      "title": "ntrp-test",
       "description": "테니스 ntrp-test 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/nutrition-guide",
+      "title": "nutrition-guide",
       "description": "테니스 nutrition-guide 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/opponent-analyzer",
+      "title": "opponent-analyzer",
       "description": "테니스 opponent-analyzer 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/overgrip-replacement-reminder",
+      "title": "overgrip-replacement-reminder",
       "description": "테니스 overgrip-replacement-reminder 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/partner-compatibility-check",
+      "title": "partner-compatibility-check",
       "description": "테니스 partner-compatibility-check 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/play-style-test",
+      "title": "play-style-test",
       "description": "테니스 play-style-test 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/practice-drill-generator",
+      "title": "practice-drill-generator",
       "description": "테니스 practice-drill-generator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/practice-wall-drill-planner",
+      "title": "practice-wall-drill-planner",
       "description": "테니스 practice-wall-drill-planner 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/price-comparison",
+      "title": "price-comparison",
       "description": "테니스 price-comparison 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/rally-consistency-tracker",
+      "title": "rally-consistency-tracker",
       "description": "테니스 rally-consistency-tracker 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/ranking-calculator",
+      "title": "ranking-calculator",
       "description": "테니스 ranking-calculator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/reaction-test",
+      "title": "reaction-test",
       "description": "테니스 reaction-test 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/recovery-routine-generator",
+      "title": "recovery-routine-generator",
       "description": "테니스 recovery-routine-generator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/return-position-calculator",
+      "title": "return-position-calculator",
       "description": "테니스 return-position-calculator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/serve-placement-mapper",
+      "title": "serve-placement-mapper",
       "description": "테니스 serve-placement-mapper 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/serve-velocity-calculator",
+      "title": "serve-velocity-calculator",
       "description": "테니스 serve-velocity-calculator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/shoe-recommender",
+      "title": "shoe-recommender",
       "description": "테니스 shoe-recommender 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/shoe-wear-tracker",
+      "title": "shoe-wear-tracker",
       "description": "테니스 shoe-wear-tracker 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/shot-selection-trainer",
+      "title": "shot-selection-trainer",
       "description": "테니스 shot-selection-trainer 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/sleep-readiness-check",
+      "title": "sleep-readiness-check",
       "description": "테니스 sleep-readiness-check 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/string-pattern-analyzer",
+      "title": "string-pattern-analyzer",
       "description": "테니스 string-pattern-analyzer 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/string-replacement-reminder",
+      "title": "string-replacement-reminder",
       "description": "테니스 string-replacement-reminder 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/string-tension",
+      "title": "string-tension",
       "description": "테니스 string-tension 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/swing-analyzer",
+      "title": "swing-analyzer",
       "description": "테니스 swing-analyzer 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/tennis-dictionary",
+      "title": "tennis-dictionary",
       "description": "테니스 tennis-dictionary 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/tennis-diet",
+      "title": "tennis-diet",
       "description": "테니스 tennis-diet 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/tennis-goal-streak-tracker",
+      "title": "tennis-goal-streak-tracker",
       "description": "테니스 tennis-goal-streak-tracker 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/tennis-time-availability-planner",
+      "title": "tennis-time-availability-planner",
       "description": "테니스 tennis-time-availability-planner 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/tiebreak-pressure-simulator",
+      "title": "tiebreak-pressure-simulator",
       "description": "테니스 tiebreak-pressure-simulator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/tournament-budget-calculator",
+      "title": "tournament-budget-calculator",
       "description": "테니스 tournament-budget-calculator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/tournament-schedule",
+      "title": "tournament-schedule",
       "description": "테니스 tournament-schedule 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/training-planner",
+      "title": "training-planner",
       "description": "테니스 training-planner 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/travel-pack-planner",
+      "title": "travel-pack-planner",
       "description": "테니스 travel-pack-planner 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/unforced-error-audit",
+      "title": "unforced-error-audit",
       "description": "테니스 unforced-error-audit 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/utr-calculator",
+      "title": "utr-calculator",
       "description": "테니스 utr-calculator 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/warmup-routine-builder",
+      "title": "warmup-routine-builder",
       "description": "테니스 warmup-routine-builder 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
       "url": "https://www.tennisfrens.com/utility/weather-check",
+      "title": "weather-check",
       "description": "테니스 weather-check 도구",
-      "type": "tool"
+      "type": "tool",
+      "category": "utility"
     },
     {
-      "url": "https://www.tennisfrens.com/blog/doubles-partner-signs-common-mistakes",
-      "description": "복식 사인은 복잡할수록 좋은 게 아닙니다. 스테이, 포치, 서브 코스, 사인 취소 기준을 단순하게 맞추는 법입니다.",
-      "type": "article"
+      "url": "https://www.tennisfrens.com/blog/tennis-elbow-string-choice-traps",
+      "title": "엘보가 걱정될 때 스트링 선택 할 때 조심할 함정",
+      "description": "테니스 엘보가 걱정된다면 딱딱한 폴리, 높은 텐션, 오래 된 스트링, 과한 연습량을 함께 점검해야 합니다.",
+      "type": "article",
+      "category": "건강 & 피트니스",
+      "lastModified": "2026-05-15T07:10:00+09:00"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/junior-racket-length-weight-monthly-check",
+      "title": "주니어 라켓 길이와 무게 한 달 점검 노트",
+      "description": "주니어 라켓은 나이표만으로 고르기 어렵습니다. 키, 스윙, 회복, 통증 신호를 한 달 단위로 점검하세요.",
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-15T02:10:00+09:00"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/practice-good-match-collapse-change-timing",
+      "title": "연습 때 잘 치고 경기에서 무너지는 이유, 언제 바꿔야 할까?",
+      "description": "연습 때 잘 치는데 경기에서 무너진다면 기술보다 조건을 바꿀 때일 수 있습니다. 점수, 선택, 루틴을 점검합니다.",
+      "type": "article",
+      "category": "멘탈 트레이닝",
+      "lastModified": "2026-05-14T21:10:00+09:00"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/match-point-pressure-routine-checklist",
+      "title": "매치 포인트 긴장 줄이는 루틴 전 꼭 볼 체크리스트",
+      "description": "매치 포인트 긴장은 없애는 게 아니라 줄이는 것입니다. 호흡, 점수 확인, 큰 타깃, 첫 샷 루틴을 체크하세요.",
+      "type": "article",
+      "category": "멘탈 트레이닝",
+      "lastModified": "2026-05-14T16:10:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/side-step-crossover-difference-2026",
+      "title": "2026년 기준 사이드 스텝과 크로스오버 차이",
       "description": "사이드 스텝은 작은 조정과 균형, 크로스오버는 먼 거리 이동과 빠른 복귀에 강합니다. 코트 상황별 선택 기준입니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-14T06:10:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/return-split-step-timing-record-check",
+      "title": "리턴 스플릿 스텝 타이밍 기록으로 확인하는 방법",
       "description": "리턴 스플릿 스텝은 감보다 기록이 빠릅니다. 상대 임팩트, 착지, 첫 발, 타점을 영상과 체크표로 확인하는 방법입니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-14T01:10:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/serve-placement-over-speed-match-strategy",
+      "title": "서브 속도보다 중요한 코스 전략 실제 경기에서 바꿔본 결과",
       "description": "서브는 빠르기보다 목표 코스와 다음 샷이 중요합니다. 와이드, 바디, T 코스를 경기 상황별로 쓰는 기준을 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-13T20:10:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/backhand-wrist-pain-posture-beginner-intermediate",
+      "title": "백핸드 손목 통증 줄이는 자세, 초보와 중급자의 차이",
       "description": "백핸드 손목 통증은 손목만의 문제가 아니라 준비, 그립 압력, 타점, 회전, 연습량이 함께 만든 부담일 수 있습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "건강 & 피트니스",
+      "lastModified": "2026-05-13T15:10:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/forehand-spin-flat-selection-guide",
+      "title": "포핸드 스핀과 플랫 선택 기준 단계별로 잡는 법",
       "description": "포핸드 스핀과 플랫은 기술 취향이 아니라 위치, 타점, 상대 위치, 점수 상황에 따라 고르는 선택지입니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-13T10:10:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-beginner-30day-practice-order",
+      "title": "테니스 입문 첫 30일 연습 순서, 지금 내 실력에 맞는 선택일까?",
       "description": "테니스 입문 첫 달은 강한 샷보다 준비 자세, 짧은 랠리, 서브 루틴, 기본 규칙을 순서대로 익히는 기간입니다.",
-      "type": "article"
+      "type": "article",
+      "category": "입문 가이드",
+      "lastModified": "2026-05-13T05:10:00+09:00"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/doubles-partner-signs-common-mistakes",
+      "title": "복식 파트너와 사인 정하는 법 자주 나오는 실수",
+      "description": "복식 사인은 복잡할수록 좋은 게 아닙니다. 스테이, 포치, 서브 코스, 사인 취소 기준을 단순하게 맞추는 법입니다.",
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-13T00:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/night-tennis-visibility-timing-guide",
+      "title": "야간 테니스 적응 가이드 — 조명·시야·타이밍 기준",
       "description": "야간 코트에서 공이 늦게 보일 때는 조명, 배경, 준비 타이밍을 함께 조정해야 합니다. 첫 10분 적응 루틴과 경기 운영 기준을 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-12T08:55:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-video-review-checklist",
+      "title": "테니스 영상 촬영 체크리스트 — 각도·삼각대·복습 기준",
       "description": "테니스 영상은 멋진 장면보다 반복 실수를 찾는 도구입니다. 코트 뒤 중앙 각도, 휴대폰 세팅, 10분 복습 기준까지 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-12T03:45:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-elbow-treatment-guide",
+      "title": "테니스 엘보 치료와 예방 — 통증 원인과 재활",
       "description": "테니스 엘보 치료와 예방 — 통증 원인과 재활에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "부상 예방",
+      "lastModified": "2026-05-12"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-string-pattern-16x19-vs-18x20",
+      "title": "스트링 패턴 16x19 vs 18x20 — 차이점과 선택법",
       "description": "스트링 패턴 16x19 vs 18x20 — 차이점과 선택법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-12"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-travel-court-finder-guide",
+      "title": "테니스 여행 코트 찾기 — 출장·휴가 중 예약 기준",
       "description": "출장이나 휴가 중 코트를 잡을 때는 거리보다 예약 확정성, 장비 이동, 샤워·주차, 취소 규정을 먼저 확인해야 합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "여행 가이드",
+      "lastModified": "2026-05-11T22:35:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-club-fee-split-guide",
+      "title": "테니스 동호회 회비 기준 — 대관·공·게스트비 나누기",
       "description": "동호회 회비는 감으로 걷기보다 대관비, 공값, 게스트비, 환불 기준을 분리해야 불필요한 갈등을 줄일 수 있습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-05-11T17:20:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/slice-backhand-control-guide",
+      "title": "슬라이스 백핸드 컨트롤 — 낮고 길게 보내는 기준",
       "description": "슬라이스는 깎는 힘보다 라켓면 안정과 전진 이동이 중요합니다. 낮은 탄도와 깊이를 만드는 순서를 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-11T02:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-restringing-timing-guide",
+      "title": "라켓 리스트링 시기와 방법 — 언제 교체해야 하나",
       "description": "라켓 리스트링 시기와 방법 — 언제 교체해야 하나에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-11"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-overgrip-replacement-guide",
+      "title": "오버그립 교체 주기와 선택법 — 흡수력·두께·소재",
       "description": "오버그립 교체 주기와 선택법 — 흡수력·두께·소재에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-11"
     },
     {
       "url": "https://www.tennisfrens.com/blog/grip-size-check-guide",
+      "title": "그립 사이즈 확인법 — 손목과 팔꿈치 부담 줄이기",
       "description": "그립이 작으면 과하게 쥐고, 크면 라켓 헤드가 늦습니다. 손 크기와 스윙 감각을 함께 확인하세요.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-10T21:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/string-replacement-cycle-guide",
+      "title": "스트링 교체 주기 가이드 — 끊어지기 전 바꿔야 할 때",
       "description": "스트링은 끊어질 때까지 쓰는 소모품이 아닙니다. 텐션 손실과 팔 부담을 기준으로 교체 시점을 정하세요.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-10T16:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/rain-day-indoor-training-guide",
+      "title": "비 오는 날 실내 훈련 — 감각을 잃지 않는 30분 루틴",
       "description": "비 때문에 코트를 못 잡아도 풋워크, 라켓면, 코어 회전은 실내에서 유지할 수 있습니다. 짧고 안전한 루틴입니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-10T11:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tournament-day-food-guide",
+      "title": "대회 당일 식사 가이드 — 속 편한 에너지 관리",
       "description": "대회 날 식사는 특별식이 아니라 소화가 검증된 음식이어야 합니다. 경기 전후 시간대별 선택 기준을 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "건강 & 피트니스",
+      "lastModified": "2026-05-10T06:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/drop-shot-selection-guide",
+      "title": "드롭샷 선택 가이드 — 성공하는 상황과 버릴 상황",
       "description": "드롭샷은 기술보다 상황 판단이 먼저입니다. 상대 위치, 내 균형, 이전 샷 깊이가 맞을 때만 선택하세요.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-10T01:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-shoe-selection-guide",
+      "title": "테니스화 선택 완전 가이드 — 코트별·발 유형별",
       "description": "테니스화 선택 완전 가이드 — 코트별·발 유형별에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-10"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-backhand-error-correction",
+      "title": "백핸드 에러 줄이기 — 교정 포인트와 드릴",
       "description": "백핸드 에러 줄이기 — 교정 포인트와 드릴에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-10"
     },
     {
       "url": "https://www.tennisfrens.com/blog/novak-djokovic",
+      "title": "노박 조코비치: 기록의 파괴자, GOAT",
       "description": "테니스 역사상 가장 위대한 선수. 24회 그랜드 슬램 우승에 빛나는 조코비치의 무결점 플레이와 철저한 자기 관리.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2026-05-10"
     },
     {
       "url": "https://www.tennisfrens.com/blog/lob-defense-transition-guide",
+      "title": "로브 수비 전환 가이드 — 밀릴 때 다시 중립 만들기",
       "description": "로브는 도망가는 샷이 아니라 시간을 되찾는 샷입니다. 높이, 깊이, 회복 위치를 함께 설계해야 합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-09T20:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/return-serve-short-backswing-guide",
+      "title": "서브 리턴 짧은 백스윙 — 빠른 공을 막는 기준",
       "description": "강한 서브를 리턴할 때는 크게 휘두르지 말고 어깨 회전과 라켓면 각도로 깊이를 만드는 것이 우선입니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-09T15:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/match-note-template-guide",
+      "title": "테니스 경기 노트 작성법 — 실력 향상이 보이는 기록",
       "description": "경기 노트는 감상문이 아니라 다음 연습 주제를 뽑는 도구입니다. 실점 패턴과 성공 패턴을 짧게 남기세요.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-09T10:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/recovery-stretching-after-match-guide",
+      "title": "경기 후 회복 스트레칭 — 다음 날 몸을 지키는 순서",
       "description": "경기 후 바로 앉아 쉬면 하체와 허리가 더 굳습니다. 8분 회복 루틴으로 다음 날 통증을 줄여보세요.",
-      "type": "article"
+      "type": "article",
+      "category": "건강 & 피트니스",
+      "lastModified": "2026-05-09T05:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-shoe-court-surface-guide",
+      "title": "테니스화 선택 가이드 — 하드·클레이·올코트 차이",
       "description": "테니스화는 디자인보다 밑창 패턴과 좌우 지지력이 중요합니다. 코트 표면별 선택 기준을 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-09T00:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-forehand-error-correction",
+      "title": "포핸드 에러 줄이기 — 흔한 실수와 교정법",
       "description": "포핸드 에러 줄이기 — 흔한 실수와 교정법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-09"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-serve-practice-routine",
+      "title": "서브 연습 루틴 — 50개 서브로 완성하는 구조화 훈련",
       "description": "서브 연습 루틴 — 50개 서브로 완성하는 구조화 훈련에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-09"
     },
     {
       "url": "https://www.tennisfrens.com/blog/doubles-communication-signal-guide",
+      "title": "복식 신호와 소통 가이드 — 포칭·스테이·스위치",
       "description": "복식은 샷보다 약속이 먼저입니다. 손 신호와 콜 기준을 정하면 파트너가 예측 가능한 움직임을 할 수 있습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-08T19:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/volley-touch-practice-guide",
+      "title": "발리 터치 연습 — 힘 빼고 각도 만드는 법",
       "description": "발리는 스윙을 크게 하는 기술이 아니라 라켓면을 빌려주는 기술입니다. 손목을 잠그고 발로 거리감을 맞추세요.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-08T14:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/two-handed-backhand-stability-guide",
+      "title": "투핸드 백핸드 안정화 — 왼손 주도와 회전 기준",
       "description": "투핸드 백핸드는 두 손으로 미는 기술이 아니라 비주도 손과 몸통 회전이 먼저 움직이는 기술입니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-08T09:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/forehand-topspin-home-drill-guide",
+      "title": "포핸드 탑스핀 홈드릴 — 코트 밖에서 감각 만들기",
       "description": "코트 시간이 부족해도 라켓면 각도, 와이퍼 스윙, 임팩트 앞 위치는 집에서 충분히 점검할 수 있습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-08T04:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-ball-machine-drills",
+      "title": "볼머신 활용 훈련법 — 반복·패턴·실전 드릴",
       "description": "볼머신 활용 훈련법 — 반복·패턴·실전 드릴에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-08"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-wall-practice-drills",
+      "title": "벽치기 테니스 훈련 — 혼자 하는 효과적인 연습법",
       "description": "벽치기 테니스 훈련 — 혼자 하는 효과적인 연습법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-08"
     },
     {
       "url": "https://www.tennisfrens.com/blog/serve-routine-20-minute-guide",
+      "title": "20분 서브 루틴 — 토스·코스·세컨드 서브 정리",
       "description": "서브 연습은 많이 치는 것보다 같은 토스와 같은 준비 동작을 유지하는 것이 먼저입니다. 20분 루틴으로 압축했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-07T23:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-lesson-before-after-practice-guide",
+      "title": "레슨 전후 연습 가이드 — 배운 기술을 몸에 남기는 법",
       "description": "레슨은 듣는 시간이 아니라 반복 기준을 얻는 시간입니다. 전후 15분 루틴만 바꿔도 배운 기술의 잔존율이 높아집니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-07T18:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/adult-beginner-first-racket-guide",
+      "title": "성인 입문 첫 라켓 가이드 — 무게·헤드·그립 기준",
       "description": "성인 입문자는 인기 모델보다 오래 다치지 않고 휘두를 수 있는 라켓을 골라야 합니다. 첫 구매 기준을 단계별로 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "입문 가이드",
+      "lastModified": "2026-05-07T13:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/beginner-match-first-win-plan",
+      "title": "초보 첫 승 플랜 — 화려한 샷보다 덜 무너지는 법",
       "description": "첫 승은 위너 수보다 범실 관리에서 나옵니다. 서브 인, 깊은 리턴, 안전한 코스 선택만으로 승률이 달라집니다.",
-      "type": "article"
+      "type": "article",
+      "category": "멘탈 트레이닝",
+      "lastModified": "2026-05-07T08:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-practice-planning",
+      "title": "효과적인 테니스 연습 계획 수립 — 주간·월간 플랜",
       "description": "효과적인 테니스 연습 계획 수립 — 주간·월간 플랜에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-07"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-video-analysis-guide",
+      "title": "내 경기 영상 분석법 — 포인트 패턴·약점 파악",
       "description": "내 경기 영상 분석법 — 포인트 패턴·약점 파악에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전략 가이드",
+      "lastModified": "2026-05-07"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-ball-selection-guide-korea",
+      "title": "테니스공 선택 가이드 — 코트와 수준별 차이",
       "description": "테니스공은 브랜드보다 코트 표면, 압력 유지, 연습 목적에 맞춰 골라야 합니다. 동호회에서 바로 쓸 기준을 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-05-06T22:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/weekend-tournament-checklist",
+      "title": "주말 테니스 대회 체크리스트 — 준비물과 경기 운영",
       "description": "대회 당일 실력만큼 중요한 것은 에너지 관리, 장비 예비, 대기 시간 루틴입니다. 실전 체크리스트로 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "경기 분석",
+      "lastModified": "2026-05-06T17:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/serve-speed-without-injury",
+      "title": "서브 속도 올리기 — 어깨 부담 없이 힘 전달하기",
       "description": "서브 속도는 팔 힘보다 토스 위치, 하체 반동, 라켓 헤드 가속의 연결에서 나옵니다. 부상 위험을 낮추는 순서가 중요합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 레슨",
+      "lastModified": "2026-05-06T12:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/doubles-positioning-common-errors",
+      "title": "복식 포지션 실수 — 파트너를 힘들게 하는 움직임",
       "description": "복식 실점의 상당수는 기술보다 위치 문제입니다. 전위와 후위가 언제 좁히고 벌려야 하는지 기준을 세워보세요.",
-      "type": "article"
+      "type": "article",
+      "category": "경기 분석",
+      "lastModified": "2026-05-06T07:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/clay-season-preparation-korea",
+      "title": "클레이 시즌 준비 — 미끄러짐과 긴 랠리에 적응하기",
       "description": "클레이 코트에서는 강타보다 높이, 회전, 회복 위치가 우선입니다. 한국 동호인이 적용할 준비 루틴을 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 레슨",
+      "lastModified": "2026-05-06T02:00:00+09:00"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-post-match-recovery",
+      "title": "경기 후 회복 루틴 — 쿨다운·아이싱·수면",
       "description": "경기 후 회복 루틴 — 쿨다운·아이싱·수면에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "건강 가이드",
+      "lastModified": "2026-05-06"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-pre-match-routine",
+      "title": "경기 전 루틴 완전 가이드 — 워밍업·멘탈 준비",
       "description": "경기 전 루틴 완전 가이드 — 워밍업·멘탈 준비에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "멘탈 트레이닝",
+      "lastModified": "2026-05-06"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-hydration-guide",
+      "title": "테니스 수분 보충 완전 가이드 — 경기 전·중·후",
       "description": "테니스 수분 보충 완전 가이드 — 경기 전·중·후에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "건강 가이드",
+      "lastModified": "2026-05-05"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-nutrition-diet-guide",
+      "title": "테니스 선수를 위한 영양 식단 가이드",
       "description": "테니스 선수를 위한 영양 식단 가이드에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "건강 가이드",
+      "lastModified": "2026-05-05"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-shoulder-strengthening",
+      "title": "테니스 어깨 강화 운동 — 로테이터 커프·부상 예방",
       "description": "테니스 어깨 강화 운동 — 로테이터 커프·부상 예방에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "부상 예방",
+      "lastModified": "2026-05-04"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-core-exercise-guide",
+      "title": "테니스를 위한 코어 운동 — 회전력·안정성·파워",
       "description": "테니스를 위한 코어 운동 — 회전력·안정성·파워에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-04"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-doubles-receive-formation",
+      "title": "복식 리시브 포메이션 — I포메이션·호주 포메이션",
       "description": "복식 리시브 포메이션 — I포메이션·호주 포메이션에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "복식 전략",
+      "lastModified": "2026-05-03"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-doubles-poach-strategy",
+      "title": "복식 포치 전략 완전 가이드 — 타이밍·시그널·포지션",
       "description": "복식 포치 전략 완전 가이드 — 타이밍·시그널·포지션에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "복식 전략",
+      "lastModified": "2026-05-03"
     },
     {
       "url": "https://www.tennisfrens.com/blog/top-5-tennis-districts-seoul",
+      "title": "서울 테니스 생활권 TOP 5 — 동호회·레슨·퇴근 후 코트",
       "description": "송파, 강남·서초, 마포·용산, 양천, 노원·도봉권의 테니스 생활권 장단점과 입문자 선택 기준.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 생활권",
+      "lastModified": "2026-05-03"
     },
     {
       "url": "https://www.tennisfrens.com/blog/jannik-sinner",
+      "title": "야닉 시너: 이탈리아의 붉은 여우",
       "description": "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2026-05-03"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-ace-serve-placement",
+      "title": "에이스 서브 코스 공략 — T존·와이드·보디 서브",
       "description": "에이스 서브 코스 공략 — T존·와이드·보디 서브에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-02"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-serve-toss-technique",
+      "title": "서브 토스 완벽하게 — 높이·위치·일관성 잡기",
       "description": "서브 토스 완벽하게 — 높이·위치·일관성 잡기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-02"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-footwork-training",
+      "title": "테니스 풋워크 훈련 — 사이드스텝·크로스스텝·리커버리",
       "description": "테니스 풋워크 훈련 — 사이드스텝·크로스스텝·리커버리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-05-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-split-step-guide",
+      "title": "스플릿 스텝 완전 정복 — 타이밍·리듬·발 위치",
       "description": "스플릿 스텝 완전 정복 — 타이밍·리듬·발 위치에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-ranking-improvement-plan",
+      "title": "테니스 랭킹 올리기 — 토너먼트 선택과 포인트 전략",
       "description": "테니스 랭킹 올리기 — 토너먼트 선택과 포인트 전략에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전략 가이드",
+      "lastModified": "2026-04-25"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-match-nerves-control",
+      "title": "테니스 경기 긴장감 컨트롤 — 루틴·호흡·집중력",
       "description": "테니스 경기 긴장감 컨트롤 — 루틴·호흡·집중력에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "멘탈 트레이닝",
+      "lastModified": "2026-04-25"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-hard-court-tactics",
+      "title": "하드 코트 전술 완전 가이드 — 바운드·포지셔닝·템포",
       "description": "하드 코트 전술 완전 가이드 — 바운드·포지셔닝·템포에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-04-24"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-second-serve-strategy",
+      "title": "세컨드 서브 전략 — 안정성과 파워의 균형 찾기",
       "description": "세컨드 서브 전략 — 안정성과 파워의 균형 찾기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-23"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-forehand-inside-out",
+      "title": "인사이드아웃 포핸드 완전 정복 — 코스·파워·전술",
       "description": "인사이드아웃 포핸드 완전 정복 — 코스·파워·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-23"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-clay-court-tactics",
+      "title": "클레이 코트 전술 완전 가이드 — 스핀·슬라이딩·포지셔닝 | TennisFriends",
       "description": "클레이 코트 전술 완전 가이드 — 스핀·슬라이딩·포지셔닝에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-23"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-kick-serve-technique",
+      "title": "킥 서브 완전 마스터 가이드 — 스핀·바운드·구사법 | TennisFriends",
       "description": "킥 서브 완전 마스터 가이드 — 스핀·바운드·구사법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-23"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-mental-pressure-points",
+      "title": "중요한 포인트에서 멘탈 강화법 — 30-40·타이브레이크·챔피언십 포인트 | TennisFriends",
       "description": "중요한 포인트에서 멘탈 강화법 — 30-40·타이브레이크·챔피언십 포인트에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-23"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-net-approach-shots",
+      "title": "어프로치샷 마스터 — 네트로 나가는 타이밍과 코스 | TennisFriends",
       "description": "어프로치샷 마스터 — 네트로 나가는 타이밍과 코스에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-23"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-return-of-serve-guide",
+      "title": "서브 리턴 완전 가이드 — 위치·타이밍·전술 | TennisFriends",
       "description": "서브 리턴 완전 가이드 — 위치·타이밍·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-23"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-drop-shot-timing",
+      "title": "드롭샷 완벽 타이밍 — 언제 어떻게 구사하는가",
       "description": "드롭샷 완벽 타이밍 — 언제 어떻게 구사하는가에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-22"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-lob-shot-guide",
+      "title": "로브샷 마스터 가이드 — 수비 로브·공격 로브·타이밍",
       "description": "로브샷 마스터 가이드 — 수비 로브·공격 로브·타이밍에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-22"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-beginner-first-month",
+      "title": "테니스 입문 첫 한 달 — 초보자가 꼭 배워야 할 기초",
       "description": "테니스 입문 첫 한 달 — 초보자가 꼭 배워야 할 기초에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "초보자 가이드",
+      "lastModified": "2026-04-21"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-grass-court-strategy",
+      "title": "잔디 코트 전략 완전 가이드 — 낮은 바운드·서브·네트 전술",
       "description": "잔디 코트 전략 완전 가이드 — 낮은 바운드·서브·네트 전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-04-21"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-injury-prevention-stretching",
+      "title": "테니스 부상 예방 스트레칭 — 어깨·팔꿈치·무릎 보호",
       "description": "테니스 부상 예방 스트레칭 — 어깨·팔꿈치·무릎 보호에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "부상 예방",
+      "lastModified": "2026-04-20"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-fitness-training-guide",
+      "title": "테니스 체력 훈련 완전 가이드 — 스피드·근력·지구력",
       "description": "테니스 체력 훈련 완전 가이드 — 스피드·근력·지구력에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-04-20"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-serve-and-volley-tactics",
+      "title": "서브앤발리 전술 가이드 — 잔디·실내 코트 공략법",
       "description": "서브앤발리 전술 가이드 — 잔디·실내 코트 공략법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-04-19"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-grip-types-guide",
+      "title": "테니스 그립 종류 완전 정리 — 이스턴·웨스턴·컨티넨탈",
       "description": "테니스 그립 종류 완전 정리 — 이스턴·웨스턴·컨티넨탈에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-19"
     },
     {
       "url": "https://www.tennisfrens.com/blog/taylor-fritz",
+      "title": "테일러 프리츠: 미국 테니스의 자존심",
       "description": "강력한 화력으로 상대를 찍어 누르는 하드 히터. 인디언 웰스 우승으로 증명한 프리츠의 저력.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2026-04-19"
     },
     {
       "url": "https://www.tennisfrens.com/blog/frances-tiafoe",
+      "title": "프란시스 티아포 — 에너지와 창의로 코트를 달구다",
       "description": "폭발적인 스텝과 감각적인 터치, 변주를 두려워하지 않는 전진으로 흐름을 뒤집는 프란시스 티아포의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2026-04-19"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-string-tension-selection",
+      "title": "스트링 선택 완전 가이드 — 폴리·나일론·텐션별 특성",
       "description": "스트링 선택 완전 가이드 — 폴리·나일론·텐션별 특성에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-04-18"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-tiebreak-strategy",
+      "title": "타이브레이크 전략 완전 가이드 — 멘탈·서브 순서·포인트 관리",
       "description": "타이브레이크 전략 완전 가이드 — 멘탈·서브 순서·포인트 관리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-04-18"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-doubles-communication",
+      "title": "복식 파트너 소통법 — 시그널·포메이션·전술 결정",
       "description": "복식 파트너 소통법 — 시그널·포메이션·전술 결정에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "복식 전략",
+      "lastModified": "2026-04-17"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-topspin-forehand-guide",
+      "title": "탑스핀 포핸드 완전 분석 — 회전·파워·코스 컨트롤",
       "description": "탑스핀 포핸드 완전 분석 — 회전·파워·코스 컨트롤에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article"
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-04-17"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-racket-recommendation-guide-2026",
+      "title": "2026년 테니스 라켓 추천 가이드 — 초보자부터 상급자까지 BEST 5",
       "description": "2026년 최신 테니스 라켓 트렌드와 추천 모델 TOP 5를 소개합니다. 윌슨 블레이드 v9, 요넥스 이존, 바볼랏 퓨어드라이브 등 인기 라켓 비교 분석.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 장비",
+      "lastModified": "2026-03-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-starting-complete-guide",
+      "title": "테니스 시작하기 완벽 가이드 2026 — 비용, 준비물, 레슨, 용어 총정리",
       "description": "테린이 탈출을 위한 A to Z. 라켓 구매 비용부터 레슨비, 필수 용어, 코트 매너, 그리고 1년 성장 로드맵까지.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 초보자",
+      "lastModified": "2026-02-20"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-lesson-cost-guide",
+      "title": "2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교",
       "description": "테니스 레슨 비용이 궁금하신가요? 서울, 경기 및 전국 평균 실내/실외 테니스장 레슨비를 1:1, 그룹 레슨별로 상세하게 비교해드립니다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 초보자",
+      "lastModified": "2026-02-10"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-string-guide",
+      "title": "테니스 스트링 완전 가이드 — 폴리 vs 인조쉽 vs 천연쉽 및 텐션 선택법 2026",
       "description": "라켓 성능의 50%는 스트링이 결정합니다. 폴리에스터, 인조쉽, 멀티필라멘트, 천연쉽의 장단점을 비교하고 나에게 맞는 텐션 찾는 법을 알려드립니다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 장비",
+      "lastModified": "2026-02-05"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-post-exercise-nutrition",
+      "title": "테니스 영양학: 경기 후 45분, 기적의 회복 골든타임",
       "description": "테니스 경기 후 근육 회복과 피로 해소를 위한 영양 섭취 전략. 탄수화물/단백질 비율, 전해질 조절, 관절 건강을 위한 영양소까지 완벽 정리.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 영양",
+      "lastModified": "2026-01-20"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-elbow-prevention-guide",
+      "title": "테니스 엘보 예방과 재활 가이드 — 통증 없이 운동하는 법",
       "description": "테니스 동호인의 50%가 겪는다는 테니스 엘보. 팔꿈치 바깥쪽 통증의 원인부터 재활 운동, 라켓/스트링 세팅 변경 팁까지 완벽하게 정리했습니다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 부상",
+      "lastModified": "2026-01-15"
     },
     {
       "url": "https://www.tennisfrens.com/blog/carlos-alcaraz",
+      "title": "카를로스 알카라스 — ",
       "description": "공격적 베이스라인과 변주로 흐름을 장악하는 카를로스 알카라스의 성장, 스타일, 인간미와 라이벌 이야기를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/autumn-tennis-rhythm-guide",
+      "title": "가을 테니스 리듬 되찾기 | 스윙·풋워크·지역별 전략 완벽 가이드",
       "description": "가을 테니스 시즌에 흔들리는 리듬과 스윙 타이밍을 잡는 법. 지역별 코트 전략, 풋워크 훈련 루틴, 스트링 세팅 팁까지 한눈에 정리....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 컨디셔닝",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/backhand-accuracy-full-guide",
+      "title": "백핸드 정확도 향상 완전 가이드 | 원핸드·투핸드 타점·라켓면·리듬",
       "description": "백핸드 정확도를 높이려면 힘이 아니라 타점과 각도를 조정해야 한다. 원핸드·투핸드별 교정 루틴, 지역 코트별 전략, 20분 감각 회복 훈련까지....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 백핸드",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/rainy-day-tennis-tips-guide",
+      "title": "비 오는 날 테니스 루틴 | 감각 유지·실내 훈련·장비 관리법 완전 가이드",
       "description": "비 오는 날 테니스 감각 유지법 6가지. 실내 대체 훈련, 스트링 관리, 리듬 감각 훈련까지 완벽 정리....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 경기",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/serve-return-prediction-guide",
+      "title": "테니스 서브 리턴 완전정복 | 토스 읽기·첫 스텝 타이밍·라켓 각도",
       "description": "서브 리턴은 예측의 기술이다. 토스 패턴, 발 리듬, 라켓 준비각, 코트별 리턴 전략과 훈련 루틴까지 완전 정리....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 서브",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-advanced-pattern-analysis",
+      "title": "테니스 상급자의 경기 읽기 — 상대 패턴 분석과 카운터 전략 | 흐름을 읽고 이기는 플레이의 심리학",
       "description": "상급자는 공을 치지 않는다, 상대를 읽는다. 패턴 분석과 카운터 전략이 진짜 승부의 기술이다....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 상급자",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-backhand-technique-guide",
+      "title": "테니스 백핸드의 기술 — 왼손의 리드로 완성하는 정확한 임팩트",
       "description": "백핸드는 힘이 아니라 밸런스의 기술이다. 왼손이 리드하고 오른손이 따라올 때 정확도와 파워가 동시에 완성된다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 백핸드",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-beginner-30day-growth-plan",
+      "title": "테니스 초보자 30일 성장 플랜 | 기초부터 경기 감각까지 체계적인 로드맵",
       "description": "초보자가 30일 만에 기초를 다지고 실제 경기 감각을 익히는 완벽한 성장 플랜. 매일 30분, 단계별 훈련 프로그램....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 초보자",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-beginner-30day-training-plan",
+      "title": "테니스 초보자 30일 훈련 플랜 | 기초부터 경기 감각까지 체계적인 로드맵",
       "description": "테니스에 처음 입문한 초보자를 위한 30일 훈련 프로그램. 매일 30분씩 투자하여 기초 기술부터 실제 경기 감각까지 단계적으로 습득하세요....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 초보자",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-doubles-strategy-guide",
-      "description": "복식은 기술이 아니라 '조화'의 경기다. 상대보다 먼저 '팀워크'를 완성할 때 비로소 승리가 시작된다. 포지션, 커뮤니케이션, 전략의 모든 것....",
-      "type": "article"
+      "title": "복식 경기 전략 완전 가이드 | 조화·커뮤니케이션·포지션·팀워크로 승부하는 듀오 플레이",
+      "description": "복식은 기술이 아니라 ",
+      "type": "article",
+      "category": "테니스 복식",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-doubles-teamwork-strategy",
+      "title": "테니스 복식의 팀워크 전략 — 호흡·시선·커뮤니케이션으로 완성하는 듀오 플레이",
       "description": "복식은 기술이 아니라 호흡의 경기다. 시선, 커뮤니케이션, 포지션이 하나로 맞을 때 비로소 승리가 시작된다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 복식",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-etiquette-and-manners",
-      "description": "테니스의 진짜 실력은 스윙이 아니라 '에티켓'에서 드러난다. 코트 매너가 경기력과 인성을 동시에 높이는 이유와 실천 방법....",
-      "type": "article"
+      "title": "테니스 코트 에티켓과 매너 | 진짜 실력을 보여주는 포츠맨십 기술",
+      "description": "테니스의 진짜 실력은 스윙이 아니라 ",
+      "type": "article",
+      "category": "테니스 코트",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-footwork-balance-training-guide",
+      "title": "테니스 풋워크 밸런스 훈련 | 하체 중심 리듬·균형 이동 완전정복",
       "description": "테니스 풋워크 밸런스 향상 루틴. 하체 중심 이동과 리듬 훈련, 코트별 발 스텝 전략까지 완벽 가이드....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 풋워크",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-footwork-science",
+      "title": "테니스 풋워크의 과학 — 발의 리듬이 경기의 리듬을 만든다",
       "description": "풋워크는 테니스의 심장이다. 발의 리듬이 곧 경기의 리듬이며, 좋은 스윙은 좋은 발에서 시작된다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 풋워크",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-forehand-impact-timing-guide",
+      "title": "테니스 포핸드 임팩트 완전 정복 | 타점·스윙 리듬·회전 타이밍 가이드",
       "description": "포핸드 임팩트 타이밍, 라켓 각도, 하체 리듬 조정까지 완전 정리. 코트별 포핸드 전략과 실전 훈련 루틴까지 한눈에....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 포핸드",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-injury-prevention-full-guide",
+      "title": "테니스 부상 예방 루틴 | 10분 워밍업·스트레칭·쿨다운 완전 가이드",
       "description": "테니스 부상은 예방이 최선이다. 어깨·무릎·손목을 지키는 10분 워밍업, 스트레칭, 쿨다운 루틴으로 안전하게 테니스를 즐기세요....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 부상",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-injury-prevention-recovery",
+      "title": "테니스 부상 예방과 회복 루틴 — 어깨·무릎·손목을 지키는 과학적 관리법",
       "description": "부상은 실력이 아니라 루틴의 문제다. 어깨·무릎·손목을 지키는 습관만 만들어도 경기력은 2배로 오래간다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 부상",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-inmatch-condition-management",
-      "description": "테니스는 체력보다 '에너지 분배'의 싸움이다. 집중력과 리듬을 끝까지 유지하는 루틴이 승부를 결정한다.",
-      "type": "article"
+      "title": "테니스 경기 중 컨디션 유지법 — 체력과 집중력을 끝까지 지키는 루틴",
+      "description": "테니스는 체력보다 ",
+      "type": "article",
+      "category": "테니스 경기",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-intermediate-match-strategy",
-      "description": "중급자는 기술로는 충분하지 않다. '개인별 리듬 조절'과 '기술'이 진짜 승부의 기술이다. 상대 패턴 읽기와 전략적 플레이....",
-      "type": "article"
+      "title": "테니스 중급자 경기 전략 | 개인별 리듬 조절·기술로 승부하는 플레이",
+      "description": "중급자는 기술로는 충분하지 않다. ",
+      "type": "article",
+      "category": "테니스 중급자",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-racket-selection-guide",
+      "title": "테니스 라켓 선택 가이드 | 무게·밸런스·스트링 텐션으로 결정되는 퍼포먼스 차이",
       "description": "라켓은 단순한 장비가 아니라 당신의 스윙을 기억하는 파트너입니다. 무게, 밸런스, 텐션으로 퍼포먼스를 결정하는 선택 가이드....",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 라켓",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-serve-speed-science",
+      "title": "테니스 서브 속도의 과학 — 파워보다 타이밍이 만든다",
       "description": "서브는 힘이 아니라 타이밍이다. 근육의 순서, 무게 이동, 호흡의 리듬이 속도를 결정한다.",
-      "type": "article"
+      "type": "article",
+      "category": "테니스 서브",
+      "lastModified": "2025-11-01"
     },
     {
       "url": "https://www.tennisfrens.com/blog/stefanos-tsitsipas",
+      "title": "스테파노스 치치파스: 그리스 조각상의 테니스",
       "description": "긴 머리를 휘날리며 코트를 누비는 그리스의 신. 강력한 포핸드와 네트 플레이를 겸비한 치치파스의 스타일.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-10-20"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tommy-paul",
+      "title": "토미 폴: 기민한 미국의 테크니션",
       "description": "빠른 발과 영리한 경기 운영. 미국 테니스의 황금세대를 이끄는 토미 폴의 다재다능함.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-10-18"
     },
     {
       "url": "https://www.tennisfrens.com/blog/alex-de-minaur",
+      "title": "알렉스 드 미노 — 스피드와 담대함으로 시간을 훔치는 기술",
       "description": "폭발적인 풋워크와 끈질긴 수비·카운터로 리듬을 빼앗는 알렉스 드 미노의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-10-08"
     },
     {
       "url": "https://www.tennisfrens.com/blog/hubert-hurkacz",
+      "title": "후베르트 후르카츠 — 탄력과 절제로 설계하는 현대형 서브&발리",
       "description": "거대한 스윙이 아니라 정교한 타이밍과 균형으로 점수를 쌓는 후베르트 후르카츠의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-10-02"
     },
     {
       "url": "https://www.tennisfrens.com/blog/casper-ruud",
+      "title": "카스페르 루드 — 점토 위에서 증명한 질서와 끈기",
       "description": "꾸준함과 규율로 흐름을 쌓는 카스페르 루드의 성장 배경, 경기 스타일, 인간적인 면모와 라이벌 이야기를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-09-29"
     },
     {
       "url": "https://www.tennisfrens.com/blog/daniil-medvedev",
+      "title": "다닐 메드베데프 — 각도와 깊이로 짜는 지공의 미학",
       "description": "낮은 탄도로 깊이를 누적하고, 리턴과 코트 포지셔닝으로 상대의 선택지를 지우는 다닐 메드베데프의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-09-21"
     },
     {
       "url": "https://www.tennisfrens.com/blog/ben-shelton",
+      "title": "벤 쉘튼 — 폭발적 서브와 대담한 전진이 만든 신세대의 속도",
       "description": "좌손 서브의 파괴력과 대담한 전진, 감각적인 드롭과 발리를 섞어 흐름을 뒤집는 벤 쉘튼의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-09-18"
     },
     {
       "url": "https://www.tennisfrens.com/blog/andrey-rublev",
+      "title": "안드레이 루블레프 — 불꽃 같은 포핸드, 절제된 규율",
       "description": "강력한 포핸드와 끊임없는 전진 의지로 랠리의 톤을 올리는 안드레이 루블레프의 성장, 스타일, 인간미와 과제를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-09-07"
     },
     {
       "url": "https://www.tennisfrens.com/blog/grigor-dimitrov",
+      "title": "그리고르 디미트로프 — 우아함과 근성을 다시 정의한 리바이벌",
       "description": "원핸드 백핸드의 미학과 노련한 전술, 성숙한 멘탈로 커리어의 두 번째 절정을 만드는 그리고르 디미트로프의 성장, 스타일, 인간적 면모를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-08-27"
     },
     {
       "url": "https://www.tennisfrens.com/blog/alexander-zverev",
+      "title": "알렉산더 즈베레프 — 균형과 리듬으로 구축한 장기전의 기술",
       "description": "길고 무거운 랠리에서 균형을 잃지 않는 알렉산더 즈베레프의 성장, 플레이 철학, 인간적인 면모와 라이벌 이야기를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-08-23"
     },
     {
       "url": "https://www.tennisfrens.com/blog/holger-rune",
+      "title": "홀거 루네 — 불꽃과 계산 사이의 대담함",
       "description": "공격적인 리턴과 예측 불가한 변주로 흐름을 흔드는 홀거 루네의 성장, 스타일, 인간적인 면모와 과제를 한 편으로.",
-      "type": "article"
+      "type": "article",
+      "category": "선수 프로필",
+      "lastModified": "2025-08-11"
     },
     {
       "url": "https://www.tennisfrens.com/players/adrian-mannarino",
+      "title": "adrian-mannarino",
       "description": "테니스 선수 adrian-mannarino 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/ajla-tomljanovic",
+      "title": "ajla-tomljanovic",
       "description": "테니스 선수 ajla-tomljanovic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alejandro-davidovich-fokina",
+      "title": "alejandro-davidovich-fokina",
       "description": "테니스 선수 alejandro-davidovich-fokina 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alejandro-tabilo",
+      "title": "alejandro-tabilo",
       "description": "테니스 선수 alejandro-tabilo 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/aleksandar-vukic",
+      "title": "aleksandar-vukic",
       "description": "테니스 선수 aleksandar-vukic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alex-blockx",
+      "title": "alex-blockx",
       "description": "테니스 선수 alex-blockx 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alex-de-minaur",
+      "title": "alex-de-minaur",
       "description": "테니스 선수 alex-de-minaur 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alex-michelsen",
+      "title": "alex-michelsen",
       "description": "테니스 선수 alex-michelsen 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alex-ritschard",
+      "title": "alex-ritschard",
       "description": "테니스 선수 alex-ritschard 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alexander-blockx",
+      "title": "alexander-blockx",
       "description": "테니스 선수 alexander-blockx 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alexander-bublik",
+      "title": "alexander-bublik",
       "description": "테니스 선수 alexander-bublik 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alexander-shevchenko",
+      "title": "alexander-shevchenko",
       "description": "테니스 선수 alexander-shevchenko 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alexander-zverev",
+      "title": "alexander-zverev",
       "description": "테니스 선수 alexander-zverev 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alexandra-eala",
+      "title": "alexandra-eala",
       "description": "테니스 선수 alexandra-eala 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alexandre-muller",
+      "title": "alexandre-muller",
       "description": "테니스 선수 alexandre-muller 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alexei-popyrin",
+      "title": "alexei-popyrin",
       "description": "테니스 선수 alexei-popyrin 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alibek-kachmazov",
+      "title": "alibek-kachmazov",
       "description": "테니스 선수 alibek-kachmazov 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/alycia-parks",
+      "title": "alycia-parks",
       "description": "테니스 선수 alycia-parks 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/amanda-anisimova",
+      "title": "amanda-anisimova",
       "description": "테니스 선수 amanda-anisimova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/anastasia-potapova",
+      "title": "anastasia-potapova",
       "description": "테니스 선수 anastasia-potapova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/andrey-rublev",
+      "title": "andrey-rublev",
       "description": "테니스 선수 andrey-rublev 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/andy-murray",
+      "title": "andy-murray",
       "description": "테니스 선수 andy-murray 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/andy-roddick",
+      "title": "andy-roddick",
       "description": "테니스 선수 andy-roddick 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/angelique-kerber",
+      "title": "angelique-kerber",
       "description": "테니스 선수 angelique-kerber 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/anhelina-kalinina",
+      "title": "anhelina-kalinina",
       "description": "테니스 선수 anhelina-kalinina 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/anna-bondar",
+      "title": "anna-bondar",
       "description": "테니스 선수 anna-bondar 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/anna-kalinskaya",
+      "title": "anna-kalinskaya",
       "description": "테니스 선수 anna-kalinskaya 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/arantxa-rus",
+      "title": "arantxa-rus",
       "description": "테니스 선수 arantxa-rus 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/arthur-fils",
+      "title": "arthur-fils",
       "description": "테니스 선수 arthur-fils 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/arthur-landercknech",
+      "title": "arthur-landercknech",
       "description": "테니스 선수 arthur-landercknech 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/aryna-sabalenka",
+      "title": "aryna-sabalenka",
       "description": "테니스 선수 aryna-sabalenka 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/ashleigh-barty",
+      "title": "ashleigh-barty",
       "description": "테니스 선수 ashleigh-barty 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/ashlyn-krueger",
+      "title": "ashlyn-krueger",
       "description": "테니스 선수 ashlyn-krueger 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/aslan-karatsev",
+      "title": "aslan-karatsev",
       "description": "테니스 선수 aslan-karatsev 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/barbora-krejcikova",
+      "title": "barbora-krejcikova",
       "description": "테니스 선수 barbora-krejcikova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/beatriz-haddad-maia",
+      "title": "beatriz-haddad-maia",
       "description": "테니스 선수 beatriz-haddad-maia 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/belinda-bencic",
+      "title": "belinda-bencic",
       "description": "테니스 선수 belinda-bencic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/ben-shelton",
+      "title": "ben-shelton",
       "description": "테니스 선수 ben-shelton 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/bianca-andreescu",
+      "title": "bianca-andreescu",
       "description": "테니스 선수 bianca-andreescu 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/billy-harris",
+      "title": "billy-harris",
       "description": "테니스 선수 billy-harris 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/borna-coric",
+      "title": "borna-coric",
       "description": "테니스 선수 borna-coric 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/botic-van-de-zandschulp",
+      "title": "botic-van-de-zandschulp",
       "description": "테니스 선수 botic-van-de-zandschulp 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/brandon-nakashima",
+      "title": "brandon-nakashima",
       "description": "테니스 선수 brandon-nakashima 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/brenda-fruhvirtova",
+      "title": "brenda-fruhvirtova",
       "description": "테니스 선수 brenda-fruhvirtova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/cameron-norrie",
+      "title": "cameron-norrie",
       "description": "테니스 선수 cameron-norrie 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/camila-giorgi",
+      "title": "camila-giorgi",
       "description": "테니스 선수 camila-giorgi 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/camilo-ugo-carabelli",
+      "title": "camilo-ugo-carabelli",
       "description": "테니스 선수 camilo-ugo-carabelli 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/carlos-alcaraz",
+      "title": "carlos-alcaraz",
       "description": "테니스 선수 carlos-alcaraz 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/carlos-taberner",
+      "title": "carlos-taberner",
       "description": "테니스 선수 carlos-taberner 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/caroline-garcia",
+      "title": "caroline-garcia",
       "description": "테니스 선수 caroline-garcia 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/caroline-garcia-legacy",
+      "title": "caroline-garcia-legacy",
       "description": "테니스 선수 caroline-garcia-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/caroline-wozniacki",
+      "title": "caroline-wozniacki",
       "description": "테니스 선수 caroline-wozniacki 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/casper-ruud",
+      "title": "casper-ruud",
       "description": "테니스 선수 casper-ruud 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/christopher-eubanks",
+      "title": "christopher-eubanks",
       "description": "테니스 선수 christopher-eubanks 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/chun-hsin-tseng",
+      "title": "chun-hsin-tseng",
       "description": "테니스 선수 chun-hsin-tseng 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/clara-burel",
+      "title": "clara-burel",
       "description": "테니스 선수 clara-burel 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/clara-tauson",
+      "title": "clara-tauson",
       "description": "테니스 선수 clara-tauson 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/clervie-ngounoue",
+      "title": "clervie-ngounoue",
       "description": "테니스 선수 clervie-ngounoue 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/coco-gauff",
+      "title": "coco-gauff",
       "description": "테니스 선수 coco-gauff 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/coleman-wong",
+      "title": "coleman-wong",
       "description": "테니스 선수 coleman-wong 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/corentin-moutet",
+      "title": "corentin-moutet",
       "description": "테니스 선수 corentin-moutet 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/daniel-evans",
+      "title": "daniel-evans",
       "description": "테니스 선수 daniel-evans 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/danielle-collins",
+      "title": "danielle-collins",
       "description": "테니스 선수 danielle-collins 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/daniil-medvedev",
+      "title": "daniil-medvedev",
       "description": "테니스 선수 daniil-medvedev 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/daria-kasatkina",
+      "title": "daria-kasatkina",
       "description": "테니스 선수 daria-kasatkina 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/david-goffin",
+      "title": "david-goffin",
       "description": "테니스 선수 david-goffin 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/dayana-yastremska",
+      "title": "dayana-yastremska",
       "description": "테니스 선수 dayana-yastremska 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/denis-shapovalov",
+      "title": "denis-shapovalov",
       "description": "테니스 선수 denis-shapovalov 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/diana-shnaider",
+      "title": "diana-shnaider",
       "description": "테니스 선수 diana-shnaider 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/diane-parry",
+      "title": "diane-parry",
       "description": "테니스 선수 diane-parry 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/diego-schwartzman",
+      "title": "diego-schwartzman",
       "description": "테니스 선수 diego-schwartzman 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/dino-prizmic",
+      "title": "dino-prizmic",
       "description": "테니스 선수 dino-prizmic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/dominic-thiem",
+      "title": "dominic-thiem",
       "description": "테니스 선수 dominic-thiem 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/dominik-koepfer",
+      "title": "dominik-koepfer",
       "description": "테니스 선수 dominik-koepfer 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/donna-vekic",
+      "title": "donna-vekic",
       "description": "테니스 선수 donna-vekic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/donna-vekic-legacy",
+      "title": "donna-vekic-legacy",
       "description": "테니스 선수 donna-vekic-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/duckhee-lee",
+      "title": "duckhee-lee",
       "description": "테니스 선수 duckhee-lee 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/duje-ajdukovic",
+      "title": "duje-ajdukovic",
       "description": "테니스 선수 duje-ajdukovic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/ekaterina-alexandrova",
+      "title": "ekaterina-alexandrova",
       "description": "테니스 선수 ekaterina-alexandrova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/elena-avanesyan",
+      "title": "elena-avanesyan",
       "description": "테니스 선수 elena-avanesyan 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/elena-rybakina",
+      "title": "elena-rybakina",
       "description": "테니스 선수 elena-rybakina 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/elina-avanesyan",
+      "title": "elina-avanesyan",
       "description": "테니스 선수 elina-avanesyan 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/elina-svitolina",
+      "title": "elina-svitolina",
       "description": "테니스 선수 elina-svitolina 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/elise-mertens",
+      "title": "elise-mertens",
       "description": "테니스 선수 elise-mertens 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/emil-ruusuvuori",
+      "title": "emil-ruusuvuori",
       "description": "테니스 선수 emil-ruusuvuori 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/emilio-nava",
+      "title": "emilio-nava",
       "description": "테니스 선수 emilio-nava 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/emina-bektas",
+      "title": "emina-bektas",
       "description": "테니스 선수 emina-bektas 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/emma-navarro",
+      "title": "emma-navarro",
       "description": "테니스 선수 emma-navarro 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/emma-raducanu",
+      "title": "emma-raducanu",
       "description": "테니스 선수 emma-raducanu 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/emma-raducanu-legacy",
+      "title": "emma-raducanu-legacy",
       "description": "테니스 선수 emma-raducanu-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/erika-andreeva",
+      "title": "erika-andreeva",
       "description": "테니스 선수 erika-andreeva 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/ethan-quinn",
+      "title": "ethan-quinn",
       "description": "테니스 선수 ethan-quinn 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/eva-lys",
+      "title": "eva-lys",
       "description": "테니스 선수 eva-lys 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/fabian-marozsan",
+      "title": "fabian-marozsan",
       "description": "테니스 선수 fabian-marozsan 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/fabio-fognini",
+      "title": "fabio-fognini",
       "description": "테니스 선수 fabio-fognini 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/federico-cina",
+      "title": "federico-cina",
       "description": "테니스 선수 federico-cina 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/felix-auger-aliassime",
+      "title": "felix-auger-aliassime",
       "description": "테니스 선수 felix-auger-aliassime 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/flavio-cobolli",
+      "title": "flavio-cobolli",
       "description": "테니스 선수 flavio-cobolli 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/frances-tiafoe",
+      "title": "frances-tiafoe",
       "description": "테니스 선수 frances-tiafoe 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/francisco-cerundolo",
+      "title": "francisco-cerundolo",
       "description": "테니스 선수 francisco-cerundolo 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/francisco-comesana",
+      "title": "francisco-comesana",
       "description": "테니스 선수 francisco-comesana 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/gabriel-diallo",
+      "title": "gabriel-diallo",
       "description": "테니스 선수 gabriel-diallo 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/gael-monfils",
+      "title": "gael-monfils",
       "description": "테니스 선수 gael-monfils 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/garbine-muguruza",
+      "title": "garbine-muguruza",
       "description": "테니스 선수 garbine-muguruza 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/giovanni-mpetshi-perricard",
+      "title": "giovanni-mpetshi-perricard",
       "description": "테니스 선수 giovanni-mpetshi-perricard 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/grigor-dimitrov",
+      "title": "grigor-dimitrov",
       "description": "테니스 선수 grigor-dimitrov 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/hailey-baptiste",
+      "title": "hailey-baptiste",
       "description": "테니스 선수 hailey-baptiste 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/hamad-medjedovic",
+      "title": "hamad-medjedovic",
       "description": "테니스 선수 hamad-medjedovic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/harold-mayot",
+      "title": "harold-mayot",
       "description": "테니스 선수 harold-mayot 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/henrique-rocha",
+      "title": "henrique-rocha",
       "description": "테니스 선수 henrique-rocha 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/holger-rune",
+      "title": "holger-rune",
       "description": "테니스 선수 holger-rune 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/hong-seong-chan",
+      "title": "hong-seong-chan",
       "description": "테니스 선수 hong-seong-chan 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/hubert-hurkacz",
+      "title": "hubert-hurkacz",
       "description": "테니스 선수 hubert-hurkacz 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/hugo-dellien",
+      "title": "hugo-dellien",
       "description": "테니스 선수 hugo-dellien 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/hugo-gaston",
+      "title": "hugo-gaston",
       "description": "테니스 선수 hugo-gaston 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/hyeon-chung",
+      "title": "hyeon-chung",
       "description": "테니스 선수 hyeon-chung 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/iga-swiatek",
+      "title": "iga-swiatek",
       "description": "테니스 선수 iga-swiatek 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/iva-jovic",
+      "title": "iva-jovic",
       "description": "테니스 선수 iva-jovic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jack-draper",
+      "title": "jack-draper",
       "description": "테니스 선수 jack-draper 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jacob-fearnley",
+      "title": "jacob-fearnley",
       "description": "테니스 선수 jacob-fearnley 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jakub-mensik",
+      "title": "jakub-mensik",
       "description": "테니스 선수 jakub-mensik 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jan-lennard-struff",
+      "title": "jan-lennard-struff",
       "description": "테니스 선수 jan-lennard-struff 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jannik-sinner",
+      "title": "jannik-sinner",
       "description": "테니스 선수 jannik-sinner 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jasmine-paolini",
+      "title": "jasmine-paolini",
       "description": "테니스 선수 jasmine-paolini 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jaume-munar",
+      "title": "jaume-munar",
       "description": "테니스 선수 jaume-munar 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jelena-ostapenko",
+      "title": "jelena-ostapenko",
       "description": "테니스 선수 jelena-ostapenko 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jessica-pegula",
+      "title": "jessica-pegula",
       "description": "테니스 선수 jessica-pegula 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jiri-lehecka",
+      "title": "jiri-lehecka",
       "description": "테니스 선수 jiri-lehecka 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jiri-vesely",
+      "title": "jiri-vesely",
       "description": "테니스 선수 jiri-vesely 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/joao-fonseca",
+      "title": "joao-fonseca",
       "description": "테니스 선수 joao-fonseca 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/joao-lucas-reis-da-silva",
+      "title": "joao-lucas-reis-da-silva",
       "description": "테니스 선수 joao-lucas-reis-da-silva 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jordan-thompson",
+      "title": "jordan-thompson",
       "description": "테니스 선수 jordan-thompson 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/jule-niemeier",
+      "title": "jule-niemeier",
       "description": "테니스 선수 jule-niemeier 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/juncheng-shang",
+      "title": "juncheng-shang",
       "description": "테니스 선수 juncheng-shang 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/karen-khachanov",
+      "title": "karen-khachanov",
       "description": "테니스 선수 karen-khachanov 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/karolina-muchova",
+      "title": "karolina-muchova",
       "description": "테니스 선수 karolina-muchova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/karolina-pliskova",
+      "title": "karolina-pliskova",
       "description": "테니스 선수 karolina-pliskova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/katerina-siniakova",
+      "title": "katerina-siniakova",
       "description": "테니스 선수 katerina-siniakova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/katie-boulter",
+      "title": "katie-boulter",
       "description": "테니스 선수 katie-boulter 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/kei-nishikori",
+      "title": "kei-nishikori",
       "description": "테니스 선수 kei-nishikori 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/kim-clijsters",
+      "title": "kim-clijsters",
       "description": "테니스 선수 kim-clijsters 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/laslo-djere",
+      "title": "laslo-djere",
       "description": "테니스 선수 laslo-djere 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/laura-siegemund",
+      "title": "laura-siegemund",
       "description": "테니스 선수 laura-siegemund 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/learner-tien",
+      "title": "learner-tien",
       "description": "테니스 선수 learner-tien 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/lesia-tsurenko",
+      "title": "lesia-tsurenko",
       "description": "테니스 선수 lesia-tsurenko 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/leylah-fernandez",
+      "title": "leylah-fernandez",
       "description": "테니스 선수 leylah-fernandez 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/leylah-fernandez-legacy",
+      "title": "leylah-fernandez-legacy",
       "description": "테니스 선수 leylah-fernandez-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/linda-noskova",
+      "title": "linda-noskova",
       "description": "테니스 선수 linda-noskova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/linda-noskova-legacy",
+      "title": "linda-noskova-legacy",
       "description": "테니스 선수 linda-noskova-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/linner-tien",
+      "title": "linner-tien",
       "description": "테니스 선수 linner-tien 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/liudmila-samsonova",
+      "title": "liudmila-samsonova",
       "description": "테니스 선수 liudmila-samsonova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/lleyton-hewitt",
+      "title": "lleyton-hewitt",
       "description": "테니스 선수 lleyton-hewitt 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/lois-boisson",
+      "title": "lois-boisson",
       "description": "테니스 선수 lois-boisson 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/lorenzo-musetti",
+      "title": "lorenzo-musetti",
       "description": "테니스 선수 lorenzo-musetti 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/lorenzo-sonego",
+      "title": "lorenzo-sonego",
       "description": "테니스 선수 lorenzo-sonego 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/luca-nardi",
+      "title": "luca-nardi",
       "description": "테니스 선수 luca-nardi 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/luca-van-assche",
+      "title": "luca-van-assche",
       "description": "테니스 선수 luca-van-assche 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/luciano-darderi",
+      "title": "luciano-darderi",
       "description": "테니스 선수 luciano-darderi 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/lucrezia-stefanini",
+      "title": "lucrezia-stefanini",
       "description": "테니스 선수 lucrezia-stefanini 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/lulu-sun",
+      "title": "lulu-sun",
       "description": "테니스 선수 lulu-sun 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/mackenzie-mcdonald",
+      "title": "mackenzie-mcdonald",
       "description": "테니스 선수 mackenzie-mcdonald 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/madison-keys",
+      "title": "madison-keys",
       "description": "테니스 선수 madison-keys 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/magda-linette",
+      "title": "magda-linette",
       "description": "테니스 선수 magda-linette 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/marcos-giron",
+      "title": "marcos-giron",
       "description": "테니스 선수 marcos-giron 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/maria-sakkari",
+      "title": "maria-sakkari",
       "description": "테니스 선수 maria-sakkari 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/maria-sakkari-legacy",
+      "title": "maria-sakkari-legacy",
       "description": "테니스 선수 maria-sakkari-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/maria-sharapova",
+      "title": "maria-sharapova",
       "description": "테니스 선수 maria-sharapova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/marie-bouzkova",
+      "title": "marie-bouzkova",
       "description": "테니스 선수 marie-bouzkova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/marin-cilic",
+      "title": "marin-cilic",
       "description": "테니스 선수 marin-cilic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/marina-stakusic",
+      "title": "marina-stakusic",
       "description": "테니스 선수 marina-stakusic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/marketa-vondrousova",
+      "title": "marketa-vondrousova",
       "description": "테니스 선수 marketa-vondrousova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/marta-kostyuk",
+      "title": "marta-kostyuk",
       "description": "테니스 선수 marta-kostyuk 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/marta-kostyuk-legacy",
+      "title": "marta-kostyuk-legacy",
       "description": "테니스 선수 marta-kostyuk-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/martin-landaluce",
+      "title": "martin-landaluce",
       "description": "테니스 선수 martin-landaluce 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/martina-hingis",
+      "title": "martina-hingis",
       "description": "테니스 선수 martina-hingis 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/marton-fucsovics",
+      "title": "marton-fucsovics",
       "description": "테니스 선수 marton-fucsovics 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/matteo-arnaldi",
+      "title": "matteo-arnaldi",
       "description": "테니스 선수 matteo-arnaldi 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/matteo-berrettini",
+      "title": "matteo-berrettini",
       "description": "테니스 선수 matteo-berrettini 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/max-purcell",
+      "title": "max-purcell",
       "description": "테니스 선수 max-purcell 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/maya-joint",
+      "title": "maya-joint",
       "description": "테니스 선수 maya-joint 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/mccartney-kessler",
+      "title": "mccartney-kessler",
       "description": "테니스 선수 mccartney-kessler 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/milos-raonic",
+      "title": "milos-raonic",
       "description": "테니스 선수 milos-raonic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/miomir-kecmanovic",
+      "title": "miomir-kecmanovic",
       "description": "테니스 선수 miomir-kecmanovic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/mirra-andreeva",
+      "title": "mirra-andreeva",
       "description": "테니스 선수 mirra-andreeva 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/mirra-andreeva-legacy",
+      "title": "mirra-andreeva-legacy",
       "description": "테니스 선수 mirra-andreeva-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/moyuka-uchijima",
+      "title": "moyuka-uchijima",
       "description": "테니스 선수 moyuka-uchijima 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/naomi-osaka",
+      "title": "naomi-osaka",
       "description": "테니스 선수 naomi-osaka 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/narae-han",
+      "title": "narae-han",
       "description": "테니스 선수 narae-han 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/nick-kyrgios",
+      "title": "nick-kyrgios",
       "description": "테니스 선수 nick-kyrgios 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/nicolas-jarry",
+      "title": "nicolas-jarry",
       "description": "테니스 선수 nicolas-jarry 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/nishesh-basavareddy",
+      "title": "nishesh-basavareddy",
       "description": "테니스 선수 nishesh-basavareddy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/novak-djokovic",
+      "title": "novak-djokovic",
       "description": "테니스 선수 novak-djokovic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/nuno-borges",
+      "title": "nuno-borges",
       "description": "테니스 선수 nuno-borges 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/oceane-dodin",
+      "title": "oceane-dodin",
       "description": "테니스 선수 oceane-dodin 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/olga-danilovic",
+      "title": "olga-danilovic",
       "description": "테니스 선수 olga-danilovic 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/ons-jabeur",
+      "title": "ons-jabeur",
       "description": "테니스 선수 ons-jabeur 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/paula-badosa",
+      "title": "paula-badosa",
       "description": "테니스 선수 paula-badosa 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/pavel-kotov",
+      "title": "pavel-kotov",
       "description": "테니스 선수 pavel-kotov 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/pedro-cachin",
+      "title": "pedro-cachin",
       "description": "테니스 선수 pedro-cachin 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/pedro-martinez",
+      "title": "pedro-martinez",
       "description": "테니스 선수 pedro-martinez 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/petra-kvitova",
+      "title": "petra-kvitova",
       "description": "테니스 선수 petra-kvitova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/peyton-stearns",
+      "title": "peyton-stearns",
       "description": "테니스 선수 peyton-stearns 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/polina-kudermetova",
+      "title": "polina-kudermetova",
       "description": "테니스 선수 polina-kudermetova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/qinwen-zheng",
+      "title": "qinwen-zheng",
       "description": "테니스 선수 qinwen-zheng 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/rafael-nadal",
+      "title": "rafael-nadal",
       "description": "테니스 선수 rafael-nadal 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/rebeka-masarova",
+      "title": "rebeka-masarova",
       "description": "테니스 선수 rebeka-masarova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/reilly-opelka",
+      "title": "reilly-opelka",
       "description": "테니스 선수 reilly-opelka 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/renata-zarazua",
+      "title": "renata-zarazua",
       "description": "테니스 선수 renata-zarazua 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/richard-gasquet",
+      "title": "richard-gasquet",
       "description": "테니스 선수 richard-gasquet 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/rinky-hijikata",
+      "title": "rinky-hijikata",
       "description": "테니스 선수 rinky-hijikata 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/roberto-bautista-agut",
+      "title": "roberto-bautista-agut",
       "description": "테니스 선수 roberto-bautista-agut 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/roberto-carballes-baena",
+      "title": "roberto-carballes-baena",
       "description": "테니스 선수 roberto-carballes-baena 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/robin-montgomery",
+      "title": "robin-montgomery",
       "description": "테니스 선수 robin-montgomery 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/roger-federer",
+      "title": "roger-federer",
       "description": "테니스 선수 roger-federer 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/roman-safiullin",
+      "title": "roman-safiullin",
       "description": "테니스 선수 roman-safiullin 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sara-bejlek",
+      "title": "sara-bejlek",
       "description": "테니스 선수 sara-bejlek 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sara-errani",
+      "title": "sara-errani",
       "description": "테니스 선수 sara-errani 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sebastian-baez",
+      "title": "sebastian-baez",
       "description": "테니스 선수 sebastian-baez 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sebastian-korda",
+      "title": "sebastian-korda",
       "description": "테니스 선수 sebastian-korda 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sebastian-ofner",
+      "title": "sebastian-ofner",
       "description": "테니스 선수 sebastian-ofner 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/seongchan-hong",
+      "title": "seongchan-hong",
       "description": "테니스 선수 seongchan-hong 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/serena-williams",
+      "title": "serena-williams",
       "description": "테니스 선수 serena-williams 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/shang-juncheng",
+      "title": "shang-juncheng",
       "description": "테니스 선수 shang-juncheng 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/simona-halep",
+      "title": "simona-halep",
       "description": "테니스 선수 simona-halep 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sloane-stephens",
+      "title": "sloane-stephens",
       "description": "테니스 선수 sloane-stephens 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sofia-kenin",
+      "title": "sofia-kenin",
       "description": "테니스 선수 sofia-kenin 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sonay-kartal",
+      "title": "sonay-kartal",
       "description": "테니스 선수 sonay-kartal 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/soonwoo-kwon",
+      "title": "soonwoo-kwon",
       "description": "테니스 선수 soonwoo-kwon 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/soonwoo-kwon-legacy",
+      "title": "soonwoo-kwon-legacy",
       "description": "테니스 선수 soonwoo-kwon-legacy 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sorana-cirstea",
+      "title": "sorana-cirstea",
       "description": "테니스 선수 sorana-cirstea 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/stan-wawrinka",
+      "title": "stan-wawrinka",
       "description": "테니스 선수 stan-wawrinka 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/stefanos-tsitsipas",
+      "title": "stefanos-tsitsipas",
       "description": "테니스 선수 stefanos-tsitsipas 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sujeong-jang",
+      "title": "sujeong-jang",
       "description": "테니스 선수 sujeong-jang 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/sumit-nagal",
+      "title": "sumit-nagal",
       "description": "테니스 선수 sumit-nagal 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/tallon-griekspoor",
+      "title": "tallon-griekspoor",
       "description": "테니스 선수 tallon-griekspoor 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/taro-daniel",
+      "title": "taro-daniel",
       "description": "테니스 선수 taro-daniel 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/tatjana-maria",
+      "title": "tatjana-maria",
       "description": "테니스 선수 tatjana-maria 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/taylah-preston",
+      "title": "taylah-preston",
       "description": "테니스 선수 taylah-preston 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/taylor-fritz",
+      "title": "taylor-fritz",
       "description": "테니스 선수 taylor-fritz 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/terence-atmane",
+      "title": "terence-atmane",
       "description": "테니스 선수 terence-atmane 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/thanasi-kokkinakis",
+      "title": "thanasi-kokkinakis",
       "description": "테니스 선수 thanasi-kokkinakis 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/thiago-seyboth-wild",
+      "title": "thiago-seyboth-wild",
       "description": "테니스 선수 thiago-seyboth-wild 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/timofei-skatov",
+      "title": "timofei-skatov",
       "description": "테니스 선수 timofei-skatov 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/tomas-barrios",
+      "title": "tomas-barrios",
       "description": "테니스 선수 tomas-barrios 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/tomas-machac",
+      "title": "tomas-machac",
       "description": "테니스 선수 tomas-machac 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/tomas-martin-etcheverry",
+      "title": "tomas-martin-etcheverry",
       "description": "테니스 선수 tomas-martin-etcheverry 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/tommy-paul",
+      "title": "tommy-paul",
       "description": "테니스 선수 tommy-paul 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/tseng-chun-hsin",
+      "title": "tseng-chun-hsin",
       "description": "테니스 선수 tseng-chun-hsin 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/ugo-humbert",
+      "title": "ugo-humbert",
       "description": "테니스 선수 ugo-humbert 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/valentin-vacherot",
+      "title": "valentin-vacherot",
       "description": "테니스 선수 valentin-vacherot 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/varvara-gracheva",
+      "title": "varvara-gracheva",
       "description": "테니스 선수 varvara-gracheva 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/venus-williams",
+      "title": "venus-williams",
       "description": "테니스 선수 venus-williams 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/veronika-kudermetova",
+      "title": "veronika-kudermetova",
       "description": "테니스 선수 veronika-kudermetova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/victoria-azarenka",
+      "title": "victoria-azarenka",
       "description": "테니스 선수 victoria-azarenka 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/victoria-mboko",
+      "title": "victoria-mboko",
       "description": "테니스 선수 victoria-mboko 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/viktoriya-tomova",
+      "title": "viktoriya-tomova",
       "description": "테니스 선수 viktoriya-tomova 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/wang-xinyu",
+      "title": "wang-xinyu",
       "description": "테니스 선수 wang-xinyu 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/wang-xiyu",
+      "title": "wang-xiyu",
       "description": "테니스 선수 wang-xiyu 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/yannick-hanfmann",
+      "title": "yannick-hanfmann",
       "description": "테니스 선수 yannick-hanfmann 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/yibing-wu",
+      "title": "yibing-wu",
       "description": "테니스 선수 yibing-wu 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/yoshihito-nishioka",
+      "title": "yoshihito-nishioka",
       "description": "테니스 선수 yoshihito-nishioka 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/yuan-yue",
+      "title": "yuan-yue",
       "description": "테니스 선수 yuan-yue 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/yue-yuan",
+      "title": "yue-yuan",
       "description": "테니스 선수 yue-yuan 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/yulia-putintseva",
+      "title": "yulia-putintseva",
       "description": "테니스 선수 yulia-putintseva 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/yunchaokete-bu",
+      "title": "yunchaokete-bu",
       "description": "테니스 선수 yunchaokete-bu 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/zheng-qinwen",
+      "title": "zheng-qinwen",
       "description": "테니스 선수 zheng-qinwen 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/zhizhen-zhang",
+      "title": "zhizhen-zhang",
       "description": "테니스 선수 zhizhen-zhang 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/zhu-lin",
+      "title": "zhu-lin",
       "description": "테니스 선수 zhu-lin 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
     },
     {
       "url": "https://www.tennisfrens.com/players/zizou-bergs",
+      "title": "zizou-bergs",
       "description": "테니스 선수 zizou-bergs 프로필",
-      "type": "player"
+      "type": "player",
+      "category": "player-profile"
+    },
+    {
+      "url": "https://www.tennisfrens.com/docs/ntrp-guide.md",
+      "title": "NTRP 테니스 실력 등급 완전 가이드",
+      "description": "> NTRP(National Tennis Rating Program)는 미국테니스협회(USTA)가 만든 테니스 실력 등급 체계입니다.",
+      "type": "document",
+      "category": "llm-mirror"
     }
   ]
 }

@@ -16,11 +16,22 @@ export async function GET(
   request: NextRequest,
   context?: { params?: Promise<{ verification?: string }> }
 ) {
+  void request;
   const params = context?.params ? await context.params : {};
   const verification = params?.verification;
   const envCode = process.env.NAVER_SITE_VERIFICATION;
 
-  const code = envCode || verification || '';
+  const code = envCode || verification || "";
+
+  if (!code) {
+    return new Response("Naver verification code is not configured.", {
+      status: 404,
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
   const html = `naver-site-verification: ${code}`;
 
   return new Response(html, {

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Archivo_Black, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -46,6 +46,19 @@ const inter = Inter({
   variable: "--font-inter",
   preload: true,
   adjustFontFallback: true,
+});
+
+const archivoBlack = Archivo_Black({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-archivo-black",
+  display: "swap",
+});
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-inter-tight",
+  display: "swap",
 });
 
 export const viewport: Viewport = {
@@ -156,12 +169,12 @@ export default function RootLayout({
   const gaMeasurementId = getGaMeasurementId();
 
   return (
-    <html lang="ko" className={inter.variable}>
+    <html
+      lang="ko"
+      className={`${inter.variable} ${archivoBlack.variable} ${interTight.variable}`}
+    >
       <head>
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-3050601904412736"
-        />
+        <meta name="google-adsense-account" content="ca-pub-3050601904412736" />
         <link
           rel="alternate"
           type="application/rss+xml"

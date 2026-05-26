@@ -21,12 +21,23 @@ export async function GET(
   request: NextRequest,
   context?: { params?: Promise<{ verification?: string }> }
 ) {
+  void request;
   const params = context?.params ? await context.params : {};
   const verification = params?.verification;
   const envCode = process.env.GOOGLE_SITE_VERIFICATION;
   
   // 환경 변수에 설정된 코드와 일치하는지 확인
-  const code = envCode || verification || '';
+  const code = envCode || verification || "";
+
+  if (!code) {
+    return new Response("Google verification code is not configured.", {
+      status: 404,
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-store",
+      },
+    });
+  }
   
   // 구글 인증 HTML 파일 내용
   const html = `google-site-verification: ${code}.html`;

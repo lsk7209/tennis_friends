@@ -1,4 +1,5 @@
 import { Trophy, MapPin, Ruler, Activity, Calendar, Crown } from "lucide-react";
+import Image from "next/image";
 
 interface PlayerProfileProps {
   name: string;
@@ -29,12 +30,14 @@ export default function PlayerProfileCard({
         <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
           {image && (
             <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-blue-50 dark:border-blue-900 shadow-inner flex-shrink-0 bg-gray-100 dark:bg-gray-700">
-              <img
+              <Image
                 src={image}
                 alt={name}
+                width={128}
+                height={128}
+                sizes="(min-width: 768px) 128px, 96px"
                 className="w-full h-full object-cover"
-                fetchPriority="high"
-                loading="eager"
+                priority
               />
             </div>
           )}

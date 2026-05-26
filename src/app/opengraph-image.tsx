@@ -2,7 +2,6 @@ import { ImageResponse } from 'next/og';
 
 // Route segment config
 export const runtime = 'edge';
-export const dynamic = 'force-static';
 export const revalidate = false;
 
 // Image metadata
@@ -99,7 +98,7 @@ export default async function Image() {
                                 fontWeight: 900,
                                 color: '#1e293b',
                                 margin: 0,
-                                letterSpacing: '-0.02em',
+                                letterSpacing: 0,
                             }}
                         >
                             Tennis Friends

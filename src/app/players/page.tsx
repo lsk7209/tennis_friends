@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
@@ -82,15 +83,21 @@ export default function PlayersPage() {
     return { totalPages: pages, paginatedPlayers: players, totalPlayers: total, startIndex: start, endIndex: end };
   }, [filteredAndSortedPlayers, currentPage]);
 
-  // 검색/정렬 변경 시 첫 페이지로 리셋
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, sortBy, genderFilter]);
-
   const handleSortChange = (value: string) => {
     if (isSortOption(value)) {
       setSortBy(value);
+      setCurrentPage(1);
     }
+  };
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    setCurrentPage(1);
+  };
+
+  const handleGenderFilterChange = (value: GenderFilter) => {
+    setGenderFilter(value);
+    setCurrentPage(1);
   };
 
   const getPlayerCard = (player: { slug: string; name: string; nameEn: string; country: string; countryFlag: string; image?: string }) => {
@@ -102,9 +109,12 @@ export default function PlayersPage() {
             <div className="relative">
               {player.image ? (
                 <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-2 border-white dark:border-gray-700 group-hover:border-blue-500 transition-colors">
-                  <img
+                  <Image
                     src={player.image}
                     alt={player.name}
+                    width={80}
+                    height={80}
+                    sizes="80px"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -222,7 +232,7 @@ export default function PlayersPage() {
             <div className="flex bg-gray-100 dark:bg-gray-700 p-1 rounded-lg mb-4 md:mb-0" aria-label="선수 성별 필터">
               <button
                 type="button"
-                onClick={() => setGenderFilter('male')}
+                onClick={() => handleGenderFilterChange('male')}
                 aria-pressed={genderFilter === 'male'}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${genderFilter === 'male'
                   ? 'bg-white dark:bg-gray-950 text-blue-700 dark:text-blue-200 shadow-sm'
@@ -233,7 +243,7 @@ export default function PlayersPage() {
               </button>
               <button
                 type="button"
-                onClick={() => setGenderFilter('female')}
+                onClick={() => handleGenderFilterChange('female')}
                 aria-pressed={genderFilter === 'female'}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${genderFilter === 'female'
                   ? 'bg-white dark:bg-gray-950 text-pink-700 dark:text-pink-200 shadow-sm'
@@ -251,7 +261,7 @@ export default function PlayersPage() {
                 type="text"
                 placeholder="선수 이름, 국가, 스타일 검색..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => handleSearchChange(e.target.value)}
                 className="pl-10 h-10"
               />
             </div>
@@ -284,7 +294,7 @@ export default function PlayersPage() {
           <h2 className="sr-only">선수 목록</h2>
           <StaggeredAnimation>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {paginatedPlayers.map((player, index) => (
+              {paginatedPlayers.map((player) => (
                 <StaggeredItem key={player.slug}>
                   {getPlayerCard(player)}
                 </StaggeredItem>

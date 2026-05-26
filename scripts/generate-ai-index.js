@@ -10,6 +10,7 @@ const BLOG_POSTS_PATH = path.join(ROOT, "src", "data", "blog-posts.js");
 const BLOG_QUALITY_PATH = path.join(ROOT, "src", "lib", "blog-quality.ts");
 const UTILITY_DIR = path.join(ROOT, "src", "app", "utility");
 const PLAYERS_DIR = path.join(ROOT, "src", "data", "players");
+const DOCS_DIR = path.join(ROOT, "public", "docs");
 const AI_INDEX_PATH = path.join(ROOT, "public", "ai-index.json");
 const LLMS_PATH = path.join(ROOT, "public", "llms.txt");
 const LLMS_FULL_PATH = path.join(ROOT, "public", "llms-full.txt");
@@ -163,8 +164,34 @@ function getPlayerSlugs() {
   return [...slugs].sort();
 }
 
-function page(url, description, type) {
-  return { url, description, type };
+function getDocPages() {
+  if (!fs.existsSync(DOCS_DIR)) return [];
+
+  return fs
+    .readdirSync(DOCS_DIR, { withFileTypes: true })
+    .filter((dirent) => dirent.isFile() && dirent.name.endsWith(".md"))
+    .map((dirent) => {
+      const slug = dirent.name.replace(/\.md$/, "");
+      const source = fs.readFileSync(path.join(DOCS_DIR, dirent.name), "utf8");
+      const heading = /^#\s+(.+)$/m.exec(source)?.[1] || slug;
+      const summary =
+        source
+          .split(/\r?\n/)
+          .map((line) => line.trim())
+          .find((line) => line && !line.startsWith("#")) || `${heading} 문서`;
+
+      return page(
+        `${SITE_URL}/docs/${dirent.name}`,
+        heading,
+        summary,
+        "document",
+        { category: "llm-mirror" },
+      );
+    });
+}
+
+function page(url, title, description, type, extra = {}) {
+  return { url, title, description, type, ...extra };
 }
 
 function getKstDateString() {
@@ -214,25 +241,44 @@ const playerSlugs = getPlayerSlugs();
 const today = getKstDateString();
 
 const pages = [
-  page(SITE_URL, "TennisFriends 홈 - 테니스 실력 향상 도구와 가이드", "homepage"),
-  page(`${SITE_URL}/utility`, "테니스 도구 모음", "index"),
-  page(`${SITE_URL}/blog`, "테니스 블로그", "index"),
-  page(`${SITE_URL}/players`, "테니스 선수 프로필", "index"),
-  page(`${SITE_URL}/tennis-rules-quiz`, "테니스 규칙 퀴즈", "tool"),
-  page(`${SITE_URL}/about`, "TennisFriends 소개와 운영 기준", "static"),
-  page(`${SITE_URL}/contact`, "TennisFriends 문의", "static"),
-  page(`${SITE_URL}/privacy`, "개인정보 처리방침", "static"),
-  page(`${SITE_URL}/terms`, "이용 약관", "static"),
-  page(`${SITE_URL}/search`, "TennisFriends 검색", "static"),
+  page(SITE_URL, "TennisFriends", "테니스 실력 향상 도구와 가이드", "homepage"),
+  page(`${SITE_URL}/utility`, "테니스 도구 모음", "무료 테니스 진단·계산 도구", "index"),
+  page(`${SITE_URL}/blog`, "테니스 블로그", "테니스 기술·전략·장비 가이드", "index"),
+  page(`${SITE_URL}/players`, "테니스 선수 프로필", "ATP·WTA 선수 프로필", "index"),
+  page(`${SITE_URL}/tennis-rules-quiz`, "테니스 규칙 퀴즈", "테니스 규칙 학습 도구", "tool"),
+  page(`${SITE_URL}/about`, "TennisFriends 소개", "TennisFriends 소개와 운영 기준", "static"),
+  page(`${SITE_URL}/contact`, "TennisFriends 문의", "TennisFriends 문의", "static"),
+  page(`${SITE_URL}/privacy`, "개인정보 처리방침", "개인정보 처리방침", "static"),
+  page(`${SITE_URL}/terms`, "이용 약관", "이용 약관", "static"),
+  page(`${SITE_URL}/search`, "TennisFriends 검색", "사이트 콘텐츠 검색", "static"),
   ...utilitySlugs.map((slug) =>
-    page(`${SITE_URL}/utility/${slug}`, `테니스 ${slug} 도구`, "tool"),
+    page(
+      `${SITE_URL}/utility/${slug}`,
+      slug,
+      `테니스 ${slug} 도구`,
+      "tool",
+      { category: "utility" },
+    ),
   ),
   ...blogPosts.map((post) =>
-    page(`${SITE_URL}/blog/${post.slug}`, post.excerpt || post.title, "article"),
+    page(
+      `${SITE_URL}/blog/${post.slug}`,
+      post.title,
+      post.excerpt || post.title,
+      "article",
+      { category: post.category, lastModified: post.scheduledAt || post.date },
+    ),
   ),
   ...playerSlugs.map((slug) =>
-    page(`${SITE_URL}/players/${slug}`, `테니스 선수 ${slug} 프로필`, "player"),
+    page(
+      `${SITE_URL}/players/${slug}`,
+      slug,
+      `테니스 선수 ${slug} 프로필`,
+      "player",
+      { category: "player-profile" },
+    ),
   ),
+  ...getDocPages(),
 ];
 
 const stats = {
