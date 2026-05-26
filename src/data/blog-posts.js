@@ -4989,6 +4989,32 @@ const scheduledBlogPosts = [...scheduledPostSeeds, ...scheduledPostSeedsPart2, .
 
 export const allBlogPosts = [
   {
+    "id": "tennis-club-selection-guide",
+    "slug": "tennis-club-selection-guide",
+    "tags": ["테니스 클럽","동호회","클럽 선택","테니스 문화"],
+    "title": "테니스 클럽 선택법 — 수준·위치·시설 체크리스트",
+    "excerpt": "테니스 클럽 선택법 — 수준·위치·시설 체크리스트에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "테니스 문화",
+    "date": "2026-05-26",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-coach-selection-guide",
+    "slug": "tennis-coach-selection-guide",
+    "tags": ["코치 선택","테니스 레슨","코치","레슨 팁"],
+    "title": "테니스 코치 선택 가이드 — 레벨별·목적별 기준",
+    "excerpt": "테니스 코치 선택 가이드 — 레벨별·목적별 기준에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "테니스 문화",
+    "date": "2026-05-26",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-backhand-crosscourt",
     "slug": "tennis-backhand-crosscourt",
     "tags": ["백핸드","크로스코트","각도","회전"],
