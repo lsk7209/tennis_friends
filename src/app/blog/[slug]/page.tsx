@@ -197,9 +197,14 @@ export default async function BlogPostPage({ params }: Props) {
 
   // Merge content from blogContentMap if available
   const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
+  const rawContent = contentData?.content ?? "";
+  // 테이블을 overflow-x: auto 래퍼로 감싸 모바일 CLS 방지
+  const processedContent = rawContent
+    .replace(/<table/g, '<div class="table-wrapper"><table')
+    .replace(/<\/table>/g, "</table></div>");
   const enrichedPost: EnrichedBlogPost = {
     ...post,
-    content: contentData?.content ?? "",
+    content: processedContent,
     tags: contentData?.tags ?? post.tags ?? [],
     summary: contentData?.summary ?? post.excerpt,
     highlight: contentData?.highlight ?? post.excerpt,

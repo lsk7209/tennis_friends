@@ -43,15 +43,12 @@ export function Hero() {
             Tennis Intelligence Platform
           </motion.p>
 
-          {/* 디스플레이 헤드라인 */}
-          <motion.h1
-            variants={revealVariants}
-            className="font-display-latin text-[14vw] sm:text-[10vw] md:text-[8vw] lg:text-[88px] leading-[0.88] tracking-[-0.045em] text-white mb-8"
-          >
+          {/* 디스플레이 헤드라인 — LCP 요소, 즉시 렌더링 */}
+          <h1 className="font-display-latin text-[14vw] sm:text-[10vw] md:text-[8vw] lg:text-[88px] leading-[0.88] tracking-[-0.045em] text-white mb-8">
             데이터로
             <br />
             COURT를 <em className="not-italic text-accent-volt">OWN</em>
-          </motion.h1>
+          </h1>
 
           {/* 서브 카피 */}
           <motion.p

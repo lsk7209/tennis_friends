@@ -43,6 +43,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: [
       "lucide-react",
       "framer-motion",
+      "date-fns",
       "@radix-ui/react-icons",
       "@radix-ui/react-avatar",
       "@radix-ui/react-dialog",

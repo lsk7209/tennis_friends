@@ -179,12 +179,44 @@ a:focus-visible {
   width: 100%;
   border-collapse: collapse;
   font-size: .95rem;
+  table-layout: fixed; /* 단일 패스 렌더링으로 CLS 방지 */
 }
 
 .prose th,
 .prose td {
   border: 1px solid var(--border);
   padding: .6rem .7rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 테이블 모바일 스크롤 래퍼 */
+.prose .table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+
+.prose .table-wrapper table {
+  margin: 0;
+}
+
+/* TLDR 요약 박스 */
+.prose .tf-tldr {
+  background: color-mix(in oklab, var(--accent) 8%, transparent);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.prose .tf-tldr .tf-tldr-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
 }
 
 .prose max-width-none {

@@ -7,7 +7,10 @@ import {
   getSiteUrl,
 } from "@/lib/site";
 
-export function truncateForNaver(description: string, maxLength: number = 80): string {
+export function truncateForNaver(
+  description: string,
+  maxLength: number = 80,
+): string {
   if (description.length <= maxLength) return description;
 
   const truncated = description.substring(0, maxLength - 3);
@@ -15,10 +18,15 @@ export function truncateForNaver(description: string, maxLength: number = 80): s
   const lastSpace = truncated.lastIndexOf(" ");
   const cutPoint = lastPeriod > maxLength * 0.7 ? lastPeriod + 1 : lastSpace;
 
-  return cutPoint > 0 ? `${description.substring(0, cutPoint)}...` : `${truncated}...`;
+  return cutPoint > 0
+    ? `${description.substring(0, cutPoint)}...`
+    : `${truncated}...`;
 }
 
-export function generateTitle(contentTitle: string, serviceName: string = SITE_NAME): string {
+export function generateTitle(
+  contentTitle: string,
+  serviceName: string = SITE_NAME,
+): string {
   return `${contentTitle} | ${serviceName}`;
 }
 
@@ -59,10 +67,12 @@ export function generatePageMetadata({
   const ogImage = image || `${siteUrl}/opengraph-image`;
   const naverDescription = truncateForNaver(description);
   const googleDescription =
-    description.length > 160 ? `${description.substring(0, 157)}...` : description;
+    description.length > 160
+      ? `${description.substring(0, 157)}...`
+      : description;
 
   return {
-    title: fullTitle,
+    title: { absolute: fullTitle },
     description: googleDescription || DEFAULT_SITE_DESCRIPTION,
     keywords: tags.length > 0 ? tags : undefined,
     authors: authors.map((name) => ({ name })),
