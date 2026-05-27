@@ -301,7 +301,7 @@ export default async function BlogPostPage({ params }: Props) {
             aria-label="게시글 메타 정보"
           >
             <Badge
-              className="bg-primary/20 text-primary"
+              className="bg-accent-volt text-court-ink font-semibold border-none"
               itemProp="articleSection"
             >
               {post.category}

@@ -12,6 +12,7 @@ import { Hero } from "./_components/home/hero";
 import { LiveTicker } from "./_components/home/live-ticker";
 import { ToolsMosaic } from "./_components/home/tools-mosaic";
 import { CourtLines } from "./_components/home/court-lines";
+import { PlayerSpotlight } from "./_components/home/player-spotlight";
 import { BlogMagazine } from "./_components/home/blog-magazine";
 import { NtrpBand } from "./_components/home/ntrp-band";
 
@@ -89,6 +90,7 @@ export default function Home() {
       <LiveTicker />
       <ToolsMosaic />
       <CourtLines />
+      <PlayerSpotlight />
       <BlogMagazine />
       <NtrpBand />
 

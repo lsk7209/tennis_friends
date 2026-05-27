@@ -5,7 +5,23 @@ import { PLAYERS_DB } from "@/data/players";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {Info, Trophy, Activity, ArrowLeft, Star, Target, Zap, Crown, Hand, CheckCircle, Shield, Award, Brain, List, Heart} from "lucide-react";
+import {
+  Info,
+  Trophy,
+  Activity,
+  ArrowLeft,
+  Star,
+  Target,
+  Zap,
+  Crown,
+  Hand,
+  CheckCircle,
+  Shield,
+  Award,
+  Brain,
+  List,
+  Heart,
+} from "lucide-react";
 import Link from "next/link";
 import ProfilePageSchema from "@/components/seo/ProfilePageSchema";
 import { allBlogPosts } from "@/data/blog-posts";
@@ -358,14 +374,25 @@ export default async function PlayerProfilePage({ params }: Props) {
       )}
 
       {/* Header / Hero */}
-      <div className="bg-gradient-to-r from-blue-800 to-indigo-900 text-white pt-24 pb-20 px-4 relative overflow-hidden">
-        <div className="absolute top-0 right-0 p-12 opacity-5">
-          <Trophy size={300} />
-        </div>
+      <div className="bg-court-ink text-white pt-24 pb-20 px-4 relative overflow-hidden">
+        {/* 배경 대형 텍스트 */}
+        <span
+          aria-hidden="true"
+          className="absolute top-1/2 right-8 -translate-y-1/2 font-black leading-none select-none pointer-events-none hidden md:block"
+          style={{
+            fontFamily:
+              "var(--font-archivo-black, 'Archivo Black', sans-serif)",
+            fontSize: "clamp(160px, 20vw, 320px)",
+            color: "rgba(223,255,28,0.04)",
+            letterSpacing: "-0.05em",
+          }}
+        >
+          {player.gender === "male" ? "ATP" : "WTA"}
+        </span>
         <div className="max-w-4xl mx-auto relative z-10">
           <Link
             href="/players"
-            className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors"
+            className="inline-flex items-center text-white/50 hover:text-white mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             선수 목록으로 돌아가기
@@ -407,7 +434,7 @@ export default async function PlayerProfilePage({ params }: Props) {
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 <Badge
                   variant="secondary"
-                  className="bg-blue-600 text-white border-none hover:bg-blue-500 px-3 py-1"
+                  className="bg-accent-volt text-court-ink border-none hover:opacity-90 px-3 py-1 font-semibold"
                 >
                   {player.gender === "male" ? "ATP Tour" : "WTA Tour"}
                 </Badge>

@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Archivo_Black, Inter_Tight } from "next/font/google";
+import {
+  Inter,
+  Archivo_Black,
+  Inter_Tight,
+  JetBrains_Mono,
+} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -58,6 +63,12 @@ const archivoBlack = Archivo_Black({
 const interTight = Inter_Tight({
   subsets: ["latin"],
   variable: "--font-inter-tight",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
   display: "swap",
 });
 
@@ -171,7 +182,7 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={`${inter.variable} ${archivoBlack.variable} ${interTight.variable}`}
+      className={`${inter.variable} ${archivoBlack.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <meta name="google-adsense-account" content="ca-pub-3050601904412736" />
@@ -186,6 +197,11 @@ export default function RootLayout({
           type="application/opensearchdescription+xml"
           title={`${SITE_NAME} Search`}
           href={getAbsoluteUrl("/opensearch.xml")}
+        />
+        <link
+          rel="preconnect"
+          href="https://cdn.jsdelivr.net"
+          crossOrigin="anonymous"
         />
         <link
           rel="preconnect"
