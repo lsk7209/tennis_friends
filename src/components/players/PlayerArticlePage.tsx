@@ -62,8 +62,12 @@ export default function PlayerArticlePage({ slug }: Props) {
       ? `https://www.atptour.com/en/players/overview`
       : `https://www.wtatennis.com/players`;
 
+  const rankNum = player.rankingCurrent
+    ? String(player.rankingCurrent).padStart(2, "0")
+    : "01";
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
+    <div className="min-h-screen bg-white dark:bg-gray-950">
       <PersonSchema
         name={player.nameEn}
         nameKo={player.name}
@@ -89,6 +93,43 @@ export default function PlayerArticlePage({ slug }: Props) {
       />
       {faqs.length > 0 && <FAQSchema faqs={faqs} />}
 
+      {/* Court Energy Hero */}
+      <div className="bg-court-ink text-white pt-24 pb-16 px-4 relative overflow-hidden">
+        <span
+          aria-hidden="true"
+          className="absolute top-1/2 right-8 -translate-y-1/2 font-black leading-none select-none pointer-events-none hidden md:block"
+          style={{
+            fontFamily: "var(--font-archivo-black)",
+            fontSize: "clamp(120px,18vw,280px)",
+            color: "rgba(223,255,28,0.04)",
+          }}
+        >
+          {rankNum}
+        </span>
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent-volt">
+            {tour} TOUR
+          </span>
+          <h1 className="text-4xl md:text-6xl font-black mt-2 mb-4">
+            {player.name}
+          </h1>
+          <p className="text-white/60 text-lg">
+            {player.country}
+            {dp.oneLineSummary ? ` · ${dp.oneLineSummary.slice(0, 80)}` : ""}
+          </p>
+          {player.rankingCurrent && (
+            <div className="mt-6 flex items-center gap-3">
+              <span className="bg-accent-volt text-court-ink text-xs font-semibold px-2 py-0.5 uppercase tracking-wide">
+                {tour}
+              </span>
+              <span className="text-white/50 text-sm">
+                세계 랭킹 {player.rankingCurrent}위
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+
       <Article
         title={player.name}
         excerpt={
@@ -97,6 +138,7 @@ export default function PlayerArticlePage({ slug }: Props) {
           `${player.name}(${player.nameEn}) ${tour} 프로 테니스 선수 완전 분석.`
         }
         image={player.image}
+        showHeader={false}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <PlayerSearchAliasSection slug={slug} />
