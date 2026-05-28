@@ -1,156 +1,256 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "테니스 코치 선택 가이드 | 레벨·목적별 기준";
+const description =
+  "테니스 코치 선택 기준을 초보, 중급, 상급, 비용, 자격, 소통 방식으로 점검합니다.";
+
+const faqItems = [
+  {
+    question: "초보자는 선수 출신 코치가 무조건 좋은가요?",
+    answer:
+      "아닙니다. 초보자는 선수 경력보다 설명력, 반복 교정, 안전한 기본기 지도 능력이 더 중요합니다.",
+  },
+  {
+    question: "체험 레슨에서는 무엇을 봐야 하나요?",
+    answer:
+      "코치가 내 문제를 하나로 좁혀 설명하는지, 다음 연습 과제를 주는지, 질문에 구체적으로 답하는지를 보세요.",
+  },
+  {
+    question: "개인 레슨과 그룹 레슨 중 무엇이 좋나요?",
+    answer:
+      "기본기 교정은 개인 레슨이 빠르고, 실전 감각과 비용 효율은 그룹 레슨이 좋습니다. 입문 첫 달은 개인 레슨 비중을 높이는 편이 안전합니다.",
+  },
+  {
+    question: "코치를 바꿔야 하는 신호는 무엇인가요?",
+    answer:
+      "매번 같은 말만 반복하거나, 통증을 무시하거나, 목표 대비 훈련 계획이 없는 상태가 이어지면 교체를 검토하세요.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '테니스 코치 선택 가이드 — 레벨별·목적별 기준 | TennisFriends',
-  description: '테니스 코치 선택 가이드 — 레벨별·목적별 기준에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["코치 선택","테니스 레슨","코치","레슨 팁"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-coach-selection-guide` },
-  openGraph: { title: '테니스 코치 선택 가이드 — 레벨별·목적별 기준', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "테니스 코치 선택",
+    "테니스 레슨",
+    "테니스 코치",
+    "레슨 팁",
+    "생활스포츠지도사",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-coach-selection-guide` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-coach-selection-guide`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '테니스 코치 선택 가이드 — 레벨별·목적별 기준', item: `${siteUrl}/blog/tennis-coach-selection-guide` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">테니스 코치 선택 가이드 — 레벨별·목적별 기준</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<article>
-    <h2>테니스 코치 선택 가이드 — 레벨별·목적별 기준</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-coach-selection-guide` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-sky-700 dark:text-sky-300">
+            테니스 레슨 선택 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            테니스 코치는 실력보다 목표 적합성으로 골라야 합니다. 초보자는
+            설명력과 안전한 기본기, 중급자는 약점 분석, 상급자는 경기 전략과
+            데이터 피드백을 기준으로 보세요.
+          </p>
+        </header>
 
-    <p>테니스 실력 향상을 위한 가장 중요한 결정 중 하나는 바로 '코치 선택'입니다. 자신에게 맞는 코치를 찾는다면 테니스 실력은 물론, 즐거움까지 배가될 수 있습니다. 이 가이드에서는 여러분의 테니스 레벨과 목적에 맞는 코치를 선택하는 구체적인 방법과 실질적인 팁을 제공합니다.</p>
+        <section className="mb-10 rounded-lg border border-sky-200 bg-sky-50 p-5 dark:border-sky-800 dark:bg-sky-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>초보자는 자세를 쉽게 설명하고 통증 신호를 보는 코치가 좋습니다.</li>
+            <li>중급자는 영상 피드백, 약점 분석, 실전 드릴이 있는지 확인합니다.</li>
+            <li>상급자는 경기 운영, 패턴 설계, 대회 준비 경험을 봅니다.</li>
+            <li>자격과 평판은 참고하되 체험 레슨의 피드백 품질로 최종 판단합니다.</li>
+          </ul>
+        </section>
 
-    <p>자신의 현재 실력과 앞으로 테니스를 통해 이루고 싶은 목표를 명확히 파악하는 것이 최우선입니다. 이를 바탕으로 코치의 전문성, 지도 스타일, 커뮤니케이션 방식 등을 종합적으로 고려해야 합���다.</p>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 초보자는 설명력과 안전 기준이 먼저다</h2>
+          <p>
+            테니스를 처음 배우는 사람에게 가장 위험한 코치는 말을 많이 하는
+            코치가 아니라, 어려운 말을 쉽게 바꾸지 못하는 코치입니다. 초보자는
+            그립, 준비 자세, 타점, 스윙 궤도, 발 위치를 한 번에 모두 고칠 수
+            없습니다. 좋은 코치는 오늘 고칠 한 가지를 정하고, 다음 레슨까지
+            반복할 과제를 남깁니다.
+          </p>
+          <p>
+            첫 달에는 강한 공을 치게 만드는 것보다 통증 없이 반복할 수 있는
+            동작을 만드는 것이 중요합니다. 손목, 팔꿈치, 어깨 통증을 "원래
+            처음엔 아픈 것"으로 넘기는 코치보다, 라켓 무게와 그립, 준비 동작을
+            함께 점검하는 코치를 선택하세요.
+          </p>
 
-    <h2>1. 나의 테니스 레벨과 목표 설정하기</h2>
+          <h2>2. 중급자는 약점 분석과 실전 연결을 본다</h2>
+          <p>
+            중급자에게 필요한 코칭은 "더 낮게, 더 빨리" 같은 일반 조언이
+            아닙니다. 예를 들어 백핸드가 밀린다면 준비가 늦은 것인지, 타점이
+            몸에 붙은 것인지, 공을 보는 시간이 짧은 것인지 원인을 나눠야
+            합니다. 코치가 원인을 분리하지 못하면 레슨을 받아도 같은 실수가
+            반복됩니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>레벨</th>
+                <th>좋은 코칭 신호</th>
+                <th>주의 신호</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>초보</td>
+                <td>한 번에 한 가지 과제만 제시</td>
+                <td>용어가 많고 설명이 추상적</td>
+              </tr>
+              <tr>
+                <td>중급</td>
+                <td>영상·랠리 상황으로 약점 분석</td>
+                <td>드릴은 많은데 경기 연결이 없음</td>
+              </tr>
+              <tr>
+                <td>상급</td>
+                <td>패턴, 상대 분석, 대회 루틴 설계</td>
+                <td>폼 교정만 반복하고 전술 피드백이 없음</td>
+              </tr>
+            </tbody>
+          </table>
 
-    <h3>초보자를 위한 코치 선택 기준</h3>
-    <p>테니스를 처음 시작하는 분들은 기본적인 스트로크(포핸드, 백핸드, 서브)와 발리, 스매시 등 필수 기술을 정확하게 배우는 것이 중요합니다. 또한, 코트에서의 기본적인 움직임과 룰 습득도 필수적입니다. 초보자에게는 무엇보다 친절하고 인내심 있는 코치가 적합합니다.</p>
-    <ul>
-        <li><strong>기초 기술 습득:</strong> 정확한 그립, 스윙 궤도, 임팩트 포인트를 체계적으로 가르쳐줄 수 있는 코치</li>
-        <li><strong>코트 에티켓 및 룰:</strong> 테니스 경기의 기본 매너와 규칙을 쉽게 설명해주는 코치</li>
-        <li><strong>동기 부여 및 재미:</strong> 테니스에 대한 흥미를 잃지 않도록 긍정적이고 격려해주는 코치</li>
-        <li><strong>안전한 플레이:</strong> 부상 방지를 위한 올바른 자세와 움직임을 강조하는 코치</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 처음 몇 번의 레슨은 체험 레슨을 통해 코치의 지도 스타일을 직접 경험해보세요. 짧은 시간 안에 많은 것을 배우기보다는, 기본기를 탄탄하게 다질 수 있도록 돕는 코치를 찾는 것이 장기적으로 큰 도움이 됩니다.</p>
+          <h2>3. 자격과 경력은 확인하되 과신하지 않는다</h2>
+          <p>
+            코치의 자격과 경력은 신뢰도를 보는 출발점입니다. 국가 체육지도자
+            자격은
+            <a href="https://sqms.kspo.or.kr/" target="_blank" rel="noreferrer">
+              국민체육진흥공단 체육지도자 홈페이지
+            </a>
+            에서 제도와 자격 정보를 확인할 수 있습니다. 다만 자격증이 있다고
+            모든 학습자에게 잘 맞는 것은 아니고, 선수 출신이라고 초보 설명력이
+            자동으로 좋은 것도 아닙니다.
+          </p>
+          <p>
+            반대로 자격만 없다고 무조건 배제할 필요도 없습니다. 성인 동호인
+            지도 경험, 레슨 커리큘럼, 부상 예방 지식, 레슨 후 피드백 습관을
+            함께 봐야 합니다. 중요한 것은 내 목표를 달성할 수 있는 구조를
+            제시하는지입니다.
+          </p>
 
-    <h3>중급자를 위한 코치 선택 기준</h3>
-    <p>어느 정도 기본기가 갖춰진 중급자라면, 자신의 플레이를 분석하고 약점을 보완하는 데 집중해야 합니다. 다양한 구질(탑스핀, 슬라이스)을 구사하고, 공격적인 플레이와 수비적인 플레이의 균형을 맞추는 것이 중요합니다. 전술적인 이해도를 높이고 실전 경험을 풍부하게 쌓을 수 있도록 돕는 코치가 필요합니다.</p>
-    <ul>
-        <li><strong>약점 분석 및 보완:</strong> 개인의 플레이를 객관적으로 평가하고 개선 방안을 제시하는 코치</li>
-        <li><strong>다양한 기술 지도:</strong> 스핀 샷, 발리, 스매시 등 고급 기술과 다양한 서브 전략을 가르치는 코치</li>
-        <li><strong>전술 및 게임 운영:</strong> 코트 상황에 맞는 전략 수립, 포인트 운영 능력 향상을 돕는 코치</li>
-        <li><strong>실전 감각 향상:</strong> 드릴 연습뿐만 아니라 실제 게임을 통해 기술을 적용하는 훈련을 제공하는 코치</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 코치에게 자신의 강점과 약점에 대해 솔직하게 이야기하고, 어떤 부분을 개선하고 싶은지 구체적으로 질문해보세요. 코치가 제시하는 훈련 프로그램이 자신의 목표와 얼마나 부합하는지 확인하는 것이 중요합니다.</p>
+          <h2>4. 비용은 시간당 단가보다 피드백 밀도로 비교한다</h2>
+          <p>
+            레슨비가 비싸도 20분 내내 공만 공급하면 효율이 낮습니다. 반대로
+            짧은 레슨이라도 문제 진단, 교정 드릴, 개인 연습 과제가 명확하면
+            만족도가 높습니다. 상담할 때는 "몇 분 수업인가요?"뿐 아니라
+            "레슨 후 연습 과제를 주시나요?", "영상 피드백이 가능한가요?"를
+            물어보세요.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              체험 레슨 체크리스트
+            </h3>
+            <ol className="list-decimal space-y-2 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>오늘의 핵심 문제를 한 문장으로 설명했는가?</li>
+              <li>내 몸 상태와 통증 여부를 먼저 물어봤는가?</li>
+              <li>교정 전후 차이를 직접 느끼게 했는가?</li>
+              <li>다음 레슨 전까지 할 개인 연습을 줬는가?</li>
+              <li>질문했을 때 구체적인 이유와 기준을 답했는가?</li>
+            </ol>
+          </aside>
 
-    <h3>상급자 및 선수 지망생을 위한 코치 선택 기준</h3>
-    <p>상급자나 선수 지망생은 경기력 향상을 위한 전문적이고 체계적인 지도가 필요합니다. 코치는 선수의 잠재력을 최대한 이끌어내고, 경기 경험을 바탕으로 섬세한 피드백을 제공해야 합니다. 멘탈 관리, 체력 훈련까지 아우르는 종합적인 코칭 능력을 갖춘 코치가 필요합니다.</p>
-    <ul>
-        <li><strong>경기력 분석 및 전략:</strong> 상대 선수 분석, 경기 데이터 분석을 통한 맞춤 전략 수립</li>
-        <li><strong>최신 테니스 트렌드 반영:</strong> 현대 테니스의 흐름에 맞는 기술 및 전술 지도</li>
-        <li><strong>멘탈 코칭:</strong> 압박감 속에서의 집중력 유지, 자신감 향상 등 심리적인 부분 지도</li>
-        <li><strong>체력 및 컨디셔닝:</strong> 테니스에 특화된 체력 훈련 및 부상 관리 프로그램 제공</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 코치의 선수 지도 경력, 특히 비슷한 레벨의 선수들을 지도해본 경험이 있는지 확인하는 것이 좋습니다. 또한, 코치가 최신 테니스 트렌드를 얼마나 잘 이해하고 적용하는지 파악하는 것도 중요합니다.</p>
+          <h2>5. 안전과 윤리 기준도 선택 조건이다</h2>
+          <p>
+            스포츠 지도에서는 기술만큼 안전한 관계가 중요합니다. 폭언, 과도한
+            신체 접촉, 통증 무시, 사적인 연락 강요는 좋은 코칭이 아닙니다.
+            체육계 인권침해와 스포츠 비리 신고·상담 경로는
+            <a href="https://www.k-sec.or.kr/" target="_blank" rel="noreferrer">
+              스포츠윤리센터
+            </a>
+            를 통해 확인할 수 있습니다. 특히 유소년 레슨은 보호자 관찰 가능
+            여부와 촬영·피드백 방식까지 확인해야 합니다.
+          </p>
 
-    <h2>2. 코치의 지도 스타일과 커뮤니케이션 방식 파악하기</h2>
+          <h2>마무리</h2>
+          <p>
+            테니스 코치 선택은 가장 유명한 사람을 고르는 일이 아니라, 내 목표를
+            가장 빨리 이해하고 안전하게 반복하게 해주는 사람을 찾는 일입니다.
+            체험 레슨을 최소 1회 진행하고, 레벨별 기준표와 체크리스트를 놓고
+            비교하면 후회할 확률을 크게 줄일 수 있습니다.
+          </p>
+        </section>
 
-    <h3>지도 스타일의 중요성</h3>
-    <p>코치의 지도 스타일은 학습 효과에 지대한 영향을 미칩니다. 어떤 코치는 엄격하고 디테일한 지도를 선호하는 반면, 어떤 코치는 격려와 긍정적인 분위기 속에서 가르치는 것을 좋아합니다. 자신의 학습 스타일에 맞는 지도 스타일을 가진 코치를 선택해야 레슨에 대한 만족도를 높일 수 있습니다.</p>
-    <ul>
-        <li><strong>디테일 지향형:</strong> 아주 작은 부분까지 꼼꼼하게 교정해주길 원하는 경우</li>
-        <li><strong>격려 및 동기 부여형:</strong> 긍정적인 피드백과 칭찬을 통해 자신감을 북돋아 주는 것을 선호하는 경우</li>
-        <li><strong>실전 중심형:</strong> 다양한 상황에서의 게임 플레이를 통해 배우는 것을 좋아하는 경우</li>
-        <li><strong>분석 및 이론형:</strong> 기술적인 원리나 이론적 설명을 통해 이해도를 높이는 것을 선호하는 경우</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 코치에게 '어떤 방식으로 가르치는 것을 선호하시나요?' 또는 '제 플레이를 어떻게 분석하고 피드백 주시나요?'와 같이 직접적으로 질문하여 지도 스타일을 파악해보세요.</p>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-    <h3>효과적인 커뮤니케이션</h3>
-    <p>코치와의 원활한 소통은 성공적인 레슨의 핵심입니다. 자��의 궁금증이나 어려움을 편안하게 이야기하고, 코치의 설명을 명확하게 이해할 수 있는 관계가 중요합니다. 코치가 자신의 말을 경청하고, 질문에 성의껏 답변해주는지 확인해야 합니다.</p>
-    <ul>
-        <li><strong>경청하는 자세:</strong> 코치가 나의 이야기를 주의 깊게 듣고 이해하려는 노력을 보이는가</li>
-        <li><strong>명확한 설명:</strong> 코치의 설명이 이해하기 쉽고 구체적인가</li>
-        <li><strong>피드백의 질:</strong> 긍정적인 부분과 개선할 부분을 균형 있게 전달하는가</li>
-        <li><strong>질문에 대한 답변:</strong> 궁금한 점에 대해 성실하고 만족스럽게 답변해주는가</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 레슨 중 궁금한 점이 있다면 망설이지 말고 질문하세요. 코치가 질문에 대해 어떻게 반응하는지, 얼마나 상세하게 설명해주는지를 통해 커뮤니케이션 스타일을 파악할 수 있습니다. 또한, 레슨 후에는 다음 레슨에 대한 기대나 궁금한 점을 미리 이야기���는 것도 좋습니다.</p>
-
-    <h2>3. 코치 선정 시 고려해야 할 추가 요소</h2>
-
-    <h3>경험과 자격</h3>
-    <p>코치의 경험과 자격증은 실력과 신뢰도를 가늠하는 중요한 기준이 될 수 있습니다. 특히, 선수 경력이 풍부하거나, 공신력 있는 기관에서 지도자 자격증을 취득한 코치라면 더 전문적인 지도를 기대할 수 있습니다.</p>
-    <ul>
-        <li><strong>지도 경력:</strong> 얼마나 오랫동안 테니스 코치로 활동했는지</li>
-        <li><strong>자격증:</strong> 대한테니스협회(KTA) 등 공신력 있는 기관의 지도자 자격증 보유 여부</li>
-        <li><strong>선수 경력:</strong> 프로 선수 또는 상위 아마추어 선수 경력이 있는지</li>
-        <li><strong>전문 분야:</strong> 유소년, 성인, 선수 육성 등 특정 분야에 대한 전문성이 있는지</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 코치의 프로필이나 소개 자료를 꼼꼼히 확인하고, 직접 만나 상담할 때 관련 질문을 ���보는 것이 좋습니다. 너무 많은 자격증보다는, 자신의 레벨과 목적에 맞는 경험과 전문성을 가진 코치를 찾는 것이 중요합니다.</p>
-
-    <h3>비용 및 접근성</h3>
-    <p>레슨 비용과 코치의 활동 장소는 현실적으로 고려해야 할 중요한 부분입니다. 자신의 예산과 꾸준히 레슨을 받을 수 있는 접근성을 고려하여 코치를 선택해야 합니다.</p>
-    <ul>
-        <li><strong>레슨 비용:</strong> 시간당 또는 회당 비용이 합리적인지</li>
-        <li><strong>그룹 레슨 vs 개인 레슨:</strong> 각 레슨 방식의 장단점과 비용 차이</li>
-        <li><strong>활동 장소:</strong> 집이나 직장에서 접근하기 쉬운 곳에 코트가 있는지</li>
-        <li><strong>레슨 스케줄:</strong> 자신의 스케줄과 코치의 스케줄이 잘 맞는지</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 여러 코치의 레슨 비용과 프로그램을 비교해보세요. 단순히 가격이 저렴하다고 해서 좋은 코치는 아니며, 너무 비싸다고 해��� 무조건 좋은 코치도 아닙니다. 코치의 실력, 지도 스타일, 시설 등을 종합적으로 고려하여 가성비를 따지는 것이 현명합니다. 또한, 레슨 시간 외에 코치가 연습이나 게임을 봐줄 수 있는지 등 추가적인 지원이 있는지 확인해보는 것도 좋습니다.</p>
-
-    <h2>4. 나에게 맞는 코치, 이렇게 찾아보세요!</h2>
-
-    <h3>온라인 및 오프라인 정보 탐색</h3>
-    <p>코치를 찾는 방법은 다양합니다. 테니스 관련 온라인 커뮤니티, 테니스 클럽 웹사이트, 스포츠 관련 앱 등에서 코치 정보를 얻을 수 있습니다. 또한, 주변 테니스 동호인들의 추천이나 테니스장에서 직접 코치의 지도 모습을 관찰하는 것도 좋은 방법입니다.</p>
-    <ul>
-        <li><strong>온라인 플랫폼 활용:</strong> 테니스 레슨 매칭 앱, 스포츠 강습 플랫폼, 지역 테니스 협회 웹사이트 등</li>
-        <li><strong>테니스 클럽 및 센터 문의:</strong> 지역 테니스 클럽이나 스포츠 센터에 소속 코치에 대한 정보 문의</li>
-        <li><strong>주변 지인 추천:</strong> 테니스를 즐기는 친구, 동호회 회원들에게 추천받기</li>
-        <li><strong>직접 관찰:</strong> 테니스장에서 코치가 다른 회원들을 지도하는 모습을 관찰하며 지도 스타일 파악</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 여러 채널을 통해 정보를 수집하고, 관심 있는 코치 몇 명을 추려 직접 연락하여 상담을 받아보세요. 첫 만남에서 코치의 전문성과 함께 자신과의 '케미'를 느껴보는 것이 중요합니다.</p>
-
-    <h3>무료 체험 레슨 활용</h3>
-    <p>많은 코치들이 첫 레슨을 무료 또는 할인된 가격으로 제공합니다. 이를 적극적으로 활용하여 코치의 지도 스타일, 커뮤니케이션 방식, 레슨 내용 등을 직접 경험해보는 것이 가장 확실한 방법입니다.</p>
-    <ul>
-        <li><strong>체험 레슨 신청:</strong> 관심 있는 코치에게 체험 레슨 가능 여부 문의</li>
-        <li><strong>레슨 내용 확인:</strong> 체험 레슨 시 코치가 어떤 내용을 지도하는지, 어떤 피드백을 주는지 주의 깊게 관찰</li>
-        <li><strong>질문 시간 활용:</strong> 체험 레슨 후 코치에게 궁금한 점을 질문하고 답변 경청</li>
-        <li><strong>다른 코치와 비교:</strong> 여러 코치의 체험 레슨을 받아본 후 객관적으로 비교 평가</li>
-    </ul>
-    <p><strong>실천 팁:</strong> 체험 레슨 시에는 자신의 현재 실력과 배우고 싶은 내용을 명확하게 전달하는 것이 좋습니다. 또한, 코치가 자신에게 맞는 조언을 해주는지, 레슨 후에도 꾸준히 연락하며 궁금증을 해결해주는지를 통해 코치의 성실함과 전문성을 가늠해볼 수 있습니다.</p>
-
-    <h2>자주 묻는 질문</h2>
-
-    <h3>Q1: 코치를 바꾸고 싶을 때, 어떻게 해야 하나요?</h3>
-    <p>코치를 바꾸기로 결정했다면, 기존 코치에게 정중하게 상황을 설명하고 레슨 종료 의사를 전달하는 것이 예의입니다. 갑작스러운 통보보다는 충분한 시간을 두고 이야기하는 것이 좋습니다. 새로운 코치를 찾을 때는 이전 코치에게서 배웠던 내용과 앞으로 배우고 싶은 부분을 명확히 정리하여 새로운 코치에��� 전달하면 더욱 효과적인 레슨을 받을 수 있습니다.</p>
-
-    <h3>Q2: 그룹 레슨과 개인 레슨 중 어떤 것이 더 좋을까요?</h3>
-    <p>그룹 레슨은 비용이 저렴하고 다른 사람들과 함께 배우는 재미가 있다는 장점이 있습니다. 하지만 개개인에게 집중하기 어렵다는 단점도 있습니다. 개인 레슨은 비용이 더 비싸지만, 코치가 오롯이 자신에게 집중하여 맞춤형 지도를 제공한다는 큰 장점이 있습니다. 자신의 예산, 학습 스타일, 목표 등을 고려하여 더 적합한 방식을 선택하는 것이 좋습니다. 초반에는 개인 레슨으로 기본기를 확실히 다지고, 이후 그룹 레슨으로 실전 감각을 익히는 것도 좋은 방법입니다.</p>
-
-    <h3>Q3: 코치가 너무 엄격하거나, 너무 느슨한 것 같아요. 어떻게 해야 할까요?</h3>
-    <p>코치의 지도 스타일은 매우 다양합니다. 만약 코치가 너무 엄격하여 부담스럽거나, 반대로 너무 느슨하여 실력 향상이 더디다고 느껴진다면, 먼저 코치와 솔직하게 대화를 시도해보는 것이 좋습니다. 자신의 어려움이나 원하는 지도 방식을 정중하게 전달해보세요. 만약 대화 후에도 ��선되지 않거나, 지속적으로 맞지 않는다고 느껴진다면, 다른 코치를 찾아보는 것을 고려해볼 수 있습니다. 중요한 것은 테니스에 대한 즐거움을 잃지 않고 꾸준히 발전해나가는 것입니다.</p>
-
-</article>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            코치를 고르기 전에 내 레벨을 먼저 확인하세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline dark:text-blue-300"
+          >
             무료 NTRP 실력 테스트 →
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

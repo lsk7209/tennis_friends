@@ -1,115 +1,271 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "베이스라인 랠리 전략 | 깊이·방향·템포 변화";
+const description =
+  "테니스 베이스라인 랠리에서 깊이, 방향, 템포를 바꾸는 기준과 실전 패턴, 연습 드릴을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "베이스라인 랠리는 무조건 오래 버티는 것이 좋은가요?",
+    answer:
+      "아닙니다. 오래 버티는 능력은 필요하지만 목적 없이 이어지는 랠리는 상대에게 리듬을 줍니다. 깊이, 방향, 템포 중 하나는 의도적으로 바꿔야 합니다.",
+  },
+  {
+    question: "깊은 공을 치기 어려울 때는 무엇부터 고쳐야 하나요?",
+    answer:
+      "스윙을 세게 하기보다 네트 위 여유 높이와 앞쪽 타점을 먼저 확인하세요. 공 높이와 회전이 확보되면 깊이는 자연스럽게 안정됩니다.",
+  },
+  {
+    question: "방향 전환은 언제 시도해야 하나요?",
+    answer:
+      "내가 균형을 잡고 있고 상대가 한쪽으로 밀렸을 때가 좋습니다. 몸이 늦었거나 상대가 중앙에 있으면 무리한 다운더라인보다 크로스 깊이가 안전합니다.",
+  },
+  {
+    question: "템포 변화는 초보자도 써도 되나요?",
+    answer:
+      "가능합니다. 빠른 공만 의미하는 것이 아니라 높은 루프볼, 낮은 슬라이스, 짧은 각도처럼 상대 리듬을 끊는 선택도 템포 변화입니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '베이스라인 랠리 전략 — 깊이·방향·템포 변화 | TennisFriends',
-  description: '베이스라인 랠리 전략 — 깊이·방향·템포 변화에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["베이스라인","랠리","전략","깊이","템포"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-baseline-rally-strategy` },
-  openGraph: { title: '베이스라인 랠리 전략 — 깊이·방향·템포 변화', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: ["베이스라인 랠리", "테니스 랠리 전략", "깊이 조절", "방향 전환", "템포 변화"],
+  alternates: { canonical: `${siteUrl}/blog/tennis-baseline-rally-strategy` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-baseline-rally-strategy`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '베이스라인 랠리 전략 — 깊이·방향·템포 변화', item: `${siteUrl}/blog/tennis-baseline-rally-strategy` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">베이스라인 랠리 전략 — 깊이·방향·템포 변화</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<article>
-    <h2>베이스라인 랠리 전략 — 깊이·방향·템포 변화</h2>
-    <p>테니스 경기에서 승패를 가르는 중요한 요소 중 하나는 바로 베이스라인 랠리입니다. 랠리에서 상대를 효과적으로 공략하고 자신의 게임을 유리하게 이끌어 나가기 위해서는 단순히 공을 넘기는 것을 넘어, 깊이, 방향, 그리고 템포의 변화를 전략적으로 활용해야 합니다. 이러한 변화를 통해 상대의 균형을 무너뜨리고 실수를 유발하며, 결정적인 찬스를 만들어낼 수 있습니다.</p>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-baseline-rally-strategy` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            테니스 랠리·전술 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            베이스라인 랠리는 오래 버티는 게임이 아니라 상대의 균형과 리듬을 무너뜨리는 과정입니다.
+            깊이로 밀고, 방향으로 움직이고, 템포로 판단을 늦추면 같은 스트로크도 훨씬 공격적인
+            전술이 됩니다.
+          </p>
+        </header>
 
-    <p>베이스라인 랠리에서의 승리는 상대보다 한 발 앞선 생각과 정교한 기술에서 비롯됩니다. 깊이를 조절��여 상대를 코트 깊숙이 밀어내거나, 예측 불가능한 방향 전환으로 빈 공간을 공략하고, 템포를 변화시켜 리듬을 빼앗는 것이 핵심입니다. 이 글에서는 이러한 베이스라인 랠리 전략의 구체적인 방법과 실용적인 팁을 자세히 알아보겠습니다.</p>
+        <section className="mb-10 rounded-lg border border-teal-200 bg-teal-50 p-5 dark:border-teal-800 dark:bg-teal-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>랠리 초반에는 깊이로 상대를 베이스라인 뒤에 묶습니다.</li>
+            <li>방향 전환은 내 균형이 잡혔고 상대가 한쪽으로 밀렸을 때만 시도합니다.</li>
+            <li>템포 변화는 빠르게 치는 것뿐 아니라 높이와 회전을 바꾸는 선택입니다.</li>
+            <li>같은 패턴으로 3번 이상 밀리면 코스보다 높이와 깊이부터 재설정합니다.</li>
+          </ul>
+        </section>
 
-    <h2>1. 깊이의 중요성: 상대를 코트 뒤로 밀어내는 힘</h2>
-    <p>베이스라인 랠리에서 '깊이'는 단순히 공을 경기장 끝까지 보내는 것을 의미하지 않습니다. 이는 상대방을 코트 깊숙이 밀어내어 공격 기회를 제한하고, 자신의 공격적인 플레이를 위한 충분한 시간을 확보하는 전략적 도구입니다. 깊은 볼은 상대방에게 다음과 같은 영향을 미칩니다.</p>
-    <ul>
-        <li><strong>공격 기회 제한:</strong> 상대가 코트 깊숙이 물러나게 되면, 네트 가까이 다가와 공격적인 샷을 구사하기 어려워집니다. 이는 상대의 공격적인 의지를 꺾고, 수비적인 자세를 취하게 만듭니다.</li>
-        <li><strong>시간 확보:</strong> 깊은 볼을 받은 상대는 공을 처리하기 위해 더 많은 시간을 필요로 합니다. 이 시간은 우��에게 다음 샷을 준비하고, 코트 안으로 움직여 유리한 위치를 선점할 수 있는 기회를 제공합니다.</li>
-        <li><strong>실수 유발:</strong> 깊은 볼은 상대방이 평소보다 더 강한 힘으로 샷을 쳐야 한다는 부담감을 줍니다. 이는 종종 샷의 정확성을 떨어뜨리고, 네트나 베이스라인 아웃과 같은 실수를 유발할 가능성을 높입니다.</li>
-    </ul>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 베이스라인 랠리는 공간을 만드는 과정이다</h2>
+          <p>
+            많은 동호인이 베이스라인 랠리를 오래 버티는 능력으로만 봅니다. 하지만 랠리의 목적은
+            공을 계속 넘기는 것이 아니라 다음 공격 공간을 만드는 것입니다. 깊은 공으로 상대를 뒤로
+            밀고, 크로스 방향으로 코트를 넓히고, 템포를 바꿔 상대의 첫 발을 늦추는 과정이 모여
+            찬스볼을 만듭니다.
+          </p>
+          <p>
+            테니스에서 rally, baseline, topspin 같은 기본 용어는
+            <a
+              href="https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ITF 테니스 용어 자료
+            </a>
+            를 참고하면 정리하기 쉽습니다. 용어를 알고 있으면 경기 후 "왜 밀렸는지"를 더 정확히
+            기록할 수 있습니다.
+          </p>
 
-    <h3>깊이 있는 샷을 구사하는 방법</h3>
-    <p>깊은 샷을 일관성 있게 구사하기 위해서는 몇 가지 기술적인 요소와 전략적인 고려가 필요합니다.</p>
-    <ul>
-        <li><strong>임팩트 시점과 스윙:</strong> 공이 최대한 높이 있을 때, 즉 정점에서 조금 떨어진 시점에 임팩트를 주는 것이 좋습니다. 백스윙은 충분히 가져가되, 팔로우 스루를 길고 부드럽게 가져가면서 공에 추진력을 실어주세요.</li>
-        <li><strong>하회전(Topspin) 활용:</strong> 하회전은 공이 떨어질 때 더 빠르게 가속되도록 하여 상대방의 발밑으로 떨어지는 깊은 샷을 만드는 데 효과적입니다. 또한, 하���전은 공의 궤적을 더 높게 만들어 네트를 넘기기 쉽게 하면서도, 상대 코트에 떨어졌을 때 더 깊이 바운스되도록 합니다.</li>
-        <li><strong>코트 중앙을 노리기:</strong> 상대방의 중앙으로 깊게 떨어지는 샷은 상대방이 어느 방향으로 움직여야 할지 혼란스럽게 만들 수 있습니다. 이는 상대방의 발을 묶어두고, 좌우로 넓게 움직여야 하는 부담을 주어 체력을 소모시키고 실수를 유발합니다.</li>
-        <li><strong>상대의 위치 파악:</strong> 상대방이 코트 앞쪽에 있다면, 깊은 샷은 매우 효과적인 무기가 됩니다. 반대로 상대가 이미 베이스라인 깊숙이 있다면, 깊이만으로는 상대를 공략하기 어려울 수 있으므로 다른 전략과 혼합해야 합니다.</li>
-    </ul>
+          <h2>2. 깊이는 랠리의 안전장치이자 공격 준비다</h2>
+          <p>
+            깊은 공은 상대를 뒤로 밀어 네트 가까운 공격 기회를 줄입니다. 동시에 내 다음 준비 시간을
+            벌어 줍니다. 깊이를 만들려면 무조건 세게 치는 것이 아니라 네트 위 여유 높이, 충분한
+            회전, 앞쪽 타점이 필요합니다. 공이 짧아지는 날에는 파워보다 높이와 회전을 먼저 조절해야
+            합니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>상황</th>
+                <th>좋은 선택</th>
+                <th>피할 선택</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>상대가 베이스라인 안쪽</td>
+                <td>중앙 깊은 공으로 뒤로 밀기</td>
+                <td>짧은 각도로 먼저 무리하기</td>
+              </tr>
+              <tr>
+                <td>내 타점이 늦음</td>
+                <td>높은 크로스로 시간 확보</td>
+                <td>다운더라인 방향 전환</td>
+              </tr>
+              <tr>
+                <td>상대가 한쪽으로 밀림</td>
+                <td>반대 코트 1m 안쪽 공략</td>
+                <td>라인 바로 위 위너 시도</td>
+              </tr>
+              <tr>
+                <td>랠리 리듬이 반복됨</td>
+                <td>루프볼이나 슬라이스로 템포 변화</td>
+                <td>같은 속도·같은 높이 반복</td>
+              </tr>
+            </tbody>
+          </table>
 
-    <h2>2. 방향 전환의 마법: 예측 불가능성으로 상대를 흔들기</h2>
-    <p>베이스라인 랠리에서 상대방을 코트 밖으로 끌어내거나 빈 공간을 공략하는 데 있어 '방향 전환'은 매우 강력한 무기입니다. 상대방이 예상치 못한 방향으로 공을 보내면, 상대는 급격하게 방향을 전환해야 하므로 균형을 잃고 움직임이 둔해지게 됩니다. 이는 결정적인 공격 기회를 만들거나 상대의 실수를 유발하는 데 매우 효과적입니다.</p>
-    <ul>
-        <li><strong>상대방 코트의 빈 공간 공략:</strong> 상대방이 코트 한쪽으로 치우쳐 있을 때, 반대편 빈 공간으로 샷을 보내는 것은 기본적이면서도 매우 효과적인 전략입니다.</li>
-        <li><strong>크로스 코트 vs. 다운 더 라인:</strong> 랠리 중에 상대방을 코트 한쪽으로 몰아넣은 후, 반대 방향으로 샷을 날리는 것은 상대방의 수비를 무너뜨리는 데 탁월합니다. 특히, 상대가 예상하기 힘든 타이밍에 '다운 더 라인(Down the Line)' 샷을 구사하면 효과를 극대화할 수 있습니다.</li>
-        <li><strong>대각선 샷의 변화:</strong> 단순히 대각선으로만 공을 보내는 것이 아니라, 대각선 샷의 각도와 깊이를 계속 변화시켜 상대방이 일정한 리듬을 타지 못하게 만들어야 합니다.</li>
-    </ul>
+          <h2>3. 방향 전환은 균형이 있을 때만 한다</h2>
+          <p>
+            베이스라인에서 가장 많은 실수는 늦은 타점에서 방향을 바꾸는 것입니다. 크로스 랠리 중
+            몸이 공 뒤에 들어가지 못했는데 다운더라인을 시도하면 네트나 사이드 아웃이 나올 확률이
+            높습니다. 방향 전환은 내가 균형을 잡고 있고 상대가 한쪽으로 밀렸을 때만 성공률이 높습니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              방향 전환 체크리스트
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+              <li>공 뒤에 들어가 앞쪽 타점으로 칠 수 있는가?</li>
+              <li>상대가 코트 한쪽으로 2걸음 이상 밀렸는가?</li>
+              <li>목표가 라인이 아니라 코트 안쪽 1m인가?</li>
+              <li>실패해도 다음 공을 준비할 위치로 회복 가능한가?</li>
+              <li>중요 포인트라면 위너보다 깊은 어프로치가 더 안전하지 않은가?</li>
+            </ul>
+          </aside>
 
-    <h3>방향 전환 샷을 효과적으로 구사하는 방법</h3>
-    <p>방향 전환 샷은 단순히 공을 ���른 곳으로 보내는 것이 아니라, 상대방의 심리를 이용하는 기술입니다.</p>
-    <ul>
-        <li><strong>상대의 움직임 예측:</strong> 상대방이 공을 치기 위해 어느 방향으로 움직이는지, 그리고 어떤 샷을 예상하는지를 파악하는 것이 중요합니다. 상대의 움직임이 예측되면, 그 반대 방향으로 샷을 보내는 것이 훨씬 효과적입니다.</li>
-        <li><strong>몸의 각도와 시선 처리:</strong> 샷을 치는 순간까지 시선을 공이 향할 방향이 아닌 다른 곳으로 처리하거나, 몸의 각도를 샷의 방향과 다르게 가져가면 상대방을 속이는 데 도움이 됩니다. 예를 들어, 다운 더 라인 샷을 치면서도 몸은 크로스 코트 방향으로 향하게 하는 식입니다.</li>
-        <li><strong>샷의 페이크:</strong> 마치 크로스 코트 샷을 치는 것처럼 준비하다가 마지막 순간에 방향을 바꿔 다운 더 라인으로 보내는 '페이크(Fake)' 기술은 상대방을 완전히 속일 수 있는 강력한 방법입니다.</li>
-        <li><strong>다양한 샷 구사:</strong> 직선적인 샷뿐만 아니라, 상대방을 코트 밖으로 끌어내기 위한 깊은 대각선 샷, 또는 상대방의 발밑으로 떨어지는 짧고 날카로운 샷 등 다양한 종류의 방향 전환 샷을 조합하여 사용하면 더욱 효과적입니다.</li>
-    </ul>
+          <h2>4. 템포 변화는 상대의 리듬을 끊는 기술이다</h2>
+          <p>
+            템포 변화는 갑자기 세게 치는 것만 뜻하지 않습니다. 높은 루프볼로 상대를 뒤로 밀거나,
+            낮은 슬라이스로 타점을 낮추거나, 짧은 각도로 앞으로 끌어내는 것도 템포 변화입니다.
+            같은 속도와 같은 높이의 공이 반복되면 상대는 점점 편해집니다. 반대로 높이와 회전을
+            바꾸면 상대는 타점과 발 위치를 다시 계산해야 합니다.
+          </p>
+          <p>
+            USTA의
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              테니스 팁과 훈련 자료
+            </a>
+            에서도 기술을 상황별로 나눠 훈련하는 접근을 확인할 수 있습니다. 랠리 전략도 샷 하나가
+            아니라 상황에 맞는 선택의 조합으로 봐야 합니다.
+          </p>
 
-    <h2>3. 템포 조절의 예술: 리듬을 빼앗고 흐름을 장악하기</h2>
-    <p>베이스라인 랠리에서 '템포' 조절은 상대방의 리듬을 깨뜨리고 경기의 주도권을 잡는 핵심 전략입니다. 빠르고 공격적인 샷과 느리고 깊은 샷을 적절히 섞어 사용하면 상대방은 일정한 리듬을 유지하기 어렵고, 체력 소모를 늘릴 수 있습니다. 템포 변화는 상대방에게 다음과 같은 영향을 미칩니다.</p>
-    <ul>
-        <li><strong>리듬 파괴:</strong> 상대방은 일정한 템포의 샷에 익숙해지면 편안함을 느끼고 자신의 게임을 풀어갈 수 있습니다. 하지만 템포가 갑자기 빨라지거나 느려지면, 이러한 편안함은 사라지고 혼란을 느끼게 됩니다.</li>
-        <li><strong>체력 소모 증가:</strong> 빠른 템포의 샷은 상대방이 빠르게 움직여 공을 처리해야 하므로 체력 소모를 증가시킵니다. 반���로, 느리고 깊은 샷은 상대방이 코트 깊숙이 물러나게 하여 다음 샷을 준비하는 데 시간을 더 쓰게 만들고, 이는 불필요한 움직임을 유발하여 체력을 소모시킬 수 있습니다.</li>
-        <li><strong>실수 유발:</strong> 템포 변화는 상대방의 판단력을 흐리게 하고, 예상치 못한 샷에 대한 반응 속도를 늦추게 하여 실수를 유발하는 데 매우 효과적입니다.</li>
-    </ul>
+          <h2>5. 랠리 패턴은 3구 단위로 설계한다</h2>
+          <p>
+            베이스라인 랠리를 잘하려면 한 공만 생각하지 말고 3구 단위로 봐야 합니다. 첫 공은 깊게
+            보내 상대를 밀고, 두 번째 공은 방향을 확인하고, 세 번째 공에서 템포나 코스를 바꿉니다.
+            이 구조가 있으면 랠리 중 급하게 위너를 노리는 실수가 줄어듭니다.
+          </p>
+          <ul>
+            <li>1구: 중앙 깊게 보내 상대의 공격 각도를 줄인다.</li>
+            <li>2구: 상대가 밀린 쪽과 회복 속도를 확인한다.</li>
+            <li>3구: 반대 코스, 높은 루프볼, 낮은 슬라이스 중 하나로 변화를 준다.</li>
+            <li>찬스볼: 서비스라인 안쪽에서 코트 1m 안쪽 목표로 마무리한다.</li>
+          </ul>
 
-    <h3>템포 변화를 효과적으로 활용하는 방법</h3>
-    <p>템포 조절은 단순히 공을 빨리 치거나 느리게 치는 것 이상의 섬세함을 요구합니다.</p>
-    <ul>
-        <li><strong>빠른 샷의 활용:</strong> 상대방이 코트 중앙에서 벗어나 있거나, 공격적인 샷을 예상하지 못할 때 빠른 샷을 구사하면 효과적입니다. 이는 상대방이 자세를 잡기 전에 경기를 끝낼 수 있는 기회를 제공합니다.</li>
-        <li><strong>느리고 깊은 샷의 활용:</strong> 상대방이 공격적으로 네트 가까이 다가왔을 때, 또는 상대방의 체력이 떨어졌다고 판단될 때 느리고 깊은 샷을 구사���여 상대를 베이스라인 뒤로 밀어내는 것이 좋습니다. 이는 상대방의 공격 의지를 꺾고, 다시 한번 수비적인 상황으로 이끌 수 있습니다.</li>
-        <li><strong>템포 변화의 타이밍:</strong> 템포 변화는 예측 불가능해야 효과적입니다. 상대방이 일정한 리듬을 타기 시작했다고 느낄 때, 또는 상대방이 방심하고 있을 때 템포를 변화시키는 것이 좋습니다.</li>
-        <li><strong>시각적 신호와 실제 샷의 조화:</strong> 샷을 치기 전의 움직임이나 라켓 스윙의 속도를 조절하여 상대방에게 템포 변화를 미리 암시하는 듯한 신호를 보내지만, 실제 샷은 예상과 다르게 구사하는 것도 좋은 전략입니다.</li>
-    </ul>
+          <h2>6. 실전 드릴은 깊이-방향-템포 순서로 한다</h2>
+          <p>
+            연습에서는 한 번에 모든 것을 바꾸려 하지 않는 편이 좋습니다. 먼저 깊이를 안정시키고,
+            그 다음 방향 전환을 붙이고, 마지막으로 템포 변화를 섞습니다. 이 순서를 지키면 랠리가
+            산만해지지 않고 경기 중에도 바로 사용할 수 있는 패턴으로 남습니다.
+          </p>
+          <p>
+            예를 들어 10분은 크로스 깊이만, 다음 10분은 크로스 3개 뒤 다운더라인 1개, 마지막 10분은
+            같은 패턴에 루프볼이나 슬라이스를 섞어 보세요. 성공률을 기록하면 어떤 변화에서 실수가
+            늘어나는지 명확히 보입니다.
+          </p>
 
-    <h2>4. 전략의 통합: 깊이, 방향, 템포의 완벽한 조화</h2>
-    <p>앞서 설명한 깊이, 방향, 템포의 변화는 각각 독립적으로도 효과적이지만, 이 세 가지 요소를 유기적으로 결합했을 때 비로소 강력한 시너지를 발휘합니다. 단 하나의 전략에만 의존하는 것은 상대방에게 예측 가능성을 높여주므로, 다양한 전략을 상황에 맞게 조합하여 사용하는 것이 중요합니다.</p>
-    <ul>
-        <li><strong>상대방의 약점 파고들기:</strong> 상대방의 백핸드가 약하다면, 백핸드 방향으로 깊고 느린 샷을 보내 체력을 소모시키다가, 상대가 움츠러들었을 때 빠른 샷으로 공격하는 전략을 사용할 수 있습니다.</li>
-        <li><strong>코트 중앙에서의 랠리:</strong> 코트 중앙에서 랠리가 길어질 때는 템포 변화와 깊이 조절을 통해 상대방을 좌우로 움직이게 하여 체력을 빼앗는 것이 중요합니다.</li>
-        <li><strong>공격적인 상황에서의 변화:</strong> 공격적인 샷을 시도할 때도 단순히 강하게 치는 것에서 벗어나, 방향 전환을 통해 상대방의 수비를 허물거나, 템포 변화를 통해 상대방의 예측을 벗어나는 것이 중요합니다.</li>
-        <li><strong>수비적인 상황에서의 반격:</strong> 수비적인 상황에서도 무조건 깊고 느린 샷으로만 버티는 것이 아니라, 기회를 보아 템포를 빠르게 가져가거나, 빈 공간으로의 과감한 방향 전환 샷으로 반격의 실마리를 찾는 것이 중요합니다.</li>
-        <li><strong>자신의 강점 활용:</strong> 자신의 스트로크 특성(예: 포핸드 파워, 백핸드 정확성)을 고려하여 깊이, 방향, 템포 전략을 조합하면 더욱 효과적입니다. 예를 들어, 강력한 포핸드를 가지고 있다면, 상대방을 코트 한쪽으로 몰아넣은 후 포핸드 다운 더 라인으로 경기를 마무리하는 전략을 구사할 수 있습니다.</li>
-    </ul>
+          <h2>마무리</h2>
+          <p>
+            베이스라인 랠리 전략의 핵심은 무작정 오래 버티는 것이 아니라 깊이, 방향, 템포를 순서 있게
+            바꾸는 것입니다. 깊이로 시간을 벌고, 방향으로 상대를 움직이고, 템포로 리듬을 깨면 같은
+            스트로크 실력으로도 더 많은 찬스볼을 만들 수 있습니다.
+          </p>
+        </section>
 
-    <h2>자주 묻는 질문</h2>
-    <h3>Q1: 베이스라인 랠리에서 가장 중요한 것은 무엇인가요?</h3>
-    <p>베이스라인 랠리에서 가장 중요한 것은 상대방을 코트 뒤로 밀어내고, 예측 불가능한 방향 전환과 템포 변화를 통해 상대방의 리듬을 깨뜨리는 것입니다. 이를 통해 상대방의 실수를 유발하고, 자신의 공격 기회를 만드는 것이 승리의 열쇠입니다.</p>
-    <h3>Q2: 깊은 샷을 구사할 때 하회전과 탑스핀 중 어떤 것을 더 사용해야 하나요?</h3>
-    <p>깊은 샷을 구사할 때는 하회전(Slice)과 탑스핀(Topspin) 모두 유용하게 활용될 수 있습니다. 하회전은 공이 낮게 깔리면서 상대방의 발밑으로 떨어지게 하��� 공격적인 샷을 어렵게 만들고, 탑스핀은 공이 높이 떴다가 빠르게 떨어지면서 상대방을 코트 깊숙이 밀어내는 데 효과적입니다. 상황과 상대방의 위치에 따라 적절히 선택하고 조합하는 것이 중요합니다.</p>
-    <h3>Q3: 템포 변화는 언제, 어떻게 하는 것이 가장 효과적인가요?</h3>
-    <p>템포 변화는 상대방이 일정한 리듬을 타기 시작했을 때, 또는 방심하고 있을 때 시도하는 것이 가장 효과적입니다. 샷을 치기 전의 라켓 스윙 속도나 움직임을 조절하여 상대방에게 템포 변화를 암시하는 듯한 신호를 보내면서도, 실제 샷은 예상과 다르게 구사하는 것이 좋습니다. 예를 들어, 느린 샷을 준비하는 듯하다가 갑자기 빠른 샷을 날리거나, 빠른 샷을 치는 듯하다가 깊고 느린 샷으로 상대방을 베이스라인 뒤로 밀어내는 방식입니다.</p>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-</article>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
-            무료 NTRP 실력 테스트 →
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            내 랠리 안정성과 전술 성향을 함께 점검해 보세요.
+          </p>
+          <Link
+            href="/utility/play-style-test"
+            className="font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
+          >
+            플레이 스타일 테스트 하기
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

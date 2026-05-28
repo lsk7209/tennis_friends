@@ -1,93 +1,290 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "인사이드인 포핸드 | 코스 선택·타점·리스크 기준";
+const description =
+  "인사이드인 포핸드 성공률을 높이는 코스 선택, 앞쪽 타점, 풋워크, 실전 리스크 관리 기준을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "인사이드인 포핸드와 인사이드아웃 포핸드는 무엇이 다른가요?",
+    answer:
+      "오른손잡이 기준으로 백핸드 코너에서 포핸드로 돌아서 상대 포핸드 쪽 라인 방향을 치면 인사이드인, 상대 백핸드 쪽 대각선 방향을 치면 인사이드아웃으로 이해하면 쉽습니다.",
+  },
+  {
+    question: "인사이드인 포핸드는 언제 시도해야 하나요?",
+    answer:
+      "상대가 인사이드아웃 또는 크로스코트를 예상해 대각선으로 치우쳤고, 내가 균형 있게 공을 몸 앞에서 맞을 수 있을 때가 좋습니다.",
+  },
+  {
+    question: "인사이드인 포핸드가 자꾸 사이드아웃되는 이유는 무엇인가요?",
+    answer:
+      "라인 자체를 목표로 잡거나 타점이 늦은 경우가 많습니다. 라인 안쪽 1m를 목표로 두고 앞쪽 타점에서 몸통 회전으로 방향을 만들어야 합니다.",
+  },
+  {
+    question: "동호인 경기에서 위너로 써도 되나요?",
+    answer:
+      "가능하지만 매번 위너를 노리기보다 상대 이동 방향을 바꾸는 압박 샷으로 쓰는 편이 안전합니다. 성공 후 다음 공까지 준비해야 포인트로 연결됩니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '인사이드인 포핸드 — 크로스코트 결정타 만들기 | TennisFriends',
-  description: '인사이드인 포핸드 — 크로스코트 결정타 만들기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["인사이드인","포핸드","크로스코트","위너"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-forehand-inside-in-guide` },
-  openGraph: { title: '인사이드인 포핸드 — 크로스코트 결정타 만들기', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "인사이드인 포핸드",
+    "포핸드 코스",
+    "포핸드 위너",
+    "테니스 포핸드",
+    "테니스 전술",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-forehand-inside-in-guide` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-forehand-inside-in-guide`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '인사이드인 포핸드 — 크로스코트 결정타 만들기', item: `${siteUrl}/blog/tennis-forehand-inside-in-guide` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">인사이드인 포핸드 — 크로스코트 결정타 만들기</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>인사이드인 포핸드 — 크로스코트 결정타 만들기</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          {
+            name: title,
+            item: `${siteUrl}/blog/tennis-forehand-inside-in-guide`,
+          },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            테니스 포핸드 전술 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            인사이드인 포핸드는 무조건 강하게 치는 위너 샷이 아닙니다. 백핸드
+            쪽으로 돌아선 뒤 상대가 대각선을 예상하는 순간, 라인 안쪽 깊은 구역으로
+            방향을 바꿔 코트 균형을 흔드는 전술 샷입니다.
+          </p>
+        </header>
 
-<p>인사이드인 포핸드는 상대방 코트의 빈 공간을 향해 볼을 깊숙하게 보내며 경기를 끝낼 수 있는 강력한 무기입니다. 이 샷은 단순히 공을 넘기는 것을 넘어, 상대방의 움직임을 제한하고 점수를 확실하게 가져오는 결정적인 역할을 수행합니다.</p>
+        <section className="mb-10 rounded-lg border border-teal-200 bg-teal-50 p-5 dark:border-teal-800 dark:bg-teal-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>인사이드인 포핸드는 라인 위가 아니라 라인 안쪽 1m를 노립니다.</li>
+            <li>타점이 늦으면 위너보다 깊은 인사이드아웃이 더 안전합니다.</li>
+            <li>상대가 대각선 수비를 예상할 때 방향 전환용으로 씁니다.</li>
+            <li>샷 이후 열린 코트를 막을 회복 스텝까지가 한 동작입니다.</li>
+          </ul>
+        </section>
 
-<p>이 기술 가이드에서는 인사이드인 포핸드의 핵심 원리를 파악하고, 크로스코트에서 위너를 만드는 구체적인 방법과 실용적인 팁을 상세하게 알아보겠습니다. 당신의 포핸드를 한 단계 업그레이드하여 코트 위에서 더욱 자신감 있게 플레이할 수 있도록 도와드�� 것입니다.</p>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 인사이드인 포핸드는 방향 전환 전술이다</h2>
+          <p>
+            인사이드인 포핸드는 백핸드 쪽으로 온 공을 포핸드로 돌아서 라인 방향,
+            즉 상대의 반대 코트로 보내는 샷입니다. 동호인 경기에서는 멋진 위너로
+            기억되지만, 실제 가치는 상대의 수비 예상을 바꾸는 데 있습니다. 여러 번
+            인사이드아웃이나 크로스로 밀어 놓은 뒤 한 번 인사이드인으로 바꾸면
+            상대는 첫 스텝을 잘못 내딛기 쉽습니다.
+          </p>
+          <p>
+            포핸드와 코트 방향 용어는 공식 자료를 기준으로 정리해 두면 좋습니다.
+            기본 용어는
+            <a
+              href="https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ITF 테니스 용어집
+            </a>
+            에서 확인할 수 있고, 스트로크 연습 자료는
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              USTA 팁과 인스트럭션
+            </a>
+            처럼 단계별 자료를 참고하면 좋습니다.
+          </p>
 
-<h2>인사이드인 포핸드의 기본 이해</h2>
+          <h2>2. 인사이드인과 인사이드아웃을 구분한다</h2>
+          <p>
+            가장 흔한 혼동은 인사이드인과 인사이드아웃을 같은 샷으로 보는 것입니다.
+            오른손잡이 기준으로 백핸드 코너에서 돌아섰을 때, 상대 백핸드 쪽 대각선
+            깊은 코스로 보내면 인사이드아웃입니다. 같은 위치에서 라인 방향으로
+            방향을 바꾸면 인사이드인입니다. 두 샷은 준비 동작은 비슷하지만 리스크와
+            회복 위치가 다릅니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>인사이드아웃</th>
+                <th>인사이드인</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>방향</td>
+                <td>대각선 깊은 코스</td>
+                <td>라인 방향 전환</td>
+              </tr>
+              <tr>
+                <td>안정성</td>
+                <td>코트 길이가 길어 비교적 안전</td>
+                <td>네트와 라인 리스크가 큼</td>
+              </tr>
+              <tr>
+                <td>효과</td>
+                <td>상대를 코트 밖으로 밀어냄</td>
+                <td>상대 첫 스텝을 반대로 유도</td>
+              </tr>
+              <tr>
+                <td>회복</td>
+                <td>대각선 랠리 대비</td>
+                <td>열린 크로스코트 대비</td>
+              </tr>
+            </tbody>
+          </table>
 
-<h3>1. 인사이드인 포핸드란 무엇인가?</h3>
-<p>인사이드인 포핸드는 일반적으로 코트의 중앙 또는 자신의 백핸드 쪽에서 시작된 볼을, 자신의 몸 앞에서 포핸드 스트로크로 쳐서 상대방 코트의 반대편(크로스코트)으로 보내는 샷입니다. 예를 들어, 오른손잡이 선수가 자신의 백핸드 쪽으로 온 공을 포핸드로 쳐서 상대방의 백핸드 쪽으로 깊숙하게 보내는 경우를 생각할 수 있습니다. 이 샷은 상대방의 움직임을 예측하고 코트의 빈 공간을 공략하는 데 매우 효과적입니다.</p>
+          <h2>3. 좋은 기회는 상대 움직임에서 나온다</h2>
+          <p>
+            인사이드인 포핸드는 내가 공을 편하게 친다고 항상 좋은 선택이 아닙니다.
+            상대가 인사이드아웃 방향을 예상해 대각선으로 치우쳤거나, 깊은 크로스
+            랠리 뒤 균형이 무너진 순간이 좋은 기회입니다. 반대로 상대가 이미 라인
+            쪽을 보고 있거나 내가 뒤로 밀린 상황이면 무리한 인사이드인은 바로
+            사이드아웃이나 역습으로 이어집니다.
+          </p>
+          <p>
+            기준은 공의 높이와 내 균형입니다. 허리 높이 근처에서 공을 몸 앞에서
+            맞을 수 있고, 마지막 스텝이 안정적이라면 방향을 바꿀 수 있습니다. 공이
+            낮거나 타점이 뒤에 있으면 먼저 깊은 인사이드아웃으로 랠리 우위를 만든
+            뒤 다음 공을 기다리는 편이 낫습니다.
+          </p>
 
-<h3>2. 인사이드인 포핸드의 중요성</h3>
-<p>인사이드인 포핸드는 단순히 위너를 만드는 샷 이상의 의미를 지닙니다. 첫째, 상대방의 움직임을 제한합니다. 크로스코트로 깊숙하게 들어오는 공은 상대방이 다음 샷을 준비하기 어렵게 만들며, 코트의 넓은 영역을 커버해야 하는 부담을 안겨줍니다. 둘째, 공격적인 플레이를 가능하게 합니다. 이 샷은 상대방을 수세로 몰아넣고, 자신의 공격 흐름을 유지하는 데 결정적인 역할을 합니다. 셋째, 경기 흐름을 바꾸는 데 유용합니다. 상대방이 예상치 못한 타이밍이나 각도로 인사이드인 포핸드를 구사하면, 경기 흐름을 자신에게 유리하게 가져올 수 있습니다.</p>
+          <h2>4. 목표는 라인 위가 아니라 안전 구역이다</h2>
+          <p>
+            인사이드인 포핸드는 라인 가까이 들어가면 멋있지만 성공률은 급격히
+            떨어집니다. 연습 목표를 사이드라인 바로 위로 잡으면 실전에서는 손목이
+            먼저 움직이고, 라켓 면이 열리거나 닫히며 실수가 늘어납니다. 목표는
+            라인 안쪽 1m, 베이스라인 1m 안쪽의 직사각형 구역입니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              인사이드인 포핸드 체크포인트
+            </h3>
+            <ol className="list-decimal space-y-2 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>상대가 대각선 수비를 예상하고 있는가?</li>
+              <li>내 타점이 몸 앞에서 만들어졌는가?</li>
+              <li>목표가 라인 안쪽 1m 안전 구역인가?</li>
+              <li>팔보다 몸통 회전으로 방향을 만들었는가?</li>
+              <li>샷 이후 열린 크로스코트를 막을 위치로 회복했는가?</li>
+            </ol>
+          </aside>
 
-<h2>크로스코트 결정타를 위한 인사이드인 포핸드 기술</h2>
+          <h2>5. 풋워크가 늦으면 방향 전환도 늦다</h2>
+          <p>
+            인사이드인 포핸드의 실수는 대부분 스윙보다 발에서 시작됩니다. 공을
+            포핸드로 돌아서 치려면 마지막 두 걸음이 작고 빠르게 조정되어야 합니다.
+            크게 한 번에 이동하면 타점이 몸에 붙고, 공을 라인 방향으로 밀 공간이
+            사라집니다. 마지막 스텝을 작게 나누면 몸 앞 타점과 회전 공간이 생깁니다.
+          </p>
+          <p>
+            오픈 스탠스만 고집할 필요도 없습니다. 시간이 충분하면 세미오픈 또는
+            뉴트럴에 가까운 자세로 체중을 목표 방향에 싣는 것이 좋습니다. 시간이
+            부족한 상황에서는 과감한 인사이드인보다 깊은 대각선 포핸드로 다음 공을
+            만드는 편이 안정적입니다.
+          </p>
 
-<h3>1. 스윙 궤적과 임팩트 포인트</h3>
-<p>인사이드인 포핸드에서 가장 중요한 요소 중 하나는 정확한 스윙 궤적과 임팩트 포인트입니다. 볼을 칠 때, 라켓 헤드는 낮은 위치에서 시작하여 위로 올라가면서 공을 맞추는 '업워드 스윙'을 해야 합니다. 이는 볼에 충분한 탑스핀을 더해 안정적인 크로스코트 샷을 가능하게 합니다. 임팩트 포인트는 자신의 몸 앞에서, 그리고 약간 측면에서 이루어져야 합니다. 너무 몸 뒤에서 치면 파워와 컨트롤이 떨어지고, 너무 앞에서 치면 자세가 불안정해져 정확성이 떨어질 수 있습니다.</p>
+          <h2>6. 20분 코스 전환 드릴</h2>
+          <p>
+            인사이드인 포핸드는 단독 기술보다 패턴으로 연습해야 실전에서 나옵니다.
+            인사이드아웃을 여러 번 보여준 뒤 인사이드인을 섞어야 상대의 첫 스텝을
+            속일 수 있기 때문입니다. 아래 루틴은 파트너 피드나 코치 피드로 진행하면
+            효과가 좋습니다.
+          </p>
+          <ul>
+            <li>5분: 백핸드 코너에서 포핸드로 돌아서는 풋워크만 반복</li>
+            <li>5분: 인사이드아웃 2개 뒤 인사이드인 1개 패턴</li>
+            <li>5분: 라인 안쪽 1m 목표 구역에 10개 중 6개 넣기</li>
+            <li>5분: 인사이드인 후 열린 코트 회복, 다음 공 크로스 수비</li>
+          </ul>
 
-<h3>2. 체중 이동과 하체 활용</h3>
-<p>강력하고 안정적인 인사이드인 포핸드를 구사하기 위해서는 체중 이동과 하체 활용이 필수적입니다. 공을 치기 전, 발을 넓게 벌려 안정적인 자세를 잡고, 백스��을 할 때 체중을 뒷발에 싣습니다. 그리고 임팩트 순간에는 앞발로 체중을 이동시키면서 스윙을 마무리합니다. 하체의 회전력을 적극적으로 사용하여 파워를 생성해야 하며, 이를 통해 라켓 스피드를 높이고 더 강력한 샷을 만들 수 있습니다.</p>
+          <h2>마무리</h2>
+          <p>
+            인사이드인 포핸드는 포핸드가 강한 사람만 쓰는 샷이 아닙니다. 상대가
+            대각선을 예상하는 순간을 읽고, 앞쪽 타점에서 라인 안쪽 안전 구역으로
+            방향을 바꾸면 동호인 경기에서도 충분히 실전 무기가 됩니다. 위너보다
+            방향 전환과 다음 공 준비를 기준으로 삼으면 성공률이 더 빨리 올라갑니다.
+          </p>
+        </section>
 
-<h3>3. 시선 처리와 볼 관찰</h3>
-<p>볼을 끝까지 정확하게 보는 것은 모든 테니스 샷의 기본이지만, 인사이드인 포핸드에서는 더욱 중요합니다. 백스윙부터 임팩트, 그리고 팔로스루까지 공을 놓치지 않고 끝까지 주시해야 합니다. 특히 임팩트 순간에 공에 집중하여 라켓 면이 정확하게 공을 맞출 수 있도록 해야 합니다. 시선이 미리 들리면 스윙 궤적이 흐트러지고 정확성이 떨어지므로, 공이 라켓을 떠날 때까지 시선을 고정하는 연습이 필요합니다.</p>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-<h2>실전 적용 및 훈련 팁</h2>
-
-<h3>1. 인사이드인 포핸드 훈련 드릴</h3>
-<ul>
-    <li><strong>월 드릴 (Wall Drill):</strong> 벽을 향해 인사이드인 포핸드로 꾸준히 공을 치면서 일정한 궤적과 리듬을 익힙니다. 처음에는 천천히 시작하여 점차 스피드를 높여갑니다.</li>
-    <li><strong>파트너 드릴:</strong> 파트너와 함께 코트의 특정 지점에서 인사이드인 포핸드만 주고받는 연습을 합니다. 크로스코트 방향으로 깊게 보내는 연습에 집중합니다.</li>
-    <li><strong>코트 커버 드릴:</strong> 파트너가 다양한 위치에서 공을 보내주면, 자신이 인사이드인 포핸드로 상대방 코트의 빈 공간을 공략하는 연습을 합니다.</li>
-    <li><strong>상황별 훈련:</strong> 경기 중 발생할 수 있는 다양한 상황(예: 상대방이 깊숙하게 공을 보냈을 때, 상대방이 네트 앞에 나왔을 때)을 설정하고 인사이드인 포핸드로 대응하는 연습을 합니다.</li>
-</ul>
-
-<h3>2. 인사이드인 포핸드 성공률 높이기 위한 팁</h3>
-<ul>
-    <li><strong>충분한 백스윙:</strong> 안정적인 샷을 위해 충분한 백스윙을 확보하는 것이 중요합니다.</li>
-    <li><strong>탑스핀 활용:</strong> 볼에 적절한 탑스핀을 걸어주면 공이 네트를 넘어가면서 자연스럽게 아래로 떨어져 코트 ���에 머무르는 확률이 높아집니다.</li>
-    <li><strong>코트 상황 파악:</strong> 상대방의 위치, 코트의 빈 공간 등을 빠르게 파악하고 샷을 결정해야 합니다.</li>
-    <li><strong>자신감 있는 스윙:</strong> 망설이지 않고 자신감 있게 스윙하는 것이 중요합니다. 약간의 실수는 연습을 통해 개선될 수 있습니다.</li>
-    <li><strong>다양한 각도 연습:</strong> 단순히 직선적인 인사이드인 포핸드뿐만 아니라, 각도를 조절하여 상대방을 더욱 어렵게 만드는 연습도 병행합니다.</li>
-</ul>
-
-<h2>자주 묻는 질문</h2>
-
-<h3>1. 인사이드인 포핸드를 칠 때 공을 너무 높게 띄우는 이유는 무엇인가요?</h3>
-<p>공을 너무 높게 띄우는 주된 이유는 임팩트 시 라켓 면이 너무 열려 있거나, 공을 충분히 앞으로 밀어주지 못하고 위로만 걷어 올리기 때문입니다. 또한, 충분한 탑스핀을 걸지 못하면 공이 너무 높게 뜨면서 상대방에게 공격 기회를 줄 수 있습니다. 이를 개선하기 위해서는 낮은 임팩트 포인트에서 시작하여 위로 올��가는 스윙 궤적을 유지하고, 임팩트 시 라켓 면을 조금 더 닫아주면서 공을 앞으로 밀어주는 연습이 필요합니다.</p>
-
-<h3>2. 인사이드인 포핸드 시 상대방이 빠르게 붙어 올 때 어떻게 대처해야 하나요?</h3>
-<p>상대방이 빠르게 붙어 올 때는 인사이드인 포핸드로 깊숙하게 코트 뒤쪽을 공략하는 것이 효과적입니다. 상대방이 네트 가까이 다가왔다면, 발리를 예상하고 좀 더 빠르고 날카로운 샷을 구사해야 합니다. 또는 상대방의 움직임을 역이용하여 짧게 코트 앞쪽으로 떨어뜨리는 샷(드롭샷)을 시도하는 것도 좋은 전략이 될 수 있습니다. 이 경우, 상대방이 예상치 못한 타이밍에 샷을 구사하는 것이 중요합니다.</p>
-
-<h3>3. 인사이드인 포핸드 연습 시 가장 주의해야 할 점은 무엇인가요?</h3>
-<p>인사이드인 포핸드 연습 시 가장 주의해야 할 점은 바로 부상 위험입니다. 특히 하체와 허리, 어깨에 무리가 갈 수 있으므로, 충분한 스트레칭과 준비 운동을 통해 근육을 이완시키는 것이 중요합니다. 또한, 처음부터 너무 강한 힘으로 치기보다는 정확한 자세와 스윙 궤적을 익히는 데 집중해야 합니다. 무리한 연습은 오히려 기술 습득을 방해하고 부상으로 이어질 수 있으므로, 꾸준하고 점진적인 연습이 중요합니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            포핸드 전술이 내 레벨에 맞는지 먼저 점검하세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline dark:text-blue-300"
+          >
             무료 NTRP 실력 테스트 →
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

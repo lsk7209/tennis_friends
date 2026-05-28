@@ -1,0 +1,17 @@
+sessionSourceMedium,sessions,totalUsers,bounceRate,averageSessionDuration
+"m.search.naver.com / referral",1181,1092,0.28619813717188824,98.037729915326
+"naver / organic",171,153,0.2046783625730994,178.17056861403509
+"(direct) / (none)",75,71,0.54666666666666663,148.3002654
+"google / organic",53,47,0.32075471698113206,128.80760728301888
+"bing / organic",15,15,0.13333333333333333,317.0563514
+"(not set)",3,2,1,1129.7068616666668
+"vercel.com / referral",3,1,0.66666666666666663,44.409868333333328
+"yahoo / organic",3,2,0.33333333333333331,78.785613
+"gw.naurobot.com / referral",2,1,0,82.79574
+"namu.wiki / referral",2,2,1,0
+"cafe.naver.com / referral",1,1,1,2.725185
+"chatgpt.com / (not set)",1,1,0,143.595276
+"chatgpt.com / referral",1,1,1,1.43214
+"copilot.com / referral",1,1,0,31.090421
+"naver.com / referral",1,1,0,770.929065
+"ntp.msn.com / referral",1,1,1,0

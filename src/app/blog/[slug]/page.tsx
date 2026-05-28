@@ -14,6 +14,7 @@ import EnhancedBlogPostSchema from "@/components/seo/EnhancedBlogPostSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FAQSection from "@/components/seo/FAQSection";
 import { AdSenseSlot } from "@/components/AdSense";
+import CafeBanner from "@/components/blog/CafeBanner";
 import { blogContentMap } from "@/data/blog-content";
 import { DEFAULT_SITE_LOCALE, SITE_NAME, getSiteUrl } from "@/lib/site";
 import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
@@ -22,8 +23,11 @@ import { isIndexableBlogSlug } from "@/lib/blog-quality";
 export const revalidate = 3600;
 
 const ARTICLE_TOP_AD_SLOT = process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_TOP_SLOT;
+const ARTICLE_MIDDLE_AD_SLOT =
+  process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_MIDDLE_SLOT;
 const ARTICLE_BOTTOM_AD_SLOT =
   process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_BOTTOM_SLOT;
+const MIDDLE_AD_AFTER_HEADING_COUNT = 4;
 
 const toolMap = [
   {
@@ -120,6 +124,22 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+function splitContentForMiddleAd(content: string): [string, string] {
+  if (!content) return ["", ""];
+
+  const headingMatches = [...content.matchAll(/<h2[\s>]/g)];
+  const targetHeading = headingMatches[MIDDLE_AD_AFTER_HEADING_COUNT];
+
+  if (!targetHeading?.index) {
+    return [content, ""];
+  }
+
+  return [
+    content.slice(0, targetHeading.index),
+    content.slice(targetHeading.index),
+  ];
+}
+
 export function generateStaticParams() {
   return getPublishedBlogPosts(allBlogPosts).map((post) => ({
     slug: post.slug,
@@ -200,8 +220,12 @@ export default async function BlogPostPage({ params }: Props) {
   const rawContent = contentData?.content ?? "";
   // 테이블을 overflow-x: auto 래퍼로 감싸 모바일 CLS 방지
   const processedContent = rawContent
+    .replace(/^<article\b[^>]*>/, "")
+    .replace(/<\/article>\s*$/, "")
     .replace(/<table/g, '<div class="table-wrapper"><table')
     .replace(/<\/table>/g, "</table></div>");
+  const [contentBeforeMiddleAd, contentAfterMiddleAd] =
+    splitContentForMiddleAd(processedContent);
   const enrichedPost: EnrichedBlogPost = {
     ...post,
     content: processedContent,
@@ -328,7 +352,7 @@ export default async function BlogPostPage({ params }: Props) {
           </section>
 
           <h1
-            className="text-4xl font-bold text-foreground mb-4"
+            className="mb-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl"
             itemProp="headline"
           >
             {post.title}
@@ -386,7 +410,9 @@ export default async function BlogPostPage({ params }: Props) {
           </p>
         </section>
 
-        <AdSenseSlot slot={ARTICLE_TOP_AD_SLOT} label="본문 상단 광고" />
+        {ARTICLE_TOP_AD_SLOT && (
+          <AdSenseSlot slot={ARTICLE_TOP_AD_SLOT} label="본문 상단 광고" />
+        )}
 
         {/* Table of Contents */}
         <nav aria-label="목차" className="mb-8">
@@ -434,12 +460,33 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Article Content */}
         <section
           id="article-content"
-          className="prose dark:prose-invert max-w-none"
+          className="prose blog-article-content aw-article dark:prose-invert max-w-none"
           itemProp="articleBody"
-          dangerouslySetInnerHTML={{ __html: enrichedPost.content ?? "" }}
+          dangerouslySetInnerHTML={{ __html: contentBeforeMiddleAd }}
         />
 
-        <AdSenseSlot slot={ARTICLE_BOTTOM_AD_SLOT} label="본문 하단 광고" />
+        {contentAfterMiddleAd && (
+          <>
+            {ARTICLE_MIDDLE_AD_SLOT && (
+              <AdSenseSlot
+                slot={ARTICLE_MIDDLE_AD_SLOT}
+                label="본문 중간 광고"
+                minHeight={260}
+                minHeightMobile={200}
+              />
+            )}
+            <section
+              className="prose blog-article-content aw-article dark:prose-invert max-w-none"
+              dangerouslySetInnerHTML={{ __html: contentAfterMiddleAd }}
+            />
+          </>
+        )}
+
+        {ARTICLE_BOTTOM_AD_SLOT && (
+          <AdSenseSlot slot={ARTICLE_BOTTOM_AD_SLOT} label="본문 하단 광고" />
+        )}
+
+        <CafeBanner />
 
         {/* Tags Section */}
         {enrichedPost.tags && enrichedPost.tags.length > 0 && (

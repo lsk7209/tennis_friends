@@ -1,104 +1,319 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "NTRP 3.5→4.0 레벨업 | 전술 전환 가이드";
+const description =
+  "NTRP 3.5에서 4.0으로 올라가기 위한 전술 전환, 서브+1, 리턴, 드릴 기준을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "NTRP 3.5에서 4.0으로 올라가는 핵심 차이는 무엇인가요?",
+    answer:
+      "샷을 더 세게 치는 것이 아니라 같은 샷을 반복 가능한 패턴으로 연결하는 능력입니다. 3.5는 좋은 공이 가끔 나오고, 4.0은 서브+1, 리턴 위치, 랠리 방향 전환을 의도적으로 반복합니다.",
+  },
+  {
+    question: "레슨 없이도 4.0에 가까워질 수 있나요?",
+    answer:
+      "가능하지만 기록과 피드백 장치가 필요합니다. 경기 영상, 더블폴트 수, 리턴 인플레이율, 3구 이후 실점 유형을 매주 기록하면 혼자 연습해도 개선 방향이 흐려지지 않습니다.",
+  },
+  {
+    question: "가장 먼저 바꿔야 할 기술은 무엇인가요?",
+    answer:
+      "대부분은 2서브와 리턴입니다. 3.5 단계에서는 랠리 능력보다 서브 게임 시작과 리턴 게임 첫 공에서 불리해지는 경우가 많아, 포인트 초반 2구를 안정시키는 편이 가장 빠릅니다.",
+  },
+  {
+    question: "복식에서도 같은 기준을 적용해도 되나요?",
+    answer:
+      "복식에서는 전술 전환이 더 빨리 드러납니다. 크로스 랠리만 오래 하는 것이 아니라 리턴 방향, 전위 압박, 첫 발리 깊이를 팀 규칙으로 정해야 4.0 수준의 경기 운영에 가까워집니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: 'NTRP 3.5→4.0 레벨업 — 고급 기술과 전략 전환 | TennisFriends',
-  description: 'NTRP 3.5→4.0 레벨업 — 고급 기술과 전략 전환에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["NTRP 3.5","NTRP 4.0","레벨업","고급 기술"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-ntrp-35-to-40-guide` },
-  openGraph: { title: 'NTRP 3.5→4.0 레벨업 — 고급 기술과 전략 전환', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "NTRP 3.5",
+    "NTRP 4.0",
+    "테니스 레벨업",
+    "테니스 전술",
+    "중급자 테니스",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-ntrp-35-to-40-guide` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-ntrp-35-to-40-guide`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: 'NTRP 3.5→4.0 레벨업 — 고급 기술과 전략 전환', item: `${siteUrl}/blog/tennis-ntrp-35-to-40-guide` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">NTRP 3.5→4.0 레벨업 — 고급 기술과 전략 전환</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>NTRP 3.5→4.0 레벨업 — 고급 기술과 전략 전환</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-ntrp-35-to-40-guide` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-emerald-700 dark:text-emerald-300">
+            중급자 레벨업·NTRP 전술 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            NTRP 3.5에서 4.0으로 올라가는 핵심은 새로운 필살기를 추가하는
+            것이 아니라, 서브와 리턴 뒤 첫 3구를 예측 가능한 전술로 묶는
+            것입니다. 4.0에 가까운 선수는 좋은 샷을 더 많이 치는 사람보다,
+            불리한 포인트를 덜 만들고 유리한 포인트를 반복해서 설계하는
+            사람입니다.
+          </p>
+        </header>
 
-<p>NTRP 3.5 레벨에서 4.0 레벨로 도약하는 것은 단순히 몇 가지 기술을 더 배우는 것을 넘어, 경기 운영 능력과 전략적 사고를 한 단계 끌어올리는 과정입니다. 이 가이드에서는 3.5 레벨의 기본기를 탄탄히 다지고 4.0 레벨에서 요구되는 고급 기술과 전략적 전환을 위한 구체적인 방법들을 제시하여 당신의 테니스 실력 향상을 돕겠습니다.</p>
+        <section className="mb-10 rounded-lg border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-800 dark:bg-emerald-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>NTRP 3.5의 병목은 기술 부족보다 포인트 초반 선택의 흔들림입니다.</li>
+            <li>4.0 준비는 2서브, 리턴 인플레이, 서브+1 패턴부터 시작합니다.</li>
+            <li>랠리에서는 깊이보다 방향 전환 타이밍, 속도보다 회복 위치가 중요합니다.</li>
+            <li>훈련은 샷별 연습이 아니라 3구 단위 시나리오로 설계해야 합니다.</li>
+          </ul>
+        </section>
 
-<p>NTRP 3.5 레벨은 안정적인 스트로크 구사 능력과 기본적인 경기 운영이 가능한 수준이지만, 4.0 레벨에서는 좀 더 일관성 있고 예측 가능한 플레이, 그리고 상대방의 약점을 파고��는 능력이 중요해집니다. 4.0 레벨로의 성공적인 레벨업은 단순히 샷의 파워나 스핀을 늘리는 것 이상으로, 경기 흐름을 읽고 상황에 맞는 최적의 플레이를 선택하는 지능적인 플레이를 요구합니다.</p>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. NTRP 3.5와 4.0의 차이는 결과가 아니라 재현성이다</h2>
+          <p>
+            USTA는 NTRP를 테니스 실력의 일반적 특성을 구분하는 체계로
+            설명합니다. 공식 FAQ에 따르면 NTRP 등급은 대체로 반 단계 단위로
+            관리되고, 실제 리그에서는 경기 결과와 상대 수준이 함께 반영됩니다.
+            그래서 3.5에서 4.0으로 간다는 말은 단순히 포핸드가 강해졌다는
+            뜻이 아닙니다. 같은 압박 상황에서 더 자주 올바른 선택을 반복한다는
+            뜻에 가깝습니다.
+          </p>
+          <p>
+            3.5 선수도 좋은 포핸드, 강한 1서브, 날카로운 다운더라인을 칠 수
+            있습니다. 문제는 그 샷이 점수, 위치, 체력, 상대 리듬이 바뀌어도
+            반복되는지입니다. 4.0으로 가려면 "잘 맞은 한 방"보다 "평균 이하의
+            날에도 무너지지 않는 패턴"을 만들어야 합니다.
+          </p>
+          <p>
+            공식 기준을 확인할 때는
+            <a
+              href="https://www.usta.com/en/home/play/adult-tennis/programs/national/usta-ntrp-ratings-faqs.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              USTA NTRP Ratings FAQ
+            </a>
+            와
+            <a
+              href="https://www.usta.com/content/dam/usta/sections/eastern/pdfs/NTRP%20Characteristics.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              NTRP General Characteristics
+            </a>
+            를 함께 보는 편이 좋습니다. 수치보다 중요한 것은 각 레벨이 요구하는
+            경기 안정성, 방향 조절, 포인트 구성 능력입니다.
+          </p>
 
-<h2>NTRP 3.5 레벨의 현황과 4.0 레벨로의 도약을 위한 준비</h2>
+          <h2>2. 4.0을 막는 첫 병목은 서브 게임의 첫 2구다</h2>
+          <p>
+            많은 3.5 선수는 랠리에서는 버티지만 서브 게임 초반에 불리해집니다.
+            1서브가 들어가면 우세하지만, 2서브가 약해지면 상대가 리턴부터
+            공격합니다. 4.0을 목표로 한다면 서브 속도보다 먼저 봐야 할 지표는
+            더블폴트 수, 2서브 리턴 공격 허용률, 서브 다음 공의 코스입니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>3.5에 자주 남는 문제</th>
+                <th>4.0으로 가는 기준</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1서브</td>
+                <td>잘 들어가는 날과 안 들어가는 날의 편차가 큼</td>
+                <td>속도를 낮춰도 첫 공으로 방향을 열 수 있음</td>
+              </tr>
+              <tr>
+                <td>2서브</td>
+                <td>넣기만 하다가 리턴 공격을 허용함</td>
+                <td>바디, 백핸드, 높은 탄도 중 하나는 의도함</td>
+              </tr>
+              <tr>
+                <td>서브+1</td>
+                <td>리턴이 오면 즉흥적으로 처리함</td>
+                <td>첫 포핸드 또는 첫 백핸드 목표 코스가 정해져 있음</td>
+              </tr>
+              <tr>
+                <td>스코어 압박</td>
+                <td>30-40, 듀스에서 동작이 짧아짐</td>
+                <td>같은 루틴으로 안전한 첫 패턴을 반복함</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            서브 연습은 100개를 몰아서 넣는 방식보다 6개 단위로 점수를 붙이는
+            방식이 낫습니다. 예를 들어 1서브 2점, 2서브 성공 1점, 더블폴트
+            -2점으로 기록하면 경기 압박과 비슷한 선택이 만들어집니다. 목표는
+            최고 속도가 아니라 2서브 뒤에도 중립 랠리를 시작할 수 있는
+            안정성입니다.
+          </p>
 
-<p>NTRP 3.5 레벨의 선수들은 대체로 다음과 같은 특징을 보입니다.</p>
-<ul>
-  <li>포핸드와 백핸드 스트로크의 일관성이 좋고, 기본적인 샷의 컨트롤이 가능합니다.</li>
-  <li>서브와 리턴 시 일정한 성공률을 보이지만, 다양한 구질이나 강력한 서브 구사는 부족할 수 있습니다.</li>
-  <li>발리, 스매시 등 네트 플레이의 기본은 익혔으나, 결정적인 순간에 활용하거나 다양한 각도로 처리하는 능력은 제한적입니다.</li>
-  <li>단식 및 복식 경기에서 기본적인 포지셔닝과 전략을 이해하고 적용합니다.</li>
-  <li>체력적으로 2~3세트 경기를 소화할 수 있지만, 경기 후반 집중력 저하가 나타날 수 있습니다.</li>
-</ul>
+          <h2>3. 리턴은 위너보다 인플레이율과 첫 방향이 먼저다</h2>
+          <p>
+            4.0 문턱에서 리턴 실수는 눈에 잘 띄지 않지만 승률을 크게 갉아먹습니다.
+            강한 리턴 한두 개보다 중요한 것은 상대 1서브에서 버티고, 2서브에서는
+            중립 이상으로 시작하는 비율입니다. 특히 동호회 복식에서는 리턴이
+            전위에게 걸리거나 네트에 박히면 포인트가 너무 빨리 끝납니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              리턴 체크리스트
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+              <li>상대 1서브에서는 깊은 중앙 리턴으로 포인트를 시작할 수 있는가?</li>
+              <li>상대 2서브에서는 백핸드 쪽, 바디, 전위 발밑 중 하나를 정했는가?</li>
+              <li>리턴 위치를 베이스라인 뒤 1m, 안쪽, 사이드로 조절해 봤는가?</li>
+              <li>리턴 실수를 네트, 아웃, 전위 차단으로 나눠 기록하는가?</li>
+              <li>중요 포인트에서 화려한 리턴보다 반복 가능한 방향을 고르는가?</li>
+            </ul>
+          </aside>
+          <p>
+            리턴 훈련은 코스가 좁아야 효과가 큽니다. "잘 받아 넘기기"가 아니라
+            듀스 코트에서는 크로스 깊게, 애드 코트에서는 중앙 깊게처럼 목표를
+            정해야 합니다. 리턴 목표가 명확하면 스윙이 짧아지고, 스플릿스텝
+            타이밍도 자연스럽게 앞당겨집니다.
+          </p>
 
-<p>4.0 레벨로 도약하기 위해서는 이러한 3.5 레벨의 강점을 유지하면서 약점을 보완하고, 다음 단계에서 요구되는 새로운 기술과 전략을 습득해야 합니다.</p>
+          <h2>4. 랠리 전술은 강타보다 회복 위치와 방향 전환이다</h2>
+          <p>
+            NTRP 3.5에서 흔한 랠리 패턴은 "좋은 공이 오면 세게 치고, 어려운 공은
+            겨우 넘기는" 흐름입니다. 4.0에 가까워지려면 모든 공을 공격하려 하지
+            말고, 중립 공과 공격 공을 구분해야 합니다. 깊은 중앙 공으로 회복할
+            때와 반대 코트로 방향을 바꿀 때를 분리하면 불필요한 언포스드 에러가
+            크게 줄어듭니다.
+          </p>
+          <p>
+            방향 전환은 내 몸이 균형을 잡고 있고, 상대가 한쪽으로 이동한 뒤
+            회복이 늦을 때만 시도합니다. 공이 낮거나 몸쪽으로 붙었는데
+            다운더라인을 노리면 4.0 전술이 아니라 낮은 확률 도박이 됩니다. 좋은
+            선수일수록 "칠 수 있는 코스"와 "쳐야 하는 코스"를 구분합니다.
+          </p>
 
-<h3>1. 샷의 일관성 및 깊이 향상</h3>
-<p>4.0 레벨에서는 단순히 공을 코트 안에 넣는 것을 넘어, 상대방을 코트 뒤로 밀어내거나 좌우로 흔드는 깊고 위력적인 샷이 요구됩니다. 이를 위해 다음과 같은 연습에 집중하세요.</p>
-<ul>
-  <li><strong>깊이 있는 스트로크 연습:</strong> 베이스라인 깊숙이 떨어지는 공을 꾸준히 치는 연습을 하세요. 상대방에게 공격 기회를 주지 않고 경기를 주도하는 데 필수적입니다. 벽 치기나 파트너와 함께 긴 랠리를 이어가는 연습이 효과적입니다.</li>
-  <li><strong>샷의 변화 구사:</strong> 슬라이스, 탑스핀, 플랫샷 등 다양한 샷을 상황에 맞게 구사하는 연습을 하세요. 특히 슬라이스는 상대방의 리듬을 깨뜨리고 네트 플레이로 유도하는 데 유용합니다.</li>
-  <li><strong>코트 커버리지 훈련:</strong> 샷을 친 후 빠르게 제자리로 돌아오거나 다음 샷을 준비하는 움���임을 훈련하세요. 코트 중앙을 중심으로 효과적으로 움직여 상대방의 빈 공간을 공격할 수 있도록 합니다.</li>
-</ul>
+          <h2>5. 네트 플레이는 마무리 기술이 아니라 압박 신호다</h2>
+          <p>
+            4.0 수준에서는 베이스라인 랠리만으로 모든 포인트를 이기기 어렵습니다.
+            상대가 짧게 주거나 낮은 슬라이스로 버티는 순간, 네트 접근이 있어야
+            다음 공이 쉬워집니다. 핵심은 완벽한 발리 기술보다 접근 전 공의 깊이와
+            접근 후 첫 발리의 위치입니다.
+          </p>
+          <ul>
+            <li>어프로치샷은 상대 코너보다 베이스라인 1m 안쪽 깊이를 먼저 목표로 둡니다.</li>
+            <li>첫 발리는 위너보다 상대 발밑 또는 빈 공간으로 낮게 보냅니다.</li>
+            <li>로브가 잦은 상대에게는 네트에 너무 붙지 않고 서비스라인 안쪽에서 멈춥니다.</li>
+            <li>복식에서는 전위가 움직일 약속 신호를 서버와 미리 정합니다.</li>
+          </ul>
+          <p>
+            네트 플레이는 실수하면 크게 보이기 때문에 3.5 선수들이 피하기 쉽습니다.
+            하지만 계속 피하면 상대는 베이스라인 뒤에서 편하게 랠리합니다. 한 세트에
+            최소 4번은 의도적으로 전진해 보는 식으로 양을 정해야 실제 전술이 됩니다.
+          </p>
 
-<h3>2. 서브와 리턴의 다양화 및 공격성 강화</h3>
-<p>4.0 레벨에서는 서브가 단순한 게임 시작이 아닌, 공격의 시작점이 됩니다. 리턴 또한 상대방에게 압박감을 주는 것이 중요합니다.</p>
-<ul>
-  <li><strong>다양한 서브 구질 연습:</strong> 플랫 서브, 슬라이스 서브, 킥 서브 등 다양한 구질을 구사하는 연습을 하세요. 특히 슬라이스 서브는 상대방을 코트 밖으로 밀어내기 좋으며, 킥 서브는 상대방의 리턴 각도를 제한하는 데 효과적입니다.</li>
-  <li><strong>서브의 정확도와 파워 향상:</strong> 단순히 힘으로만 서브를 넣기보다는, 원하는 곳으로 정확하게 보내는 연습을 하세요. 2nd 서브의 안정성 또한 매우 중요합니다.</li>
-  <li><strong>공격적인 리턴:</strong> 상대방의 2nd 서브를 적극적으로 공격하여 주도권을 가져오는 연습을 하세요. 깊고 빠른 리턴은 상대방에게 바로 압박감을 줄 수 있습니다.</li>
-</ul>
+          <h2>6. 8주 훈련은 샷이 아니라 포인트 시작 구조로 짠다</h2>
+          <p>
+            4.0 준비 훈련은 포핸드 30분, 백핸드 30분처럼 나누기보다 포인트 시작
+            구조로 묶어야 합니다. 실제 경기에서는 기술이 독립적으로 나오지 않습니다.
+            서브가 들어가고, 리턴이 오고, 첫 랠리 공에서 방향을 정하는 식으로 연결됩니다.
+          </p>
+          <ol>
+            <li>1-2주차: 2서브 60개를 바디, 백핸드, 높은 탄도 세 구역으로 나눠 기록합니다.</li>
+            <li>3-4주차: 리턴 40개 중 인플레이율과 목표 코스 성공률을 따로 기록합니다.</li>
+            <li>5-6주차: 서브+1, 리턴+1을 3구 패턴으로 반복합니다.</li>
+            <li>7-8주차: 연습 경기에서 더블폴트, 리턴 실수, 3구 이후 실점을 체크합니다.</li>
+          </ol>
+          <p>
+            이 방식의 장점은 실력이 좋아졌는지 감으로 판단하지 않는다는 점입니다.
+            경기에서 6-4로 졌더라도 더블폴트가 줄고 리턴 인플레이가 늘었다면
+            4.0으로 가는 방향은 맞습니다. 반대로 위너가 많아도 2서브 게임을 계속
+            잃는다면 훈련 순서를 다시 잡아야 합니다.
+          </p>
 
-<h2>네트 플레이와 발리의 업그레이드</h2>
+          <h2>마무리</h2>
+          <p>
+            NTRP 3.5에서 4.0으로 올라가는 과정은 화려한 기술 추가보다 경기 운영의
+            정밀도를 높이는 과정입니다. 서브 다음 공, 리턴 첫 방향, 랠리 중 방향
+            전환, 네트 접근 기준이 정리되면 같은 체력과 같은 스윙으로도 승률이
+            달라집니다. 4.0은 한 번의 멋진 샷이 아니라 반복 가능한 선택의 누적에서
+            만들어집니다.
+          </p>
+        </section>
 
-<p>4.0 레벨에서는 네트 플레이의 중요성이 더욱 커집니다. 단순히 앞에서 공을 받아내는 것을 넘어, 적극적으로 포인트를 결정짓는 네트 플레이어가 되어야 합니다.</p>
-<ul>
-  <li><strong>발리의 안정성 및 깊이:</strong> 네트 앞에서 오는 공을 안정적으로 처리하고, 상대방 코트 깊숙이 보내는 연습을 하세요. 짧은 발리는 상대방에게 공격 기회를 줄 수 있습니다.</li>
-  <li><strong>다양한 발리 구사:</strong> 드롭 발리, 슬라이스 발리, 푸시 발리 등 상황에 맞는 발리를 구사하는 연습을 하세요. 특히 드롭 발리는 상대방을 앞으로 끌어내어 틈을 만드는 데 유용합니다.</li>
-  <li><strong>스매시 결정력 향상:</strong> 뜨는 공을 놓치지 않고 확실하게 끝내는 스매시 능력을 키우세요. 정확한 타점과 빠른 판단이 중요합니다.</li>
-  <li><strong>서브 앤 발리 전략 활용:</strong> 자신의 서브를 넣고 바로 네트로 달려드는 서브 앤 발리 전략을 연습하세요. 상대방의 리턴이 약할 때 효과적인 공격 방법입니다.</li>
-</ul>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-<h2>경기 운영 전략 및 멘탈 관리</h2>
-
-<p>4.0 레벨로의 레벨업은 기술적인 부분뿐만 아니라, 경기 운영 능력과 멘탈 관리에서도 큰 변화를 요구합니다.</p>
-<ul>
-  <li><strong>상대방 분석 및 약점 공략:</strong> 상대방의 플레이 스타일, 강점과 약점을 파악하고 이를 공략하는 전략을 세우세요. 예를 들어, 백핸드가 약하다면 백핸드 쪽으로 공을 집중시키는 것입니다.</li>
-  <li><strong>코트 포지셔닝의 중요성:</strong> 자신의 샷에 맞춰 적절한 위치로 이동하고, 상대방의 샷을 예측하여 미리 대비하는 능력이 중요합니다.</li>
-  <li><strong>단식과 복식 전략의 차이 이해:</strong> 단식에서는 코트 커버리지와 체력이 중요하며, 복식에서는 파트너와의 호흡, 네트 플레이, 공간 분할이 중요합니다. 각 게임에 맞는 전략을 익히세요.</li>
-  <li><strong>멘탈 관리:</strong> 중요한 순간에 긴장하지 않고 자신의 플레이를 유지하는 멘탈 관리가 필수적입니다. 긍정적인 마음가짐을 유지하고, 실점 후에도 빠르게 털고 다음 포인트에 집중하는 연습을 하세요.</li>
-  <li><strong>경기 후 분석:</strong> 경기 후 자신의 플레이를 되돌아보고 잘 된 점과 개선할 점을 파악하여 다음 훈련에 반영하세요.</li>
-</ul>
-
-<h2>자주 묻는 질문</h2>
-<h3>NTRP 3.5에서 4.0으로 레벨업하는 데 얼마나 걸리나요?</h3>
-<p>레벨업에 걸리는 시간은 개인의 노력, 훈련 빈도, 코칭의 질, 그리고 타고난 재능 등 여러 요인에 따라 크게 달라집니다. 꾸준히 주 2~3회 이상 훈련하고, 자신의 약점을 집중적으로 보완하며, 경기 경험을 쌓는다면 일반적으로 6개월에서 2년 정도의 기간이 소요될 수 있습니다. 가장 중요한 것은 조급해하지 않고 꾸준히 노력하는 것입니다.</p>
-
-<h3>4.0 레벨에서 주로 어떤 실수를 많이 하나요?</h3>
-<p>4.0 레벨 선수들이 흔히 저지르는 실수로는 다음과 같은 것들이 있습니다. 첫째, 샷의 깊이가 부족하여 상대방에게 공격 기회를 주는 것입니다. 둘째, 네트 앞에서 섣불리 공격적인 샷을 시도하다가 범실하는 경우입니다. 셋째, 경기 후반 체력 저하로 인한 집중력 및 판단력 저하입니다. 마지막으로, 상대방의 플레이에 일희일비하며 자신의 페이스를 잃는 멘탈적인 부분도 포함됩니다.</p>
-
-<h3>4.0 레벨업을 위해 어떤 훈련 방식을 추천하나요?</h3>
-<p>4.0 레벨업을 위해서는 다양한 훈련 방식을 병행하는 것이 좋습니다. 첫째, 정기적인 레슨을 통해 전문가의 코칭을 받으며 자신의 약점을 파악하고 개선하는 것이 중요합니다. 둘째, 파트너와 함께 다양한 샷 연습, 랠리 연습, 그리고 실전 경기 연습을 꾸준히 하세요. 셋째, 벽 치기나 풋워크 훈련 등 기초 체력과 기술을 향상시키는 개인 훈련도 병행하면 효과적입니다. 마지막으로, 자신의 경기를 녹화하여 분석하는 것도 큰 도움이 됩니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
-            무료 NTRP 실력 테스트 →
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            내 현재 레벨과 약점을 먼저 확인해 보세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
+          >
+            무료 NTRP 실력 테스트 하기
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

@@ -1,22 +1,23 @@
-# Status | 마지막: 2026-05-27
+# Status | 마지막: 2026-05-28
 ## 현재 작업
-Court Energy 전체 적용 + 블로그 300편 메타 개선 완료. 배포 대기 중.
+사이트 종합 최적화 1차 진행 중. 네이버 카페 배너 CTA가 블로그 글과 선수 글 하단에 노출되는 것까지 운영 확인 완료.
 ## 최근 변경 (최근 5개만)
-- 05-27: Court Energy 선수 페이지 적용 — PlayerArticlePage.tsx 히어로 배너 + rankingCurrent 필드 수정
-- 05-27: 블로그 본문 색상 추가 — .aw-article h2(teal), strong(sky-blue), 다크모드 대응
-- 05-27: 블로그 300편 메타 개선 — excerpt 인용구 기반 고유화, 섹션헤더·영어기관명 태그 제거
-- 05-27: 블로그 article-writer 300편 통합 — blog-posts-aw-300.js + part11-article-writer-300.ts
-- 05-27: Pretendard unicode-range @font-face 추가 (한글 U+AC00-D7AF 분리)
+- 05-28: 선수 상세 글 하단 네이버 카페 배너 노출 운영 확인(`/players/carlos-alcaraz`)
+- 05-28: 네이버 카페 배너를 `docs/tennis.png` 원본 기반 PNG 자산으로 교체
+- 05-28: 운영 배포 `dpl_7j6vfCnUA5ZdeGWBfaVrD5yQnvDB` 완료, GSC sitemap 2개 + IndexNow URL 638개 전송
+- 05-28: 블로그 상세 하단 네이버 카페 배너 CTA 추가, 동적/정적 글 공통 적용
+- 05-28: 운영 배포 `dpl_7mdXGay3gdrZ6pwWqD6CUBSR1uMH` 완료, GSC sitemap 2개 + IndexNow URL 638개 전송
 ## TODO
-- [ ] Vercel 배포 후 IndexNow로 새 300편 일괄 제출
-- [ ] AdSense 슬롯 ID 환경변수 반영 (사용자에게 콘솔에서 5개 ID 확인 요청)
-- [ ] 선수 페이지 rankingCurrent 데이터 보강 (현재 전체 미설정)
-- [ ] 인덱싱 해제 4개 슬러그 효과 모니터링 (2~4주 후)
-- [ ] PSI 재측정 (배포 후)
+- [ ] 블로그 글 감사 554개 개선 대상 중 GSC 노출 상위 글부터 계속 개별 보강
+- [ ] 기존 lint 경고 71개 정리
+- [ ] 배포 후 7~14일 간 GSC에서 저CTR 선수/레슨비/경기 운영 글 CTR 변화 확인
 ## 결정사항
-- 트래픽의 87%가 네이버 (m.search.naver 74% + naver organic 13%) → 네이버 우선 최적화 정당
-- LOW_QUALITY 114개 중 GSC 노출 5+만 4개 단계적 해제 (B 전략, 위험 최소화)
-- 선수 rankingCurrent 미설정 → 랭킹 배지 미노출, 배경 장식 숫자는 "01" fallback 사용
+- 새 콘텐츠 발행 알림: `npm run publish:vercel` 경로에서 배포 후 GSC sitemap + Naver/Bing/IndexNow 자동 전송
+- 자동생성 글 보강: 원본 대용량 파일을 직접 덮기보다 `part13-optimized` override로 개별 고품질 본문을 우선 적용
+- 저CTR 페이지 보강: 실제 GSC 쿼리를 title 앞쪽에 배치하고 description은 독자 이득을 명확히 표시
+- 모바일 광고: AdSense 자동 삽입 컨테이너는 전역 CSS로 뷰포트 폭 제한
 ## 주의
-- lint/biome은 Stop hook 자동 처리 — Claude가 직접 호출 금지
-- 인덱싱 해제 4개 글은 Vercel 배포 후 search:notify가 자동 인덱싱 요청
+- 검증 통과: type-check, lint(0 errors/71 warnings), build, 로컬/운영 모바일·데스크톱 브라우저 확인
+- 최신 GSC/IndexNow 전송: sitemap 2개, URL 638개
+- 운영 확인 중 Google vignette 광고가 `aria-hidden` 콘솔 에러 1개를 만들 수 있음
+- 콘텐츠 품질 감사상 템플릿 위험 글이 남아 있어 콘텐츠 최적화는 지속 작업 필요

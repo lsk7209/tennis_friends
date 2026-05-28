@@ -1,168 +1,305 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "NTRP 2.5→3.0 레벨업 | 초급 탈출 기준";
+const description =
+  "NTRP 2.5에서 3.0으로 올라가기 위한 랠리 안정성, 서브, 풋워크, 경기 경험 기준을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "NTRP 2.5와 3.0의 가장 큰 차이는 무엇인가요?",
+    answer:
+      "2.5는 기본 샷을 배우는 단계이고, 3.0은 기본 샷으로 짧은 랠리와 간단한 경기 운영을 시작하는 단계입니다. 특히 서브 인, 크로스 랠리, 쉬운 공 처리 안정성이 차이를 만듭니다.",
+  },
+  {
+    question: "NTRP 3.0까지 얼마나 걸리나요?",
+    answer:
+      "주 2회 이상 연습하고 월 1-2회 실제 게임을 한다면 3개월에서 9개월을 현실적인 기준으로 볼 수 있습니다. 다만 서브와 풋워크를 늦게 시작하면 기간이 길어집니다.",
+  },
+  {
+    question: "혼자 연습해도 NTRP 3.0에 도달할 수 있나요?",
+    answer:
+      "벽치기, 서브 연습, 풋워크 드릴은 혼자서도 가능합니다. 다만 3.0은 실제 게임에서 점수를 운영하는 능력이 필요하므로 주기적인 랠리 파트너나 연습 경기는 꼭 필요합니다.",
+  },
+  {
+    question: "초급자는 포핸드와 백핸드 중 무엇을 먼저 고쳐야 하나요?",
+    answer:
+      "대부분은 포핸드보다 백핸드와 서브가 더 큰 병목입니다. 포핸드만 강해도 경기에서는 백핸드 리턴과 2서브가 흔들리면 3.0 수준의 안정성을 만들기 어렵습니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: 'NTRP 2.5→3.0 레벨업 완전 가이드 | TennisFriends',
-  description: 'NTRP 2.5→3.0 레벨업 완전 가이드에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["NTRP 2.5","NTRP 3.0","레벨업","실력 향상"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-ntrp-25-to-30-guide` },
-  openGraph: { title: 'NTRP 2.5→3.0 레벨업 완전 가이드', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "NTRP 2.5",
+    "NTRP 3.0",
+    "테니스 초급",
+    "테니스 레벨업",
+    "초급자 테니스",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-ntrp-25-to-30-guide` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-ntrp-25-to-30-guide`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: 'NTRP 2.5→3.0 레벨업 완전 가이드', item: `${siteUrl}/blog/tennis-ntrp-25-to-30-guide` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">NTRP 2.5→3.0 레벨업 완전 가이드</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>NTRP 2.5→3.0 레벨업 완전 가이드</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-ntrp-25-to-30-guide` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-sky-700 dark:text-sky-300">
+            초급자 레벨업·NTRP 2.5 훈련 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            NTRP 2.5에서 3.0으로 올라가는 핵심은 새로운 샷을 많이 배우는
+            것이 아니라, 포핸드·백핸드·서브를 경기에서 끊기지 않게 연결하는
+            것입니다. 초급 탈출은 강한 공보다 안정적인 첫 3구, 쉬운 공 처리,
+            기본 위치 회복에서 시작됩니다.
+          </p>
+        </header>
 
-<p>NTRP 2.5 레벨에서 3.0 레벨로 도약하는 것은 테니스 실력 향상의 중요한 이정표입니다. 꾸준한 연습과 전략적인 접근 방식을 통해 누구나 달성 가능한 목표이며, 이 가이드에서는 구체적인 훈련 방법과 실전 팁을 제공하여 여러분의 레벨업을 돕겠습니다.</p>
+        <section className="mb-10 rounded-lg border border-sky-200 bg-sky-50 p-5 dark:border-sky-800 dark:bg-sky-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>NTRP 2.5의 병목은 파워 부족보다 랠리 연결과 서브 안정성입니다.</li>
+            <li>3.0 기준은 포핸드·백핸드 크로스 4-6구, 2서브 인, 기본 점수 운영입니다.</li>
+            <li>초급자는 샷 폼보다 준비 자세, 임팩트 위치, 친 뒤 회복을 먼저 봐야 합니다.</li>
+            <li>연습만으로는 부족하고, 짧은 세트라도 실제 게임 경험을 쌓아야 합니다.</li>
+          </ul>
+        </section>
 
-<p>NTRP 2.5 레벨은 기본적인 스트로크를 구사할 수 있지만, 일관성이 부족하고 경기 운영 능력이 미흡한 단계입니다. 3.0 레벨로 올라서기 위해서는 샷의 정확성과 파워를 향상시키고, 다양한 구질을 구사하며, 기본적인 전략을 이해하는 것이 필수적입니다. 단순히 공을 넘기��� 것을 넘어, 경기를 주도하고 상대를 압박할 수 있는 능력을 키우는 데 집중해야 합니다.</p>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. NTRP 2.5는 배운 기술을 경기로 옮기기 전 단계다</h2>
+          <p>
+            NTRP 2.5 선수는 포핸드와 백핸드의 기본 동작을 알고, 느린 공에서는
+            랠리를 이어갈 수 있습니다. 하지만 공이 조금 빠르거나 깊어지면 준비가
+            늦고, 서브 게임에서는 더블폴트와 리턴 실수가 자주 나옵니다. 3.0으로
+            올라가려면 동작을 예쁘게 만드는 것보다 공을 계속 코트 안에 두는
+            경기 안정성이 먼저입니다.
+          </p>
+          <p>
+            USTA는 NTRP를 경기 능력의 일반적 특성을 구분하는 체계로 안내합니다.
+            공식 자료를 보면 초급 단계의 차이는 기술 이름을 몇 개 아느냐보다
+            스트로크를 얼마나 반복하고, 서브로 포인트를 시작하며, 기본적인 경기
+            상황을 처리하느냐에 있습니다.
+          </p>
+          <p>
+            공식 설명은
+            <a
+              href="https://www.usta.com/en/home/play/adult-tennis/programs/national/usta-ntrp-ratings-faqs.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              USTA NTRP Ratings FAQ
+            </a>
+            와
+            <a
+              href="https://www.usta.com/content/dam/usta/sections/eastern/pdfs/NTRP%20Characteristics.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              NTRP General Characteristics
+            </a>
+            에서 확인할 수 있습니다. 초급자는 이 기준을 볼 때 "나는 어떤 샷을
+            못 치나"보다 "경기에서 어떤 상황이 반복해서 끊기나"를 보는 편이
+            더 도움이 됩니다.
+          </p>
 
-<h2>1. NTRP 2.5와 3.0 레벨의 차이점 이해하기</h2>
+          <h2>2. 3.0 진입 기준은 4가지로 보면 충분하다</h2>
+          <p>
+            3.0은 고급 기술의 시작이 아니라 테니스를 경기답게 이어가는 첫 단계입니다.
+            포핸드 위너, 강한 서브, 발리 마무리가 없어도 됩니다. 대신 기본 랠리,
+            서브 인, 리턴 인플레이, 점수 이해가 안정되어야 합니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>2.5에서 자주 보이는 문제</th>
+                <th>3.0 진입 기준</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>랠리</td>
+                <td>2-3구 뒤 네트 또는 큰 아웃</td>
+                <td>느린 크로스 랠리 4-6구 유지</td>
+              </tr>
+              <tr>
+                <td>서브</td>
+                <td>토스 흔들림과 더블폴트 반복</td>
+                <td>2서브를 높은 탄도로 안전하게 넣음</td>
+              </tr>
+              <tr>
+                <td>리턴</td>
+                <td>스윙이 커서 첫 공부터 실점</td>
+                <td>짧은 스윙으로 중앙 깊게 반환</td>
+              </tr>
+              <tr>
+                <td>경기 운영</td>
+                <td>점수와 위치를 동시에 놓침</td>
+                <td>서브 순서, 듀스, 기본 포지션을 이해함</td>
+              </tr>
+            </tbody>
+          </table>
 
-<p>NTRP(National Tennis Rating Program)는 테니스 실력을 객관적으로 평가하는 시스템으로, 2.5와 3.0 레벨은 명확한 차이를 보입니다. 2.5 레벨 플레이어는 주로 포핸드와 백핸드 스트로크를 배웠지만, 아직은 공의 방향과 깊이에 대한 제어가 미흡합니다. 서브는 대체로 밋밋하며, 발리나 스매시와 같은 네트 플레이에도 어려움을 겪습니다.</p>
+          <h2>3. 랠리 안정성은 스윙보다 준비가 먼저다</h2>
+          <p>
+            초급자가 랠리를 잃는 가장 큰 이유는 스윙 자체보다 준비가 늦기 때문입니다.
+            공이 올 때 라켓을 늦게 빼고, 발이 멈춘 상태에서 팔로만 맞히면 공은
+            네트에 걸리거나 길게 나갑니다. 3.0으로 가려면 스윙을 크게 바꾸기 전에
+            준비 자세, 임팩트 위치, 친 뒤 회복을 고정해야 합니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              초급 랠리 체크리스트
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+              <li>상대가 치는 순간 스플릿스텝을 하고 있는가?</li>
+              <li>라켓 준비가 공이 바운드되기 전에 끝나는가?</li>
+              <li>목표를 라인이 아니라 코트 중앙 깊은 곳으로 잡는가?</li>
+              <li>친 뒤 바로 제자리로 돌아가는 첫 걸음이 나오는가?</li>
+              <li>실수 후 폼 전체를 바꾸기보다 높이와 목표를 먼저 조정하는가?</li>
+            </ul>
+          </aside>
+          <p>
+            좋은 훈련은 포핸드 100개를 세게 치는 것이 아니라 포핸드 크로스 5구,
+            백핸드 크로스 5구를 안정적으로 반복하는 것입니다. 속도를 줄이고,
+            네트 위 여유를 크게 두고, 코트 안쪽 1m를 목표로 잡으면 실수가 줄어듭니다.
+          </p>
 
-<p>반면, 3.0 레벨 플레이어는 다음과 같은 특징을 보입니다.
-<ul>
-    <li>포핸드와 백핸드 스트로크의 일관성이 향상되어 코트 안으로 꾸준히 공을 보낼 수 있습니다.</li>
-    <li>서브의 정확도가 높아지고, 어느 정도의 스피드와 회전을 구사할 수 있습니다.</li>
-    <li>기본적인 네트 플레이(발리, 스매시)를 시도하며, 성공률이 점차 높아집니다.</li>
-    <li>상대방의 샷을 보고 기본적인 코트 위치 선정과 샷 선택을 할 수 있습니다.</li>
-    <li>��기 중 기본적인 전략(예: 상대방의 약점 공략)을 시도합니다.</li>
-</ul>
-이러한 차이점을 명확히 인지하고, 3.0 레벨에서 요구되는 능력을 집중적으로 훈련하는 것이 레벨업의 핵심입니다.</p>
+          <h2>4. 서브는 넣기만 해도 되지만 토스는 반드시 고정해야 한다</h2>
+          <p>
+            2.5 단계에서 서브는 경기 전체를 흔드는 가장 큰 변수입니다. 좋은 랠리
+            능력이 있어도 더블폴트가 많으면 게임을 운영할 수 없습니다. 3.0 목표라면
+            빠른 1서브보다 같은 토스, 같은 리듬, 안전한 2서브가 우선입니다.
+          </p>
+          <ul>
+            <li>토스는 머리 위보다 약간 앞, 매번 같은 높이로 올립니다.</li>
+            <li>2서브는 속도를 포기하고 높은 탄도와 넉넉한 네트 여유를 둡니다.</li>
+            <li>서브 30개 중 더블폴트, 짧은 서브, 좋은 서브를 따로 기록합니다.</li>
+            <li>서브 후 공을 구경하지 말고 베이스라인 안쪽 회복 위치로 돌아옵니다.</li>
+          </ul>
+          <p>
+            서브 연습은 무작정 많이 치면 어깨만 피곤해집니다. 10개 단위로 끊고
+            성공률을 적어야 합니다. 30개 중 20개 이상 안전하게 들어가는 2서브가
+            만들어지면 경기에서 자신감이 크게 달라집니다.
+          </p>
 
-<h2>2. 실력 향상을 위한 구체적인 훈련 방법</h2>
+          <h2>5. 첫 게임 경험은 짧게, 자주, 기록하면서 쌓는다</h2>
+          <p>
+            3.0은 연습장 안에서만 만들어지지 않습니다. 실제 게임에서는 점수,
+            서브 순서, 상대 위치, 긴장감이 동시에 들어옵니다. 그래서 초급자는
+            긴 세트보다 짧은 타이브레이크, 4게임 매치, 서브 게임만 따로 하는
+            식으로 경기 경험을 자주 쌓는 편이 좋습니다.
+          </p>
+          <ol>
+            <li>1주차: 포핸드·백핸드 크로스 5구 성공률을 기록합니다.</li>
+            <li>2주차: 2서브 30개 중 성공 개수를 기록합니다.</li>
+            <li>3주차: 리턴을 중앙으로 20개 보내는 훈련을 합니다.</li>
+            <li>4주차: 타이브레이크 3번을 하고 실점 원인을 적습니다.</li>
+            <li>5주차: 서브 게임만 4번 반복해 더블폴트 수를 줄입니다.</li>
+            <li>6주차: 가장 많이 나온 실수 1개만 다음 훈련 주제로 잡습니다.</li>
+          </ol>
 
-<p>NTRP 2.5에서 3.0으로의 도약을 위해서는 체계적인 훈련이 필요합니다. 단순히 공을 많이 치는 것 이상으로, 각 스트로크별 정확도와 일관성을 높이는 연습에 집중해야 합니다.</p>
+          <h2>6. 초급 탈출을 늦추는 흔한 착각</h2>
+          <p>
+            초급자는 "폼이 완벽해지면 게임을 해야지"라고 생각하기 쉽습니다.
+            하지만 게임을 해봐야 어떤 폼이 경기에서 무너지는지 알 수 있습니다.
+            또 "강하게 쳐야 늘어난다"는 생각도 위험합니다. 2.5에서 3.0으로
+            가는 구간에서는 강한 공보다 들어가는 공, 빠른 발보다 첫 준비,
+            위너보다 상대가 한 번 더 치게 만드는 공이 더 중요합니다.
+          </p>
+          <p>
+            라켓이나 스트링을 바꾸는 것도 보조 수단입니다. 장비가 너무 무겁거나
+            그립이 맞지 않으면 조정해야 하지만, 대부분의 초급 병목은 장비보다
+            토스, 준비, 목표 설정, 회복 습관에서 나옵니다. 먼저 기록 가능한
+            기본 지표를 잡고, 그 뒤에 장비를 점검하는 순서가 안전합니다.
+          </p>
 
-<h3>2.1. 스트로크 정확도 및 일관성 향상</h3>
+          <h2>마무리</h2>
+          <p>
+            NTRP 2.5에서 3.0으로 올라가는 과정은 테니스가 연습 동작에서 경기로
+            넘어가는 구간입니다. 포핸드와 백핸드를 코트 안에 반복하고, 2서브로
+            점수를 시작하고, 리턴을 한 번 더 넘기며, 기본 점수를 이해하면 초급
+            탈출의 기반은 만들어집니다. 화려한 기술보다 끊기지 않는 첫 3구를
+            먼저 완성하세요.
+          </p>
+        </section>
 
-<p>가장 기본적이면서도 중요한 부분입니다. 코트의 특정 지점에 공을 연속적으로 보내는 연습을 통해 일관성을 확보해야 합니다.
-<ul>
-    <li><strong>벽 연습:</strong> 벽에 일정한 높이와 간격으로 타겟을 설정하고, 포핸드와 백핸드로 연속해서 공을 보내는 연습을 합니다. 타겟에 맞추는 연습을 통해 정확도를 높이고, 연속적인 샷을 통해 리듬감을 익힙니다.</li>
-    <li><strong>콘 연습:</strong> 코트 안에 콘을 놓고, 콘을 스치거나 콘을 넘��� 코트 안의 특정 지점으로 보내는 연습을 합니다. 이는 샷의 깊이와 방향 조절 능력을 향상시키는 데 효과적입니다.</li>
-    <li><strong>파트너와 랠리:</strong> 파트너와 함께 일정한 깊이와 높이로 랠리를 지속하는 연습을 합니다. 상대방의 공에 맞춰 자신의 샷을 조절하는 능력을 기를 수 있습니다. 처음에는 천천히 시작하여 점차 속도를 높여갑니다.</li>
-</ul>
-</p>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-<h3>2.2. 서브 강화</h3>
-
-<p>3.0 레벨에서는 상대방에게 위협이 될 수 있는 서브 구사가 중요합니다. 단순히 공을 넘기는 서브가 아닌, 정확하고 파워 있는 서브를 구사하는 연습이 필요합니다.</p>
-<ul>
-    <li><strong>토스 정확도 향상:</strong> 서브의 절반은 토스에 달려있다고 해도 과언이 아닙니다. 일정한 높이와 위치로 토스를 올리는 연습을 반복합니다.</li>
-    <li><strong>다양한 서브 구사 연습:</strong> 플랫 서브, 슬라이스 서브, 킥 서브 등 다양한 구질의 서브를 연습합니다. 특히 슬라이스 서브는 상대방을 코트 밖으로 밀어내는 데 효과적입니다.</li>
-    <li><strong>서브 앤 보리 연습:</strong> 서브를 넣은 후 바로 네트로 전진하여 발리로 마무리하는 연습을 합니다. 이는 서브를 통해 경기를 주도하는 능력을 키워줍니다.</li>
-    <li><strong>서브 코트 연습:</strong> 서브 박스의 특정 지점(예: T존, 와이드)으로 정확하게 보내는 연습을 합니다.</li>
-</ul>
-
-<h3>2.3. 네트 플레이 능력 향상</h3>
-
-<p>3.0 레벨에서는 네트 플레이의 중요성이 더욱 커집니다. 안정적인 발리와 스매시는 득점 기회를 만들고 경기를 유리하게 이끌 수 있습니다.</p>
-<ul>
-    <li><strong>발리 연습:</strong> 네트 앞에서 공을 띄우는 연습부터 시작하여, 점차 앞으로 나가면서 발리하는 연습을 합니다. 라켓 페이스를 일정하게 유지하고, 팔꿈치를 살짝 구부린 상태에서 손목의 움직임을 최소화하는 것이 중요합니다.</li>
-    <li><strong>스매시 연습:</strong> 높은 공을 정확하고 강하게 내려치는 연습을 합니다. 팝업된 공을 놓치지 않고, 임팩트 순간 라켓 헤드를 빠르게 내리는 연습이 필요합니다.</li>
-    <li><strong>발리-발리 랠리:</strong> 파트너와 함께 네트 앞에서 발리 랠리를 합니다. 이는 네트 플레이의 반응 속도와 정확도를 향상시키는 데 도움을 줍니다.</li>
-</ul>
-
-<h3>2.4. 풋워크 및 코트 커버리지 개선</h3>
-
-<p>넓은 코트를 효율적으로 커버하고, 최적의 위치에서 샷을 구사하기 위해서는 풋워크가 매우 중요합니다.</p>
-<ul>
-    <li><strong>사이드 스텝 및 크로스 스텝 연습:</strong> 코트 좌우로 빠르게 이동하는 연습을 합니다.</li>
-    <li><strong>스플릿 스텝 활용:</strong> 상대방이 공을 치는 순간 가볍게 점프하여 착지하는 스플릿 스텝은 다음 동작으로의 전환 속도를 높여줍니다.</li>
-    <li><strong>공의 궤적 예측 연습:</strong> 상대방의 샷을 보고 공이 어디로 떨어질지 예측하는 능력을 키웁니다. 이는 불필요한 움직임을 줄이고 효율적인 코트 커버를 가능하게 합니다.</li>
-</ul>
-
-<h2>3. 경기 운영 능력 및 전략 향상</h2>
-
-<p>단순히 기술적인 부분을 넘어, 경기를 읽고 이기는 방법을 배우는 것이 3.0 레벨로 가는 길입니다.</p>
-
-<h3>3.1. 상대방 분석 및 약점 공략</h3>
-
-<p>모든 상대는 약점을 가지고 있습니다. 상대방의 플레이 스타일을 관찰하고 약점을 파악하여 경기를 유리하게 이끌어가는 전략이 필요합니다.</p>
-<ul>
-    <li><strong>백핸드 약점 공략:</strong> 상대방의 백핸드가 약하다면, 백핸드 쪽으로 깊고 강한 샷을 자주 구사하여 실수를 유도합니다.</li>
-    <li><strong>낮은 공 공략:</strong> 상대방이 낮은 공 처리에 어려움을 느낀다면, 공을 낮게 깔아 차는 샷을 시도합니다.</li>
-    <li><strong>코트 가장자리 활용:</strong> 상대방을 코트 가장자리로 몰아넣어 체력을 소모시키고 다음 샷을 어렵게 만듭니다.</li>
-</ul>
-
-<h3>3.2. 공격과 수비의 균형</h3>
-
-<p>무조건 공격적이거나 수비적인 플레이만으로는 좋은 성적을 거두기 어렵습니다. 상황에 맞는 공격과 수비의 전환이 중요합니다.</p>
-<ul>
-    <li><strong>기회 포착:</strong> 상대방이 약한 공을 치거나 코트에서 벗어났을 때, 과감하게 공격하여 포인트를 얻습니다.</li>
-    <li><strong>안정적인 수비:</strong> 상대방의 강력한 샷에는 일단 안정적으로 공을 넘겨 경기를 이어가는 것이 중요합니다. 무리한 공격은 범실로 이어질 수 있습니다.</li>
-    <li><strong>플레이 스타일 변화:</strong> 상대방의 플레이 스타일에 맞춰 자신의 플레이 스타일을 변화시키는 유연성이 필요합니다.</li>
-</ul>
-
-<h3>3.3. 멘탈 관리</h3>
-
-<p>테니스는 정신력 싸움이기도 합니다. 긍정적인 마음가짐과 집중력을 유지하는 것이 중요합니다.</p>
-<ul>
-    <li><strong>실수로부터 배우기:</strong> 실수는 당연한 과정입니다. 실수에 좌절하기보다 원인을 분석하고 개선하려는 노력이 필요합니다.</li>
-    <li><strong>집중력 유지:</strong> 한 점 한 점 집중하며 경기에 임합니다. 점수 차이�� 일희일비하지 않고 자신의 플레이에 집중하는 것이 중요합니다.</li>
-    <li><strong>긍정적인 자기 대화:</strong> 스스로에게 격려와 긍정적인 메시지를 전달하여 자신감을 유지합니다.</li>
-</ul>
-
-<h2>4. 실전 적용 및 꾸준함의 중요성</h2>
-
-<p>이론적인 훈련만큼 중요한 것이 실전 경험입니다. 연습한 내용을 실제 경기에 적용하고, 꾸준히 노력하는 것이 레벨업의 핵심입니다.</p>
-
-<h3>4.1. 연습 경기 활용</h3>
-
-<p>레슨이나 혼자 연습하는 것 외에, 다양한 사람들과 연습 경기를 자주 가지는 것이 중요합니다.</p>
-<ul>
-    <li><strong>다양한 스타일의 상대와 경기:</strong> 자신과 다른 스타일의 상대와 경기를 하면서 다양한 상황에 대처하는 능력을 기릅니다.</li>
-    <li><strong>경기 후 복기:</strong> 경기 후 자신의 강점과 약점을 분석하고, 다음 경기에 개선할 점을 파악합니다.</li>
-    <li><strong>기록 활용:</strong> 경기 기록(예: 범실 횟수, 성공률)을 통해 객관적으로 자신의 실력을 평가합니다.</li>
-</ul>
-
-<h3>4.2. 테니스 커뮤니티 활용</h3>
-
-<p>테니스 동호회나 온라인 커뮤니티에 참여하여 정보를 공유하고 함께 운동할 사람을 찾는 것도 좋은 방법입니다.</p>
-<ul>
-    <li><strong>레슨 및 코칭:</strong> 가능하다면 전문 코치의 지도를 받는 것이 실력 향상에 큰 도움이 됩니다.</li>
-    <li><strong>함께 운동할 파트너 찾기:</strong> 비슷한 레벨의 파트너와 꾸준히 연습하면 서로에게 동기 부여가 됩니다.</li>
-    <li><strong>경험 공유:</strong> 다른 플레이어들의 경험을 통해 배우고 자신의 어려움을 공유하며 해결책을 찾을 수 있습니다.</li>
-</ul>
-
-<h3>4.3. 꾸준함이 답이다</h3>
-
-<p>어떤 훈련이든 꾸준함 없이는 효과를 보기 어렵습니다. 일주일에 최소 2~3회 이상 꾸준히 테니스를 치고 연습하는 습관을 들이는 것이 중요합니다. 단기간에 큰 변화를 기대하기보다는, 꾸준한 노력으로 점진적인 실력 향상을 이루는 것이 3.0 레벨로 ��는 가장 확실한 방법입니다.</p>
-
-<h2>자주 묻는 질문</h2>
-
-<h3>Q1: NTRP 2.5에서 3.0으로 레벨업하는 데 얼마나 걸리나요?</h3>
-<p>이는 개인의 노력, 연습 빈도, 코칭의 질 등 여러 요인에 따라 크게 달라집니다. 일반적으로 꾸준히 연습한다면 3개월에서 1년 정도의 시간이 소요될 수 있습니다. 중요한 것은 조급해하지 않고 꾸준히 노력하는 것입니다.</p>
-
-<h3>Q2: 혼자서도 NTRP 3.0 레벨까지 실력을 향상시킬 수 있나요?</h3>
-<p>혼자서도 벽 연습, 콘 연습, 풋워크 훈련 등을 통해 기본적인 기술을 향상시킬 수 있습니다. 하지만 실제 경기 경험과 상대방과의 샷 교환은 혼자서는 어렵기 때문에, 가능한 한 파트너를 구하거나 연습 경기를 자주 가지는 것이 좋습니다. 또한, 가능하다면 전문가의 피드백을 받는 것이 실력 향상에 큰 도움이 됩니다.</p>
-
-<h3>Q3: 3.0 레벨에서 중요한 기술은 무엇인가요?</h3>
-<p>3.0 레벨에서는 스트로크의 일관성과 정확도, 기본적인 서브 구사 능력, 그리고 네트 플레이(발리, 스매시)가 중요합니다. 또한, 상대방의 샷을 보고 적절한 위치로 이동하는 풋워크와 기본적인 코트 커버리지 능력도 필수적입니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
-            무료 NTRP 실력 테스트 →
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            현재 내 레벨과 초급 탈출 우선순위를 확인해 보세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
+          >
+            무료 NTRP 실력 테스트 하기
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

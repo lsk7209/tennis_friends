@@ -6,15 +6,15 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 
 export const metadata = {
-    title: '2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교 | 레슨비 아끼는 꿀팁',
-    description: '테니스 레슨 비용이 궁금하신가요? 서울, 경기 및 전국 평균 실내/실외 테니스장 레슨비를 1:1, 그룹 레슨별로 상세하게 비교해드립니다. 숨겨진 비용까지 확인하세요.',
+    title: '테니스 레슨 비용 2026 | 실내·실외 가격 비교',
+    description: '테니스 레슨 비용, 실내 테니스 가격, 개인·그룹 레슨비와 숨은 추가 비용을 월 예산별로 비교했습니다.',
     keywords: ['테니스 레슨 비용', '실내 테니스 가격', '테니스 레슨비', '테니스 강습료', '테니스 그룹 레슨', '테니스장 이용료', '테니스 비용'],
     alternates: {
         canonical: 'https://www.tennisfrens.com/blog/tennis-lesson-cost-guide',
     },
     openGraph: {
-        title: '2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교',
-        description: '테니스 레슨 비용이 궁금하신가요? 서울, 경기 및 전국 평균 실내/실외 테니스장 레슨비를 1:1, 그룹 레슨별로 상세하게 비교해드립니다.',
+        title: '테니스 레슨 비용 2026 | 실내·실외 가격 비교',
+        description: '테니스 레슨 비용과 실내 테니스 가격을 개인·그룹 레슨 기준으로 비교하고 예산 선택법을 정리했습니다.',
         url: 'https://www.tennisfrens.com/blog/tennis-lesson-cost-guide',
         siteName: 'TennisFriends',
         locale: 'ko_KR',
@@ -22,8 +22,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: '2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교',
-        description: '테니스 레슨 비용이 궁금하신가요? 서울, 경기 및 전국 평균 실내/실외 테니스장 레슨비를 1:1, 그룹 레슨별로 상세하게 비교해드립니다.',
+        title: '테니스 레슨 비용 2026 | 실내·실외 가격 비교',
+        description: '테니스 레슨 비용과 실내 테니스 가격을 개인·그룹 레슨 기준으로 비교했습니다.',
     },
     robots: {
         index: true,
@@ -38,6 +38,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
     { id: 'group-vs-private', text: '4. 1:1 개인레슨 vs 그룹레슨 가격 차이', depth: 2 },
     { id: 'hidden-costs', text: '5. 놓치기 쉬운 숨겨진 비용들', depth: 2 },
     { id: 'cost-saving-tips', text: '6. 레슨비 아끼는 현명한 팁', depth: 2 },
+    { id: 'registration-check', text: '7. 등록 전 확인할 공식 기준', depth: 2 },
     { id: 'conclusion', text: '결론 — 나에게 맞는 예산 계획', depth: 2 },
 ];
 
@@ -65,8 +66,8 @@ const faqs = [
 ];
 
 export default function TennisLessonCostGuidePage() {
-    const title = '2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교 | 레슨비 아끼는 꿀팁';
-    const excerpt = '테니스를 시작하려는데 비용이 걱정되시나요? 실내/실외, 개인/그룹 레슨별 평균 시세부터 놓치기 쉬운 추가 비용까지 꼼꼼하게 분석해 드립니다.';
+    const title = '테니스 레슨 비용 2026 | 실내·실외 가격 비교';
+    const excerpt = '테니스 레슨비, 실내 테니스 가격, 개인·그룹 레슨 차이와 숨은 비용까지 월 예산 기준으로 정리했습니다.';
 
     return (
         <Article
@@ -75,7 +76,7 @@ export default function TennisLessonCostGuidePage() {
             date="2026-01-24"
             slug="tennis-lesson-cost-guide"
             author="TennisFriends"
-            image="/images/blog/tennis-lesson-cost-guide.png"
+            image="/images/blog/tennis-racket-selection-guide.png"
         >
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 p-6 rounded-lg mb-8">
                 <div className="flex items-center gap-2 mb-3">
@@ -83,11 +84,11 @@ export default function TennisLessonCostGuidePage() {
                         비용 가이드
                     </Badge>
                     <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300">
-                        2026 최신판
+                        실내 테니스 가격
                     </Badge>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    "테니스는 귀족 스포츠라 비싸지 않나요?" 옛말입니다. 최근 테니스 붐과 함께 실내 테니스장이 급증하면서 가격 경쟁력이 생겼습니다. 하지만 여전히 지역과 시설에 따라 가격 차이가 큽니다. 호갱 되지 않는 합리적인 가격 기준을 제시해 드립니다.
+                <p className="article-summary text-gray-700 dark:text-gray-300 leading-relaxed">
+                    테니스 레슨 비용은 입문 기준 월 12만~30만 원대가 가장 흔합니다. 실내는 접근성과 볼머신이 강점이고, 실외는 코트비를 따로 계산하면 총액을 더 정확히 비교할 수 있습니다.
                 </p>
             </div>
 
@@ -130,7 +131,7 @@ export default function TennisLessonCostGuidePage() {
                         </tbody>
                     </table>
                 </div>
-                <p className="text-xs text-gray-500 mb-6 text-right">* 지역(강남/비강남), 시설 퀄리티, 코치 경력에 따라 ±5만 원 차이 발생</p>
+                <p className="text-xs text-gray-500 mb-6 text-right">* 지역, 시설, 코치 경력, 코트 대관 포함 여부에 따라 ±5만 원 이상 차이 발생</p>
             </section>
 
             <section id="indoor-cost" className="mb-12">
@@ -278,13 +279,52 @@ export default function TennisLessonCostGuidePage() {
                                 <p className="text-sm text-gray-600 dark:text-gray-400">직장인이 몰리는 저녁(18~22시)을 피해, 오전이나 낮 시간에 등록하면 '해피아워' 할인을 받을 수 있는 곳이 많습니다.</p>
                             </div>
                         </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-teal-600 dark:text-teal-400 font-bold text-xl">4.</span>
+                            <div>
+                                <strong className="text-gray-900 dark:text-white block mb-1">코트비 포함 여부 먼저 확인</strong>
+                                <p className="text-sm text-gray-600 dark:text-gray-400">실외 레슨은 레슨비가 낮아 보여도 대관료, 조명료, 볼비가 별도일 수 있습니다. 월 총액으로 비교해야 실제 절약 효과가 보입니다.</p>
+                            </div>
+                        </li>
                     </ul>
+                </div>
+            </section>
+
+            <section id="registration-check" className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span className="bg-sky-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">7</span>
+                    등록 전 확인할 공식 기준
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-sky-50 dark:bg-sky-950/30 p-6 rounded-lg">
+                        <h3 className="text-lg font-bold mb-3 text-sky-700 dark:text-sky-300">공공 코트 기준가 확인</h3>
+                        <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">
+                            실외 레슨을 알아볼 때는 주변 공공 테니스장 대관료를 먼저 확인하세요. 예를 들어 서울 공공서비스예약과 구립 체육시설 안내를 보면 대관료, 이용 제한, 양도 금지 규정을 확인할 수 있습니다.
+                        </p>
+                        <div className="flex flex-wrap gap-3 text-sm">
+                            <a href="https://yeyak.seoul.go.kr/" target="_blank" rel="noreferrer" className="font-semibold text-sky-700 underline dark:text-sky-300">
+                                서울 공공서비스예약
+                            </a>
+                            <a href="https://www.seocho.go.kr/sports/fmcs/50" target="_blank" rel="noreferrer" className="font-semibold text-sky-700 underline dark:text-sky-300">
+                                서초구 내곡테니스장 안내
+                            </a>
+                        </div>
+                    </div>
+                    <div className="bg-amber-50 dark:bg-amber-950/30 p-6 rounded-lg">
+                        <h3 className="text-lg font-bold mb-3 text-amber-700 dark:text-amber-300">등록 전 체크리스트</h3>
+                        <ul className="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                            <li>레슨비에 코트비, 볼머신, 라커, 샤워가 포함되는지 확인</li>
+                            <li>우천·부상·출장으로 빠질 때 보강 규정 확인</li>
+                            <li>3개월 이상 선결제 전 환불 기준과 사업자 정보를 확인</li>
+                            <li>입문자는 첫 달만 등록한 뒤 코치 피드백 방식과 동선을 평가</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
             <section id="conclusion" className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                    <span className="bg-orange-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">7</span>
+                    <span className="bg-orange-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">8</span>
                     결론 — 나에게 맞는 예산 계획
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">

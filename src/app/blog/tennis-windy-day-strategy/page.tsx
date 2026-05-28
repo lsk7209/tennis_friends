@@ -1,117 +1,298 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "바람 부는 날 테니스 전략 | 탑스핀·로브·서브 조정";
+const description =
+  "바람 부는 날 테니스에서 맞바람, 뒷바람, 옆바람별 샷 선택과 탑스핀, 로브, 서브 조정법을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "바람 부는 날 테니스에서 가장 먼저 확인할 것은 무엇인가요?",
+    answer:
+      "첫 5분 동안 바람 방향과 세기를 확인해야 합니다. 베이스라인 양쪽에서 짧은 랠리, 로브, 서브 토스를 해보면 맞바람과 뒷바람 차이를 바로 느낄 수 있습니다.",
+  },
+  {
+    question: "맞바람에서는 어떤 샷이 안전한가요?",
+    answer:
+      "맞바람에서는 공이 짧아지기 쉬우므로 평소보다 조금 더 깊게 보내고, 네트 위 여유를 확보한 탑스핀 크로스가 안전합니다.",
+  },
+  {
+    question: "뒷바람에서는 로브를 쓰면 안 되나요?",
+    answer:
+      "완전히 금지는 아니지만 위험합니다. 뒷바람에서는 로브가 길어지기 쉬우므로 높이를 낮추고, 공격 로브보다 깊은 수비 로브 위주로 제한하는 편이 좋습니다.",
+  },
+  {
+    question: "바람이 강할 때 서브는 어떻게 바꿔야 하나요?",
+    answer:
+      "강한 플랫 서브보다 스핀과 코스를 우선하세요. 토스를 낮게 고정하고, 맞바람에서는 깊이, 뒷바람에서는 파워 조절, 옆바람에서는 방향 보정을 먼저 생각합니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '바람 부는 날 테니스 전략 — 탑스핀·로브·서브 | TennisFriends',
-  description: '바람 부는 날 테니스 전략 — 탑스핀·로브·서브에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["바람","야외 테니스","전술","탑스핀"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-windy-day-strategy` },
-  openGraph: { title: '바람 부는 날 테니스 전략 — 탑스핀·로브·서브', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "바람 부는 날 테니스",
+    "테니스 바람 전략",
+    "테니스 탑스핀",
+    "테니스 로브",
+    "테니스 서브 조정",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-windy-day-strategy` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-windy-day-strategy`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '바람 부는 날 테니스 전략 — 탑스핀·로브·서브', item: `${siteUrl}/blog/tennis-windy-day-strategy` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">바람 부는 날 테니스 전략 — 탑스핀·로브·서브</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>바람 부는 날 테니스 전략 — 탑스핀·로브·서브</h2>
-<p>바람이 부는 날 테니스는 예측 불가능한 변수 때문에 더욱 흥미롭고 도전적인 경기가 됩니다. 바람의 방향과 세기를 이해하고, 탑스핀, 로브, 서브를 전략적으로 활용하면 어떤 날씨에도 승리할 수 있습니다. 이 글에서는 바람에 맞서는 테니스 전술을 구체적인 팁과 함께 자세히 알아보겠습니다.</p>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-windy-day-strategy` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-emerald-700 dark:text-emerald-300">
+            야외 코트·바람 대응 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            바람 부는 날 테니스는 힘으로 이기는 경기가 아니라 궤적을
+            낮추거나 높이고, 회전과 깊이를 조절하는 경기입니다. 바람 방향을
+            먼저 읽으면 실수는 줄고 상대의 불안정한 타점을 더 자주 만들 수
+            있습니다.
+          </p>
+        </header>
 
-<p>바람은 테니스 경기에 큰 영향을 미칩니다. 역풍에서는 공이 느려지고 예상보다 짧게 떨어지며, 순풍에서는 공이 멀리 날아가고 예측하기 어렵게 됩니다. 측풍은 공의 궤적을 휘게 만들어 스트로크의 정확성을 ���어뜨립니다. 이러한 바람의 특성을 이해하는 것이 바람 부는 날 테니스 전략의 첫걸음입니다. 바람을 유리하게 이용하거나 최소한의 불이익으로 경기를 풀어가는 것이 핵심입니다.</p>
+        <section className="mb-10 rounded-lg border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-800 dark:bg-emerald-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>경기 전 5분은 바람 방향과 세기를 확인하는 데 씁니다.</li>
+            <li>맞바람에서는 깊이, 뒷바람에서는 파워 조절이 우선입니다.</li>
+            <li>옆바람에서는 라인 근처보다 중앙 큰 목표를 잡습니다.</li>
+            <li>서브는 강도보다 토스 안정, 스핀, 코스 선택이 중요합니다.</li>
+          </ul>
+        </section>
 
-<h2>바람의 종류와 테니스에 미치는 영향</h2>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 바람은 공의 길이와 높이를 동시에 바꾼다</h2>
+          <p>
+            바람 부는 날에는 공이 단순히 옆으로 밀리는 것만 문제가 아닙니다.
+            맞바람은 공을 짧게 만들고, 뒷바람은 평소보다 길게 밀어내며,
+            옆바람은 코스 판단을 흔듭니다. 그래서 같은 스윙을 해도 공의
+            착지점이 매 포인트 달라질 수 있습니다.
+          </p>
+          <p>
+            중요한 것은 바람을 없애려 하지 않는 것입니다. 바람은 양쪽 선수에게
+            모두 영향을 주지만, 먼저 기준을 바꾸는 선수가 유리합니다. 코트에
+            들어가면 베이스라인 양쪽에서 미니 랠리와 긴 랠리를 모두 해보고,
+            공이 짧아지는 쪽과 길어지는 쪽을 몸으로 확인해야 합니다.
+          </p>
+          <p>
+            야외 경기 환경과 기본 규칙은
+            <a
+              href="https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ITF 테니스 용어 자료
+            </a>
+            와
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              USTA 테니스 팁 자료
+            </a>
+            를 함께 참고하면 좋습니다. 바람 대응은 샷 이름보다 코트 상황을
+            읽는 기준이 먼저입니다.
+          </p>
 
-<h3>역풍 (Headwind)</h3>
-<p>역풍은 공을 앞으로 밀어내는 힘에 저항하여 공의 속도를 늦추고 비거리를 줄입니다. 상대적으로 공이 네트 앞에서 짧게 떨어지는 경향이 있습니다.</p>
-<ul>
-    <li><strong>샷의 깊이 조절:</strong> 역풍에서는 평소보다 더 깊숙이 공을 보내려고 노력해야 합니다. 백스윙을 조금 더 크게 하고, 임팩트 시 공을 더 강하게 눌러주듯이 쳐서 공을 더 깊게 보내도록 합니다.</li>
-    <li><strong>탑스핀 활용:</strong> 탑스핀은 공에 회전을 주어 역풍의 영향을 상쇄하는 데 도움을 줍니다. 백스핀보다는 탑스핀을 적극적으로 사용하여 공이 바람에 덜 흔들리도록 합니다.</li>
-    <li><strong>서브의 변화:</strong> 역풍에서는 서브 스피드가 감소하므로, 더 강�� 서브보다는 정확성과 회전을 더한 서브를 구사하는 것이 효과적일 수 있습니다. 특히 슬라이스 서브를 활용하여 바람을 타지 않도록 합니다.</li>
-</ul>
+          <h2>2. 바람 방향별로 목표 지점을 다르게 잡는다</h2>
+          <p>
+            바람이 있는 날에는 라인을 노리는 샷보다 큰 목표를 잡는 샷이
+            이깁니다. 평소보다 50cm에서 1m 정도 안쪽을 목표로 두면 바람에
+            흔들려도 실점 가능성이 낮아집니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>바람</th>
+                <th>공의 변화</th>
+                <th>안전한 선택</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>맞바람</td>
+                <td>공이 짧아지고 속도가 줄어듦</td>
+                <td>깊은 탑스핀 크로스, 높은 네트 여유</td>
+              </tr>
+              <tr>
+                <td>뒷바람</td>
+                <td>공이 길어지고 베이스라인을 넘어감</td>
+                <td>스윙 크기 축소, 스핀 추가, 중앙 목표</td>
+              </tr>
+              <tr>
+                <td>옆바람</td>
+                <td>코스가 좌우로 밀림</td>
+                <td>라인 대신 중앙 1m 안쪽, 크로스 안정</td>
+              </tr>
+            </tbody>
+          </table>
 
-<h3>순풍 (Tailwind)</h3>
-<p>순풍은 공을 뒤에서 밀어주어 공의 속도를 높이고 비거리를 늘립니다. 공이 예상보다 훨씬 멀리 날아가거나 네트 밖으로 나갈 위험이 있습니다.</p>
-<ul>
-    <li><strong>샷의 컨트롤:</strong> 순풍에서는 과도한 힘보다는 컨트롤에 집중해야 합니다. 백스윙을 줄이고, 임팩트 시 공을 부드럽게 쳐서 불필요한 비거리가 늘어나는 것을 방지합니다.</li>
-    <li><strong>낮은 궤적 유지:</strong> 순풍에서는 공을 너무 높이 띄우면 바람에 실려 멀리 날아가기 쉽습니다. 가능한 한 낮은 궤적으로 공을 보내도록 노력합니다.</li>
-    <li><strong>로브 샷의 주의:</strong> 로브 샷은 순풍에서 매우 위험합니다. 상대방에게 쉽게 공격 기회를 줄 수 있으므로, 꼭 필요한 상황이 아니라면 피하는 것이 좋습니다.</li>
-</ul>
+          <h2>3. 탑스핀은 바람 속에서 공을 붙잡는 장치다</h2>
+          <p>
+            탑스핀은 바람 부는 날 가장 먼저 믿을 수 있는 도구입니다. 공에
+            전진 회전을 주면 네트 위를 지나도 코트 안으로 떨어지는 힘이
+            생깁니다. 맞바람에서는 공이 너무 짧아지지 않게 깊이를 보태고,
+            뒷바람에서는 공이 날아가지 않도록 회전량을 늘립니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              바람 속 탑스핀 체크리스트
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+              <li>네트 위 여유를 평소보다 넉넉하게 둡니다.</li>
+              <li>팔로만 감지 말고 하체 회전으로 깊이를 만듭니다.</li>
+              <li>뒷바람에서는 스윙 속도보다 라켓면 각도를 먼저 조정합니다.</li>
+              <li>옆바람에서는 라인샷보다 큰 크로스를 선택합니다.</li>
+            </ul>
+          </aside>
+          <p>
+            다만 탑스핀을 많이 건다고 해서 무조건 안전해지는 것은 아닙니다.
+            맞바람에서 스핀만 늘리고 전진 힘이 부족하면 공이 서비스라인 앞에
+            떨어집니다. 반대로 뒷바람에서는 스핀 없이 강하게 밀면 공이
+            베이스라인을 넘어갑니다. 회전과 깊이를 같이 조절해야 합니다.
+          </p>
 
-<h3>측풍 (Crosswind)</h3>
-<p>측풍은 공의 옆면에 작용하여 공의 궤적을 좌우로 휘게 만듭니다. 특히 스트로크의 정확성에 큰 영향을 미칩니다.</p>
-<ul>
-    <li><strong>샷의 각도 조절:</strong> 측풍의 방향을 고려하여 샷의 각도를 조절해야 합니다. 바람이 불어오는 방향으로 공을 보내면 바람에 밀려 네트 안으로 들어오기 어렵고, 바람이 불어가는 방향으로 보내면 네트 밖으로 나갈 위험이 있습니다.</li>
-    <li><strong>몸의 자세:</strong> 측풍을 받을 때는 몸의 자세를 약간 틀어 공을 더 단단하게 맞출 수 있도록 합니다. 바람이 불어오는 쪽으로 몸을 조금 더 열어주는 것이 도움이 될 수 있습니다.</li>
-    <li><strong>슬라이스 샷의 활용:</strong> 측풍에서는 슬라이스 샷이 효과적일 수 있습니다. 슬라이스 샷은 공을 낮게 유지하고 예측 불가능한 바운스를 만들어 상대방을 당황하게 할 수 있습니다.</li>
-</ul>
+          <h2>4. 로브는 바람 방향을 알 때만 공격 무기가 된다</h2>
+          <p>
+            로브는 바람 부는 날 가장 위험하면서도 가장 효과적인 샷입니다.
+            맞바람에서는 깊게 올려도 공이 짧아질 수 있고, 뒷바람에서는 작은
+            힘에도 길게 날아갑니다. 그래서 로브를 치기 전에는 반드시 지금 내가
+            맞바람 쪽인지, 뒷바람 쪽인지 확인해야 합니다.
+          </p>
+          <ul>
+            <li>맞바람 로브는 평소보다 깊고 높게 보내야 합니다.</li>
+            <li>뒷바람 로브는 높이를 낮추고 수비용으로 제한합니다.</li>
+            <li>옆바람 로브는 바람이 미는 방향 반대쪽으로 여유를 둡니다.</li>
+            <li>복식에서는 상대 전위 머리 위보다 중앙 뒤쪽이 안전합니다.</li>
+          </ul>
+          <p>
+            상대가 바람을 읽지 못하면 높은 공 하나만으로도 타점이 무너집니다.
+            특히 맞바람을 맞는 상대에게 깊은 로브를 보내면 뒤로 물러나는
+            발걸음과 공의 감속이 겹쳐 좋은 찬스가 만들어집니다.
+          </p>
 
-<h2>바람 부는 날 필수 테니스 전술</h2>
+          <h2>5. 서브는 토스를 낮추고 코스를 넓게 쓴다</h2>
+          <p>
+            바람이 강할 때 서브에서 가장 먼저 무너지는 것은 토스입니다. 공이
+            손을 떠난 뒤 바람을 오래 맞을수록 위치가 흔들립니다. 따라서 토스는
+            평소보다 약간 낮고 몸 앞쪽으로 고정하고, 강한 플랫 서브보다 스핀과
+            코스로 리턴을 어렵게 만드는 편이 안정적입니다.
+          </p>
+          <ol>
+            <li>맞바람에서는 네트 위 여유를 두고 깊게 넣습니다.</li>
+            <li>뒷바람에서는 파워를 줄이고 스핀으로 길이를 잡습니다.</li>
+            <li>옆바람에서는 바람이 미는 방향을 예상해 시작 코스를 조정합니다.</li>
+            <li>2서브는 에이스보다 상대 백핸드 쪽 높은 타점을 목표로 합니다.</li>
+          </ol>
 
-<h3>탑스핀을 활용한 샷</h3>
-<p>탑스핀은 ��람 부는 날 가장 유용한 기술 중 하나입니다. 공에 앞으로 회전을 주어 공기 저항을 극복하고, 공이 네트 위를 넘어간 후에도 빠르게 하강하도록 만듭니다. 이는 역풍에서는 공이 짧게 떨어지는 것을 방지하고, 순풍에서는 공이 너무 멀리 날아가는 것을 제어하는 데 도움을 줍니다.</p>
-<ul>
-    <li><strong>포핸드 탑스핀:</strong> 라켓을 아래에서 위로 쓸어 올리듯이 공을 맞춥니다. 임팩트 시 손목을 사용하여 더 많은 회전을 줄 수 있습니다.</li>
-    <li><strong>백핸드 탑스핀:</strong> 포핸드와 마찬가지로 라켓을 아래에서 위로 쓸어 올립니다. 원핸드 백핸드의 경우 손목과 팔꿈치를 함께 사용하여 회전을 극대화할 수 있습니다.</li>
-    <li><strong>탑스핀 서브:</strong> 키킹 동작에서 공을 약간 위쪽으로 띄우고, 라켓을 위에서 아래로 내려치면서 공을 감아 올리듯이 칩니다. 이는 서브의 속도를 줄이지 않으면서도 바람의 영향을 덜 받게 하는 효과가 있습니다.</li>
-</ul>
+          <h2>6. 바람이 강할수록 전술은 단순해야 한다</h2>
+          <p>
+            바람이 강한 날에는 복잡한 패턴보다 반복 가능한 패턴이 좋습니다.
+            라인샷, 드롭샷, 낮은 플랫 위너를 계속 시도하면 성공보다 실수가
+            빨리 쌓입니다. 큰 크로스, 중앙 깊은 공, 높은 탑스핀, 상대 백쪽
+            반복처럼 단순한 선택이 점수를 지킵니다.
+          </p>
+          <p>
+            바람은 멘탈에도 영향을 줍니다. 좋은 샷이 갑자기 길어지거나 짧아질
+            수 있기 때문에 실수 후 감정적으로 반응하기 쉽습니다. 하지만 같은
+            조건은 상대에게도 적용됩니다. 내가 먼저 목표를 크게 잡고 실수를
+            줄이면 상대가 더 급해집니다.
+          </p>
 
-<h3>로브 샷의 전략적 활용</h3>
-<p>로브 샷은 바람 부는 날 양날의 검과 같습니다. 잘못 사용하면 상대방에게 쉬운 공격 기회를 줄 수 있지만, 잘 사용하면 바람을 이용해 상대를 코트 깊숙이 밀어내거나 득점을 올릴 수 있습니다.</p>
-<ul>
-    <li><strong>수비 시 로브:</strong> 상대방이 네트 가까이 올라왔을 때, 깊숙한 로브 샷으로 상대를 코트 뒤로 밀어내며 시간을 벌고 수비 위치를 재정비할 수 있습니다. 역풍에서는 로브 샷이 더 낮게 떨어지므로, 더 깊게 보내는 데 신경 써야 합니다.</li>
-    <li><strong>공격 시 로브:</strong> 상대방이 코트 뒤에 있을 때, 예상치 못한 타이밍에 로브 샷을 구사하여 포인트를 얻을 수 있습니다. 순풍에서는 로브 샷이 바람에 실려 멀리 나가기 쉬우므로, 정확한 거리 조절이 중요합니다.</li>
-    <li><strong>바람 방향 고려:</strong> 측풍에서는 로브 샷이 어느 방향으로 휘어질지 예측하고, 상대방이 처리하기 어려운 각도로 보내는 것이 중요합니다.</li>
-</ul>
+          <h2>마무리</h2>
+          <p>
+            바람 부는 날 테니스 전략의 핵심은 바람을 이기려 하지 않고 활용하는
+            것입니다. 맞바람에서는 깊이를 보태고, 뒷바람에서는 파워를 줄이고,
+            옆바람에서는 코스를 크게 잡아야 합니다. 여기에 탑스핀, 안전한
+            로브, 낮은 토스의 서브를 더하면 야외 코트에서도 경기력이 크게
+            흔들리지 않습니다.
+          </p>
+        </section>
 
-<h3>서브 전략의 변화</h3>
-<p>바람은 서브의 속도와 방향에 큰 영향을 미칩니다. 바람의 방향과 세기에 따라 서브 전략을 유연하게 바꾸는 것이 중요합니다.</p>
-<ul>
-    <li><strong>역풍에서의 서브:</strong> 역풍에서는 서브의 속도가 감소하므로, 스피드보다는 정확성과 회전에 집중합니다. 슬라이스 서브를 사용하여 공이 바람에 덜 흔들리도록 하고, 코트 안쪽 깊숙이 넣어 상대방의 리턴을 어렵게 만듭니다.</li>
-    <li><strong>순풍에서의 서브:</strong> 순풍에서는 공이 더 멀리 나가기 때문에, 서브의 파워를 조절하는 것이 중요합니다. 너무 강한 서브보다는 컨트롤된 서브로 상대방을 코트 밖으로 밀어내는 것을 목표로 합니다.</li>
-    <li><strong>측풍에서의 서브:</strong> 측풍에서는 슬라이스 서브나 킥 서브를 활용하여 공이 바람에 의해 휘어지는 것을 이용하거나 상쇄합니다. 상대방의 약점을 파고드는 방향으로 서브를 구사합니다.</li>
-    <li><strong>토스 조절:</strong> 바람이 심할 때는 공을 토스하는 것 자체가 어려울 수 있습니다. 바람이 잦아드는 타이밍을 노리거나, 바람의 방향을 고려하여 토스 위치를 조절해야 합니다.</li>
-</ul>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
 
-<h2>바람 부는 날 실전 팁</h2>
-
-<ul>
-    <li><strong>경기 전 워밍업:</strong> 경기 전에 반드시 바람의 방향과 세기를 파악하고, 다양한 샷을 연습하며 바람에 대한 감을 익힙니다.</li>
-    <li><strong>상대방 관찰:</strong> 상대방이 바람을 어떻게 이용하는지, 어떤 샷에 어려움을 겪는지 관찰하여 자신의 전략에 반영합니다.</li>
-    <li><strong>단순함 유지:</strong> 복잡한 샷보다는 기본적인 샷을 정확하게 구사하는 데 집중합니다. 바람은 예측 불가능성을 더하므로, 단순하고 안정적인 플레이가 중요합니다.</li>
-    <li><strong>정신력 관리:</strong> 바람 때문에 실수가 나오더라도 좌절하지 않고 긍정적인 마음을 유지하는 것이 중요합니다. 바람은 누구에게나 공평하게 작용하므로, 침착함을 유지하는 선수가 유리합니다.</li>
-    <li><strong>코트 위치 선정:</strong> 바람이 심할 때는 코트 중앙보다는 바람의 영향을 덜 받는 위치를 선택하는 것도 전략이 될 수 있습니다.</li>
-</ul>
-
-<h2>자주 묻는 질문</h2>
-
-<h3>Q1: 바람이 많이 불 때 가장 중요한 것은 무엇인가요?</h3>
-<p>바람이 많이 불 때 가장 중요한 것은 바람의 방향과 세기를 파악하고, 이에 맞춰 자신의 샷과 전략을 유연하게 조절하는 것입니다. 특히 탑스핀을 적극적으로 활용하여 공의 궤적을 안정시키고, 서브와 로브 샷을 전략적으로 구사하는 것이 중요합니다.</p>
-
-<h3>Q2: 바람이 부는 날에는 어떤 샷을 피해야 하나요?</h3>
-<p>순풍에서는 너무 높게 띄우는 샷이나 공격적인 로브 샷은 피하는 것이 좋습니다. 공이 바람에 실려 네트 밖으로 나가거나 상대방에게 쉬운 공격 기회를 줄 수 있기 때문입니다. 또한, 바람의 영향을 많이 받는 샷보다는 컨트롤이 용이한 샷에 집중하는 것이 좋습니다.</p>
-
-<h3>Q3: 바람 부는 날 테니스 실력을 향상시키기 위한 연습 방법은 무엇인가요?</h3>
-<p>바람이 부는 날 테니스 실력을 향상시키려면, 다양한 바람 조건에서 꾸준히 연습하는 것이 ���장 중요합니다. 바람을 맞으며 탑스핀 샷, 로브 샷, 그리고 다양한 서브를 반복적으로 연습하고, 바람의 영향을 최소화하면서도 정확하게 공을 컨트롤하는 능력을 키워야 합니다. 또한, 바람을 이용하는 방법에 대한 이해를 높이는 것도 도움이 됩니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
-            무료 NTRP 실력 테스트 →
+        <section className="mt-10 rounded-lg bg-emerald-700 p-6 text-white">
+          <h2 className="mb-3 text-2xl font-bold">내 경기 스타일도 함께 점검하세요</h2>
+          <p className="mb-4 text-emerald-50">
+            바람 대응은 플레이 스타일에 따라 달라집니다. 수비형, 공격형, 복식형
+            중 어떤 선택이 맞는지 먼저 확인해보세요.
+          </p>
+          <Link
+            href="/utility/play-style-test"
+            className="inline-flex rounded-md bg-white px-4 py-2 font-semibold text-emerald-800"
+          >
+            플레이 스타일 테스트 바로가기
           </Link>
-        </div>
+        </section>
       </article>
-    </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+    </main>
   );
 }

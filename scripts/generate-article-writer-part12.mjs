@@ -335,7 +335,7 @@ function buildArticle({ index, seed, angle, scheduledAt, dateKst, title }) {
   const accent = (CATEGORY_INFO[seed.category] || CATEGORY_INFO["훈련 가이드"]).color;
   const internalLinks = pickInternalLinks(seedHash);
   const facts = research.facts;
-  const factLinks = facts.slice(0, 5).map((fact) => `<a href="${fact.url}" target="_blank" rel="noopener noreferrer">${fact.source}</a>`);
+  const factLinks = facts.slice(0, 6).map((fact) => `<a href="${fact.url}" target="_blank" rel="noopener noreferrer">${fact.source}</a>`);
 
   const lead = `<p class="aeo-answer article-summary">${seed.topic}의 핵심은 자세를 한 번에 크게 바꾸는 것이 아니라, 오늘 점검할 기준 하나를 정하고 같은 조건에서 반복 결과를 남기는 것입니다. 이 글은 ${factLinks[0]}, ${factLinks[1]}, ${factLinks[4]} 같은 1차 자료에서 확인할 수 있는 원칙을 ${angle.tail} 관점으로 정리합니다. 동호회 경기에서 바로 점검할 수 있도록 기준, 비교, 루틴, 기록, 안전 순서로 풀어보겠습니다.</p>`;
 
@@ -410,7 +410,7 @@ function buildArticle({ index, seed, angle, scheduledAt, dateKst, title }) {
   const contentHtml = `<article class="aw-article aw-part12" data-slug="${slug}" data-category="${seed.category}">\n${lead}\n${definitionBox}\n${statBox}\n${sections.join("\n")}\n${ymylDisclaimer}\n${aiDisclosure}\n</article>`;
   const h2List = [...contentHtml.matchAll(/<h2>(.*?)<\/h2>/g)].map((m) => m[1]);
   const text = contentHtml.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-  const usedFacts = facts.slice(0, 5).map((fact) => ({ source: fact.source, claim: fact.claim, url: fact.url }));
+  const usedFacts = facts.slice(0, 6).map((fact) => ({ source: fact.source, claim: fact.claim, url: fact.url }));
 
   const jsonldBlocks = [
     {

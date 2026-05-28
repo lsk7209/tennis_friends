@@ -1,147 +1,282 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "테니스 슬럼프 극복 | 원인 진단·회복 루틴";
+const description =
+  "테니스 슬럼프 극복을 위한 원인 진단, 훈련량 조절, 멘탈 리셋, 2주 회복 루틴 기준을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "테니스 슬럼프가 오면 훈련량을 줄여야 하나요?",
+    answer:
+      "피로 누적이나 통증이 있으면 줄이는 편이 좋습니다. 단순히 쉬기보다 강도는 낮추고 기본기, 리듬, 회복 수면을 먼저 정상화하세요.",
+  },
+  {
+    question: "슬럼프와 실력 부족은 어떻게 구분하나요?",
+    answer:
+      "최근에 되던 샷이 갑자기 흔들리고, 불안과 조급함 때문에 같은 실수가 반복되면 슬럼프 가능성이 큽니다. 처음부터 안정적으로 못 하던 기술은 기본기 과제로 봐야 합니다.",
+  },
+  {
+    question: "경기 중 슬럼프 느낌이 오면 무엇부터 해야 하나요?",
+    answer:
+      "전술을 복잡하게 바꾸기보다 목표를 하나로 줄이세요. 예를 들어 첫 서브 확률, 깊은 크로스 3개, 리턴 중앙 깊이처럼 바로 실행 가능한 기준이 좋습니다.",
+  },
+  {
+    question: "얼마나 지나야 회복되나요?",
+    answer:
+      "원인에 따라 다르지만 2주 정도 기록과 루틴을 유지하면 패턴이 보입니다. 통증, 수면 문제, 강한 불안이 지속되면 전문가 도움을 받는 것이 안전합니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '테니스 슬럼프 극복 — 원인 파악과 회복 루틴 | TennisFriends',
-  description: '테니스 슬럼프 극복 — 원인 파악과 회복 루틴에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["슬럼프","극복","멘탈","회복"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-slump-recovery-guide` },
-  openGraph: { title: '테니스 슬럼프 극복 — 원인 파악과 회복 루틴', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "테니스 슬럼프",
+    "슬럼프 극복",
+    "테니스 멘탈",
+    "테니스 회복 루틴",
+    "경기력 회복",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-slump-recovery-guide` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-slump-recovery-guide`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '테니스 슬럼프 극복 — 원인 파악과 회복 루틴', item: `${siteUrl}/blog/tennis-slump-recovery-guide` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">테니스 슬럼프 극복 — 원인 파악과 회복 루틴</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>테니스 슬럼프 극복 — 원인 파악과 회복 루틴</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-slump-recovery-guide` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            테니스 멘탈·회복 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            테니스 슬럼프는 의지만 약해서 생기는 문제가 아닙니다. 피로, 통증,
+            훈련량, 경기 압박, 기술 과제가 섞여 나타나는 신호이므로 기록으로
+            원인을 나누고, 작은 성공 기준부터 다시 쌓아야 합니다.
+          </p>
+        </header>
 
-<p>테니스 슬럼프는 누구에게나 찾아올 수 있습니다. 하지만 원인을 정확히 파악하고 체계적인 회복 루틴을 따른다면, 슬럼프를 오히려 성장의 기회로 삼아 더욱 강한 플레이어로 거듭날 수 있습니다.</p>
+        <section className="mb-10 rounded-lg border border-teal-200 bg-teal-50 p-5 dark:border-teal-800 dark:bg-teal-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>슬럼프는 결과보다 원인 패턴을 먼저 기록해야 풀립니다.</li>
+            <li>피로형, 기술형, 멘탈형, 전술형을 나눠야 처방이 달라집니다.</li>
+            <li>회복 루틴은 강한 훈련보다 낮은 강도의 반복 성공으로 시작합니다.</li>
+            <li>통증이나 강한 불안이 지속되면 코치·의료·심리 전문가 도움을 받습니다.</li>
+          </ul>
+        </section>
 
-<h3>슬럼프, 왜 찾아오는가?</h3>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 슬럼프는 실력 저하가 아니라 신호다</h2>
+          <p>
+            테니스 슬럼프는 갑자기 실력이 사라진 상태가 아닙니다. 평소 되던 샷이
+            흔들리고, 쉬운 공에서 조급해지고, 경기 전부터 결과가 걱정되는 상태가
+            반복되는 신호입니다. 이때 무조건 더 많이 치면 해결될 것 같지만, 원인이
+            피로라면 더 깊은 슬럼프로 들어갈 수 있습니다.
+          </p>
+          <p>
+            운동 수행과 회복은 훈련, 수면, 스트레스, 통증 관리가 함께 움직입니다.
+            회복과 스포츠 안전 정보는
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              USTA 팁과 인스트럭션
+            </a>
+            과
+            <a
+              href="https://www.cdc.gov/physical-activity-basics/guidelines/index.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              CDC 신체활동 가이드라인
+            </a>
+            처럼 기본 원칙 자료를 함께 참고할 수 있습니다.
+          </p>
 
-<p>테니스에서 슬럼프는 단순히 실력이 떨어지는 것이 아니라, 신체적, 정신적, 기술적 요인이 복합적으로 작용하여 발생하는 현상입니다. 자신의 플레이에 대한 자신감이 저하되고, 의욕이 떨어지며, 평소에 쉽게 성공했던 플레이가 갑자기 어려워지는 경험을 하게 됩니다. 이는 마치 짙은 안개 속에 갇힌 것처럼 답답하고 좌절감을 안겨줄 수 있습니다.</p>
+          <h2>2. 원인을 네 가지로 나눈다</h2>
+          <p>
+            슬럼프를 "멘탈 문제"로만 보면 해결이 늦어집니다. 실제로는 피로,
+            기술, 멘탈, 전술이 섞인 경우가 많습니다. 먼저 최근 2주를 기준으로
+            어떤 유형이 가장 강한지 분류하세요. 분류가 되면 훈련 방식도 달라집니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>유형</th>
+                <th>주요 신호</th>
+                <th>우선 조치</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>피로형</td>
+                <td>몸이 무겁고 반응이 늦음</td>
+                <td>훈련 강도 30~50% 감소, 수면 회복</td>
+              </tr>
+              <tr>
+                <td>기술형</td>
+                <td>특정 샷에서 같은 실수 반복</td>
+                <td>한 가지 기술만 낮은 속도로 재점검</td>
+              </tr>
+              <tr>
+                <td>멘탈형</td>
+                <td>쉬운 공에서 불안과 조급함</td>
+                <td>점수보다 실행 목표 1개 설정</td>
+              </tr>
+              <tr>
+                <td>전술형</td>
+                <td>랠리는 되는데 경기에서 무너짐</td>
+                <td>서브+1, 리턴 첫 공 패턴 단순화</td>
+              </tr>
+            </tbody>
+          </table>
 
-<h4>신체적 요인</h4>
-<ul>
-    <li>과도한 훈련으로 인한 피로 누적</li>
-    <li>부상 후유증 또는 컨디션 난조</li>
-    <li>잘못된 식습관이나 수면 부족</li>
-    <li>운동 능력 저하를 초래하는 노화 (본인이 인지하지 못할 수도 있음)</li>
-</ul>
+          <h2>3. 기록 없이는 원인도 반복된다</h2>
+          <p>
+            슬럼프를 벗어나려면 경기 결과보다 실행 기록이 필요합니다. 졌다는 사실만
+            적으면 다음 경기에서도 같은 감정만 남습니다. 대신 "언제 흔들렸는지",
+            "어떤 공에서 실수가 났는지", "그날 수면과 컨디션은 어땠는지"를 짧게
+            적어야 패턴이 보입니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              경기 후 3분 기록표
+            </h3>
+            <ol className="list-decimal space-y-2 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>오늘 가장 많이 나온 실수는 무엇인가?</li>
+              <li>실수가 난 점수 상황은 언제였는가?</li>
+              <li>몸 상태, 수면, 통증은 어땠는가?</li>
+              <li>잘 된 패턴 한 가지는 무엇인가?</li>
+              <li>다음 경기에서 지킬 실행 목표 한 가지는 무엇인가?</li>
+            </ol>
+          </aside>
 
-<h4>정신적 요인</h4>
-<ul>
-    <li>경기 결과에 대한 지나친 압박감</li>
-    <li>자신에 대한 과도한 비판 또는 낮은 자존감</li>
-    <li>최근 경기에서의 연패 또는 좋지 않은 경험</li>
-    <li>다른 선수와의 비교에서 오는 불안감</li>
-    <li>목표 의식 상실 또는 동기 부여 부족</li>
-</ul>
+          <h2>4. 회복 루틴은 강도를 낮추는 데서 시작한다</h2>
+          <p>
+            슬럼프 때 가장 위험한 선택은 더 강한 훈련으로 자신을 증명하려는 것입니다.
+            이미 피로가 쌓인 상태라면 강한 랠리와 무리한 매치는 실수 기억만 더
+            강화합니다. 첫 3~4일은 강도를 낮추고, 라켓 감각과 기본 리듬을 되찾는
+            훈련으로 바꾸는 편이 좋습니다.
+          </p>
+          <ul>
+            <li>첫 3일: 강한 매치보다 30분 기본 랠리와 스트레칭</li>
+            <li>4~7일: 가장 흔한 실수 샷 하나만 낮은 속도로 교정</li>
+            <li>8~10일: 서브+1, 리턴 첫 공처럼 단순한 경기 패턴 복구</li>
+            <li>11~14일: 연습 경기에서 실행 목표 1개만 점검</li>
+          </ul>
 
-<h4>기술적 요인</h4>
-<ul>
-    <li>특정 기술의 정체 또는 발전 부진</li>
-    <li>새로운 기술 습득의 어려움</li>
-    <li>전략 및 전술 이해 부족</li>
-    <li>��트에서의 집중력 저하</li>
-</ul>
+          <h2>5. 경기 중에는 목표를 하나로 줄인다</h2>
+          <p>
+            경기 중 슬럼프 느낌이 오면 머릿속이 복잡해집니다. 포핸드도 고치고,
+            서브도 고치고, 전술도 바꾸려 하면 더 무너집니다. 이때는 목표를 하나로
+            줄이는 것이 실전적입니다. 예를 들어 "리턴은 중앙 깊게", "백핸드는
+            크로스만", "첫 서브 확률만 올리기"처럼 바로 실행 가능한 문장이 좋습니다.
+          </p>
+          <p>
+            이 방식은 결과를 포기하라는 뜻이 아닙니다. 점수를 직접 통제할 수는
+            없지만, 첫 공의 깊이와 코스 선택은 통제할 수 있습니다. 통제 가능한
+            행동을 하나씩 되찾으면 불안이 줄고, 다음 포인트에서 몸이 다시 움직이기
+            시작합니다.
+          </p>
 
-<h3>슬럼프 탈출을 위한 첫걸음: 원인 진단</h3>
+          <h2>6. 2주 회복 루틴</h2>
+          <p>
+            아래 루틴은 부상이나 의료 문제가 없는 동호인을 기준으로 한 회복 계획입니다.
+            통증이 있거나 일상생활에도 영향을 주는 불안이 있다면 훈련 루틴보다
+            전문가 상담이 먼저입니다.
+          </p>
+          <ul>
+            <li>1~3일차: 휴식, 수면, 가벼운 스트레칭, 경기 기록 정리</li>
+            <li>4~7일차: 50% 강도 랠리, 문제 샷 하나만 느리게 반복</li>
+            <li>8~10일차: 서브+1 또는 리턴 첫 공 패턴 20분</li>
+            <li>11~14일차: 연습 경기 1세트, 결과 대신 실행 목표 채점</li>
+          </ul>
 
-<p>슬럼프를 극복하기 위한 가장 중요한 첫 단계는 바로 자신의 슬럼프 원인을 정확하게 파악하는 것입니다. 마치 의사가 환자의 증상을 진단하듯, 자신의 플레이와 심리 상태를 객관적으로 분석해야 합니다. 단순히 '잘 안 된다'는 생각에 머무르지 않고, 구체적으로 어떤 부분에서 어려움을 겪고 있는지 깊이 탐색해야 합니다.</p>
+          <h2>마무리</h2>
+          <p>
+            테니스 슬럼프 극복의 핵심은 자신을 더 몰아붙이는 것이 아니라 원인을
+            나누고 회복 가능한 순서로 다시 쌓는 것입니다. 피로를 줄이고, 기록을
+            남기고, 작은 실행 목표를 지키면 경기력은 다시 올라옵니다. 슬럼프는
+            약점이 아니라 다음 단계로 넘어가기 전 나타나는 점검 신호로 다루세요.
+          </p>
+        </section>
 
-<h4>자기 성찰 노트 작성</h4>
-<p>매일 혹은 매 경기 후 자신의 플레이와 감정을 기록하는 습관을 들이세요. 다음과 같은 질문들에 답하며 기록하면 도움이 됩니다.</p>
-<ul>
-    <li>오늘 훈련 또는 경기에서 가장 어려웠던 점은 무엇인가?</li>
-    <li>어떤 샷이나 플레이가 잘 되지 않았는가?</li>
-    <li>경기 중 어떤 감정을 느꼈는가? (불안, 좌절, 분노, 무기력 등)</li>
-    <li>경기 전후의 컨디션은 어떠했는가? (신체적, 정신적)</li>
-    <li>최근 훈련량이나 방식에 변화가 있었는가?</li>
-    <li>개인적인 스트레스 요인이 경기력에 영향을 미치고 있지는 않은가?</li>
-</ul>
-<p>이러한 기록들은 패턴을 발견하고 문제의 근본적인 원인을 파악하는 데 중요한 단서가 됩니다. 때로는 코치나 믿을 만한 동료에게 자신의 플레이에 대한 피드백을 구하는 것도 좋은 방법입니다.</p>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-<h4>전문가의 도움</h4>
-<p>만약 혼자서 원인 파악이 어렵다면, 테니스 코치, 스포츠 심리학 전문가, 혹은 멘탈 코치의 도움을 받는 것을 고려해 보세요. 객관적인 시각과 전문적인 분석을 통해 숨겨진 문제점을 발견하고 해결책을 찾을 수 있습니다.</p>
-
-<h3>슬럼프 극복을 위한 회복 루틴 구축</h3>
-
-<p>원인 파악이 끝났다면, 이제 구체적인 회복 루틴을 통해 슬럼프에서 벗어날 시간입니다. 이 루틴은 단순히 기술 연습에만 국한되지 않고, 신체적, 정신적 회복을 모두 포함하는 통합적인 접근 방식이어야 합니다.</p>
-
-<h4>1. 신체적 회복 및 재정비</h4>
-<p>몸이 건강해야 정신력도 강해집니다. 슬럼프 기간 동안에는 무리한 ��련보다는 회복에 집중하는 것이 중요합니다.</p>
-<ul>
-    <li><strong>충분한 휴식과 수면</strong>: 매일 7-8시간의 질 좋은 수면을 확보하세요.</li>
-    <li><strong>균형 잡힌 식단</strong>: 신체 회복에 도움이 되는 영양가 있는 음식을 섭취하세요.</li>
-    <li><strong>가벼운 운동</strong>: 조깅, 스트레칭, 요가 등 몸에 부담이 되지 않는 운동으로 혈액 순환을 돕고 긴장을 완화합니다.</li>
-    <li><strong>마사지 및 물리 치료</strong>: 근육의 피로를 풀고 부상 위험을 줄입니다.</li>
-</ul>
-
-<h4>2. 정신적 재충전 및 긍정 마인드셋 강화</h4>
-<p>슬럼프는 정신적으로 가장 큰 타격을 줍니다. 긍정적인 마음을 되찾고 자신감을 회복하는 것이 핵심입니다.</p>
-<ul>
-    <li><strong>성공 경험 시각화</strong>: 과거에 좋은 경기를 했거나 성공적인 샷을 날렸던 순간들을 떠올리며 성공 경험을 생생하게 시각화합니다.</li>
-    <li><strong>긍정 확언 사용</strong>: "나는 할 수 있다", "나는 계속 발전하고 있다"와 같은 긍정적인 문구를 반복적으로 되뇌며 자신감을 높입니다.</li>
-    <li><strong>작은 목표 설정 및 달성</strong>: 거창한 목표보다는 오늘 훈련에서 성공할 수 있는 작은 목표(예: 포핸드 10개 연속 성공)를 설정하고 달성하며 성취감을 느낍니다.</li>
-    <li><strong>명상 및 심호흡</strong>: 스트레스와 불안감을 줄이고 현재에 집중하는 연습을 합니다.</li>
-    <li><strong>취미 활동</strong>: 테니스 외에 즐거움을 느낄 수 있는 다른 활동에 참여하여 스트레스를 해소하고 기분 전환을 합니다.</li>
-</ul>
-
-<h4>3. 기술적 디테일 점검 및 단순화</h4>
-<p>복잡한 기술보다는 기본에 충실하고 단순화하는 것이 슬럼프 탈출에 효과적일 수 있습니다.</p>
-<ul>
-    <li><strong>기본기 복습</strong>: 스트로크의 폼, 발 스텝, 라켓 스윙 궤적 등 기본기를 다시 점검하고 반복 연습합니다.</li>
-    <li><strong>단순화된 전략</strong>: 복잡한 전술보다는 상대방의 약점을 공략하는 단순하고 명확한 전략에 집중합니다.</li>
-    <li><strong>반복 연습</strong>: 특정 샷이 문제라면, 그 샷을 수백, 수천 번 반복하며 근육 기억을 강화합니다.</li>
-    <li><strong>코치의 맞춤 지도</strong>: 코치와 함께 문제점을 파악하고, 개선을 위한 구체적인 드릴을 처방받습니다.</li>
-    <li><strong>영상 분석</strong>: 자신의 경기나 훈련 영상을 보며 문제점을 객관적으로 파악하고 개선점을 찾습니다.</li>
-</ul>
-
-<h3>슬럼프를 성장의 기회로 만드는 방법</h3>
-
-<p>슬럼프는 피하고 싶은 경험이지만, 역설적으로 자신을 더욱 강하게 만드는 계기가 될 수 있습니다. 슬럼프를 통해 얻는 교훈은 장기적인 선수 생활에 귀중한 자산이 됩니다.</p>
-
-<h4>인내심과 꾸준함</h4>
-<p>슬럼프 극복에는 시간이 걸립니다. 조급해하지 않고 꾸준히 노력하는 인내심이 필요합니다. 하루아침에 모든 것이 나아지지 않더라도, 어제보다 조금 더 ��아진 자신을 발견하는 것에 집중하세요.</p>
-
-<h4>성장 마인드셋 유지</h4>
-<p>자신의 능력이 고정되어 있다고 생각하는 대신, 노력과 학습을 통해 발전할 수 있다고 믿는 성장 마인드셋을 유지하는 것이 중요합니다. 슬럼프는 자신의 약점을 발견하고 개선할 수 있는 기회로 삼으세요.</p>
-
-<h4>동료와의 연대</h4>
-<p>다른 테니스 선수들과 경험을 공유하고 서로 격려하는 것은 큰 힘이 됩니다. 슬럼프를 겪고 있는 것은 당신 혼자가 아니라는 사실을 인지하고, 함께 어려움을 극복해나가세요.</p>
-
-<h3>자주 묻는 질문</h3>
-
-<h3>슬럼프 기간 동안 훈련량을 줄여야 하나요?</h3>
-<p>반드시 훈련량을 줄여야 하는 것은 아니지만, 훈련의 질과 목적을 재정비하는 것이 중요합니다. 과도한 훈련으로 인한 피로가 슬럼프의 원인이라면 훈련량을 줄이고 회복에 집중해야 합니다. 반면, 기술적인 부분에서의 정체가 문제라면, 특정 기술에 대한 집중적인 연습을 하되, 몸에 무리가 가지 않도록 강도를 조절해야 합니다. 핵심은 '무조건 많이'가 아니라 '현명하게' 훈련하는 것입니다.</p>
-
-<h3>슬럼프를 극복하는 데 얼마나 걸릴까요?</h3>
-<p>슬럼프의 원인과 개인의 회복 능력에 따라 다릅니다. 어떤 사람은 몇 주 안에 극복할 수도 있지만, 어떤 사람은 몇 달이 걸릴 수도 있습니다. 중요한 것은 조급해하지 않고 꾸준히 노력하는 것입니다. 작은 성공 경험을 쌓아가면서 점진적으로 자신감을 회복하는 것이 중요합니다.</p>
-
-<h3>슬럼프를 겪고 있다는 것을 어떻게 알 수 있나요?</h3>
-<p>평소보다 실력이 떨어지고, 실수가 잦으며, 경기에 대한 집중력과 의욕이 현저히 감소했다면 슬럼프를 의심해 볼 수 있습니다. 경기 결과뿐만 아니라, 경기 중 느끼는 좌절감, 불안감, 무기력감 등 심리적인 변화도 중요한 신호입니다. 또한, 훈련 시에도 같은 실수를 반복하거나 기술적인 발전이 더디다고 느껴진다면 슬럼프의 징후일 수 있습니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            현재 경기력과 실력 기준을 객관적으로 점검하세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline dark:text-blue-300"
+          >
             무료 NTRP 실력 테스트 →
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

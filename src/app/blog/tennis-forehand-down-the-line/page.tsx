@@ -1,119 +1,289 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "포핸드 다운더라인 | 코스·타이밍·리스크 기준";
+const description =
+  "포핸드 다운더라인 성공률을 높이는 코스 선택, 타이밍, 리스크 관리와 실전 드릴을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "포핸드 다운더라인은 언제 써야 하나요?",
+    answer:
+      "상대가 크로스 방향으로 치우쳤고, 내가 앞쪽 타점에서 균형을 잡은 공을 받을 때가 좋습니다. 밀린 상황에서는 깊은 크로스로 랠리를 회복하는 편이 안전합니다.",
+  },
+  {
+    question: "크로스보다 다운더라인이 더 어려운 이유는 무엇인가요?",
+    answer:
+      "사용할 수 있는 코트 길이가 짧고 네트 높은 쪽을 지나기 때문입니다. 그래서 힘보다 타점, 라켓 면, 목표 여유를 먼저 관리해야 합니다.",
+  },
+  {
+    question: "공이 자꾸 사이드아웃되는 이유는 무엇인가요?",
+    answer:
+      "목표를 라인 자체로 잡거나 손목으로 방향을 만들 때 자주 생깁니다. 라인 안쪽 1m를 목표로 두고 몸통 회전으로 라켓 경로를 유지하세요.",
+  },
+  {
+    question: "동호인도 다운더라인을 공격 패턴으로 써도 되나요?",
+    answer:
+      "가능합니다. 다만 위너를 노리는 샷이 아니라 상대의 이동 방향을 바꾸는 전술 샷으로 써야 성공률이 올라갑니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '포핸드 다운더라인 — 코스·타이밍·리스크 관리 | TennisFriends',
-  description: '포핸드 다운더라인 — 코스·타이밍·리스크 관리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["다운더라인","포핸드","코스","공격"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-forehand-down-the-line` },
-  openGraph: { title: '포핸드 다운더라인 — 코스·타이밍·리스크 관리', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "포핸드 다운더라인",
+    "포핸드",
+    "다운더라인",
+    "테니스 포핸드",
+    "테니스 전술",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-forehand-down-the-line` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-forehand-down-the-line`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '포핸드 다운더라인 — 코스·타이밍·리스크 관리', item: `${siteUrl}/blog/tennis-forehand-down-the-line` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">포핸드 다운더라인 — 코스·타이밍·리스크 관리</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>포핸드 다운더라인 — 코스·타이밍·리스크 관리</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          {
+            name: title,
+            item: `${siteUrl}/blog/tennis-forehand-down-the-line`,
+          },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            테니스 포핸드 전술 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            포핸드 다운더라인은 라인을 맞히는 기술이 아니라, 상대의 이동 방향을
+            바꾸고 다음 공을 쉽게 만드는 전술 샷입니다. 성공 기준은 라인 안쪽
+            목표, 앞쪽 타점, 네트 위 여유, 샷 이후 회복 위치입니다.
+          </p>
+        </header>
 
-<p>포핸드 다운더라인은 테니스에서 가장 강력하고 결정적인 공격 샷 중 하나로, 상대방 코트의 가장자리, 즉 라인을 따라 깊숙이 공을 보내는 기술입니다. 성공적인 포핸드 다운더라인 샷은 상대방의 수비를 무너뜨리고 포인트를 따내는 데 결정적인 역할을 하지만, 그만큼 높은 정확도와 신중한 리스크 관리가 요구됩니다.</p>
+        <section className="mb-10 rounded-lg border border-teal-200 bg-teal-50 p-5 dark:border-teal-800 dark:bg-teal-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>목표는 사이드라인이 아니라 라인 안쪽 1m입니다.</li>
+            <li>상대가 크로스로 움직인 뒤 멈추는 순간을 노립니다.</li>
+            <li>늦은 타점에서는 위너보다 깊은 크로스 복구가 안전합니다.</li>
+            <li>다운더라인 뒤에는 중앙보다 약간 오픈코트 쪽으로 회복합니다.</li>
+          </ul>
+        </section>
 
-<p>이 글에서는 포핸드 다운더라인 샷의 코스 설정, 완벽한 타이밍 포착, 그리고 경기 중 리스크를 효과적으로 관리하는 방법에 대해 상세하게 알아보겠습니다. 실용적인 팁과 구체적인 연습 방법을 통해 여러분의 포핸드 다운더라인 샷을 한 단계 업그레이드할 수 있도록 돕겠습니다.</p>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 다운더라인은 라인 샷이 아니라 방향 전환 샷이다</h2>
+          <p>
+            포핸드 다운더라인을 처음 연습하면 대부분 라인 바로 위를 목표로
+            잡습니다. 하지만 실전에서 라인은 목표가 아니라 위험 구역입니다.
+            공이 조금만 밀려도 사이드아웃이 되고, 라켓 면이 닫히면 네트에
+            걸립니다. 동호인 경기에서 성공률을 올리려면 라인 안쪽 1m, 베이스라인
+            1m 안쪽을 동시에 만족하는 넓은 목표를 잡는 편이 낫습니다.
+          </p>
+          <p>
+            ITF 용어 기준에서 다운더라인은 공을 사이드라인과 평행한 방향으로
+            보내는 샷입니다. 공식 용어 확인은
+            <a
+              href="https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ITF 테니스 용어집
+            </a>
+            을 참고할 수 있습니다. 기본 스트로크와 경기 적용 자료는
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              USTA 팁과 인스트럭션
+            </a>
+            처럼 단계별 연습 자료와 함께 보면 좋습니다.
+          </p>
 
-<h2>1. 포핸드 다운더라인의 코스 설정: 정교함이 핵심</h2>
+          <h2>2. 좋은 기회는 공보다 상대 위치에서 나온다</h2>
+          <p>
+            다운더라인은 내 공이 편하다는 이유만으로 선택하면 실패가 늘어납니다.
+            가장 좋은 순간은 상대가 크로스 랠리를 예상해 대각선으로 움직였고,
+            내가 균형을 잡은 상태에서 허리 높이 공을 앞에서 맞을 수 있을 때입니다.
+            반대로 상대가 이미 라인 쪽을 지키고 있거나 내가 밀려서 치는 공이면
+            같은 포핸드라도 깊은 크로스가 더 좋은 선택입니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>상황</th>
+                <th>다운더라인 선택</th>
+                <th>더 나은 대안</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>상대가 크로스로 크게 움직임</td>
+                <td>라인 안쪽 깊은 코스</td>
+                <td>성공 후 네트 접근 준비</td>
+              </tr>
+              <tr>
+                <td>내 타점이 몸 뒤에 있음</td>
+                <td>무리하면 사이드아웃</td>
+                <td>높고 깊은 크로스 복구</td>
+              </tr>
+              <tr>
+                <td>상대가 라인 쪽을 먼저 막음</td>
+                <td>예측당하기 쉬움</td>
+                <td>크로스 깊이 또는 중앙 바디샷</td>
+              </tr>
+              <tr>
+                <td>짧은 공을 포핸드로 전진 타격</td>
+                <td>공격 전환 가능</td>
+                <td>다운더라인 뒤 전위 압박</td>
+              </tr>
+            </tbody>
+          </table>
 
-<p>포핸드 다운더라인 샷의 성공은 결국 공이 어디로 향하는지에 달려 있습니다. 상대방의 위치, 코트의 넓이, 그리고 자신의 스윙 궤적을 종합적으로 고려하여 최적의 코스를 설정하는 것이 중요합니다. 단순히 라인만을 겨냥하는 것이 아니라, 상대방이 예측하기 어려운 각도와 깊이를 만들어내는 것이 핵심입니다.</p>
+          <h2>3. 타점은 몸 앞, 목표는 라인 안쪽이다</h2>
+          <p>
+            포핸드 다운더라인이 네트에 걸리는 가장 흔한 원인은 힘 부족이 아니라
+            늦은 타점입니다. 공을 몸 옆이나 뒤에서 맞으면 라켓이 대각선으로
+            빠져나가고, 다운더라인 방향을 손목으로 억지로 돌리게 됩니다. 이때
+            라켓 면은 흔들리고 공은 네트나 사이드아웃으로 갑니다.
+          </p>
+          <p>
+            기준은 간단합니다. 임팩트는 앞발보다 반 발 앞, 라켓 면은 목표 방향을
+            향한 채 유지, 팔로스루는 라인 방향으로 짧게 끊지 말고 어깨 회전까지
+            연결합니다. 완벽한 위너보다 상대 백핸드 뒤쪽 깊은 구역을 목표로 하면
+            실수와 리스크를 동시에 줄일 수 있습니다.
+          </p>
 
-<h3>1.1. 상대방 위치에 따른 코스 조절</h3>
+          <h2>4. 회전과 높이는 안전장치다</h2>
+          <p>
+            다운더라인을 빠르게만 치면 코트 안에 떨어질 시간이 부족합니다. 특히
+            하드코트나 빠른 실내 코트에서는 공이 조금만 뜨거나 밀려도 아웃이
+            됩니다. 그래서 동호인에게 필요한 다운더라인은 낮고 빠른 직선 샷보다
+            약간의 탑스핀과 네트 위 여유를 가진 깊은 샷입니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              포핸드 다운더라인 체크포인트
+            </h3>
+            <ol className="list-decimal space-y-2 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>상대가 크로스 방향으로 움직였는가?</li>
+              <li>내 타점이 몸 앞에서 만들어졌는가?</li>
+              <li>목표가 라인 위가 아니라 라인 안쪽 1m인가?</li>
+              <li>공이 네트 위 0.8~1.2m를 통과할 여유가 있는가?</li>
+              <li>샷 뒤 다음 공을 받을 회복 위치를 정했는가?</li>
+            </ol>
+          </aside>
 
-<ul>
-    <li><strong>상대방이 코트 중앙에 있을 때:</strong> 이때는 다운더라인 샷의 각도를 좀 더 깊게 가져가 상대방을 코트 구석으로 몰아넣는 것이 효과적입니다. 공이 깊숙이 떨어지면 상대방은 다음 샷을 처리하기 위해 더 많은 움직임을 가져가야 하므로, 다음 공격 기회를 잡기 쉬워집니다.</li>
-    <li><strong>상대방이 사이드라인에 치우쳐 있을 때:</strong> 상대방이 이미 코트 한쪽으로 치우쳐 있��면, 반대 방향의 다운더라인 샷은 오히려 상대방에게 유리한 각도를 만들어 줄 수 있습니다. 이럴 때는 차라리 상대방이 있는 쪽으로 짧고 빠른 다운더라인 샷을 시도하여 상대방의 움직임을 제한하거나, 랠리를 이어가며 기회를 엿보는 것이 나을 수 있습니다.</li>
-    <li><strong>상대방이 네트 가까이 있을 때:</strong> 상대방이 네트 가까이 전진해 있다면, 빠른 속도의 다운더라인 샷으로 상대방의 발리를 어렵게 만들 수 있습니다. 이때는 공의 깊이보다는 속도에 집중하여 상대방의 예측을 벗어나게 하는 것이 중요합니다.</li>
-</ul>
+          <h2>5. 리스크 관리는 샷 이후 위치까지 포함한다</h2>
+          <p>
+            다운더라인의 진짜 위험은 샷 자체보다 다음 공에서 나타납니다. 내가
+            라인으로 쳤는데 상대가 받아넘기면, 대각선 오픈코트가 크게 열립니다.
+            그래서 다운더라인을 친 뒤에는 단순히 중앙으로 돌아가는 것이 아니라,
+            상대가 칠 수 있는 가장 쉬운 크로스 방향을 조금 더 의식해야 합니다.
+          </p>
+          <p>
+            복식에서는 더 조심해야 합니다. 후위가 다운더라인을 무리하게 치면
+            상대 전위에게 포칭 기회를 주거나, 내 전위가 방어하기 어려운 각도를
+            만들 수 있습니다. 복식에서는 상대 전위 발 옆을 낮게 통과시키거나,
+            확실히 빈 공간이 열렸을 때만 다운더라인을 공격 옵션으로 쓰는 편이
+            안전합니다.
+          </p>
 
-<h3>1.2. 코트의 넓이 활용</h3>
+          <h2>6. 20분 실전 드릴</h2>
+          <p>
+            포핸드 다운더라인은 한 번 성공한 감각보다 반복 가능한 기준이 중요합니다.
+            아래 루틴은 파트너 랠리, 코치 피드, 볼머신 모두에 적용할 수 있습니다.
+            목표는 위너 개수가 아니라 라인 안쪽 안전 구역에 들어간 비율입니다.
+          </p>
+          <ul>
+            <li>5분: 크로스 랠리 3개 뒤 다운더라인 1개 전환</li>
+            <li>5분: 라인 안쪽 1m 목표 구역에 10개 중 6개 넣기</li>
+            <li>5분: 짧은 공 전진 타격 뒤 회복 스텝까지 연결</li>
+            <li>5분: 다운더라인 성공 뒤 다음 공을 크로스로 마무리</li>
+          </ul>
 
-<p>다운더라인 샷은 코트의 가장자리를 활용하는 샷이므로, 코트의 어느 부분을 공략하느냐에 따라 위력이 달라집니다. 좁은 각도보다는 좀 더 넓은 각도를 활용하여 상대방이 움직일 수 있는 범위를 최대한 넓히는 것이 좋습니다. 특히 베이스라인 깊숙이 떨어지는 다운더라인 샷은 상대방을 코트 밖으로 밀어내는 효과를 가져옵니다.</p>
+          <h2>마무리</h2>
+          <p>
+            포핸드 다운더라인은 화려한 한 방이 아니라 상대의 예측을 흔드는
+            방향 전환 도구입니다. 라인 자체를 노리지 말고, 앞쪽 타점과 안전한
+            목표 구역을 반복하세요. 그러면 무리한 위너가 줄고, 크로스 랠리에서
+            만든 우위를 실제 포인트로 바꾸는 비율이 올라갑니다.
+          </p>
+        </section>
 
-<h3>1.3. 스윙 궤적과 공의 회전</h3>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-<p>다운더라인 샷을 구사할 때, 공에 적절한 회전을 주는 것이 중요합니다. 너무 많은 탑스핀은 공을 짧게 만들 수 있고, 너무 적은 스핀은 공이 라인을 벗어날 위험을 높입니다. 이상적인 것은 약간의 탑스핀을 걸어 공이 빠르게 떨어지도록 하면서도 안정적으로 라인을 따라 들어가도록 하는 것입니다. 이를 위해선 임팩트 시 라켓 페이스를 살짝 닫아주는 느낌으로 스윙해야 합니다.</p>
-
-<h2>2. 포핸드 다운더라인의 완벽한 타이밍 포착: 기다림과 과감함의 조화</h2>
-
-<p>포핸드 다운더라인 샷은 단순히 좋은 타격 기회가 왔을 때 치는 것이 아니라, '정확한' 타이밍에 '적절한' 공을 기다렸다가 과감하게 시도해야 합니다. 너무 성급하게 시도하면 실수가 잦아지고, 너무 망설이면 상대방에게 공격 기회를 내줄 수 있습니다.</p>
-
-<h3>2.1. 최적의 타점 찾기</h3>
-
-<p>다운더라인 샷을 위한 최적의 타점은 공이 자신의 몸 앞쪽, 약간 옆쪽에 떨어질 때입니다. 이 타점에서 충분한 힘과 정확성을 동시에 실어 보낼 수 있습니다. 너무 늦게 치면 공의 각도를 만들기 어렵고, 너무 일찍 치면 컨트롤이 불안정해집니다. 항상 공을 끝까지 보면서 일관된 타점을 유지하는 연습이 필요합니다.</p>
-
-<h3>2.2. 상대방의 움직임 읽기</h3>
-
-<p>가장 이상적인 다운더라인 샷 기회는 상대방이 코트 중앙에서 벗어나 있거나, 다음 샷을 치기 위해 움직임이 멈춘 순간입니다. 상대방이 코트 한쪽으로 치우쳐 반대쪽 다운더라인 샷이 열려 있을 때, 혹은 상대방이 수비적인 샷을 치고 잠시 균형을 잃었을 때가 좋은 기회입니다. 상대방의 움직임을 끊임없이 관찰하고 예측하는 능력이 중요합니다.</p>
-
-<h3>2.3. 랠리 중 타이밍 활용</h3>
-
-<p>항상 공격적인 다운더라인 샷만 시도하는 것은 위험합니다. 랠리 중에 상대방이 약한 공을 쳤거나, 자신의 샷을 충분히 활용할 수 있는 상황이 왔을 때 다운더라인 샷을 시도하는 것이 효과적입니다. 상대방이 예상하지 못한 순간에, 혹은 상대방이 다음 샷을 준비하는 찰나에 과감하게 시도하는 것이 성공률을 높입니다.</p>
-
-<h2>3. 포핸드 다운더라인의 리스크 관리: 공격과 수비의 균형</h2>
-
-<p>포핸드 다운더라인 샷��� 매력적인 공격 옵션이지만, 잘못 구사하면 상대방에게 결정적인 공격 기회를 내줄 수 있는 위험한 샷이기도 합니다. 따라서 리스크를 최소화하면서도 공격적인 효과를 극대화하는 전략이 필요합니다.</p>
-
-<h3>3.1. 샷 선택의 신중함</h3>
-
-<p>모든 공에 대해 다운더라인 샷을 시도할 필요는 없습니다. 자신에게 유리한 상황, 즉 상대방이 코트 중앙에 있고 샷을 만들 공간이 충분할 때 시도하는 것이 좋습니다. 자신이 불리한 상황, 예를 들어 상대방이 강하게 압박해 오거나 자신이 코트 뒤쪽에 있을 때는 무리한 다운더라인 샷보다는 안정적인 샷으로 랠리를 이어가는 것이 현명합니다.</p>
-
-<h3>3.2. 코트 커버리지 고려</h3>
-
-<p>다운더라인 샷을 시도할 때는 자신의 코트 커버리지를 항상 염두에 두어야 합니다. 특히 오픈 코트로 깊숙이 보내는 샷을 시도할 때는, 상대방이 공을 받아넘겼을 때 자신이 코트의 어느 위치로 이동해야 할지 미리 계획해야 합니다. 샷을 날린 후 빠른 복귀를 통해 다음 샷에 대비하는 것이 중요합니다.</p>
-
-<h3>3.3. 연습을 통한 자신감 확보</h3>
-
-<p>가장 효과적인 리스크 관리는 바로 꾸준한 연습을 통해 샷에 대한 자신감을 확보하는 것입니다. 다양한 각도와 깊이의 다운더라인 샷을 반복적으로 연습하여 실전에서도 안정적으로 구사할 수 있도록 만들어야 합니다. 특히 코트 반대편의 특정 지점을 겨냥하는 연습은 정확도를 높이는 데 큰 도움이 됩니다.</p>
-
-<h2>4. 포핸드 다운더라인 실전 연습 방법</h2>
-
-<p>포핸드 다운더라인 샷을 향상시키기 위한 실질적인 연습 방법은 다음과 같습니다. 단순히 기술적인 측면뿐만 아니라, 정신적인 측면까지 고려한 연습이 필요합니다.</p>
-
-<ul>
-    <li><strong>벽 치기 연습:</strong> 벽을 이용해 다양한 각도의 다운더라인 샷을 연습할 수 있습니다. 공이 벽에 맞고 되돌아오는 것을 보면서 자신의 스윙 궤적과 임팩트 타이밍을 조절하는 데 집중합니다.</li>
-    <li><strong>파트너와 랠리 연습:</strong> 파트너와 함께 랠리를 하면서 특정 지점(예: 코트의 깊숙한 구석)을 향해 다운더라인 샷을 시도하는 연습을 합니다. 처음에는 정확도에 집중하고, 점차 속도를 높여갑니다.</li>
-    <li><strong>볼 머신 활용:</strong> 볼 머신을 이용하여 일정한 속도와 각도로 오는 공을 다운더라인 샷으로 받아치는 연습은 일관성을 기르는 데 매우 효과적입니다.</li>
-    <li><strong>실전 매치 시도:</strong> 연습한 내용을 바탕으로 실제 경기에서 다운더라인 샷을 적극적으로 시도해 봅니다. 처음에는 실수가 있더라도 좌절하지 않고, 성공했을 때의 느낌을 기억하며 자신감을 쌓아갑니다.</li>
-    <li><strong>비디오 분석:</strong> 자신의 샷 영상을 촬영하여 분석하는 것은 자신의 스윙 궤적, 타점, 그리고 샷의 문제점을 파악하는 데 큰 도움이 됩니다.</li>
-</ul>
-
-<h2>자주 묻는 질문</h2>
-
-<h3>포핸드 다운더라인 샷을 칠 때 가장 흔한 실수는 무엇인가요?</h3>
-<p>포핸드 다운더라인 샷에서 가장 흔한 실수는 너무 성급하게 샷을 시도하여 공이 라인을 벗어나거나 네트에 걸리는 것입니다. 또한, 상대방의 위치를 제대로 파악하지 못하고 무리하게 샷을 시��하는 경우도 많습니다. 마지막으로, 충분한 준비 없이 스윙을 하기 때문에 힘과 정확성을 모두 잃는 경우도 빈번합니다.</p>
-
-<h3>다운더라인 샷의 성공률을 높이기 위한 조언이 있다면?</h3>
-<p>성공률을 높이기 위해서는 첫째, 상대방이 코트 중앙에서 벗어나 있거나 균형을 잃은 순간을 기다려야 합니다. 둘째, 항상 일관된 타점을 유지하고 충분한 준비 시간을 확보해야 합니다. 셋째, 공에 적절한 탑스핀을 걸어 안정적인 궤적을 만드는 것이 중요합니다. 마지막으로, 자신이 편안하게 샷을 만들 수 있는 상황에서만 시도하는 것이 좋습니다.</p>
-
-<h3>다운더라인 샷을 연습할 때 어떤 점에 가장 집중해야 하나요?</h3>
-<p>다운더라인 샷 연습 시에는 첫째, 정확도에 가장 큰 비중을 두어야 합니다. 단순히 강하게 치는 것보다 라인을 따라 안정적으로 떨어뜨리는 것이 중요합니다. 둘째, 일관성을 길러야 합니다. 어떤 상황에서도 비슷한 퀄리티의 샷을 구사할 수 있도록 반복 연습해야 합니다. 셋째, 샷 이후의 코트 커버리지와 다음 샷 준비 자세에 대한 연습도 병행해야 합니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            포핸드 전술이 내 레벨에 맞는지 먼저 점검하세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline dark:text-blue-300"
+          >
             무료 NTRP 실력 테스트 →
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

@@ -1,0 +1,127 @@
+{
+  "period": "2026-04-26 ~ 2026-05-24",
+  "totalPages": 249,
+  "totalQueries": 140,
+  "totalClicks": 51,
+  "totalImpressions": 2353,
+  "avgCtrPct": 2.17,
+  "avgPosition": 11.56,
+  "deviceBreakdown": [
+    {
+      "device": "MOBILE",
+      "clicks": 38,
+      "impressions": 1653,
+      "ctrPct": 2.3,
+      "position": 9.69
+    },
+    {
+      "device": "DESKTOP",
+      "clicks": 13,
+      "impressions": 650,
+      "ctrPct": 2,
+      "position": 16.25
+    },
+    {
+      "device": "TABLET",
+      "clicks": 0,
+      "impressions": 27,
+      "ctrPct": 0,
+      "position": 8.11
+    }
+  ],
+  "top10ByClicks": [
+    {
+      "page": "https://www.tennisfrens.com/utility/ntrp-test",
+      "clicks": 16,
+      "impressions": 84,
+      "ctrPct": 19.05,
+      "position": 4.63
+    },
+    {
+      "page": "https://www.tennisfrens.com/",
+      "clicks": 5,
+      "impressions": 45,
+      "ctrPct": 11.11,
+      "position": 6.96
+    },
+    {
+      "page": "https://tennisfrens.com/players/jannik-sinner",
+      "clicks": 4,
+      "impressions": 19,
+      "ctrPct": 21.05,
+      "position": 15.89
+    },
+    {
+      "page": "https://www.tennisfrens.com/players/martin-landaluce",
+      "clicks": 3,
+      "impressions": 346,
+      "ctrPct": 0.87,
+      "position": 9.34
+    },
+    {
+      "page": "https://www.tennisfrens.com/blog/tennis-club-fee-split-guide",
+      "clicks": 3,
+      "impressions": 8,
+      "ctrPct": 37.5,
+      "position": 10.63
+    },
+    {
+      "page": "https://www.tennisfrens.com/players/dino-prizmic",
+      "clicks": 2,
+      "impressions": 68,
+      "ctrPct": 2.94,
+      "position": 8.22
+    },
+    {
+      "page": "https://www.tennisfrens.com/utility/tennis-dictionary",
+      "clicks": 2,
+      "impressions": 39,
+      "ctrPct": 5.13,
+      "position": 10.74
+    },
+    {
+      "page": "https://www.tennisfrens.com/blog/tennis-error-reduction-guide",
+      "clicks": 1,
+      "impressions": 12,
+      "ctrPct": 8.33,
+      "position": 8.92
+    },
+    {
+      "page": "https://tennisfrens.com/utility/ntrp-test",
+      "clicks": 1,
+      "impressions": 11,
+      "ctrPct": 9.09,
+      "position": 7.82
+    },
+    {
+      "page": "https://www.tennisfrens.com/blog/tennis-hybrid-string-setup",
+      "clicks": 1,
+      "impressions": 9,
+      "ctrPct": 11.11,
+      "position": 6.67
+    }
+  ],
+  "top10ByImpressionsLowCtr": [
+    {
+      "page": "https://www.tennisfrens.com/players/martin-landaluce",
+      "impressions": 346,
+      "clicks": 3,
+      "ctrPct": 0.87,
+      "position": 9.34
+    },
+    {
+      "page": "https://www.tennisfrens.com/players/arthur-landercknech",
+      "impressions": 202,
+      "clicks": 0,
+      "ctrPct": 0,
+      "position": 10.45
+    },
+    {
+      "page": "https://www.tennisfrens.com/players/miomir-kecmanovic",
+      "impressions": 158,
+      "clicks": 0,
+      "ctrPct": 0,
+      "position": 9.34
+    }
+  ]
+}

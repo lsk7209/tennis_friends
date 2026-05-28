@@ -1,108 +1,265 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "백핸드 크로스코트 | 각도·회전·깊이 기준";
+const description =
+  "백핸드 크로스코트 성공률을 높이는 각도, 회전, 깊이, 풋워크와 실전 드릴 기준을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "백핸드 크로스코트가 자꾸 짧아지는 이유는 무엇인가요?",
+    answer:
+      "타점이 몸 뒤에 있거나 체중 이동이 멈추는 경우가 많습니다. 임팩트를 앞에서 만들고 목표를 서비스라인이 아니라 베이스라인 1m 안쪽으로 잡으세요.",
+  },
+  {
+    question: "크로스코트는 세게 쳐야 하나요, 깊게 쳐야 하나요?",
+    answer:
+      "동호인 경기에서는 깊이가 먼저입니다. 깊은 크로스코트가 상대를 뒤로 밀고, 다음 공에서 각도나 다운더라인 선택지를 만듭니다.",
+  },
+  {
+    question: "원핸드와 투핸드 백핸드의 크로스코트 기준이 다른가요?",
+    answer:
+      "타점과 회전량은 다르지만 공통 기준은 같습니다. 어깨 회전, 앞쪽 타점, 임팩트 후 회복 스텝이 먼저입니다.",
+  },
+  {
+    question: "언제 짧은 앵글 크로스코트를 써야 하나요?",
+    answer:
+      "상대가 베이스라인 뒤로 물러섰고 내가 균형을 잡은 상황에서 쓰는 것이 좋습니다. 밀린 상황에서 억지로 각도를 만들면 사이드아웃이 많아집니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '백핸드 크로스코트 — 각도·회전·깊이 완전 분석 | TennisFriends',
-  description: '백핸드 크로스코트 — 각도·회전·깊이 완전 분석에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["백핸드","크로스코트","각도","회전"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-backhand-crosscourt` },
-  openGraph: { title: '백핸드 크로스코트 — 각도·회전·깊이 완전 분석', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "백핸드 크로스코트",
+    "백핸드",
+    "크로스코트",
+    "테니스 백핸드",
+    "테니스 기술",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-backhand-crosscourt` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-backhand-crosscourt`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '백핸드 크로스코트 — 각도·회전·깊이 완전 분석', item: `${siteUrl}/blog/tennis-backhand-crosscourt` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">백핸드 크로스코트 — 각도·회전·깊이 완전 분석</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>백핸드 크로스코트 — 각도·회전·깊이 완전 분석</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-backhand-crosscourt` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            테니스 백핸드 기술 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            백핸드 크로스코트는 세게 치는 샷보다 상대를 코트 밖으로 밀어내는
+            안전한 연결 샷입니다. 성공 기준은 앞쪽 타점, 네트 위 여유, 베이스라인
+            근처 깊이, 그리고 회복 스텝입니다.
+          </p>
+        </header>
 
-<p>백핸드 크로스코트 샷은 테니스에서 가장 다양하고 전략적인 샷 중 하나입니다. 이 샷의 성공은 단순히 공을 코트 반대편으로 넘기는 것을 넘어, 공의 각도, 회전, 그리고 깊이를 정교하게 조절하는 능력에 달려 있습니다. 이 글에서는 백핸드 크로스코트 샷의 핵심 요소들을 심층적으로 분석하고, 각 요소를 향상시키기 위한 실용적인 팁과 구체적인 훈련 방법을 제공하여 여러분의 게임을 한 단계 발전시키도록 돕겠습니다.</p>
+        <section className="mb-10 rounded-lg border border-teal-200 bg-teal-50 p-5 dark:border-teal-800 dark:bg-teal-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>중립 상황에서는 깊은 크로스코트가 최우선입니다.</li>
+            <li>각도는 힘이 아니라 앞쪽 타점과 몸통 회전으로 만듭니다.</li>
+            <li>회전은 네트 위 1~1.5m 여유를 확보하기 위한 안전장치입니다.</li>
+            <li>샷 직후 코트 중앙으로 돌아오는 첫 스텝까지가 한 동작입니다.</li>
+          </ul>
+        </section>
 
-<h2>백핸드 크로스코트 샷의 중요성</h2>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 크로스코트가 안전한 이유</h2>
+          <p>
+            크로스코트는 대각선으로 치기 때문에 사용할 수 있는 코트 길이가
+            길고, 네트 중앙을 통과하기 쉬워 실수 확률이 낮습니다. 그래서
+            백핸드가 약한 동호인도 무리한 다운더라인보다 깊은 크로스코트를
+            안정적으로 보내는 편이 포인트를 지키기 좋습니다.
+          </p>
+          <p>
+            ITF 용어 기준에서도 크로스코트는 공이 상대 코트로 대각선 이동하는
+            샷입니다. 공식 용어와 규칙 확인은
+            <a
+              href="https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ITF 테니스 용어집
+            </a>
+            을 참고할 수 있습니다. 기술 연습 자료는
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              USTA 팁과 인스트럭션
+            </a>
+            처럼 기본 스트로크 자료를 함께 보면 좋습니다.
+          </p>
 
-<p>백핸드 크로스코트 샷은 코트 중앙에서 벗어난 상대방을 코트 밖으로 밀어내거나, 상대방의 공격을 무력화시키고, 때로는 직접적인 위너를 만들어내는 데 필수적인 기술입니다. 특히 단식 경기에서는 상대방의 움직임을 제한하고 코트 전체를 효과적으로 활용하는 데 결정적인 역할을 합니다. 복식에서도 상대방의 빈 공간을 공략하거나, 수비적인 상황에서 벗어나기 위한 유용한 옵션이 됩니다. 이 샷을 능숙하게 구사할 수 있다면, 상대방에게 끊임없이 압박감을 주고 경기의 주도권을 잡는 데 큰 도움이 될 것입니다.</p>
+          <h2>2. 각도는 손목이 아니라 타점이 만든다</h2>
+          <p>
+            백핸드 크로스코트가 자꾸 중앙으로 가는 이유는 손목을 못 써서가
+            아니라 타점이 늦기 때문인 경우가 많습니다. 공을 몸 옆이나 뒤에서
+            맞추면 라켓 면이 닫히고, 자연스럽게 중앙이나 네트로 갑니다. 공을
+            몸 앞에서 맞추면 어깨 회전이 살아나고 대각선 방향으로 라켓이
+            지나갈 공간이 생깁니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>문제</th>
+                <th>원인</th>
+                <th>교정 기준</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>공이 중앙으로 감</td>
+                <td>타점이 늦고 몸통 회전이 멈춤</td>
+                <td>앞발보다 반 발 앞에서 임팩트</td>
+              </tr>
+              <tr>
+                <td>사이드아웃이 많음</td>
+                <td>손목으로 각도를 억지로 만듦</td>
+                <td>라켓 면을 고정하고 어깨 회전 사용</td>
+              </tr>
+              <tr>
+                <td>공이 짧아짐</td>
+                <td>스윙이 임팩트에서 끊김</td>
+                <td>임팩트 뒤 목표 방향으로 30cm 더 밀기</td>
+              </tr>
+            </tbody>
+          </table>
 
-<h2>샷의 핵심 요소 분석</h2>
+          <h2>3. 회전은 공격보다 안정성을 위한 장치다</h2>
+          <p>
+            동호인 백핸드에서 회전은 위너를 만들기보다 네트와 아웃을 줄이는
+            역할을 합니다. 탑스핀은 공을 네트 위로 높게 보내도 코트 안으로
+            떨어지게 만들고, 슬라이스는 낮은 바운드로 상대의 공격 타이밍을
+            늦춥니다. 중요한 것은 회전량보다 같은 궤적을 반복하는 능력입니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              백핸드 크로스코트 체크포인트
+            </h3>
+            <ol className="list-decimal space-y-2 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>준비 때 어깨가 네트 옆을 향할 만큼 충분히 돌아갔는가?</li>
+              <li>임팩트가 몸 앞에서 만들어졌는가?</li>
+              <li>공이 네트 위 1~1.5m를 통과했는가?</li>
+              <li>목표가 사이드라인이 아니라 크로스 깊은 3분의 1 구역인가?</li>
+              <li>샷 뒤 첫 스텝이 중앙 회복 방향으로 나갔는가?</li>
+            </ol>
+          </aside>
 
-<h3>1. 각도: 상대방을 움직이게 만드는 각도</h3>
+          <h2>4. 깊이는 베이스라인 1m 안쪽을 목표로 한다</h2>
+          <p>
+            깊은 백핸드 크로스코트는 상대를 뒤로 밀어 다음 공을 쉽게 만듭니다.
+            목표를 사이드라인 가까이에 두면 멋진 샷은 나오지만 실수도 늘어납니다.
+            연습 때는 상대 코트의 대각선 깊은 3분의 1 구역, 특히 베이스라인
+            1m 안쪽을 목표로 잡는 것이 좋습니다.
+          </p>
+          <p>
+            깊이를 만들 때 팔로만 밀면 어깨와 팔꿈치 부담이 커집니다. 스플릿
+            스텝, 유닛턴, 앞쪽 타점, 임팩트 후 회복이 이어져야 공이 길게
+            갑니다. 특히 수비 상황에서는 낮고 빠른 샷보다 높고 깊은 크로스코트가
+            더 안전한 선택입니다.
+          </p>
 
-<p>백핸드 크로스코트 샷의 가장 중요한 요소 중 하나는 바로 각도입니다. 단순히 상대방 코트 안쪽으로 공을 보내는 것을 넘어, 상대방이 움직이기 어렵도록 넓은 각도를 만들어내는 것이 중요합니다. 상대방이 코트 중앙에 위치해 있다면, 깊은 크로스코트 샷은 상대방을 라인 밖으로 밀어내는 효과를 가져옵니다. 반대로, 상대방이 코트 구석에 있다면, 짧고 날카로운 크로스코트 샷으로 상대방의 움직임을 멈추게 하거나, 다음 샷을 준비할 시간을 벌 수 있습니다. 각도를 조절하는 능력은 상대방의 위치와 움직임을 읽는 능력과 직결됩니다. 상대방이 앞으로 달려오고 있다면 깊은 샷을, 뒤로 물러서고 있다면 짧은 샷을 구사하는 것이 효과적입니다. 또한, 앵글을 크게 줄수록 상대방은 더 많은 거리를 움직여야 하므로 체력 소모를 유발하고 실수를 유도할 수 있습니다.</p>
+          <h2>5. 20분 연습 루틴</h2>
+          <p>
+            백핸드 크로스코트는 한 번에 강하게 치는 연습보다 같은 깊이와 방향을
+            반복하는 훈련이 효과적입니다. 아래 루틴은 파트너, 볼머신, 코치
+            피드 모두에 적용할 수 있습니다.
+          </p>
+          <ul>
+            <li>5분: 서비스라인 안쪽에서 짧은 백핸드 크로스 랠리</li>
+            <li>5분: 베이스라인 1m 안쪽 목표로 깊은 크로스 20개</li>
+            <li>5분: 깊은 크로스 2개 뒤 짧은 앵글 1개 패턴</li>
+            <li>5분: 크로스 후 중앙 회복, 다음 공 준비까지 연결</li>
+          </ul>
 
-<h4>각도 향상 팁:</h4>
-<ul>
-    <li><strong>타점 조절:</strong> 공이 몸의 어느 부분에 맞느냐에 따라 샷의 각도가 크게 달라집니다. 공을 몸의 약간 앞쪽에서 맞추면 더 직선적인 샷이, 몸의 옆쪽에서 맞추면 더 열린 각도의 샷이 나옵니다.</li>
-    <li><strong>라켓 페이스 각도:</strong> 라켓 페이스를 얼마나 열거나 닫느냐에 따라 샷의 각도가 결정됩니다. 상대방의 위치를 파악하고 원하는 각도를 만들기 위해 라켓 페이스 각도를 섬세하게 조절하는 연습이 필요합니다.</li>
-    <li><strong>스윙 궤적:</strong> 임팩트 시 라켓의 스윙 궤적을 직선이 아닌 약간의 곡선으로 ���져가면 샷의 각도를 더욱 부드럽고 예측 불가능하게 만들 수 있습니다.</li>
-    <li><strong>연습 방법:</strong> 코트의 특정 지점을 목표로 정하고, 반복적으로 크로스코트 샷을 연습하세요. 처음에는 각도에 집중하고, 익숙해지면 다양한 각도를 시도해보세요.</li>
-</ul>
+          <h2>마무리</h2>
+          <p>
+            백핸드 크로스코트는 화려한 결정구가 아니라 경기 운영의 기본
+            안전망입니다. 타점을 앞에 두고, 네트 위 여유를 확보하고, 깊은
+            목표를 반복하면 다운더라인이나 네트 접근 같은 공격 선택지도 자연스럽게
+            열립니다.
+          </p>
+        </section>
 
-<h3>2. 회전: 공에 생명력을 불어넣는 회전</h3>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-<p>백핸드 크로스코트 샷에 적절한 회전을 주는 것은 샷의 안정성과 위력을 동시에 높이는 중요한 요소입니다. 슬라이스 백핸드 크로스코트는 공의 속도를 줄이고 바운드를 낮춰 상대방의 공격을 어렵게 만들며, 탑스핀 백핸드 크로스코트는 공의 낙하 속도를 빠르게 하여 상대방이 제대로 대응하기 힘들게 만듭니다. 회전은 공의 궤적을 예측 가능하게 만들면서도, 상대방에게는 까다로운 샷으로 인식될 수 있습니다. 특히 슬라이스 회전은 공이 네트를 넘어가면서 급격하게 낮아지는 경향이 있어 상대방의 상단 그립을 가진 선수에게 더욱 위협적입니다. 반대로 탑스핀 회전은 공이 상대방 코트에 떨어졌을 때 높게 튀어 오르도록 만들어 상대방의 하단 ��립을 가진 선수에게 불리하게 작용할 수 있습니다. 회전을 자유자재로 구사할 수 있다면, 상대방의 코트 상황에 맞춰 가장 효과적인 샷을 선택할 수 있습니다.</p>
-
-<h4>회전 향상 팁:</h4>
-<ul>
-    <li><strong>라켓 헤드 스피드:</strong> 공에 회전을 주기 위해서는 충분한 라켓 헤드 스피드가 필수적입니다. 특히 임팩트 시 라켓 헤드를 공 아래에서 위로 쓸어 올리는 동작(슬라이스) 또는 위에서 아래로 찍어 누르는 동작(탑스핀)을 통해 회전을 만들 수 있습니다.</li>
-    <li><strong>라켓 면:</strong> 슬라이스 회전을 위해서는 라켓 면을 약간 열어주고, 탑스핀 회전을 위해서는 라켓 면을 닫아주는 느낌으로 임팩트해야 합니다.</li>
-    <li><strong>타점과 라켓 각도:</strong> 공이 몸의 어느 부분에서, 어떤 각도로 맞느냐에 따라 회전의 종류와 양이 달라집니다. 슬라이스는 공의 하단을 긁는다는 느낌으로, 탑스핀은 공의 윗부분을 감싸는 느낌으로 스윙하세요.</li>
-    <li><strong>연습 방법:</strong> 벽을 이용하��나 파트너와 함께 다양한 회전을 건 백핸드 크로스코트 샷을 연습하세요. 슬라이스 샷은 낮게 깔리는 샷을, 탑스핀 샷은 높게 솟구치는 샷을 만드는 데 집중해보세요.</li>
-</ul>
-
-<h3>3. 깊이: 상대방을 코트 뒤로 밀어내는 깊이</h3>
-
-<p>백핸드 크로스코트 샷의 깊이는 상대방을 코트 뒤쪽으로 밀어내어 공격적인 위치에서 벗어나게 만드는 데 중요한 역할을 합니다. 깊은 크로스코트 샷은 상대방이 공을 받아내기 위해 더 많은 거리를 달려야 하므로 체력 소모를 유발하고, 다음 샷을 준비할 시간을 줄여줍니다. 또한, 상대방이 코트 뒤쪽으로 밀려나면 네트 플레이를 시도하기 어렵게 만들어 자신의 공격 기회를 만들 수 있습니다. 특히 상대방이 네트 가까이 올라왔을 때 깊은 크로스코트 샷은 효과적인 로브 샷의 대안이 될 수 있습니다. 깊이를 조절하는 능력은 상대방의 위치뿐만 아니라, 자신의 코트 위치와 다음 샷을 어떻게 연결할지에 대한 전략적인 판단과 함께 이루어져야 합니다.</p>
-
-<h4>깊이 향상 팁:</h4>
-<ul>
-    <li><strong>스윙의 완성:</strong> 공을 깊게 보내기 위해서는 임팩트 이후에도 충분한 스윙을 유지해야 합니다. 스윙의 끝까지 힘을 전달하는 것이 중요합니다.</li>
-    <li><strong>체중 이동:</strong> 샷을 구사할 때 체중을 앞쪽으로 실어주면 공에 더 많은 힘이 전달되어 깊이를 확보하는 데 도움이 됩니다.</li>
-    <li><strong>타점의 중요성:</strong> 공을 몸의 약간 앞쪽에서, 그리고 약간 더 높게 맞추면 공이 더 멀리 날아가는 경향이 있습니다.</li>
-    <li><strong>연습 방법:</strong> 코트의 베이스라인 근처를 목표로 하는 크로스코트 샷 연습을 꾸준히 하세요. 상대방이 네트 근처에 있을 때를 가정하고 깊은 샷을 연습하는 것도 좋은 방법입니다.</li>
-</ul>
-
-<h2>실전 적용 및 훈련 방법</h2>
-
-<p>각도, 회전, 깊이의 세 가지 요소를 효과적으로 조합하는 것이 백핸드 크로스코트 샷의 진정한 힘입니다. 상대방의 움직임, 코트 상황, 그리고 자신의 강점을 고려하여 이 요소들을 유기적으로 활용해야 합니다. 예를 들어, 상대방이 코트 중앙에 있다면 각���와 깊이를 활용하여 코트 밖으로 밀어내고, 상대방이 네트 근처에 있다면 깊은 샷으로 공격 기회를 봉쇄하는 전략을 사용할 수 있습니다. 슬라이스 회전은 수비적인 상황에서 벗어나거나 상대방의 공격을 무력화하는 데 효과적이며, 탑스핀 회전은 공격적인 샷으로 상대방을 코트 뒤로 밀어내는 데 유용합니다.</p>
-
-<h4>종합 훈련 방법:</h4>
-<ul>
-    <li><strong>상황별 샷 연습:</strong> 파트너와 함께 다양한 상황을 설정하고 백핸드 크로스코트 샷을 연습하세요. 상대방이 코트 중앙에 있을 때, 코트 구석에 있을 때, 네트 근처에 있을 때 등 각 상황에 맞는 샷을 구사하는 연습을 합니다.</li>
-    <li><strong>회전 조합 연습:</strong> 슬라이스 회전과 탑스핀 회전을 번갈아 가며 구사하는 연습을 합니다. 공의 높이와 속도를 조절하며 상대방을 혼란스럽게 만드는 연습을 하세요.</li>
-    <li><strong>각도 변화 연습:</strong> 좁은 각도부터 넓은 각도까지 다양한 각도로 크로스코트 샷을 구사하는 연습을 합니다. 특히 상대방의 움직임을 유���하는 샷을 만드는 데 집중하세요.</li>
-    <li><strong>실전 게임 시뮬레이션:</strong> 연습 게임 중에 의도적으로 백핸드 크로스코트 샷을 자주 사용해보세요. 실전 감각을 익히고, 샷의 성공률을 높이는 데 도움이 됩니다.</li>
-    <li><strong>비디오 분석:</strong> 자신의 샷을 촬영하여 각도, 회전, 깊이가 어떻게 구사되고 있는지 분석하고 개선점을 찾으세요.</li>
-</ul>
-
-<h2>자주 묻는 질문</h2>
-
-<h3>Q1: 백핸드 크로스코트 샷을 할 때 너무 직선적으로 나가는데 어떻게 개선하나요?</h3>
-<p>백핸드 크로스코트 샷이 직선적으로 나가는 이유는 주로 라켓 페이스가 너무 닫혀 있거나, 스윙 궤적이 너무 직선적이기 때문입니다. 샷을 구사할 때 라켓 페이스를 약간 열어주고, 임팩트 시 라켓 헤드를 공의 옆면을 감싸는 느낌으로 스윙해보세요. 또한, 스윙 궤적을 약간 바깥쪽으로 휘게 하면 자연스럽게 각도를 만들 수 있습니다. 연습 시 코트의 더 넓은 영역을 목표로 설정하고, 의도적으로 각도를 크게 만드는 연습을 하는 것이 좋습니다.</p>
-
-<h3>Q2: 슬라이스 백핸드 크로스코트 샷과 탑스핀 백핸드 크로스코트 샷의 차이점은 무엇이며, 언제 사용하는 것이 좋나요?</h3>
-<p>슬라이스 백핸드 크로스코트 샷은 공에 역회전을 주어 공의 속도를 줄이고 바운드를 낮추는 샷입니다. 이 샷은 상대방의 공격을 무력화시키거나, 상대방을 코트 뒤로 밀어내고 다음 샷을 준비할 시간을 벌 때 유용합니다. 반면, 탑스핀 백핸드 크로스코트 샷은 공에 전진 회전을 주어 공이 상대방 코트에 떨어졌을 때 높게 튀어 오르게 만드는 샷입니다. 이 샷은 상대방을 코트 뒤로 밀어내고 공격적인 포인트를 만들 때 효과적입니다. 상대방의 위치와 움직임, 그리고 자신의 공격 의도에 따라 적절한 회전을 선택하는 것이 중요합니다.</p>
-
-<h3>Q3: 백핸드 크로스코트 샷의 깊이를 조절하는 가장 효과적인 방법은 무엇인가요?</h3>
-<p>백핸드 크로스코트 샷의 깊이를 조절하는 가장 효과적인 방법은 스윙의 완성도와 체중 이동에 집중하는 것입니다. 공을 더 깊게 보내고 싶다면, 임팩트 이후에도 충분한 스윙을 유지하여 공에 지속적으로 힘을 전달해야 합니다. 또한, 샷을 구사할 때 체중을 앞쪽으로 자연스럽게 실어주면 공에 더 많은 추진력이 생겨 깊이를 확보하는 데 도움이 됩니다. 타점도 중요한데, 공을 몸의 약간 앞쪽에서, 그리고 평소보다 약간 더 높은 지점에서 맞추면 공이 더 멀리 날아가는 경향이 있습니다. 꾸준한 연습을 통해 이러한 요소들을 익히고 실전에서 적용하는 것이 중요합니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            백핸드 안정성을 내 레벨 기준으로 점검하세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline dark:text-blue-300"
+          >
             무료 NTRP 실력 테스트 →
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

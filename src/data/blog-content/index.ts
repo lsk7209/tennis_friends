@@ -13,6 +13,7 @@ import { BLOG_CONTENT_PART9_SCHEDULED_100 } from "./part9-scheduled-100";
 import { BLOG_CONTENT_PART10_SCHEDULED_300 } from "./part10-scheduled-300";
 import { BLOG_CONTENT_ARTICLE_WRITER_300 } from "./part11-article-writer-300";
 import { BLOG_CONTENT_PART12_ARTICLE_WRITER_300 } from "./part12-article-writer-300";
+import { BLOG_CONTENT_PART13_OPTIMIZED } from "./part13-optimized";
 
 type BlogContentEntry = {
   content: string;
@@ -38,4 +39,5 @@ export const blogContentMap: Record<string, BlogContentEntry> = {
   ...BLOG_CONTENT_PART10_SCHEDULED_300,
   ...BLOG_CONTENT_ARTICLE_WRITER_300,
   ...BLOG_CONTENT_PART12_ARTICLE_WRITER_300,
+  ...BLOG_CONTENT_PART13_OPTIMIZED,
 };

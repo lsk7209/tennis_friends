@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -13,7 +14,12 @@ function getAdSenseId() {
     process.env.NEXT_PUBLIC_ADSENSE_PUB_ID ||
     process.env.NEXT_PUBLIC_ADSENSE_ID ||
     DEFAULT_ADSENSE_ID
-  );
+  ).trim();
+}
+
+function normalizeAdSlot(slot?: string) {
+  const normalizedSlot = slot?.trim();
+  return normalizedSlot || null;
 }
 
 export default function AdSense() {
@@ -62,6 +68,7 @@ type AdSenseSlotProps = {
   label?: string;
   className?: string;
   minHeight?: number;
+  minHeightMobile?: number;
 };
 
 export function AdSenseSlot({
@@ -69,11 +76,13 @@ export function AdSenseSlot({
   label = "광고",
   className = "",
   minHeight = DEFAULT_AD_HEIGHT,
+  minHeightMobile = 220,
 }: AdSenseSlotProps) {
   const adsenseId = getAdSenseId();
+  const normalizedSlot = normalizeAdSlot(slot);
 
   useEffect(() => {
-    if (!slot) return;
+    if (!normalizedSlot) return;
 
     try {
       const ads = (window.adsbygoogle = window.adsbygoogle || []);
@@ -81,22 +90,27 @@ export function AdSenseSlot({
     } catch {
       // Ad blockers or delayed script loading can fail silently.
     }
-  }, [slot]);
+  }, [normalizedSlot]);
 
-  if (!slot) return null;
+  if (!normalizedSlot) return null;
 
   return (
     <aside
       aria-label={label}
-      className={`my-8 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 text-center dark:border-gray-800 dark:bg-gray-900 ${className}`}
-      style={{ minHeight }}
+      className={`adsense-slot my-8 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 text-center dark:border-gray-800 dark:bg-gray-900 ${className}`}
+      style={
+        {
+          minHeight,
+          "--adsense-mobile-min-height": `${minHeightMobile}px`,
+        } as CSSProperties
+      }
     >
       <span className="sr-only">{label}</span>
       <ins
         className="adsbygoogle block"
         style={{ display: "block", minHeight }}
         data-ad-client={adsenseId}
-        data-ad-slot={slot}
+        data-ad-slot={normalizedSlot}
         data-ad-format="auto"
         data-full-width-responsive="true"
       />

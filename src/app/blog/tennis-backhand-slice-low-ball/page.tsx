@@ -1,110 +1,286 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "낮은 공 슬라이스 백핸드 | 어프로치·방어 기준";
+const description =
+  "낮은 공 슬라이스 백핸드 성공률을 높이는 라켓 면, 타점, 어프로치와 방어 전환 기준을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "낮은 공은 슬라이스와 드라이브 중 무엇이 안전한가요?",
+    answer:
+      "무릎 아래 낮은 공은 슬라이스가 더 안전한 경우가 많습니다. 공 밑으로 라켓을 넣기 쉽고, 낮은 탄도로 상대 공격 타이밍을 늦출 수 있습니다.",
+  },
+  {
+    question: "슬라이스 백핸드가 자꾸 뜨는 이유는 무엇인가요?",
+    answer:
+      "라켓 면을 너무 열거나 공을 아래로 찍는 경우가 많습니다. 라켓 면은 살짝 열고, 위에서 아래로 자르기보다 앞으로 길게 밀어야 낮게 갑니다.",
+  },
+  {
+    question: "낮은 공 슬라이스를 어프로치로 써도 되나요?",
+    answer:
+      "상대가 뒤에 있고 내가 전진하면서 균형을 잡은 상황이면 좋습니다. 깊고 낮은 슬라이스 뒤에는 네트로 접근해 다음 발리를 준비하세요.",
+  },
+  {
+    question: "수비 상황에서는 어디로 보내는 것이 좋나요?",
+    answer:
+      "위기 상황에서는 라인보다 중앙 깊은 구역이 안전합니다. 상대가 강하게 공격하기 어렵게 낮고 깊게 보내고, 바로 중앙 회복 스텝을 밟으세요.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '낮은 공 슬라이스 백핸드 처리 — 어프로치와 방어 | TennisFriends',
-  description: '낮은 공 슬라이스 백핸드 처리 — 어프로치와 방어에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["슬라이스","낮은공","백핸드","어프로치"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-backhand-slice-low-ball` },
-  openGraph: { title: '낮은 공 슬라이스 백핸드 처리 — 어프로치와 방어', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: [
+    "낮은 공 슬라이스 백핸드",
+    "슬라이스 백핸드",
+    "낮은 공 처리",
+    "백핸드 어프로치",
+    "테니스 백핸드",
+  ],
+  alternates: { canonical: `${siteUrl}/blog/tennis-backhand-slice-low-ball` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-backhand-slice-low-ball`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '낮은 공 슬라이스 백핸드 처리 — 어프로치와 방어', item: `${siteUrl}/blog/tennis-backhand-slice-low-ball` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">낮은 공 슬라이스 백핸드 처리 — 어프로치와 방어</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>낮은 공 슬라이스 백핸드 처리 — 어프로치와 방어</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          {
+            name: title,
+            item: `${siteUrl}/blog/tennis-backhand-slice-low-ball`,
+          },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            테니스 백핸드 슬라이스 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            낮은 공 슬라이스 백핸드는 겨우 넘기는 수비 샷이 아닙니다. 라켓 면을
+            안정시키고 공을 낮고 깊게 보내면 어프로치로 압박하거나, 수비 상황에서
+            시간을 벌어 랠리를 다시 중립으로 돌릴 수 있습니다.
+          </p>
+        </header>
 
-<p>낮은 공 슬라이스 백핸드는 테니스에서 매우 까다로운 구질이지만, 올바른 기술과 연습을 통해 이를 효과적으로 처리하면 상대방에게 압박을 주고 자신의 경기를 안정적으로 운영할 수 있습니다. 이 글에서는 낮은 공 슬라이스 백핸드를 어프로치 샷으로 활용하는 방법과 수비적인 상황에서 벗어나는 방법을 상세하게 안내합니다.</p>
+        <section className="mb-10 rounded-lg border border-teal-200 bg-teal-50 p-5 dark:border-teal-800 dark:bg-teal-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>무릎 아래 낮은 공은 드라이브보다 슬라이스가 안전합니다.</li>
+            <li>라켓 면은 크게 열지 말고, 공 밑에서 앞으로 길게 지나갑니다.</li>
+            <li>어프로치는 깊고 낮게, 수비는 중앙 깊은 구역을 우선합니다.</li>
+            <li>샷 이후에는 네트 접근 또는 중앙 회복 중 하나를 즉시 선택합니다.</li>
+          </ul>
+        </section>
 
-<h2>낮은 공 슬라이스 백핸드, 왜 중요할까?</h2>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 낮은 공은 들어 올리는 샷이 아니다</h2>
+          <p>
+            낮은 공을 보면 많은 동호인이 손목으로 공을 퍼 올립니다. 하지만 이렇게
+            치면 공이 높게 뜨고, 상대가 바로 공격할 수 있는 찬스볼이 됩니다. 낮은
+            공 슬라이스 백핸드는 공을 위로 띄우는 기술이 아니라 라켓 면을 안정시켜
+            낮은 궤도로 깊게 보내는 기술입니다.
+          </p>
+          <p>
+            슬라이스는 공에 역회전을 주는 타구입니다. 공식 용어와 기본 규칙은
+            <a
+              href="https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ITF 테니스 용어집
+            </a>
+            에서 확인할 수 있습니다. 백핸드와 슬라이스 연습 자료는
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              USTA 팁과 인스트럭션
+            </a>
+            처럼 기본 스트로크 자료를 함께 참고하면 좋습니다.
+          </p>
 
-<p>테니스 경기에서 낮은 공은 플레이어의 높이와 스윙 궤적에 큰 제약을 주기 때문에 많은 선수들이 어려움을 겪습���다. 특히 백핸드 슬라이스는 이러한 낮은 공에 대한 효과적인 대처법 중 하나로, 공의 속도를 늦추고 상대방의 예측을 벗어나게 하는 데 탁월합니다. 낮은 공을 슬라이스로 처리하는 능력은 단순히 공을 넘기는 것을 넘어, 공격적인 기회를 창출하거나 위기 상황에서 벗어나는 중요한 전략이 됩니다. 잘 구사된 슬라이스는 상대방의 발을 묶고 다음 샷을 어렵게 만들어 경기의 흐름을 유리하게 가져올 수 있습니다.</p>
+          <h2>2. 어프로치와 방어는 목표가 다르다</h2>
+          <p>
+            같은 낮은 공 슬라이스라도 상황에 따라 목표가 달라집니다. 내가 코트
+            안으로 들어가며 균형을 잡았다면 어프로치입니다. 이때는 상대가 낮은
+            타점에서 공을 들게 만들어 다음 발리 기회를 잡아야 합니다. 반대로 내가
+            밀려서 낮은 공을 받는 상황이면 방어입니다. 이때는 화려한 코스보다
+            중앙 깊은 구역으로 보내 시간을 버는 것이 중요합니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>상황</th>
+                <th>목표</th>
+                <th>다음 동작</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>짧은 낮은 공을 전진 처리</td>
+                <td>깊고 낮은 어프로치</td>
+                <td>네트 접근 후 첫 발리 준비</td>
+              </tr>
+              <tr>
+                <td>베이스라인 뒤에서 밀림</td>
+                <td>중앙 깊은 수비 슬라이스</td>
+                <td>중앙 회복과 다음 공 대기</td>
+              </tr>
+              <tr>
+                <td>상대가 네트로 접근</td>
+                <td>발밑 낮은 패스 또는 로브 준비</td>
+                <td>상대 발리 방향 읽기</td>
+              </tr>
+              <tr>
+                <td>상대가 뒤로 물러남</td>
+                <td>낮은 슬라이스로 전진 압박</td>
+                <td>서비스라인 안쪽까지 접근</td>
+              </tr>
+            </tbody>
+          </table>
 
-<h2>낮은 공 슬라이스 백핸드 어프로치 샷</h2>
+          <h2>3. 라켓 면은 살짝 열고, 길게 민다</h2>
+          <p>
+            낮은 공 슬라이스가 뜨는 이유는 라켓 면을 너무 많이 열기 때문입니다.
+            라켓 면은 공을 띄우기 위해 여는 것이 아니라, 공 밑으로 들어가 역회전을
+            만들기 위해 살짝 여는 정도면 충분합니다. 임팩트 뒤에는 라켓이 위로
+            튀지 않고 목표 방향으로 길게 나가야 공이 낮게 깔립니다.
+          </p>
+          <p>
+            손목 스냅으로 자르면 공은 짧고 불안정해집니다. 어깨와 팔 전체가
+            하나의 판처럼 움직인다고 생각하세요. 공을 맞힌 뒤 라켓이 네트 방향으로
+            30cm 더 지나가면 깊이가 생기고, 상대가 공격하기 어려운 낮은 공이
+            만들어집니다.
+          </p>
 
-<p>낮은 공 슬라이스 백핸드를 어프로치 샷으로 활용하는 것은 상대방을 코트 밖으로 밀어내거나, 다음 공격을 위한 좋은 위치를 확보하는 데 매우 효과적입니다. 어프로치 샷은 상대방이 쉽게 공격하기 어려운 깊고 낮은 각도로 공을 보내는 것을 목표로 합니다.</p>
+          <h2>4. 몸을 낮추되 허리를 접지 않는다</h2>
+          <p>
+            낮은 공을 처리할 때 허리만 접으면 시야가 흔들리고 라켓 면도 불안정해집니다.
+            무릎을 굽혀 몸 전체를 낮추고, 등과 머리는 가능한 한 안정적으로 유지해야
+            합니다. 특히 백핸드 슬라이스는 타점이 몸 옆으로 밀리기 쉬우므로, 마지막
+            한 걸음을 작게 조정해 공을 몸 앞에서 맞추는 것이 좋습니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              낮은 공 슬라이스 체크포인트
+            </h3>
+            <ol className="list-decimal space-y-2 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>허리보다 무릎으로 높이를 낮췄는가?</li>
+              <li>라켓 면이 과하게 열리지 않았는가?</li>
+              <li>임팩트가 몸 앞쪽에서 만들어졌는가?</li>
+              <li>라켓이 목표 방향으로 길게 지나갔는가?</li>
+              <li>샷 이후 네트 접근 또는 중앙 회복을 바로 선택했는가?</li>
+            </ol>
+          </aside>
 
-<h3>준비 자세와 그립</h3>
+          <h2>5. 어프로치 슬라이스는 깊이가 먼저다</h2>
+          <p>
+            어프로치 상황에서 낮은 공 슬라이스를 짧게 치면 상대에게 패싱샷 기회를
+            줍니다. 목표는 멋진 각도가 아니라 베이스라인 근처 깊은 구역입니다.
+            낮고 깊은 슬라이스는 상대가 공을 위로 들어 올리게 만들고, 네트로
+            들어간 내가 첫 발리를 편하게 처리할 가능성을 높입니다.
+          </p>
+          <p>
+            코스는 상대의 약점과 내 위치에 따라 다릅니다. 상대 백핸드가 약하면
+            백핸드 깊은 구역으로 보내고, 상대가 한쪽으로 치우쳤다면 반대 코트의
+            깊은 공간을 노립니다. 다만 이동 중 무리한 라인 공략보다 중앙 깊은
+            어프로치가 실전 성공률은 더 높습니다.
+          </p>
 
-<p>낮은 공을 상대할 때는 무릎을 깊게 굽혀 최대한 낮아지는 것이 가장 중요합니다. 라켓은 공보다 낮은 위치에서 준비하며, 슬라이스 백핸드에 적합한 세미 웨스턴 또는 웨스턴 그립을 사용하면 백스핀을 더 효과적으로 줄 수 있습니다. 백스윙은 간결하게 가져가되, 공을 임팩트하는 순간까지 라켓 헤드를 낮게 유지하는 데 집중해야 합니다.</p>
+          <h2>6. 20분 낮은 공 대응 드릴</h2>
+          <p>
+            낮은 공 슬라이스는 감각형 샷이라 짧고 자주 반복하는 연습이 효과적입니다.
+            아래 루틴은 파트너가 낮게 깔리는 공을 보내주거나, 코치 피드로 진행하면
+            가장 좋습니다. 혼자 할 때는 벽 앞에서 낮은 목표선을 정하고 연습하세요.
+          </p>
+          <ul>
+            <li>5분: 무릎을 낮추고 라켓 면 고정한 짧은 슬라이스</li>
+            <li>5분: 중앙 깊은 구역으로 수비 슬라이스 20개</li>
+            <li>5분: 짧은 낮은 공 어프로치 후 네트 접근</li>
+            <li>5분: 어프로치 뒤 첫 발리까지 연결하는 2구 패턴</li>
+          </ul>
 
-<h3>스윙 궤적과 임팩트</h3>
+          <h2>마무리</h2>
+          <p>
+            낮은 공 슬라이스 백핸드는 위기에서 빠져나오는 수비 기술이면서, 좋은
+            상황에서는 네트로 들어가는 공격 전환 기술입니다. 라켓 면을 과하게
+            열지 말고, 몸을 낮추고, 공을 낮고 깊게 보내세요. 그 기준이 잡히면
+            낮은 공은 부담이 아니라 랠리 흐름을 바꾸는 기회가 됩니다.
+          </p>
+        </section>
 
-<p>낮은 공 슬라이스 백핸드의 핵심은 '쓸어 올리는' 느낌의 스윙입니다. 라켓 헤드를 뒤에서 앞으로, 그리고 약간 위로 쓸어 올리면서 공을 맞힙니다. 임팩트 시에는 라켓 면을 살짝 열어 공에 역회전을 충분히 걸어주어야 합니다. 이렇게 하면 공이 낮게 깔리면서도 상대방 코트 깊숙이 들어가게 됩니다. 공을 맞히는 지점은 몸의 앞쪽, 약간 측면에서 이루어지도록 하여 체중 이동을 활용하는 것이 좋습니다.</p>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-<h3>샷의 방향과 깊이</h3>
-
-<p>어프로치 샷으로 사용할 때는 가능한 한 상대방의 깊숙한 곳, 특히 베이스라인 근처를 노리는 것이 좋습니다. 또한, 직선보다는 크로스코트 방향으로 보내면 상대방의 움직임을 제한하고 빈 공간을 공략하기 용이합니다. 낮은 슬라이스는 상대방이 점프하여 처리하거나, 라켓을 낮춰야 하는 상황을 만들어 다음 샷을 쉽게 만들 수 있습니다. 공의 속도는 너무 빠르지 않게 조절하여 상대방이 반응할 시간을 최소화하는 것이 중요합니다.</p>
-
-<h3>후속 동작</h3>
-
-<p>낮은 공 슬라이스 백핸드 어프로치 샷을 구사한 후에는 즉시 네트 쪽으로 전진하여 상대방의 리턴을 기다립니다. 상대방이 얕은 공을 받아치거나, 걷어내기만 하는 경우 네트 앞에서 발리나 스매시로 경기를 마무리할 기회를 잡을 수 있습니다. 공격적인 자세로 전환하여 다음 샷을 준비하는 것이 중요합니다.</p>
-
-<h2>낮은 공 슬라이스 백핸드 방어</h2>
-
-<p>수비적인 상황에서 낮은 공 슬라이스 백핸드는 위기에서 벗어나 경기를 안정시키는 데 필수적인 기술입니다. 상대방의 강력한 공격이나 예상치 못한 낮은 공에 당황하지 않고 침착하게 대처하는 것이 중요합니다.</p>
-
-<h3>상황 판단 및 목표 설정</h3>
-
-<p>낮은 공 슬라이스 백핸드를 방어적으로 사용할 때는 가장 먼저 자신의 위치와 상대방의 위치를 파악해야 합니다. 목표는 상대방의 공격을 무력화시키고, 자신에게 다시 공격 기회를 만들 수 있는 위치로 돌아가는 것입니다. 무조건 강하게 치기보다는, 상대방의 다음 샷을 어렵게 만들 수 있는 곳으로 공을 보내는 데 집중해야 합니다.</p>
-
-<h3>라켓 각도와 임팩트</h3>
-
-<p>방어적인 슬라이스 백핸드에서는 라켓 면을 더 많이 열어 역회전을 극대화하는 것이 중요합니다. 공이 발목 높이 이하로 오는 경우, 무릎을 더 깊게 굽혀 라켓을 공 아래에서 위로 쓸어 올리듯이 임팩트합니다. 공을 맞히는 순간에는 손목의 스냅보다는 팔 전체를 사용하여 부드럽게 공을 밀어주는 느낌으로 컨트롤합니다. 역회전이 많이 걸린 공은 상대방 코트에서 높이 뜨기 어려워 상대방이 공격하기 힘들어합니다.</p>
-
-<h3>공의 방향과 높이 조절</h3>
-
-<p>방어적인 슬라이스는 상대방의 코트 중앙이나 깊숙한 곳으로 보내는 것이 효과적입니다. 이렇게 하면 상대방이 어느 방향으로든 공격하기 어렵게 만들 수 있습니다. 또한, 공의 높이를 최대한 낮게 유지하여 상대방이 점프해야 하거나, 몸을 숙여야 하는 상황을 만드는 것이 좋습니다. 상대방이 공격적인 샷을 구사하기 어렵게 만들면, 자신은 다시 수비적인 상황에서 벗어나 경기를 풀어갈 시간을 벌 수 있습니다.</p>
-
-<h3>코트 복귀 및 다음 준비</h3>
-
-<p>방어적인 슬라이스 샷을 구사한 후에는 즉시 코트 중앙이나 자신의 베이스라인으로 복귀하여 다음 샷을 준비합니다. 상대방이 얕은 공을 받아치거나, 걷어내는 공을 처리할 때, 다시 수비적인 상황에서 벗어나 공격적인 샷을 날릴 기회를 엿봅니다. 침착함을 유지하고 다음 샷에 집중하는 것이 중요합니다.</p>
-
-<h2>연습 방법 및 팁</h2>
-
-<p>낮은 공 슬라이스 백핸드 실력 향상을 위해서는 꾸준한 연습이 필수적입니다. 다음은 몇 가지 효과적인 연습 방법과 팁입니다.</p>
-
-<ul>
-    <li><strong>벽 연습:</strong> 벽을 향해 슬라이스 백핸드를 반복적으로 치면서 공의 궤적과 컨트롤을 익힙니다. 낮은 공을 상상하며 연습하면 실전 감각을 키울 수 있습니다.</li>
-    <li><strong>파트너와 드릴:</strong> 파트너에게 낮은 공을 계속해서 보내달라고 부탁하고, 슬라이스 백핸드로 처리하는 연습을 합니다. 어프로치 샷과 방어적인 샷을 번갈아 연습합니다.</li>
-    <li><strong>라켓 헤드 컨트롤 집중:</strong> 백스윙부터 임팩트, 팔로스루까지 라켓 헤드를 낮게 유지하는 연습에 집중합니다. 손목보다는 팔의 움직임을 사용하여 부드럽게 공을 쓸어 올리는 감각을 익힙니다.</li>
-    <li><strong>체중 이동 활용:</strong> 공을 맞힐 때 발을 앞으로 내딛거나 몸통을 회전시켜 체중을 실어 보내는 연습을 합니다. 이는 샷의 파워와 깊이를 더해줍니다.</li>
-    <li><strong>다양한 낮은 공 상황 연습:</strong> 발목 높이, 무릎 높이 등 다양한 높이의 낮은 공을 연습합니다. 또한, 공이 코트의 어느 위치로 오든 대처할 수 있도록 연습 범위를 넓힙니다.</li>
-    <li><strong>비디오 분석:</strong> 자신의 플레이를 촬영하여 스윙 궤적, 라켓 각도, 임팩트 타이밍 등을 분석하고 개선점을 찾습니다.</li>
-</ul>
-
-<h2>자주 묻는 질문</h2>
-
-<h3>낮은 공 슬라이스 백핸드를 칠 때 공이 너무 높게 뜨는 이유는 무엇인가요?</h3>
-<p>공이 너무 높게 뜨는 가장 흔한 이유는 라켓 헤드�� 충분히 낮게 유지하지 못했거나, 임팩트 시 라켓 면을 너무 많이 열었기 때문입니다. 또한, 공을 위로 '찍어 누르듯이' 쳤을 때도 공이 높게 뜰 수 있습니다. 공을 앞으로 '쓸어 올리듯이' 부드럽게 치면서 라켓 면을 살짝만 열어 역회전을 거는 연습을 해야 합니다. 백스윙에서 임팩트까지 라켓 헤드를 공보다 낮게 유지하는 것이 중요합니다.</p>
-
-<h3>낮은 공 슬라이스 백핸드를 칠 때 상대방에게 너무 많은 시간을 주는 것 같습니다. 어떻게 하면 더 공격적으로 칠 수 있나요?</h3>
-<p>낮은 공 슬라이스를 더 공격적으로 구사하려면 공의 속도를 약간 높이고, 상대방 코트의 깊숙한 곳, 특히 베이스라인 근처를 노리는 것이 좋습니다. 또한, 크로스코트보다는 직선으로 보내 상대방의 움직임을 더 제한하는 것도 효과적입니다. 임팩트 시 체중 이동을 더 적극적으로 활용하고, 라켓 헤드를 더 빠르게 움직여 공에 힘을 전달해야 합니다. 하지만 여전히 낮은 공이기 때문에 과도한 힘보다는 정확한 임팩트와 궤도 조절에 집중하는 것이 중요합니다.</p>
-
-<h3>슬라이스 백핸드를 칠 때 라켓이 너무 많이 흔들립니다. 어떻게 하면 안정적으로 칠 수 있나요?</h3>
-<p>라켓이 많이 흔들리는 것은 주로 손목의 과도한 사용이나 스윙 궤적의 불안정성 때문입니다. 슬라이스 백핸드는 손목 스냅보다는 팔 전체를 사용하여 공을 부드럽게 밀어주는 느낌으로 쳐야 합니다. 백스윙부터 팔로스루까지 일관된 궤적을 유지하고, 공을 맞히는 순간 팔과 어깨에 힘을 빼고 부드러운 임팩트를 만드는 연습을 해야 합니다. 또한, 그립을 너무 꽉 쥐지 않고 편안하게 잡는 것도 도움이 됩니다. 코어 근육을 사용하여 몸 전체로 스윙하는 느낌을 가지는 것이 안정성을 높이는 데 중요합니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            백핸드 안정성이 내 레벨 기준에서 충분한지 점검하세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline dark:text-blue-300"
+          >
             무료 NTRP 실력 테스트 →
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

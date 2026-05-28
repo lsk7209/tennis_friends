@@ -1,5 +1,5 @@
-// Generates thin wrapper page.tsx for each of the 59 hardcoded player pages.
-// Each wrapper delegates all rendering to PlayerArticlePage which uses PLAYERS_DB rich content.
+// Generates thin wrapper page.tsx for each hardcoded player page.
+// Each wrapper delegates rendering to PlayerArticlePage and keeps SEO metadata static.
 // Run: node scripts/generate-player-pages.mjs
 
 import fs from "node:fs";
@@ -9,16 +9,18 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 const PLAYERS_DIR = path.join(ROOT, "src", "app", "players");
+const SITE_URL = "https://www.tennisfrens.com";
 
 function toPascalCase(slug) {
   return slug
     .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("");
 }
 
 function generatePageTsx(slug) {
   const componentName = `${toPascalCase(slug)}Page`;
+
   return `import { Metadata } from "next";
 import { PLAYERS_DB } from "@/data/players";
 import { getPlayerSearchSeo, buildPlayerSeoKeywords } from "@/lib/player-search-seo";
@@ -28,21 +30,24 @@ const SLUG = "${slug}";
 const _player = PLAYERS_DB[SLUG];
 const _searchSeo = getPlayerSearchSeo(SLUG);
 const _tour = _player?.gender === "male" ? "ATP" : "WTA";
-const _siteUrl = "https://www.tennisfrens.com";
+const _siteUrl = "${SITE_URL}";
 const _canonical = \`\${_siteUrl}/players/\${SLUG}\`;
-const _oneLiner = _player?.detailedProfile?.oneLineSummary?.slice(0, 120) ?? _player?.longBio?.slice(0, 120) ?? "";
+const _oneLiner =
+  _player?.detailedProfile?.oneLineSummary?.slice(0, 120) ??
+  _player?.longBio?.slice(0, 120) ??
+  "";
 
 export const metadata: Metadata = {
   title:
     _searchSeo?.title ??
-    \`\${_player?.name ?? SLUG} 선수 완전 분석 | 플레이 스타일·경력·\${_tour}\`,
+    \`\${_player?.name ?? SLUG} 선수 프로필 | 랭킹·전적·플레이스타일 \${_tour}\`,
   description:
     _searchSeo?.description ??
-    \`\${_player?.name}(\${_player?.nameEn})의 플레이 스타일, 경력 하이라이트, 대표 경기를 한눈에 정리한 \${_tour} 선수 완전 분석. \${_oneLiner}\`.trim(),
+    \`\${_player?.name}(\${_player?.nameEn})의 랭킹, 전적, 플레이스타일, 주요 경기와 강점을 정리한 \${_tour} 선수 프로필입니다. \${_oneLiner}\`.trim(),
   keywords: _player
     ? buildPlayerSeoKeywords(SLUG, _player, _tour, [
         \`\${_player.name} 플레이스타일\`,
-        \`\${_player.name} 경력\`,
+        \`\${_player.name} 전적\`,
         \`\${_player.nameEn} tennis\`,
         "테니스",
         _tour,
@@ -53,9 +58,8 @@ export const metadata: Metadata = {
   openGraph: {
     title:
       _searchSeo?.title ??
-      \`\${_player?.name} 선수 완전 분석 | \${_tour}\`,
-    description:
-      _searchSeo?.description ?? _oneLiner,
+      \`\${_player?.name} 선수 프로필 | \${_tour}\`,
+    description: _searchSeo?.description ?? _oneLiner,
     url: _canonical,
     siteName: "TennisFriends",
     locale: "ko_KR",
@@ -72,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title:
       _searchSeo?.title ??
-      \`\${_player?.name} 선수 완전 분석 | \${_tour}\`,
+      \`\${_player?.name} 선수 프로필 | \${_tour}\`,
     description: _searchSeo?.description ?? _oneLiner,
   },
   robots: { index: true, follow: true },
@@ -85,25 +89,21 @@ export default function ${componentName}() {
 }
 
 function main() {
-  const entries = fs.readdirSync(PLAYERS_DIR, { withFileTypes: true });
-  const slugs = entries
-    .filter((e) => e.isDirectory() && e.name !== "[slug]")
-    .map((e) => e.name)
+  const slugs = fs
+    .readdirSync(PLAYERS_DIR, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && entry.name !== "[slug]")
+    .map((entry) => entry.name)
     .sort();
 
   console.log(`Found ${slugs.length} player directories`);
 
-  let written = 0;
-  for (const slug of slugs) {
+  for (const [index, slug] of slugs.entries()) {
     const pagePath = path.join(PLAYERS_DIR, slug, "page.tsx");
-    const content = generatePageTsx(slug);
-    fs.writeFileSync(pagePath, content, "utf8");
-    written++;
-    process.stdout.write(`\r  wrote ${written}/${slugs.length}: ${slug}   `);
+    fs.writeFileSync(pagePath, generatePageTsx(slug), "utf8");
+    process.stdout.write(`\r  wrote ${index + 1}/${slugs.length}: ${slug}   `);
   }
 
-  console.log(`\nDone — ${written} pages generated.`);
-  console.log("Slugs:", slugs.join(", "));
+  console.log(`\nDone. ${slugs.length} pages generated.`);
 }
 
 main();

@@ -23,9 +23,9 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "드롭샷, 폭발적인 전환, 시너 라이벌리",
   },
   "martin-landaluce": {
-    title: "마르틴 란달루세 프로필 | 주니어 US오픈·ATP 유망주",
+    title: "란달루세 프로필 | 마르틴 란달루세 랭킹·전적",
     description:
-      "마르틴 란달루세와 란달루세 검색자를 위해 주니어 US오픈 우승 이력, 공격형 베이스라인, 성장 포인트를 정리했습니다.",
+      "란달루세의 랭킹, 전적, 주니어 US오픈 우승, 공격형 베이스라인과 ATP 성장 포인트를 정리했습니다.",
     aliases: ["마르틴 란달루세", "란달루세", "Martin Landaluce"],
     focus: "스페인 유망주, 주니어 US오픈, 공격형 베이스라인",
   },
@@ -37,9 +37,9 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "수비력, 안정적인 랠리, WTA 투어 흐름",
   },
   "miomir-kecmanovic": {
-    title: "미오미르 케크마노비치 프로필 | 랭킹·전적·플레이스타일",
+    title: "미오미르 케크마노비치 프로필 | 랭킹·전적·스타일",
     description:
-      "미오미르 케크마노비치와 케크마노비치 검색자를 위해 ATP 랭킹, 베이스라인 플레이, 최근 전적과 강점·약점을 정리했습니다.",
+      "미오미르 케크마노비치의 ATP 랭킹, 최근 전적, 베이스라인 운영과 강점·약점을 빠르게 확인하세요.",
     aliases: ["미오미르 케크마노비치", "케크마노비치", "Miomir Kecmanovic"],
     focus: "베이스라인 안정감, 세르비아 ATP 선수, 최근 전적",
   },
@@ -128,9 +128,9 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "청각 장애 극복, 빅서버, 독일 ATP 선수",
   },
   "arthur-landercknech": {
-    title: "아르튀르 랭데르크네슈 프로필 | 랭킹·전적·프랑스 ATP",
+    title: "아르튀르 랭데르크네슈 프로필 | 랭킹·전적·서브",
     description:
-      "아르튀르 랭데르크네슈, 랭데르크네슈 검색자를 위해 ATP 랭킹, 빅서브, 프랑스 선수로서의 전적을 정리했습니다.",
+      "아르튀르 랭데르크네슈의 ATP 랭킹, 최근 전적, 장신 빅서브와 프랑스 투어 선수 특징을 정리했습니다.",
     aliases: ["아르튀르 랭데르크네슈", "랭데르크네슈", "Arthur Rinderknech"],
     focus: "프랑스 ATP 선수, 빅서브, 장신 플레이어",
   },

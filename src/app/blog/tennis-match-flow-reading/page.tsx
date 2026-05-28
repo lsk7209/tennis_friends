@@ -1,132 +1,277 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "테니스 경기 흐름 읽기 | 모멘텀·전환점·전술 변화";
+const description =
+  "테니스 경기 흐름을 읽는 모멘텀 신호, 전환점 판단, 전술 변화와 포인트 사이 루틴을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "테니스 경기 흐름은 점수만 보면 되나요?",
+    answer:
+      "아닙니다. 점수는 결과이고, 흐름은 첫 서브 성공률, 리턴 깊이, 랠리 길이, 언포스드 에러 위치, 상대의 템포 변화 같은 반복 신호에서 먼저 보입니다.",
+  },
+  {
+    question: "모멘텀이 상대에게 넘어갔을 때 바로 바꿔야 할 것은 무엇인가요?",
+    answer:
+      "전술 전체를 바꾸기보다 다음 포인트의 첫 공 목표를 하나로 줄이는 것이 좋습니다. 예를 들어 첫 서브를 몸쪽으로 넣기, 리턴을 중앙 깊게 보내기처럼 바로 실행 가능한 기준이 필요합니다.",
+  },
+  {
+    question: "전술 변화는 몇 게임마다 해야 하나요?",
+    answer:
+      "정해진 주기보다 같은 패턴으로 2게임 이상 밀릴 때가 기준입니다. 먼저 코스, 그다음 깊이, 마지막으로 템포를 바꾸면 경기 운영이 산만해지지 않습니다.",
+  },
+  {
+    question: "복식에서도 경기 흐름 읽기 기준이 같은가요?",
+    answer:
+      "큰 원칙은 같지만 복식은 리턴 방향, 첫 발리 성공률, 전위 움직임, 파트너와의 포지션 간격을 더 비중 있게 봐야 합니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '경기 흐름 읽기 — 모멘텀·전환점·전술 변화 | TennisFriends',
-  description: '경기 흐름 읽기 — 모멘텀·전환점·전술 변화에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["경기 흐름","모멘텀","전술 변화","경기 읽기"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-match-flow-reading` },
-  openGraph: { title: '경기 흐름 읽기 — 모멘텀·전환점·전술 변화', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: ["테니스 경기 흐름", "모멘텀", "전환점", "전술 변화", "경기 운영"],
+  alternates: { canonical: `${siteUrl}/blog/tennis-match-flow-reading` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-match-flow-reading`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '경기 흐름 읽기 — 모멘텀·전환점·전술 변화', item: `${siteUrl}/blog/tennis-match-flow-reading` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">경기 흐름 읽기 — 모멘텀·전환점·전술 변화</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>경기 흐름 읽기 — 모멘텀·전환점·전술 변화</h2>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-match-flow-reading` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            테니스 경기 운영 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            테니스 경기 흐름은 분위기나 감으로만 읽는 것이 아닙니다. 점수, 첫 서브 성공률,
+            리턴 깊이, 랠리 길이, 상대의 템포 변화를 묶어 보면 모멘텀이 언제 넘어오는지와
+            전술 변화를 언제 걸어야 하는지가 보입니다.
+          </p>
+        </header>
 
-<p>테니스 경기의 승패를 가르는 중요한 요소 중 하나는 바로 '경기 흐름'을 읽는 능력입니다. 경기 흐름을 파악하고, 모멘텀을 잡으며, 결정적인 전환점에서 전술을 효과적으로 변화시키는 것은 승리로 가는 지름길이 됩니다.</p>
+        <section className="mb-10 rounded-lg border border-teal-200 bg-teal-50 p-5 dark:border-teal-800 dark:bg-teal-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>경기 흐름은 스코어보다 반복 신호에서 먼저 흔들립니다.</li>
+            <li>모멘텀을 되찾으려면 다음 포인트 목표를 하나로 줄여야 합니다.</li>
+            <li>전환점은 브레이크 포인트뿐 아니라 0-30, 15-30, 4-4 같은 작은 구간에서도 옵니다.</li>
+            <li>전술 변화는 코스, 깊이, 템포 순서로 바꾸는 편이 가장 안정적입니다.</li>
+          </ul>
+        </section>
 
-<h2>경기 흐름의 이해: 모멘텀의 중요성</h2>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 경기 흐름은 점수보다 패턴에서 보인다</h2>
+          <p>
+            초보자는 3-0으로 앞서면 흐름이 좋고, 1-4로 밀리면 흐름이 나쁘다고 판단하기 쉽습니다.
+            하지만 실전에서는 점수보다 먼저 움직이는 신호가 있습니다. 내 첫 서브가 계속 네트에
+            걸리는지, 리턴이 서비스 박스 안에 짧게 떨어지는지, 상대가 같은 코스로만 공격해도 내가
+            늦게 반응하는지부터 봐야 합니다. 이런 신호는 스코어가 무너지기 전에 이미 나타납니다.
+          </p>
+          <p>
+            경기 흐름을 잘 읽는 선수는 감정 표현보다 반복되는 장면을 기억합니다. 예를 들어
+            "상대가 포핸드 크로스에서 세 번 연속 깊게 밀었다", "내 백핸드 리턴이 계속 중앙으로
+            짧아졌다"처럼 장면을 언어로 붙이면 다음 선택이 분명해집니다. ITF의
+            <a
+              href="https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              테니스 용어 자료
+            </a>
+            처럼 기본 개념을 확인해 두면 코트 위에서 상황을 더 정확히 이름 붙일 수 있습니다.
+          </p>
 
-<p>테니스 경기에서 '모멘텀'은 단순히 점수를 앞서가는 것을 넘어, 선수들의 심리 상태와 경기 운영에 지대한 영향을 미치는 보이지 않는 힘입니다. 모멘텀이 유리한 선수는 자신감이 상승하고 플레이가 더욱 공격적으로 변하는 반면, 불리한 선수는 불안감을 느끼고 실수를 연발할 가능성이 높아집니다.</p>
+          <h2>2. 모멘텀 신호를 숫자로 나눈다</h2>
+          <p>
+            모멘텀은 눈에 보이지 않지만 숫자로 쪼개면 관리할 수 있습니다. 가장 먼저 볼 것은 첫
+            서브 성공률입니다. 첫 서브가 들어가지 않으면 상대는 리턴 위치를 앞으로 당기고, 내 두
+            번째 공은 방어적으로 바뀝니다. 두 번째는 리턴 깊이입니다. 리턴이 짧아지는 순간 상대의
+            첫 공격권이 늘어나고, 랠리 시작부터 수비 포지션에 묶입니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>신호</th>
+                <th>흐름이 좋은 상태</th>
+                <th>흐름이 넘어가는 상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>첫 서브</td>
+                <td>상대가 리턴 위치를 쉽게 못 잡음</td>
+                <td>세컨드 서브 랠리가 반복됨</td>
+              </tr>
+              <tr>
+                <td>리턴 깊이</td>
+                <td>베이스라인 근처로 상대를 밀어냄</td>
+                <td>서비스 박스 근처에 짧게 떨어짐</td>
+              </tr>
+              <tr>
+                <td>랠리 길이</td>
+                <td>내가 원하는 길이로 조절함</td>
+                <td>상대가 짧게 끊거나 길게 끌고 감</td>
+              </tr>
+              <tr>
+                <td>언포스드 에러</td>
+                <td>무리한 선택이 적음</td>
+                <td>같은 코스에서 반복 실수</td>
+              </tr>
+            </tbody>
+          </table>
 
-<h3>모멘텀을 파악하는 방법</h3>
-<ul>
-    <li><strong>득점 패턴 관찰:</strong> 연속 득점을 하는 선수, 중요한 포인트에서 결정적인 샷을 성공시키는 선수에게 모멘텀이 있다고 볼 수 있습니다. 상대방의 범실로 인해 득점을 얻는 경우에도 모멘텀이 넘어갈 수 있습니다.</li>
-    <li><strong>선수의 표정과 몸짓:</strong> 자신감 넘치는 표정, 적극적인 움직임, 환호하는 관중과의 교감 등은 모멘텀이 유리한 선수에게서 자주 나타납니다. 반대로, 좌절하는 표정, 느린 움직임, 아쉬워하는 제스처는 모멘텀이 불리함을 시사합니다.</li>
-    <li><strong>경기 상황:</strong> 중요한 게임(예: 세트 포인트, 매치 포인트)을 따내거나, 어려운 상황(예: 브레이크 다운)을 극복했을 때 모멘텀이 크게 바뀔 수 있습니다.</li>
-</ul>
+          <h2>3. 전환점은 미리 정해 두면 늦지 않는다</h2>
+          <p>
+            전환점은 매치 포인트 같은 극적인 순간에만 오지 않습니다. 리턴 게임에서 0-30을 만든
+            순간, 내 서브 게임에서 15-30으로 밀린 순간, 세트 후반 4-4나 5-5에서 맞는 첫 포인트도
+            모두 흐름을 바꿀 수 있는 구간입니다. 이때마다 새 전술을 즉흥적으로 만들면 판단이 늦고
+            몸이 굳습니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              경기 중 전환점 체크리스트
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+              <li>0-30 또는 15-30에서 첫 공 목표가 정해져 있는가?</li>
+              <li>브레이크 포인트에서 무리한 위너를 먼저 찾고 있지 않은가?</li>
+              <li>듀스가 반복될 때 같은 패턴으로만 시작하고 있지 않은가?</li>
+              <li>세트 4-4 이후 리턴 위치와 서브 코스를 의식적으로 바꾸고 있는가?</li>
+              <li>연속 3실점 후 다음 포인트 목표를 하나로 줄였는가?</li>
+            </ul>
+          </aside>
 
-<h3>모멘텀을 잡기 위한 전략</h3>
-<ul>
-    <li><strong>자신의 플레이에 집중:</strong> 상대방의 기세에 흔들리지 않고 자신의 강점을 살리는 플레이를 꾸준히 하는 것이 중요합니다.</li>
-    <li><strong>작은 성공 축하하기:</strong> 한 포인트, 한 게임을 따냈을 때 스스로를 격려하고 다음 플레이에 집중하는 태도가 모멘텀을 유지하는 데 도움이 됩니다.</li>
-    <li><strong>적극적인 플레이:</strong> 모멘텀이 유리할 때는 과감한 공격이나 서브로 상대방을 압박하여 모멘텀을 더욱 강화할 수 있습니다.</li>
-    <li><strong>상대방의 흐름 끊기:</strong> 모멘텀이 상대방에게 넘어갔다고 판단될 때는 잠시 숨을 고르거나(코치 요청 등), 플레이 속도를 늦추는 등 의도적으로 흐름을 끊는 전략도 고려해볼 수 있습니다.</li>
-</ul>
+          <h2>4. 흐름이 나쁠 때는 목표를 하나로 줄인다</h2>
+          <p>
+            흐름이 넘어갔을 때 가장 흔한 실수는 모든 것을 한꺼번에 고치려는 것입니다. 서브도
+            세게 넣고, 코스도 바꾸고, 네트 대시도 시도하면 선택지가 많아져 오히려 실행이 늦습니다.
+            이때는 다음 포인트에서 통제 가능한 목표 하나만 남겨야 합니다. "리턴을 중앙 깊게",
+            "첫 서브는 몸쪽", "백핸드는 크로스로만"처럼 문장 하나로 줄이면 몸이 다시 움직입니다.
+          </p>
+          <p>
+            USTA의
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              테니스 팁과 훈련 자료
+            </a>
+            에서도 기술을 상황별로 나누어 보는 접근이 많습니다. 경기 중에는 완벽한 해답보다
+            바로 실행할 수 있는 단순한 기준이 더 중요합니다.
+          </p>
 
-<h2>결정적인 전환점: 경기를 뒤집는 힘</h2>
+          <h2>5. 전술 변화는 코스·깊이·템포 순서로 한다</h2>
+          <p>
+            전술 변화는 크게 세 층으로 나눌 수 있습니다. 첫째는 코스 변화입니다. 계속 크로스로만
+            치다가 한 번 다운더라인을 섞거나, 상대 백핸드로만 몰다가 몸쪽으로 보내는 방식입니다.
+            둘째는 깊이 변화입니다. 베이스라인 깊은 공과 짧은 각도를 섞으면 상대의 발 위치가
+            흔들립니다. 셋째는 템포 변화입니다. 빠르게 몰아붙이다가 높은 루프볼이나 슬라이스로
+            시간을 빼앗는 식입니다.
+          </p>
+          <p>
+            순서를 지키는 이유는 단순합니다. 코스는 가장 작게 바꿀 수 있고, 깊이는 체력과 타점
+            조절이 필요하며, 템포 변화는 리듬을 크게 건드립니다. 경기 흐름이 불안한데 처음부터
+            템포까지 크게 바꾸면 내 실수가 더 늘 수 있습니다. 그래서 먼저 코스 하나를 바꾸고, 그
+            다음 깊이, 마지막으로 템포를 조절하는 편이 안전합니다.
+          </p>
 
-<p>테니스 경기는 예측 불가능한 전환점으로 가득합니다. 이러한 전환점을 얼마나 잘 감지하고, 유리하게 활용하느냐에 따라 경기의 양상이 완전히 달라질 수 있습니다. 전환점은 단순히 점수 차이가 벌어지는 순간뿐만 아니라, 심리적인 압박이 극��화되는 순간에도 찾아옵니다.</p>
+          <h2>6. 포인트 사이 20초 루틴을 만든다</h2>
+          <p>
+            경기 흐름 읽기는 포인트가 진행되는 동안만 하는 일이 아닙니다. 포인트 사이 20초 안에
+            숨을 고르고, 직전 포인트의 원인을 한 단어로 정리하고, 다음 포인트의 첫 공 목표를 정해야
+            합니다. 이 루틴이 없으면 실점 직후 감정이 다음 포인트로 넘어옵니다.
+          </p>
+          <ul>
+            <li>5초: 숨을 길게 내쉬고 시선을 라켓 줄이나 코트 바닥에 둔다.</li>
+            <li>5초: 직전 포인트를 실수, 상대 압박, 선택 미스로만 분류한다.</li>
+            <li>5초: 다음 첫 공의 코스와 높이를 정한다.</li>
+            <li>5초: 스플릿 스텝 타이밍과 준비 자세를 확인한다.</li>
+          </ul>
 
-<h3>주요 전환점 유형</h3>
-<ul>
-    <li><strong>세트 포인트/게임 포인트:</strong> 해당 포인트를 따내면 세트나 게임을 가져갈 수 있는 결정적인 순간입니다.</li>
-    <li><strong>브레이크 찬스/브레이크 포인트:</strong> 상대방의 서브 게임을 따낼 수 있는 기회입니다.</li>
-    <li><strong>연속 실점 후의 중요한 포인트:</strong> 연속으로 실점하여 흐름이 넘어갔다고 느껴질 때, 다음 포인트를 따내면 분위기를 반전시킬 수 있습니다.</li>
-    <li><strong>부상 또는 컨디션 난조:</strong> 선수의 컨디션 변화는 경기의 흐름을 급격하게 바꿀 수 있는 전환점이 됩니다.</li>
-    <li><strong>심리적 압박이 큰 게임:</strong> 중요한 게임(예: 5-5 동점 후의 게임)은 선수들에게 큰 심리적 압박을 주며, 이를 잘 이겨내는 선수가 전환점을 잡게 됩니다.</li>
-</ul>
+          <h2>마무리</h2>
+          <p>
+            테니스 경기 흐름 읽기의 핵심은 감을 믿는 것이 아니라 반복되는 신호를 붙잡는 것입니다.
+            첫 서브, 리턴 깊이, 랠리 길이, 언포스드 에러, 세트 후반 점수대를 함께 보면 모멘텀은
+            훨씬 빨리 보입니다. 흐름이 좋을 때는 강점을 반복하고, 흐름이 넘어갈 때는 목표를 하나로
+            줄인 뒤 코스, 깊이, 템포 순서로 전술을 바꾸면 경기 운영이 안정됩니다.
+          </p>
+        </section>
 
-<h3>전환점에서 승리하는 방법</h3>
-<ul>
-    <li><strong>철저한 준비:</strong> 전환점이 올 것을 예상하고, 해당 상황에서 사용할 수 있는 몇 가지 전략을 미리 생각해 둡니다.</li>
-    <li><strong>침착함 유지:</strong> 가장 중요한 순간일수록 흥분하지 않고 침착하게 자신의 플레이에 집중하는 것이 중요합니다. 심호흡을 하거나, 스트로크 연습을 하며 마음을 다스릴 수 있습니다.</li>
-    <li><strong>기본에 충실:</strong> 복잡한 플레이보다는 안정적인 샷, 기본적인 전략에 집중하여 실수를 줄입니다.</li>
-    <li><strong>상대방 분석:</strong> 상대방이 어떤 유형의 플레이에 약한지, 어떤 상황에서 불안해하는지를 파악하여 전환점에서 이를 공략합니다.</li>
-    <li><strong>과감한 시도:</strong> 유리한 전환점에서는 과감한 공격이나 예상치 못한 플레이를 시도하여 상대방을 흔들 수 있습니다.</li>
-</ul>
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
 
-<h2>전술 변화: 경기 흐름을 제어하는 열쇠</h2>
-
-<p>한 가지 전술만 고집하는 것은 테니스 경기에서 위험할 수 있습니다. 상대방의 플레이 스타일, 경기 흐름의 변화, 자신의 컨디션 등을 고려하여 유연하게 전술을 변화시키는 능력은 승리를 이끄는 핵심 요소입니다.</p>
-
-<h3>전술 변화가 필요한 상황</h3>
-<ul>
-    <li><strong>상대방의 강점 무력화:</strong> 상대방의 강력한 포핸드나 뛰어난 네트 플레이에 계속해서 당하고 있다면, 그 강점을 피하거나 무력화할 수 있는 전술 변화가 필요합니다.</li>
-    <li><strong>자신의 약점 보완:</strong> 백핸드가 약하다면 상대방의 백핸드로만 볼을 보내는 것을 피하거나, 백핸드 쪽으로 이동하여 더 나은 샷을 만들 수 있도록 준비해야 합니다.</li>
-    <li><strong>경기 흐름이 불리할 때:</strong> 계속해서 점수를 잃고 있다면, 현재의 전술이 통하지 않는다는 신호입니다. 공격적인 플레이를 시도하거나, 수비적인 플레이로 전환하여 흐름을 바꾸어야 합니다.</li>
-    <li><strong>상대방의 전술 변화에 대응:</strong> 상대방이 갑자기 공격적으로 나오거나, 수비적인 전략으로 전환했다면, 이에 맞춰 자신의 전술��� 변화시켜야 합니다.</li>
-    <li><strong>체력 안배:</strong> 장시간 경기에서 체력이 떨어지면 공격적인 플레이를 유지하기 어렵습니다. 체력 안배를 위해 플레이 스타일을 조절하거나, 랠리를 길게 가져가는 전술을 사용할 수 있습니다.</li>
-</ul>
-
-<h3>실용적인 전술 변화 방법</h3>
-<ul>
-    <li><strong>포스트 플레이 변화:</strong> 서브 후의 공격 위치, 발리 타이밍, 스매시 각도 등을 조절합니다.</li>
-    <li><strong>랠리 패턴 변경:</strong> 직선 코스 위주에서 크로스 코스 위주로, 혹은 그 반대로 랠리 패턴을 바꿉니다. 상대방의 움직임을 예측하고 코스를 공략합니다.</li>
-    <li><strong>네트 플레이 활용:</strong> 공격적인 서브 후 네트로 전진하거나, 상대방의 짧은 볼을 이용해 네트 플레이를 시도합니다.</li>
-    <li><strong>포인트 구성 변화:</strong> 단순한 스트로크 싸움에서 벗어나, 상대방을 코트 구석으로 몰아넣고 빈 공간을 공략하는 등의 복합적인 포인트 구성을 시도합니다.</li>
-    <li><strong>심리전 활용:</strong> 의도적으로 플레이 속도를 늦추거나, 상대방의 약점을 계속해서 공략하는 등의 심리적인 압박을 가하는 전술을 사용할 수 있습니다.</li>
-    <li><strong>코트 위치 조정:</strong> 베이스라인 깊숙이 머무르거나, 좀 더 공격적인 위치에서 공을 치는 등 코트에서의 위치를 조절하여 상대방에게 다른 각도와 깊이의 공을 제공합니다.</li>
-</ul>
-
-<h2>경기 흐름 읽기 실전 팁</h2>
-
-<p>경기 흐름을 읽는 능력은 하루아침에 길러지는 것이 아니라, 꾸준한 연습과 경험을 통해 향상됩니다. 실전에서 이러한 능력을 발휘하기 위한 몇 가지 구체적인 팁을 소개합니다.</p>
-
-<ul>
-    <li><strong>경기 시작 전 상대 분석:</strong> 상대방의 강점, 약점, 선호하는 플레이 스타일을 미리 파악하여 경기 초반부터 유리한 흐름을 만들 준비를 합니다.</li>
-    <li><strong>각 게임의 중요성 인지:</strong> 모든 게임은 다음 게임과 세트에 영향을 미칩니다. 특히 중요한 게임(서브 게임, 브레이크 찬스 게임)에서는 더욱 집중력을 발휘해야 합니다.</li>
-    <li><strong>자신의 감정 상태 파악:</strong> 경기가 잘 풀리지 않을 때 좌절감에 빠지기보다는, 왜 그런지 객관적으로 분석하고 다음 플레이에 집중하는 연습을 합니다.</li>
-    <li><strong>상대방의 약점을 노리기:</strong> 상대방의 백핸드, 포핸드, 서브 등 약점을 파악하고 지속적으로 공략하여 실수를 유도합니다.</li>
-    <li><strong>승부처에서의 과감함:</strong> 중요한 포인트나 전환점에서는 두려워하지 말고 과감한 샷을 시도하여 승기를 잡습니다.</li>
-    <li><strong>관중의 반응 활용:</strong> 긍정적인 관중의 반응은 모멘텀을 더욱 강화할 수 있습니다. 반대로, 부정적인 반응은 상대방에게 압박감을 줄 수 있습니다.</li>
-    <li><strong>경기 후 복기:</strong> 경기가 끝난 후, 어떤 순간에 흐름이 바뀌었는지, 왜 그런 전술 변화를 선택했는지 등을 복기하며 자신의 경기 운영 능력을 향상시킵니다.</li>
-    <li><strong>다양한 상대와 경기:</strong> 다양한 스타일의 선수들과 경기를 하면서 경기 흐름을 읽는 경험을 쌓는 것이 중요합니다.</li>
-</ul>
-
-<h2>자주 묻는 질문</h2>
-
-<h3>모멘텀이 불리할 때 어떻게 해야 하나요?</h3>
-<p>모멘텀이 불리할 때는 당황하지 않고 침착함을 유지하는 것이 가장 중요합니다. 의도적으로 플레이 속도를 늦추거나, 코트에서 잠시 숨을 고르며 마음을 다잡습니다. 또한, 자신의 강점을 살릴 수 있는 기본적인 플레이에 집중하고, 상대방의 실수를 유도하는 전략을 사용할 수 있습니다. 코치와 상담하여 전술적인 변화를 모색하는 것도 좋은 방법입니다.</p>
-
-<h3>전환점에서 실수를 줄이는 방법은 무엇인가요?</h3>
-<p>전환점에서는 심리적인 압박감이 커지므로 실수가 잦아질 수 있습니다. 이러한 압박감을 줄이기 위해 몇 가지 방법을 시도할 수 있습니다. 첫째, 해당 포인트에만 집중하고 이전의 실수는 잊어버립니다. 둘째, 심호흡을 하거나 스트로크 연습을 하며 긴장을 완화합니다. 셋째, 복잡한 플레이보��는 안정적이고 기본적인 샷을 구사하는 데 집중합니다. 마지막으로, 상대방의 약점을 파악하고 이를 공략하는 전략을 세우는 것이 도움이 됩니다.</p>
-
-<h3>전술 변화는 얼마나 자주 해야 하나요?</h3>
-<p>전술 변화의 빈도는 정해져 있지 않으며, 경기 상황에 따라 유연하게 결정해야 합니다. 상대방의 플레이 스타일, 경기 흐름, 자신의 컨디션 등을 지속적으로 관찰하며 변화가 필요하다고 판단될 때 전술을 수정합니다. 너무 잦은 전술 변화는 오히려 혼란을 야기할 수 있으므로, 핵심적인 변화를 신중하게 선택하는 것이 중요합니다. 예를 들어, 상대방이 특정 샷에 약점을 보인다면 그 약점을 집중적으로 공략하는 전술을 유지하는 것이 효과적일 수 있습니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
-            무료 NTRP 실력 테스트 →
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            현재 경기 운영 수준과 실력 기준을 함께 확인해 보세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
+          >
+            무료 NTRP 실력 테스트 하기
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

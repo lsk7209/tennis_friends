@@ -1,107 +1,276 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { getSiteUrl } from '@/lib/site';
-import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import type { Metadata } from "next";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
+const title = "언포스드 에러 줄이기 | 원인 분석·교정 루틴";
+const description =
+  "테니스 언포스드 에러를 줄이는 원인 분석, 기술·멘탈·전술 교정법과 경기 중 안정 루틴을 정리했습니다.";
+
+const faqItems = [
+  {
+    question: "언포스드 에러는 무조건 나쁜 실수인가요?",
+    answer:
+      "모든 언포스드 에러가 같은 의미는 아닙니다. 공격 가능한 상황에서 의도적으로 감수한 실수와 준비가 안 된 상태에서 나온 반복 실수는 구분해야 합니다.",
+  },
+  {
+    question: "경기 중 에러가 늘면 무엇부터 바꿔야 하나요?",
+    answer:
+      "스윙 전체를 바꾸기보다 목표 코스를 코트 안쪽으로 옮기고, 공 높이를 네트 위 1m 이상으로 확보하는 것이 먼저입니다.",
+  },
+  {
+    question: "언포스드 에러를 줄이면 공격력이 떨어지지 않나요?",
+    answer:
+      "무조건 안전하게만 치면 공격력이 줄 수 있습니다. 핵심은 공격할 공과 버틸 공을 구분해 불필요한 실수만 줄이는 것입니다.",
+  },
+  {
+    question: "연습 때는 괜찮은데 경기에서만 실수하는 이유는 무엇인가요?",
+    answer:
+      "경기에서는 점수 압박, 상대 위치, 회복 시간, 긴장으로 타점과 판단이 흔들립니다. 경기형 드릴과 포인트 사이 루틴이 필요합니다.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: '언포스드 에러 줄이기 — 원인 분석과 교정법 | TennisFriends',
-  description: '언포스드 에러 줄이기 — 원인 분석과 교정법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.',
-  keywords: ["언포스드 에러","에러 줄이기","실수","안정성"],
-  alternates: { canonical: `${getSiteUrl()}/blog/tennis-error-reduction-guide` },
-  openGraph: { title: '언포스드 에러 줄이기 — 원인 분석과 교정법', type: 'article', locale: 'ko_KR', siteName: 'TennisFriends' },
+  title,
+  description,
+  keywords: ["언포스드 에러", "테니스 실수 줄이기", "에러 교정", "테니스 안정성", "경기 운영"],
+  alternates: { canonical: `${siteUrl}/blog/tennis-error-reduction-guide` },
+  openGraph: {
+    title,
+    description,
+    type: "article",
+    locale: "ko_KR",
+    siteName: "TennisFriends",
+    url: `${siteUrl}/blog/tennis-error-reduction-guide`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Page() {
-  const siteUrl = getSiteUrl();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BreadcrumbSchema items={[
-        { name: 'TennisFriends', item: siteUrl },
-        { name: '블로그', item: `${siteUrl}/blog` },
-        { name: '언포스드 에러 줄이기 — 원인 분석과 교정법', item: `${siteUrl}/blog/tennis-error-reduction-guide` },
-      ]} />
-      <article className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">언포스드 에러 줄이기 — 원인 분석과 교정법</h1>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: `<h2>언포스드 에러 줄이기 — 원인 분석과 교정법</h2>
-<p>테니스에서 언포스드 에러(Unforced Error)를 줄이는 것은 경기력 향상의 핵심이며, 이는 단순히 실수를 줄이는 것을 넘어 경기 운영의 안정성을 높이는 데 결정적인 역할을 합니다. 언포스드 에러는 상대방의 뛰어난 플레이나 압박이 아닌, 자신의 기술적 혹은 심리적 문제로 발생하는 불필요한 실수를 의미하며, 이를 효과적으로 분석하고 교정하는 방법을 익히는 것이 중요합니다.</p>
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <BreadcrumbSchema
+        items={[
+          { name: "TennisFriends", item: siteUrl },
+          { name: "블로그", item: `${siteUrl}/blog` },
+          { name: title, item: `${siteUrl}/blog/tennis-error-reduction-guide` },
+        ]}
+      />
+      <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
+        <header className="mb-10">
+          <p className="mb-3 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            테니스 안정성·경기 운영 가이드
+          </p>
+          <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+            {title}
+          </h1>
+          <p className="article-summary text-lg leading-8 text-slate-700 dark:text-slate-300">
+            언포스드 에러를 줄이는 핵심은 소극적으로 치는 것이 아닙니다. 실수의 원인을 코스,
+            타점, 판단, 멘탈로 분류하고 공격할 공과 버틸 공을 구분해야 경기력은 유지하면서
+            불필요한 실점만 줄일 수 있습니다.
+          </p>
+        </header>
 
-<h2>언포스드 에러의 정의와 중요성</h2>
-<p>언포스드 에러는 테니스 경기에서 가장 흔하게 발생하는 실수 유형 중 하나입니다. 이는 공이 네트를 넘지 못하거나, 베이스라인 밖으로 나가는 등 상대방의 플레이와는 무관하게 발생하는 모든 종류의 실수를 포함합니다. 예를 들어, 서브가 더블 폴트가 되거나, 쉬운 발리 실수를 하거나, 랠리 중에 뜬공을 헛스윙하는 경우 등이 이에 해당됩니다.</p>
-<p>이러한 언포스드 에러는 경기 흐름을 끊고 상대방에게 불필요한 포인트를 헌납하게 만듭니다. 특히 중요한 순간에 발생하는 언포스드 에러는 심리적인 위축을 가져와 더욱 많은 실수를 유발하는 악순환을 만들 수 있습니다. 따라서 언포스드 에러를 줄이는 것은 단순히 점수를 얻는 것을 넘어, 경기 내내 안정적인 플레이를 유지하고 자신의 실력을 최대한 발휘하기 위한 필수적인 과정입니다.</p>
+        <section className="mb-10 rounded-lg border border-teal-200 bg-teal-50 p-5 dark:border-teal-800 dark:bg-teal-950/40">
+          <h2 className="mb-3 text-xl font-bold">먼저 결론</h2>
+          <ul className="space-y-2 text-slate-700 dark:text-slate-300">
+            <li>언포스드 에러는 기술 실수, 선택 실수, 멘탈 실수로 나눠야 줄어듭니다.</li>
+            <li>경기 중에는 코스를 좁히고 네트 위 여유 높이를 먼저 확보합니다.</li>
+            <li>같은 실수가 3번 반복되면 전술 문제가 아니라 교정 신호로 봐야 합니다.</li>
+            <li>공격력을 잃지 않으려면 공격할 공과 버틸 공의 기준을 미리 정해야 합니다.</li>
+          </ul>
+        </section>
 
-<h2>언포스드 에러의 주요 원인 분석</h2>
-<p>언포스드 에러는 다양한 요인에 의해 발생할 수 있습니다. 이러한 원인을 정확히 파악하는 것이 효과적인 교정의 첫걸음입니다.</p>
-<h3>1. 기술적인 문제</h3>
-<ul>
-  <li><strong>부정확한 타점:</strong> 공과의 접촉 시점이 맞지 않으면 공의 방향과 스핀이 부정확해져 네트나 라인 밖으로 나갈 확률이 높아집니다. 특히 스윙 궤적이 일정하지 않거나, 백스윙 또는 팔로스루가 충분하지 않을 때 자주 발생합니다.</li>
-  <li><strong>균형 상실:</strong> 샷을 하는 동안 몸의 균형을 잃으면 안정적인 임팩트가 불가능해집니다. 이는 급하게 움직이거나, 공을 따라가기 위해 무리한 자세를 취할 때 발생하기 쉽습니다.</li>
-  <li><strong>부적절한 스핀:</strong> 너무 많은 스핀을 걸려다 실패하거나, 원하는 스핀을 충분히 주지 못해 공이 예상치 못한 궤적으로 날아가는 경우가 있습니다.</li>
-  <li><strong>스트로크의 일관성 부족:</strong> 같은 스트로크라도 매번 다른 결과가 나오는 것은 샷의 일관성이 떨어진다는 증거입니다. 이는 샷의 준비, 스윙 궤적, 임팩트 포인트 등이 일정하지 않기 때문입니다.</li>
-</ul>
-<h3>2. 심리적인 문제</h3>
-<ul>
-  <li><strong>긴장감과 압박감:</strong> 중요한 경기나 승부처에서 느끼는 긴장감은 근육을 경���시키고 판단력을 흐리게 하여 실수를 유발합니다.</li>
-  <li><strong>집중력 부족:</strong> 랠리가 길어지거나, 상대방의 플레이에 신경 쓰느라 자신의 플레이에 집중하지 못하면 예상치 못한 실수를 할 수 있습니다.</li>
-  <li><strong>성급함:</strong> 포인트를 빨리 따내려는 조급함은 준비가 충분하지 않은 샷을 하게 만들고, 이는 곧 언포스드 에러로 이어집니다.</li>
-  <li><strong>자신감 부족:</strong> 이전 실수에 대한 불안감이나 상대방에 대한 위축감은 소극적인 플레이를 유도하고, 결국 더 많은 실수를 낳습니다.</li>
-</ul>
-<h3>3. 체력 및 컨디션 문제</h3>
-<ul>
-  <li><strong>피로:</strong> 체력이 떨어지면 집중력이 저하되고, 순간적인 판단 능력과 신체 반응 속도가 느려져 실수가 잦아집니다.</li>
-  <li><strong>몸 상태:</strong> 부상이나 컨디션 난조는 정상적인 플레이를 어렵게 만들고, 이는 언포스드 에러 증가의 직접적인 원인이 됩니다.</li>
-</ul>
+        <section className="prose prose-lg max-w-none dark:prose-invert">
+          <h2>1. 언포스드 에러는 하나의 실수가 아니다</h2>
+          <p>
+            언포스드 에러는 상대가 강하게 압박하지 않았는데 내가 만든 실점입니다. 하지만 모든
+            에러를 같은 방식으로 고치면 안 됩니다. 쉬운 공을 네트에 넣은 실수, 무리한 다운더라인
+            시도, 긴장해서 세컨드 서브를 더블폴트한 상황은 원인이 서로 다릅니다. 원인을 나누지
+            않으면 연습도 막연해지고 경기 중 대처도 늦어집니다.
+          </p>
+          <p>
+            경기 기록에서 unforced error와 winner 같은 개념은 프로 경기 통계에도 자주 쓰입니다.
+            용어 기준을 확인하려면
+            <a
+              href="https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ITF 테니스 용어 자료
+            </a>
+            를 참고할 수 있습니다. 중요한 것은 용어 자체보다 내 경기에서 같은 실수가 어디서 반복되는지
+            알아내는 것입니다.
+          </p>
 
-<h2>언포스드 에러를 줄이기 위한 실용적인 교정법</h2>
-<p>언포스드 에러의 원인을 파악했다면, 이제는 이를 개선하기 위한 구체적인 방법을 실천해야 합니다. 꾸준한 연습과 노력만이 변화를 가져올 수 있습니다.</p>
-<h3>1. 기술적 측면 개선</h3>
-<ul>
-  <li><strong>일관된 타점 연습:</strong> 테이크백을 충분히 하고, 공이 가장 적절한 위치에 왔을 때 임팩트하는 연습을 반복해야 합니다. 특히 포핸드와 백핸드 스트로크의 임팩트 존을 명확히 인지하고, 각 샷마다 일정한 타점을 유지하도록 노력해야 합니다. 샷을 하기 전에는 항상 공을 주시하는 습관을 들입니다.</li>
-  <li><strong>균형 잡힌 자세 유지:</strong> 샷을 하는 동안 무릎을 살짝 굽히고 몸의 중심을 낮추어 안정적인 균형을 유지하는 것이 중요합니다. 공을 따라가기 위해 무리하게 움직이기보다는, 공을 기다리는 움직임과 샷을 위한 준비 동작을 통해 균형을 잡는 연습을 합니다.</li>
-  <li><strong>스핀 연습:</strong> 각 스트로크에 맞는 적절한 스핀을 구���하는 연습을 합니다. 탑스핀, 슬라이스 등 다양한 스핀을 상황에 맞게 활용할 수 있도록 충분한 연습 시간을 할애해야 합니다. 특히 랠리 중에 일정하게 스핀을 유지하는 연습이 중요합니다.</li>
-  <li><strong>반복적인 드릴 훈련:</strong> 특정 스트로크에 대한 반복적인 드릴 훈련은 샷의 일관성을 높이는 데 매우 효과적입니다. 코치와 함께 자신의 약점을 파악하고, 이를 집중적으로 개선할 수 있는 드릴을 꾸준히 소화해야 합니다.</li>
-</ul>
-<h3>2. 심리적 측면 강화</h3>
-<ul>
-  <li><strong>루틴 만들기:</strong> 서브 전, 스트로크 전 등 각 샷 전에 자신만의 루틴을 만들어 집중력을 높입니다. 이는 경기 중 발생하는 불필요한 생각들을 차단하고 현재 샷에만 집중할 수 있도록 도와줍니다.</li>
-  <li><strong>긍정적인 자기 대화:</strong> 실수했을 때 자책하기보다는 "괜찮아, 다음 샷에 집중하자"와 같이 긍정적인 자기 대화를 통해 심리적인 안정을 유지합니다.</li>
-  <li><strong>호흡 조절:</strong> 긴��될 때 심호흡을 통해 마음을 가라앉히는 연습을 합니다. 이는 신체적인 긴장을 완화하고 판단력을 향상시키는 데 도움을 줍니다.</li>
-  <li><strong>마인드 컨트롤 훈련:</strong> 명상이나 심상 훈련 등을 통해 경기 상황을 긍정적으로 상상하고, 어려운 상황에서도 침착함을 유지하는 연습을 합니다.</li>
-</ul>
-<h3>3. 체력 및 컨디션 관리</h3>
-<ul>
-  <li><strong>규칙적인 체력 훈련:</strong> 테니스에 필요한 근력, 지구력, 민첩성을 향상시키기 위한 꾸준한 체력 훈련이 필수적입니다. 이는 경기 후반까지 집중력을 유지하고 실수를 줄이는 데 큰 도움이 됩니다.</li>
-  <li><strong>충분한 휴식과 영양 섭취:</strong> 경기 전후로 충분한 휴식을 취하고, 균형 잡힌 영양 섭취를 통해 최상의 컨디션을 유지하는 것이 중요합니다.</li>
-  <li><strong>몸 상태 점검:</strong> 작은 통증이라도 무시하지 않고 제때 치료하고 관리하여 부상을 예방해야 합니다.</li>
-</ul>
+          <h2>2. 에러 원인을 네 가지로 분류한다</h2>
+          <p>
+            실수를 줄이려면 먼저 분류표가 필요합니다. 경기 후 "오늘 너무 못 쳤다"라고만 적으면
+            다음 연습이 바뀌지 않습니다. 어떤 실수가 많았는지 아래 기준으로 나누면 바로 교정 과제가
+            보입니다.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>분류</th>
+                <th>대표 장면</th>
+                <th>우선 교정</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>타점 실수</td>
+                <td>몸 옆이나 뒤에서 맞아 네트에 걸림</td>
+                <td>스플릿 스텝과 준비 동작을 빠르게 한다.</td>
+              </tr>
+              <tr>
+                <td>코스 실수</td>
+                <td>라인을 노리다 사이드 아웃</td>
+                <td>목표를 코트 안쪽 1m로 옮긴다.</td>
+              </tr>
+              <tr>
+                <td>선택 실수</td>
+                <td>수비 상황에서 위너를 무리하게 시도</td>
+                <td>공격할 공과 버틸 공의 기준을 정한다.</td>
+              </tr>
+              <tr>
+                <td>멘탈 실수</td>
+                <td>중요 포인트에서 급해져 더블폴트</td>
+                <td>포인트 사이 루틴으로 속도를 늦춘다.</td>
+              </tr>
+            </tbody>
+          </table>
 
-<h2>경기 중 언포스드 에러 ���이기</h2>
-<p>실제 경기 상황에서 언포스드 에러를 줄이기 위한 몇 가지 팁을 소개합니다.</p>
-<ul>
-  <li><strong>무리한 샷 자제:</strong> 특히 불리한 상황에서는 무리하게 위너를 노리기보다, 안정적으로 공을 넘겨 랠리를 이어가는 것이 좋습니다.</li>
-  <li><strong>상대방의 플레이에 대한 과도한 반응 금지:</strong> 상대방의 뛰어난 샷에 위축되거나, 상대방의 약점을 맹공격하려다 실수를 하는 경우가 있습니다. 자신의 플레이에 집중하는 것이 중요합니다.</li>
-  <li><strong>볼 판정 신중:</strong> 아웃 콜을 할 때는 신중해야 합니다. 애매한 볼은 일단 플레이하고, 심판의 판정을 따르는 것이 실수를 줄이는 방법입니다.</li>
-  <li><strong>포인트 별 집중:</strong> 한 포인트가 끝났으면 다음 포인트에 집중합니다. 이전 포인트의 실수에 얽매이지 않고, 현재 포인트에만 온전히 집중하는 연습이 필요합니다.</li>
-</ul>
+          <h2>3. 경기 중에는 코스보다 높이를 먼저 안정시킨다</h2>
+          <p>
+            에러가 늘기 시작하면 많은 선수가 폼을 고치려 합니다. 하지만 경기 중에 스윙을 크게 바꾸면
+            더 흔들릴 수 있습니다. 가장 먼저 해야 할 것은 네트 위 여유 높이를 확보하는 것입니다.
+            공이 네트 위 1m 이상을 지나가게 만들고, 목표 코스를 라인에서 안쪽으로 옮기면 실수의
+            절반은 빠르게 줄어듭니다.
+          </p>
+          <aside className="not-prose my-6 rounded-lg border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-950/40">
+            <h3 className="mb-2 text-lg font-bold text-amber-900 dark:text-amber-200">
+              경기 중 에러 응급 처치
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+              <li>연속 2실수 후에는 다음 공을 크로스 깊게만 보낸다.</li>
+              <li>라인 목표를 버리고 코트 안쪽 1m를 목표로 잡는다.</li>
+              <li>네트 실수가 많으면 공 높이를 먼저 올린다.</li>
+              <li>아웃 실수가 많으면 스윙 속도보다 라켓 면을 확인한다.</li>
+              <li>더블폴트가 나오면 세컨드 서브 코스를 하나로 고정한다.</li>
+            </ul>
+          </aside>
 
-<h2>자주 묻는 질문</h2>
-<h3>언포스드 에러를 줄이면 ���마나 실력이 향상될까요?</h3>
-<p>언포스드 에러를 줄이는 것은 경기력 향상에 매우 직접적인 영향을 미칩니다. 불필요한 실수가 줄어들면 상대방에게 쉽게 포인트를 내주지 않게 되고, 이는 곧 승률 상승으로 이어집니다. 또한, 안정적인 플레이는 자신감을 높여주어 더욱 공격적이고 효과적인 플레이를 가능하게 합니다. 통계적으로 언포스드 에러를 얼마나 줄이느냐에 따라 경기당 득실점 차이가 크게 달라질 수 있습니다.</p>
-<h3>처음부터 언포스드 에러를 줄이는 연습을 해야 하나요?</h3>
-<p>네, 처음 테니스를 시작할 때부터 언포스드 에러를 줄이는 것을 염두에 두고 연습하는 것이 좋습니다. 물론 초보 단계에서는 많은 실수가 불가피하지만, 기본적인 자세와 스트로크를 배울 때부터 일관성과 안정성을 중요하게 생각하면 장기적으로 더 빠른 실력 향상을 기대할 수 있습니다. 처음에는 코치나 경험이 많은 동호인에게 올바른 샷 메커니즘을 배우는 것이 중요합니다.</p>
-<h3>경기 중에 멘탈 관리가 어렵습니다. 어떻게 해야 하나요?</h3>
-<p>경기 중 멘탈 관리��� 언포스드 에러를 줄이는 데 매우 중요합니다. 앞서 언급한 것처럼 자신만의 루틴을 만들고, 긍정적인 자기 대화를 꾸준히 하는 것이 도움이 됩니다. 또한, 경기 전 충분한 휴식과 수면은 멘탈 컨디션에 긍정적인 영향을 미칩니다. 만약 멘탈 관리가 지속적으로 어렵다면, 스포츠 심리학 관련 서적을 읽거나 전문가의 도움을 받는 것도 고려해볼 수 있습니다. 가장 중요한 것은 자신의 감정을 인지하고, 이를 조절하려는 꾸준한 노력을 기울이는 것입니다.</p>`,
-          }}
-        />
-        <div className="mt-12 p-6 bg-blue-50 rounded-xl">
-          <p className="font-semibold text-blue-900 mb-2">내 테니스 실력 측정하기</p>
-          <Link href="/utility/ntrp-test" className="text-blue-600 underline">
-            무료 NTRP 실력 테스트 →
+          <h2>4. 공격할 공과 버틸 공을 구분한다</h2>
+          <p>
+            언포스드 에러를 줄인다고 모든 공을 안전하게만 치면 경기 주도권을 잃습니다. 그래서
+            공격할 공과 버틸 공의 기준이 필요합니다. 서비스 박스 안쪽으로 짧게 떨어진 공, 상대가
+            코트 밖으로 밀린 공, 내가 공 뒤에 충분히 들어간 공은 공격할 수 있습니다. 반대로 몸 옆으로
+            밀린 공, 베이스라인 깊은 공, 상대가 중앙에서 기다리는 공은 버티는 공으로 봐야 합니다.
+          </p>
+          <p>
+            USTA의
+            <a
+              href="https://www.usta.com/en/home/improve/tips-and-instruction.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              테니스 팁과 훈련 자료
+            </a>
+            처럼 기술을 상황별로 나눠 보는 접근은 동호인에게도 유용합니다. 같은 포핸드라도 공격
+            포핸드와 수비 포핸드는 목표와 높이가 달라야 합니다.
+          </p>
+
+          <h2>5. 멘탈 에러는 포인트 사이 루틴으로 줄인다</h2>
+          <p>
+            중요한 포인트에서 나오는 실수는 기술이 갑자기 사라져서가 아니라 속도가 빨라져서 생기는
+            경우가 많습니다. 서브를 빨리 시작하고, 리턴 위치를 대충 잡고, 직전 실수를 머릿속에
+            남긴 채 다음 포인트에 들어가면 같은 에러가 반복됩니다. 이때 필요한 것은 복잡한 멘탈
+            훈련보다 짧은 루틴입니다.
+          </p>
+          <ul>
+            <li>숨을 길게 내쉬며 라켓 줄을 한 번 본다.</li>
+            <li>직전 실수를 타점, 코스, 선택, 멘탈 중 하나로만 분류한다.</li>
+            <li>다음 포인트의 첫 공 목표를 한 문장으로 정한다.</li>
+            <li>준비 자세를 잡은 뒤 상대가 움직이기 전까지 시선을 고정한다.</li>
+          </ul>
+
+          <h2>6. 연습은 에러가 난 장면을 재현해야 한다</h2>
+          <p>
+            벽치기나 랠리 연습만으로는 경기 중 에러가 줄지 않을 때가 있습니다. 실제 실수는 점수,
+            상대 위치, 회복 동작, 피로가 합쳐진 상황에서 나오기 때문입니다. 그래서 연습도 에러가
+            나온 장면을 재현해야 합니다. 예를 들어 백핸드 다운더라인 아웃이 반복되었다면 단순히
+            백핸드를 많이 치는 것이 아니라, 크로스 랠리 후 방향 전환을 시도하는 상황을 만들어야
+            합니다.
+          </p>
+          <p>
+            훈련 기록에는 성공률만 쓰지 말고 에러 종류를 같이 적으세요. 네트, 롱, 사이드 아웃,
+            더블폴트, 선택 실수처럼 분류하면 다음 주 연습 주제가 선명해집니다. 반복 실수는 의지가
+            부족해서가 아니라 아직 훈련 설계가 맞지 않는다는 신호일 수 있습니다.
+          </p>
+
+          <h2>마무리</h2>
+          <p>
+            언포스드 에러 줄이기의 목적은 소극적으로 버티는 선수가 되는 것이 아닙니다. 공격할 공은
+            과감하게 치고, 버틸 공은 확률 높게 넘기는 기준을 갖추는 것입니다. 실수를 타점, 코스,
+            선택, 멘탈로 분류하고 경기 중에는 높이와 목표 코스를 먼저 안정시키면 불필요한 실점은
+            빠르게 줄어듭니다.
+          </p>
+        </section>
+
+        <section className="mt-12 rounded-lg bg-white p-6 shadow-sm dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold">자주 묻는 질문</h2>
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="rounded-md border border-slate-200 p-4 dark:border-slate-700"
+              >
+                <summary className="cursor-pointer font-semibold">
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-slate-700 dark:text-slate-300">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        </section>
+
+        <div className="mt-12 rounded-xl bg-blue-50 p-6 dark:bg-blue-950/40">
+          <p className="mb-2 font-semibold text-blue-900 dark:text-blue-200">
+            내 경기 안정성과 실력 기준을 함께 점검해 보세요.
+          </p>
+          <Link
+            href="/utility/ntrp-test"
+            className="font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
+          >
+            무료 NTRP 실력 테스트 하기
           </Link>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

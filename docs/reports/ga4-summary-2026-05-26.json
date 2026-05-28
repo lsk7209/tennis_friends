@@ -1,0 +1,221 @@
+{
+  "propertyId": "534356101",
+  "period": "2026-04-28 ~ 2026-05-26",
+  "totalSessions": 1515,
+  "totalUsers": 1387,
+  "totalPages": 273,
+  "deviceBreakdown": [
+    {
+      "device": "mobile",
+      "sessions": 1242,
+      "users": 1144,
+      "bounceRatePct": "29.15",
+      "avgDurationSec": "102.9"
+    },
+    {
+      "device": "desktop",
+      "sessions": 258,
+      "users": 228,
+      "bounceRatePct": "30.62",
+      "avgDurationSec": "169.9"
+    },
+    {
+      "device": "tablet",
+      "sessions": 15,
+      "users": 15,
+      "bounceRatePct": "26.67",
+      "avgDurationSec": "145.6"
+    }
+  ],
+  "topSources": [
+    {
+      "source": "m.search.naver.com / referral",
+      "sessions": 1181,
+      "users": 1092
+    },
+    {
+      "source": "naver / organic",
+      "sessions": 171,
+      "users": 153
+    },
+    {
+      "source": "(direct) / (none)",
+      "sessions": 75,
+      "users": 71
+    },
+    {
+      "source": "google / organic",
+      "sessions": 53,
+      "users": 47
+    },
+    {
+      "source": "bing / organic",
+      "sessions": 15,
+      "users": 15
+    }
+  ],
+  "top10ByViews": [
+    {
+      "path": "/utility/ntrp-test/test",
+      "title": "NTRP 실력 테스트",
+      "views": 403,
+      "users": 157,
+      "sessions": 167,
+      "avgDuration": "28.2",
+      "bounceRate": "2.4",
+      "engagementRate": "97.6"
+    },
+    {
+      "path": "/players/hugo-gaston",
+      "title": "위고 가스통 tennis player | ranking, profile, ATP",
+      "views": 389,
+      "users": 322,
+      "sessions": 339,
+      "avgDuration": "92.0",
+      "bounceRate": "24.8",
+      "engagementRate": "75.2"
+    },
+    {
+      "path": "/utility/ntrp-test/result",
+      "title": "NTRP 실력 테스트",
+      "views": 348,
+      "users": 148,
+      "sessions": 165,
+      "avgDuration": "162.7",
+      "bounceRate": "7.3",
+      "engagementRate": "92.7"
+    },
+    {
+      "path": "/",
+      "title": "TennisFriends - 테니스 실력 테스트 & 분석 도구 | NTRP 측정, 스트링 텐션 ��산기",
+      "views": 240,
+      "users": 138,
+      "sessions": 149,
+      "avgDuration": "34.5",
+      "bounceRate": "24.2",
+      "engagementRate": "75.8"
+    },
+    {
+      "path": "/utility/ntrp-test",
+      "title": "NTRP 테스트 | 테니스 실력 등급 무료 측정 | TennisFriends",
+      "views": 232,
+      "users": 129,
+      "sessions": 138,
+      "avgDuration": "35.2",
+      "bounceRate": "18.1",
+      "engagementRate": "81.9"
+    },
+    {
+      "path": "/utility/ntrp-test",
+      "title": "NTRP 테니스 실력 테스트 — 내 테니스 레벨 무료 측정 | TennisFriends",
+      "views": 155,
+      "users": 79,
+      "sessions": 81,
+      "avgDuration": "59.3",
+      "bounceRate": "7.4",
+      "engagementRate": "92.6"
+    },
+    {
+      "path": "/utility",
+      "title": "테니스 유틸리티 도구 모음 | TennisFriends",
+      "views": 131,
+      "users": 47,
+      "sessions": 48,
+      "avgDuration": "17.3",
+      "bounceRate": "2.1",
+      "engagementRate": "97.9"
+    },
+    {
+      "path": "/utility",
+      "title": "테니스 유틸리티 도구 모음 | TennisFriends | TennisFriends",
+      "views": 91,
+      "users": 35,
+      "sessions": 39,
+      "avgDuration": "10.0",
+      "bounceRate": "7.7",
+      "engagementRate": "92.3"
+    },
+    {
+      "path": "/utility/string-tension/test",
+      "title": "스트링 텐션 계산기",
+      "views": 90,
+      "users": 20,
+      "sessions": 21,
+      "avgDuration": "44.2",
+      "bounceRate": "0.0",
+      "engagementRate": "100.0"
+    },
+    {
+      "path": "/utility/string-tension/result",
+      "title": "스트링 텐션 계산기",
+      "views": 83,
+      "users": 18,
+      "sessions": 19,
+      "avgDuration": "110.7",
+      "bounceRate": "0.0",
+      "engagementRate": "100.0"
+    }
+  ],
+  "top10HighViewsLowEngagement": [
+    {
+      "path": "/utility/ntrp-test/test",
+      "views": 403,
+      "avgDuration": 28.24596834131737,
+      "bounceRate": 0.023952095808383235
+    },
+    {
+      "path": "/utility",
+      "views": 131,
+      "avgDuration": 17.268670979166668,
+      "bounceRate": 0.020833333333333332
+    },
+    {
+      "path": "/utility",
+      "views": 91,
+      "avgDuration": 9.961286615384616,
+      "bounceRate": 0.07692307692307693
+    },
+    {
+      "path": "/utility/play-style-test",
+      "views": 73,
+      "avgDuration": 19.76027384375,
+      "bounceRate": 0.0625
+    },
+    {
+      "path": "/utility/string-tension",
+      "views": 62,
+      "avgDuration": 17.895246266666668,
+      "bounceRate": 0.2
+    },
+    {
+      "path": "/utility/play-style-test/test",
+      "views": 51,
+      "avgDuration": 22.726168315789472,
+      "bounceRate": 0
+    },
+    {
+      "path": "/tennis-rules-quiz",
+      "views": 16,
+      "avgDuration": 10.099690555555556,
+      "bounceRate": 0.2222222222222222
+    },
+    {
+      "path": "/blog",
+      "views": 15,
+      "avgDuration": 20.390392428571428,
+      "bounceRate": 0
+    },
+    {
+      "path": "/",
+      "views": 10,
+      "avgDuration": 1.0777986666666668,
+      "bounceRate": 0.2222222222222222
+    },
+    {
+      "path": "/tennis-rules-quiz/quiz",
+      "views": 10,
+      "avgDuration": 11.4665848,
+      "bounceRate": 0
+    }
+  ]
+}

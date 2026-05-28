@@ -24,6 +24,8 @@
     "search:notify": "node scripts/notify-search-engines.js",
     "search:notify:dry": "node scripts/notify-search-engines.js --dry-run",
     "search:notify:postdeploy": "node scripts/notify-search-engines.js --no-fail",
+    "search:collect": "node scripts/fetch-gsc-data.mjs && node scripts/fetch-ga4-data.mjs",
+    "audit:blog-quality": "node scripts/audit-blog-quality.mjs",
     "publish:vercel": "vercel --prod && npm run search:notify",
     "ai-index": "node scripts/generate-ai-index.js"
   },

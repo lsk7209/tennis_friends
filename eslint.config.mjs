@@ -23,6 +23,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "scripts/**",
+    "테니스프렌즈-웹/**",
     "next-env.d.ts",
     "update-novak-attributes.js",
   ]),

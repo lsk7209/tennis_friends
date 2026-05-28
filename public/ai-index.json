@@ -3,11 +3,11 @@
   "url": "https://www.tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-05-27",
+  "lastUpdated": "2026-05-28",
   "stats": {
-    "totalPages": 530,
+    "totalPages": 548,
     "tools": 64,
-    "articles": 187,
+    "articles": 205,
     "playerProfiles": 269
   },
   "pages": [
@@ -513,6 +513,38 @@
       "category": "utility"
     },
     {
+      "url": "https://www.tennisfrens.com/blog/tennis-club-selection-guide",
+      "title": "테니스 클럽 선택법 | 수준·위치·시설 체크리스트",
+      "description": "테니스 클럽 선택 기준을 수준, 거리, 코트 상태, 회비, 운영 문화로 나눠 점검합니다.",
+      "type": "article",
+      "category": "테니스 문화",
+      "lastModified": "2026-05-26"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-coach-selection-guide",
+      "title": "테니스 코치 선택 가이드 | 레벨·목적별 기준",
+      "description": "테니스 코치 선택 기준을 초보, 중급, 상급, 비용, 자격, 소통 방식으로 점검합니다.",
+      "type": "article",
+      "category": "테니스 문화",
+      "lastModified": "2026-05-26"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-backhand-crosscourt",
+      "title": "백핸드 크로스코트 | 각도·회전·깊이 기준",
+      "description": "백핸드 크로스코트 성공률을 높이는 각도, 회전, 깊이, 풋워크와 실전 드릴 기준을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-25"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-forehand-down-the-line",
+      "title": "포핸드 다운더라인 | 코스·타이밍·리스크 기준",
+      "description": "포핸드 다운더라인 성공률을 높이는 코스 선택, 타이밍, 리스크 관리와 실전 드릴을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-25"
+    },
+    {
       "url": "https://www.tennisfrens.com/blog/tennis-next-racket-upgrade-timing",
       "title": "다음 라켓으로 바꿀 타이밍, 실력 부족과 장비 한계를 구분하는 법",
       "description": "라켓 교체는 기분 전환보다 반복되는 불편함과 플레이 변화가 기준입니다. 무게, 밸런스, 스트링 조합을 함께 봅니다.",
@@ -543,6 +575,22 @@
       "type": "article",
       "category": "복식 운영",
       "lastModified": "2026-05-24T01:10:00+09:00"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-second-serve-kick-topspin",
+      "title": "세컨드 서브 킥·탑스핀 | 더블폴트 줄이는 기준",
+      "description": "세컨드 서브 킥·탑스핀 성공률을 높이는 토스, 스핀, 코스, 더블폴트 방지 드릴을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-24"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-backhand-slice-low-ball",
+      "title": "낮은 공 슬라이스 백핸드 | 어프로치·방어 기준",
+      "description": "낮은 공 슬라이스 백핸드 성공률을 높이는 라켓 면, 타점, 어프로치와 방어 전환 기준을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-24"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-bag-match-day-setup",
@@ -585,6 +633,22 @@
       "lastModified": "2026-05-23T00:10:00+09:00"
     },
     {
+      "url": "https://www.tennisfrens.com/blog/tennis-forehand-inside-in-guide",
+      "title": "인사이드인 포핸드 | 코스 선택·타점·리스크 기준",
+      "description": "인사이드인 포핸드 성공률을 높이는 코스 선택, 앞쪽 타점, 풋워크, 실전 리스크 관리 기준을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-23"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-slump-recovery-guide",
+      "title": "테니스 슬럼프 극복 | 원인 진단·회복 루틴",
+      "description": "테니스 슬럼프 극복을 위한 원인 진단, 훈련량 조절, 멘탈 리셋, 2주 회복 루틴 기준을 정리했습니다.",
+      "type": "article",
+      "category": "멘탈 트레이닝",
+      "lastModified": "2026-05-23"
+    },
+    {
       "url": "https://www.tennisfrens.com/blog/tennis-footwork-split-step-audio",
       "title": "스플릿 스텝 타이밍을 소리로 맞추는 연습법",
       "description": "상대 임팩트 순간에 맞춰 착지하는 감각은 눈보다 소리로 잡으면 더 쉬워집니다. 짧은 리듬 훈련으로 반응을 바꿉니다.",
@@ -615,6 +679,22 @@
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-05-22T04:10:00+09:00"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-match-flow-reading",
+      "title": "테니스 경기 흐름 읽기 | 모멘텀·전환점·전술 변화",
+      "description": "테니스 경기 흐름을 읽는 모멘텀 신호, 전환점 판단, 전술 변화와 포인트 사이 루틴을 정리했습니다.",
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-22"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-winner-production-guide",
+      "title": "테니스 위너 늘리기 | 코스 공략·타이밍·찬스볼 기준",
+      "description": "테니스 위너를 늘리는 코스 공략, 타이밍, 찬스볼 판단, 리스크 관리와 실전 드릴을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-22"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-high-ball-forehand",
@@ -657,6 +737,22 @@
       "lastModified": "2026-05-21T03:10:00+09:00"
     },
     {
+      "url": "https://www.tennisfrens.com/blog/tennis-error-reduction-guide",
+      "title": "언포스드 에러 줄이기 | 원인 분석·교정 루틴",
+      "description": "테니스 언포스드 에러를 줄이는 원인 분석, 기술·멘탈·전술 교정법과 경기 중 안정 루틴을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-baseline-rally-strategy",
+      "title": "베이스라인 랠리 전략 | 깊이·방향·템포 변화",
+      "description": "테니스 베이스라인 랠리에서 깊이, 방향, 템포를 바꾸는 기준과 실전 패턴, 연습 드릴을 정리했습니다.",
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-21"
+    },
+    {
       "url": "https://www.tennisfrens.com/blog/tennis-doubles-serve-plus-one",
       "title": "복식 서브 플러스 원, 첫 발리까지 미리 정하는 경기 운영",
       "description": "복식 서브 게임은 서브 하나로 끝나지 않습니다. 파트너 위치, 리턴 예상, 첫 발리 목표를 같이 정해야 합니다.",
@@ -695,6 +791,22 @@
       "type": "article",
       "category": "전술 가이드",
       "lastModified": "2026-05-20T02:10:00+09:00"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-ntrp-35-to-40-guide",
+      "title": "NTRP 3.5→4.0 레벨업 | 전술 전환 가이드",
+      "description": "NTRP 3.5에서 4.0으로 올라가기 위한 서브+1, 리턴, 랠리 전술과 8주 드릴 기준입니다.",
+      "type": "article",
+      "category": "레벨업 가이드",
+      "lastModified": "2026-05-20"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-ntrp-30-to-35-guide",
+      "title": "NTRP 3.0→3.5 레벨업 | 중급 진입 기준",
+      "description": "NTRP 3.0에서 3.5로 올라가기 위한 일관성, 서브·리턴, 6주 훈련 기준입니다.",
+      "type": "article",
+      "category": "레벨업 가이드",
+      "lastModified": "2026-05-20"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-grip-pressure-relax",
@@ -737,6 +849,22 @@
       "lastModified": "2026-05-19T01:10:00+09:00"
     },
     {
+      "url": "https://www.tennisfrens.com/blog/tennis-ntrp-25-to-30-guide",
+      "title": "NTRP 2.5→3.0 레벨업 | 초급 탈출 기준",
+      "description": "NTRP 2.5에서 3.0으로 올라가기 위한 랠리, 서브, 풋워크, 경기 경험 기준입니다.",
+      "type": "article",
+      "category": "레벨업 가이드",
+      "lastModified": "2026-05-19"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-night-match-tips",
+      "title": "야간 테니스 경기 팁 | 시야·조명 적응 전략",
+      "description": "야간 테니스 경기에서 시야, 조명, 집중력, 준비 루틴을 조정하는 실전 팁입니다.",
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-19"
+    },
+    {
       "url": "https://www.tennisfrens.com/blog/hard-court-shoe-wear-pattern",
       "title": "하드코트 테니스화 마모 패턴으로 보는 발 움직임 문제",
       "description": "테니스화 밑창은 발이 어떻게 멈추고 밀어내는지 보여줍니다. 바깥쪽 마모, 앞꿈치 마모, 뒤꿈치 마모를 구분해 봅니다.",
@@ -777,6 +905,22 @@
       "lastModified": "2026-05-18T00:10:00+09:00"
     },
     {
+      "url": "https://www.tennisfrens.com/blog/tennis-windy-day-strategy",
+      "title": "바람 부는 날 테니스 전략 | 탑스핀·로브·서브 조정",
+      "description": "바람 부는 날 테니스에서 맞바람, 뒷바람, 옆바람별 샷 선택과 서브 조정법을 정리했습니다.",
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-05-18"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-hot-weather-performance",
+      "title": "더운 날 테니스 컨디션 관리 | 수분·페이스 조절",
+      "description": "더운 날 테니스에서 탈수와 열피로를 줄이고 경기력을 유지하는 수분·페이스 기준입니다.",
+      "type": "article",
+      "category": "건강 가이드",
+      "lastModified": "2026-05-18"
+    },
+    {
       "url": "https://www.tennisfrens.com/blog/tennis-elbow-early-warning-signs",
       "title": "테니스 엘보 초기 신호, 통증이 커지기 전 멈춰야 할 순간",
       "description": "팔꿈치 통증은 강한 한 번보다 반복된 작은 부담에서 커집니다. 그립 압력, 스트링 상태, 휴식 기준을 함께 점검해야 합니다.",
@@ -810,8 +954,8 @@
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-rainy-weather-tips",
-      "title": "비 오는 날 테니스 팁 — 슬라이드·그립·전략",
-      "description": "비 오는 날 테니스 팁 — 슬라이드·그립·전략에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+      "title": "비 오는 날 테니스 팁 | 미끄럼·그립·전술 조정",
+      "description": "비 오는 날 테니스에서 경기 여부 판단, 미끄럼 방지, 젖은 그립 관리와 전술 조정을 정리했습니다.",
       "type": "article",
       "category": "전술 가이드",
       "lastModified": "2026-05-17"
