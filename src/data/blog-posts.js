@@ -3484,6 +3484,32 @@ const scheduledBlogPosts = [
 
 /** @type {import("@/types/blog").BlogPostData[]} */
 export const allBlogPosts = [
+  {
+    "id": "tennis-mental-toughness-building",
+    "slug": "tennis-mental-toughness-building",
+    "tags": ["멘탈 강화","자기 대화","집중력","루틴"],
+    "title": "테니스 멘탈 강화 훈련 — 루틴·자기 대화·집중",
+    "excerpt": "테니스 멘탈 강화 훈련 — 루틴·자기 대화·집중에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "멘탈 트레이닝",
+    "date": "2026-06-01",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-tournament-preparation",
+    "slug": "tennis-tournament-preparation",
+    "tags": ["대회 준비","토너먼트","경기 준비","컨디션"],
+    "title": "테니스 대회 준비 완전 가이드 — D-30·D-7·당일",
+    "excerpt": "테니스 대회 준비 완전 가이드 — D-30·D-7·당일에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전략 가이드",
+    "date": "2026-06-01",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
   ...articleWriterPart12Posts,
   ...articleWriterBlogPosts,
   {
