@@ -1,6 +1,18 @@
 ﻿// 블로그 글 메타데이터 - 자동 생성됨
 import { articleWriterBlogPosts } from "./blog-posts-aw-300.js";
 import { articleWriterPart12Posts } from "./blog-posts-aw-part12.js";
+import { articleWriterTitle100Posts } from "./blog-posts-aw-title100.js";
+import { articleWriterPart16PostOverrides } from "./blog-posts-part16-overrides.js";
+import { articleWriterPart17PostOverrides } from "./blog-posts-part17-overrides.js";
+import { articleWriterPart18PostOverrides } from "./blog-posts-part18-overrides.js";
+import { articleWriterPart19PostOverrides } from "./blog-posts-part19-overrides.js";
+import { articleWriterPart20PostOverrides } from "./blog-posts-part20-overrides.js";
+import { articleWriterPart21PostOverrides } from "./blog-posts-part21-overrides.js";
+import { articleWriterPart22PostOverrides } from "./blog-posts-part22-overrides.js";
+import { articleWriterPart23PostOverrides } from "./blog-posts-part23-overrides.js";
+import { articleWriterPart24PostOverrides } from "./blog-posts-part24-overrides.js";
+import { articleWriterPart25PostOverrides } from "./blog-posts-part25-overrides.js";
+import { articleWriterPart26PostOverrides } from "./blog-posts-part26-overrides.js";
 
 const SCHEDULED_POST_BADGE_COLORS = {
   blog: "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300",
@@ -3482,6 +3494,56 @@ const scheduledBlogPosts = [
   };
 });
 
+const part16PostOverrideMap = new Map(
+  articleWriterPart16PostOverrides.map((post) => [post.slug, post]),
+);
+const part17PostOverrideMap = new Map(
+  articleWriterPart17PostOverrides.map((post) => [post.slug, post]),
+);
+const part18PostOverrideMap = new Map(
+  articleWriterPart18PostOverrides.map((post) => [post.slug, post]),
+);
+const part19PostOverrideMap = new Map(
+  articleWriterPart19PostOverrides.map((post) => [post.slug, post]),
+);
+const part20PostOverrideMap = new Map(
+  articleWriterPart20PostOverrides.map((post) => [post.slug, post]),
+);
+const part21PostOverrideMap = new Map(
+  articleWriterPart21PostOverrides.map((post) => [post.slug, post]),
+);
+const part22PostOverrideMap = new Map(
+  articleWriterPart22PostOverrides.map((post) => [post.slug, post]),
+);
+const part23PostOverrideMap = new Map(
+  articleWriterPart23PostOverrides.map((post) => [post.slug, post]),
+);
+const part24PostOverrideMap = new Map(
+  articleWriterPart24PostOverrides.map((post) => [post.slug, post]),
+);
+const part25PostOverrideMap = new Map(
+  articleWriterPart25PostOverrides.map((post) => [post.slug, post]),
+);
+const part26PostOverrideMap = new Map(
+  articleWriterPart26PostOverrides.map((post) => [post.slug, post]),
+);
+
+function applyPostOverride(post) {
+  const override =
+    part26PostOverrideMap.get(post.slug) ||
+    part25PostOverrideMap.get(post.slug) ||
+    part24PostOverrideMap.get(post.slug) ||
+    part23PostOverrideMap.get(post.slug) ||
+    part22PostOverrideMap.get(post.slug) ||
+    part21PostOverrideMap.get(post.slug) ||
+    part20PostOverrideMap.get(post.slug) ||
+    part19PostOverrideMap.get(post.slug) ||
+    part18PostOverrideMap.get(post.slug) ||
+    part17PostOverrideMap.get(post.slug) ||
+    part16PostOverrideMap.get(post.slug);
+  return override ? { ...post, ...override } : post;
+}
+
 /** @type {import("@/types/blog").BlogPostData[]} */
 export const allBlogPosts = [
   {
@@ -3510,6 +3572,7 @@ export const allBlogPosts = [
     "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
     "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
   },
+  ...articleWriterTitle100Posts,
   ...articleWriterPart12Posts,
   ...articleWriterBlogPosts,
   {
@@ -6332,4 +6395,4 @@ export const allBlogPosts = [
     slug: "holger-rune",
     tags: ["선수 프로필", "서브"],
   },
-];
+].map(applyPostOverride);

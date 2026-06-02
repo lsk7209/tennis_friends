@@ -1,0 +1,108 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-01T23:24:50.280Z",
+  "baseUrl": "https://www.tennisfrens.com",
+  "liveResults": [
+    {
+      "label": "home",
+      "path": "/",
+      "status": 200,
+      "durationMs": 114,
+      "bytes": 90062,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "label": "ntrp utility",
+      "path": "/utility/ntrp-test",
+      "status": 200,
+      "durationMs": 473,
+      "bytes": 58670,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "label": "string tension",
+      "path": "/utility/string-tension",
+      "status": 200,
+      "durationMs": 526,
+      "bytes": 57037,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "label": "rules quiz",
+      "path": "/tennis-rules-quiz",
+      "status": 200,
+      "durationMs": 19,
+      "bytes": 57599,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "label": "blog sample",
+      "path": "/blog/tennis-hybrid-string-setup",
+      "status": 200,
+      "durationMs": 479,
+      "bytes": 116646,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "label": "player sample",
+      "path": "/players/arthur-rinderknech",
+      "status": 200,
+      "durationMs": 536,
+      "bytes": 99462,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "label": "sitemap",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "durationMs": 347,
+      "bytes": 206367,
+      "contentType": "application/xml",
+      "cacheControl": "public, max-age=3600, s-maxage=3600"
+    },
+    {
+      "label": "rss",
+      "path": "/rss.xml",
+      "status": 200,
+      "durationMs": 609,
+      "bytes": 43431,
+      "contentType": "application/rss+xml; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    }
+  ],
+  "psi": {
+    "attempted": 3,
+    "completed": 0,
+    "results": []
+  },
+  "warnings": [
+    {
+      "label": "home",
+      "tool": "pagespeed",
+      "status": "skipped_quota",
+      "strategy": "mobile",
+      "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'pagespeedonline.googleapis.com' for consumer 'project_number:583797351490'."
+    },
+    {
+      "label": "ntrp utility",
+      "tool": "pagespeed",
+      "status": "skipped_quota",
+      "strategy": "mobile",
+      "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'pagespeedonline.googleapis.com' for consumer 'project_number:583797351490'."
+    },
+    {
+      "label": "blog sample",
+      "tool": "pagespeed",
+      "status": "skipped_quota",
+      "strategy": "mobile",
+      "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'pagespeedonline.googleapis.com' for consumer 'project_number:583797351490'."
+    }
+  ],
+  "findings": []
+}

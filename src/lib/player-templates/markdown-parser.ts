@@ -3,7 +3,7 @@
  */
 
 // gray-matter 대신 간단한 파서 구현
-function parseFrontmatter(markdown: string): { data: Record<string, any>; content: string } {
+function parseFrontmatter(markdown: string): { data: Record<string, unknown>; content: string } {
   const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
   const match = markdown.match(frontmatterRegex);
 
@@ -15,7 +15,7 @@ function parseFrontmatter(markdown: string): { data: Record<string, any>; conten
   const content = match[2];
 
   // 간단한 YAML 파싱 (기본적인 key: value 형식만 지원)
-  const data: Record<string, any> = {};
+  const data: Record<string, unknown> = {};
   const lines = frontmatterText.split('\n');
   
   for (const line of lines) {
@@ -44,7 +44,7 @@ function parseFrontmatter(markdown: string): { data: Record<string, any>; conten
 }
 
 export interface ParsedMarkdown {
-  frontmatter: Record<string, any>;
+  frontmatter: Record<string, unknown>;
   content: string;
 }
 
@@ -136,7 +136,6 @@ export function extractInternalLinks(markdown: string): string[] {
 export function splitIntoSections(markdown: string): Array<{ id: string; title: string; content: string }> {
   const sections: Array<{ id: string; title: string; content: string }> = [];
   const headingRegex = /^## (.+)$/gm;
-  let lastIndex = 0;
   let match;
   let lastHeading: { id: string; title: string; index: number } | null = null;
 
@@ -163,7 +162,6 @@ export function splitIntoSections(markdown: string): Array<{ id: string; title: 
       title,
       index: match.index,
     };
-    lastIndex = match.index + match[0].length;
   }
 
   // 마지막 섹션 처리

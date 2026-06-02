@@ -1,0 +1,154 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T03:27:04.234Z",
+  "expectedIntervalHours": 5,
+  "files": 15,
+  "rawPosts": 1225,
+  "effectivePosts": 719,
+  "scheduledPosts": 502,
+  "fileSummaries": [
+    {
+      "file": "src/data/blog-posts.js",
+      "posts": 19,
+      "scheduled": 0,
+      "firstScheduledAt": null,
+      "lastScheduledAt": null,
+      "intervalHours": []
+    },
+    {
+      "file": "src/data/blog-posts-aw-300.js",
+      "posts": 300,
+      "scheduled": 0,
+      "firstScheduledAt": null,
+      "lastScheduledAt": null,
+      "intervalHours": []
+    },
+    {
+      "file": "src/data/blog-posts-aw-part12.js",
+      "posts": 300,
+      "scheduled": 300,
+      "firstScheduledAt": "2026-05-24T21:10:00+09:00",
+      "lastScheduledAt": "2026-07-26T04:10:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-aw-title100.js",
+      "posts": 100,
+      "scheduled": 100,
+      "firstScheduledAt": "2026-07-26T09:10:00+09:00",
+      "lastScheduledAt": "2026-08-16T00:10:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part16-overrides.js",
+      "posts": 50,
+      "scheduled": 0,
+      "firstScheduledAt": null,
+      "lastScheduledAt": null,
+      "intervalHours": []
+    },
+    {
+      "file": "src/data/blog-posts-part17-overrides.js",
+      "posts": 50,
+      "scheduled": 0,
+      "firstScheduledAt": null,
+      "lastScheduledAt": null,
+      "intervalHours": []
+    },
+    {
+      "file": "src/data/blog-posts-part18-overrides.js",
+      "posts": 50,
+      "scheduled": 50,
+      "firstScheduledAt": "2026-05-21T18:00:00+09:00",
+      "lastScheduledAt": "2026-05-31T23:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part19-overrides.js",
+      "posts": 50,
+      "scheduled": 50,
+      "firstScheduledAt": "2026-05-22T00:00:00+09:00",
+      "lastScheduledAt": "2026-06-01T05:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part20-overrides.js",
+      "posts": 50,
+      "scheduled": 50,
+      "firstScheduledAt": "2026-05-22T06:00:00+09:00",
+      "lastScheduledAt": "2026-06-01T11:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part21-overrides.js",
+      "posts": 50,
+      "scheduled": 50,
+      "firstScheduledAt": "2026-05-12T06:00:00+09:00",
+      "lastScheduledAt": "2026-05-22T11:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part22-overrides.js",
+      "posts": 50,
+      "scheduled": 50,
+      "firstScheduledAt": "2026-05-01T06:00:00+09:00",
+      "lastScheduledAt": "2026-05-11T11:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part23-overrides.js",
+      "posts": 50,
+      "scheduled": 50,
+      "firstScheduledAt": "2026-04-20T06:00:00+09:00",
+      "lastScheduledAt": "2026-04-30T11:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part24-overrides.js",
+      "posts": 50,
+      "scheduled": 50,
+      "firstScheduledAt": "2026-04-09T06:00:00+09:00",
+      "lastScheduledAt": "2026-04-19T11:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part25-overrides.js",
+      "posts": 50,
+      "scheduled": 50,
+      "firstScheduledAt": "2026-04-19T16:00:00+09:00",
+      "lastScheduledAt": "2026-04-29T21:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part26-overrides.js",
+      "posts": 6,
+      "scheduled": 6,
+      "firstScheduledAt": "2026-04-30T02:00:00+09:00",
+      "lastScheduledAt": "2026-05-01T03:00:00+09:00",
+      "intervalHours": [
+        5
+      ]
+    }
+  ],
+  "findings": []
+}

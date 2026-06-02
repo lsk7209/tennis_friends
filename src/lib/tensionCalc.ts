@@ -73,7 +73,7 @@ export function calculateTension(input: TensionInput): TensionResult {
   };
 }
 
-function generateStyleInfo(playStyle: string, stringType: string, environment: string) {
+function generateStyleInfo(playStyle: string, _stringType: string, _environment: string) {
   const styleInfo = {
     '컨트롤형': {
       summary: '당신은 컨트롤을 중시하는 플레이어입니다.',

@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-01T23:24:46.227Z",
+  "baseUrl": "https://www.tennisfrens.com",
+  "canonicalBaseUrl": "https://www.tennisfrens.com",
+  "findings": [],
+  "results": [
+    {
+      "scope": "source",
+      "files": 6,
+      "questions": 24,
+      "categories": 9
+    },
+    {
+      "scope": "live",
+      "path": "/tennis-rules-quiz",
+      "status": 200,
+      "bytes": 57599,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "Quiz",
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "scope": "live",
+      "path": "/tennis-rules-quiz/quiz",
+      "status": 200,
+      "bytes": 48295
+    },
+    {
+      "scope": "live",
+      "path": "/tennis-rules-quiz/result?score=8&grade=Match+Ready&timeSpent=120&wrongByCat=%7B%22Serve%22%3A1%7D&answers=%5B%5D&questions=%5B%5D",
+      "status": 200,
+      "bytes": 40516
+    }
+  ]
+}

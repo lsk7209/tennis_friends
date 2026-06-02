@@ -40,7 +40,7 @@ for (const slug of dirs) {
     continue;
   }
 
-  const canonical = `https://tennisfrens.com/utility/${slug}`;
+  const canonical = `https://www.tennisfrens.com/utility/${slug}`;
 
   // metadata 객체에 alternates.canonical 추가
   // 패턴: export const metadata: Metadata = { ... };

@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     canonical: getAbsoluteUrl("/search"),
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
     googleBot: {
-      index: true,
+      index: false,
       follow: true,
     },
   },

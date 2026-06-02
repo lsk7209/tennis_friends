@@ -12,6 +12,7 @@ import {Shield, AlertTriangle, CheckCircle, ArrowRight, RotateCcw, Share2} from 
 import { getRiskLevelInfo } from '@/lib/injuryRiskCalc';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import UtilityResultLinks from '@/components/UtilityResultLinks';
 
 function InjuryRiskResultContent() {
   const searchParams = useSearchParams();
@@ -396,6 +397,29 @@ function InjuryRiskResultContent() {
           </StaggeredAnimation>
         </div>
       </section>
+
+      <UtilityResultLinks
+        title="더 안전한 다음 단계 계획하기"
+        description="부상 위험 결과를 기준으로 레벨 목표, 장비, 훈련 세팅을 조정하세요."
+        source="injury-risk-result"
+        links={[
+          {
+            href: '/utility/equipment-recommendation',
+            title: '장비 추천',
+            description: '편안함 요구에 맞는 라켓과 스트링 선택지를 확인합니다.'
+          },
+          {
+            href: '/utility/string-tension',
+            title: '스트링 텐션 계산기',
+            description: '텐션 변경이 편안함과 컨트롤에 도움이 되는지 점검합니다.'
+          },
+          {
+            href: '/utility/play-style-test',
+            title: '플레이 스타일 테스트',
+            description: '반복 부담을 만드는 플레이 패턴이 있는지 확인합니다.'
+          }
+        ]}
+      />
     </div>
   );
 }

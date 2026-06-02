@@ -58,11 +58,11 @@ const posts = {
       title: '펠릭스 오제-알리아심: 캐나다의 테니스 희망',
       description: '성실함과 운동 능력을 겸비한 펠릭스 오제-알리아심. 그의 강력한 포핸드와 서비스 게임, 그리고 그랜드 슬램을 향한 도전을 정리합니다.',
       keywords: ['테니스', '펠릭스 오제-알리아심', 'Felix Auger-Aliassime', '캐나다'],
-      alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/felix-auger-aliassime` },
+      alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/felix-auger-aliassime` },
       openGraph: {
         title: '펠릭스 오제 알리아심 스타일 분석 - 무결점의 테니스, 그러나 숙제는?',
         description: '캐나다의 차세대 스타 알리아심의 강력한 피지컬과 기술적 완벽함. 그리고 그가 넘어야 할 멘탈과 전략의 산.',
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/felix-auger-aliassime`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/felix-auger-aliassime`,
         siteName: 'TennisFriends',
         locale: 'ko_KR',
         type: 'article',

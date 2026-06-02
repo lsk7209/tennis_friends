@@ -1,6 +1,8 @@
 import JsonLd from '@/components/JsonLd';
 import { getSiteUrl } from '@/lib/site';
 
+type JsonObject = Record<string, unknown>;
+
 interface ProfilePageSchemaProps {
     name: string;
     description: string;
@@ -15,9 +17,9 @@ interface ProfilePageSchemaProps {
         image?: string;
         jobTitle?: string;
         sameAs?: string[];
-        [key: string]: any;
+        [key: string]: unknown;
     };
-    breadcrumb?: any;
+    breadcrumb?: JsonObject | JsonObject[];
 }
 
 export default function ProfilePageSchema({

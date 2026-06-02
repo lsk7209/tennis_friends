@@ -2,7 +2,6 @@ import JsonLd from "@/components/JsonLd";
 import {
   DEFAULT_CONTACT_EMAIL,
   DEFAULT_COUNTRY_NAME,
-  DEFAULT_SITE_DESCRIPTION,
   SITE_NAME,
   getSiteIconUrl,
   getSiteUrl,
@@ -21,7 +20,7 @@ export default function OrganizationSchema({
   name = SITE_NAME,
   url,
   logo,
-  description = DEFAULT_SITE_DESCRIPTION,
+  description,
   email = DEFAULT_CONTACT_EMAIL,
   sameAs = [],
 }: OrganizationSchemaProps) {
@@ -39,7 +38,7 @@ export default function OrganizationSchema({
       width: 32,
       height: 32,
     },
-    description,
+    ...(description ? { description } : {}),
     ...(sameAs.length > 0 && { sameAs }),
     contactPoint: {
       "@type": "ContactPoint",
@@ -51,7 +50,13 @@ export default function OrganizationSchema({
       "@type": "Country",
       name: DEFAULT_COUNTRY_NAME,
     },
-    knowsAbout: ["테니스", "NTRP", "테니스 장비", "테니스 훈련", "스트링 텐션"],
+    knowsAbout: [
+      "테니스",
+      "NTRP",
+      "테니스 장비",
+      "테니스 훈련",
+      "스트링 텐션",
+    ],
   };
 
   return <JsonLd data={schema} />;

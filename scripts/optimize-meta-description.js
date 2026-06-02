@@ -12,7 +12,7 @@ const playerNameMap = {
     'ugo-humbert': '우고 움베르', 'sebastian-baez': '세바스티안 바에즈', 'lorenzo-musetti': '로렌조 무세티',
     'sebastian-korda': '세바스티안 코르다', 'cameron-norrie': '카메론 노리', 'tallon-griekspoor': '탈론 크리에크스푸르',
     'nicolas-jarry': '니콜라스 자리', 'alejandro-davidovich-fokina': '알레한드로 다비도비치 포키나', 'alexander-bublik': '알렉산더 부블리크',
-    'alex-michelsen': '알렉스 미첼슨', 'arthur-landercknech': '아르튀르 랑데르크네슈', 'brandon-nakashima': '브랜든 나카시마',
+    'alex-michelsen': '알렉스 미첼슨', 'arthur-rinderknech': '아르튀르 랑데르크네슈', 'brandon-nakashima': '브랜든 나카시마',
     'corentin-moutet': '코랑탱 무테', 'denis-shapovalov': '데니스 샤포발로프', 'felix-auger-aliassime': '펠릭스 오제 알리아심',
     'flavio-cobolli': '플라비오 코볼리', 'francisco-cerundolo': '프란시스코 세룬돌로', 'jack-draper': '잭 드레이퍼',
     'jakub-mensik': '야쿠프 멘시크', 'jaume-munar': '자우메 무나르', 'jiri-lehecka': '이리 레헤츠카',

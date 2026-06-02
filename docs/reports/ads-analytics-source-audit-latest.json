@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "mode": "source",
+  "generatedAt": "2026-06-02T03:26:56.668Z",
+  "baseUrl": "https://www.tennisfrens.com",
+  "adsensePubId": "ca-pub-3050601904412736",
+  "gaMeasurementId": "G-W1K51D8SBX",
+  "blogSamplePath": "/blog/tennis-hybrid-string-setup",
+  "requiredAdSlots": [
+    "5442683582",
+    "4809500982",
+    "8552062650"
+  ],
+  "findings": [],
+  "results": [
+    {
+      "scope": "source",
+      "adsensePubId": "ca-pub-3050601904412736",
+      "gaMeasurementId": "G-W1K51D8SBX",
+      "requiredAdSlots": 3
+    }
+  ]
+}

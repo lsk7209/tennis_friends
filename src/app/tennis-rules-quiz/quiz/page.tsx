@@ -1,257 +1,250 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, ArrowLeft, Clock } from 'lucide-react';
-import { QUESTION_BANK, CATEGORY_COLORS, CATEGORY_LABELS, pickQuestions, gradeQuiz, QuizAnswer, Question } from '@/lib/tennisQuiz';
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
+import {
+  CATEGORY_COLORS,
+  CATEGORY_LABELS,
+  QUESTION_BANK,
+  type Question,
+  type QuizAnswer,
+  gradeQuiz,
+  pickQuestions,
+} from "@/lib/tennisQuiz";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 
 const AUTO_ADVANCE_DELAY_MS = 500;
 
 export default function TennisRulesQuiz() {
   const router = useRouter();
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [questions] = useState<Question[]>(() => pickQuestions(QUESTION_BANK));
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [questionStartTime, setQuestionStartTime] = useState<number>(Date.now());
+  const [questionStartTime, setQuestionStartTime] = useState(() => performance.now());
   const [timeSpent, setTimeSpent] = useState(0);
 
   useEffect(() => {
-    // 퀴즈 시작 시 문항 선택
-    const selectedQuestions = pickQuestions(QUESTION_BANK);
-    setQuestions(selectedQuestions);
-    setQuestionStartTime(Date.now());
-  }, []);
+    if (!questionStartTime) return undefined;
 
-  useEffect(() => {
-    // 타이머 업데이트
-    const timer = setInterval(() => {
-      setTimeSpent(Math.floor((Date.now() - questionStartTime) / 1000));
+    const timer = window.setInterval(() => {
+      setTimeSpent(Math.floor((performance.now() - questionStartTime) / 1000));
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => window.clearInterval(timer);
   }, [questionStartTime]);
 
   const currentQuestion = questions[currentQuestionIndex];
-  const progress = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
+  const progress =
+    questions.length > 0
+      ? Math.round(((currentQuestionIndex + 1) / questions.length) * 100)
+      : 0;
   const isLastQuestion = currentQuestionIndex === questions.length - 1;
 
-  const handleAnswerSelect = (answerIndex: number) => {
-    if (selectedAnswer !== null) return; // 이미 답변을 선택한 경우
-    
-    setSelectedAnswer(answerIndex);
-    const isCorrect = answerIndex === currentQuestion.a;
-    const answerTime = Math.floor((Date.now() - questionStartTime) / 1000);
-    
-    const newAnswer: QuizAnswer = {
-      id: currentQuestion.id,
-      correct: isCorrect,
-      cat: currentQuestion.cat,
-      diff: currentQuestion.diff,
-      selectedAnswer: answerIndex,
-      timeSpent: answerTime
-    };
-    
-    const nextAnswers = [...answers, newAnswer];
-    setAnswers(nextAnswers);
-    
-    // 답변 선택 후 자동으로 다음 문항으로 이동 (마지막 문항이 아닌 경우)
-    if (!isLastQuestion) {
-      setTimeout(() => {
-        setCurrentQuestionIndex(prev => prev + 1);
-        setSelectedAnswer(null);
-        setQuestionStartTime(Date.now());
-      }, AUTO_ADVANCE_DELAY_MS); // 0.5초 후 자동 이동
-    } else {
-      setTimeout(() => {
-        handleFinish(nextAnswers);
-      }, AUTO_ADVANCE_DELAY_MS);
-    }
-  };
-
   const handleFinish = (nextAnswers = answers) => {
-    // 퀴즈 완료 - 결과 페이지로 이동
     const result = gradeQuiz(nextAnswers);
     const params = new URLSearchParams();
-    params.append('score', result.score.toString());
-    params.append('grade', result.grade);
-    params.append('timeSpent', result.timeSpent.toString());
-    params.append('wrongByCat', JSON.stringify(result.wrongByCat));
-    params.append('answers', JSON.stringify(result.answers));
-    params.append('questions', JSON.stringify(questions));
-    
+    params.append("score", result.score.toString());
+    params.append("grade", result.grade);
+    params.append("timeSpent", result.timeSpent.toString());
+    params.append("wrongByCat", JSON.stringify(result.wrongByCat));
+    params.append("answers", JSON.stringify(result.answers));
+    params.append("questions", JSON.stringify(questions));
+
     router.push(`/tennis-rules-quiz/result?${params.toString()}`);
   };
 
-  const handleNext = () => {
-    if (isLastQuestion) {
-      handleFinish();
-    }
+  const handleAnswerSelect = (answerIndex: number) => {
+    if (selectedAnswer !== null || !currentQuestion) return;
+
+    setSelectedAnswer(answerIndex);
+    const nextAnswer: QuizAnswer = {
+      id: currentQuestion.id,
+      correct: answerIndex === currentQuestion.a,
+      cat: currentQuestion.cat,
+      diff: currentQuestion.diff,
+      selectedAnswer: answerIndex,
+      timeSpent,
+    };
+
+    const nextAnswers = [...answers, nextAnswer];
+    setAnswers(nextAnswers);
+
+    window.setTimeout(() => {
+      if (isLastQuestion) {
+        handleFinish(nextAnswers);
+        return;
+      }
+
+      setCurrentQuestionIndex((prev) => prev + 1);
+      setSelectedAnswer(null);
+      setTimeSpent(0);
+      setQuestionStartTime(performance.now());
+    }, AUTO_ADVANCE_DELAY_MS);
   };
 
   const handlePrevious = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(prev => prev - 1);
-      setSelectedAnswer(null);
-      setQuestionStartTime(Date.now());
-    }
+    if (currentQuestionIndex === 0) return;
+
+    setCurrentQuestionIndex((prev) => prev - 1);
+    setSelectedAnswer(null);
+    setTimeSpent(0);
+    setQuestionStartTime(performance.now());
   };
 
   const getCategoryColor = (category: string) => {
     const colorMap: Record<string, string> = {
-      emerald: 'bg-emerald-100 text-emerald-800',
-      sky: 'bg-sky-100 text-sky-800',
-      amber: 'bg-amber-100 text-amber-800',
-      indigo: 'bg-indigo-100 text-indigo-800',
-      teal: 'bg-teal-100 text-teal-800',
-      rose: 'bg-rose-100 text-rose-800',
-      violet: 'bg-violet-100 text-violet-800',
-      orange: 'bg-orange-100 text-orange-800',
-      cyan: 'bg-cyan-100 text-cyan-800'
+      emerald: "bg-emerald-100 text-emerald-800",
+      sky: "bg-sky-100 text-sky-800",
+      amber: "bg-amber-100 text-amber-800",
+      indigo: "bg-indigo-100 text-indigo-800",
+      teal: "bg-teal-100 text-teal-800",
+      rose: "bg-rose-100 text-rose-800",
+      violet: "bg-violet-100 text-violet-800",
+      orange: "bg-orange-100 text-orange-800",
+      cyan: "bg-cyan-100 text-cyan-800",
     };
-    return colorMap[CATEGORY_COLORS[category]] || 'bg-gray-100 text-gray-800';
+    return colorMap[CATEGORY_COLORS[category]] || "bg-gray-100 text-gray-800";
   };
 
-  if (questions.length === 0) {
+  if (!currentQuestion) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <main className="flex min-h-screen items-center justify-center bg-white px-4">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">퀴즈를 준비하고 있습니다...</p>
+          <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-emerald-600" />
+          <p className="text-gray-600">퀴즈 문항을 준비하고 있습니다.</p>
         </div>
-      </div>
+      </main>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Compact Header */}
-      <section className="py-4 bg-gray-50">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="text-center mb-4">
-            <Badge className="bg-emerald-100 text-emerald-800 px-3 py-1 mb-2 text-sm font-semibold">
-              🎾 테니스 규칙 퀴즈
-            </Badge>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-              규칙 실력 점검
-            </h1>
-            <p className="text-gray-600 text-sm">
-              12문항에 답하고 당신의 규칙 지식을 확인해보세요
-            </p>
+    <main className="min-h-screen bg-white">
+      <section className="border-b border-gray-100 bg-gray-50 px-4 py-5">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <Badge className="mb-2 bg-emerald-100 text-emerald-800">
+                테니스 규칙 퀴즈
+              </Badge>
+              <h1 className="text-2xl font-bold text-gray-950">
+                실전 규칙 판단 테스트
+              </h1>
+            </div>
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+              <Clock className="h-4 w-4" />
+              {Math.floor(timeSpent / 60)}:
+              {(timeSpent % 60).toString().padStart(2, "0")}
+            </div>
           </div>
 
-          {/* Compact Progress Bar */}
-          <div className="mb-4">
-            <div className="flex justify-between items-center mb-1">
-              <span className="text-xs font-medium text-gray-700">
+          <div>
+            <div className="mb-2 flex justify-between text-sm text-gray-700">
+              <span>
                 문항 {currentQuestionIndex + 1} / {questions.length}
               </span>
-              <div className="flex items-center gap-1">
-                <Clock className="h-3 w-3 text-gray-500" />
-                <span className="text-xs font-medium text-gray-700">
-                  {Math.floor(timeSpent / 60)}:{(timeSpent % 60).toString().padStart(2, '0')}
-                </span>
-              </div>
+              <span>{progress}%</span>
             </div>
-            <Progress value={progress} className="h-1" />
+            <Progress value={progress} className="h-2" />
           </div>
         </div>
       </section>
 
-      {/* Compact Question Section */}
-      <section className="py-2 bg-white">
-        <div className="container mx-auto max-w-4xl px-4">
-          <Card className="bg-white border-gray-200 shadow-sm">
-            <CardHeader className="pb-2">
-              <div className="flex items-center justify-between mb-2">
-                <Badge className={`px-2 py-1 text-xs font-semibold ${getCategoryColor(currentQuestion.cat)}`}>
+      <section className="px-4 py-8">
+        <div className="mx-auto max-w-4xl">
+          <Card className="border-gray-200 bg-white shadow-sm">
+            <CardHeader>
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                <Badge className={getCategoryColor(currentQuestion.cat)}>
                   {CATEGORY_LABELS[currentQuestion.cat]}
                 </Badge>
-                <Badge variant="outline" className="text-gray-600 text-xs">
+                <Badge variant="outline" className="text-gray-600">
                   난이도 {currentQuestion.diff}
                 </Badge>
               </div>
-              <CardTitle className="text-lg md:text-xl font-bold text-gray-900 leading-tight">
+              <CardTitle className="text-xl leading-8 text-gray-950 sm:text-2xl">
                 {currentQuestion.q}
               </CardTitle>
             </CardHeader>
-            
-            <CardContent className="pt-0">
-              {/* Compact Options */}
-              <div className="grid gap-2 mb-4">
-                  {currentQuestion.options.map((option, index) => {
-                    const isSelected = selectedAnswer === index;
-                    
-                    return (
-                      <Button
-                        key={index}
-                        onClick={() => handleAnswerSelect(index)}
-                        disabled={selectedAnswer !== null}
-                        className={`w-full p-2 h-auto text-left justify-start transition-all duration-200 ${
-                          isSelected
-                            ? 'bg-emerald-50 border-emerald-500 text-emerald-900 shadow-md'
-                            : 'bg-white border-gray-300 hover:border-emerald-500 hover:bg-emerald-50 text-gray-900'
-                        }`}
-                        variant="outline"
-                      >
-                        <div className="flex items-center gap-2">
-                          <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center text-xs font-semibold transition-all duration-200 ${
-                            isSelected
-                              ? 'border-emerald-500 bg-emerald-500 text-white'
-                              : 'border-gray-300'
-                          }`}>
-                            {index + 1}
-                          </div>
-                          <span className="text-xs leading-tight">{option}</span>
-                        </div>
-                      </Button>
-                    );
-                  })}
-                </div>
 
+            <CardContent>
+              <div className="mb-6 grid gap-3">
+                {currentQuestion.options.map((option, index) => {
+                  const isSelected = selectedAnswer === index;
 
-                {/* Compact Navigation */}
-                <div className="flex justify-between items-center">
-                  <Button
-                    variant="outline"
-                    onClick={handlePrevious}
-                    disabled={currentQuestionIndex === 0}
-                    className="bg-white border-gray-300 hover:border-emerald-500 px-3 py-2 text-sm"
-                  >
-                    <ArrowLeft className="h-3 w-3 mr-1" />
-                    이전
-                  </Button>
-
-                  <div className="flex items-center gap-1">
-                    {questions.map((_, index) => (
-                      <div
-                        key={index}
-                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                          index < currentQuestionIndex ? 'bg-emerald-500' : 
-                          index === currentQuestionIndex ? 'bg-emerald-300' : 'bg-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  {isLastQuestion && selectedAnswer !== null && (
+                  return (
                     <Button
-                      onClick={handleNext}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 text-sm"
+                      key={`${currentQuestion.id}-${index}`}
+                      onClick={() => handleAnswerSelect(index)}
+                      disabled={selectedAnswer !== null}
+                      className={`h-auto w-full justify-start whitespace-normal rounded-lg p-4 text-left transition-colors ${
+                        isSelected
+                          ? "border-emerald-500 bg-emerald-50 text-emerald-950 shadow-sm"
+                          : "border-gray-300 bg-white text-gray-900 hover:border-emerald-500 hover:bg-emerald-50"
+                      }`}
+                      variant="outline"
                     >
-                      결과 확인
-                      <ArrowRight className="h-3 w-3 ml-1" />
+                      <span
+                        className={`mr-3 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-sm font-bold ${
+                          isSelected
+                            ? "border-emerald-500 bg-emerald-500 text-white"
+                            : "border-gray-300 text-gray-700"
+                        }`}
+                      >
+                        {index + 1}
+                      </span>
+                      <span className="leading-6">{option}</span>
                     </Button>
-                  )}
+                  );
+                })}
+              </div>
+
+              <div className="flex items-center justify-between gap-4">
+                <Button
+                  variant="outline"
+                  onClick={handlePrevious}
+                  disabled={currentQuestionIndex === 0}
+                  className="border-gray-300 bg-white"
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  이전
+                </Button>
+
+                <div className="hidden items-center gap-1 sm:flex">
+                  {questions.map((question, index) => (
+                    <span
+                      key={question.id}
+                      className={`h-2 w-2 rounded-full ${
+                        index < currentQuestionIndex
+                          ? "bg-emerald-600"
+                          : index === currentQuestionIndex
+                            ? "bg-emerald-300"
+                            : "bg-gray-300"
+                      }`}
+                    />
+                  ))}
                 </div>
-              </CardContent>
-            </Card>
+
+                {isLastQuestion && selectedAnswer !== null ? (
+                  <Button
+                    onClick={() => handleFinish()}
+                    className="bg-emerald-600 text-white hover:bg-emerald-700"
+                  >
+                    결과 확인
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                ) : (
+                  <p className="text-sm text-gray-500">답을 선택하면 자동으로 이동합니다.</p>
+                )}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

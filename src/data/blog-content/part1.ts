@@ -31,6 +31,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">야간 테니스는 단순히 어두운 시간에 치는 낮 경기가 아닙니다. 조명 각도, 그림자, 공의 높이 판단, 눈 피로가 모두 달라지기 때문에 시야 기준과 경기 루틴을 별도로 준비해야 합니다. 공이 늦게 보이는 날일수록 더 세게 치기보다 더 빨리 읽고, 더 깊게 보내고, 더 단순한 선택을 반복하는 쪽이 실수를 줄입니다.</p>
+      <p class="context-link-note">야간 경기는 조명과 공의 높이가 다르게 느껴지므로 코트 조건을 먼저 분리해서 확인해야 합니다. 이어서 <a href="/utility/court-conditions">야간 코트 조건 점검</a>와 <a href="/utility/weather-check">경기 전 날씨 확인</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -147,6 +149,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">바람 부는 날 테니스는 힘으로 이기는 경기가 아니라 궤적을 낮추거나 높이고, 회전과 깊이를 조절하는 경기입니다. 바람 방향을 먼저 읽으면 실수는 줄고 상대의 불안정한 타점을 더 자주 만들 수 있습니다. 같은 스윙을 반복하기보다 맞바람, 뒷바람, 옆바람에 맞춰 목표 지점과 샷 높이를 바꿔야 합니다.</p>
+      <p class="context-link-note">바람이 강한 날은 샷 모양보다 방향별 위험과 코트 적응 순서를 먼저 정해야 합니다. 이어서 <a href="/utility/weather-check">바람 조건 확인</a>와 <a href="/utility/court-conditions">코트 적응 체크</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -256,6 +260,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">더운 날 테니스는 잘 치는 것보다 먼저 무너지지 않는 것이 중요합니다. 수분, 전해질, 체온, 포인트 길이를 관리하면 경기 후반 집중력과 발 움직임을 훨씬 안정적으로 유지할 수 있습니다. 여름 코트에서는 최대 출력보다 지속 가능한 출력이 승률을 만듭니다.</p>
+      <p class="context-link-note">더운 날 경기력은 기술보다 체온, 수분, 휴식 간격을 먼저 관리할 때 흔들림이 줄어듭니다. 이어서 <a href="/utility/weather-check">더운 날씨 체크</a>와 <a href="/utility/hydration-planner">수분 보충 계획</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -370,6 +376,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">비 오는 날 테니스의 핵심은 무리해서 치는 것이 아니라 멈출 기준을 먼저 정하는 것입니다. 코트가 젖으면 미끄럼, 그립, 바운드, 공 무게가 모두 바뀌므로 안전 판단과 전술 조정이 함께 필요합니다. 약한 비라도 발이 밀리면 경기력 문제가 아니라 부상 위험으로 봐야 합니다.</p>
+      <p class="context-link-note">비 오는 날에는 샷을 세게 고치기보다 미끄러짐, 바운드, 그립 상태를 먼저 확인해야 합니다. 이어서 <a href="/utility/weather-check">비 예보 확인</a>와 <a href="/utility/court-conditions">젖은 코트 점검</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -478,6 +486,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">NTRP 2.5에서 3.0으로 올라가는 핵심은 새로운 샷을 많이 배우는 것이 아니라, 포핸드·백핸드·서브를 경기에서 끊기지 않게 연결하는 것입니다. 초급 탈출은 강한 공보다 안정적인 첫 3구, 쉬운 공 처리, 기본 위치 회복에서 시작됩니다.</p>
+      <p class="context-link-note">NTRP 2.5에서 3.0으로 올라가려면 새 기술보다 같은 준비 동작을 반복하는 계획이 필요합니다. 이어서 <a href="/utility/ntrp-test">NTRP 현재 위치 확인</a>와 <a href="/utility/training-planner">초급 탈출 훈련 계획</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -594,6 +604,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">NTRP 3.0에서 3.5로 올라가는 핵심은 더 어려운 기술을 배우는 것이 아니라, 이미 배운 포핸드·백핸드·서브·리턴을 경기 중에도 같은 품질로 반복하는 것입니다. 3.5 진입은 위너보다 일관성, 코스 선택, 회복 위치가 먼저입니다.</p>
+      <p class="context-link-note">NTRP 3.0 이후에는 레슨 감각보다 실제 경기에서 어떤 실수가 반복되는지 남겨야 합니다. 이어서 <a href="/utility/ntrp-test">NTRP 단계 점검</a>와 <a href="/utility/match-recorder">경기 기록</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -710,6 +722,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">NTRP 3.5에서 4.0으로 올라가는 핵심은 새로운 필살기를 추가하는 것이 아니라, 서브와 리턴 뒤 첫 3구를 예측 가능한 전술로 묶는 것입니다. 4.0에 가까운 선수는 좋은 샷을 더 많이 치는 사람보다, 불리한 포인트를 덜 만들고 유리한 포인트를 반복해서 설계하는 사람입니다.</p>
+      <p class="context-link-note">NTRP 3.5에서 4.0으로 가는 구간은 기술 수보다 포인트 운영 기준이 안정적인지가 갈립니다. 이어서 <a href="/utility/ntrp-test">NTRP 3.5-4.0 점검</a>와 <a href="/utility/match-analyzer">전술 패턴 분석</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -825,6 +839,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">베이스라인 랠리는 오래 버티는 게임이 아니라 상대의 균형과 리듬을 무너뜨리는 과정입니다. 깊이로 밀고, 방향으로 움직이고, 템포로 판단을 늦추면 같은 스트로크도 훨씬 공격적인 전술이 됩니다.</p>
+      <p class="context-link-note">베이스라인 랠리는 강한 한 방보다 같은 기준으로 깊이와 방향을 반복하는지가 핵심입니다. 이어서 <a href="/utility/rally-consistency-tracker">랠리 일관성 기록</a>와 <a href="/utility/unforced-error-audit">언포스드 에러 점검</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -932,6 +948,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">언포스드 에러를 줄이는 핵심은 소극적으로 치는 것이 아닙니다. 실수의 원인을 코스, 타점, 판단, 멘탈로 분류하고 공격할 공과 버틸 공을 구분해야 경기력은 유지하면서 불필요한 실점만 줄일 수 있습니다.</p>
+      <p class="context-link-note">에러를 줄이려면 기술 이름보다 언제 같은 판단이 반복해서 무너지는지 기록해야 합니다. 이어서 <a href="/utility/unforced-error-audit">실수 원인 감사</a>와 <a href="/utility/shot-selection-trainer">상황별 샷 선택</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -1039,6 +1057,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">테니스 위너는 강하게 치는 공이 아니라 상대가 닿기 어려운 순간과 공간에 들어간 공입니다. 파워보다 찬스볼 판단, 코스 공략, 앞쪽 타점, 리스크 관리가 먼저 정리되어야 실전 위너가 늘어납니다.</p>
+      <p class="context-link-note">위너는 힘으로 만드는 결과가 아니라 이전 샷으로 만든 찬스와 선택 기준이 맞을 때 나옵니다. 이어서 <a href="/utility/shot-selection-trainer">위너 선택 훈련</a>와 <a href="/utility/match-analyzer">찬스볼 패턴 분석</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -1146,6 +1166,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     ],
     content: `
       <p class="article-summary">테니스 경기 흐름은 분위기나 감으로만 읽는 것이 아닙니다. 점수, 첫 서브 성공률, 리턴 깊이, 랠리 길이, 상대의 템포 변화를 묶어 보면 모멘텀이 언제 넘어오는지와 전술 변화를 언제 걸어야 하는지가 보입니다.</p>
+      <p class="context-link-note">경기 흐름을 읽을 때는 분위기보다 직전 포인트에서 반복된 선택과 상대 반응을 기록해야 합니다. 이어서 <a href="/utility/match-analyzer">경기 흐름 분석</a>와 <a href="/utility/shot-selection-trainer">포인트별 선택 점검</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <aside class="highlight-box">
         <div class="highlight-box-title">먼저 결론</div>
@@ -1235,6 +1257,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     tags: ["테니스 클럽", "테니스 동호회", "클럽 선택", "테니스 모임", "테니스 초보 동호회"],
     content: `
       <p class="article-summary">좋은 테니스 클럽은 실력보다 출석률을 먼저 만들어줍니다. 처음 고를 때는 수준, 거리, 코트 상태, 회비, 운영 문화를 월 총액과 꾸준함 기준으로 비교하세요.</p>
+      <p class="context-link-note">클럽을 고를 때는 시설 조건만 보지 말고 실제로 꾸준히 나갈 수 있는 훈련 리듬까지 확인해야 합니다. 이어서 <a href="/utility/training-planner">주간 훈련 계획</a>와 <a href="/utility/practice-drill-generator">연습 드릴 생성기</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <h2>테니스 클럽 선택법: 먼저 결론</h2>
       <aside class="highlight-box">
@@ -1314,6 +1338,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     tags: ["테니스 코치 선택", "테니스 레슨", "테니스 코치", "레슨 팁", "생활스포츠지도사"],
     content: `
       <p class="article-summary">테니스 코치는 실력보다 목표 적합성으로 골라야 합니다. 초보자는 설명력과 안전한 기본기, 중급자는 약점 분석, 상급자는 경기 전략과 데이터 피드백을 기준으로 보세요.</p>
+      <p class="context-link-note">코치를 선택할 때는 레슨 설명보다 수업 뒤 혼자 반복할 과제가 분명한지를 확인해야 합니다. 이어서 <a href="/utility/training-planner">레슨 목표 정리</a>와 <a href="/utility/practice-drill-generator">복습 드릴 구성</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <h2>테니스 코치 선택 가이드: 먼저 결론</h2>
       <aside class="highlight-box">
@@ -1392,6 +1418,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     tags: ["백핸드 크로스코트", "백핸드", "크로스코트", "테니스 백핸드", "테니스 기술"],
     content: `
       <p class="article-summary">백핸드 크로스코트는 세게 치는 샷보다 상대를 코트 밖으로 밀어내는 안전한 연결 샷입니다. 성공 기준은 앞쪽 타점, 네트 위 여유, 베이스라인 근처 깊이, 그리고 회복 스텝입니다.</p>
+      <p class="context-link-note">백핸드 크로스코트는 각도보다 반복되는 선택 기준과 실수 방향을 함께 봐야 안정됩니다. 이어서 <a href="/utility/shot-selection-trainer">샷 선택 훈련</a>와 <a href="/utility/unforced-error-audit">실수 패턴 점검</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <h2>백핸드 크로스코트: 먼저 결론</h2>
       <aside class="highlight-box">
@@ -1476,6 +1504,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     tags: ["세컨드 서브", "킥서브", "탑스핀 서브", "더블폴트", "테니스 서브"],
     content: `
       <p class="article-summary">세컨드 서브는 약하게 넣는 보험 샷이 아닙니다. 킥과 탑스핀으로 네트 위 여유를 확보하고, 서비스박스 깊은 구역에 반복해서 넣어 더블폴트를 줄이면서 리턴 압박을 만드는 시작 샷입니다.</p>
+      <p class="context-link-note">킥과 톱스핀 세컨드 서브는 구질 자체보다 코스와 상대 리턴 위치가 함께 맞아야 효과가 납니다. 이어서 <a href="/utility/serve-placement-mapper">세컨드 서브 코스 기록</a>와 <a href="/utility/return-position-calculator">상대 리턴 위치 확인</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <h2>세컨드 서브 킥·탑스핀: 먼저 결론</h2>
       <aside class="highlight-box">
@@ -1569,6 +1599,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     tags: ["낮은 공 슬라이스 백핸드", "슬라이스 백핸드", "낮은 공 처리", "백핸드 어프로치", "테니스 백핸드"],
     content: `
       <p class="article-summary">낮은 공 슬라이스 백핸드는 겨우 넘기는 수비 샷이 아닙니다. 라켓 면을 안정시키고 공을 낮고 깊게 보내면 어프로치로 압박하거나, 수비 상황에서 시간을 벌어 랠리를 다시 중립으로 돌릴 수 있습니다.</p>
+      <p class="context-link-note">낮은 공 슬라이스는 공격 전환보다 먼저 안전한 선택지와 실패 원인을 분리해야 합니다. 이어서 <a href="/utility/shot-selection-trainer">낮은 공 샷 선택</a>와 <a href="/utility/unforced-error-audit">에러 원인 기록</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <h2>낮은 공 슬라이스 백핸드: 먼저 결론</h2>
       <aside class="highlight-box">
@@ -1662,6 +1694,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     tags: ["포핸드 다운더라인", "포핸드", "다운더라인", "테니스 포핸드", "테니스 전술"],
     content: `
       <p class="article-summary">포핸드 다운더라인은 라인을 맞히는 기술이 아니라, 상대의 이동 방향을 바꾸고 다음 공을 쉽게 만드는 전술 샷입니다. 성공 기준은 라인 안쪽 목표, 앞쪽 타점, 네트 위 여유, 샷 이후 회복 위치입니다.</p>
+      <p class="context-link-note">포핸드 다운더라인은 코스 욕심보다 준비 위치와 이전 랠리 흐름이 맞을 때 선택해야 합니다. 이어서 <a href="/utility/shot-selection-trainer">다운더라인 선택 훈련</a>와 <a href="/utility/rally-consistency-tracker">랠리 성공률 기록</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <h2>포핸드 다운더라인: 먼저 결론</h2>
       <aside class="highlight-box">
@@ -1755,6 +1789,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     tags: ["인사이드인 포핸드", "포핸드 코스", "포핸드 위너", "테니스 포핸드", "테니스 전술"],
     content: `
       <p class="article-summary">인사이드인 포핸드는 무조건 강하게 치는 위너 샷이 아닙니다. 백핸드 쪽으로 돌아선 뒤 상대가 대각선을 예상하는 순간, 라인 안쪽 깊은 구역으로 방향을 바꿔 코트 균형을 흔드는 전술 샷입니다.</p>
+      <p class="context-link-note">인사이드인 포핸드는 각도와 타이밍이 모두 맞는 순간만 고르는 편이 실전 성공률을 높입니다. 이어서 <a href="/utility/shot-selection-trainer">인사이드인 판단 훈련</a>와 <a href="/utility/unforced-error-audit">위험 샷 기록</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <h2>인사이드인 포핸드: 먼저 결론</h2>
       <aside class="highlight-box">
@@ -1848,6 +1884,8 @@ export const BLOG_CONTENT_PART1: Record<string, BlogContentEntry> = {
     tags: ["테니스 슬럼프", "슬럼프 극복", "테니스 멘탈", "테니스 회복 루틴", "경기력 회복"],
     content: `
       <p class="article-summary">테니스 슬럼프는 의지만 약해서 생기는 문제가 아닙니다. 피로, 통증, 훈련량, 경기 압박, 기술 과제가 섞여 나타나는 신호이므로 기록으로 원인을 나누고, 작은 성공 기준부터 다시 쌓아야 합니다.</p>
+      <p class="context-link-note">슬럼프가 길어질 때는 멘탈만 탓하지 말고 피로, 통증, 회복 루틴을 같이 확인해야 합니다. 이어서 <a href="/utility/injury-risk">몸 상태 위험 신호 점검</a>와 <a href="/utility/recovery-routine-generator">회복 루틴 생성</a>를 함께 확인하면 다음 경기에서 바로 기록할 기준을 좁힐 수 있습니다.</p>
+
 
       <h2>테니스 슬럼프 극복: 먼저 결론</h2>
       <aside class="highlight-box">

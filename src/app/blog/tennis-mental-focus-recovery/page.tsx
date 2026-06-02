@@ -272,7 +272,7 @@ export default function TennisMentalFocusRecoveryPage() {
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
             <h3 className="font-bold text-gray-900 dark:text-white mb-2">제주 (바람 많음):</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">바람으로 리듬 깨짐 → 시각 루틴(네트凝視)으로 안정.</p>
+            <p className="text-gray-700 dark:text-gray-300 text-sm">바람으로 리듬 깨짐 → 시각 루틴(네트 응시)으로 안정.</p>
           </div>
         </div>
 

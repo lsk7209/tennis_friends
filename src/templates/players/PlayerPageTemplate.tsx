@@ -147,16 +147,23 @@ const getIconColor = (iconName: string) => {
   return colorMap[iconName] || 'text-gray-600 dark:text-gray-400';
 };
 
-export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections }: PlayerPageTemplateProps) {
-  const currentYear = new Date().getFullYear();
-  const birthYear = player.birthYear || (player.birthDate ? parseInt(player.birthDate.split('-')[0]) : 2000);
-  const age = currentYear - birthYear;
+export function PlayerPageTemplate({ player, metadata: _metadata, tocItems, faqs, sections }: PlayerPageTemplateProps) {
   const nameKo = player.nameKo || player.name;
   const tags = player.tagsStory || [];
   const slug = player.slug || '';
+  const playerFacts = [
+    { label: '영문명', value: player.nameEn },
+    { label: '국가', value: `${player.countryFlag ? `${player.countryFlag} ` : ''}${player.country}` },
+    { label: '투어', value: player.tour },
+    { label: '현재 랭킹', value: player.rankingCurrent ? `#${player.rankingCurrent}` : undefined },
+    { label: '최고 랭킹', value: player.rankingPeak ? `#${player.rankingPeak}` : undefined },
+    { label: '플레이', value: player.plays },
+    { label: '백핸드', value: player.backhand },
+    { label: '선호 코트', value: player.favoriteSurface },
+  ].filter((item): item is { label: string; value: string } => Boolean(item.value));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950 dark:via-gray-900 dark:to-purple-950">
+    <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
       <Article
         title={nameKo}
         excerpt={sections.oneLiner.summary}
@@ -170,6 +177,48 @@ export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections 
               </Badge>
             ))}
           </div>
+
+          <section
+            className="not-prose mb-8 rounded-lg border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            aria-label={`${nameKo} 선수 핵심 정보`}
+          >
+            <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">
+                  Player profile
+                </p>
+                <h2 className="mt-1 text-2xl font-bold tracking-normal text-slate-950 dark:text-white">
+                  {nameKo}
+                  {player.nameEn ? (
+                    <span className="ml-2 text-base font-medium text-slate-500 dark:text-slate-400">
+                      {player.nameEn}
+                    </span>
+                  ) : null}
+                </h2>
+              </div>
+              {player.style ? (
+                <Badge className="w-fit bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200">
+                  {player.style}
+                </Badge>
+              ) : null}
+            </div>
+
+            <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {playerFacts.slice(0, 8).map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-md border border-slate-100 bg-slate-50 px-3 py-2 dark:border-slate-800 dark:bg-slate-950"
+                >
+                  <dt className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                    {item.label}
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    {item.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </section>
 
           {/* Table of Contents */}
           <TOC items={tocItems} />
@@ -194,7 +243,7 @@ export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections 
             <h2 id="what-type-of-player">{sections.playerType.title}</h2>
             <p>{sections.playerType.description}</p>
 
-            <div className="not-prose my-6 p-5 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+            <div className="not-prose my-6 rounded-lg border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
                 <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 <h4 className="text-base font-semibold text-gray-900 dark:text-gray-100 m-0">선수 프로필</h4>
@@ -335,7 +384,7 @@ export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections 
               <div key={idx}>
                 <h3>{match.title}</h3>
                 {match.highlight && (
-                  <div className="not-prose my-4 p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-xl border border-blue-200 dark:border-blue-800 shadow-md">
+                  <div className="not-prose my-4 rounded-lg border border-blue-200 bg-blue-50 p-5 shadow-sm dark:border-blue-800 dark:bg-blue-950/30">
                     <div className="flex items-center gap-2 mb-3">
                       <Trophy className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                       <p className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-0">{match.highlight}</p>
@@ -348,7 +397,7 @@ export function PlayerPageTemplate({ player, metadata, tocItems, faqs, sections 
             ))}
 
             <h3>대표 명장면</h3>
-            <blockquote className="not-prose my-4 p-5 bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/50 dark:to-slate-900/50 border-l-4 border-gray-400 dark:border-gray-600 rounded-r-lg shadow-sm">
+            <blockquote className="not-prose my-4 rounded-r-lg border-l-4 border-gray-400 bg-slate-50 p-5 shadow-sm dark:border-gray-600 dark:bg-slate-900">
               <div className="flex items-start gap-3">
                 <Zap className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
                 <p className="text-base text-gray-800 dark:text-gray-200 mb-0 italic leading-relaxed">

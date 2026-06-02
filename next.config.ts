@@ -66,6 +66,7 @@ const nextConfig: NextConfig = {
 
   // 압축
   compress: true,
+  staticPageGenerationTimeout: 180,
 
   // URL 정규화 리다이렉트
   async redirects() {
@@ -77,11 +78,10 @@ const nextConfig: NextConfig = {
         destination: "https://www.tennisfrens.com/:path*",
         permanent: true,
       },
-      // GSC 데이터 기준 올바른 철자 "Rinderknech" 로 들어오는 트래픽을
-      // 기존 색인된 URL(arthur-landercknech)로 이관
+      // Canonicalize the old misspelled Arthur Rinderknech slug.
       {
-        source: "/players/arthur-rinderknech",
-        destination: "/players/arthur-landercknech",
+        source: "/players/arthur-landercknech",
+        destination: "/players/arthur-rinderknech",
         permanent: true,
       },
     ];
@@ -157,7 +157,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=3600, s-maxage=3600",
+            value: "public, max-age=0, s-maxage=60, must-revalidate",
           },
         ],
       },
@@ -170,7 +170,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Cache-Control",
-            value: "public, max-age=3600, s-maxage=3600",
+            value: "public, max-age=0, s-maxage=60, must-revalidate",
           },
         ],
       },
@@ -232,6 +232,24 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=86400, s-maxage=86400",
+          },
+        ],
+      },
+      {
+        source: "/images/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000, s-maxage=2592000, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        source: "/fonts/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, s-maxage=31536000, immutable",
           },
         ],
       },

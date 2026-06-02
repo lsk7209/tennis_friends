@@ -135,7 +135,7 @@ export default function BlogPost() {
                 <Badge className="bg-blue-600">Standard Poly-Main</Badge>
                 <div>
                   <h5 className="font-bold text-sm mb-1">메인: 폴리 + 가로: 천연/인조거트</h5>
-                  <p className="text-xs text-gray-600">스핀과 내구성이 우선인 공격적 성향. 가로줄이 완衝 역할을 하여 폴리 특유의 딱딱함을 상쇄합니다. (주로 조코비치, 나달 방식)</p>
+                <p className="text-xs text-gray-600">스핀과 내구성이 우선인 공격적 성향. 가로줄이 완충 역할을 하여 폴리 특유의 딱딱함을 상쇄합니다. (주로 조코비치, 나달 방식)</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 bg-slate-50 dark:bg-slate-800 p-5 rounded-xl">

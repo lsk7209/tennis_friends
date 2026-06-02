@@ -4,6 +4,8 @@ import { getSiteUrl } from "@/lib/site";
 export const dynamic = "force-static";
 export const revalidate = false;
 
+const DISALLOWED_PRIVATE_PATHS = ["/private/", "/admin/", "/api/auth/"];
+
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = getSiteUrl();
 
@@ -12,45 +14,42 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "Googlebot",
         allow: "/",
-        disallow: ["/private/", "/admin/", "/api/auth/"],
+        disallow: DISALLOWED_PRIVATE_PATHS,
       },
       {
-        userAgent: "Yeti", // 네이버 크롤러
+        userAgent: "Yeti",
         allow: "/",
-        disallow: ["/private/", "/admin/", "/api/auth/"],
+        disallow: DISALLOWED_PRIVATE_PATHS,
       },
       {
         userAgent: "Bingbot",
         allow: "/",
-        disallow: ["/private/", "/admin/", "/api/auth/"],
+        disallow: DISALLOWED_PRIVATE_PATHS,
+      },
+      {
+        userAgent: "Daumoa",
+        allow: "/",
+        disallow: DISALLOWED_PRIVATE_PATHS,
       },
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/private/", "/admin/", "/api/auth/"],
+        disallow: DISALLOWED_PRIVATE_PATHS,
       },
-      // Daum 크롤러
-      {
-        userAgent: "Daumoa",
-        allow: "/",
-        disallow: ["/private/", "/admin/", "/api/auth/"],
-      },
-      // AI 봇 허용 (검색 및 학습용)
       {
         userAgent: [
           "GPTBot",
           "ChatGPT-User",
-          "OAI-SearchBot", // OpenAI
-          "Google-Extended", // Google AI
+          "OAI-SearchBot",
+          "Google-Extended",
           "ClaudeBot",
           "Claude-Web",
-          "anthropic-ai", // Anthropic
-          "PerplexityBot", // Perplexity
-          "CCBot", // Common Crawl
+          "anthropic-ai",
+          "PerplexityBot",
+          "CCBot",
         ],
         allow: "/",
       },
-      // 스크레이퍼 차단
       {
         userAgent: "Bytespider",
         disallow: "/",

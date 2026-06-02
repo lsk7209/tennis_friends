@@ -1,11 +1,9 @@
 import { ImageResponse } from 'next/og';
 
-// Route segment config
-export const runtime = 'edge';
 export const revalidate = false;
 
 // Image metadata
-export const alt = 'Tennis Friends - 테니스 친구들';
+export const alt = 'TennisFriends - 테니스 실력 테스트와 가이드';
 export const size = {
     width: 1200,
     height: 630,
@@ -113,7 +111,7 @@ export default async function Image() {
                             fontWeight: 500,
                         }}
                     >
-                        테니스의 모든 것, 친구들과 함께!
+                        테니스 실력 테스트와 실전 가이드를 한곳에서
                     </p>
                 </div>
                 <div

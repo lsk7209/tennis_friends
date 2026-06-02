@@ -1652,8 +1652,8 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
             ]
         }
     },
-    'arthur-landercknech': {
-        name: '아르튀르 랑데르크네슈', nameEn: 'Arthur Rinderknech', country: 'France', countryFlag: '🇫🇷', image: '/images/players/arthur-landercknech.png', gender: 'male',
+    'arthur-rinderknech': {
+        name: '아르튀르 랑데르크네슈', nameEn: 'Arthur Rinderknech', country: 'France', countryFlag: '🇫🇷', image: '/images/players/arthur-rinderknech.png', gender: 'male',
         plays: 'Right-handed', backhand: 'One-handed',
         longBio: '미국 대학 테니스(Texas A&M)를 평정하고 프로에 온 늦깍이 스타. 강력한 서브와 포핸드를 앞세운 공격적인 테니스를 구사합니다.',
         detailedProfile: {

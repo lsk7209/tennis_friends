@@ -80,3 +80,23 @@ output_preferences:
 cache:
   cache_dir: "out/article-writer/tennisfrens-300/.cache"
   dedup_window: 300
+
+seo_focus:
+  gsc_basis:
+    period: "2026-04-26 ~ 2026-05-24"
+    total_clicks: 51
+    total_impressions: 2353
+    average_ctr_pct: 2.17
+    average_position: 11.56
+    priority:
+      - "노출은 있으나 CTR이 낮은 선수 프로필 페이지의 제목·요약 개선"
+      - "모바일 검색 결과에서 첫 문단과 메타 설명의 직접 답변 강화"
+      - "www canonical 일관성 유지"
+  ga4_basis:
+    period: "2026-04-28 ~ 2026-05-26"
+    dominant_device: "mobile"
+    dominant_source: "Naver mobile search/referral"
+    priority:
+      - "모바일 본문 폭, 표 스크롤, 광고 CLS 방지"
+      - "도구 페이지에서 관련 글·다음 행동으로 이어지는 내부 링크 강화"
+      - "GA4 page_title에 깨진 문자열이 들어가지 않도록 공통 메타 우선 복구"

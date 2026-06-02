@@ -34,16 +34,16 @@
 ## 📍 생성된 URL
 
 ### 크롤러 정책 파일
-- robots.txt: `https://tennisfriends.co.kr/robots.txt`
-- ai.txt: `https://tennisfriends.co.kr/.well-known/ai.txt`
-- security.txt: `https://tennisfriends.co.kr/.well-known/security.txt`
+- robots.txt: `https://www.tennisfrens.com/robots.txt`
+- ai.txt: `https://www.tennisfrens.com/.well-known/ai.txt`
+- security.txt: `https://www.tennisfrens.com/.well-known/security.txt`
 
 ### 사이트맵
-- 일반: `https://tennisfriends.co.kr/sitemap.xml`
-- 네이버: `https://tennisfriends.co.kr/sitemap-naver.xml`
+- 일반: `https://www.tennisfrens.com/sitemap.xml`
+- 네이버: `https://www.tennisfrens.com/sitemap-naver.xml`
 
 ### RSS
-- RSS 피드: `https://tennisfriends.co.kr/rss.xml`
+- RSS 피드: `https://www.tennisfrens.com/rss.xml`
 
 ## 🤖 지원되는 AI 크롤러 목록
 

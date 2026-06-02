@@ -1,0 +1,35 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T04:22:40.907Z",
+  "checkedFiles": [
+    "src/lib/player-search-seo.ts",
+    "src/app/players/[slug]/page.tsx",
+    "src/templates/players/PlayerPageTemplate.tsx",
+    "src/components/players/PlayerSearchAliasSection.tsx"
+  ],
+  "gscTargetSlugs": [
+    "martin-landaluce",
+    "miomir-kecmanovic",
+    "marie-bouzkova",
+    "arthur-rinderknech",
+    "daniel-evans",
+    "alexandre-muller",
+    "jiri-lehecka",
+    "laslo-djere",
+    "hamad-medjedovic",
+    "francisco-comesana",
+    "tallon-griekspoor",
+    "ethan-quinn",
+    "polina-kudermetova",
+    "yannick-hanfmann",
+    "tomas-machac",
+    "dino-prizmic",
+    "camilo-ugo-carabelli",
+    "linda-noskova",
+    "alejandro-davidovich-fokina",
+    "jakub-mensik",
+    "karen-khachanov",
+    "luciano-darderi"
+  ],
+  "findings": []
+}

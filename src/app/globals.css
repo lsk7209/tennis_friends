@@ -1067,12 +1067,31 @@ a:focus-visible {
 }
 
 .blog-article-content {
+  max-width: 100%;
   overflow-wrap: anywhere;
+  word-break: keep-all;
 }
 
 .blog-article-content > * {
   content-visibility: auto;
   contain-intrinsic-size: auto 360px;
+}
+
+.blog-article-content img,
+.blog-article-content video,
+.blog-article-content iframe,
+.blog-article-content pre {
+  max-width: 100%;
+}
+
+.blog-article-content pre {
+  white-space: pre-wrap;
+}
+
+.blog-article-content .table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .aw-article .article-summary,
@@ -1101,6 +1120,21 @@ a:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 
+.aw-article aside,
+.aw-article details,
+.aw-article table {
+  max-width: 100%;
+}
+
+.aw-article a {
+  text-underline-offset: 0.18em;
+}
+
+.aw-article summary {
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
 .aw-article table {
   border-radius: 8px;
   overflow: hidden;
@@ -1126,11 +1160,21 @@ a:focus-visible {
   contain: layout paint style;
 }
 
+.adsense-slot .adsbygoogle {
+  min-height: var(--adsense-mobile-min-height, 220px);
+}
+
 .adsense-slot .adsbygoogle,
 .adsense-slot iframe {
   max-width: 100% !important;
   min-width: 0 !important;
   width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .adsense-slot .adsbygoogle {
+    min-height: inherit;
+  }
 }
 
 [id^="aswift_"][id$="_host"],
@@ -1173,6 +1217,16 @@ a:focus-visible {
     line-height: 1.78;
   }
 
+  .blog-article-content h2 {
+    font-size: 1.28rem;
+    line-height: 1.38;
+  }
+
+  .blog-article-content h3 {
+    font-size: 1.12rem;
+    line-height: 1.4;
+  }
+
   .aw-article aside[style*="display:grid"] {
     grid-template-columns: 1fr !important;
   }
@@ -1181,6 +1235,14 @@ a:focus-visible {
   .aw-article .aeo-answer,
   .aw-article aside {
     padding: 0.875rem 1rem !important;
+  }
+
+  .aw-article details {
+    padding: 0.75rem 0.875rem;
+  }
+
+  .aw-article table {
+    min-width: 560px;
   }
 
   .adsense-slot {

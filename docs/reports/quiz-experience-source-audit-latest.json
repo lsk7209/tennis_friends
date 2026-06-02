@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "mode": "source",
+  "generatedAt": "2026-06-02T03:27:00.688Z",
+  "baseUrl": "https://www.tennisfrens.com",
+  "canonicalBaseUrl": "https://www.tennisfrens.com",
+  "findings": [],
+  "results": [
+    {
+      "scope": "source",
+      "files": 6,
+      "questions": 24,
+      "categories": 9
+    }
+  ]
+}

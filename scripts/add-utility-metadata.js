@@ -45,12 +45,12 @@ export const metadata: Metadata = {
   title: "${title}",
   description: "${title} — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
   alternates: {
-    canonical: "https://tennisfrens.com/utility/${slug}",
+    canonical: "https://www.tennisfrens.com/utility/${slug}",
   },
   openGraph: {
     title: "${title} | TennisFriends",
     description: "${title} — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
-    url: "https://tennisfrens.com/utility/${slug}",
+    url: "https://www.tennisfrens.com/utility/${slug}",
     type: "website",
     locale: "ko_KR",
     siteName: "TennisFriends",

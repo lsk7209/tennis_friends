@@ -1,0 +1,54 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T03:26:56.220Z",
+  "reportsDir": "docs\\reports",
+  "maxReportAgeDays": 7,
+  "gsc": {
+    "period": "2026-05-01 ~ 2026-05-29",
+    "totalPages": 290,
+    "totalQueries": 153,
+    "totalClicks": 73,
+    "totalImpressions": 3278,
+    "avgCtrPct": 2.23,
+    "avgPosition": 11.17
+  },
+  "ga4": {
+    "propertyId": "534356101",
+    "period": "2026-05-03 ~ 2026-05-31",
+    "totalSessions": 2167,
+    "totalUsers": 1958,
+    "totalPages": 328
+  },
+  "mitigations": [
+    {
+      "issue": "historical non-www URLs still appear in GSC samples",
+      "status": "covered",
+      "source": "next.config.ts redirects"
+    },
+    {
+      "issue": "historical typo URL still appears in GSC samples",
+      "status": "covered",
+      "source": "next.config.ts redirects"
+    }
+  ],
+  "warnings": [
+    {
+      "report": "gsc",
+      "issue": "historical non-www URLs still appear in GSC samples",
+      "pages": [
+        "https://tennisfrens.com/players/jannik-sinner",
+        "https://tennisfrens.com/players/marie-bouzkova"
+      ],
+      "expectedHost": "https://www.tennisfrens.com"
+    },
+    {
+      "report": "gsc",
+      "issue": "historical typo URL still appears in GSC samples",
+      "pages": [
+        "https://www.tennisfrens.com/players/arthur-landercknech"
+      ],
+      "expectedPage": "https://www.tennisfrens.com/players/arthur-rinderknech"
+    }
+  ],
+  "findings": []
+}

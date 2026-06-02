@@ -1,0 +1,14 @@
+{
+  "status": "ok",
+  "effectivePosts": 719,
+  "postsWithBodyContent": 719,
+  "lowInternalBodyLinks": 0,
+  "lowExternalBodyLinks": 0,
+  "strongBodyLinkCoveragePct": 100,
+  "thresholds": {
+    "minBodyInternalLinks": 2,
+    "minBodyExternalLinks": 1
+  },
+  "note": "Report-only body link audit. Do not bulk-insert repeated links; use the priority list for human-like rewrites.",
+  "warnings": []
+}

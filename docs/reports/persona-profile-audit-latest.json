@@ -1,0 +1,8 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T03:26:57.148Z",
+  "sitePersona": "persona.yml",
+  "writerPersona": "site-config/tennisfriends-persona.yaml",
+  "requiredAuthoritySources": 5,
+  "findings": []
+}

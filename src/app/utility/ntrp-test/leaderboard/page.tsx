@@ -6,8 +6,16 @@ import { Badge } from '@/components/ui/badge';
 import { Trophy, Crown, Medal, Award } from 'lucide-react';
 import { supabase, isSupabaseConfigured } from '@/lib/supabaseClient';
 
+interface LeaderboardRow {
+  id?: string;
+  created_at: string;
+  score: number;
+  level: string;
+  character: string;
+}
+
 export default function LeaderboardPage() {
-  const [rows, setRows] = useState<any[]>([]);
+  const [rows, setRows] = useState<LeaderboardRow[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -25,7 +33,7 @@ export default function LeaderboardPage() {
             .order('score', { ascending: false })
             .limit(50);
           
-          setRows(data || []);
+          setRows((data || []) as LeaderboardRow[]);
         } else {
           // 더미 데이터 설정
           const dummyData = [

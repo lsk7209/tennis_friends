@@ -9,7 +9,9 @@
 export interface Env {
   ANALYTICS_KV: KVNamespace;
   ADMIN_PASSWORD?: string;
-  RATE_LIMITER?: any; // Rate Limiter (선택적)
+  RATE_LIMITER?: {
+    limit(input: { key: string }): Promise<{ success: boolean }>;
+  };
 }
 
 interface VisitorData {
@@ -73,7 +75,7 @@ async function retryWithBackoff<T>(
   while (attempts < maxAttempts) {
     try {
       return await fn();
-    } catch (error: any) {
+    } catch (error) {
       attempts++;
       
       if (attempts >= maxAttempts) {
@@ -89,7 +91,7 @@ async function retryWithBackoff<T>(
   throw new Error('Max retry attempts reached');
 }
 
-export default {
+const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     const path = url.pathname;
@@ -148,6 +150,8 @@ export default {
     ctx.waitUntil(aggregateStats(env, ctx));
   },
 };
+
+export default worker;
 
 // 방문자 데이터 수집 (최적화: 배치 저장)
 async function handleTrack(
@@ -401,8 +405,17 @@ async function handleClearData(request: Request, env: Env): Promise<Response> {
   }
 }
 
+interface StatsSummary {
+  totalVisitors: number;
+  uniqueVisitors: number;
+  dailyStats: Array<{ date: string; visitors: number }>;
+  timestamp: string;
+  source: string;
+  period: string;
+}
+
 // 통계 계산 (최적화: bulk reads, 캐싱)
-async function calculateStats(env: Env): Promise<any> {
+async function calculateStats(env: Env): Promise<StatsSummary> {
   const today = new Date();
   
   // 최근 30일 통계 키 준비
@@ -435,10 +448,6 @@ async function calculateStats(env: Env): Promise<any> {
     })
     .reverse();
 
-  // 오늘 통계
-  const todayKey = today.toISOString().split('T')[0];
-  const todayCount = dailyStatsValues[dailyStatsKeys.indexOf(`stats:daily:${todayKey}`)] || '0';
-
   // 총 방문자 수 계산 (최근 30일 합계)
   const totalVisitors = dailyStats.reduce((sum, stat) => sum + stat.visitors, 0);
 
@@ -457,7 +466,7 @@ async function calculateStats(env: Env): Promise<any> {
 }
 
 // 통계 집계 (크론 작업) - 최적화: 효율적인 집계
-async function aggregateStats(env: Env, ctx: ExecutionContext): Promise<void> {
+async function aggregateStats(env: Env, _ctx: ExecutionContext): Promise<void> {
   try {
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);

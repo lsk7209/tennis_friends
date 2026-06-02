@@ -11,6 +11,20 @@ import {Trophy, Share2, RotateCcw, Star, TrendingUp, Target, Award, Zap, Instagr
 import { getNTRPLevel, charMap } from '@/lib/questions';
 import { trackTestCompletion } from '@/components/Tracking';
 
+interface LevelDetail {
+  color: string;
+  borderColor: string;
+  textColor: string;
+  bgColor: string;
+  icon: string;
+  title: string;
+  description: string;
+  tips: string[];
+  proPlayers: string[];
+  nextLevel: string;
+  progress: number;
+}
+
 function ResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -36,7 +50,7 @@ function ResultContent() {
 
   // NTRP 레벨별 상세 정보
   const getLevelDetails = (level: string) => {
-    const details: { [key: string]: any } = {
+    const details: Record<string, LevelDetail> = {
       '1.5': {
         color: 'from-blue-50 to-blue-100',
         borderColor: 'border-blue-200',

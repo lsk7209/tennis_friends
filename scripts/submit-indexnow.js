@@ -9,6 +9,7 @@ const KEY_LOCATION = `https://${HOST}/${API_KEY}.txt`;
 const SITEMAP_URL = `https://${HOST}/sitemap.xml`;
 const REQUEST_TIMEOUT_MS = 15000;
 const INDEXNOW_BATCH_SIZE = 10000;
+const MAX_SITEMAP_URLS = 50000;
 const INDEXNOW_ENDPOINTS = [
     { name: 'IndexNow', hostname: 'api.indexnow.org', path: '/indexnow', includeKeyLocation: true },
     { name: 'Bing', hostname: 'www.bing.com', path: '/indexnow', includeKeyLocation: true },
@@ -34,7 +35,7 @@ async function fetchUrls() {
                 while ((match = regex.exec(data)) !== null) {
                     urls.push(match[1]);
                 }
-                resolve(urls);
+                resolve(validateUrls(urls, { requireHost: HOST }));
             });
             res.on('error', reject);
         });
@@ -110,6 +111,46 @@ function createPayload(urls, includeKeyLocation) {
     return JSON.stringify(payload);
 }
 
+function validateUrls(urls, { requireHost }) {
+    const normalizedUrls = urls.map((url) => url.trim()).filter(Boolean);
+    const uniqueUrls = [...new Set(normalizedUrls)];
+
+    if (uniqueUrls.length !== normalizedUrls.length) {
+        throw new Error(`Duplicate URLs found: ${normalizedUrls.length - uniqueUrls.length}`);
+    }
+
+    if (uniqueUrls.length > MAX_SITEMAP_URLS) {
+        throw new Error(`Too many URLs for a single sitemap: ${uniqueUrls.length}`);
+    }
+
+    for (const url of uniqueUrls) {
+        let parsed;
+        try {
+            parsed = new URL(url);
+        } catch {
+            throw new Error(`Invalid URL: ${url}`);
+        }
+
+        if (parsed.protocol !== 'https:') {
+            throw new Error(`IndexNow URL must be HTTPS: ${url}`);
+        }
+
+        if (parsed.hostname !== requireHost) {
+            throw new Error(`URL host mismatch: ${url} (expected ${requireHost})`);
+        }
+
+        if (parsed.hash) {
+            throw new Error(`URL must not contain a fragment: ${url}`);
+        }
+
+        if (url !== KEY_LOCATION && parsed.pathname !== '/' && parsed.pathname.endsWith('/')) {
+            throw new Error(`Canonical URL should not use a trailing slash: ${url}`);
+        }
+    }
+
+    return uniqueUrls;
+}
+
 async function submitToIndexNow(urls) {
     if (urls.length === 0) {
         console.log('No URLs found to submit.');
@@ -159,7 +200,7 @@ async function main() {
             urlsToSubmit = await fetchUrls();
         } else if (args.some((arg) => !arg.startsWith('-'))) {
             // Treat args as specific URLs
-            urlsToSubmit = args.filter((arg) => !arg.startsWith('-'));
+            urlsToSubmit = validateUrls(args.filter((arg) => !arg.startsWith('-')), { requireHost: HOST });
         } else {
             console.log('Usage: node scripts/submit-indexnow.js --all OR node scripts/submit-indexnow.js [url1] [url2]');
             // Default: fetch all for now or specific logic?
@@ -170,6 +211,8 @@ async function main() {
 
         // IndexNow limit is 10,000 URLs per post. We should slice if needed, but for now assuming <10k.
         console.log(`Preparing to submit ${urlsToSubmit.length} URLs...`);
+        console.log(`IndexNow host: ${HOST}`);
+        console.log(`IndexNow key location: ${KEY_LOCATION}`);
         if (dryRun) {
             console.log('Dry run: skipped IndexNow-compatible submissions.');
             return;
@@ -183,4 +226,19 @@ async function main() {
     }
 }
 
-main();
+if (require.main === module) {
+    main();
+}
+
+module.exports = {
+    API_KEY,
+    HOST,
+    KEY_LOCATION,
+    SITEMAP_URL,
+    INDEXNOW_BATCH_SIZE,
+    MAX_SITEMAP_URLS,
+    INDEXNOW_ENDPOINTS,
+    createPayload,
+    validateUrls,
+    chunk,
+};

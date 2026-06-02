@@ -3,13 +3,14 @@
  */
 
 import type { RelatedContentItem } from '@/components/RelatedContent';
+import type { LucideIcon } from 'lucide-react';
 
 // 유틸리티 메타데이터 타입
 export interface UtilityMetadata {
   id: string;
   title: string;
   description: string;
-  icon: any;
+  icon: LucideIcon;
   status: '완료' | '개발 예정';
   features: string[];
   gradient: string;

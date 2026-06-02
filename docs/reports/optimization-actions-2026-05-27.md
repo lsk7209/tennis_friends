@@ -14,7 +14,7 @@
 },
 ```
 - **목적**: GSC 카니발리제이션 해소. www / no-www 두 호스트 동시 인덱싱 분산 (NTRP 페이지 15 vs 1 클릭) 통합
-- **효과 측정**: 배포 후 1~2주 GSC `https://tennisfrens.com/*` 노출 감소, `www.` 노출 증가 확인
+- **효과 측정**: 배포 후 1~2주 GSC `https://www.tennisfrens.com/*` 노출 증가 확인
 
 ### 2. 미정의 Tailwind 토큰 → shadcn 토큰 교체
 

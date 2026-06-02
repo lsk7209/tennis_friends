@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -25,8 +25,9 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import { playStyleResults, getPlayStyleStats } from '@/lib/playStyleTest';
-import { trackTestCompletion } from '@/components/Tracking';
+import { playStyleResults, getPlayStyleStats, type PlayStyleResult } from '@/lib/playStyleTest';
+import { trackTestCompletionOnce } from '@/components/Tracking';
+import UtilityResultLinks from '@/components/UtilityResultLinks';
 
 const styleIcons = {
   1: Zap,
@@ -61,27 +62,29 @@ const bgGradients = {
 function PlayStyleResultContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [result, setResult] = useState<any>(null);
-  const [stats, setStats] = useState<any[]>([]);
+  const styleId = parseInt(searchParams.get('style') || '1');
+  const result = useMemo<PlayStyleResult>(() => {
+    return playStyleResults.find(r => r.id === styleId) || playStyleResults[0];
+  }, [styleId]);
+  const stats = useMemo(() => getPlayStyleStats(result), [result]);
   // 클라이언트 사이드에서만 차트 렌더링 (SSR에서 컨테이너 크기 계산 문제 방지)
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-    const styleId = parseInt(searchParams.get('style') || '1');
-    const playStyleResult = playStyleResults.find(r => r.id === styleId) || playStyleResults[0];
-    setResult(playStyleResult);
-    setStats(getPlayStyleStats(playStyleResult));
+    const frameId = requestAnimationFrame(() => setIsMounted(true));
+    return () => cancelAnimationFrame(frameId);
+  }, []);
 
+  useEffect(() => {
     // 테스트 완료 추적
     if (styleId) {
-      trackTestCompletion('play-style-test', {
+      trackTestCompletionOnce('play-style-test', String(styleId), {
         styleId: styleId,
-        styleName: playStyleResult.name,
-        description: playStyleResult.description
+        styleName: result.name,
+        description: result.description
       });
     }
-  }, [searchParams]);
+  }, [styleId, result]);
 
   if (!result) {
     return (
@@ -112,7 +115,7 @@ function PlayStyleResultContent() {
           text: `테니스프렌즈에서 테니스 플레이 스타일 테스트를 완료했습니다!`,
           url: window.location.href
         });
-      } catch (error) {
+      } catch {
         // 공유 취소됨 (프로덕션에서는 로그 제거)
       }
     } else {
@@ -439,6 +442,29 @@ function PlayStyleResultContent() {
           </div>
         </div>
       </section>
+
+      <UtilityResultLinks
+        title="스타일 결과를 다음 결정에 연결하기"
+        description="플레이 스타일 결과를 세팅, 컨디션, 레벨 선택으로 이어가세요."
+        source="play-style-test-result"
+        links={[
+          {
+            href: '/utility/ntrp-test',
+            title: 'NTRP 레벨 확인',
+            description: '목표를 정하기 전에 스타일 결과를 레벨 기준에 맞춰 봅니다.'
+          },
+          {
+            href: '/utility/string-tension',
+            title: '스트링 텐션 조정',
+            description: '이 스타일에 필요한 파워, 스핀, 컨트롤에 맞춰 텐션을 조정합니다.'
+          },
+          {
+            href: '/utility/equipment-recommendation',
+            title: '장비 추천 받기',
+            description: '스타일 프로필에 맞는 라켓과 스트링 조합을 확인합니다.'
+          }
+        ]}
+      />
     </div>
   );
 }

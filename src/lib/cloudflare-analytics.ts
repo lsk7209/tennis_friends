@@ -28,7 +28,7 @@ export interface StatsData {
   timestamp: string;
   source: string;
   period?: string;
-  [key: string]: any; // 추가 필드 허용
+  [key: string]: unknown; // 추가 필드 허용
 }
 
 export interface RealtimeStats {
@@ -218,7 +218,7 @@ export async function checkConnection(): Promise<boolean> {
       signal: AbortSignal.timeout(3000),
     });
     return response.ok || response.status === 401; // 401도 연결은 성공
-  } catch (error) {
+  } catch {
     return false;
   }
 }

@@ -50,12 +50,12 @@ for (const slug of PLAYER_SLUGS) {
       `canonical:\\s*['"]https://tennisfrens\\.com/blog/${slug}['"]`,
       "g",
     ),
-    `canonical: 'https://tennisfrens.com/players/${slug}'`,
+    `canonical: 'https://www.tennisfrens.com/players/${slug}'`,
   );
   // openGraph url 도 일치시킴
   content = content.replace(
     new RegExp(`url:\\s*['"]https://tennisfrens\\.com/blog/${slug}['"]`, "g"),
-    `url: 'https://tennisfrens.com/players/${slug}'`,
+    `url: 'https://www.tennisfrens.com/players/${slug}'`,
   );
 
   if (content !== before) {

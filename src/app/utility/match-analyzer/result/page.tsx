@@ -13,26 +13,26 @@ import { MatchAnalysisResult } from '@/lib/matchAnalyzer';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
+const EMPTY_STATISTICS: MatchAnalysisResult['statistics'] = {
+  servePercentage: 0,
+  returnPercentage: 0,
+  winnerErrorRatio: 0,
+  netPlaySuccess: 0,
+  breakPointConversion: 0
+};
+
+const EMPTY_RECOMMENDATIONS: MatchAnalysisResult['recommendations'] = {
+  technical: [],
+  tactical: [],
+  mental: [],
+  physical: []
+};
+
 function MatchAnalyzerResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState<MatchAnalysisResult | null>(null);
-
-  const emptyStatistics: MatchAnalysisResult['statistics'] = {
-    servePercentage: 0,
-    returnPercentage: 0,
-    winnerErrorRatio: 0,
-    netPlaySuccess: 0,
-    breakPointConversion: 0
-  };
-
-  const emptyRecommendations: MatchAnalysisResult['recommendations'] = {
-    technical: [],
-    tactical: [],
-    mental: [],
-    physical: []
-  };
   
   useEffect(() => {
     // 로딩 시뮬레이션
@@ -42,8 +42,8 @@ function MatchAnalyzerResultContent() {
       const strengths = safeJsonParse<string[]>(searchParams.get('strengths'), []);
       const weaknesses = safeJsonParse<string[]>(searchParams.get('weaknesses'), []);
       const improvements = safeJsonParse<string[]>(searchParams.get('improvements'), []);
-      const statistics = safeJsonParse<MatchAnalysisResult['statistics']>(searchParams.get('statistics'), emptyStatistics);
-      const recommendations = safeJsonParse<MatchAnalysisResult['recommendations']>(searchParams.get('recommendations'), emptyRecommendations);
+      const statistics = safeJsonParse<MatchAnalysisResult['statistics']>(searchParams.get('statistics'), EMPTY_STATISTICS);
+      const recommendations = safeJsonParse<MatchAnalysisResult['recommendations']>(searchParams.get('recommendations'), EMPTY_RECOMMENDATIONS);
       const nextMatchGoals = safeJsonParse<string[]>(searchParams.get('nextMatchGoals'), []);
       
       setResult({
@@ -76,17 +76,6 @@ function MatchAnalyzerResultContent() {
     } else {
       navigator.clipboard.writeText(window.location.href);
       toast.success('링크가 복사되었습니다!');
-    }
-  };
-
-  const getGradeColor = (grade: string) => {
-    switch (grade) {
-      case 'A': return 'bg-green-100 text-green-800';
-      case 'B': return 'bg-blue-100 text-blue-800';
-      case 'C': return 'bg-yellow-100 text-yellow-800';
-      case 'D': return 'bg-orange-100 text-orange-800';
-      case 'F': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
     }
   };
 

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -48,7 +48,7 @@ export default function FocusTrainingSession() {
 
   const [soundEnabled, setSoundEnabled] = useState(true);
 
-  const trainingPrograms = [
+  const trainingPrograms = useMemo(() => [
     {
       type: 'breathing' as TrainingType,
       title: '호흡 집중 훈련',
@@ -94,7 +94,7 @@ export default function FocusTrainingSession() {
         '승리의 순간을 생생하게 시각화합니다.'
       ]
     }
-  ];
+  ], []);
 
   const startTraining = useCallback((type: TrainingType) => {
     const program = trainingPrograms.find(p => p.type === type);
@@ -113,7 +113,7 @@ export default function FocusTrainingSession() {
     setTimeout(() => {
       setSession(prev => ({ ...prev, phase: 'active', isActive: true }));
     }, 3000);
-  }, []);
+  }, [trainingPrograms]);
 
   const togglePause = useCallback(() => {
     setSession(prev => ({

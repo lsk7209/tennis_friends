@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T04:33:08.688Z",
+  "scannedRoots": [
+    "src/app",
+    "src/components",
+    "src/lib",
+    "src/templates",
+    "workers",
+    "public"
+  ],
+  "skipped": [
+    "src/data/blog-content",
+    "src/data/players",
+    "node_modules",
+    ".next"
+  ],
+  "scannedFiles": 567,
+  "findings": []
+}

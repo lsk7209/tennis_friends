@@ -8,6 +8,7 @@ import { trackEvent, TRACKING_EVENTS } from "@/lib/analytics";
 const MAX_STORED_VISITOR_EVENTS = 200;
 const CONTENT_READ_THRESHOLD = 0.75;
 const CONTENT_READ_MIN_SECONDS = 45;
+const trackedCompletionIds = new Set<string>();
 
 interface VisitorData {
   id: string;
@@ -97,6 +98,27 @@ export const trackTestCompletion = (
       console.error("Failed to track test completion:", error);
     }
   }
+};
+
+export const trackTestCompletionOnce = (
+  testType: string,
+  completionId: string,
+  testResult?: Record<string, unknown>,
+) => {
+  const key = `test_completion_once:${testType}:${completionId}`;
+  if (trackedCompletionIds.has(key)) return;
+
+  try {
+    if (typeof window !== "undefined") {
+      if (window.sessionStorage.getItem(key)) return;
+      window.sessionStorage.setItem(key, "1");
+    }
+  } catch {
+    // Storage can be unavailable in private mode or embedded browsers.
+  }
+
+  trackedCompletionIds.add(key);
+  trackTestCompletion(testType, testResult);
 };
 
 // 테스트 완료 횟수 관리

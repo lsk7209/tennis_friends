@@ -40,7 +40,7 @@ const _oneLiner =
 export const metadata: Metadata = {
   title:
     _searchSeo?.title ??
-    \`\${_player?.name ?? SLUG} 선수 프로필 | 랭킹·전적·플레이스타일 \${_tour}\`,
+    \`\${_player?.name ?? SLUG} 선수 프로필 | 랭킹·전적·플레이스타일 | \${_tour}\`,
   description:
     _searchSeo?.description ??
     \`\${_player?.name}(\${_player?.nameEn})의 랭킹, 전적, 플레이스타일, 주요 경기와 강점을 정리한 \${_tour} 선수 프로필입니다. \${_oneLiner}\`.trim(),
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: \`\${_siteUrl}/api/og?title=\${encodeURIComponent(_player?.name ?? SLUG)}&sub=\${encodeURIComponent(\`\${_player?.nameEn} · \${_tour}\`)}\`,
+        url: \`\${_siteUrl}/api/og?title=\${encodeURIComponent(_player?.name ?? SLUG)}&sub=\${encodeURIComponent(\`\${_player?.nameEn} - \${_tour}\`)}\`,
         width: 1200,
         height: 630,
       },

@@ -1,0 +1,11 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T03:27:06.421Z",
+  "checkedFiles": [
+    "next.config.ts",
+    "public/_headers",
+    "src/app/layout.tsx",
+    "src/app/globals.css"
+  ],
+  "findings": []
+}

@@ -1,0 +1,190 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T04:33:18.699Z",
+  "requiredReports": {
+    "total": 17,
+    "ok": 17,
+    "failed": []
+  },
+  "evidence": {
+    "designSourceOfTruth": {
+      "path": "DESIGN.md",
+      "exists": true
+    },
+    "analytics": {
+      "status": "ok",
+      "gsc": {
+        "period": "2026-05-01 ~ 2026-05-29",
+        "totalPages": 290,
+        "totalQueries": 153,
+        "totalClicks": 73,
+        "totalImpressions": 3278,
+        "avgCtrPct": 2.23,
+        "avgPosition": 11.17
+      },
+      "ga4": {
+        "propertyId": "534356101",
+        "period": "2026-05-03 ~ 2026-05-31",
+        "totalSessions": 2167,
+        "totalUsers": 1958,
+        "totalPages": 328
+      },
+      "warnings": 2,
+      "mitigations": [
+        {
+          "issue": "historical non-www URLs still appear in GSC samples",
+          "status": "covered",
+          "source": "next.config.ts redirects"
+        },
+        {
+          "issue": "historical typo URL still appears in GSC samples",
+          "status": "covered",
+          "source": "next.config.ts redirects"
+        }
+      ],
+      "findings": []
+    },
+    "sitemap": {
+      "status": "ok",
+      "generatedAt": "2026-06-02T03:26:55.723Z",
+      "entries": 1107,
+      "blogs": 766,
+      "utilities": 63,
+      "players": 269,
+      "findings": []
+    },
+    "contentLinks": {
+      "status": "ok",
+      "effectivePosts": 719,
+      "postsWithBodyContent": 719,
+      "strongBodyLinkCoveragePct": 100,
+      "warnings": []
+    },
+    "generatedContent": {
+      "status": "ok",
+      "generatedAt": "2026-06-02T03:27:05.468Z",
+      "minRequiredScore": 90,
+      "minRequiredChars": 3500,
+      "expectedIntervalHours": 5,
+      "manifests": [
+        {
+          "path": "out/article-writer/tennisfrens-300/manifest.json",
+          "status": "ok",
+          "total": 300,
+          "passCount": 300,
+          "minScore": null,
+          "maxScore": null,
+          "minChars": 3678,
+          "maxChars": 3796,
+          "scheduledIntervals": [],
+          "findings": []
+        },
+        {
+          "path": "out/article-writer/tennisfrens-part12/manifest.json",
+          "status": "ok",
+          "total": 300,
+          "passCount": 300,
+          "minScore": 100,
+          "maxScore": 100,
+          "minChars": null,
+          "maxChars": null,
+          "scheduledIntervals": [
+            5
+          ],
+          "findings": []
+        },
+        {
+          "path": "out/article-writer/tennisfrens-title-100-2026-06-01/manifest.json",
+          "status": "ok",
+          "total": 100,
+          "passCount": 100,
+          "minScore": 110,
+          "maxScore": 110,
+          "minChars": 4019,
+          "maxChars": 4290,
+          "scheduledIntervals": [
+            5
+          ],
+          "findings": []
+        }
+      ]
+    },
+    "contentOpportunities": {
+      "status": "ok",
+      "generatedAt": "2026-06-02T04:23:07.417Z",
+      "summary": {
+        "total": 25,
+        "players": 23,
+        "blogs": 2,
+        "topPlayerSlugs": [
+          "martin-landaluce",
+          "miomir-kecmanovic",
+          "marie-bouzkova",
+          "arthur-rinderknech",
+          "daniel-evans",
+          "alexandre-muller",
+          "jiri-lehecka",
+          "laslo-djere",
+          "hamad-medjedovic",
+          "francisco-comesana"
+        ],
+        "topBlogSlugs": [
+          "tennis-lesson-cost-guide",
+          "tennis-error-reduction-guide"
+        ]
+      },
+      "criteria": {
+        "minImpressions": 20,
+        "maxItems": 25,
+        "note": "Report-only. Article titles and bodies are not edited by this audit."
+      },
+      "findings": []
+    }
+  },
+  "priorityBacklog": [
+    {
+      "tier": "T1",
+      "area": "Design",
+      "action": "Maintain DESIGN.md as the canonical UI, content, and layout decision source.",
+      "status": "done"
+    },
+    {
+      "tier": "T1",
+      "area": "Content",
+      "action": "Keep inactive part15 content files quarantined from active imports and future title/body batches.",
+      "status": "watch"
+    },
+    {
+      "tier": "T2",
+      "area": "Blog UX",
+      "action": "Evaluate server-rendered first-page blog index with a smaller client filter island.",
+      "status": "candidate"
+    },
+    {
+      "tier": "T2",
+      "area": "Article UX",
+      "action": "Use future screenshot QA to tune article width, ad spacing, table overflow, and related-link density.",
+      "status": "candidate"
+    },
+    {
+      "tier": "T3",
+      "area": "Editorial SEO",
+      "action": "Use GSC query/page data for human-like title, subtitle, FAQ, and internal-link rewrite briefs only.",
+      "status": "handoff_required"
+    }
+  ],
+  "watchItems": [
+    {
+      "path": "src/data/blog-content/part15-optimized.ts",
+      "exists": true,
+      "importedByActiveIndex": false,
+      "risk": "quarantine_candidate"
+    },
+    {
+      "path": "src/data/blog-posts-part15-overrides.js",
+      "exists": true,
+      "importedByActiveIndex": false,
+      "risk": "watch"
+    }
+  ]
+}

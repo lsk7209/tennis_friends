@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T03:27:06.932Z",
+  "checkedFiles": [
+    "DESIGN.md",
+    "src/app/blog/page.tsx",
+    "src/app/blog/BlogIndexClient.tsx",
+    "src/app/blog/[slug]/page.tsx",
+    "src/app/players/[slug]/page.tsx",
+    "src/templates/players/PlayerPageTemplate.tsx",
+    "src/components/RelatedContent.tsx"
+  ],
+  "findings": [],
+  "watchItems": []
+}

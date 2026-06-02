@@ -1,17 +1,8 @@
-/**
- * Component: RelatedContent
- * @param {Array} items - 관련 컨텐츠 목록 [Required]
- * @param {string} title - 섹션 제목 [Optional, default="관련 글 더보기"]
- * @param {string} type - 컨텐츠 타입 ('blog' | 'utility' | 'player') [Optional, default="blog"]
- * @param {number} maxItems - 최대 표시 개수 [Optional, default=6]
- * @example <RelatedContent items={relatedPosts} title="관련 글 더보기" type="blog" />
- */
-
 import React, { useMemo } from "react";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 export interface RelatedItem {
   id: string;
@@ -26,7 +17,6 @@ export interface RelatedItem {
   badge?: string;
 }
 
-// RelatedContentItem은 RelatedItem의 별칭
 export type RelatedContentItem = RelatedItem;
 
 interface RelatedContentProps {
@@ -42,31 +32,27 @@ export default function RelatedContent({
   type = "blog",
   maxItems = 6,
 }: RelatedContentProps) {
-  const displayItems = useMemo(() => {
-    return items.slice(0, maxItems);
-  }, [items, maxItems]);
+  const displayItems = useMemo(() => items.slice(0, maxItems), [items, maxItems]);
 
-  if (displayItems.length === 0) {
-    return null;
-  }
+  if (displayItems.length === 0) return null;
 
   return (
     <section className="mt-16" aria-label={title}>
-      <div className="flex items-center justify-between mb-6">
+      <div className="mb-6 flex items-center justify-between gap-4">
         <h2 className="text-2xl font-bold text-foreground">{title}</h2>
         {type === "blog" && (
           <Link
             href="/blog"
-            className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+            className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary"
             aria-label="블로그 전체 보기"
           >
             전체 보기
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" />
           </Link>
         )}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {displayItems.map((item) => {
           const description = item.description || item.excerpt || "";
 
@@ -77,33 +63,29 @@ export default function RelatedContent({
               className="group"
               aria-label={`${item.title} 읽기`}
             >
-              <Card className="h-full bg-card border-white/10 hover:border-primary/50 transition-all cursor-pointer group-hover:shadow-lg">
-                <CardContent className="p-4 flex flex-col h-full">
+              <Card className="h-full cursor-pointer border-white/10 bg-card transition-all group-hover:border-primary/50 group-hover:shadow-lg">
+                <CardContent className="flex h-full flex-col p-4">
                   {item.category && (
-                    <Badge className="bg-primary/20 text-primary mb-2 w-fit">
+                    <Badge className="mb-2 w-fit bg-primary/20 text-primary">
                       {item.category}
                     </Badge>
                   )}
 
-                  <h3 className="font-bold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2 flex-1">
+                  <h3 className="mb-2 line-clamp-2 flex-1 font-bold text-foreground transition-colors group-hover:text-primary">
                     {item.title}
                   </h3>
 
                   {description && (
-                    <p className="text-muted-foreground text-sm line-clamp-2 mb-3">
+                    <p className="mb-3 line-clamp-2 text-sm text-muted-foreground">
                       {description}
                     </p>
                   )}
 
                   {(item.date || item.readTime) && (
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground mt-auto">
+                    <div className="mt-auto flex items-center gap-3 text-xs text-muted-foreground">
                       {item.date && <span>{item.date}</span>}
-                      {item.readTime && (
-                        <>
-                          {item.date && <span>·</span>}
-                          <span>{item.readTime}</span>
-                        </>
-                      )}
+                      {item.date && item.readTime && <span>/</span>}
+                      {item.readTime && <span>{item.readTime}</span>}
                     </div>
                   )}
                 </CardContent>

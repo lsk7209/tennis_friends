@@ -8,12 +8,15 @@ import {
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { DEFAULT_CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 
-export const dynamic = "force-static";
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export function getRssBaseUrl() {
   return (process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com")
     .replace(/\/$/, "");
+}
+
+function cdata(value: string) {
+  return `<![CDATA[${value.replaceAll("]]>", "]]]]><![CDATA[>")}]]>`;
 }
 
 export function buildRssXml(baseUrl: string, selfPath = "/rss.xml") {
@@ -27,18 +30,19 @@ export function buildRssXml(baseUrl: string, selfPath = "/rss.xml") {
     .map((post) => {
       const postUrl = `${baseUrl}/blog/${post.slug}`;
       const pubDate = getBlogPublishDate(post).toUTCString();
+      const category = post.category || "테니스";
 
       return `
     <item>
-      <title><![CDATA[${post.title}]]></title>
-      <description><![CDATA[${post.excerpt || ""}]]></description>
+      <title>${cdata(post.title)}</title>
+      <description>${cdata(post.excerpt || "")}</description>
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
       <pubDate>${pubDate}</pubDate>
       <author>${DEFAULT_CONTACT_EMAIL} (${SITE_NAME})</author>
-      <category><![CDATA[${post.category || "테니스"}]]></category>
-      <category><![CDATA[테니스]]></category>
-      <category><![CDATA[스포츠]]></category>
+      <category>${cdata(category)}</category>
+      <category>${cdata("테니스")}</category>
+      <category>${cdata("스포츠")}</category>
       <enclosure url="${baseUrl}/opengraph-image" type="image/png" />
     </item>`;
     })
@@ -47,8 +51,10 @@ export function buildRssXml(baseUrl: string, selfPath = "/rss.xml") {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title><![CDATA[TennisFriends - 테니스 블로그]]></title>
-    <description><![CDATA[데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상과 관련된 전문적인 가이드와 최신 정보를 제공합니다.]]></description>
+    <title>${cdata("TennisFriends - 테니스 블로그")}</title>
+    <description>${cdata(
+      "데이터와 실전 경험을 바탕으로 테니스 실력 향상, 장비, 훈련, 경기 운영 가이드를 제공합니다.",
+    )}</description>
     <link>${baseUrl}</link>
     <atom:link href="${baseUrl}${selfPath}" rel="self" type="application/rss+xml" />
     <language>ko-KR</language>
@@ -77,7 +83,7 @@ export async function GET(request: NextRequest) {
   return new Response(rss, {
     headers: {
       "Content-Type": "application/rss+xml; charset=utf-8",
-      "Cache-Control": "public, max-age=3600, s-maxage=3600",
+      "Cache-Control": "public, max-age=0, s-maxage=60, must-revalidate",
     },
   });
 }

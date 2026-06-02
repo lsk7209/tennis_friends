@@ -12,6 +12,18 @@ const POST_FILES = [
   "src/data/blog-posts.js",
   "src/data/blog-posts-aw-300.js",
   "src/data/blog-posts-aw-part12.js",
+  "src/data/blog-posts-aw-title100.js",
+  "src/data/blog-posts-part16-overrides.js",
+  "src/data/blog-posts-part17-overrides.js",
+  "src/data/blog-posts-part18-overrides.js",
+  "src/data/blog-posts-part19-overrides.js",
+  "src/data/blog-posts-part20-overrides.js",
+  "src/data/blog-posts-part21-overrides.js",
+  "src/data/blog-posts-part22-overrides.js",
+  "src/data/blog-posts-part23-overrides.js",
+  "src/data/blog-posts-part24-overrides.js",
+  "src/data/blog-posts-part25-overrides.js",
+  "src/data/blog-posts-part26-overrides.js",
 ];
 const CONTENT_FILES = [
   "part1",
@@ -30,7 +42,25 @@ const CONTENT_FILES = [
   "part11-article-writer-300",
   "part12-article-writer-300",
   "part13-optimized",
+  "part14-title100",
+  "part16-quality-rewrites",
+  "part17-quality-rewrites",
+  "part18-quality-rewrites",
+  "part19-quality-rewrites",
+  "part20-quality-rewrites",
+  "part21-quality-rewrites",
+  "part22-quality-rewrites",
+  "part23-quality-rewrites",
+  "part24-quality-rewrites",
+  "part25-quality-rewrites",
+  "part26-quality-rewrites",
 ].map((name) => `src/data/blog-content/${name}.ts`);
+
+const MOJIBAKE_PATTERN = /[\uFFFD]|\?\?|[\u4E00-\u9FFF]|[\uF900-\uFAFF]/;
+
+function hasGarbledText(value) {
+  return MOJIBAKE_PATTERN.test(value);
+}
 
 const TEMPLATE_TITLE_LIMIT = 8;
 const TEMPLATE_EXCERPT_LIMIT = 8;
@@ -92,7 +122,7 @@ function collectPosts() {
     const text = readProjectFile(file);
     for (const segment of extractObjectSegments(text)) {
       const slug = readStringField(segment, "slug");
-      if (!slug || posts.has(slug)) continue;
+      if (!slug) continue;
 
       posts.set(slug, {
         slug,
@@ -132,6 +162,7 @@ function collectContentSignals() {
         hasFaq: /<details[\s>]|"faq"\s*:/.test(segment),
         hasAside: /<aside[\s>]/.test(segment),
         hasExternalLink: /target=\\"_blank\\"|target="_blank"/.test(segment),
+        hasBrokenText: hasGarbledText(segment),
       });
     });
   }
@@ -196,6 +227,11 @@ function auditPost(post, signals, titleGroups, excerptGroups) {
   if ((content.h2Count ?? 0) < 3) issues.push("low_h2_count");
   if (visualCount < 3) issues.push("low_visual_variety");
   if (!content.hasExternalLink) issues.push("missing_external_source");
+  if (post.title === post.excerpt) issues.push("duplicate_title_excerpt");
+  if (hasGarbledText(`${post.title} ${post.excerpt}`)) {
+    issues.push("garbled_metadata");
+  }
+  if (content.hasBrokenText) issues.push("garbled_content");
   if ((titleGroups.get(titlePrefix(post.title)) ?? 0) >= TEMPLATE_TITLE_LIMIT) {
     issues.push("template_title_prefix");
   }
@@ -283,6 +319,10 @@ const results = posts.map((post) =>
 );
 const report = renderReport(results);
 const reportPath = join(REPORT_DIR, `blog-quality-audit-${REPORT_DATE}.md`);
+const needsWork = results.filter((item) => item.issues.length > 0).length;
+const templateRisk = results.filter((item) =>
+  item.issues.some((issue) => issue.startsWith("template_")),
+).length;
 
 writeFileSync(reportPath, report, "utf8");
 writeFileSync(join(REPORT_DIR, "blog-quality-audit-latest.md"), report, "utf8");
@@ -292,12 +332,14 @@ console.log(
   JSON.stringify(
     {
       posts: results.length,
-      needsWork: results.filter((item) => item.issues.length > 0).length,
-      templateRisk: results.filter((item) =>
-        item.issues.some((issue) => issue.startsWith("template_")),
-      ).length,
+      needsWork,
+      templateRisk,
     },
     null,
     2,
   ),
 );
+
+if (needsWork > 0 || templateRisk > 0) {
+  process.exit(1);
+}

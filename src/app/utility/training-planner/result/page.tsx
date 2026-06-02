@@ -12,19 +12,19 @@ import {TrainingPlanResult, WeeklySchedule, FocusArea, Milestone} from '@/lib/tr
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 
+const EMPTY_RECOMMENDATIONS: TrainingPlanResult['recommendations'] = {
+  technical: [],
+  tactical: [],
+  physical: [],
+  mental: []
+};
+
 function TrainingPlannerResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState<TrainingPlanResult | null>(null);
   const [selectedWeek, setSelectedWeek] = useState(1);
-
-  const emptyRecommendations: TrainingPlanResult['recommendations'] = {
-    technical: [],
-    tactical: [],
-    physical: [],
-    mental: []
-  };
   
   useEffect(() => {
     // 로딩 시뮬레이션
@@ -34,7 +34,7 @@ function TrainingPlannerResultContent() {
       const weeklySchedule = safeJsonParse<WeeklySchedule[]>(searchParams.get('weeklySchedule'), []);
       const focusAreas = safeJsonParse<FocusArea[]>(searchParams.get('focusAreas'), []);
       const progressMilestones = safeJsonParse<Milestone[]>(searchParams.get('progressMilestones'), []);
-      const recommendations = safeJsonParse<TrainingPlanResult['recommendations']>(searchParams.get('recommendations'), emptyRecommendations);
+      const recommendations = safeJsonParse<TrainingPlanResult['recommendations']>(searchParams.get('recommendations'), EMPTY_RECOMMENDATIONS);
       const equipment = safeJsonParse<string[]>(searchParams.get('equipment'), []);
       const nextSteps = safeJsonParse<string[]>(searchParams.get('nextSteps'), []);
       

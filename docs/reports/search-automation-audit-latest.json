@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T03:26:17.586Z",
+  "canonicalOrigin": "https://www.tennisfrens.com",
+  "requiredSitemaps": [
+    "https://www.tennisfrens.com/sitemap.xml",
+    "https://www.tennisfrens.com/sitemap-naver.xml"
+  ],
+  "indexNowEndpoints": [
+    "IndexNow",
+    "Bing",
+    "Naver"
+  ],
+  "findings": []
+}

@@ -8,9 +8,7 @@ import { Player, PlayerFAQ } from '@/types/player';
  * Person 스키마 생성
  */
 export function generatePersonSchema(player: Player) {
-  const currentYear = new Date().getFullYear();
   const birthYear = player.birthYear || (player.birthDate ? parseInt(player.birthDate.split('-')[0]) : 2000);
-  const age = currentYear - birthYear;
   const nameKo = player.nameKo || player.name;
   const rank = player.rankingCurrent || player.rank || 0;
   const tour = player.tour || (player.gender === 'male' ? 'ATP' : 'WTA');
@@ -47,7 +45,7 @@ export function generatePersonSchema(player: Player) {
  * Note: FAQPage는 별도의 FAQSchema 컴포넌트에서 생성되므로 여기서는 생성하지 않습니다.
  * 중복 생성을 방지하기 위해 ProfilePage만 반환합니다.
  */
-export function generateProfilePageSchema(player: Player, faqs: PlayerFAQ[]) {
+export function generateProfilePageSchema(player: Player, _faqs: PlayerFAQ[]) {
   const nameKo = player.nameKo || player.name;
   const slug = player.slug || '';
 

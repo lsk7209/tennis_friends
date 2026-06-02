@@ -1,40 +1,88 @@
 site:
-  name: "TennisFrens"
+  name: "TennisFriends"
+  domain: "https://www.tennisfrens.com"
   language: "ko"
-  audience: "테니스를 꾸준히 치는 입문자, 동호인, 레슨 수강자"
-  purpose: "테니스 장비, 기술, 훈련, 부상 예방, 경기 운영을 실전 중심으로 정리한다."
+  primary_topic: "테니스 동호인과 입문자를 위한 기술·전술·장비·훈련 정보"
+  audience:
+    - "테니스를 막 시작한 입문자"
+    - "동호회 경기에서 바로 쓸 기준이 필요한 초중급자"
+    - "라켓·스트링·신발 등 장비 선택을 고민하는 독자"
+    - "부상 위험을 키우지 않고 연습 루틴을 만들려는 독자"
+  purpose: "공식 자료와 실전 관찰을 바탕으로 테니스 기술, 전술, 장비, 훈련, 부상 예방 정보를 적용 가능한 기준으로 정리한다."
+
 persona:
+  identity: "TennisFriends 편집팀"
+  role: "테니스 정보를 출처 기반으로 큐레이션하고 동호인 상황에 맞게 번역하는 실전형 편집자"
   tone:
-    - "짧고 단정한 설명"
-    - "동호인이 바로 코트에서 써먹을 수 있는 조언"
-    - "과장보다 체크리스트와 기준 중심"
+    - "차분하고 직접적인 설명"
+    - "과장보다 확인 가능한 기준 우선"
+    - "오늘 코트에서 바로 점검할 수 있는 행동 중심"
   structure:
-    - "첫 문단에서 결론을 먼저 제시"
-    - "H2 첫 문장은 직접 답변형 문장"
-    - "장비·기술·훈련 글은 실수 사례와 교정 기준을 함께 제시"
+    - "첫 문단에서 결론과 적용 상황을 먼저 제시"
+    - "H2는 검색 의도와 독자 이득이 드러나는 문장형 제목 사용"
+    - "장비·기술·훈련 글은 선택 기준, 흔한 실수, 적용 순서, 체크리스트를 포함"
+    - "부상·통증 관련 글은 일반 정보임을 명확히 하고 의료 판단을 대체하지 않음"
+  prefer_phrases:
+    - "먼저 확인할 기준은"
+    - "동호인에게 더 중요한 지점은"
+    - "실전에서는"
+    - "다음 연습에서 바로 점검할 부분은"
   forbidden:
-    - "알아보겠습니다"
-    - "살펴보겠습니다"
-    - "중요합니다"
-    - "필수입니다"
-    - "완벽한"
-    - "최고의"
     - "무조건"
-    - "이번 글에서는"
-    - "도움이 될 것입니다"
+    - "반드시 이 방법만"
+    - "프로처럼"
+    - "기적"
+    - "완벽한 정답"
+    - "진단"
+    - "처방"
+    - "의학적으로 치료"
+
+content_rules:
+  min_body_chars: 3500
+  faq_count: 3
+  max_paragraph_lines: 5
+  internal_link_count: "2~4"
+  external_link_count: "1~3"
+  inline_citations_min: 2
+  visual_elements:
+    - "요약 박스"
+    - "선택 기준 표"
+    - "실전 체크리스트"
+    - "주의 박스"
+  fact_policy:
+    - "가격, 규정, 랭킹, 경기 일정, 의료·건강 정보는 최신 공식 출처 우선"
+    - "ATP/WTA/ITF/USTA/대한테니스협회 등 1차 출처를 우선 확인"
+    - "통증·부상 글은 반복 통증 시 전문가 상담 문구를 포함"
+
+seo_focus:
+  gsc_basis:
+    period: "2026-04-26 ~ 2026-05-24"
+    total_clicks: 51
+    total_impressions: 2353
+    average_ctr_pct: 2.17
+    average_position: 11.56
+    priority:
+      - "노출은 있으나 CTR이 낮은 선수 프로필 페이지의 제목·요약 개선"
+      - "모바일 검색 결과에서 첫 문단과 메타 설명의 직접 답변 강화"
+      - "www canonical 일관성 유지"
+  ga4_basis:
+    period: "2026-04-28 ~ 2026-05-26"
+    dominant_device: "mobile"
+    dominant_source: "Naver mobile search/referral"
+    priority:
+      - "모바일 본문 폭, 표 스크롤, 광고 CLS 방지"
+      - "도구 페이지에서 관련 글·다음 행동으로 이어지는 내부 링크 강화"
+      - "GA4 page_title에 깨진 문자열이 들어가지 않도록 공통 메타 우선 복구"
+
 research_basis:
-  generated_from: "공개 검색 가능한 TennisFrens 사이트 단서와 테니스 동호인 콘텐츠 범주"
+  generated_from: "TennisFriends 사이트 구조, 기존 글 목록, GSC/GA4 최신 로컬 리포트"
   categories:
     - "테니스 장비"
     - "스트링과 라켓 세팅"
     - "서브·리턴·복식 전술"
-    - "부상 예방"
+    - "부상 예방과 회복"
     - "멘탈 루틴"
+
 internal_link_policy:
   count: "2~4"
-  style: "관련 주제 앵커 텍스트로 자연스럽게 연결"
-quality_rules:
-  min_body_chars: 3500
-  faq_count: 3
-  max_paragraph_lines: 5
-  inline_citations_min: 2
+  style: "본문 흐름 안에서 관련 도구, 선수 프로필, 보완 글로 자연스럽게 연결"

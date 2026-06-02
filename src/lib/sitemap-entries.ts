@@ -179,7 +179,6 @@ export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
     { slug: "privacy", frequency: "monthly" as const, priority: 0.5 },
     { slug: "terms", frequency: "monthly" as const, priority: 0.5 },
     { slug: "tennis-rules-quiz", frequency: "monthly" as const, priority: 0.7 },
-    { slug: "search", frequency: "weekly" as const, priority: 0.5 },
   ];
 
   for (const page of staticPages) {

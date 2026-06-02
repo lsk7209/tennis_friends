@@ -104,7 +104,7 @@ export default function MatchRecorderTest() {
     setIsSubmitting(true);
 
     // 실제로는 여기서 데이터를 저장하는 API 호출
-    const finalData = {
+    const _finalData = {
       ...matchData,
       result: calculateResult()
     };

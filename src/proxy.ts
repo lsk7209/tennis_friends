@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { allBlogPosts } from "@/data/blog-posts";
 import { isPublishedBlogPost } from "@/lib/blog-publish";
-import { isLowQualityBlogSlug } from "@/lib/blog-quality";
+import { isIndexableBlogSlug } from "@/lib/blog-quality";
 
 const BLOG_PATH_PREFIX = "/blog/";
 const NO_INDEX_HEADERS = {
@@ -34,9 +34,13 @@ export function proxy(request: NextRequest) {
     });
   }
 
-  const response = NextResponse.next();
+  const rewriteUrl = request.nextUrl.clone();
+  rewriteUrl.pathname = `/blog-render/${encodeURIComponent(slug)}`;
+  const response = post
+    ? NextResponse.rewrite(rewriteUrl)
+    : NextResponse.next();
 
-  if (isLowQualityBlogSlug(slug)) {
+  if (!isIndexableBlogSlug(slug)) {
     response.headers.set("x-robots-tag", "noindex, follow");
   }
 

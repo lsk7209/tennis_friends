@@ -1,0 +1,14 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T04:43:25.870Z",
+  "checkedFiles": [
+    "src/app/blog/page.tsx",
+    "src/app/blog/BlogIndexClient.tsx"
+  ],
+  "categoryFilterCoverage": {
+    "groups": 6,
+    "publishedCategories": 82,
+    "uncoveredMajorCategories": 0
+  },
+  "findings": []
+}

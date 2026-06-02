@@ -17,12 +17,12 @@ export const metadata = {
   description: '${post.description}',
   keywords: [${post.keywords.map(k => `'${k}'`).join(', ')}],
   alternates: {
-    canonical: \`\${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/${post.slug}\`,
+    canonical: \`\${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/${post.slug}\`,
   },
   openGraph: {
     title: '${post.title}',
     description: post.summary,
-    url: \`\${process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com'}/blog/${post.slug}\`,
+    url: \`\${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com'}/blog/${post.slug}\`,
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

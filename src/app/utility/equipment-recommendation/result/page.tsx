@@ -11,6 +11,20 @@ import {ArrowRight, RotateCcw, Share2, ShoppingCart, Star, CheckCircle, Target, 
 import { EquipmentResult, RacketRecommendation, StringRecommendation } from '@/lib/equipmentRecommendation';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import UtilityResultLinks from '@/components/UtilityResultLinks';
+
+const EMPTY_ACCESSORIES: EquipmentResult['accessories'] = {
+  grip: [],
+  overgrip: [],
+  dampener: [],
+  bag: []
+};
+
+const EMPTY_BUDGET: EquipmentResult['totalBudget'] = {
+  min: 0,
+  max: 0,
+  recommended: 0
+};
 
 function EquipmentRecommendationResultContent() {
   const searchParams = useSearchParams();
@@ -18,25 +32,12 @@ function EquipmentRecommendationResultContent() {
   const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState<EquipmentResult | null>(null);
 
-  const emptyAccessories: EquipmentResult['accessories'] = {
-    grip: [],
-    overgrip: [],
-    dampener: [],
-    bag: []
-  };
-
-  const emptyBudget: EquipmentResult['totalBudget'] = {
-    min: 0,
-    max: 0,
-    recommended: 0
-  };
-  
   useEffect(() => {
     const timer = setTimeout(() => {
       const rackets = safeJsonParse<RacketRecommendation[]>(searchParams.get('rackets'), []);
       const strings = safeJsonParse<StringRecommendation[]>(searchParams.get('strings'), []);
-      const accessories = safeJsonParse<EquipmentResult['accessories']>(searchParams.get('accessories'), emptyAccessories);
-      const totalBudget = safeJsonParse<EquipmentResult['totalBudget']>(searchParams.get('totalBudget'), emptyBudget);
+      const accessories = safeJsonParse<EquipmentResult['accessories']>(searchParams.get('accessories'), EMPTY_ACCESSORIES);
+      const totalBudget = safeJsonParse<EquipmentResult['totalBudget']>(searchParams.get('totalBudget'), EMPTY_BUDGET);
       
       setResult({
         rackets,
@@ -555,6 +556,29 @@ function EquipmentRecommendationResultContent() {
           </StaggeredAnimation>
         </div>
       </section>
+
+      <UtilityResultLinks
+        title="추천 결과 검증하기"
+        description="장비 추천을 레벨, 스타일, 부상 위험 기준으로 한 번 더 확인하세요."
+        source="equipment-recommendation-result"
+        links={[
+          {
+            href: '/utility/play-style-test',
+            title: '플레이 스타일 테스트',
+            description: '추천 장비가 실제 포인트 운영 방식과 맞는지 확인합니다.'
+          },
+          {
+            href: '/utility/string-tension',
+            title: '스트링 텐션 계산기',
+            description: '스트링 추천을 바로 적용 가능한 시작 텐션으로 바꿉니다.'
+          },
+          {
+            href: '/utility/injury-risk',
+            title: '부상 위험 체크',
+            description: '장비 변경 전 편안함과 훈련 부담 문제를 점검합니다.'
+          }
+        ]}
+      />
     </div>
   );
 }

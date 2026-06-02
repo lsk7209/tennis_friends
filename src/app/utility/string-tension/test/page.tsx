@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -126,7 +126,6 @@ export default function StringTensionTest() {
   };
 
   const currentStepData = steps[currentStep];
-  const isStepComplete = formData[currentStepData.id as keyof TensionInput] !== undefined;
   const IconComponent = currentStepData.icon;
 
   return (

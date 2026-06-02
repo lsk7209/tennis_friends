@@ -40,15 +40,15 @@ export default function MatchAnalyzerTest() {
 
   const progress = Math.round(((currentStep + 1) / steps.length) * 100);
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: string, value: unknown) => {
     setFormData(prev => {
       const newData = { ...prev };
       const keys = field.split('.');
-      let current = newData as any;
+      let current = newData as Record<string, unknown>;
       
       for (let i = 0; i < keys.length - 1; i++) {
         if (!current[keys[i]]) current[keys[i]] = {};
-        current = current[keys[i]];
+        current = current[keys[i]] as Record<string, unknown>;
       }
       
       current[keys[keys.length - 1]] = value;

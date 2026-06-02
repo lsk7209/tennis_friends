@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T04:33:08.699Z",
+  "scannedRoots": [
+    "next.config.ts",
+    "package.json",
+    "scripts",
+    "src/app",
+    "src/components",
+    "src/lib",
+    "src/templates",
+    "workers",
+    "public"
+  ],
+  "skipped": [
+    "src/data/blog-content",
+    "src/data/players",
+    "node_modules",
+    ".next"
+  ],
+  "scannedFiles": 681,
+  "findings": []
+}

@@ -148,8 +148,64 @@ function getUtilitySlugs() {
     .sort();
 }
 
+function stripSiteSuffix(value) {
+  return value
+    .replace(/\s*\|\s*TennisFriends\s*$/i, "")
+    .replace(/\s*-\s*TennisFriends\s*$/i, "")
+    .trim();
+}
+
+function titleFromSlug(slug) {
+  return slug
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function readMetadataString(source, field) {
+  const direct = new RegExp(`${field}\\s*:\\s*["']([^"']+)["']`).exec(source);
+  if (direct) return direct[1].trim();
+
+  const nested = new RegExp(`${field}\\s*:\\s*\\{\\s*default\\s*:\\s*["']([^"']+)["']`).exec(
+    source,
+  );
+  return nested ? nested[1].trim() : "";
+}
+
+function readUtilityMetadata(slug) {
+  const utilityPath = path.join(UTILITY_DIR, slug);
+  const metadataFiles = ["page.tsx", "layout.tsx"]
+    .map((fileName) => path.join(utilityPath, fileName))
+    .filter((filePath) => fs.existsSync(filePath));
+
+  for (const filePath of metadataFiles) {
+    const source = fs.readFileSync(filePath, "utf8");
+    const title = stripSiteSuffix(readMetadataString(source, "title"));
+    const description = readMetadataString(source, "description");
+
+    if (title && description) {
+      return { slug, title, description };
+    }
+  }
+
+  const fallbackTitle = titleFromSlug(slug);
+  return {
+    slug,
+    title: fallbackTitle,
+    description: `${fallbackTitle} - TennisFriends tennis utility for clearer decisions.`,
+  };
+}
+
+function getUtilityEntries() {
+  return getUtilitySlugs().map(readUtilityMetadata);
+}
+
 function getPlayerSlugs() {
-  const slugs = new Set();
+  return getPlayerEntries().map((player) => player.slug);
+}
+
+function getPlayerEntries() {
+  const players = new Map();
   for (const file of fs.readdirSync(PLAYERS_DIR)) {
     if (!file.endsWith(".ts")) continue;
     const source = fs.readFileSync(path.join(PLAYERS_DIR, file), "utf8");
@@ -158,10 +214,19 @@ function getPlayerSlugs() {
       ...source.matchAll(/slug\s*:\s*['"]([a-z0-9]+(?:-[a-z0-9]+)+)['"]/g),
     ];
     for (const match of matches) {
-      slugs.add(match[1]);
+      const slug = match[1];
+      if (players.has(slug)) continue;
+
+      const start = match.index ?? source.indexOf(match[0]);
+      const block = source.slice(start, start + 3000);
+      players.set(slug, {
+        slug,
+        name: readStringField(block, "name") || slug,
+        nameEn: readStringField(block, "nameEn") || slug,
+      });
     }
   }
-  return [...slugs].sort();
+  return [...players.values()].sort((a, b) => a.slug.localeCompare(b.slug));
 }
 
 function getDocPages() {
@@ -236,8 +301,9 @@ const lowQualityBlogSlugs = readLowQualityBlogSlugs();
 const blogPosts = getPublishedBlogPosts(readBlogPosts()).filter(
   (post) => !lowQualityBlogSlugs.has(post.slug),
 );
-const utilitySlugs = getUtilitySlugs();
-const playerSlugs = getPlayerSlugs();
+const utilityEntries = getUtilityEntries();
+const playerEntries = getPlayerEntries();
+const playerSlugs = playerEntries.map((player) => player.slug);
 const today = getKstDateString();
 
 const pages = [
@@ -251,11 +317,11 @@ const pages = [
   page(`${SITE_URL}/privacy`, "개인정보 처리방침", "개인정보 처리방침", "static"),
   page(`${SITE_URL}/terms`, "이용 약관", "이용 약관", "static"),
   page(`${SITE_URL}/search`, "TennisFriends 검색", "사이트 콘텐츠 검색", "static"),
-  ...utilitySlugs.map((slug) =>
+  ...utilityEntries.map((utility) =>
     page(
-      `${SITE_URL}/utility/${slug}`,
-      slug,
-      `테니스 ${slug} 도구`,
+      `${SITE_URL}/utility/${utility.slug}`,
+      utility.title,
+      utility.description,
       "tool",
       { category: "utility" },
     ),
@@ -269,11 +335,11 @@ const pages = [
       { category: post.category, lastModified: post.scheduledAt || post.date },
     ),
   ),
-  ...playerSlugs.map((slug) =>
+  ...playerEntries.map((player) =>
     page(
-      `${SITE_URL}/players/${slug}`,
-      slug,
-      `테니스 선수 ${slug} 프로필`,
+      `${SITE_URL}/players/${player.slug}`,
+      `${player.name} (${player.nameEn})`,
+      `테니스 선수 ${player.name} ${player.nameEn} 프로필, 랭킹, 전적, 플레이 스타일`,
       "player",
       { category: "player-profile" },
     ),
@@ -283,7 +349,7 @@ const pages = [
 
 const stats = {
   totalPages: pages.length,
-  tools: utilitySlugs.length + 1,
+  tools: utilityEntries.length + 1,
   articles: blogPosts.length,
   playerProfiles: playerSlugs.length,
 };

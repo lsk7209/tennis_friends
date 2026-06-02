@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import {
-  Inter,
   Archivo_Black,
+  Inter,
   Inter_Tight,
   JetBrains_Mono,
 } from "next/font/google";
@@ -29,6 +29,7 @@ import {
 } from "@/lib/site";
 
 const PROD_GA_MEASUREMENT_ID = "G-W1K51D8SBX";
+const SITE_TITLE = `${SITE_NAME} - 테니스 실력 향상 플랫폼`;
 
 function getGaMeasurementId(): string {
   if (process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) {
@@ -81,7 +82,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} - 테니스 실력 향상 플랫폼`,
+    default: SITE_TITLE,
     template: `%s | ${SITE_NAME}`,
   },
   description: DEFAULT_SITE_DESCRIPTION,
@@ -116,7 +117,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: `${SITE_NAME} - 테니스 실력 향상 플랫폼`,
+    title: SITE_TITLE,
     description: DEFAULT_SITE_DESCRIPTION,
     url: getAbsoluteUrl("/"),
     siteName: SITE_NAME,
@@ -133,7 +134,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} - 테니스 실력 향상 플랫폼`,
+    title: SITE_TITLE,
     description: DEFAULT_SITE_DESCRIPTION,
     images: ["/opengraph-image"],
   },

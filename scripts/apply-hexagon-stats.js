@@ -31,7 +31,7 @@ const playerNameMap = {
     'alejandro-davidovich-fokina': '알레한드로 다비도비치 포키나',
     'alexander-bublik': '알렉산더 부블리크',
     'alex-michelsen': '알렉스 미첼슨',
-    'arthur-landercknech': '아르튀르 랑데르크네슈',
+    'arthur-rinderknech': '아르튀르 랑데르크네슈',
     'brandon-nakashima': '브랜든 나카시마',
     'corentin-moutet': '코랑탱 무테',
     'denis-shapovalov': '데니스 샤포발로프',

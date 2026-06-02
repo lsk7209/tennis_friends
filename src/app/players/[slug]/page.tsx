@@ -36,8 +36,9 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { getPublishedBlogPosts } from "@/lib/blog-publish";
 import { getSiteUrl } from "@/lib/site";
 import {
+  buildPlayerSeoDescription,
   buildPlayerSeoKeywords,
-  getPlayerSearchSeo,
+  buildPlayerSeoTitle,
 } from "@/lib/player-search-seo";
 
 // Force static generation for these paths
@@ -69,17 +70,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteUrl = getSiteUrl();
   const canonical = `${siteUrl}/players/${slug}`;
   const metadataOverride = SEARCH_METADATA_OVERRIDES[slug];
-  const searchSeo = getPlayerSearchSeo(slug);
-  const oneLiner = player.detailedProfile?.oneLineSummary
-    ? player.detailedProfile.oneLineSummary.slice(0, 60)
-    : "";
-  const baseTitle = `${player.name} tennis player | ranking, profile, ${tour}`;
-  const baseDescription = oneLiner
-    ? `${oneLiner} ${player.name}(${player.nameEn}) profile with playing style, strengths, ranking and match record.`
-    : `${player.name}(${player.nameEn}) profile with playing style, strengths, ranking and match record.`;
-  const title = metadataOverride?.title ?? searchSeo?.title ?? baseTitle;
+  const baseTitle = buildPlayerSeoTitle(player, tour);
+  const baseDescription = buildPlayerSeoDescription(player, tour);
+  const title = metadataOverride?.title ?? baseTitle;
   const description =
-    metadataOverride?.description ?? searchSeo?.description ?? baseDescription;
+    metadataOverride?.description ?? baseDescription;
   const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(player.name)}&sub=${encodeURIComponent(`${player.nameEn} · ${tour} profile`)}`;
   const keywords = metadataOverride
     ? [
@@ -909,47 +904,54 @@ export default async function PlayerProfilePage({ params }: Props) {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 mt-12">
-        <Card className="bg-gradient-to-r from-blue-50 via-white to-purple-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 border-blue-200 dark:border-gray-700">
-          <CardContent className="p-8">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">
-              🎾 {player.name}처럼 플레이하고 싶으신가요?
+        <section
+          className="rounded-lg border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"
+          aria-label={`${player.name} 선수 분석 다음 단계`}
+        >
+          <div className="mb-5">
+            <h3 className="text-xl font-bold text-slate-950 dark:text-white">
+              {player.name} 분석 다음 단계
             </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-6">
-              나의 실력과 스타일을 분석해보세요
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              선수의 플레이 특징을 내 연습 기준, 실력 레벨, 장비 선택으로 이어서 확인합니다.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <Link href="/utility/play-style-test" className="group">
-                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-400 hover:shadow-md transition-all text-center">
-                  <div className="text-2xl mb-2">✨</div>
-                  <div className="font-semibold text-sm group-hover:text-purple-600 transition-colors">
-                    플레이 스타일 진단
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                    7가지 스타일 분석
-                  </p>
-                </div>
-              </Link>
-              <Link href="/utility/ntrp-test" className="group">
-                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:shadow-md transition-all text-center">
-                  <div className="text-2xl mb-2">📊</div>
-                  <div className="font-semibold text-sm group-hover:text-blue-600 transition-colors">
-                    NTRP 실력 테스트
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">정확한 레벨 측정</p>
-                </div>
-              </Link>
-              <Link href="/utility/equipment-recommendation" className="group">
-                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-400 hover:shadow-md transition-all text-center">
-                  <div className="text-2xl mb-2">🏸</div>
-                  <div className="font-semibold text-sm group-hover:text-green-600 transition-colors">
-                    장비 추천
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">맞춤 장비 분석</p>
-                </div>
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
+          </div>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <Link
+              href="/utility/play-style-test"
+              className="group rounded-md border border-slate-200 bg-slate-50 p-4 transition-colors hover:border-emerald-400 dark:border-slate-800 dark:bg-slate-950"
+            >
+              <div className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 dark:text-slate-100 dark:group-hover:text-emerald-300">
+                플레이 스타일 진단
+              </div>
+              <p className="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400">
+                내 경기 성향과 보완 포인트를 유형별로 확인
+              </p>
+            </Link>
+            <Link
+              href="/utility/ntrp-test"
+              className="group rounded-md border border-slate-200 bg-slate-50 p-4 transition-colors hover:border-blue-400 dark:border-slate-800 dark:bg-slate-950"
+            >
+              <div className="text-sm font-semibold text-slate-900 group-hover:text-blue-700 dark:text-slate-100 dark:group-hover:text-blue-300">
+                NTRP 실력 테스트
+              </div>
+              <p className="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400">
+                현재 레벨과 다음 훈련 기준을 빠르게 측정
+              </p>
+            </Link>
+            <Link
+              href="/utility/equipment-recommendation"
+              className="group rounded-md border border-slate-200 bg-slate-50 p-4 transition-colors hover:border-amber-400 dark:border-slate-800 dark:bg-slate-950"
+            >
+              <div className="text-sm font-semibold text-slate-900 group-hover:text-amber-700 dark:text-slate-100 dark:group-hover:text-amber-300">
+                장비 추천 시스템
+              </div>
+              <p className="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400">
+                실력과 목적에 맞는 라켓·스트링 조합 확인
+              </p>
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   );

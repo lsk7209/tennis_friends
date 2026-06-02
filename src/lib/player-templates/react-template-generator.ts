@@ -118,14 +118,14 @@ function getBackhandKo(backhand: string): string {
 /**
  * 손잡이 한글 변환
  */
-function getHandKo(hand: string): string {
+function _getHandKo(hand: string): string {
   return hand === 'right' ? '오른손' : '왼손';
 }
 
 /**
  * 코트 타입 한글 변환
  */
-function getSurfaceKo(surface: string): string {
+function _getSurfaceKo(surface: string): string {
   const surfaceMap: Record<string, string> = {
     hard: '하드',
     clay: '클레이',
@@ -380,7 +380,7 @@ export function generateTemplateSections(
 /**
  * TOC 아이템 생성
  */
-export function generateTOCItems(player: Player, hasOptional: boolean): Array<{ id: string; text: string; depth: 2 | 3 }> {
+export function generateTOCItems(player: Player, _hasOptional: boolean): Array<{ id: string; text: string; depth: 2 | 3 }> {
   const nameKo = player.nameKo || player.name;
   const templateType = player.templateType || 'standard';
 

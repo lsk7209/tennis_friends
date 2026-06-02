@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -45,7 +44,6 @@ import {
   Gamepad2,
   Footprints,
   Flame,
-  type LucideIcon,
 } from "lucide-react";
 import type { UtilityMetadata } from "@/lib/utilities";
 
@@ -992,7 +990,7 @@ export default function UtilityPage() {
             letterSpacing: "-0.05em",
           }}
         >
-          65
+          {activeUtilities.length}
         </span>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">

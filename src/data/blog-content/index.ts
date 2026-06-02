@@ -14,6 +14,18 @@ import { BLOG_CONTENT_PART10_SCHEDULED_300 } from "./part10-scheduled-300";
 import { BLOG_CONTENT_ARTICLE_WRITER_300 } from "./part11-article-writer-300";
 import { BLOG_CONTENT_PART12_ARTICLE_WRITER_300 } from "./part12-article-writer-300";
 import { BLOG_CONTENT_PART13_OPTIMIZED } from "./part13-optimized";
+import { BLOG_CONTENT_PART14_TITLE100 } from "./part14-title100";
+import { BLOG_CONTENT_PART16_QUALITY_REWRITES } from "./part16-quality-rewrites";
+import { BLOG_CONTENT_PART17_QUALITY_REWRITES } from "./part17-quality-rewrites";
+import { BLOG_CONTENT_PART18_QUALITY_REWRITES } from "./part18-quality-rewrites";
+import { BLOG_CONTENT_PART19_QUALITY_REWRITES } from "./part19-quality-rewrites";
+import { BLOG_CONTENT_PART20_QUALITY_REWRITES } from "./part20-quality-rewrites";
+import { BLOG_CONTENT_PART21_QUALITY_REWRITES } from "./part21-quality-rewrites";
+import { BLOG_CONTENT_PART22_QUALITY_REWRITES } from "./part22-quality-rewrites";
+import { BLOG_CONTENT_PART23_QUALITY_REWRITES } from "./part23-quality-rewrites";
+import { BLOG_CONTENT_PART24_QUALITY_REWRITES } from "./part24-quality-rewrites";
+import { BLOG_CONTENT_PART25_QUALITY_REWRITES } from "./part25-quality-rewrites";
+import { BLOG_CONTENT_PART26_QUALITY_REWRITES } from "./part26-quality-rewrites";
 
 type BlogContentEntry = {
   content: string;
@@ -40,4 +52,16 @@ export const blogContentMap: Record<string, BlogContentEntry> = {
   ...BLOG_CONTENT_ARTICLE_WRITER_300,
   ...BLOG_CONTENT_PART12_ARTICLE_WRITER_300,
   ...BLOG_CONTENT_PART13_OPTIMIZED,
+  ...BLOG_CONTENT_PART14_TITLE100,
+  ...BLOG_CONTENT_PART16_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART17_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART18_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART19_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART20_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART21_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART22_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART23_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART24_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART25_QUALITY_REWRITES,
+  ...BLOG_CONTENT_PART26_QUALITY_REWRITES,
 };

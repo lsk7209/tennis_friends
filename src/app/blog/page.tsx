@@ -1,302 +1,112 @@
-"use client";
-
-import React, { useState, useMemo } from "react";
-import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { FileText, ChevronLeft, ChevronRight, Search, X } from "lucide-react";
+import type { Metadata } from "next";
+import { FileText } from "lucide-react";
+import BlogIndexClient, { type BlogIndexPost } from "./BlogIndexClient";
 import { allBlogPosts } from "@/data/blog-posts";
 import {
-  BADGE_LABELS,
   BADGE_COLORS,
+  BADGE_LABELS,
   CATEGORY_COLORS,
-  POSTS_PER_PAGE,
 } from "@/lib/constants";
 import { CATEGORY_GROUPS } from "@/lib/blog-utils";
 import {
+  getBlogPublishDate,
   getPublishedBlogPosts,
-  sortBlogPostsByPublishTime,
 } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
-import { Input } from "@/components/ui/input";
-import type { BlogPostData } from "@/types/blog";
+import { getSiteUrl } from "@/lib/site";
+
+export const revalidate = 3600;
+
+export const metadata: Metadata = {
+  title: "테니스 블로그 | TennisFriends",
+  description:
+    "테니스 입문, 레슨, 장비, 전술, 부상 예방, 동호회 경기 준비를 실전 기준으로 정리한 TennisFriends 블로그입니다.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "테니스 블로그 | TennisFriends",
+    description:
+      "테니스 실력 향상과 경기 준비에 바로 쓰는 가이드, 체크리스트, 장비·전술 콘텐츠를 모았습니다.",
+    type: "website",
+    url: `${getSiteUrl()}/blog`,
+  },
+};
+
+function buildBlogIndexPosts(): BlogIndexPost[] {
+  return sortPublishedPosts().map((post, index) => ({
+    id: post.id,
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    category: post.category,
+    tags: post.tags ?? [],
+    date: getBlogPublishDate(post).toISOString().slice(0, 10),
+    readTime: post.readTime || `${8 + (index % 5) * 2}분`,
+    badge: BADGE_LABELS[index % BADGE_LABELS.length],
+    badgeColor: BADGE_COLORS[index % BADGE_COLORS.length],
+    categoryColor: CATEGORY_COLORS[index % CATEGORY_COLORS.length],
+  }));
+}
+
+function sortPublishedPosts() {
+  return getPublishedBlogPosts(allBlogPosts)
+    .filter((post) => isIndexableBlogSlug(post.slug))
+    .sort(
+      (a, b) =>
+        getBlogPublishDate(b).getTime() - getBlogPublishDate(a).getTime(),
+    );
+}
 
 export default function BlogPage() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
-  // 모든 블로그 글 데이터 (다양한 배지와 색상 적용) - useMemo로 최적화
-  const blogPosts = useMemo(() => {
-    return getPublishedBlogPosts(allBlogPosts)
-      .filter((post) => isIndexableBlogSlug(post.slug))
-      .map((post, index) => {
-      // 날짜를 다양하게 설정 (최근 3개월 내)
-      const baseDate = new Date("2025-09-01");
-      const daysToAdd = Math.floor(index * 2.3); // 글마다 다른 날짜
-      const postDate = new Date(baseDate);
-      postDate.setDate(baseDate.getDate() + daysToAdd);
-
-      return {
-        ...post,
-        badge: BADGE_LABELS[index % BADGE_LABELS.length],
-        badgeColor: BADGE_COLORS[index % BADGE_COLORS.length],
-        categoryColor: CATEGORY_COLORS[index % CATEGORY_COLORS.length],
-        date: post.date || postDate.toISOString().split("T")[0],
-        readTime: post.readTime || `${8 + (index % 5) * 2}분`, // 8분, 10분, 12분, 14분, 16분 반복
-      } as BlogPostData & {
-        badge: string;
-        badgeColor: string;
-        categoryColor: string;
-        readTime: string;
-      };
-    });
-  }, []);
-
-  // 필터링 및 검색 로직
-  const filteredBlogPosts = useMemo(() => {
-    return blogPosts.filter((post) => {
-      const matchesSearch =
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (post.tags &&
-          (post.tags as string[]).some((tag) =>
-            tag.toLowerCase().includes(searchQuery.toLowerCase()),
-          ));
-
-      let matchesCategory = true;
-      if (selectedCategory) {
-        // Find which group the selected ID belongs to
-        const group = Object.values(CATEGORY_GROUPS).find(
-          (g) => g.id === selectedCategory,
-        );
-        if (group) {
-          matchesCategory = group.categories.includes(post.category);
-        } else {
-          matchesCategory = post.category === selectedCategory; // Fallback for exact match if needed
-        }
-      }
-
-      return matchesSearch && matchesCategory;
-    });
-  }, [blogPosts, searchQuery, selectedCategory]);
-
-  // 작성일자 기준으로 최신순 정렬
-  const sortedBlogPosts = useMemo(() => {
-    return sortBlogPostsByPublishTime(filteredBlogPosts);
-  }, [filteredBlogPosts]);
-
-  // Pagination 계산 - useMemo로 최적화
-  const { totalPages, currentPosts } = useMemo(() => {
-    const total = Math.ceil(sortedBlogPosts.length / POSTS_PER_PAGE);
-    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-    const endIndex = startIndex + POSTS_PER_PAGE;
-    const posts = sortedBlogPosts.slice(startIndex, endIndex);
-    return { totalPages: total, currentPosts: posts };
-  }, [sortedBlogPosts, currentPage]);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
-    setCurrentPage(1); // 검색 시 첫 페이지로 이동
-  };
-
-  const handleCategoryClick = (category: string | null) => {
-    setSelectedCategory(category);
-    setCurrentPage(1); // 카테고리 변경 시 첫 페이지로 이동
-  };
-
-  const clearSearch = () => {
-    setSearchQuery("");
-  };
+  const posts = buildBlogIndexPosts();
+  const categoryGroups = Object.values(CATEGORY_GROUPS).map((group) => ({
+    id: group.id,
+    label: group.label,
+    categories: group.categories,
+  }));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950 dark:via-indigo-950 dark:to-purple-950">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium mb-6">
-            <FileText className="w-4 h-4" />
+    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+      <section className="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:py-12">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm font-medium text-emerald-800 dark:border-emerald-900 dark:bg-emerald-950 dark:text-emerald-200">
+            <FileText className="h-4 w-4" aria-hidden="true" />
             테니스 블로그
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            테니스
-            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              {" "}
-              지식 & 팁
-            </span>
-          </h1>
-
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            테니스 실력 향상을 위한 전문적인 가이드와 최신 정보를 제공합니다.
-            초보자부터 프로 선수까지 모두가 즐길 수 있는 콘텐츠를 준비하고
-            있습니다.
-          </p>
-
-          {/* Search and Filters */}
-          <div className="max-w-4xl mx-auto mb-12 space-y-6">
-            <div className="relative group">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
-              <Input
-                type="text"
-                placeholder="궁금한 테니스 지식을 검색해보세요 (예: 푸셔, 백핸드, 스트링...)"
-                className="pl-12 pr-12 h-14 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 shadow-sm rounded-2xl text-lg focus:ring-2 focus:ring-blue-500 transition-all"
-                value={searchQuery}
-                onChange={handleSearchChange}
-              />
-              {searchQuery && (
-                <button
-                  onClick={clearSearch}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full text-gray-400 transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              )}
+          <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-end">
+            <div>
+              <h1 className="max-w-3xl text-3xl font-bold tracking-normal text-slate-950 dark:text-white sm:text-4xl">
+                실전에서 바로 쓰는 테니스 가이드
+              </h1>
+              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
+                레슨, 장비, 전술, 멘탈, 부상 예방까지 동호인이 경기 전후에
+                확인해야 할 내용을 주제별로 정리했습니다.
+              </p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
-                <Button
-                  variant={selectedCategory === null ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => handleCategoryClick(null)}
-                  className={`rounded-full px-5 ${selectedCategory === null ? "bg-blue-600 hover:bg-blue-700 shadow-md text-white" : "bg-white/50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-700"}`}
-                >
-                  전체
-                </Button>
-                {Object.values(CATEGORY_GROUPS).map((group) => {
-                  const isActive = selectedCategory === group.id;
-                  return (
-                    <Button
-                      key={group.id}
-                      variant={isActive ? "default" : "outline"}
-                      size="sm"
-                      onClick={() => handleCategoryClick(group.id)}
-                      className={`rounded-full px-5 ${isActive ? `bg-blue-600 text-white shadow-md hover:bg-blue-700` : "bg-white/50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-700"}`}
-                    >
-                      {group.label}
-                    </Button>
-                  );
-                })}
+            <dl className="grid grid-cols-2 gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900">
+              <div>
+                <dt className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                  공개 글
+                </dt>
+                <dd className="mt-1 text-2xl font-bold">{posts.length}</dd>
               </div>
-            </div>
+              <div>
+                <dt className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                  주제 그룹
+                </dt>
+                <dd className="mt-1 text-2xl font-bold">
+                  {categoryGroups.length}
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
+      </section>
 
-        {/* No Results State */}
-        {sortedBlogPosts.length === 0 && (
-          <div className="text-center py-20 bg-white/30 dark:bg-gray-800/30 rounded-3xl backdrop-blur-sm border-2 border-dashed border-gray-200 dark:border-gray-700 mb-12">
-            <div className="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Search className="w-8 h-8 text-gray-400" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-              검색 결과가 없습니다
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              다른 키워드로 검색해보시거나 필터를 변경해보세요.
-            </p>
-            <Button
-              variant="outline"
-              onClick={() => {
-                clearSearch();
-                handleCategoryClick(null);
-              }}
-              className="rounded-full"
-            >
-              초기화하기
-            </Button>
-          </div>
-        )}
-
-        {/* Blog Posts */}
-        <h2 className="sr-only">전체 블로그 게시글</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {currentPosts.map((post) => (
-            <Card
-              key={post.id}
-              className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all"
-            >
-              <CardContent className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <Badge className={post.badgeColor}>{post.badge}</Badge>
-                  <Badge className={post.categoryColor}>{post.category}</Badge>
-                </div>
-
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  {post.title}
-                </h3>
-
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                    <span>{post.date}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <Link
-                    href={`/blog/${post.slug || post.id}`}
-                    aria-label={`${post.title} 자세히 보기`}
-                  >
-                    <Button className="bg-blue-500 hover:bg-blue-600">
-                      자세히 보기
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mb-16">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              aria-label="이전 페이지"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              이전
-            </Button>
-
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <Button
-                key={page}
-                variant={page === currentPage ? "default" : "outline"}
-                size="sm"
-                onClick={() => handlePageChange(page)}
-                className={
-                  page === currentPage ? "bg-blue-500 hover:bg-blue-600" : ""
-                }
-              >
-                {page}
-              </Button>
-            ))}
-
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              aria-label="다음 페이지"
-            >
-              다음
-              <ChevronRight className="w-4 h-4" />
-            </Button>
-          </div>
-        )}
-      </div>
-    </div>
+      <BlogIndexClient posts={posts} categoryGroups={categoryGroups} />
+    </main>
   );
 }

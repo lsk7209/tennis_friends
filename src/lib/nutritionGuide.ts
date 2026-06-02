@@ -291,7 +291,11 @@ function calculateTotalHydration(plan: NutritionPlan, multiplier: number): strin
   return `${Math.round(total)}ml`;
 }
 
-function calculateTotalCalories(plan: NutritionPlan, multiplier: number, adjustments: any): string {
+function calculateTotalCalories(
+  plan: NutritionPlan,
+  multiplier: number,
+  adjustments: { carbs: number; protein: number; fat: number },
+): string {
   let total = 0;
   
   if (plan.pre) total += 300 * adjustments.carbs;

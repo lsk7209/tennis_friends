@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-06-02T00:19:34.115Z",
+  "baseUrl": "https://www.tennisfrens.com",
+  "adsensePubId": "ca-pub-3050601904412736",
+  "gaMeasurementId": "G-W1K51D8SBX",
+  "blogSamplePath": "/blog/tennis-hybrid-string-setup",
+  "requiredAdSlots": [
+    "5442683582",
+    "4809500982",
+    "8552062650"
+  ],
+  "findings": [],
+  "results": [
+    {
+      "scope": "source",
+      "adsensePubId": "ca-pub-3050601904412736",
+      "gaMeasurementId": "G-W1K51D8SBX",
+      "requiredAdSlots": 3
+    },
+    {
+      "scope": "live",
+      "path": "/",
+      "status": 200,
+      "bytes": 90062,
+      "hasAdsenseAccountMeta": true,
+      "hasGa4Script": true,
+      "ga4ScriptRequired": true,
+      "hasCsp": true
+    },
+    {
+      "scope": "live",
+      "path": "/blog/tennis-hybrid-string-setup",
+      "status": 200,
+      "bytes": 116646,
+      "adSlotCount": 3
+    },
+    {
+      "scope": "live",
+      "path": "/ads.txt",
+      "status": 200,
+      "bytes": 60,
+      "hasAdsensePublisher": true
+    }
+  ]
+}

@@ -1,23 +1,18 @@
 'use client';
 
-import React, { useEffect, useState, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import React, { Suspense, useMemo } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {Calculator, Share2, RotateCcw, Target, Settings, TrendingUp, AlertCircle, ArrowRight, CheckCircle, Sparkles} from 'lucide-react';
-import { calculateTension, getTensionComparison, TensionInput, TensionResult } from '@/lib/tensionCalc';
+import { calculateTension, getTensionComparison, TensionInput } from '@/lib/tensionCalc';
 
 function StringTensionResultContent() {
   const searchParams = useSearchParams();
-  const router = useRouter();
-  const [result, setResult] = useState<TensionResult | null>(null);
-  const [inputData, setInputData] = useState<TensionInput | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
+  const derived = useMemo(() => {
     const params = {
       headSize: searchParams.get('headSize') as TensionInput['headSize'],
       stringType: searchParams.get('stringType') as TensionInput['stringType'],
@@ -28,12 +23,18 @@ function StringTensionResultContent() {
     };
 
     if (params.headSize && params.stringType && params.playStyle && params.environment && params.feelPreference) {
-      setInputData(params as TensionInput);
-      const calculatedResult = calculateTension(params as TensionInput);
-      setResult(calculatedResult);
+      const inputData = params as TensionInput;
+      return {
+        inputData,
+        result: calculateTension(inputData),
+      };
     }
-    setIsLoading(false);
+
+    return null;
   }, [searchParams]);
+
+  const result = derived?.result ?? null;
+  const inputData = derived?.inputData ?? null;
 
   const getStyleColor = (style: string) => {
     const colors = {
@@ -56,17 +57,6 @@ function StringTensionResultContent() {
       toast.success('결과가 클립보드에 복사되었습니다! 📋');
     }
   };
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-emerald-50 to-teal-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 text-lg font-medium">결과를 계산하고 있습니다...</p>
-        </div>
-      </div>
-    );
-  }
 
   if (!result || !inputData) {
     return (

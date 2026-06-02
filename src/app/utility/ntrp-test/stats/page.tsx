@@ -11,9 +11,22 @@ import { levelToNum } from '@/lib/questions';
 
 const COLORS = ['#10b981', '#60a5fa', '#f59e0b', '#ef4444', '#a78bfa', '#14b8a6', '#22c55e', '#94a3b8'];
 
+interface NtrpResultRow {
+  created_at: string;
+  score: number;
+  level: string;
+  character: string;
+  device_id?: string;
+}
+
+interface PieLabelProps {
+  name?: string;
+  percent?: number;
+}
+
 export default function StatsPage() {
-  const [recent, setRecent] = useState<any[]>([]);
-  const [mine, setMine] = useState<any[]>([]);
+  const [recent, setRecent] = useState<NtrpResultRow[]>([]);
+  const [mine, setMine] = useState<NtrpResultRow[]>([]);
   const [dist, setDist] = useState<{ bucket: string; count: number }[]>([]);
   const [trend, setTrend] = useState<{ date: string; avg: number }[]>([]);
   const [chars, setChars] = useState<{ name: string; value: number }[]>([]);
@@ -35,7 +48,7 @@ export default function StatsPage() {
             .select('created_at, score, level, character')
             .order('created_at', { ascending: false })
             .limit(10);
-          setRecent(r10 || []);
+          setRecent((r10 || []) as NtrpResultRow[]);
 
           // 내 기기 히스토리
           const { data: my10 } = await supabase
@@ -44,11 +57,11 @@ export default function StatsPage() {
             .eq('device_id', device)
             .order('created_at', { ascending: false })
             .limit(10);
-          setMine(my10 || []);
+          setMine((my10 || []) as NtrpResultRow[]);
         } else {
           // Supabase가 설정되지 않은 경우 로컬 스토리지 사용
-          const localResults = JSON.parse(localStorage.getItem('ntrp_results') || '[]');
-          const myResults = localResults.filter((r: any) => r.device_id === device);
+          const localResults = JSON.parse(localStorage.getItem('ntrp_results') || '[]') as NtrpResultRow[];
+          const myResults = localResults.filter((r) => r.device_id === device);
           
           setRecent(localResults.slice(0, 10));
           setMine(myResults.slice(0, 10));
@@ -76,7 +89,7 @@ export default function StatsPage() {
           const charMapCount: Record<string, number> = {};
           const trendMap: Record<string, number[]> = {};
 
-          (all100 || []).forEach((row: any) => {
+          ((all100 || []) as NtrpResultRow[]).forEach((row) => {
             const s = row.score;
             if (s <= 25) buckets[0].count++;
             else if (s <= 35) buckets[1].count++;
@@ -207,7 +220,10 @@ export default function StatsPage() {
                           dataKey="value"
                           nameKey="name"
                           outerRadius={120}
-                          label={(props: any) => `${props.name} ${(props.percent * 100).toFixed(0)}%`}
+                          label={(props: unknown) => {
+                            const { name = '', percent = 0 } = props as PieLabelProps;
+                            return `${name} ${(percent * 100).toFixed(0)}%`;
+                          }}
                         >
                           {chars.map((_, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
