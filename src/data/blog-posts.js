@@ -3547,6 +3547,32 @@ function applyPostOverride(post) {
 /** @type {import("@/types/blog").BlogPostData[]} */
 export const allBlogPosts = [
   {
+    "id": "tennis-indoor-court-tips",
+    "slug": "tennis-indoor-court-tips",
+    "tags": ["실내 코트","바운드","조명","환경 적응"],
+    "title": "실내 테니스 코트 팁 — 바운드·조명·적응 전략",
+    "excerpt": "실내 테니스 코트 팁 — 바운드·조명·적응 전략에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-06-02",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-opponent-analysis-guide",
+    "slug": "tennis-opponent-analysis-guide",
+    "tags": ["상대 분석","약점 공략","전술","경기 분석"],
+    "title": "상대 약점 파악과 공략법 — 경기 중 분석 기술",
+    "excerpt": "상대 약점 파악과 공략법 — 경기 중 분석 기술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "전술 가이드",
+    "date": "2026-06-02",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-mental-toughness-building",
     "slug": "tennis-mental-toughness-building",
     "tags": ["멘탈 강화","자기 대화","집중력","루틴"],
