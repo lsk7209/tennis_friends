@@ -3547,6 +3547,32 @@ function applyPostOverride(post) {
 /** @type {import("@/types/blog").BlogPostData[]} */
 export const allBlogPosts = [
   {
+    "id": "tennis-string-breaking-solution",
+    "slug": "tennis-string-breaking-solution",
+    "tags": ["스트링 절단","스트링","관리","장비 관리"],
+    "title": "스트링 자주 끊기는 이유와 해결책",
+    "excerpt": "스트링 자주 끊기는 이유와 해결책에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "장비 가이드",
+    "date": "2026-06-03",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
+    "id": "tennis-beginner-equipment-guide",
+    "slug": "tennis-beginner-equipment-guide",
+    "tags": ["입문 장비","초보자","라켓 추천","예산별"],
+    "title": "테니스 입문 장비 완전 가이드 — 예산별 추천",
+    "excerpt": "테니스 입문 장비 완전 가이드 — 예산별 추천에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "초보자 가이드",
+    "date": "2026-06-03",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-indoor-court-tips",
     "slug": "tennis-indoor-court-tips",
     "tags": ["실내 코트","바운드","조명","환경 적응"],
