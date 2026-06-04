@@ -3547,6 +3547,19 @@ function applyPostOverride(post) {
 /** @type {import("@/types/blog").BlogPostData[]} */
 export const allBlogPosts = [
   {
+    "id": "tennis-western-grip-advantages",
+    "slug": "tennis-western-grip-advantages",
+    "tags": ["웨스턴 그립","그립","탑스핀","클레이코트"],
+    "title": "웨스턴 그립의 장단점 — 언제 쓰고 언제 피하나",
+    "excerpt": "웨스턴 그립의 장단점 — 언제 쓰고 언제 피하나에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+    "badge": "최신 글",
+    "category": "기술 가이드",
+    "date": "2026-06-04",
+    "readTime": "10분",
+    "badgeColor": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-string-breaking-solution",
     "slug": "tennis-string-breaking-solution",
     "tags": ["스트링 절단","스트링","관리","장비 관리"],
