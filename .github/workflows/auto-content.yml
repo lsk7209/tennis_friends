@@ -2,8 +2,9 @@ name: Auto Content Generation
 
 on:
   schedule:
-    # 매일 KST 06:00 = UTC 21:00 (전날)
-    - cron: '0 21 * * *'
+    # 주 2회(월·목) KST 06:00 = UTC 21:00 (전날). 빌드 비용 절감: 회당 BATCH_POSTS편을
+    # 묶어 생성·1회 push → 주 발행량은 유지하면서 Vercel 빌드를 주7→2회로 축소.
+    - cron: '0 21 * * 1,4'
   workflow_dispatch:
     inputs:
       force:
@@ -30,6 +31,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DAILY_AI_BUDGET: '0.5'
+          BATCH_POSTS: '7'
         run: node scripts/auto-content.js
 
       - name: 변경사항 확인

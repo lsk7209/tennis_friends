@@ -10,6 +10,9 @@ const path = require("path");
 const API_KEY = process.env.GEMINI_API_KEY;
 const DAILY_BUDGET = parseFloat(process.env.DAILY_AI_BUDGET || "0.5");
 const COST_PER_POST = 0.002; // gemini-2.5-flash-lite 기준 추정
+// 1회 실행당 생성 편수(빌드 비용 절감용 배치). cron을 주2회로 줄이고 회당 여러 편을 묶어
+// 발행량은 유지하면서 git push(=Vercel 빌드) 횟수만 줄인다. 미설정 시 기존값 2 유지.
+const BATCH_POSTS = parseInt(process.env.BATCH_POSTS || "2", 10);
 
 // 테니스 롱테일 키워드 주제 큐
 const TOPIC_QUEUE = [
@@ -695,7 +698,7 @@ async function main() {
   const toGenerate = TOPIC_QUEUE.filter(({ slug }) => {
     const dir = path.join("src/app/blog", slug);
     return !fs.existsSync(dir);
-  }).slice(0, Math.min(maxPosts, 2)); // 하루 최대 2개
+  }).slice(0, Math.min(maxPosts, BATCH_POSTS)); // 실행당 최대 BATCH_POSTS개 (배치 발행)
 
   if (toGenerate.length === 0) {
     console.log("생성할 새 주제 없음 (모두 존재하거나 예산 초과)");
