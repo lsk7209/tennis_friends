@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import {
   Archivo_Black,
   Inter,
@@ -29,6 +30,7 @@ import {
 } from "@/lib/site";
 
 const PROD_GA_MEASUREMENT_ID = "G-W1K51D8SBX";
+const ADSENSE_ID = "ca-pub-3050601904412736";
 const SITE_TITLE = `${SITE_NAME} - 테니스 실력 향상 플랫폼`;
 
 function getGaMeasurementId(): string {
@@ -186,7 +188,13 @@ export default function RootLayout({
       className={`${inter.variable} ${archivoBlack.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
       <head>
-        <meta name="google-adsense-account" content="ca-pub-3050601904412736" />
+        <meta name="google-adsense-account" content={ADSENSE_ID} />
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <link
           rel="alternate"
           type="application/rss+xml"
