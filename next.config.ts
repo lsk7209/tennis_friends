@@ -74,8 +74,8 @@ const nextConfig: NextConfig = {
       // no-www → www 정규화 (GSC 카니발리제이션 방지: 동일 URL이 두 호스트로 분산 인덱싱되는 문제)
       {
         source: "/:path*",
-        has: [{ type: "host", value: "tennisfrens.com" }],
-        destination: "https://www.tennisfrens.com/:path*",
+        has: [{ type: "host", value: "www.tennisfrens.com" }],
+        destination: "https://tennisfrens.com/:path*",
         permanent: true,
       },
       // Canonicalize the old misspelled Arthur Rinderknech slug.
