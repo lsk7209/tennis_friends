@@ -14,6 +14,7 @@ import { Toaster } from "@/components/ui/sonner";
 import CacheReset from "@/components/CacheReset";
 import Tracking from "@/components/Tracking";
 import AdSense from "@/components/AdSense";
+import CoupangAffiliateBanner from "@/components/affiliate/CoupangAffiliateBanner";
 import GAProvider from "@/components/analytics/GAProvider";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
@@ -230,6 +231,7 @@ export default function RootLayout({
           <div className="layout-container flex h-full grow flex-col">
             <Header />
             <main className="flex-1 pb-16 md:pb-0">{children}</main>
+            <CoupangAffiliateBanner />
             <Footer />
             <MobileNav />
           </div>
