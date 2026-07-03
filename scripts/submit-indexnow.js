@@ -77,12 +77,12 @@ async function fetchUrls(url = SITEMAP_URL, redirectCount = 0) {
 
 function readHost() {
   const filePath = path.join(__dirname, "..", ".gsc-domain");
-  if (!fs.existsSync(filePath)) return "www.tennisfrens.com";
+  if (!fs.existsSync(filePath)) return "tennisfrens.com";
 
   try {
     return new URL(fs.readFileSync(filePath, "utf8").trim()).hostname;
   } catch {
-    return "www.tennisfrens.com";
+    return "tennisfrens.com";
   }
 }
 
