@@ -23,14 +23,14 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "드롭샷, 폭발적인 전환, 시너 라이벌리",
   },
   "martin-landaluce": {
-    title: "마르틴 란달루세 프로필 | 랭킹·전적·플레이스타일",
+    title: "마르틴 란달루세(Martin Landaluce) 프로필 | ATP 랭킹·전적",
     description:
       "마르틴 란달루세(Martin Landaluce)의 ATP 프로필입니다. 랭킹 흐름, 전적, 플레이스타일, 성장 포인트를 한눈에 정리했습니다.",
     aliases: ["마르틴 란달루세", "란달루세", "Martin Landaluce"],
     focus: "스페인 유망주의 랭킹 흐름과 경기 스타일",
   },
   "marie-bouzkova": {
-    title: "마리 부즈코바 프로필 | 랭킹·전적·플레이스타일",
+    title: "마리 부즈코바(Marie Bouzkova) 프로필 | WTA 랭킹·전적",
     description:
       "마리 부즈코바(Marie Bouzkova)의 WTA 프로필입니다. 랭킹, 전적, 수비력과 경기 운영, 팬들이 자주 찾는 핵심 정보를 모았습니다.",
     aliases: ["마리 부즈코바", "부즈코바", "Marie Bouzkova"],
