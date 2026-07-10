@@ -58,10 +58,16 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "프랑스 유망주, 파워 포핸드, 차세대 ATP",
   },
   "arthur-rinderknech": {
-    title: "아르튀르 랑데르크네슈 프로필 | 랭킹·전적·서브",
+    title: "아르튀르 랭데르크네슈(Arthur Rinderknech) 프로필 | ATP 랭킹·전적·서브",
     description:
-      "아르튀르 랑데르크네슈(Arthur Rinderknech)의 ATP 프로필입니다. 랭킹, 전적, 서브 기반 플레이스타일과 주요 강점을 정리했습니다.",
-    aliases: ["아르튀르 랑데르크네슈", "랑데르크네슈", "Arthur Rinderknech"],
+      "아르튀르 랭데르크네슈(Arthur Rinderknech)의 ATP 랭킹, 최근 전적, 장신 빅서브와 플레이스타일을 정리했습니다.",
+    aliases: [
+      "아르튀르 랭데르크네슈",
+      "아르튀르 랑데르크네슈",
+      "랭데르크네슈",
+      "랑데르크네슈",
+      "Arthur Rinderknech",
+    ],
     focus: "프랑스 선수의 서브 강점과 경기 흐름",
   },
   "arthur-landercknech": {
