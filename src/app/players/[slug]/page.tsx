@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PLAYERS_DB } from "@/data/players";
+import playerLegacyRedirects from "@/data/players/legacy-redirects.json";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -43,9 +44,11 @@ import {
 
 // Force static generation for these paths
 export async function generateStaticParams() {
-  return Object.keys(PLAYERS_DB).map((slug) => ({
+  return Object.keys(PLAYERS_DB)
+    .filter((slug) => !(slug in playerLegacyRedirects))
+    .map((slug) => ({
     slug,
-  }));
+    }));
 }
 
 type Props = {

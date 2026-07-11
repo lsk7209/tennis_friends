@@ -3,6 +3,7 @@ import path from "path";
 import type { MetadataRoute } from "next";
 import { allBlogPosts } from "@/data/blog-posts";
 import { PLAYERS_DB } from "@/data/players";
+import playerLegacyRedirects from "@/data/players/legacy-redirects.json";
 import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { getSiteUrl } from "@/lib/site";
@@ -155,7 +156,9 @@ export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
     });
   }
 
-  for (const slug of Object.keys(PLAYERS_DB).sort()) {
+  for (const slug of Object.keys(PLAYERS_DB)
+    .filter((candidate) => !(candidate in playerLegacyRedirects))
+    .sort()) {
     entries.push({
       url: `${siteUrl}/players/${slug}`,
       lastModified: latestPlayerDate,

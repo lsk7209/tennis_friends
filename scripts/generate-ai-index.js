@@ -10,6 +10,10 @@ const BLOG_POSTS_PATH = path.join(ROOT, "src", "data", "blog-posts.js");
 const BLOG_QUALITY_PATH = path.join(ROOT, "src", "lib", "blog-quality.ts");
 const UTILITY_DIR = path.join(ROOT, "src", "app", "utility");
 const PLAYERS_DIR = path.join(ROOT, "src", "data", "players");
+const PLAYER_LEGACY_REDIRECTS = require(path.join(
+  PLAYERS_DIR,
+  "legacy-redirects.json",
+));
 const DOCS_DIR = path.join(ROOT, "public", "docs");
 const AI_INDEX_PATH = path.join(ROOT, "public", "ai-index.json");
 const LLMS_PATH = path.join(ROOT, "public", "llms.txt");
@@ -215,7 +219,7 @@ function getPlayerEntries() {
     ];
     for (const match of matches) {
       const slug = match[1];
-      if (players.has(slug)) continue;
+      if (players.has(slug) || PLAYER_LEGACY_REDIRECTS[slug]) continue;
 
       const start = match.index ?? source.indexOf(match[0]);
       const block = source.slice(start, start + 3000);

@@ -93,6 +93,7 @@ registerSourceTranspiler();
 const { getSitemapEntries, toXmlSitemap } = require("../src/lib/sitemap-entries.ts");
 const { allBlogPosts } = require("../src/data/blog-posts.js");
 const { PLAYERS_DB } = require("../src/data/players/index.ts");
+const playerLegacyRedirects = require("../src/data/players/legacy-redirects.json");
 const { getPublishedBlogPosts } = require("../src/lib/blog-publish.ts");
 const { isIndexableBlogSlug } = require("../src/lib/blog-quality.ts");
 
@@ -100,7 +101,9 @@ const entries = getSitemapEntries(SITE_URL);
 const urls = entries.map((entry) => entry.url);
 const duplicateUrls = urls.filter((url, index) => urls.indexOf(url) !== index);
 const utilitySlugs = getUtilitySlugs();
-const playerSlugs = Object.keys(PLAYERS_DB).sort();
+const playerSlugs = Object.keys(PLAYERS_DB)
+  .filter((slug) => !playerLegacyRedirects[slug])
+  .sort();
 const publishedBlogSlugs = getPublishedBlogPosts(allBlogPosts)
   .filter((post) => isIndexableBlogSlug(post.slug))
   .map((post) => post.slug)

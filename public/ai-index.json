@@ -3,12 +3,12 @@
   "url": "https://www.tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-06-02",
+  "lastUpdated": "2026-07-11",
   "stats": {
-    "totalPages": 550,
+    "totalPages": 554,
     "tools": 64,
-    "articles": 207,
-    "playerProfiles": 269
+    "articles": 212,
+    "playerProfiles": 268
   },
   "pages": [
     {
@@ -511,6 +511,46 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-western-grip-advantages",
+      "title": "웨스턴 그립의 장단점 — 언제 쓰고 언제 피하나",
+      "description": "웨스턴 그립의 장단점 — 언제 쓰고 언제 피하나에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-06-04"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-string-breaking-solution",
+      "title": "스트링 자주 끊기는 이유와 해결책",
+      "description": "스트링 자주 끊기는 이유와 해결책에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+      "type": "article",
+      "category": "장비 가이드",
+      "lastModified": "2026-06-03"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-beginner-equipment-guide",
+      "title": "테니스 입문 장비 완전 가이드 — 예산별 추천",
+      "description": "테니스 입문 장비 완전 가이드 — 예산별 추천에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+      "type": "article",
+      "category": "초보자 가이드",
+      "lastModified": "2026-06-03"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-indoor-court-tips",
+      "title": "실내 테니스 코트 팁 — 바운드·조명·적응 전략",
+      "description": "실내 테니스 코트 팁 — 바운드·조명·적응 전략에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-06-02"
+    },
+    {
+      "url": "https://www.tennisfrens.com/blog/tennis-opponent-analysis-guide",
+      "title": "상대 약점 파악과 공략법 — 경기 중 분석 기술",
+      "description": "상대 약점 파악과 공략법 — 경기 중 분석 기술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
+      "type": "article",
+      "category": "전술 가이드",
+      "lastModified": "2026-06-02"
     },
     {
       "url": "https://www.tennisfrens.com/blog/tennis-mental-toughness-building",
@@ -3367,13 +3407,6 @@
     },
     {
       "url": "https://www.tennisfrens.com/players/marta-kostyuk",
-      "title": "마르타 코스튜크 (Marta Kostyuk)",
-      "description": "테니스 선수 마르타 코스튜크 Marta Kostyuk 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
-      "url": "https://www.tennisfrens.com/players/marta-kostyuk-legacy",
       "title": "마르타 코스튜크 (Marta Kostyuk)",
       "description": "테니스 선수 마르타 코스튜크 Marta Kostyuk 프로필, 랭킹, 전적, 플레이 스타일",
       "type": "player",

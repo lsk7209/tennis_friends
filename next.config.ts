@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import playerLegacyRedirects from "./src/data/players/legacy-redirects.json";
 
 const isGitHubPages =
   process.env.GITHUB_ACTIONS && process.env.GITHUB_PAGES === "true";
@@ -84,6 +85,11 @@ const nextConfig: NextConfig = {
         destination: "/players/arthur-rinderknech",
         permanent: true,
       },
+      ...Object.entries(playerLegacyRedirects).map(([source, destination]) => ({
+        source: `/players/${source}`,
+        destination: `/players/${destination}`,
+        permanent: true,
+      })),
     ];
   },
 
