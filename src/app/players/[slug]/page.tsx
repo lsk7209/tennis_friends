@@ -58,7 +58,14 @@ type Props = {
 const SEARCH_METADATA_OVERRIDES: Record<
   string,
   { title: string; description: string; keywords: string[] }
-> = {};
+> = {
+  "alexandra-eala": {
+    title: "알렉산드라 이알라(Alexandra Eala) 프로필 | 필리핀 WTA 선수·전적·플레이스타일",
+    description:
+      "알렉산드라 이알라(Alexandra Eala)의 WTA 프로필입니다. 필리핀 출신 왼손잡이 테니스 선수의 플레이스타일, 주요 전적과 경기 흐름을 확인하세요.",
+    keywords: ["알렉산드라 이알라", "Alexandra Eala", "필리핀 테니스 선수", "WTA 선수"],
+  },
+};
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const player = PLAYERS_DB[slug];
