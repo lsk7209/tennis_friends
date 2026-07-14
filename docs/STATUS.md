@@ -2,8 +2,10 @@
 
 Current goal: align TennisFrens source URL policy with the live Vercel non-www canonical host.
 
-State: Vercel preview is Ready; unauthenticated HTTP inspection is protected by Vercel SSO. No production deployment has been made.
+State: production deployment completed and live smoke checks passed on 2026-07-14.
 
 Evidence: URL consistency, redirect configuration, live redirect, metadata coverage, lint, and TypeScript checks passed on 2026-07-14.
 
 Scope: canonical URLs and redirect policy only; no editorial content, ads, production data, or secrets changed.
+
+Production evidence: player page returned 200 with a self-canonical non-www URL and AdSense markup; www returned 307 to the non-www page; ads.txt, robots.txt, and sitemap.xml returned 200 with the expected canonical host references.

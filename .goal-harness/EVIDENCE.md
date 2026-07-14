@@ -17,6 +17,9 @@ Level: 2
 | npm run type-check | PASS | TypeScript completed without errors. |
 | Vercel preview build | PASS | Preview `dpl_3pjLT2MrjUcoaiidwSBWXqcNeUnt` is Ready after compilation, typecheck, and 1,528 static pages. |
 | Preview HTTP smoke | CONSTRAINED | The Ready preview returns 302 to Vercel SSO for unauthenticated requests; external HTML inspection requires an authorized browser session. |
+| Production deployment | PASS | Vercel deployment `dpl_5sXXZWtYAAYxycP9S3f34LnoXpVJ` is Ready and aliases `tennisfrens.com` and `www.tennisfrens.com`. |
+| Production player smoke | PASS | Alexandra Eala player page: 200, self-canonical `https://tennisfrens.com/players/alexandra-eala`, and AdSense markup present. |
+| Production host/discovery smoke | PASS | www player page: 307 to non-www; ads.txt, robots.txt, and sitemap.xml: 200 with expected canonical-host entries. |
 
 ## Test Results
 
