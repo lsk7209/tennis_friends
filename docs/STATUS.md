@@ -2,7 +2,7 @@
 
 Current goal: align TennisFrens source URL policy with the live Vercel non-www canonical host.
 
-State: preview verification pending.
+State: Vercel preview is platform-pending after logged build success; no production deployment has been made.
 
 Evidence: URL consistency, redirect configuration, live redirect, metadata coverage, lint, and TypeScript checks passed on 2026-07-14.
 

@@ -15,6 +15,7 @@ Level: 2
 | npm run audit:metadata-coverage | PASS | 10 static, 63 utility, and 59 player-static routes covered. |
 | npm run lint | PASS | ESLint completed without findings. |
 | npm run type-check | PASS | TypeScript completed without errors. |
+| Vercel preview build | PENDING PLATFORM | Preview `dpl_3pjLT2MrjUcoaiidwSBWXqcNeUnt` compiled, type-checked, and generated 1,528 static pages, but remained Building after `onBuildComplete`. |
 
 ## Test Results
 
@@ -30,6 +31,7 @@ Level: 2
 - Source canonical defaults, metadata/schema URLs, RSS/sitemap discovery URLs, and generated AI-discovery assets now use the live Vercel non-www host.
 - The legacy redirect artifact is retained only as compatibility configuration and now sends www to the same non-www canonical host used by Vercel.
 - No editorial content, ad placement, production data, or credentials were changed.
+- Branch `codex/tennisfrens-ctr-20260714` was pushed with commit `e115e70`; no production merge or production deployment was performed.
 # Risk Notice
 
 Task: Align TennisFrens source canonical-host defaults and remove an obsolete Cloudflare redirect artifact.
