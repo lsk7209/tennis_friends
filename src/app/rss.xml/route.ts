@@ -1,4 +1,3 @@
-import { NextRequest } from "next/server";
 import { allBlogPosts } from "@/data/blog-posts";
 import {
   getBlogPublishDate,
@@ -8,7 +7,7 @@ import {
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { DEFAULT_CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export function getRssBaseUrl() {
   return (process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com")
@@ -76,8 +75,7 @@ export function buildRssXml(baseUrl: string, selfPath = "/rss.xml") {
 </rss>`;
 }
 
-export async function GET(request: NextRequest) {
-  void request;
+export async function GET() {
   const rss = buildRssXml(getRssBaseUrl());
 
   return new Response(rss, {

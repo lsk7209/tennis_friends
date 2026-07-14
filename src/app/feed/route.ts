@@ -1,10 +1,8 @@
-import { NextRequest } from 'next/server';
 import { buildRssXml, getRssBaseUrl } from '@/app/rss.xml/route';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
-export async function GET(request: NextRequest) {
-  void request;
+export async function GET() {
   return new Response(buildRssXml(getRssBaseUrl(), '/feed'), {
     headers: {
       'Content-Type': 'application/rss+xml; charset=utf-8',
