@@ -146,7 +146,9 @@ function getPlayerSlugs() {
     }
   }
 
-  return [...players].sort();
+  return [...players]
+    .filter((slug) => !slug.endsWith("-legacy"))
+    .sort();
 }
 
 function getDocSlugs() {

@@ -5,10 +5,10 @@
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
   "lastUpdated": "2026-07-14",
   "stats": {
-    "totalPages": 554,
+    "totalPages": 546,
     "tools": 64,
     "articles": 212,
-    "playerProfiles": 268
+    "playerProfiles": 260
   },
   "pages": [
     {
@@ -2559,13 +2559,6 @@
       "category": "player-profile"
     },
     {
-      "url": "https://tennisfrens.com/players/caroline-garcia-legacy",
-      "title": "카롤린 가르시아 (Caroline Garcia)",
-      "description": "테니스 선수 카롤린 가르시아 Caroline Garcia 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
       "url": "https://tennisfrens.com/players/caroline-wozniacki",
       "title": "캐롤라인 보즈니아키 (Caroline Wozniacki)",
       "description": "테니스 선수 캐롤라인 보즈니아키 Caroline Wozniacki 프로필, 랭킹, 전적, 플레이 스타일",
@@ -2734,13 +2727,6 @@
       "category": "player-profile"
     },
     {
-      "url": "https://tennisfrens.com/players/donna-vekic-legacy",
-      "title": "돈나 베키치 (Donna Vekic)",
-      "description": "테니스 선수 돈나 베키치 Donna Vekic 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
       "url": "https://tennisfrens.com/players/duckhee-lee",
       "title": "이덕희 (Duckhee Lee)",
       "description": "테니스 선수 이덕희 Duckhee Lee 프로필, 랭킹, 전적, 플레이 스타일",
@@ -2826,13 +2812,6 @@
     },
     {
       "url": "https://tennisfrens.com/players/emma-raducanu",
-      "title": "엠마 라두카누 (Emma Raducanu)",
-      "description": "테니스 선수 엠마 라두카누 Emma Raducanu 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
-      "url": "https://tennisfrens.com/players/emma-raducanu-legacy",
       "title": "엠마 라두카누 (Emma Raducanu)",
       "description": "테니스 선수 엠마 라두카누 Emma Raducanu 프로필, 랭킹, 전적, 플레이 스타일",
       "type": "player",
@@ -3231,21 +3210,7 @@
       "category": "player-profile"
     },
     {
-      "url": "https://tennisfrens.com/players/leylah-fernandez-legacy",
-      "title": "레일라 페르난데스 (Leylah Fernandez)",
-      "description": "테니스 선수 레일라 페르난데스 Leylah Fernandez 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
       "url": "https://tennisfrens.com/players/linda-noskova",
-      "title": "린다 노스코바 (Linda Noskova)",
-      "description": "테니스 선수 린다 노스코바 Linda Noskova 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
-      "url": "https://tennisfrens.com/players/linda-noskova-legacy",
       "title": "린다 노스코바 (Linda Noskova)",
       "description": "테니스 선수 린다 노스코바 Linda Noskova 프로필, 랭킹, 전적, 플레이 스타일",
       "type": "player",
@@ -3358,13 +3323,6 @@
     },
     {
       "url": "https://tennisfrens.com/players/maria-sakkari",
-      "title": "마리아 사카리 (Maria Sakkari)",
-      "description": "테니스 선수 마리아 사카리 Maria Sakkari 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
-      "url": "https://tennisfrens.com/players/maria-sakkari-legacy",
       "title": "마리아 사카리 (Maria Sakkari)",
       "description": "테니스 선수 마리아 사카리 Maria Sakkari 프로필, 랭킹, 전적, 플레이 스타일",
       "type": "player",
@@ -3486,13 +3444,6 @@
       "url": "https://tennisfrens.com/players/mirra-andreeva",
       "title": "미라 안드레바 (Mirra Andreeva)",
       "description": "테니스 선수 미라 안드레바 Mirra Andreeva 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
-      "url": "https://tennisfrens.com/players/mirra-andreeva-legacy",
-      "title": "미라 안드레예바 (Mirra Andreeva)",
-      "description": "테니스 선수 미라 안드레예바 Mirra Andreeva 프로필, 랭킹, 전적, 플레이 스타일",
       "type": "player",
       "category": "player-profile"
     },
@@ -3792,13 +3743,6 @@
     },
     {
       "url": "https://tennisfrens.com/players/soonwoo-kwon",
-      "title": "권순우 (Soonwoo Kwon)",
-      "description": "테니스 선수 권순우 Soonwoo Kwon 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
-      "url": "https://tennisfrens.com/players/soonwoo-kwon-legacy",
       "title": "권순우 (Soonwoo Kwon)",
       "description": "테니스 선수 권순우 Soonwoo Kwon 프로필, 랭킹, 전적, 플레이 스타일",
       "type": "player",

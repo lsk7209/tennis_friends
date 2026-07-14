@@ -9,3 +9,5 @@ Evidence: URL consistency, redirect configuration, live redirect, metadata cover
 Scope: canonical URLs and redirect policy only; no editorial content, ads, production data, or secrets changed.
 
 Production evidence: player page returned 200 with a self-canonical non-www URL and AdSense markup; www returned 307 to the non-www page; ads.txt, robots.txt, and sitemap.xml returned 200 with the expected canonical host references.
+
+Follow-up state: canonical-only AI discovery artifact repair is in verification. Scope excludes routing, editorial content, ads, production data, and secrets.
