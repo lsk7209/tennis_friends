@@ -16,3 +16,9 @@
 | `npm run audit:metadata-coverage` | PASS | `status=ok`, 10 static routes, 63 utility routes, and 59 player static routes. |
 | `npm run build` | PASS | Next.js production build compiled, type-checked, and generated all 1,528 static pages. |
 | Local production route smoke | PASS | HTTP 200; intended Korean title and description; canonical remains `https://tennisfrens.com/players/alexandra-eala`. |
+
+## Deployment Recovery Evidence
+
+- First GitHub Pages run `29305904425` failed before deployment because `/rss.xml` declared `force-dynamic`, which is incompatible with the workflow's `output: export` mode.
+- After static RSS conversion, the local GitHub Pages-mode build passed compilation and TypeScript, then exposed a second pre-existing static-export requirement: `/blog-render/[slug]` did not re-export `generateStaticParams` from its canonical blog route.
+- After re-exporting the canonical static params, the same local Pages-mode build completed static generation for 2,673 routes and emitted `out/rss.xml` plus the `out/blog-render/` tree. Redirect/header export warnings remain expected limitations of GitHub Pages static hosting; no build error remained.

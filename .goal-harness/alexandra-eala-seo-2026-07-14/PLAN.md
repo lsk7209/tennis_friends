@@ -31,3 +31,12 @@
 - Completion Criteria: Deployed page returns 200 with the expected title/description/canonical.
 - Test Point: GitHub Actions status and live HTML metadata check.
 - Rollback/Recovery: `git revert <merge-or-change-commit>` and push through the same Pages workflow.
+
+## Deployment Recovery Amendment
+
+- Objective: Repair the pre-existing GitHub Pages static-export blocker revealed by the release workflow.
+- Tasks: Make `/rss.xml` and `/feed` GET route handlers explicitly static, re-export blog static params from the `/blog-render/[slug]` compatibility route, and reproduce the GitHub Pages build mode locally before retrying deployment.
+- Expected Files: `src/app/rss.xml/route.ts`, `src/app/feed/route.ts`, `src/app/blog-render/[slug]/page.tsx`, harness evidence and review.
+- Completion Criteria: `GITHUB_ACTIONS=true GITHUB_PAGES=true npm run build` completes and emits static RSS outputs.
+- Test Point: GitHub Pages-mode build plus public RSS and player-page fetch after deployment.
+- Rollback/Recovery: Revert only the static-route compatibility patch if RSS output changes unexpectedly.

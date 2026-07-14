@@ -2,7 +2,7 @@
 
 Current State: VERIFYING
 Current Phase: Phase 3 - release review
-Completed: Harness established; fresh page-query evidence and live-page baseline captured; Alexandra Eala-only metadata override implemented; lint, typecheck, metadata audit, production build, and local production-route smoke passed.
+Completed: Harness established; fresh page-query evidence and live-page baseline captured; Alexandra Eala-only metadata override implemented; lint, typecheck, metadata audit, normal production build, local production-route smoke, and GitHub Pages static-export build passed. Repaired two pre-existing static-export blockers found by the release workflow.
 In Progress: Scoped diff review and normal GitHub release verification.
 Remaining: PR merge, GitHub Pages deployment, and deployed-route metadata verification.
 Blocked: None. Two pre-existing analytics-report changes remain excluded from this work.
