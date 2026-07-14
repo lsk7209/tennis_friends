@@ -2,7 +2,7 @@
 
 ## Validation Level
 
-Level: 2 (unit-style artifact assertion, domain audits, lint, and typecheck). Build and live deployment checks are pending.
+Level: 4 (production build and live public smoke test completed).
 
 ## Commands Run
 
@@ -16,6 +16,9 @@ Level: 2 (unit-style artifact assertion, domain audits, lint, and typecheck). Bu
 | `npm run type-check` | PASS | No TypeScript errors. |
 | `npm run lint` | PASS | No ESLint findings; only existing Babel large-file notes. |
 | `npm run build` | CONSTRAINED | Turbopack rejected the temporary external `node_modules` junction (`points out of filesystem root`), not a source/build diagnostic. Vercel preview will provide the isolated build check. |
+| Vercel preview | PASS | Deployment `dpl_F9nHdnbwjsHg6XUFiWqXGFDP4yaS` completed. |
+| Vercel production | PASS | Deployment `dpl_DE41hKP8WqtZtKX9C4RueAyv3dQs` built 2,677 static pages successfully. |
+| Production smoke | PASS | `ai-index.json`: 546 pages, 260 players, 0 legacy URLs; canonical Marta Kostyuk 200; legacy URL 308 to canonical. |
 
 ## Test Results
 

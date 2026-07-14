@@ -8,13 +8,13 @@
 | Artifact audit expects and validates the canonical-only player set. | PASS | `node scripts/audit-search-artifacts.mjs` passed. |
 | Sitemap coverage remains valid. | PASS | `node scripts/audit-sitemap-coverage.mjs` passed. |
 | TypeScript and lint remain clean. | PASS | `npm run type-check` and `npm run lint` passed. |
-| Production build succeeds. | PENDING | Local Turbopack cannot use the temporary external `node_modules` junction; verify in isolated Vercel preview. |
+| Production build succeeds. | PASS | Vercel preview and production builds completed successfully. |
 
 ## User Flow Criteria
 
 | Criteria | Status | Evidence |
 |---|---|---|
-| Live public index excludes legacy pages and legacy redirect remains available. | PENDING | Verify after Git-connected deployment. |
+| Live public index excludes legacy pages and legacy redirect remains available. | PASS | Production JSON has 0 legacy URLs; canonical Marta Kostyuk is 200 and legacy route is 308 to it. |
 
 ## Stability And Error Handling
 
