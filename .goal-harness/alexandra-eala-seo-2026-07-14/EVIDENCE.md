@@ -22,3 +22,6 @@
 - First GitHub Pages run `29305904425` failed before deployment because `/rss.xml` declared `force-dynamic`, which is incompatible with the workflow's `output: export` mode.
 - After static RSS conversion, the local GitHub Pages-mode build passed compilation and TypeScript, then exposed a second pre-existing static-export requirement: `/blog-render/[slug]` did not re-export `generateStaticParams` from its canonical blog route.
 - After re-exporting the canonical static params, the same local Pages-mode build completed static generation for 2,673 routes and emitted `out/rss.xml` plus the `out/blog-render/` tree. Redirect/header export warnings remain expected limitations of GitHub Pages static hosting; no build error remained.
+- PR #8 merged as `50068d92`; the first Pages workflow correctly stopped before deployment on the pre-existing static-export error.
+- PR #9 merged as `9c6fd017`; GitHub Actions workflow `29306335714` completed successfully for both build and deploy.
+- Live production verification: `https://tennisfrens.com/players/alexandra-eala` returned HTTP 200 with the intended title/description, canonical `https://tennisfrens.com/players/alexandra-eala`, and `index, follow`. `/rss.xml` returned XML HTTP 200; `/robots.txt` and `/ads.txt` returned HTTP 200; ads.txt contains the expected publisher record.
