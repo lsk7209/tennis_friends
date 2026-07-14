@@ -2,19 +2,19 @@
 
 > 한국어 테니스 실력 향상 플랫폼. NTRP 측정·스트링 텐션 계산·부상 예방·플레이 스타일 진단 등 무료 도구 64종과 전문 블로그 212개를 제공합니다.
 
-URL: https://www.tennisfrens.com
+URL: https://tennisfrens.com
 
 ## 주요 링크
 
-- [홈](https://www.tennisfrens.com)
-- [테니스 도구 모음](https://www.tennisfrens.com/utility)
-- [테니스 블로그](https://www.tennisfrens.com/blog)
-- [테니스 선수 프로필](https://www.tennisfrens.com/players)
-- [NTRP 실력 테스트](https://www.tennisfrens.com/utility/ntrp-test)
-- [스트링 텐션 계산기](https://www.tennisfrens.com/utility/string-tension)
-- [테니스 룰 퀴즈](https://www.tennisfrens.com/tennis-rules-quiz)
-- [전체 AI 인덱스](https://www.tennisfrens.com/ai-index.json)
-- [전체 LLM 문서](https://www.tennisfrens.com/llms-full.txt)
+- [홈](https://tennisfrens.com)
+- [테니스 도구 모음](https://tennisfrens.com/utility)
+- [테니스 블로그](https://tennisfrens.com/blog)
+- [테니스 선수 프로필](https://tennisfrens.com/players)
+- [NTRP 실력 테스트](https://tennisfrens.com/utility/ntrp-test)
+- [스트링 텐션 계산기](https://tennisfrens.com/utility/string-tension)
+- [테니스 룰 퀴즈](https://tennisfrens.com/tennis-rules-quiz)
+- [전체 AI 인덱스](https://tennisfrens.com/ai-index.json)
+- [전체 LLM 문서](https://tennisfrens.com/llms-full.txt)
 
 ## 주요 서비스
 

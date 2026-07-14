@@ -1,4 +1,4 @@
-const DEFAULT_BASE_URL = "https://www.tennisfrens.com";
+const DEFAULT_BASE_URL = "https://tennisfrens.com";
 const NON_WWW_BASE_URL = `https://${"tennisfrens.com"}`;
 
 const args = process.argv.slice(2);

@@ -3,7 +3,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
-const DEFAULT_BASE_URL = "https://www.tennisfrens.com";
+const DEFAULT_BASE_URL = "https://tennisfrens.com";
 const ADSENSE_PUB_ID = "ca-pub-3050601904412736";
 const ADSENSE_PUB_NUMERIC_ID = "pub-3050601904412736";
 const ADSENSE_LINE =

@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 export const revalidate = 3600;
 
 function getBaseUrl() {
-  return process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com";
+  return process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
 }
 
 export async function GET(request: NextRequest) {

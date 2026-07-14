@@ -7,7 +7,7 @@ const SLUG = "luciano-darderi";
 const _player = PLAYERS_DB[SLUG];
 const _searchSeo = getPlayerSearchSeo(SLUG);
 const _tour = _player?.gender === "male" ? "ATP" : "WTA";
-const _siteUrl = "https://www.tennisfrens.com";
+const _siteUrl = "https://tennisfrens.com";
 const _canonical = `${_siteUrl}/players/${SLUG}`;
 const _oneLiner =
   _player?.detailedProfile?.oneLineSummary?.slice(0, 120) ??

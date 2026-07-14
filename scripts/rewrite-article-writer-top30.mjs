@@ -238,7 +238,7 @@ function rewriteOne(item, index) {
       { source: "ITF Rules of Tennis", claim: "경기 규칙과 코트 조건은 판단 기준의 출발점이 된다.", url: "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/" },
       { source: "USTA", claim: "기술 향상은 준비, 실행, 회복을 나눠 반복할 때 점검하기 쉽다.", url: "https://www.usta.com/en/home/improve/tips-and-instruction.html" },
       { source: category.includes("부상") ? "Mayo Clinic" : "USTA NTRP", claim: "반복되는 선택과 몸 상태를 함께 봐야 경기 적용 기준이 선명해진다.", url: category.includes("부상") ? "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/sports-injuries/art-20044765" : "https://www.usta.com/en/home/play/adult-tennis/programs/national/usta-league-faqs.html" },
-      { source: "TennisFriends", claim: "상황, 선택, 다음 행동 3칸 기록은 다음 연습 주제를 좁히는 데 도움이 된다.", url: "https://www.tennisfrens.com/utility/match-analyzer" },
+      { source: "TennisFriends", claim: "상황, 선택, 다음 행동 3칸 기록은 다음 연습 주제를 좁히는 데 도움이 된다.", url: "https://tennisfrens.com/utility/match-analyzer" },
     ],
     design_decisions: {
       ...draft.design_decisions,

@@ -3,7 +3,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
-const DEFAULT_BASE_URL = "https://www.tennisfrens.com";
+const DEFAULT_BASE_URL = "https://tennisfrens.com";
 const baseUrl = (
   readArg("--base-url") ||
   process.env.PUBLIC_AUDIT_BASE_URL ||

@@ -6,7 +6,7 @@ import ts from "typescript";
 
 const ROOT = process.cwd();
 const require = createRequire(import.meta.url);
-const SITE_URL = "https://www.tennisfrens.com";
+const SITE_URL = "https://tennisfrens.com";
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
 const findings = [];
 

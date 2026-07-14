@@ -9,12 +9,12 @@ export const metadata = {
   description: "푸셔·문볼 상대에게 말려 실수한다면 타점 유지, 짧은 볼, 각도 전개, 네트 압박으로 이기는 실전 전략을 정리했습니다.",
   keywords: ["테니스 푸셔 상대법","문볼 공략","테니스 전술","푸셔","Pusher","테니스 전략","멘탈 관리"],
   alternates: {
-    canonical: 'https://www.tennisfrens.com/blog/tennis-strategy-beat-pusher',
+    canonical: 'https://tennisfrens.com/blog/tennis-strategy-beat-pusher',
   },
   openGraph: {
     title: "테니스 푸셔 상대법 5가지 | 문볼 공략",
     description: "푸셔·문볼 상대에게 말려 실수한다면 타점 유지, 짧은 볼, 각도 전개, 네트 압박으로 이기는 실전 전략을 정리했습니다.",
-    url: 'https://www.tennisfrens.com/blog/tennis-strategy-beat-pusher',
+    url: 'https://tennisfrens.com/blog/tennis-strategy-beat-pusher',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
     type: 'article',

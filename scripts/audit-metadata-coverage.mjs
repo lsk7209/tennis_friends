@@ -3,7 +3,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const APP_DIR = path.join(ROOT, "src", "app");
-const SITE_URL = "https://www.tennisfrens.com";
+const SITE_URL = "https://tennisfrens.com";
 
 const REQUIRED_STATIC_ROUTES = [
   { route: "/", file: "page.tsx", canonicalHints: ['canonical: "/"', 'getAbsoluteUrl("/")'] },

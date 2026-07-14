@@ -15,7 +15,7 @@ const TITLES_CSV = path.join(OUT_DIR, "titles.csv");
 const MANIFEST_PATH = path.join(OUT_DIR, "manifest.json");
 const QUALITY_REPORT = path.join(OUT_DIR, "quality-report.json");
 
-const SITE_URL = "https://www.tennisfrens.com";
+const SITE_URL = "https://tennisfrens.com";
 const START_ISO = "2026-05-24T21:10:00+09:00";
 const INTERVAL_HOURS = 5;
 const TOTAL_ARTICLES = 300;

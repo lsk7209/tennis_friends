@@ -27,7 +27,7 @@ export default function QuizSchema({
   publisher,
 }: QuizSchemaProps) {
   const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
 
   const defaultPublisher = {
     "@type": "Organization",

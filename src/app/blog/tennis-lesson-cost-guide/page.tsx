@@ -17,13 +17,13 @@ export const metadata = {
     "테니스 코트비",
   ],
   alternates: {
-    canonical: "https://www.tennisfrens.com/blog/tennis-lesson-cost-guide",
+    canonical: "https://tennisfrens.com/blog/tennis-lesson-cost-guide",
   },
   openGraph: {
     title: "테니스 레슨 비용 2026 | 실내·실외·개인·그룹 가격 비교",
     description:
       "테니스 레슨비를 월 예산, 코트비, 장비비, 환불 조건까지 나눠 현실적으로 비교합니다.",
-    url: "https://www.tennisfrens.com/blog/tennis-lesson-cost-guide",
+    url: "https://tennisfrens.com/blog/tennis-lesson-cost-guide",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "article",

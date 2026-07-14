@@ -4,7 +4,7 @@ import path from "node:path";
 import vm from "node:vm";
 
 const ROOT = process.cwd();
-const SITE_URL = "https://www.tennisfrens.com";
+const SITE_URL = "https://tennisfrens.com";
 const BLOG_POSTS_PATH = path.join(ROOT, "src", "data", "blog-posts.js");
 const BLOG_QUALITY_PATH = path.join(ROOT, "src", "lib", "blog-quality.ts");
 const UTILITY_DIR = path.join(ROOT, "src", "app", "utility");

@@ -6,7 +6,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
 const REPORT_DATE = new Date().toISOString().slice(0, 10);
-const CANONICAL_ORIGIN = "https://www.tennisfrens.com";
+const CANONICAL_ORIGIN = "https://tennisfrens.com";
 const MIN_IMPRESSIONS = 20;
 const MAX_ITEMS = 25;
 
