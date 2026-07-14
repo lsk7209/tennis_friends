@@ -21,12 +21,12 @@ export const metadata = {
     "서울 테니스 추천",
   ],
   alternates: {
-    canonical: "https://www.tennisfrens.com/blog/top-5-tennis-districts-seoul",
+    canonical: "https://tennisfrens.com/blog/top-5-tennis-districts-seoul",
   },
   openGraph: {
     title,
     description: excerpt,
-    url: "https://www.tennisfrens.com/blog/top-5-tennis-districts-seoul",
+    url: "https://tennisfrens.com/blog/top-5-tennis-districts-seoul",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "article",

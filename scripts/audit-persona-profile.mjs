@@ -105,7 +105,7 @@ assert(lineValue(siteSection, "name") === "TennisFriends", {
   issue: "site name mismatch",
   actual: lineValue(siteSection, "name"),
 });
-assert(lineValue(siteSection, "domain") === "https://www.tennisfrens.com", {
+assert(lineValue(siteSection, "domain") === "https://tennisfrens.com", {
   scope: "site persona",
   issue: "site domain mismatch",
   actual: lineValue(siteSection, "domain"),
@@ -194,7 +194,7 @@ assert(internalLinkPolicy.includes("2~4"), {
   issue: "internal link count policy missing",
 });
 
-assert(lineValue(section(writerPersona, "site"), "domain") === "https://www.tennisfrens.com", {
+assert(lineValue(section(writerPersona, "site"), "domain") === "https://tennisfrens.com", {
   scope: "writer persona",
   issue: "writer persona domain mismatch",
 });

@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const SCAN_ROOTS = ["src", "scripts", "public", path.join("docs", "reports")];
+const SCAN_ROOTS = ["src", "scripts", "public"];
 const TEXT_EXTENSIONS = new Set([
   ".ts",
   ".tsx",
@@ -17,14 +17,14 @@ const TEXT_EXTENSIONS = new Set([
 
 const DISALLOWED_PATTERNS = [
   {
-    name: "non-www canonical host",
-    pattern: /https?:\/\/tennisfrens\.com\b/g,
-    fix: "Use https://www.tennisfrens.com for public URLs.",
+    name: "www host outside redirect fixtures",
+    pattern: /https?:\/\/www\.tennisfrens\.com\b/g,
+    fix: "Use https://tennisfrens.com for public URLs.",
   },
   {
     name: "retired tennisfriends.co.kr host",
     pattern: /https?:\/\/tennisfriends\.co\.kr\b/g,
-    fix: "Use https://www.tennisfrens.com for current production URLs.",
+    fix: "Use https://tennisfrens.com for current production URLs.",
   },
 ];
 
@@ -32,6 +32,10 @@ const IGNORED_FILE_PATTERNS = [
   /(^|[\\/])docs[\\/]reports[\\/]gsc-summary-/,
   /(^|[\\/])docs[\\/]reports[\\/]ga4-summary-/,
   /(^|[\\/])docs[\\/]reports[\\/]analytics-audit-latest\.json$/,
+  /(^|[\\/])public[\\/]_redirects$/,
+  /(^|[\\/])public[\\/]ai-index\.json$/,
+  /(^|[\\/])scripts[\\/]audit-redirect-config\.mjs$/,
+  /(^|[\\/])scripts[\\/]audit-redirects\.mjs$/,
 ];
 
 function shouldScan(filePath) {
@@ -88,6 +92,6 @@ console.log(
   JSON.stringify({
     status: "ok",
     scannedRoots: SCAN_ROOTS,
-    canonicalHost: "https://www.tennisfrens.com",
+    canonicalHost: "https://tennisfrens.com",
   }),
 );

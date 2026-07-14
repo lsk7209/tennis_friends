@@ -1,4 +1,4 @@
-const DEFAULT_BASE_URL = "https://www.tennisfrens.com";
+const DEFAULT_BASE_URL = "https://tennisfrens.com";
 const NON_WWW_BASE_URL = `https://${"tennisfrens.com"}`;
 const INDEXNOW_KEY = "46d9a30e05e90f665fa353387fa67c4c";
 const ADSENSE_LINE =

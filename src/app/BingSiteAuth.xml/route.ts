@@ -10,7 +10,7 @@ export const revalidate = false;
  * 1. Bing Webmaster Tools에서 XML 파일 인증 방식 선택
  * 2. 파일명: BingSiteAuth.xml
  * 3. 환경 변수에 BING_SITE_VERIFICATION 설정
- * 4. URL: https://www.tennisfrens.com/BingSiteAuth.xml
+ * 4. URL: https://tennisfrens.com/BingSiteAuth.xml
  */
 export async function GET(_request: NextRequest) {
   const verificationCode = process.env.BING_SITE_VERIFICATION;

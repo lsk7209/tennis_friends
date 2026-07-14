@@ -10,7 +10,7 @@ const MANIFEST_PATH = path.join(OUT_DIR, "manifest.json");
 const LONG_TAILS_PATH = path.join(ROOT, "seeds-tmp", "long-tails.txt");
 const PUBLISHED_PATH = path.join(ROOT, "seeds-tmp", "published.txt");
 const TODAY = "2026-05-15";
-const SITE_URL = "https://www.tennisfrens.com";
+const SITE_URL = "https://tennisfrens.com";
 
 const CATEGORY_RULES = [
   { key: "serve", category: "서브 기술", color: "#2563eb", words: ["서브", "토스", "더블폴트", "킥서브", "슬라이스"] },

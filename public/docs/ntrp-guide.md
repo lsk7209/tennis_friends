@@ -3,7 +3,7 @@
 > NTRP(National Tennis Rating Program)는 미국테니스협회(USTA)가 만든 테니스 실력 등급 체계입니다.
 > 1.0(완전 초보)부터 7.0(프로 선수)까지 0.5 단위로 구분됩니다.
 
-URL: https://www.tennisfrens.com/utility/ntrp-test
+URL: https://tennisfrens.com/utility/ntrp-test
 
 ---
 
@@ -94,7 +94,7 @@ NTRP는 테니스 실력을 객관적으로 수치화한 국제 표준 등급 �
 
 ## TennisFriends NTRP 테스트
 
-- URL: https://www.tennisfrens.com/utility/ntrp-test
+- URL: https://tennisfrens.com/utility/ntrp-test
 - 소요 시간: 약 10~15분
 - 10,000명+ 데이터 기반 알고리즘 적용
 - 서브·리턴·스트로크·풋워크·전략 5개 영역 종합 평가
@@ -123,8 +123,8 @@ A: 네, TennisFriends의 NTRP 테스트는 완전 무료입니다.
 
 ## 관련 도구
 
-- NTRP 테스트: https://www.tennisfrens.com/utility/ntrp-test
-- UTR 계산기: https://www.tennisfrens.com/utility/utr-calculator
-- 플레이 스타일 진단: https://www.tennisfrens.com/utility/play-style-test
-- 훈련 계획 수립기: https://www.tennisfrens.com/utility/training-planner
-- 장비 추천: https://www.tennisfrens.com/utility/equipment-recommendation
+- NTRP 테스트: https://tennisfrens.com/utility/ntrp-test
+- UTR 계산기: https://tennisfrens.com/utility/utr-calculator
+- 플레이 스타일 진단: https://tennisfrens.com/utility/play-style-test
+- 훈련 계획 수립기: https://tennisfrens.com/utility/training-planner
+- 장비 추천: https://tennisfrens.com/utility/equipment-recommendation

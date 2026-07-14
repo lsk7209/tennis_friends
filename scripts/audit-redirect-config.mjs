@@ -2,8 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const CANONICAL_ORIGIN = "https://www.tennisfrens.com";
-const NON_WWW_ORIGIN = `https://${"tennisfrens.com"}`;
+const CANONICAL_ORIGIN = "https://tennisfrens.com";
+const WWW_ORIGIN = "https://www.tennisfrens.com";
 const TYPO_SLUG = "/players/arthur-landercknech";
 const CANONICAL_PLAYER_SLUG = "/players/arthur-rinderknech";
 
@@ -34,12 +34,12 @@ assert(nextConfig.includes("async redirects()"), {
   issue: "Next redirects hook missing",
 });
 assert(
-  normalizedNextConfig.includes('has: [{ type: "host", value: "tennisfrens.com" }]') &&
-    normalizedNextConfig.includes('destination: "https://www.tennisfrens.com/:path*"') &&
+  normalizedNextConfig.includes('has: [{ type: "host", value: "www.tennisfrens.com" }]') &&
+    normalizedNextConfig.includes('destination: "https://tennisfrens.com/:path*"') &&
     normalizedNextConfig.includes("permanent: true"),
   {
     scope: "next.config.ts",
-    issue: "non-www to www permanent redirect missing",
+    issue: "www to non-www permanent redirect missing",
   },
 );
 assert(
@@ -61,19 +61,19 @@ assert(
   },
 );
 assert(
-  redirectLines.includes(`${NON_WWW_ORIGIN}/* ${CANONICAL_ORIGIN}/:splat 301`),
+  redirectLines.includes(`${WWW_ORIGIN}/* ${CANONICAL_ORIGIN}/:splat 301`),
   {
     scope: "public/_redirects",
-    issue: "Cloudflare non-www canonical redirect missing",
-    expected: `${NON_WWW_ORIGIN}/* ${CANONICAL_ORIGIN}/:splat 301`,
+    issue: "Cloudflare www canonical redirect missing",
+    expected: `${WWW_ORIGIN}/* ${CANONICAL_ORIGIN}/:splat 301`,
   },
 );
 
-const nonWwwLineIndex = redirectLines.indexOf(
-  `${NON_WWW_ORIGIN}/* ${CANONICAL_ORIGIN}/:splat 301`,
+const wwwLineIndex = redirectLines.indexOf(
+  `${WWW_ORIGIN}/* ${CANONICAL_ORIGIN}/:splat 301`,
 );
 const typoLineIndex = redirectLines.indexOf(`${TYPO_SLUG} ${CANONICAL_PLAYER_SLUG} 301`);
-assert(typoLineIndex >= 0 && nonWwwLineIndex >= 0 && typoLineIndex < nonWwwLineIndex, {
+assert(typoLineIndex >= 0 && wwwLineIndex >= 0 && typoLineIndex < wwwLineIndex, {
   scope: "public/_redirects",
   issue: "specific typo redirect should be evaluated before host wildcard redirect",
   order: redirectLines,

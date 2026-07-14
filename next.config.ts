@@ -72,7 +72,7 @@ const nextConfig: NextConfig = {
   // URL 정규화 리다이렉트
   async redirects() {
     return [
-      // no-www → www 정규화 (GSC 카니발리제이션 방지: 동일 URL이 두 호스트로 분산 인덱싱되는 문제)
+      // Canonicalize www to the live non-www Vercel host to prevent host-split indexing.
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.tennisfrens.com" }],

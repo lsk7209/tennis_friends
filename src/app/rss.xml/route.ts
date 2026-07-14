@@ -11,7 +11,7 @@ import { DEFAULT_CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 export const dynamic = "force-dynamic";
 
 export function getRssBaseUrl() {
-  return (process.env.NEXT_PUBLIC_SITE_URL || "https://www.tennisfrens.com")
+  return (process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com")
     .replace(/\/$/, "");
 }
 

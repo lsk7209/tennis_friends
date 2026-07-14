@@ -75,10 +75,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
               "@type": "WebSite",
               "name": "TennisFriends",
               "description": description,
-              "url": "https://www.tennisfrens.com",
+              "url": "https://tennisfrens.com",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://www.tennisfrens.com/search?q={search_term_string}",
+                "target": "https://tennisfrens.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

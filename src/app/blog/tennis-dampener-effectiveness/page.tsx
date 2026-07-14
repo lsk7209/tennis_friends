@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tennisfrens.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
 
 export const metadata = {
   title: "댐퍼(Dampener)의 효과: 진동 감소와 타구감",

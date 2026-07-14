@@ -7,8 +7,8 @@ const crypto = require("crypto");
 
 const DEFAULT_SITE_URL = "sc-domain:tennisfrens.com";
 const DEFAULT_SITEMAPS = [
-  "https://www.tennisfrens.com/sitemap.xml",
-  "https://www.tennisfrens.com/sitemap-naver.xml",
+  "https://tennisfrens.com/sitemap.xml",
+  "https://tennisfrens.com/sitemap-naver.xml",
 ];
 const DEFAULT_CREDENTIALS_PATH =
   "D:\\env\\cursorai-451704-85a5abbe8eeb.json";
@@ -53,10 +53,10 @@ function unique(value, index, array) {
 
 function readProjectSiteUrl() {
   const filePath = path.join(__dirname, "..", ".gsc-domain");
-  if (!fs.existsSync(filePath)) return "https://www.tennisfrens.com/";
+  if (!fs.existsSync(filePath)) return "https://tennisfrens.com/";
 
   const value = fs.readFileSync(filePath, "utf8").trim();
-  return value || "https://www.tennisfrens.com/";
+  return value || "https://tennisfrens.com/";
 }
 
 function deriveDomainProperty(siteUrl) {

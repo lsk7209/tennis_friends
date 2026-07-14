@@ -18,14 +18,14 @@ export const metadata = {
     "스트링",
   ],
   alternates: {
-    canonical: "https://www.tennisfrens.com/blog/rainy-day-tennis-tips-guide",
+    canonical: "https://tennisfrens.com/blog/rainy-day-tennis-tips-guide",
   },
   openGraph: {
     title:
       "비 오는 날 테니스 루틴 | 감각 유지·실내 훈련·장비 관리법 완전 가이드",
     description:
       "비 오는 날 테니스 감각 유지법 6가지. 실내 대체 훈련, 스트링 관리, 리듬 감각 훈련까지 완벽 정리.",
-    url: "https://www.tennisfrens.com/blog/rainy-day-tennis-tips-guide",
+    url: "https://tennisfrens.com/blog/rainy-day-tennis-tips-guide",
     siteName: "TennisFriends",
     locale: "ko_KR",
     type: "website",

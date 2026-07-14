@@ -341,7 +341,7 @@ function reviewArticle(article, index) {
   facts.push({
     source: "TennisFriends",
     claim: "상황, 선택, 다음 행동 3칸 기록은 다음 연습 주제를 좁히는 데 도움이 된다.",
-    url: "https://www.tennisfrens.com/utility/match-analyzer",
+    url: "https://tennisfrens.com/utility/match-analyzer",
   });
 
   const nextDraft = {

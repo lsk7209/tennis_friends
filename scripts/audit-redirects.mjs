@@ -1,5 +1,5 @@
-const CANONICAL_BASE_URL = "https://www.tennisfrens.com";
-const NON_WWW_BASE_URL = `https://${"tennisfrens.com"}`;
+const CANONICAL_BASE_URL = "https://tennisfrens.com";
+const WWW_BASE_URL = "https://www.tennisfrens.com";
 
 const args = process.argv.slice(2);
 const canonicalBaseUrl = (
@@ -7,26 +7,26 @@ const canonicalBaseUrl = (
   process.env.PUBLIC_CANONICAL_BASE_URL ||
   CANONICAL_BASE_URL
 ).replace(/\/$/, "");
-const nonWwwBaseUrl = (
-  readArg("--non-www-base-url") ||
-  process.env.PUBLIC_NON_WWW_BASE_URL ||
-  NON_WWW_BASE_URL
+const wwwBaseUrl = (
+  readArg("--www-base-url") ||
+  process.env.PUBLIC_WWW_BASE_URL ||
+  WWW_BASE_URL
 ).replace(/\/$/, "");
 
 const cases = [
   {
-    label: "non-www home",
-    url: nonWwwBaseUrl,
+    label: "www home",
+    url: wwwBaseUrl,
     expectedLocation: `${canonicalBaseUrl}/`,
   },
   {
-    label: "non-www player",
-    url: `${nonWwwBaseUrl}/players/jannik-sinner`,
+    label: "www player",
+    url: `${wwwBaseUrl}/players/jannik-sinner`,
     expectedLocation: `${canonicalBaseUrl}/players/jannik-sinner`,
   },
   {
-    label: "non-www blog",
-    url: `${nonWwwBaseUrl}/blog/tennis-hybrid-string-setup`,
+    label: "www blog",
+    url: `${wwwBaseUrl}/blog/tennis-hybrid-string-setup`,
     expectedLocation: `${canonicalBaseUrl}/blog/tennis-hybrid-string-setup`,
   },
   {
@@ -35,8 +35,8 @@ const cases = [
     expectedLocation: `${canonicalBaseUrl}/players/arthur-rinderknech`,
   },
   {
-    label: "Arthur typo slug on non-www",
-    url: `${nonWwwBaseUrl}/players/arthur-landercknech`,
+    label: "Arthur typo slug on www",
+    url: `${wwwBaseUrl}/players/arthur-landercknech`,
     expectedFinalUrl: `${canonicalBaseUrl}/players/arthur-rinderknech`,
   },
 ];

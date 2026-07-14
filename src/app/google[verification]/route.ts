@@ -5,16 +5,16 @@ export const revalidate = false;
 
 /**
  * 구글 Search Console HTML 인증 파일
- * 
+ *
  * 사용 방법:
  * 1. Google Search Console에서 HTML 파일 인증 방식 선택
  * 2. 제공된 파일명을 복사 (예: google1234567890.html)
  * 3. 환경 변수에 GOOGLE_SITE_VERIFICATION 설정
- * 4. URL: https://www.tennisfrens.com/google[verification-code]
- * 
+ * 4. URL: https://tennisfrens.com/google[verification-code]
+ *
  * 예시:
  * - 파일명: google1234567890.html
- * - URL: https://www.tennisfrens.com/google1234567890
+ * - URL: https://tennisfrens.com/google1234567890
  * - 환경 변수: GOOGLE_SITE_VERIFICATION=1234567890
  */
 export async function GET(
@@ -25,7 +25,7 @@ export async function GET(
   const params = context?.params ? await context.params : {};
   const verification = params?.verification;
   const envCode = process.env.GOOGLE_SITE_VERIFICATION;
-  
+
   // 환경 변수에 설정된 코드와 일치하는지 확인
   const code = envCode || verification || "";
 
@@ -38,7 +38,7 @@ export async function GET(
       },
     });
   }
-  
+
   // 구글 인증 HTML 파일 내용
   const html = `google-site-verification: ${code}.html`;
 

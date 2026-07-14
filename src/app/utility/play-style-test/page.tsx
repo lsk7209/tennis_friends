@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "테니스 플레이 스타일 테스트",
     description: "내 플레이 성향을 파악하고 어울리는 훈련 방향을 확인합니다.",
     type: "website",
-    url: "https://www.tennisfrens.com/utility/play-style-test",
+    url: "https://tennisfrens.com/utility/play-style-test",
   },
 };
 
