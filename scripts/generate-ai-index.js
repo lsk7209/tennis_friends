@@ -230,7 +230,9 @@ function getPlayerEntries() {
       });
     }
   }
-  return [...players.values()].sort((a, b) => a.slug.localeCompare(b.slug));
+  return [...players.values()]
+    .filter((player) => !player.slug.endsWith("-legacy"))
+    .sort((a, b) => a.slug.localeCompare(b.slug));
 }
 
 function getDocPages() {
