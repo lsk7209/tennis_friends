@@ -15,7 +15,8 @@ Level: 2
 | npm run audit:metadata-coverage | PASS | 10 static, 63 utility, and 59 player-static routes covered. |
 | npm run lint | PASS | ESLint completed without findings. |
 | npm run type-check | PASS | TypeScript completed without errors. |
-| Vercel preview build | PENDING PLATFORM | Preview `dpl_3pjLT2MrjUcoaiidwSBWXqcNeUnt` compiled, type-checked, and generated 1,528 static pages, but remained Building after `onBuildComplete`. |
+| Vercel preview build | PASS | Preview `dpl_3pjLT2MrjUcoaiidwSBWXqcNeUnt` is Ready after compilation, typecheck, and 1,528 static pages. |
+| Preview HTTP smoke | CONSTRAINED | The Ready preview returns 302 to Vercel SSO for unauthenticated requests; external HTML inspection requires an authorized browser session. |
 
 ## Test Results
 
