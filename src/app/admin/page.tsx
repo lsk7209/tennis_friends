@@ -9,8 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, AreaChart, Area } from 'recharts';
 import { Eye, Users, TrendingUp, Search, Globe, Calendar, Monitor, Smartphone, Globe2, Clock, FileText, Timer, ExternalLink, Activity, BarChart3, ArrowRight, ArrowLeft, Download, MapPin, Target, Zap, TrendingDown, CheckCircle, AlertTriangle, Map } from 'lucide-react';
 import { getPopularTests } from '@/components/Tracking';
-import { getStats as getCloudflareStats, getRealtimeStats, clearData as clearCloudflareData } from '@/lib/cloudflare-analytics';
-import type { VisitorData, StatsData, DataStatus, CloudflareStatus } from '@/types/admin';
+import type { VisitorData, StatsData, DataStatus } from '@/types/admin';
 import { calculateStats } from '@/lib/admin/statistics';
 import { EMPTY_STATS_DATA, ADMIN_PASSWORD } from '@/lib/admin/constants';
 import { toast } from 'sonner';
@@ -27,12 +26,6 @@ export default function AdminPage() {
     lastUpdate: null,
     error: null,
   });
-  const [cloudflareStatus, setCloudflareStatus] = useState<CloudflareStatus>({
-    connected: false,
-    apiUrl: process.env.NEXT_PUBLIC_ANALYTICS_API_URL || null,
-    lastCheck: null,
-  });
-
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === ADMIN_PASSWORD) {
@@ -58,54 +51,15 @@ export default function AdminPage() {
   const fetchStats = async () => {
     setLoading(true);
     try {
-      // 1. Cloudflare Workers API 시도
-      const apiUrl = process.env.NEXT_PUBLIC_ANALYTICS_API_URL;
-      if (apiUrl) {
-        try {
-          // Cloudflare 연결 상태 확인
-          setCloudflareStatus((prev) => ({
-            ...prev,
-            connected: true,
-            lastCheck: new Date().toISOString()
-          }));
-
-          const cloudflareStats = await getCloudflareStats(password || ADMIN_PASSWORD);
-          if (cloudflareStats && cloudflareStats.source === 'cloudflare-kv') {
-            // Cloudflare 데이터와 localStorage 데이터 병합
-            const localStats = await loadStatsFromLocalStorage();
-            if (localStats) {
-              // 두 데이터 소스 병합
-              setStats({
-                ...localStats,
-                // Cloudflare에서 가져온 일일 통계 우선 사용
-                dailyStats: cloudflareStats.dailyStats || localStats.dailyStats,
-                totalVisitors: Math.max(cloudflareStats.totalVisitors || 0, localStats.totalVisitors || 0),
-                source: 'cloudflare+local',
-              });
-            } else {
-              // Cloudflare 데이터만 사용
-              setStats({
-                ...EMPTY_STATS_DATA,
-                ...cloudflareStats,
-              });
-            }
-            setLoading(false);
-            return;
-          }
-        } catch (cloudflareError) {
-          console.warn('Cloudflare API 호출 실패, localStorage 사용:', cloudflareError);
-        }
-      }
-
-      // 2. localStorage에서 데이터 읽기 (폴백)
-      loadStatsFromLocalStorage();
+      await loadStatsFromLocalStorage();
     } catch (error) {
       if (process.env.NODE_ENV === 'development') {
-        console.error('통계 로드 실패:', error);
+        console.error('Failed to load local analytics:', error);
       }
-      loadStatsFromLocalStorage();
+      setStats({ ...EMPTY_STATS_DATA });
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const loadStatsFromLocalStorage = async (): Promise<StatsData | null> => {
@@ -225,23 +179,6 @@ export default function AdminPage() {
                     <span className="text-muted-foreground">{dataStatus.error}</span>
                   )}
                 </>
-              )}
-              {cloudflareStatus.apiUrl && (
-                <Badge
-                  variant="outline"
-                  className={
-                    cloudflareStatus.connected
-                      ? "bg-green-50 text-green-700 border-green-200"
-                      : "bg-yellow-50 text-yellow-700 border-yellow-200"
-                  }
-                >
-                  {cloudflareStatus.connected ? '☁️ Cloudflare 연결됨' : '☁️ Cloudflare 미연결'}
-                </Badge>
-              )}
-              {cloudflareStatus.lastCheck && (
-                <span className="text-xs text-muted-foreground">
-                  확인: {new Date(cloudflareStatus.lastCheck).toLocaleTimeString('ko-KR')}
-                </span>
               )}
             </div>
           </div>
@@ -1092,52 +1029,6 @@ export default function AdminPage() {
               </Card>
             </div>
 
-            {/* Cloudflare 연동 상태 */}
-            {cloudflareStatus.apiUrl && (
-              <Card className="mb-8 border-blue-200 bg-blue-50 dark:bg-blue-900/20">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Activity className="h-5 w-5" />
-                    Cloudflare Workers 연동 상태
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="p-3 bg-white dark:bg-gray-800 rounded-lg">
-                      <div className="text-sm text-muted-foreground mb-1">연결 상태</div>
-                      <div className="flex items-center gap-2">
-                        <div className={`w-3 h-3 rounded-full ${cloudflareStatus.connected ? 'bg-green-500' : 'bg-red-500'
-                          }`} />
-                        <span className="font-semibold">
-                          {cloudflareStatus.connected ? '연결됨' : '연결 안됨'}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="p-3 bg-white dark:bg-gray-800 rounded-lg">
-                      <div className="text-sm text-muted-foreground mb-1">API URL</div>
-                      <div className="text-sm font-mono truncate">{cloudflareStatus.apiUrl}</div>
-                    </div>
-                    <div className="p-3 bg-white dark:bg-gray-800 rounded-lg">
-                      <div className="text-sm text-muted-foreground mb-1">마지막 확인</div>
-                      <div className="text-sm">
-                        {cloudflareStatus.lastCheck
-                          ? new Date(cloudflareStatus.lastCheck).toLocaleString('ko-KR')
-                          : '아직 확인 안됨'}
-                      </div>
-                    </div>
-                  </div>
-                  {!cloudflareStatus.connected && cloudflareStatus.apiUrl && (
-                    <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-                      <p className="text-sm text-yellow-800 dark:text-yellow-200">
-                        ⚠️ Cloudflare Workers에 연결할 수 없습니다.
-                        Workers가 배포되어 있고 KV 네임스페이스가 설정되어 있는지 확인하세요.
-                      </p>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            )}
-
             {/* 트렌드 분석 */}
             <Card className="mb-8 border-purple-200 bg-purple-50 dark:bg-purple-900/20">
               <CardHeader>
@@ -1436,17 +1327,6 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                   <Button
                     onClick={async () => {
                       if (confirm('모든 방문자 데이터를 삭제하시겠습니까?')) {
-                        // Cloudflare Workers API 시도
-                        const apiUrl = process.env.NEXT_PUBLIC_ANALYTICS_API_URL;
-                        if (apiUrl) {
-                          try {
-                            await clearCloudflareData(password || '1234');
-                            toast.success('Cloudflare 데이터가 삭제되었습니다.');
-                          } catch (error) {
-                            console.error('Cloudflare 데이터 삭제 실패:', error);
-                          }
-                        }
-
                         // localStorage 삭제
                         localStorage.removeItem('visitorData');
                         localStorage.removeItem('tennis_session_id');
@@ -1470,30 +1350,6 @@ ${testDataCount > 0 ? '⚠️ 테스트 데이터가 포함되어 있습니다.'
                     className="text-red-600 hover:text-red-700"
                   >
                     데이터 초기화
-                  </Button>
-                  <Button
-                    onClick={async () => {
-                      try {
-                        const apiUrl = process.env.NEXT_PUBLIC_ANALYTICS_API_URL;
-                        if (apiUrl) {
-                          const realtime = await getRealtimeStats(password || '1234');
-                          if (realtime) {
-                            toast.success(`실시간 통계: 마지막 업데이트: ${realtime.lastUpdate || '없음'}, 오늘 방문자: ${realtime.todayCount}명`);
-                          } else {
-                            toast.error('실시간 통계를 가져올 수 없습니다.');
-                          }
-                        } else {
-                          toast.error('Cloudflare Analytics API가 설정되지 않았습니다. 환경 변수 NEXT_PUBLIC_ANALYTICS_API_URL를 확인하세요.');
-                        }
-                      } catch (error) {
-                        toast.error(`실시간 통계 조회 실패: ${error}`);
-                      }
-                    }}
-                    variant="outline"
-                    size="sm"
-                    className="bg-blue-50 hover:bg-blue-100"
-                  >
-                    실시간 통계
                   </Button>
                 </div>
               </CardContent>

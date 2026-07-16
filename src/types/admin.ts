@@ -92,7 +92,7 @@ export interface StatsData {
     duplicateRecords: number;
     issues: string[];
   };
-  source?: string; // 데이터 소스 ('local', 'cloudflare-kv', 'cloudflare+local' 등)
+  source?: string; // 데이터 소스 ('local' 등)
   period?: string; // 통계 기간 ('30days' 등)
 }
 
@@ -101,11 +101,5 @@ export interface DataStatus {
   dataCount: number;
   lastUpdate: string | null;
   error: string | null;
-}
-
-export interface CloudflareStatus {
-  connected: boolean;
-  apiUrl: string | null;
-  lastCheck: string | null;
 }
 

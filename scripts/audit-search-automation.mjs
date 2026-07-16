@@ -78,10 +78,6 @@ assert(script(packageJson, "postdeploy").includes("search:notify:postdeploy"), {
   scope: "package scripts",
   issue: "postdeploy does not trigger resilient search notification",
 });
-assert(script(packageJson, "postcf-deploy").includes("search:notify:postdeploy"), {
-  scope: "package scripts",
-  issue: "Cloudflare postdeploy does not trigger resilient search notification",
-});
 assert(script(packageJson, "audit:search-notify").includes("--dry-run"), {
   scope: "package scripts",
   issue: "search notification audit is not dry-run protected",

@@ -56,7 +56,6 @@ NEXT_PUBLIC_SITE_URL=https://username.github.io/repository-name
 # 선택적
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-NEXT_PUBLIC_ANALYTICS_API_URL=your_analytics_api_url
 GOOGLE_SITE_VERIFICATION=your_google_verification_code
 NAVER_SITE_VERIFICATION=your_naver_verification_code
 DAUM_SITE_VERIFICATION=your_daum_verification_code

@@ -56,7 +56,7 @@ assert(
   redirectLines.includes(`${TYPO_SLUG} ${CANONICAL_PLAYER_SLUG} 301`),
   {
     scope: "public/_redirects",
-    issue: "Cloudflare typo slug redirect missing",
+    issue: "typo slug redirect missing",
     expected: `${TYPO_SLUG} ${CANONICAL_PLAYER_SLUG} 301`,
   },
 );
@@ -64,7 +64,7 @@ assert(
   redirectLines.includes(`${WWW_ORIGIN}/* ${CANONICAL_ORIGIN}/:splat 301`),
   {
     scope: "public/_redirects",
-    issue: "Cloudflare www canonical redirect missing",
+    issue: "www canonical redirect missing",
     expected: `${WWW_ORIGIN}/* ${CANONICAL_ORIGIN}/:splat 301`,
   },
 );

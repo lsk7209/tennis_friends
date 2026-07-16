@@ -16,7 +16,6 @@ function read(relativePath) {
 const nextConfig = read("next.config.ts");
 const layout = read("src/app/layout.tsx");
 const globals = read("src/app/globals.css");
-const cloudflareHeaders = read("public/_headers");
 const findings = [];
 
 function assert(condition, issue, detail = {}) {
@@ -70,43 +69,6 @@ for (const [route, cacheToken] of [
   }
 }
 
-for (const [route, cacheToken] of [
-  ["/sitemap.xml", "s-maxage=3600"],
-  ["/sitemap-naver.xml", "s-maxage=3600"],
-  ["/rss.xml", "s-maxage=60"],
-  ["/feed", "application/rss+xml; charset=utf-8"],
-  ["/robots.txt", "s-maxage=86400"],
-  ["/llms.txt", "text/plain; charset=utf-8"],
-  ["/llms-full.txt", "text/plain; charset=utf-8"],
-  ["/ai-index.json", "application/json; charset=utf-8"],
-  ["/ads.txt", "s-maxage=86400"],
-  ["/opensearch.xml", "application/opensearchdescription+xml; charset=utf-8"],
-  ["/images/*", "stale-while-revalidate=86400"],
-  ["/fonts/*", "immutable"],
-]) {
-  const routeIndex = cloudflareHeaders.indexOf(route);
-  assert(routeIndex !== -1, "cloudflare_header_route_missing", { route });
-  if (routeIndex !== -1) {
-    const section = cloudflareHeaders.slice(routeIndex, routeIndex + 300);
-    assert(section.includes(cacheToken), "cloudflare_header_policy_missing", {
-      route,
-      expected: cacheToken,
-    });
-  }
-}
-
-for (const token of [
-  "X-Robots-Tag",
-  "pagead2.googlesyndication.com",
-  "www.googletagmanager.com",
-  "www.google-analytics.com",
-  "googleads.g.doubleclick.net",
-]) {
-  assert(cloudflareHeaders.includes(token), "cloudflare_global_header_missing", {
-    token,
-  });
-}
-
 for (const origin of [
   "https://cdn.jsdelivr.net",
   "https://pagead2.googlesyndication.com",
@@ -142,7 +104,6 @@ const report = {
   generatedAt: new Date().toISOString(),
   checkedFiles: [
     "next.config.ts",
-    "public/_headers",
     "src/app/layout.tsx",
     "src/app/globals.css",
   ],
