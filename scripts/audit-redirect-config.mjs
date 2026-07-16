@@ -5,6 +5,8 @@ const ROOT = process.cwd();
 const CANONICAL_ORIGIN = "https://tennisfrens.com";
 const TYPO_SLUG = "/players/arthur-landercknech";
 const CANONICAL_PLAYER_SLUG = "/players/arthur-rinderknech";
+const LEGACY_PLAYER_SLUG = "marta-kostyuk-legacy";
+const LEGACY_PLAYER_CANONICAL_SLUG = "marta-kostyuk";
 
 const findings = [];
 
@@ -21,6 +23,10 @@ function compact(text) {
 }
 
 const nextConfig = readProjectFile("next.config.ts");
+const playerPage = readProjectFile("src/app/players/[slug]/page.tsx");
+const playerLegacyRedirects = JSON.parse(
+  readProjectFile("src/data/players/legacy-redirects.json"),
+);
 const normalizedNextConfig = compact(nextConfig);
 
 assert(nextConfig.includes("async redirects()"), {
@@ -34,6 +40,24 @@ assert(
   {
     scope: "next.config.ts",
     issue: "www to non-www permanent redirect missing",
+  },
+);
+assert(
+  playerLegacyRedirects[LEGACY_PLAYER_SLUG] === LEGACY_PLAYER_CANONICAL_SLUG,
+  {
+    scope: "player legacy redirects",
+    issue: "Marta Kostyuk legacy slug mapping missing",
+    expected: LEGACY_PLAYER_CANONICAL_SLUG,
+    actual: playerLegacyRedirects[LEGACY_PLAYER_SLUG],
+  },
+);
+assert(
+  playerPage.includes("permanentRedirect") &&
+    playerPage.includes("playerLegacyRedirects[") &&
+    playerPage.includes("permanentRedirect(`/players/${canonicalSlug}`)"),
+  {
+    scope: "player page",
+    issue: "legacy player slugs are not redirected before rendering",
   },
 );
 assert(
@@ -58,6 +82,7 @@ console.log(
     redirects: {
       canonicalHost: CANONICAL_ORIGIN,
       typoSlug: `${TYPO_SLUG} -> ${CANONICAL_PLAYER_SLUG}`,
+      legacyPlayerSlug: `${LEGACY_PLAYER_SLUG} -> ${LEGACY_PLAYER_CANONICAL_SLUG}`,
     },
     findings,
   }),

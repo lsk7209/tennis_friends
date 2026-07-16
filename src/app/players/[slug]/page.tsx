@@ -1,6 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { PLAYERS_DB } from "@/data/players";
 import playerLegacyRedirects from "@/data/players/legacy-redirects.json";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -136,6 +136,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 export default async function PlayerProfilePage({ params }: Props) {
   const resolvedParams = await params;
+  const canonicalSlug =
+    playerLegacyRedirects[
+      resolvedParams.slug as keyof typeof playerLegacyRedirects
+    ];
+
+  // A legacy slug can still be requested directly even when it is excluded
+  // from static generation. Redirect before rendering so its search signals
+  // consolidate on the canonical player profile.
+  if (canonicalSlug) {
+    permanentRedirect(`/players/${canonicalSlug}`);
+  }
+
   const player = PLAYERS_DB[resolvedParams.slug];
 
   if (!player) {
