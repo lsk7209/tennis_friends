@@ -65,6 +65,18 @@ const SEARCH_METADATA_OVERRIDES: Record<
       "알렉산드라 이알라(Alexandra Eala)의 WTA 프로필입니다. 필리핀 출신 왼손잡이 테니스 선수의 플레이스타일, 주요 전적과 경기 흐름을 확인하세요.",
     keywords: ["알렉산드라 이알라", "Alexandra Eala", "필리핀 테니스 선수", "WTA 선수"],
   },
+  "iva-jovic": {
+    title: "이바 조비크(Iva Jovic) 프로필 | 미국 WTA 유망주·랭킹·전적",
+    description:
+      "이바 조비크(이바 조비치, Iva Jovic) 미국 WTA 유망주 프로필입니다. 현재 랭킹, 전적, 오른손 베이스라인 플레이스타일과 경기 흐름을 확인하세요.",
+    keywords: [
+      "이바 조비크",
+      "이바 조비치",
+      "Iva Jovic",
+      "이바 조비크 랭킹",
+      "미국 WTA 유망주",
+    ],
+  },
 };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
