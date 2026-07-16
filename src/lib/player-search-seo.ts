@@ -279,6 +279,28 @@ function localizePlayingHand(value?: string) {
   return value;
 }
 
+const KOREAN_COUNTRY_NAMES: Record<string, string> = {
+  "Australia": "호주",
+  "Austria": "오스트리아",
+  "Belgium": "벨기에",
+  "Canada": "캐나다",
+  "Czech Republic": "체코",
+  "France": "프랑스",
+  "Germany": "독일",
+  "Great Britain": "영국",
+  "Italy": "이탈리아",
+  "Japan": "일본",
+  "Philippines": "필리핀",
+  "Poland": "폴란드",
+  "Spain": "스페인",
+  "United Kingdom": "영국",
+  "United States": "미국",
+};
+
+function localizeCountry(value?: string) {
+  return KOREAN_COUNTRY_NAMES[value ?? ""] ?? value;
+}
+
 export function buildPlayerSeoTitle(player: PlayerData, tour: string) {
   const rank = player.rankingCurrent || player.rank;
   const rankPart = rank ? `랭킹 ${rank}위` : "랭킹";
@@ -295,7 +317,7 @@ export function buildPlayerSeoDescription(player: PlayerData, tour: string) {
     player.detailedProfile?.oneLineSummary || player.longBio || player.bio || "";
   const summaryPart = summary ? ` ${summary.slice(0, 70)}` : "";
 
-  return `${player.name}(${player.nameEn}) 선수의 ${tour} 프로필입니다. ${rankPart}${player.country} 출신, ${handPart}${style}주요 강점과 경기 흐름을 정리했습니다.${summaryPart}`;
+  return `${player.name}(${player.nameEn}) 선수의 ${tour} 프로필입니다. ${rankPart}${localizeCountry(player.country)} 출신, ${handPart}${style}주요 강점과 경기 흐름을 정리했습니다.${summaryPart}`;
 }
 
 export function getPlayerSearchSeo(slug: string): PlayerSearchSeo | undefined {
