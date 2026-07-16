@@ -5,7 +5,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const require = createRequire(import.meta.url);
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
-const CANONICAL_HOST = "www.tennisfrens.com";
+const CANONICAL_HOST = "tennisfrens.com";
 const CANONICAL_ORIGIN = `https://${CANONICAL_HOST}`;
 const INDEXNOW_KEY = "46d9a30e05e90f665fa353387fa67c4c";
 const REQUIRED_SITEMAPS = [
@@ -145,7 +145,7 @@ assert(indexNowKeyFile === INDEXNOW_KEY, {
   expected: INDEXNOW_KEY,
   actualLength: indexNowKeyFile.length,
 });
-assert(submitIndexNow.includes(`'${INDEXNOW_KEY}'`), {
+assert(new RegExp(`["']${INDEXNOW_KEY}["']`).test(submitIndexNow), {
   scope: "IndexNow submitter",
   issue: "IndexNow key fallback missing",
 });
@@ -154,7 +154,7 @@ assert(submitIndexNow.includes("readHost()"), {
   issue: "IndexNow host is not derived from site domain",
 });
 for (const endpoint of REQUIRED_INDEXNOW_ENDPOINTS) {
-  assert(submitIndexNow.includes(`name: '${endpoint}'`), {
+  assert(new RegExp(`name:\\s*["']${endpoint}["']`).test(submitIndexNow), {
     scope: "IndexNow submitter",
     issue: "required IndexNow-compatible endpoint missing",
     endpoint,
@@ -227,7 +227,7 @@ expectThrows("duplicate URLs", () =>
 );
 expectThrows("host mismatch", () =>
   indexNowModule.validateUrls(
-    [`https://${"tennisfrens.com"}/blog/tennis-hybrid-string-setup`],
+    [`https://${"www.tennisfrens.com"}/blog/tennis-hybrid-string-setup`],
     { requireHost: CANONICAL_HOST },
   ),
 );
