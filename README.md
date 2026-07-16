@@ -92,16 +92,6 @@ GitHub 저장소의 **Settings** → **Secrets and variables** → **Actions**�
 
 자세한 내용은 `GITHUB_PAGES_DEPLOYMENT.md`를 참고하세요.
 
-### Cloudflare Pages 배포
-
-```bash
-# Cloudflare Pages 빌드
-npm run cf-build
-
-# Cloudflare Pages 배포
-npm run deploy
-```
-
 ### 환경 변수
 
 프로젝트 루트에 `.env.local` 파일을 생성하고 필요한 환경 변수를 설정하세요:

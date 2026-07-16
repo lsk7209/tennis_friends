@@ -14,7 +14,7 @@ TennisFriends (tennisfrens.com) is a Korean-language tennis content and tools pl
 - **Animations**: Framer Motion
 - **Charts**: Recharts
 - **Fonts**: Inter (Google Fonts) + Pretendard (CDN)
-- **Deployment**: Vercel (primary), Cloudflare Pages, GitHub Pages (static export)
+- **Deployment**: Vercel (primary), GitHub Pages (static export)
 - **SEO**: Heavy SEO focus - structured data (JSON-LD), sitemaps, RSS, multi-search-engine verification
 
 ## Directory Structure
@@ -43,7 +43,7 @@ src/
 │   ├── seo/                # SEO schema components (OrganizationSchema, WebSiteSchema)
 │   ├── BlogPost.tsx        # Blog post renderer
 │   ├── CTASection.tsx      # Call-to-action sections
-│   ├── Tracking.tsx        # Analytics tracking (localStorage + Cloudflare KV)
+│   ├── Tracking.tsx        # Analytics tracking (localStorage)
 │   ├── AdSense.tsx         # Google AdSense integration
 │   ├── JsonLd.tsx          # JSON-LD structured data
 │   └── ScrollAnimation.tsx # Scroll-based animations
@@ -73,11 +73,10 @@ src/
 │   ├── playStyleTest.ts    # Play style test logic
 │   ├── tensionCalc.ts      # String tension calculator
 │   ├── trainingPlanner.ts  # Training plan generator
-│   ├── cloudflare-analytics.ts  # Cloudflare KV analytics
 │   └── admin/              # Admin utilities (statistics.ts, helpers.ts)
 ├── templates/              # Player page templates
 └── types/                  # TypeScript type definitions
-    ├── admin.ts            # VisitorData, StatsData, CloudflareStatus
+    ├── admin.ts            # VisitorData, StatsData
     ├── blog.ts             # BlogPostData, BlogPost
     └── player.ts           # PlayerData, TemplateType
 
@@ -88,14 +87,10 @@ scripts/                    # Build and utility scripts (not linted)
 ├── enrich_new_players.js   # Auto-enrich player profiles
 └── ...                     # 20+ other content/maintenance scripts
 
-workers/                    # Cloudflare Workers (backend)
-└── analytics/              # Analytics worker (Cloudflare KV)
-
 docs/                       # Project documentation
 ├── PROJECT_MANUAL.md       # Comprehensive project guide
 ├── PLAYER_SYSTEM_GUIDE.md  # Player system documentation
 ├── player-template-guide.md # How to create player profiles
-├── cloudflare-analytics-setup.md
 └── reports/                # Audit and optimization reports
 
 public/                     # Static assets
@@ -111,9 +106,6 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 
 # Deployment
-npm run cf-build     # Build for Cloudflare Pages
-npm run cf-deploy    # Deploy to Cloudflare Pages
-npm run deploy       # Deploy static output via Wrangler
 npm run gh-pages     # Build and deploy to GitHub Pages
 
 # SEO
@@ -190,7 +182,6 @@ npm run indexnow     # Submit URLs to IndexNow
 ### Build Configuration
 - Vercel deployment: default (no static export, image optimization enabled)
 - GitHub Pages: static export with `output: 'export'`, unoptimized images
-- Cloudflare Pages: via `@cloudflare/next-on-pages` with Wrangler
 - Production builds remove console.log (keeps error/warn)
 - Security headers configured in `next.config.ts`
 
