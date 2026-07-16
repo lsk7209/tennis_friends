@@ -1,10 +1,10 @@
 {
   "status": "ok",
-  "generatedAt": "2026-06-02T03:26:17.586Z",
-  "canonicalOrigin": "https://www.tennisfrens.com",
+  "generatedAt": "2026-07-16T06:03:10.002Z",
+  "canonicalOrigin": "https://tennisfrens.com",
   "requiredSitemaps": [
-    "https://www.tennisfrens.com/sitemap.xml",
-    "https://www.tennisfrens.com/sitemap-naver.xml"
+    "https://tennisfrens.com/sitemap.xml",
+    "https://tennisfrens.com/sitemap-naver.xml"
   ],
   "indexNowEndpoints": [
     "IndexNow",

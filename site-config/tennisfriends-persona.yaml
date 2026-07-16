@@ -1,6 +1,6 @@
 site:
   name: "TennisFriends"
-  domain: "https://www.tennisfrens.com"
+  domain: "https://tennisfrens.com"
   primary_topic: "테니스 동호인과 입문자를 위한 기술·전술·장비·훈련 정보"
   language: ko
   is_ymyl_domain: false
