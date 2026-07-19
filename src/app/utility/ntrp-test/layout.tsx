@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NTRP 실력 테스트",
-  description: "NTRP 실력 테스트 — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
+  title: "NTRP 테스트 | 테니스 실력 등급 자가 진단",
+  description:
+    "NTRP 기준으로 현재 테니스 실력 등급을 가늠해 보세요. 스트로크·서브·경기 경험 질문으로 내 수준 범위를 확인할 수 있습니다.",
   alternates: {
     canonical: "https://tennisfrens.com/utility/ntrp-test",
   },
   openGraph: {
-    title: "NTRP 실력 테스트 | TennisFriends",
-    description: "NTRP 실력 테스트 — TennisFriends에서 제공하는 테니스 동호인 전용 도구입니다.",
+    title: "NTRP 테스트 | 테니스 실력 등급 자가 진단",
+    description:
+      "NTRP 기준으로 현재 테니스 실력 등급을 가늠해 보세요. 스트로크·서브·경기 경험 질문으로 내 수준 범위를 확인할 수 있습니다.",
     url: "https://tennisfrens.com/utility/ntrp-test",
     type: "website",
     locale: "ko_KR",
