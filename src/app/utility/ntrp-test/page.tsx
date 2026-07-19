@@ -9,9 +9,9 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "NTRP 테스트 | 테니스 실력 등급 무료 측정",
+  title: "NTRP 테스트 | 테니스 실력 등급 자가 진단",
   description:
-    "NTRP 뜻과 테니스 실력 등급을 10문항으로 확인하세요. 초보·동호인·중급자 레벨 진단과 다음 훈련 방향을 무료로 제안합니다.",
+    "NTRP 기준으로 현재 테니스 실력 등급을 가늠해 보세요. 스트로크·서브·경기 경험 질문으로 내 수준 범위를 확인할 수 있습니다.",
   path: "/utility/ntrp-test",
   type: "website",
   tags: [
