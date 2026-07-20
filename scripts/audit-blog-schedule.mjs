@@ -3,7 +3,8 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
-const EXPECTED_INTERVAL_HOURS = 5;
+const MINIMUM_FUTURE_INTERVAL_HOURS = 12;
+const AUDIT_STARTED_AT = Date.now();
 const POST_FILES = [
   "src/data/blog-posts.js",
   "src/data/blog-posts-aw-300.js",
@@ -139,11 +140,15 @@ function auditFileSchedule(file, posts) {
     const hours = (current.timestamp - previous.timestamp) / 3_600_000;
     intervals.push(hours);
 
-    if (hours !== EXPECTED_INTERVAL_HOURS) {
+    if (
+      previous.timestamp >= AUDIT_STARTED_AT &&
+      current.timestamp >= AUDIT_STARTED_AT &&
+      hours < MINIMUM_FUTURE_INTERVAL_HOURS
+    ) {
       findings.push({
         file,
         slug: current.slug,
-        issue: "scheduledAt interval is not 5 hours",
+        issue: "future scheduledAt interval is under 12 hours",
         previousSlug: previous.slug,
         previousScheduledAt: previous.scheduledAt,
         scheduledAt: current.scheduledAt,
@@ -195,14 +200,37 @@ for (const duplicate of duplicateGroups(effectivePosts, "title")) {
 }
 
 const scheduledPosts = effectivePosts.filter((post) => post.scheduledAt);
+const futureScheduledPosts = scheduledPosts
+  .map((post) => ({ ...post, timestamp: parseSchedule(post) }))
+  .filter((post) => post.timestamp !== null && post.timestamp >= AUDIT_STARTED_AT)
+  .sort((a, b) => a.timestamp - b.timestamp);
+
+for (let index = 1; index < futureScheduledPosts.length; index += 1) {
+  const previous = futureScheduledPosts[index - 1];
+  const current = futureScheduledPosts[index];
+  const hours = (current.timestamp - previous.timestamp) / 3_600_000;
+
+  if (hours < MINIMUM_FUTURE_INTERVAL_HOURS) {
+    findings.push({
+      issue: "future effective schedule interval is under 12 hours",
+      previousSlug: previous.slug,
+      previousScheduledAt: previous.scheduledAt,
+      slug: current.slug,
+      scheduledAt: current.scheduledAt,
+      intervalHours: hours,
+    });
+  }
+}
+
 const audit = {
   status: findings.length === 0 ? "ok" : "failed",
   generatedAt: new Date().toISOString(),
-  expectedIntervalHours: EXPECTED_INTERVAL_HOURS,
+  minimumFutureIntervalHours: MINIMUM_FUTURE_INTERVAL_HOURS,
   files: POST_FILES.length,
   rawPosts: rawPosts.length,
   effectivePosts: effectivePosts.length,
   scheduledPosts: scheduledPosts.length,
+  futureScheduledPosts: futureScheduledPosts.length,
   fileSummaries,
   findings,
 };

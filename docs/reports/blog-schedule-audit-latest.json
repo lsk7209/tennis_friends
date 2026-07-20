@@ -1,15 +1,16 @@
 {
   "status": "ok",
-  "generatedAt": "2026-06-02T03:27:04.234Z",
-  "expectedIntervalHours": 5,
+  "generatedAt": "2026-07-20T06:56:15.083Z",
+  "minimumFutureIntervalHours": 12,
   "files": 15,
-  "rawPosts": 1225,
-  "effectivePosts": 719,
+  "rawPosts": 1232,
+  "effectivePosts": 726,
   "scheduledPosts": 502,
+  "futureScheduledPosts": 96,
   "fileSummaries": [
     {
       "file": "src/data/blog-posts.js",
-      "posts": 19,
+      "posts": 26,
       "scheduled": 0,
       "firstScheduledAt": null,
       "lastScheduledAt": null,
@@ -28,19 +29,20 @@
       "posts": 300,
       "scheduled": 300,
       "firstScheduledAt": "2026-05-24T21:10:00+09:00",
-      "lastScheduledAt": "2026-07-26T04:10:00+09:00",
+      "lastScheduledAt": "2026-08-03T15:10:00+09:00",
       "intervalHours": [
-        5
+        5,
+        12
       ]
     },
     {
       "file": "src/data/blog-posts-aw-title100.js",
       "posts": 100,
       "scheduled": 100,
-      "firstScheduledAt": "2026-07-26T09:10:00+09:00",
-      "lastScheduledAt": "2026-08-16T00:10:00+09:00",
+      "firstScheduledAt": "2026-08-04T03:10:00+09:00",
+      "lastScheduledAt": "2026-09-22T15:10:00+09:00",
       "intervalHours": [
-        5
+        12
       ]
     },
     {
