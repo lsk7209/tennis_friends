@@ -9,11 +9,20 @@ const SLOT_KEY = "coupang-inline";
 const LABEL = "테니스 라켓";
 const DISCLOSURE =
   "이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.";
-const HIDDEN_PREFIXES = ["/admin", "/privacy", "/terms", "/contact"];
+function isBannerRoute(pathname: string) {
+  if (pathname === "/") return true;
+  if (pathname === "/blog" || pathname === "/tennis-rules-quiz") return true;
+
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments[0] === "players" && segments.length <= 2) return true;
+  if (segments[0] === "utility" && segments.length <= 2) return true;
+
+  return false;
+}
 
 export default function CoupangAffiliateBanner() {
   const pathname = usePathname() ?? "/";
-  if (HIDDEN_PREFIXES.some((path) => pathname === path || pathname.startsWith(`${path}/`))) return null;
+  if (!isBannerRoute(pathname)) return null;
 
   const params = new URLSearchParams({
     siteKey: SITE_KEY,

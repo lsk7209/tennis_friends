@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import {
   Archivo_Black,
   Inter,
@@ -141,17 +140,6 @@ export const metadata: Metadata = {
     description: DEFAULT_SITE_DESCRIPTION,
     images: ["/opengraph-image"],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -190,12 +178,6 @@ export default function RootLayout({
     >
       <head>
         <meta name="google-adsense-account" content={ADSENSE_ID} />
-        <Script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <link
           rel="alternate"
           type="application/rss+xml"
