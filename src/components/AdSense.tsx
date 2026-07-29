@@ -8,6 +8,27 @@ const DEFAULT_ADSENSE_ID = "ca-pub-3050601904412736";
 const ADSENSE_LOAD_DELAY_MS = 1500;
 const DEFAULT_AD_HEIGHT = 280;
 const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "0.0.0.0"]);
+const ADSENSE_EXCLUDED_PATHS = new Set([
+  "/about",
+  "/contact",
+  "/privacy",
+  "/terms",
+]);
+
+function isAdSenseExcludedPath(pathname: string | null) {
+  if (!pathname) return true;
+  if (ADSENSE_EXCLUDED_PATHS.has(pathname)) return true;
+  return pathname === "/admin" || pathname.startsWith("/admin/");
+}
+
+function isNoIndexDocument() {
+  const robots = document
+    .querySelector('meta[name="robots"]')
+    ?.getAttribute("content")
+    ?.toLowerCase();
+
+  return robots?.split(",").some((directive) => directive.trim() === "noindex");
+}
 
 function getAdSenseId() {
   return (
@@ -27,7 +48,8 @@ export default function AdSense() {
   const adsenseId = getAdSenseId();
 
   useEffect(() => {
-    if (pathname?.startsWith("/admin")) return;
+    if (isAdSenseExcludedPath(pathname)) return;
+    if (isNoIndexDocument()) return;
     if (LOCAL_HOSTS.has(window.location.hostname)) return;
     if (document.getElementById("adsense-script")) return;
 
