@@ -79,7 +79,10 @@ export default function Page() {
                 </Button>
               </Link>
               <Link href="/utility/training-planner">
-                <Button variant="outline">
+                <Button
+                  variant="outline"
+                  className="border-slate-300 text-slate-900 hover:border-emerald-600 hover:text-emerald-700"
+                >
                   <Target className="mr-2 h-4 w-4" />
                   훈련 플래너 보기
                 </Button>

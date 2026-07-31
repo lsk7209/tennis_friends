@@ -4,6 +4,7 @@
 import { usePathname } from "next/navigation";
 
 const DASHBOARD_BASE = "https://multi-dashboard-one.vercel.app";
+const MEASUREMENT_BASE = "/";
 const SITE_KEY = "tennisfrens";
 const SLOT_KEY = "coupang-inline";
 const LABEL = "테니스 라켓";
@@ -32,7 +33,7 @@ export default function CoupangAffiliateBanner() {
   });
 
   return (
-    <div data-banner-measurement data-banner-measurement-base={DASHBOARD_BASE} data-banner-site-key={SITE_KEY} data-banner-slot-key={SLOT_KEY}>
+    <div data-banner-measurement data-banner-measurement-base={MEASUREMENT_BASE} data-banner-site-key={SITE_KEY} data-banner-slot-key={SLOT_KEY}>
     <aside aria-label="쿠팡 파트너스 추천" style={{ margin: "24px auto", maxWidth: 960, padding: "0 16px" }}>
       <a
         href={`${DASHBOARD_BASE}/api/banner-management/click?${params.toString()}`}

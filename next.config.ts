@@ -69,6 +69,18 @@ const nextConfig: NextConfig = {
   compress: true,
   staticPageGenerationTimeout: 180,
 
+  // Keep browser-side banner measurement same-origin; Vercel proxies the POST
+  // to the dashboard service without requiring cross-origin preflight support.
+  async rewrites() {
+    return [
+      {
+        source: "/api/banner-management/event",
+        destination:
+          "https://multi-dashboard-one.vercel.app/api/banner-management/event",
+      },
+    ];
+  },
+
   // URL 정규화 리다이렉트
   async redirects() {
     return [

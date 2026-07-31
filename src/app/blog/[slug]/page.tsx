@@ -225,7 +225,7 @@ export default async function BlogPostPage({ params }: Props) {
   ];
 
   return (
-    <main className="container mx-auto max-w-4xl px-4 py-10 sm:py-12">
+    <div className="container mx-auto max-w-4xl px-4 py-10 sm:py-12">
       <BreadcrumbSchema items={breadcrumbItems} />
       <EnhancedBlogPostSchema
         title={post.title}
@@ -302,7 +302,11 @@ export default async function BlogPostPage({ params }: Props) {
                 <span itemProp="name">작성자 TennisFriends</span>
               </span>
             </div>
-            <Button variant="outline" size="sm" className="border-white/10 bg-card">
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-slate-300 bg-card text-slate-900 hover:border-emerald-600 hover:text-emerald-700 dark:border-white/10 dark:text-white"
+            >
               <Share2 className="mr-2 h-4 w-4" />
               공유하기
             </Button>
@@ -455,6 +459,6 @@ export default async function BlogPostPage({ params }: Props) {
           </CardContent>
         </Card>
       </section>
-    </main>
+    </div>
   );
 }
