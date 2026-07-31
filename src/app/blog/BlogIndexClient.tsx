@@ -132,7 +132,7 @@ export default function BlogIndexClient({
           variant={selectedCategory === null ? "default" : "outline"}
           size="sm"
           onClick={() => selectCategory(null)}
-          className="rounded-md"
+          className="rounded-md border-slate-300 text-slate-800 hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:text-slate-100"
         >
           전체
         </Button>
@@ -142,7 +142,7 @@ export default function BlogIndexClient({
             variant={selectedCategory === group.id ? "default" : "outline"}
             size="sm"
             onClick={() => selectCategory(group.id)}
-            className="rounded-md"
+            className="rounded-md border-slate-300 text-slate-800 hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:text-slate-100"
           >
             {group.label}
           </Button>
@@ -158,7 +158,7 @@ export default function BlogIndexClient({
           <Button
             variant="outline"
             onClick={clearFilters}
-            className="mt-5 rounded-md"
+            className="mt-5 rounded-md border-slate-300 text-slate-800 hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:text-slate-100"
           >
             초기화
           </Button>
@@ -181,7 +181,7 @@ export default function BlogIndexClient({
                   <h3 className="text-lg font-bold leading-snug text-slate-950 dark:text-white">
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="transition hover:text-emerald-700 dark:hover:text-emerald-300"
+                      className="text-slate-950 transition hover:text-emerald-700 dark:text-white dark:hover:text-emerald-300"
                     >
                       {post.title}
                     </Link>
@@ -213,7 +213,7 @@ export default function BlogIndexClient({
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
             aria-label="이전 페이지"
-            className="rounded-md"
+            className="rounded-md border-slate-300 text-slate-800 hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:text-slate-100"
           >
             <ChevronLeft className="h-4 w-4" aria-hidden="true" />
             이전
@@ -224,7 +224,7 @@ export default function BlogIndexClient({
               variant="outline"
               size="sm"
               onClick={() => handlePageChange(1)}
-              className="rounded-md"
+              className="rounded-md border-slate-300 text-slate-800 hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:text-slate-100"
             >
               1
             </Button>
@@ -241,7 +241,7 @@ export default function BlogIndexClient({
               size="sm"
               onClick={() => handlePageChange(page)}
               aria-current={page === currentPage ? "page" : undefined}
-              className="min-w-9 rounded-md"
+              className="min-w-9 rounded-md border-slate-300 text-slate-800 hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:text-slate-100"
             >
               {page}
             </Button>
@@ -256,7 +256,7 @@ export default function BlogIndexClient({
               variant="outline"
               size="sm"
               onClick={() => handlePageChange(totalPages)}
-              className="rounded-md"
+              className="rounded-md border-slate-300 text-slate-800 hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:text-slate-100"
             >
               {totalPages}
             </Button>
@@ -268,7 +268,7 @@ export default function BlogIndexClient({
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
             aria-label="다음 페이지"
-            className="rounded-md"
+            className="rounded-md border-slate-300 text-slate-800 hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:text-slate-100"
           >
             다음
             <ChevronRight className="h-4 w-4" aria-hidden="true" />

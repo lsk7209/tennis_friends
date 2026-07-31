@@ -91,8 +91,11 @@ body {
 
 /* 링크/포커스 접근성 */
 a {
-  color: var(--accent);
   text-underline-offset: 2px;
+}
+
+.prose a {
+  color: var(--accent);
 }
 
 a:focus-visible {
@@ -1070,11 +1073,6 @@ a:focus-visible {
   max-width: 100%;
   overflow-wrap: anywhere;
   word-break: keep-all;
-}
-
-.blog-article-content > * {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 360px;
 }
 
 .blog-article-content img,

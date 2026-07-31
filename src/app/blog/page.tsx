@@ -18,7 +18,7 @@ import { getSiteUrl } from "@/lib/site";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "테니스 블로그 | TennisFriends",
+  title: "테니스 블로그",
   description:
     "테니스 입문, 레슨, 장비, 전술, 부상 예방, 동호회 경기 준비를 실전 기준으로 정리한 TennisFriends 블로그입니다.",
   alternates: {
@@ -67,7 +67,7 @@ export default function BlogPage() {
   }));
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+    <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
       <section className="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:py-12">
           <div className="mb-5 inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm font-medium text-emerald-800 dark:border-emerald-900 dark:bg-emerald-950 dark:text-emerald-200">
@@ -107,6 +107,6 @@ export default function BlogPage() {
       </section>
 
       <BlogIndexClient posts={posts} categoryGroups={categoryGroups} />
-    </main>
+    </div>
   );
 }
