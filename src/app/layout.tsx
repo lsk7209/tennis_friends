@@ -12,7 +12,6 @@ import MobileNav from "@/components/layout/MobileNav";
 import { Toaster } from "@/components/ui/sonner";
 import CacheReset from "@/components/CacheReset";
 import Tracking from "@/components/Tracking";
-import AdSense from "@/components/AdSense";
 import CoupangAffiliateBanner from "@/components/affiliate/CoupangAffiliateBanner";
 import GAProvider from "@/components/analytics/GAProvider";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
@@ -222,7 +221,6 @@ export default function RootLayout({
         <CacheReset />
         <GAProvider measurementId={gaMeasurementId} />
         <Tracking />
-        <AdSense />
       </body>
     </html>
   );

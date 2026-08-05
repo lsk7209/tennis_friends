@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { getSiteUrl } from '@/lib/site';
+import AdSenseReaderScript from '@/components/AdSenseReaderScript';
 
 export const metadata: Metadata = {
   title: '테니스 블로그 - 전략, 기술, 장비 가이드',
@@ -33,6 +34,11 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <AdSenseReaderScript />
+      {children}
+    </>
+  );
 }
 
