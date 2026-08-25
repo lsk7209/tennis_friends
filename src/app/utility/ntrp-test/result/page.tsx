@@ -10,6 +10,10 @@ import { Badge } from '@/components/ui/badge';
 import {Trophy, Share2, RotateCcw, Star, TrendingUp, Target, Award, Zap, Instagram, Twitter, Facebook, Copy, CheckCircle, ArrowRight, BookOpen, Settings, Shield, BarChart3} from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
 import { trackTestCompletion } from '@/components/Tracking';
+import { AdSenseSlot } from '@/components/AdSense';
+
+const NTRP_RESULT_AD_SLOT =
+  process.env.NEXT_PUBLIC_ADSENSE_NTRP_RESULT_SLOT || "4809500982";
 
 interface LevelDetail {
   color: string;
@@ -281,6 +285,14 @@ function ResultContent() {
             </div>
           </CardContent>
         </Card>
+
+        <AdSenseSlot
+          slot={NTRP_RESULT_AD_SLOT}
+          label="NTRP 결과 분석 다음 광고"
+          minHeight={250}
+          minHeightMobile={200}
+          className="mx-auto max-w-4xl"
+        />
 
         {/* 상세 분석 섹션 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
