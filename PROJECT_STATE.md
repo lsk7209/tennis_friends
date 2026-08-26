@@ -2,63 +2,52 @@
 
 ## Purpose
 
-TennisFrens is a Next.js tennis utility, player-information, and editorial site. The current task is to download and technically review the GitHub repository.
+TennisFriends is a public, no-login Next.js tennis content and utility site. Supabase, accounts, and a shared user database are not part of the current product contract.
 
 ## Current Work
 
-- Date: 2026-08-26
-- Scope: completed security, automation, routing, index, dependency, encoding, and verification improvements
-- Boundary: no deployment, Git push, external service mutation, or product code change
-- Checkout at start: `main` / `3f2b474` from `https://github.com/lsk7209/tennis_friends`
+- Date: 2026-08-27
+- Goal: restore trustworthy analytics on the GitHub Pages artifact and improve the highest-value static-site UX paths.
+- Authorized external scope: authenticated GA4/GSC/GTM inspection, necessary measurement settings, commit, and GitHub push.
+- Deployment boundary: stop at `git push`; no Vercel project, deployment, domain, alias, or environment mutation.
 
-## Changed Files
+## Implemented
 
-- `.goal-harness/GOAL.md`
-- `.goal-harness/PLAN.md`
-- `.goal-harness/STATUS.md`
-- `.goal-harness/ACCEPTANCE.md`
-- `.goal-harness/TESTS.md`
-- `.goal-harness/CHANGELOG.md`
-- `PROJECT_STATE.md`
+- Direct GA4 (`G-W1K51D8SBX`) now loads in every production build, including GitHub Pages.
+- GitHub Pages builds use the custom-domain root contract and assert that repository-name base paths do not leak into exported URLs.
+- `/blog` now emits 12 posts per static page with crawlable `/blog/page/N/` navigation instead of serializing the full catalog to the client.
+- NTRP completion events and local history require a unique same-session completion token; copied result URLs do not create false completions.
+- NTRP statistics are explicitly local-only, and the former sample/public leaderboard claim is removed.
+- AdSense is mounted once at the root; the NTRP result slot remains available without a duplicate loader.
+- The global cache/service-worker reset was removed.
+- Motion honors the user's reduced-motion preference through `MotionConfig`, CSS, the number counter, and the live ticker.
+- Supabase client code and dependency were removed because the site has no account or shared-data requirement.
 
-Application behavior and repository safety gates are improved. The completed change set is authorized for a GitHub push; no deployment or hosting mutation is included.
+## Console Evidence
 
-## Baseline Review Validation (Before Improvements)
+- GA4 property `tennisfrens.com` (property `534356101`), web stream `14422139724`, measurement ID `G-W1K51D8SBX`; data received in the prior 48 hours and enhanced measurement enabled.
+- GSC domain property `sc-domain:tennisfrens.com`; both canonical sitemaps succeeded with 1,473 discovered pages.
+- GA4 and GSC are linked for the same domain/stream.
+- The open GTM container `GTM-WJ3L5263` belongs to a different site (`lim01.soonsaak.co.kr`), so it was not modified and GTM was not added to TennisFriends.
 
-- PASS: `npm ci` (633 packages)
-- PASS: `npm run lint`
-- PASS: `npm run type-check`
-- PASS: `npm run build` (2,990 static pages)
-- FAIL: `npm audit --json` (9 advisories: 6 high, 2 moderate, 1 low)
-- FAIL: `npm run verify` stopped on stale bundled GSC/GA4 reports and a redirect-audit mismatch
-- FAIL: source encoding audit found seven pages containing Unicode replacement characters
-- CONSTRAINED: several audits require local analytics/content-generation artifacts not included in the checkout
+## Validation
 
-### Improvement Validation
+- PASS: `npm run verify` (lint, typecheck, focused audits, production build; 3,076 pages).
+- PASS: `npm run audit:static-export` (3,076 custom-domain root pages, GA loader, paginated blog, no `/tennis_friends/` path leakage).
+- PASS: production dependency audit with zero vulnerabilities.
+- PASS: `/blog` exported HTML reduced from about 874 KB to about 111 KB.
+- PASS: browser smoke on `/blog/page/2/` and one visible NTRP result ad slot.
+- PASS: `git diff --check` (line-ending notices only).
 
-- PASS: `npm run verify` including lint, typecheck, audits, and runtime build (2,982 pages)
-- PASS: exact GitHub Pages static-export audit (2,982 pages)
-- PASS: production dependency audit (0 vulnerabilities)
-- PASS: generated HTML/workflow safety audit
-- PASS: source and active-content encoding audits
-- PASS: search artifact audit (1,305 pages, 971 articles)
-- PASS: deterministic generated-artifact hashes and custom article export assertion
+## Risks And Boundaries
 
-## Risks
-
-- Existing repository documentation includes older deployment evidence and may not reflect current live state.
-- Review results are local-code evidence unless explicitly identified otherwise.
-- HIGH: client-side admin password is exposed through `NEXT_PUBLIC_ADMIN_PASSWORD`.
-- HIGH: automated Gemini content can be written as HTML/TSX and pushed without a strict validation gate.
-- HIGH: production dependencies include actionable advisories, including Next.js 16.2.7.
-- HIGH: GitHub Pages static export and Vercel/Node runtime features do not share one deployment contract.
-- HIGH: blog proxy rewrites can bypass custom static pages and may render empty bodies where `blogContentMap` is missing.
-- HIGH/MEDIUM: tracked `.omx` contains operational/OAuth-flow artifacts and should be removed from public history after credential review.
-- MEDIUM: generated AI index materially undercounts published/indexable blog posts.
+- Local NTRP history is intentionally device/browser-local and is not a public leaderboard.
+- Static export ignores server-only redirects, headers, middleware, and API routes; the verified GitHub Pages contract is static output only.
+- Localhost cannot prove the remote AdSense script response; source/output audits prove loader placement, and post-push live observation remains separate.
+- Historical product documents may mention a planned Supabase design; they are not the active implementation contract.
 
 ## Next Actions
 
-1. Review and commit the local changes when ready; push separately if desired.
-2. Privately audit Git history for `.omx` sensitivity before deciding on credential rotation or history rewrite.
-3. Confirm Supabase RLS in the live project under a separately authorized migration plan.
-4. Monitor image/CSS behavior because patched Sharp/PostCSS overrides are outside Next's declared ranges despite passing both local build modes.
+1. Commit and push the verified change set to GitHub `main`.
+2. Verify the remote `main` SHA after push.
+3. Observe the public GitHub Pages result after its normal workflow completes; do not mutate Vercel.

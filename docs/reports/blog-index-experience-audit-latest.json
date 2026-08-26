@@ -1,14 +1,11 @@
 {
   "status": "ok",
-  "generatedAt": "2026-06-02T04:43:25.870Z",
+  "generatedAt": "2026-08-26T23:33:40.365Z",
   "checkedFiles": [
     "src/app/blog/page.tsx",
-    "src/app/blog/BlogIndexClient.tsx"
+    "src/app/blog/BlogIndexPageContent.tsx",
+    "src/app/blog/page/[page]/page.tsx",
+    "src/lib/blog-index.ts"
   ],
-  "categoryFilterCoverage": {
-    "groups": 6,
-    "publishedCategories": 82,
-    "uncoveredMajorCategories": 0
-  },
   "findings": []
 }

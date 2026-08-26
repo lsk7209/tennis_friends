@@ -19,7 +19,7 @@
 - **UI Components**: Radix UI
 - **Animation**: Framer Motion
 - **Charts**: Recharts
-- **Database**: Supabase (선택적)
+- **Storage**: 로그인 없이 브라우저 localStorage 사용
 
 ## 📦 설치 및 실행
 
@@ -97,9 +97,6 @@ GitHub 저장소의 **Settings** → **Secrets and variables** → **Actions**�
 프로젝트 루트에 `.env.local` 파일을 생성하고 필요한 환경 변수를 설정하세요:
 
 ```env
-# Supabase (선택적)
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 `.env.example` 파일을 참고하세요.

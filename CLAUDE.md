@@ -10,7 +10,7 @@ TennisFriends (tennisfrens.com) is a Korean-language tennis content and tools pl
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS v4 with `tailwindcss-animate`
 - **UI Components**: Radix UI primitives + shadcn/ui pattern (`src/components/ui/`)
-- **Database**: Supabase (PostgreSQL) - optional, falls back to dummy client
+- **Storage**: browser localStorage for no-login personal results
 - **Animations**: Framer Motion
 - **Charts**: Recharts
 - **Fonts**: Inter (Google Fonts) + Pretendard (CDN)
@@ -56,7 +56,6 @@ src/
 │   └── player-examples/    # Player example data
 ├── lib/                    # Shared utilities and logic
 │   ├── site.ts             # Site constants (SITE_NAME, URLs, locale)
-│   ├── supabaseClient.ts   # Supabase client setup (optional)
 │   ├── utils.ts            # General utilities (cn helper via clsx + tailwind-merge)
 │   ├── constants.ts        # App constants
 │   ├── seo/                # SEO metadata helpers (generatePageMetadata, generateTitle)
@@ -147,8 +146,6 @@ npm run indexnow     # Submit URLs to IndexNow
 - Content is Korean-language tennis content
 
 ### Database
-- Supabase is optional - the app works without it using dummy fallbacks
-- Environment variables: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - Tables: `ntrp_results` (NTRP test results), `tension_results` (string tension results)
 - Materialized view: `ntrp_top7d` (top 50 scores from past 7 days for leaderboard)
 
@@ -163,8 +160,6 @@ npm run indexnow     # Submit URLs to IndexNow
 
 ### Environment Variables
 - `NEXT_PUBLIC_SITE_URL` - Site URL override
-- `NEXT_PUBLIC_SUPABASE_URL` - Supabase project URL
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Supabase anonymous key
 - `GOOGLE_SITE_VERIFICATION` - Google Search Console
 - `NAVER_SITE_VERIFICATION` - Naver Search Advisor
 - `BING_SITE_VERIFICATION` - Bing Webmaster
@@ -189,7 +184,7 @@ npm run indexnow     # Submit URLs to IndexNow
 - Server Components for metadata generation and static content
 - Client Components (`'use client'`) for interactive utilities, tests, and calculators
 - No REST API endpoints - headless design using static data + client-side logic
-- Calculation results stored optionally in Supabase, always available in localStorage
+- Calculation results are stored only in the visitor's localStorage.
 
 ## Adding New Content
 

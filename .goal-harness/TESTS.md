@@ -1,5 +1,24 @@
 # TESTS
 
+## Measurement And Product Improvement Checks (2026-08-27)
+
+- Full regression: `npm run verify` — PASS, 3,076 pages.
+- Exact static host: `npm run audit:static-export` — PASS, custom-domain root paths and GA marker verified.
+- NTRP ad/result contract: `npm run audit:ntrp-result-ad` — PASS.
+- Blog payload/navigation: `npm run audit:blog-index-experience` — PASS.
+- Analytics/ad source: `npm run audit:ads-analytics:source` — PASS.
+- Browser smoke: `/blog/page/2/` returned the expected page title; NTRP result contained one visible `data-ad-slot="4809500982"` element.
+- Git hygiene: `git diff --check` — PASS (CRLF conversion notices only).
+
+## Completion Checklist (2026-08-27)
+
+- [x] Available checks were run.
+- [x] Substantiated reviewer findings were repaired and revalidated.
+- [x] Acceptance criteria have direct evidence.
+- [ ] Commit is pushed and remote `main` SHA matches local HEAD.
+
+---
+
 ## Current Review Checks (2026-08-26)
 
 - Dependency install: `npm ci`

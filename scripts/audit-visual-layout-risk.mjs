@@ -9,7 +9,7 @@ const REPORTS_DIR = path.join(ROOT, "docs", "reports");
 const FILES = {
   design: "DESIGN.md",
   blogPage: "src/app/blog/page.tsx",
-  blogClient: "src/app/blog/BlogIndexClient.tsx",
+  blogContent: "src/app/blog/BlogIndexPageContent.tsx",
   articlePage: "src/app/blog/[slug]/page.tsx",
   playerPage: "src/app/players/[slug]/page.tsx",
   playerTemplate: "src/templates/players/PlayerPageTemplate.tsx",
@@ -31,7 +31,7 @@ fs.mkdirSync(REPORTS_DIR, { recursive: true });
 
 const design = readProjectFile(FILES.design);
 const blogPage = readProjectFile(FILES.blogPage);
-const blogClient = readProjectFile(FILES.blogClient);
+const blogContent = readProjectFile(FILES.blogContent);
 const articlePage = readProjectFile(FILES.articlePage);
 const playerPage = readProjectFile(FILES.playerPage);
 const playerTemplate = readProjectFile(FILES.playerTemplate);
@@ -47,12 +47,12 @@ assert(!blogPage.includes("bg-gradient-to-br"), {
   issue: "blog index should avoid dominant decorative gradients",
 });
 
-assert(!blogClient.includes("rounded-full"), {
+assert(!blogContent.includes("rounded-full"), {
   scope: "blog index",
   issue: "blog index controls should avoid pill-heavy layout",
 });
 
-assert(blogClient.includes("pageWindow("), {
+assert(blogContent.includes("pageWindow("), {
   scope: "blog index",
   issue: "compact pagination window missing",
 });

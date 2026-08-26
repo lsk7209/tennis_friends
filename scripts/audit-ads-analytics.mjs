@@ -91,9 +91,6 @@ function validateSourceIntegration() {
   const blogPage = readProjectFile("src/app/blog/[slug]/page.tsx");
   const globals = readProjectFile("src/app/globals.css");
   const nextConfig = readProjectFile("next.config.ts");
-  const envLocal = fs.existsSync(path.join(ROOT, ".env.local"))
-    ? readProjectFile(".env.local")
-    : "";
   const adsTxt = readProjectFile("public/ads.txt").trim();
 
   assert(layout.includes(`google-adsense-account`) && layout.includes(ADSENSE_PUB_ID), {
@@ -202,13 +199,6 @@ function validateSourceIntegration() {
       issue: "article middle ad reserved height missing",
     },
   );
-  for (const slot of REQUIRED_AD_SLOTS) {
-    assert(envLocal.includes(slot), {
-      scope: "source",
-      issue: ".env.local article AdSense slot value missing",
-      slot,
-    });
-  }
   assert(adsTxt === ADSENSE_LINE, {
     scope: "source",
     issue: "local ads.txt mismatch",

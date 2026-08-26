@@ -27,6 +27,13 @@ export function useNumberCounter(target: number, duration = 1.2) {
   const raf = useRef<number | null>(null);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      raf.current = requestAnimationFrame(() => setCount(target));
+      return () => {
+        if (raf.current !== null) cancelAnimationFrame(raf.current);
+      };
+    }
+
     const start = performance.now();
     const tick = (now: number) => {
       const elapsed = (now - start) / (duration * 1000);

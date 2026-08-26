@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026-08-27 Measurement And Public-Site Improvements
+
+| Area | Change | Reason |
+|---|---|---|
+| Analytics/static deployment | Added production GA4 fallback and explicit custom-domain GitHub Pages variables and assertions. | Make analytics independent of Vercel-only detection and prevent base-path leakage. |
+| Blog index | Replaced full client catalog with 12-item static pages and crawlable pagination. | Reduce initial HTML/client payload and improve stable navigation. |
+| NTRP | Added same-session completion tokens, local-only result history, honest statistics, and no-public-leaderboard copy. | Prevent copied URLs from polluting events and avoid presenting sample/shared data as real. |
+| Ads/cache/motion | Mounted AdSense once, removed global cache reset, and added reduced-motion handling. | Avoid duplicate loaders, destructive cache behavior, and accessibility regressions. |
+| Dependencies/docs | Removed unused Supabase client/dependency and aligned active documentation with the public no-login product. | Keep the implementation contract accurate and smaller. |
+
+---
+
 ## Changed Files
 
 | File | Change | Reason |

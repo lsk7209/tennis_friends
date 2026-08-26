@@ -1,5 +1,29 @@
 # GOAL
 
+## Active Measurement and Product Improvement Goal (2026-08-27)
+
+Improve TennisFriends as a public, no-login tennis content and utility site by restoring trustworthy GA4/GSC measurement on GitHub Pages, applying only necessary GA4/GTM/GSC console settings, reducing the oversized blog index payload, repairing the NTRP advertising/statistics experience, and removing avoidable cache and motion risks.
+
+### Active Done Conditions
+
+- The GitHub Pages production artifact loads the intended GA4 measurement configuration and key page/tool events can be verified without relying on Vercel-specific environment detection.
+- Current GA4, GSC, and GTM console state is inspected through an authenticated browser where available; only necessary, evidence-backed settings are changed and each mutation is recorded.
+- `/blog` no longer serializes the complete published-post catalog into the initial page and provides crawlable, shareable page navigation compatible with static export.
+- The NTRP result advertisement has a valid AdSense loader path, and statistics/leaderboard UI does not present disconnected or sample data as live user data.
+- Global cache cleanup does not unregister unrelated service workers or delete every origin cache on ordinary visits.
+- Infinite and entrance motion respects `prefers-reduced-motion`.
+- Focused tests, lint, typecheck, runtime build, exact GitHub Pages static export, and generated-artifact audits pass.
+- Harness evidence and `PROJECT_STATE.md` distinguish local proof, console proof, GitHub push, and hosting deployment state.
+
+### Active Non-Goals
+
+- No login, account, Supabase migration, or user database is introduced.
+- No Vercel project, deployment, domain, alias, or environment setting is changed.
+- No speculative content expansion or bulk editorial rewrite.
+- GTM is not added unless current console/code evidence shows a concrete need beyond direct GA4.
+
+---
+
 ## Active Improvement Goal (2026-08-26)
 
 Resolve the locally verifiable high- and medium-priority findings from the repository review: remove false client-side authentication, gate automated generated content before push, update vulnerable dependencies, make routing/static-host behavior explicit, correct blog and AI-index coverage, repair source encoding, isolate external-data audits, and prevent operational artifacts from being committed.

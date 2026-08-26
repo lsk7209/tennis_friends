@@ -9,8 +9,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {Trophy, Share2, RotateCcw, Star, TrendingUp, Target, Award, Zap, Instagram, Twitter, Facebook, Copy, CheckCircle, ArrowRight, BookOpen, Settings, Shield, BarChart3} from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
-import { trackTestCompletion } from '@/components/Tracking';
+import { trackTestCompletionOnce } from '@/components/Tracking';
 import { AdSenseSlot } from '@/components/AdSense';
+import { recordNtrpResultOnce } from '@/lib/ntrp-results';
 
 const NTRP_RESULT_AD_SLOT =
   process.env.NEXT_PUBLIC_ADSENSE_NTRP_RESULT_SLOT || "4809500982";
@@ -34,6 +35,7 @@ function ResultContent() {
   const router = useRouter();
   const score = Number(searchParams.get('score') || 0);
   const q13 = decodeURIComponent(searchParams.get('q13') || '');
+  const completionId = searchParams.get('completion') || '';
   
   const { level, desc } = getNTRPLevel(score);
   const character = charMap[q13] || '올라운더';
@@ -42,15 +44,22 @@ function ResultContent() {
 
   // 테스트 완료 추적
   useEffect(() => {
-    if (score > 0) {
-      trackTestCompletion('ntrp-test', {
+    if (score > 0 && completionId) {
+      const recorded = recordNtrpResultOnce({
+        completionId,
+        score,
+        level,
+        character,
+      });
+      if (!recorded) return;
+      trackTestCompletionOnce('ntrp-test', completionId, {
         level: level,
         score: score,
         character: character,
         q13: q13
       });
     }
-  }, [score, level, character, q13]);
+  }, [score, level, character, q13, completionId]);
 
   // NTRP 레벨별 상세 정보
   const getLevelDetails = (level: string) => {
@@ -166,14 +175,14 @@ function ResultContent() {
   const levelDetails = getLevelDetails(level);
 
   const copyToClipboard = () => {
-    const url = `${window.location.origin}/utility/ntrp-test/result?score=${score}&q13=${encodeURIComponent(q13)}`;
+    const url = window.location.href;
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   const shareToSocial = (platform: string) => {
-    const url = `${window.location.origin}/utility/ntrp-test/result?score=${score}&q13=${encodeURIComponent(q13)}`;
+    const url = window.location.href;
     const text = `🎾 내 테니스 실력은 NTRP ${level} (${character} 스타일)이에요! TennisFriends에서 나의 실력을 확인해보세요!`;
     
     const shareUrls = {

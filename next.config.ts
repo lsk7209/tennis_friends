@@ -5,10 +5,11 @@ const isGitHubPages =
   process.env.GITHUB_ACTIONS && process.env.GITHUB_PAGES === "true";
 const isStaticExport = isGitHubPages || process.env.STATIC_EXPORT === "true";
 const repositoryBasePath =
-  process.env.GITHUB_PAGES_BASE_PATH ||
-  (process.env.GITHUB_REPOSITORY
-    ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
-    : "/tennis_friends");
+  process.env.GITHUB_PAGES_BASE_PATH !== undefined
+    ? process.env.GITHUB_PAGES_BASE_PATH
+    : process.env.GITHUB_REPOSITORY
+      ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`
+      : "/tennis_friends";
 
 const nextConfig: NextConfig = {
   // Vercel 환경에서는 기본값(serverless) 사용
@@ -19,10 +20,12 @@ const nextConfig: NextConfig = {
         distDir: "out",
         // basePath는 환경 변수로 설정 가능, 기본값은 저장소 이름 기반
         ...(isGitHubPages
-          ? {
-              basePath: repositoryBasePath,
-              assetPrefix: repositoryBasePath,
-            }
+          ? repositoryBasePath
+            ? {
+                basePath: repositoryBasePath,
+                assetPrefix: repositoryBasePath,
+              }
+            : {}
           : {}),
         images: {
           unoptimized: true,
@@ -150,7 +153,7 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://multi-dashboard-one.vercel.app https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://www.googletagmanager.com https://www.google-analytics.com https://www.googletagservices.com https://www.googleadservices.com https://adservice.google.com https://adservice.google.co.kr; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://multi-dashboard-one.vercel.app https://www.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://csi.gstatic.com https://cdn.jsdelivr.net https://*.supabase.co; frame-src https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://www.google.com;",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://multi-dashboard-one.vercel.app https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://www.googletagmanager.com https://www.google-analytics.com https://www.googletagservices.com https://www.googleadservices.com https://adservice.google.com https://adservice.google.co.kr; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://multi-dashboard-one.vercel.app https://www.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://csi.gstatic.com https://cdn.jsdelivr.net; frame-src https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://www.google.com;",
           },
         ],
       },

@@ -1,5 +1,29 @@
 # EVIDENCE
 
+## 2026-08-27 Measurement And Product Improvement Evidence
+
+### Authenticated console inspection
+
+- GA4 property `tennisfrens.com` (`534356101`), web stream `14422139724`, measurement ID `G-W1K51D8SBX`; recent data and enhanced measurement are active.
+- GSC domain property `sc-domain:tennisfrens.com`; canonical and Naver sitemaps are successful with 1,473 discovered pages.
+- GA4-GSC linking already targets the same domain and stream.
+- GTM container `GTM-WJ3L5263` is for `lim01.soonsaak.co.kr`; no GTM mutation or TennisFriends installation was performed.
+
+### Code and output verification
+
+| Check | Result | Evidence |
+|---|---|---|
+| `npm run verify` | PASS | Lint, typecheck, focused audits, dependency audit, and production build; 3,076 pages. |
+| `npm run audit:static-export` | PASS | GA loader, `/blog/page/2`, custom-domain root URLs, and absence of `/tennis_friends/` leakage asserted. |
+| Blog payload | PASS | Exported `/blog` HTML reduced from 874,419 bytes to about 110,962 bytes. |
+| NTRP result/ad audit | PASS | Completion-token contract and root AdSense loader/slot assertions pass. |
+| Browser smoke | PASS | `/blog/page/2/` loaded with title `테니스 블로그 2페이지`; NTRP result rendered one visible ad slot. |
+| Independent review | PASS after repair | Reliability and test reviewers' completion-token, base-path, audit-coverage, documentation, and reduced-motion findings were repaired and revalidated. |
+
+No Vercel command or mutation was performed. Console work was inspection-only because GA4/GSC were already correctly configured and the available GTM container was unrelated.
+
+---
+
 ## Risk Notice - 2026-08-26 Improvements
 
 Task: Repair confirmed repository security, routing, indexing, dependency, encoding, and validation issues.

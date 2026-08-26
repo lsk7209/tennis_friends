@@ -48,7 +48,9 @@ export default function NtrpTestPage() {
         setTimeout(() => {
           const totalScore = newAnswers.reduce((sum, answer) => sum + answer, 0);
           const q13Label = questions[12].options[newAnswers[12] - 1];
-          router.push(`/utility/ntrp-test/result?score=${totalScore}&q13=${encodeURIComponent(q13Label)}`);
+          const completionId = crypto.randomUUID();
+          window.sessionStorage.setItem(`tennisfrens:ntrp-pending:${completionId}`, "1");
+          router.push(`/utility/ntrp-test/result?score=${totalScore}&q13=${encodeURIComponent(q13Label)}&completion=${completionId}`);
         }, 1500); // 완료 애니메이션 시간 증가
       }
     }, 600); // 답변 선택 후 600ms 대기

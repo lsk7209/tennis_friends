@@ -10,8 +10,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
 import { Toaster } from "@/components/ui/sonner";
-import CacheReset from "@/components/CacheReset";
 import Tracking from "@/components/Tracking";
+import AdSense from "@/components/AdSense";
+import MotionPreferences from "@/components/MotionPreferences";
 import CoupangAffiliateBanner from "@/components/affiliate/CoupangAffiliateBanner";
 import GAProvider from "@/components/analytics/GAProvider";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
@@ -37,10 +38,7 @@ function getGaMeasurementId(): string {
     return process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   }
 
-  if (
-    process.env.NODE_ENV === "production" &&
-    process.env.VERCEL_ENV === "production"
-  ) {
+  if (process.env.NODE_ENV === "production") {
     return PROD_GA_MEASUREMENT_ID;
   }
 
@@ -206,6 +204,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-gradient-to-br from-gray-50 via-white to-gray-100 font-display text-gray-900 antialiased dark:from-gray-950 dark:via-gray-900 dark:to-black dark:text-gray-100">
+        <MotionPreferences>
         <OrganizationSchema />
         <WebSiteSchema />
         <div className="group/design-root relative flex min-h-screen w-full flex-col overflow-x-hidden">
@@ -218,9 +217,10 @@ export default function RootLayout({
           </div>
         </div>
         <Toaster />
-        <CacheReset />
+        <AdSense />
         <GAProvider measurementId={gaMeasurementId} />
         <Tracking />
+        </MotionPreferences>
       </body>
     </html>
   );

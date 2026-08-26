@@ -1,5 +1,17 @@
 # PLAN
 
+## Active Measurement and Product Improvement Plan (2026-08-27)
+
+1. Establish current GitHub Pages output, GA4/GSC/GTM code paths, logged-in console availability, and a rollback-safe mutation boundary.
+2. Implement direct GA4 production configuration and the smallest static-export-compatible blog pagination/search split.
+3. Repair the NTRP ad/statistics presentation, remove or scope global cache reset, and add reduced-motion handling.
+4. Verify focused behavior, lint, typecheck, runtime build, GitHub Pages static export, payload reduction, analytics markers, and accessibility behavior.
+5. Apply only required GA4/GSC/GTM console settings, record evidence, run independent review, repair substantiated findings, then commit and push to GitHub `main`.
+
+Classification: large; domain profile: web; risk: R2 local code plus R3 authenticated external analytics settings. GitHub push is authorized. Vercel operations remain prohibited.
+
+---
+
 ## Active Improvement Plan (2026-08-26)
 
 1. Record risk boundary and acceptance tests; obtain independent read-only security and routing/index designs.

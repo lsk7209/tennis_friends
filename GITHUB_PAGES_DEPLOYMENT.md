@@ -17,8 +17,6 @@
    - GitHub 저장소의 **Settings** → **Secrets and variables** → **Actions**
    - 다음 Secrets 추가 (선택사항):
      - `NEXT_PUBLIC_SITE_URL`: 사이트 URL (예: `https://username.github.io/repository-name`)
-     - `NEXT_PUBLIC_SUPABASE_URL`: Supabase URL
-     - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Supabase Anon Key
      - `GOOGLE_SITE_VERIFICATION`: 구글 인증 코드
      - `NAVER_SITE_VERIFICATION`: 네이버 인증 코드
 
@@ -54,8 +52,6 @@ GitHub 저장소의 **Settings** → **Secrets and variables** → **Actions**�
 NEXT_PUBLIC_SITE_URL=https://username.github.io/repository-name
 
 # 선택적
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 GOOGLE_SITE_VERIFICATION=your_google_verification_code
 NAVER_SITE_VERIFICATION=your_naver_verification_code
 DAUM_SITE_VERIFICATION=your_daum_verification_code

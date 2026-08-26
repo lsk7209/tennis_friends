@@ -16,7 +16,7 @@ export function LiveTicker() {
 
   return (
     <div className="bg-accent-volt text-court-ink overflow-hidden py-2.5 select-none">
-      <div className="flex items-center gap-0 animate-[ticker_28s_linear_infinite]">
+      <div className="flex items-center gap-0 animate-[ticker_28s_linear_infinite] motion-reduce:animate-none">
         {items.map((item, i) => (
           <span
             key={i}
