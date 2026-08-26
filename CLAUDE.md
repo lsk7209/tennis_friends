@@ -154,7 +154,7 @@ npm run indexnow     # Submit URLs to IndexNow
 
 ### Authentication
 - No user login system for visitors
-- Admin panel uses simple password auth via `NEXT_PUBLIC_ADMIN_PASSWORD` env var
+- Admin panel only displays analytics stored in the current browser's localStorage; it has no client-side password or server privileges.
 - Device tracking via localStorage device IDs (for test result attribution)
 
 ### Testing

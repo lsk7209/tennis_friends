@@ -7,6 +7,7 @@
 const fs = require("fs");
 const https = require("https");
 const path = require("path");
+const { validateGeneratedHtml } = require("./lib/validate-generated-html");
 
 const API_KEY = process.env.GEMINI_API_KEY;
 const SIX_MONTHS_AGO = new Date();
@@ -85,11 +86,11 @@ async function main() {
     console.log(`\n갱신 중: ${post.slug} (${post.date})`);
 
     try {
-      const updateSection = await callGemini(
+      const updateSection = validateGeneratedHtml(await callGemini(
         `테니스 블로그 글 "${post.title}"에 추가할 "2026년 최신 업데이트" 섹션을 HTML로 작성해주세요.
 200자 이내, h2 태그 사용, 실용적인 최신 정보 포함.
 HTML 태그만 출력하세요.`,
-      );
+      ), { minHeadings: 1, maxLength: 10_000 });
 
       const pagePath = path.join("src/app/blog", post.slug, "page.tsx");
       let content = fs.readFileSync(pagePath, "utf8");
@@ -99,21 +100,27 @@ HTML 태그만 출력하세요.`,
       const today = new Date().toISOString().split("T")[0];
 
       // page.tsx의 HTML 콘텐츠에 업데이트 섹션 prepend
-      content = content.replace(
+      const updatedContent = content.replace(
         /dangerouslySetInnerHTML=\{\{\s*__html:\s*`/,
         `dangerouslySetInnerHTML={{ __html: \`${updateHtml.replace(/`/g, "\\`")}\n`,
       );
+      if (updatedContent === content) {
+        throw new Error("Refresh target HTML marker was not found; no files were changed");
+      }
 
       // blog-posts.js date 업데이트
       const postsFile = "src/data/blog-posts.js";
       let posts = fs.readFileSync(postsFile, "utf8");
-      posts = posts.replace(
+      const updatedPosts = posts.replace(
         new RegExp(`("slug":\\s*"${post.slug}"[^}]*"date":\\s*)"[^"]+"`),
         `$1"${today}"`,
       );
+      if (updatedPosts === posts) {
+        throw new Error("Refresh target metadata was not found; no files were changed");
+      }
 
-      fs.writeFileSync(pagePath, content, "utf8");
-      fs.writeFileSync(postsFile, posts, "utf8");
+      fs.writeFileSync(pagePath, updatedContent, "utf8");
+      fs.writeFileSync(postsFile, updatedPosts, "utf8");
       console.log(`✅ 갱신: ${post.slug} → ${today}`);
     } catch (err) {
       console.error(`❌ 실패: ${post.slug} — ${err.message}`);

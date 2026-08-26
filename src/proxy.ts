@@ -34,11 +34,10 @@ export function proxy(request: NextRequest) {
     });
   }
 
-  const rewriteUrl = request.nextUrl.clone();
-  rewriteUrl.pathname = `/blog-render/${encodeURIComponent(slug)}`;
-  const response = post
-    ? NextResponse.rewrite(rewriteUrl)
-    : NextResponse.next();
+  // Let Next.js resolve exact custom pages before the dynamic [slug] route.
+  // Rewriting every known slug to the shared renderer hid custom articles and
+  // could produce an empty body when the shared content map had no entry.
+  const response = NextResponse.next();
 
   if (!isIndexableBlogSlug(slug)) {
     response.headers.set("x-robots-tag", "noindex, follow");

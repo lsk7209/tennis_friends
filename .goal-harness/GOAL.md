@@ -1,6 +1,42 @@
 # GOAL
 
-## Final Deliverable
+## Active Improvement Goal (2026-08-26)
+
+Resolve the locally verifiable high- and medium-priority findings from the repository review: remove false client-side authentication, gate automated generated content before push, update vulnerable dependencies, make routing/static-host behavior explicit, correct blog and AI-index coverage, repair source encoding, isolate external-data audits, and prevent operational artifacts from being committed.
+
+### Active Done Conditions
+
+- No password or credential-like value is shipped through `NEXT_PUBLIC_ADMIN_PASSWORD`.
+- Automated generated-content workflows cannot push unvalidated HTML/TSX.
+- Production dependency audit has no known high-severity finding that can be fixed compatibly.
+- Custom blog pages are not silently replaced by an empty shared renderer.
+- AI index article coverage matches the published/indexable dataset and generated outputs are deterministic when inputs are unchanged.
+- All known Unicode replacement characters in scanned source are repaired.
+- Default code verification does not require fresh private analytics exports; operational freshness remains available as a separate check.
+- `.omx` operational artifacts are ignored and removed from the Git index without deleting local copies.
+- lint, typecheck, focused audits, production build, and regression checks pass or exact residual constraints are documented.
+
+### Non-Goals
+
+- No production deployment, Vercel mutation, external submission, credential use, database migration, or Git push.
+- No Git-history rewrite; historical `.omx` removal requires separate explicit authorization.
+- No bulk editorial rewrite beyond repairing confirmed corrupted characters.
+
+---
+
+## Current Review Goal (2026-08-26)
+
+Download `lsk7209/tennis_friends` into the local workspace and produce an evidence-backed repository review covering installability, build quality, architecture, security, operations, and material follow-up priorities without deploying or changing product behavior.
+
+## Current Done Conditions
+
+- Local checkout is clean and matches the fetched `origin/main` commit.
+- Dependencies install from the lockfile.
+- Project-native lint, typecheck, audit/verification, and build checks are run where practical.
+- Review findings cite exact files/lines and distinguish confirmed defects from residual risks.
+- `PROJECT_STATE.md` and harness evidence record the downloaded state and next actions.
+
+## Prior Goal (2026-07-14)
 
 TennisFrens player-page CTR and AdSense readiness improvement based on fresh direct GSC evidence
 

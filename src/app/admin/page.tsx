@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, AreaChart, Area } from 'recharts';
@@ -11,13 +10,11 @@ import { Eye, Users, TrendingUp, Search, Globe, Calendar, Monitor, Smartphone, G
 import { getPopularTests } from '@/components/Tracking';
 import type { VisitorData, StatsData, DataStatus } from '@/types/admin';
 import { calculateStats } from '@/lib/admin/statistics';
-import { EMPTY_STATS_DATA, ADMIN_PASSWORD } from '@/lib/admin/constants';
+import { EMPTY_STATS_DATA } from '@/lib/admin/constants';
 import { toast } from 'sonner';
 import { getReferrerDisplay, extractKeyword, formatDate } from '@/lib/admin/helpers';
 
 export default function AdminPage() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [password, setPassword] = useState('');
   const [stats, setStats] = useState<StatsData | null>(null);
   const [loading, setLoading] = useState(false);
   const [dataStatus, setDataStatus] = useState<DataStatus>({
@@ -26,19 +23,11 @@ export default function AdminPage() {
     lastUpdate: null,
     error: null,
   });
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (password === ADMIN_PASSWORD) {
-      setIsAuthenticated(true);
-      fetchStats();
-    } else {
-      toast.error('비밀번호가 올바르지 않습니다.');
-    }
-  };
-
-  // 실시간 통계 자동 업데이트 (30초마다)
+  // 이 화면은 현재 브라우저의 localStorage 통계만 보여준다.
+  // 서버 권한이 없는 화면에 클라이언트 비밀번호를 두면 비밀값처럼 오인되므로
+  // 별도 로그인 없이 로컬 통계를 불러온다.
   useEffect(() => {
-    if (!isAuthenticated) return;
+    fetchStats();
 
     const interval = setInterval(() => {
       fetchStats();
@@ -46,7 +35,7 @@ export default function AdminPage() {
 
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAuthenticated]);
+  }, []);
 
   const fetchStats = async () => {
     setLoading(true);
@@ -114,34 +103,6 @@ export default function AdminPage() {
   };
 
   // 헬퍼 함수들은 이미 helpers에서 import됨
-
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
-        <Card className="w-full max-w-md">
-          <CardHeader>
-            <CardTitle className="text-center">관리자 로그인</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleLogin} className="space-y-4">
-              <div>
-                <Input
-                  type="password"
-                  placeholder="비밀번호를 입력하세요"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full"
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                로그인
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
 
   if (loading) {
     return (

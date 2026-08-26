@@ -178,6 +178,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const publishedTime = getBlogPublishDate(post).toISOString();
   const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
+  if (!contentData?.content) notFound();
   const processedContent = normalizeArticleHtml(contentData?.content ?? "");
   const [contentBeforeMiddleAd, contentAfterMiddleAd] =
     splitContentForMiddleAd(processedContent);

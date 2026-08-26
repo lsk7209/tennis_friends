@@ -1,16 +1,13 @@
 name: Content Refresh
 
 on:
-  schedule:
-    # 매주 월요일 KST 03:00 = UTC 일요일 18:00
-    - cron: '0 18 * * 0'
   workflow_dispatch:
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -31,16 +28,19 @@ jobs:
         run: |
           git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
 
-      - name: 커밋 & 푸시
+      - name: 검토용 패치 검증
         if: steps.check_changes.outputs.changed == 'true'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/app/blog/ src/data/blog-posts.js
-          git commit -m "chore(content): refresh stale blog posts [$(date +%Y-%m-%d)]"
-          git push
+          git diff --check
+          npm ci
+          npm run type-check
+          git add -N src/app/blog/ src/data/blog-posts.js
+          git diff --binary > refreshed-content.patch
 
-      - name: IndexNow 제출
+      - name: 검토용 패치 업로드
         if: steps.check_changes.outputs.changed == 'true'
-        run: node scripts/submit-indexnow.js
-        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: refreshed-content-review
+          path: refreshed-content.patch
+          if-no-files-found: error

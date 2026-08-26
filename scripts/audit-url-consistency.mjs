@@ -36,6 +36,7 @@ const IGNORED_FILE_PATTERNS = [
   /(^|[\\/])public[\\/]ai-index\.json$/,
   /(^|[\\/])scripts[\\/]audit-redirect-config\.mjs$/,
   /(^|[\\/])scripts[\\/]audit-redirects\.mjs$/,
+  /(^|[\\/])scripts[\\/]audit-analytics-reports\.mjs$/,
 ];
 
 function shouldScan(filePath) {

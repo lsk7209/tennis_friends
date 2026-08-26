@@ -6,6 +6,7 @@
 const fs = require("fs");
 const https = require("https");
 const path = require("path");
+const { validateGeneratedHtml } = require("./lib/validate-generated-html");
 
 const API_KEY = process.env.GEMINI_API_KEY;
 const DAILY_BUDGET = parseFloat(process.env.DAILY_AI_BUDGET || "0.5");
@@ -680,12 +681,13 @@ HTML 본문만 출력하세요. 다른 설명은 없이 HTML만.`;
 
   const raw = await callGemini(prompt);
   // Gemini가 ```html 코드블록으로 감쌀 경우 제거
-  return raw
+  const html = raw
     .trim()
     .replace(/^```html\n?/, "")
     .replace(/^```\n?/, "")
     .replace(/\n?```$/, "")
     .trim();
+  return validateGeneratedHtml(html, { minHeadings: 4 });
 }
 
 async function main() {

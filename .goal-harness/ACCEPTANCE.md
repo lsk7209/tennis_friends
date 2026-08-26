@@ -1,5 +1,32 @@
 # ACCEPTANCE
 
+## Active Improvement Criteria (2026-08-26)
+
+| Criteria | Status | Evidence |
+|---|---|---|
+| Browser bundles contain no admin password comparison or public password environment variable. | PASS | Focused `rg` audit returned no references. |
+| Generated content must pass a strict local validation gate before workflow commit/push. | PASS | Allowlist validator and workflow safety audit pass; workflows are manual/read-only and upload review patches. |
+| Custom blog routes preserve their intended content under the active runtime contract. | PASS | Proxy rewrite removed; article audit and exported custom-page body assertion pass. |
+| AI index includes the published/indexable blog inventory. | PASS | Search-artifact audit passes with 971 articles and deterministic hashes. |
+| Source encoding audit reports zero findings. | PASS | 77 replacement characters repaired; both encoding audits pass. |
+| Default code verification is independent of private analytics freshness. | PASS | `npm run verify` passes; analytics freshness remains under `audit:analytics`. |
+| Operational artifacts are no longer tracked for future commits while local files are preserved. | PASS | `git ls-files .omx` returns zero; local report file still exists. |
+| Lint, typecheck, build, and applicable security audit pass. | PASS | Full verify, runtime build, static-export audit, and production dependency audit pass. |
+
+---
+
+## Current Review Criteria (2026-08-26)
+
+| Criteria | Status | Evidence |
+|---|---|---|
+| Repository is downloaded into `D:\web\tennisfrenscom` and checkout identity is recorded. | PASS | `main`, `origin`, and commit captured in current evidence. |
+| Lockfile-based dependency installation completes. | PASS | `npm ci` installed 633 packages. |
+| Static checks and production build complete or exact failures are recorded. | PASS | lint, typecheck, and build passed; audit failures are recorded in `EVIDENCE.md`. |
+| Review findings are prioritized and cite exact source locations. | PASS | Consolidated review cites source and workflow locations. |
+| No deployment or external write operation occurs. | PASS | Review boundary recorded in status. |
+
+---
+
 ## Feature Criteria
 
 | Criteria | Status | Evidence |

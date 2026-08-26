@@ -31,6 +31,12 @@ export const CATEGORY_GROUPS = {
         categories: ['테니스 초보자', '테니스 중급자', '테니스 상급자', '겨울 테니스', '가을 테니스', '비 오는 날 테니스', '지역 정보', '입문 가이드', '훈련 가이드', '초보자 가이드', '레벨업 가이드', '주니어 가이드', '시니어 가이드', '한국 특화', '훈련', '테니스 훈련', '주니어 테니스', '시니어 테니스', '경기 준비', '테니스 생활권', '테니스 문화', '여행 가이드', '멘탈 트레이닝', '실력 진단', '코트 적응', '코트 환경', '코트·환경', '상황별 팁'],
         color: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
     },
+    GENERAL: {
+        id: 'general',
+        label: '종합 가이드',
+        categories: ['테니스 가이드'],
+        color: 'bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300'
+    },
     PRO: {
         id: 'pro',
         label: '선수 분석',

@@ -38,11 +38,14 @@
     "audit:performance-config": "node scripts/audit-performance-config.mjs",
     "audit:content-links": "node scripts/audit-content-link-coverage.mjs",
     "audit:generated-content-quality": "node scripts/audit-generated-content-quality.mjs",
+    "audit:generated-html-safety": "node scripts/audit-generated-html-validator.js",
+    "audit:dependencies:production": "npm audit --omit=dev --audit-level=high",
+    "audit:static-export": "node scripts/audit-static-export.mjs",
     "audit:content-opportunities": "node scripts/audit-content-opportunities.mjs",
     "audit:visual-layout-risk": "node scripts/audit-visual-layout-risk.mjs",
     "audit:site-content-design-review": "node scripts/audit-site-content-design-review.mjs",
     "audit:ops": "npm run verify && npm run audit:blog-quality && npm run audit:content-links && npm run audit:analytics && npm run audit:ads-analytics && npm run audit:quiz-experience && npm run audit:performance && npm run audit:public-endpoints && npm run audit:live-seo && npm run audit:redirects && npm run audit:search-notify",
-    "verify": "npm run audit:url-consistency && npm run audit:search-artifacts && npm run audit:search-automation && npm run audit:redirect-config && npm run audit:sitemap-coverage && npm run audit:analytics && npm run audit:ads-analytics:source && npm run audit:persona-profile && npm run audit:metadata-coverage && npm run audit:schema-coverage && npm run audit:korean-ux-text && npm run audit:source-encoding && npm run audit:active-content-encoding && npm run audit:utility-experience && npm run audit:quiz-experience:source && npm run audit:internal-links && npm run audit:article-experience && npm run audit:blog-index-experience && npm run audit:player-search-seo && npm run audit:blog-quality && npm run audit:blog-schedule && npm run audit:content-links && npm run audit:generated-content-quality && npm run audit:content-opportunities && npm run audit:performance-config && npm run audit:visual-layout-risk && npm run audit:site-content-design-review && npm run lint && npm run type-check && npm run build",
+    "verify": "npm run audit:dependencies:production && npm run audit:url-consistency && npm run audit:search-artifacts && npm run audit:search-automation && npm run audit:redirect-config && npm run audit:sitemap-coverage && npm run audit:persona-profile && npm run audit:metadata-coverage && npm run audit:schema-coverage && npm run audit:korean-ux-text && npm run audit:source-encoding && npm run audit:active-content-encoding && npm run audit:generated-html-safety && npm run audit:utility-experience && npm run audit:quiz-experience:source && npm run audit:internal-links && npm run audit:article-experience && npm run audit:blog-index-experience && npm run audit:player-search-seo && npm run audit:blog-schedule && npm run audit:content-links && npm run audit:performance-config && npm run audit:visual-layout-risk && npm run lint && npm run type-check && npm run build",
     "gh-pages": "next build && gh-pages -d out",
     "postdeploy": "npm run search:notify:postdeploy",
     "postgh-pages": "npm run search:notify:postdeploy",
@@ -60,7 +63,7 @@
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.2.7",
+    "@next/mdx": "^16.2.11",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-checkbox": "^1.3.3",
     "@radix-ui/react-dialog": "^1.1.15",
@@ -82,7 +85,7 @@
     "html2canvas": "^1.4.1",
     "jspdf": "^4.2.1",
     "lucide-react": "^0.548.0",
-    "next": "^16.2.7",
+    "next": "^16.2.11",
     "next-themes": "^0.4.6",
     "react": "^19.2.1",
     "react-circular-progressbar": "^2.2.0",
@@ -100,13 +103,16 @@
     "@types/react-dom": "^19",
     "baseline-browser-mapping": "^2.10.33",
     "eslint": "^9",
-    "eslint-config-next": "^16.2.7",
+    "eslint-config-next": "^16.2.11",
     "gh-pages": "^6.1.1",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.4.0",
     "typescript": "^5"
   },
   "overrides": {
-    "postcss": "8.5.15"
+    "dompurify": "3.4.13",
+    "nanoid": "3.3.18",
+    "postcss": "8.5.23",
+    "sharp": "0.35.0"
   }
 }

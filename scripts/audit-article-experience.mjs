@@ -161,9 +161,9 @@ assert(
   },
 );
 
-assert(proxy.includes("`/blog-render/${encodeURIComponent(slug)}`"), {
+assert(!proxy.includes("NextResponse.rewrite"), {
   scope: "proxy",
-  issue: "blog proxy rewrite to blog-render route missing",
+  issue: "blog proxy must preserve exact custom article routes",
 });
 
 assert(proxy.includes('response.headers.set("x-robots-tag", "noindex, follow")'), {

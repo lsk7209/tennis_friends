@@ -1,5 +1,79 @@
 # EVIDENCE
 
+## Risk Notice - 2026-08-26 Improvements
+
+Task: Repair confirmed repository security, routing, indexing, dependency, encoding, and validation issues.
+
+Why Needed: Current code exposes a client-side password, permits unvalidated generated content to auto-push, contains actionable dependency advisories, and has deployment-dependent content behavior.
+
+Impact Scope: Local source, lockfile, CI workflow definitions, generated-index logic, audit scripts, Git index hygiene, and review documentation.
+
+Rollback: Revert the eventual implementation commit or restore individual files from commit `3f2b474`; `.omx` local files will not be deleted.
+
+Safer Alternative: Report findings without repair; rejected because the user explicitly authorized improvements.
+
+Approval Needed: No live/external mutation is authorized. Deployment, push, history rewrite, credential use, and database changes remain excluded.
+
+---
+
+## 2026-08-26 Improvement Validation
+
+| Command | Result | Notes |
+|---|---|---|
+| `npm run verify` | PASS | Deterministic audits, lint, typecheck, and Next.js runtime build; 2,982 static pages. |
+| `npm run audit:static-export` | PASS | Exact GitHub Pages environment; 2,982 pages and representative custom/dynamic/player/sitemap outputs asserted. |
+| `npm run audit:dependencies:production` | PASS | Zero production vulnerabilities. |
+| `npm run audit:generated-html-safety` | PASS | Unsafe tags, attributes, executable markers, template interpolation, fences, and unbalanced markup rejected; workflows cannot schedule or push. |
+| `npm run audit:source-encoding` | PASS | 690 files scanned, zero findings after 77 replacement-character repairs. |
+| `npm run audit:search-artifacts` | PASS | 1,305 pages, 64 tools, 971 articles, 260 players, one document. |
+| deterministic SHA-256 comparison | PASS | AI index and llms artifacts unchanged across identical consecutive generation. |
+| custom static export assertion | PASS | `tennis-western-grip-advantages` export contains its intended custom article body. |
+| `.omx` index/local check | PASS | Zero tracked paths; local operational files preserved. |
+| `git diff --check` | PASS | No whitespace errors; CRLF conversion notices only. |
+
+Review disposition:
+
+- Test-review HIGH findings for static-export proof and dependency gate were fixed and rerun.
+- Reliability MEDIUM partial-refresh finding was fixed with pre-write replacement assertions.
+- Accepted residual: patched Sharp/PostCSS overrides exceed Next's declared dependency ranges; both runtime and static-export builds pass, but platform-specific monitoring remains prudent.
+- Deferred by safety boundary: public Git-history purge/credential rotation and live Supabase RLS changes require separate authorization and external-state handling.
+
+---
+
+## 2026-08-26 Repository Download And Review
+
+Validation level: 3 (production build passed; no live smoke test requested or performed).
+
+| Command | Result | Notes |
+|---|---|---|
+| `git clone https://github.com/lsk7209/tennis_friends .` | PASS | Downloaded into `D:\web\tennisfrenscom`. |
+| `git rev-parse HEAD` / `git ls-remote origin refs/heads/main` | PASS | Both resolve to `3f2b4747b0dbd3e9ada012334646ba343615ed8a`. |
+| `npm ci` | PASS | 633 packages installed from lockfile. |
+| `npm run lint` | PASS | No ESLint findings; Babel reported four source modules above 500 KB. |
+| `npm run type-check` | PASS | TypeScript completed without errors. |
+| `npm run build` | PASS | Next.js 16.2.7 compiled and generated 2,990 static pages. |
+| `npm audit --json` | FAIL | 9 advisories: 6 high, 2 moderate, 1 low; direct Next.js dependency is below patched 16.2.11. |
+| `npm run verify` | FAIL | Stopped at analytics audit because bundled GSC/GA4 reports are 87.5-89.5 days stale and the redirect assertion contradicts current config syntax. |
+| `npm run audit:source-encoding` | FAIL | Seven source pages contain Unicode replacement characters. |
+| `npm run audit:active-content-encoding` | PASS | 51 active files, zero findings. |
+| `npm run audit:generated-content-quality` | FAIL | Five expected external `out/article-writer` manifests/reports are absent from the checkout. |
+| `npm run audit:ads-analytics:source` | FAIL | Audit expects local env slot values/providers; source has hard-coded slot fallbacks, so this is environment-sensitive. |
+
+No deployment, push, external submission, or application-code modification was performed. Audit-generated report and public-index changes were restored after validation.
+
+### Prioritized Review Findings
+
+1. HIGH: `NEXT_PUBLIC_ADMIN_PASSWORD` is bundled and compared in the client (`src/lib/admin/constants.ts:7`, `src/app/admin/page.tsx:1,29-33`); it is not server-side authentication.
+2. HIGH: Gemini-generated HTML/TSX is written and automatically pushed without a strict sanitizer/allowlist (`scripts/auto-content.js:544-615,681-727`, `.github/workflows/auto-content.yml:18-35,48-59`).
+3. HIGH: production dependency audit reports Next.js, Sharp, Nanoid, and DOMPurify advisories; the direct Next.js version is `16.2.7` (`package.json:85`).
+4. HIGH: the GitHub Pages static-export workflow conflicts with runtime rewrites, redirects, headers, and proxy expectations (`next.config.ts:4-30,72-145`, `.github/workflows/deploy.yml:34-55`).
+5. HIGH: the blog proxy rewrites known slugs to the shared renderer, but some custom static pages have no `blogContentMap` entry, creating deployment-dependent empty-body risk (`src/proxy.ts:28-41`, `src/app/blog/[slug]/page.tsx:172-181,367-397`).
+6. HIGH/MEDIUM: `.omx` tracks operational and OAuth-flow artifacts; no access/refresh token was observed, but repository history and credential exposure should be audited.
+7. MEDIUM: AI index generation reads an import-heavy source through a fallback that misses most published posts; current evidence shows 212 indexed articles versus 1,133 published/indexable posts (`scripts/generate-ai-index.js:22-103,306-375`).
+8. MEDIUM: seven source pages contain Unicode replacement characters, proven by the repository encoding audit.
+
+---
+
 ## Validation Level
 
 Level: 2

@@ -1,7 +1,7 @@
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
-import vm from "node:vm";
+import { pathToFileURL } from "node:url";
 
 const ROOT = process.cwd();
 const SITE_URL = "https://tennisfrens.com";
@@ -9,6 +9,9 @@ const BLOG_POSTS_PATH = path.join(ROOT, "src", "data", "blog-posts.js");
 const BLOG_QUALITY_PATH = path.join(ROOT, "src", "lib", "blog-quality.ts");
 const UTILITY_DIR = path.join(ROOT, "src", "app", "utility");
 const PLAYERS_DIR = path.join(ROOT, "src", "data", "players");
+const PLAYER_LEGACY_REDIRECTS = JSON.parse(
+  fs.readFileSync(path.join(PLAYERS_DIR, "legacy-redirects.json"), "utf8"),
+);
 const DOCS_DIR = path.join(ROOT, "public", "docs");
 const AI_INDEX_PATH = path.join(ROOT, "public", "ai-index.json");
 const LLMS_PATHS = [
@@ -26,68 +29,20 @@ function readStringField(block, field) {
   return bare ? bare[1] : "";
 }
 
-function readBlogPosts() {
-  const source = fs.readFileSync(BLOG_POSTS_PATH, "utf8");
-
-  try {
-    if (!source.includes("import ")) {
-      const executable = source.replace(
-        /export\s+const\s+allBlogPosts\s*=/,
-        "globalThis.allBlogPosts =",
-      );
-      const context = { globalThis: {} };
-      vm.createContext(context);
-      vm.runInContext(executable, context, { timeout: 1000 });
-
-      if (Array.isArray(context.globalThis.allBlogPosts)) {
-        return context.globalThis.allBlogPosts
-          .map((post) => ({
-            slug: post.slug || post.id,
-            title: post.title || "",
-            date: post.date || "",
-            scheduledAt: post.scheduledAt || "",
-          }))
-          .filter((post) => post.slug && post.title && post.date);
-      }
-    }
-  } catch {
-    // Fallback to source parsing below.
+async function readBlogPosts() {
+  const module = await import(pathToFileURL(BLOG_POSTS_PATH).href);
+  if (!Array.isArray(module.allBlogPosts)) {
+    throw new Error("src/data/blog-posts.js must export allBlogPosts");
   }
 
-  const posts = [];
-  const seen = new Set();
-  const objectMatches = source.matchAll(
-    /\{\s*(?:id|"id"):\s*["']([^"']+)["'][\s\S]*?\n\s*\}/g,
-  );
-  const slugMatches = source.matchAll(
-    /slug\s*:\s*["']([^"']+)["'][\s\S]*?title\s*:\s*["']([^"']+)["'][\s\S]*?excerpt\s*:\s*["']([^"']*)["'][\s\S]*?date\s*:\s*["']([^"']+)["']/g,
-  );
-
-  for (const match of objectMatches) {
-    const block = match[0];
-    const slug = readStringField(block, "slug") || readStringField(block, "id") || match[1];
-    const title = readStringField(block, "title");
-    const date = readStringField(block, "date");
-    const scheduledAt = readStringField(block, "scheduledAt");
-
-    if (!slug || !title || !date || seen.has(slug)) continue;
-    seen.add(slug);
-    posts.push({ slug, title, date, scheduledAt });
-  }
-
-  for (const match of slugMatches) {
-    const slug = match[1];
-    if (!slug || seen.has(slug)) continue;
-    seen.add(slug);
-    posts.push({
-      slug,
-      title: match[2],
-      date: match[4],
-      scheduledAt: "",
-    });
-  }
-
-  return posts.filter((post) => post.slug && post.title && post.date);
+  return module.allBlogPosts
+    .map((post) => ({
+      slug: post.slug || post.id,
+      title: post.title || "",
+      date: post.date || "",
+      scheduledAt: post.scheduledAt || "",
+    }))
+    .filter((post) => post.slug && post.title && post.date);
 }
 
 function readLowQualityBlogSlugs() {
@@ -111,10 +66,10 @@ function toPublishTime(post) {
   return Number.isNaN(timestamp) ? 0 : timestamp;
 }
 
-function getPublishedBlogSlugs() {
+async function getPublishedBlogSlugs() {
   const now = Date.now();
   const lowQuality = readLowQualityBlogSlugs();
-  return readBlogPosts()
+  return (await readBlogPosts())
     .filter((post) => toPublishTime(post) <= now)
     .filter((post) => !lowQuality.has(post.slug))
     .map((post) => post.slug)
@@ -147,7 +102,7 @@ function getPlayerSlugs() {
   }
 
   return [...players]
-    .filter((slug) => !slug.endsWith("-legacy"))
+    .filter((slug) => !PLAYER_LEGACY_REDIRECTS[slug])
     .sort();
 }
 
@@ -295,7 +250,7 @@ compareSets(
 
 compareSets(
   "article URLs",
-  getPublishedBlogSlugs().map((slug) => `${SITE_URL}/blog/${slug}`),
+  (await getPublishedBlogSlugs()).map((slug) => `${SITE_URL}/blog/${slug}`),
   pages.filter((page) => page.type === "article").map((page) => page.url).sort(),
   findings,
 );

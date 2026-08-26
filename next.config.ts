@@ -72,6 +72,7 @@ const nextConfig: NextConfig = {
   // Keep browser-side banner measurement same-origin; Vercel proxies the POST
   // to the dashboard service without requiring cross-origin preflight support.
   async rewrites() {
+    if (isStaticExport) return [];
     return [
       {
         source: "/api/banner-management/event",
@@ -83,6 +84,7 @@ const nextConfig: NextConfig = {
 
   // URL 정규화 리다이렉트
   async redirects() {
+    if (isStaticExport) return [];
     return [
       // Canonicalize www to the live non-www Vercel host to prevent host-split indexing.
       {
@@ -107,6 +109,7 @@ const nextConfig: NextConfig = {
 
   // 보안 헤더
   async headers() {
+    if (isStaticExport) return [];
     return [
       {
         source: "/(.*)",

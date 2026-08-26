@@ -1,5 +1,14 @@
 # TESTS
 
+## Current Review Checks (2026-08-26)
+
+- Dependency install: `npm ci`
+- Static quality: `npm run lint`, `npm run type-check`
+- Repository audit suite: `npm run verify` (contains build; external-write scripts are not invoked)
+- Git integrity: `git status --short --branch`, `git rev-parse HEAD`, `git ls-remote origin refs/heads/main`
+
+---
+
 ## Required Checks
 
 - Run/start: N/A; production HTTP smoke checks cover the affected static metadata route.

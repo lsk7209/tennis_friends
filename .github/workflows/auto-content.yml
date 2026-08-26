@@ -1,10 +1,6 @@
 name: Auto Content Generation
 
 on:
-  schedule:
-    # 주 2회(월·목) KST 06:00 = UTC 21:00 (전날). 빌드 비용 절감: 회당 BATCH_POSTS편을
-    # 묶어 생성·1회 push → 주 발행량은 유지하면서 Vercel 빌드를 주7→2회로 축소.
-    - cron: '0 21 * * 1,4'
   workflow_dispatch:
     inputs:
       force:
@@ -16,7 +12,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -45,16 +41,19 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: 커밋 & 푸시
+      - name: 검토용 패치 검증
         if: steps.check_changes.outputs.changed == 'true'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/app/blog/ src/data/blog-posts.js
-          git commit -m "feat(content): auto-generated blog posts [$(date +%Y-%m-%d)]"
-          git push
+          git diff --check
+          npm ci
+          npm run type-check
+          git add -N src/app/blog/ src/data/blog-posts.js
+          git diff --binary > generated-content.patch
 
-      - name: IndexNow 제출 (Bing·Naver)
+      - name: 검토용 패치 업로드
         if: steps.check_changes.outputs.changed == 'true'
-        run: node scripts/submit-indexnow.js
-        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-content-review
+          path: generated-content.patch
+          if-no-files-found: error

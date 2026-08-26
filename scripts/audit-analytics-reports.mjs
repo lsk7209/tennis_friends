@@ -4,7 +4,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
 const CANONICAL_HOST = "https://tennisfrens.com";
-const NON_WWW_HOST = `https://${"tennisfrens.com"}`;
+const NON_WWW_HOST = "https://www.tennisfrens.com";
 const MAX_REPORT_AGE_DAYS = 7;
 
 const requiredGscCsv = [
@@ -69,7 +69,7 @@ function assertRedirectMitigations() {
   const nextConfig = readProjectFile("next.config.ts");
 
   const hasNonWwwRedirect =
-    nextConfig.includes('has: [{ type: "host", value: "tennisfrens.com" }]') &&
+    nextConfig.includes('has: [{ type: "host", value: "www.tennisfrens.com" }]') &&
     nextConfig.includes('destination: "https://tennisfrens.com/:path*"') &&
     nextConfig.includes("permanent: true");
   assert(hasNonWwwRedirect, {

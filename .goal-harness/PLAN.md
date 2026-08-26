@@ -1,5 +1,27 @@
 # PLAN
 
+## Active Improvement Plan (2026-08-26)
+
+1. Record risk boundary and acceptance tests; obtain independent read-only security and routing/index designs.
+2. Implement locally verifiable security and workflow gates, dependency updates, routing/index corrections, encoding repairs, and audit separation.
+3. Run focused checks, full static validation, production build, dependency audit, and repair regressions.
+4. Run proportional read-only final review, resolve substantiated HIGH/BLOCKER findings, and finish state/evidence documents.
+
+Classification: large; domain profile: general; risk: R2 with security-sensitive code review. External/live actions remain prohibited.
+
+---
+
+## Current Review Plan (2026-08-26)
+
+1. Confirm checkout identity, cleanliness, instructions, and project structure.
+2. Run lockfile install and project-native static/build checks without deployment or external write operations.
+3. Review architecture/product maintainability and security/operations in separate read-only lanes.
+4. Consolidate prioritized findings, update evidence and project state, and report exact local run steps.
+
+Classification: medium; domain profile: general; risk: R1 read-only/local validation.
+
+---
+
 ## Classification
 
 - Size: medium

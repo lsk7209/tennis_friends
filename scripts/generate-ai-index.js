@@ -2,10 +2,10 @@
 
 const fs = require("fs");
 const path = require("path");
-const vm = require("vm");
+const { pathToFileURL } = require("url");
 
 const ROOT = path.join(__dirname, "..");
-const SITE_URL = "https://tennisfrens.com";
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com").replace(/\/$/, "");
 const BLOG_POSTS_PATH = path.join(ROOT, "src", "data", "blog-posts.js");
 const BLOG_QUALITY_PATH = path.join(ROOT, "src", "lib", "blog-quality.ts");
 const UTILITY_DIR = path.join(ROOT, "src", "app", "utility");
@@ -19,88 +19,24 @@ const AI_INDEX_PATH = path.join(ROOT, "public", "ai-index.json");
 const LLMS_PATH = path.join(ROOT, "public", "llms.txt");
 const LLMS_FULL_PATH = path.join(ROOT, "public", "llms-full.txt");
 
-function readBlogPosts() {
-  const source = fs.readFileSync(BLOG_POSTS_PATH, "utf8");
-  const evaluatedPosts = readBlogPostsByEvaluation(source);
-  if (evaluatedPosts.length > 0) return evaluatedPosts;
-
-  const objectMatches = source.matchAll(/\{\s*(?:id|"id"):\s*["']([^"']+)["'][\s\S]*?\n\s*\}/g);
-  const slugMatches = source.matchAll(/slug\s*:\s*["']([^"']+)["'][\s\S]*?title\s*:\s*["']([^"']+)["'][\s\S]*?excerpt\s*:\s*["']([^"']*)["'][\s\S]*?date\s*:\s*["']([^"']+)["']/g);
-  const posts = [];
-  const seen = new Set();
-
-  for (const match of objectMatches) {
-    const block = match[0];
-    const id = readStringField(block, "id") || match[1];
-    const slug = readStringField(block, "slug") || id;
-    const title = readStringField(block, "title");
-    const excerpt = readStringField(block, "excerpt");
-    const category = readStringField(block, "category");
-    const date = readStringField(block, "date");
-    const scheduledAt = readStringField(block, "scheduledAt");
-
-    if (!slug || !title || !date || seen.has(slug)) continue;
-
-    seen.add(slug);
-    posts.push({
-      id,
-      slug,
-      title,
-      excerpt: excerpt || title,
-      category: category || "테니스 가이드",
-      date,
-      scheduledAt,
-    });
+async function readBlogPosts() {
+  const moduleUrl = pathToFileURL(BLOG_POSTS_PATH).href;
+  const module = await import(moduleUrl);
+  if (!Array.isArray(module.allBlogPosts)) {
+    throw new Error("src/data/blog-posts.js must export allBlogPosts");
   }
 
-  for (const match of slugMatches) {
-    const slug = match[1];
-    if (!slug || seen.has(slug)) continue;
-
-    seen.add(slug);
-    posts.push({
-      id: slug,
-      slug,
-      title: match[2],
-      excerpt: match[3] || match[2],
-      category: "테니스 가이드",
-      date: match[4],
-      scheduledAt: "",
-    });
-  }
-
-  return posts;
-}
-
-function readBlogPostsByEvaluation(source) {
-  try {
-    if (source.includes("import ")) return [];
-
-    const executable = source.replace(
-      /export\s+const\s+allBlogPosts\s*=/,
-      "globalThis.allBlogPosts =",
-    );
-    const context = { globalThis: {} };
-    vm.createContext(context);
-    vm.runInContext(executable, context, { timeout: 1000 });
-
-    const posts = context.globalThis.allBlogPosts;
-    if (!Array.isArray(posts)) return [];
-
-    return posts
-      .map((post) => ({
-        id: post.id || post.slug,
-        slug: post.slug || post.id,
-        title: post.title || "",
-        excerpt: post.excerpt || post.title || "",
-        category: post.category || "테니스 가이드",
-        date: post.date || "",
-        scheduledAt: post.scheduledAt || "",
-      }))
-      .filter((post) => post.slug && post.title && post.date);
-  } catch {
-    return [];
-  }
+  return module.allBlogPosts
+    .map((post) => ({
+      id: post.id || post.slug,
+      slug: post.slug || post.id,
+      title: post.title || "",
+      excerpt: post.excerpt || post.title || "",
+      category: post.category || "테니스 가이드",
+      date: post.date || "",
+      scheduledAt: post.scheduledAt || "",
+    }))
+    .filter((post) => post.slug && post.title && post.date);
 }
 
 function readStringField(block, field) {
@@ -126,7 +62,10 @@ function getPublishedBlogPosts(posts) {
   const now = Date.now();
   return posts
     .filter((post) => toPublishTime(post) <= now)
-    .sort((a, b) => toPublishTime(b) - toPublishTime(a));
+    .sort(
+      (a, b) =>
+        toPublishTime(b) - toPublishTime(a) || a.slug.localeCompare(b.slug),
+    );
 }
 
 function readLowQualityBlogSlugs() {
@@ -303,8 +242,9 @@ function updateCountText(filePath, stats, today) {
   }
 }
 
+async function main() {
 const lowQualityBlogSlugs = readLowQualityBlogSlugs();
-const blogPosts = getPublishedBlogPosts(readBlogPosts()).filter(
+const blogPosts = getPublishedBlogPosts(await readBlogPosts()).filter(
   (post) => !lowQualityBlogSlugs.has(post.slug),
 );
 const utilityEntries = getUtilityEntries();
@@ -377,3 +317,9 @@ updateCountText(LLMS_FULL_PATH, stats, today);
 console.log(
   `AI index updated: ${stats.totalPages} pages, ${stats.tools} tools, ${stats.articles} articles, ${stats.playerProfiles} players`,
 );
+}
+
+main().catch((error) => {
+  console.error("Failed to generate AI index:", error);
+  process.exitCode = 1;
+});
