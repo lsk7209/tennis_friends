@@ -44,6 +44,7 @@ User-agent: Claude-Web
 User-agent: anthropic-ai
 User-agent: PerplexityBot
 User-agent: CCBot
+User-agent: cohere-ai
 Allow: /
 
 User-agent: Bytespider

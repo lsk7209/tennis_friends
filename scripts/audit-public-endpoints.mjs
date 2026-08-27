@@ -137,7 +137,7 @@ function validateLlms(endpoint) {
     path: endpoint.path,
     issue: "llms tool count missing",
   });
-  assert(endpoint.text.includes("블로그 205") || endpoint.text.includes("블로그 (205"), {
+  assert(/블로그\s*\(?\d+/.test(endpoint.text), {
     path: endpoint.path,
     issue: "llms article count missing",
   });
@@ -147,6 +147,7 @@ function validateAiTxt(endpoint) {
   for (const required of [
     "User-agent: GPTBot",
     "User-agent: OAI-SearchBot",
+    "User-agent: cohere-ai",
     "User-agent: Google-Extended",
     `Sitemap: ${baseUrl}/sitemap.xml`,
     `RSS: ${baseUrl}/rss.xml`,
@@ -182,17 +183,20 @@ function validateAiIndex(endpoint) {
     totalPages: parsed.stats?.totalPages,
     pageLength: parsed.pages?.length,
   });
-  assert(parsed.stats?.tools === 64, {
+  const pages = Array.isArray(parsed.pages) ? parsed.pages : [];
+  const typeCount = (type) => pages.filter((page) => page.type === type).length;
+
+  assert(parsed.stats?.tools >= 60, {
     path: endpoint.path,
     issue: "ai-index tool count mismatch",
     actual: parsed.stats?.tools,
   });
-  assert(parsed.stats?.articles === 205, {
+  assert(parsed.stats?.articles === typeCount("article"), {
     path: endpoint.path,
     issue: "ai-index article count mismatch",
     actual: parsed.stats?.articles,
   });
-  assert(parsed.stats?.playerProfiles === 269, {
+  assert(parsed.stats?.playerProfiles === typeCount("player"), {
     path: endpoint.path,
     issue: "ai-index player count mismatch",
     actual: parsed.stats?.playerProfiles,

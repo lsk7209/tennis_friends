@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import FAQSection from "@/components/seo/FAQSection";
 import {
@@ -87,6 +88,47 @@ export default function Home() {
       <JsonLd data={reviewSchema} id="homepage-app-schema" />
 
       <Hero />
+      <section
+        aria-labelledby="tennisfriends-answer-heading"
+        className="border-b border-court-line/20 bg-white px-6 py-12 dark:bg-court-ink"
+      >
+        <div className="mx-auto max-w-4xl">
+          <h2
+            id="tennisfriends-answer-heading"
+            className="text-2xl font-bold tracking-tight text-court-ink dark:text-white md:text-3xl"
+          >
+            TennisFriends에서는 무엇을 할 수 있나요?
+          </h2>
+          <div className="article-summary mt-5 space-y-4 text-base leading-8 text-gray-700 dark:text-gray-200">
+            <p>
+              TennisFriends는 테니스 동호인과 입문자가 자신의 현재 수준을
+              점검하고 다음 훈련 결정을 내릴 수 있도록 무료 진단 도구와 실전
+              가이드를 제공하는 사이트입니다. 대표 기능인
+              {" "}
+              <Link className="font-semibold underline" href="/utility/ntrp-test">
+                NTRP 실력 테스트
+              </Link>
+              는 경기 경험과 기술 수행 수준을 기준으로 참고 등급을 제시하며,
+              결과는 공식 대회 등급이나 코치의 평가를 대체하지 않습니다.
+            </p>
+            <p>
+              라켓과 스트링을 조정하려면
+              {" "}
+              <Link className="font-semibold underline" href="/utility/string-tension">
+                스트링 텐션 계산기
+              </Link>
+              를, 훈련 부담을 점검하려면
+              {" "}
+              <Link className="font-semibold underline" href="/utility/injury-risk">
+                부상 위험 체크
+              </Link>
+              를 이용할 수 있습니다. 각 결과에는 판단 근거와 관련 가이드를
+              함께 연결해 사용자가 수치만 보지 않고 실제 코트에서 적용할 수
+              있도록 구성했습니다.
+            </p>
+          </div>
+        </div>
+      </section>
       <LiveTicker />
       <ToolsMosaic />
       <CourtLines />

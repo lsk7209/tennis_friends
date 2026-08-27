@@ -54,7 +54,15 @@ function readLowQualityBlogSlugs() {
   );
 
   if (!match) return new Set();
-  return new Set([...match[1].matchAll(/"([^"]+)"/g)].map((item) => item[1]));
+  const lowQuality = new Set(
+    [...match[1].matchAll(/"([^"]+)"/g)].map((item) => item[1]),
+  );
+  const rewrittenMatch =
+    /QUALITY_REWRITTEN_BLOG_SLUGS\s*=\s*\[([\s\S]*?)\]\s*as const/.exec(source);
+  for (const item of rewrittenMatch?.[1].matchAll(/"([^"]+)"/g) ?? []) {
+    lowQuality.delete(item[1]);
+  }
+  return lowQuality;
 }
 
 function toPublishTime(post) {

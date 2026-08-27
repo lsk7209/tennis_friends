@@ -2,6 +2,7 @@ import JsonLd from "@/components/JsonLd";
 import {
   DEFAULT_CONTACT_EMAIL,
   DEFAULT_COUNTRY_NAME,
+  DEFAULT_SITE_DESCRIPTION,
   SITE_NAME,
   getSiteIconUrl,
   getSiteUrl,
@@ -20,7 +21,7 @@ export default function OrganizationSchema({
   name = SITE_NAME,
   url,
   logo,
-  description,
+  description = DEFAULT_SITE_DESCRIPTION,
   email = DEFAULT_CONTACT_EMAIL,
   sameAs = [],
 }: OrganizationSchemaProps) {
@@ -30,6 +31,7 @@ export default function OrganizationSchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
     name,
     url: url || siteUrl,
     logo: {
@@ -38,7 +40,7 @@ export default function OrganizationSchema({
       width: 32,
       height: 32,
     },
-    ...(description ? { description } : {}),
+    description,
     ...(sameAs.length > 0 && { sameAs }),
     contactPoint: {
       "@type": "ContactPoint",

@@ -1,5 +1,14 @@
 # EVIDENCE
 
+## 2026-08-27 SEO, GEO, and AEO Evidence
+
+- Two Luna/max read-only agents reviewed technical SEO and GEO/AEO; the primary agent owned edits and verification.
+- `npm run verify`: PASS, including zero production vulnerabilities, canonical/redirect/search, 1,465-entry sitemap, metadata/schema, 24-route indexability, content/link/performance, lint, typecheck, and 3,076-page build.
+- Follow-up indexability audit, typecheck, and build passed after the blog-render metadata override.
+- Generated HTML: NTRP result, string-tension test, and blog-render sample are `noindex, follow`; the public article is `index, follow`; each blog sample has one BreadcrumbList script; homepage contains the answer block.
+- AI index: 1,467 entries with 1,133 articles, 64 tools, 260 players, and one document.
+- No external service, deployment, Vercel setting, or Git remote was changed.
+
 ## 2026-08-27 Measurement And Product Improvement Evidence
 
 ### Post-push hosting discovery

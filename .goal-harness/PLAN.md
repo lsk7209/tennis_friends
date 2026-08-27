@@ -1,5 +1,14 @@
 # PLAN
 
+## SEO, GEO, and AEO Plan (2026-08-27)
+
+1. Run parallel Luna/max technical SEO and GEO/AEO read-only audits.
+2. Repair static indexability, AI inventory drift, entity/schema consistency, and homepage answer structure.
+3. Add regression checks and run focused audits, full verification, final build, and generated-HTML assertions.
+4. Record verified results and limitations in the harness, project state, and GEO report.
+
+Classification: large repository audit and multi-file R2 implementation; no external mutation or deployment.
+
 ## Active Measurement and Product Improvement Plan (2026-08-27)
 
 1. Establish current GitHub Pages output, GA4/GSC/GTM code paths, logged-in console availability, and a rollback-safe mutation boundary.

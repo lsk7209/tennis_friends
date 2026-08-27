@@ -1,5 +1,13 @@
 # GOAL
 
+## Active SEO, GEO, and AEO Goal (2026-08-27)
+
+Improve TennisFriends search and AI-answer readiness without bulk rewriting content: close static-export indexability gaps, align sitemap and AI discovery inventories, make entity markup consistent, and add an extractable homepage answer supported by internal links.
+
+Done conditions: result/state and internal-renderer routes are `noindex, follow`; normal articles remain indexable with one breadcrumb graph; schema entities use stable IDs and truthful organizational authorship; sitemap and AI index agree on 1,133 indexable blogs; crawler policy is aligned; audits, lint, typecheck, build, and generated-HTML checks pass.
+
+Non-goals: no bulk article rewrite, invented author identity, unverified `sameAs`, ranking promise, deployment, or Vercel mutation.
+
 ## Active Measurement and Product Improvement Goal (2026-08-27)
 
 Improve TennisFriends as a public, no-login tennis content and utility site by restoring trustworthy GA4/GSC measurement on GitHub Pages, applying only necessary GA4/GTM/GSC console settings, reducing the oversized blog index payload, repairing the NTRP advertising/statistics experience, and removing avoidable cache and motion risks.

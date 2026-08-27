@@ -26,6 +26,7 @@ export default function WebSiteSchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
     name,
     url: url || siteUrl,
     description,
@@ -40,6 +41,7 @@ export default function WebSiteSchema({
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
       name: SITE_NAME,
       url: siteUrl,
       logo: {

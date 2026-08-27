@@ -1,5 +1,15 @@
 # TESTS
 
+## SEO, GEO, and AEO Checks (2026-08-27)
+
+- `npm run audit:search-artifacts` — PASS: 1,467 entries, 1,133 articles, 64 tools, 260 players, one document.
+- `npm run audit:sitemap-coverage` — PASS: 1,465 URLs, 1,133 blogs, 63 utilities, 260 players.
+- `npm run audit:indexability-boundaries` — PASS: 24 state routes and blog-render boundary.
+- `npm run verify` — PASS: audits, lint, typecheck, build, 3,076 pages.
+- Follow-up `npm run type-check && npm run build` — PASS after blog-render repair.
+- Generated HTML — PASS: result/internal-renderer noindex; public article index; one breadcrumb JSON-LD.
+- `git diff --check` — PASS; line-ending notices only.
+
 ## Measurement And Product Improvement Checks (2026-08-27)
 
 - Full regression: `npm run verify` — PASS, 3,076 pages.

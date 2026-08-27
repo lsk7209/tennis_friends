@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generatedAt": "2026-06-02T03:26:59.736Z",
+  "generatedAt": "2026-08-27T03:43:44.876Z",
   "entryFiles": [
     "src/data/blog-content/index.ts",
     "src/data/blog-posts.js"
@@ -26,6 +26,7 @@
     "src/data/blog-content/part24-quality-rewrites.ts",
     "src/data/blog-content/part25-quality-rewrites.ts",
     "src/data/blog-content/part26-quality-rewrites.ts",
+    "src/data/blog-content/part29-approved-august-2026.ts",
     "src/data/blog-content/part3.ts",
     "src/data/blog-content/part4-new30.ts",
     "src/data/blog-content/part5-scheduled.ts",
@@ -36,6 +37,7 @@
     "src/data/blog-content/part8-bulk-03.ts",
     "src/data/blog-content/part8-bulk-04.ts",
     "src/data/blog-content/part9-scheduled-100.ts",
+    "src/data/blog-posts-approved-august-2026.js",
     "src/data/blog-posts-aw-300.js",
     "src/data/blog-posts-aw-part12.js",
     "src/data/blog-posts-aw-title100.js",

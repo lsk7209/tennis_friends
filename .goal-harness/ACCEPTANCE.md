@@ -1,5 +1,17 @@
 # ACCEPTANCE
 
+## SEO, GEO, and AEO Criteria (2026-08-27)
+
+| Criteria | Status | Evidence |
+|---|---|---|
+| Interactive result/state routes are excluded from indexing. | PASS | 24-route audit and representative generated HTML. |
+| Internal `/blog-render/*` duplicates are non-indexable. | PASS | Page metadata override outputs `noindex, follow`. |
+| Public articles remain indexable with one breadcrumb graph. | PASS | Representative output has `index, follow` and one BreadcrumbList script. |
+| AI index and sitemap use the same blog inventory. | PASS | Both report 1,133 indexable blogs. |
+| Entity markup is coherent and does not invent a person author. | PASS | Stable entity IDs and Organization authorship compile into output. |
+| Homepage provides a server-rendered answer-first block. | PASS | Generated homepage contains the heading and `article-summary`. |
+| Full repository verification succeeds. | PASS | Full verify, follow-up typecheck/build, and diff check passed. |
+
 ## Measurement And Product Improvement Criteria (2026-08-27)
 
 | Criteria | Status | Evidence |

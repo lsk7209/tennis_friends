@@ -47,6 +47,7 @@ export default function robots(): MetadataRoute.Robots {
           "anthropic-ai",
           "PerplexityBot",
           "CCBot",
+          "cohere-ai",
         ],
         allow: "/",
       },

@@ -1,4 +1,5 @@
 import JsonLd from "@/components/JsonLd";
+import { SITE_NAME, getSiteIconUrl, getSiteUrl } from "@/lib/site";
 
 interface BlogPostSchemaProps {
   title: string;
@@ -21,7 +22,8 @@ export default function BlogPostSchema({
   category = "테니스",
   readingTime,
 }: BlogPostSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com";
+  const siteUrl = getSiteUrl();
+  const siteIconUrl = getSiteIconUrl();
   const url = `${siteUrl}/blog/${slug}`;
   const imageUrl = image
     ? image.startsWith("http")
@@ -39,18 +41,20 @@ export default function BlogPostSchema({
     datePublished: date,
     dateModified: date,
     author: {
-      "@type": "Person",
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
       name: author,
-      url: siteUrl,
+      url: `${siteUrl}/about`,
     },
     publisher: {
       "@type": "Organization",
-      name: "TennisFriends",
+      "@id": `${siteUrl}/#organization`,
+      name: SITE_NAME,
       logo: {
         "@type": "ImageObject",
-        url: `${siteUrl}/logo.png`,
-        width: 512,
-        height: 512,
+        url: siteIconUrl,
+        width: 32,
+        height: 32,
       },
       url: siteUrl,
     },
@@ -69,9 +73,10 @@ export default function BlogPostSchema({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "TennisFriends",
+    "@id": `${siteUrl}/#organization`,
+    name: SITE_NAME,
     url: siteUrl,
-    logo: `${siteUrl}/logo.png`,
+    logo: siteIconUrl,
     description:
       "데이터로 똑똑하게, 테니스를 즐겁게. 테니스 실력 향상을 위한 모든 것을 제공합니다.",
     sameAs: [

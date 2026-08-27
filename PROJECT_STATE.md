@@ -7,9 +7,25 @@ TennisFriends is a public, no-login Next.js tennis content and utility site. Sup
 ## Current Work
 
 - Date: 2026-08-27
-- Goal: restore trustworthy analytics on the GitHub Pages artifact and improve the highest-value static-site UX paths.
-- Authorized external scope: authenticated GA4/GSC/GTM inspection, necessary measurement settings, commit, and GitHub push.
+- Goal: technical SEO, GEO, and AEO optimization with static indexability controls, aligned AI discovery, coherent entities, and answer-first homepage content.
+- Authorized external scope: none in this workstream; local source, generated artifacts, and verification only.
 - Deployment boundary: stop at `git push`; no Vercel project, deployment, domain, alias, or environment mutation.
+
+## SEO/GEO/AEO Work Completed
+
+- Added `noindex, follow` to 24 result/test/stats/leaderboard routes and internal `/blog-render/*` output, plus a regression audit.
+- Corrected AI-index filtering so sitemap and AI discovery agree on 1,133 indexable blogs.
+- Connected Organization, WebSite, publisher, and author entities with stable IDs; removed fictional Person authorship and duplicate breadcrumb generation.
+- Aligned AI crawler signals and added a server-rendered homepage answer block with contextual tool links and an NTRP limitation.
+- Added `GEO-ANALYSIS.md`; readiness is assessed at 80/100 with live AI citations and off-site mentions unverified.
+
+## SEO/GEO/AEO Validation
+
+- PASS: `npm run verify`, including all audits, lint, typecheck, and 3,076-page production build.
+- PASS: follow-up typecheck/build after blog-render repair.
+- PASS: sitemap 1,465 entries and AI index 1,467 entries; both contain 1,133 indexable blogs.
+- PASS: representative generated HTML robots, one-breadcrumb, stable entity ID, and homepage answer checks.
+- PASS: `git diff --check` with line-ending notices only.
 
 ## Implemented
 

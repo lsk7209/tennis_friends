@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-08-27 SEO, GEO, and AEO Optimization
+
+| Area | Change | Reason |
+|---|---|---|
+| Indexability | Added noindex to 24 state routes and internal blog renderer. | Prevent thin and duplicate indexing. |
+| Discovery | Fixed rewritten-blog filtering; regenerated AI artifacts with 1,133 articles. | Match sitemap inventory. |
+| Structured data | Added stable entity IDs, Organization authorship, real icon URLs, and one breadcrumb owner. | Improve entity coherence. |
+| AEO | Added a server-rendered homepage answer block. | Provide an extractable answer. |
+| AI policy | Aligned crawler directives and remote checks. | Prevent policy drift. |
+| Verification | Added indexability regression audit and GEO report. | Preserve proof. |
+
 ## 2026-08-27 Measurement And Public-Site Improvements
 
 | Area | Change | Reason |

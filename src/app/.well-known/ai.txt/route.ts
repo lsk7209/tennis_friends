@@ -44,6 +44,9 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: cohere-ai
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 

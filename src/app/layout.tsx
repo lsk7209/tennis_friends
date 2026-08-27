@@ -153,11 +153,14 @@ export const metadata: Metadata = {
     DaumBot: "index, follow, all",
     Daumoa: "index, follow, all",
     GPTBot: "index, follow",
+    "OAI-SearchBot": "index, follow",
     "ChatGPT-User": "index, follow",
     "Google-Extended": "index, follow",
     "anthropic-ai": "index, follow",
+    ClaudeBot: "index, follow",
     "Claude-Web": "index, follow",
     PerplexityBot: "index, follow",
+    "cohere-ai": "index, follow",
   },
 };
 

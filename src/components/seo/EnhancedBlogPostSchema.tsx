@@ -1,5 +1,4 @@
 import JsonLd from "@/components/JsonLd";
-import { generateBreadcrumbSchema } from "@/lib/seo/metadata-helpers";
 import {
   DEFAULT_CONTACT_EMAIL,
   DEFAULT_SITE_DESCRIPTION,
@@ -48,6 +47,7 @@ export default function EnhancedBlogPostSchema({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
     name: SITE_NAME,
     url: siteUrl,
     logo: {
@@ -64,13 +64,6 @@ export default function EnhancedBlogPostSchema({
     },
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: author,
-    url: authorUrl || siteUrl,
-  };
-
   const blogPostSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -80,12 +73,14 @@ export default function EnhancedBlogPostSchema({
     datePublished: date,
     dateModified: dateModified || date,
     author: {
-      "@type": "Person",
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
       name: author,
-      url: authorUrl || siteUrl,
+      url: authorUrl || `${siteUrl}/about`,
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
       name: SITE_NAME,
       logo: {
         "@type": "ImageObject",
@@ -104,20 +99,9 @@ export default function EnhancedBlogPostSchema({
     ...(articleBody && { articleBody }),
   };
 
-  const breadcrumbItems = [
-    { name: "홈", url: "/" },
-    { name: "블로그", url: "/blog" },
-  ];
-
-  if (title.trim()) {
-    breadcrumbItems.push({ name: title.trim(), url: `/blog/${slug}` });
-  }
-
-  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
-
   const combinedSchema = {
     "@context": "https://schema.org",
-    "@graph": [organizationSchema, personSchema, blogPostSchema, breadcrumbSchema],
+    "@graph": [organizationSchema, blogPostSchema],
   };
 
   return <JsonLd data={combinedSchema} id={`blog-post-schema-${slug}`} />;
