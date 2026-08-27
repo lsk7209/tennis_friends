@@ -3,7 +3,6 @@ import Image from "next/image";
 import BlogPostSchema from "@/components/seo/BlogPostSchema";
 import YmylDisclaimer from "@/components/YmylDisclaimer";
 import AuthorByline from "@/components/AuthorByline";
-import CafeBanner from "@/components/blog/CafeBanner";
 
 interface ArticleProps {
   title: string;
@@ -80,7 +79,6 @@ export default function Article({
       {date && <AuthorByline author={author} publishedAt={date} />}
       {ymylTopic && <YmylDisclaimer topic={ymylTopic} />}
       <div className="max-w-none">{children}</div>
-      <CafeBanner />
     </article>
   );
 }

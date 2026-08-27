@@ -1,5 +1,36 @@
 # GOAL
 
+## Active Naver Cafe Conversion Goal (2026-08-27)
+
+### Final Deliverable
+
+Make `https://cafe.naver.com/homecookie` the site's primary measurable destination through a consistent, accessible, truthful CTA system.
+
+### User Value
+
+Visitors can consume the article, player, or utility value they came for and then find the official TennisFriends Naver Cafe without searching for a hidden image banner.
+
+### Required Features
+
+- Primary event `naver_cafe_visit` with location, text, destination, and page-path properties.
+- Cafe CTA in the home hero, desktop header, mobile menu/navigation, footer, and one sitewide end-of-content section.
+- Safe new-tab behavior and accessible destination labels.
+- No unverified ranking, membership, benefit, testimonial, or urgency claim.
+- No duplicate page-level banners and no sitewide promotional banner on admin/privacy/terms routes; persistent navigation links remain available.
+
+### Non-Goals
+
+- No forced redirect, modal, form, Naver account automation, GA4 admin mutation, deployment, or invented downstream conversion claim.
+
+### Done Conditions
+
+- Source audit, lint, typecheck, full verify, exact GitHub Pages export, and generated HTML checks pass.
+- The funnel blueprint, harness evidence, and project state define the event denominator and unverified boundaries.
+
+### User-Visible Result
+
+The site clearly presents the Naver Cafe as the primary next step while keeping public content and tools usable without a gate.
+
 ## Active SEO, GEO, and AEO Goal (2026-08-27)
 
 Improve TennisFriends search and AI-answer readiness without bulk rewriting content: close static-export indexability gaps, align sitemap and AI discovery inventories, make entity markup consistent, and add an extractable homepage answer supported by internal links.

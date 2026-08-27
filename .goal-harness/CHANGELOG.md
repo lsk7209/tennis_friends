@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-08-27 Naver Cafe Primary Conversion
+
+| Area | Change | Reason |
+|---|---|---|
+| Conversion hierarchy | Made the approved Naver Cafe URL the primary home action and added persistent desktop/mobile/footer access. | Align the site with the owner's primary traffic objective. |
+| Sitewide CTA | Replaced the image banner with a truthful text CTA, rendered once before the affiliate banner on eligible pages. | Improve clarity, remove duplicate placement, and keep the primary action ahead of monetization. |
+| Measurement | Added the `naver_cafe_visit` event with CTA location, link text, destination URL, and page path. | Establish an attributable outbound-intent baseline. |
+| Claims and accessibility | Removed the unsupported “No.1” creative; added safe new-tab attributes and accessible destination labels. | Preserve trust and keyboard/screen-reader usability. |
+| Static/runtime boundaries | Added source/static audits and a base-path-aware hydrated route exclusion for admin and legal pages. | Prevent shared-layout leakage and GitHub Pages pathname regressions. |
+| Funnel contract | Added `CAFE-FUNNEL.md` with evidence, metric denominator, hypotheses, and downstream proof boundaries. | Separate verified outbound clicks from unverified Naver Cafe joins or member quality. |
+
 ## 2026-08-27 SEO, GEO, and AEO Optimization
 
 | Area | Change | Reason |

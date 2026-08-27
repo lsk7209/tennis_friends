@@ -1,5 +1,17 @@
 # TESTS
 
+## Naver Cafe Conversion Checks (2026-08-27)
+
+- `npm run audit:cafe-funnel` — PASS.
+- `npm run lint` — PASS.
+- `npm run type-check` — PASS.
+- `npm run verify` — PASS: all audits, lint, typecheck, and 3,076-page build.
+- `npm run audit:static-export` — PASS: exact GitHub Pages environment and 3,076-page export.
+- Generated home and NTRP-result HTML cafe URL/new-tab/rel/unsupported-banner checks — PASS.
+- Generated admin/privacy/terms HTML sitewide-banner exclusion checks — PASS.
+- Playwright GitHub Pages base-path smoke — PASS: home banner `1`, cafe links `5`, banner before affiliate; privacy banner `0`, persistent cafe links `3`.
+- Final `git diff --check` and worktree review — PASS; CRLF conversion notices only, no whitespace errors.
+
 ## SEO, GEO, and AEO Checks (2026-08-27)
 
 - `npm run audit:search-artifacts` — PASS: 1,467 entries, 1,133 articles, 64 tools, 260 players, one document.

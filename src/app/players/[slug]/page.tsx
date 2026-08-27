@@ -29,7 +29,6 @@ import { allBlogPosts } from "@/data/blog-posts";
 import RelatedContent from "@/components/RelatedContent";
 import FAQSchema from "@/components/seo/FAQSchema";
 import Image from "next/image";
-import CafeBanner from "@/components/blog/CafeBanner";
 import PlayerHexagonStats from "@/components/players/PlayerHexagonStats";
 import PlayerSearchAliasSection from "@/components/players/PlayerSearchAliasSection";
 
@@ -931,10 +930,6 @@ export default async function PlayerProfilePage({ params }: Props) {
           }
           return null;
         })()}
-      </div>
-
-      <div className="max-w-4xl mx-auto px-4">
-        <CafeBanner />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 mt-12">

@@ -1,5 +1,25 @@
 # EVIDENCE
 
+## 2026-08-27 Naver Cafe Primary-Conversion Evidence
+
+- Goal: make `https://cafe.naver.com/homecookie` the site's primary measurable destination without gating public content.
+- Cost-first routing: two Luna/max read-only agents independently audited CTA coverage/funnel structure and analytics/event integrity; the primary agent owned all edits, integration, and verification. No high-risk finding required Sol escalation.
+- Implemented locations: `home_hero`, `desktop_header`, `mobile_menu`, `mobile_bottom_nav`, `footer_links`, and `sitewide_bottom`.
+- Event contract: `naver_cafe_visit` with `cta_location`, `link_text`, `destination_url`, and `page_path`.
+- `npm run audit:cafe-funnel`: PASS with the exact destination and six tracked locations.
+- `npm run lint`: PASS with no ESLint findings; Babel only noted four existing source modules above 500 KB.
+- `npm run type-check`: PASS.
+- Final `npm run verify`: PASS, including zero production vulnerabilities, all SEO/content/performance audits, lint, typecheck, and a 3,076-page production build.
+- Final `npm run audit:static-export`: PASS in the exact GitHub Pages base-path environment with 3,076 pages.
+- Static HTML sample: home has four and NTRP result has three safe cafe anchors before hydration; every sampled anchor uses `_blank` and `noopener noreferrer`; the old banner image is absent. Admin/privacy/terms output contains no sitewide cafe-banner heading.
+- Playwright runtime smoke at `/tennis_friends/`: one hydrated sitewide banner, five cafe links, and the banner precedes the affiliate region.
+- Playwright runtime smoke at `/tennis_friends/privacy/`: zero sitewide banners and three persistent navigation/footer cafe links. The smoke exposed and verified the repair for base-path-prefixed `usePathname()` values.
+- Final Luna/max read-only review found no code BLOCKER/HIGH issue; it retained post-release GA4 receipt/key-event confirmation as a non-blocking external follow-up.
+- The only local-browser console error was the temporary static mount's root `/icon` 404; repository-path assets and the site favicon loaded successfully.
+- No deployment, Git push, GA4 admin mutation, Naver account action, Vercel command, or other external write occurred.
+
+Known measurement boundary: this site can prove outbound cafe intent after release. Cafe joins, member quality, and downstream activity require separate Naver Cafe evidence, and GA4 key-event marking remains an explicit external-admin action.
+
 ## 2026-08-27 SEO, GEO, and AEO Evidence
 
 - Two Luna/max read-only agents reviewed technical SEO and GEO/AEO; the primary agent owned edits and verification.

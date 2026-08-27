@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Moon, Sun, Menu, X } from 'lucide-react';
+import NaverCafeLink from '@/components/NaverCafeLink';
 
 const Header: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
@@ -134,6 +135,16 @@ const Header: React.FC = () => {
 
         {/* Right side buttons */}
         <div className="flex items-center gap-3">
+          <Button asChild variant="default" size="sm" className="hidden md:inline-flex">
+            <NaverCafeLink
+              ctaLocation="desktop_header"
+              linkText="네이버 카페"
+              aria-label="네이버 카페 테니스프렌즈 새 창에서 열기"
+            >
+              네이버 카페
+            </NaverCafeLink>
+          </Button>
+
           {/* Dark mode toggle */}
           <Button
             variant="ghost"
@@ -179,6 +190,15 @@ const Header: React.FC = () => {
                     </Link>
                   );
                 })}
+                <NaverCafeLink
+                  ctaLocation="mobile_menu"
+                  linkText="네이버 카페 방문하기"
+                  aria-label="네이버 카페 테니스프렌즈 새 창에서 열기"
+                  className="rounded-lg bg-accent-volt px-3 py-3 text-center font-bold text-court-ink"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  네이버 카페 방문하기
+                </NaverCafeLink>
               </div>
             </nav>
           </div>

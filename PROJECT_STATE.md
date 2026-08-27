@@ -7,9 +7,28 @@ TennisFriends is a public, no-login Next.js tennis content and utility site. Sup
 ## Current Work
 
 - Date: 2026-08-27
-- Goal: technical SEO, GEO, and AEO optimization with static indexability controls, aligned AI discovery, coherent entities, and answer-first homepage content.
+- Goal: make the TennisFriends Naver Cafe the site's primary measurable destination while preserving the completed SEO, GEO, AEO, utility, and content behavior.
 - Authorized external scope: none in this workstream; local source, generated artifacts, and verification only.
 - Deployment boundary: stop at `git push`; no Vercel project, deployment, domain, alias, or environment mutation.
+
+## Naver Cafe Conversion Work Completed
+
+- Centralized `https://cafe.naver.com/homecookie` in one tracked, accessible external-link component.
+- Made the cafe the homepage's primary CTA and added persistent desktop header, mobile menu, mobile bottom-navigation, and footer entry points.
+- Replaced the unsupported “No.1” image creative with a truthful sitewide text CTA that appears before the affiliate banner.
+- Removed duplicate article/player banner ownership and moved the sitewide CTA to the root layout.
+- Added `naver_cafe_visit` with `cta_location`, `link_text`, `destination_url`, and `page_path`.
+- Excluded the promotional sitewide banner from admin/privacy/terms after hydration while retaining persistent navigation links; the predicate handles root-hosted and `/tennis_friends` base-path URLs.
+- Added `CAFE-FUNNEL.md`, `audit:cafe-funnel`, static-export boundary checks, and harness evidence.
+
+## Naver Cafe Conversion Validation
+
+- PASS: final `npm run verify`, including all audits, lint, typecheck, zero production vulnerabilities, and a 3,076-page build.
+- PASS: final `npm run audit:static-export` in the exact GitHub Pages base-path environment, also covering 3,076 pages.
+- PASS: static home/NTRP HTML contains exact, safe cafe anchors and no legacy banner image; admin/privacy/terms HTML contains no sitewide banner heading.
+- PASS: Playwright home runtime shows one sitewide banner, five cafe links, and the cafe section before the affiliate region.
+- PASS: Playwright `/tennis_friends/privacy/` runtime shows zero sitewide banners and three persistent cafe links.
+- PASS: source audit confirms six attributed CTA locations and the agreed event properties.
 
 ## SEO/GEO/AEO Work Completed
 
@@ -59,6 +78,8 @@ TennisFriends is a public, no-login Next.js tennis content and utility site. Sup
 
 ## Risks And Boundaries
 
+- `naver_cafe_visit` measures outbound intent only; Naver Cafe membership, join quality, and downstream activity are not observable from this site's GA4.
+- GA4 key-event marking and a genuine post-release baseline remain unverified external-admin/production actions.
 - Local NTRP history is intentionally device/browser-local and is not a public leaderboard.
 - Static export ignores server-only redirects, headers, middleware, and API routes. GitHub Pages is a repository-path fallback; `tennisfrens.com` currently resolves to Vercel and must remain root-based.
 - Localhost cannot prove the remote AdSense script response; source/output audits prove loader placement, and post-push live observation remains separate.
@@ -66,6 +87,6 @@ TennisFriends is a public, no-login Next.js tennis content and utility site. Sup
 
 ## Next Actions
 
-1. Commit and push the verified GitHub Pages base-path repair to `main`.
-2. Verify the remote SHA and repository-path fallback after its workflow completes.
-3. Continue measurement observation in GA4/GSC; do not mutate Vercel.
+1. Review and commit/push this verified local change only when explicitly authorized; no deployment or remote write occurred in this workstream.
+2. After release, confirm a genuine `naver_cafe_visit` in GA4 and optionally mark it as a key event through an authorized GA4 admin session.
+3. Establish a stable baseline by page path and `cta_location` before testing alternate CTA copy; use separate Naver Cafe evidence for joins and member quality.

@@ -20,7 +20,7 @@ import { NtrpBand } from "./_components/home/ntrp-band";
 export const metadata: Metadata = {
   title: "TennisFriends - 테니스 실력 테스트",
   description:
-    "NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측, 플레이 스타일 진단 등 테니스 실력 향상을 위한 무료 도구와 테니스 가이드를 제공합니다.",
+    "NTRP 실력 테스트와 테니스 가이드를 확인하고 네이버 카페 테니스프렌즈에서 이야기를 이어가세요. 스트링 텐션, 부상 위험, 플레이 스타일 도구도 제공합니다.",
   keywords: [
     "테니스",
     "NTRP 테스트",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TennisFriends - 테니스 실력 테스트 & 분석 도구",
     description:
-      "NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 모든 것. 무료로 시작하세요.",
+      "테니스 가이드와 무료 도구를 확인하고 네이버 카페 테니스프렌즈로 이동해 카페 게시판을 확인하세요.",
     url: getAbsoluteUrl("/"),
     siteName: SITE_NAME,
     locale: DEFAULT_SITE_LOCALE,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TennisFriends - 테니스 실력 테스트",
     description:
-      "NTRP 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 무료 도구를 제공합니다.",
+      "테니스 가이드와 무료 도구를 확인하고 네이버 카페 테니스프렌즈로 이동하세요.",
     images: [getAbsoluteUrl("/opengraph-image")],
   },
   alternates: {

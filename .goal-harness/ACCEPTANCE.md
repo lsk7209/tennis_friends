@@ -1,5 +1,17 @@
 # ACCEPTANCE
 
+## Naver Cafe Conversion Criteria (2026-08-27)
+
+| Criteria | Status | Evidence |
+|---|---|---|
+| The approved Naver Cafe URL is the primary homepage CTA. | PASS | Static output and Playwright home smoke show the exact cafe URL as the hero's primary action. |
+| Desktop and mobile visitors can reach the cafe from persistent navigation. | PASS | Header, mobile menu/bottom navigation, and footer source audit; home runtime reports five cafe links. |
+| Every eligible public page has one sitewide end-of-content CTA. | PASS | Root layout owns one banner; Playwright reports one on home and zero on the excluded privacy route, including GitHub Pages base-path behavior. |
+| Each cafe click uses `naver_cafe_visit` with the agreed properties. | PASS | Source audit and typecheck. |
+| External links use safe new-tab attributes and accessible labels. | PASS | Static HTML inspection reports every sampled cafe link with `_blank` and `noopener noreferrer`; Playwright exposes the destination label. |
+| Unsupported “No.1” creative is not rendered. | PASS | Exact static-export audit and five-page HTML inspection find no legacy banner image. |
+| Existing SEO, utilities, content, analytics, and build behavior do not regress. | PASS | Final `npm run verify` and `npm run audit:static-export` pass across 3,076 pages. |
+
 ## SEO, GEO, and AEO Criteria (2026-08-27)
 
 | Criteria | Status | Evidence |

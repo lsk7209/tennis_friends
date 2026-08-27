@@ -1,30 +1,75 @@
-import Image from "next/image";
+"use client";
 
-const CAFE_BANNER = {
-  href: "https://cafe.naver.com/homecookie",
-  image: "/images/naver-cafe-tennisfriends-banner.png",
-  alt: "테니스 친구찾기 네이버 카페 바로가기",
-};
+import { ArrowUpRight } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { useSyncExternalStore } from "react";
+import NaverCafeLink from "@/components/NaverCafeLink";
 
-export default function CafeBanner() {
+const EXCLUDED_PATHS = new Set(["/admin", "/privacy", "/terms"]);
+const subscribeToHydration = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
+function isExcludedPath(pathname: string) {
+  const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+
+  return Array.from(EXCLUDED_PATHS).some(
+    (excludedPath) =>
+      normalizedPathname === excludedPath ||
+      normalizedPathname.endsWith(excludedPath),
+  );
+}
+
+interface CafeBannerProps {
+  ctaLocation?: string;
+}
+
+export default function CafeBanner({
+  ctaLocation = "sitewide_bottom",
+}: CafeBannerProps) {
+  const pathname = usePathname();
+  const isHydrated = useSyncExternalStore(
+    subscribeToHydration,
+    getClientSnapshot,
+    getServerSnapshot,
+  );
+
+  // Static export reuses the root layout markup across routes. Waiting until the
+  // client knows the real pathname prevents the banner from leaking into admin
+  // and legal-page HTML, while persistent header/footer cafe links stay static.
+  if (!isHydrated || isExcludedPath(pathname)) return null;
+
   return (
-    <div className="not-prose mt-12">
-      <a
-        href={CAFE_BANNER.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="테니스 친구찾기 네이버 카페로 이동"
-        className="group block overflow-hidden rounded-lg bg-black shadow-lg ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 dark:ring-gray-800"
-      >
-        <Image
-          src={CAFE_BANNER.image}
-          alt={CAFE_BANNER.alt}
-          width={2000}
-          height={360}
-          sizes="(max-width: 768px) 100vw, 1380px"
-          className="h-auto w-full transition duration-300 group-hover:brightness-110"
-        />
-      </a>
-    </div>
+    <section
+      aria-labelledby="naver-cafe-cta-heading"
+      className="not-prose border-y border-accent-volt/20 bg-court-ink px-6 py-12 text-white"
+    >
+      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent-volt">
+            TennisFriends on Naver Cafe
+          </p>
+          <h2
+            id="naver-cafe-cta-heading"
+            className="mt-2 text-2xl font-bold tracking-tight md:text-3xl"
+          >
+            테니스 이야기를 카페에서 이어가세요
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-white/70 md:text-base">
+            네이버 카페 테니스프렌즈로 이동해 카페 게시판을 확인할 수
+            있습니다.
+          </p>
+        </div>
+        <NaverCafeLink
+          ctaLocation={ctaLocation}
+          linkText="네이버 카페 방문하기"
+          aria-label="네이버 카페 테니스프렌즈 새 창에서 열기"
+          className="inline-flex h-12 shrink-0 items-center justify-center gap-2 bg-accent-volt px-6 text-sm font-bold text-court-ink transition hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-volt"
+        >
+          네이버 카페 방문하기
+          <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+        </NaverCafeLink>
+      </div>
+    </section>
   );
 }

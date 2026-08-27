@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import NaverCafeLink from "@/components/NaverCafeLink";
 
 const Footer: React.FC = () => {
   return (
@@ -19,6 +20,14 @@ const Footer: React.FC = () => {
 
           {/* Policy links */}
           <div className="flex gap-x-6 gap-y-2 flex-wrap justify-center">
+            <NaverCafeLink
+              ctaLocation="footer_links"
+              linkText="네이버 카페"
+              aria-label="네이버 카페 테니스프렌즈 새 창에서 열기"
+              className="text-sm font-bold !text-emerald-700 hover:underline dark:!text-accent-volt"
+            >
+              네이버 카페
+            </NaverCafeLink>
             <Link
               href="/about"
               prefetch={false}

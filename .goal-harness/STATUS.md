@@ -1,10 +1,10 @@
 # STATUS
 
 Current State: DONE
-Current Phase: 2026-08-27 SEO, GEO, and AEO optimization complete
-Completed: Parallel technical/GEO audits; 24 state-route noindex boundaries; blog-render noindex override; schema entity alignment; AI crawler policy alignment; sitemap/AI-index reconciliation; homepage answer block; full audits, lint, typecheck, production builds, and output HTML inspection.
+Current Phase: 2026-08-27 Naver Cafe primary-conversion implementation complete locally
+Completed: Two Luna/max audits; single event contract; tracked home/header/mobile/footer/sitewide CTA system; unsupported banner removal; root and GitHub Pages base-path route exclusions; source/static/runtime audits; full verification; harness and project-state handoff.
 In Progress: None.
-Remaining: Optional verified author/reviewer profiles, external brand-mention measurement, crawlable player pagination, and real content-modification dates.
+Remaining: External-only follow-up after an authorized release: observe a genuine GA4 event and optionally mark it as a key event; use Naver Cafe evidence for joins/member quality.
 Blocked: No.
-Last Verification: 2026-08-27 full verify passed with 3,076 pages; follow-up typecheck/build passed; representative generated HTML robots and JSON-LD checks passed.
-Next Action: Review the local diff, then commit/push only if explicitly requested.
+Last Verification: 2026-08-27 final `npm run verify` passed with 3,076 pages; exact GitHub Pages static export and Playwright base-path smoke passed; final Luna review found no BLOCKER/HIGH issue.
+Next Action: Await explicit authorization before commit/push; no deployment or external mutation occurred.

@@ -14,6 +14,7 @@ import Tracking from "@/components/Tracking";
 import AdSense from "@/components/AdSense";
 import MotionPreferences from "@/components/MotionPreferences";
 import CoupangAffiliateBanner from "@/components/affiliate/CoupangAffiliateBanner";
+import CafeBanner from "@/components/blog/CafeBanner";
 import GAProvider from "@/components/analytics/GAProvider";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
@@ -214,6 +215,7 @@ export default function RootLayout({
           <div className="layout-container flex h-full grow flex-col">
             <Header />
             <main className="flex-1 pb-16 md:pb-0">{children}</main>
+            <CafeBanner />
             <CoupangAffiliateBanner />
             <Footer />
             <MobileNav />

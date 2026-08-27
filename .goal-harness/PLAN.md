@@ -1,5 +1,17 @@
 # PLAN
 
+## Naver Cafe Conversion Plan (2026-08-27)
+
+Status: implementation and local verification complete; external release and analytics-admin actions remain outside this workstream.
+
+1. Audit current CTA coverage and analytics patterns in two non-overlapping Luna/max read-only lanes.
+2. Define the primary conversion, evidence boundary, page hierarchy, event contract, and rollback-safe scope.
+3. Implement one tracked external-link component and use it across home, desktop/mobile navigation, footer, and sitewide end-of-content CTA.
+4. Remove unsupported creative claims and page-level duplicate banners; keep legal/admin pages free from promotion.
+5. Add deterministic source and static-export checks, run full validation, and record evidence.
+
+Classification: medium-to-large R2 conversion implementation; domain profile: general/web. Rollback is a normal Git revert. No external account or deployment mutation.
+
 ## SEO, GEO, and AEO Plan (2026-08-27)
 
 1. Run parallel Luna/max technical SEO and GEO/AEO read-only audits.

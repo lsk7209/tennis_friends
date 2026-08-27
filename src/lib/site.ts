@@ -1,7 +1,7 @@
 export const SITE_NAME = "TennisFriends";
 export const DEFAULT_SITE_URL = "https://tennisfrens.com";
 export const DEFAULT_SITE_DESCRIPTION =
-  "테니스 동호인과 입문자를 위한 기술, 전술, 장비, 훈련 정보를 실전 기준으로 정리하는 테니스 콘텐츠와 도구 플랫폼입니다.";
+  "테니스 동호인과 입문자를 위한 기술, 전술, 장비, 훈련 정보와 무료 도구를 제공하고 네이버 카페 테니스프렌즈로 연결하는 테니스 플랫폼입니다.";
 export const DEFAULT_SITE_LOCALE = "ko_KR";
 export const DEFAULT_SITE_LANGUAGE = "ko-KR";
 export const DEFAULT_CONTACT_EMAIL = "contact@tennisfrens.com";

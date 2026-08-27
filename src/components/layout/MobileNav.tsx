@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Settings, BookOpen, Trophy, Home } from 'lucide-react';
+import { Settings, BookOpen, Trophy, Home, MessageCircle } from 'lucide-react';
+import NaverCafeLink from '@/components/NaverCafeLink';
 
 const navItems = [
   { href: '/', icon: Home, label: '홈' },
@@ -41,6 +42,15 @@ export default function MobileNav() {
             </Link>
           );
         })}
+        <NaverCafeLink
+          ctaLocation="mobile_bottom_nav"
+          linkText="카페"
+          aria-label="네이버 카페 테니스프렌즈 새 창에서 열기"
+          className="flex flex-1 flex-col items-center justify-center py-2 !text-emerald-700 dark:!text-accent-volt"
+        >
+          <MessageCircle className="h-5 w-5" aria-hidden="true" />
+          <span className="mt-1 text-[10px] font-bold">카페</span>
+        </NaverCafeLink>
       </div>
     </nav>
   );

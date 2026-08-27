@@ -63,6 +63,7 @@ export const TRACKING_EVENTS = {
   SEARCH_PERFORMED: "search_performed",
   BLOG_POST_VIEWED: "blog_post_viewed",
   PLAYER_PROFILE_VIEWED: "player_profile_viewed",
+  NAVER_CAFE_VISIT: "naver_cafe_visit",
 } as const;
 
 // 전역 gtag 타입 선언 (GA4 공식 시그니처 포괄)

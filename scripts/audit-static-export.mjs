@@ -28,6 +28,10 @@ const required = [
   "out/blog/tennis-western-grip-advantages/index.html",
   "out/blog/t01-tennis-grip-size/index.html",
   "out/players/carlos-alcaraz/index.html",
+  "out/utility/ntrp-test/result/index.html",
+  "out/admin/index.html",
+  "out/privacy/index.html",
+  "out/terms/index.html",
   "out/sitemap.xml",
 ];
 for (const relativePath of required) {
@@ -39,6 +43,38 @@ for (const relativePath of required) {
 const home = fs.readFileSync(path.join(ROOT, "out/index.html"), "utf8");
 if (!home.includes("G-W1K51D8SBX") || !home.includes("googletagmanager.com/gtag/js")) {
   throw new Error("Static export is missing the GA4 loader");
+}
+
+const cafeUrl = "https://cafe.naver.com/homecookie";
+const resultPage = fs.readFileSync(
+  path.join(ROOT, "out/utility/ntrp-test/result/index.html"),
+  "utf8",
+);
+for (const [label, html] of [
+  ["home", home],
+  ["NTRP result", resultPage],
+]) {
+  if (!html.includes(cafeUrl)) {
+    throw new Error(`Static ${label} output is missing the Naver Cafe link`);
+  }
+  if (!html.includes('target="_blank"') || !html.includes("noopener noreferrer")) {
+    throw new Error(`Static ${label} output is missing safe external-link attributes`);
+  }
+  if (html.includes("naver-cafe-tennisfriends-banner.png")) {
+    throw new Error(`Static ${label} output still renders the unsupported No.1 banner`);
+  }
+}
+
+const sitewideCafeHeading = "테니스 이야기를 카페에서 이어가세요";
+for (const relativePath of [
+  "out/admin/index.html",
+  "out/privacy/index.html",
+  "out/terms/index.html",
+]) {
+  const html = fs.readFileSync(path.join(ROOT, relativePath), "utf8");
+  if (html.includes(sitewideCafeHeading)) {
+    throw new Error(`Static export leaked the sitewide cafe banner into ${relativePath}`);
+  }
 }
 
 const blogIndex = fs.readFileSync(path.join(ROOT, "out/blog/index.html"), "utf8");

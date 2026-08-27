@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Calendar, Clock, Share2 } from "lucide-react";
-import CafeBanner from "@/components/blog/CafeBanner";
 import RelatedContent, {
   type RelatedContentItem,
 } from "@/components/RelatedContent";
@@ -399,8 +398,6 @@ export default async function BlogPostPage({ params }: Props) {
         {ARTICLE_BOTTOM_AD_SLOT && (
           <AdSenseSlot slot={ARTICLE_BOTTOM_AD_SLOT} label="본문 하단 광고" />
         )}
-
-        <CafeBanner />
 
         {enrichedPost.tags && enrichedPost.tags.length > 0 && (
           <section aria-label="Tags" className="mt-8 flex flex-wrap gap-2">
