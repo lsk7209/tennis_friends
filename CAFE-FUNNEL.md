@@ -1,6 +1,6 @@
 # TennisFriends to Naver Cafe Funnel
 
-Date: 2026-08-27
+Date: 2026-08-28
 
 ## Decision summary
 
@@ -49,7 +49,7 @@ Date: 2026-08-27
 
 | Stage | Entry | Job | Promise | Primary CTA | Friction | Success event | Next state |
 |---|---|---|---|---|---|---|---|
-| Organic landing | Search visitor opens an article, profile, tool, or home | Deliver the promised tennis information | Useful content remains available without a gate | Continue reading or use the tool | Trust is initially low | Engaged page view | Content/tool stage |
+| Organic landing | Search visitor opens an article, profile, tool, or home | Deliver the promised tennis information | Useful content remains available without a gate | Continue reading or use the tool | Trust is initially low | Page view, `search_performed`, or `tool_started` | Content/tool stage |
 | Consideration | Visitor has seen useful content or a result | Explain the relationship to the cafe | Continue to TennisFriends on Naver Cafe | 네이버 카페 방문하기 | External destination and new tab | `naver_cafe_visit` | Naver Cafe |
 | Persistent access | Visitor wants the cafe before reaching page end | Make the primary destination easy to find | Direct access from header/mobile navigation | 네이버 카페 / 카페 | Navigation competition | `naver_cafe_visit` by location | Naver Cafe |
 | Not ready | Visitor ignores the cafe CTA | Preserve value and trust | Keep all public content usable | Internal content/tool link | No forced signup | Continued engagement | Later CTA exposure |
@@ -59,7 +59,7 @@ Date: 2026-08-27
 1. Header: visible desktop cafe button plus mobile-menu cafe button.
 2. Homepage hero: cafe visit is the primary CTA; NTRP test is secondary.
 3. Mobile bottom navigation: dedicated cafe destination.
-4. Sitewide end-of-content section: after hydration, the cafe CTA appears once after the main content on eligible pages; admin, privacy, and terms routes are excluded.
+4. Sitewide end-of-content section: the cafe CTA is present in static HTML once after the main content on eligible pages; admin, privacy, and terms routes are excluded.
 5. Footer: persistent textual cafe link.
 6. Unsupported “No.1” banner creative is no longer rendered.
 
@@ -76,6 +76,15 @@ Date: 2026-08-27
 | Exclusions | Internal test traffic and known bots where configured in GA4 |
 | Primary rate | Unique users with `naver_cafe_visit` / eligible users |
 | Guardrails | Engagement, tool completion, content read completion, and accidental repeat clicks |
+
+Supporting events use `search_performed(search_term, result_count, page_path)`, `tool_started(tool_slug, source_path, destination_path)`, and the existing genuine `test_completed(test_type, page_path)` contract. Search events are deduplicated within the active client runtime. `tool_started` is a navigation-intent event, while `test_completed` remains the completion event; they must not be treated as interchangeable.
+
+For reporting, use session- or user-level denominators rather than raw click totals:
+
+- Search continuation rate = sessions with a search-result selection / sessions with `search_performed`.
+- Tool start rate = sessions with `tool_started` / eligible organic landing sessions.
+- Tool completion rate = users with `test_completed` / users with `tool_started`, segmented by `tool_slug` or `test_type` only where the mapping is explicit.
+- Cafe outbound rate = unique users with `naver_cafe_visit` / eligible organic landing users.
 
 Do not mark the funnel successful from clicks alone. The site can prove outbound intent; cafe joins and member quality require separate Naver Cafe evidence.
 

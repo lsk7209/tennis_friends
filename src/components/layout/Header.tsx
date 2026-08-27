@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Moon, Sun, Menu, Search, X } from 'lucide-react';
 import NaverCafeLink from '@/components/NaverCafeLink';
 
 const Header: React.FC = () => {
@@ -68,6 +68,7 @@ const Header: React.FC = () => {
     { href: '/utility/', label: '유틸리티' },
     { href: '/blog', label: '블로그' },
     { href: '/players', label: '테니스선수' },
+    { href: '/search', label: '검색' },
   ];
 
   // 현재 경로에 따라 활성 상태 결정
@@ -80,6 +81,9 @@ const Header: React.FC = () => {
     }
     if (href === '/players') {
       return pathname.startsWith('/players');
+    }
+    if (href === '/search') {
+      return pathname.startsWith('/search');
     }
     return false;
   };
@@ -122,6 +126,9 @@ const Header: React.FC = () => {
                   className={`font-bold transition-colors !text-black dark:!text-white hover:opacity-70`}
                 >
                   {item.label}
+                  {item.href === '/search' && (
+                    <Search className="ml-1 inline h-3.5 w-3.5" aria-hidden="true" />
+                  )}
                 </Link>
                 {
                   active && (
@@ -187,6 +194,9 @@ const Header: React.FC = () => {
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
+                      {item.href === '/search' && (
+                        <Search className="ml-2 inline h-4 w-4" aria-hidden="true" />
+                      )}
                     </Link>
                   );
                 })}

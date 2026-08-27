@@ -1,5 +1,35 @@
 # ACCEPTANCE
 
+## 2026-08-28 Remaining Search Inventory And Measurement Acceptance
+
+- PASS: all 54 physical low-quality blog routes are absent from the sitemap and AI index and emit `noindex, follow` in generated HTML.
+- PASS: 23 page-level `robots.index: true` conflicts were corrected and are guarded by the sitemap coverage audit.
+- PASS: utility entry clicks emit `tool_started`; repeated rendering does not duplicate `search_performed` for an unchanged query/result set.
+- PASS: `npm run audit:sitemap-coverage`, `npm run audit:cafe-funnel`, `npm run type-check`, `git diff --check`, and `npm run audit:static-export` completed successfully.
+- BOUNDED: duplicate-intent consolidation remains an editorial decision; no commit, push, deployment, Vercel mutation, or analytics-admin mutation occurred.
+
+## 2026-08-27 Search Acquisition And Conversion Acceptance
+
+- PASS: Qualified static blog, player, and utility landing pages contain a contextual Naver Cafe CTA; excluded admin/legal pages do not.
+- PASS: Site search is globally reachable, records query/result count and result selection, and provides useful zero-result next steps.
+- PASS: Homepage NTRP copy matches the 15-question flow.
+- PASS: Admin and quiz state/result routes emit `noindex, follow`; named AI crawlers receive the shared private-path disallows.
+- PASS: Privacy copy matches the public no-login, GA4, and bounded local-browser-storage implementation.
+- PASS: lint, typecheck, production build, exact GitHub Pages export, and generated-output smoke checks completed successfully.
+- BOUNDED: public production still reflects an earlier release; Git push, deployment, GA4 admin changes, and search-engine submissions were not authorized.
+- FOLLOW-UP: physical blog routes outside the data-driven inventory require an editorial canonical/merge decision before safe automatic consolidation.
+
+## Cafe-First Ad-Free Content Criteria (2026-08-27)
+
+| Criteria | Status | Evidence |
+|---|---|---|
+| Public pages ship no AdSense or affiliate advertising UI/script/configuration. | PASS | Source and generated-output audits find no active advertising marker; ad components and `public/ads.txt` are removed. |
+| GA4 and `naver_cafe_visit` remain functional after ad removal. | PASS | Ad-free and cafe-funnel audits, typecheck, generated HTML, and browser link inspection pass. |
+| The reported article renders its comparison data accessibly without raw Markdown separators or pipe-delimited prose. | PASS | All 29 known tables convert; representative output/runtime contains four semantic tables and zero raw separators. |
+| A single realistic AI-image pilot is truthful, local, optimized, accessible, and compatible with both hosting paths. | PASS | 1600x900 local WebP is 77,910 bytes with Korean alt/caption and explicit dimensions; exact export and browser load pass under `/tennis_friends`. |
+| Existing SEO/GEO/AEO, utilities, content inventory, and static export do not regress. | PASS | Full verify and exact 3,076-page GitHub Pages export pass. |
+| Documentation records the selective image policy and unverified post-release measurement boundary. | PASS | Harness and `PROJECT_STATE.md` distinguish the completed local work from later push/GA4 confirmation. |
+
 ## Naver Cafe Conversion Criteria (2026-08-27)
 
 | Criteria | Status | Evidence |
@@ -32,7 +62,7 @@
 | Current GA4/GSC/GTM state is inspected and unrelated GTM state is preserved. | PASS | Authenticated console evidence recorded; GTM container belongs to another domain and was not changed. |
 | Blog index is static, paginated, crawlable, and materially smaller. | PASS | 95 static pages; public page 2 browser smoke passed; exported HTML reduced from about 874 KB to 111 KB. |
 | NTRP copied result URLs do not create false completions or shared statistics. | PASS | Unique same-session token contract and focused audit pass; UI labels records as local-only. |
-| AdSense loader is mounted once and the NTRP result slot renders. | PASS | Source audit and browser DOM smoke report one visible slot. |
+| Historical advertising baseline (superseded by cafe-first decision). | SUPERSEDED | The 2026-08-27 active criteria require advertising removal. |
 | Ordinary visits do not clear all caches or unregister service workers. | PASS | Global cache reset component and mount removed. |
 | Reduced-motion preference is honored. | PASS | Root `MotionConfig`, CSS, counter, and ticker handling compile and pass focused review. |
 | Full verification and exact static export pass. | PASS | `npm run verify` and `npm run audit:static-export` passed with 3,076 pages. |

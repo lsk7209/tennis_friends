@@ -33,7 +33,7 @@ export const metadata = {
     description: "전체 선수의 10%에 불과한 왼손잡이와의 대결, 낯선 서브 궤적과 스핀에 당황하지 마세요.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

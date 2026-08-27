@@ -26,7 +26,7 @@ export const metadata = {
     description: '테니스 경기 중 흔들리지 않는 멘탈 루틴. 호흡, 시선, 루틴, 리듬을 통해 자신감과 집중력을 높이는 심리 관리법.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

@@ -13,7 +13,7 @@ export function NtrpBand() {
             당신의 NTRP는?
           </h2>
           <p className="text-white/50 mt-3 max-w-md text-sm leading-relaxed">
-            10개 질문, 5분이면 충분합니다. 국제 표준 NTRP 등급으로 내 실력을
+            15개 질문, 약 5분이면 충분합니다. NTRP 기준을 참고해 내 실력을
             객관적으로 확인하세요.
           </p>
         </div>

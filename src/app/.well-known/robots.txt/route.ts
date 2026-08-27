@@ -46,6 +46,9 @@ User-agent: PerplexityBot
 User-agent: CCBot
 User-agent: cohere-ai
 Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/auth/
 
 User-agent: Bytespider
 Disallow: /

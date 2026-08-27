@@ -26,7 +26,7 @@ export const metadata = {
     description: '겨울 테니스 실내 코트에서 스윙 감각과 스피드를 유지하는 7가지 루틴.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

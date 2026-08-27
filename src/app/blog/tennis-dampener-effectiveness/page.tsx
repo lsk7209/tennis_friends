@@ -30,7 +30,7 @@ export const metadata = {
     description: "작은 고무 조각 하나가 타구감을 바꿉니다. 엘보 방지 효과에 대한 진실과 다양한 댐퍼 종류 비교.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

@@ -26,7 +26,7 @@ export const metadata = {
     description: '하드·클레이·올코트별 아웃솔 차이, 평발/요족 맞춤 인솔, 지역별 기후 조건과 교체 주기까지 완전 정리.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

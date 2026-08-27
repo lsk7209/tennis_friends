@@ -11,6 +11,7 @@ const FILES = {
   blogPage: "src/app/blog/page.tsx",
   blogContent: "src/app/blog/BlogIndexPageContent.tsx",
   articlePage: "src/app/blog/[slug]/page.tsx",
+  articleHtml: "src/lib/article-html.mjs",
   playerPage: "src/app/players/[slug]/page.tsx",
   playerTemplate: "src/templates/players/PlayerPageTemplate.tsx",
   relatedContent: "src/components/RelatedContent.tsx",
@@ -33,6 +34,7 @@ const design = readProjectFile(FILES.design);
 const blogPage = readProjectFile(FILES.blogPage);
 const blogContent = readProjectFile(FILES.blogContent);
 const articlePage = readProjectFile(FILES.articlePage);
+const articleHtml = readProjectFile(FILES.articleHtml);
 const playerPage = readProjectFile(FILES.playerPage);
 const playerTemplate = readProjectFile(FILES.playerTemplate);
 const relatedContent = readProjectFile(FILES.relatedContent);
@@ -67,18 +69,14 @@ assert(
 );
 
 assert(
-  articlePage.includes('class="table-wrapper"') &&
-    articlePage.includes("MIDDLE_AD_AFTER_HEADING_COUNT"),
+  articlePage.includes("normalizeArticleHtml") &&
+    articleHtml.includes('class="table-wrapper"') &&
+    articlePage.includes("__html: processedContent"),
   {
     scope: "article layout",
-    issue: "article detail needs mobile-safe tables and controlled middle ad split",
+    issue: "article detail needs mobile-safe tables and uninterrupted content rendering",
   },
 );
-
-assert((articlePage.match(/<AdSenseSlot/g) || []).length >= 3, {
-  scope: "article ads",
-  issue: "article detail should keep top, middle, and bottom ad placements",
-});
 
 assert(!playerTemplate.includes("bg-gradient-to-br"), {
   scope: "player template",

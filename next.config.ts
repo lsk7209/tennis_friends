@@ -72,19 +72,6 @@ const nextConfig: NextConfig = {
   compress: true,
   staticPageGenerationTimeout: 180,
 
-  // Keep browser-side banner measurement same-origin; Vercel proxies the POST
-  // to the dashboard service without requiring cross-origin preflight support.
-  async rewrites() {
-    if (isStaticExport) return [];
-    return [
-      {
-        source: "/api/banner-management/event",
-        destination:
-          "https://multi-dashboard-one.vercel.app/api/banner-management/event",
-      },
-    ];
-  },
-
   // URL 정규화 리다이렉트
   async redirects() {
     if (isStaticExport) return [];
@@ -153,7 +140,7 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://multi-dashboard-one.vercel.app https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://www.googletagmanager.com https://www.google-analytics.com https://www.googletagservices.com https://www.googleadservices.com https://adservice.google.com https://adservice.google.co.kr; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://multi-dashboard-one.vercel.app https://www.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://csi.gstatic.com https://cdn.jsdelivr.net; frame-src https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://www.google.com;",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://cdn.jsdelivr.net; frame-src https://www.google.com;",
           },
         ],
       },

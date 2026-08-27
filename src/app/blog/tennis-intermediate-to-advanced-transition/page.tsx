@@ -26,7 +26,7 @@ export const metadata = {
     description: '중급자는 기술로는 충분하지만, 운영력에서 한계를 느낀다. \'스윙의 일관성\'과 \'포인트 설계\'가 상급자의 문을 연다.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

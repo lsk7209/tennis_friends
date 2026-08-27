@@ -28,7 +28,7 @@ export const metadata = {
     description: '발리는 힘이 아니라 반응의 기술이다. 네트 앞 1초 안에 리듬을 잡는 순간, 승부는 이미 결정된다.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

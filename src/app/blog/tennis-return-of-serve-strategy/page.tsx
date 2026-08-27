@@ -25,7 +25,7 @@ export const metadata = {
     description: '기회의 시작은 리턴입니다. 리턴이 안정되는 순간 모든 게임이 바뀝니다.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

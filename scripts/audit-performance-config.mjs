@@ -71,7 +71,6 @@ for (const [route, cacheToken] of [
 
 for (const origin of [
   "https://cdn.jsdelivr.net",
-  "https://pagead2.googlesyndication.com",
   "https://www.googletagmanager.com",
 ]) {
   assert(

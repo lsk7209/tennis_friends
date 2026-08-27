@@ -1,6 +1,70 @@
 # GOAL
 
-## Active Naver Cafe Conversion Goal (2026-08-27)
+## Active Search Acquisition And Conversion Goal (2026-08-27)
+
+### Final Deliverable
+
+Improve the current local TennisFriends site so qualified search visitors can discover the right indexable landing page, receive a clear answer or tool path, and reach the primary measurable destination, the TennisFriends Naver Cafe, without weakening the public no-login product or the existing static-host contracts.
+
+### User Value
+
+Search visitors land on trustworthy tennis guidance or utilities, can continue into the most relevant next action, and encounter a consistent, measurable Cafe path after receiving value.
+
+### Required Features
+
+- Recheck technical SEO, sitemap/robots/canonical/schema, rendered source, performance configuration, and static export against the current dirty worktree.
+- Recheck the search-to-Cafe funnel, GA4 event contract, mobile path, and page-type attribution.
+- Prefer evidence-backed improvements to current landing templates and shared measurement over speculative bulk content or duplicate keyword pages.
+- Preserve the root-hosted `tennisfrens.com` canonical and `/tennis_friends` GitHub Pages asset/base-path contract.
+- Record current public-site drift separately from local implementation proof.
+
+### Non-Goals
+
+- No Vercel mutation, deployment, Git push, Search Console submission, GA4 admin change, bulk article rewrite, invented search data, or Naver Cafe automation.
+
+### Done Conditions
+
+- Relevant focused audits, lint, typecheck, production build, static-export checks, and representative search-to-conversion smoke checks pass.
+- Any changed measurement contract has a source audit and clear denominator.
+- `PROJECT_STATE.md`, harness evidence, and acceptance status record local proof, public drift, and the dated remeasurement boundary.
+
+### User-Visible Result
+
+The locally optimized site presents stronger crawlable search landing paths and a clearer, measurable route from useful content or tools to the TennisFriends Naver Cafe.
+
+## Completed Cafe-First Ad-Free Content Goal (2026-08-27)
+
+### Final Deliverable
+
+Remove AdSense and other revenue-first advertising surfaces from TennisFriends, repair raw Markdown table syntax that leaks into published blog pages, and validate one editorially appropriate realistic AI-image pilot without weakening the Naver Cafe conversion path.
+
+### User Value
+
+Visitors get cleaner tennis guidance without broken table markup or distracting ads, then encounter a clear and measurable path to the TennisFriends Naver Cafe.
+
+### Required Features
+
+- No AdSense loader, slot, publisher metadata, `ads.txt` contract, ad-only component, or ad-dependent audit remains in the active site or build path.
+- Removing ads does not remove direct GA4 or the `naver_cafe_visit` event contract.
+- Markdown tables render as accessible HTML tables or an equally readable responsive structure instead of raw `|` and separator lines.
+- The repository detects representative raw-table leakage before release.
+- One realistic tennis image pilot, if generated, has a truthful scene, local optimized asset, explicit dimensions, descriptive Korean alt text, and no fabricated person, logo, result, or endorsement.
+- Existing SEO/GEO/AEO, static export, canonical URLs, and `/tennis_friends` GitHub Pages paths remain valid.
+
+### Non-Goals
+
+- No bulk image generation for 1,000+ posts, no invented photography claims, no paid image API, no article-body bulk rewrite, and no Vercel or external-account mutation.
+
+### Done Conditions
+
+- Focused ad-removal and blog-rendering audits, lint, typecheck, full `npm run verify`, exact static export, and representative runtime/static HTML checks pass.
+- Harness and `PROJECT_STATE.md` record changed files, evidence, remaining production/GA4 boundaries, and the selective image rollout rule.
+
+### User-Visible Result
+
+The site is ad-free and cafe-first; affected blog guidance is readable, and the pilot article uses a credible, performant visual rather than decorative or misleading stock-like filler.
+
+## Completed Naver Cafe Conversion Goal (2026-08-27)
 
 ### Final Deliverable
 
@@ -31,7 +95,7 @@ Visitors can consume the article, player, or utility value they came for and the
 
 The site clearly presents the Naver Cafe as the primary next step while keeping public content and tools usable without a gate.
 
-## Active SEO, GEO, and AEO Goal (2026-08-27)
+## Completed SEO, GEO, and AEO Goal (2026-08-27)
 
 Improve TennisFriends search and AI-answer readiness without bulk rewriting content: close static-export indexability gaps, align sitemap and AI discovery inventories, make entity markup consistent, and add an extractable homepage answer supported by internal links.
 
@@ -39,11 +103,11 @@ Done conditions: result/state and internal-renderer routes are `noindex, follow`
 
 Non-goals: no bulk article rewrite, invented author identity, unverified `sameAs`, ranking promise, deployment, or Vercel mutation.
 
-## Active Measurement and Product Improvement Goal (2026-08-27)
+## Historical Measurement and Product Improvement Goal (superseded 2026-08-27)
 
 Improve TennisFriends as a public, no-login tennis content and utility site by restoring trustworthy GA4/GSC measurement on GitHub Pages, applying only necessary GA4/GTM/GSC console settings, reducing the oversized blog index payload, repairing the NTRP advertising/statistics experience, and removing avoidable cache and motion risks.
 
-### Active Done Conditions
+### Historical Done Conditions
 
 - The GitHub Pages production artifact loads the intended GA4 measurement configuration and key page/tool events can be verified without relying on Vercel-specific environment detection.
 - Current GA4, GSC, and GTM console state is inspected through an authenticated browser where available; only necessary, evidence-backed settings are changed and each mutation is recorded.

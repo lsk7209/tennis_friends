@@ -26,7 +26,7 @@ export const metadata = {
     description: '테니스 서브를 강하게 만드는 핵심은 타이밍과 리듬이다.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

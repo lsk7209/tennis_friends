@@ -28,7 +28,7 @@ export const metadata = {
     description: "너무 얇으면 라켓이 돌고, 너무 두꺼우면 손목이 아픕니다. 정확한 그립 사이즈 측정법과 튜닝 팁.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

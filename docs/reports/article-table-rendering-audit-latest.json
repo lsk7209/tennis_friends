@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-08-27T12:18:42.175Z",
+  "targetSlug": "t09-20-minute-wall-practice-log",
+  "sourceFile": "src/data/blog-content/part29-approved-august-2026.ts",
+  "rawSeparatorCount": 4,
+  "convertedTableCount": 4,
+  "contentWideRawTableCount": 29,
+  "contentWideConvertedTableCount": 29,
+  "visualBytes": 77910,
+  "findings": []
+}

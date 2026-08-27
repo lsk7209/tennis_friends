@@ -1,10 +1,10 @@
 # STATUS
 
 Current State: DONE
-Current Phase: 2026-08-27 Naver Cafe primary-conversion implementation complete locally
-Completed: Two Luna/max audits; single event contract; tracked home/header/mobile/footer/sitewide CTA system; unsupported banner removal; root and GitHub Pages base-path route exclusions; source/static/runtime audits; full verification; harness and project-state handoff.
+Current Phase: Search inventory and funnel measurement optimization verified
+Completed: Removed active AdSense and affiliate surfaces/contracts, preserved GA4 and `naver_cafe_visit`, converted all 29 known raw Markdown tables, added one optimized realistic image pilot, and passed focused, full, exact static-export, and responsive-browser verification.
 In Progress: None.
-Remaining: External-only follow-up after an authorized release: observe a genuine GA4 event and optionally mark it as a key event; use Naver Cafe evidence for joins/member quality.
+Remaining: Release only when authorized, then verify genuine GA4 conversion receipts and editorially review duplicate-intent articles.
 Blocked: No.
-Last Verification: 2026-08-27 final `npm run verify` passed with 3,076 pages; exact GitHub Pages static export and Playwright base-path smoke passed; final Luna review found no BLOCKER/HIGH issue.
-Next Action: Await explicit authorization before commit/push; no deployment or external mutation occurred.
+Last Verification: Sitemap/cafe audits, typecheck, diff check, and exact GitHub Pages static export passed; 3,076 pages generated and all 54 physical low-quality blog routes emitted `noindex, follow`.
+Next Action: Commit and push only when explicitly authorized; do not mutate Vercel.

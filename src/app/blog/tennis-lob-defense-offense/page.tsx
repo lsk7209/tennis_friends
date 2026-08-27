@@ -28,7 +28,7 @@ export const metadata = {
     description: "위기 탈출용 높은 로브부터, 네트 대시한 상대를 넘기는 공격적인 탑스핀 로브까지. 로브의 모든 것을 파헤칩니다.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

@@ -28,7 +28,7 @@ export const metadata = {
     description: "텐션이 높으면 컨트롤, 낮으면 파워? 반은 맞고 반은 틀립니다. 나에게 맞는 적정 텐션을 찾는 과학적인 접근법.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

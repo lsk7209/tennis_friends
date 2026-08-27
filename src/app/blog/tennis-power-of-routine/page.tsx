@@ -26,7 +26,7 @@ export const metadata = {
     description: '루틴은 단순한 습관이 아니다. 매일의 일관된 반복이 집중력, 안정감, 승부 감각을 만든다.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

@@ -31,6 +31,13 @@ const cafeLink = requireText("src/components/NaverCafeLink.tsx", [
 ]);
 
 requireText("src/lib/analytics.ts", ['NAVER_CAFE_VISIT: "naver_cafe_visit"']);
+requireText("src/lib/analytics.ts", ['TOOL_STARTED: "tool_started"']);
+requireText("src/components/Tracking.tsx", [
+  "TRACKING_EVENTS.TOOL_STARTED",
+  "tool_slug",
+  "source_path",
+  "destination_path",
+]);
 requireText("src/app/_components/home/hero.tsx", [
   'ctaLocation="home_hero"',
   "네이버 카페 방문하기",
@@ -48,21 +55,20 @@ const cafeBanner = requireText("src/components/blog/CafeBanner.tsx", [
   "네이버 카페 방문하기",
   '"/admin", "/privacy", "/terms"',
   "normalizedPathname.endsWith(excludedPath)",
-  "if (!isHydrated || isExcludedPath(pathname)) return null",
+  "if (isExcludedPath(pathname)) return null",
 ]);
 const layout = requireText("src/app/layout.tsx", [
   "<CafeBanner />",
-  "<CoupangAffiliateBanner />",
 ]);
 
 if ((layout.match(/<CafeBanner \/>/g) || []).length !== 1) {
   findings.push({ file: "src/app/layout.tsx", issue: "sitewide CafeBanner must render once" });
 }
 
-if (layout.indexOf("<CafeBanner />") > layout.indexOf("<CoupangAffiliateBanner />")) {
+if (layout.includes("CoupangAffiliateBanner")) {
   findings.push({
     file: "src/app/layout.tsx",
-    issue: "primary cafe CTA appears after the secondary affiliate banner",
+    issue: "secondary affiliate banner remains in the cafe-first layout",
   });
 }
 
@@ -85,6 +91,34 @@ for (const file of [
 
 if (!cafeLink.includes("onClick={handleClick}")) {
   findings.push({ file: "src/components/NaverCafeLink.tsx", issue: "click handler is not attached" });
+}
+
+const search = requireText("src/app/search/SearchClient.tsx", [
+  "SEARCH_PERFORMED",
+  'ctaLocation="search_no_results"',
+  'cta_location: "search_results"',
+  "result_count",
+  "trackedSearchEvents",
+]);
+
+if (search.includes("lead_captured")) {
+  findings.push({
+    file: "src/app/search/SearchClient.tsx",
+    issue: "site search must not report an outbound cafe click as a captured lead",
+  });
+}
+
+const ntrpBand = requireText("src/app/_components/home/ntrp-band.tsx", [
+  "15개 질문",
+]);
+const toolsMosaic = requireText("src/app/_components/home/tools-mosaic.tsx", [
+  "15개 질문",
+]);
+if (ntrpBand.includes("10개 질문") || toolsMosaic.includes("10개 질문")) {
+  findings.push({
+    scope: "ntrp promise",
+    issue: "homepage NTRP question count does not match the 15-question test",
+  });
 }
 
 if (findings.length > 0) {

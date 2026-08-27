@@ -44,7 +44,7 @@ src/
 │   ├── BlogPost.tsx        # Blog post renderer
 │   ├── CTASection.tsx      # Call-to-action sections
 │   ├── Tracking.tsx        # Analytics tracking (localStorage)
-│   ├── AdSense.tsx         # Google AdSense integration
+│   ├── NaverCafeLink.tsx   # Tracked primary cafe conversion link
 │   ├── JsonLd.tsx          # JSON-LD structured data
 │   └── ScrollAnimation.tsx # Scroll-based animations
 ├── data/                   # Static data files

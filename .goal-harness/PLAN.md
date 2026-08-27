@@ -1,5 +1,19 @@
 # PLAN
 
+## Cafe-First Ad-Free Content Plan (2026-08-27)
+
+Status: COMPLETE
+
+1. [x] Run two non-overlapping Luna/max read-only audits: AdSense/affiliate removal scope and raw-table/image rendering scope.
+2. [x] Update the durable harness and project state with the new R2 objective, acceptance criteria, rollback, and verification plan.
+3. [x] Remove active AdSense and advertising-only source/configuration while preserving GA4 and Naver Cafe measurement.
+4. [x] Fix the shared article rendering path so Markdown tables become accessible responsive tables; add a deterministic regression audit across published content.
+5. [x] Generate and integrate one representative realistic tennis image only after confirming the exact article, image contract, and static-export path.
+6. [x] Run focused audits, lint, typecheck, full verification, exact GitHub Pages export, and representative static/runtime checks; repair failures.
+7. [x] Complete independent review, update evidence/status/project state, and stop before any new push unless separately authorized.
+
+Classification: medium-to-large R2 web/content implementation; domain profile: general with SEO-content checks. Rollback is a normal Git revert. No Vercel, GA4 admin, Naver account, or other external mutation is authorized.
+
 ## Naver Cafe Conversion Plan (2026-08-27)
 
 Status: implementation and local verification complete; external release and analytics-admin actions remain outside this workstream.
@@ -21,7 +35,7 @@ Classification: medium-to-large R2 conversion implementation; domain profile: ge
 
 Classification: large repository audit and multi-file R2 implementation; no external mutation or deployment.
 
-## Active Measurement and Product Improvement Plan (2026-08-27)
+## Historical Measurement and Product Improvement Plan (superseded 2026-08-27)
 
 1. Establish current GitHub Pages output, GA4/GSC/GTM code paths, logged-in console availability, and a rollback-safe mutation boundary.
 2. Implement direct GA4 production configuration and the smallest static-export-compatible blog pagination/search split.
@@ -33,7 +47,7 @@ Classification: large; domain profile: web; risk: R2 local code plus R3 authenti
 
 ---
 
-## Active Improvement Plan (2026-08-26)
+## Historical Improvement Plan (2026-08-26)
 
 1. Record risk boundary and acceptance tests; obtain independent read-only security and routing/index designs.
 2. Implement locally verifiable security and workflow gates, dependency updates, routing/index corrections, encoding repairs, and audit separation.

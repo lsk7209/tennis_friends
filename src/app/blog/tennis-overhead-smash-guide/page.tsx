@@ -28,7 +28,7 @@ export const metadata = {
     description: "가장 강력하지만 가장 실수하기 쉬운 샷. 스매싱의 타점 잡기, 왼손의 역할, 그리고 자신감 있게 마무리하는 비결.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

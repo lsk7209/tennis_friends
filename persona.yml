@@ -70,7 +70,7 @@ seo_focus:
     dominant_device: "mobile"
     dominant_source: "Naver mobile search/referral"
     priority:
-      - "모바일 본문 폭, 표 스크롤, 광고 CLS 방지"
+      - "모바일 본문 폭, 표 스크롤, 이미지 레이아웃 안정성"
       - "도구 페이지에서 관련 글·다음 행동으로 이어지는 내부 링크 강화"
       - "GA4 page_title에 깨진 문자열이 들어가지 않도록 공통 메타 우선 복구"
 

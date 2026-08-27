@@ -1,23 +1,31 @@
-# Status | 마지막: 2026-05-28
+# Status | 마지막: 2026-08-27
+
 ## 현재 작업
-사이트 종합 최적화 1차 진행 중. 네이버 카페 배너 CTA 정적/동적 선수 글 적용까지 완료, 다음 세션은 콘텐츠 품질 보강 또는 lint 경고 정리부터 진행.
-## 최근 변경 (최근 5개만)
-- 05-28: 동적 선수 상세(`/players/[slug]`) 하단에도 네이버 카페 배너 CTA 직접 추가
-- 05-28: 운영 배포 `dpl_FSFM1JBqMvSU9gedTZ53qqmZp9AG` 완료, GSC sitemap 2개 + IndexNow URL 640개 전송
-- 05-28: 선수 상세 글 하단 네이버 카페 배너 노출 운영 확인(`/players/carlos-alcaraz`)
-- 05-28: 네이버 카페 배너를 `docs/tennis.png` 원본 기반 PNG 자산으로 교체
-- 05-28: 운영 배포 `dpl_7j6vfCnUA5ZdeGWBfaVrD5yQnvDB` 완료, GSC sitemap 2개 + IndexNow URL 638개 전송
+
+사이트 목적을 네이버 카페 유입으로 단일화하고 광고 런타임을 제거하는 작업을 완료했다. 원시 Markdown 표는 공통 렌더러에서 접근 가능한 HTML 표로 변환하고, 대표 벽치기 글에는 최적화한 실사형 이미지를 1건만 파일럿 적용했다.
+
+## 최근 변경
+
+- AdSense 로더·슬롯·메타·`ads.txt`와 쿠팡 제휴 배너·프록시·CSP 허용 도메인을 제거했다.
+- GA4와 `naver_cafe_visit` 이벤트, 전역 카페 CTA는 유지했다.
+- `part29-approved-august-2026.ts`의 원시 표 29개를 공통 렌더러가 의미 있는 표로 변환하도록 했다.
+- `t09-20-minute-wall-practice-log`에 1600×900, 77,910바이트 WebP 파일럿 이미지를 연결했다.
+- 광고 부재, 표 변환, 카페 전환, 정적 출력 경계를 자동 감사에 추가했다.
+
 ## TODO
-- [ ] 블로그 글 감사 554개 개선 대상 중 GSC 노출 상위 글부터 계속 개별 보강
-- [ ] 기존 lint 경고 71개 정리
-- [ ] 배포 후 7~14일 간 GSC에서 저CTR 선수/레슨비/경기 운영 글 CTR 변화 확인
+
+- [x] 전체 `npm run verify`와 정확한 GitHub Pages 정적 출력 감사를 완료했다(각 3,076페이지).
+- [ ] 실제 공개 후 GA4에서 진짜 `naver_cafe_visit` 1건을 확인한다.
+- [ ] 이미지는 글마다 자동 생성하지 않고 검색·독자 가치가 큰 글부터 개별 검수한다.
+
 ## 결정사항
-- 새 콘텐츠 발행 알림: `npm run publish:vercel` 경로에서 배포 후 GSC sitemap + Naver/Bing/IndexNow 자동 전송
-- 자동생성 글 보강: 원본 대용량 파일을 직접 덮기보다 `part13-optimized` override로 개별 고품질 본문을 우선 적용
-- 저CTR 페이지 보강: 실제 GSC 쿼리를 title 앞쪽에 배치하고 description은 독자 이득을 명확히 표시
-- 모바일 광고: AdSense 자동 삽입 컨테이너는 전역 CSS로 뷰포트 폭 제한
+
+- 사이트의 1차 전환은 `https://cafe.naver.com/homecookie` 방문이다.
+- 광고 수익화 UI는 운영하지 않는다.
+- 이미지에는 인물 식별, 브랜드, 허위 성과·추천 문구를 넣지 않으며 로컬 최적화 자산만 사용한다.
+
 ## 주의
-- 검증 통과: type-check, lint(0 errors/71 warnings), build, 로컬/운영 모바일·데스크톱 브라우저 확인
-- 최신 GSC/IndexNow 전송: sitemap 2개, URL 640개
-- 운영 확인 중 Google vignette 광고가 `aria-hidden` 콘솔 에러 1개를 만들 수 있음
-- 콘텐츠 품질 감사상 템플릿 위험 글이 남아 있어 콘텐츠 최적화는 지속 작업 필요
+
+- GA4 클릭은 카페 방문 의도만 측정하며 실제 가입과 카페 내 활동을 증명하지 않는다.
+- 외부 GA4 관리자 설정과 공개 후 동작은 로컬 검증과 구분한다.
+- 콘텐츠 품질 감사상 템플릿 위험 글은 별도 지속 개선 대상이다.

@@ -87,7 +87,7 @@ export const trackTestCompletion = (
     // 테스트 완료 횟수 카운터 업데이트
     updateTestCompletionCount(testType);
 
-    // GA4 이벤트 전송 (AdSense 최적화에 중요한 전환 시그널)
+    // GA4 이벤트 전송 (도구 완료와 카페 전환 흐름 분석용)
     trackEvent(TRACKING_EVENTS.TEST_COMPLETED, {
       test_type: testType,
       page_path: window.location.pathname,
@@ -160,6 +160,37 @@ export const getPopularTests = (): { testType: string; count: number }[] => {
 
 export default function Tracking() {
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleToolStart = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const anchor = target.closest("a[href]");
+      if (!(anchor instanceof HTMLAnchorElement)) return;
+
+      const destination = new URL(anchor.href, window.location.href);
+      if (destination.origin !== window.location.origin) return;
+
+      const normalizedPath = destination.pathname.replace(
+        /^\/tennis_friends(?=\/|$)/,
+        "",
+      );
+      const match = normalizedPath.match(/^\/utility\/([^/]+)\/?$/);
+      if (!match) return;
+
+      trackEvent(TRACKING_EVENTS.TOOL_STARTED, {
+        tool_slug: match[1],
+        source_path: pathname,
+        destination_path: normalizedPath,
+      });
+    };
+
+    document.addEventListener("click", handleToolStart);
+    return () => document.removeEventListener("click", handleToolStart);
+  }, [pathname]);
 
   useEffect(() => {
     // 방문자 데이터 수집 (클라이언트 사이드 저장)

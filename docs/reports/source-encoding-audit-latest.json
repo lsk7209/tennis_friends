@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generatedAt": "2026-08-27T09:56:17.413Z",
+  "generatedAt": "2026-08-27T11:40:40.916Z",
   "scannedRoots": [
     "next.config.ts",
     "package.json",
@@ -18,6 +18,6 @@
     "node_modules",
     ".next"
   ],
-  "scannedFiles": 720,
+  "scannedFiles": 719,
   "findings": []
 }

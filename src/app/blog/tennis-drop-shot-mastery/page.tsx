@@ -28,7 +28,7 @@ export const metadata = {
     description: "상대의 허를 찌르는 드롭샷. 성공률을 높이는 그립, 터치 감각, 그리고 무엇보다 중요한 타이밍과 위장(Disguise) 기술.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

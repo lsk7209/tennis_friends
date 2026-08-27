@@ -88,6 +88,20 @@ function getUtilitySlugs() {
     .sort();
 }
 
+function getPhysicalBlogSlugs() {
+  const blogDir = path.join(ROOT, "src", "app", "blog");
+  return fs
+    .readdirSync(blogDir, { withFileTypes: true })
+    .filter(
+      (dirent) =>
+        dirent.isDirectory() &&
+        dirent.name !== "[slug]" &&
+        fs.existsSync(path.join(blogDir, dirent.name, "page.tsx")),
+    )
+    .map((dirent) => dirent.name)
+    .sort();
+}
+
 registerSourceTranspiler();
 
 const { getSitemapEntries, toXmlSitemap } = require("../src/lib/sitemap-entries.ts");
@@ -108,6 +122,10 @@ const publishedBlogSlugs = getPublishedBlogPosts(allBlogPosts)
   .filter((post) => isIndexableBlogSlug(post.slug))
   .map((post) => post.slug)
   .sort();
+const physicalBlogSlugs = getPhysicalBlogSlugs();
+const physicalNoindexSlugs = physicalBlogSlugs.filter(
+  (slug) => !publishedBlogSlugs.includes(slug),
+);
 
 assert(entries.length > 0, { issue: "sitemap has no entries" });
 assert(duplicateUrls.length === 0, {
@@ -141,6 +159,48 @@ compareSets(
   utilitySlugs.map((slug) => `${SITE_URL}/utility/${slug}`),
   urls.filter((url) => url.startsWith(`${SITE_URL}/utility/`)),
 );
+
+for (const slug of physicalNoindexSlugs) {
+  const layoutPath = path.join(
+    ROOT,
+    "src",
+    "app",
+    "blog",
+    slug,
+    "layout.tsx",
+  );
+  const layoutSource = fs.existsSync(layoutPath)
+    ? fs.readFileSync(layoutPath, "utf8")
+    : "";
+  assert(
+    layoutSource.includes("NoIndexLayout") &&
+      layoutSource.includes("metadata"),
+    {
+      issue: "physical blog route bypasses the blog quality noindex gate",
+      slug,
+    },
+  );
+
+  const pageSource = readProjectFile(`src/app/blog/${slug}/page.tsx`);
+  assert(!/robots\s*:\s*\{[\s\S]*?index\s*:\s*true/.test(pageSource), {
+    issue: "physical noindex blog page explicitly overrides robots index",
+    slug,
+  });
+
+  assert(!urls.includes(`${SITE_URL}/blog/${slug}`), {
+    issue: "physical noindex blog leaked into sitemap",
+    slug,
+  });
+}
+
+const aiIndex = JSON.parse(readProjectFile("public/ai-index.json"));
+const aiIndexUrls = new Set(aiIndex.pages.map((page) => page.url));
+for (const slug of physicalNoindexSlugs) {
+  assert(!aiIndexUrls.has(`${SITE_URL}/blog/${slug}`), {
+    issue: "physical noindex blog leaked into AI index",
+    slug,
+  });
+}
 
 compareSets(
   "player",
@@ -200,6 +260,8 @@ const audit = {
   generatedAt: new Date().toISOString(),
   entries: entries.length,
   blogs: publishedBlogSlugs.length,
+  physicalBlogs: physicalBlogSlugs.length,
+  physicalNoindexBlogs: physicalNoindexSlugs.length,
   utilities: utilitySlugs.length,
   players: playerSlugs.length,
   findings,

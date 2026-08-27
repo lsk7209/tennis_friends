@@ -2,13 +2,9 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useSyncExternalStore } from "react";
 import NaverCafeLink from "@/components/NaverCafeLink";
 
 const EXCLUDED_PATHS = new Set(["/admin", "/privacy", "/terms"]);
-const subscribeToHydration = () => () => {};
-const getClientSnapshot = () => true;
-const getServerSnapshot = () => false;
 
 function isExcludedPath(pathname: string) {
   const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
@@ -28,16 +24,10 @@ export default function CafeBanner({
   ctaLocation = "sitewide_bottom",
 }: CafeBannerProps) {
   const pathname = usePathname();
-  const isHydrated = useSyncExternalStore(
-    subscribeToHydration,
-    getClientSnapshot,
-    getServerSnapshot,
-  );
 
-  // Static export reuses the root layout markup across routes. Waiting until the
-  // client knows the real pathname prevents the banner from leaking into admin
-  // and legal-page HTML, while persistent header/footer cafe links stay static.
-  if (!isHydrated || isExcludedPath(pathname)) return null;
+  // Render during static generation so search visitors and no-JS users receive
+  // the same contextual next step. Route-specific exclusions remain deterministic.
+  if (isExcludedPath(pathname)) return null;
 
   return (
     <section

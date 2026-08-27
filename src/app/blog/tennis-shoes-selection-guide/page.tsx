@@ -26,7 +26,7 @@ export const metadata = {
     description: '내 발에 맞는 테니스화는 따로 있습니다. 아식스, 나이키, 아디다스 핏 비교와 코트별 밑창 선택 가이드.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

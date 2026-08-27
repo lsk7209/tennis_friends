@@ -52,10 +52,11 @@ export function trackPageView(url: string, measurementId: string): void {
 }
 
 /**
- * 전환 이벤트 (AdSense 최적화용 고신호 이벤트)
+ * 사이트 행동 및 네이버 카페 전환 이벤트
  */
 export const TRACKING_EVENTS = {
   TOOL_USED: "tool_used",
+  TOOL_STARTED: "tool_started",
   TEST_COMPLETED: "test_completed",
   CTA_CLICKED: "cta_clicked",
   CONTENT_READ_COMPLETE: "content_read_complete",

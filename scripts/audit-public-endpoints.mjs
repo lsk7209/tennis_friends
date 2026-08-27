@@ -1,8 +1,6 @@
 const DEFAULT_BASE_URL = "https://tennisfrens.com";
 const NON_WWW_BASE_URL = `https://${"tennisfrens.com"}`;
 const INDEXNOW_KEY = "46d9a30e05e90f665fa353387fa67c4c";
-const ADSENSE_LINE =
-  "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0";
 
 const args = process.argv.slice(2);
 const baseUrl = (
@@ -17,7 +15,6 @@ const endpoints = [
   { path: "/sitemap.xml", type: "sitemap" },
   { path: "/sitemap-naver.xml", type: "sitemap" },
   { path: "/rss.xml", type: "rss" },
-  { path: "/ads.txt", type: "ads" },
   { path: "/llms.txt", type: "llms" },
   { path: "/llms-full.txt", type: "llms-full" },
   { path: "/ai-index.json", type: "ai-index" },
@@ -117,14 +114,6 @@ function validateRss(endpoint) {
   assert(endpoint.text.includes("<atom:link"), {
     path: endpoint.path,
     issue: "RSS self atom link missing",
-  });
-}
-
-function validateAds(endpoint) {
-  assert(endpoint.text.trim() === ADSENSE_LINE, {
-    path: endpoint.path,
-    issue: "ads.txt line mismatch",
-    actual: endpoint.text.trim(),
   });
 }
 
@@ -250,9 +239,6 @@ for (const endpoint of endpoints) {
       break;
     case "rss":
       validateRss(result);
-      break;
-    case "ads":
-      validateAds(result);
       break;
     case "llms":
     case "llms-full":

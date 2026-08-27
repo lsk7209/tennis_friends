@@ -28,7 +28,7 @@ export const metadata = {
     description: "낮게 깔리는 슬라이스는 최고의 수비이자 공격의 발판입니다. 언더스핀을 거는 요령과 체공 시간을 조절하는 노하우.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

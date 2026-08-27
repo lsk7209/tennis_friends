@@ -1,11 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Calendar, Clock, Share2 } from "lucide-react";
 import RelatedContent, {
   type RelatedContentItem,
 } from "@/components/RelatedContent";
-import { AdSenseSlot } from "@/components/AdSense";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,6 +14,8 @@ import EnhancedBlogPostSchema from "@/components/seo/EnhancedBlogPostSchema";
 import FAQSection from "@/components/seo/FAQSection";
 import { allBlogPosts } from "@/data/blog-posts";
 import { blogContentMap } from "@/data/blog-content";
+import { getBlogVisual } from "@/data/blog-visuals";
+import { normalizeArticleHtml } from "@/lib/article-html.mjs";
 import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { getRelatedUtilityLinks } from "@/lib/internal-linking";
@@ -22,14 +24,6 @@ import { DEFAULT_SITE_LOCALE, SITE_NAME, getSiteUrl } from "@/lib/site";
 import type { BlogPostData } from "@/types/blog";
 
 export const revalidate = 3600;
-
-const ARTICLE_TOP_AD_SLOT =
-  process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_TOP_SLOT || "5442683582";
-const ARTICLE_MIDDLE_AD_SLOT =
-  process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_MIDDLE_SLOT || "4809500982";
-const ARTICLE_BOTTOM_AD_SLOT =
-  process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_BOTTOM_SLOT || "8552062650";
-const MIDDLE_AD_AFTER_HEADING_COUNT = 4;
 
 interface EnrichedBlogPost extends BlogPostData {
   content?: string;
@@ -47,26 +41,14 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-function splitContentForMiddleAd(content: string): [string, string] {
-  if (!content) return ["", ""];
+function getHostedAssetPath(assetPath: string) {
+  const githubPagesBasePath =
+    process.env.GITHUB_ACTIONS === "true" &&
+    process.env.GITHUB_PAGES === "true"
+      ? process.env.GITHUB_PAGES_BASE_PATH || "/tennis_friends"
+      : "";
 
-  const headingMatches = [...content.matchAll(/<h2[\s>]/g)];
-  const targetHeading = headingMatches[MIDDLE_AD_AFTER_HEADING_COUNT];
-
-  if (!targetHeading?.index) return [content, ""];
-
-  return [
-    content.slice(0, targetHeading.index),
-    content.slice(targetHeading.index),
-  ];
-}
-
-function normalizeArticleHtml(content: string) {
-  return content
-    .replace(/^<article\b[^>]*>/, "")
-    .replace(/<\/article>\s*$/, "")
-    .replace(/<table/g, '<div class="table-wrapper"><table')
-    .replace(/<\/table>/g, "</table></div>");
+  return `${githubPagesBasePath}${assetPath}`;
 }
 
 function getPublishedPost(slug: string) {
@@ -124,9 +106,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `${siteUrl}/blog/${post.slug}`;
   const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
   const description = buildSeoDescription(post, contentData);
-  const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(
+  const articleVisual = getBlogVisual(post.slug);
+  const fallbackOgImage = `${siteUrl}/api/og?title=${encodeURIComponent(
     post.title,
   )}&sub=${encodeURIComponent(post.category ?? "테니스 가이드")}`;
+  const ogImage = articleVisual
+    ? `${siteUrl}${articleVisual.src}`
+    : fallbackOgImage;
 
   return {
     title: post.title,
@@ -153,9 +139,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [
         {
           url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: post.title,
+          width: articleVisual?.width ?? 1200,
+          height: articleVisual?.height ?? 630,
+          alt: articleVisual?.alt ?? post.title,
         },
       ],
     },
@@ -179,8 +165,7 @@ export default async function BlogPostPage({ params }: Props) {
   const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
   if (!contentData?.content) notFound();
   const processedContent = normalizeArticleHtml(contentData?.content ?? "");
-  const [contentBeforeMiddleAd, contentAfterMiddleAd] =
-    splitContentForMiddleAd(processedContent);
+  const articleVisual = getBlogVisual(post.slug);
 
   const enrichedPost: EnrichedBlogPost = {
     ...post,
@@ -238,6 +223,7 @@ export default async function BlogPostPage({ params }: Props) {
         readingTime={post.readTime}
         keywords={enrichedPost.tags ?? []}
         articleBody={enrichedPost.content ?? ""}
+        image={articleVisual?.src}
       />
 
       <nav aria-label="Breadcrumb" className="mb-8">
@@ -313,6 +299,23 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </header>
 
+        {articleVisual && (
+          <figure className="not-prose mb-8 overflow-hidden rounded-xl border border-white/10 bg-card shadow-sm">
+            <Image
+              src={getHostedAssetPath(articleVisual.src)}
+              alt={articleVisual.alt}
+              width={articleVisual.width}
+              height={articleVisual.height}
+              priority
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="h-auto w-full object-cover"
+            />
+            <figcaption className="px-4 py-3 text-sm leading-relaxed text-muted-foreground sm:px-5">
+              {articleVisual.caption}
+            </figcaption>
+          </figure>
+        )}
+
         <section
           className="mb-8 rounded-lg border border-white/10 bg-card p-5 sm:p-6"
           aria-labelledby="summary-heading"
@@ -329,10 +332,6 @@ export default async function BlogPostPage({ params }: Props) {
         >
           <p className="font-medium text-foreground">{enrichedPost.highlight}</p>
         </section>
-
-        {ARTICLE_TOP_AD_SLOT && (
-          <AdSenseSlot slot={ARTICLE_TOP_AD_SLOT} label="본문 상단 광고" />
-        )}
 
         <nav aria-label="Table of contents" className="mb-8">
           <details className="group rounded-lg border border-white/10 bg-card">
@@ -368,36 +367,8 @@ export default async function BlogPostPage({ params }: Props) {
           id="article-content"
           className="prose blog-article-content aw-article max-w-none dark:prose-invert"
           itemProp="articleBody"
-          dangerouslySetInnerHTML={{ __html: contentBeforeMiddleAd }}
+          dangerouslySetInnerHTML={{ __html: processedContent }}
         />
-
-        {contentAfterMiddleAd ? (
-          <>
-            {ARTICLE_MIDDLE_AD_SLOT && (
-              <AdSenseSlot
-                slot={ARTICLE_MIDDLE_AD_SLOT}
-                label="본문 중간 광고"
-                minHeight={260}
-                minHeightMobile={200}
-              />
-            )}
-            <section
-              className="prose blog-article-content aw-article max-w-none dark:prose-invert"
-              dangerouslySetInnerHTML={{ __html: contentAfterMiddleAd }}
-            />
-          </>
-        ) : ARTICLE_MIDDLE_AD_SLOT ? (
-          <AdSenseSlot
-            slot={ARTICLE_MIDDLE_AD_SLOT}
-            label="본문 중간 광고"
-            minHeight={260}
-            minHeightMobile={200}
-          />
-        ) : null}
-
-        {ARTICLE_BOTTOM_AD_SLOT && (
-          <AdSenseSlot slot={ARTICLE_BOTTOM_AD_SLOT} label="본문 하단 광고" />
-        )}
 
         {enrichedPost.tags && enrichedPost.tags.length > 0 && (
           <section aria-label="Tags" className="mt-8 flex flex-wrap gap-2">

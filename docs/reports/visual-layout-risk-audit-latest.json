@@ -1,11 +1,12 @@
 {
   "status": "ok",
-  "generatedAt": "2026-08-27T09:56:28.250Z",
+  "generatedAt": "2026-08-27T11:40:52.013Z",
   "checkedFiles": [
     "DESIGN.md",
     "src/app/blog/page.tsx",
     "src/app/blog/BlogIndexPageContent.tsx",
     "src/app/blog/[slug]/page.tsx",
+    "src/lib/article-html.mjs",
     "src/app/players/[slug]/page.tsx",
     "src/templates/players/PlayerPageTemplate.tsx",
     "src/components/RelatedContent.tsx"

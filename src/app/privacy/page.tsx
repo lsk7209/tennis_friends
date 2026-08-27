@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "개인정보처리방침 | 테니스프렌즈",
   description:
-    "테니스프렌즈의 개인정보처리방침을 확인하세요. 회원의 개인정보 보호를 위한 정책과 권리를 안내합니다.",
+    "테니스프렌즈의 웹 로그 분석, 기기 내 저장 정보, 쿠키와 이용자 권리를 안내합니다.",
   alternates: {
     canonical: "https://tennisfrens.com/privacy",
   },
@@ -46,33 +46,23 @@ export default function PrivacyPage() {
               제1조 (수집하는 개인정보 항목 및 수집방법)
             </h2>
             <p className="mb-4">
-              회사는 서비스 제공을 위해 필요한 최소한의 개인정보를 수집하고
-              있습니다.
+              테니스프렌즈는 회원가입이나 로그인을 제공하지 않습니다. 사이트
+              이용 과정에서 다음 정보가 처리될 수 있습니다.
             </p>
             <ol className="list-decimal pl-5 space-y-3 text-gray-700 dark:text-gray-300">
               <li>
-                <strong>회원가입 및 관리:</strong> 닉네임, 프로필 사진,
-                생년월일, 성별, 테니스 구력(NTRP), 휴대전화번호
+                <strong>Google Analytics:</strong> 접속 페이지, 방문 시간,
+                유입 경로, 기기·브라우저 정보와 카페 이동 버튼 클릭 기록
               </li>
               <li>
-                <strong>서비스 이용 과정:</strong> 서비스 이용 기록, 접속 로그,
-                쿠키, 접속 IP 정보, 기기 정보
+                <strong>기기 내 저장:</strong> 익명 세션 식별자, 도구·테스트
+                이용 기록, NTRP 결과와 최근 방문 기록. 이 정보는 이용자의
+                브라우저 저장소에만 보관되며 회원 계정이나 공용 데이터베이스로
+                전송되지 않습니다.
               </li>
               <li>
-                <strong>권한 기반 수집 정보:</strong>
-                <ul className="list-disc pl-5 mt-2 space-y-1 text-sm text-gray-600 dark:text-gray-400">
-                  <li>
-                    <strong>카메라/사진:</strong> 프로필 사진 등록 및 매치 정보
-                    등록을 위한 이미지 촬영 및 첨부
-                  </li>
-                  <li>
-                    <strong>저장공간:</strong> 사진 및 파일 저장을 위한 접근
-                  </li>
-                  <li>
-                    <strong>SMS/전화:</strong> 본인 인증 및 회원가입 시
-                    휴대전화번호 확인
-                  </li>
-                </ul>
+                <strong>수집하지 않는 정보:</strong> 이름, 전화번호, 프로필
+                사진, 생년월일, 카메라·SMS·전화 권한과 회원가입 정보
               </li>
             </ol>
           </section>
@@ -83,20 +73,20 @@ export default function PrivacyPage() {
               제2조 (개인정보의 수집 및 이용목적)
             </h2>
             <p className="mb-4">
-              회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+              처리되는 정보는 다음 목적에만 사용합니다.
             </p>
             <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
               <li>
-                <strong>서비스 제공:</strong> 테니스 매치 매칭, 채팅 서비스, 내
-                주변 매치 찾기 등 핵심 기능 제공
+                <strong>기능 제공:</strong> 테스트 진행 상태와 결과, 로컬 이용
+                기록을 같은 기기에서 표시
               </li>
               <li>
-                <strong>회원 관리:</strong> 본인 확인, 개인 식별, 부정이용 방지,
-                가입 의사 확인
+                <strong>서비스 개선:</strong> 페이지와 도구 이용 흐름, 오류와
+                이탈 구간 파악
               </li>
               <li>
-                <strong>신규 서비스 개발 및 마케팅:</strong> 신규 기능 개발,
-                이벤트 정보 및 광고성 정보 제공(동의 시)
+                <strong>전환 측정:</strong> 네이버 카페 이동 버튼의 위치별 클릭
+                성과 확인
               </li>
             </ul>
           </section>
@@ -107,9 +97,10 @@ export default function PrivacyPage() {
               제3조 (개인정보의 보유 및 이용기간)
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이
-              달성되면 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할
-              필요가 있는 경우에는 일정 기간 동안 보존합니다.
+              기기 내 기록은 브라우저 저장소에 최대 200건까지 유지되며 이용자가
+              브라우저 사이트 데이터 또는 로컬 저장소를 삭제하면 함께
+              삭제됩니다. Google Analytics 정보의 보유기간과 삭제 기준은
+              Google의 정책 및 해당 속성 설정을 따릅니다.
             </p>
           </section>
 
@@ -119,8 +110,11 @@ export default function PrivacyPage() {
               제4조 (이용자 및 법정대리인의 권리와 그 행사방법)
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              이용자는 언제든지 등록되어 있는 자신의 개인정보를 조회하거나
-              수정할 수 있으며 가입 해지를 요청할 수 있습니다.
+              이용자는 브라우저 설정에서 쿠키를 제한하거나 사이트 데이터를
+              삭제할 수 있습니다. Google Analytics 수집을 원하지 않는 경우
+              Google Analytics 차단 브라우저 부가기능 또는 브라우저의 추적 방지
+              기능을 사용할 수 있습니다. 본 사이트에는 탈퇴가 필요한 회원
+              계정이 없습니다.
             </p>
           </section>
 
@@ -147,40 +141,36 @@ export default function PrivacyPage() {
           <section className="bg-gray-50 dark:bg-gray-900/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800">
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
               <span className="w-1.5 h-6 bg-blue-500 rounded-full inline-block"></span>
-              제6조 (광고 및 제3자 쿠키)
+              제6조 (웹 로그 분석 및 쿠키)
             </h2>
             <p className="mb-3 text-gray-700 dark:text-gray-300">
-              본 사이트는 Google 및 기타 제3자 공급업체의 광고 서비스(Google
-              AdSense)를 이용합니다. 이와 관련하여 다음 사항을 고지합니다.
+              본 사이트는 광고를 제공하지 않으며, 서비스 이용 흐름과 네이버 카페
+              이동 성과를 파악하기 위해 Google Analytics를 사용할 수 있습니다.
             </p>
             <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
               <li>
-                Google을 포함한 제3자 공급업체는{" "}
-                <strong>쿠키(DoubleClick DART 쿠키 포함)</strong>를 사용하여
-                이용자가 본 사이트 및 다른 사이트를 방문한 기록을 기반으로
-                광고를 제공합니다.
+                웹 로그 분석 과정에서 접속 페이지, 이용 시간, 기기·브라우저 정보,
+                카페 이동 버튼 클릭 같은 이용 기록이 처리될 수 있습니다.
               </li>
               <li>
                 이용자는{" "}
                 <a
-                  href="https://policies.google.com/technologies/ads"
+                  href="https://policies.google.com/privacy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 underline"
                 >
-                  Google 광고 및 콘텐츠 네트워크 개인정보처리방침
+                  Google 개인정보처리방침
                 </a>
-                에서 DART 쿠키의 사용을 거부할 수 있습니다.
+                에서 관련 처리 기준을 확인할 수 있습니다.
               </li>
               <li>
-                광고 네트워크가 수집하는 정보에는 IP 주소, 브라우저 유형, 방문
-                페이지, 방문 시간, 기기 정보 등이 포함될 수 있습니다.
+                이용자는 브라우저 설정에서 쿠키 저장을 제한할 수 있습니다. 이
+                경우에도 사이트의 주요 콘텐츠는 열람할 수 있습니다.
               </li>
               <li>
-                서비스 이용 분석을 위해 Google Analytics 등의 웹 로그 분석
-                도구를 사용할 수 있으며, 이용자는 브라우저 설정을 통해 쿠키
-                저장을 거부할 수 있습니다. 다만 이 경우 일부 서비스 이용에
-                제약이 있을 수 있습니다.
+                네이버 카페 등 외부 사이트로 이동한 뒤의 개인정보 처리는 해당
+                서비스의 개인정보처리방침을 따릅니다.
               </li>
             </ul>
           </section>
@@ -191,7 +181,7 @@ export default function PrivacyPage() {
               제7조 (개인정보 처리방침 변경)
             </h2>
             <p className="text-gray-700 dark:text-gray-300">
-              이 개인정보처리방침은 <strong>2026년 4월 23일</strong>부터
+              이 개인정보처리방침은 <strong>2026년 8월 27일</strong>부터
               적용됩니다.
             </p>
           </section>

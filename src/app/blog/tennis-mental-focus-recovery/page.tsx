@@ -26,7 +26,7 @@ export const metadata = {
     description: '테니스의 승패는 멘탈이 결정한다. 실수 후 3초, 그 짧은 루틴이 경기 전체의 흐름을 바꾼다.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

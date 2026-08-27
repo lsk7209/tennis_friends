@@ -26,7 +26,7 @@ export const metadata = {
     description: '경기는 끝났지만, 진짜 승부는 회복에서 시작된다. 경기 후 24시간, 루틴 하나가 다음 실력을 결정한다.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

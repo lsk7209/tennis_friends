@@ -25,7 +25,7 @@ export const metadata = {
     description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

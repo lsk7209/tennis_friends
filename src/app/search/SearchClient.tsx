@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import NaverCafeLink from "@/components/NaverCafeLink";
 import { allBlogPosts } from "@/data/blog-posts";
 import { PLAYERS_DB } from "@/data/players";
 import { getPublishedBlogPosts } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
+import { trackEvent, TRACKING_EVENTS } from "@/lib/analytics";
 
 const utilityResults = [
   {
@@ -35,8 +37,11 @@ const utilityResults = [
   },
 ];
 
+const trackedSearchEvents = new Set<string>();
+
 export default function SearchClient() {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
   const query = searchParams.get("q")?.trim() || "";
   const normalizedQuery = query.toLowerCase();
 
@@ -90,6 +95,20 @@ export default function SearchClient() {
     return [...blogResults, ...playerResults, ...matchedUtilities];
   }, [normalizedQuery, query]);
 
+  useEffect(() => {
+    if (!query) return;
+
+    const eventKey = `${pathname}:${query}:${results.length}`;
+    if (trackedSearchEvents.has(eventKey)) return;
+    trackedSearchEvents.add(eventKey);
+
+    trackEvent(TRACKING_EVENTS.SEARCH_PERFORMED, {
+      search_term: query,
+      result_count: results.length,
+      page_path: window.location.pathname,
+    });
+  }, [pathname, query, results.length]);
+
   return (
     <>
       <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
@@ -126,6 +145,14 @@ export default function SearchClient() {
             <Link
               key={`${result.type}-${result.href}`}
               href={result.href}
+              onClick={() =>
+                trackEvent(TRACKING_EVENTS.CTA_CLICKED, {
+                  cta_location: "search_results",
+                  destination_url: result.href,
+                  result_type: result.type,
+                  search_term: query,
+                })
+              }
               className="rounded-2xl border border-black/5 bg-white p-5 transition hover:border-emerald-400 hover:shadow-sm dark:border-white/10 dark:bg-gray-900"
             >
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-600">
@@ -141,7 +168,22 @@ export default function SearchClient() {
           ))
         ) : query ? (
           <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-sm text-gray-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
-            검색 결과가 없습니다. 선수 이름, 기술명, 장비 키워드처럼 더 구체적인 검색어로 다시 시도해 보세요.
+            <p>검색 결과가 없습니다. 선수 이름, 기술명, 장비 키워드처럼 더 구체적인 검색어로 다시 시도해 보세요.</p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href="/utility/ntrp-test"
+                className="rounded-lg bg-emerald-600 px-4 py-2 font-semibold text-white hover:bg-emerald-700"
+              >
+                NTRP 테스트하기
+              </Link>
+              <NaverCafeLink
+                ctaLocation="search_no_results"
+                linkText="카페에서 질문하기"
+                className="rounded-lg border border-gray-300 px-4 py-2 font-semibold text-gray-800 hover:border-emerald-500 dark:border-gray-600 dark:text-gray-100"
+              >
+                카페에서 질문하기
+              </NaverCafeLink>
+            </div>
           </div>
         ) : null}
       </section>

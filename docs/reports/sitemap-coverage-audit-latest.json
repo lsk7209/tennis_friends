@@ -1,8 +1,10 @@
 {
   "status": "ok",
-  "generatedAt": "2026-08-27T09:56:11.127Z",
+  "generatedAt": "2026-08-27T15:24:26.783Z",
   "entries": 1465,
   "blogs": 1133,
+  "physicalBlogs": 182,
+  "physicalNoindexBlogs": 54,
   "utilities": 63,
   "players": 260,
   "findings": []

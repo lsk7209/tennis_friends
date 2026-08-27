@@ -36,7 +36,7 @@
 - Put the working surface first: calculators, tools, article lists, and player data come before marketing copy.
 - Keep scan density high: compact headings, short labels, stable controls, and restrained spacing on repeat-use pages.
 - Preserve editorial trust: article structures vary by topic and avoid repeated boilerplate link blocks.
-- Keep mobile stable: no horizontal button floods, overflowing tables, cramped ad slots, or text trapped inside small controls.
+- Keep mobile stable: no horizontal button floods, overflowing tables, unstable media, or text trapped inside small controls.
 - Use one primary accent and one support accent per view; avoid one-note palettes and dominant decorative gradients.
 
 ## Visual Language
@@ -46,11 +46,11 @@
 - Spacing/layout rhythm: full-width bands with constrained inner content; no cards inside cards
 - Shape/radius/elevation: cards and controls use 8px radius or less unless inherited component behavior requires otherwise
 - Motion: subtle hover movement only; no decorative motion that distracts from tools or reading
-- Imagery/iconography: lucide icons for common actions; tennis imagery only when it clarifies product, player, or gameplay context
+- Imagery/iconography: lucide icons for common actions; use selectively reviewed, locally optimized tennis imagery only when it clarifies product, player, or gameplay context, with explicit dimensions and descriptive alt text
 
 ## Components
 
-- Existing components to reuse: `Button`, `Badge`, `Card`, `Input`, `AdSenseSlot`, `RelatedContent`, `RelatedUtilitiesSection`, player templates
+- Existing components to reuse: `Button`, `Badge`, `Card`, `Input`, `NaverCafeLink`, `RelatedContent`, `RelatedUtilitiesSection`, player templates
 - New/changed components: blog index client filter island for search, category filtering, compact pagination
 - Variants and states: active/inactive filters, empty search state, disabled pagination, mobile wrapping states
 - Token/component ownership: Tailwind classes and global article/table rules live in app/components CSS surfaces; avoid one-off visual systems per page
@@ -59,12 +59,12 @@
 
 - Search and pagination controls need clear labels and disabled states.
 - Article tables must remain overflow-safe on mobile.
-- Ads must not block the first answer, summary, table comprehension, or core tool controls.
+- The primary cafe CTA must not interrupt the first answer, summary, table comprehension, or core tool controls.
 - Text must fit inside buttons/cards at mobile widths without relying on viewport-scaled font sizes.
 
 ## Verification
 
 - Required local command: `npm run verify`
-- Design-specific checks: blog index server/client split, compact pagination, article width, ad placement count, table wrapper, related links, Korean UX text audit
+- Design-specific checks: blog index server/client split, compact pagination, article width, semantic table conversion, selective image stability, related links, Korean UX text audit
 - Screenshot QA targets for visual implementation passes: `/`, `/blog`, one article page, `/utility`, one utility detail page, `/tennis-rules-quiz`
-- Production-adjacent actions such as GSC sitemap submission, IndexNow, GA4, or AdSense tuning are verified separately after deploy.
+- Production-adjacent actions such as GSC sitemap submission, IndexNow, or GA4 administration are verified separately after release.

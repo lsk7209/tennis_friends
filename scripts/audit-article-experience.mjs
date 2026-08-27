@@ -4,6 +4,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
 const BLOG_PAGE = "src/app/blog/[slug]/page.tsx";
+const ARTICLE_HTML = "src/lib/article-html.mjs";
 const BLOG_RENDER_PAGE = "src/app/blog-render/[slug]/page.tsx";
 const PROXY = "src/proxy.ts";
 
@@ -21,13 +22,10 @@ function hasMojibake(value) {
   return /[\uFFFD]|\?\?\?|\?[\uAC00-\uD7AF\u4E00-\u9FFF\uF900-\uFAFF]|[\uF900-\uFAFF]/.test(value);
 }
 
-function countIncludes(source, needles) {
-  return needles.filter((needle) => source.includes(needle)).length;
-}
-
 fs.mkdirSync(REPORTS_DIR, { recursive: true });
 
 const blogPage = readProjectFile(BLOG_PAGE);
+const articleHtml = readProjectFile(ARTICLE_HTML);
 const blogRenderPage = readProjectFile(BLOG_RENDER_PAGE);
 const proxy = readProjectFile(PROXY);
 
@@ -112,40 +110,28 @@ const articleRequirements = [
   {
     issue: "mobile table wrapper missing",
     ok:
-      blogPage.includes('replace(/<table/g') &&
-      blogPage.includes('class="table-wrapper"'),
+      blogPage.includes("normalizeArticleHtml") &&
+      articleHtml.includes('class="table-wrapper"') &&
+      articleHtml.includes("convertMarkdownParagraphTables"),
   },
   {
-    issue: "middle ad split after headings missing",
+    issue: "article body is not rendered as one uninterrupted section",
     ok:
-      blogPage.includes("MIDDLE_AD_AFTER_HEADING_COUNT") &&
-      blogPage.includes("splitContentForMiddleAd(processedContent)"),
+      (blogPage.match(/dangerouslySetInnerHTML/g) || []).length === 1 &&
+      blogPage.includes("__html: processedContent"),
+  },
+  {
+    issue: "selective editorial image pipeline missing",
+    ok:
+      blogPage.includes("getBlogVisual(post.slug)") &&
+      blogPage.includes("<Image") &&
+      blogPage.includes("image={articleVisual?.src}"),
   },
 ];
 
 for (const requirement of articleRequirements) {
   assert(requirement.ok, { scope: "article page", issue: requirement.issue });
 }
-
-const adSlots = [
-  "NEXT_PUBLIC_ADSENSE_ARTICLE_TOP_SLOT",
-  "NEXT_PUBLIC_ADSENSE_ARTICLE_MIDDLE_SLOT",
-  "NEXT_PUBLIC_ADSENSE_ARTICLE_BOTTOM_SLOT",
-  "5442683582",
-  "4809500982",
-  "8552062650",
-];
-
-assert(countIncludes(blogPage, adSlots) === adSlots.length, {
-  scope: "article ads",
-  issue: "article page does not include all required ad slot bindings and fallbacks",
-  expected: adSlots,
-});
-
-assert((blogPage.match(/<AdSenseSlot/g) || []).length >= 3, {
-  scope: "article ads",
-  issue: "article page does not render three ad slot placements",
-});
 
 assert(!hasMojibake(blogPage), {
   scope: "article source",
@@ -174,7 +160,7 @@ assert(proxy.includes('response.headers.set("x-robots-tag", "noindex, follow")')
 const audit = {
   status: findings.length === 0 ? "ok" : "failed",
   generatedAt: new Date().toISOString(),
-  checkedRequirements: articleRequirements.length + 5,
+  checkedRequirements: articleRequirements.length + 4,
   findings,
 };
 

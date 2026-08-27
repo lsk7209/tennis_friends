@@ -28,7 +28,7 @@ export const metadata = {
     description: "TFCC 손상부터 슬개건염까지. 테니스 동호인을 괴롭히는 손목과 무릎 통증의 원인과 예방 스트레칭.",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

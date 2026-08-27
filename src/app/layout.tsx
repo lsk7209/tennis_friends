@@ -11,9 +11,7 @@ import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
 import { Toaster } from "@/components/ui/sonner";
 import Tracking from "@/components/Tracking";
-import AdSense from "@/components/AdSense";
 import MotionPreferences from "@/components/MotionPreferences";
-import CoupangAffiliateBanner from "@/components/affiliate/CoupangAffiliateBanner";
 import CafeBanner from "@/components/blog/CafeBanner";
 import GAProvider from "@/components/analytics/GAProvider";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
@@ -31,7 +29,6 @@ import {
 } from "@/lib/site";
 
 const PROD_GA_MEASUREMENT_ID = "G-W1K51D8SBX";
-const ADSENSE_ID = "ca-pub-3050601904412736";
 const SITE_TITLE = `${SITE_NAME} - 테니스 실력 향상 플랫폼`;
 
 function getGaMeasurementId(): string {
@@ -178,7 +175,6 @@ export default function RootLayout({
       className={`${inter.variable} ${archivoBlack.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
       <head>
-        <meta name="google-adsense-account" content={ADSENSE_ID} />
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -198,11 +194,6 @@ export default function RootLayout({
         />
         <link
           rel="preconnect"
-          href="https://pagead2.googlesyndication.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preconnect"
           href="https://www.googletagmanager.com"
           crossOrigin="anonymous"
         />
@@ -216,13 +207,11 @@ export default function RootLayout({
             <Header />
             <main className="flex-1 pb-16 md:pb-0">{children}</main>
             <CafeBanner />
-            <CoupangAffiliateBanner />
             <Footer />
             <MobileNav />
           </div>
         </div>
         <Toaster />
-        <AdSense />
         <GAProvider measurementId={gaMeasurementId} />
         <Tracking />
         </MotionPreferences>

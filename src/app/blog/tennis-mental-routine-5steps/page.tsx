@@ -25,7 +25,7 @@ export const metadata = {
     description: '포인트 사이 20초를 지배하라. 루틴·시선·호흡·이미지 트레이닝으로 흔들리지 않는 멘탈을 만드는 5단계 심리 전략.',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

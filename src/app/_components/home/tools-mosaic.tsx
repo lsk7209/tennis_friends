@@ -17,7 +17,7 @@ const TOOLS = [
     label: "실력 진단",
     title: "NTRP\n테스트",
     description:
-      "10개 질문으로 나의 테니스 레벨을 객관적으로 측정합니다. 1.0~7.0 국제 표준 기준.",
+      "15개 질문으로 나의 테니스 레벨을 점검합니다. 1.0~7.0 NTRP 기준을 참고합니다.",
     href: "/utility/ntrp-test",
     cta: "테스트 시작 →",
   },
