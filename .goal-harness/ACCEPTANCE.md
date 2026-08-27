@@ -4,9 +4,9 @@
 
 | Criteria | Status | Evidence |
 |---|---|---|
-| GitHub Pages production output loads direct GA4 without Vercel-only detection. | PASS | Workflow environment, root layout, and exact static-export audit assert `G-W1K51D8SBX`. |
+| GitHub Pages output loads direct GA4 without Vercel-only detection. | PASS | Workflow environment, root layout, and repository-path static-export audit assert `G-W1K51D8SBX`. |
 | Current GA4/GSC/GTM state is inspected and unrelated GTM state is preserved. | PASS | Authenticated console evidence recorded; GTM container belongs to another domain and was not changed. |
-| Blog index is static, paginated, crawlable, and materially smaller. | PASS | 95 static pages; page 2 browser smoke passed; exported HTML reduced from about 874 KB to 111 KB. |
+| Blog index is static, paginated, crawlable, and materially smaller. | PASS | 95 static pages; public page 2 browser smoke passed; exported HTML reduced from about 874 KB to 111 KB. |
 | NTRP copied result URLs do not create false completions or shared statistics. | PASS | Unique same-session token contract and focused audit pass; UI labels records as local-only. |
 | AdSense loader is mounted once and the NTRP result slot renders. | PASS | Source audit and browser DOM smoke report one visible slot. |
 | Ordinary visits do not clear all caches or unregister service workers. | PASS | Global cache reset component and mount removed. |

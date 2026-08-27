@@ -2,6 +2,17 @@
 
 ## 2026-08-27 Measurement And Product Improvement Evidence
 
+### Post-push hosting discovery
+
+- Remote `main` matched local commit `cfcc8214bdc01f15da1a3b4a44e1f62fe446b8b3`.
+- GitHub Pages deployment, SEO Safeguard, and Hosting Cost Guard all completed successfully for that SHA.
+- `https://tennisfrens.com/blog/page/2/` returned a Vercel `308` to `/blog/page/2`, then `404`; the custom domain is not currently served by GitHub Pages.
+- `https://lsk7209.github.io/tennis_friends/blog/page/2/` returned GitHub Pages `200`, but the root-based artifact contract did not match the repository-path host.
+- Repair decision: preserve root paths for Vercel production while restoring `/tennis_friends` base and asset paths only in the GitHub Pages workflow.
+- Corrected `npm run audit:static-export` passed with 3,076 pages and explicit repository-path asset/navigation assertions.
+- After Vercel's Git integration finished, public `/blog/page/2` rendered `테니스 블로그 2페이지`, pagination through page 95, and exactly one GA4 loader.
+- Public NTRP result smoke rendered exactly one visible `4809500982` ad slot and one GA4 loader.
+
 ### Authenticated console inspection
 
 - GA4 property `tennisfrens.com` (`534356101`), web stream `14422139724`, measurement ID `G-W1K51D8SBX`; recent data and enhanced measurement are active.

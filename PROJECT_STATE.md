@@ -14,7 +14,7 @@ TennisFriends is a public, no-login Next.js tennis content and utility site. Sup
 ## Implemented
 
 - Direct GA4 (`G-W1K51D8SBX`) now loads in every production build, including GitHub Pages.
-- GitHub Pages builds use the custom-domain root contract and assert that repository-name base paths do not leak into exported URLs.
+- GitHub Pages builds use the repository path `/tennis_friends`; the canonical production domain remains the root-hosted Vercel site.
 - `/blog` now emits 12 posts per static page with crawlable `/blog/page/N/` navigation instead of serializing the full catalog to the client.
 - NTRP completion events and local history require a unique same-session completion token; copied result URLs do not create false completions.
 - NTRP statistics are explicitly local-only, and the former sample/public leaderboard claim is removed.
@@ -33,7 +33,9 @@ TennisFriends is a public, no-login Next.js tennis content and utility site. Sup
 ## Validation
 
 - PASS: `npm run verify` (lint, typecheck, focused audits, production build; 3,076 pages).
-- PASS: `npm run audit:static-export` (3,076 custom-domain root pages, GA loader, paginated blog, no `/tennis_friends/` path leakage).
+- PASS: corrected `npm run audit:static-export` generated 3,076 pages and verified the GA loader, `/tennis_friends/_next/` assets, and `/tennis_friends/blog/page/2/` navigation.
+- PASS: public `https://tennisfrens.com/blog/page/2` rendered the new paginated page with one GA4 loader.
+- PASS: public NTRP result rendered one visible ad slot and one GA4 loader.
 - PASS: production dependency audit with zero vulnerabilities.
 - PASS: `/blog` exported HTML reduced from about 874 KB to about 111 KB.
 - PASS: browser smoke on `/blog/page/2/` and one visible NTRP result ad slot.
@@ -42,12 +44,12 @@ TennisFriends is a public, no-login Next.js tennis content and utility site. Sup
 ## Risks And Boundaries
 
 - Local NTRP history is intentionally device/browser-local and is not a public leaderboard.
-- Static export ignores server-only redirects, headers, middleware, and API routes; the verified GitHub Pages contract is static output only.
+- Static export ignores server-only redirects, headers, middleware, and API routes. GitHub Pages is a repository-path fallback; `tennisfrens.com` currently resolves to Vercel and must remain root-based.
 - Localhost cannot prove the remote AdSense script response; source/output audits prove loader placement, and post-push live observation remains separate.
 - Historical product documents may mention a planned Supabase design; they are not the active implementation contract.
 
 ## Next Actions
 
-1. Commit and push the verified change set to GitHub `main`.
-2. Verify the remote `main` SHA after push.
-3. Observe the public GitHub Pages result after its normal workflow completes; do not mutate Vercel.
+1. Commit and push the verified GitHub Pages base-path repair to `main`.
+2. Verify the remote SHA and repository-path fallback after its workflow completes.
+3. Continue measurement observation in GA4/GSC; do not mutate Vercel.

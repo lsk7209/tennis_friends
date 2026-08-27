@@ -14,7 +14,7 @@ const result = spawnSync(process.execPath, [npmCli, "run", "build"], {
     GITHUB_ACTIONS: "true",
     GITHUB_PAGES: "true",
     GITHUB_REPOSITORY: "lsk7209/tennis_friends",
-    GITHUB_PAGES_BASE_PATH: "",
+    GITHUB_PAGES_BASE_PATH: "/tennis_friends",
     NEXT_PUBLIC_SITE_URL: "https://tennisfrens.com",
   },
   stdio: "inherit",
@@ -45,8 +45,11 @@ const blogIndex = fs.readFileSync(path.join(ROOT, "out/blog/index.html"), "utf8"
 if (Buffer.byteLength(blogIndex) > 250_000) {
   throw new Error(`Blog index payload is too large: ${Buffer.byteLength(blogIndex)} bytes`);
 }
-if (blogIndex.includes('/tennis_friends/')) {
-  throw new Error("Custom-domain export unexpectedly contains the repository base path");
+if (!blogIndex.includes('/tennis_friends/blog/page/2/')) {
+  throw new Error("GitHub Pages export is missing the repository base path");
+}
+if (!home.includes('/tennis_friends/_next/')) {
+  throw new Error("GitHub Pages assets are missing the repository base path");
 }
 
 const customArticle = fs.readFileSync(
