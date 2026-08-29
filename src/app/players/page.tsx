@@ -22,6 +22,7 @@ import {FadeIn, StaggeredAnimation, StaggeredItem} from '@/components/ScrollAnim
 import { PLAYERS_PER_PAGE } from '@/lib/constants';
 
 import { PLAYERS_DB } from '@/data/players';
+import playerLegacyRedirects from '@/data/players/legacy-redirects.json';
 
 const SORT_OPTIONS = ['name', 'country'] as const;
 type SortOption = (typeof SORT_OPTIONS)[number];
@@ -40,10 +41,12 @@ export default function PlayersPage() {
   // 필터링 및 정렬된 선수 목록
   const filteredAndSortedPlayers = useMemo(() => {
     // 모든 선수 데이터를 배열로 변환
-    let players = Object.entries(PLAYERS_DB).map(([slug, data]) => ({
-      slug,
-      ...data
-    }));
+    let players = Object.entries(PLAYERS_DB)
+      .filter(([slug]) => !(slug in playerLegacyRedirects))
+      .map(([slug, data]) => ({
+        slug,
+        ...data
+      }));
 
     // 성별 필터 적용
     if (genderFilter !== 'all') {

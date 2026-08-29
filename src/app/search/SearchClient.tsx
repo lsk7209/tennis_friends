@@ -6,6 +6,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import NaverCafeLink from "@/components/NaverCafeLink";
 import { allBlogPosts } from "@/data/blog-posts";
 import { PLAYERS_DB } from "@/data/players";
+import playerLegacyRedirects from "@/data/players/legacy-redirects.json";
 import { getPublishedBlogPosts } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { trackEvent, TRACKING_EVENTS } from "@/lib/analytics";
@@ -68,6 +69,7 @@ export default function SearchClient() {
 
     const playerResults = query
       ? Object.entries(PLAYERS_DB)
+          .filter(([slug]) => !(slug in playerLegacyRedirects))
           .filter(([slug, player]) =>
             [slug, player.name, player.nameEn, player.country]
               .filter(Boolean)

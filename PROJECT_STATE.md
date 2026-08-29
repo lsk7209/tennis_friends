@@ -1,5 +1,17 @@
 # PROJECT_STATE
 
+## Duplicate Player Alias Consolidation Release Candidate (2026-08-30)
+
+- Goal: consolidate the two public Hong Seong-chan profile routes so search engines, the player directory, site search, the sitemap, and AI discovery all point to one canonical profile.
+- GitHub-first baseline: local `main`, `origin/main`, and the current production deployment were all verified at `d815cf492bf4f8f7ccb2cabccd18c1d3db28f1e0` before editing.
+- Canonical survivor: `/players/seongchan-hong`. It owns the tracked player image and is the current GA4 landing-page winner (49 active users / 50 sessions in the fresh dashboard snapshot); `/players/hong-seong-chan` remains reachable through a permanent redirect.
+- Implementation: added the legacy mapping, removed redirect-only aliases from the player directory and site search, and expanded the redirect audit so the mapping and both internal-discovery gates are regression-locked.
+- Generated discovery state: 1,465 sitemap entries, 1,134 blogs, and 259 canonical player profiles. `ai-index.json` and `llms*.txt` contain the survivor and exclude the alias.
+- Fresh validation: `npm run audit:redirect-config`, `npm run audit:player-search-seo`, `npm run audit:sitemap-coverage`, `npm run audit:site-content-design-review`, `npm run type-check`, `git diff --check`, and full `npm run verify` all passed. The full build generated 3,077/3,077 static pages with zero production dependency vulnerabilities.
+- Local production smoke: the alias returns `308` to `/players/seongchan-hong`; the survivor returns `200` with a self-canonical and one H1; sitemap and AI discovery expose only the survivor.
+- Deployment note: the canonical Vercel domain supports the permanent redirect. The GitHub Pages static mirror intentionally disables Next.js redirects and will return `404` for the legacy alias; its generated pages still canonicalize to `https://tennisfrens.com`, so this is recorded as a non-blocking mirror limitation rather than the production SEO contract.
+- Current boundary: no commit, Git push, deployment, workflow dispatch, indexing submission, analytics-admin mutation, or Vercel CLI/API mutation has occurred for this release candidate yet. The active fleet task authorizes the coherent Git push and its Git-connected deployments after final review.
+
 ## Search Inventory And Funnel Measurement Closure (2026-08-28)
 
 - Classified the 54 physical blog routes omitted from discovery as the existing low-quality set; kept them out of the 1,465-URL sitemap and 1,467-page AI index rather than inflating indexable inventory.

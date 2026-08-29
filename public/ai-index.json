@@ -3,12 +3,12 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-08-28",
+  "lastUpdated": "2026-08-30",
   "stats": {
     "totalPages": 1467,
     "tools": 64,
-    "articles": 1133,
-    "playerProfiles": 260
+    "articles": 1134,
+    "playerProfiles": 259
   },
   "pages": [
     {
@@ -511,6 +511,14 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/t07-string-tension-log",
+      "title": "테니스 스트링 텐션을 낮출지 유지할지 판단하는 기록표",
+      "description": "테니스 스트링 텐션을 낮출지 유지할지 판단하는 기록표 스트링을 다시 매려 할 때 “조금 낮춰 볼까?”라는 생각은 자연스럽다. 다만 텐션을 바꾼 같은 주에 라켓을 바꾸고, 레슨을 늘리고, 스윙도 고치면 어떤 변화가 공의 깊이와 타구감에 영향을 줬는지 알기 어렵다. 텐션은 장비의 한 요소일",
+      "type": "article",
+      "category": "테니스 가이드",
+      "lastModified": "2026-08-28T10:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/t06-first-tournament-operations",
@@ -10329,13 +10337,6 @@
       "url": "https://tennisfrens.com/players/holger-rune",
       "title": "홀게르 루네 (Holger Rune)",
       "description": "테니스 선수 홀게르 루네 Holger Rune 프로필, 랭킹, 전적, 플레이 스타일",
-      "type": "player",
-      "category": "player-profile"
-    },
-    {
-      "url": "https://tennisfrens.com/players/hong-seong-chan",
-      "title": "홍성찬 (Seong-chan Hong)",
-      "description": "테니스 선수 홍성찬 Seong-chan Hong 프로필, 랭킹, 전적, 플레이 스타일",
       "type": "player",
       "category": "player-profile"
     },

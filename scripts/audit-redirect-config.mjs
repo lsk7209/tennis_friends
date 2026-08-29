@@ -7,6 +7,8 @@ const TYPO_SLUG = "/players/arthur-landercknech";
 const CANONICAL_PLAYER_SLUG = "/players/arthur-rinderknech";
 const LEGACY_PLAYER_SLUG = "marta-kostyuk-legacy";
 const LEGACY_PLAYER_CANONICAL_SLUG = "marta-kostyuk";
+const DUPLICATE_PLAYER_SLUG = "hong-seong-chan";
+const DUPLICATE_PLAYER_CANONICAL_SLUG = "seongchan-hong";
 
 const findings = [];
 
@@ -24,6 +26,8 @@ function compact(text) {
 
 const nextConfig = readProjectFile("next.config.ts");
 const playerPage = readProjectFile("src/app/players/[slug]/page.tsx");
+const playerDirectory = readProjectFile("src/app/players/page.tsx");
+const searchClient = readProjectFile("src/app/search/SearchClient.tsx");
 const playerLegacyRedirects = JSON.parse(
   readProjectFile("src/data/players/legacy-redirects.json"),
 );
@@ -52,6 +56,16 @@ assert(
   },
 );
 assert(
+  playerLegacyRedirects[DUPLICATE_PLAYER_SLUG] ===
+    DUPLICATE_PLAYER_CANONICAL_SLUG,
+  {
+    scope: "player legacy redirects",
+    issue: "Hong Seong-chan duplicate slug mapping missing",
+    expected: DUPLICATE_PLAYER_CANONICAL_SLUG,
+    actual: playerLegacyRedirects[DUPLICATE_PLAYER_SLUG],
+  },
+);
+assert(
   playerPage.includes("permanentRedirect") &&
     playerPage.includes("playerLegacyRedirects[") &&
     playerPage.includes("permanentRedirect(`/players/${canonicalSlug}`)"),
@@ -69,6 +83,19 @@ assert(
     issue: "Arthur Rinderknech typo slug permanent redirect missing",
   },
 );
+for (const [scope, source] of [
+  ["player directory", playerDirectory],
+  ["site search", searchClient],
+]) {
+  assert(
+    source.includes("playerLegacyRedirects") &&
+      source.includes("!(slug in playerLegacyRedirects)"),
+    {
+      scope,
+      issue: "legacy player aliases remain internally discoverable",
+    },
+  );
+}
 
 if (findings.length > 0) {
   console.error(JSON.stringify({ status: "failed", findings }, null, 2));
@@ -78,11 +105,18 @@ if (findings.length > 0) {
 console.log(
   JSON.stringify({
     status: "ok",
-    checked: ["next.config.ts"],
+    checked: [
+      "next.config.ts",
+      "src/app/players/[slug]/page.tsx",
+      "src/app/players/page.tsx",
+      "src/app/search/SearchClient.tsx",
+      "src/data/players/legacy-redirects.json",
+    ],
     redirects: {
       canonicalHost: CANONICAL_ORIGIN,
       typoSlug: `${TYPO_SLUG} -> ${CANONICAL_PLAYER_SLUG}`,
       legacyPlayerSlug: `${LEGACY_PLAYER_SLUG} -> ${LEGACY_PLAYER_CANONICAL_SLUG}`,
+      duplicatePlayerSlug: `${DUPLICATE_PLAYER_SLUG} -> ${DUPLICATE_PLAYER_CANONICAL_SLUG}`,
     },
     findings,
   }),
