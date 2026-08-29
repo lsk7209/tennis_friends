@@ -46,7 +46,7 @@ export async function generateStaticParams() {
   return Object.keys(PLAYERS_DB)
     .filter((slug) => !(slug in playerLegacyRedirects))
     .map((slug) => ({
-    slug,
+      slug,
     }));
 }
 
@@ -59,20 +59,26 @@ const SEARCH_METADATA_OVERRIDES: Record<
   { title: string; description: string; keywords: string[] }
 > = {
   "alexandra-eala": {
-    title: "알렉산드라 이알라(Alexandra Eala) 프로필 | 필리핀 WTA 선수·전적·플레이스타일",
+    title:
+      "알렉산드라 이알라(Alexandra Eala) 프로필 | 필리핀 WTA 선수·플레이스타일·강점",
     description:
-      "알렉산드라 이알라(Alexandra Eala)의 WTA 프로필입니다. 필리핀 출신 왼손잡이 테니스 선수의 플레이스타일, 주요 전적과 경기 흐름을 확인하세요.",
-    keywords: ["알렉산드라 이알라", "Alexandra Eala", "필리핀 테니스 선수", "WTA 선수"],
+      "알렉산드라 이알라(Alexandra Eala)의 WTA 프로필입니다. 필리핀 출신 왼손잡이 테니스 선수의 플레이스타일과 강점, 경기 운영 특징을 정리했습니다.",
+    keywords: [
+      "알렉산드라 이알라",
+      "Alexandra Eala",
+      "필리핀 테니스 선수",
+      "WTA 선수",
+    ],
   },
   "iva-jovic": {
-    title: "이바 조비크(Iva Jovic) 프로필 | 미국 WTA 유망주·랭킹·전적",
+    title: "이바 조비크(Iva Jovic) 프로필 | 미국 WTA 유망주·플레이스타일",
     description:
-      "이바 조비크(이바 조비치, Iva Jovic) 미국 WTA 유망주 프로필입니다. 현재 랭킹, 전적, 오른손 베이스라인 플레이스타일과 경기 흐름을 확인하세요.",
+      "이바 조비크(이바 조비치, Iva Jovic) 미국 WTA 유망주 프로필입니다. 오른손 베이스라인 플레이스타일과 강점, 성장 포인트를 정리했습니다.",
     keywords: [
       "이바 조비크",
       "이바 조비치",
       "Iva Jovic",
-      "이바 조비크 랭킹",
+      "이바 조비크 플레이스타일",
       "미국 WTA 유망주",
     ],
   },
@@ -94,8 +100,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const baseTitle = buildPlayerSeoTitle(player, tour);
   const baseDescription = buildPlayerSeoDescription(player, tour);
   const title = metadataOverride?.title ?? baseTitle;
-  const description =
-    metadataOverride?.description ?? baseDescription;
+  const description = metadataOverride?.description ?? baseDescription;
   const ogImage = `${siteUrl}/api/og?title=${encodeURIComponent(player.name)}&sub=${encodeURIComponent(`${player.nameEn} · ${tour} profile`)}`;
   const keywords = metadataOverride
     ? [
@@ -356,7 +361,7 @@ export default async function PlayerProfilePage({ params }: Props) {
         </p>
         <p>
           본 프로필 페이지에서는 {player.name} 선수의 기본 정보와 플레이 스타일,
-          그리고 최신 경기력을 분석한 데이터를 제공할 예정입니다.
+          강점과 약점, 주목할 경기 패턴을 정리해 소개합니다.
         </p>
       </div>
     );
@@ -367,7 +372,7 @@ export default async function PlayerProfilePage({ params }: Props) {
       <BreadcrumbSchema items={breadcrumbItems} />
       <ProfilePageSchema
         name={`${player.name} (${player.nameEn}) - 테니스 프로필`}
-        description={`${player.name} 선수의 상세 프로필, 랭킹, 플레이 스타일, 사용 장비 정보.`}
+        description={`${player.name} 선수의 국적, 플레이 스타일, 강점과 약점, 주목할 경기 패턴을 정리한 프로필.`}
         image={player.image || "/images/players/placeholder-tennis-player.svg"}
         breadcrumb={{
           "@type": "BreadcrumbList",
@@ -604,15 +609,17 @@ export default async function PlayerProfilePage({ params }: Props) {
                             </a>
                           </li>
                         )}
-                        <li>
-                          <a
-                            href="#recent-form"
-                            className="!text-black dark:!text-white hover:!text-blue-600 transition-colors no-underline block"
-                            style={{ color: "black" }}
-                          >
-                            5. 최근 폼 & 전망
-                          </a>
-                        </li>
+                        {player.detailedProfile.recentForm && (
+                          <li>
+                            <a
+                              href="#recent-form"
+                              className="!text-black dark:!text-white hover:!text-blue-600 transition-colors no-underline block"
+                              style={{ color: "black" }}
+                            >
+                              5. 최근 폼 & 전망
+                            </a>
+                          </li>
+                        )}
                         {player.detailedProfile.faq && (
                           <li>
                             <a
@@ -722,18 +729,22 @@ export default async function PlayerProfilePage({ params }: Props) {
                       </>
                     )}
 
-                    <h2
-                      id="recent-form"
-                      className="flex items-center gap-2 mt-12 scroll-mt-24"
-                    >
-                      <Activity className="w-6 h-6 text-green-500" />
-                      최근 흐름과 전망
-                    </h2>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: player.detailedProfile.recentForm || "",
-                      }}
-                    />
+                    {player.detailedProfile.recentForm && (
+                      <>
+                        <h2
+                          id="recent-form"
+                          className="flex items-center gap-2 mt-12 scroll-mt-24"
+                        >
+                          <Activity className="w-6 h-6 text-green-500" />
+                          최근 흐름과 전망
+                        </h2>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: player.detailedProfile.recentForm,
+                          }}
+                        />
+                      </>
+                    )}
 
                     {player.detailedProfile.faq &&
                       player.detailedProfile.faq.length > 0 && (
@@ -821,9 +832,9 @@ export default async function PlayerProfilePage({ params }: Props) {
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400">
                           {player.gender === "male" ? "ATP" : "WTA"} 투어에서
-                          활약 중이며, 꾸준한 성적으로 랭킹을 유지하고 있습니다.
-                          그랜드슬램 및 마스터스 대회에서의 활약이 기대되는
-                          선수입니다.
+                          경기를 치르는 선수로, 이 페이지에서는 플레이 스타일과
+                          강점을 중심으로 소개합니다. 대회별 성적과 랭킹은 공식
+                          투어 사이트에서 확인할 수 있습니다.
                         </p>
                       </div>
                     </div>
@@ -875,14 +886,42 @@ export default async function PlayerProfilePage({ params }: Props) {
                     </div>
                   </div>
                 ) : (
-                  <div className="text-center py-16 bg-gray-50 dark:bg-gray-900/50 rounded-2xl border border-dashed border-gray-200 dark:border-gray-700">
-                    <Activity className="w-16 h-16 mx-auto mb-4 text-gray-300 dark:text-gray-600" />
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                      데이터 수집 중
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm space-y-4">
+                    <h3 className="flex items-center text-xl font-bold text-gray-900 dark:text-gray-100">
+                      <Activity className="w-5 h-5 mr-2 text-blue-500" />
+                      플레이 스타일 분석
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400 max-w-sm mx-auto">
-                      {player.name} 선수의 정밀 능력치 데이터를 수집하고
-                      있습니다.
+                    {player.detailedProfile?.playStyle ? (
+                      <div
+                        className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed"
+                        dangerouslySetInnerHTML={{
+                          __html: player.detailedProfile.playStyle,
+                        }}
+                      />
+                    ) : (
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {player.name} 선수는{" "}
+                        {player.plays === "Right-handed" ? "오른손" : "왼손"}
+                        잡이 플레이어로,
+                        {player.backhand === "Two-handed"
+                          ? " 안정적인 투핸드 백핸드"
+                          : " 날카로운 원핸드 백핸드"}
+                        를 구사합니다.
+                      </p>
+                    )}
+                    {player.detailedProfile?.signatureMatch && (
+                      <div className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg">
+                        <p className="font-bold text-gray-700 dark:text-gray-200 mb-1">
+                          {player.detailedProfile.signatureMatch.title}
+                        </p>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                          {player.detailedProfile.signatureMatch.description}
+                        </p>
+                      </div>
+                    )}
+                    <p className="text-xs text-gray-400 dark:text-gray-500">
+                      ※ 수치화된 능력치 그래프는 공개 경기 영상·기록을 바탕으로
+                      편집팀이 평가한 일부 선수에게만 제공됩니다.
                     </p>
                   </div>
                 )}
@@ -942,7 +981,8 @@ export default async function PlayerProfilePage({ params }: Props) {
               {player.name} 분석 다음 단계
             </h3>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-              선수의 플레이 특징을 내 연습 기준, 실력 레벨, 장비 선택으로 이어서 확인합니다.
+              선수의 플레이 특징을 내 연습 기준, 실력 레벨, 장비 선택으로 이어서
+              확인합니다.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">

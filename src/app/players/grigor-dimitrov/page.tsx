@@ -17,14 +17,14 @@ const _oneLiner =
 export const metadata: Metadata = {
   title:
     _searchSeo?.title ??
-    `${_player?.name ?? SLUG} 선수 프로필 | 랭킹·전적·플레이스타일 | ${_tour}`,
+    `${_player?.name ?? SLUG} 선수 프로필 | 플레이스타일·강점 | ${_tour}`,
   description:
     _searchSeo?.description ??
-    `${_player?.name}(${_player?.nameEn})의 랭킹, 전적, 플레이스타일, 주요 경기와 강점을 정리한 ${_tour} 선수 프로필입니다. ${_oneLiner}`.trim(),
+    `${_player?.name}(${_player?.nameEn})의 국적, 플레이스타일, 강점과 약점, 주목할 경기 패턴을 정리한 ${_tour} 선수 프로필입니다. ${_oneLiner}`.trim(),
   keywords: _player
     ? buildPlayerSeoKeywords(SLUG, _player, _tour, [
         `${_player.name} 플레이스타일`,
-        `${_player.name} 전적`,
+        `${_player.name} 강점`,
         `${_player.nameEn} tennis`,
         "테니스",
         _tour,

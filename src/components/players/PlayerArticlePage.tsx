@@ -44,11 +44,15 @@ export default function PlayerArticlePage({ slug }: Props) {
       depth: 2,
     },
     { id: "fan-appeal", text: "팬들은 이 선수의 어떤 점에 끌릴까?", depth: 2 },
-    {
-      id: "recent-form",
-      text: `요즘 ${player.name}의 경기력 흐름은?`,
-      depth: 2,
-    },
+    ...(dp.recentForm
+      ? [
+          {
+            id: "recent-form",
+            text: `요즘 ${player.name}의 경기력 흐름은?`,
+            depth: 2 as const,
+          },
+        ]
+      : []),
     { id: "one-liner", text: "한 문장으로 정리하면?", depth: 2 },
     ...(faqs.length > 0
       ? [{ id: "faq", text: "자주 묻는 질문 (FAQ)", depth: 2 as const }]
@@ -235,7 +239,10 @@ export default function PlayerArticlePage({ slug }: Props) {
                 </div>
               </div>
             ) : (
-              <p>{player.name}의 대표 경기 정보를 준비 중입니다.</p>
+              <p>
+                {player.name}의 대표 경기는 이 프로필에서 별도로 다루지
+                않습니다. 플레이 스타일과 강점 분석을 참고해 주세요.
+              </p>
             )}
 
             {/* 팬 매력 */}
@@ -249,21 +256,24 @@ export default function PlayerArticlePage({ slug }: Props) {
                 dangerouslySetInnerHTML={{ __html: dp.fanAppeal }}
               />
             ) : (
-              <p>{player.name}의 팬 매력 분석을 준비 중입니다.</p>
+              <p>
+                {player.name}의 팬 포인트는 위 플레이 스타일·강점 분석에서
+                확인할 수 있습니다.
+              </p>
             )}
 
-            {/* 최근 경기력 */}
-            <h2 id="recent-form" className="flex items-center gap-2 mt-12">
-              <Zap className="w-6 h-6 text-green-500" />
-              요즘 {player.name}의 경기력 흐름은?
-            </h2>
-            {dp.recentForm ? (
-              <div
-                className="player-content"
-                dangerouslySetInnerHTML={{ __html: dp.recentForm }}
-              />
-            ) : (
-              <p>최신 경기력 정보를 업데이트 중입니다.</p>
+            {/* 최근 경기력 (데이터가 있을 때만 노출) */}
+            {dp.recentForm && (
+              <>
+                <h2 id="recent-form" className="flex items-center gap-2 mt-12">
+                  <Zap className="w-6 h-6 text-green-500" />
+                  요즘 {player.name}의 경기력 흐름은?
+                </h2>
+                <div
+                  className="player-content"
+                  dangerouslySetInnerHTML={{ __html: dp.recentForm }}
+                />
+              </>
             )}
 
             {/* 한 문장 요약 */}
