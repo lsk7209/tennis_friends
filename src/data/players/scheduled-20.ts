@@ -27,10 +27,14 @@ const playerSeeds: PlayerSeed[] = [
     plays: "Left-handed",
     backhand: "Two-handed",
     identity: "왼손 각도와 빠른 판단으로 랠리 리듬을 흔드는 미국 신예",
-    strength: "낮은 자세의 리턴, 빠른 코스 전환, 상대 백핸드 쪽으로 여는 왼손 크로스",
-    growth: "주니어와 챌린저 무대에서 긴 랠리 감각을 키우며 성인 투어 적응력을 높이고 있습니다.",
-    matchUse: "첫 리턴을 깊게 넣은 뒤 포핸드 쪽 빈 공간을 빠르게 공략하는 패턴이 좋습니다.",
-    weakness: "체격이 큰 빅서버를 상대로는 첫 두 포인트에서 밀리지 않는 리턴 깊이가 중요합니다.",
+    strength:
+      "낮은 자세의 리턴, 빠른 코스 전환, 상대 백핸드 쪽으로 여는 왼손 크로스",
+    growth:
+      "주니어와 챌린저 무대에서 긴 랠리 감각을 키우며 성인 투어 적응력을 높이고 있습니다.",
+    matchUse:
+      "첫 리턴을 깊게 넣은 뒤 포핸드 쪽 빈 공간을 빠르게 공략하는 패턴이 좋습니다.",
+    weakness:
+      "체격이 큰 빅서버를 상대로는 첫 두 포인트에서 밀리지 않는 리턴 깊이가 중요합니다.",
   },
   {
     slug: "juncheng-shang",
@@ -42,10 +46,14 @@ const playerSeeds: PlayerSeed[] = [
     plays: "Left-handed",
     backhand: "Two-handed",
     identity: "중국 남자 테니스의 공격적인 왼손 베이스라이너",
-    strength: "빠른 준비 동작, 날카로운 포핸드 크로스, 짧은 공을 놓치지 않는 전진성",
-    growth: "어린 시절부터 국제 무대를 경험하며 하드코트 랠리와 공격 전환 능력을 다듬었습니다.",
-    matchUse: "리턴 게임에서 상대 두 번째 서브를 빠르게 잡아 코트 안쪽에서 공격합니다.",
-    weakness: "경기 흐름이 빨라질수록 무리한 다운더라인 선택을 줄이는 것이 과제입니다.",
+    strength:
+      "빠른 준비 동작, 날카로운 포핸드 크로스, 짧은 공을 놓치지 않는 전진성",
+    growth:
+      "어린 시절부터 국제 무대를 경험하며 하드코트 랠리와 공격 전환 능력을 다듬었습니다.",
+    matchUse:
+      "리턴 게임에서 상대 두 번째 서브를 빠르게 잡아 코트 안쪽에서 공격합니다.",
+    weakness:
+      "경기 흐름이 빨라질수록 무리한 다운더라인 선택을 줄이는 것이 과제입니다.",
   },
   {
     slug: "yunchaokete-bu",
@@ -57,9 +65,11 @@ const playerSeeds: PlayerSeed[] = [
     plays: "Right-handed",
     backhand: "Two-handed",
     identity: "묵직한 베이스라인 랠리와 인내심으로 포인트를 쌓는 중국 선수",
-    strength: "긴 랠리에서 버티는 하체, 안정적인 백핸드, 무리하지 않는 코스 선택",
+    strength:
+      "긴 랠리에서 버티는 하체, 안정적인 백핸드, 무리하지 않는 코스 선택",
     growth: "챌린저 무대 경험을 바탕으로 투어급 공 속도에 적응하는 단계입니다.",
-    matchUse: "상대가 먼저 무리하게 만들도록 깊은 크로스 랠리를 반복하는 운영이 어울립니다.",
+    matchUse:
+      "상대가 먼저 무리하게 만들도록 깊은 크로스 랠리를 반복하는 운영이 어울립니다.",
     weakness: "짧은 공을 받았을 때 포인트를 끝내는 전환 속도가 더 필요합니다.",
   },
   {
@@ -72,10 +82,13 @@ const playerSeeds: PlayerSeed[] = [
     plays: "Right-handed",
     backhand: "Two-handed",
     identity: "미국 대학 테니스 기반의 강한 서브와 포핸드 조합형 선수",
-    strength: "큰 첫 서브, 공격적인 포핸드 첫 타, 코트 안쪽에서 빠르게 끝내는 마무리",
+    strength:
+      "큰 첫 서브, 공격적인 포핸드 첫 타, 코트 안쪽에서 빠르게 끝내는 마무리",
     growth: "대학 무대의 압박 경기 경험을 프로 무대 패턴으로 옮기는 중입니다.",
-    matchUse: "서브 플러스 원 패턴으로 짧은 공을 만들고 포핸드로 마무리하는 흐름이 핵심입니다.",
-    weakness: "수비 랠리가 길어질 때 샷 선택을 차분하게 유지하는 것이 필요합니다.",
+    matchUse:
+      "서브 플러스 원 패턴으로 짧은 공을 만들고 포핸드로 마무리하는 흐름이 핵심입니다.",
+    weakness:
+      "수비 랠리가 길어질 때 샷 선택을 차분하게 유지하는 것이 필요합니다.",
   },
   {
     slug: "alexander-blockx",
@@ -89,7 +102,8 @@ const playerSeeds: PlayerSeed[] = [
     identity: "주니어 무대에서 주목받은 벨기에의 균형형 베이스라이너",
     strength: "안정적인 양손 백핸드, 코스 선택, 랠리 중 템포 조절",
     growth: "주니어 성과를 바탕으로 성인 투어의 무거운 공에 적응하고 있습니다.",
-    matchUse: "상대의 속도를 그대로 이용해 크로스 랠리를 길게 끌고 가는 방식이 좋습니다.",
+    matchUse:
+      "상대의 속도를 그대로 이용해 크로스 랠리를 길게 끌고 가는 방식이 좋습니다.",
     weakness: "공격 전환 타이밍을 늦추면 포인트를 길게 끌려갈 수 있습니다.",
   },
   {
@@ -103,9 +117,11 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "포르투갈의 탄탄한 하드코트형 베이스라이너",
     strength: "묵직한 포핸드, 안정적인 서비스 게임, 코트 뒤에서 버티는 체력",
-    growth: "챌린저 투어에서 경기 수를 쌓으며 투어 레벨의 리듬을 익히고 있습니다.",
+    growth:
+      "챌린저 투어에서 경기 수를 쌓으며 투어 레벨의 리듬을 익히고 있습니다.",
     matchUse: "첫 서브 후 포핸드 방향을 넓게 열어 상대 수비 범위를 늘립니다.",
-    weakness: "빠른 네트 전환과 짧은 공 처리의 다양성이 더해지면 경쟁력이 커집니다.",
+    weakness:
+      "빠른 네트 전환과 짧은 공 처리의 다양성이 더해지면 경쟁력이 커집니다.",
   },
   {
     slug: "tseng-chun-hsin",
@@ -118,8 +134,10 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "민첩한 수비와 탄탄한 기본기로 알려진 대만 베이스라이너",
     strength: "빠른 발, 낮은 실수율, 리턴 게임에서의 끈질긴 수비",
-    growth: "주니어 정상급 경험 이후 성인 투어에서 피지컬과 공격력을 보강해왔습니다.",
-    matchUse: "상대 공격을 한 번 더 돌려보내며 무리한 선택을 유도하는 전술이 강점입니다.",
+    growth:
+      "주니어 정상급 경험 이후 성인 투어에서 피지컬과 공격력을 보강해왔습니다.",
+    matchUse:
+      "상대 공격을 한 번 더 돌려보내며 무리한 선택을 유도하는 전술이 강점입니다.",
     weakness: "짧은 찬스볼에서 한 번에 끝내는 파워가 경기 흐름을 좌우합니다.",
   },
   {
@@ -148,7 +166,8 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "미국식 공격 템포와 탄탄한 기본기를 함께 가진 선수",
     strength: "서브 후 첫 포핸드, 빠른 발, 공격적인 베이스라인 진입",
-    growth: "주니어 그랜드슬램 결승 경험을 바탕으로 프로 무대에서 꾸준히 경쟁하고 있습니다.",
+    growth:
+      "주니어 그랜드슬램 결승 경험을 바탕으로 프로 무대에서 꾸준히 경쟁하고 있습니다.",
     matchUse: "상대 두 번째 서브를 코트 안에서 받아 빠르게 주도권을 잡습니다.",
     weakness: "긴 랠리에서 공격과 안정의 균형을 맞추는 것이 관건입니다.",
   },
@@ -163,9 +182,11 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "이탈리아 테니스의 차세대 기술형 베이스라이너",
     strength: "깔끔한 양손 백핸드, 빠른 준비 동작, 코트 안쪽 진입",
-    growth: "유럽 주니어와 프로 전환 무대를 거치며 경기 체력과 파워를 키우고 있습니다.",
+    growth:
+      "유럽 주니어와 프로 전환 무대를 거치며 경기 체력과 파워를 키우고 있습니다.",
     matchUse: "백핸드 크로스로 랠리를 안정시킨 뒤 포핸드 전환으로 공격합니다.",
-    weakness: "성인 무대의 무거운 서브를 상대로 리턴 깊이를 유지하는 것이 중요합니다.",
+    weakness:
+      "성인 무대의 무거운 서브를 상대로 리턴 깊이를 유지하는 것이 중요합니다.",
   },
   {
     slug: "maya-joint",
@@ -178,7 +199,8 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "호주 여자 테니스의 활동량 높은 신예 베이스라이너",
     strength: "빠른 발, 공격적인 리턴, 랠리 중 방향 전환",
-    growth: "주니어와 성인 무대를 병행하며 하드코트 경기력을 빠르게 끌어올리고 있습니다.",
+    growth:
+      "주니어와 성인 무대를 병행하며 하드코트 경기력을 빠르게 끌어올리고 있습니다.",
     matchUse: "리턴에서 먼저 깊이를 만들고 다음 공을 오픈 코트로 전환합니다.",
     weakness: "빠른 공격 뒤 회복 위치를 안정시키면 실점 패턴이 줄어듭니다.",
   },
@@ -193,7 +215,8 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "프랑스의 묵직한 스트로크와 인내심을 갖춘 베이스라이너",
     strength: "클레이에서의 긴 랠리, 포핸드 깊이, 차분한 코스 선택",
-    growth: "부상과 복귀 과정을 지나며 성인 무대에서 자기 리듬을 회복하고 있습니다.",
+    growth:
+      "부상과 복귀 과정을 지나며 성인 무대에서 자기 리듬을 회복하고 있습니다.",
     matchUse: "높은 바운드와 깊은 포핸드로 상대 공격 타이밍을 늦춥니다.",
     weakness: "빠른 하드코트에서는 첫 두 샷의 템포 적응이 중요합니다.",
   },
@@ -208,9 +231,12 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "캐나다의 파워와 운동 능력을 겸비한 젊은 공격형 선수",
     strength: "강한 포핸드, 빠른 코트 커버, 공격 전환 속도",
-    growth: "주니어 시절부터 높은 기대를 받으며 프로 무대 경험을 넓히고 있습니다.",
-    matchUse: "수비에서 한 번 버틴 뒤 포핸드 방향 전환으로 주도권을 빼앗습니다.",
-    weakness: "강한 샷 뒤 다음 준비를 빠르게 해 연속 공격을 완성하는 것이 필요합니다.",
+    growth:
+      "주니어 시절부터 높은 기대를 받으며 프로 무대 경험을 넓히고 있습니다.",
+    matchUse:
+      "수비에서 한 번 버틴 뒤 포핸드 방향 전환으로 주도권을 빼앗습니다.",
+    weakness:
+      "강한 샷 뒤 다음 준비를 빠르게 해 연속 공격을 완성하는 것이 필요합니다.",
   },
   {
     slug: "alexandra-eala",
@@ -223,8 +249,10 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "필리핀 테니스의 상징적인 왼손 베이스라이너",
     strength: "왼손 각도, 백핸드 안정성, 투어 경험에서 나온 경기 집중력",
-    growth: "주니어 그랜드슬램 성공 이후 성인 무대에서 꾸준히 경쟁력을 확장하고 있습니다.",
-    matchUse: "왼손 크로스로 상대를 코트 밖으로 밀어낸 뒤 열린 공간을 공략합니다.",
+    growth:
+      "주니어 그랜드슬램 성공 이후 성인 무대에서 꾸준히 경쟁력을 확장하고 있습니다.",
+    matchUse:
+      "왼손 크로스로 상대를 코트 밖으로 밀어낸 뒤 열린 공간을 공략합니다.",
     weakness: "빅서버를 상대로 초반 리턴 깊이를 확보하는 것이 중요합니다.",
   },
   {
@@ -253,9 +281,12 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "미국 여자 테니스의 빠른 성장세를 보이는 청소년 유망주",
     strength: "공격적인 리턴, 빠른 발, 두려움 없는 코스 선택",
-    growth: "주니어 무대의 자신감을 성인 무대의 경기 운영으로 바꾸는 과정에 있습니다.",
-    matchUse: "상대 두 번째 서브를 적극적으로 받아 초반부터 랠리 주도권을 잡습니다.",
-    weakness: "위기 상황에서 무리한 다운더라인 선택을 줄이면 안정성이 좋아집니다.",
+    growth:
+      "주니어 무대의 자신감을 성인 무대의 경기 운영으로 바꾸는 과정에 있습니다.",
+    matchUse:
+      "상대 두 번째 서브를 적극적으로 받아 초반부터 랠리 주도권을 잡습니다.",
+    weakness:
+      "위기 상황에서 무리한 다운더라인 선택을 줄이면 안정성이 좋아집니다.",
   },
   {
     slug: "polina-kudermetova",
@@ -268,9 +299,11 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "단단한 기본기와 공격 전환을 갖춘 러시아 베이스라이너",
     strength: "깊은 백핸드, 안정적인 리턴, 코트 안쪽에서의 빠른 마무리",
-    growth: "투어와 하위 대회를 오가며 경기 수를 쌓고 리듬을 안정시키고 있습니다.",
+    growth:
+      "투어와 하위 대회를 오가며 경기 수를 쌓고 리듬을 안정시키고 있습니다.",
     matchUse: "리턴 게임에서 상대 서브 속도를 이용해 깊은 첫 공을 만듭니다.",
-    weakness: "압박 상황에서 서브 게임의 첫 포인트를 차분히 가져가는 것이 중요합니다.",
+    weakness:
+      "압박 상황에서 서브 게임의 첫 포인트를 차분히 가져가는 것이 중요합니다.",
   },
   {
     slug: "taylah-preston",
@@ -283,7 +316,8 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "호주의 공격적인 주니어 출신 베이스라인 유망주",
     strength: "포핸드 선제 공격, 빠른 코트 적응, 높은 에너지",
-    growth: "호주 하드코트 환경에서 성장하며 성인 무대의 속도에 맞춰가고 있습니다.",
+    growth:
+      "호주 하드코트 환경에서 성장하며 성인 무대의 속도에 맞춰가고 있습니다.",
     matchUse: "첫 공격을 포핸드로 만들고 짧은 공에는 망설이지 않고 전진합니다.",
     weakness: "긴 랠리에서 깊이를 잃지 않는 안정성이 성장 포인트입니다.",
   },
@@ -298,9 +332,12 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "강한 서브와 과감한 공격 선택이 특징인 독일 선수",
     strength: "첫 서브, 포핸드 한 방, 잔디와 빠른 코트에서의 전진성",
-    growth: "큰 무대 경험을 통해 공격적인 테니스를 더 안정적으로 다듬고 있습니다.",
-    matchUse: "서브로 짧은 리턴을 만들고 포핸드 또는 네트 전환으로 포인트를 닫습니다.",
-    weakness: "공격이 흔들릴 때 두 번째 플랜으로 랠리 안정성을 확보해야 합니다.",
+    growth:
+      "큰 무대 경험을 통해 공격적인 테니스를 더 안정적으로 다듬고 있습니다.",
+    matchUse:
+      "서브로 짧은 리턴을 만들고 포핸드 또는 네트 전환으로 포인트를 닫습니다.",
+    weakness:
+      "공격이 흔들릴 때 두 번째 플랜으로 랠리 안정성을 확보해야 합니다.",
   },
   {
     slug: "clervie-ngounoue",
@@ -313,7 +350,8 @@ const playerSeeds: PlayerSeed[] = [
     backhand: "Two-handed",
     identity: "운동 능력과 공격 감각이 좋은 미국 주니어 챔피언 출신 선수",
     strength: "빠른 반응, 적극적인 리턴, 네트까지 이어지는 공격 전환",
-    growth: "주니어 성공 이후 프로 무대에서 체력과 경기 운영을 확장하는 단계입니다.",
+    growth:
+      "주니어 성공 이후 프로 무대에서 체력과 경기 운영을 확장하는 단계입니다.",
     matchUse: "리턴에서 압박을 걸고 짧은 공에는 빠르게 전진해 마무리합니다.",
     weakness: "상대가 속도를 낮출 때 성급하게 공격하지 않는 판단이 중요합니다.",
   },
@@ -330,23 +368,14 @@ const buildPlayer = (seed: PlayerSeed): PlayerData => ({
   longBio: `${seed.identity}입니다. ${seed.growth} 강점은 ${seed.strength}이며, 경기에서는 ${seed.matchUse} 약점 보완 포인트는 ${seed.weakness}`,
   detailedProfile: {
     oneLineSummary: seed.identity,
-    whyNotable: `이 선수는 ${seed.country} 테니스에서 지켜볼 만한 이름입니다. 아직 완성형 스타라기보다, 경기 수를 쌓으며 장점과 약점을 선명하게 만드는 단계라는 점이 흥미롭습니다.`,
-    playStyle: `<p>${seed.name}의 플레이 스타일은 ${seed.strength}로 요약할 수 있습니다. 단순히 강하게 치는 선수라기보다 첫 두 샷에서 상대 위치를 흔들고, 랠리 중에는 자기 장점이 나오는 방향으로 공을 반복해 보냅니다.</p>`,
+    whyNotable: `${seed.identity}. ${seed.growth}`,
+    playStyle: `<p>${seed.name}의 플레이는 <strong>${seed.strength}</strong>로 요약됩니다. 경기에서는 ${seed.matchUse}</p><p>보완 과제는 ${seed.weakness}</p>`,
     growthStory: seed.growth,
     signatureMatch: {
-      title: `${seed.nameEn} 성장 포인트`,
-      description: `${seed.matchUse} 이 패턴이 안정되면 더 높은 레벨에서도 자신의 서비스 게임과 리턴 게임을 모두 설계할 수 있습니다.`,
+      title: `${seed.name}의 경기 운영 포인트`,
+      description: seed.matchUse,
     },
-    hexagonStats: [
-      { name: "서브", score: seed.strength.includes("서브") ? 8.5 : 7 },
-      { name: "리턴", score: seed.strength.includes("리턴") ? 8.5 : 7.5 },
-      { name: "포핸드", score: seed.strength.includes("포핸드") ? 8.5 : 7.5 },
-      { name: "백핸드", score: seed.strength.includes("백핸드") ? 8.5 : 7.5 },
-      { name: "수비", score: seed.strength.includes("수비") || seed.strength.includes("발") ? 8 : 7 },
-      { name: "멘탈", score: 7.5 },
-    ],
-    fanAppeal: `${seed.identity}라는 점에서 팬들이 성장 과정을 따라가기 좋은 선수입니다.`,
-    recentForm: "투어와 하위 대회 경험을 통해 경기 운영의 완성도를 높이는 단계입니다.",
+    fanAppeal: `${seed.identity}라는 점에서 성장 과정을 지켜보기 좋은 선수입니다.`,
     faq: [
       {
         question: `${seed.name}의 가장 큰 강점은 무엇인가요?`,
@@ -365,7 +394,6 @@ const buildPlayer = (seed: PlayerSeed): PlayerData => ({
 });
 
 export const SCHEDULED_20_PLAYERS: Record<string, PlayerData> =
-  Object.fromEntries(playerSeeds.map((seed) => [seed.slug, buildPlayer(seed)])) as Record<
-    string,
-    PlayerData
-  >;
+  Object.fromEntries(
+    playerSeeds.map((seed) => [seed.slug, buildPlayer(seed)]),
+  ) as Record<string, PlayerData>;

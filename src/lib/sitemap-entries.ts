@@ -20,9 +20,16 @@ export type SitemapEntry = {
 };
 
 const APP_DIR = path.join(process.cwd(), "src", "app");
-const BLOG_CONTENT_DIR = path.join(process.cwd(), "src", "data", "blog-content");
+const BLOG_CONTENT_DIR = path.join(
+  process.cwd(),
+  "src",
+  "data",
+  "blog-content",
+);
 const PLAYERS_DIR = path.join(process.cwd(), "src", "data", "players");
-const FALLBACK_STATIC_DATE = new Date("2026-01-01T00:00:00.000Z");
+// 실제 파일 수정일(mtime)을 구하지 못했을 때 쓰는 폴백. 고정 과거 날짜 대신
+// 빌드(=배포) 시각을 써서 sitemap lastmod가 stale 신호를 주지 않도록 한다.
+const FALLBACK_STATIC_DATE = new Date();
 
 function normalizeBaseUrl(baseUrl = getSiteUrl()) {
   return baseUrl.replace(/\/$/, "");
@@ -85,13 +92,11 @@ function getBlogContentDate(slug: string) {
   try {
     if (!fs.existsSync(BLOG_CONTENT_DIR)) return FALLBACK_STATIC_DATE;
 
-    const contentFile = fs
-      .readdirSync(BLOG_CONTENT_DIR)
-      .find((name) => {
-        if (!name.endsWith(".ts")) return false;
-        const source = fs.readFileSync(path.join(BLOG_CONTENT_DIR, name), "utf8");
-        return source.includes(`"${slug}":`) || source.includes(`'${slug}':`);
-      });
+    const contentFile = fs.readdirSync(BLOG_CONTENT_DIR).find((name) => {
+      if (!name.endsWith(".ts")) return false;
+      const source = fs.readFileSync(path.join(BLOG_CONTENT_DIR, name), "utf8");
+      return source.includes(`"${slug}":`) || source.includes(`'${slug}':`);
+    });
 
     return contentFile
       ? safeStatDate(path.join(BLOG_CONTENT_DIR, contentFile))
@@ -103,13 +108,15 @@ function getBlogContentDate(slug: string) {
 
 export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
   const siteUrl = normalizeBaseUrl(baseUrl);
-  const publishedBlogPosts = getPublishedBlogPosts(allBlogPosts).filter((post) =>
-    isIndexableBlogSlug(post.slug),
+  const publishedBlogPosts = getPublishedBlogPosts(allBlogPosts).filter(
+    (post) => isIndexableBlogSlug(post.slug),
   );
   const latestBlogDate = latestDate(
     ...publishedBlogPosts.map((post) => getBlogDate(post.date)),
   );
-  const latestUtilityDate = getDirectoryLatestDate(path.join(APP_DIR, "utility"));
+  const latestUtilityDate = getDirectoryLatestDate(
+    path.join(APP_DIR, "utility"),
+  );
   const latestPlayerDate = getDirectoryLatestDate(PLAYERS_DIR);
   const homeDate = latestDate(
     getPageDate("page.tsx"),
@@ -170,7 +177,10 @@ export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
   for (const post of publishedBlogPosts) {
     entries.push({
       url: `${siteUrl}/blog/${post.slug}`,
-      lastModified: latestDate(getBlogPublishDate(post), getBlogContentDate(post.slug)),
+      lastModified: latestDate(
+        getBlogPublishDate(post),
+        getBlogContentDate(post.slug),
+      ),
       changeFrequency: "weekly",
       priority: 0.8,
     });

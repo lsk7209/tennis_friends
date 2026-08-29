@@ -7,13 +7,15 @@ const FEATURED_PLAYER = {
   nameKo: "카를로스 알카라스",
   number: "01",
   image: "/images/players/carlos-alcaraz.png",
-  stats: [
-    { label: "ATP RANK", value: "#2" },
-    { label: "WIN%", value: "83%" },
-    { label: "SERVE", value: "220km/h" },
-    { label: "TITLES", value: "14" },
+  summary:
+    "스페인의 올코트 플레이어. 강력한 포핸드와 드롭샷, 과감한 네트 전진을 오가며 하드·클레이·잔디 모든 표면에서 메이저 타이틀을 들어올렸다.",
+  highlights: [
+    "2022 US 오픈 우승 — 역대 최연소 남자 단식 세계 1위 등극",
+    "2023 윔블던 우승 (결승에서 조코비치 상대 승리)",
+    "2024 롤랑가로스·윔블던 연속 우승",
+    "하드·클레이·잔디 세 표면 모두 메이저 우승 경험",
   ],
-  styles: ["All-Court", "Aggressive", "Heavy Topspin"],
+  styles: ["올코트", "공격적", "헤비 톱스핀"],
 };
 
 export function PlayerSpotlight() {
@@ -84,25 +86,23 @@ export function PlayerSpotlight() {
                 {p.name}
               </h3>
 
-              {/* 4칸 스탯 그리드 */}
-              <div className="grid grid-cols-2 gap-px bg-white/10 border border-white/10 mb-8">
-                {p.stats.map((stat) => (
-                  <div key={stat.label} className="bg-[#0D1220] px-5 py-4">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-white/40 mb-1">
-                      {stat.label}
-                    </p>
-                    <p
-                      className="text-2xl font-black text-accent-volt leading-none"
-                      style={{
-                        fontFamily:
-                          "var(--font-archivo-black, 'Archivo Black', sans-serif)",
-                      }}
-                    >
-                      {stat.value}
-                    </p>
-                  </div>
+              {/* 선수 소개 + 주요 커리어 */}
+              <p className="text-sm md:text-base text-white/70 leading-relaxed mb-6">
+                {p.summary}
+              </p>
+              <ul className="space-y-2 mb-8">
+                {p.highlights.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-2 text-sm text-white/60 leading-relaxed"
+                  >
+                    <span aria-hidden="true" className="text-accent-volt">
+                      →
+                    </span>
+                    <span>{item}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
 
               {/* 플레이 스타일 칩 */}
               <div className="flex flex-wrap gap-2 mb-8">
