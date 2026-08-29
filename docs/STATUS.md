@@ -1,12 +1,12 @@
 # Status
 
-## 2026-08-30 — Duplicate player URL release candidate
+## 2026-08-30 — Duplicate player URL live-verified
 
-- State: implementation and full local verification complete; commit and deployment verification pending.
+- State: implementation, local verification, Git push, Git-connected deployments, and public production verification complete.
 - Canonical decision: keep `/players/seongchan-hong`; permanently redirect `/players/hong-seong-chan` and suppress the alias from internal search/discovery.
-- Evidence: all focused audits, the refreshed site/content/design review, and `npm run verify` passed; generated inventory is 1,465 sitemap entries, 1,134 blogs, and 259 canonical players; local production behavior is alias `308` and survivor `200`.
-- External state: GitHub and production remain at `d815cf492bf4f8f7ccb2cabccd18c1d3db28f1e0`. No push, deployment, workflow dispatch, indexing submission, or Vercel CLI/API mutation has occurred for this release candidate.
-- Next: independent diff review, exact staging, remote drift check, commit/push, then GitHub Actions, Git-connected deployments, and public-domain proof.
+- Evidence: all focused audits, the refreshed site/content/design review, and `npm run verify` passed; generated inventory is 1,465 sitemap entries, 1,134 blogs, and 259 canonical players. Public behavior is alias `308`, survivor `200` with one H1/self-canonical, canonical-only sitemap/AI index, and one canonical result in both player filtering and site search.
+- External state: runtime commit `49ef50eabf8fe8a438f4e302ae50c2da7747833e`; Vercel Production `6157989447`; GitHub Pages `6157980452`; all three push workflows succeeded for the same SHA.
+- Next: update the fleet-level harness and ledger, then continue with the next confirmed SEO defect.
 
 Current goal: keep TennisFriends ad-free and make the Naver Cafe the primary measurable destination while preserving useful public tennis content.
 

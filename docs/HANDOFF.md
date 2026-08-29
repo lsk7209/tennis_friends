@@ -2,16 +2,16 @@
 
 ## Current handoff — duplicate Hong Seong-chan profile consolidation
 
-- Timestamp: 2026-08-30 01:40 KST
+- Timestamp: 2026-08-30 02:01 KST
 - User goal: audit and optimize the dashboard fleet from fresh evidence, checking GitHub first for TennisFriends and removing confirmed SEO duplication without disturbing unrelated work.
-- Exact current state: clean remote-aligned `main` baseline `d815cf492bf4f8f7ccb2cabccd18c1d3db28f1e0` now has an uncommitted, locally verified release candidate. The canonical survivor is `/players/seongchan-hong`; `/players/hong-seong-chan` is a permanent alias.
+- Exact current state: runtime commit `49ef50eabf8fe8a438f4e302ae50c2da7747833e` is live on the canonical Vercel domain. The canonical survivor is `/players/seongchan-hong`; `/players/hong-seong-chan` is a permanent alias.
 - Completed work: added the alias mapping; excluded redirect-only player slugs from the player directory and site search; regression-locked the mapping and internal-discovery exclusions; regenerated current audit, sitemap, AI-index, and LLM discovery artifacts.
-- Changed files: `src/data/players/legacy-redirects.json`, `src/app/players/page.tsx`, `src/app/search/SearchClient.tsx`, `scripts/audit-redirect-config.mjs`, current generated search artifacts under `public/`, current audit reports under `docs/reports/`, and the three current-state documents.
-- Fresh validation evidence: focused redirect/player/sitemap/site-review/type checks passed; `npm run verify` passed with zero production vulnerabilities and 3,077/3,077 generated pages; local production smoke returned alias `308`, survivor `200`, one survivor H1, self-canonical metadata, and no alias leakage in sitemap or AI index.
-- Side effects / rollback: local files only so far. Before push, rollback is the exact staged commit once created; after push, the mapping can be reverted with a narrow follow-up commit. No production database or account state is involved.
-- Blockers / risks: no production blocker. The canonical Vercel target supports the `308`; the GitHub Pages static mirror disables Next.js redirects and therefore returns `404` for the alias, while its pages canonicalize to the Vercel domain. The remaining release gate is remote-drift check, exact-file staging, and Git-connected deployment verification.
-- Single next step: finish the independent read-only review, stage only the coherent release files, commit, re-fetch `origin/main`, and push only if it still matches the verified baseline.
-- Deliberately not run or sent: no manual workflow dispatch, IndexNow submission, production database write, Vercel CLI/API call, analytics-admin change, or external message.
+- Changed files / live systems: four redirect/internal-discovery source files, generated search assets under `public/`, current audit reports under `docs/reports/`, and current-state documents; GitHub `main`, GitHub Actions, GitHub Pages, and the Git-connected Vercel Production deployment were updated.
+- Fresh validation evidence: focused redirect/player/sitemap/site-review/type checks and full `npm run verify` passed with zero production vulnerabilities and 3,077/3,077 generated pages. Vercel Production `6157989447`, GitHub Pages `6157980452`, and all three push workflows succeeded for `49ef50e`. Public HTTP proof returned alias `308`, survivor `200`, one survivor H1, self-canonical metadata, and no alias leakage in sitemap or AI index. Public Playwright checks showed one canonical result in both player filtering and site search with zero console errors or warnings.
+- Side effects / rollback: production search routing and generated discovery inventory now use the canonical survivor. Roll back with a narrow revert of `49ef50e`; no production database or account state changed.
+- Blockers / risks: no production blocker. The GitHub Pages static mirror disables Next.js redirects and therefore returns `404` for the alias, while its pages canonicalize to the Vercel domain. GitHub also reports five open development-scope Dependabot alerts; `npm audit --omit=dev` remains zero and this SEO release did not broaden dependency scope.
+- Single next step: record this live proof in the multi-dashboard fleet harness/ledger, then continue with the next confirmed fleet defect.
+- Deliberately not run or sent: no manual workflow dispatch, IndexNow submission, production database write, Vercel CLI/API call, analytics-admin change, or external message. The ignored `.playwright-cli/` snapshot directory is local test output only and was not committed.
 
 Branch: `codex/tennisfrens-ctr-20260714`.
 

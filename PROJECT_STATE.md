@@ -1,6 +1,6 @@
 # PROJECT_STATE
 
-## Duplicate Player Alias Consolidation Release Candidate (2026-08-30)
+## Duplicate Player Alias Consolidation Live-Verified (2026-08-30)
 
 - Goal: consolidate the two public Hong Seong-chan profile routes so search engines, the player directory, site search, the sitemap, and AI discovery all point to one canonical profile.
 - GitHub-first baseline: local `main`, `origin/main`, and the current production deployment were all verified at `d815cf492bf4f8f7ccb2cabccd18c1d3db28f1e0` before editing.
@@ -8,9 +8,11 @@
 - Implementation: added the legacy mapping, removed redirect-only aliases from the player directory and site search, and expanded the redirect audit so the mapping and both internal-discovery gates are regression-locked.
 - Generated discovery state: 1,465 sitemap entries, 1,134 blogs, and 259 canonical player profiles. `ai-index.json` and `llms*.txt` contain the survivor and exclude the alias.
 - Fresh validation: `npm run audit:redirect-config`, `npm run audit:player-search-seo`, `npm run audit:sitemap-coverage`, `npm run audit:site-content-design-review`, `npm run type-check`, `git diff --check`, and full `npm run verify` all passed. The full build generated 3,077/3,077 static pages with zero production dependency vulnerabilities.
-- Local production smoke: the alias returns `308` to `/players/seongchan-hong`; the survivor returns `200` with a self-canonical and one H1; sitemap and AI discovery expose only the survivor.
+- Production release: runtime commit `49ef50eabf8fe8a438f4e302ae50c2da7747833e`; Vercel Production deployment `6157989447` and GitHub Pages deployment `6157980452` both succeeded for that exact SHA. Push-triggered SEO Safeguard `33264076809`, Hosting Cost Guard `33264076732`, and Deploy to GitHub Pages `33264076703` all passed.
+- Public production smoke: the alias returns `308` to `/players/seongchan-hong`; the survivor returns `200` with a self-canonical and one H1; sitemap and AI discovery expose only the survivor; `llms*.txt` reports 1,134 blogs and 259 players.
+- Public browser proof: filtering the player directory for `홍성찬` and using the sitewide search each produced one link to `/players/seongchan-hong` and none to the alias; console errors and warnings were both zero.
 - Deployment note: the canonical Vercel domain supports the permanent redirect. The GitHub Pages static mirror intentionally disables Next.js redirects and will return `404` for the legacy alias; its generated pages still canonicalize to `https://tennisfrens.com`, so this is recorded as a non-blocking mirror limitation rather than the production SEO contract.
-- Current boundary: no commit, Git push, deployment, workflow dispatch, indexing submission, analytics-admin mutation, or Vercel CLI/API mutation has occurred for this release candidate yet. The active fleet task authorizes the coherent Git push and its Git-connected deployments after final review.
+- Current boundary: the requested Git push and Git-connected deployments are complete. No manual workflow dispatch, indexing submission, analytics-admin mutation, production database write, or Vercel CLI/API mutation was performed.
 
 ## Search Inventory And Funnel Measurement Closure (2026-08-28)
 
