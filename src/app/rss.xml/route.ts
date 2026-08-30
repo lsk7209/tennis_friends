@@ -8,6 +8,7 @@ import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { DEFAULT_CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 
 export const dynamic = "force-static";
+export const revalidate = 3600;
 
 export function getRssBaseUrl() {
   return (process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com")
@@ -47,6 +48,10 @@ export function buildRssXml(baseUrl: string, selfPath = "/rss.xml") {
     })
     .join("");
 
+  const latestPublishDate = sortedPosts[0]
+    ? getBlogPublishDate(sortedPosts[0])
+    : new Date("2026-01-01T00:00:00+09:00");
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
@@ -59,10 +64,10 @@ export function buildRssXml(baseUrl: string, selfPath = "/rss.xml") {
     <language>ko-KR</language>
     <managingEditor>${DEFAULT_CONTACT_EMAIL} (${SITE_NAME})</managingEditor>
     <webMaster>${DEFAULT_CONTACT_EMAIL} (${SITE_NAME})</webMaster>
-    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <lastBuildDate>${latestPublishDate.toUTCString()}</lastBuildDate>
     <generator>TennisFriends Blog</generator>
     <ttl>60</ttl>
-    <copyright>Copyright ${new Date().getFullYear()} TennisFriends. All rights reserved.</copyright>
+    <copyright>Copyright ${latestPublishDate.getFullYear()} TennisFriends. All rights reserved.</copyright>
     <image>
       <url>${baseUrl}/favicon.ico</url>
       <title>TennisFriends</title>
@@ -81,7 +86,7 @@ export async function GET() {
   return new Response(rss, {
     headers: {
       "Content-Type": "application/rss+xml; charset=utf-8",
-      "Cache-Control": "public, max-age=0, s-maxage=60, must-revalidate",
+      "Cache-Control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=300",
     },
   });
 }

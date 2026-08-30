@@ -48,8 +48,8 @@ assert(
 for (const [route, cacheToken] of [
   ["/sitemap.xml", "s-maxage=3600"],
   ["/sitemap-naver.xml", "s-maxage=3600"],
-  ["/rss.xml", "s-maxage=60"],
-  ["/feed", "s-maxage=60"],
+  ["/rss.xml", "s-maxage=3600"],
+  ["/feed", "s-maxage=3600"],
   ["/robots.txt", "s-maxage=86400"],
   ["/llms.txt", "s-maxage=3600"],
   ["/llms-full.txt", "s-maxage=3600"],
