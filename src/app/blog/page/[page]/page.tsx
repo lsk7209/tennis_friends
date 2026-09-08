@@ -8,7 +8,8 @@ type BlogIndexRouteProps = {
   params: Promise<{ page: string }>;
 };
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+export const revalidate = 60;
 
 export function generateStaticParams() {
   return Array.from(

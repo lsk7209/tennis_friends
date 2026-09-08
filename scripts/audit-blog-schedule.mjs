@@ -3,9 +3,13 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
-const EXPECTED_INTERVAL_HOURS = 5;
+const DEFAULT_EXPECTED_INTERVAL_HOURS = 5;
+const EXPECTED_INTERVAL_HOURS_BY_FILE = new Map([
+  ["src/data/blog-posts-reviewed-september-2026.js", 12],
+]);
 const POST_FILES = [
   "src/data/blog-posts.js",
+  "src/data/blog-posts-reviewed-september-2026.js",
   "src/data/blog-posts-aw-300.js",
   "src/data/blog-posts-aw-part12.js",
   "src/data/blog-posts-aw-title100.js",
@@ -126,6 +130,8 @@ function parseSchedule(post) {
 }
 
 function auditFileSchedule(file, posts) {
+  const expectedIntervalHours =
+    EXPECTED_INTERVAL_HOURS_BY_FILE.get(file) ?? DEFAULT_EXPECTED_INTERVAL_HOURS;
   const scheduled = posts
     .filter((post) => post.scheduledAt)
     .map((post) => ({ ...post, timestamp: parseSchedule(post) }))
@@ -139,11 +145,11 @@ function auditFileSchedule(file, posts) {
     const hours = (current.timestamp - previous.timestamp) / 3_600_000;
     intervals.push(hours);
 
-    if (hours !== EXPECTED_INTERVAL_HOURS) {
+    if (hours !== expectedIntervalHours) {
       findings.push({
         file,
         slug: current.slug,
-        issue: "scheduledAt interval is not 5 hours",
+        issue: `scheduledAt interval is not ${expectedIntervalHours} hours`,
         previousSlug: previous.slug,
         previousScheduledAt: previous.scheduledAt,
         scheduledAt: current.scheduledAt,
@@ -159,6 +165,7 @@ function auditFileSchedule(file, posts) {
     firstScheduledAt: scheduled[0]?.scheduledAt ?? null,
     lastScheduledAt: scheduled.at(-1)?.scheduledAt ?? null,
     intervalHours: [...new Set(intervals)],
+    expectedIntervalHours,
   });
 }
 
@@ -198,7 +205,8 @@ const scheduledPosts = effectivePosts.filter((post) => post.scheduledAt);
 const audit = {
   status: findings.length === 0 ? "ok" : "failed",
   generatedAt: new Date().toISOString(),
-  expectedIntervalHours: EXPECTED_INTERVAL_HOURS,
+  defaultExpectedIntervalHours: DEFAULT_EXPECTED_INTERVAL_HOURS,
+  intervalOverrides: Object.fromEntries(EXPECTED_INTERVAL_HOURS_BY_FILE),
   files: POST_FILES.length,
   rawPosts: rawPosts.length,
   effectivePosts: effectivePosts.length,

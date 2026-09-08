@@ -23,7 +23,7 @@ import { getRelatedBlogPosts } from "@/lib/related-content";
 import { DEFAULT_SITE_LOCALE, SITE_NAME, getSiteUrl } from "@/lib/site";
 import type { BlogPostData } from "@/types/blog";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 interface EnrichedBlogPost extends BlogPostData {
   content?: string;

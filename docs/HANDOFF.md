@@ -1,5 +1,18 @@
 # Handoff
 
+## Current handoff — 30 reviewed articles scheduled every 12 hours
+
+- Timestamp: 2026-09-08 17:15 KST
+- User goal: schedule the accepted TennisFriends 30-article package for automatic publication every 12 hours and stop after this site.
+- Exact current state: local release candidate is based on fetched `origin/main` `2e1bcf8d82013bd61dde654a2b2f5f54a1ad0910`; 30 future posts run from `2026-09-09T09:00:00+09:00` through `2026-09-23T21:00:00+09:00` at 12-hour intervals.
+- Completed work: converted the accepted MDX bodies into the site's HTML data contract without duplicate H1s; registered metadata/content; added per-file schedule auditing; verified all 18 internal article dependencies publish their targets first; enabled 60-second ISR across every scheduled-content surface and on-demand generation for future pagination.
+- Changed files / live systems: reviewed September metadata/content, import and audit scripts, blog index routes, schedule reports, and package verification command. No live system has been changed at this checkpoint.
+- Fresh validation evidence: `npm run verify` passed; after final cache hardening, dedicated schedule audit, lint, type-check, and build passed. Build generated 3,077/3,077 pages and reports one-minute revalidation for `/blog`, pagination, detail, blog-render, `/feed`, `/feed.xml`, RSS, and both sitemaps. The dedicated audit reports 30 posts, 12-hour spacing, 18 ordered dependencies, and publish-gate counts 0 before/1 at/2 after the first interval.
+- Side effects / rollback: only this isolated release clone is changed. Roll back by reverting the eventual single release commit. The primary `E:\web\tennisfrens` checkout remains untouched.
+- Blockers / risks: push, Git-connected deployment, and public smoke verification remain. Local `npm ci` reports one moderate production advisory; the configured high-severity production audit passes.
+- Single next step: receive final independent GO, commit/push main, then verify the exact Git-connected deployment and public pre-release 404 gate.
+- Deliberately not run or sent: no Vercel CLI/API mutation, manual workflow dispatch, production DB write, indexing notification, account change, or external message.
+
 ## Current handoff — duplicate Hong Seong-chan profile consolidation
 
 - Timestamp: 2026-08-30 02:01 KST

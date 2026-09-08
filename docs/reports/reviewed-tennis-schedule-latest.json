@@ -1,0 +1,14 @@
+{
+  "status": "ok",
+  "posts": 30,
+  "first": "2026-09-09T09:00:00+09:00",
+  "last": "2026-09-23T21:00:00+09:00",
+  "intervalHours": 12,
+  "dependencyLinks": 18,
+  "publishGate": {
+    "beforeFirst": 0,
+    "atFirst": 1,
+    "afterTwelveHours": 2
+  },
+  "findings": []
+}

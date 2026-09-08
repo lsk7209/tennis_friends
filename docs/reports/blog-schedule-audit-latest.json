@@ -1,11 +1,14 @@
 {
   "status": "ok",
-  "generatedAt": "2026-08-29T16:31:20.456Z",
-  "expectedIntervalHours": 5,
-  "files": 15,
-  "rawPosts": 1232,
-  "effectivePosts": 726,
-  "scheduledPosts": 502,
+  "generatedAt": "2026-09-08T08:26:05.917Z",
+  "defaultExpectedIntervalHours": 5,
+  "intervalOverrides": {
+    "src/data/blog-posts-reviewed-september-2026.js": 12
+  },
+  "files": 16,
+  "rawPosts": 1262,
+  "effectivePosts": 756,
+  "scheduledPosts": 532,
   "fileSummaries": [
     {
       "file": "src/data/blog-posts.js",
@@ -13,7 +16,19 @@
       "scheduled": 0,
       "firstScheduledAt": null,
       "lastScheduledAt": null,
-      "intervalHours": []
+      "intervalHours": [],
+      "expectedIntervalHours": 5
+    },
+    {
+      "file": "src/data/blog-posts-reviewed-september-2026.js",
+      "posts": 30,
+      "scheduled": 30,
+      "firstScheduledAt": "2026-09-09T09:00:00+09:00",
+      "lastScheduledAt": "2026-09-23T21:00:00+09:00",
+      "intervalHours": [
+        12
+      ],
+      "expectedIntervalHours": 12
     },
     {
       "file": "src/data/blog-posts-aw-300.js",
@@ -21,7 +36,8 @@
       "scheduled": 0,
       "firstScheduledAt": null,
       "lastScheduledAt": null,
-      "intervalHours": []
+      "intervalHours": [],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-aw-part12.js",
@@ -31,7 +47,8 @@
       "lastScheduledAt": "2026-07-26T04:10:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-aw-title100.js",
@@ -41,7 +58,8 @@
       "lastScheduledAt": "2026-08-16T00:10:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part16-overrides.js",
@@ -49,7 +67,8 @@
       "scheduled": 0,
       "firstScheduledAt": null,
       "lastScheduledAt": null,
-      "intervalHours": []
+      "intervalHours": [],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part17-overrides.js",
@@ -57,7 +76,8 @@
       "scheduled": 0,
       "firstScheduledAt": null,
       "lastScheduledAt": null,
-      "intervalHours": []
+      "intervalHours": [],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part18-overrides.js",
@@ -67,7 +87,8 @@
       "lastScheduledAt": "2026-05-31T23:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part19-overrides.js",
@@ -77,7 +98,8 @@
       "lastScheduledAt": "2026-06-01T05:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part20-overrides.js",
@@ -87,7 +109,8 @@
       "lastScheduledAt": "2026-06-01T11:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part21-overrides.js",
@@ -97,7 +120,8 @@
       "lastScheduledAt": "2026-05-22T11:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part22-overrides.js",
@@ -107,7 +131,8 @@
       "lastScheduledAt": "2026-05-11T11:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part23-overrides.js",
@@ -117,7 +142,8 @@
       "lastScheduledAt": "2026-04-30T11:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part24-overrides.js",
@@ -127,7 +153,8 @@
       "lastScheduledAt": "2026-04-19T11:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part25-overrides.js",
@@ -137,7 +164,8 @@
       "lastScheduledAt": "2026-04-29T21:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     },
     {
       "file": "src/data/blog-posts-part26-overrides.js",
@@ -147,7 +175,8 @@
       "lastScheduledAt": "2026-05-01T03:00:00+09:00",
       "intervalHours": [
         5
-      ]
+      ],
+      "expectedIntervalHours": 5
     }
   ],
   "findings": []

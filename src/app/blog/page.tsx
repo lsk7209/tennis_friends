@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import BlogIndexPageContent from "./BlogIndexPageContent";
 import { getSiteUrl } from "@/lib/site";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "테니스 블로그",
   description:

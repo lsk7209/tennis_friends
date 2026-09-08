@@ -1,0 +1,152 @@
+{
+  "generatedAt": "2026-09-08T08:26:05.429Z",
+  "scheduleStart": "2026-09-09T09:00:00+09:00",
+  "scheduleEnd": "2026-09-23T21:00:00+09:00",
+  "intervalHours": 12,
+  "dependencies": [
+    {
+      "articleId": "a005",
+      "targetArticleId": "a003",
+      "targetRoute": "/blog/singles-or-doubles-first-practice-match",
+      "targetSha256": "9e92a04183d04c32d272b23fbc7a3a253884346a67aaff52c3f8e562fa8938f6",
+      "targetScheduledAt": "2026-09-10T09:00:00+09:00",
+      "dependentScheduledAt": "2026-09-11T09:00:00+09:00"
+    },
+    {
+      "articleId": "a006",
+      "targetArticleId": "a003",
+      "targetRoute": "/blog/singles-or-doubles-first-practice-match",
+      "targetSha256": "9e92a04183d04c32d272b23fbc7a3a253884346a67aaff52c3f8e562fa8938f6",
+      "targetScheduledAt": "2026-09-10T09:00:00+09:00",
+      "dependentScheduledAt": "2026-09-11T21:00:00+09:00"
+    },
+    {
+      "articleId": "a006",
+      "targetArticleId": "a002",
+      "targetRoute": "/blog/doubles-pairing-organizer-questions",
+      "targetSha256": "2be0c83e636f54a11bf13d6e06022aa598bb4ba5b839e219d0d8480a4eb70600",
+      "targetScheduledAt": "2026-09-09T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-11T21:00:00+09:00"
+    },
+    {
+      "articleId": "a009",
+      "targetArticleId": "a008",
+      "targetRoute": "/blog/stringing-work-order-units-reference-dt",
+      "targetSha256": "877659026a159ff20a5bdd394c569b679c64ed5ec5681d05035dbc6e8c5600ee",
+      "targetScheduledAt": "2026-09-12T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-13T09:00:00+09:00"
+    },
+    {
+      "articleId": "a007",
+      "targetArticleId": "a005",
+      "targetRoute": "/blog/tiebreak-serve-order-note",
+      "targetSha256": "fd17bdc330c74126533b8015735bc3b2833d2810cfe7f33c35edeb072449aee6",
+      "targetScheduledAt": "2026-09-11T09:00:00+09:00",
+      "dependentScheduledAt": "2026-09-12T09:00:00+09:00"
+    },
+    {
+      "articleId": "a013",
+      "targetArticleId": "a004",
+      "targetRoute": "/blog/return-recovery-video-observation",
+      "targetSha256": "c5c1d39f94244ead81b677c841456728a002c4aa0d0bc8f9cf2d9d0d3e1e1077",
+      "targetScheduledAt": "2026-09-10T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-15T09:00:00+09:00"
+    },
+    {
+      "articleId": "a016",
+      "targetArticleId": "a002",
+      "targetRoute": "/blog/doubles-pairing-organizer-questions",
+      "targetSha256": "2be0c83e636f54a11bf13d6e06022aa598bb4ba5b839e219d0d8480a4eb70600",
+      "targetScheduledAt": "2026-09-09T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-16T21:00:00+09:00"
+    },
+    {
+      "articleId": "a018",
+      "targetArticleId": "a008",
+      "targetRoute": "/blog/stringing-work-order-units-reference-dt",
+      "targetSha256": "877659026a159ff20a5bdd394c569b679c64ed5ec5681d05035dbc6e8c5600ee",
+      "targetScheduledAt": "2026-09-12T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-17T21:00:00+09:00"
+    },
+    {
+      "articleId": "a021",
+      "targetArticleId": "a006",
+      "targetRoute": "/blog/rain-court-reservation-cancellation-process",
+      "targetSha256": "760e3f49181af550d579c4420170c01efcffdff42ffe60ba8d4a9305de2c7455",
+      "targetScheduledAt": "2026-09-11T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-19T09:00:00+09:00"
+    },
+    {
+      "articleId": "a022",
+      "targetArticleId": "a002",
+      "targetRoute": "/blog/doubles-pairing-organizer-questions",
+      "targetSha256": "2be0c83e636f54a11bf13d6e06022aa598bb4ba5b839e219d0d8480a4eb70600",
+      "targetScheduledAt": "2026-09-09T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-19T21:00:00+09:00"
+    },
+    {
+      "articleId": "a022",
+      "targetArticleId": "a006",
+      "targetRoute": "/blog/rain-court-reservation-cancellation-process",
+      "targetSha256": "760e3f49181af550d579c4420170c01efcffdff42ffe60ba8d4a9305de2c7455",
+      "targetScheduledAt": "2026-09-11T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-19T21:00:00+09:00"
+    },
+    {
+      "articleId": "a023",
+      "targetArticleId": "a022",
+      "targetRoute": "/blog/court-cancellation-wait-or-alternative",
+      "targetSha256": "f0f647b3157179b5b189796038236c4a7b8209ca1443363a233590594a863346",
+      "targetScheduledAt": "2026-09-19T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-20T09:00:00+09:00"
+    },
+    {
+      "articleId": "a025",
+      "targetArticleId": "a024",
+      "targetRoute": "/blog/lesson-feedback-attribution-note",
+      "targetSha256": "aa65dca8b4dd49e70d7fcac5971c85f9bf8c3c3d925d27cc2b27944123f220f4",
+      "targetScheduledAt": "2026-09-20T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-21T09:00:00+09:00"
+    },
+    {
+      "articleId": "a026",
+      "targetArticleId": "a024",
+      "targetRoute": "/blog/lesson-feedback-attribution-note",
+      "targetSha256": "aa65dca8b4dd49e70d7fcac5971c85f9bf8c3c3d925d27cc2b27944123f220f4",
+      "targetScheduledAt": "2026-09-20T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-21T21:00:00+09:00"
+    },
+    {
+      "articleId": "a028",
+      "targetArticleId": "a004",
+      "targetRoute": "/blog/return-recovery-video-observation",
+      "targetSha256": "c5c1d39f94244ead81b677c841456728a002c4aa0d0bc8f9cf2d9d0d3e1e1077",
+      "targetScheduledAt": "2026-09-10T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-22T21:00:00+09:00"
+    },
+    {
+      "articleId": "a028",
+      "targetArticleId": "a013",
+      "targetRoute": "/blog/return-practice-requested-actual-serve",
+      "targetSha256": "ccebc054b2ec47fa9b705b9e17e5c56ef6c2e5fa26302315488d468e7bf4f87a",
+      "targetScheduledAt": "2026-09-15T09:00:00+09:00",
+      "dependentScheduledAt": "2026-09-22T21:00:00+09:00"
+    },
+    {
+      "articleId": "a029",
+      "targetArticleId": "a005",
+      "targetRoute": "/blog/tiebreak-serve-order-note",
+      "targetSha256": "fd17bdc330c74126533b8015735bc3b2833d2810cfe7f33c35edeb072449aee6",
+      "targetScheduledAt": "2026-09-11T09:00:00+09:00",
+      "dependentScheduledAt": "2026-09-23T09:00:00+09:00"
+    },
+    {
+      "articleId": "a030",
+      "targetArticleId": "a018",
+      "targetRoute": "/blog/elbow-discomfort-session-record",
+      "targetSha256": "1e8e2436de6746d5096522b33692fb44abe390f9f27bca84674afcf6a7ab6218",
+      "targetScheduledAt": "2026-09-17T21:00:00+09:00",
+      "dependentScheduledAt": "2026-09-23T21:00:00+09:00"
+    }
+  ]
+}

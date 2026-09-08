@@ -8,7 +8,7 @@ import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { DEFAULT_CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 
 export const dynamic = "force-static";
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export function getRssBaseUrl() {
   return (process.env.NEXT_PUBLIC_SITE_URL || "https://tennisfrens.com")
@@ -86,7 +86,7 @@ export async function GET() {
   return new Response(rss, {
     headers: {
       "Content-Type": "application/rss+xml; charset=utf-8",
-      "Cache-Control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=300",
+      "Cache-Control": "public, max-age=0, s-maxage=60, stale-while-revalidate=30",
     },
   });
 }
