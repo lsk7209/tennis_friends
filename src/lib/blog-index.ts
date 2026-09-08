@@ -46,6 +46,16 @@ export function getBlogIndexPageCount(): number {
   return Math.max(1, Math.ceil(getPublishedIndexPosts().length / POSTS_PER_PAGE));
 }
 
+export function getBlogIndexPageCapacity(): number {
+  return Math.max(
+    1,
+    Math.ceil(
+      allBlogPosts.filter((post) => isIndexableBlogSlug(post.slug)).length /
+        POSTS_PER_PAGE,
+    ),
+  );
+}
+
 export function getBlogIndexPage(page: number) {
   const posts = getPublishedIndexPosts();
   const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));

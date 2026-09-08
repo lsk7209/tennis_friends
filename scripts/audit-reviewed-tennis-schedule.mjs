@@ -27,7 +27,7 @@ if (/<p>\s*#\s/.test(content)) findings.push("generated content contains a raw M
 if (/href=\\?"(?:javascript:|data:|\/\/)/i.test(content)) findings.push("generated content contains an unsafe link scheme");
 if (posts.some((post) => !Number.isFinite(post.time))) findings.push("invalid scheduledAt value");
 if (!/export const revalidate = 60/.test(blogPage)) findings.push("blog index does not revalidate every minute");
-if (!/export const dynamicParams = true/.test(paginatedPage) || !/export const revalidate = 60/.test(paginatedPage)) findings.push("paginated blog cannot add scheduled pages on demand within one minute");
+if (!/export const dynamicParams = false/.test(paginatedPage) || !/getBlogIndexPageCapacity/.test(paginatedPage) || !/export const revalidate = 60/.test(paginatedPage)) findings.push("paginated blog does not prebuild future capacity with the one-minute release contract");
 const releaseConsumers = [
   "src/app/blog/[slug]/page.tsx",
   "src/app/blog-render/[slug]/page.tsx",

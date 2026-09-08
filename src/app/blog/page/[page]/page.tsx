@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogIndexPageContent from "../../BlogIndexPageContent";
-import { getBlogIndexPageCount } from "@/lib/blog-index";
+import {
+  getBlogIndexPageCapacity,
+  getBlogIndexPageCount,
+} from "@/lib/blog-index";
 import { getAbsoluteUrl } from "@/lib/site";
 
 type BlogIndexRouteProps = {
   params: Promise<{ page: string }>;
 };
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 export const revalidate = 60;
 
 export function generateStaticParams() {
   return Array.from(
-    { length: Math.max(0, getBlogIndexPageCount() - 1) },
+    { length: Math.max(0, getBlogIndexPageCapacity() - 1) },
     (_, index) => ({ page: String(index + 2) }),
   );
 }
