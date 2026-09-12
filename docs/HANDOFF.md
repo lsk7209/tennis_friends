@@ -4,13 +4,12 @@
 
 - Timestamp: 2026-09-12 KST
 - User goal: repair the missing AdSense technical installation for currently registered sites, continuing from the dashboard evidence.
-- Exact current state: fetched canonical `origin/main` and fast-forwarded this clean primary checkout to `e5076831d46fd83e62fcdce9af820a3284ee33f2`. Fresh dashboard evidence identifies only Tennisfrens as a managed active gap: homepage loader absent and `https://tennisfrens.com/ads.txt` returned `404`.
-- Planned change: add only the confirmed account loader `ca-pub-3050601904412736`, exact ads.txt row `google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0`, and narrowly required CSP origins. Preserve the Cafe CTA and GA4; do not place manual ad slots.
-- Completed work: remote-first reconciliation and source inspection completed. The prior cafe-first ad-free audit intentionally blocks this new authorized policy and will be replaced by an installation audit before implementation.
-- Fresh validation evidence: dashboard snapshot `2026-09-12T05:44:31.076Z`; all relevant collectors succeeded. Working tree clean immediately before this checkpoint.
-- Side effects / rollback: no source edit, Git commit/push, Vercel mutation, account change, ad-slot placement, or indexing action yet. Rollback after implementation will be a single narrow Git revert.
-- Blockers / risks: technical installation does not prove ad fill or account-level Auto ads configuration. Public loader and ads.txt checks are required after the Git-connected deployment.
-- Single next step: apply and verify the minimal source/CSP/ads.txt plus regression-audit replacement, then commit and push only the verified diff.
+- Exact current state: repair commit `fd4a995b381b23bb0fd3f350c09141acd1034b70` is on `origin/main`; Git-connected Vercel deployment `dpl_FrAPaspfCHNnLPWAX3RryveCEWWb` completed successfully. The public homepage now contains the confirmed loader and `https://tennisfrens.com/ads.txt` returns the exact row with `200 text/plain`.
+- Completed work: added only loader `ca-pub-3050601904412736`, exact ads.txt row `google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0`, and narrowly required CSP origins. Cafe CTA and GA4 remain present; no manual ad slots were added. The obsolete ad-free regression audit was replaced by source and static-output installation checks.
+- Fresh validation evidence: source installation audit, lint, type-check, normal Next production build, and GitHub Pages static-output audit passed. Public validation confirms the ads.txt row, homepage loader, loader/iframe CSP origins, and active Vercel deployment ID.
+- Side effects / rollback: one Git commit and Git-connected deployment only; no direct Vercel CLI/API, AdSense account action, ad-slot placement, or indexing action. Roll back with `git revert fd4a995` if required.
+- Blockers / risks: technical installation does not prove ad fill or account-level Auto ads configuration; those remain outside this repair.
+- Single next step: no further technical installation work is required for the currently registered managed sites; reassess only after a future fresh dashboard collection signals a new gap.
 
 ## Current handoff — 30 reviewed articles scheduled every 12 hours
 
