@@ -12,7 +12,7 @@ const REQUIRED_REPORTS = [
   "sitemap-coverage-audit-latest.json",
   "search-automation-audit-latest.json",
   "analytics-audit-latest.json",
-  "cafe-first-ad-free-source-audit-latest.json",
+  "adsense-install-source-audit-latest.json",
   "active-content-encoding-audit-latest.json",
   "internal-links-audit-latest.json",
   "article-experience-audit-latest.json",
@@ -110,7 +110,7 @@ function renderMarkdown(review) {
   const generated = review.evidence.generatedContent;
   const links = review.evidence.contentLinks;
   const opportunities = review.evidence.contentOpportunities;
-  const adFree = review.evidence.adFree;
+  const adsenseInstall = review.evidence.adsenseInstall;
 
   const backlogRows = review.priorityBacklog
     .map(
@@ -132,7 +132,7 @@ function renderMarkdown(review) {
 - Sitemap coverage: ${numberValue(sitemap.entries)} URLs, ${numberValue(sitemap.blogs)} blogs, ${numberValue(sitemap.utilities)} utilities, ${numberValue(sitemap.players)} players
 - GSC: ${numberValue(analytics.gsc?.totalClicks)} clicks, ${numberValue(analytics.gsc?.totalImpressions)} impressions, ${numberValue(analytics.gsc?.avgCtrPct)}% CTR, average position ${numberValue(analytics.gsc?.avgPosition)}
 - GA4: ${numberValue(analytics.ga4?.totalSessions)} sessions, ${numberValue(analytics.ga4?.totalUsers)} users
-- Monetization: ${adFree.status === "ok" ? "ad-free" : "needs attention"}; primary conversion ${adFree.primaryConversion ?? "unknown"}
+- Monetization: ${adsenseInstall.status === "ok" ? "AdSense loader and ads.txt installed" : "needs attention"}; primary conversion ${adsenseInstall.primaryConversion ?? "unknown"}
 - Content: ${numberValue(links.effectivePosts)} effective posts with ${numberValue(links.strongBodyLinkCoveragePct)}% strong body-link coverage
 - GSC opportunities: ${numberValue(opportunities.summary?.total)} total, ${numberValue(opportunities.summary?.players)} player pages, ${numberValue(opportunities.summary?.blogs)} blog pages
 - Generated drafts: ${numberValue(generated.manifests?.length)} manifests, min quality requirement ${numberValue(generated.minRequiredScore)}+
@@ -185,9 +185,9 @@ const review = {
       exists: relativeExists("DESIGN.md"),
     },
     analytics: analyticsSummary(reportsByName["analytics-audit-latest.json"]),
-    adFree: reportSummary(
-      reportsByName["cafe-first-ad-free-source-audit-latest.json"],
-      ["mode", "primaryConversion", "destination", "findings"],
+    adsenseInstall: reportSummary(
+      reportsByName["adsense-install-source-audit-latest.json"],
+      ["mode", "adsenseClient", "adsTxtLine", "primaryConversion", "destination", "findings"],
     ),
     sitemap: reportSummary(reportsByName["sitemap-coverage-audit-latest.json"], [
       "entries",

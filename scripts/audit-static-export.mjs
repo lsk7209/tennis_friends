@@ -174,13 +174,14 @@ if (!wallPracticeArticle.includes("/tennis_friends/images/blog/20-minute-wall-pr
 if (!fs.existsSync(path.join(ROOT, "out/images/blog/20-minute-wall-practice.webp"))) {
   throw new Error("GitHub Pages export is missing the wall-practice image asset");
 }
-if (fs.existsSync(path.join(ROOT, "out/ads.txt"))) {
-  throw new Error("GitHub Pages export still contains ads.txt");
+const adsTxt = fs.readFileSync(path.join(ROOT, "out", "ads.txt"), "utf8").trim();
+if (adsTxt !== "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0") {
+  throw new Error("GitHub Pages export is missing the exact AdSense ads.txt binding");
 }
 
-const adFreeOutputAudit = spawnSync(
+const adsenseOutputAudit = spawnSync(
   process.execPath,
-  [path.join(ROOT, "scripts", "audit-ad-free-cafe-first.mjs"), "--output"],
+  [path.join(ROOT, "scripts", "audit-adsense-install.mjs"), "--output"],
   {
     cwd: ROOT,
     env: {
@@ -192,7 +193,7 @@ const adFreeOutputAudit = spawnSync(
     stdio: "inherit",
   },
 );
-if (adFreeOutputAudit.error) throw adFreeOutputAudit.error;
-if (adFreeOutputAudit.status !== 0) process.exit(adFreeOutputAudit.status ?? 1);
+if (adsenseOutputAudit.error) throw adsenseOutputAudit.error;
+if (adsenseOutputAudit.status !== 0) process.exit(adsenseOutputAudit.status ?? 1);
 
 console.log("GitHub Pages static export audit passed.");
