@@ -20,6 +20,7 @@ export default function CourtConditionsPage() {
   const [humidity, setHumidity] = useState(55);
   const [wind, setWind] = useState(5);
   const [lighting, setLighting] = useState('good');
+  const inputsValid = Number.isFinite(temperature) && temperature >= -30 && temperature <= 50 && Number.isFinite(humidity) && humidity >= 0 && humidity <= 100 && Number.isFinite(wind) && wind >= 0 && wind <= 100;
 
   const analysis = useMemo(() => {
     let score = 100;
@@ -62,8 +63,8 @@ export default function CourtConditionsPage() {
     if (score >= 70) tips.push('현재 조건에서는 평소 패턴을 유지해도 무리가 크지 않습니다.');
     else tips.push('무리한 위닝샷보다 안전한 전개와 풋워크 안정이 먼저입니다.');
 
-    return { score: Math.max(0, score), tips, risks };
-  }, [condition, humidity, lighting, surface, temperature, wind]);
+    return { score: inputsValid ? Math.min(100, Math.max(0, score)) : 0, tips, risks };
+  }, [condition, humidity, inputsValid, lighting, surface, temperature, wind]);
 
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,_#ecfdf5_0%,_#ffffff_34%,_#f8fafc_100%)]">
@@ -72,7 +73,7 @@ export default function CourtConditionsPage() {
           <Badge className="bg-white/15 text-white hover:bg-white/15">코트 상태 체크</Badge>
           <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">오늘 코트 환경에서 어떻게 플레이할지 판단하기</h1>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-emerald-50">
-            코트 표면과 날씨가 바뀌면 평소와 같은 전술이 잘 안 통할 수 있습니다. 간단한 환경 조건을 넣어 현재 플레이 적합도를 확인하세요.
+            코트 표면과 날씨가 바뀌면 평소와 같은 전술이 잘 안 통할 수 있습니다. 직접 확인한 환경 조건을 넣어 로컬 규칙 기반 적합도를 확인하세요. 실제 코트나 기상 데이터를 조회하지 않습니다.
           </p>
         </section>
 
@@ -110,9 +111,9 @@ export default function CourtConditionsPage() {
                 </Select>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <div><Label htmlFor="temp">기온</Label><Input id="temp" type="number" value={temperature} onChange={(e) => setTemperature(Number(e.target.value) || 0)} /></div>
-                <div><Label htmlFor="humidity">습도</Label><Input id="humidity" type="number" value={humidity} onChange={(e) => setHumidity(Number(e.target.value) || 0)} /></div>
-                <div><Label htmlFor="wind">바람</Label><Input id="wind" type="number" value={wind} onChange={(e) => setWind(Number(e.target.value) || 0)} /></div>
+                <div><Label htmlFor="temp">기온 (°C)</Label><Input id="temp" type="number" min="-30" max="50" value={temperature} onChange={(e) => setTemperature(Number(e.target.value))} /></div>
+                <div><Label htmlFor="humidity">습도 (%)</Label><Input id="humidity" type="number" min="0" max="100" value={humidity} onChange={(e) => setHumidity(Number(e.target.value))} /></div>
+                <div><Label htmlFor="wind">바람 (km/h)</Label><Input id="wind" type="number" min="0" max="100" value={wind} onChange={(e) => setWind(Number(e.target.value))} /></div>
                 <div>
                   <Label className="mb-2 block">조명</Label>
                   <Select value={lighting} onValueChange={setLighting}>
@@ -126,6 +127,7 @@ export default function CourtConditionsPage() {
                   </Select>
                 </div>
               </div>
+              {!inputsValid && <p role="alert" className="text-sm font-semibold text-red-700">기온·습도·바람을 허용 범위 안에서 입력하세요.</p>}
             </CardContent>
           </Card>
 
@@ -188,7 +190,7 @@ export default function CourtConditionsPage() {
             </Card>
 
             <div>
-              <Button className="bg-emerald-600 text-white hover:bg-emerald-700">현재 조건 저장하기</Button>
+              <Button disabled aria-disabled="true" title="저장 기능은 제공되지 않습니다" className="bg-emerald-600 text-white hover:bg-emerald-700">저장 기능 미제공</Button>
             </div>
           </div>
         </section>

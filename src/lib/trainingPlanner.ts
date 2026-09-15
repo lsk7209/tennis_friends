@@ -70,6 +70,19 @@ export interface Milestone {
 }
 
 export function generateTrainingPlan(input: TrainingPlanInput): TrainingPlanResult {
+  if (
+    !Number.isFinite(input.availableTime.weekly) ||
+    input.availableTime.weekly <= 0 ||
+    input.availableTime.weekly > 168 ||
+    !Number.isFinite(input.availableTime.sessionLength) ||
+    input.availableTime.sessionLength <= 0 ||
+    input.availableTime.sessionLength > input.availableTime.weekly ||
+    !Number.isFinite(input.experience) ||
+    input.experience < 0 ||
+    input.experience > 100
+  ) {
+    throw new RangeError('training time and experience must be finite and internally consistent');
+  }
   const planName = generatePlanName(input);
   const duration = calculateDuration(input);
   const weeklySchedule = generateWeeklySchedule(input, duration);

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { calculateServeVelocity, UTILITY_ESTIMATE_VERSION } from '@/lib/utility-estimates';
 
 
 export default function ServeVelocityCalculatorPage() {
@@ -16,21 +17,8 @@ export default function ServeVelocityCalculatorPage() {
   const [showResult, setShowResult] = useState(false);
 
   const result = useMemo(() => {
-    const speedMps = time > 0 ? distance / time : 0;
-    const speedKmh = speedMps * 3.6;
-    const adjustedSpeed = speedKmh + Math.max(0, height - 2.3) * 4 + angle * 0.8;
-
-    let grade = '입문';
-    if (adjustedSpeed >= 170) grade = '상급';
-    else if (adjustedSpeed >= 140) grade = '중상급';
-    else if (adjustedSpeed >= 110) grade = '중급';
-
-    return {
-      speedMps: Math.round(speedMps * 10) / 10,
-      speedKmh: Math.round(speedKmh),
-      adjustedSpeed: Math.round(adjustedSpeed),
-      grade,
-    };
+    try { return { ...calculateServeVelocity({ distanceM: distance, timeSeconds: time, contactHeightM: height, launchAngleDegrees: angle }), error: null }; }
+    catch { return { speedMps: 0, speedKmh: 0, adjustedSpeed: 0, grade: '-', error: '거리 1~30m, 시간 0.1~3초, 높이 1~4m, 각도 -20~30도 범위로 입력하세요.' }; }
   }, [angle, distance, height, time]);
 
   return (
@@ -54,19 +42,19 @@ export default function ServeVelocityCalculatorPage() {
             <CardContent className="space-y-5">
               <div>
                 <Label htmlFor="distance">비행 거리 (m)</Label>
-                <Input id="distance" type="number" step="0.1" value={distance} onChange={(e) => setDistance(Number(e.target.value) || 0)} />
+                <Input id="distance" type="number" min="1" max="30" step="0.1" value={distance} onChange={(e) => setDistance(Number(e.target.value))} />
               </div>
               <div>
                 <Label htmlFor="time">비행 시간 (초)</Label>
-                <Input id="time" type="number" step="0.01" value={time} onChange={(e) => setTime(Number(e.target.value) || 0)} />
+                <Input id="time" type="number" min="0.1" max="3" step="0.01" value={time} onChange={(e) => setTime(Number(e.target.value))} />
               </div>
               <div>
                 <Label htmlFor="height">타점 높이 (m)</Label>
-                <Input id="height" type="number" step="0.1" value={height} onChange={(e) => setHeight(Number(e.target.value) || 0)} />
+                <Input id="height" type="number" min="1" max="4" step="0.1" value={height} onChange={(e) => setHeight(Number(e.target.value))} />
               </div>
               <div>
                 <Label htmlFor="angle">발사 각도 (도)</Label>
-                <Input id="angle" type="number" step="1" value={angle} onChange={(e) => setAngle(Number(e.target.value) || 0)} />
+                <Input id="angle" type="number" min="-20" max="30" step="1" value={angle} onChange={(e) => setAngle(Number(e.target.value))} />
               </div>
               <Button className="w-full bg-orange-500 text-white hover:bg-orange-600" onClick={() => setShowResult(true)}>
                 <Zap className="mr-2 h-4 w-4" />
@@ -78,6 +66,7 @@ export default function ServeVelocityCalculatorPage() {
           <div className="space-y-6">
             {showResult ? (
               <>
+                {result.error && <p role="alert" className="rounded-md bg-red-50 p-4 font-semibold text-red-700">{result.error}</p>}
                 <div className="grid gap-4 md:grid-cols-3">
                   <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">추정 속도</p><p className="mt-2 text-2xl font-bold text-orange-600">{result.speedKmh} km/h</p></CardContent></Card>
                   <Card className="border-slate-200 bg-white shadow-sm"><CardContent className="p-5"><p className="text-sm text-slate-500">기본 환산</p><p className="mt-2 text-2xl font-bold text-slate-900">{result.speedMps} m/s</p></CardContent></Card>
@@ -93,6 +82,7 @@ export default function ServeVelocityCalculatorPage() {
                   </CardHeader>
                   <CardContent className="space-y-3 text-sm leading-6 text-slate-600">
                     <p>기본 계산 속도는 시간과 거리만으로 구한 값이고, 보정 속도는 타점 높이와 발사 각도를 약하게 반영한 값입니다.</p>
+                    <p>산식: 거리 ÷ 시간 × 3.6, 높이·각도 휴리스틱 보정 · 모델 {UTILITY_ESTIMATE_VERSION}</p>
                     <p>같은 속도라도 코스 정확도와 세컨드 서브 안정성이 더 중요할 수 있으니, 숫자만으로 서브 품질을 판단하지 않는 편이 좋습니다.</p>
                   </CardContent>
                 </Card>

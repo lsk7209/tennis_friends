@@ -1,5 +1,70 @@
 # EVIDENCE
 
+## 2026-09-15 — TF-001–038 and TF-040 local closure
+
+- Completion denominator: 39/40 tasks locally closed; TF-039 is `BLOCKED_APPROVAL` and is not reported complete.
+- `npm run preverify`: PASS for publication, utility integrity, schema, URL/HTTP, next actions, accessibility, consent, quality workflow, and analytics importer.
+- `audit:utility-boundaries`, `audit:blog-schedule`, `audit:visual-layout-risk`, and `audit:adsense-install:output`: PASS. The schedule audit covers 1,262 raw posts / 756 effective posts and has no duplicate-title findings.
+- `npm run type-check`: PASS. `git diff --check`: PASS with line-ending conversion notices only.
+- Latest full build and exact static export: PASS at 3,105 pages. Utility browser fleet: 63/63 routes passed the defined 320x844 checks.
+- AdSense is fail closed unless external effects are production-authorized and `NEXT_PUBLIC_ADS_CONSENT_READY=verified`; current CMP/account/region fields remain null.
+- Performance comparison is `PASS_WITH_LAB_VARIANCE`; PSI/RUM remain null and no production causality is claimed.
+- No commit, push, deployment, account/CMP mutation, URL mutation, live mail/database write, or indexing notification occurred.
+
+## 2026-09-15 — TF-024 contextual next actions
+
+- Failing-first `audit:next-action-links` exposed that its initial matcher did not recognize the booking result's valid `/` and `/utility` next actions; the audit was corrected to cover all internal links without weakening target checks.
+- Final `audit:next-action-links`: PASS for nine result pages, existing utility targets, no forced splitting markers, and three primary home paths.
+- `audit:internal-links`: PASS with ten core utility candidates, 63 routes, four relevance fixtures, and no findings.
+- Shared result-link defaults are Korean (`다음에 확인할 도구`, `열기`). Typecheck passes.
+
+## 2026-09-15 — TF-023 URL/HTTP/robots/sitemap contract
+
+- `audit:url-http-contract`: PASS across five URL policy types; live HTTP remains explicitly `NOT_VERIFIED` rather than inferred from local output.
+- `audit:url-consistency` and `audit:redirect-config`: PASS for the canonical host and three representative permanent redirect classes.
+- `audit:sitemap-coverage`: PASS with 1,478 entries, 1,147 published/indexable blogs, 182 physical blogs, 54 physical noindex blogs, 63 utilities, and 259 players.
+- Previous exact export evidence remains identified separately at 3,105 pages. No deployment or live mutation occurred.
+
+## 2026-09-15 — TF-025 schema semantics
+
+- `audit:schema-semantics`: PASS for real Organization authorship, explicit-only modification dates, no unsupported blog rating, breadcrumb policy, and retirement of FAQ rich-result expectations.
+- `audit:schema-coverage`: PASS for six schema owners, ten components, and utility application coverage.
+- Typecheck and focused ESLint: PASS. No external or live schema change occurred.
+
+## 2026-09-15 — TF-019/020/021 tool-integrity progress
+
+- `audit:utility-data-integrity`: PASS for nine data/result surfaces. It verifies local/static origin disclosure, absence of live fetch, unsupported persistence removal, invalid-result handling, formula/version disclosure, and zero artificial result delays across injury/equipment/training/nutrition/match.
+- `audit:utility-boundaries`: PASS. It rejects invalid tension enums, proves deterministic results and exact lb-to-kg rounding, locks the corrected lower-power/higher-control direction, validates injury age/finite bounds, rejects inconsistent match counts, rejects zero/non-finite training time, and proves equipment calculations do not mutate the shared catalog.
+- Typecheck and focused ESLint: PASS.
+- Remaining coverage is explicit: the artificial delays are removed, but inline calculators outside the five tested libraries still prevent claiming TF-019–TF-021 complete.
+
+## 2026-09-15 — TF-016/017 publication and pagination contracts
+
+- Found and repaired two fail-open/duplication risks: invalid dates previously mapped to Unix epoch and could publish; out-of-range page requests were clamped to the last page.
+- `audit:blog-publication-contract`: PASS with deterministic publication fixtures plus a production-size 25-post/12-per-page pagination set proving 12/12/1 coverage, no duplication or omission, exact root/page URL generation, release instant, future scheduling, edited content, draft/private exclusion, invalid dates, ordering, out-of-range pages, and invalid page size.
+- `audit:blog-index-experience`: PASS across list, paginated route, index helper, detail route, and sitemap sources; list/detail use the same 60-second cache policy and list/detail/sitemap use the shared publication gate.
+- The homepage shelf is now explicitly labeled `Editor's Picks` with a Korean explanation that it is curated rather than chronological; this closes the stale-looking `Latest Reads` ambiguity without falsely changing its editorial selection.
+- `npm run type-check`: PASS. No external mutation occurred.
+
+## 2026-09-15 — TF-009 external-effect isolation
+
+- Failing-first: `npm run audit:external-effects-isolation` exited 1 because the central policy did not exist.
+- Independent read-only review confirmed unconditional AdSense/preconnect loading, preview GA activation when an ID was present, and no booking network mutation.
+- `npm run audit:external-effects-isolation`, `npm run lint -- --quiet`, and `npm run type-check`: PASS.
+- `npm run verify`: PASS with two moderate dependency advisories; Next.js 16.3.5 generated 3,103 pages.
+- Disabled artifact proof: `.next/server/app/index.html` contained none of the GA ID, GA loader, AdSense loader ID, or AdSense host.
+- Enabled artifact proof: command-scoped `NEXT_PUBLIC_EXTERNAL_EFFECTS=production` build generated 3,103 pages and the same artifact contained all four expected production markers.
+- Exact static-export attempt: FAIL at `/api/og`; the route uses `request.url`, which export mode rejects under `dynamic = "error"`. No deployment or external mutation followed.
+
+## 2026-09-14 — docs/11 confirmed trust-contract slice
+
+- Baseline: commit `408ddd081914241c99f8da8c9d6237f122db319d`; initial worktree change was the user-provided untracked `docs/11/` directory.
+- Failing-first proof: `npm run audit:trust-contracts` exited 1 on the stale 10-question homepage claim while the inventory contained 15 entries.
+- Independent review found residual false booking/payment completion, unsupported expert/accuracy language, stale CTA count, and an ad-free privacy statement conflicting with the active loader. All were repaired and added to the trust audit.
+- Dependency repair: the first full verify exited 1 because `next@16.2.11` and `sharp@0.35.0` had current critical/high advisories. `next@16.3.5` and `sharp@0.35.4` removed those findings; two moderate advisories remain.
+- Final proof: `npm run verify` exited 0. All audits, lint, typecheck, and the Next.js production build passed; 3,103 static pages were generated. Inventory: 1,477 sitemap entries, 1,146 blogs, 63 utilities, and 259 players.
+- External boundary: no push, deployment, account console action, live email, DB/data mutation, URL/indexing mutation, or paid service call.
+
 ## 2026-08-28 Remaining Search Inventory And Measurement Evidence
 
 - Read-only inventory review proved that the 54 physical blog routes missing from the sitemap are exactly low-quality-gated slugs, so they were not added to discovery feeds.

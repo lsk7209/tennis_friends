@@ -42,7 +42,10 @@ export function Hero() {
           </motion.p>
 
           {/* 디스플레이 헤드라인 — LCP 요소, 즉시 렌더링 */}
-          <h1 className="font-display-latin text-[14vw] sm:text-[10vw] md:text-[8vw] lg:text-[88px] leading-[0.88] tracking-[-0.045em] text-white mb-8">
+          <h1
+            className="font-display-latin text-[14vw] sm:text-[10vw] md:text-[8vw] lg:text-[88px] leading-[0.88] tracking-[-0.045em] text-white mb-8"
+            aria-label="읽고 점검하고, 카페에서 이어가세요"
+          >
             읽고 점검하고,
             <br />
             카페에서 <em className="not-italic text-accent-volt">이어가세요</em>
@@ -52,6 +55,7 @@ export function Hero() {
           <motion.p
             variants={revealVariants}
             className="text-base md:text-lg text-white/60 max-w-xl mb-10 leading-relaxed"
+            aria-label="테니스 가이드와 도구로 필요한 내용을 먼저 확인하고, 네이버 카페 테니스프렌즈에서 다음 이야기를 확인하세요."
           >
             테니스 가이드와 도구로 필요한 내용을 먼저 확인하고,
             <br />
@@ -72,11 +76,9 @@ export function Hero() {
                 네이버 카페 방문하기 →
               </NaverCafeLink>
             </Button>
-            <Link href="/utility/ntrp-test" prefetch={false}>
-              <Button variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg"><Link href="/utility/ntrp-test" prefetch={false}>
                 NTRP 테스트 시작
-              </Button>
-            </Link>
+              </Link></Button>
           </motion.div>
         </motion.div>
       </div>

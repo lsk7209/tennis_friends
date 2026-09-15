@@ -371,12 +371,10 @@ export default function FlexibilityTestPage() {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 다시 테스트하기
               </Button>
-              <Link href="/utility/flexibility-test">
-                <Button className="bg-teal-500 hover:bg-teal-600">
+              <Button asChild className="bg-teal-500 hover:bg-teal-600"><Link href="/utility/flexibility-test">
                   <TrendingUp className="w-4 h-4 mr-2" />
                   유연성 향상 팁 보기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </div>
         )}

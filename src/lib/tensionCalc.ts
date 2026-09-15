@@ -17,7 +17,33 @@ export interface TensionResult {
   color: string;
 }
 
+export const TENSION_MODEL_VERSION = 'tf-tension-rules-v2-20260915';
+
+const VALID_INPUTS = {
+  headSize: ['Small', 'Mid', 'Oversize'],
+  stringType: ['Polyester', 'Multifilament', 'Natural Gut', 'Hybrid'],
+  playStyle: ['컨트롤형', '파워형', '스핀형', '올라운더'],
+  environment: ['실내', '실외(여름)', '실외(겨울)', '실외(봄/가을)'],
+  feelPreference: ['부드럽게', '적당히', '단단하게'],
+  ntrpLevel: ['2.5', '3.0', '3.5', '4.0', '4.5+'],
+} as const;
+
+export function isTensionInput(input: Partial<TensionInput>): input is TensionInput {
+  return (
+    VALID_INPUTS.headSize.includes(input.headSize as never) &&
+    VALID_INPUTS.stringType.includes(input.stringType as never) &&
+    VALID_INPUTS.playStyle.includes(input.playStyle as never) &&
+    VALID_INPUTS.environment.includes(input.environment as never) &&
+    VALID_INPUTS.feelPreference.includes(input.feelPreference as never) &&
+    (input.ntrpLevel === undefined ||
+      VALID_INPUTS.ntrpLevel.includes(input.ntrpLevel as never))
+  );
+}
+
 export function calculateTension(input: TensionInput): TensionResult {
+  if (!isTensionInput(input)) {
+    throw new RangeError('invalid tension calculator input');
+  }
   let base = 55; // 기본 55lbs
   
   // 라켓 헤드 크기 조정
@@ -30,8 +56,8 @@ export function calculateTension(input: TensionInput): TensionResult {
   if (input.stringType === 'Hybrid') base -= 1;
   
   // 플레이 스타일 조정
-  if (input.playStyle === '파워형') base += 2;
-  if (input.playStyle === '컨트롤형') base -= 2;
+  if (input.playStyle === '파워형') base -= 2;
+  if (input.playStyle === '컨트롤형') base += 2;
   if (input.playStyle === '스핀형') base += 1;
   
   // 환경 조정
@@ -78,7 +104,7 @@ function generateStyleInfo(playStyle: string, _stringType: string, _environment:
     '컨트롤형': {
       summary: '당신은 컨트롤을 중시하는 플레이어입니다.',
       tips: [
-        '낮은 텐션으로 공의 깊이와 방향을 정확히 조절하세요.',
+        '조금 높은 텐션은 반발을 줄여 방향 제어에 도움을 줄 수 있습니다.',
         '폴리 스트링은 10시간 이후 텐션 유지율을 체크하세요.',
         '하이브리드 세팅 시 메인 스트링 기준으로 계산하세요.'
       ],
@@ -87,7 +113,7 @@ function generateStyleInfo(playStyle: string, _stringType: string, _environment:
     '파워형': {
       summary: '당신은 파워를 중시하는 공격적 플레이어입니다.',
       tips: [
-        '높은 텐션으로 공의 속도와 위력을 극대화하세요.',
+        '조금 낮은 텐션은 반발과 편안함을 높이는 데 도움을 줄 수 있습니다.',
         '여름철엔 1–2lb 낮춰서 팔꿈치 부담을 줄이세요.',
         '자연거트 스트링은 텐션 유지가 좋아 파워형에 적합합니다.'
       ],
@@ -119,24 +145,24 @@ function generateStyleInfo(playStyle: string, _stringType: string, _environment:
 export function getTensionComparison(playStyle: string) {
   const comparisons = {
     '컨트롤형': [
-      { style: '컨트롤형', tension: '48-52lb', description: '정확한 컨트롤' },
-      { style: '파워형', tension: '54-58lb', description: '강력한 파워' },
+      { style: '컨트롤형', tension: '54-58lb', description: '반발을 줄인 방향 제어' },
+      { style: '파워형', tension: '48-52lb', description: '반발과 편안함' },
       { style: '스핀형', tension: '50-54lb', description: '효과적 스핀' }
     ],
     '파워형': [
-      { style: '파워형', tension: '54-58lb', description: '강력한 파워' },
-      { style: '컨트롤형', tension: '48-52lb', description: '정확한 컨트롤' },
+      { style: '파워형', tension: '48-52lb', description: '반발과 편안함' },
+      { style: '컨트롤형', tension: '54-58lb', description: '반발을 줄인 방향 제어' },
       { style: '스핀형', tension: '50-54lb', description: '효과적 스핀' }
     ],
     '스핀형': [
       { style: '스핀형', tension: '50-54lb', description: '효과적 스핀' },
-      { style: '컨트롤형', tension: '48-52lb', description: '정확한 컨트롤' },
-      { style: '파워형', tension: '54-58lb', description: '강력한 파워' }
+      { style: '컨트롤형', tension: '54-58lb', description: '반발을 줄인 방향 제어' },
+      { style: '파워형', tension: '48-52lb', description: '반발과 편안함' }
     ],
     '올라운더': [
       { style: '올라운더', tension: '52-56lb', description: '균형잡힌 플레이' },
-      { style: '컨트롤형', tension: '48-52lb', description: '정확한 컨트롤' },
-      { style: '파워형', tension: '54-58lb', description: '강력한 파워' }
+      { style: '컨트롤형', tension: '54-58lb', description: '반발을 줄인 방향 제어' },
+      { style: '파워형', tension: '48-52lb', description: '반발과 편안함' }
     ]
   };
   

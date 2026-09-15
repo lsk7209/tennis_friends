@@ -2,7 +2,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-249-self-call-disputes-match-record",
     "title": "동호회 운영 셀프 콜 분쟁 경기기록",
-    "excerpt": "셀프 콜 분쟁를 동호회 운영, 경기기록 기준으로 바로 점검합니다.",
+    "excerpt": "셀프 콜 분쟁을 동호회 운영, 경기기록 기준으로 바로 점검합니다.",
     "category": "동호회 운영",
     "tags": ["동호회 운영","셀프 콜 분쟁","동호회 운영","경기기록"],
     "date": "2026-04-19",
@@ -11,7 +11,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-250-self-call-disputes-common-mistakes",
     "title": "동호회 운영 셀프 콜 분쟁 실수 줄이기",
-    "excerpt": "셀프 콜 분쟁를 동호회 운영, 경기기록 기준으로 바로 점검합니다.",
+    "excerpt": "셀프 콜 분쟁을 동호회 운영, 경기기록 기준으로 바로 점검합니다.",
     "category": "동호회 운영",
     "tags": ["동호회 운영","셀프 콜 분쟁","동호회 운영","경기기록"],
     "date": "2026-04-19",
@@ -20,7 +20,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-251-court-noshow-rules-beginner-checklist",
     "title": "동호회 운영 코트 노쇼 규칙 초보 체크",
-    "excerpt": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+    "excerpt": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
     "category": "동호회 운영",
     "tags": ["동호회 운영","코트 노쇼 규칙","예약 매너","동호회 운영"],
     "date": "2026-04-20",
@@ -29,7 +29,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-252-court-noshow-rules-twenty-min-routine",
     "title": "동호회 운영 코트 노쇼 규칙 20분 루틴",
-    "excerpt": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+    "excerpt": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
     "category": "동호회 운영",
     "tags": ["동호회 운영","코트 노쇼 규칙","예약 매너","동호회 운영"],
     "date": "2026-04-20",
@@ -38,7 +38,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-253-court-noshow-rules-level-gap",
     "title": "동호회 운영 코트 노쇼 규칙 레벨 차이",
-    "excerpt": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+    "excerpt": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
     "category": "동호회 운영",
     "tags": ["동호회 운영","코트 노쇼 규칙","예약 매너","동호회 운영"],
     "date": "2026-04-20",
@@ -47,7 +47,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-254-court-noshow-rules-match-record",
     "title": "동호회 운영 코트 노쇼 규칙 경기기록",
-    "excerpt": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+    "excerpt": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
     "category": "동호회 운영",
     "tags": ["동호회 운영","코트 노쇼 규칙","예약 매너","동호회 운영"],
     "date": "2026-04-20",
@@ -56,7 +56,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-255-court-noshow-rules-common-mistakes",
     "title": "동호회 운영 코트 노쇼 규칙 실수 줄이기",
-    "excerpt": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+    "excerpt": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
     "category": "동호회 운영",
     "tags": ["동호회 운영","코트 노쇼 규칙","예약 매너","동호회 운영"],
     "date": "2026-04-20",
@@ -65,7 +65,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-256-weekend-tournament-apply-beginner-checklist",
     "title": "경기 분석 주말 대회 신청 초보 체크",
-    "excerpt": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+    "excerpt": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
     "category": "경기 분석",
     "tags": ["경기 분석","주말 대회 신청","동호회 경기","참가 준비"],
     "date": "2026-04-21",
@@ -74,7 +74,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-257-weekend-tournament-apply-twenty-min-routine",
     "title": "경기 분석 주말 대회 신청 20분 루틴",
-    "excerpt": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+    "excerpt": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
     "category": "경기 분석",
     "tags": ["경기 분석","주말 대회 신청","동호회 경기","참가 준비"],
     "date": "2026-04-21",
@@ -83,7 +83,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-258-weekend-tournament-apply-level-gap",
     "title": "경기 분석 주말 대회 신청 레벨 차이",
-    "excerpt": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+    "excerpt": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
     "category": "경기 분석",
     "tags": ["경기 분석","주말 대회 신청","동호회 경기","참가 준비"],
     "date": "2026-04-21",
@@ -92,7 +92,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-259-weekend-tournament-apply-match-record",
     "title": "경기 분석 주말 대회 신청 경기기록",
-    "excerpt": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+    "excerpt": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
     "category": "경기 분석",
     "tags": ["경기 분석","주말 대회 신청","동호회 경기","참가 준비"],
     "date": "2026-04-21",
@@ -101,7 +101,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-260-weekend-tournament-apply-common-mistakes",
     "title": "경기 분석 주말 대회 신청 실수 줄이기",
-    "excerpt": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+    "excerpt": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
     "category": "경기 분석",
     "tags": ["경기 분석","주말 대회 신청","동호회 경기","참가 준비"],
     "date": "2026-04-21",
@@ -110,7 +110,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-261-forehand-grip-switch-beginner-checklist",
     "title": "테니스 레슨 포핸드 그립 전환 초보 체크",
-    "excerpt": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+    "excerpt": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","포핸드 그립 전환","스윙 교정","타점 안정"],
     "date": "2026-04-22",
@@ -119,7 +119,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-262-forehand-grip-switch-twenty-min-routine",
     "title": "테니스 레슨 포핸드 그립 전환 20분 루틴",
-    "excerpt": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+    "excerpt": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","포핸드 그립 전환","스윙 교정","타점 안정"],
     "date": "2026-04-22",
@@ -128,7 +128,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-263-forehand-grip-switch-level-gap",
     "title": "테니스 레슨 포핸드 그립 전환 레벨 차이",
-    "excerpt": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+    "excerpt": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","포핸드 그립 전환","스윙 교정","타점 안정"],
     "date": "2026-04-22",
@@ -137,7 +137,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-264-forehand-grip-switch-match-record",
     "title": "테니스 레슨 포핸드 그립 전환 경기기록",
-    "excerpt": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+    "excerpt": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","포핸드 그립 전환","스윙 교정","타점 안정"],
     "date": "2026-04-22",
@@ -146,7 +146,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-265-forehand-grip-switch-common-mistakes",
     "title": "테니스 레슨 포핸드 그립 전환 실수 줄이기",
-    "excerpt": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+    "excerpt": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","포핸드 그립 전환","스윙 교정","타점 안정"],
     "date": "2026-04-23",
@@ -200,7 +200,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-271-volley-wrist-fix-beginner-checklist",
     "title": "테니스 레슨 발리 손목 고정 초보 체크",
-    "excerpt": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+    "excerpt": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","발리 손목 고정","네트 플레이","임팩트 안정"],
     "date": "2026-04-24",
@@ -209,7 +209,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-272-volley-wrist-fix-twenty-min-routine",
     "title": "테니스 레슨 발리 손목 고정 20분 루틴",
-    "excerpt": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+    "excerpt": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","발리 손목 고정","네트 플레이","임팩트 안정"],
     "date": "2026-04-24",
@@ -218,7 +218,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-273-volley-wrist-fix-level-gap",
     "title": "테니스 레슨 발리 손목 고정 레벨 차이",
-    "excerpt": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+    "excerpt": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","발리 손목 고정","네트 플레이","임팩트 안정"],
     "date": "2026-04-24",
@@ -227,7 +227,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-274-volley-wrist-fix-match-record",
     "title": "테니스 레슨 발리 손목 고정 경기기록",
-    "excerpt": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+    "excerpt": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","발리 손목 고정","네트 플레이","임팩트 안정"],
     "date": "2026-04-24",
@@ -236,7 +236,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-275-volley-wrist-fix-common-mistakes",
     "title": "테니스 레슨 발리 손목 고정 실수 줄이기",
-    "excerpt": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+    "excerpt": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
     "category": "테니스 레슨",
     "tags": ["테니스 레슨","발리 손목 고정","네트 플레이","임팩트 안정"],
     "date": "2026-04-25",
@@ -245,7 +245,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-276-smash-backpedal-beginner-checklist",
     "title": "훈련 가이드 스매시 백스텝 초보 체크",
-    "excerpt": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+    "excerpt": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스매시 백스텝","오버헤드 풋워크","부상 예방"],
     "date": "2026-04-25",
@@ -254,7 +254,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-277-smash-backpedal-twenty-min-routine",
     "title": "훈련 가이드 스매시 백스텝 20분 루틴",
-    "excerpt": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+    "excerpt": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스매시 백스텝","오버헤드 풋워크","부상 예방"],
     "date": "2026-04-25",
@@ -263,7 +263,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-278-smash-backpedal-level-gap",
     "title": "훈련 가이드 스매시 백스텝 레벨 차이",
-    "excerpt": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+    "excerpt": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스매시 백스텝","오버헤드 풋워크","부상 예방"],
     "date": "2026-04-25",
@@ -272,7 +272,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-279-smash-backpedal-match-record",
     "title": "훈련 가이드 스매시 백스텝 경기기록",
-    "excerpt": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+    "excerpt": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스매시 백스텝","오버헤드 풋워크","부상 예방"],
     "date": "2026-04-25",
@@ -281,7 +281,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-280-smash-backpedal-common-mistakes",
     "title": "훈련 가이드 스매시 백스텝 실수 줄이기",
-    "excerpt": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+    "excerpt": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스매시 백스텝","오버헤드 풋워크","부상 예방"],
     "date": "2026-04-26",
@@ -290,7 +290,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-281-dropshot-when-to-use-beginner-checklist",
     "title": "전술 가이드 드롭샷 타이밍 초보 체크",
-    "excerpt": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+    "excerpt": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
     "category": "전술 가이드",
     "tags": ["전술 가이드","드롭샷 타이밍","전술 선택","상대 위치"],
     "date": "2026-04-26",
@@ -299,7 +299,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-282-dropshot-when-to-use-twenty-min-routine",
     "title": "전술 가이드 드롭샷 타이밍 20분 루틴",
-    "excerpt": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+    "excerpt": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
     "category": "전술 가이드",
     "tags": ["전술 가이드","드롭샷 타이밍","전술 선택","상대 위치"],
     "date": "2026-04-26",
@@ -308,7 +308,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-283-dropshot-when-to-use-level-gap",
     "title": "전술 가이드 드롭샷 타이밍 레벨 차이",
-    "excerpt": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+    "excerpt": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
     "category": "전술 가이드",
     "tags": ["전술 가이드","드롭샷 타이밍","전술 선택","상대 위치"],
     "date": "2026-04-26",
@@ -317,7 +317,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-284-dropshot-when-to-use-match-record",
     "title": "전술 가이드 드롭샷 타이밍 경기기록",
-    "excerpt": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+    "excerpt": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
     "category": "전술 가이드",
     "tags": ["전술 가이드","드롭샷 타이밍","전술 선택","상대 위치"],
     "date": "2026-04-26",
@@ -326,7 +326,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-285-dropshot-when-to-use-common-mistakes",
     "title": "전술 가이드 드롭샷 타이밍 실수 줄이기",
-    "excerpt": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+    "excerpt": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
     "category": "전술 가이드",
     "tags": ["전술 가이드","드롭샷 타이밍","전술 선택","상대 위치"],
     "date": "2026-04-27",
@@ -425,7 +425,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-296-split-step-timing-beginner-checklist",
     "title": "훈련 가이드 스플릿 스텝 초보 체크",
-    "excerpt": "스플릿 스텝를 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
+    "excerpt": "스플릿 스텝을 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스플릿 스텝","반응 타이밍","풋워크"],
     "date": "2026-04-29",
@@ -434,7 +434,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-297-split-step-timing-twenty-min-routine",
     "title": "훈련 가이드 스플릿 스텝 20분 루틴",
-    "excerpt": "스플릿 스텝를 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
+    "excerpt": "스플릿 스텝을 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스플릿 스텝","반응 타이밍","풋워크"],
     "date": "2026-04-29",
@@ -443,7 +443,7 @@ export const articleWriterPart25PostOverrides = [
   {
     "slug": "aw2-298-split-step-timing-level-gap",
     "title": "훈련 가이드 스플릿 스텝 레벨 차이",
-    "excerpt": "스플릿 스텝를 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
+    "excerpt": "스플릿 스텝을 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스플릿 스텝","반응 타이밍","풋워크"],
     "date": "2026-04-29",

@@ -47,18 +47,19 @@ function normalizeScore(id: string, value: number) {
 
 export default function Page() {
   const [values, setValues] = useState<Record<string, string>>({});
+  const inputsValid = fields.every((field) => values[field.id] !== undefined && values[field.id] !== "" && Number.isFinite(Number(values[field.id])) && Number(values[field.id]) > 0 && Number(values[field.id]) <= 1000);
 
   const result = useMemo(() => {
     const entries = fields.map((field) => {
-      const raw = Number(values[field.id]) || 0;
+      const raw = inputsValid ? Number(values[field.id]) : 0;
       const score = normalizeScore(field.id, raw);
       return { ...field, raw, score };
     });
     const totalWeight = entries.reduce((sum, item) => sum + item.weight, 0);
     const totalScore = Math.round(entries.reduce((sum, item) => sum + item.score * item.weight, 0) / totalWeight);
     const label = totalScore >= 80 ? "경기 체력이 좋은 편" : totalScore >= 60 ? "기본 체력은 확보" : "기초 체력 보강 권장";
-    return { entries, totalScore, label };
-  }, [values]);
+    return { entries, totalScore: inputsValid ? Math.min(100, Math.max(0, totalScore)) : 0, label: inputsValid ? label : "모든 측정값을 입력하세요" };
+  }, [inputsValid, values]);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
@@ -81,12 +82,15 @@ export default function Page() {
                   id={field.id}
                   type="number"
                   step="0.1"
+                  min="0.1"
+                  max="1000"
                   placeholder={field.placeholder}
                   value={values[field.id] ?? ""}
                   onChange={(e) => setValues((current) => ({ ...current, [field.id]: e.target.value }))}
                 />
               </div>
             ))}
+            {!inputsValid && <p role="alert" className="md:col-span-2 text-sm font-semibold text-red-700">6개 측정값을 모두 0보다 크고 1,000 이하인 값으로 입력하세요.</p>}
           </CardContent>
         </Card>
 
@@ -139,6 +143,7 @@ export default function Page() {
             <CardContent className="space-y-2 text-sm leading-6 text-muted-foreground">
               <p>스프린트와 민첩성이 낮으면 짧은 풋워크 루틴을 주 2회 먼저 넣는 편이 좋습니다.</p>
               <p>지구력이 낮으면 경기형 랠리보다 인터벌 훈련과 회복 루틴을 함께 설계하세요.</p>
+              <p>모델 tf-fitness-v1-20260915: 항목별 기준점(민첩성 30회, 스프린트 4초, 지구력 25분, 푸시업 35회, 점프 55cm, 균형 60초)을 0~100점으로 환산해 18/18/16/16/16/16%로 가중 평균합니다.</p>
             </CardContent>
           </Card>
         </div>

@@ -53,9 +53,10 @@ if (OUTPUT_MODE) {
     assert(Boolean(file), { scope: "static output", issue: `${label} HTML missing` });
     if (file) {
       const html = fs.readFileSync(file, "utf8");
-      assert(html.includes(ADSENSE_CLIENT) && html.includes("adsbygoogle.js"), {
+      const adsExpected = process.env.NEXT_PUBLIC_ADS_CONSENT_READY === "verified";
+      assert(adsExpected ? html.includes(ADSENSE_CLIENT) && html.includes("adsbygoogle.js") : !html.includes("adsbygoogle.js"), {
         scope: "static output",
-        issue: `${label} AdSense loader missing`,
+        issue: adsExpected ? `${label} AdSense loader missing despite verified consent flag` : `${label} AdSense loader present without verified consent flag`,
       });
       assert(html.includes(CAFE_URL), { scope: "static output", issue: `${label} cafe destination missing` });
     }

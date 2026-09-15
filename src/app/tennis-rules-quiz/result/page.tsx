@@ -313,30 +313,22 @@ function TennisRulesQuizResultContent() {
           </div>
 
           <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <Link href="/tennis-rules-quiz/quiz">
-              <Button className="w-full bg-emerald-600 text-white hover:bg-emerald-700">
+            <Button asChild className="w-full bg-emerald-600 text-white hover:bg-emerald-700"><Link href="/tennis-rules-quiz/quiz">
                 <RotateCcw className="mr-2 h-4 w-4" />
                 다시 풀기
-              </Button>
-            </Link>
-            <Link href="/utility/ntrp-test">
-              <Button variant="outline" className="w-full border-gray-300 bg-white">
+              </Link></Button>
+            <Button asChild variant="outline" className="w-full border-gray-300 bg-white"><Link href="/utility/ntrp-test">
                 <Trophy className="mr-2 h-4 w-4" />
                 NTRP 테스트
-              </Button>
-            </Link>
-            <Link href="/utility/string-tension">
-              <Button variant="outline" className="w-full border-gray-300 bg-white">
+              </Link></Button>
+            <Button asChild variant="outline" className="w-full border-gray-300 bg-white"><Link href="/utility/string-tension">
                 <Target className="mr-2 h-4 w-4" />
                 텐션 계산기
-              </Button>
-            </Link>
-            <Link href="/utility/injury-risk">
-              <Button variant="outline" className="w-full border-gray-300 bg-white">
+              </Link></Button>
+            <Button asChild variant="outline" className="w-full border-gray-300 bg-white"><Link href="/utility/injury-risk">
                 <BookOpen className="mr-2 h-4 w-4" />
                 부상 체크
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
 
           <div className="flex flex-col justify-center gap-3 sm:flex-row">

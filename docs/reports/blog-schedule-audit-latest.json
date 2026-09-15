@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generatedAt": "2026-09-08T08:26:05.917Z",
+  "generatedAt": "2026-09-15T07:01:43.449Z",
   "defaultExpectedIntervalHours": 5,
   "intervalOverrides": {
     "src/data/blog-posts-reviewed-september-2026.js": 12

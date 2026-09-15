@@ -2,7 +2,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-099-tennis-shoe-outsole-match-record",
     "title": "테니스화 아웃솔 경기 기록",
-    "excerpt": "테니스화은 무리한 교정보다 아웃솔 마모 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "테니스화는 무리한 교정보다 아웃솔 마모 신호를 먼저 기록해야 안전합니다.",
     "category": "장비 관리",
     "tags": ["테니스화","아웃솔 마모","코트 접지"],
     "date": "2026-05-01",
@@ -11,7 +11,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-100-tennis-shoe-outsole-common-mistakes",
     "title": "테니스화 아웃솔 실수 줄이기",
-    "excerpt": "테니스화은 무리한 교정보다 아웃솔 마모 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "테니스화는 무리한 교정보다 아웃솔 마모 신호를 먼저 기록해야 안전합니다.",
     "category": "장비 관리",
     "tags": ["테니스화","아웃솔 마모","코트 접지"],
     "date": "2026-05-01",
@@ -20,7 +20,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-101-tennis-elbow-early-signal-beginner-checklist",
     "title": "테니스 엘보 초기 신호 초보 체크",
-    "excerpt": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["테니스 엘보","팔꿈치 통증","초기 신호"],
     "date": "2026-05-01",
@@ -29,7 +29,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-102-tennis-elbow-early-signal-twenty-min-routine",
     "title": "테니스 엘보 초기 신호 20분 루틴",
-    "excerpt": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["테니스 엘보","팔꿈치 통증","초기 신호"],
     "date": "2026-05-01",
@@ -38,7 +38,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-103-tennis-elbow-early-signal-level-gap",
     "title": "테니스 엘보 초기 신호 레벨 차이",
-    "excerpt": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["테니스 엘보","팔꿈치 통증","초기 신호"],
     "date": "2026-05-02",
@@ -47,7 +47,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-104-tennis-elbow-early-signal-match-record",
     "title": "테니스 엘보 초기 신호 경기 기록",
-    "excerpt": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["테니스 엘보","팔꿈치 통증","초기 신호"],
     "date": "2026-05-02",
@@ -56,7 +56,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-105-tennis-elbow-early-signal-common-mistakes",
     "title": "테니스 엘보 초기 신호 실수 줄이기",
-    "excerpt": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["테니스 엘보","팔꿈치 통증","초기 신호"],
     "date": "2026-05-02",
@@ -200,7 +200,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-121-ankle-clay-slide-beginner-checklist",
     "title": "발목 클레이 슬라이드 초보 체크",
-    "excerpt": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["발목 보호","클레이 슬라이드","미끄럼 제어"],
     "date": "2026-05-05",
@@ -209,7 +209,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-122-ankle-clay-slide-twenty-min-routine",
     "title": "발목 클레이 슬라이드 20분 루틴",
-    "excerpt": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["발목 보호","클레이 슬라이드","미끄럼 제어"],
     "date": "2026-05-06",
@@ -218,7 +218,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-123-ankle-clay-slide-level-gap",
     "title": "발목 클레이 슬라이드 레벨 차이",
-    "excerpt": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["발목 보호","클레이 슬라이드","미끄럼 제어"],
     "date": "2026-05-06",
@@ -227,7 +227,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-124-ankle-clay-slide-match-record",
     "title": "발목 클레이 슬라이드 경기 기록",
-    "excerpt": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["발목 보호","클레이 슬라이드","미끄럼 제어"],
     "date": "2026-05-06",
@@ -236,7 +236,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-125-ankle-clay-slide-common-mistakes",
     "title": "발목 클레이 슬라이드 실수 줄이기",
-    "excerpt": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
     "category": "부상 예방",
     "tags": ["발목 보호","클레이 슬라이드","미끄럼 제어"],
     "date": "2026-05-06",
@@ -335,7 +335,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-136-summer-hydration-beginner-checklist",
     "title": "여름 수분 보충 초보 체크",
-    "excerpt": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
     "category": "컨디션 관리",
     "tags": ["여름 테니스","수분 보충","전해질 관리"],
     "date": "2026-05-08",
@@ -344,7 +344,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-137-summer-hydration-twenty-min-routine",
     "title": "여름 수분 보충 20분 루틴",
-    "excerpt": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
     "category": "컨디션 관리",
     "tags": ["여름 테니스","수분 보충","전해질 관리"],
     "date": "2026-05-09",
@@ -353,7 +353,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-138-summer-hydration-level-gap",
     "title": "여름 수분 보충 레벨 차이",
-    "excerpt": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
     "category": "컨디션 관리",
     "tags": ["여름 테니스","수분 보충","전해질 관리"],
     "date": "2026-05-09",
@@ -362,7 +362,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-139-summer-hydration-match-record",
     "title": "여름 수분 보충 경기 기록",
-    "excerpt": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
     "category": "컨디션 관리",
     "tags": ["여름 테니스","수분 보충","전해질 관리"],
     "date": "2026-05-09",
@@ -371,7 +371,7 @@ export const articleWriterPart22PostOverrides = [
   {
     "slug": "aw2-140-summer-hydration-common-mistakes",
     "title": "여름 수분 보충 실수 줄이기",
-    "excerpt": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+    "excerpt": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
     "category": "컨디션 관리",
     "tags": ["여름 테니스","수분 보충","전해질 관리"],
     "date": "2026-05-09",

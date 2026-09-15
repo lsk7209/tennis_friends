@@ -71,12 +71,12 @@ export default function EnhancedBlogPostSchema({
     description,
     image: imageUrl,
     datePublished: date,
-    dateModified: dateModified || date,
+    ...(dateModified && { dateModified }),
     author: {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: author,
-      url: authorUrl || `${siteUrl}/about`,
+      url: authorUrl || siteUrl,
     },
     publisher: {
       "@type": "Organization",

@@ -100,10 +100,45 @@ function wrapHtmlTables(content) {
   );
 }
 
-export function normalizeArticleHtml(content) {
+function normalizePlainText(value) {
+  return value
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function isDuplicateLeadText(content, candidate) {
+  if (!candidate) return false;
+  const firstParagraph = /^\s*<p\b[^>]*>([\s\S]*?)<\/p>/i.exec(content);
+  if (!firstParagraph) return false;
+
+  const lead = normalizePlainText(firstParagraph[1]);
+  const comparison = normalizePlainText(candidate);
+  return Boolean(comparison && (lead === comparison || lead.startsWith(comparison)));
+}
+
+export function removeDuplicateLeadParagraph(content, duplicateCandidates = []) {
+  const firstParagraph = /^(\s*)<p\b[^>]*>([\s\S]*?)<\/p>/i.exec(content);
+  if (!firstParagraph) return content;
+
+  const lead = normalizePlainText(firstParagraph[2]);
+  const isDuplicate = duplicateCandidates
+    .filter(Boolean)
+    .some((candidate) => normalizePlainText(candidate) === lead);
+
+  return isDuplicate ? content.slice(firstParagraph[0].length) : content;
+}
+
+export function normalizeArticleHtml(content, duplicateLeadCandidates = []) {
   const articleBody = content
     .replace(/^<article\b[^>]*>/i, "")
     .replace(/<\/article>\s*$/i, "");
 
-  return convertMarkdownParagraphTables(wrapHtmlTables(articleBody));
+  const deduplicatedBody = removeDuplicateLeadParagraph(
+    articleBody,
+    duplicateLeadCandidates,
+  );
+  return convertMarkdownParagraphTables(wrapHtmlTables(deduplicatedBody));
 }

@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { calculateHydration, UTILITY_ESTIMATE_VERSION } from "@/lib/utility-estimates";
 
 const intensityAdjustments = {
   low: 0,
@@ -27,30 +28,11 @@ export default function HydrationPlannerClient() {
   const [sweatRate, setSweatRate] = useState<keyof typeof sweatAdjustments>("medium");
 
   const plan = useMemo(() => {
-    const weight = Number(weightKg) || 0;
-    const duration = Number(durationMinutes) || 0;
-    const temp = Number(temperatureC) || 0;
-    const hours = duration / 60;
-
-    const before = Math.round(weight * 5);
-    const hourlyBase = 420 + Math.max(0, temp - 18) * 18 + intensityAdjustments[intensity] + sweatAdjustments[sweatRate];
-    const hourly = Math.min(1100, Math.max(400, Math.round(hourlyBase)));
-    const during = Math.round(hourly * hours);
-    const estimatedSweatLossL = Math.max(0.4, Number((hourly / 1000 * hours * 1.15).toFixed(1)));
-    const after = Math.round(estimatedSweatLossL * 1250);
-    const sodiumPerHour = Math.round(300 + Math.max(0, temp - 20) * 12 + sweatAdjustments[sweatRate] * 0.8);
-    const risk =
-      hourly >= 850 || temp >= 30 ? "높음" : hourly >= 650 || temp >= 25 ? "중간" : "보통";
-
-    return {
-      before,
-      during,
-      after,
-      hourly,
-      sodiumPerHour,
-      estimatedSweatLossL,
-      risk,
-    };
+    try {
+      return { ...calculateHydration({ weightKg: Number(weightKg), durationMinutes: Number(durationMinutes), temperatureC: Number(temperatureC), intensityAdjustment: intensityAdjustments[intensity], sweatAdjustment: sweatAdjustments[sweatRate] }), error: null };
+    } catch {
+      return { before: 0, during: 0, after: 0, hourly: 0, sodiumPerHour: 0, estimatedSweatLossL: 0, risk: "-", error: "체중 20~300kg, 시간 15~480분, 기온 -10~50°C 범위로 입력하세요." };
+    }
   }, [durationMinutes, intensity, sweatRate, temperatureC, weightKg]);
 
   return (
@@ -69,15 +51,15 @@ export default function HydrationPlannerClient() {
           <CardContent className="grid gap-5 md:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="weight">체중 (kg)</Label>
-              <Input id="weight" type="number" value={weightKg} onChange={(e) => setWeightKg(e.target.value)} />
+              <Input id="weight" type="number" min="20" max="300" value={weightKg} onChange={(e) => setWeightKg(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="duration">플레이 시간 (분)</Label>
-              <Input id="duration" type="number" value={durationMinutes} onChange={(e) => setDurationMinutes(e.target.value)} />
+              <Input id="duration" type="number" min="15" max="480" value={durationMinutes} onChange={(e) => setDurationMinutes(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="temp">기온 (°C)</Label>
-              <Input id="temp" type="number" value={temperatureC} onChange={(e) => setTemperatureC(e.target.value)} />
+              <Input id="temp" type="number" min="-10" max="50" value={temperatureC} onChange={(e) => setTemperatureC(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label>운동 강도</Label>
@@ -121,6 +103,7 @@ export default function HydrationPlannerClient() {
               </CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4 sm:grid-cols-3">
+              {plan.error && <p role="alert" className="sm:col-span-3 text-sm font-semibold text-red-700">{plan.error}</p>}
               <div className="rounded-xl bg-emerald-50 p-4">
                 <p className="text-sm text-muted-foreground">경기 전 2시간</p>
                 <p className="mt-1 text-2xl font-bold">{plan.before}ml</p>
@@ -148,6 +131,7 @@ export default function HydrationPlannerClient() {
               <p>권장 나트륨: <strong>{plan.sodiumPerHour}mg / 시간</strong></p>
               <p>예상 땀 손실: <strong>{plan.estimatedSweatLossL}L</strong></p>
               <p>탈수 리스크: <strong>{plan.risk}</strong></p>
+              <p className="text-muted-foreground">휴리스틱 모델 {UTILITY_ESTIMATE_VERSION}; 의료 진단이나 개인 땀 측정을 대체하지 않습니다.</p>
             </CardContent>
           </Card>
 

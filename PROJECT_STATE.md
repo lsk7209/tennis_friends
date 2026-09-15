@@ -1,5 +1,32 @@
 # PROJECT_STATE
 
+## Full docs/11 Completion — Local Closed, TF-039 Blocked (2026-09-15)
+
+- Scope expanded from the completed TF-009 slice to the full TF-001–TF-040 package; TF-041/042 remain specification-defined optional later work.
+- Static export blocker fixed: `/api/og` is now deterministic and build-network independent; exact GitHub Pages export passes with 3,105 pages.
+- TF-011 concrete repair: reusable particle selection covers Hangul final consonants, the rieul `로` exception, digits, and a bounded Latin fallback. The part12 generator and player JSON-LD use it.
+- Regenerated 300 part12 articles removed 900 literal `은(는)`/`이(가)`/`을(를)` placeholders; particle audit and typecheck pass.
+- TF-001–TF-038 and TF-040 are locally complete. Build and exact static export pass at 3,105 pages; 63/63 utility routes passed the defined mobile/browser audit.
+- TF-039 remains `BLOCKED_APPROVAL`: no current authorization exists for commit/push, deployment, account/CMP mutation, or production smoke. No local evidence is promoted to a claim of live deployment, account status, RUM, revenue, or search outcome.
+- Final local evidence is indexed in `docs/tennisfrens-audit/COMPLETION_AUDIT.md`; rollback/approval and disabled healthcheck plans are adjacent.
+
+## TF-009 External-Effect Isolation — Local (2026-09-15)
+
+- GA4, AdSense, their preconnects, and the local `Tracking` collector now default off in ordinary local/test/preview builds.
+- Production activation is explicit through `NEXT_PUBLIC_EXTERNAL_EFFECTS=production` for GitHub Pages or the platform-provided `VERCEL_ENV=production` signal.
+- The new `audit:external-effects-isolation` is part of `verify` and also locks contact/booking non-network behavior plus separation of live operational audits.
+- Fresh proof: full verify passed; disabled and enabled server builds generated 3,103 pages with the expected absent/present external markers.
+- Known gap: exact GitHub Pages export currently fails on the pre-existing `/api/og` `request.url` incompatibility. No push/deployment/account action occurred.
+
+## docs/11 Trust Contract — Local First Slice (2026-09-14)
+
+- Baseline: `main` at `408ddd081914241c99f8da8c9d6237f122db319d`; the initial worktree contained only the user-provided untracked `docs/11/` package.
+- Local repairs: NTRP count/non-official wording, contact mailto truthfulness and metadata, privacy mail/ad disclosure, explicit court-booking simulation, and synthetic NTRP distribution labeling.
+- Regression: new `audit:trust-contracts` covers the homepage, CTA, contact, privacy, utility index, booking detail/test/result, and synthetic chart; it is part of `npm run verify`.
+- Dependency drift repair: updated Next.js 16.2.11 to 16.3.5 and sharp 0.35.0 to 0.35.4 after the live production audit reported critical/high advisories. Two moderate advisories remain.
+- Fresh proof: final `npm run verify` exit 0; all audits, lint, typecheck, and 3,103-page production build pass. Inventory reports 1,477 sitemap entries, 1,146 blogs, 63 utilities, and 259 players.
+- Boundary: no commit/push, deployment, Vercel/account mutation, live mail, data/URL/indexing mutation, or business-outcome claim. Next safe slice is TF-009 external-request/test isolation.
+
 ## Duplicate Player Alias Consolidation Live-Verified (2026-08-30)
 
 - Goal: consolidate the two public Hong Seong-chan profile routes so search engines, the player directory, site search, the sitemap, and AI discovery all point to one canonical profile.

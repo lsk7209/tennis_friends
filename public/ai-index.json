@@ -3,11 +3,11 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-08-30",
+  "lastUpdated": "2026-09-15",
   "stats": {
-    "totalPages": 1467,
+    "totalPages": 1480,
     "tools": 64,
-    "articles": 1134,
+    "articles": 1147,
     "playerProfiles": 259
   },
   "pages": [
@@ -511,6 +511,110 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/return-practice-requested-actual-serve",
+      "title": "리턴 연습에서 부탁한 코스와 실제 서브가 달랐을 때",
+      "description": "“백핸드 쪽으로 보내 주세요.” 파트너에게 부탁한 뒤 리턴이 네트에 걸렸습니다. 그런데 방금 서브가 몸 가까이 왔는지, 약속한 바깥쪽으로 왔는지는 기억나지 않습니다. 리턴 실패만 표시하면 부탁한 조건에서 어려웠던 것인지, 다른 공을 받다가 놓친 것인지 구분하기 어렵습니다.",
+      "type": "article",
+      "category": "파트너 연습",
+      "lastModified": "2026-09-15T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/short-backhand-footwork-note",
+      "title": "짧은 백핸드 메모, 마지막 두 발 옆에 함께 적을 것",
+      "description": "백핸드가 연달아 짧게 떨어졌습니다. 연습장 메모에는 두 번 모두 “발이 늦음”이라고 적었습니다. 그런데 첫 공은 옆으로 뛰어가며 받았고, 두 번째 공은 미리 기다리던 자리로 왔습니다. 결과가 비슷하다는 이유로 같은 원인을 써 버리면 다음 레슨에서 무엇을 보여 줘야 할지 오히려 모호해집니다.",
+      "type": "article",
+      "category": "관찰 기록",
+      "lastModified": "2026-09-14T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/serve-video-analysis-sequence",
+      "title": "서브 영상의 토스 시점이 다르면 같은 초에서 비교하지 마세요",
+      "description": "지난주와 오늘의 서브 영상을 나란히 켰습니다. 같은 재생 시간에서 멈췄는데 한쪽은 무릎을 굽히고 있고 다른 쪽은 이미 라켓을 올리고 있습니다. 자세가 바뀐 것처럼 보여도 먼저 확인할 것이 있습니다. 두 영상이 동작의 같은 순간을 보여 주는지입니다. 촬영 시작이나 앞부분 편집이 다르면 같은 초는 비교의 기준이 되지 않습니다.",
+      "type": "article",
+      "category": "영상 복습",
+      "lastModified": "2026-09-14T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/used-tennis-racket-grommet-frame-handover",
+      "title": "중고 테니스 라켓 수령 전 그로밋과 프레임을 따로 확인하세요",
+      "description": "거래 사진에서는 깨끗했던 라켓인데, 직접 받으니 헤드 위쪽이 거칠게 보입니다. 판매자는 “범퍼만 닳은 것”이라고 하고, 구매자는 프레임이 깨진 것은 아닌지 걱정합니다. 이때 흠집 개수부터 세기보다 어느 부품의 어느 위치를 보고 있는지 맞추는 편이 질문을 구체적으로 만듭니다. 플라스틱 보호 부품의 마모와 프레임에 생긴 의심 흔적은 같은 항목",
+      "type": "article",
+      "category": "장비 수령",
+      "lastModified": "2026-09-13T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/racket-demo-rental-fees-return-conditions",
+      "title": "라켓 시타 대여료를 냈어도 반납은 따로 남습니다",
+      "description": "주말 레슨에서 써 보고 싶은 라켓을 찾으면 시타 신청부터 서두르기 쉽습니다. 그런데 결제 화면의 큰 금액은 전부 이용료일까요. 라켓이 마음에 들면 돌려보내지 않고 차액만 내면 될까요. 신청 전에 확인할 것은 모델 이름뿐 아니라 돈이 빠져나가는 방식과 물건을 돌려주는 절차입니다. 시타 비용을 냈다는 사실만으로 라켓을 소유하게 되거나 대여가 ",
+      "type": "article",
+      "category": "라켓 선택",
+      "lastModified": "2026-09-13T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/stringing-work-order-units-reference-dt",
+      "title": "스트링 작업표의 kg·lb와 DT를 구분하는 읽기 순서",
+      "description": "지난번에는 문자로 50lb를 요청했는데 이번 작업표에는 23kg가 적혀 있습니다. 라켓을 받은 뒤 측정해 준 종이에는 DT라는 다른 숫자도 보입니다. 어느 쪽이 맞는 텐션인지, 작업이 달라진 것인지 궁금해집니다. 숫자를 먼저 빼거나 더하기 전에 각 값이 무엇을 뜻하는지 나누어 읽어야 합니다.",
+      "type": "article",
+      "category": "장비 수명",
+      "lastModified": "2026-09-12T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/self-officiated-tennis-reversed-out-call",
+      "title": "셀프저지 테니스에서 아웃 콜을 번복하면 다시 치면 될까",
+      "description": "아웃이라고 외친 순간 상대가 라켓을 내렸는데, 다시 생각하니 공이 선에 닿은 것 같습니다. 미안한 마음에 “다시 칠까요?”부터 말하고 싶을 수 있습니다. 그러나 USTA의 셀프저지 지침인 The Code를 적용하는 경기라면, 자신의 아웃 콜을 번복했을 때 원칙적으로 상대에게 포인트를 주며 재경기하지 않습니다. 사과와 포인트 처리는 따로 확",
+      "type": "article",
+      "category": "경기 판정",
+      "lastModified": "2026-09-12T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/rain-court-reservation-cancellation-process",
+      "title": "비가 그친 뒤 테니스장 예약, 취소 버튼부터 누르면 될까",
+      "description": "오후에 내리던 비가 그쳤습니다. 저녁 코트는 이미 결제했고, 동행자들은 출발해도 되는지 묻습니다. 예약 화면에는 여전히 예약 완료라고 나오는데 단체 대화방에는 근처 코트가 젖었다는 사진이 올라옵니다. 이때 개인 취소 버튼을 먼저 눌러도 될까요?",
+      "type": "article",
+      "category": "코트 이용",
+      "lastModified": "2026-09-11T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tiebreak-serve-order-note",
+      "title": "타이브레이크에서 서브 순서를 놓쳤을 때 확인할 것",
+      "description": "타이브레이크 도중 “지금 내 서브 차례 아닌가요?”라는 말이 나왔다면 점수만 보고 다음 사람을 고르기 어렵습니다. 원래 첫 서브를 맡은 사람, 실제로 끝난 포인트 수, 오류를 발견한 순간을 함께 알아야 합니다. 서브한 사람이 잘못된 경우와 서브 위치가 잘못된 경우도 구분해야 합니다.",
+      "type": "article",
+      "category": "경기 운영",
+      "lastModified": "2026-09-11T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/return-recovery-video-observation",
+      "title": "테니스 경기 영상에서 리턴 뒤 이동을 먼저 확인하는 법",
+      "description": "리턴이 짧아져 실점한 장면을 보면 라켓 동작부터 고치고 싶어질 수 있습니다. 하지만 테니스 경기 영상에서 먼저 남길 것은 리턴의 결과, 타구 뒤 화면에 보이는 이동, 확인할 수 없는 정보입니다. 세 항목을 나누면 실제로 본 장면을 근거로 다음 질문을 만들 수 있습니다. 화면에 없는 원인을 설명하려고 빈칸을 채울 필요는 없습니다.",
+      "type": "article",
+      "category": "경기 기록",
+      "lastModified": "2026-09-10T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/singles-or-doubles-first-practice-match",
+      "title": "첫 연습 매치에서 단식과 복식 중 무엇부터 할까",
+      "description": "첫 연습 매치의 형식은 참가 인원으로 가능한 선택을 좁히고, 오늘 확인할 플레이를 고른 뒤, 시작과 종료 방식을 합의하는 순서로 정하세요. 혼자 공을 받아 다음 공을 준비하는 과정을 보고 싶은지, 파트너와 공간과 역할을 나누어보고 싶은지에 따라 단식과 복식의 쓰임이 달라집니다. 복식을 초보자의 기본값으로 두거나 단식을 높은 수준의 증명으로",
+      "type": "article",
+      "category": "레벨 매칭",
+      "lastModified": "2026-09-10T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/doubles-pairing-organizer-questions",
+      "title": "동호회 운영자가 첫 복식 페어를 정할 때 묻는 세 가지",
+      "description": "새 참가자가 섞인 날의 첫 복식 페어는 오늘 원하는 연습, 편한 역할과 어려운 공, 다음 교대에 대한 동의를 듣고 정하세요. 운영자가 이 정보를 먼저 모으면 첫 조를 제안한 이유를 설명할 수 있습니다. 처음 정한 두 사람을 고정 파트너로 선언할 필요도 없습니다. 첫 라운드를 마친 뒤 무엇을 확인하고 다시 편성할지 함께 알리면 됩니다.",
+      "type": "article",
+      "category": "레벨 매칭",
+      "lastModified": "2026-09-09T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/ntrp-test-result-club-introduction",
+      "title": "NTRP 테스트 결과를 동호회 매치에 쓰는 법",
+      "description": "NTRP 테스트 결과를 동호회 매치에 쓸 때는 숫자 옆에 참고용 자기평가라고 적고, 편하게 이어갈 수 있는 공과 함께 하고 싶은 연습을 덧붙이세요. 결과 화면만 전달하는 것보다 상대가 자신의 연습 목적과 비교할 정보가 생깁니다. 첫 게임을 마친 뒤에는 숫자를 올리거나 내리기 전에 그 소개가 실제 플레이와 맞았는지 확인하면 됩니다.",
+      "type": "article",
+      "category": "레벨 매칭",
+      "lastModified": "2026-09-09T09:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/t07-string-tension-log",
@@ -3770,7 +3874,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-276-match",
-      "title": "테니스 가방 경기 전 준비, 빠지면 흔들리는 항목",
+      "title": "원정 경기 전 테니스 가방 최종 점검",
       "description": "테니스 가방은 물건 목록보다 빠졌을 때 경기력이 흔들리는 항목부터 챙깁니다.",
       "type": "article",
       "category": "경기 준비",
@@ -3834,7 +3938,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-270-doubles",
-      "title": "복식 스트레이트 패싱 위치, 전위 발과 라켓 면 읽기",
+      "title": "복식 전위 옆 스트레이트 패싱 목표점",
       "description": "복식 스트레이트 패싱은 강타보다 전위 발 위치와 라켓 면을 보고 결정합니다.",
       "type": "article",
       "category": "복식 전술",
@@ -3898,7 +4002,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-268-tennis-guide",
-      "title": "야간 조명 로브 대처, 첫 후퇴 방향 정하기",
+      "title": "야간 조명 아래 높은 로브 추적법",
       "description": "야간 조명 아래 로브는 늦게 보는 문제가 많아 첫 후퇴 방향을 먼저 정해야 합니다.",
       "type": "article",
       "category": "코트 환경",
@@ -3994,7 +4098,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-264-tennis-guide",
-      "title": "장비 교체 테스트 순서, 기존 조건과 비교하기",
+      "title": "새 라켓과 스트링 교체 테스트 순서",
       "description": "장비 교체 테스트는 새 장비 만족감보다 기존 장비와 같은 조건 비교가 먼저입니다.",
       "type": "article",
       "category": "장비 가이드",
@@ -4026,7 +4130,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-263-string",
-      "title": "추운 날 스트링 텐션 감각, 딱딱한 타구감 점검",
+      "title": "추운 코트에서 스트링 반발감 기록하기",
       "description": "추운 날 스트링 텐션은 딱딱한 타구감과 팔 부담을 경기 초반에 다시 확인해야 합니다.",
       "type": "article",
       "category": "장비 가이드",
@@ -4162,7 +4266,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-167-tennis-guide",
-      "title": "사인 사이 인터벌 루틴, 복식 대화 짧게 정리",
+      "title": "파트너 사인 사이 호흡 인터벌",
       "description": "복식 사인 인터벌은 대화가 길어지지 않게 한 단어와 손짓으로 고정하세요.",
       "type": "article",
       "category": "복식 전술",
@@ -4346,7 +4450,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-248-mental",
-      "title": "더블폴트 후 멘탈 복구, 토스 높이와 호흡 재설정",
+      "title": "더블폴트 직후 다음 토스 복구 루틴",
       "description": "더블폴트 후 멘탈은 반성보다 다음 토스 높이와 호흡 길이를 정해야 회복됩니다.",
       "type": "article",
       "category": "멘탈 트레이닝",
@@ -4498,7 +4602,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-152-tennis-guide",
-      "title": "매치포인트 선택 줄이기, 성공 패턴 하나로 압축",
+      "title": "매치포인트에서 선택지 하나로 줄이기",
       "description": "매치포인트 선택은 새 전술보다 이미 성공한 패턴 하나로 줄이는 게 안전합니다.",
       "type": "article",
       "category": "경기 전략",
@@ -4562,7 +4666,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-150-match-cooldown",
-      "title": "경기 후 쿨다운 순서, 호흡과 수분부터 회복",
+      "title": "경기 종료 후 10분 쿨다운 루틴",
       "description": "경기 후 쿨다운은 스트레칭보다 호흡과 수분, 종아리 긴장 확인이 먼저입니다.",
       "type": "article",
       "category": "건강 & 피트니스",
@@ -4706,7 +4810,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-146-video-beginner",
-      "title": "영상 분석 첫 장면 고르기, 반복 실수부터 보기",
+      "title": "테니스 영상 분석용 첫 장면 선별법",
       "description": "영상 분석은 멋진 샷보다 반복해서 무너지는 준비 장면부터 보는 편이 낫습니다.",
       "type": "article",
       "category": "경기 분석",
@@ -4978,7 +5082,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-130-record",
-      "title": "레슨 복습 노트 작성법, 다음 연습 행동 남기기",
+      "title": "레슨 직후 3줄 복습 노트 쓰기",
       "description": "레슨 복습 노트는 들은 말보다 다음 연습에서 확인할 행동을 남겨야 합니다.",
       "type": "article",
       "category": "훈련 가이드",
@@ -5083,14 +5187,14 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-098-tennis-shoe-outsole-level-gap",
       "title": "테니스화 아웃솔 레벨 차이",
-      "description": "테니스화은 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "테니스화는 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 관리",
       "lastModified": "2026-05-22T11:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-194-return-beginner",
-      "title": "리턴 게임 로브 타이밍, 서버 회복 위치 읽기",
+      "title": "서버 회복 위치로 로브 타이밍 읽기",
       "description": "리턴 게임 로브는 상대 전위가 붙은 순간보다 서버 회복 위치를 보고 올립니다.",
       "type": "article",
       "category": "리턴 전략",
@@ -5123,14 +5227,14 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-097-tennis-shoe-outsole-twenty-min-routine",
       "title": "테니스화 아웃솔 20분 점검",
-      "description": "테니스화은 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "테니스화는 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 관리",
       "lastModified": "2026-05-22T06:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-192-tennis-guide",
-      "title": "바람 부는 날 토스 조정, 시작 위치와 코스 폭",
+      "title": "바람 부는 날 토스 조정",
       "description": "바람 부는 날 토스는 높이를 올리기보다 시작 위치와 코스 폭을 좁혀야 합니다.",
       "type": "article",
       "category": "서브 전략",
@@ -5155,7 +5259,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-096-tennis-shoe-outsole-beginner-checklist",
       "title": "테니스화 아웃솔 초보 체크",
-      "description": "테니스화은 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "테니스화는 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 관리",
       "lastModified": "2026-05-22T01:00:00+09:00"
@@ -5307,7 +5411,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-090-grip-size-choice-common-mistakes",
       "title": "그립 사이즈 선택 실수 줄이기",
-      "description": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-20T19:00:00+09:00"
@@ -5323,7 +5427,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-089-grip-size-choice-match-record",
       "title": "그립 사이즈 선택 경기 기록",
-      "description": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-20T14:00:00+09:00"
@@ -5339,7 +5443,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-088-grip-size-choice-level-gap",
       "title": "그립 사이즈 선택 레벨 차이",
-      "description": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-20T09:00:00+09:00"
@@ -5355,7 +5459,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-087-grip-size-choice-twenty-min-routine",
       "title": "그립 사이즈 선택 20분 점검",
-      "description": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-20T04:00:00+09:00"
@@ -5387,7 +5491,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-086-grip-size-choice-beginner-checklist",
       "title": "그립 사이즈 선택 초보 체크",
-      "description": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-19T23:00:00+09:00"
@@ -5499,7 +5603,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-080-string-gauge-comparison-common-mistakes",
       "title": "스트링 게이지 비교 실수 줄이기",
-      "description": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-18T17:00:00+09:00"
@@ -5515,7 +5619,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-079-string-gauge-comparison-match-record",
       "title": "스트링 게이지 비교 경기 기록",
-      "description": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-18T12:00:00+09:00"
@@ -5531,7 +5635,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-078-string-gauge-comparison-level-gap",
       "title": "스트링 게이지 비교 레벨 차이",
-      "description": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-18T07:00:00+09:00"
@@ -5547,7 +5651,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-077-string-gauge-comparison-twenty-min-routine",
       "title": "스트링 게이지 비교 20분 점검",
-      "description": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-18T02:00:00+09:00"
@@ -5579,7 +5683,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-076-string-gauge-comparison-beginner-checklist",
       "title": "스트링 게이지 비교 초보 체크",
-      "description": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-17T21:00:00+09:00"
@@ -5595,7 +5699,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-075-racket-balance-point-common-mistakes",
       "title": "라켓 밸런스 포인트 실수 줄이기",
-      "description": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-17T16:00:00+09:00"
@@ -5611,7 +5715,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-074-racket-balance-point-match-record",
       "title": "라켓 밸런스 포인트 경기 기록",
-      "description": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-17T11:00:00+09:00"
@@ -5627,7 +5731,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-073-racket-balance-point-level-gap",
       "title": "라켓 밸런스 포인트 레벨 차이",
-      "description": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-17T06:00:00+09:00"
@@ -5643,7 +5747,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-072-racket-balance-point-twenty-min-routine",
       "title": "라켓 밸런스 포인트 20분 점검",
-      "description": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-17T01:00:00+09:00"
@@ -5675,7 +5779,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-071-racket-balance-point-beginner-checklist",
       "title": "라켓 밸런스 포인트 초보 체크",
-      "description": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-16T20:00:00+09:00"
@@ -5962,7 +6066,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-020-tennis-guide",
-      "title": "바람 부는 날 토스 조정",
+      "title": "측풍에서 서브 토스 시작점 좁히기",
       "description": "바람 부는 날 서브 토스를 높이보다 시작 위치, 회전, 목표 코스로 조정하는 기준입니다.",
       "type": "article",
       "category": "서브 전략",
@@ -6026,7 +6130,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-028-shoes",
-      "title": "테니스화 밑창 마모 확인",
+      "title": "테니스화 좌우 밑창 마모 비교법",
       "description": "테니스화 밑창 마모를 코트별 미끄러짐, 발목 피로, 교체 시점으로 판단합니다.",
       "type": "article",
       "category": "장비 가이드",
@@ -6042,7 +6146,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-030-court",
-      "title": "클레이코트 슬라이딩 입문",
+      "title": "클레이코트 첫 슬라이딩 제동 연습",
       "description": "클레이코트 슬라이딩을 멈춤 동작, 균형 회복, 다음 샷 준비 기준으로 시작합니다.",
       "type": "article",
       "category": "코트 환경",
@@ -6674,7 +6778,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-114-shoes",
-      "title": "테니스화 밑창 마모, 발목 부담 줄이는 확인법",
+      "title": "테니스화 밑창 마모 확인",
       "description": "테니스화 밑창 마모를 코트별 미끄러짐과 발목 부담 기준으로 봅니다.",
       "type": "article",
       "category": "장비 가이드",
@@ -6690,7 +6794,7 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-116-court",
-      "title": "클레이코트 슬라이딩 입문, 멈춤과 균형 회복",
+      "title": "클레이코트 슬라이딩 입문",
       "description": "클레이코트 슬라이딩을 멈춤 동작과 균형 회복 기준으로 시작합니다.",
       "type": "article",
       "category": "코트 환경",
@@ -6859,7 +6963,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-055-middle-ball-call-common-mistakes",
       "title": "복식 가운데 콜 실수 줄이기",
-      "description": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-13T12:00:00+09:00"
@@ -6875,7 +6979,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-054-middle-ball-call-match-record",
       "title": "복식 가운데 콜 경기 기록",
-      "description": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-13T07:00:00+09:00"
@@ -6891,7 +6995,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-053-middle-ball-call-level-gap",
       "title": "복식 가운데 콜 레벨 차이",
-      "description": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-13T02:00:00+09:00"
@@ -6923,7 +7027,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-052-middle-ball-call-twenty-min-routine",
       "title": "복식 가운데 콜 20분 점검",
-      "description": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-12T21:00:00+09:00"
@@ -6939,7 +7043,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-051-middle-ball-call-beginner-checklist",
       "title": "복식 가운데 콜 초보 체크",
-      "description": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+      "description": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-12T16:00:00+09:00"
@@ -7179,7 +7283,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-140-summer-hydration-common-mistakes",
       "title": "여름 수분 보충 실수 줄이기",
-      "description": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+      "description": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "컨디션 관리",
       "lastModified": "2026-05-09T19:00:00+09:00"
@@ -7195,7 +7299,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-139-summer-hydration-match-record",
       "title": "여름 수분 보충 경기 기록",
-      "description": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+      "description": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "컨디션 관리",
       "lastModified": "2026-05-09T14:00:00+09:00"
@@ -7211,7 +7315,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-138-summer-hydration-level-gap",
       "title": "여름 수분 보충 레벨 차이",
-      "description": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+      "description": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "컨디션 관리",
       "lastModified": "2026-05-09T09:00:00+09:00"
@@ -7227,7 +7331,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-137-summer-hydration-twenty-min-routine",
       "title": "여름 수분 보충 20분 루틴",
-      "description": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+      "description": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "컨디션 관리",
       "lastModified": "2026-05-09T04:00:00+09:00"
@@ -7259,7 +7363,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-136-summer-hydration-beginner-checklist",
       "title": "여름 수분 보충 초보 체크",
-      "description": "여름 테니스은 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
+      "description": "여름 테니스는 무리한 교정보다 수분 보충 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "컨디션 관리",
       "lastModified": "2026-05-08T23:00:00+09:00"
@@ -7459,7 +7563,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-125-ankle-clay-slide-common-mistakes",
       "title": "발목 클레이 슬라이드 실수 줄이기",
-      "description": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+      "description": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-06T16:00:00+09:00"
@@ -7475,7 +7579,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-124-ankle-clay-slide-match-record",
       "title": "발목 클레이 슬라이드 경기 기록",
-      "description": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+      "description": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-06T11:00:00+09:00"
@@ -7491,7 +7595,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-123-ankle-clay-slide-level-gap",
       "title": "발목 클레이 슬라이드 레벨 차이",
-      "description": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+      "description": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-06T06:00:00+09:00"
@@ -7507,7 +7611,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-122-ankle-clay-slide-twenty-min-routine",
       "title": "발목 클레이 슬라이드 20분 루틴",
-      "description": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+      "description": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-06T01:00:00+09:00"
@@ -7531,7 +7635,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-121-ankle-clay-slide-beginner-checklist",
       "title": "발목 클레이 슬라이드 초보 체크",
-      "description": "발목 보호은 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
+      "description": "발목 보호는 무리한 교정보다 클레이 슬라이드 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-05T20:00:00+09:00"
@@ -7723,7 +7827,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-105-tennis-elbow-early-signal-common-mistakes",
       "title": "테니스 엘보 초기 신호 실수 줄이기",
-      "description": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+      "description": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-02T12:00:00+09:00"
@@ -7731,7 +7835,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-104-tennis-elbow-early-signal-match-record",
       "title": "테니스 엘보 초기 신호 경기 기록",
-      "description": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+      "description": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-02T07:00:00+09:00"
@@ -7739,7 +7843,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-103-tennis-elbow-early-signal-level-gap",
       "title": "테니스 엘보 초기 신호 레벨 차이",
-      "description": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+      "description": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-02T02:00:00+09:00"
@@ -7763,7 +7867,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-102-tennis-elbow-early-signal-twenty-min-routine",
       "title": "테니스 엘보 초기 신호 20분 루틴",
-      "description": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+      "description": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-01T21:00:00+09:00"
@@ -7771,7 +7875,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-101-tennis-elbow-early-signal-beginner-checklist",
       "title": "테니스 엘보 초기 신호 초보 체크",
-      "description": "테니스 엘보은 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
+      "description": "테니스 엘보는 무리한 교정보다 팔꿈치 통증 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-01T16:00:00+09:00"
@@ -7779,7 +7883,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-100-tennis-shoe-outsole-common-mistakes",
       "title": "테니스화 아웃솔 실수 줄이기",
-      "description": "테니스화은 무리한 교정보다 아웃솔 마모 신호를 먼저 기록해야 안전합니다.",
+      "description": "테니스화는 무리한 교정보다 아웃솔 마모 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "장비 관리",
       "lastModified": "2026-05-01T11:00:00+09:00"
@@ -7787,7 +7891,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-099-tennis-shoe-outsole-match-record",
       "title": "테니스화 아웃솔 경기 기록",
-      "description": "테니스화은 무리한 교정보다 아웃솔 마모 신호를 먼저 기록해야 안전합니다.",
+      "description": "테니스화는 무리한 교정보다 아웃솔 마모 신호를 먼저 기록해야 안전합니다.",
       "type": "article",
       "category": "장비 관리",
       "lastModified": "2026-05-01T06:00:00+09:00"
@@ -7843,7 +7947,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-198-matchpoint-breathing-level-gap",
       "title": "매치포인트 호흡 레벨 차이",
-      "description": "매치포인트은 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "매치포인트는 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "멘탈 트레이닝",
       "lastModified": "2026-04-30T11:00:00+09:00"
@@ -7859,7 +7963,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-197-matchpoint-breathing-twenty-min-routine",
       "title": "매치포인트 호흡 20분 루틴",
-      "description": "매치포인트은 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "매치포인트는 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "멘탈 트레이닝",
       "lastModified": "2026-04-30T06:00:00+09:00"
@@ -7875,7 +7979,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-196-matchpoint-breathing-beginner-checklist",
       "title": "매치포인트 호흡 초보 체크",
-      "description": "매치포인트은 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "매치포인트는 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "멘탈 트레이닝",
       "lastModified": "2026-04-30T01:00:00+09:00"
@@ -7883,7 +7987,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-298-split-step-timing-level-gap",
       "title": "훈련 가이드 스플릿 스텝 레벨 차이",
-      "description": "스플릿 스텝를 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
+      "description": "스플릿 스텝을 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-04-29T21:00:00+09:00"
@@ -7891,7 +7995,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-195-indoor-hard-grip-common-mistakes",
       "title": "실내 하드 미끄럼 실수 줄이기",
-      "description": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-29T20:00:00+09:00"
@@ -7899,7 +8003,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-297-split-step-timing-twenty-min-routine",
       "title": "훈련 가이드 스플릿 스텝 20분 루틴",
-      "description": "스플릿 스텝를 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
+      "description": "스플릿 스텝을 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-04-29T16:00:00+09:00"
@@ -7907,7 +8011,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-194-indoor-hard-grip-match-record",
       "title": "실내 하드 미끄럼 경기 기록",
-      "description": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-29T15:00:00+09:00"
@@ -7915,7 +8019,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-296-split-step-timing-beginner-checklist",
       "title": "훈련 가이드 스플릿 스텝 초보 체크",
-      "description": "스플릿 스텝를 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
+      "description": "스플릿 스텝을 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-04-29T11:00:00+09:00"
@@ -7923,7 +8027,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-193-indoor-hard-grip-level-gap",
       "title": "실내 하드 미끄럼 레벨 차이",
-      "description": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-29T10:00:00+09:00"
@@ -7939,7 +8043,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-192-indoor-hard-grip-twenty-min-routine",
       "title": "실내 하드 미끄럼 20분 루틴",
-      "description": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-29T05:00:00+09:00"
@@ -7955,7 +8059,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-191-indoor-hard-grip-beginner-checklist",
       "title": "실내 하드 미끄럼 초보 체크",
-      "description": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-29T00:00:00+09:00"
@@ -7971,7 +8075,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-190-grass-low-bounce-common-mistakes",
       "title": "잔디 코트 낮은 바운드 실수 줄이기",
-      "description": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-28T19:00:00+09:00"
@@ -7987,7 +8091,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-189-grass-low-bounce-match-record",
       "title": "잔디 코트 낮은 바운드 경기 기록",
-      "description": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-28T14:00:00+09:00"
@@ -8003,7 +8107,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-188-grass-low-bounce-level-gap",
       "title": "잔디 코트 낮은 바운드 레벨 차이",
-      "description": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-28T09:00:00+09:00"
@@ -8019,7 +8123,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-187-grass-low-bounce-twenty-min-routine",
       "title": "잔디 코트 낮은 바운드 20분 루틴",
-      "description": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-28T04:00:00+09:00"
@@ -8035,7 +8139,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-186-grass-low-bounce-beginner-checklist",
       "title": "잔디 코트 낮은 바운드 초보 체크",
-      "description": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-27T23:00:00+09:00"
@@ -8051,7 +8155,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-185-post-rain-clay-common-mistakes",
       "title": "비 온 뒤 클레이 실수 줄이기",
-      "description": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-27T18:00:00+09:00"
@@ -8067,7 +8171,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-184-post-rain-clay-match-record",
       "title": "비 온 뒤 클레이 경기 기록",
-      "description": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-27T13:00:00+09:00"
@@ -8083,7 +8187,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-183-post-rain-clay-level-gap",
       "title": "비 온 뒤 클레이 레벨 차이",
-      "description": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-27T08:00:00+09:00"
@@ -8091,7 +8195,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-285-dropshot-when-to-use-common-mistakes",
       "title": "전술 가이드 드롭샷 타이밍 실수 줄이기",
-      "description": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+      "description": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "전술 가이드",
       "lastModified": "2026-04-27T04:00:00+09:00"
@@ -8099,7 +8203,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-182-post-rain-clay-twenty-min-routine",
       "title": "비 온 뒤 클레이 20분 루틴",
-      "description": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-27T03:00:00+09:00"
@@ -8107,7 +8211,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-284-dropshot-when-to-use-match-record",
       "title": "전술 가이드 드롭샷 타이밍 경기기록",
-      "description": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+      "description": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "전술 가이드",
       "lastModified": "2026-04-26T23:00:00+09:00"
@@ -8115,7 +8219,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-181-post-rain-clay-beginner-checklist",
       "title": "비 온 뒤 클레이 초보 체크",
-      "description": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-26T22:00:00+09:00"
@@ -8123,7 +8227,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-283-dropshot-when-to-use-level-gap",
       "title": "전술 가이드 드롭샷 타이밍 레벨 차이",
-      "description": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+      "description": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "전술 가이드",
       "lastModified": "2026-04-26T18:00:00+09:00"
@@ -8131,7 +8235,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-180-windy-day-toss-common-mistakes",
       "title": "바람 토스 서브 실수 줄이기",
-      "description": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-26T17:00:00+09:00"
@@ -8139,7 +8243,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-282-dropshot-when-to-use-twenty-min-routine",
       "title": "전술 가이드 드롭샷 타이밍 20분 루틴",
-      "description": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+      "description": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "전술 가이드",
       "lastModified": "2026-04-26T13:00:00+09:00"
@@ -8147,7 +8251,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-179-windy-day-toss-match-record",
       "title": "바람 토스 서브 경기 기록",
-      "description": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-26T12:00:00+09:00"
@@ -8155,7 +8259,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-281-dropshot-when-to-use-beginner-checklist",
       "title": "전술 가이드 드롭샷 타이밍 초보 체크",
-      "description": "드롭샷 타이밍를 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
+      "description": "드롭샷 타이밍을 전술 선택, 상대 위치 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "전술 가이드",
       "lastModified": "2026-04-26T08:00:00+09:00"
@@ -8163,7 +8267,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-178-windy-day-toss-level-gap",
       "title": "바람 토스 서브 레벨 차이",
-      "description": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-26T07:00:00+09:00"
@@ -8171,7 +8275,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-280-smash-backpedal-common-mistakes",
       "title": "훈련 가이드 스매시 백스텝 실수 줄이기",
-      "description": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+      "description": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-04-26T03:00:00+09:00"
@@ -8179,7 +8283,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-177-windy-day-toss-twenty-min-routine",
       "title": "바람 토스 서브 20분 루틴",
-      "description": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-26T02:00:00+09:00"
@@ -8187,7 +8291,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-279-smash-backpedal-match-record",
       "title": "훈련 가이드 스매시 백스텝 경기기록",
-      "description": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+      "description": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-04-25T22:00:00+09:00"
@@ -8195,7 +8299,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-176-windy-day-toss-beginner-checklist",
       "title": "바람 토스 서브 초보 체크",
-      "description": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-25T21:00:00+09:00"
@@ -8203,7 +8307,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-278-smash-backpedal-level-gap",
       "title": "훈련 가이드 스매시 백스텝 레벨 차이",
-      "description": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+      "description": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-04-25T17:00:00+09:00"
@@ -8211,7 +8315,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-175-night-court-vision-common-mistakes",
       "title": "야간 코트 시야 실수 줄이기",
-      "description": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-25T16:00:00+09:00"
@@ -8219,7 +8323,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-277-smash-backpedal-twenty-min-routine",
       "title": "훈련 가이드 스매시 백스텝 20분 루틴",
-      "description": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+      "description": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-04-25T12:00:00+09:00"
@@ -8227,7 +8331,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-174-night-court-vision-match-record",
       "title": "야간 코트 시야 경기 기록",
-      "description": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-25T11:00:00+09:00"
@@ -8235,7 +8339,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-276-smash-backpedal-beginner-checklist",
       "title": "훈련 가이드 스매시 백스텝 초보 체크",
-      "description": "스매시 백스텝를 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
+      "description": "스매시 백스텝을 오버헤드 풋워크, 부상 예방 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-04-25T07:00:00+09:00"
@@ -8243,7 +8347,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-173-night-court-vision-level-gap",
       "title": "야간 코트 시야 레벨 차이",
-      "description": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-25T06:00:00+09:00"
@@ -8251,7 +8355,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-275-volley-wrist-fix-common-mistakes",
       "title": "테니스 레슨 발리 손목 고정 실수 줄이기",
-      "description": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+      "description": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-25T02:00:00+09:00"
@@ -8259,7 +8363,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-172-night-court-vision-twenty-min-routine",
       "title": "야간 코트 시야 20분 루틴",
-      "description": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-25T01:00:00+09:00"
@@ -8283,7 +8387,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-274-volley-wrist-fix-match-record",
       "title": "테니스 레슨 발리 손목 고정 경기기록",
-      "description": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+      "description": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-24T21:00:00+09:00"
@@ -8291,7 +8395,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-171-night-court-vision-beginner-checklist",
       "title": "야간 코트 시야 초보 체크",
-      "description": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "코트 적응",
       "lastModified": "2026-04-24T20:00:00+09:00"
@@ -8299,7 +8403,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-273-volley-wrist-fix-level-gap",
       "title": "테니스 레슨 발리 손목 고정 레벨 차이",
-      "description": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+      "description": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-24T16:00:00+09:00"
@@ -8307,7 +8411,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-170-tiebreak-opening-two-common-mistakes",
       "title": "타이브레이크 첫 두 포인트 실수 줄이기",
-      "description": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-24T15:00:00+09:00"
@@ -8315,7 +8419,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-272-volley-wrist-fix-twenty-min-routine",
       "title": "테니스 레슨 발리 손목 고정 20분 루틴",
-      "description": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+      "description": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-24T11:00:00+09:00"
@@ -8323,7 +8427,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-169-tiebreak-opening-two-match-record",
       "title": "타이브레이크 첫 두 포인트 경기 기록",
-      "description": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-24T10:00:00+09:00"
@@ -8331,7 +8435,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-271-volley-wrist-fix-beginner-checklist",
       "title": "테니스 레슨 발리 손목 고정 초보 체크",
-      "description": "발리 손목 고정를 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
+      "description": "발리 손목 고정을 네트 플레이, 임팩트 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-24T06:00:00+09:00"
@@ -8339,7 +8443,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-168-tiebreak-opening-two-level-gap",
       "title": "타이브레이크 첫 두 포인트 레벨 차이",
-      "description": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-24T05:00:00+09:00"
@@ -8355,7 +8459,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-167-tiebreak-opening-two-twenty-min-routine",
       "title": "타이브레이크 첫 두 포인트 20분 루틴",
-      "description": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-24T00:00:00+09:00"
@@ -8379,7 +8483,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-166-tiebreak-opening-two-beginner-checklist",
       "title": "타이브레이크 첫 두 포인트 초보 체크",
-      "description": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-23T19:00:00+09:00"
@@ -8395,7 +8499,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-165-break-point-loss-track-common-mistakes",
       "title": "브레이크 포인트 실점 실수 줄이기",
-      "description": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-23T14:00:00+09:00"
@@ -8411,7 +8515,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-164-break-point-loss-track-match-record",
       "title": "브레이크 포인트 실점 경기 기록",
-      "description": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-23T09:00:00+09:00"
@@ -8427,7 +8531,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-163-break-point-loss-track-level-gap",
       "title": "브레이크 포인트 실점 레벨 차이",
-      "description": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-23T04:00:00+09:00"
@@ -8435,7 +8539,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-265-forehand-grip-switch-common-mistakes",
       "title": "테니스 레슨 포핸드 그립 전환 실수 줄이기",
-      "description": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+      "description": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-23T00:00:00+09:00"
@@ -8499,7 +8603,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-162-break-point-loss-track-twenty-min-routine",
       "title": "브레이크 포인트 실점 20분 루틴",
-      "description": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-22T23:00:00+09:00"
@@ -8507,7 +8611,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-264-forehand-grip-switch-match-record",
       "title": "테니스 레슨 포핸드 그립 전환 경기기록",
-      "description": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+      "description": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-22T19:00:00+09:00"
@@ -8515,7 +8619,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-161-break-point-loss-track-beginner-checklist",
       "title": "브레이크 포인트 실점 초보 체크",
-      "description": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-22T18:00:00+09:00"
@@ -8523,7 +8627,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-263-forehand-grip-switch-level-gap",
       "title": "테니스 레슨 포핸드 그립 전환 레벨 차이",
-      "description": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+      "description": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-22T14:00:00+09:00"
@@ -8531,7 +8635,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-160-forehand-miss-chart-common-mistakes",
       "title": "포핸드 실수 방향 실수 줄이기",
-      "description": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-22T13:00:00+09:00"
@@ -8539,7 +8643,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-262-forehand-grip-switch-twenty-min-routine",
       "title": "테니스 레슨 포핸드 그립 전환 20분 루틴",
-      "description": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+      "description": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-22T09:00:00+09:00"
@@ -8547,7 +8651,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-159-forehand-miss-chart-match-record",
       "title": "포핸드 실수 방향 경기 기록",
-      "description": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-22T08:00:00+09:00"
@@ -8555,7 +8659,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-261-forehand-grip-switch-beginner-checklist",
       "title": "테니스 레슨 포핸드 그립 전환 초보 체크",
-      "description": "포핸드 그립 전환를 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
+      "description": "포핸드 그립 전환을 스윙 교정, 타점 안정 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "테니스 레슨",
       "lastModified": "2026-04-22T04:00:00+09:00"
@@ -8563,7 +8667,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-158-forehand-miss-chart-level-gap",
       "title": "포핸드 실수 방향 레벨 차이",
-      "description": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-22T03:00:00+09:00"
@@ -8587,7 +8691,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-260-weekend-tournament-apply-common-mistakes",
       "title": "경기 분석 주말 대회 신청 실수 줄이기",
-      "description": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+      "description": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-21T23:00:00+09:00"
@@ -8595,7 +8699,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-157-forehand-miss-chart-twenty-min-routine",
       "title": "포핸드 실수 방향 20분 루틴",
-      "description": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-21T22:00:00+09:00"
@@ -8603,7 +8707,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-259-weekend-tournament-apply-match-record",
       "title": "경기 분석 주말 대회 신청 경기기록",
-      "description": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+      "description": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-21T18:00:00+09:00"
@@ -8611,7 +8715,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-156-forehand-miss-chart-beginner-checklist",
       "title": "포핸드 실수 방향 초보 체크",
-      "description": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+      "description": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-21T17:00:00+09:00"
@@ -8619,7 +8723,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-258-weekend-tournament-apply-level-gap",
       "title": "경기 분석 주말 대회 신청 레벨 차이",
-      "description": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+      "description": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-21T13:00:00+09:00"
@@ -8635,7 +8739,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-257-weekend-tournament-apply-twenty-min-routine",
       "title": "경기 분석 주말 대회 신청 20분 루틴",
-      "description": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+      "description": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-21T08:00:00+09:00"
@@ -8651,7 +8755,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-256-weekend-tournament-apply-beginner-checklist",
       "title": "경기 분석 주말 대회 신청 초보 체크",
-      "description": "주말 대회 신청를 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
+      "description": "주말 대회 신청을 동호회 경기, 참가 준비 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-21T03:00:00+09:00"
@@ -8683,7 +8787,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-255-court-noshow-rules-common-mistakes",
       "title": "동호회 운영 코트 노쇼 규칙 실수 줄이기",
-      "description": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+      "description": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-20T22:00:00+09:00"
@@ -8699,7 +8803,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-254-court-noshow-rules-match-record",
       "title": "동호회 운영 코트 노쇼 규칙 경기기록",
-      "description": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+      "description": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-20T17:00:00+09:00"
@@ -8715,7 +8819,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-253-court-noshow-rules-level-gap",
       "title": "동호회 운영 코트 노쇼 규칙 레벨 차이",
-      "description": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+      "description": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-20T12:00:00+09:00"
@@ -8731,7 +8835,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-252-court-noshow-rules-twenty-min-routine",
       "title": "동호회 운영 코트 노쇼 규칙 20분 루틴",
-      "description": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+      "description": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-20T07:00:00+09:00"
@@ -8747,7 +8851,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-251-court-noshow-rules-beginner-checklist",
       "title": "동호회 운영 코트 노쇼 규칙 초보 체크",
-      "description": "코트 노쇼 규칙를 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
+      "description": "코트 노쇼 규칙을 예약 매너, 동호회 운영 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-20T02:00:00+09:00"
@@ -8771,7 +8875,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-250-self-call-disputes-common-mistakes",
       "title": "동호회 운영 셀프 콜 분쟁 실수 줄이기",
-      "description": "셀프 콜 분쟁를 동호회 운영, 경기기록 기준으로 바로 점검합니다.",
+      "description": "셀프 콜 분쟁을 동호회 운영, 경기기록 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-19T21:00:00+09:00"
@@ -8779,7 +8883,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-249-self-call-disputes-match-record",
       "title": "동호회 운영 셀프 콜 분쟁 경기기록",
-      "description": "셀프 콜 분쟁를 동호회 운영, 경기기록 기준으로 바로 점검합니다.",
+      "description": "셀프 콜 분쟁을 동호회 운영, 경기기록 기준으로 바로 점검합니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-19T16:00:00+09:00"
@@ -8843,7 +8947,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-245-club-first-visit-common-mistakes",
       "title": "동호회 첫 방문 실수 줄이기",
-      "description": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-18T20:00:00+09:00"
@@ -8851,7 +8955,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-244-club-first-visit-match-record",
       "title": "동호회 첫 방문 경기 기록",
-      "description": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-18T15:00:00+09:00"
@@ -8859,7 +8963,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-243-club-first-visit-level-gap",
       "title": "동호회 첫 방문 레벨 차이",
-      "description": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-18T10:00:00+09:00"
@@ -8867,7 +8971,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-242-club-first-visit-twenty-min-routine",
       "title": "동호회 첫 방문 20분 루틴",
-      "description": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-18T05:00:00+09:00"
@@ -8875,7 +8979,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-241-club-first-visit-beginner-checklist",
       "title": "동호회 첫 방문 초보 체크",
-      "description": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-04-18T00:00:00+09:00"
@@ -8899,7 +9003,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-240-no-sport-first-racket-common-mistakes",
       "title": "운동 초보 첫 라켓 실수 줄이기",
-      "description": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-04-17T19:00:00+09:00"
@@ -8907,7 +9011,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-239-no-sport-first-racket-match-record",
       "title": "운동 초보 첫 라켓 경기 기록",
-      "description": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-04-17T14:00:00+09:00"
@@ -8915,7 +9019,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-238-no-sport-first-racket-level-gap",
       "title": "운동 초보 첫 라켓 레벨 차이",
-      "description": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-04-17T09:00:00+09:00"
@@ -8923,7 +9027,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-237-no-sport-first-racket-twenty-min-routine",
       "title": "운동 초보 첫 라켓 20분 루틴",
-      "description": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-04-17T04:00:00+09:00"
@@ -8947,7 +9051,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-236-no-sport-first-racket-beginner-checklist",
       "title": "운동 초보 첫 라켓 초보 체크",
-      "description": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-04-16T23:00:00+09:00"
@@ -9035,7 +9139,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-225-junior-starting-age-common-mistakes",
       "title": "주니어 시작 나이 실수 줄이기",
-      "description": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "주니어 테니스",
       "lastModified": "2026-04-14T16:00:00+09:00"
@@ -9043,7 +9147,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-224-junior-starting-age-match-record",
       "title": "주니어 시작 나이 경기 기록",
-      "description": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "주니어 테니스",
       "lastModified": "2026-04-14T11:00:00+09:00"
@@ -9051,7 +9155,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-223-junior-starting-age-level-gap",
       "title": "주니어 시작 나이 레벨 차이",
-      "description": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "주니어 테니스",
       "lastModified": "2026-04-14T06:00:00+09:00"
@@ -9059,7 +9163,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-222-junior-starting-age-twenty-min-routine",
       "title": "주니어 시작 나이 20분 루틴",
-      "description": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "주니어 테니스",
       "lastModified": "2026-04-14T01:00:00+09:00"
@@ -9067,7 +9171,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-221-junior-starting-age-beginner-checklist",
       "title": "주니어 시작 나이 초보 체크",
-      "description": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "주니어 테니스",
       "lastModified": "2026-04-13T20:00:00+09:00"
@@ -9115,7 +9219,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-215-double-fault-reset-common-mistakes",
       "title": "더블폴트 리셋 실수 줄이기",
-      "description": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "서브 전략",
       "lastModified": "2026-04-12T14:00:00+09:00"
@@ -9123,7 +9227,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-214-double-fault-reset-match-record",
       "title": "더블폴트 리셋 경기 기록",
-      "description": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "서브 전략",
       "lastModified": "2026-04-12T09:00:00+09:00"
@@ -9131,7 +9235,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-213-double-fault-reset-level-gap",
       "title": "더블폴트 리셋 레벨 차이",
-      "description": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "서브 전략",
       "lastModified": "2026-04-12T04:00:00+09:00"
@@ -9139,7 +9243,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-212-double-fault-reset-twenty-min-routine",
       "title": "더블폴트 리셋 20분 루틴",
-      "description": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "서브 전략",
       "lastModified": "2026-04-11T23:00:00+09:00"
@@ -9147,7 +9251,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-211-double-fault-reset-beginner-checklist",
       "title": "더블폴트 리셋 초보 체크",
-      "description": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "서브 전략",
       "lastModified": "2026-04-11T18:00:00+09:00"
@@ -9155,7 +9259,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-210-five-set-pacing-common-mistakes",
       "title": "5세트 페이싱 실수 줄이기",
-      "description": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "경기 운영",
       "lastModified": "2026-04-11T13:00:00+09:00"
@@ -9163,7 +9267,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-209-five-set-pacing-match-record",
       "title": "5세트 페이싱 경기 기록",
-      "description": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "경기 운영",
       "lastModified": "2026-04-11T08:00:00+09:00"
@@ -9171,7 +9275,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-208-five-set-pacing-level-gap",
       "title": "5세트 페이싱 레벨 차이",
-      "description": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "경기 운영",
       "lastModified": "2026-04-11T03:00:00+09:00"
@@ -9179,7 +9283,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-207-five-set-pacing-twenty-min-routine",
       "title": "5세트 페이싱 20분 루틴",
-      "description": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "경기 운영",
       "lastModified": "2026-04-10T22:00:00+09:00"
@@ -9187,7 +9291,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-206-five-set-pacing-beginner-checklist",
       "title": "5세트 페이싱 초보 체크",
-      "description": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "경기 운영",
       "lastModified": "2026-04-10T17:00:00+09:00"
@@ -9235,7 +9339,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-200-matchpoint-breathing-common-mistakes",
       "title": "매치포인트 호흡 실수 줄이기",
-      "description": "매치포인트은 감정보다 호흡 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "매치포인트는 감정보다 호흡 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "멘탈 트레이닝",
       "lastModified": "2026-04-09T11:00:00+09:00"
@@ -9243,7 +9347,7 @@
     {
       "url": "https://tennisfrens.com/blog/aw2-199-matchpoint-breathing-match-record",
       "title": "매치포인트 호흡 경기 기록",
-      "description": "매치포인트은 감정보다 호흡 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+      "description": "매치포인트는 감정보다 호흡 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
       "type": "article",
       "category": "멘탈 트레이닝",
       "lastModified": "2026-04-09T06:00:00+09:00"

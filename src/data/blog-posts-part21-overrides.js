@@ -20,7 +20,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-051-middle-ball-call-beginner-checklist",
     "title": "복식 가운데 콜 초보 체크",
-    "excerpt": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "복식 전술",
     "tags": ["복식 가운데","콜 약속","파트너 소통"],
     "date": "2026-05-12",
@@ -29,7 +29,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-052-middle-ball-call-twenty-min-routine",
     "title": "복식 가운데 콜 20분 점검",
-    "excerpt": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "복식 전술",
     "tags": ["복식 가운데","콜 약속","파트너 소통"],
     "date": "2026-05-12",
@@ -38,7 +38,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-053-middle-ball-call-level-gap",
     "title": "복식 가운데 콜 레벨 차이",
-    "excerpt": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "복식 전술",
     "tags": ["복식 가운데","콜 약속","파트너 소통"],
     "date": "2026-05-13",
@@ -47,7 +47,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-054-middle-ball-call-match-record",
     "title": "복식 가운데 콜 경기 기록",
-    "excerpt": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "복식 전술",
     "tags": ["복식 가운데","콜 약속","파트너 소통"],
     "date": "2026-05-13",
@@ -56,7 +56,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-055-middle-ball-call-common-mistakes",
     "title": "복식 가운데 콜 실수 줄이기",
-    "excerpt": "복식 가운데은 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "복식 가운데는 감각보다 콜 약속 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "복식 전술",
     "tags": ["복식 가운데","콜 약속","파트너 소통"],
     "date": "2026-05-13",
@@ -200,7 +200,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-071-racket-balance-point-beginner-checklist",
     "title": "라켓 밸런스 포인트 초보 체크",
-    "excerpt": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["라켓 밸런스","스윙감","장비 선택"],
     "date": "2026-05-16",
@@ -209,7 +209,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-072-racket-balance-point-twenty-min-routine",
     "title": "라켓 밸런스 포인트 20분 점검",
-    "excerpt": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["라켓 밸런스","스윙감","장비 선택"],
     "date": "2026-05-17",
@@ -218,7 +218,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-073-racket-balance-point-level-gap",
     "title": "라켓 밸런스 포인트 레벨 차이",
-    "excerpt": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["라켓 밸런스","스윙감","장비 선택"],
     "date": "2026-05-17",
@@ -227,7 +227,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-074-racket-balance-point-match-record",
     "title": "라켓 밸런스 포인트 경기 기록",
-    "excerpt": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["라켓 밸런스","스윙감","장비 선택"],
     "date": "2026-05-17",
@@ -236,7 +236,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-075-racket-balance-point-common-mistakes",
     "title": "라켓 밸런스 포인트 실수 줄이기",
-    "excerpt": "라켓 밸런스은 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "라켓 밸런스는 감각보다 스윙감 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["라켓 밸런스","스윙감","장비 선택"],
     "date": "2026-05-17",
@@ -245,7 +245,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-076-string-gauge-comparison-beginner-checklist",
     "title": "스트링 게이지 비교 초보 체크",
-    "excerpt": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["스트링 게이지","1.25 스트링","1.30 스트링"],
     "date": "2026-05-17",
@@ -254,7 +254,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-077-string-gauge-comparison-twenty-min-routine",
     "title": "스트링 게이지 비교 20분 점검",
-    "excerpt": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["스트링 게이지","1.25 스트링","1.30 스트링"],
     "date": "2026-05-18",
@@ -263,7 +263,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-078-string-gauge-comparison-level-gap",
     "title": "스트링 게이지 비교 레벨 차이",
-    "excerpt": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["스트링 게이지","1.25 스트링","1.30 스트링"],
     "date": "2026-05-18",
@@ -272,7 +272,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-079-string-gauge-comparison-match-record",
     "title": "스트링 게이지 비교 경기 기록",
-    "excerpt": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["스트링 게이지","1.25 스트링","1.30 스트링"],
     "date": "2026-05-18",
@@ -281,7 +281,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-080-string-gauge-comparison-common-mistakes",
     "title": "스트링 게이지 비교 실수 줄이기",
-    "excerpt": "스트링 게이지은 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "스트링 게이지는 감각보다 1.25 스트링 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["스트링 게이지","1.25 스트링","1.30 스트링"],
     "date": "2026-05-18",
@@ -335,7 +335,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-086-grip-size-choice-beginner-checklist",
     "title": "그립 사이즈 선택 초보 체크",
-    "excerpt": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["그립 사이즈","손목 부담","라켓 선택"],
     "date": "2026-05-19",
@@ -344,7 +344,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-087-grip-size-choice-twenty-min-routine",
     "title": "그립 사이즈 선택 20분 점검",
-    "excerpt": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["그립 사이즈","손목 부담","라켓 선택"],
     "date": "2026-05-20",
@@ -353,7 +353,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-088-grip-size-choice-level-gap",
     "title": "그립 사이즈 선택 레벨 차이",
-    "excerpt": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["그립 사이즈","손목 부담","라켓 선택"],
     "date": "2026-05-20",
@@ -362,7 +362,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-089-grip-size-choice-match-record",
     "title": "그립 사이즈 선택 경기 기록",
-    "excerpt": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["그립 사이즈","손목 부담","라켓 선택"],
     "date": "2026-05-20",
@@ -371,7 +371,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-090-grip-size-choice-common-mistakes",
     "title": "그립 사이즈 선택 실수 줄이기",
-    "excerpt": "그립 사이즈은 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "그립 사이즈는 감각보다 손목 부담 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 가이드",
     "tags": ["그립 사이즈","손목 부담","라켓 선택"],
     "date": "2026-05-20",
@@ -425,7 +425,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-096-tennis-shoe-outsole-beginner-checklist",
     "title": "테니스화 아웃솔 초보 체크",
-    "excerpt": "테니스화은 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "테니스화는 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 관리",
     "tags": ["테니스화","아웃솔 마모","코트 접지"],
     "date": "2026-05-22",
@@ -434,7 +434,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-097-tennis-shoe-outsole-twenty-min-routine",
     "title": "테니스화 아웃솔 20분 점검",
-    "excerpt": "테니스화은 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "테니스화는 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 관리",
     "tags": ["테니스화","아웃솔 마모","코트 접지"],
     "date": "2026-05-22",
@@ -443,7 +443,7 @@ export const articleWriterPart21PostOverrides = [
   {
     "slug": "aw2-098-tennis-shoe-outsole-level-gap",
     "title": "테니스화 아웃솔 레벨 차이",
-    "excerpt": "테니스화은 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
+    "excerpt": "테니스화는 감각보다 아웃솔 마모 기준을 먼저 정해야 흔들림이 줄어듭니다.",
     "category": "장비 관리",
     "tags": ["테니스화","아웃솔 마모","코트 접지"],
     "date": "2026-05-22",

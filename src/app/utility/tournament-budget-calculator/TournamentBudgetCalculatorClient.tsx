@@ -20,9 +20,13 @@ export default function TournamentBudgetCalculatorClient() {
   const [days, setDays] = useState("2");
   const [stringCost, setStringCost] = useState("30000");
   const [misc, setMisc] = useState("20000");
+  const moneyValues = [entryFee, transport, lodgingPerNight, foodPerDay, stringCost, misc].map(Number);
+  const countValues = [nights, days].map(Number);
+  const inputsValid = moneyValues.every((value) => Number.isFinite(value) && value >= 0 && value <= 100000000) && countValues.every((value) => Number.isInteger(value) && value >= 0 && value <= 365);
 
   const budget = useMemo(() => {
-    const lodging = (Number(lodgingPerNight) || 0) * (Number(nights) || 0);
+    if (!inputsValid) return { lodging: 0, food: 0, subtotal: 0, buffer: 0, recommended: 0 };
+    const lodging = Number(lodgingPerNight) * Number(nights);
     const food = (Number(foodPerDay) || 0) * (Number(days) || 0);
     const entry = Number(entryFee) || 0;
     const move = Number(transport) || 0;
@@ -39,7 +43,7 @@ export default function TournamentBudgetCalculatorClient() {
       buffer,
       recommended,
     };
-  }, [days, entryFee, foodPerDay, lodgingPerNight, misc, nights, stringCost, transport]);
+  }, [days, entryFee, foodPerDay, inputsValid, lodgingPerNight, misc, nights, stringCost, transport]);
 
   const items = [
     { label: "참가비", value: Number(entryFee) || 0, icon: CreditCard },
@@ -66,37 +70,38 @@ export default function TournamentBudgetCalculatorClient() {
           <CardContent className="grid gap-4 md:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="entryFee">참가비</Label>
-              <Input id="entryFee" type="number" value={entryFee} onChange={(e) => setEntryFee(e.target.value)} />
+              <Input id="entryFee" type="number" min="0" max="100000000" value={entryFee} onChange={(e) => setEntryFee(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="transport">교통비</Label>
-              <Input id="transport" type="number" value={transport} onChange={(e) => setTransport(e.target.value)} />
+              <Input id="transport" type="number" min="0" max="100000000" value={transport} onChange={(e) => setTransport(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="lodging">1박 숙박비</Label>
-              <Input id="lodging" type="number" value={lodgingPerNight} onChange={(e) => setLodgingPerNight(e.target.value)} />
+              <Input id="lodging" type="number" min="0" max="100000000" value={lodgingPerNight} onChange={(e) => setLodgingPerNight(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="nights">숙박 일수</Label>
-              <Input id="nights" type="number" value={nights} onChange={(e) => setNights(e.target.value)} />
+              <Input id="nights" type="number" min="0" max="365" step="1" value={nights} onChange={(e) => setNights(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="food">1일 식비</Label>
-              <Input id="food" type="number" value={foodPerDay} onChange={(e) => setFoodPerDay(e.target.value)} />
+              <Input id="food" type="number" min="0" max="100000000" value={foodPerDay} onChange={(e) => setFoodPerDay(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="days">전체 일정 일수</Label>
-              <Input id="days" type="number" value={days} onChange={(e) => setDays(e.target.value)} />
+              <Input id="days" type="number" min="0" max="365" step="1" value={days} onChange={(e) => setDays(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="strings">스트링/그립 교체</Label>
-              <Input id="strings" type="number" value={stringCost} onChange={(e) => setStringCost(e.target.value)} />
+              <Input id="strings" type="number" min="0" max="100000000" value={stringCost} onChange={(e) => setStringCost(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="misc">기타 예비비</Label>
-              <Input id="misc" type="number" value={misc} onChange={(e) => setMisc(e.target.value)} />
+              <Input id="misc" type="number" min="0" max="100000000" value={misc} onChange={(e) => setMisc(e.target.value)} />
             </div>
           </CardContent>
+          {!inputsValid && <p role="alert" className="px-6 pb-6 text-sm font-semibold text-red-700">금액은 0~1억원, 일정 일수는 0~365의 정수로 입력하세요.</p>}
         </Card>
 
         <div className="grid gap-4">
@@ -109,6 +114,7 @@ export default function TournamentBudgetCalculatorClient() {
                 <p className="text-sm text-slate-300">기본 합계</p>
                 <p className="text-3xl font-bold">{formatWon(budget.subtotal)}</p>
               </div>
+              <p className="text-xs text-slate-300">산식: 항목 합계 + 항목 합계의 12% 비상 버퍼 · 모델 tf-budget-v1-20260915</p>
               <div>
                 <p className="text-sm text-slate-300">권장 버퍼 12%</p>
                 <p className="text-xl font-semibold">{formatWon(budget.buffer)}</p>

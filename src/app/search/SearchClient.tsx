@@ -105,7 +105,7 @@ export default function SearchClient() {
     trackedSearchEvents.add(eventKey);
 
     trackEvent(TRACKING_EVENTS.SEARCH_PERFORMED, {
-      search_term: query,
+      query_length: query.length,
       result_count: results.length,
       page_path: window.location.pathname,
     });
@@ -152,7 +152,6 @@ export default function SearchClient() {
                   cta_location: "search_results",
                   destination_url: result.href,
                   result_type: result.type,
-                  search_term: query,
                 })
               }
               className="rounded-2xl border border-black/5 bg-white p-5 transition hover:border-emerald-400 hover:shadow-sm dark:border-white/10 dark:bg-gray-900"

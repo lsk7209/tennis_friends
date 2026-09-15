@@ -17,11 +17,9 @@ export function NtrpBand() {
             객관적으로 확인하세요.
           </p>
         </div>
-        <Link href="/utility/ntrp-test" prefetch={false} className="flex-none">
-          <Button variant="volt" size="lg">
+        <Button asChild variant="volt" size="lg"><Link href="/utility/ntrp-test" prefetch={false} className="flex-none">
             지금 무료로 테스트하기 →
-          </Button>
-        </Link>
+          </Link></Button>
       </div>
     </section>
   );

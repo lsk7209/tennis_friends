@@ -19,6 +19,7 @@ export default function WeatherCheckPage() {
   const [rain, setRain] = useState(10);
   const [uv, setUv] = useState(4);
   const [visibility, setVisibility] = useState(12);
+  const inputsValid = Number.isFinite(temperature) && temperature >= -30 && temperature <= 50 && Number.isFinite(humidity) && humidity >= 0 && humidity <= 100 && Number.isFinite(wind) && wind >= 0 && wind <= 100 && Number.isFinite(rain) && rain >= 0 && rain <= 100 && Number.isFinite(uv) && uv >= 0 && uv <= 20 && Number.isFinite(visibility) && visibility >= 0 && visibility <= 100;
 
   const analysis = useMemo(() => {
     let score = 100;
@@ -70,8 +71,8 @@ export default function WeatherCheckPage() {
     if (score < 40) status = '주의';
     else if (score < 70) status = '보통';
 
-    return { score: Math.max(0, score), status, warnings, tips };
-  }, [humidity, rain, temperature, uv, visibility, wind]);
+    return { score: inputsValid ? Math.min(100, Math.max(0, score)) : 0, status: inputsValid ? status : '입력 오류', warnings, tips };
+  }, [humidity, inputsValid, rain, temperature, uv, visibility, wind]);
 
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)]">
@@ -80,8 +81,8 @@ export default function WeatherCheckPage() {
           <Badge className="bg-white/15 text-white hover:bg-white/15">날씨 체크</Badge>
           <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">테니스 치기 좋은 날씨인지 빠르게 판단하기</h1>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-sky-50">
-            야외 테니스는 기온보다도 바람, 습도, 강수 확률의 영향을 크게 받습니다. 간단한 수치를 넣으면
-            오늘 경기 진행 여부와 준비 포인트를 빠르게 확인할 수 있습니다.
+            야외 테니스는 기온보다도 바람, 습도, 강수 확률의 영향을 크게 받습니다. 직접 확인한 수치를 넣으면
+            로컬 규칙으로 경기 준비 포인트를 계산합니다. 실시간 예보를 조회하지 않습니다.
           </p>
         </section>
 
@@ -120,13 +121,14 @@ export default function WeatherCheckPage() {
                 </Select>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <div><Label htmlFor="temp">기온</Label><Input id="temp" type="number" value={temperature} onChange={(e) => setTemperature(Number(e.target.value) || 0)} /></div>
-                <div><Label htmlFor="humidity">습도</Label><Input id="humidity" type="number" value={humidity} onChange={(e) => setHumidity(Number(e.target.value) || 0)} /></div>
-                <div><Label htmlFor="wind">바람</Label><Input id="wind" type="number" value={wind} onChange={(e) => setWind(Number(e.target.value) || 0)} /></div>
-                <div><Label htmlFor="rain">강수 확률</Label><Input id="rain" type="number" value={rain} onChange={(e) => setRain(Number(e.target.value) || 0)} /></div>
-                <div><Label htmlFor="uv">자외선</Label><Input id="uv" type="number" value={uv} onChange={(e) => setUv(Number(e.target.value) || 0)} /></div>
-                <div><Label htmlFor="visibility">가시거리</Label><Input id="visibility" type="number" value={visibility} onChange={(e) => setVisibility(Number(e.target.value) || 0)} /></div>
+                <div><Label htmlFor="temp">기온 (°C)</Label><Input id="temp" type="number" min="-30" max="50" value={temperature} onChange={(e) => setTemperature(Number(e.target.value))} /></div>
+                <div><Label htmlFor="humidity">습도 (%)</Label><Input id="humidity" type="number" min="0" max="100" value={humidity} onChange={(e) => setHumidity(Number(e.target.value))} /></div>
+                <div><Label htmlFor="wind">바람 (km/h)</Label><Input id="wind" type="number" min="0" max="100" value={wind} onChange={(e) => setWind(Number(e.target.value))} /></div>
+                <div><Label htmlFor="rain">강수 확률 (%)</Label><Input id="rain" type="number" min="0" max="100" value={rain} onChange={(e) => setRain(Number(e.target.value))} /></div>
+                <div><Label htmlFor="uv">자외선 지수</Label><Input id="uv" type="number" min="0" max="20" value={uv} onChange={(e) => setUv(Number(e.target.value))} /></div>
+                <div><Label htmlFor="visibility">가시거리 (km)</Label><Input id="visibility" type="number" min="0" max="100" value={visibility} onChange={(e) => setVisibility(Number(e.target.value))} /></div>
               </div>
+              {!inputsValid && <p role="alert" className="text-sm font-semibold text-red-700">각 입력란에 표시된 허용 범위 안의 값을 입력하세요.</p>}
             </CardContent>
           </Card>
 
@@ -205,7 +207,7 @@ export default function WeatherCheckPage() {
             </Card>
 
             <div>
-              <Button className="bg-sky-600 text-white hover:bg-sky-700">현재 조건 저장하기</Button>
+              <Button disabled aria-disabled="true" title="저장 기능은 제공되지 않습니다" className="bg-sky-600 text-white hover:bg-sky-700">저장 기능 미제공</Button>
             </div>
           </div>
         </section>

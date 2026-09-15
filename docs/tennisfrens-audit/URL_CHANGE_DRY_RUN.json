@@ -1,0 +1,30 @@
+{
+  "mode": "dry-run",
+  "generatedAt": "2026-09-15T14:45:00+09:00",
+  "baselineCommit": "408ddd081914241c99f8da8c9d6237f122db319d",
+  "authorizedForExecution": false,
+  "changes": [
+    {
+      "from": "/players/hong-seong-chan",
+      "to": "/players/seongchan-hong",
+      "intent": "same player entity and same profile intent",
+      "uniqueInformation": "none identified in legacy alias dataset",
+      "redirect": 308,
+      "internalLinks": "canonical slug only",
+      "sitemap": "target only",
+      "rollback": "remove legacy-redirects.json mapping and restore alias discovery only after a separate review",
+      "state": "already implemented before docs/11"
+    },
+    {
+      "from": "/blog/tennis-drop-shot-timing",
+      "to": "/blog/tennis-drop-shot-mastery",
+      "intent": "partially overlapping technique topic",
+      "uniqueInformation": "not fully compared",
+      "redirect": null,
+      "internalLinks": "no change",
+      "sitemap": "retain both",
+      "rollback": "not applicable; no execution",
+      "state": "review-only; blocked from execution"
+    }
+  ]
+}

@@ -1,5 +1,26 @@
 # GOAL
 
+## Completed TF-009 External-Effect Isolation Goal (2026-09-15)
+
+Fail closed for GA4, AdSense, their preconnects, and client tracking in ordinary local/test/preview builds, while preserving an explicit production activation path for GitHub Pages and Vercel production. Prove contact and court-booking source paths do not make application network mutations, keep live operational commands outside default verification, and stop before push or deployment.
+
+## Active Goal (2026-09-14) — docs/11 trust and behavior contract
+
+Execute the highest-confidence safe local slice from `docs/11`: reconcile public claims with the implemented NTRP questionnaire, contact transport, demo utilities, and synthetic statistics while preserving URLs, working features, analytics, advertising installation, and user data.
+
+### Active Done Conditions
+
+- The homepage states the actual 15-question inventory and identifies the result as a non-official self-assessment.
+- Opening a local mail client is not presented as confirmed delivery, and the privacy notice describes the real mailto data path.
+- Demo booking and synthetic distribution surfaces cannot be mistaken for live booking or measured user statistics.
+- A deterministic audit prevents these four contracts from regressing and is included in `npm run verify`.
+- Focused audits, lint, typecheck, and production build pass; no push, deployment, account, database, URL, or indexing mutation occurs.
+
+### Active Non-Goals
+
+- No bulk content rewrite, URL consolidation, framework migration, live account inspection, email transmission, deployment, or Git push.
+- Unmeasured GSC, GA4, AdSense account, RUM, and business outcomes remain `null`/not verified.
+
 ## Active Search Acquisition And Conversion Goal (2026-08-27)
 
 ### Final Deliverable

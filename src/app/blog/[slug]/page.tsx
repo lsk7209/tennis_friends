@@ -15,7 +15,10 @@ import FAQSection from "@/components/seo/FAQSection";
 import { allBlogPosts } from "@/data/blog-posts";
 import { blogContentMap } from "@/data/blog-content";
 import { getBlogVisual } from "@/data/blog-visuals";
-import { normalizeArticleHtml } from "@/lib/article-html.mjs";
+import {
+  isDuplicateLeadText,
+  normalizeArticleHtml,
+} from "@/lib/article-html.mjs";
 import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { getRelatedUtilityLinks } from "@/lib/internal-linking";
@@ -101,6 +104,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) notFound();
 
   const publishedTime = getBlogPublishDate(post).toISOString();
+  const modifiedTime = post.updatedAt
+    ? new Date(post.updatedAt).toISOString()
+    : undefined;
   const indexable = isIndexableBlogSlug(post.slug);
   const siteUrl = getSiteUrl();
   const canonical = `${siteUrl}/blog/${post.slug}`;
@@ -133,6 +139,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: SITE_NAME,
       locale: DEFAULT_SITE_LOCALE,
       publishedTime,
+      ...(modifiedTime && { modifiedTime }),
       authors: ["TennisFriends"],
       tags: post.category ? [post.category] : [],
       url: canonical,
@@ -162,9 +169,15 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const publishedTime = getBlogPublishDate(post).toISOString();
+  const modifiedTime = post.updatedAt
+    ? new Date(post.updatedAt).toISOString()
+    : undefined;
   const contentData = blogContentMap[post.slug] || blogContentMap[post.id];
   if (!contentData?.content) notFound();
-  const processedContent = normalizeArticleHtml(contentData?.content ?? "");
+  const processedContent = normalizeArticleHtml(contentData?.content ?? "", [
+    contentData?.summary,
+    post.excerpt,
+  ]);
   const articleVisual = getBlogVisual(post.slug);
 
   const enrichedPost: EnrichedBlogPost = {
@@ -174,6 +187,10 @@ export default async function BlogPostPage({ params }: Props) {
     summary: contentData?.summary ?? post.excerpt,
     highlight: contentData?.highlight ?? post.excerpt,
   };
+  const normalizedSummary = (enrichedPost.summary ?? post.excerpt).trim();
+  const showExcerpt =
+    post.excerpt.trim() !== normalizedSummary &&
+    !isDuplicateLeadText(contentData.content, post.excerpt);
 
   const allPostsForRelated = publishedBlogPosts.map(toRelatedItem);
   const currentRelatedItem = toRelatedItem({
@@ -217,8 +234,8 @@ export default async function BlogPostPage({ params }: Props) {
         description={post.excerpt || ""}
         slug={post.slug}
         date={publishedTime}
-        dateModified={publishedTime}
-        author="TennisFriends"
+        dateModified={modifiedTime}
+        author={post.author ?? SITE_NAME}
         category={post.category}
         readingTime={post.readTime}
         keywords={enrichedPost.tags ?? []}
@@ -278,13 +295,15 @@ export default async function BlogPostPage({ params }: Props) {
             {post.title}
           </h1>
 
-          <p className="mb-6 text-lg text-muted-foreground" itemProp="description">
-            {post.excerpt}
-          </p>
+          {showExcerpt && (
+            <p className="mb-6 text-lg text-muted-foreground" itemProp="description">
+              {post.excerpt}
+            </p>
+          )}
 
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="text-sm text-muted-foreground">
-              <span itemProp="author" itemScope itemType="https://schema.org/Person">
+              <span itemProp="author" itemScope itemType="https://schema.org/Organization">
                 <span itemProp="name">작성자 TennisFriends</span>
               </span>
             </div>

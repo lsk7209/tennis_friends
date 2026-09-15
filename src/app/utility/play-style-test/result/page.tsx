@@ -426,18 +426,14 @@ function PlayStyleResultContent() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/utility/play-style-test/test">
-                <Button variant="outline" size="lg" className="bg-white border-2 border-gray-300 hover:border-purple-500 px-8 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <Button asChild variant="outline" size="lg" className="bg-white border-2 border-gray-300 hover:border-purple-500 px-8 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility/play-style-test/test">
                   <RotateCcw className="h-5 w-5 mr-2" />
                   다시 테스트하기
-                </Button>
-              </Link>
-              <Link href="/utility">
-                <Button size="lg" className={`bg-gradient-to-r ${gradient} hover:opacity-90 text-white px-8 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105`}>
+                </Link></Button>
+              <Button asChild size="lg" className={`bg-gradient-to-r ${gradient} hover:opacity-90 text-white px-8 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105`}><Link href="/utility">
                   다른 테스트 보기
                   <ArrowRight className="h-5 w-5 ml-2" />
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </div>
         </div>

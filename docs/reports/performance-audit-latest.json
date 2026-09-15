@@ -1,14 +1,14 @@
 {
   "status": "ok",
-  "generatedAt": "2026-06-01T23:24:50.280Z",
-  "baseUrl": "https://www.tennisfrens.com",
+  "generatedAt": "2026-09-15T06:08:06.322Z",
+  "baseUrl": "https://tennisfrens.com",
   "liveResults": [
     {
       "label": "home",
       "path": "/",
       "status": 200,
-      "durationMs": 114,
-      "bytes": 90062,
+      "durationMs": 430,
+      "bytes": 98487,
       "contentType": "text/html; charset=utf-8",
       "cacheControl": "public, max-age=0, must-revalidate"
     },
@@ -16,8 +16,8 @@
       "label": "ntrp utility",
       "path": "/utility/ntrp-test",
       "status": 200,
-      "durationMs": 473,
-      "bytes": 58670,
+      "durationMs": 23,
+      "bytes": 64324,
       "contentType": "text/html; charset=utf-8",
       "cacheControl": "public, max-age=0, must-revalidate"
     },
@@ -25,8 +25,8 @@
       "label": "string tension",
       "path": "/utility/string-tension",
       "status": 200,
-      "durationMs": 526,
-      "bytes": 57037,
+      "durationMs": 283,
+      "bytes": 62611,
       "contentType": "text/html; charset=utf-8",
       "cacheControl": "public, max-age=0, must-revalidate"
     },
@@ -34,8 +34,8 @@
       "label": "rules quiz",
       "path": "/tennis-rules-quiz",
       "status": 200,
-      "durationMs": 19,
-      "bytes": 57599,
+      "durationMs": 257,
+      "bytes": 63167,
       "contentType": "text/html; charset=utf-8",
       "cacheControl": "public, max-age=0, must-revalidate"
     },
@@ -43,17 +43,17 @@
       "label": "blog sample",
       "path": "/blog/tennis-hybrid-string-setup",
       "status": 200,
-      "durationMs": 479,
-      "bytes": 116646,
+      "durationMs": 896,
+      "bytes": 107853,
       "contentType": "text/html; charset=utf-8",
-      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+      "cacheControl": "public, max-age=0, must-revalidate"
     },
     {
       "label": "player sample",
       "path": "/players/arthur-rinderknech",
       "status": 200,
-      "durationMs": 536,
-      "bytes": 99462,
+      "durationMs": 261,
+      "bytes": 102329,
       "contentType": "text/html; charset=utf-8",
       "cacheControl": "public, max-age=0, must-revalidate"
     },
@@ -61,8 +61,8 @@
       "label": "sitemap",
       "path": "/sitemap.xml",
       "status": 200,
-      "durationMs": 347,
-      "bytes": 206367,
+      "durationMs": 26,
+      "bytes": 273492,
       "contentType": "application/xml",
       "cacheControl": "public, max-age=3600, s-maxage=3600"
     },
@@ -70,10 +70,10 @@
       "label": "rss",
       "path": "/rss.xml",
       "status": 200,
-      "durationMs": 609,
-      "bytes": 43431,
+      "durationMs": 516,
+      "bytes": 47554,
       "contentType": "application/rss+xml; charset=utf-8",
-      "cacheControl": "public, max-age=0, must-revalidate"
+      "cacheControl": "public, max-age=0, s-maxage=3600, stale-while-revalidate=300"
     }
   ],
   "psi": {
@@ -82,6 +82,13 @@
     "results": []
   },
   "warnings": [
+    {
+      "label": "sitemap",
+      "path": "/sitemap.xml",
+      "issue": "response size above guardrail",
+      "bytes": 273492,
+      "maxHtmlBytes": 260000
+    },
     {
       "label": "home",
       "tool": "pagespeed",

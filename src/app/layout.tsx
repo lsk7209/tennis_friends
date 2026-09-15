@@ -17,6 +17,7 @@ import CafeBanner from "@/components/blog/CafeBanner";
 import GAProvider from "@/components/analytics/GAProvider";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import { isAdsConsentReady, isProductionExternalEffectsEnabled } from "@/lib/external-effects";
 import {
   DEFAULT_CONTACT_EMAIL,
   DEFAULT_PLACENAME,
@@ -33,16 +34,14 @@ const PROD_GA_MEASUREMENT_ID = "G-W1K51D8SBX";
 const ADSENSE_CLIENT = "ca-pub-3050601904412736";
 const SITE_TITLE = `${SITE_NAME} - 테니스 실력 향상 플랫폼`;
 
-function getGaMeasurementId(): string {
+function getGaMeasurementId(externalEffectsEnabled: boolean): string {
+  if (!externalEffectsEnabled) return "";
+
   if (process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) {
     return process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   }
 
-  if (process.env.NODE_ENV === "production") {
-    return PROD_GA_MEASUREMENT_ID;
-  }
-
-  return "";
+  return PROD_GA_MEASUREMENT_ID;
 }
 
 const inter = Inter({
@@ -169,7 +168,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaMeasurementId = getGaMeasurementId();
+  const externalEffectsEnabled = isProductionExternalEffectsEnabled();
+  const adsConsentReady = isAdsConsentReady();
+  const gaMeasurementId = getGaMeasurementId(externalEffectsEnabled);
 
   return (
     <html
@@ -194,26 +195,32 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net"
           crossOrigin="anonymous"
         />
-        <link
-          rel="preconnect"
-          href="https://www.googletagmanager.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preconnect"
-          href="https://pagead2.googlesyndication.com"
-          crossOrigin="anonymous"
-        />
+        {externalEffectsEnabled && (
+          <>
+            <link
+              rel="preconnect"
+              href="https://www.googletagmanager.com"
+              crossOrigin="anonymous"
+            />
+            {adsConsentReady && <link
+              rel="preconnect"
+              href="https://pagead2.googlesyndication.com"
+              crossOrigin="anonymous"
+            />}
+          </>
+        )}
       </head>
       <body className="bg-gradient-to-br from-gray-50 via-white to-gray-100 font-display text-gray-900 antialiased dark:from-gray-950 dark:via-gray-900 dark:to-black dark:text-gray-100">
         <MotionPreferences>
-        <Script
-          id="adsense-loader"
-          async
-          strategy="afterInteractive"
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-          crossOrigin="anonymous"
-        />
+        {adsConsentReady && (
+          <Script
+            id="adsense-loader"
+            async
+            strategy="afterInteractive"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
+          />
+        )}
         <OrganizationSchema />
         <WebSiteSchema />
         <div className="group/design-root relative flex min-h-screen w-full flex-col overflow-x-hidden">
@@ -226,8 +233,12 @@ export default function RootLayout({
           </div>
         </div>
         <Toaster />
-        <GAProvider measurementId={gaMeasurementId} />
-        <Tracking />
+        {externalEffectsEnabled && (
+          <>
+            <GAProvider measurementId={gaMeasurementId} />
+            <Tracking />
+          </>
+        )}
         </MotionPreferences>
       </body>
     </html>

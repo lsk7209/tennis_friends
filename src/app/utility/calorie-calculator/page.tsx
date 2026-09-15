@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { calculateCalories, UTILITY_ESTIMATE_VERSION } from "@/lib/utility-estimates";
 
 const metsMap = {
   singles: { light: 6, moderate: 7.3, hard: 8.5 },
@@ -20,11 +21,12 @@ export default function Page() {
   const [intensity, setIntensity] = useState<"light" | "moderate" | "hard">("moderate");
 
   const result = useMemo(() => {
-    const weightKg = Number(weight) || 0;
-    const durationHours = (Number(minutes) || 0) / 60;
     const mets = metsMap[matchType][intensity];
-    const calories = Math.round(weightKg * durationHours * mets);
-    return { calories, mets };
+    try {
+      return { calories: calculateCalories({ weightKg: Number(weight), minutes: Number(minutes), mets }), mets, error: null };
+    } catch {
+      return { calories: null, mets, error: "체중은 20~300kg, 시간은 1~720분 사이로 입력하세요." };
+    }
   }, [intensity, matchType, minutes, weight]);
 
   return (
@@ -43,11 +45,11 @@ export default function Page() {
           <CardContent className="grid gap-4">
             <div className="space-y-2">
               <Label htmlFor="weight">체중 (kg)</Label>
-              <Input id="weight" type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
+              <Input id="weight" type="number" min="20" max="300" value={weight} onChange={(e) => setWeight(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="minutes">플레이 시간 (분)</Label>
-              <Input id="minutes" type="number" value={minutes} onChange={(e) => setMinutes(e.target.value)} />
+              <Input id="minutes" type="number" min="1" max="720" value={minutes} onChange={(e) => setMinutes(e.target.value)} />
             </div>
             <div className="space-y-2">
               <Label>경기 유형</Label>
@@ -98,8 +100,7 @@ export default function Page() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-5xl font-bold">{result.calories}</p>
-              <p className="mt-2 text-base">kcal</p>
+              {result.error ? <p role="alert" className="text-base font-semibold">{result.error}</p> : <><p className="text-5xl font-bold">{result.calories}</p><p className="mt-2 text-base">kcal</p></>}
             </CardContent>
           </Card>
 
@@ -111,6 +112,7 @@ export default function Page() {
               <p className="flex items-center gap-2"><Scale className="h-4 w-4 text-orange-500" /> 체중: {weight || 0}kg</p>
               <p className="flex items-center gap-2"><Timer className="h-4 w-4 text-orange-500" /> 시간: {minutes || 0}분</p>
               <p>적용 METs: {result.mets}</p>
+              <p>산식: 체중(kg) × 시간(h) × METs, 1kcal 단위 반올림 · 모델 {UTILITY_ESTIMATE_VERSION}</p>
               <p>실제 소모량은 휴식 시간, 날씨, 랠리 길이에 따라 달라질 수 있습니다.</p>
             </CardContent>
           </Card>

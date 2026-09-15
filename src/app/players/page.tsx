@@ -156,12 +156,10 @@ export default function PlayersPage() {
                 {player.country}
               </p>
 
-              <Link href={`/players/${player.slug}`}>
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white">
+              <Button asChild className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white"><Link href={`/players/${player.slug}`}>
                   <Target className="w-4 h-4 mr-2" />
                   {player.name} 자세히 보기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </div>
         </CardContent>
@@ -409,18 +407,14 @@ export default function PlayersPage() {
                 선수들의 플레이 스타일을 분석하고 당신의 테니스 실력을 향상시켜보세요
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/utility/ntrp-test">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"><Link href="/utility/ntrp-test">
                     <Trophy className="h-5 w-5 mr-2" />
                     실력 테스트하기
-                  </Button>
-                </Link>
-                <Link href="/utility/play-style-test">
-                  <Button size="lg" variant="outline" className="bg-white border-2 border-gray-300 hover:border-blue-500">
+                  </Link></Button>
+                <Button asChild size="lg" variant="outline" className="bg-white border-2 border-gray-300 hover:border-blue-500"><Link href="/utility/play-style-test">
                     <Zap className="h-5 w-5 mr-2" />
                     플레이 스타일 찾기
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </CardContent>
           </Card>

@@ -20,7 +20,7 @@ interface UtilityResultLinksProps {
 }
 
 export default function UtilityResultLinks({
-  title = "Recommended tools",
+  title = "다음에 확인할 도구",
   description,
   links,
   source = "utility-result",
@@ -60,7 +60,7 @@ export default function UtilityResultLinks({
                     {link.description}
                   </p>
                   <div className="mt-4 flex items-center text-sm font-semibold text-emerald-700">
-                    Open
+                    열기
                     <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </CardContent>

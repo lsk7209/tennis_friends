@@ -26,17 +26,13 @@ export default function FlexibilityTestPage() {
             유연성은 단순 스트레칭 수준이 아니라 서브, 회전, 이동 효율과 직접 연결됩니다. 이 테스트는 주요 관절과 부위의 가동 범위를 간단히 점검하는 데 초점을 둡니다.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link href="/utility/flexibility-test/test">
-              <Button size="lg" className="bg-white text-teal-600 hover:bg-cyan-50">
+            <Button asChild size="lg" className="bg-white text-teal-600 hover:bg-cyan-50"><Link href="/utility/flexibility-test/test">
                 <Activity className="mr-2 h-5 w-5" />
                 테스트 시작
-              </Button>
-            </Link>
-            <Link href="/utility/recovery-routine-generator">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              </Link></Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10"><Link href="/utility/recovery-routine-generator">
                 회복 루틴 보기
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
         </section>
 
@@ -73,9 +69,7 @@ export default function FlexibilityTestPage() {
                 </div>
                 <p className="mt-2 text-sm leading-6 text-teal-900">대회 전보다는 평소 컨디션이 안정된 날에 측정하고, 4주 간격으로 다시 보는 편이 좋습니다.</p>
               </div>
-              <Link href="/utility/flexibility-test/test">
-                <Button className="bg-teal-500 text-white hover:bg-teal-600">테스트하러 가기</Button>
-              </Link>
+              <Button asChild className="bg-teal-500 text-white hover:bg-teal-600"><Link href="/utility/flexibility-test/test">테스트하러 가기</Link></Button>
             </CardContent>
           </Card>
         </section>

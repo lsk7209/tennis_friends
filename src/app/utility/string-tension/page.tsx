@@ -49,18 +49,14 @@ export default function Page() {
               </div>
             ))}
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="/utility/string-tension/test">
-                <Button className="bg-sky-600 hover:bg-sky-700">
+              <Button asChild className="bg-sky-600 hover:bg-sky-700"><Link href="/utility/string-tension/test">
                   <Calculator className="mr-2 h-4 w-4" />
                   계산 시작
-                </Button>
-              </Link>
-              <Link href="/utility/equipment-recommendation">
-                <Button variant="outline">
+                </Link></Button>
+              <Button asChild variant="outline"><Link href="/utility/equipment-recommendation">
                   <ArrowRight className="mr-2 h-4 w-4" />
                   장비 추천 보기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </CardContent>
         </Card>

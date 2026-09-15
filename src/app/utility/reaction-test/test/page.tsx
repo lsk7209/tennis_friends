@@ -349,12 +349,10 @@ export default function ReactionTestGame() {
                 <RotateCcw className="w-4 h-4 mr-2" />
                 다시 테스트하기
               </Button>
-              <Link href="/utility/reaction-test">
-                <Button className="bg-orange-500 hover:bg-orange-600">
+              <Button asChild className="bg-orange-500 hover:bg-orange-600"><Link href="/utility/reaction-test">
                   <TrendingUp className="w-4 h-4 mr-2" />
                   다른 모드 시도하기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </div>
         )}

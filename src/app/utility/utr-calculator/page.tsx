@@ -17,6 +17,13 @@ interface MatchResult {
 export default function UTRCalculatorPage() {
   const [step, setStep] = useState<'intro' | 'input' | 'result'>('intro');
   const [matches, setMatches] = useState<MatchResult[]>([{ opponentUTR: '', myGames: '', opponentGames: '' }]);
+  const isValidMatch = (match: MatchResult) => {
+    const utr = Number(match.opponentUTR);
+    const mine = Number(match.myGames);
+    const opponent = Number(match.opponentGames);
+    return Number.isFinite(utr) && utr >= 1 && utr <= 16 && Number.isInteger(mine) && mine >= 0 && mine <= 99 && Number.isInteger(opponent) && opponent >= 0 && opponent <= 99 && mine + opponent > 0;
+  };
+  const allMatchesValid = matches.every(isValidMatch);
 
   const calculatedUTR = useMemo(() => {
     let totalWeight = 0;
@@ -28,7 +35,7 @@ export default function UTRCalculatorPage() {
       const opponentGames = Number(match.opponentGames);
       const totalGames = myGames + opponentGames;
 
-      if (opponentUTR > 0 && totalGames > 0) {
+      if (isValidMatch(match)) {
         const winRatio = myGames / totalGames;
         const estimate = Math.max(1, Math.min(16, opponentUTR + (winRatio - 0.5) * 2));
         weightedSum += estimate * totalGames;
@@ -141,15 +148,15 @@ export default function UTRCalculatorPage() {
                       <div className="mt-4 grid gap-4 md:grid-cols-3">
                         <div>
                           <Label htmlFor={`utr-${index}`}>상대 UTR</Label>
-                          <Input id={`utr-${index}`} type="number" step="0.01" value={match.opponentUTR} onChange={(e) => updateMatch(index, 'opponentUTR', e.target.value)} />
+                          <Input id={`utr-${index}`} type="number" min="1" max="16" step="0.01" value={match.opponentUTR} onChange={(e) => updateMatch(index, 'opponentUTR', e.target.value)} />
                         </div>
                         <div>
                           <Label htmlFor={`my-${index}`}>내 게임 수</Label>
-                          <Input id={`my-${index}`} type="number" value={match.myGames} onChange={(e) => updateMatch(index, 'myGames', e.target.value)} />
+                          <Input id={`my-${index}`} type="number" min="0" max="99" step="1" value={match.myGames} onChange={(e) => updateMatch(index, 'myGames', e.target.value)} />
                         </div>
                         <div>
                           <Label htmlFor={`opp-${index}`}>상대 게임 수</Label>
-                          <Input id={`opp-${index}`} type="number" value={match.opponentGames} onChange={(e) => updateMatch(index, 'opponentGames', e.target.value)} />
+                          <Input id={`opp-${index}`} type="number" min="0" max="99" step="1" value={match.opponentGames} onChange={(e) => updateMatch(index, 'opponentGames', e.target.value)} />
                         </div>
                       </div>
                     </CardContent>
@@ -162,7 +169,8 @@ export default function UTRCalculatorPage() {
                   </Button>
                 )}
 
-                <Button className="w-full bg-blue-600 text-white hover:bg-blue-700" onClick={() => setStep('result')}>
+                {!allMatchesValid && <p role="alert" className="text-sm font-semibold text-red-700">모든 경기에 상대 UTR 1~16과 0~99 사이의 정수 게임 수를 입력하세요. 양쪽 게임 수 합은 1 이상이어야 합니다.</p>}
+                <Button disabled={!allMatchesValid} className="w-full bg-blue-600 text-white hover:bg-blue-700" onClick={() => setStep('result')}>
                   <Calculator className="mr-2 h-5 w-5" />
                   계산하기
                 </Button>
@@ -199,6 +207,7 @@ export default function UTRCalculatorPage() {
               <div className="mt-3 space-y-2 text-sm leading-6 text-slate-600">
                 <p>이 값은 공식 UTR과 다를 수 있으며, 실력 흐름을 대략적으로 보는 용도로 적합합니다.</p>
                 <p>상대 UTR 값이 정확할수록 결과도 더 현실적으로 나옵니다.</p>
+                <p>모델 tf-utr-estimate-v1-20260915: 경기별 추정값은 상대 UTR + (게임 승률 − 0.5) × 2이며 1~16으로 제한한 뒤 총 게임 수로 가중 평균하고 소수 둘째 자리에서 반올림합니다.</p>
               </div>
             </div>
 

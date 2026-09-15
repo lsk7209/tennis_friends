@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { toast } from 'sonner';
 import { TrainingPlanInput, generateTrainingPlan } from '@/lib/trainingPlanner';
 
 export default function TrainingPlannerTest() {
@@ -71,7 +72,13 @@ export default function TrainingPlannerTest() {
       setCurrentStep(prev => prev + 1);
     } else {
       // 모든 데이터 입력 완료 - 계획 생성
-      const result = generateTrainingPlan(formData as TrainingPlanInput);
+      let result;
+      try {
+        result = generateTrainingPlan(formData as TrainingPlanInput);
+      } catch {
+        toast.error('주당 시간, 세션 길이와 경력 값을 다시 확인해 주세요.');
+        return;
+      }
       
       // 결과 페이지로 이동
       const params = new URLSearchParams();

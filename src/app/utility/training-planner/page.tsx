@@ -37,18 +37,14 @@ export default function Page() {
               </div>
             ))}
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="/utility/training-planner/test">
-                <Button className="bg-violet-600 hover:bg-violet-700">
+              <Button asChild className="bg-violet-600 hover:bg-violet-700"><Link href="/utility/training-planner/test">
                   <Calendar className="mr-2 h-4 w-4" />
                   플래너 시작
-                </Button>
-              </Link>
-              <Link href="/utility/ntrp-test">
-                <Button variant="outline">
+                </Link></Button>
+              <Button asChild variant="outline"><Link href="/utility/ntrp-test">
                   <ClipboardList className="mr-2 h-4 w-4" />
                   실력 테스트 먼저 보기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </CardContent>
         </Card>

@@ -18,6 +18,7 @@ if (!outputOnly) {
       GITHUB_REPOSITORY: "lsk7209/tennis_friends",
       GITHUB_PAGES_BASE_PATH: "/tennis_friends",
       NEXT_PUBLIC_SITE_URL: "https://tennisfrens.com",
+      NEXT_PUBLIC_EXTERNAL_EFFECTS: "production",
     },
     stdio: "inherit",
   });
@@ -189,6 +190,7 @@ const adsenseOutputAudit = spawnSync(
       GITHUB_ACTIONS: "true",
       GITHUB_PAGES: "true",
       GITHUB_PAGES_BASE_PATH: "/tennis_friends",
+      NEXT_PUBLIC_EXTERNAL_EFFECTS: "production",
     },
     stdio: "inherit",
   },

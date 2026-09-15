@@ -11,12 +11,15 @@ export function BlogMagazine() {
         <div className="flex items-end justify-between mb-10">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent-clay mb-3">
-              Latest Reads
+              Editor&apos;s Picks
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-court-ink leading-tight tracking-[-0.035em]">
               테니스 인사이트
             </h2>
           </div>
+          <p className="max-w-xs text-right text-xs leading-5 text-court-ink/50 hidden md:block">
+            발행일 순서가 아닌 편집 추천 글입니다.
+          </p>
           <Link
             href="/blog"
             prefetch={false}

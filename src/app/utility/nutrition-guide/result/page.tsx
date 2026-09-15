@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useMemo, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -11,6 +11,7 @@ import {Droplets, Clock, ArrowRight, RotateCcw, Share2, CheckCircle, Zap} from '
 import { NutritionResult, Meal, Supplement, Timing } from '@/lib/nutritionGuide';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import { AccessibleErrorState } from '@/components/AccessibleErrorState';
 
 type MacroValue = { grams: number; percentage: number };
 type MealView = Meal & { description?: string };
@@ -76,13 +77,8 @@ const EMPTY_RECOMMENDATIONS: NonNullable<NutritionResult['recommendations']> & {
 function NutritionResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
-  const [result, setResult] = useState<NutritionResultView | null>(null);
   const [selectedPhase, setSelectedPhase] = useState('preSession');
-
-  useEffect(() => {
-    // 로딩 시뮬레이션
-    const timer = setTimeout(() => {
+  const result = useMemo<NutritionResultView | null>(() => {
       const planName = searchParams.get('planName') || '';
       const totalCalories = Number(searchParams.get('totalCalories') || 0);
       const macronutrients = safeJsonParse<NutritionResult['macronutrients'] | null>(searchParams.get('macronutrients'), null);
@@ -101,7 +97,8 @@ function NutritionResultContent() {
         ? hydration.total || '0ml'
         : `${normalizedHydration?.waterIntake || 0}ml`;
       
-      setResult({
+      if (!planName || !Number.isFinite(totalCalories) || totalCalories <= 0 || !macronutrients || !hydration) return null;
+      return {
         planName,
         plan: EMPTY_PLAN as NutritionResultView['plan'],
         totalHydration,
@@ -117,11 +114,7 @@ function NutritionResultContent() {
         supplements,
         timing,
         recommendations
-      });
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
+      };
   }, [searchParams]);
 
   const handleRetake = () => {
@@ -170,27 +163,14 @@ function NutritionResultContent() {
     }
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600 mx-auto mb-6"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">계획 생성 중입니다...</h2>
-          <p className="text-gray-600">맞춤형 영양 계획을 만들고 있습니다.</p>
-        </div>
-      </div>
-    );
-  }
-
   if (!result) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">오류가 발생했습니다</h2>
-          <p className="text-gray-600 mb-4">계획을 불러올 수 없습니다.</p>
-          <Button onClick={handleRetake}>다시 시도하기</Button>
-        </div>
-      </div>
+      <AccessibleErrorState
+        title="계획을 불러올 수 없습니다"
+        description="유효한 영양 계획이 없습니다. 다시 입력해 주세요."
+        actionLabel="다시 시도하기"
+        onAction={handleRetake}
+      />
     );
   }
 
@@ -710,12 +690,10 @@ function NutritionResultContent() {
                   <Share2 className="h-4 w-4 mr-2" />
                   계획 공유하기
                 </Button>
-                <Link href="/utility/training-planner">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3">
+                <Button asChild className="bg-green-600 hover:bg-green-700 text-white px-6 py-3"><Link href="/utility/training-planner">
                     <ArrowRight className="h-4 w-4 mr-2" />
                     훈련 계획과 함께
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </div>
           </FadeIn>

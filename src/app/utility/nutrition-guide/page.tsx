@@ -56,18 +56,14 @@ export default function Page() {
             </p>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-3">
-            <Link href="/utility/nutrition-guide/test">
-              <Button className="bg-green-600 hover:bg-green-700">
+            <Button asChild className="bg-green-600 hover:bg-green-700"><Link href="/utility/nutrition-guide/test">
                 <Apple className="mr-2 h-4 w-4" />
                 영양 계획 시작
-              </Button>
-            </Link>
-            <Link href="/utility/hydration-planner">
-              <Button variant="outline">
+              </Link></Button>
+            <Button asChild variant="outline"><Link href="/utility/hydration-planner">
                 <ArrowRight className="mr-2 h-4 w-4" />
                 수분 플래너 보기
-              </Button>
-            </Link>
+              </Link></Button>
           </CardContent>
         </Card>
 

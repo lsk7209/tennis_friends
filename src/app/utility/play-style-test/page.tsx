@@ -48,18 +48,14 @@ export default function Page() {
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/utility/play-style-test/test">
-                <Button className="bg-pink-600 hover:bg-pink-700">
+              <Button asChild className="bg-pink-600 hover:bg-pink-700"><Link href="/utility/play-style-test/test">
                   <Sparkles className="mr-2 h-4 w-4" />
                   테스트 시작
-                </Button>
-              </Link>
-              <Link href="/utility/play-style-test/result">
-                <Button variant="outline">
+                </Link></Button>
+              <Button asChild variant="outline"><Link href="/utility/play-style-test/result">
                   <ArrowRight className="mr-2 h-4 w-4" />
                   결과 예시 보기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </CardContent>
         </Card>

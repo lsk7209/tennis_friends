@@ -25,7 +25,7 @@ export default function ContactPage() {
     category: "",
     message: "",
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isMailAppOpened, setIsMailAppOpened] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,17 +38,10 @@ export default function ContactPage() {
       `mailto:contact@tennisfrens.com?subject=${subject}&body=${body}`,
       "_self",
     );
-    setIsSubmitted(true);
+    setIsMailAppOpened(true);
     setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        category: "",
-        message: "",
-      });
-    }, 3000);
+      setIsMailAppOpened(false);
+    }, 5000);
   };
 
   const handleChange = (field: string, value: string) => {
@@ -85,14 +78,15 @@ export default function ContactPage() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {isSubmitted ? (
+            {isMailAppOpened ? (
               <div className="text-center py-8">
                 <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-foreground mb-2">
-                  문의가 접수되었습니다!
+                  메일 앱을 열었습니다
                 </h3>
                 <p className="text-muted-foreground">
-                  빠른 시일 내에 답변드리겠습니다.
+                  작성 내용을 확인하고 메일 앱에서 직접 전송해 주세요. 이
+                  화면만으로는 문의 접수가 완료되지 않습니다.
                 </p>
               </div>
             ) : (
@@ -228,12 +222,12 @@ export default function ContactPage() {
             <CardContent className="space-y-4">
               <div>
                 <h4 className="font-semibold text-foreground mb-2">
-                  NTRP 테스트는 얼마나 정확한가요?
+                  NTRP 테스트는 공식 등급인가요?
                 </h4>
                 <p className="text-muted-foreground text-sm">
-                  우리의 NTRP 테스트는 전문 코치들과 함께 개발된 알고리즘을
-                  사용하여 높은 정확도를 제공합니다. 다만 참고용으로 사용하시기
-                  바랍니다.
+                  아니요. 15개 질문으로 현재 경기 수준을 돌아보는 비공식 자가
+                  진단이며, 공식 NTRP 등급이나 코치의 현장 평가를 대체하지
+                  않습니다.
                 </p>
               </div>
               <div>

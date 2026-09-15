@@ -39,11 +39,9 @@ export default function SwingAnalyzerPage() {
               <Upload className="mr-2 h-5 w-5" />
               영상 업로드 준비
             </Button>
-            <Link href="/utility/match-video-review-template">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10"><Link href="/utility/match-video-review-template">
                 영상 리뷰 템플릿 보기
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
         </section>
 
@@ -79,9 +77,7 @@ export default function SwingAnalyzerPage() {
                 </div>
                 <p className="mt-2 text-sm leading-6 text-violet-900">정면 1개, 측면 1개만 찍어도 교정 포인트가 훨씬 선명해집니다.</p>
               </div>
-              <Link href="/utility/match-video-review-template">
-                <Button className="bg-violet-600 text-white hover:bg-violet-700">복기 템플릿 보기</Button>
-              </Link>
+              <Button asChild className="bg-violet-600 text-white hover:bg-violet-700"><Link href="/utility/match-video-review-template">복기 템플릿 보기</Link></Button>
             </CardContent>
           </Card>
         </section>

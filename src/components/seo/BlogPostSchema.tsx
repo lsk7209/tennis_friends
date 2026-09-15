@@ -39,12 +39,11 @@ export default function BlogPostSchema({
     description: description,
     image: imageUrl,
     datePublished: date,
-    dateModified: date,
     author: {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: author,
-      url: `${siteUrl}/about`,
+      url: siteUrl,
     },
     publisher: {
       "@type": "Organization",

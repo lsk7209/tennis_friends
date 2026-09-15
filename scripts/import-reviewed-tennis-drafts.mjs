@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { assertPublishable } from "../src/lib/publication-quality.mjs";
 
 const [packageDir, startAt = "2026-09-09T09:00:00+09:00"] = process.argv.slice(2);
 if (!packageDir) throw new Error("Usage: node scripts/import-reviewed-tennis-drafts.mjs <package-dir> [start-at]");
@@ -9,6 +10,13 @@ const manifest = JSON.parse(fs.readFileSync(path.join(packageDir, "manifest.json
 const releaseDependencies = JSON.parse(fs.readFileSync(path.join(packageDir, "release-dependencies.json"), "utf8"));
 const items = manifest.items ?? manifest.articles ?? manifest;
 if (!Array.isArray(items) || items.length !== 30) throw new Error(`Expected 30 manifest items, received ${items?.length}`);
+const knownRoutes = new Set([
+  ...items.map((item) => `/blog/${item.slug}`),
+  ...releaseDependencies.dependencies.map((dependency) => dependency.target_route),
+  "/utility/ntrp-test",
+  "/utility/tennis-dictionary",
+  "/utility/play-style-test",
+]);
 
 const escapeHtml = (value) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 const plainText = (value) => value.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/[*_`>#]/g, "").replace(/\s+/g, " ").trim();
@@ -71,6 +79,8 @@ for (const [index, item] of items.entries()) {
   if (item.status !== "done") throw new Error(`${item.id} is not done`);
   const draftPath = path.join(packageDir, item.draft_path);
   const markdown = fs.readFileSync(draftPath, "utf8");
+  const quality = assertPublishable({ ...item, body: markdown, reviewEvidence: item.review_evidence ?? item.reviewed_by }, knownRoutes);
+  if (quality.warnings.length) console.warn(`${item.id}: review warnings: ${quality.warnings.join(", ")}`);
   const html = markdownToHtml(markdown);
   const firstParagraph = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "").split(/\r?\n\r?\n/).map(plainText).find((value) => value && value !== item.title) ?? item.answer_claim;
   const excerpt = firstParagraph.slice(0, 190);
@@ -78,7 +88,12 @@ for (const [index, item] of items.entries()) {
   const kst = new Date(Date.parse(scheduledAt) + 9 * 3_600_000).toISOString().slice(0, 19) + "+09:00";
   const tags = [...new Set([item.main_keyword, ...(item.extended_keywords ?? []).slice(0, 3)].filter(Boolean))];
   posts.push({ id: item.id, slug: item.slug, title: item.title, excerpt, badge: "예약 글", category: item.cluster || "테니스 가이드", date: kst.slice(0, 10), scheduledAt: kst, readTime: `${Math.max(6, Math.ceil(plainText(markdown).length / 650))}분`, badgeColor: "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300", categoryColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300", tags });
-  contents[item.slug] = { summary: excerpt, highlight: item.answer_claim || item.subtitle || item.title, tags, content: html };
+  contents[item.slug] = {
+    summary: item.answer_claim || item.subtitle || excerpt,
+    highlight: item.subtitle || item.answer_claim || item.title,
+    tags,
+    content: html,
+  };
 }
 
 const metadata = `export const reviewedSeptember2026Posts = ${JSON.stringify(posts, null, 2)};\n`;

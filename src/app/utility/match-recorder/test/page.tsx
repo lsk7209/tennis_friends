@@ -426,17 +426,13 @@ export default function MatchRecorderTest() {
                 체계적인 경기 기록으로 실력 향상을 추적해보세요
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/utility/match-recorder/test">
-                  <Button className="bg-amber-500 hover:bg-amber-600">
+                <Button asChild className="bg-amber-500 hover:bg-amber-600"><Link href="/utility/match-recorder/test">
                     <Plus className="w-4 h-4 mr-2" />
                     새 경기 기록하기
-                  </Button>
-                </Link>
-                <Link href="/utility">
-                  <Button variant="outline">
+                  </Link></Button>
+                <Button asChild variant="outline"><Link href="/utility">
                     다른 도구 둘러보기
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </CardContent>
           </Card>

@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-09-15T06:18:00Z",
+  "environment": "Next.js development server, Chromium, 320x844",
+  "scope": "all src/app/utility route directories",
+  "total": 63,
+  "passed": 63,
+  "checks": [
+    "HTTP 200",
+    "exactly one H1",
+    "no horizontal overflow",
+    "no link-button or button-link nesting",
+    "no page console errors during initial load"
+  ],
+  "failures": []
+}

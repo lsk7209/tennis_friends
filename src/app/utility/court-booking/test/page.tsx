@@ -34,7 +34,7 @@ export default function CourtBookingTest() {
       toast.error('이용약관에 동의해주세요.');
       return;
     }
-    // 실제로는 API 호출 후 결과 페이지로 이동
+    // 데모 입력은 전송하거나 저장하지 않고 예시 결과로만 이동한다.
     router.push('/utility/court-booking/result');
   };
 
@@ -51,15 +51,13 @@ export default function CourtBookingTest() {
       <div className="bg-white border-b">
         <div className="container mx-auto max-w-4xl px-4 py-6">
           <div className="flex items-center gap-4">
-            <Link href="/utility/court-booking">
-              <Button variant="ghost" size="sm">
+            <Button asChild variant="ghost" size="sm"><Link href="/utility/court-booking">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 뒤로가기
-              </Button>
-            </Link>
+              </Link></Button>
             <div>
-              <h1 className="text-2xl font-bold">코트 예약하기</h1>
-              <p className="text-gray-600">실내 하드코트 A - 서울 강남점</p>
+              <h1 className="text-2xl font-bold">코트 예약 흐름 데모</h1>
+              <p className="text-gray-600">화면에 입력한 정보는 전송·저장되지 않으며 실제 예약이나 결제가 진행되지 않습니다.</p>
             </div>
           </div>
         </div>
@@ -87,7 +85,7 @@ export default function CourtBookingTest() {
               <div className="w-8 h-8 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center text-sm font-semibold">
                 3
               </div>
-              <span className="text-sm text-gray-500">완료</span>
+              <span className="text-sm text-gray-500">예시 결과</span>
             </div>
           </div>
         </div>
@@ -293,10 +291,10 @@ export default function CourtBookingTest() {
                 />
                 <div>
                   <Label htmlFor="terms" className="text-sm font-medium">
-                    이용약관 및 취소 정책에 동의합니다 *
+                    데모 화면임을 확인했습니다 *
                   </Label>
                   <p className="text-xs text-gray-500 mt-1">
-                    예약 24시간 전까지 무료 취소 가능합니다. 자세한 내용은 이용약관을 확인해주세요.
+                    입력 내용은 이 화면의 상태로만 사용되며 외부 예약처나 결제사로 전송되지 않습니다.
                   </p>
                 </div>
               </div>
@@ -305,13 +303,11 @@ export default function CourtBookingTest() {
 
           {/* Submit */}
           <div className="flex gap-4">
-            <Link href="/utility/court-booking" className="flex-1">
-              <Button variant="outline" className="w-full">
+            <Button asChild variant="outline" className="w-full"><Link href="/utility/court-booking" className="flex-1">
                 이전으로
-              </Button>
-            </Link>
+              </Link></Button>
             <Button type="submit" className="flex-1 bg-blue-600 hover:bg-blue-700">
-              예약 완료하기
+              예시 결과 보기
             </Button>
           </div>
         </form>

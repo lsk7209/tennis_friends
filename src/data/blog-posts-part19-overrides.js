@@ -10,7 +10,7 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-192-tennis-guide",
-    "title": "바람 부는 날 토스 조정, 시작 위치와 코스 폭",
+    "title": "바람 부는 날 토스 조정",
     "excerpt": "바람 부는 날 토스는 높이를 올리기보다 시작 위치와 코스 폭을 좁혀야 합니다.",
     "category": "서브 전략",
     "tags": ["바람 부는 날","서브 토스","코스 조정"],
@@ -19,7 +19,7 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-194-return-beginner",
-    "title": "리턴 게임 로브 타이밍, 서버 회복 위치 읽기",
+    "title": "서버 회복 위치로 로브 타이밍 읽기",
     "excerpt": "리턴 게임 로브는 상대 전위가 붙은 순간보다 서버 회복 위치를 보고 올립니다.",
     "category": "리턴 전략",
     "tags": ["리턴 게임","로브 타이밍","초보 리턴"],
@@ -208,7 +208,7 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-248-mental",
-    "title": "더블폴트 후 멘탈 복구, 토스 높이와 호흡 재설정",
+    "title": "더블폴트 직후 다음 토스 복구 루틴",
     "excerpt": "더블폴트 후 멘탈은 반성보다 다음 토스 높이와 호흡 길이를 정해야 회복됩니다.",
     "category": "멘탈 트레이닝",
     "tags": ["더블폴트","멘탈 복구","호흡 루틴"],
@@ -298,7 +298,7 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-263-string",
-    "title": "추운 날 스트링 텐션 감각, 딱딱한 타구감 점검",
+    "title": "추운 코트에서 스트링 반발감 기록하기",
     "excerpt": "추운 날 스트링 텐션은 딱딱한 타구감과 팔 부담을 경기 초반에 다시 확인해야 합니다.",
     "category": "장비 가이드",
     "tags": ["추운 날 스트링","텐션 감각","팔 부담"],
@@ -307,7 +307,7 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-264-tennis-guide",
-    "title": "장비 교체 테스트 순서, 기존 조건과 비교하기",
+    "title": "새 라켓과 스트링 교체 테스트 순서",
     "excerpt": "장비 교체 테스트는 새 장비 만족감보다 기존 장비와 같은 조건 비교가 먼저입니다.",
     "category": "장비 가이드",
     "tags": ["장비 교체","테스트 순서","조건 비교"],
@@ -334,7 +334,7 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-268-tennis-guide",
-    "title": "야간 조명 로브 대처, 첫 후퇴 방향 정하기",
+    "title": "야간 조명 아래 높은 로브 추적법",
     "excerpt": "야간 조명 아래 로브는 늦게 보는 문제가 많아 첫 후퇴 방향을 먼저 정해야 합니다.",
     "category": "코트 환경",
     "tags": ["야간 조명","로브 대처","후퇴 방향"],
@@ -352,7 +352,7 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-270-doubles",
-    "title": "복식 스트레이트 패싱 위치, 전위 발과 라켓 면 읽기",
+    "title": "복식 전위 옆 스트레이트 패싱 목표점",
     "excerpt": "복식 스트레이트 패싱은 강타보다 전위 발 위치와 라켓 면을 보고 결정합니다.",
     "category": "복식 전술",
     "tags": ["복식 스트레이트","패싱 위치","전위"],
@@ -370,7 +370,7 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-276-match",
-    "title": "테니스 가방 경기 전 준비, 빠지면 흔들리는 항목",
+    "title": "원정 경기 전 테니스 가방 최종 점검",
     "excerpt": "테니스 가방은 물건 목록보다 빠졌을 때 경기력이 흔들리는 항목부터 챙깁니다.",
     "category": "경기 준비",
     "tags": ["테니스 가방","경기 전 준비","준비물"],

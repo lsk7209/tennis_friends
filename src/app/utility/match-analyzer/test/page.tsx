@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { toast } from 'sonner';
 import { MatchAnalysisInput, analyzeMatch } from '@/lib/matchAnalyzer';
 
 export default function MatchAnalyzerTest() {
@@ -61,7 +62,13 @@ export default function MatchAnalyzerTest() {
       setCurrentStep(prev => prev + 1);
     } else {
       // 모든 데이터 입력 완료 - 분석 실행
-      const result = analyzeMatch(formData as MatchAnalysisInput);
+      let result;
+      try {
+        result = analyzeMatch(formData as MatchAnalysisInput);
+      } catch {
+        toast.error('횟수는 0 이상이어야 하며 성공 횟수는 전체 시도를 넘을 수 없습니다.');
+        return;
+      }
       
       // 결과 페이지로 이동
       const params = new URLSearchParams();

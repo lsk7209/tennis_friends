@@ -1,21 +1,20 @@
 {
-  "status": "ok",
-  "generatedAt": "2026-06-02T03:27:05.468Z",
+  "status": "fail",
+  "generatedAt": "2026-09-15T04:57:51.637Z",
   "minRequiredScore": 90,
   "minRequiredChars": 3500,
   "expectedIntervalHours": 5,
   "manifests": [
     {
       "path": "out/article-writer/tennisfrens-300/manifest.json",
-      "status": "ok",
-      "total": 300,
-      "passCount": 300,
-      "minScore": null,
-      "maxScore": null,
-      "minChars": 3678,
-      "maxChars": 3796,
-      "scheduledIntervals": [],
-      "findings": []
+      "status": "missing",
+      "total": 0,
+      "findings": [
+        {
+          "issue": "manifest_missing",
+          "path": "out/article-writer/tennisfrens-300/manifest.json"
+        }
+      ]
     },
     {
       "path": "out/article-writer/tennisfrens-part12/manifest.json",
@@ -33,17 +32,14 @@
     },
     {
       "path": "out/article-writer/tennisfrens-title-100-2026-06-01/manifest.json",
-      "status": "ok",
-      "total": 100,
-      "passCount": 100,
-      "minScore": 110,
-      "maxScore": 110,
-      "minChars": 4019,
-      "maxChars": 4290,
-      "scheduledIntervals": [
-        5
-      ],
-      "findings": []
+      "status": "missing",
+      "total": 0,
+      "findings": [
+        {
+          "issue": "manifest_missing",
+          "path": "out/article-writer/tennisfrens-title-100-2026-06-01/manifest.json"
+        }
+      ]
     }
   ],
   "qualityReports": [
@@ -58,12 +54,27 @@
     },
     {
       "path": "out/article-writer/tennisfrens-title-100-2026-06-01/quality-report.json",
-      "status": "ok",
-      "total": 100,
-      "minScore": 110,
-      "maxScore": 110,
-      "findings": []
+      "status": "missing",
+      "findings": [
+        {
+          "issue": "quality_report_missing",
+          "path": "out/article-writer/tennisfrens-title-100-2026-06-01/quality-report.json"
+        }
+      ]
     }
   ],
-  "findings": []
+  "findings": [
+    {
+      "path": "out/article-writer/tennisfrens-300/manifest.json",
+      "issue": "manifest_missing"
+    },
+    {
+      "path": "out/article-writer/tennisfrens-title-100-2026-06-01/manifest.json",
+      "issue": "manifest_missing"
+    },
+    {
+      "path": "out/article-writer/tennisfrens-title-100-2026-06-01/quality-report.json",
+      "issue": "quality_report_missing"
+    }
+  ]
 }

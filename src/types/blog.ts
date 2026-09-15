@@ -8,6 +8,11 @@ export interface BlogPostData {
   category: string;
   date: string;
   scheduledAt?: string;
+  publicationState?: "published" | "draft" | "private";
+  updatedAt?: string;
+  verifiedAt?: string;
+  author?: string;
+  sources?: Array<{ name: string; url: string; checkedAt?: string }>;
   readTime: string;
   badgeColor?: string;
   categoryColor?: string;

@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "source": "GSC_OR_GA4",
+    "property": null,
+    "timezone": null,
+    "dateStart": null,
+    "dateEnd": null,
+    "dimensions": [],
+    "rowLimit": null,
+    "anonymized": true
+  },
+  "rows": [
+    {
+      "url": "https://tennisfrens.com/example",
+      "clicks": null,
+      "impressions": null,
+      "views": null,
+      "sessions": null,
+      "engagementRate": null
+    }
+  ]
+}

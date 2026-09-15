@@ -145,7 +145,7 @@ export default function Home() {
               {
                 question: "NTRP 테니스 등급이란 무엇인가요?",
                 answer:
-                  "NTRP(National Tennis Rating Program)는 1.0부터 7.0까지의 숫자로 테니스 실력을 객관적으로 평가하는 국제 표준 등급 시스템입니다. 1.0은 완전 초보자, 3.0은 중급 동호인, 5.0 이상은 프로 수준입니다. TennisFriends의 무료 NTRP 테스트로 10개 질문에 답하면 나의 등급을 확인할 수 있습니다.",
+                  "NTRP(National Tennis Rating Program)는 테니스 경기 수준을 설명하는 참고 기준입니다. TennisFriends의 15개 질문 자가 진단은 이 기준을 참고한 비공식 도구이며, 공식 등급이나 코치의 평가를 대체하지 않습니다.",
               },
               {
                 question: "테니스 스트링 텐션은 어떻게 정해야 하나요?",

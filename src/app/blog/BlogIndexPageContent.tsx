@@ -5,20 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { getBlogIndexPage } from "@/lib/blog-index";
-
-function pageHref(page: number) {
-  return page <= 1 ? "/blog" : `/blog/page/${page}`;
-}
-
-function pageWindow(currentPage: number, totalPages: number) {
-  const start = Math.max(1, currentPage - 2);
-  const end = Math.min(totalPages, currentPage + 2);
-  return Array.from({ length: end - start + 1 }, (_, index) => start + index);
-}
+import { getBlogPageHref, getPaginationWindow } from "@/lib/blog-publish";
 
 export default function BlogIndexPageContent({ page }: { page: number }) {
-  const { posts, currentPage, totalPages, totalPosts } = getBlogIndexPage(page);
-  const visiblePages = pageWindow(currentPage, totalPages);
+  const { posts, currentPage, totalPages, totalPosts, outOfRange } =
+    getBlogIndexPage(page);
+  if (outOfRange) return null;
+  const visiblePageHrefs = getPaginationWindow(currentPage, totalPages);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
@@ -71,13 +64,16 @@ export default function BlogIndexPageContent({ page }: { page: number }) {
 
         {totalPages > 1 && (
           <nav className="mt-10 flex flex-wrap items-center justify-center gap-2" aria-label="블로그 페이지">
-            {currentPage > 1 && <Button asChild variant="outline" size="sm"><Link href={pageHref(currentPage - 1)}>이전</Link></Button>}
-            {visiblePages[0] > 1 && <Button asChild variant="outline" size="sm"><Link href="/blog">1</Link></Button>}
-            {visiblePages[0] > 2 && <span className="px-1 text-sm text-slate-400">…</span>}
-            {visiblePages.map((pageNumber) => <Button key={pageNumber} asChild variant={pageNumber === currentPage ? "default" : "outline"} size="sm"><Link href={pageHref(pageNumber)} aria-current={pageNumber === currentPage ? "page" : undefined}>{pageNumber}</Link></Button>)}
-            {visiblePages.at(-1)! < totalPages - 1 && <span className="px-1 text-sm text-slate-400">…</span>}
-            {visiblePages.at(-1)! < totalPages && <Button asChild variant="outline" size="sm"><Link href={pageHref(totalPages)}>{totalPages}</Link></Button>}
-            {currentPage < totalPages && <Button asChild variant="outline" size="sm"><Link href={pageHref(currentPage + 1)}>다음</Link></Button>}
+            {currentPage > 1 && <Button asChild variant="outline" size="sm"><Link href={getBlogPageHref(currentPage - 1)}>이전</Link></Button>}
+            {visiblePageHrefs[0] !== "/blog" && <Button asChild variant="outline" size="sm"><Link href="/blog">1</Link></Button>}
+            {currentPage > 4 && <span className="px-1 text-sm text-slate-400">…</span>}
+            {visiblePageHrefs.map((href) => {
+              const pageNumber = href === "/blog" ? 1 : Number(href.split("/").at(-1));
+              return <Button key={href} asChild variant={pageNumber === currentPage ? "default" : "outline"} size="sm"><Link href={href} aria-current={pageNumber === currentPage ? "page" : undefined}>{pageNumber}</Link></Button>;
+            })}
+            {currentPage + 2 < totalPages - 1 && <span className="px-1 text-sm text-slate-400">…</span>}
+            {!visiblePageHrefs.includes(getBlogPageHref(totalPages)) && <Button asChild variant="outline" size="sm"><Link href={getBlogPageHref(totalPages)}>{totalPages}</Link></Button>}
+            {currentPage < totalPages && <Button asChild variant="outline" size="sm"><Link href={getBlogPageHref(currentPage + 1)}>다음</Link></Button>}
           </nav>
         )}
       </section>

@@ -361,7 +361,7 @@ export const articleWriterPart16PostOverrides = [
   },
   {
     "slug": "aw-114-shoes",
-    "title": "테니스화 밑창 마모, 발목 부담 줄이는 확인법",
+    "title": "테니스화 밑창 마모 확인",
     "excerpt": "테니스화 밑창 마모를 코트별 미끄러짐과 발목 부담 기준으로 봅니다.",
     "category": "장비 가이드",
     "tags": ["테니스화","밑창 마모","발목"],
@@ -377,7 +377,7 @@ export const articleWriterPart16PostOverrides = [
   },
   {
     "slug": "aw-116-court",
-    "title": "클레이코트 슬라이딩 입문, 멈춤과 균형 회복",
+    "title": "클레이코트 슬라이딩 입문",
     "excerpt": "클레이코트 슬라이딩을 멈춤 동작과 균형 회복 기준으로 시작합니다.",
     "category": "코트 환경",
     "tags": ["클레이코트","슬라이딩","입문"],

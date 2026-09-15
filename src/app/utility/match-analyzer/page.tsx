@@ -24,17 +24,13 @@ export default function MatchAnalyzerPage() {
             경기를 구조적으로 다시 보는 흐름에 맞춰 구성했습니다.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link href="/utility/match-analyzer/test">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-blue-50"><Link href="/utility/match-analyzer/test">
                 <BarChart3 className="mr-2 h-5 w-5" />
                 경기 분석 시작
-              </Button>
-            </Link>
-            <Link href="/utility/match-recorder">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              </Link></Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10"><Link href="/utility/match-recorder">
                 경기 기록 보러 가기
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
         </section>
 
@@ -71,9 +67,7 @@ export default function MatchAnalyzerPage() {
                 </div>
                 <p className="mt-2 text-sm leading-6 text-blue-900">한 경기마다 개선 포인트를 1개만 정리하면 실제 연습 반영률이 높아집니다.</p>
               </div>
-              <Link href="/utility/match-analyzer/test">
-                <Button className="bg-blue-600 text-white hover:bg-blue-700">분석하러 가기</Button>
-              </Link>
+              <Button asChild className="bg-blue-600 text-white hover:bg-blue-700"><Link href="/utility/match-analyzer/test">분석하러 가기</Link></Button>
             </CardContent>
           </Card>
         </section>

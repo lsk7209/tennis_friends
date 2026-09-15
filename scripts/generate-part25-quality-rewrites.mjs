@@ -2,10 +2,12 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { withKoreanParticle } from "../src/lib/korean-particle.js";
 import { articleWriterPart12Posts } from "../src/data/blog-posts-aw-part12.js";
 import { articleWriterTitle100Posts } from "../src/data/blog-posts-aw-title100.js";
 
 const ROOT = process.cwd();
+const j = withKoreanParticle;
 const CONTENT_OUT = path.join(
   ROOT,
   "src",
@@ -243,7 +245,7 @@ function makeTitle(topic, variant) {
 }
 
 function makeExcerpt(topic, variant) {
-  return `${topic.main}를 ${topic.extended}, ${topic.support} 기준으로 바로 점검합니다.`;
+  return `${j(topic.main, "을/를")} ${topic.extended}, ${topic.support} 기준으로 바로 점검합니다.`;
 }
 
 function buildContent(row, index) {
@@ -255,11 +257,11 @@ function buildContent(row, index) {
   const exampleScore = index % 3 === 0 ? "30-30" : index % 3 === 1 ? "듀스" : "세컨드 서브";
   const pressure = index % 2 === 0 ? "상대가 먼저 항의하거나 전진 압박을 거는 순간" : "내가 급하게 결론을 내리고 싶은 순간";
 
-  return `<p>${row.title}는 ${topic.angle}입니다. 검색으로는 ${topic.main}의 정답처럼 보이는 조언이 많지만, 동호회 코트에서는 상대 수준, 예약 방식, 공의 속도, 파트너와의 약속이 섞이면서 판단이 자주 흔들립니다. 이 글은 ${topic.extended}와 ${topic.support}를 함께 보며 바로 적용할 수 있는 기준을 남기는 데 초점을 둡니다.</p>
-<p>핵심은 ${topic.action}는 것입니다. ${variant.intent}. 그래서 이 글은 기술 설명만 늘리지 않고, 경기 전 확인, 포인트 중 판단, 경기 후 기록을 한 번에 연결합니다. 공식 규칙이나 기본 절차는 <a href="${source[1]}" target="_blank" rel="noopener noreferrer">${source[0]}</a>처럼 신뢰할 수 있는 자료를 기준으로 두고, 실제 동호회 상황에서는 더 짧고 반복 가능한 문장으로 바꿔야 합니다.</p>
-<aside class="${accent} border-l-4 p-4 my-6"><strong>오늘의 적용 기준</strong><br />${topic.main}를 볼 때는 감정 평가보다 ${topic.extended} 신호를 먼저 확인합니다. 그다음 ${topic.support} 한 줄을 남기면 다음 경기에서 같은 실수를 줄일 수 있습니다.</aside>
-<h2>${topic.main}를 시작하기 전 확인할 것</h2>
-<p>${topic.main}는 혼자만 잘 이해한다고 해결되지 않습니다. 특히 ${exampleScore}처럼 흐름이 바뀌는 점수에서는 말이 길어질수록 판단 품질이 떨어집니다. 경기 전에는 기준을 하나만 고릅니다. 예를 들어 "${topic.extended}가 흔들리면 ${topic.support}를 먼저 확인한다"처럼 행동이 보이는 문장으로 정리해야 합니다.</p>
+  return `<p>${j(row.title, "은/는")} ${topic.angle}입니다. 검색으로는 ${topic.main}의 정답처럼 보이는 조언이 많지만, 동호회 코트에서는 상대 수준, 예약 방식, 공의 속도, 파트너와의 약속이 섞이면서 판단이 자주 흔들립니다. 이 글은 ${j(topic.extended, "과/와")} ${j(topic.support, "을/를")} 함께 보며 바로 적용할 수 있는 기준을 남기는 데 초점을 둡니다.</p>
+<p>핵심은 ${j(topic.action, "은/는")} 것입니다. ${variant.intent}. 그래서 이 글은 기술 설명만 늘리지 않고, 경기 전 확인, 포인트 중 판단, 경기 후 기록을 한 번에 연결합니다. 공식 규칙이나 기본 절차는 <a href="${source[1]}" target="_blank" rel="noopener noreferrer">${source[0]}</a>처럼 신뢰할 수 있는 자료를 기준으로 두고, 실제 동호회 상황에서는 더 짧고 반복 가능한 문장으로 바꿔야 합니다.</p>
+<aside class="${accent} border-l-4 p-4 my-6"><strong>오늘의 적용 기준</strong><br />${j(topic.main, "을/를")} 볼 때는 감정 평가보다 ${topic.extended} 신호를 먼저 확인합니다. 그다음 ${topic.support} 한 줄을 남기면 다음 경기에서 같은 실수를 줄일 수 있습니다.</aside>
+<h2>${j(topic.main, "을/를")} 시작하기 전 확인할 것</h2>
+<p>${j(topic.main, "은/는")} 혼자만 잘 이해한다고 해결되지 않습니다. 특히 ${exampleScore}처럼 흐름이 바뀌는 점수에서는 말이 길어질수록 판단 품질이 떨어집니다. 경기 전에는 기준을 하나만 고릅니다. 예를 들어 "${j(topic.extended, "이/가")} 흔들리면 ${j(topic.support, "을/를")} 먼저 확인한다"처럼 행동이 보이는 문장으로 정리해야 합니다.</p>
 <ul>
   <li>${topic.extended}: 지금 상황에서 가장 먼저 볼 외부 신호입니다.</li>
   <li>${topic.support}: 다음 경기까지 가져갈 기록 단위입니다.</li>
@@ -267,34 +269,34 @@ function buildContent(row, index) {
 </ul>
 <p>초보자는 문제를 많이 고치려 하고, 중급자는 우선순위를 줄입니다. ${topic.main}에서도 마찬가지입니다. 라켓면, 발, 상대 반응, 파트너 약속, 코트 예약, 판정 표현을 한꺼번에 고치려 하면 다음 포인트가 더 불안해집니다. 오늘은 하나만 봅니다. ${topic.action}. 이 문장이 남으면 이미 절반은 정리된 것입니다.</p>
 <h2>${row.title} 실행 순서</h2>
-<p>실행 순서는 네 단계로 나누면 충분합니다. 첫째, 경기 전에는 ${topic.main}가 생길 가능성이 높은 장면을 하나 적습니다. 둘째, 포인트 중에는 ${pressure}을 신호로 삼습니다. 셋째, 포인트 뒤에는 말보다 짧은 확인 문장을 씁니다. 넷째, 경기 뒤에는 ${topic.support}를 남겨 다음 연습 과제로 넘깁니다.</p>
+<p>실행 순서는 네 단계로 나누면 충분합니다. 첫째, 경기 전에는 ${j(topic.main, "이/가")} 생길 가능성이 높은 장면을 하나 적습니다. 둘째, 포인트 중에는 ${j(pressure, "을/를")} 신호로 삼습니다. 셋째, 포인트 뒤에는 말보다 짧은 확인 문장을 씁니다. 넷째, 경기 뒤에는 ${j(topic.support, "을/를")} 남겨 다음 연습 과제로 넘깁니다.</p>
 <table>
   <thead><tr><th>구간</th><th>확인 질문</th><th>남길 문장</th></tr></thead>
   <tbody>
-    <tr><td>경기 전</td><td>${topic.main}가 나올 장면은 어디인가?</td><td>${topic.extended} 기준 1개</td></tr>
+    <tr><td>경기 전</td><td>${j(topic.main, "이/가")} 나올 장면은 어디인가?</td><td>${topic.extended} 기준 1개</td></tr>
     <tr><td>포인트 중</td><td>지금 반응은 판단인가 감정인가?</td><td>멈춤 신호 1개</td></tr>
     <tr><td>경기 후</td><td>다음에 반복할 행동은 무엇인가?</td><td>${topic.support} 한 줄</td></tr>
   </tbody>
 </table>
-<p>이 표는 복잡한 분석을 대신하는 장치가 아닙니다. 경기 중에는 자세한 설명보다 빠른 복구가 중요합니다. ${topic.main}가 흔들릴 때 ${topic.extended}를 확인하고, 바로 ${topic.support}로 연결하면 포인트 사이 시간이 짧아져도 다음 행동이 남습니다. 이 방식은 실내 코트, 야외 코트, 복식, 단식 모두에 맞게 줄여 쓸 수 있습니다.</p>
+<p>이 표는 복잡한 분석을 대신하는 장치가 아닙니다. 경기 중에는 자세한 설명보다 빠른 복구가 중요합니다. ${j(topic.main, "이/가")} 흔들릴 때 ${j(topic.extended, "을/를")} 확인하고, 바로 ${j(topic.support, "으로/로")} 연결하면 포인트 사이 시간이 짧아져도 다음 행동이 남습니다. 이 방식은 실내 코트, 야외 코트, 복식, 단식 모두에 맞게 줄여 쓸 수 있습니다.</p>
 <h2>${topic.extended}에서 자주 나오는 실수</h2>
-<p>첫 번째 실수는 원인을 너무 빨리 단정하는 것입니다. ${topic.main}가 나왔을 때 바로 실력, 성격, 집중력 문제로 결론 내리면 실제 조정 지점이 사라집니다. 두 번째 실수는 한 번에 모든 것을 바꾸는 것입니다. ${variant.label} 관점에서는 ${topic.support} 하나만 남겨도 충분합니다. 세 번째 실수는 기록을 경기 뒤 감상문처럼 길게 쓰는 것입니다. 기록은 짧아야 다시 읽힙니다.</p>
-<p>예를 들어 ${topic.main} 상황에서 "다음부터 조심"이라고 적으면 다음 행동이 없습니다. 대신 "${topic.extended}가 보이면 ${topic.support}를 확인"이라고 적으면 다음 경기 전 바로 읽을 수 있습니다. 이 차이가 누적되면 같은 레벨의 상대와 경기해도 회복 속도가 달라집니다.</p>
+<p>첫 번째 실수는 원인을 너무 빨리 단정하는 것입니다. ${j(topic.main, "이/가")} 나왔을 때 바로 실력, 성격, 집중력 문제로 결론 내리면 실제 조정 지점이 사라집니다. 두 번째 실수는 한 번에 모든 것을 바꾸는 것입니다. ${variant.label} 관점에서는 ${topic.support} 하나만 남겨도 충분합니다. 세 번째 실수는 기록을 경기 뒤 감상문처럼 길게 쓰는 것입니다. 기록은 짧아야 다시 읽힙니다.</p>
+<p>예를 들어 ${topic.main} 상황에서 "다음부터 조심"이라고 적으면 다음 행동이 없습니다. 대신 "${j(topic.extended, "이/가")} 보이면 ${j(topic.support, "을/를")} 확인"이라고 적으면 다음 경기 전 바로 읽을 수 있습니다. 이 차이가 누적되면 같은 레벨의 상대와 경기해도 회복 속도가 달라집니다.</p>
 <h2>초보와 중급자의 판단 차이</h2>
-<p>초보자는 ${topic.main}를 결과로 봅니다. 성공했는지 실패했는지만 남기기 쉽습니다. 중급자는 과정을 봅니다. 어떤 신호를 보고, 어느 순간에 멈추고, 무엇을 다음 포인트로 넘겼는지 확인합니다. 그래서 ${topic.extended}와 ${topic.support}를 분리하는 습관이 중요합니다. 점수 하나를 잃어도 다음 판단이 좋아지면 글의 목적은 달성됩니다.</p>
+<p>초보자는 ${j(topic.main, "을/를")} 결과로 봅니다. 성공했는지 실패했는지만 남기기 쉽습니다. 중급자는 과정을 봅니다. 어떤 신호를 보고, 어느 순간에 멈추고, 무엇을 다음 포인트로 넘겼는지 확인합니다. 그래서 ${j(topic.extended, "과/와")} ${j(topic.support, "을/를")} 분리하는 습관이 중요합니다. 점수 하나를 잃어도 다음 판단이 좋아지면 글의 목적은 달성됩니다.</p>
 <ol>
   <li>오늘 자주 흔들린 장면 하나를 고릅니다.</li>
   <li>${topic.extended} 신호가 있었는지 짧게 적습니다.</li>
-  <li>${topic.support}로 다음 행동을 한 줄로 만듭니다.</li>
+  <li>${j(topic.support, "으로/로")} 다음 행동을 한 줄로 만듭니다.</li>
   <li>다음 경기 전 그 문장만 다시 읽습니다.</li>
 </ol>
-<p>이 루틴은 <a href="${linkA[0]}">${linkA[1]}</a>와 함께 쓰면 더 좋습니다. 경기 뒤 복기가 필요한 날에는 <a href="${linkB[0]}">${linkB[1]}</a>로 연결해 한 가지 과제만 남기세요. ${topic.main}는 많이 아는 사람보다 같은 기준을 반복하는 사람이 먼저 안정됩니다.</p>
-<h2>${variant.form}로 남기는 3분 복기</h2>
-<p>경기 후 3분이면 충분합니다. 첫 줄에는 ${topic.main}가 나온 장면을 씁니다. 둘째 줄에는 ${topic.extended}가 보였는지 씁니다. 셋째 줄에는 ${topic.support}로 다음 행동을 씁니다. 이때 잘했다, 못했다 같은 평가 단어는 줄입니다. 대신 언제, 어디서, 무엇을 봤는지 남겨야 다음 연습과 연결됩니다.</p>
-<details><summary>${topic.main}는 초보자도 바로 적용할 수 있나요?</summary><p>가능합니다. 기준을 하나로 줄이고 ${topic.support} 한 줄만 남기면 과한 분석 없이 다음 경기에서 다시 확인할 수 있습니다.</p></details>
-<details><summary>${topic.extended}가 계속 흔들리면 무엇부터 바꾸나요?</summary><p>기술 전체를 바꾸기보다 멈춤 신호 하나를 정하세요. 같은 장면이 반복되면 그때 연습 과제로 분리하면 됩니다.</p></details>
+<p>이 루틴은 <a href="${linkA[0]}">${linkA[1]}</a>와 함께 쓰면 더 좋습니다. 경기 뒤 복기가 필요한 날에는 <a href="${linkB[0]}">${linkB[1]}</a>로 연결해 한 가지 과제만 남기세요. ${j(topic.main, "은/는")} 많이 아는 사람보다 같은 기준을 반복하는 사람이 먼저 안정됩니다.</p>
+<h2>${j(variant.form, "으로/로")} 남기는 3분 복기</h2>
+<p>경기 후 3분이면 충분합니다. 첫 줄에는 ${j(topic.main, "이/가")} 나온 장면을 씁니다. 둘째 줄에는 ${j(topic.extended, "이/가")} 보였는지 씁니다. 셋째 줄에는 ${j(topic.support, "으로/로")} 다음 행동을 씁니다. 이때 잘했다, 못했다 같은 평가 단어는 줄입니다. 대신 언제, 어디서, 무엇을 봤는지 남겨야 다음 연습과 연결됩니다.</p>
+<details><summary>${j(topic.main, "은/는")} 초보자도 바로 적용할 수 있나요?</summary><p>가능합니다. 기준을 하나로 줄이고 ${topic.support} 한 줄만 남기면 과한 분석 없이 다음 경기에서 다시 확인할 수 있습니다.</p></details>
+<details><summary>${j(topic.extended, "이/가")} 계속 흔들리면 무엇부터 바꾸나요?</summary><p>기술 전체를 바꾸기보다 멈춤 신호 하나를 정하세요. 같은 장면이 반복되면 그때 연습 과제로 분리하면 됩니다.</p></details>
 <details><summary>${variant.label} 방식은 얼마나 자주 쓰면 되나요?</summary><p>매 경기 전부가 아니라 같은 문제가 두 번 이상 반복된 날에만 쓰면 충분합니다. 짧고 반복 가능한 기록이 핵심입니다.</p></details>
-<p>정리하면 ${row.title}의 목표는 많은 정보를 외우는 것이 아닙니다. ${topic.main}, ${topic.extended}, ${topic.support}를 연결해 코트에서 다시 꺼낼 수 있는 한 문장을 만드는 것입니다. 오늘은 한 장면만 고르고, 다음 경기 전 그 문장만 확인하세요. 그것이 실제로 검색 노출보다 오래 남는 콘텐츠 품질입니다.</p>`;
+<p>정리하면 ${row.title}의 목표는 많은 정보를 외우는 것이 아닙니다. ${topic.main}, ${topic.extended}, ${j(topic.support, "을/를")} 연결해 코트에서 다시 꺼낼 수 있는 한 문장을 만드는 것입니다. 오늘은 한 장면만 고르고, 다음 경기 전 그 문장만 확인하세요. 그것이 실제로 검색 노출보다 오래 남는 콘텐츠 품질입니다.</p>`;
 }
 
 const rows = TARGET_SLUGS.map((slug, index) => {
@@ -318,7 +320,7 @@ const contentEntries = rows
   .map((row, index) => {
     const faq = [
       {
-        question: `${row.topic.main}는 어디서부터 고치나요?`,
+        question: `${j(row.topic.main, "은/는")} 어디서부터 고치나요?`,
         answer: `${row.topic.extended} 신호를 먼저 확인하고 ${row.topic.support} 한 줄로 다음 행동을 남기면 됩니다.`,
       },
       {
@@ -334,7 +336,7 @@ const contentEntries = rows
     content: ${esc(buildContent(row, index))},
     tags: ${esc(row.tags)},
     summary: ${esc(row.excerpt)},
-    highlight: ${esc(`${row.topic.main}를 ${row.topic.extended}, ${row.topic.support} 기준으로 줄여 실제 경기에서 다시 쓸 수 있게 정리합니다.`)},
+    highlight: ${esc(`${j(row.topic.main, "을/를")} ${row.topic.extended}, ${row.topic.support} 기준으로 줄여 실제 경기에서 다시 쓸 수 있게 정리합니다.`)},
     faq: ${JSON.stringify(faq, null, 6).replaceAll("\n", "\n    ")},
   }`;
   })

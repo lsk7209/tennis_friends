@@ -8,7 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {Calculator, Share2, RotateCcw, Target, Settings, TrendingUp, AlertCircle, ArrowRight, CheckCircle, Sparkles} from 'lucide-react';
-import { calculateTension, getTensionComparison, TensionInput } from '@/lib/tensionCalc';
+import { calculateTension, getTensionComparison, isTensionInput, TENSION_MODEL_VERSION, TensionInput } from '@/lib/tensionCalc';
+import { AccessibleErrorState } from '@/components/AccessibleErrorState';
 
 function StringTensionResultContent() {
   const searchParams = useSearchParams();
@@ -22,8 +23,8 @@ function StringTensionResultContent() {
       ntrpLevel: searchParams.get('ntrpLevel') as TensionInput['ntrpLevel']
     };
 
-    if (params.headSize && params.stringType && params.playStyle && params.environment && params.feelPreference) {
-      const inputData = params as TensionInput;
+    if (isTensionInput(params)) {
+      const inputData: TensionInput = params;
       return {
         inputData,
         result: calculateTension(inputData),
@@ -60,18 +61,15 @@ function StringTensionResultContent() {
 
   if (!result || !inputData) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-emerald-50 to-teal-50 flex items-center justify-center">
-        <div className="text-center">
-          <AlertCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">결과를 불러올 수 없습니다</h2>
-          <p className="text-gray-600 mb-6">입력 데이터가 올바르지 않습니다.</p>
-          <Link href="/utility/string-tension/test">
-            <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white">
-              다시 테스트하기
-            </Button>
-          </Link>
-        </div>
-      </div>
+      <AccessibleErrorState
+        title="결과를 불러올 수 없습니다"
+        description="입력 데이터가 올바르지 않습니다. 다시 테스트해 주세요."
+        actionLabel="다시 테스트하기"
+        actionHref="/utility/string-tension/test"
+        className="bg-gradient-to-br from-blue-50 via-emerald-50 to-teal-50"
+        actionClassName="bg-gradient-to-r from-blue-600 to-emerald-600 text-white hover:from-blue-700 hover:to-emerald-700"
+        icon={<AlertCircle aria-hidden="true" className="mx-auto mb-4 h-16 w-16 text-red-500" />}
+      />
     );
   }
 
@@ -121,12 +119,10 @@ function StringTensionResultContent() {
                 <Share2 className="h-5 w-5 mr-2" />
                 결과 공유하기
               </Button>
-              <Link href="/utility/string-tension/test">
-                <Button variant="outline" className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/30 px-8 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
+              <Button asChild variant="outline" className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/30 px-8 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"><Link href="/utility/string-tension/test">
                   <RotateCcw className="h-5 w-5 mr-2" />
                   다시 계산하기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </div>
         </div>
@@ -199,6 +195,18 @@ function StringTensionResultContent() {
           </div>
 
           {/* Tips Section */}
+          <Card className="mb-8 border-blue-200 bg-blue-50">
+            <CardContent className="p-6 text-sm leading-6 text-blue-950">
+              <h2 className="font-bold">계산 기준과 한계</h2>
+              <p className="mt-2">
+                기준값 55lb에서 헤드 크기, 스트링 종류, 플레이 성향, 계절·환경, 타구감, 참고 NTRP를 항목별 ±1~2lb로 조정하고 45~65lb 범위로 제한합니다. kg은 lb×0.453592를 소수점 첫째 자리로 반올림합니다.
+              </p>
+              <p className="mt-2">
+                모델 버전: {TENSION_MODEL_VERSION}. 라켓 제조사 권장 범위와 현재 스트링 상태를 우선하고, 이 값은 전문 스트링어의 점검을 대체하지 않습니다.
+              </p>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 mb-8">
             <CardContent className="p-8">
               <div className="flex items-center gap-3 mb-8">
@@ -342,23 +350,19 @@ function StringTensionResultContent() {
                   텐션 계산이 도움이 되셨나요?
                 </h2>
                 <p className="text-xl text-gray-700 mb-10 leading-relaxed font-medium">
-                  더 많은 테니스 도구와 전문가 조언이 TennisFriends에 있습니다.<br />
+                  더 많은 테니스 도구와 전문가 조언이 TennisFriends에 있습니다.{' '}<br />
                   <span className="text-gray-600">지금 바로 다른 유틸리티도 활용해보세요!</span>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/utility/ntrp-test">
-                    <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  <Button asChild className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"><Link href="/utility/ntrp-test">
                       <Target className="h-5 w-5 mr-2" />
                       NTRP 실력 테스트
                       <ArrowRight className="h-5 w-5 ml-2" />
-                    </Button>
-                  </Link>
-                  <Link href="/utility/injury-risk">
-                    <Button variant="outline" className="bg-white border-2 border-gray-300 hover:border-blue-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    </Link></Button>
+                  <Button asChild variant="outline" className="bg-white border-2 border-gray-300 hover:border-blue-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility/injury-risk">
                       <Settings className="h-5 w-5 mr-2" />
                       부상 리스크 체크
-                    </Button>
-                  </Link>
+                    </Link></Button>
                 </div>
               </div>
             </CardContent>

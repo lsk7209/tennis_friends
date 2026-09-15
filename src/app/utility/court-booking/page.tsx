@@ -28,18 +28,14 @@ export default function Page() {
             </p>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-3">
-            <Link href="/utility/court-booking/test">
-              <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button asChild className="bg-blue-600 hover:bg-blue-700"><Link href="/utility/court-booking/test">
                 <CalendarDays className="mr-2 h-4 w-4" />
                 예약 흐름 보기
-              </Button>
-            </Link>
-            <Link href="/utility/court-booking/result">
-              <Button variant="outline">
+              </Link></Button>
+            <Button asChild variant="outline"><Link href="/utility/court-booking/result">
                 <Clock3 className="mr-2 h-4 w-4" />
                 결과 예시 보기
-              </Button>
-            </Link>
+              </Link></Button>
           </CardContent>
         </Card>
 

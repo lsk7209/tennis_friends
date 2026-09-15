@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { toast } from 'sonner';
 import { EquipmentInput, calculateEquipmentRecommendations } from '@/lib/equipmentRecommendation';
 
 const AUTO_ADVANCE_DELAY_MS = 300;
@@ -161,7 +162,13 @@ export default function EquipmentRecommendationTest() {
       setCurrentStep(prev => prev + 1);
     } else {
       // 모든 질문 완료 - 결과 계산
-      const result = calculateEquipmentRecommendations(nextFormData as EquipmentInput);
+      let result;
+      try {
+        result = calculateEquipmentRecommendations(nextFormData as EquipmentInput);
+      } catch {
+        toast.error('입력값을 다시 확인해 주세요.');
+        return;
+      }
       
       // 결과 페이지로 이동
       const params = new URLSearchParams();

@@ -49,7 +49,7 @@ export const articleWriterPart17PostOverrides = [
   },
   {
     "slug": "aw-020-tennis-guide",
-    "title": "바람 부는 날 토스 조정",
+    "title": "측풍에서 서브 토스 시작점 좁히기",
     "excerpt": "바람 부는 날 서브 토스를 높이보다 시작 위치, 회전, 목표 코스로 조정하는 기준입니다.",
     "category": "서브 전략",
     "tags": ["바람 부는 날","서브 토스","코스 조정"],
@@ -113,7 +113,7 @@ export const articleWriterPart17PostOverrides = [
   },
   {
     "slug": "aw-028-shoes",
-    "title": "테니스화 밑창 마모 확인",
+    "title": "테니스화 좌우 밑창 마모 비교법",
     "excerpt": "테니스화 밑창 마모를 코트별 미끄러짐, 발목 피로, 교체 시점으로 판단합니다.",
     "category": "장비 가이드",
     "tags": ["테니스화","밑창 마모","교체 시점"],
@@ -129,7 +129,7 @@ export const articleWriterPart17PostOverrides = [
   },
   {
     "slug": "aw-030-court",
-    "title": "클레이코트 슬라이딩 입문",
+    "title": "클레이코트 첫 슬라이딩 제동 연습",
     "excerpt": "클레이코트 슬라이딩을 멈춤 동작, 균형 회복, 다음 샷 준비 기준으로 시작합니다.",
     "category": "코트 환경",
     "tags": ["클레이코트","슬라이딩","균형 회복"],

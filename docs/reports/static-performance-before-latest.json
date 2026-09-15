@@ -1,0 +1,18 @@
+{
+  "capturedAt": "2026-09-15T06:15:00Z",
+  "label": "pre-accessibility-rebuild static export",
+  "environment": "local Python static server, Chromium, 390x844, cache disabled",
+  "basePath": "/tennis_friends",
+  "results": [
+    { "path": "/", "loadMs": [67, 57, 74], "transferBytes": [1119784, 1119784, 1119784] },
+    { "path": "/utility/ntrp-test/", "loadMs": [77, 118, 74], "transferBytes": [976376, 976376, 976376] },
+    { "path": "/blog/seoul-best-tennis-courts/", "loadMs": [82, 63, 83], "transferBytes": [1061543, 993672, 1061542] },
+    { "path": "/players/carlos-alcaraz/", "loadMs": [168, 81, 90], "transferBytes": [1378779, 1311031, 1378904] }
+  ],
+  "rum": null,
+  "pageSpeed": null,
+  "notes": [
+    "This snapshot is the existing static export before the final accessibility rebuild.",
+    "RUM is unavailable and PageSpeed API quota was exhausted; neither value is inferred."
+  ]
+}

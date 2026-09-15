@@ -55,7 +55,7 @@ export const articleWriterPart18PostOverrides = [
   },
   {
     "slug": "aw-130-record",
-    "title": "레슨 복습 노트 작성법, 다음 연습 행동 남기기",
+    "title": "레슨 직후 3줄 복습 노트 쓰기",
     "excerpt": "레슨 복습 노트는 들은 말보다 다음 연습에서 확인할 행동을 남겨야 합니다.",
     "category": "훈련 가이드",
     "tags": ["레슨 복습","연습 노트","기록법"],
@@ -127,7 +127,7 @@ export const articleWriterPart18PostOverrides = [
   },
   {
     "slug": "aw-146-video-beginner",
-    "title": "영상 분석 첫 장면 고르기, 반복 실수부터 보기",
+    "title": "테니스 영상 분석용 첫 장면 선별법",
     "excerpt": "영상 분석은 멋진 샷보다 반복해서 무너지는 준비 장면부터 보는 편이 낫습니다.",
     "category": "경기 분석",
     "tags": ["영상 분석","첫 장면","초보 복기"],
@@ -163,7 +163,7 @@ export const articleWriterPart18PostOverrides = [
   },
   {
     "slug": "aw-150-match-cooldown",
-    "title": "경기 후 쿨다운 순서, 호흡과 수분부터 회복",
+    "title": "경기 종료 후 10분 쿨다운 루틴",
     "excerpt": "경기 후 쿨다운은 스트레칭보다 호흡과 수분, 종아리 긴장 확인이 먼저입니다.",
     "category": "건강 & 피트니스",
     "tags": ["경기 후 쿨다운","회복 순서","부상 예방"],
@@ -181,7 +181,7 @@ export const articleWriterPart18PostOverrides = [
   },
   {
     "slug": "aw-152-tennis-guide",
-    "title": "매치포인트 선택 줄이기, 성공 패턴 하나로 압축",
+    "title": "매치포인트에서 선택지 하나로 줄이기",
     "excerpt": "매치포인트 선택은 새 전술보다 이미 성공한 패턴 하나로 줄이는 게 안전합니다.",
     "category": "경기 전략",
     "tags": ["매치포인트","선택 줄이기","멘탈 루틴"],
@@ -271,7 +271,7 @@ export const articleWriterPart18PostOverrides = [
   },
   {
     "slug": "aw-167-tennis-guide",
-    "title": "사인 사이 인터벌 루틴, 복식 대화 짧게 정리",
+    "title": "파트너 사인 사이 호흡 인터벌",
     "excerpt": "복식 사인 인터벌은 대화가 길어지지 않게 한 단어와 손짓으로 고정하세요.",
     "category": "복식 전술",
     "tags": ["복식 사인","인터벌 루틴","파트너 콜"],

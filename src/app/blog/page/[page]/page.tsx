@@ -25,6 +25,8 @@ export async function generateMetadata({
   params,
 }: BlogIndexRouteProps): Promise<Metadata> {
   const page = Number((await params).page);
+  const totalPages = getBlogIndexPageCount();
+  if (!Number.isInteger(page) || page < 2 || page > totalPages) notFound();
   const canonical = `/blog/page/${page}`;
 
   return {

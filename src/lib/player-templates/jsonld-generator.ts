@@ -3,6 +3,7 @@
  */
 
 import { Player, PlayerFAQ } from '@/types/player';
+import { withKoreanParticle } from '@/lib/korean-particle';
 
 /**
  * Person 스키마 생성
@@ -35,7 +36,7 @@ export function generatePersonSchema(player: Player) {
       getPlayStyleKo(style),
       getSurfaceKo(surface),
     ],
-    description: `${nameKo}은(는) ${player.country} 출신의 세계랭킹 ${rank}위 테니스 선수입니다.`,
+    description: `${withKoreanParticle(nameKo, '은/는')} ${player.country} 출신의 세계랭킹 ${rank}위 테니스 선수입니다.`,
   };
 }
 

@@ -61,7 +61,12 @@ export default function PrivacyPage() {
                 전송되지 않습니다.
               </li>
               <li>
-                <strong>수집하지 않는 정보:</strong> 이름, 전화번호, 프로필
+                <strong>문의 양식:</strong> 입력한 이름, 이메일, 제목과 메시지는
+                사이트 서버에 저장되지 않고 사용자의 메일 앱에 전달됩니다. 실제
+                전송을 완료하면 메일 서비스와 수신 메일함에서 처리될 수 있습니다.
+              </li>
+              <li>
+                <strong>그 밖에 수집하지 않는 정보:</strong> 전화번호, 프로필
                 사진, 생년월일, 카메라·SMS·전화 권한과 회원가입 정보
               </li>
             </ol>
@@ -144,8 +149,9 @@ export default function PrivacyPage() {
               제6조 (웹 로그 분석 및 쿠키)
             </h2>
             <p className="mb-3 text-gray-700 dark:text-gray-300">
-              본 사이트는 광고를 제공하지 않으며, 서비스 이용 흐름과 네이버 카페
-              이동 성과를 파악하기 위해 Google Analytics를 사용할 수 있습니다.
+              본 사이트는 Google AdSense 광고와 Google Analytics를 사용할 수
+              있습니다. 광고 승인, 실제 광고 송출 여부, 지역별 동의 요구사항은
+              계정 설정과 방문 환경에 따라 달라질 수 있습니다.
             </p>
             <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
               <li>

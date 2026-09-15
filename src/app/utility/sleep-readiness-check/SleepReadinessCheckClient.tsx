@@ -15,6 +15,7 @@ export default function SleepReadinessCheckClient() {
   const [stress, setStress] = useState("2");
   const [lateCaffeine, setLateCaffeine] = useState(false);
   const [matchToday, setMatchToday] = useState(false);
+  const inputsValid = [sleepHours, sleepQuality, soreness, stress].every((value) => value.trim() !== "" && Number.isFinite(Number(value))) && Number(sleepHours) >= 0 && Number(sleepHours) <= 16 && [sleepQuality, soreness, stress].every((value) => Number(value) >= 1 && Number(value) <= 5);
 
   const result = useMemo(() => {
     const hours = Number(sleepHours) || 0;
@@ -35,8 +36,8 @@ export default function SleepReadinessCheckClient() {
     const focus =
       score >= 80 ? "기술+포인트 플레이" : score >= 60 ? "기술 반복과 볼륨 조절" : "회복 러닝, 가벼운 타격, 일찍 취침";
 
-    return { score, status, focus };
-  }, [lateCaffeine, matchToday, sleepHours, sleepQuality, soreness, stress]);
+    return { score: inputsValid ? score : 0, status: inputsValid ? status : "입력 오류", focus };
+  }, [inputsValid, lateCaffeine, matchToday, sleepHours, sleepQuality, soreness, stress]);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
@@ -54,8 +55,9 @@ export default function SleepReadinessCheckClient() {
           <CardContent className="grid gap-4 md:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="sleepHours">수면 시간 (시간)</Label>
-              <Input id="sleepHours" type="number" value={sleepHours} onChange={(e) => setSleepHours(e.target.value)} />
+              <Input id="sleepHours" type="number" min="0" max="16" step="0.1" value={sleepHours} onChange={(e) => setSleepHours(e.target.value)} />
             </div>
+            {!inputsValid && <p role="alert" className="md:col-span-2 text-sm font-semibold text-red-700">수면 시간은 0~16시간, 평점은 각각 1~5로 입력하세요.</p>}
             <div className="space-y-2">
               <Label htmlFor="sleepQuality">수면 질 (1~5)</Label>
               <Input id="sleepQuality" type="number" min="1" max="5" value={sleepQuality} onChange={(e) => setSleepQuality(e.target.value)} />

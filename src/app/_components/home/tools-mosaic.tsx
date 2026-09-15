@@ -77,19 +77,15 @@ export function ToolsMosaic() {
                     </ToolCardDescription>
                   </div>
                   <div className="mt-8">
-                    <Button
-                      variant={
-                        tool.variant === "featured" ? "ghost" : "outline"
-                      }
-                      size="sm"
+                    <span
                       className={
                         tool.variant === "featured"
-                          ? "text-court-ink hover:text-court-ink/70 px-0"
-                          : undefined
+                          ? "inline-flex min-h-10 items-center text-sm font-semibold text-court-ink"
+                          : "inline-flex min-h-10 items-center rounded-lg border border-white/20 px-4 text-sm font-semibold text-white"
                       }
                     >
                       {tool.cta}
-                    </Button>
+                    </span>
                   </div>
                 </ToolCard>
               </Link>
@@ -99,11 +95,9 @@ export function ToolsMosaic() {
 
         {/* 전체 도구 링크 */}
         <div className="mt-8 flex justify-end">
-          <Link href="/utility" prefetch={false}>
-            <Button variant="ghost" size="sm">
+          <Button asChild variant="ghost" size="sm"><Link href="/utility" prefetch={false}>
               전체 63개 도구 보기 →
-            </Button>
-          </Link>
+            </Link></Button>
         </div>
       </div>
     </section>

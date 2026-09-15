@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-09-15T00:00:00+09:00",
+  "canonicalOrigin": "https://tennisfrens.com",
+  "evidenceAxes": {
+    "source": "VERIFIED",
+    "staticExport": "VERIFIED_PREVIOUS_CHECKPOINT",
+    "liveHttp": "NOT_VERIFIED"
+  },
+  "contracts": [
+    { "type": "canonical-public", "examples": ["/", "/blog", "/players/carlos-alcaraz", "/utility/ntrp-test"], "expectedStatus": 200, "robots": "index,follow", "sitemap": true },
+    { "type": "public-noindex", "examples": ["/admin", "/tennis-rules-quiz/quiz", "/tennis-rules-quiz/result"], "expectedStatus": 200, "robots": "noindex,follow", "sitemap": false },
+    { "type": "private-disallowed", "examples": ["/private/", "/admin/", "/api/auth/"], "expectedStatus": null, "robotsTxtDisallow": true, "sitemap": false },
+    { "type": "legacy-redirect", "examples": ["/players/hong-seong-chan", "/players/marta-kostyuk-legacy", "/players/arthur-landercknech"], "expectedStatus": 308, "sitemap": false, "staticMirrorNote": "GitHub Pages export cannot implement Next.js redirects; aliases may be absent/404 there." },
+    { "type": "missing", "examples": ["/__docs11_missing_fixture__"], "expectedStatus": 404, "sitemap": false }
+  ],
+  "generatedOutputEvidence": {
+    "command": "npm run audit:static-export",
+    "lastResult": "PASS",
+    "pageCount": 3105,
+    "scope": ["representative 200 outputs", "54 physical noindex pages", "robots private disallows", "sitemap.xml", "base-path navigation"]
+  },
+  "liveEvidence": {
+    "status": "NOT_VERIFIED",
+    "reason": "No new deployment is authorized and this local package has not been published. Live state must not be used as proof of the current worktree."
+  }
+}

@@ -406,12 +406,10 @@ export default function FocusTrainingSession() {
                   <RotateCcw className="w-4 h-4 mr-2" />
                   다른 훈련하기
                 </Button>
-                <Link href="/utility/focus-training">
-                  <Button variant="outline">
+                <Button asChild variant="outline"><Link href="/utility/focus-training">
                     <Sparkles className="w-4 h-4 mr-2" />
                     훈련 정보 보기
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </CardContent>
           </Card>

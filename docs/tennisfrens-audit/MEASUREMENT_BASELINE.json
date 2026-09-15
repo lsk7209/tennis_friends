@@ -1,0 +1,19 @@
+{
+  "measuredAt": "2026-09-15T14:20:00+09:00",
+  "scope": "local repository and available generated reports",
+  "metrics": {
+    "gsc": { "value": null, "unit": null, "method": "private account unavailable", "denominator": null, "coverage": "not_verified" },
+    "ga4": { "value": null, "unit": null, "method": "private account unavailable", "denominator": null, "coverage": "not_verified" },
+    "adsenseAccount": { "value": null, "unit": null, "method": "private account unavailable", "denominator": null, "coverage": "not_verified" },
+    "rum": { "value": null, "unit": null, "method": "no current sourced RUM export", "denominator": null, "coverage": "not_verified" },
+    "sitemapEntries": { "value": 1477, "unit": "urls", "method": "local sitemap coverage audit", "denominator": 1477, "coverage": "full_generated_inventory" },
+    "indexableBlogs": { "value": 1146, "unit": "urls", "method": "local sitemap coverage audit", "denominator": 1146, "coverage": "full_generated_inventory" },
+    "utilities": { "value": 63, "unit": "routes", "method": "local utility and sitemap audits", "denominator": 72, "coverage": "63 completed of 72 metadata entries" },
+    "players": { "value": 259, "unit": "profiles", "method": "local sitemap coverage audit", "denominator": 259, "coverage": "full_generated_inventory" }
+  },
+  "limitations": [
+    "Null account metrics are unavailable, not zero.",
+    "Local output counts do not prove live HTTP availability or search-engine indexation.",
+    "Business outcomes are not inferred from code or build success."
+  ]
+}

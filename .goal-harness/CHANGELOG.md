@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## 2026-09-15 — TF-009 external-effect isolation
+
+| File | Change | Reason |
+|---|---|---|
+| `src/lib/external-effects.ts`, `src/app/layout.tsx` | Added a central production-only gate around GA4, AdSense, preconnects, and Tracking | Prevent preview/test traffic and browser effects by default |
+| `.github/workflows/deploy.yml`, `scripts/audit-static-export.mjs` | Explicitly enabled effects for the intended production artifact | Preserve production measurement without relying on `NODE_ENV` |
+| `scripts/audit-external-effects-isolation.mjs`, `package.json` | Added the deterministic TF-009 gate to `verify` | Prevent contract regression |
+| Harness, project state, and handoff | Recorded proof and the `/api/og` export gap | Preserve exact continuation state |
+
+## 2026-09-14 — docs/11 trust contract
+
+| File | Change | Reason |
+|---|---|---|
+| `src/app/page.tsx`, `src/components/CTASection.tsx`, `src/app/utility/page.tsx` | Corrected NTRP count and non-official language | Match the 15-question source and avoid accuracy/official-rating confusion |
+| `src/app/contact/*`, `src/app/privacy/page.tsx` | Corrected templated title, mailto state, policy path, unsupported expert claim, and active-ad disclosure | Match implemented behavior |
+| `src/app/utility/court-booking/*`, `src/app/_components/home/court-lines.tsx` | Converted fake booking/payment success and measured-stat language to explicit simulation/examples | Prevent live-service and real-data confusion |
+| `scripts/audit-trust-contracts.mjs`, `package.json` | Added the trust audit to `verify` | Lock repaired behavior |
+| `package.json`, `package-lock.json` | Updated Next.js and sharp patch versions | Remove current critical/high production advisories |
+| `docs/tennisfrens-audit/*`, `.goal-harness/*`, `docs/HANDOFF.md` | Recorded baseline, evidence, state, and next step | Durable continuation |
+
 ## 2026-08-28
 
 - Closed the 54-route physical blog indexability gap with route metadata and full-output regression coverage.

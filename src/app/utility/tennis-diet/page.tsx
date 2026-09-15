@@ -23,8 +23,10 @@ export default function TennisDietPage() {
   const [activity, setActivity] = useState<ActivityLevel>('moderate');
   const [tennisDays, setTennisDays] = useState<TennisDays>('3-4');
   const [goal, setGoal] = useState<Goal>('maintain');
+  const inputsValid = Number.isFinite(height) && height >= 100 && height <= 250 && Number.isFinite(weight) && weight >= 20 && weight <= 300 && Number.isInteger(age) && age >= 14 && age <= 100;
 
   const result = useMemo(() => {
+    if (!inputsValid) return { calories: 0, carbs: 0, protein: 0, fat: 0 };
     const bmr =
       gender === 'male'
         ? 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age
@@ -51,7 +53,7 @@ export default function TennisDietPage() {
     const fat = Math.round((calories * 0.25) / 9);
 
     return { calories, carbs, protein, fat };
-  }, [activity, age, gender, goal, height, tennisDays, weight]);
+  }, [activity, age, gender, goal, height, inputsValid, tennisDays, weight]);
 
   const mealGuide = {
     maintain: [
@@ -97,16 +99,17 @@ export default function TennisDietPage() {
             <CardContent className="space-y-5">
               <div>
                 <Label htmlFor="height">키 (cm)</Label>
-                <Input id="height" type="number" value={height} onChange={(event) => setHeight(Number(event.target.value) || 0)} />
+                <Input id="height" type="number" min="100" max="250" value={height} onChange={(event) => setHeight(Number(event.target.value))} />
               </div>
               <div>
                 <Label htmlFor="weight">체중 (kg)</Label>
-                <Input id="weight" type="number" value={weight} onChange={(event) => setWeight(Number(event.target.value) || 0)} />
+                <Input id="weight" type="number" min="20" max="300" value={weight} onChange={(event) => setWeight(Number(event.target.value))} />
               </div>
               <div>
                 <Label htmlFor="age">나이</Label>
-                <Input id="age" type="number" value={age} onChange={(event) => setAge(Number(event.target.value) || 0)} />
+                <Input id="age" type="number" min="14" max="100" step="1" value={age} onChange={(event) => setAge(Number(event.target.value))} />
               </div>
+              {!inputsValid && <p role="alert" className="text-sm font-semibold text-red-700">키 100~250cm, 체중 20~300kg, 나이 14~100세 범위로 입력하세요.</p>}
               <div>
                 <Label className="mb-2 block">성별</Label>
                 <Select value={gender} onValueChange={(value: 'male' | 'female') => setGender(value)}>
@@ -206,6 +209,7 @@ export default function TennisDietPage() {
                   <p>경기 2~3시간 전에는 소화가 잘되는 탄수화물과 적당한 단백질 조합이 안정적입니다.</p>
                   <p>경기 직후 30분 안에는 수분과 단백질을 먼저 보충하면 회복 체감이 확실히 좋아집니다.</p>
                   <p>장시간 야외 경기라면 식단보다도 수분과 전해질 관리가 먼저입니다.</p>
+                  <p>모델 tf-diet-v1-20260915: Harris-Benedict 기초대사량에 활동 배수와 테니스 빈도 보정값을 더하고, 목표에 따라 -300/+250kcal를 적용한 뒤 탄수화물 50%, 단백질 25%, 지방 25%로 환산합니다. 의료·영양 진단을 대체하지 않습니다.</p>
                 </div>
                 <div className="mt-5">
                   <Button className="bg-green-600 text-white hover:bg-green-700">현재 결과 기억해두기</Button>

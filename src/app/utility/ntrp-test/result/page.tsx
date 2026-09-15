@@ -519,15 +519,13 @@ function ResultContent() {
                   <Share2 className="h-5 w-5 mr-2" />
                   친구들에게 공유하기
                 </Button>
-                <Link href="/utility/ntrp-test/stats">
-                  <Button 
-                    variant="outline" 
+                <Button asChild
+                    variant="outline"
                     className="bg-white border-2 border-gray-300 hover:border-purple-500 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
+                  ><Link href="/utility/ntrp-test/stats">
                     <BarChart3 className="h-5 w-5 mr-2" />
                     전체 통계 보기
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </div>
           </CardContent>
@@ -541,18 +539,14 @@ function ResultContent() {
               TennisFriends와 함께 당신의 테니스 여정을 한 단계 더 발전시켜보세요
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/utility">
-                <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300">
+              <Button asChild className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility">
                   <ArrowRight className="h-5 w-5 mr-2" />
                   모든 유틸리티 보기
-                </Button>
-              </Link>
-              <Link href="/blog">
-                <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300">
+                </Link></Button>
+              <Button asChild variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/blog">
                   <BookOpen className="h-5 w-5 mr-2" />
                   테니스 가이드 읽기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </CardContent>
         </Card>

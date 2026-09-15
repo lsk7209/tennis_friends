@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-09-15T07:01:27.869Z",
+  "status": "PASS",
+  "sourceBinding": "VERIFIED",
+  "adsenseAccountApproval": null,
+  "siteAssignment": null,
+  "productionAdDelivery": null,
+  "certifiedCmp": null,
+  "tcfVersion": null,
+  "regionalRuntimeBehavior": null,
+  "deploymentReadiness": "NOT_READY_ACCOUNT_AND_CMP_EVIDENCE_REQUIRED",
+  "failures": []
+}

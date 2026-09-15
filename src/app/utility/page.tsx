@@ -46,6 +46,7 @@ import {
   Flame,
 } from "lucide-react";
 import type { UtilityMetadata } from "@/lib/utilities";
+import { getUtilityContract, UTILITY_CONTRACT_LABELS } from "@/lib/utility-contracts";
 
 // ============================================
 // 유틸리티 메타데이터 관리 시스템
@@ -73,10 +74,10 @@ export const utilitiesMetadata: UtilityMetadata[] = [
     id: "ntrp-test",
     title: "NTRP 실력 테스트",
     description:
-      "15개 질문으로 정확한 테니스 실력을 측정하고 개선 방향을 제시받으세요.",
+      "15개 질문으로 현재 경기 수준을 참고용으로 점검하고 개선 방향을 확인하세요.",
     icon: BarChart3,
     status: "완료",
-    features: ["15개 질문", "정확한 분석", "개선 방향 제시", "통계 대시보드"],
+    features: ["15개 질문", "비공식 자가 진단", "개선 방향 제시", "기기 내 기록"],
     gradient: "from-blue-500 via-cyan-500 to-teal-500",
     bgColor: "bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50",
     iconBg: "bg-gradient-to-br from-blue-500 to-cyan-500",
@@ -200,11 +201,11 @@ export const utilitiesMetadata: UtilityMetadata[] = [
   },
   {
     id: "court-booking",
-    title: "코트 예약 시스템",
-    description: "전국 테니스 코트를 실시간으로 예약하세요.",
+    title: "코트 예약 흐름 데모",
+    description: "예시 코트 데이터로 예약 흐름을 체험하는 데모입니다.",
     icon: Calendar,
     status: "완료",
-    features: ["실시간 예약", "전국 코트", "편리한 결제", "예약 관리"],
+    features: ["가상 코트", "예약 단계 체험", "결과 예시", "실제 결제 없음"],
     gradient: "from-cyan-500 via-blue-500 to-indigo-500",
     bgColor: "bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50",
     iconBg: "bg-gradient-to-br from-cyan-500 to-blue-500",
@@ -1029,6 +1030,7 @@ export default function UtilityPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {activeUtilities.map((utility) => {
               const Icon = utility.icon;
+              const contract = getUtilityContract(utility);
               return (
                 <Link
                   href={`/utility/${utility.id}`}
@@ -1060,6 +1062,12 @@ export default function UtilityPage() {
                       <p className="text-gray-600 dark:text-gray-400 mb-5 line-clamp-2 text-sm leading-relaxed min-h-[40px]">
                         {utility.description}
                       </p>
+
+                      <div className="mb-4 flex flex-wrap gap-2 text-xs" aria-label="도구 상태">
+                        <Badge variant="outline">{UTILITY_CONTRACT_LABELS[contract.releaseState]}</Badge>
+                        <Badge variant="outline">{UTILITY_CONTRACT_LABELS[contract.dataOrigin]}</Badge>
+                        <Badge variant="outline">{UTILITY_CONTRACT_LABELS[contract.verificationState]}</Badge>
+                      </div>
 
                       <div className="pt-4 border-t border-gray-100 dark:border-gray-700/50">
                         <div className="flex items-center text-blue-600 dark:text-blue-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">

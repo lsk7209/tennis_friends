@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useMemo, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -11,6 +11,7 @@ import {Calendar, Target, ArrowRight, RotateCcw, Share2, CheckCircle, Users, Arr
 import {TrainingPlanResult, WeeklySchedule, FocusArea, Milestone} from '@/lib/trainingPlanner';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import { AccessibleErrorState } from '@/components/AccessibleErrorState';
 
 const EMPTY_RECOMMENDATIONS: TrainingPlanResult['recommendations'] = {
   technical: [],
@@ -22,13 +23,8 @@ const EMPTY_RECOMMENDATIONS: TrainingPlanResult['recommendations'] = {
 function TrainingPlannerResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
-  const [result, setResult] = useState<TrainingPlanResult | null>(null);
   const [selectedWeek, setSelectedWeek] = useState(1);
-  
-  useEffect(() => {
-    // 로딩 시뮬레이션
-    const timer = setTimeout(() => {
+  const result = useMemo<TrainingPlanResult | null>(() => {
       const planName = searchParams.get('planName') || '';
       const duration = Number(searchParams.get('duration') || 0);
       const weeklySchedule = safeJsonParse<WeeklySchedule[]>(searchParams.get('weeklySchedule'), []);
@@ -38,7 +34,8 @@ function TrainingPlannerResultContent() {
       const equipment = safeJsonParse<string[]>(searchParams.get('equipment'), []);
       const nextSteps = safeJsonParse<string[]>(searchParams.get('nextSteps'), []);
       
-      setResult({
+      if (!planName || !Number.isInteger(duration) || duration < 1 || weeklySchedule.length === 0) return null;
+      return {
         planName,
         duration,
         weeklySchedule,
@@ -47,11 +44,7 @@ function TrainingPlannerResultContent() {
         recommendations,
         equipment,
         nextSteps
-      });
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
+      };
   }, [searchParams]);
 
   const handleRetake = () => {
@@ -100,29 +93,16 @@ function TrainingPlannerResultContent() {
     }
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-20 w-20 border-b-2 border-indigo-600 mx-auto mb-6"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">계획 생성 중입니다...</h2>
-          <p className="text-gray-600 text-lg">맞춤형 훈련 계획을 만들고 있습니다.</p>
-        </div>
-      </div>
-    );
-  }
-
   if (!result) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">오류가 발생했습니다</h2>
-          <p className="text-gray-600 mb-4">계획을 불러올 수 없습니다.</p>
-          <Button onClick={handleRetake} className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
-            다시 시도하기
-          </Button>
-        </div>
-      </div>
+      <AccessibleErrorState
+        title="계획을 불러올 수 없습니다"
+        description="유효한 훈련 계획이 없습니다. 다시 입력해 주세요."
+        actionLabel="다시 시도하기"
+        onAction={handleRetake}
+        className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50"
+        actionClassName="bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700"
+      />
     );
   }
 
@@ -555,12 +535,10 @@ function TrainingPlannerResultContent() {
                   <Share2 className="h-5 w-5 mr-2" />
                   계획 공유하기
                 </Button>
-                <Link href="/utility/ntrp-test">
-                  <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Button asChild className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"><Link href="/utility/ntrp-test">
                     <ArrowRight className="h-5 w-5 mr-2" />
                     실력 테스트 하기
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </div>
           </FadeIn>

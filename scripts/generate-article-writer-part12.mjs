@@ -7,6 +7,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import { withKoreanParticle } from "../src/lib/korean-particle.js";
 
 const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, "out", "article-writer", "tennisfrens-part12");
@@ -280,13 +281,13 @@ function buildResearch(seed, angle, factKey) {
     definitions: [
       {
         term: seed.topic,
-        definition: `${seed.topic}는 한 번의 결과보다 같은 준비에서 반복되는 결과를 기준으로 점검해야 하는 테니스 실전 주제다.`,
+        definition: `${withKoreanParticle(seed.topic, "은/는")} 한 번의 결과보다 같은 준비에서 반복되는 결과를 기준으로 점검해야 하는 테니스 실전 주제다.`,
         source: "TennisFriends 편집 기준",
         url: SITE_URL,
       },
       {
         term: angle.tail,
-        definition: `${angle.tail}는 ${seed.topic}을(를) 동호인 환경에서 바로 적용할 수 있도록 좁힌 관점이다.`,
+        definition: `${withKoreanParticle(angle.tail, "은/는")} ${withKoreanParticle(seed.topic, "을/를")} 동호인 환경에서 바로 적용할 수 있도록 좁힌 관점이다.`,
         source: "TennisFriends 편집 기준",
         url: `${SITE_URL}/blog`,
       },
@@ -304,7 +305,7 @@ function buildResearch(seed, angle, factKey) {
       },
     ],
     faqs: [
-      { q: `${seed.topic}는 매일 연습해야 하나요?`, a: "매일보다 같은 기준으로 주 2~3회 반복하는 편이 비교 가능한 기록을 남기는 데 유리합니다.", source: "TennisFriends", url: SITE_URL },
+      { q: `${withKoreanParticle(seed.topic, "은/는")} 매일 연습해야 하나요?`, a: "매일보다 같은 기준으로 주 2~3회 반복하는 편이 비교 가능한 기록을 남기는 데 유리합니다.", source: "TennisFriends", url: SITE_URL },
       { q: `${seed.topic} 점검에 영상이 꼭 필요한가요?`, a: "스마트폰 한 대로도 충분합니다. 같은 각도와 같은 거리에서 촬영하는 것이 핵심입니다.", source: "TennisFriends", url: `${SITE_URL}/utility/match-analyzer` },
       { q: "통증이 반복되면 어떻게 하나요?", a: "통증이 반복되면 운동량을 낮추고 의료 전문가 상담을 우선해야 합니다. 기술 팁으로 해결하려 하지 마세요.", source: "Mayo Clinic", url: "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/sports-injuries/art-20044765" },
       { q: "혼자 연습할 때도 효과가 있나요?", a: "벽치기와 셀프 토스 환경에서도 같은 기록 체계를 유지하면 다음 레슨이나 경기 적용이 빨라집니다.", source: "USTA", url: "https://www.usta.com/en/home/improve/tips-and-instruction.html" },
@@ -347,7 +348,7 @@ function buildArticle({ index, seed, angle, scheduledAt, dateKst, title }) {
 
   const sections = [
     `<h2>1. ${seed.topic}에서 가장 먼저 볼 기준</h2>`,
-    paragraph(`${seed.topic}을(를) 고치려 할 때 첫 기준은 결과가 아닌 반복 가능한 준비 동작입니다. ${factLinks[1]} 자료처럼 동작을 준비-실행-회복으로 나누면 어디서 무너지는지가 더 분명해집니다. ${angle.tail} 관점에서는 오늘 단 한 가지 기준만 정하는 것이 다음 점검을 가능하게 만듭니다.`),
+    paragraph(`${withKoreanParticle(seed.topic, "을/를")} 고치려 할 때 첫 기준은 결과가 아닌 반복 가능한 준비 동작입니다. ${factLinks[1]} 자료처럼 동작을 준비-실행-회복으로 나누면 어디서 무너지는지가 더 분명해집니다. ${angle.tail} 관점에서는 오늘 단 한 가지 기준만 정하는 것이 다음 점검을 가능하게 만듭니다.`),
     paragraph(`예를 들어 토스가 흔들린다면 높이와 방향을 한 번에 보지 말고, 먼저 라켓을 잡지 않은 손의 출발 위치만 봅니다. 발리라면 손목 고정 여부보다 스플릿 스텝의 박자를 먼저 점검합니다. 작은 단위로 좁혀야 다음 연습에서 같은 항목을 다시 측정할 수 있습니다.`),
 
     `<h2>2. 초보와 중급자의 점검 차이</h2>`,
@@ -363,7 +364,7 @@ function buildArticle({ index, seed, angle, scheduledAt, dateKst, title }) {
     paragraph(`특히 부상이나 통증과 연결되는 항목은 조심해야 합니다. ${factLinks[5]} 자료처럼 반복 통증은 자가 판단의 한계를 분명히 두고 의료 전문가 상담을 우선해야 합니다. 이 글의 기술 팁은 부상·치료를 대체하지 않습니다.`),
 
     `<h2>5. 경기에서 적용하는 기준</h2>`,
-    paragraph(`경기에서는 새 기술을 완성하려 하지 말고 선택지를 줄여야 합니다. ${seed.topic}이(가) 흔들리는 날에는 속도, 코스, 자세 중 하나만 낮춥니다. 예를 들어 서브라면 세게 치기보다 같은 토스를 유지합니다. 복식이라면 과감한 포칭보다 가운데 공 콜을 먼저 맞춥니다.`),
+    paragraph(`경기에서는 새 기술을 완성하려 하지 말고 선택지를 줄여야 합니다. ${withKoreanParticle(seed.topic, "이/가")} 흔들리는 날에는 속도, 코스, 자세 중 하나만 낮춥니다. 예를 들어 서브라면 세게 치기보다 같은 토스를 유지합니다. 복식이라면 과감한 포칭보다 가운데 공 콜을 먼저 맞춥니다.`),
     paragraph(`${factLinks[2]} 통계에서도 확인할 수 있듯 퍼스트 서브 인 비율, 브레이크포인트 전환률처럼 단순한 수치 하나가 경기 흐름을 잘 설명합니다. 동호회 경기에서도 한두 가지 지표만 점수 단위로 적어 두면 다음 경기에서 비교할 수 있습니다.`),
 
     `<h2>6. 기록표 — 3칸 양식</h2>`,
@@ -383,7 +384,7 @@ function buildArticle({ index, seed, angle, scheduledAt, dateKst, title }) {
     paragraph(`도구를 쓰는 목적은 점수를 더 잘 받기 위해서가 아니라 같은 기록을 다음 사람(파트너·코치·다음 주 나 자신)이 읽을 수 있게 만드는 것입니다. 도구 안에서 같은 단어를 사용할수록 비교가 쉬워집니다. ${seed.topic} 점검에서도 도구가 강제하는 양식 덕분에 기록이 흩어지지 않고 한 주제로 모입니다.`),
 
     `<h2>10. 파트너·코치와 공유하는 기록 양식</h2>`,
-    paragraph(`혼자 점검해도 의미가 있지만, ${seed.topic}은(는) 파트너나 코치의 외부 시선이 있을 때 변화 속도가 빨라집니다. 양식을 공유하면 두 사람이 같은 단어로 같은 장면을 설명할 수 있게 되고, 그때부터 비교 가능한 피드백이 가능합니다. 가장 단순한 시작은 한 주 동안 적은 기록을 한 페이지 PDF로 묶어 코치에게 전달하는 것입니다.`),
+    paragraph(`혼자 점검해도 의미가 있지만, ${withKoreanParticle(seed.topic, "은/는")} 파트너나 코치의 외부 시선이 있을 때 변화 속도가 빨라집니다. 양식을 공유하면 두 사람이 같은 단어로 같은 장면을 설명할 수 있게 되고, 그때부터 비교 가능한 피드백이 가능합니다. 가장 단순한 시작은 한 주 동안 적은 기록을 한 페이지 PDF로 묶어 코치에게 전달하는 것입니다.`),
     paragraph(`코치 입장에서 가장 어려운 일은 한 번 본 동작을 다음 레슨에서 다시 추정하는 일입니다. 동영상 한 클립과 세 칸 기록표만 함께 전달해도 코치가 어디부터 짚어야 할지 정해집니다. ${factLinks[1]} 가이드처럼 코칭 자료가 준비-실행-회복으로 나뉘어 있는 이유도 같은 단위로 대화하기 위한 약속입니다.`),
 
     `<h2>11. 4주 누적 점검표</h2>`,
@@ -395,13 +396,13 @@ function buildArticle({ index, seed, angle, scheduledAt, dateKst, title }) {
     paragraph(`특히 추운 날, 잠이 부족한 날, 새 장비로 바꾼 첫 주에는 새 기술을 시도하기보다 기존 패턴 중 가장 안전한 옵션 한 가지로 줄이세요. 통증·뻐근함은 회복 부족의 신호일 수 있습니다. ${factLinks[5]} 자료처럼 반복 통증은 의료 전문가 상담을 우선해야 합니다.`),
 
     `<h2>13. 이번 글에서 가져갈 한 문장</h2>`,
-    paragraph(`${seed.topic}을(를) 한 줄로 정리하면 다음과 같습니다 — 오늘 코트에서 점검할 기준은 한 가지, 기록은 세 칸, 다음 행동은 한 문장. 이 세 가지가 한 주 동안 같은 양식으로 쌓이면 ${angle.tail} 관점에서도 변화가 분명히 드러납니다.`),
+    paragraph(`${withKoreanParticle(seed.topic, "을/를")} 한 줄로 정리하면 다음과 같습니다 — 오늘 코트에서 점검할 기준은 한 가지, 기록은 세 칸, 다음 행동은 한 문장. 이 세 가지가 한 주 동안 같은 양식으로 쌓이면 ${angle.tail} 관점에서도 변화가 분명히 드러납니다.`),
 
     `<h2>자주 묻는 질문</h2>`,
     `<details><summary>${research.faqs[0].q}</summary><p>${research.faqs[0].a}</p></details><details><summary>${research.faqs[1].q}</summary><p>${research.faqs[1].a}</p></details><details><summary>${research.faqs[2].q}</summary><p>${research.faqs[2].a}</p></details><details><summary>${research.faqs[3].q}</summary><p>${research.faqs[3].a}</p></details>`,
 
     `<h2>마무리 점검</h2>`,
-    paragraph(`${seed.topic}은(는) 하루 만에 완성되는 항목이 아닙니다. 오늘은 기준 하나, 기록 세 칸, 다음 행동 하나만 남기면 됩니다. 다음 경기에서 같은 기준이 유지되면 그때 속도와 난도를 올리세요. 글 한 편을 끝까지 적용해 보는 것이 글 열 편을 읽는 것보다 코트 위 변화가 큽니다.`),
+    paragraph(`${withKoreanParticle(seed.topic, "은/는")} 하루 만에 완성되는 항목이 아닙니다. 오늘은 기준 하나, 기록 세 칸, 다음 행동 하나만 남기면 됩니다. 다음 경기에서 같은 기준이 유지되면 그때 속도와 난도를 올리세요. 글 한 편을 끝까지 적용해 보는 것이 글 열 편을 읽는 것보다 코트 위 변화가 큽니다.`),
   ];
 
   const aiDisclosure = `<aside class="aw-ai-disclosure" style="border:1px dashed #94a3b8;background:#f8fafc;padding:12px 14px;border-radius:8px;margin-top:20px;font-size:0.9em;color:#475569;">이 글은 AI 도구를 활용해 공개 자료와 TennisFriends 편집 기준으로 정리한 콘텐츠입니다. 사실 확인은 출처 원문을 우선합니다.</aside>`;
@@ -437,7 +438,7 @@ function buildArticle({ index, seed, angle, scheduledAt, dateKst, title }) {
     },
   ];
 
-  const excerpt = `${seed.topic}을(를) 동호회 경기에서 바로 점검할 수 있도록 ${angle.tail} 관점으로 기준, 비교, 루틴, 기록, 안전 순서를 정리했습니다.`;
+  const excerpt = `${withKoreanParticle(seed.topic, "을/를")} 동호회 경기에서 바로 점검할 수 있도록 ${angle.tail} 관점으로 기준, 비교, 루틴, 기록, 안전 순서를 정리했습니다.`;
 
   return {
     index,

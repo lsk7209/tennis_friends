@@ -71,6 +71,7 @@ export interface MatchAnalysisResult {
 type MatchStatistics = MatchAnalysisResult['statistics'];
 
 export function analyzeMatch(input: MatchAnalysisInput): MatchAnalysisResult {
+  validateMatchInput(input);
   const stats = calculateStatistics(input);
   const score = calculateOverallScore(stats);
   const grade = getGrade(score);
@@ -85,6 +86,33 @@ export function analyzeMatch(input: MatchAnalysisInput): MatchAnalysisResult {
     recommendations: getRecommendations(stats),
     nextMatchGoals: getNextMatchGoals(stats)
   };
+}
+
+function validateMatchInput(input: MatchAnalysisInput) {
+  const numericValues = [
+    input.duration,
+    input.sets,
+    ...input.games,
+    input.points.won,
+    input.points.lost,
+    ...Object.values(input.serves),
+    ...Object.values(input.returns),
+    ...Object.values(input.winners),
+    ...Object.values(input.errors),
+    ...Object.values(input.netPlay),
+    ...Object.values(input.mental),
+  ];
+  if (numericValues.some((value) => !Number.isFinite(value) || value < 0)) {
+    throw new RangeError('match counts must be finite non-negative values');
+  }
+  const inconsistent =
+    input.serves.firstServeIn > input.serves.firstServeTotal ||
+    input.serves.secondServeIn > input.serves.secondServeTotal ||
+    input.returns.firstServeReturnWon > input.returns.firstServeReturnTotal ||
+    input.returns.secondServeReturnWon > input.returns.secondServeReturnTotal ||
+    input.netPlay.volleysWon + input.netPlay.volleysLost > input.netPlay.approaches ||
+    input.mental.breakPointsWon > input.mental.breakPointsFaced;
+  if (inconsistent) throw new RangeError('successful counts cannot exceed attempts');
 }
 
 function calculateStatistics(input: MatchAnalysisInput): MatchStatistics {

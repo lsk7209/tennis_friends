@@ -1,5 +1,25 @@
 # ACCEPTANCE
 
+## 2026-09-15 TF-009 external-effect isolation
+
+- PASS: ordinary local/test/preview builds do not render GA4, AdSense, their external preconnects, or the `Tracking` collector.
+- PASS: GitHub Pages explicitly opts in with `NEXT_PUBLIC_EXTERNAL_EFFECTS: production`; Vercel activates only for `VERCEL_ENV=production`.
+- PASS: contact remains a user-initiated `mailto:` handoff and booking remains a source-proven local simulation with no fetch/XHR/beacon mutation.
+- PASS: live/public/ops scripts remain outside `npm run verify`.
+- PASS: focused audit, lint, typecheck, full verify, disabled artifact inspection, and explicitly enabled 3,103-page build passed.
+- GAP: exact static export is not green; `/api/og` reads `request.url` and cannot export under `dynamic = "error"`.
+- BOUNDED: no live request capture, push, deployment, account action, email send, reservation, payment, or search-engine notification occurred.
+
+## 2026-09-14 docs/11 trust-contract acceptance
+
+- PASS: every public NTRP entry checked by the regression audit uses the actual 15-question count and identifies the result as non-official/reference-only.
+- PASS: the contact page does not claim `mailto:` delivery and the privacy notice describes the user-mail-client path.
+- PASS: court-booking list, input, and result pages are explicit simulations and contain no fake booking/payment completion or inert receipt/share/manage actions.
+- PASS: the homepage distribution is explicitly synthetic, not measured user data.
+- PASS: privacy wording acknowledges the source-confirmed AdSense installation without claiming account status or delivery.
+- PASS: final `npm run verify` exited 0 with lint, typecheck, audits, and a 3,103-page production build.
+- BOUNDED: no interactive browser, live account, push, deployment, email, or business-result verification occurred.
+
 ## 2026-08-28 Remaining Search Inventory And Measurement Acceptance
 
 - PASS: all 54 physical low-quality blog routes are absent from the sitemap and AI index and emit `noindex, follow` in generated HTML.

@@ -65,7 +65,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-156-forehand-miss-chart-beginner-checklist",
     "title": "포핸드 실수 방향 초보 체크",
-    "excerpt": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["포핸드 실수","실수 방향","기록표"],
     "date": "2026-04-21",
@@ -74,7 +74,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-157-forehand-miss-chart-twenty-min-routine",
     "title": "포핸드 실수 방향 20분 루틴",
-    "excerpt": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["포핸드 실수","실수 방향","기록표"],
     "date": "2026-04-21",
@@ -83,7 +83,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-158-forehand-miss-chart-level-gap",
     "title": "포핸드 실수 방향 레벨 차이",
-    "excerpt": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["포핸드 실수","실수 방향","기록표"],
     "date": "2026-04-22",
@@ -92,7 +92,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-159-forehand-miss-chart-match-record",
     "title": "포핸드 실수 방향 경기 기록",
-    "excerpt": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["포핸드 실수","실수 방향","기록표"],
     "date": "2026-04-22",
@@ -101,7 +101,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-160-forehand-miss-chart-common-mistakes",
     "title": "포핸드 실수 방향 실수 줄이기",
-    "excerpt": "포핸드 실수은 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "포핸드 실수는 결과보다 실수 방향 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["포핸드 실수","실수 방향","기록표"],
     "date": "2026-04-22",
@@ -110,7 +110,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-161-break-point-loss-track-beginner-checklist",
     "title": "브레이크 포인트 실점 초보 체크",
-    "excerpt": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["브레이크 포인트","실점 추적","압박 상황"],
     "date": "2026-04-22",
@@ -119,7 +119,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-162-break-point-loss-track-twenty-min-routine",
     "title": "브레이크 포인트 실점 20분 루틴",
-    "excerpt": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["브레이크 포인트","실점 추적","압박 상황"],
     "date": "2026-04-22",
@@ -128,7 +128,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-163-break-point-loss-track-level-gap",
     "title": "브레이크 포인트 실점 레벨 차이",
-    "excerpt": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["브레이크 포인트","실점 추적","압박 상황"],
     "date": "2026-04-23",
@@ -137,7 +137,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-164-break-point-loss-track-match-record",
     "title": "브레이크 포인트 실점 경기 기록",
-    "excerpt": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["브레이크 포인트","실점 추적","압박 상황"],
     "date": "2026-04-23",
@@ -146,7 +146,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-165-break-point-loss-track-common-mistakes",
     "title": "브레이크 포인트 실점 실수 줄이기",
-    "excerpt": "브레이크 포인트은 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "브레이크 포인트는 결과보다 실점 추적 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["브레이크 포인트","실점 추적","압박 상황"],
     "date": "2026-04-23",
@@ -155,7 +155,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-166-tiebreak-opening-two-beginner-checklist",
     "title": "타이브레이크 첫 두 포인트 초보 체크",
-    "excerpt": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["타이브레이크","첫 두 포인트","초반 전략"],
     "date": "2026-04-23",
@@ -164,7 +164,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-167-tiebreak-opening-two-twenty-min-routine",
     "title": "타이브레이크 첫 두 포인트 20분 루틴",
-    "excerpt": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["타이브레이크","첫 두 포인트","초반 전략"],
     "date": "2026-04-24",
@@ -173,7 +173,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-168-tiebreak-opening-two-level-gap",
     "title": "타이브레이크 첫 두 포인트 레벨 차이",
-    "excerpt": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["타이브레이크","첫 두 포인트","초반 전략"],
     "date": "2026-04-24",
@@ -182,7 +182,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-169-tiebreak-opening-two-match-record",
     "title": "타이브레이크 첫 두 포인트 경기 기록",
-    "excerpt": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["타이브레이크","첫 두 포인트","초반 전략"],
     "date": "2026-04-24",
@@ -191,7 +191,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-170-tiebreak-opening-two-common-mistakes",
     "title": "타이브레이크 첫 두 포인트 실수 줄이기",
-    "excerpt": "타이브레이크은 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "타이브레이크는 결과보다 첫 두 포인트 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "경기 분석",
     "tags": ["타이브레이크","첫 두 포인트","초반 전략"],
     "date": "2026-04-24",
@@ -200,7 +200,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-171-night-court-vision-beginner-checklist",
     "title": "야간 코트 시야 초보 체크",
-    "excerpt": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["야간 코트","시야 보정","조명 적응"],
     "date": "2026-04-24",
@@ -209,7 +209,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-172-night-court-vision-twenty-min-routine",
     "title": "야간 코트 시야 20분 루틴",
-    "excerpt": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["야간 코트","시야 보정","조명 적응"],
     "date": "2026-04-25",
@@ -218,7 +218,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-173-night-court-vision-level-gap",
     "title": "야간 코트 시야 레벨 차이",
-    "excerpt": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["야간 코트","시야 보정","조명 적응"],
     "date": "2026-04-25",
@@ -227,7 +227,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-174-night-court-vision-match-record",
     "title": "야간 코트 시야 경기 기록",
-    "excerpt": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["야간 코트","시야 보정","조명 적응"],
     "date": "2026-04-25",
@@ -236,7 +236,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-175-night-court-vision-common-mistakes",
     "title": "야간 코트 시야 실수 줄이기",
-    "excerpt": "야간 코트은 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "야간 코트는 결과보다 시야 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["야간 코트","시야 보정","조명 적응"],
     "date": "2026-04-25",
@@ -245,7 +245,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-176-windy-day-toss-beginner-checklist",
     "title": "바람 토스 서브 초보 체크",
-    "excerpt": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["바람 토스","서브 보정","바람 대응"],
     "date": "2026-04-25",
@@ -254,7 +254,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-177-windy-day-toss-twenty-min-routine",
     "title": "바람 토스 서브 20분 루틴",
-    "excerpt": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["바람 토스","서브 보정","바람 대응"],
     "date": "2026-04-26",
@@ -263,7 +263,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-178-windy-day-toss-level-gap",
     "title": "바람 토스 서브 레벨 차이",
-    "excerpt": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["바람 토스","서브 보정","바람 대응"],
     "date": "2026-04-26",
@@ -272,7 +272,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-179-windy-day-toss-match-record",
     "title": "바람 토스 서브 경기 기록",
-    "excerpt": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["바람 토스","서브 보정","바람 대응"],
     "date": "2026-04-26",
@@ -281,7 +281,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-180-windy-day-toss-common-mistakes",
     "title": "바람 토스 서브 실수 줄이기",
-    "excerpt": "바람 토스은 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "바람 토스는 결과보다 서브 보정 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["바람 토스","서브 보정","바람 대응"],
     "date": "2026-04-26",
@@ -290,7 +290,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-181-post-rain-clay-beginner-checklist",
     "title": "비 온 뒤 클레이 초보 체크",
-    "excerpt": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["비 온 뒤 클레이","클레이 적응","미끄럼 제어"],
     "date": "2026-04-26",
@@ -299,7 +299,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-182-post-rain-clay-twenty-min-routine",
     "title": "비 온 뒤 클레이 20분 루틴",
-    "excerpt": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["비 온 뒤 클레이","클레이 적응","미끄럼 제어"],
     "date": "2026-04-27",
@@ -308,7 +308,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-183-post-rain-clay-level-gap",
     "title": "비 온 뒤 클레이 레벨 차이",
-    "excerpt": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["비 온 뒤 클레이","클레이 적응","미끄럼 제어"],
     "date": "2026-04-27",
@@ -317,7 +317,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-184-post-rain-clay-match-record",
     "title": "비 온 뒤 클레이 경기 기록",
-    "excerpt": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["비 온 뒤 클레이","클레이 적응","미끄럼 제어"],
     "date": "2026-04-27",
@@ -326,7 +326,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-185-post-rain-clay-common-mistakes",
     "title": "비 온 뒤 클레이 실수 줄이기",
-    "excerpt": "비 온 뒤 클레이은 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "비 온 뒤 클레이는 결과보다 클레이 적응 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["비 온 뒤 클레이","클레이 적응","미끄럼 제어"],
     "date": "2026-04-27",
@@ -335,7 +335,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-186-grass-low-bounce-beginner-checklist",
     "title": "잔디 코트 낮은 바운드 초보 체크",
-    "excerpt": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["잔디 코트","낮은 바운드","타점 조절"],
     "date": "2026-04-27",
@@ -344,7 +344,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-187-grass-low-bounce-twenty-min-routine",
     "title": "잔디 코트 낮은 바운드 20분 루틴",
-    "excerpt": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["잔디 코트","낮은 바운드","타점 조절"],
     "date": "2026-04-28",
@@ -353,7 +353,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-188-grass-low-bounce-level-gap",
     "title": "잔디 코트 낮은 바운드 레벨 차이",
-    "excerpt": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["잔디 코트","낮은 바운드","타점 조절"],
     "date": "2026-04-28",
@@ -362,7 +362,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-189-grass-low-bounce-match-record",
     "title": "잔디 코트 낮은 바운드 경기 기록",
-    "excerpt": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["잔디 코트","낮은 바운드","타점 조절"],
     "date": "2026-04-28",
@@ -371,7 +371,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-190-grass-low-bounce-common-mistakes",
     "title": "잔디 코트 낮은 바운드 실수 줄이기",
-    "excerpt": "잔디 코트은 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "잔디 코트는 결과보다 낮은 바운드 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["잔디 코트","낮은 바운드","타점 조절"],
     "date": "2026-04-28",
@@ -380,7 +380,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-191-indoor-hard-grip-beginner-checklist",
     "title": "실내 하드 미끄럼 초보 체크",
-    "excerpt": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["실내 하드","미끄럼 감각","풋워크"],
     "date": "2026-04-29",
@@ -389,7 +389,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-192-indoor-hard-grip-twenty-min-routine",
     "title": "실내 하드 미끄럼 20분 루틴",
-    "excerpt": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["실내 하드","미끄럼 감각","풋워크"],
     "date": "2026-04-29",
@@ -398,7 +398,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-193-indoor-hard-grip-level-gap",
     "title": "실내 하드 미끄럼 레벨 차이",
-    "excerpt": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["실내 하드","미끄럼 감각","풋워크"],
     "date": "2026-04-29",
@@ -407,7 +407,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-194-indoor-hard-grip-match-record",
     "title": "실내 하드 미끄럼 경기 기록",
-    "excerpt": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["실내 하드","미끄럼 감각","풋워크"],
     "date": "2026-04-29",
@@ -416,7 +416,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-195-indoor-hard-grip-common-mistakes",
     "title": "실내 하드 미끄럼 실수 줄이기",
-    "excerpt": "실내 하드은 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "실내 하드는 결과보다 미끄럼 감각 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "코트 적응",
     "tags": ["실내 하드","미끄럼 감각","풋워크"],
     "date": "2026-04-29",
@@ -425,7 +425,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-196-matchpoint-breathing-beginner-checklist",
     "title": "매치포인트 호흡 초보 체크",
-    "excerpt": "매치포인트은 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "매치포인트는 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "멘탈 트레이닝",
     "tags": ["매치포인트","호흡 루틴","집중력"],
     "date": "2026-04-30",
@@ -434,7 +434,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-197-matchpoint-breathing-twenty-min-routine",
     "title": "매치포인트 호흡 20분 루틴",
-    "excerpt": "매치포인트은 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "매치포인트는 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "멘탈 트레이닝",
     "tags": ["매치포인트","호흡 루틴","집중력"],
     "date": "2026-04-30",
@@ -443,7 +443,7 @@ export const articleWriterPart23PostOverrides = [
   {
     "slug": "aw2-198-matchpoint-breathing-level-gap",
     "title": "매치포인트 호흡 레벨 차이",
-    "excerpt": "매치포인트은 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
+    "excerpt": "매치포인트는 결과보다 호흡 루틴 기준을 먼저 남겨야 다음 선택이 선명합니다.",
     "category": "멘탈 트레이닝",
     "tags": ["매치포인트","호흡 루틴","집중력"],
     "date": "2026-04-30",

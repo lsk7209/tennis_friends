@@ -2,7 +2,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-199-matchpoint-breathing-match-record",
     "title": "매치포인트 호흡 경기 기록",
-    "excerpt": "매치포인트은 감정보다 호흡 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "매치포인트는 감정보다 호흡 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "멘탈 트레이닝",
     "tags": ["매치포인트","호흡 루틴","집중력"],
     "date": "2026-04-09",
@@ -11,7 +11,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-200-matchpoint-breathing-common-mistakes",
     "title": "매치포인트 호흡 실수 줄이기",
-    "excerpt": "매치포인트은 감정보다 호흡 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "매치포인트는 감정보다 호흡 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "멘탈 트레이닝",
     "tags": ["매치포인트","호흡 루틴","집중력"],
     "date": "2026-04-09",
@@ -65,7 +65,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-206-five-set-pacing-beginner-checklist",
     "title": "5세트 페이싱 초보 체크",
-    "excerpt": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "경기 운영",
     "tags": ["5세트","페이싱","체력 분배"],
     "date": "2026-04-10",
@@ -74,7 +74,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-207-five-set-pacing-twenty-min-routine",
     "title": "5세트 페이싱 20분 루틴",
-    "excerpt": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "경기 운영",
     "tags": ["5세트","페이싱","체력 분배"],
     "date": "2026-04-10",
@@ -83,7 +83,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-208-five-set-pacing-level-gap",
     "title": "5세트 페이싱 레벨 차이",
-    "excerpt": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "경기 운영",
     "tags": ["5세트","페이싱","체력 분배"],
     "date": "2026-04-11",
@@ -92,7 +92,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-209-five-set-pacing-match-record",
     "title": "5세트 페이싱 경기 기록",
-    "excerpt": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "경기 운영",
     "tags": ["5세트","페이싱","체력 분배"],
     "date": "2026-04-11",
@@ -101,7 +101,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-210-five-set-pacing-common-mistakes",
     "title": "5세트 페이싱 실수 줄이기",
-    "excerpt": "5세트은 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "5세트는 감정보다 페이싱 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "경기 운영",
     "tags": ["5세트","페이싱","체력 분배"],
     "date": "2026-04-11",
@@ -110,7 +110,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-211-double-fault-reset-beginner-checklist",
     "title": "더블폴트 리셋 초보 체크",
-    "excerpt": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "서브 전략",
     "tags": ["더블폴트","리셋 루틴","세컨드 서브"],
     "date": "2026-04-11",
@@ -119,7 +119,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-212-double-fault-reset-twenty-min-routine",
     "title": "더블폴트 리셋 20분 루틴",
-    "excerpt": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "서브 전략",
     "tags": ["더블폴트","리셋 루틴","세컨드 서브"],
     "date": "2026-04-11",
@@ -128,7 +128,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-213-double-fault-reset-level-gap",
     "title": "더블폴트 리셋 레벨 차이",
-    "excerpt": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "서브 전략",
     "tags": ["더블폴트","리셋 루틴","세컨드 서브"],
     "date": "2026-04-12",
@@ -137,7 +137,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-214-double-fault-reset-match-record",
     "title": "더블폴트 리셋 경기 기록",
-    "excerpt": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "서브 전략",
     "tags": ["더블폴트","리셋 루틴","세컨드 서브"],
     "date": "2026-04-12",
@@ -146,7 +146,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-215-double-fault-reset-common-mistakes",
     "title": "더블폴트 리셋 실수 줄이기",
-    "excerpt": "더블폴트은 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "더블폴트는 감정보다 리셋 루틴 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "서브 전략",
     "tags": ["더블폴트","리셋 루틴","세컨드 서브"],
     "date": "2026-04-12",
@@ -200,7 +200,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-221-junior-starting-age-beginner-checklist",
     "title": "주니어 시작 나이 초보 체크",
-    "excerpt": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "주니어 테니스",
     "tags": ["주니어","시작 나이","부모 체크"],
     "date": "2026-04-13",
@@ -209,7 +209,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-222-junior-starting-age-twenty-min-routine",
     "title": "주니어 시작 나이 20분 루틴",
-    "excerpt": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "주니어 테니스",
     "tags": ["주니어","시작 나이","부모 체크"],
     "date": "2026-04-14",
@@ -218,7 +218,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-223-junior-starting-age-level-gap",
     "title": "주니어 시작 나이 레벨 차이",
-    "excerpt": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "주니어 테니스",
     "tags": ["주니어","시작 나이","부모 체크"],
     "date": "2026-04-14",
@@ -227,7 +227,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-224-junior-starting-age-match-record",
     "title": "주니어 시작 나이 경기 기록",
-    "excerpt": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "주니어 테니스",
     "tags": ["주니어","시작 나이","부모 체크"],
     "date": "2026-04-14",
@@ -236,7 +236,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-225-junior-starting-age-common-mistakes",
     "title": "주니어 시작 나이 실수 줄이기",
-    "excerpt": "주니어은 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "주니어는 감정보다 시작 나이 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "주니어 테니스",
     "tags": ["주니어","시작 나이","부모 체크"],
     "date": "2026-04-14",
@@ -335,7 +335,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-236-no-sport-first-racket-beginner-checklist",
     "title": "운동 초보 첫 라켓 초보 체크",
-    "excerpt": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "장비 가이드",
     "tags": ["운동 초보","첫 라켓","라켓 선택"],
     "date": "2026-04-16",
@@ -344,7 +344,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-237-no-sport-first-racket-twenty-min-routine",
     "title": "운동 초보 첫 라켓 20분 루틴",
-    "excerpt": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "장비 가이드",
     "tags": ["운동 초보","첫 라켓","라켓 선택"],
     "date": "2026-04-17",
@@ -353,7 +353,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-238-no-sport-first-racket-level-gap",
     "title": "운동 초보 첫 라켓 레벨 차이",
-    "excerpt": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "장비 가이드",
     "tags": ["운동 초보","첫 라켓","라켓 선택"],
     "date": "2026-04-17",
@@ -362,7 +362,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-239-no-sport-first-racket-match-record",
     "title": "운동 초보 첫 라켓 경기 기록",
-    "excerpt": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "장비 가이드",
     "tags": ["운동 초보","첫 라켓","라켓 선택"],
     "date": "2026-04-17",
@@ -371,7 +371,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-240-no-sport-first-racket-common-mistakes",
     "title": "운동 초보 첫 라켓 실수 줄이기",
-    "excerpt": "운동 초보은 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "운동 초보는 감정보다 첫 라켓 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "장비 가이드",
     "tags": ["운동 초보","첫 라켓","라켓 선택"],
     "date": "2026-04-17",
@@ -380,7 +380,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-241-club-first-visit-beginner-checklist",
     "title": "동호회 첫 방문 초보 체크",
-    "excerpt": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "동호회 운영",
     "tags": ["동호회","첫 방문","매너"],
     "date": "2026-04-18",
@@ -389,7 +389,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-242-club-first-visit-twenty-min-routine",
     "title": "동호회 첫 방문 20분 루틴",
-    "excerpt": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "동호회 운영",
     "tags": ["동호회","첫 방문","매너"],
     "date": "2026-04-18",
@@ -398,7 +398,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-243-club-first-visit-level-gap",
     "title": "동호회 첫 방문 레벨 차이",
-    "excerpt": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "동호회 운영",
     "tags": ["동호회","첫 방문","매너"],
     "date": "2026-04-18",
@@ -407,7 +407,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-244-club-first-visit-match-record",
     "title": "동호회 첫 방문 경기 기록",
-    "excerpt": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "동호회 운영",
     "tags": ["동호회","첫 방문","매너"],
     "date": "2026-04-18",
@@ -416,7 +416,7 @@ export const articleWriterPart24PostOverrides = [
   {
     "slug": "aw2-245-club-first-visit-common-mistakes",
     "title": "동호회 첫 방문 실수 줄이기",
-    "excerpt": "동호회은 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
+    "excerpt": "동호회는 감정보다 첫 방문 기준을 먼저 정해야 다음 선택이 흔들리지 않습니다.",
     "category": "동호회 운영",
     "tags": ["동호회","첫 방문","매너"],
     "date": "2026-04-18",

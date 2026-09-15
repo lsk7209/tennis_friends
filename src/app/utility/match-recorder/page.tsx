@@ -43,17 +43,13 @@ export default function MatchRecorderPage() {
             경기 직후 3분만 투자해도 복기 품질이 달라집니다. 스코어만 남기지 말고, 잘 된 패턴과 흔들린 순간을 같이 기록해 두세요.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link href="/utility/match-recorder/test">
-              <Button size="lg" className="bg-white text-amber-600 hover:bg-amber-50">
+            <Button asChild size="lg" className="bg-white text-amber-600 hover:bg-amber-50"><Link href="/utility/match-recorder/test">
                 <Plus className="mr-2 h-5 w-5" />
                 경기 기록 시작
-              </Button>
-            </Link>
-            <Link href="/utility/match-analyzer">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              </Link></Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10"><Link href="/utility/match-analyzer">
                 분석 도구 보기
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
         </section>
 
@@ -115,9 +111,7 @@ export default function MatchRecorderPage() {
                 </div>
                 <p className="mt-2 text-sm leading-6 text-amber-900">경기 직후 3줄 메모만 남겨도 다음 연습의 방향이 선명해집니다.</p>
               </div>
-              <Link href="/utility/match-recorder/test">
-                <Button className="bg-amber-500 text-white hover:bg-amber-600">지금 기록하러 가기</Button>
-              </Link>
+              <Button asChild className="bg-amber-500 text-white hover:bg-amber-600"><Link href="/utility/match-recorder/test">지금 기록하러 가기</Link></Button>
             </CardContent>
           </Card>
         </section>

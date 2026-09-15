@@ -1,0 +1,17 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-09-15T07:01:24.951Z",
+  "fixtures": [
+    "published-at-release",
+    "future",
+    "edited",
+    "draft",
+    "private",
+    "invalid-date",
+    "stable-order",
+    "first-page",
+    "last-page",
+    "out-of-range",
+    "invalid-page-size"
+  ]
+}

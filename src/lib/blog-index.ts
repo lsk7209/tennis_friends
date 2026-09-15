@@ -1,5 +1,9 @@
 import { allBlogPosts } from "@/data/blog-posts";
-import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
+import {
+  getBlogPublishDate,
+  getPublishedBlogPosts,
+  paginatePublishedBlogPosts,
+} from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import {
   BADGE_COLORS,
@@ -58,14 +62,5 @@ export function getBlogIndexPageCapacity(): number {
 
 export function getBlogIndexPage(page: number) {
   const posts = getPublishedIndexPosts();
-  const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
-  const safePage = Math.min(Math.max(Math.trunc(page), 1), totalPages);
-  const start = (safePage - 1) * POSTS_PER_PAGE;
-
-  return {
-    posts: posts.slice(start, start + POSTS_PER_PAGE),
-    currentPage: safePage,
-    totalPages,
-    totalPosts: posts.length,
-  };
+  return paginatePublishedBlogPosts(posts, page, POSTS_PER_PAGE);
 }

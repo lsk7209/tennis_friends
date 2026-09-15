@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useMemo, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -12,6 +12,7 @@ import {BarChart3, Target, ArrowRight, RotateCcw, Share2, CheckCircle, AlertTria
 import { MatchAnalysisResult } from '@/lib/matchAnalyzer';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
+import { AccessibleErrorState } from '@/components/AccessibleErrorState';
 
 const EMPTY_STATISTICS: MatchAnalysisResult['statistics'] = {
   servePercentage: 0,
@@ -31,14 +32,10 @@ const EMPTY_RECOMMENDATIONS: MatchAnalysisResult['recommendations'] = {
 function MatchAnalyzerResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
-  const [result, setResult] = useState<MatchAnalysisResult | null>(null);
-  
-  useEffect(() => {
-    // 로딩 시뮬레이션
-    const timer = setTimeout(() => {
-      const overallScore = Number(searchParams.get('overallScore') || 0);
-      const grade = searchParams.get('grade') || 'C';
+  const result = useMemo<MatchAnalysisResult | null>(() => {
+      const rawOverallScore = searchParams.get('overallScore');
+      const grade = searchParams.get('grade') || '';
+      const overallScore = Number(rawOverallScore);
       const strengths = safeJsonParse<string[]>(searchParams.get('strengths'), []);
       const weaknesses = safeJsonParse<string[]>(searchParams.get('weaknesses'), []);
       const improvements = safeJsonParse<string[]>(searchParams.get('improvements'), []);
@@ -46,7 +43,8 @@ function MatchAnalyzerResultContent() {
       const recommendations = safeJsonParse<MatchAnalysisResult['recommendations']>(searchParams.get('recommendations'), EMPTY_RECOMMENDATIONS);
       const nextMatchGoals = safeJsonParse<string[]>(searchParams.get('nextMatchGoals'), []);
       
-      setResult({
+      if (rawOverallScore === null || !Number.isFinite(overallScore) || overallScore < 0 || overallScore > 100 || !['A', 'B', 'C', 'D', 'F'].includes(grade)) return null;
+      return {
         overallScore,
         grade: grade as "A" | "B" | "C" | "D" | "F",
         strengths,
@@ -55,11 +53,7 @@ function MatchAnalyzerResultContent() {
         statistics,
         recommendations,
         nextMatchGoals
-      });
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
+      };
   }, [searchParams]);
 
   const handleRetake = () => {
@@ -101,29 +95,16 @@ function MatchAnalyzerResultContent() {
     }
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-20 w-20 border-b-2 border-blue-600 mx-auto mb-6"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">분석 중입니다...</h2>
-          <p className="text-gray-600 text-lg">경기 데이터를 분석하고 있습니다.</p>
-        </div>
-      </div>
-    );
-  }
-
   if (!result) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">오류가 발생했습니다</h2>
-          <p className="text-gray-600 mb-4">결과를 불러올 수 없습니다.</p>
-          <Button onClick={handleRetake} className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white">
-            다시 시도하기
-          </Button>
-        </div>
-      </div>
+      <AccessibleErrorState
+        title="결과를 불러올 수 없습니다"
+        description="유효한 경기 분석 결과가 없습니다. 다시 입력해 주세요."
+        actionLabel="다시 시도하기"
+        onAction={handleRetake}
+        className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"
+        actionClassName="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700"
+      />
     );
   }
 
@@ -491,12 +472,10 @@ function MatchAnalyzerResultContent() {
                   <Share2 className="h-5 w-5 mr-2" />
                   결과 공유하기
                 </Button>
-                <Link href="/utility/ntrp-test">
-                  <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Button asChild className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"><Link href="/utility/ntrp-test">
                     <ArrowRight className="h-5 w-5 mr-2" />
                     실력 테스트 하기
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </div>
           </FadeIn>

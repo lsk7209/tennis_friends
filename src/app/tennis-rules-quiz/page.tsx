@@ -111,22 +111,18 @@ export default function TennisRulesQuizIntro() {
                 결과 페이지에서 점수와 약점 카테고리, 복습 방향을 함께 확인할 수 있습니다.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Link href="/tennis-rules-quiz/quiz">
-                  <Button className="w-full bg-emerald-600 px-7 py-6 text-base font-semibold text-white hover:bg-emerald-700 sm:w-auto">
+                <Button asChild className="w-full bg-emerald-600 px-7 py-6 text-base font-semibold text-white hover:bg-emerald-700 sm:w-auto"><Link href="/tennis-rules-quiz/quiz">
                     <Play className="mr-2 h-5 w-5" />
                     퀴즈 시작
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link href="/utility/ntrp-test">
-                  <Button
+                  </Link></Button>
+                <Button asChild
                     variant="outline"
                     className="w-full border-gray-300 bg-white px-7 py-6 text-base font-semibold text-gray-900 hover:border-emerald-500 sm:w-auto"
-                  >
+                  ><Link href="/utility/ntrp-test">
                     <Trophy className="mr-2 h-5 w-5" />
                     NTRP 테스트
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </div>
 

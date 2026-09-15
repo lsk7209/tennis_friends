@@ -54,7 +54,7 @@ assert(!blogContent.includes("rounded-full"), {
   issue: "blog index controls should avoid pill-heavy layout",
 });
 
-assert(blogContent.includes("pageWindow("), {
+assert(blogContent.includes("getPaginationWindow("), {
   scope: "blog index",
   issue: "compact pagination window missing",
 });

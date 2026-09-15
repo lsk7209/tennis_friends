@@ -1,10 +1,10 @@
 # STATUS
 
-Current State: DONE
-Current Phase: Search inventory and funnel measurement optimization verified
-Completed: Removed active AdSense and affiliate surfaces/contracts, preserved GA4 and `naver_cafe_visit`, converted all 29 known raw Markdown tables, added one optimized realistic image pilot, and passed focused, full, exact static-export, and responsive-browser verification.
-In Progress: None.
-Remaining: Release only when authorized, then verify genuine GA4 conversion receipts and editorially review duplicate-intent articles.
-Blocked: No.
-Last Verification: Sitemap/cafe audits, typecheck, diff check, and exact GitHub Pages static export passed; 3,076 pages generated and all 54 physical low-quality blog routes emitted `noindex, follow`.
-Next Action: Commit and push only when explicitly authorized; do not mutate Vercel.
+Current State: RELEASING
+Current Phase: TF-039 approved Git push, connected deployment, and production smoke
+Completed: TF-001–TF-038 and TF-040 locally. Build and exact static export pass at 3,105 pages; all 63 utility routes passed the defined mobile/browser audit; release, rollback, completion, and disabled healthcheck evidence is recorded.
+In Progress: User authorized continuation on 2026-09-15 after the exact TF-039 blocker was stated. Prepare one scoped commit, push `main`, observe the push-connected GitHub Pages deployment, and run public smoke.
+Remaining: TF-039 production evidence and final durable closure.
+Blocked: No. Account/CMP settings remain outside the release and stay fail closed.
+Last Verification: build, static export, utility fleet browser audit, focused contract audits, typecheck, and lint completed; final documentation verification remains the last local command checkpoint.
+Next Action: commit the verified worktree, push `origin/main`, track the connected deployment, and record exact public evidence before reporting complete.

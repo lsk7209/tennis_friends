@@ -27,6 +27,8 @@ export default function RankingCalculatorPage() {
   const [opponentRank, setOpponentRank] = useState(700);
   const [result, setResult] = useState<Result>('win');
   const [level, setLevel] = useState<Level>('local');
+  const baseInputValid = Number.isInteger(currentRank) && currentRank >= 1 && currentRank <= 100000 && Number.isInteger(currentPoints) && currentPoints >= 0 && currentPoints <= 1000000;
+  const opponentValid = Number.isInteger(opponentRank) && opponentRank >= 1 && opponentRank <= 100000;
 
   const ranking = useMemo(() => {
     let points = currentPoints;
@@ -53,6 +55,7 @@ export default function RankingCalculatorPage() {
   }, [currentPoints, currentRank, matches]);
 
   const addMatch = () => {
+    if (!baseInputValid || !opponentValid) return;
     setMatches((prev) => [...prev, { id: crypto.randomUUID(), opponentRank, result, level }]);
   };
 
@@ -80,11 +83,12 @@ export default function RankingCalculatorPage() {
               <CardContent className="space-y-4">
                 <div>
                   <Label htmlFor="current-rank">현재 랭킹</Label>
-                  <Input id="current-rank" type="number" value={currentRank} onChange={(e) => setCurrentRank(Number(e.target.value) || 0)} />
+                  <Input id="current-rank" type="number" min="1" max="100000" step="1" value={currentRank} onChange={(e) => setCurrentRank(Number(e.target.value))} />
                 </div>
                 <div>
                   <Label htmlFor="current-points">현재 포인트</Label>
-                  <Input id="current-points" type="number" value={currentPoints} onChange={(e) => setCurrentPoints(Number(e.target.value) || 0)} />
+                  <Input id="current-points" type="number" min="0" max="1000000" step="1" value={currentPoints} onChange={(e) => setCurrentPoints(Number(e.target.value))} />
+                {!baseInputValid && <p role="alert" className="text-sm font-semibold text-red-700">랭킹은 1~100,000위, 포인트는 0~1,000,000의 정수로 입력하세요.</p>}
                 </div>
               </CardContent>
             </Card>
@@ -96,7 +100,8 @@ export default function RankingCalculatorPage() {
               <CardContent className="space-y-4">
                 <div>
                   <Label htmlFor="opponent-rank">상대 랭킹</Label>
-                  <Input id="opponent-rank" type="number" value={opponentRank} onChange={(e) => setOpponentRank(Number(e.target.value) || 0)} />
+                  <Input id="opponent-rank" type="number" min="1" max="100000" step="1" value={opponentRank} onChange={(e) => setOpponentRank(Number(e.target.value))} />
+                  {!opponentValid && <p role="alert" className="mt-2 text-sm font-semibold text-red-700">상대 랭킹은 1~100,000위의 정수로 입력하세요.</p>}
                 </div>
                 <div>
                   <Label className="mb-2 block">결과</Label>
@@ -119,7 +124,7 @@ export default function RankingCalculatorPage() {
                     </SelectContent>
                   </Select>
                 </div>
-                <Button onClick={addMatch} className="w-full bg-amber-500 text-white hover:bg-amber-600">
+                <Button disabled={!baseInputValid || !opponentValid} onClick={addMatch} className="w-full bg-amber-500 text-white hover:bg-amber-600">
                   <Plus className="mr-2 h-4 w-4" />
                   경기 추가
                 </Button>
@@ -194,6 +199,7 @@ export default function RankingCalculatorPage() {
                 <div className="mt-3 space-y-2 text-sm leading-6 text-slate-600">
                   <p>상위 랭킹 선수에게 승리한 결과를 따로 기록해 두면 시즌 목표를 더 현실적으로 잡기 좋습니다.</p>
                   <p>포인트 계산은 실제 협회 규정과 다를 수 있으니, 흐름 확인용 시뮬레이터로 보는 편이 맞습니다.</p>
+                  <p>모델 tf-ranking-sim-v1-20260915: 대회 등급 배수(1/1.5/2), 상대 순위 차, 승패를 반영하고 포인트 3점당 예상 순위 1칸으로 환산합니다. 실제 협회 산식이 아닙니다.</p>
                 </div>
               </CardContent>
             </Card>

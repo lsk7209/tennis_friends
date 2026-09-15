@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-09-15T07:01:28.244Z",
+  "status": "PASS",
+  "triggers": [
+    "pull_request",
+    "workflow_dispatch"
+  ],
+  "scheduled": false,
+  "command": "npm run verify",
+  "exceptionPolicy": "any non-zero audit, lint, typecheck, or build exit fails the job",
+  "failures": []
+}

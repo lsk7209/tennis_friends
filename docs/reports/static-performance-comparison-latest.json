@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-09-15T06:57:00+09:00",
+  "status": "PASS_WITH_LAB_VARIANCE",
+  "method": "Same host, browser session, viewport, cache-disabled policy, routes, and three-run median before and after final static rebuild",
+  "comparisons": [
+    { "path": "/", "beforeMedianLoadMs": 67, "afterMedianLoadMs": 76, "loadChangePct": 13.43, "beforeMedianTransferBytes": 1119784, "afterMedianTransferBytes": 1121543, "transferChangePct": 0.16 },
+    { "path": "/utility/ntrp-test/", "beforeMedianLoadMs": 77, "afterMedianLoadMs": 46, "loadChangePct": -40.26, "beforeMedianTransferBytes": 976376, "afterMedianTransferBytes": 977454, "transferChangePct": 0.11 },
+    { "path": "/blog/seoul-best-tennis-courts/", "beforeMedianLoadMs": 82, "afterMedianLoadMs": 50, "loadChangePct": -39.02, "beforeMedianTransferBytes": 1061542, "afterMedianTransferBytes": 994750, "transferChangePct": -6.29 },
+    { "path": "/players/carlos-alcaraz/", "beforeMedianLoadMs": 90, "afterMedianLoadMs": 88, "loadChangePct": -2.22, "beforeMedianTransferBytes": 1378779, "afterMedianTransferBytes": 1312109, "transferChangePct": -4.84 }
+  ],
+  "invariants": { "horizontalOverflow": false, "pageSpeedInsights": null, "rum": null },
+  "interpretation": "Three of four routes improved median load time; home regressed 9 ms while transfer size was effectively flat. These small local samples are directional evidence, not production Core Web Vitals or causal proof."
+}

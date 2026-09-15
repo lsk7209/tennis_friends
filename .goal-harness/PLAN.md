@@ -1,5 +1,27 @@
 # PLAN
 
+## TF-009 External-Effect Isolation Plan (2026-09-15)
+
+Status: COMPLETE LOCALLY; STATIC-EXPORT BLOCKER RECORDED
+
+1. Map inherited analytics, advertising, contact, booking, and operational effects.
+2. Add a failing-first deterministic isolation audit.
+3. Introduce one fail-closed production gate and wire the authorized deployment build explicitly.
+4. Prove disabled and enabled server-build artifacts, run full verification, and attempt the exact static export.
+5. Record the independent review, `/api/og` static-export blocker, and no-release boundary.
+
+## docs/11 Trust Contract Plan (2026-09-14)
+
+Status: COMPLETE FOR CONFIRMED FIRST SLICE
+
+1. Reproduce package observations against the current repository and record the dirty-tree/commit baseline.
+2. Add a deterministic regression audit for TF-005, TF-006, TF-007, and TF-008 before changing behavior.
+3. Correct only the confirmed public claims and mailto state semantics.
+4. Run focused audits, lint, typecheck, full verification/build, and diff review.
+5. Update `docs/tennisfrens-audit/`, the harness, and project handoff; stop before push/deployment.
+
+Classification: medium R2 trust/content implementation; domain profile: general with SEO/content checks. Rollback is a normal revert of the local diff.
+
 ## Cafe-First Ad-Free Content Plan (2026-08-27)
 
 Status: COMPLETE

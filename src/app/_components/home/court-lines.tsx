@@ -43,21 +43,25 @@ export function CourtLines() {
             Data Insights
           </p>
           <h2 className="text-3xl font-bold leading-tight tracking-[-0.035em] text-white md:text-4xl">
-            TennisFriends 사용자 NTRP 분포
+            NTRP 응답 분포 예시
           </h2>
           <p className="mt-3 text-sm text-white/50">
-            실제 테스트 응답 기반 데이터 예시
+            실제 사용자 통계가 아닌 화면 설명용 가상 분포 예시
           </p>
         </div>
 
-        <div className="h-[280px] min-h-[280px] min-w-0 md:h-[360px] md:min-h-[360px]">
+        <figure className="h-[280px] min-h-[280px] min-w-0 md:h-[360px] md:min-h-[360px]">
           <svg
             className="h-full w-full"
             viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}
             role="img"
-            aria-label="NTRP 응답 분포 그래프"
+            aria-label="화면 설명용 가상 NTRP 응답 분포 그래프"
             preserveAspectRatio="none"
           >
+            <title>화면 설명용 가상 NTRP 응답 분포</title>
+            <desc>
+              {DATA.map((item) => `NTRP ${item.level}: ${item.count}명`).join(', ')}
+            </desc>
             <defs>
               <linearGradient id="voltGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#DFFF1C" stopOpacity="0.25" />
@@ -109,7 +113,11 @@ export function CourtLines() {
               );
             })}
           </svg>
-        </div>
+          <figcaption className="sr-only">
+            실제 사용자 통계가 아닌 화면 설명용 가상 데이터입니다.{' '}
+            {DATA.map((item) => `NTRP ${item.level} ${item.count}명`).join(', ')}
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

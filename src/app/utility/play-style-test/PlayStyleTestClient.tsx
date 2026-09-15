@@ -132,12 +132,10 @@ export default function PlayStyleTestIntro() {
                 <span className="text-gray-600">당신의 플레이 DNA는 어떤 유형일까요?</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/utility/play-style-test/test">
-                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+                <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"><Link href="/utility/play-style-test/test">
                     테스트 시작하기
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+                  </Link></Button>
                 <Button variant="outline" size="lg" className="px-10 py-6 text-lg font-bold rounded-xl bg-white/80 backdrop-blur-sm border-2 border-gray-300 hover:border-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
                   샘플 결과 보기
                 </Button>
@@ -276,12 +274,10 @@ export default function PlayStyleTestIntro() {
                   5분이면 당신의 테니스 DNA를 알 수 있습니다<br />
                   <span className="text-gray-600">과학적 분석과 전문가의 조언이 기다립니다.</span>
                 </p>
-                <Link href="/utility/play-style-test/test">
-                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-6 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"><Link href="/utility/play-style-test/test">
                     무료 테스트 시작하기
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </CardContent>
           </Card>

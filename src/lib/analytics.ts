@@ -17,6 +17,53 @@ export const isGAEnabled = (): boolean =>
 
 type GtagParams = Record<string, string | number | boolean | null | undefined>;
 
+const EVENT_PARAMETER_ALLOWLIST: Record<string, ReadonlySet<string>> = {
+  tool_used: new Set(["tool_name", "ntrp"]),
+  tool_started: new Set(["tool_slug", "source_path", "destination_path"]),
+  test_completed: new Set(["test_type", "page_path"]),
+  cta_clicked: new Set([
+    "cta_location",
+    "source",
+    "destination_path",
+    "destination_url",
+    "result_type",
+  ]),
+  content_read_complete: new Set(["page_path", "read_seconds"]),
+  lead_captured: new Set(["source", "page_path"]),
+  search_performed: new Set(["query_length", "result_count", "page_path"]),
+  blog_post_viewed: new Set(["page_path"]),
+  player_profile_viewed: new Set(["page_path", "player_slug"]),
+  naver_cafe_visit: new Set([
+    "cta_location",
+    "link_text",
+    "destination_url",
+    "page_path",
+  ]),
+};
+
+const SENSITIVE_VALUE_PATTERN = /@|(?:^|\D)01[016789][^0-9]*\d{3,4}[^0-9]*\d{4}(?:\D|$)/;
+
+export function sanitizeAnalyticsEvent(
+  eventName: string,
+  params: GtagParams = {},
+): GtagParams | null {
+  const allowedKeys = EVENT_PARAMETER_ALLOWLIST[eventName];
+  if (!allowedKeys) return null;
+
+  const sanitized: GtagParams = {};
+  for (const [key, value] of Object.entries(params)) {
+    if (!allowedKeys.has(key) || value == null) continue;
+    if (typeof value !== "string") {
+      sanitized[key] = value;
+      continue;
+    }
+    const normalized = value.trim().slice(0, 100);
+    if (!normalized || SENSITIVE_VALUE_PATTERN.test(normalized)) continue;
+    sanitized[key] = normalized;
+  }
+  return sanitized;
+}
+
 /**
  * GA4 커스텀 이벤트 전송
  * @param eventName - snake_case 권장 (예: "tool_used", "cta_clicked")
@@ -24,8 +71,10 @@ type GtagParams = Record<string, string | number | boolean | null | undefined>;
  */
 export function trackEvent(eventName: string, params: GtagParams = {}): void {
   if (!isGAEnabled()) return;
+  const sanitizedParams = sanitizeAnalyticsEvent(eventName, params);
+  if (!sanitizedParams) return;
   try {
-    window.gtag("event", eventName, params);
+    window.gtag("event", eventName, sanitizedParams);
   } catch (e) {
     if (process.env.NODE_ENV === "development") {
       console.warn("[analytics] trackEvent failed", eventName, e);

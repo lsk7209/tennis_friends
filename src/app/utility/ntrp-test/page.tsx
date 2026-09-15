@@ -72,21 +72,17 @@ export default function Page() {
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/utility/ntrp-test/test">
-                <Button className="bg-emerald-600 hover:bg-emerald-700">
+              <Button asChild className="bg-emerald-600 hover:bg-emerald-700"><Link href="/utility/ntrp-test/test">
                   <BarChart3 className="mr-2 h-4 w-4" />
                   테스트 시작
-                </Button>
-              </Link>
-              <Link href="/utility/training-planner">
-                <Button
+                </Link></Button>
+              <Button asChild
                   variant="outline"
                   className="border-slate-300 text-slate-900 hover:border-emerald-600 hover:text-emerald-700"
-                >
+                ><Link href="/utility/training-planner">
                   <Target className="mr-2 h-4 w-4" />
                   훈련 플래너 보기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </CardContent>
         </Card>

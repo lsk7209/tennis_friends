@@ -20,7 +20,7 @@ const CTASection: React.FC = () => {
       href: "/utility/ntrp-test",
       color: "text-primary",
       gradient: "from-primary/20 to-primary/40",
-      features: ["10개 질문", "정확한 분석", "개선 방향 제시"]
+      features: ["15개 질문", "비공식 참고 결과", "개선 방향 제시"]
     },
     {
       title: "스트링 텐션 계산기",

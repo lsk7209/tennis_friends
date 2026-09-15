@@ -2,8 +2,10 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { withKoreanParticle } from "../src/lib/korean-particle.js";
 
 const ROOT = process.cwd();
+const j = withKoreanParticle;
 const CONTENT_OUT = path.join(
   ROOT,
   "src",
@@ -160,17 +162,17 @@ function buildContent(row, index) {
   const structure = index % 6;
   const headings = [
     [`${main} 문제가 반복되는 장면`, `${a} 기준으로 먼저 보는 신호`, `${b}까지 연결하는 실전 루틴`, `다음 경기에서 남길 기록`],
-    [`${main}을 결과가 아니라 과정으로 보기`, `${a} 판단을 빠르게 만드는 표`, `${b} 실수를 줄이는 연습 순서`, `동호회 경기 적용법`],
-    [`오늘 바로 확인할 ${main} 신호`, `${a}와 ${b}를 나누는 기준`, `무리하지 않는 수정 루틴`, `자주 헷갈리는 질문`],
-    [`${main} 검색자가 실제로 막히는 지점`, `${a}를 코트에서 확인하는 법`, `${b} 기록이 필요한 이유`, `다음 선택을 좁히는 기준`],
-    [`${main}을 바꾸기 전 멈춰볼 것`, `${a} 실패 패턴 비교`, `${b}를 살리는 20분 구성`, `복기 질문 3가지`],
+    [`${j(main, "을/를")} 결과가 아니라 과정으로 보기`, `${a} 판단을 빠르게 만드는 표`, `${b} 실수를 줄이는 연습 순서`, `동호회 경기 적용법`],
+    [`오늘 바로 확인할 ${main} 신호`, `${j(a, "과/와")} ${j(b, "을/를")} 나누는 기준`, `무리하지 않는 수정 루틴`, `자주 헷갈리는 질문`],
+    [`${main} 검색자가 실제로 막히는 지점`, `${j(a, "을/를")} 코트에서 확인하는 법`, `${b} 기록이 필요한 이유`, `다음 선택을 좁히는 기준`],
+    [`${j(main, "을/를")} 바꾸기 전 멈춰볼 것`, `${a} 실패 패턴 비교`, `${j(b, "을/를")} 살리는 20분 구성`, `복기 질문 3가지`],
     [`${main}의 핵심은 선택지 줄이기`, `${a} 상황별 판단표`, `${b}까지 이어지는 체크리스트`, `마지막으로 확인할 안전선`],
   ][structure];
   const visualLabel = ["판단표", "체크리스트", "주의 박스", "루틴 카드", "비교표", "복기 질문"][structure];
 
   return `<div class="article-summary" style="border-left:4px solid ${accent.border};background:${accent.bg};padding:16px 18px;margin:20px 0;border-radius:8px;"><strong>${title}</strong><br>${excerpt} 이 글은 ${main} 문제를 한 번에 해결한다는 약속 대신, 다음 경기에서 같은 장면을 더 잘 판단하게 만드는 기준을 제시합니다.</div>
 <p>${title} 주제를 찾는 사람은 대개 이미 한두 번 같은 장면을 겪었습니다. 그래서 이 글은 “더 세게”, “더 많이” 같은 막연한 처방을 피하고 ${main}, ${a}, ${b} 세 항목을 따로 봅니다. 공식 규칙과 코칭 자료는 ${sourceLinks(sourceKind)}에서 확인할 수 있고, 여기서는 동호회 경기에서 바로 쓸 수 있는 판단 기준으로 풀어냅니다.</p>
-<p>먼저 목표를 좁혀야 합니다. 오늘 필요한 것은 완벽한 폼 교정이 아니라 다음 포인트에서 같은 실수를 줄이는 일입니다. ${category} 글답게 결과보다 선택 기준, 준비 순서, 기록 방법을 함께 다룹니다. 관련 도구로는 ${linkList(links)}를 함께 확인하면 판단이 빨라집니다.</p>
+<p>먼저 목표를 좁혀야 합니다. 오늘 필요한 것은 완벽한 폼 교정이 아니라 다음 포인트에서 같은 실수를 줄이는 일입니다. ${category} 글답게 결과보다 선택 기준, 준비 순서, 기록 방법을 함께 다룹니다. 관련 도구로는 ${j(linkList(links), "을/를")} 함께 확인하면 판단이 빨라집니다.</p>
 <h2>${headings[0]}</h2>
 <p>${main} 항목은 공 하나의 성공이나 실패로 판단하면 흔들립니다. 같은 상황이 세 번 이상 반복되는지, 그때 몸의 준비와 시선이 같은지, 그리고 선택한 코스가 경기 흐름과 맞는지를 같이 봐야 합니다. 특히 동호회 경기에서는 상대 수준, 코트 상태, 파트너 위치가 매번 달라지므로 하나의 정답보다 관찰 순서가 더 중요합니다.</p>
 <aside style="border-left:4px solid ${accent.border};background:#ffffff;padding:14px 16px;margin:18px 0;border-radius:8px;"><strong>${visualLabel}</strong><br>${main} 문제를 볼 때 첫 질문은 “왜 실패했나”가 아니라 “실패 전에 어떤 선택을 했나”입니다. 선택이 정리되면 기술 교정도 훨씬 좁아집니다.</aside>
@@ -186,16 +188,16 @@ ${table(row)}
 <h2>${headings[3]}</h2>
 <p>마지막 기준은 다음 경기에서 확인할 수 있어야 합니다. “좋아졌다”는 느낌보다 “첫 세 포인트에서 준비가 빨랐다”, “센터볼 콜이 늦지 않았다”, “토스가 바람 방향에 맞게 조정됐다”처럼 검증 가능한 문장이 좋습니다. 그래야 같은 글을 다시 읽지 않고도 자신의 경기 기록으로 판단할 수 있습니다.</p>
 <details><summary>${main} 문제는 하루 만에 고칠 수 있나요?</summary><p>완전히 고치기는 어렵지만 한 경기에서 확인할 기준 하나를 줄이는 것은 가능합니다. 이 글의 목적도 완성보다 반복 가능한 판단 기준을 만드는 데 있습니다.</p></details>
-<details><summary>${a}와 ${b} 중 무엇을 먼저 봐야 하나요?</summary><p>경기 중에는 ${a} 항목을 먼저 보고, 경기 후 복기에서 ${b} 항목을 확인하는 순서가 안전합니다. 동시에 두 가지를 바꾸면 원인을 찾기 어렵습니다.</p></details>
+<details><summary>${j(a, "과/와")} ${b} 중 무엇을 먼저 봐야 하나요?</summary><p>경기 중에는 ${a} 항목을 먼저 보고, 경기 후 복기에서 ${b} 항목을 확인하는 순서가 안전합니다. 동시에 두 가지를 바꾸면 원인을 찾기 어렵습니다.</p></details>
 <details><summary>초보자도 이 기준을 써도 되나요?</summary><p>초보자일수록 기준을 줄이는 편이 좋습니다. 단, 통증이나 장비 문제처럼 안전과 관련된 신호는 연습보다 먼저 확인해야 합니다.</p></details>
-<p>정리하면 ${title}의 핵심은 더 많은 조언을 모으는 것이 아니라, 다음 경기에서 확인할 기준을 줄이는 것입니다. ${main} 주제를 중심으로 ${a}, ${b}를 나눠 기록하면 실수의 원인이 선명해지고, 연습 시간도 덜 낭비됩니다.</p>`;
+<p>정리하면 ${title}의 핵심은 더 많은 조언을 모으는 것이 아니라, 다음 경기에서 확인할 기준을 줄이는 것입니다. ${main} 주제를 중심으로 ${a}, ${j(b, "을/를")} 나눠 기록하면 실수의 원인이 선명해지고, 연습 시간도 덜 낭비됩니다.</p>`;
 }
 
 const contentEntries = rows
   .map((row, index) => {
     const [slug, title, excerpt, category, tags] = row;
     const faq = [
-      { question: `${tags[0]}은 무엇부터 봐야 하나요?`, answer: `${tags[1]}와 ${tags[2]}를 동시에 바꾸지 말고, 경기 중에는 한 가지 신호만 먼저 확인하는 편이 안전합니다.` },
+      { question: `${j(tags[0], "은/는")} 무엇부터 봐야 하나요?`, answer: `${j(tags[1], "과/와")} ${j(tags[2], "을/를")} 동시에 바꾸지 말고, 경기 중에는 한 가지 신호만 먼저 확인하는 편이 안전합니다.` },
       { question: `이 글은 ${category} 초보자도 쓸 수 있나요?`, answer: `가능합니다. 다만 통증이나 장비 파손처럼 안전 문제가 있으면 연습보다 점검을 먼저 해야 합니다.` },
       { question: `다음 경기에서 어떻게 복기하나요?`, answer: `성공률보다 같은 장면이 반복됐는지, 그리고 선택 기준이 흔들렸는지를 한 줄로 남기면 됩니다.` },
     ];
@@ -203,7 +205,7 @@ const contentEntries = rows
     content: ${esc(buildContent(row, index))},
     tags: ${esc(tags)},
     summary: ${esc(excerpt)},
-    highlight: ${esc(`${title}의 핵심은 ${tags[0]} 주제를 ${tags[1]}와 ${tags[2]} 기준으로 나눠 기록하는 것입니다.`)},
+    highlight: ${esc(`${title}의 핵심은 ${tags[0]} 주제를 ${j(tags[1], "과/와")} ${tags[2]} 기준으로 나눠 기록하는 것입니다.`)},
     faq: ${JSON.stringify(faq, null, 6).replaceAll("\n", "\n    ")},
   }`;
   })

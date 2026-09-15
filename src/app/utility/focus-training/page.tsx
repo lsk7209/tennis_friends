@@ -45,17 +45,13 @@ export default function FocusTrainingIntroPage() {
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link href="/utility/focus-training/test">
-                <Button size="lg" className="bg-violet-600 px-8 text-white hover:bg-violet-700">
+              <Button asChild size="lg" className="bg-violet-600 px-8 text-white hover:bg-violet-700"><Link href="/utility/focus-training/test">
                   <Play className="mr-2 w-5 h-5" />
                   집중력 테스트 시작
-                </Button>
-              </Link>
-              <Link href="/utility/mental-training">
-                <Button size="lg" variant="outline" className="px-8">
+                </Link></Button>
+              <Button asChild size="lg" variant="outline" className="px-8"><Link href="/utility/mental-training">
                   멘탈 훈련 도구 보기
-                </Button>
-              </Link>
+                </Link></Button>
             </div>
           </div>
 

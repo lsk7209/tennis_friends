@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-09-15T06:57:00+09:00",
+  "method": "Chromium 320x844, cache disabled, local static export, three runs per route",
+  "baseUrl": "http://127.0.0.1:3101/tennis_friends",
+  "results": [
+    { "path": "/", "loadMs": [86, 76, 55], "transferBytes": [1121543, 1121543, 1121543], "overflow": false },
+    { "path": "/utility/ntrp-test/", "loadMs": [46, 43, 60], "transferBytes": [977454, 977454, 977454], "overflow": false },
+    { "path": "/blog/seoul-best-tennis-courts/", "loadMs": [50, 61, 46], "transferBytes": [994750, 994750, 994750], "overflow": false },
+    { "path": "/players/carlos-alcaraz/", "loadMs": [169, 88, 82], "transferBytes": [1312109, 1312109, 1312109], "overflow": false }
+  ]
+}

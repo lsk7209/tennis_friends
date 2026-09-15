@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -13,28 +13,29 @@ import { getRiskLevelInfo } from '@/lib/injuryRiskCalc';
 import { safeJsonParse } from '@/lib/safe-json';
 import { FadeIn, SlideUp, StaggeredAnimation, StaggeredItem } from '@/components/ScrollAnimation';
 import UtilityResultLinks from '@/components/UtilityResultLinks';
+import { AccessibleErrorState } from '@/components/AccessibleErrorState';
 
 function InjuryRiskResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
-  
-  const riskScore = Number(searchParams.get('riskScore') || 0);
-  const riskLevel = searchParams.get('riskLevel') || 'medium';
+
+  const rawRiskScore = searchParams.get('riskScore');
+  const riskScore = Number(rawRiskScore);
+  const riskLevel = searchParams.get('riskLevel') || '';
   const riskFactors = safeJsonParse(searchParams.get('riskFactors'), []);
   const preventionTips = safeJsonParse(searchParams.get('preventionTips'), []);
   const equipmentRecommendations = safeJsonParse(searchParams.get('equipmentRecommendations'), []);
   const trainingAdjustments = safeJsonParse(searchParams.get('trainingAdjustments'), []);
   const warningSigns = safeJsonParse(searchParams.get('warningSigns'), []);
 
-  const riskInfo = getRiskLevelInfo(riskLevel);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
+  const validRiskLevels = new Set(['low', 'medium', 'high', 'very-high']);
+  const hasValidResult =
+    rawRiskScore !== null &&
+    Number.isFinite(riskScore) &&
+    riskScore >= 0 &&
+    riskScore <= 100 &&
+    validRiskLevels.has(riskLevel);
+  const riskInfo = getRiskLevelInfo(riskLevel || 'medium');
 
   const handleRetake = () => {
     router.push('/utility/injury-risk/test');
@@ -63,15 +64,16 @@ function InjuryRiskResultContent() {
     return gradients[level as keyof typeof gradients] || 'from-yellow-500 to-orange-500';
   };
 
-  if (isLoading) {
+  if (!hasValidResult) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-red-600 mx-auto mb-6"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">분석 중입니다...</h2>
-          <p className="text-gray-600">부상 위험도를 계산하고 있습니다.</p>
-        </div>
-      </div>
+      <AccessibleErrorState
+        title="결과를 불러올 수 없습니다"
+        description="유효한 부상 위험 검사 결과가 없습니다. 다시 체크해 주세요."
+        actionLabel="다시 체크하기"
+        onAction={handleRetake}
+        className="bg-gradient-to-br from-red-50 via-orange-50 to-amber-50"
+        icon={<AlertTriangle aria-hidden="true" className="mx-auto mb-4 h-14 w-14 text-red-600" />}
+      />
     );
   }
 
@@ -321,12 +323,10 @@ function InjuryRiskResultContent() {
                   <Share2 className="h-5 w-5 mr-2" />
                   결과 공유하기
                 </Button>
-                <Link href="/utility/ntrp-test">
-                  <Button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <Button asChild className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"><Link href="/utility/ntrp-test">
                     <ArrowRight className="h-5 w-5 mr-2" />
                     실력 테스트 하기
-                  </Button>
-                </Link>
+                  </Link></Button>
               </div>
             </div>
           </FadeIn>

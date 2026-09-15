@@ -34,6 +34,7 @@ export default function GoalSettingPage() {
   const [target, setTarget] = useState(10);
   const [unit, setUnit] = useState('회');
   const [deadline, setDeadline] = useState('');
+  const goalValuesValid = Number.isFinite(current) && current >= 0 && current <= 1000000 && Number.isFinite(target) && target > 0 && target <= 1000000;
 
   const stats = useMemo(() => {
     const completed = goals.filter((goal) => goal.current >= goal.target).length;
@@ -42,7 +43,7 @@ export default function GoalSettingPage() {
   }, [goals]);
 
   const addGoal = () => {
-    if (!title.trim() || !deadline) return;
+    if (!title.trim() || !deadline || !goalValuesValid) return;
     setGoals((prev) => [
       ...prev,
       { id: crypto.randomUUID(), title, description, category, current, target, unit, deadline },
@@ -112,22 +113,23 @@ export default function GoalSettingPage() {
               <div className="grid grid-cols-3 gap-3">
                 <div>
                   <Label htmlFor="goal-current">현재</Label>
-                  <Input id="goal-current" type="number" value={current} onChange={(event) => setCurrent(Number(event.target.value) || 0)} />
+                  <Input id="goal-current" type="number" min="0" max="1000000" value={current} onChange={(event) => setCurrent(Number(event.target.value))} />
                 </div>
                 <div>
                   <Label htmlFor="goal-target">목표</Label>
-                  <Input id="goal-target" type="number" value={target} onChange={(event) => setTarget(Number(event.target.value) || 0)} />
+                  <Input id="goal-target" type="number" min="1" max="1000000" value={target} onChange={(event) => setTarget(Number(event.target.value))} />
                 </div>
                 <div>
                   <Label htmlFor="goal-unit">단위</Label>
                   <Input id="goal-unit" value={unit} onChange={(event) => setUnit(event.target.value)} />
                 </div>
               </div>
+              {!goalValuesValid && <p role="alert" className="text-sm font-semibold text-red-700">현재 값은 0 이상, 목표 값은 1 이상 1,000,000 이하로 입력하세요.</p>}
               <div>
                 <Label htmlFor="goal-deadline">기한</Label>
                 <Input id="goal-deadline" type="date" value={deadline} onChange={(event) => setDeadline(event.target.value)} />
               </div>
-              <Button onClick={addGoal} className="w-full bg-indigo-600 text-white hover:bg-indigo-700">
+              <Button disabled={!goalValuesValid} onClick={addGoal} className="w-full bg-indigo-600 text-white hover:bg-indigo-700">
                 <Plus className="mr-2 h-4 w-4" />
                 목표 추가
               </Button>

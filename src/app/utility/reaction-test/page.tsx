@@ -41,17 +41,13 @@ export default function ReactionTestPage() {
             반복 측정으로 변화 추이를 기록하는 데 초점을 둡니다.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link href="/utility/reaction-test/test">
-              <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50">
+            <Button asChild size="lg" className="bg-white text-orange-600 hover:bg-orange-50"><Link href="/utility/reaction-test/test">
                 <Play className="mr-2 h-5 w-5" />
                 테스트 시작
-              </Button>
-            </Link>
-            <Link href="/utility/focus-training">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              </Link></Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10"><Link href="/utility/focus-training">
                 집중 훈련 보러 가기
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
         </section>
 
@@ -95,9 +91,7 @@ export default function ReactionTestPage() {
                 </div>
                 <p className="mt-2 text-sm leading-6 text-orange-900">훈련 전 1회, 훈련 후 1회를 기록하면 집중력 변화와 피로 누적을 같이 보기 좋습니다.</p>
               </div>
-              <Link href="/utility/reaction-test/test">
-                <Button className="bg-orange-500 text-white hover:bg-orange-600">지금 테스트하기</Button>
-              </Link>
+              <Button asChild className="bg-orange-500 text-white hover:bg-orange-600"><Link href="/utility/reaction-test/test">지금 테스트하기</Link></Button>
             </CardContent>
           </Card>
         </section>

@@ -77,7 +77,7 @@ export default function PriceComparisonPage() {
           <Badge className="bg-white/15 text-white hover:bg-white/15">가격 비교</Badge>
           <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">테니스 장비 가격을 한 번에 비교하기</h1>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-emerald-50">
-            가격만 보는 대신 할인율, 리뷰 수, 재고 상태까지 함께 보세요. 같은 제품도 판매처에 따라 체감 가치가 크게 달라집니다.
+            아래 판매처·가격·평점·재고는 비교 화면을 설명하기 위한 정적 예시입니다. 실시간 쇼핑몰 데이터나 실제 구매 링크가 아닙니다.
           </p>
         </section>
 
@@ -198,9 +198,9 @@ export default function PriceComparisonPage() {
                           {product.status === 'sold-out' && <Badge className="bg-rose-100 text-rose-700 hover:bg-rose-100">품절</Badge>}
                         </TableCell>
                         <TableCell>
-                          <Button size="sm" className="bg-emerald-600 text-white hover:bg-emerald-700">
+                          <Button disabled aria-disabled="true" title="예시 데이터에는 구매 링크가 없습니다" size="sm" className="bg-emerald-600 text-white hover:bg-emerald-700">
                             <ExternalLink className="mr-1 h-4 w-4" />
-                            보기
+                            예시
                           </Button>
                         </TableCell>
                       </TableRow>

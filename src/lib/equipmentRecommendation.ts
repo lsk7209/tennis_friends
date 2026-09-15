@@ -376,8 +376,12 @@ const strings: StringRecommendation[] = [
 ];
 
 export function calculateEquipmentRecommendations(input: EquipmentInput): EquipmentResult {
+  if (!Number.isFinite(input.age) || input.age < 5 || input.age > 100) {
+    throw new RangeError('age must be a finite value between 5 and 100');
+  }
   // 라켓 추천 로직
-  const recommendedRackets = rackets.map(racket => {
+  const recommendedRackets = rackets.map(sourceRacket => {
+    const racket = { ...sourceRacket };
     let score = 0;
     
     // 스킬 레벨 매칭
@@ -410,7 +414,8 @@ export function calculateEquipmentRecommendations(input: EquipmentInput): Equipm
   }).sort((a, b) => b.matchScore - a.matchScore).slice(0, 3);
 
   // 스트링 추천 로직
-  const recommendedStrings = strings.map(string => {
+  const recommendedStrings = strings.map(sourceString => {
+    const string = { ...sourceString };
     let score = 0;
     
     // 스킬 레벨 매칭

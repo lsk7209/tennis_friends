@@ -23,6 +23,9 @@ export interface InjuryRiskResult {
 }
 
 export function calculateInjuryRisk(input: InjuryRiskInput): InjuryRiskResult {
+  if (!Number.isFinite(input.age) || input.age < 5 || input.age > 100) {
+    throw new RangeError("age must be a finite value between 5 and 100");
+  }
   let riskScore = 0;
   const riskFactors: string[] = [];
   const preventionTips: string[] = [];
@@ -34,12 +37,12 @@ export function calculateInjuryRisk(input: InjuryRiskInput): InjuryRiskResult {
   if (input.age < 18) {
     riskScore += 10;
     riskFactors.push('성장기 관절 부담');
-  } else if (input.age >= 40) {
-    riskScore += 25;
-    riskFactors.push('중년기 관절 노화');
   } else if (input.age >= 50) {
     riskScore += 35;
     riskFactors.push('고령기 관절 취약성');
+  } else if (input.age >= 40) {
+    riskScore += 25;
+    riskFactors.push('중년기 관절 노화');
   }
 
   // 성별 기반 위험도
