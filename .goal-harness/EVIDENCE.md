@@ -1,5 +1,16 @@
 # EVIDENCE
 
+## 2026-09-15 — TF-039 production release closure
+
+- User authorized continuation after the exact remaining push/deployment/smoke scope was stated.
+- Release commit: `d7b2f403b64956a8f2b1d7e536918b1494f411c2`; `origin/main` reconciled at the same SHA with a clean worktree.
+- Push workflows: SEO Safeguard `34951234634` PASS; Hosting Cost Guard `34951234633` PASS; GitHub Pages run `34951234656` PASS (build 4m2s, deploy 24s).
+- Exact-SHA deployments: GitHub Pages `6455573560` SUCCESS; Vercel Production `6455592155` SUCCESS.
+- Public `https://tennisfrens.com`: home, blog, NTRP, players, and contact returned 200 with one H1 and expected canonical; missing route returned 404.
+- Public discovery/contracts: robots referenced `https://tennisfrens.com/sitemap.xml`; sitemap returned 200 with 1,478 `<loc>` entries; ads.txt returned the exact publisher row.
+- External effects: GA marker was present in production HTML; AdSense loader was absent because consent readiness was not verified. No account/CMP mutation occurred.
+- GitHub reported 13 repository-wide Dependabot alerts after push. This is separately retained from the passing local production dependency audit, which has no high/critical finding under its configured runtime scope.
+
 ## 2026-09-15 — TF-001–038 and TF-040 local closure
 
 - Completion denominator: 39/40 tasks locally closed; TF-039 is `BLOCKED_APPROVAL` and is not reported complete.

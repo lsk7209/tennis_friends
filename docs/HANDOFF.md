@@ -1,5 +1,18 @@
 # Handoff
 
+## Current handoff — docs/11 complete and production verified
+
+- Timestamp: 2026-09-15 KST
+- User goal: complete the full `docs/11` package, including the previously approval-gated release.
+- Exact current state: TF-001–TF-040 are complete. Required local, deployment, and public-smoke evidence is recorded.
+- Completed work: pushed release commit `d7b2f403b64956a8f2b1d7e536918b1494f411c2`; SEO and hosting guards passed; GitHub Pages and Vercel connected production deployments succeeded for that exact SHA; public contract smoke passed.
+- Changed files/live systems: `origin/main`, GitHub Pages deployment `6455573560`, and Vercel Production deployment `6455592155`. This final handoff update is the only pending documentation delta before the closing push.
+- Fresh validation evidence: GitHub Pages run `34951234656` passed; home/blog/NTRP/players/contact 200 with expected H1/canonical; missing route 404; robots sitemap reference true; sitemap 1,478 URLs; exact ads.txt row; GA present; AdSense loader absent.
+- Side effects/rollback: revert release commit `d7b2f40` with a normal `git revert` and let connected deployments roll forward from the revert commit. Do not reset shared history.
+- Blockers/risks: none for TF-001–TF-040. Account CMP/TCF, ad approval/fill, RUM, revenue, and search outcomes remain unverified; GitHub reports 13 repository-wide Dependabot alerts while the scoped production audit has no high/critical result.
+- Single next step: no required task remains; use the disabled-by-default healthcheck plan for future monitoring.
+- Deliberately not run or sent: no account/CMP mutation, live mail/database write, URL deletion/redirect/noindex mutation, paid service, or manual indexing notification.
+
 ## Current handoff — TF-039 release authorized
 
 - Timestamp: 2026-09-15 KST

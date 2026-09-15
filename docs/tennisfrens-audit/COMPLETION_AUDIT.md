@@ -3,9 +3,9 @@
 - Audit date: 2026-09-15 KST
 - Baseline commit: `408ddd081914241c99f8da8c9d6237f122db319d`
 - Scope denominator: TF-001–TF-040 (40 tasks)
-- Local completion: 39/40
-- Operational completion: 0/1 approval-gated task
-- Overall state: `BLOCKED_APPROVAL` because TF-039 requires an explicitly approved push/deployment/account/CMP operation and production smoke.
+- Local completion: 40/40
+- Operational completion: 1/1 release task
+- Overall state: `COMPLETE`. The user authorized TF-039; commit `d7b2f403b64956a8f2b1d7e536918b1494f411c2` was pushed and both connected production deployments plus public smoke succeeded.
 
 ## Task matrix
 
@@ -25,7 +25,7 @@
 | TF-036 | LOCAL_COMPLETE | `ANALYTICS_IMPORT.md` and importer provide the offline merge path; GSC/GA4 exports are absent, so related values remain null. |
 | TF-037 | LOCAL_COMPLETE | This matrix reports denominator, before/after evidence, validation gaps, and null account/RUM fields. |
 | TF-038 | LOCAL_COMPLETE | `ROLLBACK_AND_APPROVAL.md` records recovery, preview, and exact approval boundaries. |
-| TF-039 | BLOCKED_APPROVAL | No current authorization for push, deployment, account/CMP mutation, or production smoke. It must not be reported complete. |
+| TF-039 | COMPLETE | User-authorized push completed. GitHub Pages deployment `6455573560` and Vercel Production deployment `6455592155` succeeded for exact SHA `d7b2f403…`; public smoke passed. Account/CMP mutation was not required and remains fail closed. |
 | TF-040 | LOCAL_COMPLETE | `HEALTHCHECK_PLAN.md`, `STATUS.md`, `.goal-harness/STATUS.md`, and `docs/HANDOFF.md` provide disabled-by-default continuation and ownership. |
 
 ## Fresh validation summary
@@ -36,10 +36,12 @@
 - Focused audits for publication, blog schedule, visual layout, utility boundaries, ads consent, accessibility, privacy, URL/schema, links, and quality workflow pass.
 - `npm run type-check`: passed.
 - `npm run lint`: zero errors; four warnings are confined to generated Playwright audit artifacts under `output/`.
+- Push-triggered SEO Safeguard `34951234634`, Hosting Cost Guard `34951234633`, and GitHub Pages run `34951234656` succeeded.
+- Public production: home/blog/NTRP/players/contact returned 200 with one H1 and expected canonicals; missing route returned 404; robots referenced the canonical sitemap; sitemap exposed 1,478 URLs; ads.txt matched the publisher row; GA marker was present and the AdSense loader remained absent.
 
 ## Explicitly unverified or limited
 
 - GSC, GA4, AdSense account state, CMP certification/TCF behavior, PSI, and production RUM: `null` / `NOT_VERIFIED`.
-- Current worktree live deployment and public production smoke: not run.
+- Account-level AdSense approval, certified CMP/TCF state, and regional consent UI remain `NOT_VERIFIED`; advertising remains safely disabled rather than being reported as active.
 - Static export cannot apply Next.js runtime redirects, headers, middleware, or API behavior; those require the deployment target's equivalent configuration and live verification.
 - Dependency audit retains moderate `baseline-browser-mapping` and `fflate` findings below the configured high-severity production failure threshold; no blind major upgrade was performed.

@@ -1,14 +1,15 @@
 # PROJECT_STATE
 
-## Full docs/11 Completion — Local Closed, TF-039 Blocked (2026-09-15)
+## Full docs/11 Completion — Production Verified (2026-09-15)
 
 - Scope expanded from the completed TF-009 slice to the full TF-001–TF-040 package; TF-041/042 remain specification-defined optional later work.
 - Static export blocker fixed: `/api/og` is now deterministic and build-network independent; exact GitHub Pages export passes with 3,105 pages.
 - TF-011 concrete repair: reusable particle selection covers Hangul final consonants, the rieul `로` exception, digits, and a bounded Latin fallback. The part12 generator and player JSON-LD use it.
 - Regenerated 300 part12 articles removed 900 literal `은(는)`/`이(가)`/`을(를)` placeholders; particle audit and typecheck pass.
 - TF-001–TF-038 and TF-040 are locally complete. Build and exact static export pass at 3,105 pages; 63/63 utility routes passed the defined mobile/browser audit.
-- TF-039 remains `BLOCKED_APPROVAL`: no current authorization exists for commit/push, deployment, account/CMP mutation, or production smoke. No local evidence is promoted to a claim of live deployment, account status, RUM, revenue, or search outcome.
-- Final local evidence is indexed in `docs/tennisfrens-audit/COMPLETION_AUDIT.md`; rollback/approval and disabled healthcheck plans are adjacent.
+- TF-039 was authorized and completed: commit `d7b2f403…` is on `origin/main`; GitHub Pages deployment `6455573560` and Vercel Production deployment `6455592155` succeeded for that exact SHA; public smoke passed.
+- Account/CMP status, RUM, revenue, and search outcomes remain unverified. AdSense remains fail closed because consent readiness was not asserted.
+- Final local and production evidence is indexed in `docs/tennisfrens-audit/COMPLETION_AUDIT.md`; rollback and disabled healthcheck plans are adjacent.
 
 ## TF-009 External-Effect Isolation — Local (2026-09-15)
 
