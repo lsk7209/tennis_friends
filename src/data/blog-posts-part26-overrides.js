@@ -1,8 +1,8 @@
 export const articleWriterPart26PostOverrides = [
   {
     "slug": "aw2-299-split-step-timing-match-record",
-    "title": "훈련 가이드 스플릿 스텝 경기기록",
-    "excerpt": "스플릿 스텝을 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
+    "title": "경기 중 스플릿 스텝 타이밍, 무엇을 기록할까",
+    "excerpt": "경기 중 첫 스텝이 늦어 실점한 상황을 기준으로 스플릿 스텝을 기록하는 방법입니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스플릿 스텝","반응 타이밍","풋워크"],
     "date": "2026-04-30",
@@ -10,8 +10,8 @@ export const articleWriterPart26PostOverrides = [
   },
   {
     "slug": "aw2-300-split-step-timing-common-mistakes",
-    "title": "훈련 가이드 스플릿 스텝 실수 줄이기",
-    "excerpt": "스플릿 스텝을 반응 타이밍, 풋워크 기준으로 바로 점검합니다.",
+    "title": "스플릿 스텝 하는 사람들의 흔한 실수",
+    "excerpt": "스플릿 스텝을 이미 하고 있는 사람들이 놓치는 타이밍과 동작 실수를 정리했습니다.",
     "category": "훈련 가이드",
     "tags": ["훈련 가이드","스플릿 스텝","반응 타이밍","풋워크"],
     "date": "2026-04-30",
