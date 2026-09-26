@@ -12,6 +12,14 @@ import { getNTRPLevel, charMap } from '@/lib/questions';
 import { trackTestCompletionOnce } from '@/components/Tracking';
 import { recordNtrpResultOnce } from '@/lib/ntrp-results';
 
+function safeDecode(value: string) {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
 interface LevelDetail {
   color: string;
   borderColor: string;
@@ -30,9 +38,10 @@ function ResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const score = Number(searchParams.get('score') || 0);
-  const q13 = decodeURIComponent(searchParams.get('q13') || '');
+  const q13 = safeDecode(searchParams.get('q13') || '');
   const completionId = searchParams.get('completion') || '';
-  
+  const hasValidResult = Number.isFinite(score) && score > 0 && completionId.length > 0;
+
   const { level, desc } = getNTRPLevel(score);
   const character = charMap[q13] || '올라운더';
   const [copied, setCopied] = useState(false);
@@ -195,6 +204,30 @@ function ResultContent() {
       window.open(shareUrls[platform as keyof typeof shareUrls], '_blank');
     }
   };
+
+  if (!hasValidResult) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-20">
+        <div className="container mx-auto max-w-xl px-4 text-center">
+          <Card className="border-2 border-gray-200 shadow-lg">
+            <CardContent className="p-10">
+              <h1 className="text-2xl font-bold text-gray-900 mb-3">결과를 찾을 수 없습니다</h1>
+              <p className="text-gray-600 mb-8">
+                테스트를 완료한 뒤에만 결과를 확인할 수 있습니다. 링크가 잘못되었거나 이미 만료되었을 수 있어요.
+              </p>
+              <Button
+                onClick={() => router.push('/utility/ntrp-test')}
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg font-bold"
+              >
+                <RotateCcw className="h-5 w-5 mr-2" />
+                테스트 시작하기
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-12">
