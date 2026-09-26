@@ -97,8 +97,8 @@ export const articleWriterPart17PostOverrides = [
   },
   {
     "slug": "aw-026-court-beginner",
-    "title": "테니스 여행 코트 예약 기준",
-    "excerpt": "테니스 여행에서 코트 예약을 위치, 이동 시간, 장비 대여, 취소 규정으로 점검합니다.",
+    "title": "테니스 여행, 처음 코트 예약할 때 확인할 순서",
+    "excerpt": "현지 코트를 처음 예약해 본다면 예약 전 준비할 정보, 예약 시 확정·취소 규정 확인, 도착 후 점검 순서를 알아둡니다.",
     "category": "여행 가이드",
     "tags": ["테니스 여행","코트 예약","이동 시간"],
     "readTime": "9분"
