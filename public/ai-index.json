@@ -3,11 +3,11 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-09-15",
+  "lastUpdated": "2026-09-26",
   "stats": {
-    "totalPages": 1480,
+    "totalPages": 1497,
     "tools": 64,
-    "articles": 1147,
+    "articles": 1164,
     "playerProfiles": 259
   },
   "pages": [
@@ -423,8 +423,8 @@
     },
     {
       "url": "https://tennisfrens.com/utility/tennis-dictionary",
-      "title": "테니스 용어 사전 | 50+ 필수 용어 완벽 정리",
-      "description": "러브, 듀스, 에이스부터 서브 앤 발리까지. 초보자가 꼭 알아야 할 테니스 용어 50가지를 쉽고 자세하게 설명해드립니다.",
+      "title": "테니스 용어 사전 | 필수 용어 완벽 정리",
+      "description": "러브, 듀스, 에이스부터 서브 앤 발리까지. 테니스 경기에서 자주 쓰는 용어를 쉽고 자세하게 설명해드립니다.",
       "type": "tool",
       "category": "utility"
     },
@@ -511,6 +511,142 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/post-tournament-next-match-decision",
+      "title": "대회 뒤 다음 경기 등록을 미루어야 하는 신호",
+      "description": "대회를 마치고 돌아오는 길에 다음 참가 제안이 도착합니다. 접수가 곧 끝난다는 말에 달력의 빈칸부터 찾습니다. 하지만 빈 주말이 있다는 사실만으로 이동과 파트너 약속, 일상으로 돌아온 상태까지 확인된 것은 아닙니다. 오늘 경기가 아쉬웠다는 마음과 다음 대회에 참가할 수 있는 조건도 따로 생각할 필요가 있습니다.",
+      "type": "article",
+      "category": "대회 이후 일정 판단",
+      "lastModified": "2026-09-23T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/match-point-shot-decision",
+      "title": "매치 포인트에서 안전한 선택을 좁히는 세 질문",
+      "description": "한 포인트만 따면 경기가 끝납니다. 평소에는 고르지 않던 빠른 서브나 좁은 코스가 갑자기 매력적으로 보일 수 있습니다. 반대로 상대의 매치 포인트를 막아야 할 때는 어떤 공이든 약하게 넘기면 될 것처럼 생각하기도 합니다. 중요한 점수라는 이유만으로 공격이나 유지를 미리 정하면 현재 공에서 가능한 선택을 놓칠 수 있습니다.",
+      "type": "article",
+      "category": "중요 포인트 판단",
+      "lastModified": "2026-09-23T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/left-handed-opponent-first-games-note",
+      "title": "왼손잡이 상대 첫 두 게임에서 적을 서브 바운드",
+      "description": "상대가 왼손으로 서브하는 모습을 보고 받기도 전에 옆으로 자리를 옮겼습니다. ‘왼손잡이 서브는 이쪽으로 휜다’는 기억 때문입니다. 그런데 실제 공은 몸 가까이 들어왔고 리턴이 급해졌습니다. 이때 확인할 것은 일반론을 더 외우는 일보다, 내가 무엇을 예상했고 공은 실제로 어디로 왔는지입니다.",
+      "type": "article",
+      "category": "리턴 관찰",
+      "lastModified": "2026-09-22T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/windy-day-lob-choice-check",
+      "title": "바람 부는 날 로브를 고르기 전에 볼 것",
+      "description": "높이 올린 공이 예상보다 짧아 상대에게 잡혔습니다. 다음에는 더 멀리 보내려 했는데 이번에는 길게 나갑니다. 바람이 불고 있었다면 두 결과를 모두 바람 탓으로 설명하기 쉽습니다. 하지만 실제로 본 것은 짧거나 길게 간 궤적이고, 바람이 어느 정도 원인이었는지는 별도로 확인해야 할 문제입니다.",
+      "type": "article",
+      "category": "경기 샷 선택",
+      "lastModified": "2026-09-22T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/wall-practice-limit-decision",
+      "title": "벽치기 뒤 파트너 연습으로 넘어갈 신호",
+      "description": "벽에서는 공을 오래 이어 치는데 사람과 마주 서면 어디로 칠지 망설여집니다. 벽치기를 더 해야 하는지, 이제 파트너를 구해야 하는지 고민할 수 있습니다. 반대로 벽에서 자주 끊긴다는 이유로 다른 사람과 연습할 자격이 아직 없다고 생각하기도 합니다. 그 결정을 연속 성공 횟수 하나로 내릴 필요는 없습니다.",
+      "type": "article",
+      "category": "연습 형식 선택",
+      "lastModified": "2026-09-21T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/ball-machine-match-transfer-note",
+      "title": "볼 머신 연습의 성공을 실전 기록과 비교하기 전",
+      "description": "기계가 보내 주는 공은 목표 구역에 여러 번 넣었는데 경기에서는 같은 쪽으로 치다 실수했습니다. 연습이 소용없었다고 느끼기 쉽습니다. 반대로 기계 연습 성공률이 높으니 실전에서도 곧 비슷한 결과가 나올 것이라고 기대할 수도 있습니다. 두 판단 모두 성공 횟수 앞에 붙어야 할 조건이 빠져 있을 수 있습니다.",
+      "type": "article",
+      "category": "훈련 비교",
+      "lastModified": "2026-09-21T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/lesson-feedback-attribution-note",
+      "title": "레슨 직후 메모에 남길 코치의 설명과 내 해석",
+      "description": "레슨 노트에 ‘준비를 빨리’라고 적었습니다. 코트에서는 알 것 같았는데 혼자 연습하려니 라켓을 먼저 움직이라는 뜻인지, 공이 오기 전에 자리를 잡으라는 뜻인지 모호합니다. 그 아래 ‘스윙을 더 빨리 시작하기’를 덧붙이면 문장은 구체적이지만, 코치가 실제로 그렇게 설명했는지는 별개의 문제입니다.",
+      "type": "article",
+      "category": "레슨 기록",
+      "lastModified": "2026-09-20T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/indoor-court-first-visit-questions",
+      "title": "실내 테니스장 예약 전 천장 높이를 물어봐야 할 때",
+      "description": "시설 사진에서는 천장이 높아 보이는데, 서브 토스를 올리는 위치의 조명은 사진 바깥에 있습니다. 예약 문의에 “높아서 괜찮습니다”라는 답을 들었더라도 무엇을 기준으로 한 답인지는 남아 있을 수 있습니다. 건물 가운데 가장 높은 곳과 내가 공을 올릴 코트 위 공간은 같지 않을 수 있기 때문입니다.",
+      "type": "article",
+      "category": "코트 이용",
+      "lastModified": "2026-09-20T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/court-cancellation-wait-or-alternative",
+      "title": "테니스장 취소표를 기다릴지 대체 코트를 찾을지",
+      "description": "원하던 코트는 매진이고 취소표를 기다리고 있습니다. 조금 떨어진 곳에는 다른 시간대가 보이지만, 그곳으로 바꾸면 파트너가 출발 시간을 조정해야 합니다. 기다리는 사람에게는 아직 선택지가 남아 있어도, 동행자에게는 언제 어디로 가야 하는지 답이 필요한 상황입니다.",
+      "type": "article",
+      "category": "코트 이용",
+      "lastModified": "2026-09-19T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/clay-slide-readiness-signals",
+      "title": "클레이 첫날 슬라이드를 미뤄야 하는 장면",
+      "description": "옆 코트의 동호인은 공을 따라가며 자연스럽게 미끄러집니다. 처음 클레이에 온 사람에게는 그 동작이 이 코트에 적응했다는 표시처럼 보일 수 있습니다. 하지만 다른 사람이 슬라이드하는 모습만으로 오늘 같은 동작을 해야 한다고 정할 수는 없습니다. 같은 장소에 서 있어도 이동 경험과 현재 느끼는 제동은 다릅니다.",
+      "type": "article",
+      "category": "코트 적응",
+      "lastModified": "2026-09-19T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/tournament-wait-time-plan",
+      "title": "동호회 대회 일정이 밀렸을 때 다음 호출을 확인하는 법",
+      "description": "앞 코트의 경기가 길어지자 옆 사람이 “아직 한참 남았겠네요”라고 말합니다. 식사를 하러 나가도 될 것 같지만, 게시판에는 처음 예정 시각이 그대로 있고 단체 대화방에는 별도 안내가 없습니다. 이 상황에서 필요한 것은 남은 시간을 눈대중으로 계산하는 일이 아니라 다음 호출이 어디서 나오는지 확인하는 일입니다.",
+      "type": "article",
+      "category": "대회 운영",
+      "lastModified": "2026-09-18T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/hot-weather-match-water-prep",
+      "title": "더운 날 경기 시간표에 맞춰 물 준비를 확인하는 법",
+      "description": "오후 경기라 물을 챙겼는데, 현장에서는 오전부터 접수하고 야외에서 순서를 기다려야 할 수 있습니다. 물병을 가방에 넣은 것은 확인했지만 언제까지 머무는지, 비었을 때 어디서 보충하는지, 기다리는 동안 더위를 피할 곳이 있는지는 아직 모르는 상태입니다. 물 준비는 물병의 개수만으로 끝나지 않습니다.",
+      "type": "article",
+      "category": "경기 준비",
+      "lastModified": "2026-09-18T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/elbow-discomfort-session-record",
+      "title": "팔꿈치가 불편한 날 연습 기록에서 나눠 적을 것",
+      "description": "연습 뒤 팔꿈치가 불편하면 최근 바꾼 스트링부터 떠올릴 수 있습니다. 기록에도 “줄이 딱딱해서 아픔”이라고 적기 쉽습니다. 그러나 줄을 바꾼 사실과 증상이 생긴 사실은 함께 있었다는 정보일 뿐, 그 기록만으로 원인이 밝혀진 것은 아닙니다.",
+      "type": "article",
+      "category": "회복과 기록",
+      "lastModified": "2026-09-17T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/night-tennis-sleep-preparation",
+      "title": "야간 테니스 뒤 수면 준비에서 덜어낼 행동",
+      "description": "코트에서는 일찍 나왔는데 잠자리에 들 시간은 계속 늦어집니다. 귀가한 뒤 경기 영상을 열고, 놓친 리턴을 다시 보고, 내일 쓸 스트링을 검색하다 보면 운동 이후의 일이 길어집니다. 이때 잠이 늦어진 이유를 곧바로 야간 테니스 하나로 정하면 실제로 이어서 하고 있던 선택 과제를 놓칠 수 있습니다.",
+      "type": "article",
+      "category": "회복과 일정",
+      "lastModified": "2026-09-17T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/mixed-doubles-return-position",
+      "title": "혼합복식 리턴 위치를 정할 때 먼저 맞출 두 가지",
+      "description": "새 파트너와 혼합복식을 시작하면서 누가 오른쪽을 맡을지 정합니다. 경력이 긴 선수가 먼저 고르거나 성별에 따라 자리를 나누면 빠르게 준비가 끝난 것처럼 보입니다. 하지만 어느 쪽 서브를 받아 본 경험이 있는지, 리턴 뒤 파트너가 어떤 공을 준비하는지까지 설명되지는 않습니다.",
+      "type": "article",
+      "category": "복식 시작",
+      "lastModified": "2026-09-16T21:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/poach-miss-retry-agreement",
+      "title": "포치 실패 뒤, 이전 사인이 재시도 약속까지 뜻할까요",
+      "description": "전위가 가로질러 나갔지만 공은 비운 쪽으로 빠졌습니다. 파트너가 “괜찮아”라고 말하자 전위는 같은 시도를 계속하라는 뜻으로 받아들였습니다. 다음 서브에서도 움직였는데, 이번에는 서버가 그쪽 공간을 준비하지 않고 있었습니다. 실점 뒤 위로의 말은 오갔지만 다음 계획까지 맞춘 것은 아니었던 셈입니다.",
+      "type": "article",
+      "category": "복식 소통",
+      "lastModified": "2026-09-16T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/doubles-center-ball-priority",
+      "title": "복식 센터볼이 오기 전 우선권을 정하는 한 문장",
+      "description": "공이 두 사람 사이로 지나간 뒤 “네 공인 줄 알았어”라는 말이 겹칩니다. 다음에는 가운데 공을 내가 치겠다고 말했지만, 이번에는 파트너도 라켓을 내밉니다. 담당을 정했다는 기억은 같은데 어느 공까지 포함했는지는 달랐던 장면입니다.",
+      "type": "article",
+      "category": "복식 소통",
+      "lastModified": "2026-09-15T21:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/return-practice-requested-actual-serve",
