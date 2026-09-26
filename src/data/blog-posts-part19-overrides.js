@@ -244,8 +244,8 @@ export const articleWriterPart19PostOverrides = [
   },
   {
     "slug": "aw-254-serve-beginner",
-    "title": "세컨드 서브 더블폴트 초보",
-    "excerpt": "세컨드 서브 더블폴트는 힘을 빼기보다 목표 높이와 코스 폭을 정해야 줄어듭니다.",
+    "title": "서브 초보의 더블폴트, 그립과 토스부터 확인하세요",
+    "excerpt": "서브를 갓 배운 초보자의 더블폴트는 코스보다 컨티넨탈 그립과 토스 일관성 같은 기본기 문제인 경우가 많습니다.",
     "category": "서브 전략",
     "tags": ["세컨드 서브","더블폴트","초보 서브"],
     "date": "2026-05-27",
@@ -326,7 +326,7 @@ export const articleWriterPart19PostOverrides = [
   {
     "slug": "aw-267-club-match-record",
     "title": "동호회 첫 경기 매너 기록",
-    "excerpt": "동호회 첫 경기 매너는 인사보다 점수 콜, 공 처리, 대기 흐름에서 드러납니다.",
+    "excerpt": "동호회 첫 경기 후에는 어색했던 장면, 상대 반응, 다음 경기 행동을 세 줄로 기록해야 매너 실수를 반복하지 않습니다.",
     "category": "동호회 운영",
     "tags": ["동호회 첫 경기","매너 기록","점수 콜"],
     "date": "2026-05-29",
@@ -353,7 +353,7 @@ export const articleWriterPart19PostOverrides = [
   {
     "slug": "aw-270-doubles",
     "title": "복식 전위 옆 스트레이트 패싱 목표점",
-    "excerpt": "복식 스트레이트 패싱은 강타보다 전위 발 위치와 라켓 면을 보고 결정합니다.",
+    "excerpt": "복식 스트레이트 패싱은 전위 발밑이 아니라 라켓 범위 바로 바깥, 몸 옆 30~50cm 지점을 목표로 삼아야 성공률이 올라갑니다.",
     "category": "복식 전술",
     "tags": ["복식 스트레이트","패싱 위치","전위"],
     "date": "2026-05-30",
