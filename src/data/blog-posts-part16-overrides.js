@@ -329,8 +329,8 @@ export const articleWriterPart16PostOverrides = [
   },
   {
     "slug": "aw-110-beginner",
-    "title": "출근 전 테니스 훈련",
-    "excerpt": "출근 전 짧은 테니스 훈련을 몸풀기, 한 가지 기술, 기록으로 줄입니다.",
+    "title": "테니스 완전 초보, 출근 전 시작할 때 준비할 것",
+    "excerpt": "테니스를 처음 배우는 초보자가 출근 전 시간에 시작하려면 장비, 스트레칭, 첫 3회 세션 구성을 다르게 잡아야 합니다.",
     "category": "훈련 가이드",
     "tags": ["출근 전","테니스 훈련","초보"],
     "readTime": "9분",

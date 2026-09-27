@@ -25,7 +25,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import { playStyleResults, getPlayStyleStats, type PlayStyleResult } from '@/lib/playStyleTest';
+import { playStyleResults, getPlayStyleStats } from '@/lib/playStyleTest';
 import { trackTestCompletionOnce } from '@/components/Tracking';
 import UtilityResultLinks from '@/components/UtilityResultLinks';
 
@@ -62,10 +62,14 @@ const bgGradients = {
 function PlayStyleResultContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const styleId = parseInt(searchParams.get('style') || '1');
-  const result = useMemo<PlayStyleResult>(() => {
-    return playStyleResults.find(r => r.id === styleId) || playStyleResults[0];
-  }, [styleId]);
+  const styleId = parseInt(searchParams.get('style') || '', 10);
+  const completionId = searchParams.get('completion') || '';
+  const matchedResult = useMemo(
+    () => playStyleResults.find(r => r.id === styleId),
+    [styleId],
+  );
+  const hasValidResult = Boolean(matchedResult) && completionId.length > 0;
+  const result = matchedResult ?? playStyleResults[0];
   const stats = useMemo(() => getPlayStyleStats(result), [result]);
   // 클라이언트 사이드에서만 차트 렌더링 (SSR에서 컨테이너 크기 계산 문제 방지)
   const [isMounted, setIsMounted] = useState(false);
@@ -76,23 +80,33 @@ function PlayStyleResultContent() {
   }, []);
 
   useEffect(() => {
-    // 테스트 완료 추적
-    if (styleId) {
-      trackTestCompletionOnce('play-style-test', String(styleId), {
-        styleId: styleId,
-        styleName: result.name,
-        description: result.description
-      });
-    }
-  }, [styleId, result]);
+    // 테스트 완료 추적 (직접 진입·잘못된 링크는 기록하지 않음)
+    if (!hasValidResult) return;
+    trackTestCompletionOnce('play-style-test', completionId, {
+      styleId: styleId,
+      styleName: result.name,
+      description: result.description
+    });
+  }, [hasValidResult, completionId, styleId, result]);
 
-  if (!result) {
+  if (!hasValidResult) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 text-lg font-medium">결과를 분석 중입니다...</p>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 flex items-center justify-center px-4">
+        <Card className="max-w-md w-full border-2 border-purple-200 shadow-lg">
+          <CardContent className="p-10 text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-3">결과를 찾을 수 없습니다</h1>
+            <p className="text-gray-600 mb-8">
+              테스트를 완료한 뒤에만 결과를 확인할 수 있습니다. 링크가 잘못되었거나 이미 만료되었을 수 있어요.
+            </p>
+            <Button
+              onClick={() => router.push('/utility/play-style-test/test')}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg font-bold"
+            >
+              <RotateCcw className="h-5 w-5 mr-2" />
+              테스트 시작하기
+            </Button>
+          </CardContent>
+        </Card>
       </div>
     );
   }

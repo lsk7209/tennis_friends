@@ -49,7 +49,9 @@ export default function PlayStyleTest() {
         setIsCompleting(true);
         setTimeout(() => {
           const result = calculatePlayStyle(newAnswers);
-          router.push(`/utility/play-style-test/result?style=${result.id}`);
+          const completionId = crypto.randomUUID();
+          window.sessionStorage.setItem(`tennisfrens:playstyle-pending:${completionId}`, "1");
+          router.push(`/utility/play-style-test/result?style=${result.id}&completion=${completionId}`);
         }, 1500); // 완료 애니메이션 시간 증가
       }
     }, 700); // 답변 선택 후 700ms 대기 (NTRP보다 조금 더 길게)
