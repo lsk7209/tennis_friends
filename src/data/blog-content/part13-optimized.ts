@@ -911,7 +911,7 @@ export const BLOG_CONTENT_PART13_OPTIMIZED: Record<string, BlogContentEntry> = {
 
 <h2>1. 먼저 운동을 멈춰야 하는 신호</h2>
 <p>테니스 중 손목이 불편하면 "그립을 바꾸면 되겠지"라고 생각하기 쉽습니다. 하지만 손목 통증은 단순 피로부터 힘줄 문제, 충격 누적, 넘어짐으로 인한 손상까지 원인이 다양합니다. 코트에서 계속 칠지 말지는 장비보다 증상 기준으로 먼저 판단해야 합니다.</p>
-<p><a href="https://sportsmedicine.mayoclinic.org/condition/wrist-pain/page/2" target="_blank" rel="noopener noreferrer">Mayo Clinic Sports Medicine</a>은 통증과 붓기가 며칠 이상 지속되거나 악화되면 의사에게 보라고 안내합니다. <a href="https://www.nhs.uk/symptoms/hand-pain/wrist-pain/" target="_blank" rel="noopener noreferrer">NHS 손목 통증 안내</a>도 통증, 붓기, 움직임 제한이 지속될 때 도움을 받는 기준을 제시합니다. <a href="https://www.playerdevelopment.usta.com/Improve-Your-Game/Sport-Science/117397_Sports_Medicine_Wrist_Management_Prevention_of_Wrist_Injuries_in_Tennis_Players/" target="_blank" rel="noopener noreferrer">USTA 손목 부상 예방 자료</a>는 반복적인 테니스 동작에서 손목과 전완의 근력·유연성 관리가 중요하다고 설명합니다.</p>
+<p><a href="https://sportsmedicine.mayoclinic.org/condition/wrist-pain/page/2" target="_blank" rel="noopener noreferrer">Mayo Clinic Sports Medicine</a>은 통증과 붓기가 며칠 이상 지속되거나 악화되면 의사에게 보라고 안내합니다. <a href="https://www.nhs.uk/symptoms/hand-pain/wrist-pain/" target="_blank" rel="noopener noreferrer">NHS 손목 통증 안내</a>도 통증, 붓기, 움직임 제한이 지속될 때 도움을 받는 기준을 제시합니다. USTA 손목 부상 예방 자료는 반복적인 테니스 동작에서 손목과 전완의 근력·유연성 관리가 중요하다고 설명합니다.</p>
 
 <h2>2. 손목 통증 체크 순서</h2>
 <table>
@@ -1168,7 +1168,7 @@ export const BLOG_CONTENT_PART13_OPTIMIZED: Record<string, BlogContentEntry> = {
 
 <h2>1. 코치 피드백이 금방 사라지는 이유</h2>
 <p>레슨 중에는 코치의 말이 선명하게 들립니다. 하지만 샤워하고 집에 가는 동안 기억은 빠르게 섞입니다. "라켓을 빨리 빼라", "몸을 더 써라", "발이 멈춘다" 같은 문장은 그 순간에는 이해되지만, 어떤 공에서 나온 말인지 빠지면 다음 연습에서 재현하기 어렵습니다. 그래서 기록은 기억 보관용이 아니라 장면 복원용이어야 합니다.</p>
-<p>USTA Player Development의 <a href="https://s3.amazonaws.com/ustaassets/assets/689/15/20019_c_ny_24_player_development_journal_2024-single-pages3.pdf" target="_blank" rel="noopener noreferrer">Player Development Journal</a>은 훈련과 경기 후 자기평가를 남기는 방식을 제시합니다. 또 USTA Player Development의 <a href="https://www.playerdevelopment.usta.com/Improve-Your-Game/Sport-Science/116187_Technique_Evaluating_Technique/" target="_blank" rel="noopener noreferrer">기술 평가 자료</a>는 선수에게 들어오는 체감 피드백과 코치·영상 피드백을 함께 다루는 관점을 보여줍니다. 동호인 레슨에도 같은 원리가 적용됩니다. 기록은 코치의 말을 많이 모으는 것이 아니라, 나에게 반복되는 장면을 분명히 만드는 과정입니다.</p>
+<p>USTA Player Development의 <a href="https://s3.amazonaws.com/ustaassets/assets/689/15/20019_c_ny_24_player_development_journal_2024-single-pages3.pdf" target="_blank" rel="noopener noreferrer">Player Development Journal</a>은 훈련과 경기 후 자기평가를 남기는 방식을 제시합니다. 또 USTA Player Development의 기술 평가 자료는 선수에게 들어오는 체감 피드백과 코치·영상 피드백을 함께 다루는 관점을 보여줍니다. 동호인 레슨에도 같은 원리가 적용됩니다. 기록은 코치의 말을 많이 모으는 것이 아니라, 나에게 반복되는 장면을 분명히 만드는 과정입니다.</p>
 
 <h2>2. 레슨 직후 10분 안에 적을 4가지</h2>
 <table>
@@ -1208,7 +1208,7 @@ export const BLOG_CONTENT_PART13_OPTIMIZED: Record<string, BlogContentEntry> = {
 </table>
 
 <h2>6. 영상 기록과 함께 쓰는 방법</h2>
-<p>영상은 강력하지만 영상만 남기면 다시 보지 않는 파일이 되기 쉽습니다. 영상을 찍었다면 파일명에 날짜와 주제를 넣고, 노트에는 타임스탬프를 남깁니다. "12:40, 백핸드 깊은 공에서 상체가 뒤로 빠짐"처럼 적으면 다음에 30분짜리 영상을 처음부터 볼 필요가 없습니다. USTA의 <a href="https://www.playerdevelopment.usta.com/About-USTA/Player-Development/the_match_is_over_and_youre_the_coach_what_now/" target="_blank" rel="noopener noreferrer">경기 후 코칭 피드백 자료</a>도 피드백 타이밍과 선수 상태를 고려하는 중요성을 다룹니다. 레슨 영상도 마찬가지로, 감정이 가라앉은 뒤 핵심 장면만 확인하는 편이 좋습니다.</p>
+<p>영상은 강력하지만 영상만 남기면 다시 보지 않는 파일이 되기 쉽습니다. 영상을 찍었다면 파일명에 날짜와 주제를 넣고, 노트에는 타임스탬프를 남깁니다. "12:40, 백핸드 깊은 공에서 상체가 뒤로 빠짐"처럼 적으면 다음에 30분짜리 영상을 처음부터 볼 필요가 없습니다. USTA의 경기 후 코칭 피드백 자료도 피드백 타이밍과 선수 상태를 고려하는 중요성을 다룹니다. 레슨 영상도 마찬가지로, 감정이 가라앉은 뒤 핵심 장면만 확인하는 편이 좋습니다.</p>
 <p>영상과 노트가 연결되면 코치에게 질문하기도 쉬워집니다. "이때 팔이 문제인가요?"보다 "이 장면에서 타점이 늦은 원인이 준비 위치인지, 오른발 진입인지 궁금합니다"라고 묻는 편이 답을 훨씬 구체적으로 받을 수 있습니다.</p>
 
 <h2>7. 다음 레슨 전에 5분만 다시 보는 법</h2>
