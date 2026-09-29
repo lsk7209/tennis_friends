@@ -1,5 +1,17 @@
 # STATUS
 
+## 2026-09-30 02:30 KST — player facts audit released
+- PR #42 (`46d6d42`): 33 corrections in `src/data/players/new-30.ts`, checked against WTA/ATP/USTA/AO/major-outlet sources fetched on 2026-09-30.
+  - Major counts: Sabalenka 4, Gauff 2, Rybakina 3 (and first Kazakh No.1), Andreeva's 2026 RG title, Anisimova's 2025 finals and career-high No.3.
+  - Retirement details: Murray, Gasquet, Fognini, Schwartzman.
+  - Thiem as the second Austrian major champion; Jabeur's Open Era "first"; Keys' AO records; Haddad Maia as the first Brazilian woman in the top 10 in the Open Era.
+  - Removed unsourced speed/percentile claims and a wrong coach name.
+- PR #43 (`73ddcf4`): the "왜 주목해야 하는가?" section was empty for profiles without `whyNotable`; it now falls back to the sourced `longBio`.
+
+CI passed and deployments succeeded. The production script (`output/verify-players.mjs`) confirms the new text on 6 profiles and no removed claims.
+
+Out of scope: subjective "투어 최상위권" wording in male.ts/female.ts.
+
 ## 2026-09-30 01:00 KST — 404 hydration fix, Emma Navarro sources, tool links
 - PR #38 (`dfb893e`): Header now always renders the active-nav underline and toggles its opacity. It was the cause of React #418 on prerendered 404s. A local production build reproduced the error on 3 of 7 paths and showed 0 after the fix. The production re-check is 0 on all 7 (`/blog/page/999`, unknown topic, unknown utility, root 404, `/utility`, `/blog`, `/`). Guarded by `audit:not-found-status`, which fails on the old Header.
 - PR #39 (`a1482ba`): the Emma Navarro profile is now sourced from WTA articles (2024 US Open SF vs Sabalenka 6-3 7-6(2) as the No.13 seed; career high No.8; titles Hobart 2024, Merida 2025, Strasbourg 2026 — 3-0 in finals). The signature match is Strasbourg 2026 vs Mboko, 6-0 5-7 6-2. The unsupported "3-set win rate" claim is removed; production confirms the source link is present and the old claim is absent.
