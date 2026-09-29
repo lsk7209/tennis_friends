@@ -96,7 +96,7 @@ export function ToolsMosaic() {
         {/* 전체 도구 링크 */}
         <div className="mt-8 flex justify-end">
           <Button asChild variant="ghost-inverse" size="sm"><Link href="/utility" prefetch={false}>
-              전체 63개 도구 보기 →
+              전체 65개 도구 보기 →
             </Link></Button>
         </div>
       </div>

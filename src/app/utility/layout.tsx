@@ -4,14 +4,14 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
 
 export const metadata: Metadata = {
   title: '테니스 유틸리티 도구 모음',
-  description: '테니스 실력 향상을 위한 63개 무료 도구. NTRP 자가점검, 스트링 텐션 계산기, 부상 예방 참고 점검, 플레이 스타일 테스트, 장비 추천, 훈련 계획 등. 결과는 참고용입니다.',
+  description: '테니스 실력 향상을 위한 65개 무료 도구. NTRP 자가점검, 스트링 텐션 계산기, 부상 예방 참고 점검, 플레이 스타일 테스트, 장비 추천, 훈련 계획 등. 결과는 참고용입니다.',
   keywords: ['테니스 유틸리티', '테니스 도구', 'NTRP 테스트', '스트링 텐션', '부상 예방', '테니스 계산기', '테니스 분석'],
   alternates: {
     canonical: `${siteUrl}/utility`,
   },
   openGraph: {
     title: '테니스 유틸리티 도구 모음',
-    description: '테니스 실력 향상을 위한 63개 무료 도구. 결과는 참고용입니다.',
+    description: '테니스 실력 향상을 위한 65개 무료 도구. 결과는 참고용입니다.',
     url: `${siteUrl}/utility`,
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '테니스 유틸리티 도구 모음',
-    description: '63개 무료 테니스 도구 모음',
+    description: '65개 무료 테니스 도구 모음',
     images: [`${siteUrl}/opengraph-image`],
   },
 };
