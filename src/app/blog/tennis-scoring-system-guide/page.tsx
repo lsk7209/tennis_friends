@@ -1,5 +1,6 @@
 import Article from '@/components/blog/Article';
 import TOC from '@/components/blog/TOC';
+import Link from 'next/link';
 import { FAQ } from '@/components/blog/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -136,6 +137,9 @@ export default function TennisScoringSystemGuidePage() {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">5. 결론: 점수는 실시간 전략의 나침반이다</h2>
         <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
           테니스 점수를 단순히 숫자로만 보지 마세요. <strong>30-30</strong>은 긴장이 시작되는 점수이고, <strong>40-0</strong>은 여유를 가지고 새로운 시도를 해볼 수 있는 점수입니다. 점수의 흐름을 읽는 자가 결국 그 게임의 주인이 됩니다.
+        </p>
+        <p className="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          읽은 내용을 확인하고 싶다면 <Link href="/utility/tennis-scoring-quiz" className="font-semibold text-emerald-700 underline dark:text-emerald-400">테니스 점수 계산 퀴즈</Link>로 듀스·타이브레이크·노애드 규칙을 12문제로 점검해 보세요. 문제마다 ITF 규칙 기준 해설이 나옵니다.
         </p>
       </section>
 

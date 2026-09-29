@@ -55,6 +55,12 @@ export default function DoublesPositioningSimulatorPage() {
           >
             파트너 체크 보기
           </Link>
+          <Link
+            href="/utility/doubles-rotation-generator"
+            className="rounded-full border border-indigo-600 px-5 py-2.5 text-sm font-semibold text-indigo-700"
+          >
+            모임 대진표 만들기
+          </Link>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from 'react';
+import Link from 'next/link';
 import { BookOpen, Search, Star, StarOff, Volume2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -68,6 +69,9 @@ export default function TennisDictionaryPage() {
               </div>
             </div>
             <p className="mt-4 text-sm text-slate-500">총 {tennisTerms.length}개 용어 중 {filteredTerms.length}개 표시</p>
+            <p className="mt-2 text-sm text-slate-600">
+              외운 용어를 확인하려면 <Link href="/utility/tennis-terms-quiz" className="font-semibold text-emerald-700 underline">테니스 용어 퀴즈</Link>를 풀어 보세요. 설명만 보고 용어를 맞히는 10문제가 매번 새로 나옵니다.
+            </p>
           </CardContent>
         </Card>
 
