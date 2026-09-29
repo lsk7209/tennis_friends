@@ -396,7 +396,7 @@ export default function TrainingPlannerTest() {
                     variant="outline"
                     onClick={handlePrevious}
                     disabled={currentStep === 0}
-                    className="bg-white border-gray-300 hover:border-indigo-500 px-3 py-2 text-sm"
+                    className="text-gray-900 bg-white border-gray-300 hover:border-indigo-500 px-3 py-2 text-sm"
                   >
                     <ArrowLeft className="h-3 w-3 mr-1" />
                     이전

@@ -551,7 +551,7 @@ function ResultContent() {
                 </Button>
                 <Button asChild
                     variant="outline"
-                    className="bg-white border-2 border-gray-300 hover:border-purple-500 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="text-gray-900 bg-white border-2 border-gray-300 hover:border-purple-500 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
                   ><Link href="/utility/ntrp-test/stats">
                     <BarChart3 className="h-5 w-5 mr-2" />
                     전체 통계 보기

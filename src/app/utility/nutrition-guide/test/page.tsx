@@ -459,7 +459,7 @@ export default function NutritionGuideTest() {
                     variant="outline"
                     onClick={handlePrevious}
                     disabled={currentStep === 0}
-                    className="bg-white border-gray-300 hover:border-green-500 px-6 py-3"
+                    className="text-gray-900 bg-white border-gray-300 hover:border-green-500 px-6 py-3"
                   >
                     <ArrowLeft className="h-4 w-4 mr-2" />
                     이전

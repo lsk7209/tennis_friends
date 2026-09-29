@@ -677,7 +677,7 @@ function NutritionResultContent() {
                 <Button
                   onClick={handleRetake}
                   variant="outline"
-                  className="bg-white border-gray-300 hover:border-green-500 px-6 py-3"
+                  className="text-gray-900 bg-white border-gray-300 hover:border-green-500 px-6 py-3"
                 >
                   <RotateCcw className="h-4 w-4 mr-2" />
                   다시 계획하기
@@ -685,7 +685,7 @@ function NutritionResultContent() {
                 <Button
                   onClick={handleShare}
                   variant="outline"
-                  className="bg-white border-gray-300 hover:border-green-500 px-6 py-3"
+                  className="text-gray-900 bg-white border-gray-300 hover:border-green-500 px-6 py-3"
                 >
                   <Share2 className="h-4 w-4 mr-2" />
                   계획 공유하기

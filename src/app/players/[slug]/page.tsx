@@ -24,7 +24,7 @@ import {
   Heart,
 } from "lucide-react";
 import Link from "next/link";
-import ProfilePageSchema from "@/components/seo/ProfilePageSchema";
+import PlayerPageSchema from "@/components/seo/PlayerPageSchema";
 import { allBlogPosts } from "@/data/blog-posts";
 import RelatedContent from "@/components/RelatedContent";
 import FAQSchema from "@/components/seo/FAQSchema";
@@ -370,32 +370,15 @@ export default async function PlayerProfilePage({ params }: Props) {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
       <BreadcrumbSchema items={breadcrumbItems} />
-      <ProfilePageSchema
+      <PlayerPageSchema
+        url={`${siteUrl}/players/${resolvedParams.slug}`}
         name={`${player.name} (${player.nameEn}) - 테니스 프로필`}
         description={`${player.name} 선수의 국적, 플레이 스타일, 강점과 약점, 주목할 경기 패턴을 정리한 프로필.`}
-        image={player.image || "/images/players/placeholder-tennis-player.svg"}
-        breadcrumb={{
-          "@type": "BreadcrumbList",
-          itemListElement: breadcrumbItems.map((item, index) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: item.name,
-            item: item.item,
-          })),
-        }}
-        mainEntity={{
-          "@type": "Person",
+        image={player.image || undefined}
+        person={{
           name: player.nameEn,
           alternateName: player.name,
-          description: `${player.name} 테니스 선수 프로필`,
-          image:
-            player.image || "/images/players/placeholder-tennis-player.svg",
-          nationality: {
-            "@type": "Country",
-            name: player.country,
-          },
-          jobTitle: "Professional Tennis Player",
-          url: `${siteUrl}/players/${resolvedParams.slug}`,
+          nationality: player.country,
         }}
       />
       {player.detailedProfile?.faq && (

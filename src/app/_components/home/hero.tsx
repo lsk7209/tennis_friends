@@ -76,7 +76,7 @@ export function Hero() {
                 네이버 카페 방문하기 →
               </NaverCafeLink>
             </Button>
-            <Button asChild variant="outline" size="lg"><Link href="/utility/ntrp-test" prefetch={false}>
+            <Button asChild variant="outline-inverse" size="lg"><Link href="/utility/ntrp-test" prefetch={false}>
                 NTRP 테스트 시작
               </Link></Button>
           </motion.div>

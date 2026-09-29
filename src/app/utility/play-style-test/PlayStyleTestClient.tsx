@@ -136,7 +136,7 @@ export default function PlayStyleTestIntro() {
                     테스트 시작하기
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link></Button>
-                <Button variant="outline" size="lg" className="px-10 py-6 text-lg font-bold rounded-xl bg-white/80 backdrop-blur-sm border-2 border-gray-300 hover:border-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+                <Button variant="outline" size="lg" className="text-gray-900 px-10 py-6 text-lg font-bold rounded-xl bg-white/80 backdrop-blur-sm border-2 border-gray-300 hover:border-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
                   샘플 결과 보기
                 </Button>
               </div>

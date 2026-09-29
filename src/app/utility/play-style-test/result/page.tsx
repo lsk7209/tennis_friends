@@ -141,7 +141,7 @@ function PlayStyleResultContent() {
             <Button 
               variant="outline" 
               onClick={handleShare}
-              className="flex items-center bg-white/80 backdrop-blur-sm border-2 hover:bg-white transition-all duration-300"
+              className="text-gray-900 flex items-center bg-white/80 backdrop-blur-sm border-2 hover:bg-white transition-all duration-300"
             >
               <Share2 className="h-4 w-4 mr-2" />
               공유하기
@@ -426,7 +426,7 @@ function PlayStyleResultContent() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="outline" size="lg" className="bg-white border-2 border-gray-300 hover:border-purple-500 px-8 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility/play-style-test/test">
+              <Button asChild variant="outline" size="lg" className="text-gray-900 bg-white border-2 border-gray-300 hover:border-purple-500 px-8 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility/play-style-test/test">
                   <RotateCcw className="h-5 w-5 mr-2" />
                   다시 테스트하기
                 </Link></Button>
