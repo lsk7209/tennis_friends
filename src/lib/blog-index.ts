@@ -5,6 +5,7 @@ import {
   paginatePublishedBlogPosts,
 } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
+import { buildBlogTopicNavigation, filterBlogPostsByTopic } from "@/lib/blog-utils";
 import {
   BADGE_COLORS,
   BADGE_LABELS,
@@ -63,4 +64,27 @@ export function getBlogIndexPageCapacity(): number {
 export function getBlogIndexPage(page: number) {
   const posts = getPublishedIndexPosts();
   return paginatePublishedBlogPosts(posts, page, POSTS_PER_PAGE);
+}
+
+export function getBlogTopicNavigation() {
+  return buildBlogTopicNavigation(getPublishedIndexPosts());
+}
+
+export function getBlogTopicPage(topicId: string, page: number) {
+  const posts = filterBlogPostsByTopic(getPublishedIndexPosts(), topicId);
+  return paginatePublishedBlogPosts(posts, page, POSTS_PER_PAGE);
+}
+
+export function getBlogTopicPageCount(topicId: string) {
+  return Math.ceil(filterBlogPostsByTopic(getPublishedIndexPosts(), topicId).length / POSTS_PER_PAGE);
+}
+
+export function getBlogTopicPageCapacity(topicId: string) {
+  const posts = allBlogPosts.filter((post) => isIndexableBlogSlug(post.slug));
+  return Math.ceil(filterBlogPostsByTopic(posts, topicId).length / POSTS_PER_PAGE);
+}
+
+export function getBlogTopicPageHref(topicId: string, page: number) {
+  const root = `/blog/topic/${topicId}`;
+  return page <= 1 ? root : `${root}/page/${page}`;
 }

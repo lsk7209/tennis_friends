@@ -24,7 +24,7 @@ import {
   Heart,
 } from "lucide-react";
 import Link from "next/link";
-import ProfilePageSchema from "@/components/seo/ProfilePageSchema";
+import PlayerPageSchema from "@/components/seo/PlayerPageSchema";
 import { allBlogPosts } from "@/data/blog-posts";
 import RelatedContent from "@/components/RelatedContent";
 import FAQSchema from "@/components/seo/FAQSchema";
@@ -71,7 +71,7 @@ const SEARCH_METADATA_OVERRIDES: Record<
     ],
   },
   "iva-jovic": {
-    title: "이바 조비크(Iva Jovic) 프로필 | 미국 WTA 유망주·플레이스타일",
+    title: "이바 조비치(이바 조비크, Iva Jovic) 프로필 | 경기 기록·플레이스타일",
     description:
       "이바 조비크(이바 조비치, Iva Jovic) 미국 WTA 유망주 프로필입니다. 오른손 베이스라인 플레이스타일과 강점, 성장 포인트를 정리했습니다.",
     keywords: [
@@ -370,32 +370,15 @@ export default async function PlayerProfilePage({ params }: Props) {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
       <BreadcrumbSchema items={breadcrumbItems} />
-      <ProfilePageSchema
+      <PlayerPageSchema
+        url={`${siteUrl}/players/${resolvedParams.slug}`}
         name={`${player.name} (${player.nameEn}) - 테니스 프로필`}
         description={`${player.name} 선수의 국적, 플레이 스타일, 강점과 약점, 주목할 경기 패턴을 정리한 프로필.`}
-        image={player.image || "/images/players/placeholder-tennis-player.svg"}
-        breadcrumb={{
-          "@type": "BreadcrumbList",
-          itemListElement: breadcrumbItems.map((item, index) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: item.name,
-            item: item.item,
-          })),
-        }}
-        mainEntity={{
-          "@type": "Person",
+        image={player.image || undefined}
+        person={{
           name: player.nameEn,
           alternateName: player.name,
-          description: `${player.name} 테니스 선수 프로필`,
-          image:
-            player.image || "/images/players/placeholder-tennis-player.svg",
-          nationality: {
-            "@type": "Country",
-            name: player.country,
-          },
-          jobTitle: "Professional Tennis Player",
-          url: `${siteUrl}/players/${resolvedParams.slug}`,
+          nationality: player.country,
         }}
       />
       {player.detailedProfile?.faq && (
@@ -707,6 +690,9 @@ export default async function PlayerProfilePage({ params }: Props) {
                           <p className="text-gray-700 dark:text-gray-300 leading-relaxed relative z-10">
                             {player.detailedProfile.signatureMatch.description}
                           </p>
+                          {player.detailedProfile.signatureMatch.sourceUrl && (
+                            <a href={player.detailedProfile.signatureMatch.sourceUrl} target="_blank" rel="noopener noreferrer" className="relative z-10 mt-3 inline-block text-sm font-semibold text-blue-700 underline dark:text-blue-300">대회 공식 경기 기록 보기</a>
+                          )}
                         </div>
                       </>
                     )}

@@ -317,15 +317,15 @@ function TennisRulesQuizResultContent() {
                 <RotateCcw className="mr-2 h-4 w-4" />
                 다시 풀기
               </Link></Button>
-            <Button asChild variant="outline" className="w-full border-gray-300 bg-white"><Link href="/utility/ntrp-test">
+            <Button asChild variant="outline" className="text-gray-900 w-full border-gray-300 bg-white"><Link href="/utility/ntrp-test">
                 <Trophy className="mr-2 h-4 w-4" />
                 NTRP 테스트
               </Link></Button>
-            <Button asChild variant="outline" className="w-full border-gray-300 bg-white"><Link href="/utility/string-tension">
+            <Button asChild variant="outline" className="text-gray-900 w-full border-gray-300 bg-white"><Link href="/utility/string-tension">
                 <Target className="mr-2 h-4 w-4" />
                 텐션 계산기
               </Link></Button>
-            <Button asChild variant="outline" className="w-full border-gray-300 bg-white"><Link href="/utility/injury-risk">
+            <Button asChild variant="outline" className="text-gray-900 w-full border-gray-300 bg-white"><Link href="/utility/injury-risk">
                 <BookOpen className="mr-2 h-4 w-4" />
                 부상 체크
               </Link></Button>
@@ -336,7 +336,7 @@ function TennisRulesQuizResultContent() {
               onClick={generateShareImage}
               disabled={isGeneratingImage}
               variant="outline"
-              className="border-gray-300 bg-white"
+              className="text-gray-900 border-gray-300 bg-white"
             >
               <Download className="mr-2 h-4 w-4" />
               {isGeneratingImage ? "이미지 생성 중" : "결과 이미지 저장"}
@@ -345,7 +345,7 @@ function TennisRulesQuizResultContent() {
               onClick={generatePDF}
               disabled={isGeneratingPDF}
               variant="outline"
-              className="border-gray-300 bg-white"
+              className="text-gray-900 border-gray-300 bg-white"
             >
               <Download className="mr-2 h-4 w-4" />
               {isGeneratingPDF ? "PDF 생성 중" : "PDF 저장"}
@@ -353,7 +353,7 @@ function TennisRulesQuizResultContent() {
             <Button
               onClick={copyToClipboard}
               variant="outline"
-              className="border-gray-300 bg-white"
+              className="text-gray-900 border-gray-300 bg-white"
             >
               <Share2 className="mr-2 h-4 w-4" />
               링크 공유

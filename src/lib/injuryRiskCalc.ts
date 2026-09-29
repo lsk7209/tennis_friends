@@ -257,22 +257,22 @@ export function getRiskLevelInfo(level: string) {
     'low': { 
       label: '낮음', 
       color: 'bg-green-100 text-green-800',
-      description: '안전한 플레이 환경입니다. 현재 루틴을 유지하세요.'
+      description: '입력한 항목의 참고 점수가 낮게 나왔습니다. 이 결과만으로 운동의 안전을 판단할 수 없습니다.'
     },
     'medium': { 
       label: '보통', 
       color: 'bg-yellow-100 text-yellow-800',
-      description: '일부 주의사항이 있습니다. 예방 조치를 취하세요.'
+      description: '입력한 항목의 참고 점수가 보통 범위입니다. 현재 증상과 개인 상태는 이 점수에 반영되지 않을 수 있습니다.'
     },
     'high': { 
       label: '높음', 
       color: 'bg-orange-100 text-orange-800',
-      description: '부상 위험이 높습니다. 즉시 조치가 필요합니다.'
+      description: '입력한 항목의 참고 점수가 높게 나왔습니다. 통증이나 이상이 있으면 전문가와 상담하세요.'
     },
     'very-high': { 
       label: '매우 높음', 
       color: 'bg-red-100 text-red-800',
-      description: '심각한 부상 위험입니다. 전문가 상담을 권장합니다.'
+      description: '입력한 항목의 참고 점수가 매우 높게 나왔습니다. 이 점수는 진단이 아니며 전문가 상담이 필요할 수 있습니다.'
     }
   };
   

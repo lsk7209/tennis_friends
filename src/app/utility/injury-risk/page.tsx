@@ -19,7 +19,7 @@ const factors = [
 ];
 
 const faqItems = [
-  { question: '이 도구는 무엇을 확인하나요?', answer: '테니스 플레이 빈도, 기존 통증, 장비 상태, 회복 루틴 같은 요소를 바탕으로 부상 위험 신호를 빠르게 점검합니다.' },
+  { question: '이 도구는 무엇을 확인하나요?', answer: '테니스 플레이 빈도, 기존 통증, 장비 상태, 회복 루틴 등 입력 항목을 정리해 일반적인 참고 정보를 보여줍니다.' },
   { question: '의학적 진단을 대신하나요?', answer: '아니요. 이 페이지는 자가 점검용 참고 도구이며, 실제 통증이나 부상 의심이 있으면 전문 진료가 우선입니다.' },
   { question: '언제 다시 체크하는 게 좋나요?', answer: '대회 전, 연습량을 갑자기 늘린 뒤, 신발이나 스트링을 바꾼 뒤, 통증이 반복될 때 다시 보는 편이 좋습니다.' },
 ];
@@ -28,11 +28,11 @@ export default function InjuryRiskPage() {
   return (
     <>
       <SoftwareApplicationSchema
-        name="부상 위험 점검"
-        description="테니스 플레이 빈도, 통증 이력, 장비 상태, 회복 루틴을 바탕으로 부상 위험 신호를 점검하는 웹 도구입니다."
+        name="테니스 부상 예방 참고 점검"
+        description="테니스 플레이 빈도, 통증 이력, 장비 상태, 회복 루틴 등 입력 항목에 따른 일반적인 참고 정보를 보여주는 도구입니다."
         url={utilityUrl}
         applicationCategory="HealthApplication"
-        featureList={['부상 위험 점검', '자가 체크', '예방 가이드']}
+        featureList={['입력 항목 점검', '일반 참고 정보', '예방 안내']}
         offers={{ price: '0', priceCurrency: 'KRW' }}
       />
 
@@ -56,16 +56,16 @@ export default function InjuryRiskPage() {
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="rounded-[32px] bg-gradient-to-r from-red-600 to-orange-500 px-8 py-10 text-white shadow-xl">
-              <Badge className="bg-white/15 text-white hover:bg-white/15">부상 위험 점검</Badge>
+              <Badge className="bg-white/15 text-white hover:bg-white/15">부상 예방 참고 점검</Badge>
               <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">안전하게 오래 치기 위한 테니스 부상 체크</h1>
               <p className="mt-4 max-w-3xl text-lg leading-8 text-orange-50">
                 테니스는 누적 피로와 반복 동작이 크기 때문에 큰 통증이 오기 전에 신호를 먼저 보는 편이 중요합니다.
-                이 도구는 부상 위험을 빠르게 확인하고 예방 루틴을 정리하는 데 초점을 둡니다.
+                이 도구는 입력 항목을 돌아보고 일반적인 예방 루틴을 살펴보는 데 도움을 줍니다. 개인별 부상 위험을 예측하지 않습니다.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-white text-red-600 hover:bg-orange-50"><Link href="/utility/injury-risk/test">
                     <Shield className="mr-2 h-5 w-5" />
-                    위험도 체크 시작
+                    예방 항목 점검 시작
                   </Link></Button>
                 <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10"><Link href="/utility/recovery-routine-generator">
                     회복 루틴 보기

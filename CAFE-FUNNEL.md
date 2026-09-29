@@ -79,11 +79,13 @@ Date: 2026-08-28
 
 Supporting events use `search_performed(search_term, result_count, page_path)`, `tool_started(tool_slug, source_path, destination_path)`, and the existing genuine `test_completed(test_type, page_path)` contract. Search events are deduplicated within the active client runtime. `tool_started` is a navigation-intent event, while `test_completed` remains the completion event; they must not be treated as interchangeable.
 
+As of the local 2026-09-28 measurement revision, `assessment_started` fires on the first valid NTRP answer with `tool_slug`, `page_path`, questionnaire/scoring version, and `measurement_version=v2`. It excludes answers and attempt IDs. The legacy `tool_started` series stays a navigation intent and must not be combined with `assessment_started` as one denominator. `blog_post_viewed` and `content_read_complete` v2 apply to article pages only; v2 read completion requires article depth and 45 seconds of visible time. The historical series are not backfilled. Storage failure can prevent a local completion from being proven, so missing events are not proof of abandonment.
+
 For reporting, use session- or user-level denominators rather than raw click totals:
 
 - Search continuation rate = sessions with a search-result selection / sessions with `search_performed`.
-- Tool start rate = sessions with `tool_started` / eligible organic landing sessions.
-- Tool completion rate = users with `test_completed` / users with `tool_started`, segmented by `tool_slug` or `test_type` only where the mapping is explicit.
+- Tool navigation rate = sessions with legacy `tool_started` / eligible organic landing sessions.
+- NTRP completion rate for the v2 period = users with `test_completed` / users with `assessment_started`, using a matched date window and NTRP tool mapping. Treat this as an observed browser event rate, not a cross-device attempt completion guarantee.
 - Cafe outbound rate = unique users with `naver_cafe_visit` / eligible organic landing users.
 
 Do not mark the funnel successful from clicks alone. The site can prove outbound intent; cafe joins and member quality require separate Naver Cafe evidence.

@@ -24,6 +24,7 @@ export type PlayerData = {
       title: string;
       date?: string;
       description: string;
+      sourceUrl?: string;
     };
     hexagonStats?: Array<{
       name: string;

@@ -459,7 +459,7 @@ function MatchAnalyzerResultContent() {
                 <Button
                   onClick={handleRetake}
                   variant="outline"
-                  className="bg-white border-2 border-gray-300 hover:border-blue-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="text-gray-900 bg-white border-2 border-gray-300 hover:border-blue-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <RotateCcw className="h-5 w-5 mr-2" />
                   다시 분석하기
@@ -467,7 +467,7 @@ function MatchAnalyzerResultContent() {
                 <Button
                   onClick={handleShare}
                   variant="outline"
-                  className="bg-white border-2 border-gray-300 hover:border-blue-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="text-gray-900 bg-white border-2 border-gray-300 hover:border-blue-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Share2 className="h-5 w-5 mr-2" />
                   결과 공유하기

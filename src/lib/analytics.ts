@@ -19,8 +19,14 @@ type GtagParams = Record<string, string | number | boolean | null | undefined>;
 
 const EVENT_PARAMETER_ALLOWLIST: Record<string, ReadonlySet<string>> = {
   tool_used: new Set(["tool_name", "ntrp"]),
+  // Legacy event: a click toward a tool landing page, not an assessment start.
   tool_started: new Set(["tool_slug", "source_path", "destination_path"]),
-  test_completed: new Set(["test_type", "page_path"]),
+  assessment_started: new Set([
+    "tool_slug", "page_path", "questionnaire_version", "scoring_version", "measurement_version",
+  ]),
+  test_completed: new Set([
+    "test_type", "page_path", "questionnaire_version", "scoring_version", "measurement_version",
+  ]),
   cta_clicked: new Set([
     "cta_location",
     "source",
@@ -28,10 +34,10 @@ const EVENT_PARAMETER_ALLOWLIST: Record<string, ReadonlySet<string>> = {
     "destination_url",
     "result_type",
   ]),
-  content_read_complete: new Set(["page_path", "read_seconds"]),
+  content_read_complete: new Set(["page_path", "read_seconds", "measurement_version"]),
   lead_captured: new Set(["source", "page_path"]),
   search_performed: new Set(["query_length", "result_count", "page_path"]),
-  blog_post_viewed: new Set(["page_path"]),
+  blog_post_viewed: new Set(["page_path", "measurement_version"]),
   player_profile_viewed: new Set(["page_path", "player_slug"]),
   naver_cafe_visit: new Set([
     "cta_location",
@@ -106,6 +112,7 @@ export function trackPageView(url: string, measurementId: string): void {
 export const TRACKING_EVENTS = {
   TOOL_USED: "tool_used",
   TOOL_STARTED: "tool_started",
+  ASSESSMENT_STARTED: "assessment_started",
   TEST_COMPLETED: "test_completed",
   CTA_CLICKED: "cta_clicked",
   CONTENT_READ_COMPLETE: "content_read_complete",

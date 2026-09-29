@@ -42,15 +42,15 @@ function InjuryRiskResultContent() {
   };
 
   const handleShare = () => {
+    const url = 'https://tennisfrens.com/utility/injury-risk';
     if (navigator.share) {
       navigator.share({
-        title: 'TennisFriends 부상 위험도 체크 결과',
-        text: `나의 테니스 부상 위험도는 ${riskInfo.label}입니다.`,
-        url: window.location.href
+        title: 'TennisFriends 부상 자가점검',
+        text: '부상 관련 참고 항목을 살펴보세요. 의료 진단은 아닙니다.',
+        url
       });
     } else {
-      navigator.clipboard.writeText(window.location.href);
-      toast.success('링크가 복사되었습니다!');
+      navigator.clipboard.writeText(url).then(() => toast.success('도구 링크가 복사되었습니다!')).catch(() => toast.error('링크 복사에 실패했습니다.'));
     }
   };
 
@@ -89,10 +89,10 @@ function InjuryRiskResultContent() {
           <div className="text-center mb-8">
             <Badge className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-2 mb-6 text-sm font-semibold shadow-lg">
               <Shield className="h-4 w-4 mr-2 inline" />
-              부상 위험도 분석 완료
+              부상 예방 참고 점검 완료
             </Badge>
             <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
-              당신의 부상 위험도는
+              입력 항목의 참고 점검 결과
             </h1>
           </div>
         </div>
@@ -108,13 +108,14 @@ function InjuryRiskResultContent() {
                   <Shield className="h-16 w-16 text-white" />
                 </div>
                 <div className="text-7xl font-extrabold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-4">{riskScore}</div>
-                <div className="text-xl text-gray-600 mb-6 font-medium">위험도 점수</div>
+                <div className="text-xl text-gray-600 mb-6 font-medium">참고 점수 · 부상 확률 아님</div>
                 <Badge className={`px-6 py-3 text-xl font-bold text-white shadow-lg bg-gradient-to-r ${getRiskGradient(riskLevel)}`}>
                   {riskInfo.label}
                 </Badge>
                 <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mt-8">
                   {riskInfo.description}
                 </p>
+                <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-700">이 계산은 개인의 부상 여부나 운동 가능 상태를 확인하지 않습니다. 운동 중 통증이 있으면 중단하고 전문가에게 문의하세요. <a href="https://www.nhs.uk/conditions/sprains-and-strains/" target="_blank" rel="noopener noreferrer" className="underline">운동 부상 안내 (NHS)</a></p>
               </CardContent>
             </Card>
           </FadeIn>
@@ -128,10 +129,10 @@ function InjuryRiskResultContent() {
             <SlideUp>
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                  주요 위험 요인
+                  입력 항목에 따른 확인 사항
                 </h2>
                 <p className="text-gray-600 text-lg">
-                  다음 요인들이 부상 위험을 높이고 있습니다.
+                  기존 참고 계산 규칙에서 표시한 항목입니다. 실제 부상 위험이나 원인으로 확정할 수 없습니다.
                 </p>
               </div>
             </SlideUp>
@@ -161,10 +162,10 @@ function InjuryRiskResultContent() {
             <SlideUp>
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                  예방 방법
+                  일반적인 참고 사항
                 </h2>
                 <p className="text-gray-600 text-lg">
-                  부상 위험을 줄이기 위한 구체적인 방법들입니다.
+                  아래 제안은 개인에게 맞춘 치료나 부상 예방 효과를 보장하지 않습니다. 통증이나 기존 부상에 관한 결정은 전문가와 상의하세요.
                 </p>
               </div>
             </SlideUp>
@@ -198,10 +199,10 @@ function InjuryRiskResultContent() {
             <SlideUp>
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                  장비 추천
+                  참고 장비 항목
                 </h2>
                 <p className="text-gray-600 text-lg">
-                  부상 예방에 도움이 되는 장비들입니다.
+                  기존 규칙이 표시한 장비 항목입니다. 부상 예방 효과를 보장하지 않습니다.
                 </p>
               </div>
             </SlideUp>
@@ -235,10 +236,10 @@ function InjuryRiskResultContent() {
             <SlideUp>
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                  훈련 조정사항
+                  훈련 참고 항목
                 </h2>
                 <p className="text-gray-600 text-lg">
-                  더 안전한 플레이를 위한 훈련 방법 조정사항입니다.
+                  기존 규칙이 표시한 일반적인 훈련 항목입니다. 개인별 운동 가능 여부는 전문가와 상의하세요.
                 </p>
               </div>
             </SlideUp>
@@ -310,7 +311,7 @@ function InjuryRiskResultContent() {
                 <Button
                   onClick={handleRetake}
                   variant="outline"
-                  className="bg-white border-2 border-gray-300 hover:border-red-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="text-gray-900 bg-white border-2 border-gray-300 hover:border-red-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <RotateCcw className="h-5 w-5 mr-2" />
                   다시 체크하기
@@ -318,7 +319,7 @@ function InjuryRiskResultContent() {
                 <Button
                   onClick={handleShare}
                   variant="outline"
-                  className="bg-white border-2 border-gray-300 hover:border-red-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="text-gray-900 bg-white border-2 border-gray-300 hover:border-red-500 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Share2 className="h-5 w-5 mr-2" />
                   결과 공유하기
@@ -399,24 +400,24 @@ function InjuryRiskResultContent() {
       </section>
 
       <UtilityResultLinks
-        title="더 안전한 다음 단계 계획하기"
-        description="부상 위험 결과를 기준으로 레벨 목표, 장비, 훈련 세팅을 조정하세요."
+        title="다른 참고 도구 살펴보기"
+        description="장비와 훈련 관련 일반 정보를 확인할 수 있습니다. 이 결과로 운동 가능 여부를 판단하지 마세요."
         source="injury-risk-result"
         links={[
           {
             href: '/utility/equipment-recommendation',
-            title: '장비 추천',
+            title: '장비 선택 도구',
             description: '편안함 요구에 맞는 라켓과 스트링 선택지를 확인합니다.'
           },
           {
             href: '/utility/string-tension',
             title: '스트링 텐션 계산기',
-            description: '텐션 변경이 편안함과 컨트롤에 도움이 되는지 점검합니다.'
+            description: '스트링 텐션 선택지를 비교합니다.'
           },
           {
             href: '/utility/play-style-test',
             title: '플레이 스타일 테스트',
-            description: '반복 부담을 만드는 플레이 패턴이 있는지 확인합니다.'
+            description: '플레이 성향을 돌아보는 별도 자가점검입니다.'
           }
         ]}
       />

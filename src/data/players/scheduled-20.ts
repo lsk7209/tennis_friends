@@ -14,6 +14,7 @@ type PlayerSeed = {
   growth: string;
   matchUse: string;
   weakness: string;
+  signatureMatch?: NonNullable<NonNullable<PlayerData["detailedProfile"]>["signatureMatch"]>;
 };
 
 const playerSeeds: PlayerSeed[] = [
@@ -287,6 +288,12 @@ const playerSeeds: PlayerSeed[] = [
       "상대 두 번째 서브를 적극적으로 받아 초반부터 랠리 주도권을 잡습니다.",
     weakness:
       "위기 상황에서 무리한 다운더라인 선택을 줄이면 안정성이 좋아집니다.",
+    signatureMatch: {
+      title: "2026 호주오픈 3회전 vs 재스민 파올리니",
+      date: "2026. 01. 23",
+      description: "조비치가 파올리니를 6-2, 7-6(3)으로 이긴 경기입니다. 대회 기록에서 상대, 라운드, 점수를 확인할 수 있습니다.",
+      sourceUrl: "https://ausopen.com/match/2026-iva-jovic-vs-jasmine-paolini-ws304",
+    },
   },
   {
     slug: "polina-kudermetova",
@@ -371,7 +378,7 @@ const buildPlayer = (seed: PlayerSeed): PlayerData => ({
     whyNotable: `${seed.identity}. ${seed.growth}`,
     playStyle: `<p>${seed.name}의 플레이는 <strong>${seed.strength}</strong>로 요약됩니다. 경기에서는 ${seed.matchUse}</p><p>보완 과제는 ${seed.weakness}</p>`,
     growthStory: seed.growth,
-    signatureMatch: {
+    signatureMatch: seed.signatureMatch ?? {
       title: `${seed.name}의 경기 운영 포인트`,
       description: seed.matchUse,
     },

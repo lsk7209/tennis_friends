@@ -3,8 +3,8 @@ import { generatePageMetadata } from '@/lib/seo/metadata-helpers';
 
 // Enhanced metadata with Naver optimization
 export const metadata: Metadata = generatePageMetadata({
-  title: '부상 위험 예측',
-  description: '데이터 기반 분석으로 부상 위험도를 체크하고, 안전한 플레이를 위한 맞춤형 조언을 받아보세요. 나이, 플레이 환경, 이전 부상 이력을 종합 분석합니다.',
+  title: '테니스 부상 예방 참고 점검',
+  description: '플레이 환경과 이전 부상 이력 등 입력 항목을 점검하고 일반적인 예방 정보를 확인하세요. 의학적 진단이나 개인별 위험 예측은 아닙니다.',
   alternates: { canonical: "https://tennisfrens.com/utility/injury-risk" },
   path: '/utility/injury-risk',
   type: 'website',

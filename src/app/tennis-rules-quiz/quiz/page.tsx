@@ -208,7 +208,7 @@ export default function TennisRulesQuiz() {
                   variant="outline"
                   onClick={handlePrevious}
                   disabled={currentQuestionIndex === 0}
-                  className="border-gray-300 bg-white"
+                  className="text-gray-900 border-gray-300 bg-white"
                 >
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   이전

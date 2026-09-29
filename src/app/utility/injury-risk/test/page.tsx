@@ -214,7 +214,7 @@ export default function InjuryRiskTest() {
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-4">
             <Badge className="bg-red-100 text-red-800 px-3 py-1 mb-2 text-xs font-semibold">
-              🛡️ 부상 위험 예측
+              🛡️ 부상 예방 참고 점검
             </Badge>
             <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
               안전한 테니스를 위한 체크
@@ -275,7 +275,7 @@ export default function InjuryRiskTest() {
                     variant="outline"
                     onClick={handlePrevious}
                     disabled={currentStep === 0}
-                    className="bg-white border-gray-300 hover:border-red-500 px-4 py-2 text-sm"
+                    className="text-gray-900 bg-white border-gray-300 hover:border-red-500 px-4 py-2 text-sm"
                   >
                     <ArrowLeft className="h-3 w-3 mr-1" />
                     이전
@@ -315,7 +315,7 @@ export default function InjuryRiskTest() {
               부상 예방 안내
             </h3>
             <p className="text-gray-600 mb-6">
-              정확한 정보를 입력하시면 더 정확한 부상 위험도 분석을 받을 수 있습니다.
+              입력한 항목을 바탕으로 일반적인 예방 정보를 확인할 수 있습니다. 결과는 의학적 진단이나 개인별 위험 예측이 아닙니다.
             </p>
             <div className="bg-red-50 border border-red-200 rounded-xl p-6">
               <h4 className="font-semibold text-red-900 mb-2">🛡️ 중요 안내</h4>

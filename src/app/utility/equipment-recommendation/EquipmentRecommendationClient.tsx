@@ -109,7 +109,7 @@ export default function EquipmentRecommendationIntro() {
                     장비 추천 받기
                     <ArrowRight className="h-5 w-5 ml-2" />
                   </Link></Button>
-                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto bg-white/80 backdrop-blur-sm border-2 border-gray-300 hover:border-indigo-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><Link href="/utility/ntrp-test">
+                <Button asChild variant="outline" size="lg" className="text-gray-900 w-full sm:w-auto bg-white/80 backdrop-blur-sm border-2 border-gray-300 hover:border-indigo-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><Link href="/utility/ntrp-test">
                     <Zap className="h-5 w-5 mr-2" />
                     먼저 실력 테스트
                   </Link></Button>
