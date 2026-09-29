@@ -6,3 +6,5 @@
 - Rating schema is prohibited unless first-party rating values, counts, collection flow, and current display are all verifiable. No such rating evidence is claimed by this package.
 - FAQ accordions are maintained for reader navigation and accessibility. `FAQPage` markup that already exists is not treated as a promised Google rich-result feature, KPI, or completion condition.
 - Player `Person` schema is limited to actual player entities. Site authorship is not represented as a fictional person.
+
+- Player pages use `WebPage` with `about: Person`, not `ProfilePage`. Google's ProfilePage feature targets people affiliated with the site; these are third-party editorial profiles. Person `image` is emitted only for a real player photo (no placeholder), and breadcrumbs are emitted once by `BreadcrumbSchema` (2026-09-29, TF-15). JSON-LD shape is audited locally; Rich Results Test was not run.

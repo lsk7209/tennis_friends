@@ -22,7 +22,7 @@ const REQUIRED_SCHEMA_OWNERS = [
   {
     label: "dynamic player profile template",
     file: path.join("src", "app", "players", "[slug]", "page.tsx"),
-    required: ["BreadcrumbSchema", "ProfilePageSchema", "FAQSchema"],
+    required: ["BreadcrumbSchema", "PlayerPageSchema", "FAQSchema"],
   },
   {
     label: "tennis rules quiz",
@@ -43,7 +43,7 @@ const SCHEMA_COMPONENTS = [
   path.join("src", "components", "seo", "FAQSection.tsx"),
   path.join("src", "components", "seo", "FAQSchema.tsx"),
   path.join("src", "components", "seo", "OrganizationSchema.tsx"),
-  path.join("src", "components", "seo", "ProfilePageSchema.tsx"),
+  path.join("src", "components", "seo", "PlayerPageSchema.tsx"),
   path.join("src", "components", "seo", "QuizSchema.tsx"),
   path.join("src", "components", "seo", "SoftwareApplicationSchema.tsx"),
   path.join("src", "components", "seo", "WebSiteSchema.tsx"),
