@@ -1392,7 +1392,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
                     <div class="highlight-box-title">🇳🇱 "오렌지 군단의 에이스"</div>
                     <p>리하르트 크라이첵, 로빈 하세의 뒤를 잇는 네덜란드 테니스의 간판스타입니다. 특히 <strong>홈(네덜란드)에서 열리는 대회</strong>에서 유독 강한 모습을 보여주며 '홈 강자'의 면모를 과시합니다.</p>
                 </div>
-                <p>2023년 한 해에만 투어 2승을 거두며 세계 랭킹 20위권에 진입, 커리어 하이를 찍고 있습니다.</p>
+                <p>2023년 한 해에만 투어 2승을 거두며 세계 랭킹 20위권에 진입하며 당시 커리어 하이를 기록했습니다.</p>
             `,
             playStyle: `
                 <p><strong>"공격적 베이스라이너 (Aggressive Baseliner)"</strong></p>
@@ -1498,7 +1498,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
             `,
             recentForm: `
                 <p><strong>"커리어 하이 시즌"</strong></p>
-                <p>2024년 로마 마스터스 준우승으로 세계 랭킹 10위권 진입을 눈앞에 뒀습니다. 클레이뿐만 아니라 하드 코트에서도 강력함을 증명하고 있습니다.</p>
+                <p>2024년 로마 마스터스에서 준우승하며 커리어 최고 성적을 냈습니다. 클레이뿐만 아니라 하드 코트에서도 강력함을 증명하고 있습니다.</p>
             `,
             faq: [
                 {
@@ -1903,7 +1903,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
             `,
             recentForm: `
                 <p><strong>"Top 50 진입 돌풍"</strong></p>
-                <p>2023년 말 넥스트젠 파이널스 출전에 이어 2024년에는 투어 대회에서 꾸준히 성적을 내며 세계 랭킹 30위권을 넘보고 있습니다. 성장세가 매우 가파릅니다.</p>
+                <p>2023년 말 넥스트젠 파이널스 출전에 이어 2024년부터 투어 대회에서 꾸준히 성적을 내며 순위를 끌어올려, 2026년 9월 ATP 랭킹 7위에 올랐습니다(ATP 랭킹 기준).</p>
             `,
             faq: [
                 {
@@ -3242,7 +3242,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
             oneLineSummary: '아시아 남자 테니스 역대 최고 순위(4위), 불리한 신체 조건을 극복한 "샷 메이킹의 마법사".',
             whyNotable: `
                 <p><strong>"아시아 테니스의 선구자"</strong></p>
-                <p>니시코리 케이는 2014년 US 오픈 준우승을 차지하며 아시아 남자 선수 최초로 그랜드슬램 결승에 진출했습니다. 서양 선수들에 비해 왜소한 체격(178cm)임에도 불구하고, 5세트 승률 역대 1위(현역 기준)라는 놀라운 정신력과 체력으로 세계 4위까지 올랐습니다.</p>
+                <p>니시코리 케이는 2014년 US 오픈 준우승을 차지하며 아시아 남자 선수 최초로 그랜드슬램 결승에 진출했습니다. 서양 선수들에 비해 왜소한 체격(178cm)임에도 불구하고, 5세트 접전에서 특히 강했던 정신력과 체력으로 세계 4위까지 올랐습니다.</p>
                 <p>그의 성공은 수많은 아시아 테니스 키즈들에게 "할 수 있다"는 희망을 심어주었습니다.</p>
             `,
             playStyle: `
@@ -3857,7 +3857,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
                 },
                 {
                     question: '포르투갈 최고의 선수인가요?',
-                    answer: '현재 랭킹과 기세로 보면 단연 No.1입니다. 선배 주앙 소자의 기록들을 하나씩 갈아치우고 있습니다.'
+                    answer: '랭킹과 최근 성적으로 보면 포르투갈 남자 테니스를 대표하는 선수 중 한 명이며, 선배 주앙 소자의 뒤를 잇고 있습니다.'
                 },
                 {
                     question: '나달을 이겼다고요?',
@@ -5021,7 +5021,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
             whyNotable: `
                 <p><strong>"La Monf, 코트 위의 예술가"</strong></p>
                 <p>가엘 몽피스는 승패를 떠나 가장 보고 싶은 경기를 하는 선수입니다. 슬라이딩하며 치는 샷, 360도 회전 스매싱 등 묘기에 가까운 플레이로 관중들을 매료시킵니다.</p>
-                <p>단순한 쇼맨이 아니라 세계 랭킹 6위까지 올랐던 실력파이며, 30대 후반의 나이에도 여전히 투어 우승을 차지하는 등 자기 관리 또한 철저한 "살아있는 전설"입니다.</p>
+                <p>단순한 쇼맨이 아니라 세계 랭킹 6위까지 올랐던 실력파이며, 30대 후반까지 투어 우승을 차지할 만큼 자기 관리가 철저했던 "살아있는 전설"이며, 2026 시즌을 끝으로 은퇴한다고 발표했습니다(ATP 기준).</p>
             `,
             playStyle: `
                 <p><strong>"카운터 펀처 + 아크로바틱 디펜더"</strong></p>
@@ -6557,13 +6557,13 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
     },
     'lleyton-hewitt': {
         name: '레이튼 휴이트', nameEn: 'Lleyton Hewitt', country: 'Australia', countryFlag: '🇦🇺', image: '/images/players/lleyton-hewitt.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '"C\'mon!" 역대 최연소 세계 랭킹 1위 기록 보유자. 작은 체구에도 악바리 같은 근성과 빠른 발로 코트를 지배했던 호주의 전설입니다.',
+        longBio: '"C\'mon!" 2001년 20세 8개월에 세계 1위에 올라, 2022년 알카라스가 넘어서기 전까지 최연소 세계 1위 기록을 지녔던 선수. 작은 체구에도 악바리 같은 근성과 빠른 발로 코트를 지배했던 호주의 전설입니다.',
         detailedProfile: {
             oneLineSummary: '포기를 모르는 "Rusty", 호주 테니스의 영혼이자 최연소 세계 1위.',
             whyNotable: `
                 <div class="highlight-box">
                     <div class="highlight-box-title">🇦🇺 "The Fighter"</div>
-                    <p>20세 8개월의 나이로 역대 최연소 ATP 연말 세계 랭킹 1위(2001년)에 올랐습니다. 2001 US 오픈, 2002 윔블던 챔피언입니다. 끊임없이 소리치며 자신을 독려하는 파이팅 넘치는 스타일의 원조입니다.</p>
+                    <p>20세 8개월의 나이로 ATP 연말 세계 1위(2001년)에 올랐고, 이 최연소 기록은 2022년 19세의 알카라스가 넘어섰습니다. 2001 US 오픈, 2002 윔블던 챔피언입니다. 끊임없이 소리치며 자신을 독려하는 파이팅 넘치는 스타일의 원조입니다.</p>
                 </div>
             `,
             playStyle: `
