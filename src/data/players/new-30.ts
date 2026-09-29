@@ -23,7 +23,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
       oneLineSummary:
         "호랑이 문신과 함께 코트를 지배하는 여자 테니스 최강의 파워히터.",
       playStyle:
-        "<p>전 코트에서 일관되게 공격적입니다. 서브 스피드는 190km/h를 넘기고, 포핸드·백핸드 모두 남자 선수급 타점을 보입니다. 기복이 큰 약점을 최근 2년 동안 크게 개선해 메이저 3회 우승까지 도달했습니다.</p>",
+        "<p>전 코트에서 일관되게 공격적입니다. 강한 첫 서브와 양쪽 스트로크로 랠리 초반부터 주도권을 잡습니다. 기복을 줄이면서 메이저 단식 4회 우승(2023·2024 호주 오픈, 2024·2025 US 오픈)까지 도달했습니다.</p>",
       hexagonStats: [
         { name: "포핸드", score: 10 },
         { name: "서브", score: 9.5 },
@@ -34,14 +34,14 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
       ],
       faq: [
         {
-          question: "사발렌카의 팔 문신은 어떤 의미인가요?",
+          question: "사발렌카의 2026 시즌 성적은?",
           answer:
-            "오른팔에 새긴 호랑이 문신은 '어떤 상대 앞에서도 위축되지 않겠다'는 본인의 경기 철학을 상징합니다.",
+            "브리즈번, 인디언웰스, 마이애미에서 우승했고 호주 오픈과 US 오픈에서는 결승에 올랐습니다(WTA 공식 기사 기준, 2026-09-30 확인).",
         },
         {
           question: "사발렌카의 메이저 타이틀은?",
           answer:
-            "2023 호주 오픈, 2024 호주 오픈 2연패에 이어 2024 US 오픈까지 총 3회 그랜드슬램 단식 우승(2026년 4월 기준).",
+            "2023·2024 호주 오픈 2연패와 2024·2025 US 오픈 2연패로 그랜드슬램 단식 4회 우승(2026-09-30 확인).",
         },
       ],
     },
@@ -55,12 +55,12 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "Two-handed",
     longBio:
-      "15세에 윔블던 3회전 진출로 세계를 놀라게 한 미국 테니스의 얼굴. 2023 US 오픈에서 생애 첫 메이저를 차지하며 세리나 윌리엄스 이후의 세대를 책임지는 선수로 자리 잡았습니다.",
+      "15세에 윔블던 예선을 통과해 16강까지 오르며 세계를 놀라게 한 미국 테니스의 얼굴. 2023 US 오픈과 2025 롤랑가로스에서 우승해 메이저 단식 2회 챔피언이 됐습니다.",
     detailedProfile: {
       oneLineSummary:
         "스피드와 수비 범위로 승부하는 차세대 미국 테니스의 간판.",
       playStyle:
-        "<p>투어에서 가장 빠른 발을 가진 선수 중 한 명입니다. 백핸드의 안정성과 리턴 게임 성공률이 돋보이고, 최근 포핸드 폼 교정으로 공격력까지 확장됐습니다. 데프-페어웨더 코치 아래 서브 테크닉을 전면 수정한 이후 승률이 크게 올랐습니다.</p>",
+        "<p>빠른 발과 넓은 수비 범위가 기본 무기입니다. 백핸드가 안정적이고 리턴에서 랠리를 길게 가져갑니다. 서브는 오랜 과제였고, 2025 US 오픈 직전 생체역학 전문가 개빈 맥밀런을 팀에 합류시켜 서브 동작을 손보기 시작했습니다(WTA 기사 기준).</p>",
       hexagonStats: [
         { name: "스피드", score: 10 },
         { name: "백핸드", score: 9 },
@@ -73,7 +73,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
         {
           question: "코코 가우프가 주니어에서 주목받은 계기는?",
           answer:
-            "2019년 윔블던 본선에 와일드카드로 출전해 15세 나이로 3회전까지 진출하며 베테랑 비너스 윌리엄스를 꺾은 장면이 결정적이었습니다.",
+            "2019년 윔블던 예선 와일드카드를 받아 15세에 예선을 통과했고, 1회전에서 비너스 윌리엄스를 꺾은 뒤 16강까지 오른 장면이 결정적이었습니다.",
         },
         {
           question: "2023 US 오픈 우승의 의미는?",
@@ -92,11 +92,11 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "Two-handed",
     longBio:
-      "카자흐스탄 국적의 장신 서버. 2022 윔블던을 제패하며 여자 테니스 역대 최장신(184cm) 그랜드슬램 챔피언이 되었습니다.",
+      "카자흐스탄 국적의 장신 서버. 2022 윔블던, 2026 호주 오픈, 2026 US 오픈에서 우승해 메이저 단식 3회 챔피언이 됐고, 2026 US 오픈 우승과 함께 카자흐스탄 선수 최초로 세계 1위에 올랐습니다(2026-09-30 확인).",
     detailedProfile: {
-      oneLineSummary: "184cm 장신에서 내리꽂는 200km/h 서브의 주인공.",
+      oneLineSummary: "184cm 장신에서 내리꽂는 서브로 경기를 여는 카자흐스탄의 에이스.",
       playStyle:
-        "<p>여자 테니스에서 가장 위협적인 서브를 가지고 있습니다. 첫 서브 평균 180km/h대, 에이스 비율 투어 최상위권. 표정 변화가 거의 없는 '포커페이스'로 불리며 프레셔 상황에서 루틴을 흩트리지 않는 것이 강점입니다.</p>",
+        "<p>강한 첫 서브로 쉬운 포인트를 만드는 것이 가장 큰 무기입니다. 표정 변화가 거의 없는 '포커페이스'로 불리며 프레셔 상황에서 루틴을 흩트리지 않는 것이 강점입니다.</p>",
       hexagonStats: [
         { name: "서브", score: 10 },
         { name: "포핸드", score: 9 },
@@ -132,7 +132,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     detailedProfile: {
       oneLineSummary: "기복 없는 정확도로 투어 최정상을 꾸준히 지키는 선수.",
       playStyle:
-        "<p>화려한 위너보다는 '상대가 실수하게 만드는' 플레이. 라운드마다 범실 비율이 투어 최저권이고, 탑스핀·슬라이스 믹싱으로 상대 리듬을 끊어놓습니다.</p>",
+        "<p>화려한 위너보다는 '상대가 실수하게 만드는' 플레이. 범실이 적은 편이고, 탑스핀·슬라이스 믹싱으로 상대 리듬을 끊어놓습니다.</p>",
       hexagonStats: [
         { name: "일관성", score: 10 },
         { name: "백핸드", score: 9 },
@@ -159,12 +159,12 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "Two-handed",
     longBio:
-      "튀니지 출신, 아프리카·아랍권 최초의 여자 메이저 결승 진출자. 창의적인 샷 셀렉션과 드롭샷으로 '테니스의 셰프'라는 별명을 얻었습니다.",
+      "튀니지 출신, 오픈 시대 아프리카·아랍권 여자 선수 최초의 메이저 단식 결승 진출자(2022 윔블던). 창의적인 샷 셀렉션과 드롭샷으로 '테니스의 셰프'라는 별명을 얻었습니다.",
     detailedProfile: {
       oneLineSummary:
         "드롭샷과 슬라이스로 경기를 요리하는 아프리카의 첫 메이저 결승 진출자.",
       playStyle:
-        "<p>투어에서 가장 창의적인 선수 중 하나. 드롭샷, 하프발리, 앵글 샷 등 변칙 샷 비율이 투어 최상위권입니다. 파워형 상대를 상대로 리듬을 깨트리는 능력이 탁월합니다.</p>",
+        "<p>투어에서 가장 창의적인 선수 중 하나. 드롭샷, 하프발리, 앵글 샷 등 변칙 샷을 자주 섞습니다. 파워형 상대를 상대로 리듬을 깨트리는 능력이 탁월합니다.</p>",
       hexagonStats: [
         { name: "창의성", score: 10 },
         { name: "드롭샷", score: 10 },
@@ -241,7 +241,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
         {
           question: "파올리니가 2024년에 주목받은 이유는?",
           answer:
-            "2024 롤랑가로스·윔블던 연속 결승 진출로 이탈리아 여자 테니스 역사상 세 번째 메이저 결승 진출자가 됐습니다.",
+            "2024 롤랑가로스와 윔블던에서 연속으로 단식 결승에 올랐고, 이 결과로 처음 톱10에 진입했습니다.",
         },
       ],
     },
@@ -296,7 +296,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "Two-handed",
     longBio:
-      "2007년생, 17세 나이로 투어 톱10에 진입한 차세대 신동. 현역 선수 중 가장 어린 메이저 4강 진출자입니다.",
+      "2007년생. 2025년 2월 17세에 톱10에 진입했고, 2026 롤랑가로스 결승에서 마야 흐발린스카를 6-3, 6-2로 꺾고 첫 메이저 단식 우승을 차지했습니다(2026-09-30 확인).",
     detailedProfile: {
       oneLineSummary: "만 17세에 톱10에 오른 2007년생 천재.",
       playStyle:
@@ -313,7 +313,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
         {
           question: "안드레예바는 언제부터 주목받기 시작했나요?",
           answer:
-            "2023년 윔블던 16세 나이로 4라운드 진출하며 세계적 주목을 받았고, 2024년부터 성인 투어 톱10에 올랐습니다.",
+            "2023년 윔블던에서 16세에 4라운드까지 오르며 주목받았고, 2025년 두바이와 인디언웰스 WTA 1000 연속 우승으로 톱10에 자리 잡았습니다.",
         },
       ],
     },
@@ -363,7 +363,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     detailedProfile: {
       oneLineSummary: "8년 만에 메이저 문턱을 넘어선 '늦된 챔피언'.",
       playStyle:
-        "<p>투어 최고 수준의 포핸드·서브 파워를 가졌지만 범실 비율이 발목을 잡아왔습니다. 2024년 후반 바이탈리 라탈로프 코치 합류 후 범실이 크게 줄며 메이저 우승으로 이어졌습니다.</p>",
+        "<p>강한 포핸드와 서브가 무기이고, 오랫동안 범실 관리가 과제였습니다. 2025 호주 오픈 결승에서는 세계 1위 사발렌카를 6-3, 2-6, 7-5로 꺾었습니다.</p>",
       hexagonStats: [
         { name: "포핸드", score: 10 },
         { name: "서브", score: 9.5 },
@@ -376,7 +376,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
         {
           question: "키스의 2025 호주 오픈 우승은 어떤 의미인가요?",
           answer:
-            "29세 나이, 11번째 메이저 8강 이상 진출 끝에 거둔 첫 우승으로 '끈기의 상징'이라는 평가를 받았습니다.",
+            "29세에 거둔 첫 메이저 우승으로, WTA 기준 호주 오픈 최고령 첫 우승자이자 오픈 시대에 첫 두 메이저 결승 사이 간격이 가장 긴 선수(2017 US 오픈 결승 이후)가 됐습니다.",
         },
       ],
     },
@@ -422,7 +422,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "Two-handed",
     longBio:
-      "2012·2013 호주 오픈 2연패 챔피언. 30대 후반이 된 지금도 톱30에 안정적으로 머무르는 여자 테니스의 베테랑입니다.",
+      "2012·2013 호주 오픈 2연패 챔피언이자 전 세계 1위. 출산과 긴 공백 뒤에도 투어에 복귀한 여자 테니스의 베테랑입니다.",
     detailedProfile: {
       oneLineSummary: "출산 후 복귀에 성공한 2012·2013 호주 오픈 챔피언.",
       playStyle:
@@ -610,7 +610,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Left-handed",
     backhand: "Two-handed",
     longBio:
-      "브라질 테니스 역사상 가장 높은 WTA 랭킹을 기록한 선수. 왼손잡이라는 희소성과 강력한 서브로 투어에서 차별화된 존재감을 보입니다.",
+      "오픈 시대 브라질 여자 선수 최초로 단식 톱10(개인 최고 10위, 2023년)에 오른 선수. 왼손잡이라는 희소성과 강력한 서브로 투어에서 차별화된 존재감을 보입니다.",
     detailedProfile: {
       oneLineSummary: "브라질 테니스 최고 기록을 보유한 왼손잡이 빅서버.",
       playStyle:
@@ -627,7 +627,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
         {
           question: "왼손잡이 선수의 이점은?",
           answer:
-            "투어의 90% 이상이 오른손잡이이므로 연습 상대가 적고, 반대로 실전에서는 상대가 왼손잡이 패턴에 익숙하지 않아 우위를 점할 수 있습니다.",
+            "투어 선수 대부분이 오른손잡이라 왼손잡이 연습 상대가 적고, 반대로 실전에서는 상대가 왼손잡이 패턴에 익숙하지 않아 우위를 점할 수 있습니다.",
         },
       ],
     },
@@ -641,7 +641,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "Two-handed",
     longBio:
-      "17세 나이로 2019 롤랑가로스 4강에 진출했던 미국 테니스의 기대주. 번아웃으로 긴 공백 후 복귀해 2024년 WTA 톱50에 재진입했습니다.",
+      "17세에 2019 롤랑가로스 4강에 올랐던 미국 선수. 긴 공백 뒤 복귀해 2025년 윔블던과 US 오픈에서 연속으로 메이저 결승에 올랐고, 2026년 1월 개인 최고 세계 3위를 기록했습니다(USTA 기준, 2026-09-30 확인).",
     detailedProfile: {
       oneLineSummary: "번아웃 후 복귀에 성공한 미국 차세대 파워히터.",
       playStyle:
@@ -678,7 +678,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     detailedProfile: {
       oneLineSummary: "클레이 코트의 신, 롤랑가로스 14회 우승자.",
       playStyle:
-        "<p>투어 역사상 가장 높은 RPM의 탑스핀 포핸드를 가진 선수였습니다. 왼손잡이 포핸드가 오른손잡이 선수의 백핸드 쪽으로 꽂히는 각도는 특히 클레이에서 절대적 위력을 발휘했습니다.</p>",
+        "<p>회전량이 많은 왼손 탑스핀 포핸드가 상징이었습니다. 왼손잡이 포핸드가 오른손잡이 선수의 백핸드 쪽으로 꽂히는 각도는 특히 클레이에서 절대적 위력을 발휘했습니다.</p>",
       hexagonStats: [
         { name: "클레이", score: 10 },
         { name: "탑스핀", score: 10 },
@@ -715,7 +715,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
       oneLineSummary:
         "테니스의 예술, 원핸드 백핸드의 아름다움을 재정의한 전설.",
       playStyle:
-        "<p>원핸드 백핸드·공격적 서브앤발리를 현대 테니스에서도 통하게 만든 주역. 스윙 효율이 극도로 높아 체력 소모가 적었고, 40세까지 메이저 결승에 오를 수 있었던 이유입니다.</p>",
+        "<p>원핸드 백핸드와 공격적인 네트 플레이를 현대 테니스에서도 통하게 만든 주역. 효율적인 스윙과 움직임 덕분에 37세였던 2019 윔블던까지 메이저 결승에 올랐습니다.</p>",
       hexagonStats: [
         { name: "기술", score: 10 },
         { name: "서브", score: 9.5 },
@@ -759,7 +759,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
         {
           question: "머리의 은퇴 경기는?",
           answer:
-            "2024년 8월 파리 올림픽 복식 준결승. 복식 파트너는 댄 에반스였고, 경기 후 공식 은퇴를 발표했습니다.",
+            "2024년 8월 1일 파리 올림픽 남자 복식 8강. 댄 에반스와 짝을 이뤄 테일러 프리츠·토미 폴에게 2-6, 4-6으로 진 경기가 커리어 마지막 경기였습니다(ATP 기사 기준).",
         },
       ],
     },
@@ -773,7 +773,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "One-handed",
     longBio:
-      "2020 US 오픈 우승자. 오스트리아 최초의 메이저 단식 챔피언이자 원핸드 백핸드의 마지막 세대 중 한 명. 손목 부상으로 2024년 10월 은퇴했습니다.",
+      "2020 US 오픈 우승자. 1995 롤랑가로스의 토마스 무스터에 이어 오스트리아 남자 선수 두 번째 메이저 단식 챔피언이자 원핸드 백핸드 세대의 대표 주자. 손목 부상으로 2024년 10월 은퇴했습니다.",
     detailedProfile: {
       oneLineSummary: "원핸드 백핸드로 US 오픈 정상에 오른 오스트리아의 영웅.",
       playStyle:
@@ -897,7 +897,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "One-handed",
     longBio:
-      "프랑스 테니스의 베테랑. 원핸드 백핸드 '테니스 아티스트'로 불렸으며, 2025년 은퇴 예정을 발표했습니다.",
+      "프랑스 테니스의 베테랑. 원핸드 백핸드 '테니스 아티스트'로 불렸으며, 2025년 5월 29일 롤랑가로스 2회전에서 야닉 시너에게 진 경기를 끝으로 은퇴했습니다.",
     detailedProfile: {
       oneLineSummary:
         "투어에서 가장 아름다운 원핸드 백핸드로 불렸던 프랑스의 예술가.",
@@ -915,7 +915,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
         {
           question: "가스케의 은퇴 계획은?",
           answer:
-            "2025 롤랑가로스를 끝으로 공식 은퇴를 예고한 상태입니다(2026년 4월 기준).",
+            "2025 롤랑가로스 2회전에서 시너에게 3-6, 0-6, 4-6으로 진 경기가 마지막이었고, 대회 측이 기념 트로피로 은퇴를 기렸습니다(ATP 기사 기준).",
         },
       ],
     },
@@ -929,7 +929,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "Two-handed",
     longBio:
-      "이탈리아 테니스의 베테랑. 2019 몬테카를로 마스터스 우승으로 커리어 하이 라이트를 만들었습니다. 감정적인 경기 스타일로도 유명합니다.",
+      "이탈리아 테니스의 베테랑. 2019 몬테카를로 마스터스 우승이 커리어 하이라이트이며, 2025 윔블던 1회전에서 알카라스와 5세트 접전을 벌인 뒤 은퇴를 발표했습니다.",
     detailedProfile: {
       oneLineSummary:
         "변화무쌍한 플레이와 감정 기복으로 유명한 이탈리아의 개성파.",
@@ -961,11 +961,11 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
     plays: "Right-handed",
     backhand: "Two-handed",
     longBio:
-      "170cm 단신으로 ATP 톱10까지 올랐던 아르헨티나 선수. 2024년 투어 고별 시즌을 보내고 은퇴했습니다.",
+      "170cm 단신으로 ATP 최고 8위까지 올랐던 아르헨티나 선수. 2025년 2월 부에노스아이레스 아르헨티나 오픈에서 커리어를 마쳤습니다.",
     detailedProfile: {
       oneLineSummary: "170cm 단신으로 톱10에 오른 '작은 거인'.",
       playStyle:
-        "<p>신장이 170cm로 남자 투어 최단신 수준이지만 압도적 풋워크와 리턴 게임 장악력으로 약점을 상쇄했습니다. 클레이에서 특히 위협적이었고 메이저 8강을 다수 기록했습니다.</p>",
+        "<p>신장이 170cm로 남자 투어에서 작은 편이지만 빠른 풋워크와 리턴 능력으로 약점을 상쇄했습니다. 클레이에서 특히 위협적이었고, 2020 롤랑가로스에서는 4강까지 올랐습니다.</p>",
       hexagonStats: [
         { name: "풋워크", score: 10 },
         { name: "리턴", score: 10 },
@@ -977,7 +977,7 @@ export const NEW_30_PLAYERS: Record<string, PlayerData> = {
       faq: [
         {
           question: "슈바르츠만의 은퇴 시점은?",
-          answer: "2024년 아르헨티나 오픈을 끝으로 공식 은퇴를 발표했습니다.",
+          answer: "2025년 2월 13일 아르헨티나 오픈 2회전에서 페드로 마르티네스에게 2-6, 2-6으로 진 경기가 마지막이었습니다(ATP 기사 기준).",
         },
       ],
     },
