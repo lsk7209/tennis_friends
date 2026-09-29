@@ -178,7 +178,7 @@ export const utilitiesMetadata: UtilityMetadata[] = [
     id: "tennis-dictionary",
     title: "테니스 용어 사전",
     description:
-      "200개 이상의 테니스 용어를 검색하고 자세한 설명을 확인하세요. 초보자도 쉽게 이해할 수 있는 쉬운 설명과 예시를 제공합니다.",
+      "자주 헷갈리는 테니스 용어를 검색하고 자세한 설명을 확인하세요. 초보자도 쉽게 이해할 수 있는 쉬운 설명과 예시를 제공합니다.",
     icon: Book,
     status: "완료",
     features: ["용어 검색", "상세 설명", "예시 제공", "즐겨찾기"],

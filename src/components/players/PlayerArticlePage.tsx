@@ -122,13 +122,23 @@ export default function PlayerArticlePage({ slug }: Props) {
             {dp.oneLineSummary ? ` · ${dp.oneLineSummary.slice(0, 80)}` : ""}
           </p>
           {player.rankingCurrent && (
-            <div className="mt-6 flex items-center gap-3">
-              <span className="bg-accent-volt text-court-ink text-xs font-semibold px-2 py-0.5 uppercase tracking-wide">
-                {tour}
-              </span>
-              <span className="text-white/50 text-sm">
-                세계 랭킹 {player.rankingCurrent}위
-              </span>
+            <div className="mt-6">
+              <div className="flex items-center gap-3">
+                <span className="bg-accent-volt text-court-ink text-xs font-semibold px-2 py-0.5 uppercase tracking-wide">
+                  {tour}
+                </span>
+                <span className="text-white/50 text-sm">
+                  세계 랭킹 {player.rankingCurrent}위
+                </span>
+              </div>
+              <a
+                href={atpWtaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-block text-white/35 text-xs hover:text-white/60"
+              >
+                랭킹은 매주 갱신됩니다 · {tour} 공식 사이트에서 실시간 순위 확인
+              </a>
             </div>
           )}
         </div>
