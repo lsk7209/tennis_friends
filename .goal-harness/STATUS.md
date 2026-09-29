@@ -1,5 +1,8 @@
 # STATUS
 
+## 2026-09-30 08:50 KST — official sources for October posts
+PR #51 was squash-merged as `3194e85`. Ten scheduled October posts gained a 참고 자료 line: USTA The Code, ITF 2026 Rules (Rule 24 / Appendix VI), USTA NTRP FAQ, and NHS heat-illness and sprain pages, all verified to return 200. `no_external_source` warnings went from 19 to 9; the remaining 9 have no genuinely relevant official source. CI passed and deployments succeeded. The posts are unpublished until their scheduled date, so the production content check is pending.
+
 ## 2026-09-30 08:30 KST — stale player facts fixed
 PR #49 was squash-merged as `403bccc`: 10 corrections in male.ts/female.ts.
 - Hewitt's youngest (year-end) No.1 records are now noted as broken by Alcaraz in 2022.
