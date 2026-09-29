@@ -44,6 +44,7 @@
     "audit:terms-quiz": "node --experimental-strip-types scripts/audit-terms-quiz.mjs",
     "audit:scoring-quiz": "node --experimental-strip-types scripts/audit-scoring-quiz.mjs",
     "audit:doubles-rotation": "node --experimental-strip-types scripts/audit-doubles-rotation.mjs",
+    "audit:external-links": "node scripts/audit-external-links.mjs",
     "audit:not-found-status": "node scripts/audit-not-found-status.mjs",
     "audit:storage-safety": "node scripts/audit-storage-safety.mjs",
     "audit:button-contrast": "node scripts/audit-button-contrast.mjs",

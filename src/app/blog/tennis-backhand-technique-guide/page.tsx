@@ -88,14 +88,6 @@ export default function TennisBackhandTechniqueGuidePage() {
 
       <TOC items={tocItems} />
 
-      <div className="bg-white/50 p-4 rounded-lg mb-4">
-        <p className="text-sm text-gray-600 mb-2">📚 더 깊이 공부해보세요:</p>
-        <ul className="space-y-1 text-sm">
-          <li>• <a href="https://www.tennis.com/pro-game/2021/01/backhand-technique-guide/789456/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">테니스 백핸드 기술 가이드 - Tennis.com</a></li>
-          <li>• <a href="https://www.usta.com/en/home/play/tennis-basics/backhand.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">USTA 백핸드 가이드</a></li>
-        </ul>
-      </div>
-
       <section id="backhand-essence-left-hand-leads" className="mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span className="bg-green-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">1</span>

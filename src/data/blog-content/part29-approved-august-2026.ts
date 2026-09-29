@@ -51,7 +51,7 @@ export const BLOG_CONTENT_PART29_APPROVED_AUGUST_2026 = {
 <h3>온라인으로만 사야 한다면 무엇을 기록해야 하나요?</h3>
 <p>현재 라켓의 표기 사이즈, 오버그립 겹 수, 미끄러짐 여부, 20분 연습 뒤의 손 피로 위치를 적어 두자. 이 기록이 손 치수 하나보다 다음 후보를 좁히는 데 더 유용하다.</p>
 <h2>참고한 자료</h2>
-<p>• <a href="https://www.playerdevelopment.usta.com/Improve-Your-Game/Sport-Science/116192_Technique_Racket_Selection/" rel="noopener noreferrer">USTA Player Development — Racket Selection</a></p>
+<p>• USTA Player Development — Racket Selection</p>
 <p>• <a href="https://www.usta.com/en/home/stay-current/midwest/chicago/how-to-start-playing-tennis--or-pick-the-racquet-up-again-.html" rel="noopener noreferrer">USTA — How to Start Playing Tennis</a></p>
 <p>• <a href="https://www.usta.com/en/home/improve/tips-and-instruction/national/learning-the-basics--forehand.html" rel="noopener noreferrer">USTA Tennis 101 — The Forehand</a></p>`, faq: [] },
   "t02-first-month-lessons": { summary: "테니스 레슨 첫 달에는 ‘주 몇 회를 들어야 하나요?’보다 ‘이번 주에 혼자 연습할 한 가지는 무엇인가요?’를 먼저 물어보는 편이 낫다. 레슨 시간에는 코치가 눈으로 보며 수정해 줄 수 있지만, 다음 수업까지 몸에 남는 것은 혼자 반복한 동작이다. 그래서 첫 달 계획은 레슨 횟수와 무관하게, 한 번에 고칠 동작을 하나로 제한하고 그 결과를 다음 수업에 가져가는 방식으로 짜야 한다.", highlight: "테니스 레슨 첫 달에는 ‘주 몇 회를 들어야 하나요?’보다 ‘이번 주에 혼자 연습할 한 가지는 무엇인가요?’를 먼저 물어보는 편이 낫다.", tags: ["테니스 가이드"], content: `<p>테니스 레슨 첫 달에는 ‘주 몇 회를 들어야 하나요?’보다 ‘이번 주에 혼자 연습할 한 가지는 무엇인가요?’를 먼저 물어보는 편이 낫다. 레슨 시간에는 코치가 눈으로 보며 수정해 줄 수 있지만, 다음 수업까지 몸에 남는 것은 혼자 반복한 동작이다. 그래서 첫 달 계획은 레슨 횟수와 무관하게, 한 번에 고칠 동작을 하나로 제한하고 그 결과를 다음 수업에 가져가는 방식으로 짜야 한다.</p>
@@ -382,7 +382,7 @@ export const BLOG_CONTENT_PART29_APPROVED_AUGUST_2026 = {
 <h3>데모 중 팔이 아팠어요.</h3>
 <p>그날의 장비 비교를 중단한다. 통증이 지속되거나 저림·약화가 있으면 무리해 다시 치지 말고 적절한 전문 도움을 받는다.</p>
 <h2>참고 자료</h2>
-<p>• <a href="https://www.playerdevelopment.usta.com/Improve-Your-Game/Sport-Science/116192_Technique_Racket_Selection/" rel="noopener noreferrer">USTA Player Development: Racket Selection</a></p>
+<p>• USTA Player Development: Racket Selection</p>
 <p>• <a href="https://www.usta.com/en/home/improve/tips-and-instruction/national/learning-the-basics--forehand.html" rel="noopener noreferrer">USTA Tennis 101: The Forehand</a></p>
 <h2>데모 메모를 코치에게 보여 주는 방법</h2>
 <p>레슨을 받는다면 라켓 이름만 말하지 말고 메모에서 반복된 장면을 보여 준다. “이 라켓은 좋았어요”보다 “짧은 공에서는 편했지만 서브 뒤 팔이 무거웠어요”, “기존 라켓보다 포핸드 깊이는 쉬웠지만 발리 준비가 늦었어요”라고 말하면 코치도 현재 동작과 비교해 볼 수 있다. 코치는 실제 스윙을 보고 우선 연습할 기술과 장비 확인 순서를 함께 정하는 데 도움을 줄 수 있다.</p>
