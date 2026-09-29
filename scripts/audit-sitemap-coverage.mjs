@@ -104,14 +104,47 @@ function getPhysicalBlogSlugs() {
 
 registerSourceTranspiler();
 
-const { getSitemapEntries, toXmlSitemap } = require("../src/lib/sitemap-entries.ts");
+const { getBlogLastModified, getSitemapEntries, latestDate, toMetadataSitemap, toXmlSitemap } = require("../src/lib/sitemap-entries.ts");
 const { allBlogPosts } = require("../src/data/blog-posts.js");
 const { PLAYERS_DB } = require("../src/data/players/index.ts");
 const playerLegacyRedirects = require("../src/data/players/legacy-redirects.json");
 const { getPublishedBlogPosts } = require("../src/lib/blog-publish.ts");
 const { isIndexableBlogSlug } = require("../src/lib/blog-quality.ts");
 
-const entries = getSitemapEntries(SITE_URL);
+assert(latestDate(new Date("2020-01-01"), new Date("2021-01-01")).toISOString() === "2021-01-01T00:00:00.000Z", {
+  issue: "latestDate must select the newest supplied date",
+});
+assert(latestDate() === undefined && latestDate(new Date(Number.NaN)) === undefined, {
+  issue: "unknown or invalid dates must remain unknown",
+});
+const sampleMetadata = { date: "2020-01-01", updatedAt: "2021-01-01" };
+assert(getBlogLastModified(sampleMetadata)?.toISOString() === "2020-12-31T15:00:00.000Z", {
+  issue: "blog modification date must use the later KST update date",
+});
+assert(getBlogLastModified({ date: "2020-01-01", updatedAt: "invalid" })?.toISOString() === "2019-12-31T15:00:00.000Z", {
+  issue: "invalid update date must preserve publication date",
+});
+assert(getBlogLastModified({ date: "2020-01-01", updatedAt: "2022-01-01T00:00:00" })?.toISOString() === "2019-12-31T15:00:00.000Z", {
+  issue: "update timestamps without explicit timezone must not be guessed",
+});
+
+const originalReadFileSync = fs.readFileSync;
+let contentReads = 0;
+fs.readFileSync = function (...args) {
+  if (String(args[0]).includes(`${path.sep}blog-content${path.sep}`)) contentReads += 1;
+  return originalReadFileSync.apply(this, args);
+};
+let entries;
+try {
+  entries = getSitemapEntries(SITE_URL);
+} finally {
+  fs.readFileSync = originalReadFileSync;
+}
+assert(contentReads === 0, { issue: "sitemap rereads blog content for every post", contentReads });
+const secondEntries = getSitemapEntries(SITE_URL);
+assert(entries.every((entry, index) => entry.lastModified?.getTime() === secondEntries[index].lastModified?.getTime()), {
+  issue: "sitemap dates change between builds with unchanged content",
+});
 const urls = entries.map((entry) => entry.url);
 const duplicateUrls = urls.filter((url, index) => urls.indexOf(url) !== index);
 const utilitySlugs = getUtilitySlugs();
@@ -143,7 +176,7 @@ for (const entry of entries) {
     issue: "sitemap URL has trailing slash",
     url: entry.url,
   });
-  assert(entry.lastModified instanceof Date && !Number.isNaN(entry.lastModified.getTime()), {
+  assert(entry.lastModified === undefined || (entry.lastModified instanceof Date && Number.isFinite(entry.lastModified.getTime())), {
     issue: "invalid sitemap lastModified",
     url: entry.url,
   });
@@ -153,6 +186,30 @@ for (const entry of entries) {
     priority: entry.priority,
   });
 }
+
+const blogEntries = entries.filter((entry) => entry.url.startsWith(`${SITE_URL}/blog/`));
+assert(blogEntries.every((entry) => entry.lastModified instanceof Date), {
+  issue: "published blog entry lost its known publication date",
+});
+const samplePost = getPublishedBlogPosts(allBlogPosts).find((post) =>
+  isIndexableBlogSlug(post.slug) && post.updatedAt,
+);
+if (samplePost) {
+  const published = new Date(samplePost.scheduledAt || `${samplePost.date}T00:00:00+09:00`);
+  const updated = new Date(samplePost.updatedAt.includes("T") ? samplePost.updatedAt : `${samplePost.updatedAt}T00:00:00+09:00`);
+  const expected = Math.max(published.getTime(), updated.getTime());
+  const actual = entries.find((entry) => entry.url === `${SITE_URL}/blog/${samplePost.slug}`)?.lastModified?.getTime();
+  assert(actual === expected, { issue: "blog lastmod differs from publication/update metadata", slug: samplePost.slug });
+}
+assert(entries.find((entry) => entry.url === `${SITE_URL}/privacy`)?.lastModified === undefined, {
+  issue: "undated static page must omit lastmod",
+});
+assert(!toXmlSitemap([{ url: `${SITE_URL}/undated`, changeFrequency: "monthly", priority: 0.5 }]).includes("<lastmod>"), {
+  issue: "XML writes a lastmod for an undated page",
+});
+assert(toMetadataSitemap([{ url: `${SITE_URL}/undated`, changeFrequency: "monthly", priority: 0.5 }])[0].lastModified === undefined, {
+  issue: "metadata sitemap writes a lastmod for an undated page",
+});
 
 compareSets(
   "utility",

@@ -7,6 +7,7 @@ import playerLegacyRedirects from "@/data/players/legacy-redirects.json";
 import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
 import { getSiteUrl } from "@/lib/site";
+import type { BlogPostData } from "@/types/blog";
 
 export type SitemapFrequency = NonNullable<
   MetadataRoute.Sitemap[number]["changeFrequency"]
@@ -14,95 +15,52 @@ export type SitemapFrequency = NonNullable<
 
 export type SitemapEntry = {
   url: string;
-  lastModified: Date;
+  lastModified?: Date;
   changeFrequency: SitemapFrequency;
   priority: number;
 };
 
 const APP_DIR = path.join(process.cwd(), "src", "app");
-const BLOG_CONTENT_DIR = path.join(
-  process.cwd(),
-  "src",
-  "data",
-  "blog-content",
-);
-const PLAYERS_DIR = path.join(process.cwd(), "src", "data", "players");
-// 실제 파일 수정일(mtime)을 구하지 못했을 때 쓰는 폴백. 고정 과거 날짜 대신
-// 빌드(=배포) 시각을 써서 sitemap lastmod가 stale 신호를 주지 않도록 한다.
-const FALLBACK_STATIC_DATE = new Date();
 
 function normalizeBaseUrl(baseUrl = getSiteUrl()) {
   return baseUrl.replace(/\/$/, "");
 }
 
-function safeStatDate(filePath: string) {
-  try {
-    return fs.statSync(filePath).mtime;
-  } catch {
-    return FALLBACK_STATIC_DATE;
-  }
+export function latestDate(...dates: Array<Date | undefined>): Date | undefined {
+  return dates.reduce<Date | undefined>(
+    (latest, date) =>
+      date instanceof Date && Number.isFinite(date.getTime()) &&
+      (!latest || date > latest)
+        ? date
+        : latest,
+    undefined,
+  );
 }
 
-function latestDate(...dates: Date[]) {
-  return dates.reduce(
-    (latest, date) => (date > latest ? date : latest),
-    FALLBACK_STATIC_DATE,
-  );
+function parseContentDate(value?: string): Date | undefined {
+  if (!value) return undefined;
+  const normalized = /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? `${value}T00:00:00+09:00`
+    : /(?:Z|[+-]\d{2}:\d{2})$/.test(value)
+      ? value
+      : undefined;
+  if (!normalized) return undefined;
+  const parsed = new Date(normalized);
+  return Number.isFinite(parsed.getTime()) ? parsed : undefined;
+}
+
+export function getBlogLastModified(post: BlogPostData): Date | undefined {
+  return latestDate(getBlogPublishDate(post), parseContentDate(post.updatedAt));
 }
 
 function getSlugsFromDir(dirPath: string) {
   try {
-    const fullPath = path.join(APP_DIR, dirPath);
-    if (!fs.existsSync(fullPath)) return [];
-
-    return fs
-      .readdirSync(fullPath, { withFileTypes: true })
+    return fs.readdirSync(path.join(APP_DIR, dirPath), { withFileTypes: true })
       .filter((dirent) => dirent.isDirectory())
       .map((dirent) => dirent.name)
       .sort();
   } catch {
     return [];
-  }
-}
-
-function getDirectoryLatestDate(dirPath: string) {
-  try {
-    if (!fs.existsSync(dirPath)) return FALLBACK_STATIC_DATE;
-
-    return latestDate(
-      ...fs
-        .readdirSync(dirPath)
-        .map((name) => safeStatDate(path.join(dirPath, name))),
-    );
-  } catch {
-    return FALLBACK_STATIC_DATE;
-  }
-}
-
-function getPageDate(...segments: string[]) {
-  return safeStatDate(path.join(APP_DIR, ...segments));
-}
-
-function getBlogDate(date: string) {
-  const parsed = new Date(`${date}T00:00:00+09:00`);
-  return Number.isNaN(parsed.getTime()) ? FALLBACK_STATIC_DATE : parsed;
-}
-
-function getBlogContentDate(slug: string) {
-  try {
-    if (!fs.existsSync(BLOG_CONTENT_DIR)) return FALLBACK_STATIC_DATE;
-
-    const contentFile = fs.readdirSync(BLOG_CONTENT_DIR).find((name) => {
-      if (!name.endsWith(".ts")) return false;
-      const source = fs.readFileSync(path.join(BLOG_CONTENT_DIR, name), "utf8");
-      return source.includes(`"${slug}":`) || source.includes(`'${slug}':`);
-    });
-
-    return contentFile
-      ? safeStatDate(path.join(BLOG_CONTENT_DIR, contentFile))
-      : FALLBACK_STATIC_DATE;
-  } catch {
-    return FALLBACK_STATIC_DATE;
   }
 }
 
@@ -112,40 +70,28 @@ export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
     (post) => isIndexableBlogSlug(post.slug),
   );
   const latestBlogDate = latestDate(
-    ...publishedBlogPosts.map((post) => getBlogDate(post.date)),
-  );
-  const latestUtilityDate = getDirectoryLatestDate(
-    path.join(APP_DIR, "utility"),
-  );
-  const latestPlayerDate = getDirectoryLatestDate(PLAYERS_DIR);
-  const homeDate = latestDate(
-    getPageDate("page.tsx"),
-    latestBlogDate,
-    latestUtilityDate,
+    ...publishedBlogPosts.map(getBlogLastModified),
   );
 
   const entries: SitemapEntry[] = [
     {
       url: siteUrl,
-      lastModified: homeDate,
       changeFrequency: "daily",
       priority: 1,
     },
     {
       url: `${siteUrl}/blog`,
-      lastModified: latestDate(getPageDate("blog", "page.tsx"), latestBlogDate),
+      lastModified: latestBlogDate,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${siteUrl}/utility`,
-      lastModified: latestUtilityDate,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${siteUrl}/players`,
-      lastModified: latestPlayerDate,
       changeFrequency: "weekly",
       priority: 0.9,
     },
@@ -154,10 +100,6 @@ export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
   for (const slug of getSlugsFromDir("utility")) {
     entries.push({
       url: `${siteUrl}/utility/${slug}`,
-      lastModified: latestDate(
-        getPageDate("utility", slug, "page.tsx"),
-        getPageDate("utility", slug, "layout.tsx"),
-      ),
       changeFrequency: "monthly",
       priority: 0.9,
     });
@@ -168,7 +110,6 @@ export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
     .sort()) {
     entries.push({
       url: `${siteUrl}/players/${slug}`,
-      lastModified: latestPlayerDate,
       changeFrequency: "weekly",
       priority: 0.8,
     });
@@ -177,10 +118,7 @@ export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
   for (const post of publishedBlogPosts) {
     entries.push({
       url: `${siteUrl}/blog/${post.slug}`,
-      lastModified: latestDate(
-        getBlogPublishDate(post),
-        getBlogContentDate(post.slug),
-      ),
+      lastModified: getBlogLastModified(post),
       changeFrequency: "weekly",
       priority: 0.8,
     });
@@ -197,7 +135,6 @@ export function getSitemapEntries(baseUrl?: string): SitemapEntry[] {
   for (const page of staticPages) {
     entries.push({
       url: `${siteUrl}/${page.slug}`,
-      lastModified: getPageDate(page.slug, "page.tsx"),
       changeFrequency: page.frequency,
       priority: page.priority,
     });
@@ -211,7 +148,7 @@ export function toMetadataSitemap(
 ): MetadataRoute.Sitemap {
   return entries.map((entry) => ({
     url: entry.url,
-    lastModified: entry.lastModified,
+    ...(entry.lastModified && { lastModified: entry.lastModified }),
     changeFrequency: entry.changeFrequency,
     priority: entry.priority,
   }));
@@ -222,8 +159,7 @@ export function toXmlSitemap(entries: SitemapEntry[]) {
     .map(
       (entry) => `  <url>
     <loc>${escapeXml(entry.url)}</loc>
-    <lastmod>${entry.lastModified.toISOString()}</lastmod>
-    <changefreq>${entry.changeFrequency}</changefreq>
+${entry.lastModified ? `    <lastmod>${entry.lastModified.toISOString()}</lastmod>\n` : ""}    <changefreq>${entry.changeFrequency}</changefreq>
     <priority>${entry.priority.toFixed(1)}</priority>
   </url>`,
     )

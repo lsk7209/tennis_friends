@@ -71,7 +71,7 @@ const SEARCH_METADATA_OVERRIDES: Record<
     ],
   },
   "iva-jovic": {
-    title: "이바 조비크(Iva Jovic) 프로필 | 미국 WTA 유망주·플레이스타일",
+    title: "이바 조비치(이바 조비크, Iva Jovic) 프로필 | 경기 기록·플레이스타일",
     description:
       "이바 조비크(이바 조비치, Iva Jovic) 미국 WTA 유망주 프로필입니다. 오른손 베이스라인 플레이스타일과 강점, 성장 포인트를 정리했습니다.",
     keywords: [
@@ -707,6 +707,9 @@ export default async function PlayerProfilePage({ params }: Props) {
                           <p className="text-gray-700 dark:text-gray-300 leading-relaxed relative z-10">
                             {player.detailedProfile.signatureMatch.description}
                           </p>
+                          {player.detailedProfile.signatureMatch.sourceUrl && (
+                            <a href={player.detailedProfile.signatureMatch.sourceUrl} target="_blank" rel="noopener noreferrer" className="relative z-10 mt-3 inline-block text-sm font-semibold text-blue-700 underline dark:text-blue-300">대회 공식 경기 기록 보기</a>
+                          )}
                         </div>
                       </>
                     )}
