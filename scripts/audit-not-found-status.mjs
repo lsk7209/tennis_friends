@@ -33,4 +33,10 @@ function routeCallsNotFound(loadingFile) {
 
 const offending = findLoadingBoundaries(appDirectory).filter(routeCallsNotFound);
 assert.deepEqual(offending, [], `loading.tsx above a notFound() page causes soft 404s:\n${offending.join("\n")}`);
-console.log("Not-found status audit passed: no loading boundary wraps a notFound() route.");
+
+// The shared /_not-found HTML is prerendered once, so pathname-dependent
+// elements in the global Header must toggle a class, not mount/unmount
+// (production React #418 on 404 pages, 2026-09-30).
+const header = fs.readFileSync(path.join(root, "src/components/layout/Header.tsx"), "utf8");
+assert.doesNotMatch(header, /\{\s*active\s*&&/u, "Header must not conditionally mount the active-nav indicator");
+console.log("Not-found status audit passed: no loading boundary wraps a notFound() route; header indicator is hydration-stable.");
