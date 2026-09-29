@@ -1,5 +1,15 @@
 # STATUS
 
+## 2026-09-30 08:30 KST — stale player facts fixed
+PR #49 was squash-merged as `403bccc`: 10 corrections in male.ts/female.ts.
+- Hewitt's youngest (year-end) No.1 records are now noted as broken by Alcaraz in 2022.
+- "Currently rising" lines for Jarry, Griekspoor and Cobolli (ATP No.7, Sep 2026) and one WTA profile are dated.
+- Sinner's No.1 is dated September 2026.
+- Monfils' end-of-2026 retirement is added.
+- Nishikori's "best 5-set record" claim and Borges' vague "No.1" are softened.
+
+Djokovic's 24 majors / 40 Masters / 7 Finals were verified as still current. CI passed and deployments succeeded; production confirms the new text on 4 profiles.
+
 ## 2026-09-30 07:40 KST — dead external links removed
 PR #47 was squash-merged as `4cfa413`.
 - Checked 253 external URLs. 56 were GET-confirmed 404 (tennis.com URLs with fabricated IDs like `/789456/`, stale USTA/playerdevelopment paths, removed Mayo Clinic/ACSM pages, etc.) and were removed from 35 files: dead items in 23 further-reading boxes, with empty boxes dropped; in content strings the anchor text is kept.
