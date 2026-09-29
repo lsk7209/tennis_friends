@@ -1,5 +1,19 @@
 # STATUS
 
+## 2026-09-29 20:20 KST — blocked-storage crash fixed and released
+A production E2E with `localStorage`/`sessionStorage` throwing showed "This page couldn't load" on every page (pageerror from the shared Header theme read and Tracking). PR #30 fixed this, and it was squash-merged as `912c63d`:
+- adds the never-throwing `src/lib/safe-storage.ts` helpers;
+- uses them in Header, Tracking, device id and play-style completion;
+- adds `audit:storage-safety` to `verify` (it fails on the old source and passes on the new).
+
+PR CI passed (verify 3m26s, seo-check, hosting-cost, Vercel). The Vercel production status for `912c63d` is success.
+
+The production re-run with storage blocked answered all 15 NTRP questions and reached `/utility/ntrp-test/result` with score 45/45, a completion id, the score displayed and 0 page errors.
+
+The button visual check on production (light/dark `/players`, home hero, `/utility/focus-training`) found no unreadable button. Captures are `docs/reports/tf-buttons-*-2026-09-29.png`.
+
+Rollback: `git revert 912c63d`.
+
 ## 2026-09-29 19:45 KST — released
 State: RELEASED. PR #28 was squash-merged into #27. #27 was squash-merged into `main` as `7069b4dcd0ea2bd95e134c71d492caefa6e7d8d2`, after merging 12 newer `origin/main` commits. The one NTRP result-page conflict was resolved in favor of the versioned result contract. PR CI passed (verify, seo-check, hosting-cost, Vercel preview). Deployments succeeded: GitHub Pages `6732615096` (run `36556527482`) and Vercel Production `6732608041`.
 
