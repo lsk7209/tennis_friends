@@ -28,6 +28,7 @@ import { BLOG_CONTENT_PART25_QUALITY_REWRITES } from "./part25-quality-rewrites"
 import { BLOG_CONTENT_PART26_QUALITY_REWRITES } from "./part26-quality-rewrites";
 import { BLOG_CONTENT_PART29_APPROVED_AUGUST_2026 } from "./part29-approved-august-2026";
 import { BLOG_CONTENT_PART30_REVIEWED_SEPTEMBER_2026 } from "./part30-reviewed-september-2026";
+import { BLOG_CONTENT_BEGINNER_SERIES_2026 } from "./part31-beginner-series-2026";
 
 type BlogContentEntry = {
   content: string;
@@ -38,6 +39,7 @@ type BlogContentEntry = {
 };
 
 export const blogContentMap: Record<string, BlogContentEntry> = {
+  ...BLOG_CONTENT_BEGINNER_SERIES_2026,
   ...BLOG_CONTENT_PART30_REVIEWED_SEPTEMBER_2026,
   ...BLOG_CONTENT_PART29_APPROVED_AUGUST_2026,
   ...BLOG_CONTENT_PART1,
