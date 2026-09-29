@@ -1,5 +1,20 @@
 # STATUS
 
+## 2026-09-30 00:05 KST — terms quiz and beginner series released
+PR #36 was squash-merged as `ffb9e42`:
+- `/utility/tennis-terms-quiz`: 10 random terms from the 47-term dictionary, with the answer's own name masked.
+- Three beginner posts in the 입문 가이드 category (`tennis-beginner-first-month-lessons`, `-second-month-gear`, `-third-month-first-club-game`), linked to each other and to the new tools.
+- Dictionary: service-line definition corrected and a typo fixed. Utility count is 66.
+
+PR CI passed (verify, seo-check, hosting-cost, Vercel). Deployment: GitHub Pages success, Vercel success.
+
+Production checks:
+- The quiz, all three posts and `/blog/topic/situation` return 200. The posts have 1 h1, 7 h2, an HTML table, no raw pipes and a self canonical.
+- The sitemap includes the new URLs, and `/utility` shows 66.
+- Production browser run at 390px: the quiz runs 10 answers → result → review of 10 → new set; 0 console errors, no overflow.
+
+Rollback: `git revert ffb9e42`.
+
 ## 2026-09-29 21:40 KST — new tools released
 PR #34 was squash-merged as `2c793d7`, adding two tools:
 - `/utility/doubles-rotation-generator`: 4–24 players, 1–6 courts, even rests, partner-repeat minimization, text copy, cafe CTA.
