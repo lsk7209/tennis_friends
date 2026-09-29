@@ -4,14 +4,21 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { getBlogIndexPage } from "@/lib/blog-index";
+import { getBlogIndexPage, getBlogTopicNavigation, getBlogTopicPage, getBlogTopicPageHref } from "@/lib/blog-index";
 import { getBlogPageHref, getPaginationWindow } from "@/lib/blog-publish";
 
-export default function BlogIndexPageContent({ page }: { page: number }) {
+export default function BlogIndexPageContent({ page, topicId }: { page: number; topicId?: string }) {
   const { posts, currentPage, totalPages, totalPosts, outOfRange } =
-    getBlogIndexPage(page);
+    topicId ? getBlogTopicPage(topicId, page) : getBlogIndexPage(page);
   if (outOfRange) return null;
-  const visiblePageHrefs = getPaginationWindow(currentPage, totalPages);
+  const topics = getBlogTopicNavigation();
+  const currentTopic = topics.find((topic) => topic.id === topicId);
+  const pageHref = (targetPage: number) => topicId
+    ? getBlogTopicPageHref(topicId, targetPage)
+    : getBlogPageHref(targetPage);
+  const visiblePageNumbers = getPaginationWindow(currentPage, totalPages).map((href) =>
+    href === "/blog" ? 1 : Number(href.split("/").at(-1))
+  );
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
@@ -24,14 +31,16 @@ export default function BlogIndexPageContent({ page }: { page: number }) {
           <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-end">
             <div>
               <h1 className="max-w-3xl text-3xl font-bold tracking-normal text-slate-950 dark:text-white sm:text-4xl">
-                실전에서 바로 쓰는 테니스 가이드
+                {currentTopic ? `${currentTopic.label} 글 모음` : "실전에서 바로 쓰는 테니스 가이드"}
               </h1>
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
-                레슨, 장비, 전술, 멘탈, 부상 예방까지 동호인이 경기 전후에 확인해야 할 내용을 주제별로 정리했습니다.
+                {currentTopic
+                  ? `${currentTopic.label}에 해당하는 공개 글을 최신 순서로 모았습니다.`
+                  : "레슨, 장비, 전술, 멘탈, 부상 예방까지 동호인이 경기 전후에 확인해야 할 내용을 주제별로 정리했습니다."}
               </p>
             </div>
             <dl className="grid grid-cols-2 gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900">
-              <div><dt className="text-xs font-medium text-slate-500 dark:text-slate-400">공개 글</dt><dd className="mt-1 text-2xl font-bold">{totalPosts}</dd></div>
+              <div><dt className="text-xs font-medium text-slate-500 dark:text-slate-400">{currentTopic ? "주제 글" : "공개 글"}</dt><dd className="mt-1 text-2xl font-bold">{totalPosts}</dd></div>
               <div><dt className="text-xs font-medium text-slate-500 dark:text-slate-400">현재 페이지</dt><dd className="mt-1 text-2xl font-bold">{currentPage}/{totalPages}</dd></div>
             </dl>
           </div>
@@ -48,7 +57,28 @@ export default function BlogIndexPageContent({ page }: { page: number }) {
           <Button type="submit" className="h-12">검색</Button>
         </form>
 
-        <h2 className="sr-only">블로그 글 목록</h2>
+        {topics.length > 0 && (
+          <nav aria-labelledby="blog-topics-heading" className="mb-10">
+            <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+              <h2 id="blog-topics-heading" className="text-xl font-bold">목적별로 읽기</h2>
+              <Link href="/blog" className="text-sm font-medium text-emerald-700 underline-offset-4 hover:underline dark:text-emerald-300">전체 글 보기</Link>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {topics.map((topic) => (
+                <div key={topic.id} className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+                  <h3 className="font-semibold"><Link href={getBlogTopicPageHref(topic.id, 1)} aria-current={topic.id === topicId && currentPage === 1 ? "page" : undefined} className="text-emerald-700 underline-offset-4 hover:underline dark:text-emerald-300">{topic.label} 전체 보기</Link> <span className="text-sm font-normal text-slate-500 dark:text-slate-400">{topic.count}개 글</span></h3>
+                  <ul className="mt-3 space-y-2 text-sm">
+                    {topic.examples.map((post) => (
+                      <li key={post.slug}><Link href={`/blog/${post.slug}`} className="text-emerald-700 underline-offset-4 hover:underline dark:text-emerald-300">{post.title}</Link></li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </nav>
+        )}
+
+        <h2 id="blog-posts" className="mb-4 text-xl font-bold">{currentTopic ? `${currentTopic.label} 글 목록` : "전체 글 목록"}</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <Card key={post.slug} className="h-full rounded-lg border-slate-200 bg-white transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
@@ -63,17 +93,16 @@ export default function BlogIndexPageContent({ page }: { page: number }) {
         </div>
 
         {totalPages > 1 && (
-          <nav className="mt-10 flex flex-wrap items-center justify-center gap-2" aria-label="블로그 페이지">
-            {currentPage > 1 && <Button asChild variant="outline" size="sm"><Link href={getBlogPageHref(currentPage - 1)}>이전</Link></Button>}
-            {visiblePageHrefs[0] !== "/blog" && <Button asChild variant="outline" size="sm"><Link href="/blog">1</Link></Button>}
+          <nav className="mt-10 flex flex-wrap items-center justify-center gap-2" aria-label={currentTopic ? `${currentTopic.label} 페이지` : "블로그 페이지"}>
+            {currentPage > 1 && <Button asChild variant="outline" size="sm" className="text-slate-900 dark:text-white"><Link href={pageHref(currentPage - 1)}>이전</Link></Button>}
+            {visiblePageNumbers[0] !== 1 && <Button asChild variant="outline" size="sm" className="text-slate-900 dark:text-white"><Link href={pageHref(1)}>1</Link></Button>}
             {currentPage > 4 && <span className="px-1 text-sm text-slate-400">…</span>}
-            {visiblePageHrefs.map((href) => {
-              const pageNumber = href === "/blog" ? 1 : Number(href.split("/").at(-1));
-              return <Button key={href} asChild variant={pageNumber === currentPage ? "default" : "outline"} size="sm"><Link href={href} aria-current={pageNumber === currentPage ? "page" : undefined}>{pageNumber}</Link></Button>;
+            {visiblePageNumbers.map((pageNumber) => {
+              return <Button key={pageNumber} asChild variant={pageNumber === currentPage ? "default" : "outline"} size="sm" className={pageNumber === currentPage ? undefined : "text-slate-900 dark:text-white"}><Link href={pageHref(pageNumber)} aria-current={pageNumber === currentPage ? "page" : undefined}>{pageNumber}</Link></Button>;
             })}
             {currentPage + 2 < totalPages - 1 && <span className="px-1 text-sm text-slate-400">…</span>}
-            {!visiblePageHrefs.includes(getBlogPageHref(totalPages)) && <Button asChild variant="outline" size="sm"><Link href={getBlogPageHref(totalPages)}>{totalPages}</Link></Button>}
-            {currentPage < totalPages && <Button asChild variant="outline" size="sm"><Link href={getBlogPageHref(currentPage + 1)}>다음</Link></Button>}
+            {!visiblePageNumbers.includes(totalPages) && <Button asChild variant="outline" size="sm" className="text-slate-900 dark:text-white"><Link href={pageHref(totalPages)}>{totalPages}</Link></Button>}
+            {currentPage < totalPages && <Button asChild variant="outline" size="sm" className="text-slate-900 dark:text-white"><Link href={pageHref(currentPage + 1)}>다음</Link></Button>}
           </nav>
         )}
       </section>

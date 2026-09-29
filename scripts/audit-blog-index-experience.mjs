@@ -28,9 +28,9 @@ assert(source.root.includes("export const revalidate = 60") && source.route.incl
 assert(source.detail.includes("getPublishedBlogPosts(allBlogPosts)") && source.sitemap.includes("getPublishedBlogPosts(allBlogPosts)"), "list, detail, and sitemap must share the publication gate");
 assert(!source.content.includes("allBlogPosts") && !source.content.includes("useMemo"), "complete post catalog must not reach a client component");
 assert(source.content.includes('action="/search"') && source.content.includes('method="get"'), "search must use a crawl-safe GET form");
-assert(source.content.includes("<Link href={getBlogPageHref(") && source.content.includes("<Link href={href}"), "pagination must use ordinary links from the shared URL contract");
+assert(source.content.includes("getPaginationWindow(currentPage, totalPages)") && source.content.includes("<Link href={pageHref("), "pagination must use ordinary links from the shared URL contract");
 assert(source.content.includes("Editor&apos;s Picks") || read("src/app/_components/home/blog-magazine.tsx").includes("Editor&apos;s Picks"), "curated home shelf must not claim chronological latest ordering");
-assert(source.content.includes('aria-label="블로그 페이지"'), "pagination navigation label is missing");
+assert(source.content.includes('aria-label={currentTopic ?') && source.content.includes('"블로그 페이지"'), "pagination navigation label is missing");
 
 const audit = {
   status: findings.length === 0 ? "ok" : "failed",

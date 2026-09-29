@@ -53,3 +53,34 @@ export const getCategoryGroup = (category: string) => {
     }
     return null;
 };
+
+export const getBlogTopicId = (category: string) => getCategoryGroup(category)?.id ?? 'other';
+
+export function isBlogTopicId(id: string) {
+    return id === 'other' || Object.values(CATEGORY_GROUPS).some((group) => group.id === id);
+}
+
+export function filterBlogPostsByTopic<T extends { category: string }>(posts: readonly T[], id: string): T[] {
+    return isBlogTopicId(id) ? posts.filter((post) => getBlogTopicId(post.category) === id) : [];
+}
+
+export function buildBlogTopicNavigation<T extends { category: string; slug: string; title: string }>(posts: readonly T[]) {
+    const groups = Object.values(CATEGORY_GROUPS).map((group) => ({
+        id: group.id,
+        label: group.label,
+        posts: filterBlogPostsByTopic(posts, group.id),
+    }));
+    const otherPosts = filterBlogPostsByTopic(posts, 'other');
+
+    return [
+        ...groups.filter((group) => group.posts.length > 0),
+        ...(otherPosts.length > 0
+            ? [{ id: 'other', label: '기타 주제', posts: otherPosts }]
+            : []),
+    ].map((group) => ({
+        id: group.id,
+        label: group.label,
+        count: group.posts.length,
+        examples: group.posts.slice(0, 2).map(({ slug, title }) => ({ slug, title })),
+    }));
+}
