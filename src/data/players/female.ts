@@ -2686,7 +2686,7 @@ export const FEMALE_PLAYERS: Record<string, PlayerData> = {
             `,
       recentForm: `
                 <p><strong>"Top 20 진입 목표"</strong></p>
-                <p>호주 오픈 8강 이후에도 꾸준히 성적을 내며 세계 랭킹 20위권 진입을 눈앞에 두고 있습니다. 차세대 그랜드슬램 우승 후보 중 한 명입니다.</p>
+                <p>2024 호주 오픈 8강으로 이름을 알린 뒤 투어에서 꾸준히 성적을 내며 상위권 선수로 자리를 넓혀 왔습니다.</p>
             `,
       faq: [
         {
@@ -2919,7 +2919,7 @@ export const FEMALE_PLAYERS: Record<string, PlayerData> = {
         {
           question: "칼린스카야의 남자친구는 누구인가요?",
           answer:
-            "현재 ATP 세계 랭킹 1위인 이탈리아의 야닉 시너(Jannik Sinner)입니다.",
+            "이탈리아의 야닉 시너(Jannik Sinner)입니다. 시너는 2026년 9월 기준 ATP 세계 랭킹 1위입니다.",
         },
         {
           question: "칼린스카야의 별명은?",
