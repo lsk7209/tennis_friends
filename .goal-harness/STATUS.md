@@ -1,5 +1,14 @@
 # STATUS
 
+## 2026-09-30 01:00 KST — 404 hydration fix, Emma Navarro sources, tool links
+- PR #38 (`dfb893e`): Header now always renders the active-nav underline and toggles its opacity. It was the cause of React #418 on prerendered 404s. A local production build reproduced the error on 3 of 7 paths and showed 0 after the fix. The production re-check is 0 on all 7 (`/blog/page/999`, unknown topic, unknown utility, root 404, `/utility`, `/blog`, `/`). Guarded by `audit:not-found-status`, which fails on the old Header.
+- PR #39 (`a1482ba`): the Emma Navarro profile is now sourced from WTA articles (2024 US Open SF vs Sabalenka 6-3 7-6(2) as the No.13 seed; career high No.8; titles Hobart 2024, Merida 2025, Strasbourg 2026 — 3-0 in finals). The signature match is Strasbourg 2026 vs Mboko, 6-0 5-7 6-2. The unsupported "3-set win rate" claim is removed; production confirms the source link is present and the old claim is absent.
+- PR #40 (`d3ba2ee`): contextual links added (scoring guide → scoring quiz, dictionary → terms quiz, doubles positioning → rotation generator). All three are present on production.
+
+CI passed for every PR, and Vercel production status is success.
+
+Rollback: revert the individual commits.
+
 ## 2026-09-30 00:05 KST — terms quiz and beginner series released
 PR #36 was squash-merged as `ffb9e42`:
 - `/utility/tennis-terms-quiz`: 10 random terms from the 47-term dictionary, with the answer's own name masked.
