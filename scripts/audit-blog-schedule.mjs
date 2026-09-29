@@ -6,11 +6,13 @@ const REPORTS_DIR = path.join(ROOT, "docs", "reports");
 const DEFAULT_EXPECTED_INTERVAL_HOURS = 5;
 const EXPECTED_INTERVAL_HOURS_BY_FILE = new Map([
   ["src/data/blog-posts-reviewed-september-2026.js", 12],
+  ["src/data/blog-posts-october-2026.js", 24],
 ]);
 const POST_FILES = [
   "src/data/blog-posts.js",
   "src/data/blog-posts-reviewed-september-2026.js",
   "src/data/blog-posts-beginner-series-2026.js",
+  "src/data/blog-posts-october-2026.js",
   "src/data/blog-posts-aw-300.js",
   "src/data/blog-posts-aw-part12.js",
   "src/data/blog-posts-aw-title100.js",
