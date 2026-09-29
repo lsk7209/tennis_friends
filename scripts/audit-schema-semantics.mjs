@@ -19,4 +19,15 @@ assert.doesNotMatch(enhanced + legacy, /AggregateRating/u);
 assert.match(policy, /FAQPage.*not treated|FAQPage.*처리되지/iu);
 assert.match(policy, /Rating schema is prohibited/u);
 
-console.log(JSON.stringify({ status: "ok", checks: ["real-author-type", "explicit-modified-date", "no-unsupported-rating", "breadcrumb-policy", "faq-goal-retired"] }));
+// TF-15: third-party player pages are WebPage about a Person, never ProfilePage,
+// never a placeholder image, and never a second breadcrumb owner.
+const playerPage = read("src/app/players/[slug]/page.tsx");
+const playerSchema = read("src/components/seo/PlayerPageSchema.tsx");
+assert.match(playerSchema, /'@type': 'WebPage'/u);
+assert.match(playerSchema, /about: \{\s*'@type': 'Person'/u);
+assert.doesNotMatch(playerSchema + playerPage, /'@type': 'ProfilePage'|"@type": "ProfilePage"/u);
+assert.doesNotMatch(playerSchema, /breadcrumb/u);
+assert.doesNotMatch(playerPage, /<PlayerPageSchema[\s\S]*?placeholder[\s\S]*?\/>/u);
+assert.match(policy, /Player pages use `WebPage`/u);
+
+console.log(JSON.stringify({ status: "ok", checks: ["real-author-type", "explicit-modified-date", "no-unsupported-rating", "breadcrumb-policy", "faq-goal-retired", "player-webpage-about-person"] }));

@@ -1,5 +1,8 @@
 # STATUS
 
+## 2026-09-29 18:55 KST — remaining handoff items (Kiro)
+State: COMPLETE_LOCAL_PR_OPEN. PR #27 (`feature/tf-handoff-improvements-2026-09-29`) holds the Codex work. The follow-up PR (`fix/tf-remaining-2026-09-29`) closes TF-08, TF-15 and TF-18 locally. `npm run verify` passed with 3,239 pages. The browser blocked-storage flow is NOT_RUN because the tool hung. There was no merge, no deployment and no external account change. The NTRP and injury model reviews still need owner decisions. Details are in `docs/reports/tennisfrens-improvement-2026-09-29.md`.
+
 ## 2026-09-29 17:21 KST — user-requested stop
 State: STOPPED_AFTER_LOCAL_COMPLETION. The local improvement work is recorded in `docs/reports/tennisfrens-improvement-2026-09-29.md`; no further TennisFriends implementation or release work is authorized in this run. Branch `main`, HEAD `6048347583820837eba74fef1cabe0e0effdf120`; the local changes and evidence files remain uncommitted. The last full `npm run verify` passed with 3,239 static pages, and `git diff --check` passed at stop time. No push, PR, deployment, search submission, GA4 administrator change, advertising activation, or cafe posting was performed. Reopen from the report and fresh worktree inspection if explicitly requested.
 

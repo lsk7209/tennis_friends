@@ -411,7 +411,7 @@ export default function PlayersPage() {
                     <Trophy className="h-5 w-5 mr-2" />
                     실력 테스트하기
                   </Link></Button>
-                <Button asChild size="lg" variant="outline" className="bg-white border-2 border-gray-300 hover:border-blue-500"><Link href="/utility/play-style-test">
+                <Button asChild size="lg" variant="outline" className="text-gray-900 bg-white border-2 border-gray-300 hover:border-blue-500"><Link href="/utility/play-style-test">
                     <Zap className="h-5 w-5 mr-2" />
                     플레이 스타일 찾기
                   </Link></Button>

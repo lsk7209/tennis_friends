@@ -359,7 +359,7 @@ function StringTensionResultContent() {
                       NTRP 실력 테스트
                       <ArrowRight className="h-5 w-5 ml-2" />
                     </Link></Button>
-                  <Button asChild variant="outline" className="bg-white border-2 border-gray-300 hover:border-blue-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility/injury-risk">
+                  <Button asChild variant="outline" className="text-gray-900 bg-white border-2 border-gray-300 hover:border-blue-500 px-10 py-6 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility/injury-risk">
                       <Settings className="h-5 w-5 mr-2" />
                       부상 리스크 체크
                     </Link></Button>

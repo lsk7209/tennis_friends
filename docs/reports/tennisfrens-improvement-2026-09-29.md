@@ -1,5 +1,16 @@
 # TennisFriends local improvement report
 
+## Continuation — 2026-09-29 18:55 KST (Kiro)
+
+- The earlier local work was split into 6 commits on `feature/tf-handoff-improvements-2026-09-29`, and PR #27 was opened.
+- The remaining items were done on `fix/tf-remaining-2026-09-29`:
+  - TF-08 → FIXED_LOCAL. The shared Button `outline`, `secondary`, `ghost` and `link` variants use `text-current` instead of hard-coded white. Dark brand sections use explicit `outline-inverse` / `ghost-inverse` variants. 30 callers that paint a `bg-white` background now set `text-gray-900`. `audit:button-contrast` was added to `verify`; it fails on the old source and passes on the new source.
+  - TF-15 → FIXED_LOCAL. Player pages use `WebPage` + `about: Person` (`PlayerPageSchema`). `ProfilePage`, the placeholder schema image and the duplicate breadcrumb were removed. `audit:schema-semantics` and `STRUCTURED_DATA_POLICY.md` were updated. Rich Results Test NOT_RUN.
+  - TF-18 → FIXED_LOCAL. README deployment and environment-variable sections match `deploy.yml`, and the missing `OPTIMIZATION_REPORT.md` reference was removed. `DESIGN.md` now records the button surface rule and the topic routes.
+- Verification: `npm run verify` completed with 0 errors and 3,239 static pages (`.goal-harness/verify-remaining-2026-09-29.log`). Lint showed 0 errors and only the existing `output/playwright` warnings. Regenerated `*-latest` reports and AI-index files were restored as before.
+- NOT_RUN: the blocked-storage 15-answer browser flow. The `playwright-cli` session hung twice and was stopped. The storage-failure path remains covered by `audit:ntrp-storage` (quota, corruption and storage failure fixtures).
+- E: free space after the build is about 2.5 GB.
+
 ## Stop record — 2026-09-29 17:21 KST
 
 The user requested that TennisFriends work be recorded and stopped. Local changes and evidence remain uncommitted on `main` at `6048347583820837eba74fef1cabe0e0effdf120`. The last full verification passed as documented below; `git diff --check` also exited 0 at stop time. No external action was taken. The generated build backups previously moved to C: for E: space recovery are now retained under `D:\e-drive-cache-archive\2026-09-29`; the repository and evidence remain on E:. Further work starts with a fresh worktree and runtime check.

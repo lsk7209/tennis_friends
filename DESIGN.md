@@ -3,7 +3,7 @@
 ## Source of Truth
 
 - Status: Active
-- Last refreshed: 2026-06-02
+- Last refreshed: 2026-09-29
 - Primary product surfaces: home, blog index, article detail, utility tools, quizzes, player pages
 - Evidence reviewed: `src/app/page.tsx`, `src/app/blog/page.tsx`, `src/app/blog/[slug]/page.tsx`, `src/app/utility/page.tsx`, `src/templates/players/PlayerPageTemplate.tsx`, `src/app/globals.css`, `docs/reports/site-content-design-review-latest.md`
 
@@ -51,8 +51,9 @@
 ## Components
 
 - Existing components to reuse: `Button`, `Badge`, `Card`, `Input`, `NaverCafeLink`, `RelatedContent`, `RelatedUtilitiesSection`, player templates
-- New/changed components: blog index client filter island for search, category filtering, compact pagination
+- New/changed components: blog index client filter island for search, category filtering, compact pagination; blog topic hub routes (`/blog/topic/[topic]`) with server pagination and `noindex,follow`
 - Variants and states: active/inactive filters, empty search state, disabled pagination, mobile wrapping states
+- Button surfaces (2026-09-29, TF-08): `outline`, `secondary`, `ghost` and `link` inherit the surrounding text color (`text-current`) so they stay readable on light pages and in dark mode. Dark brand sections (home hero, tools mosaic) use the explicit `outline-inverse` / `ghost-inverse` variants. A caller that paints its own light background (`bg-white`) must also set a text color. `volt` remains the primary CTA. Enforced by `npm run audit:button-contrast`.
 - Token/component ownership: Tailwind classes and global article/table rules live in app/components CSS surfaces; avoid one-off visual systems per page
 
 ## Accessibility
@@ -65,6 +66,6 @@
 ## Verification
 
 - Required local command: `npm run verify`
-- Design-specific checks: blog index server/client split, compact pagination, article width, semantic table conversion, selective image stability, related links, Korean UX text audit
+- Design-specific checks: button surface contrast audit, blog topic navigation audit, blog index server/client split, compact pagination, article width, semantic table conversion, selective image stability, related links, Korean UX text audit
 - Screenshot QA targets for visual implementation passes: `/`, `/blog`, one article page, `/utility`, one utility detail page, `/tennis-rules-quiz`
 - Production-adjacent actions such as GSC sitemap submission, IndexNow, or GA4 administration are verified separately after release.

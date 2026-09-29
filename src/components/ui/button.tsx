@@ -15,15 +15,21 @@ const buttonVariants = cva(
       variant: {
         volt: "bg-accent-volt text-court-ink rounded-none",
         pill: "bg-accent-volt text-court-ink rounded-full",
+        // Surface-neutral variants inherit the surrounding text color so they stay
+        // readable on both light pages and dark sections (TF-08).
         outline:
+          "border-[1.5px] border-current/25 text-current rounded-none hover:border-current",
+        ghost: "text-current hover:bg-current/10",
+        // Dark-surface variants keep the original white-on-ink brand treatment.
+        "outline-inverse":
           "border-[1.5px] border-white/20 text-white rounded-none hover:border-accent-volt",
-        ghost: "text-white hover:text-accent-volt",
+        "ghost-inverse": "text-white hover:text-accent-volt",
         destructive: "bg-accent-clay text-white rounded-none",
         // 기존 페이지 호환 aliases
         default: "bg-accent-volt text-court-ink rounded-none",
         secondary:
-          "border-[1.5px] border-white/20 text-white rounded-none hover:border-accent-volt",
-        link: "text-white underline-offset-4 hover:underline hover:text-accent-volt",
+          "border-[1.5px] border-current/25 text-current rounded-none hover:border-current",
+        link: "text-current underline-offset-4 hover:underline",
       },
       size: {
         sm: "h-9 px-4 text-[13px]",
