@@ -1,5 +1,12 @@
 # STATUS
 
+## 2026-09-30 07:40 KST — dead external links removed
+PR #47 was squash-merged as `4cfa413`.
+- Checked 253 external URLs. 56 were GET-confirmed 404 (tennis.com URLs with fabricated IDs like `/789456/`, stale USTA/playerdevelopment paths, removed Mayo Clinic/ACSM pages, etc.) and were removed from 35 files: dead items in 23 further-reading boxes, with empty boxes dropped; in content strings the anchor text is kept.
+- The diff check confirmed exactly those 56 hrefs were lost and no live link was touched.
+- New on-demand `npm run audit:external-links` (network, not in verify). After the fix: 195 URLs, 0 dead, 1 unreachable (ycs.or.kr).
+- CI passed and deployments succeeded. Production: 4 sample pages return 200 with no fake links and no empty boxes.
+
 ## 2026-09-30 02:40 KST — 30 October posts scheduled
 PR #45 was squash-merged as `8be382f`. It adds 30 posts in `src/data/blog-posts-october-2026.js` + `src/data/blog-content/part32-october-2026.ts`, scheduled daily at 09:00 KST from 2026-10-01 to 2026-10-30:
 - 10 ITF rule explainers, spot-checked against the 2026 Rules text (Rules 10, 12, 14–16, 18, 19, 22–25, 27, Appendix VI);
