@@ -73,7 +73,7 @@ npm start
 #### 자동 배포
 
 - `main` 또는 `master` 브랜치에 푸시하면 자동으로 빌드 및 배포됩니다
-- 워크플로우: `.github/workflows/deploy-github-pages.yml`
+- 워크플로우: `.github/workflows/deploy.yml`
 
 #### 수동 배포
 
@@ -82,24 +82,15 @@ npm start
 npm run gh-pages
 ```
 
-#### 환경 변수 설정 (선택)
+#### 환경 변수 설정
 
-GitHub 저장소의 **Settings** → **Secrets and variables** → **Actions**에서 Secrets 추가:
+`NEXT_PUBLIC_SITE_URL`, `GITHUB_PAGES_BASE_PATH`, `NEXT_PUBLIC_EXTERNAL_EFFECTS`, GA4 측정 ID는 `.github/workflows/deploy.yml`에 명시되어 있습니다. Actions Secrets로 받는 값은 검색엔진 사이트 인증 토큰(`GOOGLE_`, `NAVER_`, `DAUM_`, `BING_SITE_VERIFICATION`)뿐입니다.
 
-- `NEXT_PUBLIC_SITE_URL`: 사이트 URL
-- `GITHUB_PAGES_BASE_PATH`: basePath (기본값은 저장소 이름)
-- 기타 환경 변수들
-
-자세한 내용은 `GITHUB_PAGES_DEPLOYMENT.md`를 참고하세요.
+대표 도메인 `https://tennisfrens.com`은 Git 연동 Vercel 배포가 제공하고, GitHub Pages는 정적 미러입니다. 정적 export에는 Next.js 런타임 리디렉션·헤더·미들웨어가 적용되지 않습니다. 자세한 내용은 `GITHUB_PAGES_DEPLOYMENT.md`를 참고하세요.
 
 ### 환경 변수
 
-프로젝트 루트에 `.env.local` 파일을 생성하고 필요한 환경 변수를 설정하세요:
-
-```env
-```
-
-`.env.example` 파일을 참고하세요.
+로컬에서는 `env.example`을 참고해 프로젝트 루트에 `.env.local`을 만드세요. 분석·광고 등 외부 효과는 `NEXT_PUBLIC_EXTERNAL_EFFECTS=production`(또는 Vercel Production 환경)일 때만 켜지므로 로컬·프리뷰에서는 기본적으로 꺼져 있습니다. 광고는 추가로 `NEXT_PUBLIC_ADS_CONSENT_READY=verified`가 필요합니다.
 
 ## 📁 프로젝트 구조
 
@@ -128,18 +119,19 @@ GitHub 저장소의 **Settings** → **Secrets and variables** → **Actions**�
 ```bash
 # 린트 검사
 npm run lint
+
+# 전체 검증 (소스 감사 → 린트 → 타입체크 → 빌드)
+npm run verify
 ```
 
 ## 📝 최적화 사항
 
-- ✅ 폰트 로딩 최적화 (next/font 사용)
-- ✅ 프로덕션 Console 로그 제거
-- ✅ SSR 호환성 개선
-- ✅ 번들 크기 최적화
-- ✅ 이미지 최적화 설정
-- ✅ 보안 헤더 설정
+- 폰트 로딩 최적화 (next/font 사용)
+- 프로덕션 Console 로그 제거
+- 이미지 최적화 설정
+- 보안 헤더 설정 (Vercel 런타임에서만 적용, 정적 export에는 미적용)
 
-자세한 최적화 내용은 `OPTIMIZATION_REPORT.md`를 참고하세요.
+각 항목의 검증은 `npm run verify`에 포함된 `audit:*` 스크립트가 담당합니다.
 
 ## 🤝 기여하기
 
