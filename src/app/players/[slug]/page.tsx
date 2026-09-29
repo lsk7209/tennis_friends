@@ -624,11 +624,16 @@ export default async function PlayerProfilePage({ params }: Props) {
                       <Crown className="w-6 h-6 text-yellow-500" />왜 주목해야
                       하는가?
                     </h2>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: player.detailedProfile.whyNotable || "",
-                      }}
-                    />
+                    {player.detailedProfile.whyNotable ? (
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: player.detailedProfile.whyNotable,
+                        }}
+                      />
+                    ) : (
+                      // Profiles without a dedicated section reuse the sourced bio so the heading is never empty.
+                      <p>{player.longBio}</p>
+                    )}
 
                     <h2
                       id="play-style"
