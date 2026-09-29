@@ -1,5 +1,20 @@
 # STATUS
 
+## 2026-09-30 02:40 KST — 30 October posts scheduled
+PR #45 was squash-merged as `8be382f`. It adds 30 posts in `src/data/blog-posts-october-2026.js` + `src/data/blog-content/part32-october-2026.ts`, scheduled daily at 09:00 KST from 2026-10-01 to 2026-10-30:
+- 10 ITF rule explainers, spot-checked against the 2026 Rules text (Rules 10, 12, 14–16, 18, 19, 22–25, 27, Appendix VI);
+- 8 club-operation guides and 1 journal guide;
+- 6 skill guides, 3 beginner months 4–6, and 2 health guides.
+
+Checks before merge:
+- Publication gate: 0 hard errors (19 `no_external_source` warnings).
+- All internal links resolve; links presenting demo tools (court-booking, ranking-calculator) as real helpers were removed.
+- `audit:blog-schedule`: intervalHours [24], status ok. PR CI passed.
+
+Deployment: Vercel and GitHub Pages succeeded. Production at 2026-09-29T17:29Z: the first and last posts return 404 (not yet published), with 0 `oct26-` URLs in the sitemap and the blog index.
+
+Next check: after 2026-10-01 09:00 KST, confirm `/blog/oct26-line-call-basics` returns 200 and appears in the sitemap.
+
 ## 2026-09-30 02:30 KST — player facts audit released
 - PR #42 (`46d6d42`): 33 corrections in `src/data/players/new-30.ts`, checked against WTA/ATP/USTA/AO/major-outlet sources fetched on 2026-09-30.
   - Major counts: Sabalenka 4, Gauff 2, Rybakina 3 (and first Kazakh No.1), Andreeva's 2026 RG title, Anisimova's 2025 finals and career-high No.3.
