@@ -1,5 +1,20 @@
 # STATUS
 
+## 2026-09-29 21:40 KST — new tools released
+PR #34 was squash-merged as `2c793d7`, adding two tools:
+- `/utility/doubles-rotation-generator`: 4–24 players, 1–6 courts, even rests, partner-repeat minimization, text copy, cafe CTA.
+- `/utility/tennis-scoring-quiz`: 12 questions verified against the ITF 2026 Rules of Tennis PDF.
+
+The utility count is now 65, and `audit:utility-contracts` checks that the public count matches the number of routes. New audits: `audit:doubles-rotation` and `audit:scoring-quiz`.
+
+PR CI passed (verify, seo-check, hosting-cost, Vercel). Deployment: GitHub Pages success, Vercel success.
+
+Production checks:
+- Both pages return 200 with a self canonical and are in the sitemap; `/utility` shows 65.
+- Production browser run at 390px: rotation validation and rest distribution work; the quiz runs 12/12 answers → result → review of 12 → retry; 0 console errors, no overflow.
+
+Rollback: `git revert 2c793d7`.
+
 ## 2026-09-29 20:50 KST — soft 404 and claims fix released
 PR #32 was squash-merged as `6fdd0b1`. GitHub Pages run `36562978406` and the Vercel commit status both succeeded.
 
