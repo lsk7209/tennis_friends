@@ -6,11 +6,14 @@ import Link from 'next/link';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
 import {Trophy, Share2, RotateCcw, Star, TrendingUp, Target, Award, Zap, Instagram, Twitter, Facebook, Copy, CheckCircle, ArrowRight, BookOpen, Settings, Shield, BarChart3} from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
 import { trackTestCompletionOnce } from '@/components/Tracking';
-import { recordNtrpResultOnce } from '@/lib/ntrp-results';
+import { hasPendingNtrpAttempt, recordNtrpResultOnce } from '@/lib/ntrp-results';
+import { buildNtrpShareUrl, parseNtrpResultParams } from '@/lib/ntrp-result-contract';
+import NaverCafeLink from '@/components/NaverCafeLink';
 
 interface LevelDetail {
   color: string;
@@ -29,25 +32,35 @@ interface LevelDetail {
 function ResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const score = Number(searchParams.get('score') || 0);
-  const q13 = decodeURIComponent(searchParams.get('q13') || '');
+  const parsed = parseNtrpResultParams(searchParams);
+  const resultKind = parsed.kind;
+  const resultSource = parsed.kind === 'displayable' ? parsed.source : null;
+  const score = parsed.kind === 'displayable' ? parsed.score : 0;
+  const q13 = parsed.kind === 'displayable' ? (parsed.style || '') : '';
   const completionId = searchParams.get('completion') || '';
   
   const { level, desc } = getNTRPLevel(score);
-  const character = charMap[q13] || '올라운더';
+  const character = charMap[q13] || '스타일 정보 없음';
   const [copied, setCopied] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
 
   // 테스트 완료 추적
   useEffect(() => {
-    if (score > 0 && completionId) {
+    if (resultKind === 'displayable' && resultSource === 'local_candidate' && completionId) {
+      const locallyCompleted = hasPendingNtrpAttempt(completionId, {
+        score,
+        character,
+        questionnaire: 'legacy-v2',
+        scoring: 'legacy-sum-v2',
+      });
+      if (!locallyCompleted) return;
       const recorded = recordNtrpResultOnce({
         completionId,
         score,
         level,
         character,
       });
-      if (!recorded) return;
+      if (!recorded) toast.info('이 브라우저에 기록을 저장하지 못했습니다. 현재 결과는 확인할 수 있습니다.');
       trackTestCompletionOnce('ntrp-test', completionId, {
         level: level,
         score: score,
@@ -55,7 +68,7 @@ function ResultContent() {
         q13: q13
       });
     }
-  }, [score, level, character, q13, completionId]);
+  }, [resultKind, resultSource, score, level, character, q13, completionId]);
 
   // NTRP 레벨별 상세 정보
   const getLevelDetails = (level: string) => {
@@ -170,15 +183,19 @@ function ResultContent() {
 
   const levelDetails = getLevelDetails(level);
 
-  const copyToClipboard = () => {
-    const url = window.location.href;
-    navigator.clipboard.writeText(url);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const shareUrl = () => buildNtrpShareUrl(window.location.href, score, q13 || null);
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl());
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      toast.error('자동 복사에 실패했습니다. 아래 링크를 직접 선택해 복사해 주세요.');
+    }
   };
 
   const shareToSocial = (platform: string) => {
-    const url = window.location.href;
+    const url = shareUrl();
     const text = `🎾 내 테니스 실력은 NTRP ${level} (${character} 스타일)이에요! TennisFriends에서 나의 실력을 확인해보세요!`;
     
     const shareUrls = {
@@ -189,12 +206,19 @@ function ResultContent() {
     
     if (platform === 'instagram') {
       // Instagram은 URL만 복사
-      navigator.clipboard.writeText(`${text}\n\n${url}`);
-      toast.success('인스타그램에 붙여넣기할 내용이 복사되었습니다! 📱');
+      navigator.clipboard.writeText(`${text}\n\n${url}`).then(() => toast.success('공유할 내용이 복사되었습니다.')).catch(() => toast.error('자동 복사에 실패했습니다. 링크를 직접 복사해 주세요.'));
     } else {
       window.open(shareUrls[platform as keyof typeof shareUrls], '_blank');
     }
   };
+
+  if (parsed.kind !== 'displayable') return (
+    <main className="container mx-auto max-w-xl px-4 py-16 text-center">
+      <h1 className="text-2xl font-bold">{parsed.kind === 'empty' ? '결과가 없습니다' : '유효하지 않은 결과입니다'}</h1>
+      <p className="mt-4">테스트를 완료하거나 유효한 공유 링크를 열어 주세요.</p>
+      <Button asChild className="mt-6"><Link href="/utility/ntrp-test">테스트 시작하기</Link></Button>
+    </main>
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-12">
@@ -217,10 +241,11 @@ function ResultContent() {
               </div>
               
               <h1 className="text-5xl font-bold text-gray-900 mb-4">
-                축하합니다! 🎉
+                비공식 자가점검 결과
               </h1>
+              {resultSource === 'shared' && <p className="mb-4 text-sm font-semibold text-blue-800">공유받은 결과입니다. 이 브라우저의 테스트 완료 기록은 아닙니다.</p>}
               
-              <div className="text-7xl font-extrabold mb-4 animate-pulse">
+              <div className="text-7xl font-extrabold mb-4">
                 <span className={`${levelDetails.textColor}`}>{level}</span>
               </div>
               
@@ -231,6 +256,7 @@ function ResultContent() {
               <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
                 {desc}
               </p>
+              <p className="mb-6 text-sm text-gray-700">비공식 자가점검 결과이며 공식 NTRP 등급이 아닙니다.</p>
               
               <div className="flex justify-center mb-8">
                 <Badge className={`${levelDetails.bgColor} ${levelDetails.textColor} px-6 py-3 text-xl font-bold shadow-lg`}>
@@ -265,8 +291,8 @@ function ResultContent() {
                   <div className="flex items-center justify-center mb-3">
                     <TrendingUp className="h-8 w-8 text-purple-500" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">진행률</h3>
-                  <p className="text-3xl font-bold text-gray-900">{levelDetails.progress}%</p>
+                  <h3 className="font-bold text-gray-900 mb-2">계산 기준 문항</h3>
+                  <p className="text-3xl font-bold text-gray-900">15 / 15</p>
                 </div>
               </div>
 
@@ -320,14 +346,14 @@ function ResultContent() {
             </CardContent>
           </Card>
 
-          {/* 프로 선수 비교 */}
+      {/* 연습 참고 자료 */}
           <Card className="bg-white border-2 border-gray-200 shadow-lg">
             <CardContent className="p-8">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
                   <Award className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">비슷한 스타일의 프로 선수</h3>
+                <h3 className="text-2xl font-bold text-gray-900">연습 참고 자료</h3>
               </div>
               <div className="space-y-4">
                 <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
@@ -336,12 +362,12 @@ function ResultContent() {
                       <span className="text-white font-bold">🏆</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900">대표 선수</h4>
-                      <p className="text-gray-600 text-sm">{levelDetails.proPlayers[0]}</p>
+                      <h4 className="font-bold text-gray-900">연습 주제</h4>
+                      <p className="text-gray-600 text-sm">{levelDetails.tips[0]}</p>
                     </div>
                   </div>
                   <p className="text-gray-700 text-sm">
-                    당신과 비슷한 플레이 스타일을 가진 선수들의 경기를 참고해보세요!
+                    아래 검색어로 연습 영상을 살펴보세요. 특정 선수와의 실력 유사성을 뜻하지 않습니다.
                   </p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-lg">
@@ -356,25 +382,26 @@ function ResultContent() {
         </div>
 
         {/* 소셜 공유 모달 */}
-        {showShareModal && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <Card className="bg-white max-w-md w-full">
+        <Dialog open={showShareModal} onOpenChange={setShowShareModal}>
+          <DialogContent className="max-h-[90vh] overflow-y-auto bg-white p-0">
+            <Card className="bg-white border-0 shadow-none">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">결과 공유하기</h3>
-                  <p className="text-gray-600">친구들과 내 테니스 실력을 공유해보세요!</p>
+                  <DialogTitle className="text-2xl font-bold text-gray-900 mb-2">결과 공유하기</DialogTitle>
+                  <DialogDescription className="text-gray-600">비공식 자가점검 결과 링크를 공유할 수 있습니다.</DialogDescription>
                 </div>
                 
                 <div className="space-y-4 mb-6">
                   <Button
                     onClick={() => {
-                      const url = `${window.location.origin}/utility/ntrp-test/result?score=${score}&q13=${encodeURIComponent(q13)}`;
+                      const url = shareUrl();
                       const text = `🎾 내 테니스 실력은 NTRP ${level} (${character} 스타일)이에요! 나의 실력을 확인해보세요!`;
                       if (typeof navigator.share === 'function') {
-                        navigator.share({ title: 'NTRP 테스트 결과', text, url }).catch(() => {});
+                        navigator.share({ title: 'NTRP 테스트 결과', text, url }).catch((error) => {
+                          if (error?.name !== 'AbortError') toast.error('공유에 실패했습니다. 링크 복사를 이용해 주세요.');
+                        });
                       } else {
-                        navigator.clipboard.writeText(`${text}\n${url}`);
-                        toast.success('카카오톡에 붙여넣기할 내용이 복사되었습니다!');
+                        navigator.clipboard.writeText(`${text}\n${url}`).then(() => toast.success('공유할 내용이 복사되었습니다.')).catch(() => toast.error('자동 복사에 실패했습니다. 링크를 직접 복사해 주세요.'));
                       }
                     }}
                     className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 py-3 font-bold"
@@ -411,6 +438,9 @@ function ResultContent() {
                     {copied ? '복사됨!' : '링크 복사'}
                   </Button>
                 </div>
+                <label className="mb-4 block text-sm text-gray-700">공유 링크
+                  <input readOnly onFocus={(event) => event.currentTarget.select()} value={typeof window === 'undefined' ? '' : shareUrl()} className="mt-1 w-full rounded border border-gray-300 p-2 text-xs" />
+                </label>
                 
                 <Button 
                   onClick={() => setShowShareModal(false)}
@@ -421,15 +451,15 @@ function ResultContent() {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        )}
+          </DialogContent>
+        </Dialog>
 
         {/* 추천 콘텐츠 섹션 */}
         <Card className="bg-gradient-to-r from-blue-50 via-white to-green-50 border-2 border-blue-200 shadow-lg mb-8">
           <CardContent className="p-8">
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">🎯 당신을 위한 맞춤 추천</h3>
-              <p className="text-lg text-gray-600">NTRP {level} 레벨에 최적화된 도구와 콘텐츠를 확인해보세요</p>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">🎯 함께 살펴볼 도구와 콘텐츠</h3>
+              <p className="text-lg text-gray-600">모든 방문자에게 제공하는 일반 자료입니다.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -534,11 +564,10 @@ function ResultContent() {
         {/* 최종 CTA */}
         <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl">
           <CardContent className="p-12 text-center">
-            <h3 className="text-4xl font-bold mb-4">🎾 더 많은 테니스 도구를 만나보세요!</h3>
-            <p className="text-xl mb-8 opacity-90">
-              TennisFriends와 함께 당신의 테니스 여정을 한 단계 더 발전시켜보세요
-            </p>
+            <h3 className="text-4xl font-bold mb-4">🎾 테니스 이야기를 이어가세요</h3>
+            <p className="text-xl mb-8 opacity-90">결과를 참고해 연습한 뒤 카페에서 다른 동호인의 경험도 살펴보세요.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <NaverCafeLink ctaLocation="ntrp_result" linkText="네이버 카페 방문하기" className="inline-flex items-center justify-center bg-white px-8 py-4 text-lg font-bold text-blue-700 hover:bg-gray-100">네이버 카페 방문하기</NaverCafeLink>
               <Button asChild className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility">
                   <ArrowRight className="h-5 w-5 mr-2" />
                   모든 유틸리티 보기

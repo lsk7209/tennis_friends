@@ -1,13 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Check, Sparkles, BarChart3 } from 'lucide-react';
 import { toast } from 'sonner';
-import { questions } from '@/lib/questions';
+import { charMap, questions } from '@/lib/questions';
+import { trackEvent, TRACKING_EVENTS } from '@/lib/analytics';
+import { registerPendingNtrpAttempt } from '@/lib/ntrp-results';
 
 export default function NtrpTestPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -15,14 +17,32 @@ export default function NtrpTestPage() {
   const router = useRouter();
 
   const currentQuestion = questions[currentQuestionIndex];
-  const progress = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
+  const progress = Math.round((answers.filter((answer) => answer >= 1 && answer <= 5).length / questions.length) * 100);
+  const transitionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const completionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const started = useRef(false);
+
+  useEffect(() => () => {
+    if (transitionTimer.current) clearTimeout(transitionTimer.current);
+    if (completionTimer.current) clearTimeout(completionTimer.current);
+  }, []);
 
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isCompleting, setIsCompleting] = useState(false);
 
   const handleAnswer = (value: number) => {
-    if (isTransitioning) return;
+    if (isTransitioning || isCompleting) return;
+    if (!started.current) {
+      started.current = true;
+      trackEvent(TRACKING_EVENTS.ASSESSMENT_STARTED, {
+        tool_slug: 'ntrp-test',
+        page_path: '/utility/ntrp-test/test',
+        questionnaire_version: 'legacy-v2',
+        scoring_version: 'legacy-sum-v2',
+        measurement_version: 'v2',
+      });
+    }
 
     const newAnswers = [...answers];
     newAnswers[currentQuestionIndex] = value;
@@ -31,7 +51,7 @@ export default function NtrpTestPage() {
     setIsTransitioning(true);
 
     // 선택된 답변 강조 표시
-    setTimeout(() => {
+    transitionTimer.current = setTimeout(() => {
       if (currentQuestionIndex < questions.length - 1) {
         // 다음 질문으로 자동 이동
         setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -45,11 +65,19 @@ export default function NtrpTestPage() {
       } else {
         // 테스트 완료 - 특별한 완료 애니메이션 후 결과 페이지로 이동
         setIsCompleting(true);
-        setTimeout(() => {
+        completionTimer.current = setTimeout(() => {
           const totalScore = newAnswers.reduce((sum, answer) => sum + answer, 0);
           const q13Label = questions[12].options[newAnswers[12] - 1];
           const completionId = crypto.randomUUID();
-          window.sessionStorage.setItem(`tennisfrens:ntrp-pending:${completionId}`, "1");
+          const stored = registerPendingNtrpAttempt(completionId, {
+            score: totalScore,
+            character: charMap[q13Label],
+            questionnaire: 'legacy-v2',
+            scoring: 'legacy-sum-v2',
+          });
+          if (!stored) {
+            toast.info('이 브라우저에는 결과를 저장하지 못할 수 있습니다. 현재 결과는 확인할 수 있습니다.');
+          }
           router.push(`/utility/ntrp-test/result?score=${totalScore}&q13=${encodeURIComponent(q13Label)}&completion=${completionId}`);
         }, 1500); // 완료 애니메이션 시간 증가
       }
@@ -57,6 +85,7 @@ export default function NtrpTestPage() {
   };
 
   const handlePrevious = () => {
+    if (isTransitioning || isCompleting) return;
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
     }
@@ -232,7 +261,7 @@ export default function NtrpTestPage() {
                 <Button
                   variant="outline"
                   onClick={handlePrevious}
-                  disabled={currentQuestionIndex === 0}
+                  disabled={currentQuestionIndex === 0 || isTransitioning || isCompleting}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${
                     currentQuestionIndex === 0
                       ? 'opacity-50 cursor-not-allowed'
