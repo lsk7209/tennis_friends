@@ -796,6 +796,18 @@ export const utilitiesMetadata: UtilityMetadata[] = [
     category: "경기 준비",
   },
   {
+    id: "tennis-terms-quiz",
+    title: "테니스 용어 퀴즈",
+    description: "설명을 보고 용어를 맞히는 10문제 퀴즈입니다. 풀 때마다 다른 용어가 나옵니다.",
+    icon: Book,
+    status: "완료",
+    features: ["10문제", "매번 새 세트", "정답 단어 가림", "오답 복습"],
+    gradient: "from-teal-500 via-cyan-500 to-sky-500",
+    bgColor: "bg-gradient-to-br from-teal-50 via-cyan-50 to-sky-50",
+    iconBg: "bg-gradient-to-br from-teal-500 to-cyan-500",
+    category: "경기 준비",
+  },
+  {
     id: "court-surface-advisor",
     title: "코트 서피스 어드바이저",
     description: "코트 표면별 훈련 포커스와 장비 선택을 가이드합니다.",

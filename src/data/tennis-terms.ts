@@ -53,7 +53,7 @@ export const tennisTerms: TennisTerm[] = [
         term: '베이글 (Bagel)',
         category: '점수/은어',
         definition: '6-0으로 세트를 이기거나 지는 것. 0의 모양이 베이글 빵과 닮아서 붙은 이름입니다.',
-        examples: ['첫 세트를 베이글 스코어로 가져왓다.'],
+        examples: ['첫 세트를 베이글 스코어로 가져왔다.'],
         relatedTerms: ['브레드스틱', '더블 베이글'],
         difficulty: '중급'
     },
@@ -200,7 +200,7 @@ export const tennisTerms: TennisTerm[] = [
         id: 'service-line',
         term: '서비스 라인 (Service Line)',
         category: '코트',
-        definition: '서브룰 넣을 때 공이 넘어가야 하는 네트와 베이스라인 사이의 선.',
+        definition: '네트와 베이스라인 사이에 네트와 나란히 그어진 선으로, 서비스 박스의 뒤쪽 경계입니다. 서브는 이 선을 넘지 않고 서비스 박스 안에 떨어져야 합니다.',
         examples: ['공이 서비스 라인을 살짝 벗어나 폴트가 선언되었다.'],
         relatedTerms: ['베이스라인', '서비스 박스'],
         difficulty: '초급'

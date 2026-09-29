@@ -9,7 +9,7 @@ const root = process.cwd();
 const page = fs.readFileSync(path.join(root, "src/app/utility/page.tsx"), "utf8");
 const items = [...page.matchAll(/id:\s*"([^"]+)"[\s\S]*?status:\s*"(완료|개발 예정)"[\s\S]*?category:\s*"([^"]+)"/g)]
   .map((match) => ({ id: match[1], status: match[2], category: match[3] }));
-assert.equal(items.length, 74, "all utility metadata entries must have a four-axis contract");
+assert.equal(items.length, 75, "all utility metadata entries must have a four-axis contract");
 for (const item of items) {
   const contract = getUtilityContract(item);
   assert.ok(contract.purpose);
