@@ -35,6 +35,7 @@ Module._load = function (request, parent, isMain) {
       CONTENT_READ_COMPLETE: "content_read_complete",
     },
   };
+  if (request === "@/lib/safe-storage") return originalLoad.call(this, path.join(root, "src/lib/safe-storage.ts"), parent, isMain);
   return originalLoad.call(this, request, parent, isMain);
 };
 

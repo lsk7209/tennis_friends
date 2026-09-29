@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { safeJsonParse } from "@/lib/safe-json";
 import { trackEvent, TRACKING_EVENTS } from "@/lib/analytics";
+import { safeStorageGet, safeStorageSet } from "@/lib/safe-storage";
 
 const MAX_STORED_VISITOR_EVENTS = 200;
 const CONTENT_READ_THRESHOLD = 0.75;
@@ -85,7 +86,7 @@ export const trackTestCompletion = (
 
     // 기존 방문자 데이터 가져오기
     const existingData: VisitorData[] = safeJsonParse(
-      localStorage.getItem("visitorData"),
+      safeStorageGet("visitorData"),
       [],
     );
 
@@ -94,7 +95,7 @@ export const trackTestCompletion = (
     const recentData = existingData.slice(-MAX_STORED_VISITOR_EVENTS);
 
     // 로컬 스토리지에 저장
-    localStorage.setItem("visitorData", JSON.stringify(recentData));
+    safeStorageSet("visitorData", JSON.stringify(recentData));
 
     // 테스트 완료 횟수 카운터 업데이트
     updateTestCompletionCount(testType);
@@ -140,14 +141,14 @@ export const trackTestCompletionOnce = (
 // 테스트 완료 횟수 관리
 function updateTestCompletionCount(testType: string) {
   const countKey = `test_completion_${testType}`;
-  const currentCount = parseInt(localStorage.getItem(countKey) || "0");
-  localStorage.setItem(countKey, (currentCount + 1).toString());
+  const currentCount = parseInt(safeStorageGet(countKey) || "0");
+  safeStorageSet(countKey, (currentCount + 1).toString());
 }
 
 // 테스트 완료 횟수 조회
 export const getTestCompletionCount = (testType: string): number => {
   const countKey = `test_completion_${testType}`;
-  return parseInt(localStorage.getItem(countKey) || "0");
+  return parseInt(safeStorageGet(countKey) || "0");
 };
 
 // 인기 테스트 순위 계산
@@ -244,7 +245,7 @@ export default function Tracking() {
 
         // 기존 방문자 데이터 가져오기
         const existingData: VisitorData[] = safeJsonParse(
-          localStorage.getItem("visitorData"),
+          safeStorageGet("visitorData"),
           [],
         );
 
@@ -253,7 +254,7 @@ export default function Tracking() {
         const recentData = existingData.slice(-MAX_STORED_VISITOR_EVENTS);
 
         // 로컬 스토리지에 저장 (백업용)
-        localStorage.setItem("visitorData", JSON.stringify(recentData));
+        safeStorageSet("visitorData", JSON.stringify(recentData));
 
       } catch (error) {
         // 프로덕션에서는 에러를 조용히 처리
@@ -379,28 +380,28 @@ function extractKeyword(referrer: string): string | null {
 // 세션 ID 생성 및 관리
 function getOrCreateSessionId(): string {
   const sessionKey = "tennis_session_id";
-  let sessionId = localStorage.getItem(sessionKey);
+  let sessionId = safeStorageGet(sessionKey);
 
   if (!sessionId) {
     sessionId =
       Math.random().toString(36).substring(2, 11) + Date.now().toString(36);
-    localStorage.setItem(sessionKey, sessionId);
+    safeStorageSet(sessionKey, sessionId);
 
     // 세션 만료 시간 설정 (24시간)
     const expiry = Date.now() + 24 * 60 * 60 * 1000;
-    localStorage.setItem("tennis_session_expiry", expiry.toString());
+    safeStorageSet("tennis_session_expiry", expiry.toString());
   } else {
     // 세션 만료 확인
     const expiry = parseInt(
-      localStorage.getItem("tennis_session_expiry") || "0",
+      safeStorageGet("tennis_session_expiry") || "0",
     );
     if (Date.now() > expiry) {
       // 세션 만료됨, 새로운 세션 생성
       sessionId =
         Math.random().toString(36).substring(2, 11) + Date.now().toString(36);
-      localStorage.setItem(sessionKey, sessionId);
+      safeStorageSet(sessionKey, sessionId);
       const newExpiry = Date.now() + 24 * 60 * 60 * 1000;
-      localStorage.setItem("tennis_session_expiry", newExpiry.toString());
+      safeStorageSet("tennis_session_expiry", newExpiry.toString());
     }
   }
 
@@ -410,10 +411,10 @@ function getOrCreateSessionId(): string {
 // 신규 방문자 확인
 function isNewVisitorCheck(): boolean {
   const visitorKey = "tennis_first_visit";
-  const firstVisit = localStorage.getItem(visitorKey);
+  const firstVisit = safeStorageGet(visitorKey);
 
   if (!firstVisit) {
-    localStorage.setItem(visitorKey, new Date().toISOString());
+    safeStorageSet(visitorKey, new Date().toISOString());
     return true;
   }
 
