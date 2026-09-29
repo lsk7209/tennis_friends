@@ -10,6 +10,18 @@ const CONTENT_READ_THRESHOLD = 0.75;
 const CONTENT_READ_MIN_SECONDS = 45;
 const trackedCompletionIds = new Set<string>();
 
+export function isBlogArticlePath(pathname: string): boolean {
+  return /^\/blog\/[^/]+\/?$/.test(pathname) && !pathname.startsWith("/blog/page/");
+}
+
+export function hasReachedArticleThreshold(
+  rect: Pick<DOMRect, "top" | "height">,
+  viewportHeight: number,
+): boolean {
+  return rect.height > 0 && rect.top + rect.height > 0 &&
+    rect.top + rect.height * CONTENT_READ_THRESHOLD <= viewportHeight;
+}
+
 interface VisitorData {
   id: string;
   timestamp: string;
@@ -87,17 +99,21 @@ export const trackTestCompletion = (
     // 테스트 완료 횟수 카운터 업데이트
     updateTestCompletionCount(testType);
 
-    // GA4 이벤트 전송 (도구 완료와 카페 전환 흐름 분석용)
-    trackEvent(TRACKING_EVENTS.TEST_COMPLETED, {
-      test_type: testType,
-      page_path: window.location.pathname,
-    });
   } catch (error) {
     // 프로덕션에서는 에러를 조용히 처리
     if (process.env.NODE_ENV === "development") {
       console.error("Failed to track test completion:", error);
     }
   }
+
+  // Local storage can fail independently of the analytics consent/delivery path.
+  trackEvent(TRACKING_EVENTS.TEST_COMPLETED, {
+    test_type: testType,
+    page_path: window.location.pathname,
+    questionnaire_version: testType === "ntrp-test" ? "legacy-v2" : undefined,
+    scoring_version: testType === "ntrp-test" ? "legacy-sum-v2" : undefined,
+    measurement_version: "v2",
+  });
 };
 
 export const trackTestCompletionOnce = (
@@ -239,17 +255,18 @@ export default function Tracking() {
         // 로컬 스토리지에 저장 (백업용)
         localStorage.setItem("visitorData", JSON.stringify(recentData));
 
-        if (pathname.startsWith("/blog/")) {
-          trackEvent(TRACKING_EVENTS.BLOG_POST_VIEWED, {
-            page_path: pathname,
-          });
-        }
-
       } catch (error) {
         // 프로덕션에서는 에러를 조용히 처리
         if (process.env.NODE_ENV === "development") {
           console.error("Failed to track visit:", error);
         }
+      }
+
+      if (isBlogArticlePath(pathname) && document.querySelector("article")) {
+        trackEvent(TRACKING_EVENTS.BLOG_POST_VIEWED, {
+          page_path: pathname,
+          measurement_version: "v2",
+        });
       }
     };
 
@@ -272,38 +289,54 @@ export default function Tracking() {
   }, [pathname]);
 
   useEffect(() => {
-    if (!pathname.startsWith("/blog/") || typeof window === "undefined") return;
+    if (!isBlogArticlePath(pathname) || typeof window === "undefined") return;
+
+    const article = document.querySelector("article");
+    if (!article) return;
 
     let didTrack = false;
-    const startedAt = Date.now();
+    let reachedThreshold = false;
+    let visibleMs = 0;
+    let visibleSince = document.visibilityState === "visible" ? Date.now() : null;
 
-    const trackReadComplete = () => {
+    const checkReadComplete = () => {
       if (didTrack) return;
-
-      const scrollableHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      if (scrollableHeight <= 0) return;
-
-      const scrollRatio = window.scrollY / scrollableHeight;
-      const durationSeconds = (Date.now() - startedAt) / 1000;
-
-      if (
-        scrollRatio >= CONTENT_READ_THRESHOLD &&
-        durationSeconds >= CONTENT_READ_MIN_SECONDS
-      ) {
+      if (document.visibilityState === "visible" &&
+          hasReachedArticleThreshold(article.getBoundingClientRect(), window.innerHeight)) {
+        reachedThreshold = true;
+      }
+      const currentVisibleMs = visibleMs + (visibleSince === null ? 0 : Date.now() - visibleSince);
+      if (reachedThreshold && currentVisibleMs >= CONTENT_READ_MIN_SECONDS * 1000) {
         didTrack = true;
         trackEvent(TRACKING_EVENTS.CONTENT_READ_COMPLETE, {
           page_path: pathname,
-          read_seconds: Math.round(durationSeconds),
+          read_seconds: Math.round(currentVisibleMs / 1000),
+          measurement_version: "v2",
         });
-        window.removeEventListener("scroll", trackReadComplete);
       }
     };
 
-    window.addEventListener("scroll", trackReadComplete, { passive: true });
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        visibleSince = Date.now();
+      } else if (visibleSince !== null) {
+        visibleMs += Date.now() - visibleSince;
+        visibleSince = null;
+      }
+      checkReadComplete();
+    };
+
+    checkReadComplete();
+    window.addEventListener("scroll", checkReadComplete, { passive: true });
+    window.addEventListener("resize", checkReadComplete);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    const timer = window.setInterval(checkReadComplete, 1000);
 
     return () => {
-      window.removeEventListener("scroll", trackReadComplete);
+      window.removeEventListener("scroll", checkReadComplete);
+      window.removeEventListener("resize", checkReadComplete);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      window.clearInterval(timer);
     };
   }, [pathname]);
 
