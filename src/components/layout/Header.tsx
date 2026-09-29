@@ -131,11 +131,12 @@ const Header: React.FC = () => {
                     <Search className="ml-1 inline h-3.5 w-3.5" aria-hidden="true" />
                   )}
                 </Link>
-                {
-                  active && (
-                    <div className="absolute -bottom-2 left-0 h-0.5 w-full bg-primary rounded-full"></div>
-                  )
-                }
+                {/* Always rendered: static 404 HTML is prerendered for /_not-found, so a
+                    conditional element would mismatch the client pathname on hydration. */}
+                <div
+                  aria-hidden="true"
+                  className={`absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-primary transition-opacity ${active ? 'opacity-100' : 'opacity-0'}`}
+                />
               </div>
             );
           })}
