@@ -4,6 +4,7 @@ import { articleWriterPart12Posts } from "./blog-posts-aw-part12.js";
 import { approvedAugust2026Posts } from "./blog-posts-approved-august-2026.js";
 import { reviewedSeptember2026Posts } from "./blog-posts-reviewed-september-2026.js";
 import { beginnerSeries2026Posts } from "./blog-posts-beginner-series-2026.js";
+import { october2026ScheduledPosts } from "./blog-posts-october-2026.js";
 import { articleWriterTitle100Posts } from "./blog-posts-aw-title100.js";
 import { articleWriterPart16PostOverrides } from "./blog-posts-part16-overrides.js";
 import { articleWriterPart17PostOverrides } from "./blog-posts-part17-overrides.js";
@@ -3549,6 +3550,7 @@ function applyPostOverride(post) {
 
 /** @type {import("@/types/blog").BlogPostData[]} */
 export const allBlogPosts = [
+  ...october2026ScheduledPosts,
   ...beginnerSeries2026Posts,
   ...reviewedSeptember2026Posts,
   ...approvedAugust2026Posts,
