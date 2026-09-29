@@ -1,5 +1,14 @@
 # STATUS
 
+## 2026-09-29 19:45 KST — released
+State: RELEASED. PR #28 was squash-merged into #27. #27 was squash-merged into `main` as `7069b4dcd0ea2bd95e134c71d492caefa6e7d8d2`, after merging 12 newer `origin/main` commits. The one NTRP result-page conflict was resolved in favor of the versioned result contract. PR CI passed (verify, seo-check, hosting-cost, Vercel preview). Deployments succeeded: GitHub Pages `6732615096` (run `36556527482`) and Vercel Production `6732608041`.
+
+Public smoke results:
+- `/`, `/blog`, `/blog/topic/strategy` (noindex), `/utility/ntrp-test`, `/players/iva-jovic` (WebPage about Person, no ProfilePage, AO source) and `/sitemap.xml` (1,495 URLs, no topic URLs) all return 200. The missing route returns 404.
+- GA and the cafe link are present; the AdSense loader is absent (fail-closed).
+
+Rollback: `git revert 7069b4d`. The NTRP and injury model reviews remain owner decisions, and the blocked-storage browser flow is NOT_RUN.
+
 ## 2026-09-29 18:55 KST — remaining handoff items (Kiro)
 State: COMPLETE_LOCAL_PR_OPEN. PR #27 (`feature/tf-handoff-improvements-2026-09-29`) holds the Codex work. The follow-up PR (`fix/tf-remaining-2026-09-29`) closes TF-08, TF-15 and TF-18 locally. `npm run verify` passed with 3,239 pages. The browser blocked-storage flow is NOT_RUN because the tool hung. There was no merge, no deployment and no external account change. The NTRP and injury model reviews still need owner decisions. Details are in `docs/reports/tennisfrens-improvement-2026-09-29.md`.
 
