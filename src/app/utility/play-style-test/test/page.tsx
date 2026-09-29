@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import {CheckCircle, Sparkles} from 'lucide-react';
 import { toast } from 'sonner';
 import { playStyleQuestions, calculatePlayStyle } from '@/lib/playStyleTest';
+import { safeStorageSet } from "@/lib/safe-storage";
 
 export default function PlayStyleTest() {
   const router = useRouter();
@@ -50,7 +51,7 @@ export default function PlayStyleTest() {
         setTimeout(() => {
           const result = calculatePlayStyle(newAnswers);
           const completionId = crypto.randomUUID();
-          window.sessionStorage.setItem(`tennisfrens:playstyle-pending:${completionId}`, "1");
+          safeStorageSet(`tennisfrens:playstyle-pending:${completionId}`, "1", "session");
           router.push(`/utility/play-style-test/result?style=${result.id}&completion=${completionId}`);
         }, 1500); // 완료 애니메이션 시간 증가
       }

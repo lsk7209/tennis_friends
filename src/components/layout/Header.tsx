@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Moon, Sun, Menu, Search, X } from 'lucide-react';
 import NaverCafeLink from '@/components/NaverCafeLink';
+import { safeStorageGet, safeStorageSet } from "@/lib/safe-storage";
 
 const Header: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
@@ -18,7 +19,7 @@ const Header: React.FC = () => {
     if (typeof window === 'undefined') return;
 
     // 다크모드 상태 초기화
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = safeStorageGet('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     // 명시적으로 저장된 테마 우선, 없으면 시스템 설정 따름
@@ -57,7 +58,7 @@ const Header: React.FC = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
     document.documentElement.classList.toggle('dark', newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+    safeStorageSet('theme', newTheme ? 'dark' : 'light');
   };
 
   const toggleMobileMenu = () => {
