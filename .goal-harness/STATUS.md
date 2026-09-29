@@ -1,5 +1,20 @@
 # STATUS
 
+## 2026-09-29 20:50 KST — soft 404 and claims fix released
+PR #32 was squash-merged as `6fdd0b1`. GitHub Pages run `36562978406` and the Vercel commit status both succeeded.
+
+Before the fix, production served unknown `/blog/<slug>` and `/players/<slug>` URLs as 200 + noindex (soft 404). The cause was route-level `loading.tsx` Suspense streaming the status before `notFound()`. After the fix, fresh random unknown blog, player and utility URLs, `/blog/page/999` and an unknown topic all return 404, and real pages return 200.
+
+The unverifiable claims were removed from the live pages; the equipment page no longer contains `5,000+` or `전문가 검증`.
+
+New guards: `audit:not-found-status` (fails when a loading boundary is restored) and a sitewide unsupported-claim scan in `audit:trust-contracts` (fails on the old equipment page).
+
+The production storage-blocked NTRP re-run still passes (45/45, 0 page errors).
+
+Open issue: React #418 hydration error on the 404 render of `/blog/topic/<unknown>`, `/blog/page/999` and `/utility/<unknown>` (the status codes are correct). It was not reproducible in dev, and a production build needs about 2.5 GB free on E:.
+
+Rollback: `git revert 6fdd0b1`.
+
 ## 2026-09-29 20:20 KST — blocked-storage crash fixed and released
 A production E2E with `localStorage`/`sessionStorage` throwing showed "This page couldn't load" on every page (pageerror from the shared Header theme read and Tracking). PR #30 fixed this, and it was squash-merged as `912c63d`:
 - adds the never-throwing `src/lib/safe-storage.ts` helpers;
