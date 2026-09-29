@@ -39,14 +39,14 @@ export default function EquipmentRecommendationIntro() {
     },
     {
       icon: Users,
-      title: '전문가 검증',
-      description: '테니스 전문가가 검증한 신뢰할 수 있는 추천',
+      title: '규칙 공개',
+      description: '입력값을 일반적인 장비 선택 기준에 대입하는 규칙 기반 추천',
       gradient: 'from-green-400 to-emerald-400'
     },
     {
       icon: Award,
-      title: '리뷰 연동',
-      description: '실제 사용자 리뷰와 평점을 반영한 추천',
+      title: '구매 전 비교용',
+      description: '특정 판매처와 연결되지 않은 참고용 후보 목록',
       gradient: 'from-purple-400 to-pink-400'
     }
   ];
@@ -98,7 +98,7 @@ export default function EquipmentRecommendationIntro() {
             <SlideUp delay={0.6}>
               <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto font-medium">
                 플레이 스타일과 실력에 맞는 최적의 라켓과 스트링을 추천해드립니다.<br />
-                <span className="text-gray-600">전문가가 검증한 데이터로 더 나은 선택을 하세요.</span>
+                <span className="text-gray-600">결과는 참고용이며, 가능하면 시타 후 결정하세요.</span>
               </p>
             </SlideUp>
             
@@ -121,11 +121,11 @@ export default function EquipmentRecommendationIntro() {
               <div className="flex flex-wrap items-center justify-center gap-6 text-gray-700 text-base font-medium">
                 <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
                   <div className="w-3 h-3 bg-indigo-600 rounded-full animate-pulse"></div>
-                  <span>5,000+ 장비 추천 완료</span>
+                  <span>로그인 없이 바로 이용</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
                   <Shield className="h-4 w-4 text-indigo-600" />
-                  <span>전문가 검증된 데이터</span>
+                  <span>규칙 기반 참고 추천</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full shadow-md">
                   <Zap className="h-4 w-4 text-yellow-500" />
@@ -320,7 +320,7 @@ export default function EquipmentRecommendationIntro() {
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">장비 분석</h3>
                     <p className="text-gray-600 leading-relaxed text-base">
-                      과학적 알고리즘이 당신의 정보를 분석하여 최적의 라켓과 스트링을 도출합니다.
+                      입력한 정보를 규칙에 대입해 참고할 만한 라켓과 스트링 후보를 보여 줍니다.
                     </p>
                   </CardContent>
                 </Card>

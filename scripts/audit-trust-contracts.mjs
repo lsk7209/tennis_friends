@@ -46,6 +46,35 @@ assert.match(distribution, /가상 분포 예시/);
 assert.doesNotMatch(privacy, /본 사이트는 광고를 제공하지 않으며/);
 assert.match(privacy, /Google AdSense/);
 
+// Sitewide: no unverifiable usage counts, expert-validation, or review claims
+// in page source (2026-09-29). Metadata and on-page copy are both scanned.
+const { readdir } = await import("node:fs/promises");
+const UNSUPPORTED_CLAIMS = [
+  /전문가가 (?:작성|검증)/u,
+  /전문가 검증/u,
+  /과학적 알고리즘/u,
+  /사용자 리뷰와 평점/u,
+  /[0-9][0-9,]*\+\s*(?:장비\s+)?(?:추천|사용자|회원|테스트)\s*완료/u,
+  /[0-9]+만\+\s*선수/u,
+];
+async function listPages(directory) {
+  const entries = await readdir(new URL(`../${directory}`, import.meta.url), { withFileTypes: true });
+  const nested = await Promise.all(entries.map((entry) => {
+    const child = `${directory}/${entry.name}`;
+    if (entry.isDirectory()) return listPages(child);
+    return /\.tsx?$/.test(entry.name) ? [child] : [];
+  }));
+  return nested.flat();
+}
+const claimViolations = [];
+for (const file of [...(await listPages("src/app")), ...(await listPages("src/components"))]) {
+  const source = await read(file);
+  for (const pattern of UNSUPPORTED_CLAIMS) {
+    if (pattern.test(source)) claimViolations.push(`${file}: ${pattern}`);
+  }
+}
+assert.deepEqual(claimViolations, [], `unsupported public claims:\n${claimViolations.join("\n")}`);
+
 console.log(
   "Trust contract audit passed: NTRP count, contact flow, demo utilities, and synthetic distribution labels are consistent.",
 );
