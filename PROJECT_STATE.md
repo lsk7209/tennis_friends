@@ -1,8 +1,9 @@
 # PROJECT_STATE
 
-## Codex Improvement Spec 2026-09-30 — Local Only, Not Deployed
+## Codex Improvement Spec 2026-09-30 — Production Deployed
 
-- Branch `improve/codex-spec-20260930` from baseline `38d47d9`. No commit, push, PR, deploy, GA4/GSC/AdSense change, or search submission.
+- Released via PR #53, squash commit `091e3d4` on `main` (baseline `38d47d9`). Vercel Production deployment `6749087296` and GitHub Pages deployment `6749094989` succeeded for that SHA; PR checks verify/seo-check/audit-hosting-costs passed. No GA4/GSC/AdSense setting change or search submission.
+- Live read-only smoke (2026-09-30 KST, plain GET): NTRP intro/test/stats, privacy date + og:url, home copy, guide `#finding-lessons` all 200 with new content; `/search` single `<main>`; GA present, AdSense loader absent; missing route 404; `/players/hong-seong-chan` 308 → `/players/seongchan-hong`.
 - NTRP history (`src/lib/ntrp-results.ts`): statuses `ready/empty/partial/corrupt/unavailable`; SecurityError on read is `unavailable`, not corrupt; records carry `questionnaire/scoring/provenance`; unversioned legacy records are `unknown-legacy` and never re-graded or aggregated; new writes require an integer 15–75 score whose level matches `legacySumV2Level`. Corrupt/partial history blocks writes; the stats page offers raw backup + confirmed reset of NTRP-owned keys only.
 - Scoring model unchanged (legacy-sum-v2). Limits disclosed on intro/result; a revision proposal is in `docs/ntrp-assessment-model-review.md` (inactive, unapproved).
 - Test page: explicit 다음/결과 보기, radio fieldset, no 600ms/1500ms waits, double-submit guard. Result page: provenance label (`resolveNtrpResultOrigin`), save state, single contextual cafe CTA after practice directions, unofficial share text.

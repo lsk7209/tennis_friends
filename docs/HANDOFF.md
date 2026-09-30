@@ -1,11 +1,11 @@
 # Handoff
 
-## Current handoff — Codex improvement spec 2026-09-30 (local, not deployed)
+## Current handoff — Codex improvement spec 2026-09-30 (production deployed)
 
-- Timestamp: 2026-09-30 KST. Branch `improve/codex-spec-20260930`, baseline `38d47d9`, working tree uncommitted.
-- State: TF-D01–D16 local work done; see PROJECT_STATE.md for the change summary. `npm run verify` and a local Chrome CDP flow (external requests blocked) passed.
-- Approval needed: commit/push/PR/deploy; GA4 Enhanced Measurement history page_view, site search, data redaction review; privacy policy effective date (still 2026-08-27 after copy change); any new NTRP scoring model.
-- Rollback: discard the branch or revert files; stored NTRP records written by this branch add fields that the previous reader ignores (it only checked id/createdAt/score/level/character), so old code still reads them.
+- Timestamp: 2026-09-30 KST. PR #53 squash-merged as `091e3d4` on `main`; Vercel Production `6749087296` and GitHub Pages `6749094989` succeeded; live read-only smoke passed (see PROJECT_STATE.md).
+- Open items needing the operator: GA4 Enhanced Measurement history page_view, site search, data redaction review (`docs/reports/ga4-auto-collection-review-2026-09-30.md`); any new NTRP scoring model (`docs/ntrp-assessment-model-review.md`, inactive).
+- Measurement: compare cafe clicks / NTRP completion from 2026-09-30 with an equal-length prior window and the same measurement version; field CWV not yet measured.
+- Rollback: `git revert 091e3d4` and push; connected deployments roll forward. Stored NTRP records only gained fields, so the previous reader still accepts them.
 ## Current handoff — docs/11 complete and production verified
 
 - Timestamp: 2026-09-15 KST
