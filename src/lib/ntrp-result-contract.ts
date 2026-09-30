@@ -36,3 +36,41 @@ export function buildNtrpShareUrl(pageUrl: string, score: number, style: string 
   if (style && STYLES.has(style)) url.searchParams.set("style", style);
   return url.toString();
 }
+
+export type NtrpResultOrigin =
+  | "completed_in_this_browser"
+  | "saved_in_this_browser"
+  | "unverified_completion"
+  | "shared"
+  | "legacy_link";
+
+/**
+ * Where a displayed result came from. Only a pending proof created by the test
+ * page in this browser counts as a new completion; a `completion` URL parameter
+ * alone is merely a candidate and proves nothing.
+ */
+export function resolveNtrpResultOrigin(input: {
+  source: "shared" | "legacy_link" | "local_candidate";
+  hasPendingProof: boolean;
+  isStoredLocally: boolean;
+}): { origin: NtrpResultOrigin; countsAsNewCompletion: boolean } {
+  if (input.source === "shared") return { origin: "shared", countsAsNewCompletion: false };
+  if (input.source === "legacy_link") return { origin: "legacy_link", countsAsNewCompletion: false };
+  if (input.hasPendingProof) return { origin: "completed_in_this_browser", countsAsNewCompletion: true };
+  if (input.isStoredLocally) return { origin: "saved_in_this_browser", countsAsNewCompletion: false };
+  return { origin: "unverified_completion", countsAsNewCompletion: false };
+}
+
+export const NTRP_RESULT_ORIGIN_LABELS: Record<NtrpResultOrigin, string> = {
+  completed_in_this_browser: "이 브라우저에서 방금 완료한 비공식 자가점검 결과입니다.",
+  saved_in_this_browser: "이 브라우저에서 완료해 저장된 기록입니다.",
+  unverified_completion: "이 브라우저에서 완료했는지 확인할 수 없어 참고용으로만 표시합니다. 내 기록에는 저장하지 않습니다.",
+  shared: "공유받은 참고 결과입니다. 이 브라우저의 테스트 완료 기록은 아닙니다.",
+  legacy_link: "이전 형식의 링크로 표시한 참고 결과입니다. 이 브라우저의 테스트 완료 기록은 아닙니다.",
+};
+
+/** Share copy always carries the unofficial status; it never includes answers or completion ids. */
+export function buildNtrpShareText(level: string, character: string | null): string {
+  const style = character ? ` (${character} 스타일)` : "";
+  return `🎾 TennisFriends NTRP 비공식 자가점검 참고 결과: ${level}${style}. 공식 NTRP 등급은 아니에요. 나도 해보기 →`;
+}

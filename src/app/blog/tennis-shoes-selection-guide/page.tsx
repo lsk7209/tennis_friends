@@ -72,7 +72,6 @@ export default function TennisShoesSelectionGuidePage() {
       date="2026-01-26"
       slug="tennis-shoes-selection-guide"
       author="TennisFriends"
-      image="/images/blog/tennis-shoes-selection-guide.png"
     >
       <div className="bg-gradient-to-r from-teal-50 to-green-50 dark:from-teal-950 dark:to-green-950 p-6 rounded-lg mb-8 border border-teal-100 dark:border-teal-900">
         <div className="flex items-center gap-2 mb-3">

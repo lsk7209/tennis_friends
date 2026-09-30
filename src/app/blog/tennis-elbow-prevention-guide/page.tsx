@@ -89,7 +89,6 @@ export default function TennisElbowPreventionGuidePage() {
       date="2026-01-28"
       slug="tennis-elbow-prevention-guide"
       author="TennisFriends"
-      image="/images/blog/tennis-elbow-prevention-guide.png"
       ymylTopic="medical"
     >
       <div className="bg-gradient-to-r from-red-50 to-pink-50 dark:from-red-950 dark:to-pink-950 p-6 rounded-lg mb-8">

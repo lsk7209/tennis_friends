@@ -34,9 +34,8 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'split-step-science', text: '1. 스플릿 스텝의 과학: 아가시의 "임팩트 점프" 법칙', depth: 2 },
   { id: 'short-backswing', text: '2. 짧은 백스윙: 텐션 3/10 규칙과 블로킹 메커니즘', depth: 2 },
   { id: 'return-target-zones', text: '3. 고확률 리턴 타겟: 3대의 골든 매직 존', depth: 2 },
-  { id: 'return-types', text: '4. 리턴의 종류: 블록(Block), 슬라이스(Slice), 립(Rip)', depth: 2 },
-  { id: 'returner-psychology', text: '5. 리턴너의 심리학: 서버를 "벽"으로 압박하라', depth: 2 },
-  { id: 'conclusion', text: '6. 결론: 리턴은 브레이크의 문을 여는 열쇠다', depth: 2 },
+  { id: 'returner-psychology', text: '4. 리턴너의 심리학: 서버를 "벽"으로 압박하라', depth: 2 },
+  { id: 'conclusion', text: '5. 결론: 리턴은 브레이크의 문을 여는 열쇠다', depth: 2 },
 ];
 
 const faqs = [

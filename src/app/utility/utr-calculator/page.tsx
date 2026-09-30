@@ -74,7 +74,7 @@ export default function UTRCalculatorPage() {
 
   if (step === 'intro') {
     return (
-      <main className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)]">
+      <div className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)]">
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-5xl">
             <div className="rounded-[32px] bg-gradient-to-r from-blue-600 to-violet-500 px-8 py-10 text-white shadow-xl">
@@ -113,13 +113,13 @@ export default function UTRCalculatorPage() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
     );
   }
 
   if (step === 'input') {
     return (
-      <main className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)] py-12">
+      <div className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)] py-12">
         <div className="mx-auto max-w-3xl px-4">
           <Button variant="ghost" onClick={() => setStep('intro')} className="mb-6">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -178,12 +178,12 @@ export default function UTRCalculatorPage() {
             </CardContent>
           </Card>
         </div>
-      </main>
+      </div>
     );
   }
 
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)] py-12">
+    <div className="min-h-screen bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_35%,_#f8fafc_100%)] py-12">
       <div className="mx-auto max-w-3xl px-4">
         <Card className="overflow-hidden border-slate-200 bg-white shadow-2xl">
           <div className="bg-gradient-to-r from-blue-600 to-violet-500 p-8 text-center text-white">
@@ -222,6 +222,6 @@ export default function UTRCalculatorPage() {
           </CardContent>
         </Card>
       </div>
-    </main>
+    </div>
   );
 }

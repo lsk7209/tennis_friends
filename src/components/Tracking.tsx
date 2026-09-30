@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { safeJsonParse } from "@/lib/safe-json";
 import { trackEvent, TRACKING_EVENTS } from "@/lib/analytics";
 import { safeStorageGet, safeStorageSet } from "@/lib/safe-storage";
+import { isExternalEffectsActiveInDocument } from "@/lib/external-effects";
 
 const MAX_STORED_VISITOR_EVENTS = 200;
 const CONTENT_READ_THRESHOLD = 0.75;
@@ -51,59 +52,71 @@ interface VisitorData {
   testType?: string; // 테스트 종류
 }
 
-// 테스트 완료 이벤트 추적 함수
-export const trackTestCompletion = (
-  testType: string,
-  testResult?: Record<string, unknown>,
-) => {
+/**
+ * Optional on-device visit log read by the internal /admin page. It is not the
+ * user's NTRP history (see ntrp-results.ts) and is written only when production
+ * external effects are enabled, so local, test, and preview runs leave no log.
+ * Only the referrer origin is kept; raw search terms, full referrer URLs, the
+ * raw user-agent string, and result payloads are not stored.
+ */
+export function isVisitorLogEnabled(): boolean {
+  return isExternalEffectsActiveInDocument();
+}
+
+export function referrerOrigin(referrer: string): string {
+  if (!referrer) return "";
   try {
-    const testData: VisitorData = {
-      id: Math.random().toString(36).substring(2, 11),
-      timestamp: new Date().toISOString(),
-      referrer: document.referrer || "",
-      userAgent: navigator.userAgent || "",
-      ip: "client-side",
-      page: window.location.pathname,
-      searchKeyword: extractKeyword(document.referrer) || undefined,
-      searchEngine: getSearchEngine(document.referrer) || undefined,
-      // 디바이스 정보
-      browser: parseUserAgent(navigator.userAgent).browser,
-      browserVersion: parseUserAgent(navigator.userAgent).browserVersion,
-      os: parseUserAgent(navigator.userAgent).os,
-      osVersion: parseUserAgent(navigator.userAgent).osVersion,
-      deviceType: getDeviceType(),
-      screenResolution: `${screen.width}x${screen.height}`,
-      language: navigator.language || "unknown",
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      pageType: "test",
-      sessionId: getOrCreateSessionId(),
-      isNewVisitor: false, // 테스트 완료는 이미 방문자로 가정
-      // 테스트 관련 데이터
-      testCompleted: testType,
-      testResult: testResult,
-      testType: testType,
-    };
+    return new URL(referrer).origin;
+  } catch {
+    return "";
+  }
+}
 
-    // 기존 방문자 데이터 가져오기
-    const existingData: VisitorData[] = safeJsonParse(
-      safeStorageGet("visitorData"),
-      [],
-    );
+function appendVisitorLog(entry: VisitorData): void {
+  const existingData: VisitorData[] = safeJsonParse(safeStorageGet("visitorData"), []);
+  existingData.push(entry);
+  safeStorageSet("visitorData", JSON.stringify(existingData.slice(-MAX_STORED_VISITOR_EVENTS)));
+}
 
-    // 테스트 완료 데이터 추가
-    existingData.push(testData);
-    const recentData = existingData.slice(-MAX_STORED_VISITOR_EVENTS);
+function buildVisitorEntry(page: string, pageType: VisitorData["pageType"], sessionId: string, isNewVisitor: boolean): VisitorData {
+  const deviceInfo = parseUserAgent(navigator.userAgent || "");
+  const origin = referrerOrigin(document.referrer);
+  return {
+    id: Math.random().toString(36).substring(2, 11),
+    timestamp: new Date().toISOString(),
+    referrer: origin,
+    userAgent: "",
+    ip: "client-side",
+    page,
+    searchEngine: getSearchEngine(origin) || undefined,
+    browser: deviceInfo.browser,
+    browserVersion: deviceInfo.browserVersion,
+    os: deviceInfo.os,
+    osVersion: deviceInfo.osVersion,
+    deviceType: getDeviceType(),
+    screenResolution: `${screen.width}x${screen.height}`,
+    language: navigator.language || "unknown",
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    pageType,
+    sessionId,
+    isNewVisitor,
+  };
+}
 
-    // 로컬 스토리지에 저장
-    safeStorageSet("visitorData", JSON.stringify(recentData));
-
-    // 테스트 완료 횟수 카운터 업데이트
-    updateTestCompletionCount(testType);
-
-  } catch (error) {
-    // 프로덕션에서는 에러를 조용히 처리
-    if (process.env.NODE_ENV === "development") {
-      console.error("Failed to track test completion:", error);
+// 테스트 완료 이벤트 추적 함수
+export const trackTestCompletion = (testType: string) => {
+  if (isVisitorLogEnabled()) {
+    try {
+      appendVisitorLog({
+        ...buildVisitorEntry(window.location.pathname, "test", getOrCreateSessionId(), false),
+        testCompleted: testType,
+        testType,
+      });
+      updateTestCompletionCount(testType);
+    } catch (error) {
+      if (process.env.NODE_ENV === "development") {
+        console.error("Failed to track test completion:", error);
+      }
     }
   }
 
@@ -117,10 +130,14 @@ export const trackTestCompletion = (
   });
 };
 
+/**
+ * Sends one completion per completion id. `_details` is accepted for existing
+ * callers but intentionally neither stored nor sent.
+ */
 export const trackTestCompletionOnce = (
   testType: string,
   completionId: string,
-  testResult?: Record<string, unknown>,
+  _details?: Record<string, unknown>,
 ) => {
   const key = `test_completion_once:${testType}:${completionId}`;
   if (trackedCompletionIds.has(key)) return;
@@ -135,7 +152,7 @@ export const trackTestCompletionOnce = (
   }
 
   trackedCompletionIds.add(key);
-  trackTestCompletion(testType, testResult);
+  trackTestCompletion(testType);
 };
 
 // 테스트 완료 횟수 관리
@@ -212,54 +229,13 @@ export default function Tracking() {
   useEffect(() => {
     // 방문자 데이터 수집 (클라이언트 사이드 저장)
     const trackVisit = () => {
-      try {
-        // 세션 관리
-        const sessionId = getOrCreateSessionId();
-        const isNewVisitor = isNewVisitorCheck();
-
-        // 디바이스 및 브라우저 정보 파싱
-        const deviceInfo = parseUserAgent(navigator.userAgent);
-
-        const visitorData: VisitorData = {
-          id: Math.random().toString(36).substring(2, 11),
-          timestamp: new Date().toISOString(),
-          referrer: document.referrer || "",
-          userAgent: navigator.userAgent || "",
-          ip: "client-side",
-          page: pathname,
-          searchKeyword: extractKeyword(document.referrer) || undefined,
-          searchEngine: getSearchEngine(document.referrer) || undefined,
-          // 추가 세분화 데이터
-          browser: deviceInfo.browser,
-          browserVersion: deviceInfo.browserVersion,
-          os: deviceInfo.os,
-          osVersion: deviceInfo.osVersion,
-          deviceType: getDeviceType(),
-          screenResolution: `${screen.width}x${screen.height}`,
-          language: navigator.language || "unknown",
-          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-          pageType: getPageType(pathname),
-          sessionId: sessionId,
-          isNewVisitor: isNewVisitor,
-        };
-
-        // 기존 방문자 데이터 가져오기
-        const existingData: VisitorData[] = safeJsonParse(
-          safeStorageGet("visitorData"),
-          [],
-        );
-
-        // 새로운 데이터 추가 (최근 1000개만 유지)
-        existingData.push(visitorData);
-        const recentData = existingData.slice(-MAX_STORED_VISITOR_EVENTS);
-
-        // 로컬 스토리지에 저장 (백업용)
-        safeStorageSet("visitorData", JSON.stringify(recentData));
-
-      } catch (error) {
-        // 프로덕션에서는 에러를 조용히 처리
-        if (process.env.NODE_ENV === "development") {
-          console.error("Failed to track visit:", error);
+      if (isVisitorLogEnabled()) {
+        try {
+          appendVisitorLog(buildVisitorEntry(pathname, getPageType(pathname), getOrCreateSessionId(), isNewVisitorCheck()));
+        } catch (error) {
+          if (process.env.NODE_ENV === "development") {
+            console.error("Failed to track visit:", error);
+          }
         }
       }
 
@@ -355,23 +331,6 @@ function getSearchEngine(referrer: string): string | null {
     if (url.hostname.includes("bing")) return "Bing";
     if (url.hostname.includes("yahoo")) return "Yahoo";
     return "기타";
-  } catch {
-    return null;
-  }
-}
-
-// 검색 키워드 추출
-function extractKeyword(referrer: string): string | null {
-  if (!referrer) return null;
-  try {
-    const url = new URL(referrer);
-    const params = url.searchParams;
-    return (
-      params.get("q") ||
-      params.get("query") ||
-      params.get("p") ||
-      params.get("wd")
-    );
   } catch {
     return null;
   }

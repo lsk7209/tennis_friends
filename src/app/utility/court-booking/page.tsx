@@ -15,7 +15,7 @@ const courts = [
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <section className="grid gap-6">
         <Card className="border-blue-100 bg-gradient-to-br from-blue-50 via-white to-green-50">
           <CardHeader>
@@ -60,6 +60,6 @@ export default function Page() {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

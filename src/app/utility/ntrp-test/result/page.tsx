@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useEffect, useRef, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -8,11 +8,18 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
-import {Trophy, Share2, RotateCcw, Star, TrendingUp, Target, Award, Zap, Instagram, Twitter, Facebook, Copy, CheckCircle, ArrowRight, BookOpen, Settings, Shield, BarChart3} from 'lucide-react';
+import { Trophy, Share2, RotateCcw, Target, Award, Zap, Instagram, Twitter, Facebook, Copy, CheckCircle, ArrowRight, BookOpen, Settings, Shield, BarChart3, MessageCircle } from 'lucide-react';
 import { getNTRPLevel, charMap } from '@/lib/questions';
 import { trackTestCompletionOnce } from '@/components/Tracking';
-import { hasPendingNtrpAttempt, recordNtrpResultOnce } from '@/lib/ntrp-results';
-import { buildNtrpShareUrl, parseNtrpResultParams } from '@/lib/ntrp-result-contract';
+import { hasPendingNtrpAttempt, readNtrpStorage, recordNtrpResultOnce } from '@/lib/ntrp-results';
+import {
+  buildNtrpShareText,
+  buildNtrpShareUrl,
+  NTRP_RESULT_ORIGIN_LABELS,
+  type NtrpResultOrigin,
+  parseNtrpResultParams,
+  resolveNtrpResultOrigin,
+} from '@/lib/ntrp-result-contract';
 import NaverCafeLink from '@/components/NaverCafeLink';
 
 interface LevelDetail {
@@ -22,12 +29,44 @@ interface LevelDetail {
   bgColor: string;
   icon: string;
   title: string;
-  description: string;
   tips: string[];
-  proPlayers: string[];
   nextLevel: string;
-  progress: number;
 }
+
+type SaveState = 'idle' | 'saved' | 'blocked_by_history' | 'failed';
+
+// General practice directions per reference band. These are the same for every
+// visitor in a band and are not a personal weakness analysis.
+const LEVEL_DETAILS: Record<string, LevelDetail> = {
+  '1.5': {
+    color: 'from-blue-50 to-blue-100', borderColor: 'border-blue-200', textColor: 'text-blue-800', bgColor: 'bg-blue-100',
+    icon: '🌱', title: '입문 구간', tips: ['기본 그립 익히기', '포핸드 스트로크 연습', '서브 기본 동작'], nextLevel: '2.5',
+  },
+  '2.5': {
+    color: 'from-yellow-50 to-yellow-100', borderColor: 'border-yellow-200', textColor: 'text-yellow-800', bgColor: 'bg-yellow-100',
+    icon: '🌻', title: '기본기 다지는 구간', tips: ['랠리 지속 연습', '세컨 서브 안정성', '포지셔닝 기초'], nextLevel: '3.0',
+  },
+  '3.0': {
+    color: 'from-orange-50 to-orange-100', borderColor: 'border-orange-200', textColor: 'text-orange-800', bgColor: 'bg-orange-100',
+    icon: '🔥', title: '초중급 구간', tips: ['깊이 조절 연습', '네트 플레이 기초', '복식 위치 잡기'], nextLevel: '3.5',
+  },
+  '3.5': {
+    color: 'from-red-50 to-red-100', borderColor: 'border-red-200', textColor: 'text-red-800', bgColor: 'bg-red-100',
+    icon: '⚡', title: '중급 구간', tips: ['방향 전환 연습', '움직이며 치는 샷', '중요한 포인트 루틴'], nextLevel: '4.0',
+  },
+  '4.0': {
+    color: 'from-purple-50 to-purple-100', borderColor: 'border-purple-200', textColor: 'text-purple-800', bgColor: 'bg-purple-100',
+    icon: '👑', title: '중상급 구간', tips: ['서브·리턴 패턴 다양화', '상황별 샷 선택', '경기 기록 복기'], nextLevel: '4.5',
+  },
+  '4.5': {
+    color: 'from-indigo-50 to-indigo-100', borderColor: 'border-indigo-200', textColor: 'text-indigo-800', bgColor: 'bg-indigo-100',
+    icon: '🏆', title: '상급 구간', tips: ['포인트 패턴 설계', '약점 샷 보완', '경기 영상 분석'], nextLevel: '5.0+',
+  },
+  '5.0+': {
+    color: 'from-pink-50 to-pink-100', borderColor: 'border-pink-200', textColor: 'text-pink-800', bgColor: 'bg-pink-100',
+    icon: '🌟', title: '자가점검 최상위 구간', tips: ['공인 평가·대회 기록으로 확인', '약점 샷 점검', '경기 영상 분석'], nextLevel: '공식 평가로 확인',
+  },
+};
 
 function ResultContent() {
   const searchParams = useSearchParams();
@@ -38,152 +77,50 @@ function ResultContent() {
   const score = parsed.kind === 'displayable' ? parsed.score : 0;
   const q13 = parsed.kind === 'displayable' ? (parsed.style || '') : '';
   const completionId = searchParams.get('completion') || '';
-  
+
   const { level, desc } = getNTRPLevel(score);
   const character = charMap[q13] || '스타일 정보 없음';
+  const hasStyle = Boolean(charMap[q13]);
   const [copied, setCopied] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
-
-  // 테스트 완료 추적
-  useEffect(() => {
-    if (resultKind === 'displayable' && resultSource === 'local_candidate' && completionId) {
-      const locallyCompleted = hasPendingNtrpAttempt(completionId, {
-        score,
-        character,
-        questionnaire: 'legacy-v2',
-        scoring: 'legacy-sum-v2',
-      });
-      if (!locallyCompleted) return;
-      const recorded = recordNtrpResultOnce({
-        completionId,
-        score,
-        level,
-        character,
-      });
-      if (!recorded) toast.info('이 브라우저에 기록을 저장하지 못했습니다. 현재 결과는 확인할 수 있습니다.');
-      trackTestCompletionOnce('ntrp-test', completionId, {
-        level: level,
-        score: score,
-        character: character,
-        q13: q13
-      });
-    }
-  }, [resultKind, resultSource, score, level, character, q13, completionId]);
-
-  // NTRP 레벨별 상세 정보
-  const getLevelDetails = (level: string) => {
-    const details: Record<string, LevelDetail> = {
-      '1.5': {
-        color: 'from-blue-50 to-blue-100',
-        borderColor: 'border-blue-200',
-        textColor: 'text-blue-800',
-        bgColor: 'bg-blue-100',
-        icon: '🌱',
-        title: '테니스 입문자',
-        description: '기본 스트로크를 배우는 단계',
-        tips: ['기본 그립 익히기', '포핸드 스트로크 연습', '서브 기본 동작'],
-        proPlayers: ['초보자 친화적 선수들'],
-        nextLevel: '2.0',
-        progress: 15
-      },
-      '2.0': {
-        color: 'from-green-50 to-green-100',
-        borderColor: 'border-green-200',
-        textColor: 'text-green-800',
-        bgColor: 'bg-green-100',
-        icon: '🌿',
-        title: '기본기 다지는 단계',
-        description: '기본 스트로크를 구사할 수 있음',
-        tips: ['백핸드 스트로크 연습', '서브 정확도 향상', '발리 기본 동작'],
-        proPlayers: ['기본기 중시 선수들'],
-        nextLevel: '2.5',
-        progress: 30
-      },
-      '2.5': {
-        color: 'from-yellow-50 to-yellow-100',
-        borderColor: 'border-yellow-200',
-        textColor: 'text-yellow-800',
-        bgColor: 'bg-yellow-100',
-        icon: '🌻',
-        title: '기본기 완성 단계',
-        description: '기본 스트로크를 안정적으로 구사',
-        tips: ['스핀 기술 익히기', '포지셔닝 연습', '경기 전략 기초'],
-        proPlayers: ['기본기 탄탄한 선수들'],
-        nextLevel: '3.0',
-        progress: 45
-      },
-      '3.0': {
-        color: 'from-orange-50 to-orange-100',
-        borderColor: 'border-orange-200',
-        textColor: 'text-orange-800',
-        bgColor: 'bg-orange-100',
-        icon: '🔥',
-        title: '중급자 입문',
-        description: '안정적인 스트로크와 서브',
-        tips: ['고급 스핀 기술', '네트 플레이', '멘탈 게임'],
-        proPlayers: ['중급자 대표 선수들'],
-        nextLevel: '3.5',
-        progress: 60
-      },
-      '3.5': {
-        color: 'from-red-50 to-red-100',
-        borderColor: 'border-red-200',
-        textColor: 'text-red-800',
-        bgColor: 'bg-red-100',
-        icon: '⚡',
-        title: '중급자 완성',
-        description: '고급 기술과 전술을 구사',
-        tips: ['고급 전술', '멘탈 강화', '체력 관리'],
-        proPlayers: ['고급 중급자 선수들'],
-        nextLevel: '4.0',
-        progress: 75
-      },
-      '4.0': {
-        color: 'from-purple-50 to-purple-100',
-        borderColor: 'border-purple-200',
-        textColor: 'text-purple-800',
-        bgColor: 'bg-purple-100',
-        icon: '👑',
-        title: '상급자 입문',
-        description: '고급 기술과 전술 마스터',
-        tips: ['프로급 기술', '전문 전술', '경기 분석'],
-        proPlayers: ['프로 선수들'],
-        nextLevel: '4.5',
-        progress: 90
-      },
-      '4.5': {
-        color: 'from-indigo-50 to-indigo-100',
-        borderColor: 'border-indigo-200',
-        textColor: 'text-indigo-800',
-        bgColor: 'bg-indigo-100',
-        icon: '🏆',
-        title: '상급자 완성',
-        description: '프로급 기술과 전술 완성',
-        tips: ['프로급 완성도', '경기 지배력', '리더십'],
-        proPlayers: ['세계 랭킹 선수들'],
-        nextLevel: '5.0+',
-        progress: 95
-      },
-      '5.0+': {
-        color: 'from-pink-50 to-pink-100',
-        borderColor: 'border-pink-200',
-        textColor: 'text-pink-800',
-        bgColor: 'bg-pink-100',
-        icon: '🌟',
-        title: '전문가 레벨',
-        description: '최고 수준의 기술과 전술',
-        tips: ['최고 수준 유지', '멘토링', '코칭'],
-        proPlayers: ['세계 최고 선수들'],
-        nextLevel: '최고 수준',
-        progress: 100
-      }
-    };
-    return details[level] || details['3.0'];
+  // The dialog has two openers and no DialogTrigger, so remember which one to refocus on close.
+  const shareOpenerRef = useRef<HTMLElement | null>(null);
+  const openShareModal = (event: React.MouseEvent<HTMLElement>) => {
+    shareOpenerRef.current = event.currentTarget;
+    setShowShareModal(true);
   };
+  const [origin, setOrigin] = useState<NtrpResultOrigin | null>(null);
+  const [saveState, setSaveState] = useState<SaveState>('idle');
 
-  const levelDetails = getLevelDetails(level);
+  // Resolve provenance, then save and count only a proven completion from this browser.
+  useEffect(() => {
+    if (resultKind !== 'displayable' || !resultSource) return;
+    const attempt = { score, character, questionnaire: 'legacy-v2', scoring: 'legacy-sum-v2' } as const;
+    const hasPendingProof = resultSource === 'local_candidate' && Boolean(completionId) && hasPendingNtrpAttempt(completionId, attempt);
+    const stored = readNtrpStorage();
+    const isStoredLocally = Boolean(completionId) && stored.results.some((result) => result.id === completionId);
+    const resolved = resolveNtrpResultOrigin({ source: resultSource, hasPendingProof, isStoredLocally });
+    const timeoutId = window.setTimeout(() => setOrigin(resolved.origin), 0);
+    if (!resolved.countsAsNewCompletion) return () => window.clearTimeout(timeoutId);
 
+    const recorded = recordNtrpResultOnce({ completionId, score, level, character });
+    const nextSaveState: SaveState = recorded
+      ? 'saved'
+      : stored.status === 'corrupt' || stored.status === 'partial' ? 'blocked_by_history' : 'failed';
+    const saveTimeoutId = window.setTimeout(() => setSaveState(nextSaveState), 0);
+    if (!recorded) toast.info('이 브라우저에 기록을 저장하지 못했습니다. 현재 결과는 확인할 수 있습니다.');
+    trackTestCompletionOnce('ntrp-test', completionId);
+    return () => {
+      window.clearTimeout(timeoutId);
+      window.clearTimeout(saveTimeoutId);
+    };
+  }, [resultKind, resultSource, score, level, character, completionId]);
+
+  const levelDetails = LEVEL_DETAILS[level] ?? LEVEL_DETAILS['3.0'];
+  const shareStyle = hasStyle ? character : null;
   const shareUrl = () => buildNtrpShareUrl(window.location.href, score, q13 || null);
+  const shareText = buildNtrpShareText(level, shareStyle);
+
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(shareUrl());
@@ -194,186 +131,162 @@ function ResultContent() {
     }
   };
 
-  const shareToSocial = (platform: string) => {
+  const copyShareText = () => {
+    navigator.clipboard.writeText(`${shareText}\n${shareUrl()}`)
+      .then(() => toast.success('공유할 내용이 복사되었습니다.'))
+      .catch(() => toast.error('자동 복사에 실패했습니다. 아래 링크를 직접 선택해 복사해 주세요.'));
+  };
+
+  const shareToSocial = (platform: 'twitter' | 'facebook' | 'instagram') => {
     const url = shareUrl();
-    const text = `🎾 내 테니스 실력은 NTRP ${level} (${character} 스타일)이에요! TennisFriends에서 나의 실력을 확인해보세요!`;
-    
-    const shareUrls = {
-      twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
-      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-      instagram: `https://www.instagram.com/`, // Instagram은 URL 공유만 가능
-    };
-    
     if (platform === 'instagram') {
-      // Instagram은 URL만 복사
-      navigator.clipboard.writeText(`${text}\n\n${url}`).then(() => toast.success('공유할 내용이 복사되었습니다.')).catch(() => toast.error('자동 복사에 실패했습니다. 링크를 직접 복사해 주세요.'));
-    } else {
-      window.open(shareUrls[platform as keyof typeof shareUrls], '_blank');
+      // Instagram has no web share URL; copy the text and link instead.
+      copyShareText();
+      return;
     }
+    const shareUrls = {
+      twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+    };
+    window.open(shareUrls[platform], '_blank', 'noopener,noreferrer');
+  };
+
+  const shareNative = () => {
+    const url = shareUrl();
+    if (typeof navigator.share !== 'function') {
+      copyShareText();
+      return;
+    }
+    navigator.share({ title: 'NTRP 비공식 자가점검 결과', text: shareText, url }).catch((error) => {
+      // Dismissing the share sheet is neither an error nor a success.
+      if (error?.name !== 'AbortError') toast.error('공유에 실패했습니다. 링크 복사를 이용해 주세요.');
+    });
   };
 
   if (parsed.kind !== 'displayable') return (
-    <main className="container mx-auto max-w-xl px-4 py-16 text-center">
-      <h1 className="text-2xl font-bold">{parsed.kind === 'empty' ? '결과가 없습니다' : '유효하지 않은 결과입니다'}</h1>
+    <div className="container mx-auto max-w-xl px-4 py-16 text-center">
+      <h1 className="text-2xl font-bold">{parsed.kind === 'empty' ? '결과가 없습니다' : '유효하지 않은 결과 링크입니다'}</h1>
       <p className="mt-4">테스트를 완료하거나 유효한 공유 링크를 열어 주세요.</p>
       <Button asChild className="mt-6"><Link href="/utility/ntrp-test">테스트 시작하기</Link></Button>
-    </main>
+    </div>
   );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-12">
       <div className="container mx-auto max-w-6xl container-padding">
-        {/* 메인 결과 카드 */}
-        <Card id="result-card" className={`bg-gradient-to-br ${levelDetails.color} border-2 ${levelDetails.borderColor} shadow-2xl mb-8 transform hover:scale-105 transition-all duration-300`}>
-          <CardContent className="p-8 text-center relative overflow-hidden">
-            {/* 배경 장식 */}
-            <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
-              <div className="text-8xl">{levelDetails.icon}</div>
+        {/* 1. 참고 결과 한눈에 보기 */}
+        <Card id="result-card" className={`bg-gradient-to-br ${levelDetails.color} border-2 ${levelDetails.borderColor} mb-8 shadow-xl`}>
+          <CardContent className="relative p-8 text-center">
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg">
+              <span className="text-4xl" aria-hidden="true">{levelDetails.icon}</span>
             </div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 opacity-10">
-              <div className="text-6xl">🎾</div>
-            </div>
-            
-            {/* 메인 결과 */}
-            <div className="relative z-10">
-              <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <div className="text-4xl">{levelDetails.icon}</div>
-              </div>
-              
-              <h1 className="text-5xl font-bold text-gray-900 mb-4">
-                비공식 자가점검 결과
-              </h1>
-              {resultSource === 'shared' && <p className="mb-4 text-sm font-semibold text-blue-800">공유받은 결과입니다. 이 브라우저의 테스트 완료 기록은 아닙니다.</p>}
-              
-              <div className="text-7xl font-extrabold mb-4">
-                <span className={`${levelDetails.textColor}`}>{level}</span>
-              </div>
-              
-              <h2 className={`text-2xl font-bold ${levelDetails.textColor} mb-4`}>
-                {levelDetails.title}
-              </h2>
-              
-              <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-                {desc}
+
+            <h1 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl">비공식 자가점검 결과</h1>
+            {origin && (
+              <p role="status" className="mx-auto mb-4 max-w-2xl text-sm font-semibold text-gray-800">
+                {NTRP_RESULT_ORIGIN_LABELS[origin]}
               </p>
-              <p className="mb-6 text-sm text-gray-700">비공식 자가점검 결과이며 공식 NTRP 등급이 아닙니다.</p>
-              
-              <div className="flex justify-center mb-8">
-                <Badge className={`${levelDetails.bgColor} ${levelDetails.textColor} px-6 py-3 text-xl font-bold shadow-lg`}>
-                  🎯 {character} 스타일
-                </Badge>
-              </div>
+            )}
 
-              {/* 통계 그리드 */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center justify-center mb-3">
-                    <Trophy className="h-8 w-8 text-yellow-500" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">총 점수</h3>
-                  <p className="text-3xl font-bold text-gray-900">{score}점</p>
-                </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center justify-center mb-3">
-                    <Star className="h-8 w-8 text-blue-500" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">레벨</h3>
-                  <p className={`text-3xl font-bold ${levelDetails.textColor}`}>{level}</p>
-                </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center justify-center mb-3">
-                    <Target className="h-8 w-8 text-green-500" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">스타일</h3>
-                  <p className="text-lg font-bold text-gray-900">{character}</p>
-                </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center justify-center mb-3">
-                    <TrendingUp className="h-8 w-8 text-purple-500" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">계산 기준 문항</h3>
-                  <p className="text-3xl font-bold text-gray-900">15 / 15</p>
-                </div>
-              </div>
+            <p className={`mb-2 text-6xl font-extrabold md:text-7xl ${levelDetails.textColor}`}>
+              <span className="sr-only">참고 레벨 </span>{level}
+            </p>
+            <h2 className={`mb-4 text-2xl font-bold ${levelDetails.textColor}`}>{levelDetails.title}</h2>
+            <p className="mx-auto mb-4 max-w-3xl text-lg leading-relaxed text-gray-700">{desc}</p>
+            <p className="mb-6 text-sm text-gray-700">
+              계산 기준: 기존 15문항 합산 모델(선택지 번호 1~5점 합계). 공식 NTRP 등급이 아닙니다.
+            </p>
 
-              {/* 액션 버튼들 */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button 
-                  onClick={() => router.push('/utility/ntrp-test')}
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <RotateCcw className="h-5 w-5 mr-2" />
-                  다시 테스트하기
-                </Button>
-                <Button 
-                  onClick={() => setShowShareModal(true)}
-                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Share2 className="h-5 w-5 mr-2" />
-                  결과 공유하기
-                </Button>
+            <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="rounded-xl border-2 border-gray-200 bg-white p-5">
+                <Trophy className="mx-auto mb-2 h-7 w-7 text-yellow-600" aria-hidden="true" />
+                <h3 className="mb-1 font-bold text-gray-900">합산 점수</h3>
+                <p className="text-2xl font-bold text-gray-900">{score}점 <span className="text-sm font-normal text-gray-600">/ 15~75점</span></p>
               </div>
+              <div className="rounded-xl border-2 border-gray-200 bg-white p-5">
+                <Target className="mx-auto mb-2 h-7 w-7 text-green-700" aria-hidden="true" />
+                <h3 className="mb-1 font-bold text-gray-900">플레이 스타일(13번 답변)</h3>
+                <p className="text-lg font-bold text-gray-900">{character}</p>
+              </div>
+            </div>
+
+            {saveState === 'saved' && (
+              <p className="mb-4 text-sm text-emerald-800">이 브라우저의 기록에 저장했습니다.</p>
+            )}
+            {saveState === 'blocked_by_history' && (
+              <p className="mb-4 text-sm text-amber-800">
+                기존 기록을 읽을 수 없어 이번 결과를 저장하지 않았습니다.{' '}
+                <Link href="/utility/ntrp-test/stats" className="font-semibold underline">기록 복구 옵션 보기</Link>
+              </p>
+            )}
+            {saveState === 'failed' && (
+              <p className="mb-4 text-sm text-amber-800">이 브라우저에 기록을 저장하지 못했습니다. 결과는 계속 볼 수 있습니다.</p>
+            )}
+
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Button
+                onClick={() => router.push('/utility/ntrp-test')}
+                className="bg-blue-700 px-8 py-4 text-lg font-bold text-white hover:bg-blue-800"
+              >
+                <RotateCcw className="mr-2 h-5 w-5" aria-hidden="true" />
+                다시 테스트하기
+              </Button>
+              <Button
+                onClick={openShareModal}
+                className="bg-green-700 px-8 py-4 text-lg font-bold text-white hover:bg-green-800"
+              >
+                <Share2 className="mr-2 h-5 w-5" aria-hidden="true" />
+                결과 공유하기
+              </Button>
             </div>
           </CardContent>
         </Card>
 
-        {/* 상세 분석 섹션 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* 개선 방향 */}
-          <Card className="bg-white border-2 border-gray-200 shadow-lg">
+        {/* 2. 일반 연습 방향 */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 mb-8 gap-8">
+          <Card className="border-2 border-gray-200 bg-white shadow-lg">
             <CardContent className="p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <Target className="h-6 w-6 text-blue-600" />
+              <div className="mb-2 flex items-center">
+                <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+                  <Target className="h-6 w-6 text-blue-700" aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">개선 방향</h3>
+                <h3 className="text-2xl font-bold text-gray-900">다음 연습 방향</h3>
               </div>
-              <div className="space-y-4">
-                {levelDetails.tips.map((tip: string, index: number) => (
-                  <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 text-white font-bold text-sm">
+              <p className="mb-4 text-sm text-gray-600">이 구간 방문자 모두에게 보여주는 일반 제안이며 개인별 약점 분석이 아닙니다.</p>
+              <div className="space-y-3">
+                {levelDetails.tips.map((tip, index) => (
+                  <div key={tip} className="flex items-center rounded-lg bg-gray-50 p-4">
+                    <div className="mr-4 flex h-8 w-8 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white">
                       {index + 1}
                     </div>
-                    <span className="text-gray-700 font-medium">{tip}</span>
+                    <span className="font-medium text-gray-700">{tip}</span>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <p className="text-blue-800 font-medium">
-                  💡 <strong>다음 레벨:</strong> NTRP {levelDetails.nextLevel}을 목표로 연습해보세요!
-                </p>
-              </div>
+              <p className="mt-6 rounded-lg bg-blue-50 p-4 font-medium text-blue-900">
+                💡 <strong>다음 참고 구간:</strong> {levelDetails.nextLevel}
+              </p>
             </CardContent>
           </Card>
 
-      {/* 연습 참고 자료 */}
-          <Card className="bg-white border-2 border-gray-200 shadow-lg">
+          <Card className="border-2 border-gray-200 bg-white shadow-lg">
             <CardContent className="p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                  <Award className="h-6 w-6 text-purple-600" />
+              <div className="mb-6 flex items-center">
+                <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100">
+                  <Award className="h-6 w-6 text-purple-700" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">연습 참고 자료</h3>
               </div>
               <div className="space-y-4">
-                <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-                  <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">🏆</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">연습 주제</h4>
-                      <p className="text-gray-600 text-sm">{levelDetails.tips[0]}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 text-sm">
-                    아래 검색어로 연습 영상을 살펴보세요. 특정 선수와의 실력 유사성을 뜻하지 않습니다.
-                  </p>
+                <div className="rounded-lg bg-purple-50 p-4">
+                  <h4 className="font-bold text-gray-900">연습 주제</h4>
+                  <p className="text-sm text-gray-700">{levelDetails.tips[0]}</p>
+                  <p className="mt-2 text-sm text-gray-700">아래 검색어로 연습 영상을 살펴보세요. 특정 선수와의 실력 유사성을 뜻하지 않습니다.</p>
                 </div>
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <h4 className="font-bold text-gray-900 mb-2">📺 추천 경기 영상</h4>
-                  <p className="text-gray-600 text-sm">
-                    유튜브에서 "{character} 스타일 테니스" 또는 "NTRP {level} 테니스"로 검색해보세요.
+                <div className="rounded-lg bg-gray-50 p-4">
+                  <h4 className="mb-2 font-bold text-gray-900">📺 영상 검색어 예시</h4>
+                  <p className="text-sm text-gray-700">
+                    유튜브에서 &quot;{levelDetails.tips[0]} 테니스&quot; 또는 &quot;NTRP {level} 테니스&quot;로 검색해 보세요.
                   </p>
                 </div>
               </div>
@@ -381,72 +294,70 @@ function ResultContent() {
           </Card>
         </div>
 
+        {/* 3. 맥락 있는 카페 연결 */}
+        <Card className="mb-8 border-2 border-emerald-200 bg-emerald-50">
+          <CardContent className="flex flex-col items-center gap-4 p-8 text-center md:flex-row md:text-left">
+            <MessageCircle className="h-10 w-10 flex-none text-emerald-700" aria-hidden="true" />
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-900">연습 이야기를 카페에서 이어가세요</h3>
+              <p className="mt-1 text-gray-700">이번 결과를 참고해 연습한 이야기를 네이버 카페에서 다른 동호인과 나눠 보세요.</p>
+            </div>
+            <NaverCafeLink
+              ctaLocation="ntrp_result"
+              linkText="네이버 카페에서 이야기하기"
+              className="inline-flex items-center justify-center rounded-md bg-emerald-700 px-6 py-3 font-bold text-white hover:bg-emerald-800"
+            >
+              네이버 카페에서 이야기하기
+            </NaverCafeLink>
+          </CardContent>
+        </Card>
+
         {/* 소셜 공유 모달 */}
         <Dialog open={showShareModal} onOpenChange={setShowShareModal}>
-          <DialogContent className="max-h-[90vh] overflow-y-auto bg-white p-0">
-            <Card className="bg-white border-0 shadow-none">
+          <DialogContent
+            className="max-h-[90vh] overflow-y-auto bg-white p-0"
+            onCloseAutoFocus={(event) => {
+              if (!shareOpenerRef.current) return;
+              event.preventDefault();
+              shareOpenerRef.current.focus();
+            }}
+          >
+            <Card className="border-0 bg-white shadow-none">
               <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <DialogTitle className="text-2xl font-bold text-gray-900 mb-2">결과 공유하기</DialogTitle>
-                  <DialogDescription className="text-gray-600">비공식 자가점검 결과 링크를 공유할 수 있습니다.</DialogDescription>
+                <div className="mb-6 text-center">
+                  <DialogTitle className="mb-2 text-2xl font-bold text-gray-900">결과 공유하기</DialogTitle>
+                  <DialogDescription className="text-gray-700">
+                    비공식 자가점검 결과 링크를 공유합니다. 링크에는 합산 점수와 스타일만 담기며, 문항별 답변이나 이 브라우저의 기록은 포함되지 않습니다.
+                  </DialogDescription>
                 </div>
-                
-                <div className="space-y-4 mb-6">
-                  <Button
-                    onClick={() => {
-                      const url = shareUrl();
-                      const text = `🎾 내 테니스 실력은 NTRP ${level} (${character} 스타일)이에요! 나의 실력을 확인해보세요!`;
-                      if (typeof navigator.share === 'function') {
-                        navigator.share({ title: 'NTRP 테스트 결과', text, url }).catch((error) => {
-                          if (error?.name !== 'AbortError') toast.error('공유에 실패했습니다. 링크 복사를 이용해 주세요.');
-                        });
-                      } else {
-                        navigator.clipboard.writeText(`${text}\n${url}`).then(() => toast.success('공유할 내용이 복사되었습니다.')).catch(() => toast.error('자동 복사에 실패했습니다. 링크를 직접 복사해 주세요.'));
-                      }
-                    }}
-                    className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 py-3 font-bold"
-                  >
-                    <span className="mr-2">💬</span>
+
+                <div className="mb-6 space-y-4">
+                  <Button onClick={shareNative} className="w-full bg-yellow-400 py-3 font-bold text-gray-900 hover:bg-yellow-500">
+                    <span className="mr-2" aria-hidden="true">💬</span>
                     카카오톡 / 메신저 공유
                   </Button>
-                  <Button
-                    onClick={() => shareToSocial('twitter')}
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3"
-                  >
-                    <Twitter className="h-5 w-5 mr-2" />
+                  <Button onClick={() => shareToSocial('twitter')} className="w-full bg-blue-700 py-3 text-white hover:bg-blue-800">
+                    <Twitter className="mr-2 h-5 w-5" aria-hidden="true" />
                     트위터에 공유
                   </Button>
-                  <Button 
-                    onClick={() => shareToSocial('facebook')}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
-                  >
-                    <Facebook className="h-5 w-5 mr-2" />
+                  <Button onClick={() => shareToSocial('facebook')} className="w-full bg-blue-800 py-3 text-white hover:bg-blue-900">
+                    <Facebook className="mr-2 h-5 w-5" aria-hidden="true" />
                     페이스북에 공유
                   </Button>
-                  <Button 
-                    onClick={() => shareToSocial('instagram')}
-                    className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-3"
-                  >
-                    <Instagram className="h-5 w-5 mr-2" />
-                    인스타그램에 공유
+                  <Button onClick={() => shareToSocial('instagram')} className="w-full bg-gradient-to-r from-pink-600 to-purple-700 py-3 text-white hover:from-pink-700 hover:to-purple-800">
+                    <Instagram className="mr-2 h-5 w-5" aria-hidden="true" />
+                    인스타그램용 문구 복사
                   </Button>
-                  <Button 
-                    onClick={copyToClipboard}
-                    className="w-full bg-gray-600 hover:bg-gray-700 text-white py-3"
-                  >
-                    {copied ? <CheckCircle className="h-5 w-5 mr-2" /> : <Copy className="h-5 w-5 mr-2" />}
+                  <Button onClick={copyToClipboard} className="w-full bg-gray-700 py-3 text-white hover:bg-gray-800">
+                    {copied ? <CheckCircle className="mr-2 h-5 w-5" aria-hidden="true" /> : <Copy className="mr-2 h-5 w-5" aria-hidden="true" />}
                     {copied ? '복사됨!' : '링크 복사'}
                   </Button>
                 </div>
                 <label className="mb-4 block text-sm text-gray-700">공유 링크
                   <input readOnly onFocus={(event) => event.currentTarget.select()} value={typeof window === 'undefined' ? '' : shareUrl()} className="mt-1 w-full rounded border border-gray-300 p-2 text-xs" />
                 </label>
-                
-                <Button 
-                  onClick={() => setShowShareModal(false)}
-                  variant="outline" 
-                  className="w-full"
-                >
+
+                <Button onClick={() => setShowShareModal(false)} variant="outline" className="w-full">
                   닫기
                 </Button>
               </CardContent>
@@ -454,131 +365,91 @@ function ResultContent() {
           </DialogContent>
         </Dialog>
 
-        {/* 추천 콘텐츠 섹션 */}
-        <Card className="bg-gradient-to-r from-blue-50 via-white to-green-50 border-2 border-blue-200 shadow-lg mb-8">
-          <CardContent className="p-8">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">🎯 함께 살펴볼 도구와 콘텐츠</h3>
-              <p className="text-lg text-gray-600">모든 방문자에게 제공하는 일반 자료입니다.</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <Link href="/utility/string-tension">
-                <Card className="h-full bg-white border-2 border-gray-200 hover:border-blue-500 transition-all duration-300 hover:shadow-lg group cursor-pointer">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                      <Settings className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">스트링 텐션</h4>
-                    <p className="text-sm text-gray-600">최적의 텐션 찾기</p>
-                  </CardContent>
-                </Card>
-              </Link>
-              
-              <Link href="/utility/injury-risk">
-                <Card className="h-full bg-white border-2 border-gray-200 hover:border-red-500 transition-all duration-300 hover:shadow-lg group cursor-pointer">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-200 transition-colors">
-                      <Shield className="h-8 w-8 text-red-600" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">부상 예방</h4>
-                    <p className="text-sm text-gray-600">안전한 플레이 체크</p>
-                  </CardContent>
-                </Card>
-              </Link>
-              
-              <Link href="/utility/play-style-test">
-                <Card className="h-full bg-white border-2 border-gray-200 hover:border-purple-500 transition-all duration-300 hover:shadow-lg group cursor-pointer">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-                      <Zap className="h-8 w-8 text-purple-600" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">플레이 스타일</h4>
-                    <p className="text-sm text-gray-600">7가지 스타일 진단</p>
-                  </CardContent>
-                </Card>
-              </Link>
-              
-              <Link href="/blog">
-                <Card className="h-full bg-white border-2 border-gray-200 hover:border-green-500 transition-all duration-300 hover:shadow-lg group cursor-pointer">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
-                      <BookOpen className="h-8 w-8 text-green-600" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">테니스 가이드</h4>
-                    <p className="text-sm text-gray-600">전문가 팁 & 조언</p>
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* 바이럴 요소 - 챌린지 섹션 */}
-        <Card className="bg-gradient-to-r from-pink-50 via-purple-50 to-indigo-50 border-2 border-pink-200 shadow-lg mb-8">
+        {/* 4. 공유 / 기록 */}
+        <Card className="mb-8 border-2 border-pink-200 bg-gradient-to-r from-pink-50 via-purple-50 to-indigo-50 shadow-lg">
           <CardContent className="p-8 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">🏆 TennisFriends 챌린지</h3>
-              <p className="text-lg text-gray-600 mb-8">
-                친구들과 함께 테니스 실력을 비교하고 성장해보세요!
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="text-4xl mb-4">👥</div>
-                  <h4 className="font-bold text-gray-900 mb-2">친구 초대</h4>
-                  <p className="text-sm text-gray-600">친구들과 함께 테스트하고 결과를 비교해보세요</p>
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="text-4xl mb-4">📈</div>
-                  <h4 className="font-bold text-gray-900 mb-2">실력 추적</h4>
-                  <p className="text-sm text-gray-600">정기적으로 테스트하여 실력 향상을 확인하세요</p>
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="text-4xl mb-4">🎯</div>
-                  <h4 className="font-bold text-gray-900 mb-2">목표 설정</h4>
-                  <p className="text-sm text-gray-600">다음 레벨을 목표로 체계적으로 연습하세요</p>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  onClick={() => setShowShareModal(true)}
-                  className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Share2 className="h-5 w-5 mr-2" />
-                  친구들에게 공유하기
-                </Button>
-                <Button asChild
-                    variant="outline"
-                    className="text-gray-900 bg-white border-2 border-gray-300 hover:border-purple-500 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
-                  ><Link href="/utility/ntrp-test/stats">
-                    <BarChart3 className="h-5 w-5 mr-2" />
-                    전체 통계 보기
-                  </Link></Button>
-              </div>
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">친구와 비교하고 기록 남기기</h3>
+            <p className="mb-6 text-gray-700">
+              친구에게 결과 링크를 보내 함께 해 보거나, 이 브라우저에 저장된 지난 결과를 확인할 수 있습니다. 기록은 다른 기기와 동기화되지 않습니다.
+            </p>
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Button
+                onClick={openShareModal}
+                className="bg-purple-700 px-8 py-4 text-lg font-bold text-white hover:bg-purple-800"
+              >
+                <Share2 className="mr-2 h-5 w-5" aria-hidden="true" />
+                친구에게 공유하기
+              </Button>
+              <Button asChild
+                variant="outline"
+                className="border-2 border-gray-300 bg-white px-8 py-4 text-lg font-bold text-gray-900 hover:border-purple-600"
+              ><Link href="/utility/ntrp-test/stats">
+                <BarChart3 className="mr-2 h-5 w-5" aria-hidden="true" />
+                이 브라우저의 기록 보기
+              </Link></Button>
             </div>
           </CardContent>
         </Card>
 
-        {/* 최종 CTA */}
-        <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl">
-          <CardContent className="p-12 text-center">
-            <h3 className="text-4xl font-bold mb-4">🎾 테니스 이야기를 이어가세요</h3>
-            <p className="text-xl mb-8 opacity-90">결과를 참고해 연습한 뒤 카페에서 다른 동호인의 경험도 살펴보세요.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <NaverCafeLink ctaLocation="ntrp_result" linkText="네이버 카페 방문하기" className="inline-flex items-center justify-center bg-white px-8 py-4 text-lg font-bold text-blue-700 hover:bg-gray-100">네이버 카페 방문하기</NaverCafeLink>
-              <Button asChild className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/utility">
-                  <ArrowRight className="h-5 w-5 mr-2" />
-                  모든 유틸리티 보기
-                </Link></Button>
-              <Button asChild variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"><Link href="/blog">
-                  <BookOpen className="h-5 w-5 mr-2" />
-                  테니스 가이드 읽기
-                </Link></Button>
+        {/* 5. 상세 자료 */}
+        <Card className="mb-8 border-2 border-blue-200 bg-gradient-to-r from-blue-50 via-white to-green-50 shadow-lg">
+          <CardContent className="p-8">
+            <div className="mb-8 text-center">
+              <h3 className="mb-4 text-2xl font-bold text-gray-900">🎯 함께 살펴볼 도구와 콘텐츠</h3>
+              <p className="text-gray-700">모든 방문자에게 제공하는 일반 자료입니다.</p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <Link href="/utility/string-tension">
+                <Card className="group h-full border-2 border-gray-200 bg-white transition-colors hover:border-blue-600">
+                  <CardContent className="p-6 text-center">
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100"><Settings className="h-8 w-8 text-blue-700" aria-hidden="true" /></div>
+                    <h4 className="mb-2 font-bold text-gray-900">스트링 텐션</h4>
+                    <p className="text-sm text-gray-700">입력 조건별 참고 텐션 범위</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/utility/injury-risk">
+                <Card className="group h-full border-2 border-gray-200 bg-white transition-colors hover:border-red-600">
+                  <CardContent className="p-6 text-center">
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100"><Shield className="h-8 w-8 text-red-700" aria-hidden="true" /></div>
+                    <h4 className="mb-2 font-bold text-gray-900">부상 예방</h4>
+                    <p className="text-sm text-gray-700">운동 습관 참고 점검</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/utility/play-style-test">
+                <Card className="group h-full border-2 border-gray-200 bg-white transition-colors hover:border-purple-600">
+                  <CardContent className="p-6 text-center">
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100"><Zap className="h-8 w-8 text-purple-700" aria-hidden="true" /></div>
+                    <h4 className="mb-2 font-bold text-gray-900">플레이 스타일</h4>
+                    <p className="text-sm text-gray-700">7가지 스타일 자가점검</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/blog">
+                <Card className="group h-full border-2 border-gray-200 bg-white transition-colors hover:border-green-600">
+                  <CardContent className="p-6 text-center">
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100"><BookOpen className="h-8 w-8 text-green-700" aria-hidden="true" /></div>
+                    <h4 className="mb-2 font-bold text-gray-900">테니스 가이드</h4>
+                    <p className="text-sm text-gray-700">연습·장비·규칙 글</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Button asChild variant="outline" className="border-2 px-6 py-3 font-bold"><Link href="/utility">
+                <ArrowRight className="mr-2 h-5 w-5" aria-hidden="true" />
+                모든 유틸리티 보기
+              </Link></Button>
             </div>
           </CardContent>
         </Card>
+
+        <p className="text-center text-xs text-gray-600">
+          <Badge variant="outline" className="mr-2">안내</Badge>
+          이 결과는 스스로 답한 15문항을 합산한 참고 정보입니다. 공식 NTRP 등급은 USTA 등 공인 기관의 평가나 대회 기록으로 확인하세요.
+        </p>
       </div>
     </div>
   );
@@ -586,7 +457,7 @@ function ResultContent() {
 
 export default function ResultPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="p-8 text-center" role="status">결과를 불러오는 중…</div>}>
       <ResultContent />
     </Suspense>
   );

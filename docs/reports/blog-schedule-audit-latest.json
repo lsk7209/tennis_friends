@@ -1,14 +1,15 @@
 {
   "status": "ok",
-  "generatedAt": "2026-09-15T07:01:43.449Z",
+  "generatedAt": "2026-09-30T00:44:17.575Z",
   "defaultExpectedIntervalHours": 5,
   "intervalOverrides": {
-    "src/data/blog-posts-reviewed-september-2026.js": 12
+    "src/data/blog-posts-reviewed-september-2026.js": 12,
+    "src/data/blog-posts-october-2026.js": 24
   },
-  "files": 16,
-  "rawPosts": 1262,
-  "effectivePosts": 756,
-  "scheduledPosts": 532,
+  "files": 18,
+  "rawPosts": 1295,
+  "effectivePosts": 789,
+  "scheduledPosts": 565,
   "fileSummaries": [
     {
       "file": "src/data/blog-posts.js",
@@ -29,6 +30,28 @@
         12
       ],
       "expectedIntervalHours": 12
+    },
+    {
+      "file": "src/data/blog-posts-beginner-series-2026.js",
+      "posts": 3,
+      "scheduled": 3,
+      "firstScheduledAt": "2026-09-29T09:00:00+09:00",
+      "lastScheduledAt": "2026-09-29T19:00:00+09:00",
+      "intervalHours": [
+        5
+      ],
+      "expectedIntervalHours": 5
+    },
+    {
+      "file": "src/data/blog-posts-october-2026.js",
+      "posts": 30,
+      "scheduled": 30,
+      "firstScheduledAt": "2026-10-01T09:00:00+09:00",
+      "lastScheduledAt": "2026-10-30T09:00:00+09:00",
+      "intervalHours": [
+        24
+      ],
+      "expectedIntervalHours": 24
     },
     {
       "file": "src/data/blog-posts-aw-300.js",

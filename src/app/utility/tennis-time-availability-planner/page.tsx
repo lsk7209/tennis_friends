@@ -50,7 +50,7 @@ const checklist = [
 
 export default function TennisTimeAvailabilityPlannerPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
       <section className="rounded-3xl border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-cyan-50 p-8 shadow-sm">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-700">Planning Utility</p>
         <h1 className="mt-3 text-3xl font-bold text-gray-900">테니스 시간 배분 플래너</h1>
@@ -109,6 +109,6 @@ export default function TennisTimeAvailabilityPlannerPage() {
           </ul>
         </aside>
       </section>
-    </main>
+    </div>
   );
 }

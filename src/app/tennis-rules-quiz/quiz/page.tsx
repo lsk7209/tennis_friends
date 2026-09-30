@@ -113,17 +113,17 @@ export default function TennisRulesQuiz() {
 
   if (!currentQuestion) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-white px-4">
+      <div className="flex min-h-screen items-center justify-center bg-white px-4">
         <div className="text-center">
           <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-emerald-600" />
           <p className="text-gray-600">퀴즈 문항을 준비하고 있습니다.</p>
         </div>
-      </main>
+      </div>
     );
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       <section className="border-b border-gray-100 bg-gray-50 px-4 py-5">
         <div className="mx-auto max-w-4xl">
           <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -245,6 +245,6 @@ export default function TennisRulesQuiz() {
           </Card>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

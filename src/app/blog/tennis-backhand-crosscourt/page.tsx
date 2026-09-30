@@ -72,7 +72,7 @@ export default function Page() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
+    <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-50">
       <BreadcrumbSchema
         items={[
           { name: "TennisFriends", item: siteUrl },
@@ -260,6 +260,6 @@ export default function Page() {
           </Link>
         </div>
       </article>
-    </main>
+    </div>
   );
 }

@@ -147,7 +147,7 @@ function TennisRulesQuizResultContent() {
   };
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-50 via-white to-sky-50 px-4 py-10">
         <div className="mx-auto max-w-4xl">
           <Card
@@ -399,7 +399,7 @@ function TennisRulesQuizResultContent() {
           },
         ]}
       />
-    </main>
+    </div>
   );
 }
 

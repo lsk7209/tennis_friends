@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { trackPageView } from "@/lib/analytics";
+import { flushAnalyticsQueue, trackPageView } from "@/lib/analytics";
 
 /**
  * GA4 공식 gtag.js 로더 + SPA 라우트 전환 시 페이지뷰 자동 전송.
@@ -23,6 +23,8 @@ export default function GAProvider({ measurementId = "" }: GAProviderProps) {
     if (!isReady || !measurementId || !pathname) return;
     if (pathname.startsWith("/admin")) return;
     trackPageView(pathname, measurementId);
+    // Events fired before gtag.js was ready follow the page_view they belong to.
+    flushAnalyticsQueue();
   }, [isReady, measurementId, pathname]);
 
   // 환경변수 없거나 관리자 페이지면 스크립트 자체를 로드하지 않음

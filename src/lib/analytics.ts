@@ -1,3 +1,5 @@
+import { isExternalEffectsActiveInDocument } from "@/lib/external-effects";
+
 /**
  * GA4 (Google Analytics 4) 이벤트 트래킹 유틸리티
  *
@@ -71,21 +73,68 @@ export function sanitizeAnalyticsEvent(
 }
 
 /**
- * GA4 커스텀 이벤트 전송
- * @param eventName - snake_case 권장 (예: "tool_used", "cta_clicked")
- * @param params - 이벤트 파라미터 (최대 25개, 값 100자 이내 권장)
+ * Result of a local dispatch attempt. "sent" means the event was handed to
+ * gtag in this browser — it does not prove that GA received or processed it.
  */
-export function trackEvent(eventName: string, params: GtagParams = {}): void {
-  if (!isGAEnabled()) return;
-  const sanitizedParams = sanitizeAnalyticsEvent(eventName, params);
-  if (!sanitizedParams) return;
+export type TrackEventResult = "sent" | "queued" | "dropped";
+
+// Events fired before gtag.js is ready (e.g. the first NTRP answer or a fast
+// result page) would otherwise be silently lost. The queue lives in memory only,
+// accepts events only when the server enabled production external effects,
+// is bounded in size and age, never retries, and is never persisted.
+export const ANALYTICS_QUEUE_MAX_EVENTS = 20;
+export const ANALYTICS_QUEUE_MAX_AGE_MS = 30_000;
+type QueuedEvent = { eventName: string; params: GtagParams; queuedAt: number; key: string };
+const analyticsQueue: QueuedEvent[] = [];
+
+function isAnalyticsQueueAllowed(): boolean {
+  return isExternalEffectsActiveInDocument();
+}
+
+function dispatch(eventName: string, params: GtagParams): TrackEventResult {
   try {
-    window.gtag("event", eventName, sanitizedParams);
+    window.gtag("event", eventName, params);
+    return "sent";
   } catch (e) {
     if (process.env.NODE_ENV === "development") {
       console.warn("[analytics] trackEvent failed", eventName, e);
     }
+    return "dropped";
   }
+}
+
+function enqueue(eventName: string, params: GtagParams, now: number): TrackEventResult {
+  if (!isAnalyticsQueueAllowed()) return "dropped";
+  const key = `${eventName}:${JSON.stringify(params)}`;
+  if (analyticsQueue.some((item) => item.key === key)) return "queued";
+  if (analyticsQueue.length >= ANALYTICS_QUEUE_MAX_EVENTS) return "dropped";
+  analyticsQueue.push({ eventName, params, queuedAt: now, key });
+  return "queued";
+}
+
+/** Sends queued events once gtag is ready; expired events are discarded. Returns the sent count. */
+export function flushAnalyticsQueue(now: number = Date.now()): number {
+  if (!isGAEnabled()) return 0;
+  const pending = analyticsQueue.splice(0, analyticsQueue.length);
+  return pending
+    .filter((item) => now - item.queuedAt <= ANALYTICS_QUEUE_MAX_AGE_MS)
+    .filter((item) => dispatch(item.eventName, item.params) === "sent").length;
+}
+
+export function getQueuedAnalyticsEventCount(): number {
+  return analyticsQueue.length;
+}
+
+/**
+ * GA4 커스텀 이벤트 전송
+ * @param eventName - snake_case 권장 (예: "tool_used", "cta_clicked")
+ * @param params - 이벤트 파라미터 (최대 25개, 값 100자 이내 권장)
+ */
+export function trackEvent(eventName: string, params: GtagParams = {}): TrackEventResult {
+  const sanitizedParams = sanitizeAnalyticsEvent(eventName, params);
+  if (!sanitizedParams) return "dropped";
+  if (!isGAEnabled()) return enqueue(eventName, sanitizedParams, Date.now());
+  return dispatch(eventName, sanitizedParams);
 }
 
 /**

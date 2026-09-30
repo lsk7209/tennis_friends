@@ -76,7 +76,7 @@ const content = {
 
 export default function Page() {
   return (
-    <main className="mx-auto w-full max-w-4xl px-4 py-12">
+    <div className="mx-auto w-full max-w-4xl px-4 py-12">
       <article className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Conditioning</p>
         <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">추운 날 경기 운영 가이드</h1>
@@ -153,6 +153,6 @@ export default function Page() {
           </div>
         </div>
       </article>
-    </main>
+    </div>
   );
 }

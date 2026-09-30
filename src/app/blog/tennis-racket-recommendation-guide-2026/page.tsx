@@ -70,7 +70,6 @@ export default function TennisRacketRecommendationGuide2026Page() {
             date="2026-01-25"
             slug="tennis-racket-recommendation-guide-2026"
             author="TennisFriends"
-            image="/images/blog/tennis-racket-recommendation-guide-2026.png"
         >
             <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950 dark:to-red-950 p-6 rounded-lg mb-8">
                 <div className="flex items-center gap-2 mb-3">

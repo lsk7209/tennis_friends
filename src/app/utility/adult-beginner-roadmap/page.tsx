@@ -34,7 +34,7 @@ const rules = [
 
 export default function AdultBeginnerRoadmapPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
       <section className="rounded-3xl border border-lime-100 bg-gradient-to-br from-lime-50 via-white to-emerald-50 p-8 shadow-sm">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-lime-700">Beginner Utility</p>
         <h1 className="mt-3 text-3xl font-bold text-gray-900">성인 입문 로드맵</h1>
@@ -75,6 +75,6 @@ export default function AdultBeginnerRoadmapPage() {
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 }

@@ -93,7 +93,7 @@ export default function TennisRulesQuizIntro() {
         about="테니스 경기 규칙 학습"
       />
 
-      <main className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white">
         <section
           className="border-b border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-sky-50 px-4 py-12 sm:py-16"
           aria-label="테니스 규칙 퀴즈 소개"
@@ -246,7 +246,7 @@ export default function TennisRulesQuizIntro() {
             <FAQSection items={faqItems} id="quiz-faq" title="자주 묻는 질문" />
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

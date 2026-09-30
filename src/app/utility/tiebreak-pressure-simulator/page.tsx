@@ -220,7 +220,7 @@ export default function TiebreakPressureSimulatorPage() {
   /* ---------------------------------------------------------------- */
   if (phase === "intro") {
     return (
-      <main className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-12">
+      <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-12">
         <section className="rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-50 p-8 text-center shadow-sm">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-600">
             Tiebreak Simulator
@@ -273,7 +273,7 @@ export default function TiebreakPressureSimulatorPage() {
             </svg>
           </button>
         </section>
-      </main>
+      </div>
     );
   }
 
@@ -283,7 +283,7 @@ export default function TiebreakPressureSimulatorPage() {
   if (phase === "result") {
     const grade = getGrade(total);
     return (
-      <main className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-12">
+      <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-12">
         {/* progress bar full */}
         <div className="h-2 w-full overflow-hidden rounded-full bg-violet-100">
           <div className="h-full rounded-full bg-gradient-to-r from-violet-500 to-purple-500 transition-all duration-500"
@@ -371,7 +371,7 @@ export default function TiebreakPressureSimulatorPage() {
             </Link>
           </div>
         </section>
-      </main>
+      </div>
     );
   }
 
@@ -381,7 +381,7 @@ export default function TiebreakPressureSimulatorPage() {
   const scenario = scenarios[current];
 
   return (
-    <main className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-12">
       {/* progress bar */}
       <div className="h-2 w-full overflow-hidden rounded-full bg-violet-100">
         <div
@@ -506,6 +506,6 @@ export default function TiebreakPressureSimulatorPage() {
           </div>
         )}
       </section>
-    </main>
+    </div>
   );
 }

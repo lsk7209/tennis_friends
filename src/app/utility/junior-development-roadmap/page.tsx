@@ -38,7 +38,7 @@ const principles = [
 
 export default function JuniorDevelopmentRoadmapPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
       <section className="rounded-3xl border border-violet-100 bg-gradient-to-br from-violet-50 via-white to-sky-50 p-8 shadow-sm">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-700">Training Utility</p>
         <h1 className="mt-3 text-3xl font-bold text-gray-900">주니어 성장 로드맵</h1>
@@ -79,6 +79,6 @@ export default function JuniorDevelopmentRoadmapPage() {
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 }

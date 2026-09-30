@@ -35,7 +35,7 @@ const questions = [
 
 export default function ShoeWearTrackerPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
       <section className="rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50 via-white to-amber-50 p-8 shadow-sm">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-700">Equipment Utility</p>
         <h1 className="mt-3 text-3xl font-bold text-gray-900">테니스화 마모 체크 가이드</h1>
@@ -79,6 +79,6 @@ export default function ShoeWearTrackerPage() {
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 }

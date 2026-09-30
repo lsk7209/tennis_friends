@@ -107,7 +107,7 @@ export default function TournamentScheduleClient() {
   }, [location, level]);
 
   return (
-    <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-12">
       <section className="rounded-3xl border border-indigo-100 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 p-8 shadow-sm">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-700">Schedule Utility</p>
         <h1 className="mt-3 text-3xl font-bold text-gray-900">테니스 대회 일정 보드</h1>
@@ -208,6 +208,6 @@ export default function TournamentScheduleClient() {
           </article>
         ) : null}
       </section>
-    </main>
+    </div>
   );
 }

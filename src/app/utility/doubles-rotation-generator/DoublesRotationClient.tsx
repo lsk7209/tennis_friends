@@ -106,7 +106,7 @@ export default function DoublesRotationClient() {
 
   return (
     <>
-      <main className="mx-auto max-w-6xl px-4 py-12 text-slate-900 dark:text-slate-100">
+      <div className="mx-auto max-w-6xl px-4 py-12 text-slate-900 dark:text-slate-100">
         <header className="mb-8 max-w-3xl">
           <Badge className="bg-emerald-700 text-white">동호회 모임 도구</Badge>
           <h1 className="mt-3 text-3xl font-bold md:text-4xl">복식 로테이션·대진표 생성기</h1>
@@ -205,7 +205,7 @@ export default function DoublesRotationClient() {
             </NaverCafeLink>
           </Button>
         </section>
-      </main>
+      </div>
       <UtilityResultLinks links={NEXT_LINKS} source="doubles-rotation" ctaLocation="doubles_rotation_next" />
     </>
   );

@@ -1,5 +1,11 @@
 # Handoff
 
+## Current handoff — Codex improvement spec 2026-09-30 (local, not deployed)
+
+- Timestamp: 2026-09-30 KST. Branch `improve/codex-spec-20260930`, baseline `38d47d9`, working tree uncommitted.
+- State: TF-D01–D16 local work done; see PROJECT_STATE.md for the change summary. `npm run verify` and a local Chrome CDP flow (external requests blocked) passed.
+- Approval needed: commit/push/PR/deploy; GA4 Enhanced Measurement history page_view, site search, data redaction review; privacy policy effective date (still 2026-08-27 after copy change); any new NTRP scoring model.
+- Rollback: discard the branch or revert files; stored NTRP records written by this branch add fields that the previous reader ignores (it only checked id/createdAt/score/level/character), so old code still reads them.
 ## Current handoff — docs/11 complete and production verified
 
 - Timestamp: 2026-09-15 KST

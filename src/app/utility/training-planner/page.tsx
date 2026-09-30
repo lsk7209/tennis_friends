@@ -15,7 +15,7 @@ const steps = [
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <section className="grid gap-6 lg:grid-cols-[1fr_1fr]">
         <Card className="border-violet-100 bg-gradient-to-br from-violet-50 via-white to-fuchsia-50">
           <CardHeader>
@@ -69,6 +69,6 @@ export default function Page() {
           </CardContent>
         </Card>
       </section>
-    </main>
+    </div>
   );
 }

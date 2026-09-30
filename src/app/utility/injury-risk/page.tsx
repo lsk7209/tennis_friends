@@ -36,7 +36,7 @@ export default function InjuryRiskPage() {
         offers={{ price: '0', priceCurrency: 'KRW' }}
       />
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,_#fff7ed_0%,_#ffffff_34%,_#f8fafc_100%)]">
+      <div className="min-h-screen bg-[linear-gradient(180deg,_#fff7ed_0%,_#ffffff_34%,_#f8fafc_100%)]">
         {/* 의료 면책 고지 */}
         <div className="mx-auto max-w-6xl px-4 pt-6 sm:px-6 lg:px-8">
           <div className="rounded-xl border-l-4 border-red-500 bg-red-50 p-4">
@@ -110,7 +110,7 @@ export default function InjuryRiskPage() {
             </section>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

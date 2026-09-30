@@ -35,9 +35,8 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'inside-out-logic', text: '2. 인사이드 아웃 포핸드: 역방향의 미학', depth: 2 },
   { id: 'three-phase-strategy', text: '3. 경기 운영 3단계: Neutral → Offense → Finish', depth: 2 },
   { id: 'big-point-psychology', text: '4. 빅 포인트 심리학: 브레이크 포인트 극복법', depth: 2 },
-  { id: 'momentum-shift', text: '5. 모멘텀 관리: 흐름을 바꾸는 체인지 오버 활용', depth: 2 },
-  { id: 'adaptive-tactics', text: '6. 상황별 맞춤 전술: 카운터 펀처 vs 어그레시브 베이스라이너', depth: 2 },
-  { id: 'conclusion', text: '7. 결론: 전략이 스윙을 압도한다', depth: 2 },
+  { id: 'adaptive-tactics', text: '5. 상황별 맞춤 전술: 카운터 펀처 vs 어그레시브 베이스라이너', depth: 2 },
+  { id: 'conclusion', text: '6. 결론: 전략이 스윙을 압도한다', depth: 2 },
 ];
 
 const faqs = [

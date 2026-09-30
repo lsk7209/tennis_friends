@@ -47,7 +47,7 @@ export default function MatchdayPackingChecklistClient() {
   };
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <section className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <Card>
           <CardHeader>
@@ -126,6 +126,6 @@ export default function MatchdayPackingChecklistClient() {
           </CardContent>
         </Card>
       </section>
-    </main>
+    </div>
   );
 }

@@ -69,13 +69,13 @@ const reviewSchema = {
   operatingSystem: "Web",
   offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
   description:
-    "테니스 실력 테스트, 스트링 텐션 계산기, 부상 리스크 예측 등 테니스 실력 향상을 위한 무료 도구 모음",
+    "NTRP 비공식 자가점검, 스트링 텐션 참고 계산기, 부상 예방 참고 점검 등 테니스 연습을 돕는 무료 도구 모음",
   inLanguage: "ko",
   featureList: [
-    "NTRP 실력 테스트",
-    "스트링 텐션 계산기",
-    "부상 위험도 예측",
-    "플레이 스타일 진단",
+    "NTRP 비공식 자가점검",
+    "스트링 텐션 참고 계산기",
+    "부상 예방 참고 점검",
+    "플레이 스타일 자가점검",
     "장비 추천 시스템",
     "훈련 계획 수립",
     "경기 분석 도구",

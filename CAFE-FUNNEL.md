@@ -106,3 +106,7 @@ Establish a baseline before running copy variants. Change one major variable at 
 - No membership count, testimonial, ranking, exclusive benefit, urgency, or guaranteed outcome is claimed.
 - No pop-up, forced redirect, form, consent change, or external-account mutation is introduced.
 - Deployment and GA4 admin conversion marking remain separate actions.
+
+## NTRP result CTA (local 2026-09-30, not deployed)
+
+The result page has one dedicated `NaverCafeLink` (`cta_location=ntrp_result`), placed after the general practice directions and before share/records; the sitewide `CafeBanner` is unchanged. Compare only against a recorded deploy date, with the same window length and measurement version. With ~19 cafe-event users per 28 days, report click users only unless a matched denominator (users who saw the result) exists. Player pages were intentionally left unchanged so this is a single-variable change.

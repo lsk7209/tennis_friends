@@ -14,3 +14,18 @@ export function isProductionExternalEffectsEnabled(): boolean {
 export function isAdsConsentReady(): boolean {
   return isProductionExternalEffectsEnabled() && process.env.NEXT_PUBLIC_ADS_CONSENT_READY === "verified";
 }
+
+
+/**
+ * Client-side view of the server decision above. The root layout renders
+ * `data-external-effects` on <html>, because server-only variables such as
+ * VERCEL_ENV are not available in client bundles.
+ */
+export function isExternalEffectsActiveInDocument(): boolean {
+  try {
+    return typeof document !== "undefined" &&
+      document.documentElement?.dataset?.externalEffects === "production";
+  } catch {
+    return false;
+  }
+}

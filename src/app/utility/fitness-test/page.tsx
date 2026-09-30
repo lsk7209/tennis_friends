@@ -62,7 +62,7 @@ export default function Page() {
   }, [inputsValid, values]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <section className="grid gap-6 lg:grid-cols-[1fr_1fr]">
         <Card className="border-red-100 bg-gradient-to-br from-red-50 via-white to-orange-50">
           <CardHeader>
@@ -148,6 +148,6 @@ export default function Page() {
           </Card>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

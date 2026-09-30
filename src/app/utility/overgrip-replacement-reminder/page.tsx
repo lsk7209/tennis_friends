@@ -38,7 +38,7 @@ const signs = [
 
 export default function OvergripReplacementReminderPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
       <section className="rounded-3xl border border-green-100 bg-gradient-to-br from-green-50 via-white to-emerald-50 p-8 shadow-sm">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-green-700">Equipment Utility</p>
         <h1 className="mt-3 text-3xl font-bold text-gray-900">오버그립 교체 알림 가이드</h1>
@@ -83,6 +83,6 @@ export default function OvergripReplacementReminderPage() {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

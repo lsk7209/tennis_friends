@@ -36,7 +36,7 @@ export default function HydrationPlannerClient() {
   }, [durationMinutes, intensity, sweatRate, temperatureC, weightKg]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <Card className="border-emerald-100 bg-gradient-to-br from-emerald-50 to-cyan-50">
           <CardHeader>
@@ -150,6 +150,6 @@ export default function HydrationPlannerClient() {
           </Card>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

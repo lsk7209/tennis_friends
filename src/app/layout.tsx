@@ -175,6 +175,7 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
+      data-external-effects={externalEffectsEnabled ? "production" : "off"}
       className={`${inter.variable} ${archivoBlack.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
       <head>

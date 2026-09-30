@@ -1,3 +1,6 @@
+import { legacySumV2Level } from "./ntrp-results";
+
+
 export const questions = [
   { 
     id: 1, 
@@ -166,14 +169,23 @@ export const questions = [
   }
 ];
 
+// Legacy 15-question sum model (legacy-sum-v2): each answer contributes its option
+// number (1–5), including the style/background questions 13–15. Level bands live
+// in ntrp-results.ts so storage validation and display cannot drift apart.
+// This is an unofficial self-check, not a USTA NTRP rating.
+const LEVEL_DESCRIPTIONS: Record<string, string> = {
+  "1.5": "스트로크 기초를 익히는 단계로 답한 경우의 참고 구간입니다.",
+  "2.5": "기본 랠리는 이어가지만 안정성과 실전 경험을 쌓는 단계로 답한 경우의 참고 구간입니다.",
+  "3.0": "중간 속도 스트로크가 비교적 일정하고 단·복식 포지션을 익혀 가는 단계로 답한 경우의 참고 구간입니다.",
+  "3.5": "방향 조절과 상황 대응이 늘고 네트 플레이를 시도하는 단계로 답한 경우의 참고 구간입니다.",
+  "4.0": "샷 선택과 경기 운영을 의식적으로 조절한다고 답한 경우의 참고 구간입니다.",
+  "4.5": "파워·스핀을 활용해 경기를 주도하는 편이라고 답한 경우의 참고 구간입니다.",
+  "5.0+": "이 자가점검의 최상위 구간입니다. 공식 등급 확인은 공인 평가나 대회 기록으로 하세요.",
+};
+
 export function getNTRPLevel(score: number) {
-  if (score <= 24) return { level: "1.5", desc: "기초적인 스트로크만 가능하며, 경기 경험이 거의 없음." };
-  if (score <= 34) return { level: "2.5", desc: "기본 랠리는 가능하나 기술 완성도와 실전 감각은 낮음." };
-  if (score <= 44) return { level: "3.0", desc: "중간 속도 스트로크에 일관성이 생기며, 단/복식 포지션 이해 시작." };
-  if (score <= 54) return { level: "3.5", desc: "방향 조절과 상황 대응 능력이 향상, 네트 플레이 도전 가능." };
-  if (score <= 64) return { level: "4.0", desc: "전술적 경기 운영과 다양한 샷 전략이 가능." };
-  if (score <= 70) return { level: "4.5", desc: "게임 주도력, 파워/스핀 활용 능력 우수." };
-  return { level: "5.0+", desc: "모든 기술과 전략을 완성한 고급 수준." };
+  const level = legacySumV2Level(score) ?? "1.5";
+  return { level, desc: LEVEL_DESCRIPTIONS[level] };
 }
 
 export const charMap: Record<string, string> = {

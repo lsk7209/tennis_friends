@@ -1,5 +1,15 @@
 # PROJECT_STATE
 
+## Codex Improvement Spec 2026-09-30 — Local Only, Not Deployed
+
+- Branch `improve/codex-spec-20260930` from baseline `38d47d9`. No commit, push, PR, deploy, GA4/GSC/AdSense change, or search submission.
+- NTRP history (`src/lib/ntrp-results.ts`): statuses `ready/empty/partial/corrupt/unavailable`; SecurityError on read is `unavailable`, not corrupt; records carry `questionnaire/scoring/provenance`; unversioned legacy records are `unknown-legacy` and never re-graded or aggregated; new writes require an integer 15–75 score whose level matches `legacySumV2Level`. Corrupt/partial history blocks writes; the stats page offers raw backup + confirmed reset of NTRP-owned keys only.
+- Scoring model unchanged (legacy-sum-v2). Limits disclosed on intro/result; a revision proposal is in `docs/ntrp-assessment-model-review.md` (inactive, unapproved).
+- Test page: explicit 다음/결과 보기, radio fieldset, no 600ms/1500ms waits, double-submit guard. Result page: provenance label (`resolveNtrpResultOrigin`), save state, single contextual cafe CTA after practice directions, unofficial share text.
+- Visitor log (`visitorData`) is written only when `<html data-external-effects="production">`; stores referrer origin only, no raw search term/UA/result payload. GA events fired before gtag is ready are held in a bounded in-memory queue (20 events, 30s, production only).
+- Home/JSON-LD/ticker copy no longer claims injury-risk prediction or "optimal" tension; utility verification is `behavior-tested` only with a registered audit.
+- Content: 10 static articles had TOC entries without targets (1 section written, 9 entries removed); 5 articles referenced missing hero images; 95 pages rendered nested `<main>`. New guards: `audit:toc-targets`, accessibility-contracts nested-main check.
+- GA4 auto-collection: source-only review in `docs/reports/ga4-auto-collection-review-2026-09-30.md`; Enhanced Measurement/redaction settings need admin confirmation.
 ## Full docs/11 Completion — Production Verified (2026-09-15)
 
 - Scope expanded from the completed TF-009 slice to the full TF-001–TF-040 package; TF-041/042 remain specification-defined optional later work.
