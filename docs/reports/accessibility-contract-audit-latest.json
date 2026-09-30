@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-09-15T07:01:27.491Z",
+  "generatedAt": "2026-09-30T00:43:57.533Z",
   "status": "PASS",
   "coverage": {
-    "tsxFiles": 590,
+    "tsxFiles": 598,
     "nestedInteractivePatterns": 0,
+    "nestedMainLandmarks": 0,
     "focusedErrorResultPages": 6,
     "chartTextFallbacks": 1
   },

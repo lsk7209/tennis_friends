@@ -24,7 +24,7 @@ const cards = [
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <BreadcrumbSchema items={[
         { name: '홈', item: getSiteUrl() },
         { name: '유틸리티', item: `${getSiteUrl()}/utility` },
@@ -84,6 +84,6 @@ export default function Page() {
           })}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

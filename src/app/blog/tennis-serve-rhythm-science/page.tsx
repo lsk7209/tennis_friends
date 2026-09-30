@@ -6,14 +6,14 @@ import { Badge } from '@/components/ui/badge';
 
 export const metadata = {
   title: '서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성 | 첫 서브 성공률 70% 만드는 방법',
-  description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
+  description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 함께 높이는 실전 루틴 정리.',
   keywords: ['테니스 서브', '토스', '체중이동', '회전', '리듬', '서브 타이밍', '플랫 서브', '슬라이스 서브', '킥 서브'],
   alternates: {
     canonical: 'https://tennisfrens.com/blog/tennis-serve-rhythm-science',
   },
   openGraph: {
     title: '서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성 | 첫 서브 성공률 70% 만드는 방법',
-    description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
+    description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 함께 높이는 실전 루틴 정리.',
     url: 'https://tennisfrens.com/blog/tennis-serve-rhythm-science',
     siteName: 'TennisFriends',
     locale: 'ko_KR',
@@ -22,7 +22,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '서브 리듬의 과학 — 토스·회전·체중이동으로 완성하는 파워와 안정성 | 첫 서브 성공률 70% 만드는 방법',
-    description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 동시에 높이는 실전 루틴과 지역별 조정법 완전 정리.',
+    description: '토스 높이, 회전축, 체중이동 타이밍으로 서브 파워와 안정성을 함께 높이는 실전 루틴 정리.',
   },
   robots: {
     index: false,
@@ -35,9 +35,8 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'pronation-science', text: '2. 내전(Pronation)의 과학: 채찍질의 마법', depth: 2 },
   { id: 'kinetic-chain-serve', text: '3. 서브의 4단계 운동 사슬: Load to Land', depth: 2 },
   { id: 'toss-accuracy', text: '4. 토스 정확도: 시계면(Clock Face) 조절법', depth: 2 },
-  { id: 'regional-serve-strategy', text: '5. 코트별/지역별 서브 적응 전략', depth: 2 },
-  { id: 'serve-ritual-pro', text: '6. 프로의 서브 리추얼(Ritual) 따라하기', depth: 2 },
-  { id: 'conclusion', text: '7. 결론: 서브는 기술이 아닌 박자다', depth: 2 },
+  { id: 'serve-ritual-pro', text: '5. 프로의 서브 리추얼(Ritual) 따라하기', depth: 2 },
+  { id: 'conclusion', text: '6. 결론: 서브는 기술이 아닌 박자다', depth: 2 },
 ];
 
 const faqs = [

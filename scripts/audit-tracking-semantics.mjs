@@ -36,12 +36,15 @@ Module._load = function (request, parent, isMain) {
     },
   };
   if (request === "@/lib/safe-storage") return originalLoad.call(this, path.join(root, "src/lib/safe-storage.ts"), parent, isMain);
+  if (request === "@/lib/external-effects") return originalLoad.call(this, path.join(root, "src/lib/external-effects.ts"), parent, isMain);
   return originalLoad.call(this, request, parent, isMain);
 };
 
 let tracking;
+let analytics;
 try {
   tracking = require(path.join(root, "src/components/Tracking.tsx"));
+  analytics = require(path.join(root, "src/lib/analytics.ts"));
 } finally {
   Module._load = originalLoad;
   Module._extensions[".tsx"] = originalTsx;
@@ -131,7 +134,6 @@ try {
   Date.now = originalNow;
 }
 
-const analytics = require(path.join(root, "src/lib/analytics.ts"));
 assert.equal(analytics.TRACKING_EVENTS.ASSESSMENT_STARTED, "assessment_started");
 assert.deepEqual(analytics.sanitizeAnalyticsEvent("assessment_started", {
   tool_slug: "ntrp-test", page_path: "/utility/ntrp-test/test",
@@ -154,5 +156,91 @@ assert.deepEqual(analytics.sanitizeAnalyticsEvent("test_completed", {
 }), {
   test_type: "ntrp-test", page_path: "/utility/ntrp-test/result", measurement_version: "v2",
 });
+
+// --- D06/D08: the optional visitor log is written only when the server enabled
+// production external effects, and never stores raw referrer/search/result data.
+{
+  const memory = new Map();
+  const workingStorage = {
+    getItem: (key) => memory.get(key) ?? null,
+    setItem: (key, value) => memory.set(key, String(value)),
+    removeItem: (key) => memory.delete(key),
+  };
+  const setDocument = (externalEffects) => {
+    globalThis.document = {
+      referrer: "https://www.google.com/search?q=someone%40example.com+tennis",
+      documentElement: { dataset: externalEffects ? { externalEffects } : {} },
+    };
+  };
+  globalThis.window = {
+    location: { pathname: "/utility/ntrp-test/result" },
+    innerWidth: 800,
+    localStorage: workingStorage,
+    sessionStorage: workingStorage,
+  };
+  const before = events.length;
+
+  setDocument(undefined);
+  assert.equal(tracking.isVisitorLogEnabled(), false);
+  tracking.trackTestCompletionOnce("ntrp-test", "local-run", { score: 45, q13: "올라운더" });
+  assert.equal(memory.has("visitorData"), false, "local/preview runs must not write the visitor log");
+  assert.equal(memory.has("test_completion_ntrp-test"), false, "local/preview runs must not bump popularity counters");
+  assert.equal(events.length, before + 1, "the GA attempt itself is still delegated to trackEvent (no-op without gtag)");
+
+  setDocument("off");
+  assert.equal(tracking.isVisitorLogEnabled(), false);
+
+  setDocument("production");
+  assert.equal(tracking.isVisitorLogEnabled(), true);
+  tracking.trackTestCompletionOnce("ntrp-test", "prod-run", { score: 45, q13: "올라운더" });
+  const stored = JSON.parse(memory.get("visitorData"));
+  assert.equal(stored.length, 1);
+  assert.equal(stored[0].referrer, "https://www.google.com", "only the referrer origin is kept");
+  assert.equal(stored[0].searchKeyword, undefined, "raw search terms are not stored");
+  assert.equal(stored[0].userAgent, "", "the raw user-agent string is not stored");
+  assert.equal(stored[0].testResult, undefined, "result payloads are not duplicated into the visitor log");
+  assert.equal(JSON.stringify(stored).includes("example.com"), false);
+  assert.equal(tracking.referrerOrigin("not a url"), "");
+}
+
+// --- D06: bounded in-memory queue for events fired before gtag.js is ready.
+{
+  const sent = [];
+  const setEffects = (value) => {
+    globalThis.document = { documentElement: { dataset: value ? { externalEffects: value } : {} } };
+  };
+  globalThis.window = { location: { origin: "https://tennisfrens.com", pathname: "/" } };
+  const started = { tool_slug: "ntrp-test", page_path: "/utility/ntrp-test/test", measurement_version: "v2" };
+
+  setEffects(undefined);
+  assert.equal(analytics.trackEvent("assessment_started", started), "dropped", "local/preview: no gtag, no queue");
+  assert.equal(analytics.getQueuedAnalyticsEventCount(), 0);
+
+  setEffects("production");
+  assert.equal(analytics.trackEvent("assessment_started", started), "queued");
+  assert.equal(analytics.trackEvent("assessment_started", started), "queued", "identical event is deduplicated");
+  assert.equal(analytics.getQueuedAnalyticsEventCount(), 1);
+  assert.equal(analytics.trackEvent("unknown_event", {}), "dropped", "non-allowlisted events are never queued");
+  assert.equal(analytics.flushAnalyticsQueue(), 0, "nothing is flushed while gtag is missing");
+  assert.equal(analytics.getQueuedAnalyticsEventCount(), 1);
+
+  window.gtag = (...args) => sent.push(args);
+  assert.equal(analytics.flushAnalyticsQueue(), 1, "late gtag receives the queued start event");
+  assert.deepEqual(sent[0], ["event", "assessment_started", started]);
+  assert.equal(analytics.getQueuedAnalyticsEventCount(), 0);
+  assert.equal(analytics.trackEvent("test_completed", { test_type: "ntrp-test" }), "sent");
+
+  delete window.gtag;
+  for (let index = 0; index < analytics.ANALYTICS_QUEUE_MAX_EVENTS + 5; index += 1) {
+    analytics.trackEvent("content_read_complete", { page_path: `/blog/p${index}`, read_seconds: 45 });
+  }
+  assert.equal(analytics.getQueuedAnalyticsEventCount(), analytics.ANALYTICS_QUEUE_MAX_EVENTS, "queue is bounded");
+  window.gtag = (...args) => sent.push(args);
+  const sentBefore = sent.length;
+  assert.equal(analytics.flushAnalyticsQueue(Date.now() + analytics.ANALYTICS_QUEUE_MAX_AGE_MS + 1), 0, "expired events are discarded, not replayed");
+  assert.equal(sent.length, sentBefore);
+  assert.equal(analytics.getQueuedAnalyticsEventCount(), 0);
+  delete window.gtag;
+}
 
 console.log("Tracking semantics audit passed.");

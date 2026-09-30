@@ -35,7 +35,7 @@ const sections = [
 
 export default function Page() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-12">
+    <div className="mx-auto w-full max-w-5xl px-4 py-12">
       <section className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-gray-900">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Equipment</p>
         <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">그립 사이즈 체커</h1>
@@ -67,6 +67,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

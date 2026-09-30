@@ -38,7 +38,7 @@ const cautions = [
 
 export default function PracticeWallDrillPlannerPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12">
       <section className="rounded-3xl border border-stone-100 bg-gradient-to-br from-stone-50 via-white to-lime-50 p-8 shadow-sm">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-stone-700">Training Utility</p>
         <h1 className="mt-3 text-3xl font-bold text-gray-900">벽치기 연습 플래너</h1>
@@ -79,6 +79,6 @@ export default function PracticeWallDrillPlannerPage() {
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 }

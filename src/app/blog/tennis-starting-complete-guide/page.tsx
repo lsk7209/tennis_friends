@@ -45,11 +45,11 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
 const faqs = [
     {
         q: '테니스 배우는데 총 비용이 얼마나 드나요?',
-        a: '초기 장비(라켓, 신발 등)에 약 30~50만 원, 월 레슨비(주 2회 20분 기준) 약 20~25만 원 정도가 듭니다. 골프보다는 저렴하고 헬스보다는 비싼 편입니다.'
+        a: '글 작성 당시 서울 기준 예시로는 초기 장비(라켓, 신발 등)에 약 40~55만 원, 월 레슨비(주 2회 20분)에 약 20~28만 원 정도입니다. 지역·시간대·레슨 인원에 따라 차이가 크므로 등록 전에 직접 확인하세요.'
     },
     {
         q: '운동 신경이 꽝인데 할 수 있을까요?',
-        a: '네, 가능합니다! 테니스는 감각도 중요하지만 "올바른 자세의 반복 숙달"이 핵심인 스포츠입니다. 꾸준히 레슨 받고 빈 스윙 연습을 하면 누구나 랠리가 가능합니다.'
+        a: '가능합니다. 테니스는 감각도 중요하지만 올바른 자세를 반복해 익히는 과정이 핵심입니다. 꾸준히 레슨을 받고 빈 스윙을 연습하면 대부분 랠리를 이어갈 수 있게 됩니다. 속도는 사람마다 다릅니다.'
     },
     {
         q: '라켓은 무조건 새 거 사야 하나요?',
@@ -57,7 +57,7 @@ const faqs = [
     },
     {
         q: '게임은 언제부터 가능한가요?',
-        a: '개인차가 크지만, 보통 레슨 3개월 차에 난타(랠리)가 되고, 6개월 정도 되면 서브를 넣고 게임 운영이 가능해집니다. 구력 1년까지는 "테린이"라고 불립니다.'
+        a: '개인차가 크고 레슨 횟수·연습량에 따라 다릅니다. 주 2회 정도 꾸준히 배우는 경우 몇 달 안에 랠리가 이어지고, 반년에서 1년 사이에 서브를 넣고 게임을 시작하는 사람이 많습니다.'
     }
 ];
 
@@ -72,7 +72,6 @@ export default function TennisStartingCompleteGuidePage() {
             date="2026-01-26"
             slug="tennis-starting-complete-guide"
             author="TennisFriends"
-            image="/images/blog/tennis-starting-complete-guide.png"
         >
             <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950 dark:to-teal-950 p-6 rounded-lg mb-8 border border-emerald-100 dark:border-emerald-900">
                 <div className="flex items-center gap-2 mb-3">
@@ -138,8 +137,11 @@ export default function TennisStartingCompleteGuidePage() {
             <section id="cost-analysis" className="mb-16">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <span className="bg-blue-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">2</span>
-                    현실적인 비용 분석 (서울 기준)
+                    현실적인 비용 분석 (서울 기준 예시)
                 </h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    아래 금액은 글 작성 당시(2026년 1월) 기준의 대략적인 예시입니다. 지역, 시간대, 레슨 횟수·인원, 시설비 포함 여부에 따라 크게 달라지므로 등록 전 해당 레슨장에 직접 확인하세요.
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Card className="bg-white dark:bg-gray-800 border-2 border-blue-100 dark:border-blue-900">
                         <CardContent className="p-6">
@@ -217,6 +219,45 @@ export default function TennisStartingCompleteGuidePage() {
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">주머니 있는 반바지(공 보관용), 두꺼운 스포츠 양말.</p>
                     </div>
                 </div>
+            </section>
+
+            <section id="finding-lessons" className="mb-16">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span className="bg-amber-500 text-white rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">4</span>
+                    좋은 레슨장과 코치님 찾는 법
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                    레슨장은 집이나 직장에서 꾸준히 다닐 수 있는 거리인지가 가장 먼저입니다. 그다음 아래 항목을 상담이나 체험 레슨에서 직접 확인해 보세요. 가격과 운영 방식은 지역·시간대·시설마다 다르므로 여러 곳을 비교하는 것이 좋습니다.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <Card className="bg-white dark:bg-gray-800 border-2 border-amber-100 dark:border-amber-900">
+                        <CardContent className="p-6">
+                            <h3 className="text-lg font-bold mb-3 text-amber-700 dark:text-amber-300">레슨장 고를 때 확인할 것</h3>
+                            <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                                <li>실내(연습장) / 실외(코트) 여부와 날씨·계절에 따른 운영</li>
+                                <li>1회 레슨 시간, 주당 횟수, 개인·그룹 인원</li>
+                                <li>레슨비에 코트 사용료·볼 비용이 포함되는지</li>
+                                <li>결석·보강 규정과 환불 기준</li>
+                                <li>레슨 외 연습(볼머신, 대관)을 할 수 있는지</li>
+                            </ul>
+                        </CardContent>
+                    </Card>
+                    <Card className="bg-white dark:bg-gray-800 border-2 border-amber-100 dark:border-amber-900">
+                        <CardContent className="p-6">
+                            <h3 className="text-lg font-bold mb-3 text-amber-700 dark:text-amber-300">체험 레슨에서 볼 것</h3>
+                            <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                                <li>그립·준비 자세 같은 기본을 설명하고 교정해 주는지</li>
+                                <li>공만 많이 던져 주기보다 무엇을 고칠지 짚어 주는지</li>
+                                <li>내 목표(취미, 게임, 대회)와 수준에 맞춰 계획을 이야기하는지</li>
+                                <li>무리한 동작이나 통증에 대해 쉬어 가도록 안내하는지</li>
+                                <li>질문하기 편하고 설명이 이해하기 쉬운지</li>
+                            </ul>
+                        </CardContent>
+                    </Card>
+                </div>
+                <p className="text-xs text-gray-500 mt-4">
+                    * 코치 자격이나 경력이 궁금하면 상담 때 직접 물어보세요. 자격 종류는 기관마다 다르며, 이 글은 특정 레슨장이나 자격을 추천하지 않습니다.
+                </p>
             </section>
 
             <section id="dictionary" className="mb-16">

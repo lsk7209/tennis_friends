@@ -22,7 +22,7 @@ const styles = ["공격 주도형", "안정 수비형", "패턴 운영형", "올
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <BreadcrumbSchema items={[
         { name: '홈', item: getSiteUrl() },
         { name: '유틸리티', item: `${getSiteUrl()}/utility` },
@@ -74,6 +74,6 @@ export default function Page() {
           </CardContent>
         </Card>
       </section>
-    </main>
+    </div>
   );
 }

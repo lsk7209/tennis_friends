@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://tennisfrens.com/privacy",
   },
+  openGraph: {
+    title: "개인정보처리방침 | 테니스프렌즈",
+    description:
+      "테니스프렌즈의 웹 로그 분석, 기기 내 저장 정보, 쿠키와 이용자 권리를 안내합니다.",
+    url: "https://tennisfrens.com/privacy",
+    type: "website",
+  },
   robots: {
     index: true,
     follow: true,
@@ -55,10 +62,23 @@ export default function PrivacyPage() {
                 유입 경로, 기기·브라우저 정보와 카페 이동 버튼 클릭 기록
               </li>
               <li>
-                <strong>기기 내 저장:</strong> 익명 세션 식별자, 도구·테스트
-                이용 기록, NTRP 결과와 최근 방문 기록. 이 정보는 이용자의
-                브라우저 저장소에만 보관되며 회원 계정이나 공용 데이터베이스로
-                전송되지 않습니다.
+                <strong>기기 내 저장:</strong> 이용자의 브라우저 저장소에만
+                보관되며 회원 계정이나 공용 데이터베이스로 전송되지 않습니다.
+                <ul className="mt-2 list-disc space-y-1 pl-5">
+                  <li>
+                    <strong>NTRP 결과 기록:</strong> 테스트를 완료한 날짜·합산
+                    점수·참고 레벨·스타일과 채점 버전(최근 50건). 문항별 답변은
+                    저장하지 않습니다.
+                  </li>
+                  <li>
+                    <strong>선택적 방문 기록(운영 사이트에서만):</strong> 방문
+                    페이지, 유입 사이트의 도메인, 브라우저·OS 종류, 화면 크기,
+                    언어·시간대, 기기에서 만든 임의 세션 값(최근 200건). 전체
+                    유입 URL, 검색어, 브라우저 식별 문자열 원문과 테스트 결과는
+                    이 기록에 담지 않습니다. 이 값은 이름·연락처를 포함하지
+                    않지만, 재식별이 불가능하다고 보장하는 익명 정보는 아닙니다.
+                  </li>
+                </ul>
               </li>
               <li>
                 <strong>문의 양식:</strong> 입력한 이름, 이메일, 제목과 메시지는
@@ -102,10 +122,13 @@ export default function PrivacyPage() {
               제3조 (개인정보의 보유 및 이용기간)
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              기기 내 기록은 브라우저 저장소에 최대 200건까지 유지되며 이용자가
-              브라우저 사이트 데이터 또는 로컬 저장소를 삭제하면 함께
-              삭제됩니다. Google Analytics 정보의 보유기간과 삭제 기준은
-              Google의 정책 및 해당 속성 설정을 따릅니다.
+              NTRP 결과 기록은 최근 50건, 선택적 방문 기록은 최근 200건까지
+              브라우저 저장소에 유지되며, 이용자가 브라우저 사이트 데이터 또는
+              로컬 저장소를 삭제하면 함께 삭제됩니다. NTRP 기록 화면의
+              &lsquo;NTRP 기록 삭제&rsquo;는 NTRP 결과 기록만 지우며 방문
+              기록이나 Google Analytics에서 처리된 정보는 지우지 않습니다.
+              Google Analytics 정보의 보유기간과 삭제 기준은 Google의 정책 및
+              해당 속성 설정을 따릅니다.
             </p>
           </section>
 
@@ -187,7 +210,7 @@ export default function PrivacyPage() {
               제7조 (개인정보 처리방침 변경)
             </h2>
             <p className="text-gray-700 dark:text-gray-300">
-              이 개인정보처리방침은 <strong>2026년 8월 27일</strong>부터
+              이 개인정보처리방침은 <strong>2026년 9월 30일</strong>부터
               적용됩니다.
             </p>
           </section>

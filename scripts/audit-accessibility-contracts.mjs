@@ -61,6 +61,13 @@ if (nestedInteractive.length) {
   failures.push(`Link wrapping Button remains in: ${nestedInteractive.join(', ')}`);
 }
 
+// The root layout owns the single <main> landmark; pages and components render
+// inside it, so any other <main> produces a nested landmark (2026-09-30).
+const extraMain = tsxFiles
+  .filter((file) => file.replaceAll('\\', '/') !== 'src/app/layout.tsx')
+  .filter((file) => /<main(?=[\s>])/.test(fs.readFileSync(path.join(ROOT, file), 'utf8')));
+if (extraMain.length) failures.push(`nested <main> landmark in: ${extraMain.join(', ')}`);
+
 const errorComponent = fs.readFileSync(path.join(ROOT, 'src/components/AccessibleErrorState.tsx'), 'utf8');
 for (const token of ['tabIndex={-1}', '.focus()', 'role="alert"', '<h1', 'aria-labelledby']) {
   if (!errorComponent.includes(token)) failures.push(`AccessibleErrorState missing ${token}`);
@@ -82,6 +89,7 @@ const report = {
   coverage: {
     tsxFiles: tsxFiles.length,
     nestedInteractivePatterns: nestedInteractive.length,
+    nestedMainLandmarks: extraMain.length,
     focusedErrorResultPages: RESULT_PAGES.length,
     chartTextFallbacks: 1,
   },

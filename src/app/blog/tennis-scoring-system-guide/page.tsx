@@ -36,8 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'tiebreak-mechanics', text: '2. 타이브레이크의 미립자 분석: 7점 vs 10점(슈퍼)', depth: 2 },
   { id: 'ad-vs-noad', text: '3. Ad vs No-Ad: 듀스 룰에 따른 경기 템포의 차이', depth: 2 },
   { id: 'scoring-etiquette', text: '4. 점수 호출 에티켓: "서버의 의무"와 매너', depth: 2 },
-  { id: 'psychology-of-deuce-ad', text: '5. 코트의 심리학: 듀스 사이드 vs 애드 사이드', depth: 2 },
-  { id: 'conclusion', text: '6. 결론: 점수는 실시간 전략의 나침반이다', depth: 2 },
+  { id: 'conclusion', text: '5. 결론: 점수는 실시간 전략의 나침반이다', depth: 2 },
 ];
 
 const faqs = [

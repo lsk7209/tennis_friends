@@ -14,10 +14,10 @@ import { staggerVariants, hoverLift } from "@/components/motion-presets";
 const TOOLS = [
   {
     variant: "featured" as const,
-    label: "실력 진단",
+    label: "실력 자가점검",
     title: "NTRP\n테스트",
     description:
-      "15개 질문으로 나의 테니스 레벨을 점검합니다. 1.0~7.0 NTRP 기준을 참고합니다.",
+      "15개 질문 답변을 합산해 NTRP 기준의 참고 구간을 보여줍니다. 공식 등급은 아닙니다.",
     href: "/utility/ntrp-test",
     cta: "테스트 시작 →",
   },
@@ -26,18 +26,18 @@ const TOOLS = [
     label: "장비 설정",
     title: "스트링 텐션\n계산기",
     description:
-      "라켓·플레이 스타일·선호 타구감을 입력하면 최적 텐션 범위를 추천합니다.",
+      "라켓·스트링·플레이 스타일을 입력하면 조건에 따른 참고 텐션 범위를 보여줍니다.",
     href: "/utility/string-tension",
     cta: "계산하기 →",
   },
   {
     variant: "standard" as const,
     label: "부상 예방",
-    title: "부상 리스크\n예측",
+    title: "부상 예방\n참고 점검",
     description:
-      "현재 훈련 패턴과 신체 상태를 분석해 테니스 엘보·무릎 부상 위험도를 진단합니다.",
+      "운동 빈도·준비운동·이전 부상 등 입력 항목을 점검하고 일반 예방 정보를 보여줍니다. 의학적 진단이 아닙니다.",
     href: "/utility/injury-risk",
-    cta: "진단하기 →",
+    cta: "점검하기 →",
   },
 ];
 
@@ -51,7 +51,7 @@ export function ToolsMosaic() {
             Smart Tools
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-[-0.035em]">
-            데이터 기반 테니스 도구
+            연습을 돕는 테니스 도구
           </h2>
         </div>
 

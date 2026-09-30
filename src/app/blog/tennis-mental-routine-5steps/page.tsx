@@ -36,8 +36,7 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'anchoring-techniques', text: '3. 앵커링(Anchoring): 집중력을 깨우는 신체 트리거', depth: 2 },
   { id: 'breathing-vagus-nerve', text: '4. 호흡의 미학: 미주신경 자극을 통한 리셋', depth: 2 },
   { id: 'visualization-strategy', text: '5. 시각화 전략: 다음 샷의 결과가 아닌 과정을 보라', depth: 2 },
-  { id: 'mental-check-after-match', text: '6. 경기 후 자가 진단 피드백', depth: 2 },
-  { id: 'conclusion', text: '7. 결론: 루틴은 흔들리지 않는 심리적 근육이다', depth: 2 },
+  { id: 'conclusion', text: '6. 결론: 루틴은 흔들리지 않는 심리적 근육이다', depth: 2 },
 ];
 
 const faqs = [

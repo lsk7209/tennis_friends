@@ -142,7 +142,7 @@ export default function DoublesChemistryTestPage() {
   /* ---- Intro ---- */
   if (screen === "intro") {
     return (
-      <main className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-12">
+      <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-12">
         <section className="rounded-3xl border border-fuchsia-100 bg-gradient-to-br from-fuchsia-50 via-white to-pink-50 p-8 shadow-sm md:p-12">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-700">
             Doubles Chemistry Test
@@ -202,7 +202,7 @@ export default function DoublesChemistryTestPage() {
             복식 포지셔닝 보기
           </Link>
         </div>
-      </main>
+      </div>
     );
   }
 
@@ -210,7 +210,7 @@ export default function DoublesChemistryTestPage() {
   if (screen === "quiz") {
     const q = questions[current];
     return (
-      <main className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-12">
+      <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-12">
         {/* progress */}
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm text-gray-500">
@@ -254,13 +254,13 @@ export default function DoublesChemistryTestPage() {
             })}
           </div>
         </section>
-      </main>
+      </div>
     );
   }
 
   /* ---- Result ---- */
   return (
-    <main className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-12">
       {/* grade card */}
       <section
         className={`relative overflow-hidden rounded-3xl border ${grade.border} bg-gradient-to-br from-fuchsia-50 via-white to-pink-50 p-8 shadow-sm md:p-12`}
@@ -375,6 +375,6 @@ export default function DoublesChemistryTestPage() {
           유틸리티 목록
         </Link>
       </div>
-    </main>
+    </div>
   );
 }

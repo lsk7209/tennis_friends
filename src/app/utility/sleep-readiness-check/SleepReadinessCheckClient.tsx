@@ -40,7 +40,7 @@ export default function SleepReadinessCheckClient() {
   }, [inputsValid, lateCaffeine, matchToday, sleepHours, sleepQuality, soreness, stress]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <section className="grid gap-6 lg:grid-cols-[1fr_1fr]">
         <Card>
           <CardHeader>
@@ -125,6 +125,6 @@ export default function SleepReadinessCheckClient() {
           </Card>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

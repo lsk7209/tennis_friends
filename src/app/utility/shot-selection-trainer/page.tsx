@@ -157,7 +157,7 @@ export default function ShotSelectionTrainerPage() {
   /* ---- Intro ---- */
   if (phase === "intro") {
     return (
-      <main className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-16">
+      <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-16">
         <div className="w-full rounded-3xl border border-red-200 bg-gradient-to-br from-red-50 via-white to-orange-50 p-10 text-center shadow-sm">
           <p className="text-5xl">🎾</p>
           <h1 className="mt-4 text-3xl font-extrabold text-gray-900">샷 선택 트레이너</h1>
@@ -188,7 +188,7 @@ export default function ShotSelectionTrainerPage() {
             </Link>
           </div>
         </div>
-      </main>
+      </div>
     );
   }
 
@@ -196,7 +196,7 @@ export default function ShotSelectionTrainerPage() {
   if (phase === "result") {
     const rating = getRating(totalScore);
     return (
-      <main className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-16">
+      <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-8 px-4 py-16">
         <div className="w-full rounded-3xl border border-red-200 bg-gradient-to-br from-red-50 via-white to-orange-50 p-10 text-center shadow-sm">
           <p className="text-5xl">🏅</p>
           <h2 className="mt-4 text-2xl font-extrabold text-gray-900">훈련 완료!</h2>
@@ -253,7 +253,7 @@ export default function ShotSelectionTrainerPage() {
             })}
           </div>
         </div>
-      </main>
+      </div>
     );
   }
 
@@ -264,7 +264,7 @@ export default function ShotSelectionTrainerPage() {
   const isCorrect = chosenIndex === situation.bestIndex;
 
   return (
-    <main className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-4 py-12">
+    <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-4 py-12">
       {/* Progress bar */}
       <div className="w-full">
         <div className="flex items-center justify-between text-sm font-semibold text-gray-500">
@@ -352,6 +352,6 @@ export default function ShotSelectionTrainerPage() {
           </div>
         )}
       </div>
-    </main>
+    </div>
   );
 }

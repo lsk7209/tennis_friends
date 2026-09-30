@@ -7,6 +7,12 @@ export const metadata: Metadata = {
     alternates: {
         canonical: 'https://tennisfrens.com/terms',
     },
+    openGraph: {
+        title: '이용약관 | 테니스프렌즈',
+        description: '테니스프렌즈 서비스 이용약관입니다. 서비스 이용 조건과 회원의 권리 및 의무를 안내합니다.',
+        url: 'https://tennisfrens.com/terms',
+        type: 'website',
+    },
     robots: {
         index: true,
         follow: true,

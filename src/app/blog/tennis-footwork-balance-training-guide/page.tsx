@@ -35,9 +35,8 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'recovery-hierarchy', text: '2. 리커버리 계층 구조: 크로스오버 vs 셔플 스텝', depth: 2 },
   { id: 'adjustment-steps', text: '3. 미세 조정(Adjustment) 스텝: 타점의 정밀 설계', depth: 2 },
   { id: 'surface-friction', text: '4. 코트 표면과 마찰력 관리: 하드 vs 클레이', depth: 2 },
-  { id: 'balance-metrics', text: '5. 밸런스 측정 지표: 코어 안정성 체크', depth: 2 },
-  { id: 'footwork-routine', text: '6. 10분 하체 리듬 최적화 루틴', depth: 2 },
-  { id: 'conclusion', text: '7. 결론: 좋은 발이 좋은 손을 만든다', depth: 2 },
+  { id: 'footwork-routine', text: '5. 10분 하체 리듬 최적화 루틴', depth: 2 },
+  { id: 'conclusion', text: '6. 결론: 좋은 발이 좋은 손을 만든다', depth: 2 },
 ];
 
 const faqs = [

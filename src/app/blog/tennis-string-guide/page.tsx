@@ -75,7 +75,6 @@ export default function TennisStringGuidePage() {
             date="2026-01-27"
             slug="tennis-string-guide"
             author="TennisFriends"
-            image="/images/blog/tennis-string-guide.png"
         >
             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950 dark:to-amber-950 p-6 rounded-lg mb-8">
                 <div className="flex items-center gap-2 mb-3">

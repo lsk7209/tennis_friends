@@ -98,7 +98,7 @@ export default function TermsQuizClient() {
 
   return (
     <>
-      <main className="mx-auto max-w-3xl px-4 py-12 text-slate-900 dark:text-slate-100">
+      <div className="mx-auto max-w-3xl px-4 py-12 text-slate-900 dark:text-slate-100">
         <header className="mb-8">
           <Badge className="bg-emerald-700 text-white">테니스 퀴즈</Badge>
           <h1 className="mt-3 text-3xl font-bold md:text-4xl">테니스 용어 퀴즈</h1>
@@ -174,7 +174,7 @@ export default function TermsQuizClient() {
             </NaverCafeLink>
           </Button>
         </section>
-      </main>
+      </div>
       <UtilityResultLinks links={NEXT_LINKS} source="terms-quiz" ctaLocation="terms_quiz_next" />
     </>
   );

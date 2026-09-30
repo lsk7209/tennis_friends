@@ -34,10 +34,8 @@ const tocItems: Array<{ id: string; text: string; depth: 2 | 3 }> = [
   { id: 'ten-unwritten-rules', text: "1. 테니스 친구들의 '10가지 불문율'", depth: 2 },
   { id: 'community-psychology', text: '2. 커뮤니티 심리학: 환영받는 파트너의 특징', depth: 2 },
   { id: 'legal-vs-etiquette', text: '3. 규칙 vs 매너: 애매한 상황의 정답', depth: 2 },
-  { id: 'doubles-synergy', text: '4. 복식 시너지: 파트너의 실력을 120% 끌어올리는 매너', depth: 2 },
-  { id: 'geo-culture-depth', text: '5. 로컬 클럽 문화: 지역별 고유 예절 분석', depth: 2 },
-  { id: 'court-exit-ritual', text: '6. 마무리 의식: 마지막 인사가 다음 매칭을 결정한다', depth: 2 },
-  { id: 'conclusion', text: '7. 결론: 실력은 기술로, 품격은 태도로', depth: 2 },
+  { id: 'geo-culture-depth', text: '4. 로컬 클럽 문화: 지역별 고유 예절 분석', depth: 2 },
+  { id: 'conclusion', text: '5. 결론: 실력은 기술로, 품격은 태도로', depth: 2 },
 ];
 
 const faqs = [
