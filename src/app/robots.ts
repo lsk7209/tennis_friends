@@ -4,7 +4,7 @@ import { getSiteUrl } from "@/lib/site";
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const DISALLOWED_PRIVATE_PATHS = ["/private/", "/admin/", "/api/auth/"];
+const DISALLOWED_PRIVATE_PATHS = ["/private/", "/admin/", "/api/", "/*?"];
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = getSiteUrl();

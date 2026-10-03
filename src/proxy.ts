@@ -18,7 +18,18 @@ function getBlogSlug(pathname: string) {
   return slug && !slug.includes("/") ? decodeURIComponent(slug) : null;
 }
 
+const BOT_UA =
+  /bot|crawl|spider|slurp|Googlebot|bingbot|Bytespider|GPTBot|ClaudeBot|PerplexityBot|OAI-SearchBot|YandexBot|Baiduspider|DuckDuckBot|Yeti|Daumoa/i;
+
 export function proxy(request: NextRequest) {
+  // 봇의 쿼리스트링 크롤링 차단 -> 불필요한 Serverless 함수 및 ISR 폭주 방지
+  if (request.nextUrl.search) {
+    const ua = request.headers.get("user-agent") || "";
+    if (BOT_UA.test(ua)) {
+      return new NextResponse("Forbidden", { status: 403 });
+    }
+  }
+
   const slug = getBlogSlug(request.nextUrl.pathname);
 
   if (!slug) {
@@ -47,5 +58,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/blog/:slug*"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };
