@@ -129,20 +129,16 @@ export const articleWriterBlogPosts = [
   {
     "id": "aw-008-injury-grip",
     "slug": "aw-008-injury-grip",
-    "tags": [
-      "손목 통증",
-      "테니스 그립",
-      "부상 예방",
-      "장비 가이드"
-    ],
-    "title": "테니스 손목 통증과 그립 점검 | 바꿔야 할 신호",
-    "excerpt": "테니스 손목 통증이 생길 때 운동을 멈춰야 할 신호와 그립 크기, 스트링, 라켓 세팅 점검 순서를 정리했습니다.",
+    "tags": ["손목 통증","테니스 그립","장비 점검","진료 준비"],
+    "title": "테니스 손목 통증과 그립 점검 | 증상 확인 뒤 장비 상담",
+    "excerpt": "손목 통증의 진료 신호를 먼저 살피고 그립·오버그립·스트링에서 기록할 변수를 정리합니다. 장비 상담과 의료 상담을 구분한 가상 예시도 제공합니다.",
     "badge": "손목 점검",
     "category": "장비 가이드",
     "date": "2026-05-15",
-    "readTime": "8분",
+    "readTime": "4분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
+    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
+    "updatedAt": "2026-10-20"
   },
   {
     "id": "aw-009-club-match-club-match",
@@ -219,20 +215,16 @@ export const articleWriterBlogPosts = [
   {
     "id": "aw-013-injury-injury-5",
     "slug": "aw-013-injury-injury-5",
-    "tags": [
-      "부상 예방",
-      "엘보 통증",
-      "테니스 엘보",
-      "운동량 조절"
-    ],
-    "title": "테니스 엘보 통증 전조 신호 | 멈춰야 할 기준 5가지",
-    "excerpt": "테니스 엘보 통증이 시작될 때 바로 줄여야 할 운동량, 라켓 세팅, 백핸드 충격, 회복 시간 점검 기준을 정리했습니다.",
+    "tags": ["팔꿈치 통증","테니스 엘보","증상 기록","의료 상담"],
+    "title": "테니스 엘보가 의심될 때: 팔꿈치 통증 관찰 질문 5가지",
+    "excerpt": "팔꿈치 통증의 위치·유발 동작·시작 방식·일상 기능·변화를 다섯 질문으로 정리합니다. 갑작스러운 손상 신호와 상담 메모 예시도 확인하세요.",
     "badge": "엘보 통증 점검",
     "category": "부상 예방",
     "date": "2026-05-15",
-    "readTime": "8분",
+    "readTime": "4분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300"
+    "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300",
+    "updatedAt": "2026-10-20"
   },
   {
     "id": "aw-014-beginner",
@@ -633,20 +625,16 @@ export const articleWriterBlogPosts = [
   {
     "id": "aw-036-women",
     "slug": "aw-036-women",
-    "tags": [
-      "부상 예방",
-      "여성 동호인",
-      "부상 예방 여성",
-      "테니스프렌즈"
-    ],
-    "title": "여성 동호인 어깨 부담 관리 상황별 선택 가이드",
-    "excerpt": "'통증 위치와 반복 시점' 기준으로 코트에서 바로 점검하는 부상 예방 실전 가이드.",
+    "tags": ["어깨 통증","진료 준비","일상 기능","증상 기록"],
+    "title": "어깨 통증 진료 준비: 일상 동작·서브 변화 기록하기",
+    "excerpt": "어깨 통증의 시작 경위와 옷 입기·물건 꺼내기 같은 일상 기능 변화를 상담 메모로 정리합니다. 응급 신호와 의료진에게 물어볼 질문도 확인하세요.",
     "badge": "신규 가이드",
     "category": "부상 예방",
     "date": "2026-05-15",
-    "readTime": "8분",
+    "readTime": "4분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300"
+    "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300",
+    "updatedAt": "2026-10-20"
   },
   {
     "id": "aw-037-return-5",
@@ -1497,20 +1485,16 @@ export const articleWriterBlogPosts = [
   {
     "id": "aw-084-injury-serve",
     "slug": "aw-084-injury-serve",
-    "tags": [
-      "서브 기술",
-      "어깨 통증",
-      "서브 기술 어깨",
-      "테니스프렌즈"
-    ],
-    "title": "어깨 통증 전 서브 볼륨 관리 상황별 선택 가이드",
-    "excerpt": "'토스 출발점과 릴리스 높이' 기준으로 코트에서 바로 점검하는 서브 기술 실전 가이드.",
+    "tags": ["어깨 통증","서브 중단","경기 약속","코치 대화"],
+    "title": "어깨가 아픈 날 서브 연습: 중단 결정과 약속 조정",
+    "excerpt": "서브 중 어깨가 아픈 오늘, 통증을 유발하는 서브를 멈추고 코치·파트너와 레슨·경기 약속을 조정하는 문장을 정리합니다.",
     "badge": "신규 가이드",
     "category": "서브 기술",
     "date": "2026-05-15",
-    "readTime": "8분",
+    "readTime": "4분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "updatedAt": "2026-10-20"
   },
   {
     "id": "aw-085-match-5",
@@ -1677,20 +1661,16 @@ export const articleWriterBlogPosts = [
   {
     "id": "aw-094-injury-grip-record",
     "slug": "aw-094-injury-grip-record",
-    "tags": [
-      "장비 가이드",
-      "손목 통증",
-      "장비 가이드 손목",
-      "테니스프렌즈"
-    ],
-    "title": "손목 통증 생길 때 그립 점검 기록표로 점검하는 방법",
-    "excerpt": "'팔 부담과 공 깊이 기록' 기준으로 코트에서 바로 점검하는 장비 가이드 실전 가이드.",
+    "tags": ["손목 통증","증상 기록","그립","진료 준비"],
+    "title": "손목 통증 그립 기록법 | 진료 상담을 위한 증상 메모",
+    "excerpt": "손목 통증의 시작·위치·유발 동작·감각·기능·경과를 적는 상담 메모입니다. 그립 정보는 원인 결론이 아닌 별도 배경으로 기록합니다.",
     "badge": "신규 가이드",
     "category": "장비 가이드",
     "date": "2026-05-15",
-    "readTime": "8분",
+    "readTime": "4분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
+    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
+    "updatedAt": "2026-10-20"
   },
   {
     "id": "aw-095-club-match",

@@ -137,11 +137,12 @@ export const articleWriterPart16PostOverrides = [
   },
   {
     "slug": "aw-084-injury-serve",
-    "title": "어깨 통증 날 서브 관리",
-    "excerpt": "어깨 통증이 있는 날 서브 강도와 연습량을 안전하게 낮추는 기준입니다.",
+    "title": "어깨가 아픈 날 서브 연습: 중단 결정과 약속 조정",
+    "excerpt": "서브 중 어깨가 아픈 오늘, 통증을 유발하는 서브를 멈추고 코치·파트너와 레슨·경기 약속을 조정하는 문장을 정리합니다.",
     "category": "부상 예방",
-    "tags": ["어깨 통증","서브","부상 예방"],
-    "readTime": "9분",
+    "tags": ["어깨 통증","서브 중단","경기 약속","코치 대화"],
+    "readTime": "4분",
+    "updatedAt": "2026-10-20"
   },
   {
     "slug": "aw-085-match-5",
@@ -209,11 +210,12 @@ export const articleWriterPart16PostOverrides = [
   },
   {
     "slug": "aw-094-injury-grip-record",
-    "title": "손목 통증 그립 기록법",
-    "excerpt": "손목 통증이 생긴 날 그립 두께와 타점 변화를 함께 기록합니다.",
+    "title": "손목 통증 그립 기록법 | 진료 상담을 위한 증상 메모",
+    "excerpt": "손목 통증의 시작·위치·유발 동작·감각·기능·경과를 적는 상담 메모입니다. 그립 정보는 원인 결론이 아닌 별도 배경으로 기록합니다.",
     "category": "부상 예방",
-    "tags": ["손목 통증","그립","기록법"],
-    "readTime": "9분",
+    "tags": ["손목 통증","증상 기록","그립","진료 준비"],
+    "readTime": "4분",
+    "updatedAt": "2026-10-20"
   },
   {
     "slug": "aw-095-club-match",
