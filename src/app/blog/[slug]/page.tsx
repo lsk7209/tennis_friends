@@ -18,6 +18,7 @@ import { getBlogVisual } from "@/data/blog-visuals";
 import {
   isDuplicateLeadText,
   normalizeArticleHtml,
+  prepareInlineFaq,
 } from "@/lib/article-html.mjs";
 import { getBlogPublishDate, getPublishedBlogPosts } from "@/lib/blog-publish";
 import { isIndexableBlogSlug } from "@/lib/blog-quality";
@@ -178,6 +179,7 @@ export default async function BlogPostPage({ params }: Props) {
     contentData?.summary,
     post.excerpt,
   ]);
+  const { html: articleContent, hasInlineFaq } = prepareInlineFaq(processedContent);
   const articleVisual = getBlogVisual(post.slug);
 
   const enrichedPost: EnrichedBlogPost = {
@@ -386,7 +388,7 @@ export default async function BlogPostPage({ params }: Props) {
           id="article-content"
           className="prose blog-article-content aw-article max-w-none dark:prose-invert"
           itemProp="articleBody"
-          dangerouslySetInnerHTML={{ __html: processedContent }}
+          dangerouslySetInnerHTML={{ __html: articleContent }}
         />
 
         {enrichedPost.tags && enrichedPost.tags.length > 0 && (
@@ -405,7 +407,7 @@ export default async function BlogPostPage({ params }: Props) {
         )}
       </article>
 
-      {faqItems.length > 0 && (
+      {faqItems.length > 0 && !hasInlineFaq && (
         <FAQSection
           items={faqItems}
           id="faq"

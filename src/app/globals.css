@@ -73,6 +73,7 @@
   --border: #e2e8f0;
   /* slate-200 */
   --accent: #0ea5e9;
+  --prose-link: #0369a1;
   /* sky-500(링크 포커스) */
   --code-bg: #0b1020;
   /* 딥 네이비 */
@@ -88,6 +89,7 @@
   --border: #1f2937;
   /* gray-800 */
   --accent: #38bdf8;
+  --prose-link: #38bdf8;
   /* sky-400 */
   --code-bg: #0b1020;
 }
@@ -110,7 +112,7 @@ a {
 }
 
 .prose a {
-  color: var(--accent);
+  color: var(--prose-link);
 }
 
 a:focus-visible {
@@ -528,7 +530,7 @@ a:focus-visible {
   }
 
   .prose a {
-    color: var(--accent);
+    color: var(--prose-link);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.2s ease;
@@ -886,6 +888,10 @@ a:focus-visible {
   .dark .prose p,
   .dark .prose li {
     color: var(--text-secondary);
+  }
+
+  .dark .prose a {
+    color: var(--prose-link);
   }
 
   .dark .prose blockquote {

@@ -41,7 +41,7 @@ export function proxy(request: NextRequest) {
   if (post && !isPublishedBlogPost(post)) {
     return new NextResponse("Not Found", {
       status: 404,
-      headers: NO_INDEX_HEADERS,
+      headers: { ...NO_INDEX_HEADERS, "cache-control": "no-store" },
     });
   }
 

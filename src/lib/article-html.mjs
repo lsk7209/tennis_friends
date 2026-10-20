@@ -142,3 +142,16 @@ export function normalizeArticleHtml(content, duplicateLeadCandidates = []) {
   );
   return convertMarkdownParagraphTables(wrapHtmlTables(deduplicatedBody));
 }
+
+export function prepareInlineFaq(html) {
+  const heading = /<h2\b([^>]*)>\s*자주 묻는 질문\s*<\/h2>/i;
+  if (!heading.test(html)) return { html, hasInlineFaq: false };
+
+  return {
+    html: html.replace(heading, (_match, attributes) => {
+      const withoutId = attributes.replace(/\s+id\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/i, "");
+      return `<h2${withoutId} id="faq">자주 묻는 질문</h2>`;
+    }),
+    hasInlineFaq: true,
+  };
+}

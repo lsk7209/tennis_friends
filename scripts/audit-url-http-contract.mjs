@@ -16,7 +16,8 @@ const types = new Set(contract.contracts.map((entry) => entry.type));
 for (const required of ["canonical-public", "public-noindex", "private-disallowed", "legacy-redirect", "missing"]) {
   assert.ok(types.has(required), `missing URL contract type: ${required}`);
 }
-for (const privatePath of ["/private/", "/admin/", "/api/auth/"]) {
+// The broader /api/ rule covers authentication and every other API endpoint.
+for (const privatePath of ["/private/", "/admin/", "/api/"]) {
   assert.match(robots, new RegExp(privatePath.replaceAll("/", "\\/"), "u"));
 }
 assert.match(redirects, /permanent:\s*true/u);

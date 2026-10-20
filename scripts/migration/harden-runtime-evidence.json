@@ -1,0 +1,19 @@
+{
+  "exit": 0,
+  "elapsedSeconds": 39.87,
+  "parentImageId": "sha256:62aed28f5e4da39daa81ceb3c8a93333ceab0d67388f3c42e909b0d231f8e605",
+  "parentImageTag": "ovh-tennisfriends-staging:caecd5f-b652651f79b4",
+  "parentSourceDigest": "b652651f79b4b2e6c8c442bd515c3cb6c804b0fbd6d31020c1681da3b83ddc68",
+  "hardeningDigest": "42ad14a9a831b7e89ea91ae8c904a324eff8397127d94e31cdd5d9d0fa565506",
+  "runtimeDockerfileSha256": "42ad14a9a831b7e89ea91ae8c904a324eff8397127d94e31cdd5d9d0fa565506",
+  "sourceDigest": "b652651f79b4b2e6c8c442bd515c3cb6c804b0fbd6d31020c1681da3b83ddc68",
+  "parentOciManifestDigest": "sha256:62aed28f5e4da39daa81ceb3c8a93333ceab0d67388f3c42e909b0d231f8e605",
+  "image": "ovh-tennisfriends-staging:caecd5f-b652651f79b4-h42ad14a9a831",
+  "imageId": "sha256:48dec17e243db93704b8d8f6ebb09b2ebde605189ca5a0819c38774f206a86dc",
+  "imageBytes": 1962956278,
+  "perlBaseVersion": "5.36.0-7+deb12u4",
+  "nodeVersion": "v24.21.0",
+  "serverSha256": "0823e4fbec9aad6afbb52386a4e324a4b7185a54580407c28b34efc0ec11a90f",
+  "builderMemoryBytes": 4294967296,
+  "combinedSourceDigest": "1a77d71ed029de0cc98bb6998f2755be0fde2d0338129528a7922613e6f33ade"
+}

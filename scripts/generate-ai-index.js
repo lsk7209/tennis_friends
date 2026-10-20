@@ -26,7 +26,9 @@ async function readBlogPosts() {
     throw new Error("src/data/blog-posts.js must export allBlogPosts");
   }
 
+  const { unavailableBlogSlugs } = await import(pathToFileURL(path.join(ROOT, "src/data/blog-unavailable.js")).href);
   return module.allBlogPosts
+    .filter((post) => !unavailableBlogSlugs.includes(post.slug) && !["draft", "private"].includes(post.publicationState))
     .map((post) => ({
       id: post.id || post.slug,
       slug: post.slug || post.id,

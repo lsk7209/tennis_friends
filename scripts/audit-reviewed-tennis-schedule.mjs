@@ -39,7 +39,9 @@ const releaseConsumers = [
 ];
 for (const file of releaseConsumers) {
   const source = fs.readFileSync(path.join(root, file), "utf8");
-  if (!/export const revalidate = 60/.test(source)) findings.push(`${file} does not honor the one-minute release cache contract`);
+  // Article access keeps minute-level scheduling; discovery refreshes hourly.
+  const ttl = ["src/app/rss.xml/route.ts", "src/app/feed/route.ts", "src/app/feed.xml/route.ts", "src/app/sitemap.ts", "src/app/sitemap-naver.xml/route.ts"].includes(file) ? 3600 : 60;
+  if (!new RegExp(`export const revalidate = ${ttl};`).test(source)) findings.push(`${file} does not honor the deployed ${ttl}-second cache contract`);
 }
 for (const dependency of releasePlan.dependencies) {
   if (!dependency.targetScheduledAt || !dependency.dependentScheduledAt) findings.push(`unresolved dependency: ${dependency.targetArticleId} -> ${dependency.articleId}`);

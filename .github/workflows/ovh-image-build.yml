@@ -1,0 +1,41 @@
+name: OVH production image build
+
+on:
+  push:
+    branches:
+      - 'codex/ovh-release-*'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out frozen release branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Validate manifest and build isolated production image
+        run: python3 scripts/migration/build-production-ci.py --build
+      - name: Upload image and import evidence
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ovh-production-image
+          path: release-artifacts/
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error
+      - name: Upload failed build diagnostics
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ovh-build-diagnostics
+          path: |
+            release-artifacts/build.log
+            release-artifacts/build-measurements-ci.json
+            release-artifacts/smoke.log
+            release-artifacts/smoke-failure.json
+          retention-days: 1
+          if-no-files-found: warn

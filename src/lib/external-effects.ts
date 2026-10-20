@@ -3,6 +3,8 @@
  * and preview builds. Production delivery must identify itself explicitly.
  */
 export function isProductionExternalEffectsEnabled(): boolean {
+  if (process.env.NEXT_PUBLIC_DEPLOYMENT_STAGE === "staging" ||
+      process.env.NEXT_PUBLIC_EXTERNAL_EFFECTS === "disabled") return false;
   return (
     process.env.NEXT_PUBLIC_EXTERNAL_EFFECTS === "production" ||
     process.env.VERCEL_ENV === "production"

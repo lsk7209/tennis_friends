@@ -118,7 +118,8 @@ const articleRequirements = [
     issue: "article body is not rendered as one uninterrupted section",
     ok:
       (blogPage.match(/dangerouslySetInnerHTML/g) || []).length === 1 &&
-      blogPage.includes("__html: processedContent"),
+      blogPage.includes("prepareInlineFaq(processedContent)") &&
+      /<section\b[^>]*id="article-content"[^>]*itemProp="articleBody"[^>]*dangerouslySetInnerHTML=\{\{\s*__html:\s*articleContent\s*\}\}[^>]*\/>/s.test(blogPage),
   },
   {
     issue: "selective editorial image pipeline missing",

@@ -1,0 +1,28 @@
+# Reviewable production template; never reuse a staging-built image.
+# Applying production routing/DNS requires the user's cutover approval.
+services:
+  web:
+    image: ${TENNISFRIENDS_PRODUCTION_IMAGE:?Production-built immutable image required}
+    init: true
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      NEXT_PUBLIC_SITE_URL: https://tennisfrens.com
+      NEXT_PUBLIC_EXTERNAL_EFFECTS: production
+      NEXT_PUBLIC_DEPLOYMENT_STAGE: production
+      NEXT_PUBLIC_ADS_CONSENT_READY: unverified
+    # Check port availability before registering the production service.
+    ports: ["127.0.0.1:${TENNISFRIENDS_PRODUCTION_PORT:?Reserve a free private port}:3000"]
+    mem_limit: 1024m
+    cpus: 1.0
+    pids_limit: 128
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    logging:
+      driver: json-file
+      options: {max-size: "5m", max-file: "3"}
+    networks: [private]
+networks:
+  private:
+    name: tennisfriends-production-private

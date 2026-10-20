@@ -3,59 +3,12 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadProjectSource } from "./lib/load-project-source.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const REPORT_DATE = new Date().toISOString().slice(0, 10);
 const REPORT_DIR = join(ROOT, "docs", "reports");
-const POST_FILES = [
-  "src/data/blog-posts.js",
-  "src/data/blog-posts-aw-300.js",
-  "src/data/blog-posts-aw-part12.js",
-  "src/data/blog-posts-aw-title100.js",
-  "src/data/blog-posts-part16-overrides.js",
-  "src/data/blog-posts-part17-overrides.js",
-  "src/data/blog-posts-part18-overrides.js",
-  "src/data/blog-posts-part19-overrides.js",
-  "src/data/blog-posts-part20-overrides.js",
-  "src/data/blog-posts-part21-overrides.js",
-  "src/data/blog-posts-part22-overrides.js",
-  "src/data/blog-posts-part23-overrides.js",
-  "src/data/blog-posts-part24-overrides.js",
-  "src/data/blog-posts-part25-overrides.js",
-  "src/data/blog-posts-part26-overrides.js",
-];
-const CONTENT_FILES = [
-  "part1",
-  "part2",
-  "part3",
-  "part4-new30",
-  "part5-scheduled",
-  "part6-generated",
-  "part7-generated",
-  "part8-bulk-01",
-  "part8-bulk-02",
-  "part8-bulk-03",
-  "part8-bulk-04",
-  "part9-scheduled-100",
-  "part10-scheduled-300",
-  "part11-article-writer-300",
-  "part12-article-writer-300",
-  "part13-optimized",
-  "part14-title100",
-  "part16-quality-rewrites",
-  "part17-quality-rewrites",
-  "part18-quality-rewrites",
-  "part19-quality-rewrites",
-  "part20-quality-rewrites",
-  "part21-quality-rewrites",
-  "part22-quality-rewrites",
-  "part23-quality-rewrites",
-  "part24-quality-rewrites",
-  "part25-quality-rewrites",
-  "part26-quality-rewrites",
-].map((name) => `src/data/blog-content/${name}.ts`);
-
 const MOJIBAKE_PATTERN = /[\uFFFD]|\?\?|[\u4E00-\u9FFF]|[\uF900-\uFAFF]/;
 
 function hasGarbledText(value) {
@@ -69,105 +22,35 @@ const NAVER_TITLE_MAX_LENGTH = 40;
 const EXCERPT_MAX_LENGTH = 120;
 const NAVER_EXCERPT_MAX_LENGTH = 80;
 
-function readProjectFile(relativePath) {
-  const filePath = join(ROOT, relativePath);
-  if (!existsSync(filePath)) return "";
-  return readFileSync(filePath, "utf8");
-}
-
-function readStringField(segment, field) {
-  const match = new RegExp(`"${field}"\\s*:\\s*"((?:\\\\.|[^"\\\\])*)"`, "s").exec(
-    segment,
-  );
-  if (!match) return "";
-  return match[1]
-    .replace(/\\"/g, '"')
-    .replace(/\\n/g, " ")
-    .replace(/\\u([0-9a-fA-F]{4})/g, (_, code) =>
-      String.fromCharCode(Number.parseInt(code, 16)),
-    );
-}
-
-function readArrayField(segment, field) {
-  const match = new RegExp(`"${field}"\\s*:\\s*\\[([\\s\\S]*?)\\]`).exec(
-    segment,
-  );
-  if (!match) return [];
-  return [...match[1].matchAll(/"((?:\\.|[^"\\])*)"/g)].map((item) =>
-    item[1].replace(/\\"/g, '"'),
-  );
-}
-
-function extractObjectSegments(text) {
-  const segments = [];
-  const slugRe = /"slug"\s*:\s*"([^"]+)"/g;
-  let match;
-
-  while ((match = slugRe.exec(text)) !== null) {
-    const start = text.lastIndexOf("{", match.index);
-    const next = text.indexOf("\n  {", match.index + 1);
-    const end = next > -1 ? next : text.indexOf("\n]", match.index);
-    if (start > -1 && end > -1) {
-      segments.push(text.slice(start, end));
-    }
-  }
-
-  return segments;
-}
-
 function collectPosts() {
-  const posts = new Map();
-
-  for (const file of POST_FILES) {
-    const text = readProjectFile(file);
-    for (const segment of extractObjectSegments(text)) {
-      const slug = readStringField(segment, "slug");
-      if (!slug) continue;
-
-      posts.set(slug, {
-        slug,
-        title: readStringField(segment, "title"),
-        excerpt: readStringField(segment, "excerpt"),
-        category: readStringField(segment, "category"),
-        tags: readArrayField(segment, "tags"),
-      });
-    }
+  const { allBlogPosts } = loadProjectSource("src/data/blog-posts.js");
+  const unique = new Map();
+  for (const post of allBlogPosts) {
+    if (!unique.has(post.slug)) unique.set(post.slug, { ...post, tags: post.tags || [] });
   }
-
-  return [...posts.values()];
+  return [...unique.values()];
 }
 
-function collectContentSignals() {
-  const signals = new Map();
-
-  for (const file of CONTENT_FILES) {
-    const text = readProjectFile(file);
-    const keyRe = /["']([a-z][a-z0-9-]{4,})["']\s*:\s*\{/g;
-    const keys = [];
-    let match;
-
-    while ((match = keyRe.exec(text)) !== null) {
-      if (match[1].includes("-")) keys.push({ slug: match[1], index: match.index });
-    }
-
-    keys.forEach(({ slug, index }, itemIndex) => {
-      const nextIndex = keys[itemIndex + 1]?.index ?? text.length;
-      const segment = text.slice(index, nextIndex);
-      signals.set(slug, {
-        length: segment.length,
-        h2Count: (segment.match(/<h2[\s>]/g) || []).length,
-        hasSummary: /article-summary|aeo-answer/.test(segment),
-        hasTable: /<table[\s>]/.test(segment),
-        hasList: /<(ul|ol)[\s>]/.test(segment),
-        hasFaq: /<details[\s>]|"faq"\s*:/.test(segment),
-        hasAside: /<aside[\s>]/.test(segment),
-        hasExternalLink: /target=\\"_blank\\"|target="_blank"/.test(segment),
-        hasBrokenText: hasGarbledText(segment),
-      });
-    });
-  }
-
-  return signals;
+function collectContentSignals(posts) {
+  const { blogContentMap } = loadProjectSource("src/data/blog-content/index.ts");
+  return new Map(posts.map(post => {
+    const body = blogContentMap[post.slug] || blogContentMap[post.id];
+    const file = join(ROOT, "src/app/blog", post.slug, "page.tsx");
+    const customSource = existsSync(file) ? readFileSync(file, "utf8") : "";
+    const isCustom = customSource && !customSource.includes("@/app/blog/[slug]/page");
+    const text = body?.content || (isCustom ? customSource : "");
+    return [post.slug, {
+      length: text.replace(/<[^>]*>/g, "").length,
+      h2Count: (text.match(/<h2[\s>]/g) || []).length,
+      hasSummary: Boolean(body?.summary) || /article-summary|aeo-answer/.test(text),
+      hasTable: /<table[\s>]/.test(text),
+      hasList: /<(ul|ol)[\s>]/.test(text),
+      hasFaq: Boolean(body?.faq?.length) || /<details[\s>]/.test(text),
+      hasAside: /<aside[\s>]/.test(text),
+      hasExternalLink: /https?:\/\//.test(text),
+      hasBrokenText: hasGarbledText(text),
+    }];
+  }));
 }
 
 function normalizeTemplate(value) {
@@ -217,13 +100,13 @@ function auditPost(post, signals, titleGroups, excerptGroups) {
 
   if (!titleHasKeyword) issues.push("title_keyword");
   if (!excerptHasKeyword) issues.push("excerpt_keyword");
-  if (post.title.length > TITLE_MAX_LENGTH) issues.push("title_over_google");
-  if (post.title.length > NAVER_TITLE_MAX_LENGTH) issues.push("title_over_naver");
-  if (post.excerpt.length > EXCERPT_MAX_LENGTH) issues.push("excerpt_over_google");
+  if (post.title.length > TITLE_MAX_LENGTH) issues.push("title_length_hint");
+  if (post.title.length > NAVER_TITLE_MAX_LENGTH) issues.push("title_length_secondary_hint");
+  if (post.excerpt.length > EXCERPT_MAX_LENGTH) issues.push("excerpt_length_hint");
   if (post.excerpt.length > NAVER_EXCERPT_MAX_LENGTH) {
-    issues.push("excerpt_over_naver");
+    issues.push("excerpt_length_secondary_hint");
   }
-  if ((content.length ?? 0) < 3500) issues.push("thin_content");
+  if ((content.length ?? 0) < 3500) issues.push("short_body_review");
   if ((content.h2Count ?? 0) < 3) issues.push("low_h2_count");
   if (visualCount < 3) issues.push("low_visual_variety");
   if (!content.hasExternalLink) issues.push("missing_external_source");
@@ -276,9 +159,10 @@ function renderReport(results) {
     "",
     "## 기준",
     "",
-    "- 제목: 메인/확장 키워드 중 1개 이상 포함, Google 60자/네이버 40자 기준 점검",
-    "- 부제: excerpt를 부제로 보고 메인/확장 키워드 포함, Google 120자/네이버 80자 기준 점검",
-    "- 본문: 3500자 이상, H2 3개 이상, 요약/표/목록/FAQ/박스 중 3개 이상",
+    "- 제목: 메인/확장 키워드 중 1개 이상 포함, 편집용 60자/40자 길이 참고값 (검색엔진 공식 제한 아님)",
+    "- 부제: excerpt를 부제로 보고 메인/확장 키워드 포함, 편집용 120자/80자 길이 참고값 (검색엔진 공식 제한 아님)",
+    "- 본문: 3500자·H2 3개·시각 요소 3개는 수동 검토 후보를 찾는 내부 휴리스틱이며 합격선이 아닙니다.",
+    "- 런타임 메타데이터와 본문 맵을 직접 집계하며, 개별 페이지는 소스 구조를 참고합니다. 예약·비공개도 포함한 재고 점검이며 사실 정확성/Google 색인 판정이 아닙니다.",
     "- 템플릿화: 같은 제목 prefix 또는 부제 패턴이 8회 이상 반복되면 위험",
     "",
     "## 우선 개선 대상 50개",
@@ -309,7 +193,7 @@ function renderReport(results) {
 mkdirSync(REPORT_DIR, { recursive: true });
 
 const posts = collectPosts();
-const signals = collectContentSignals();
+const signals = collectContentSignals(posts);
 const titleGroups = buildGroupCounts(posts, (post) => titlePrefix(post.title));
 const excerptGroups = buildGroupCounts(posts, (post) =>
   normalizeTemplate(post.excerpt),

@@ -71,7 +71,7 @@ assert(
 assert(
   articlePage.includes("normalizeArticleHtml") &&
     articleHtml.includes('class="table-wrapper"') &&
-    articlePage.includes("__html: processedContent"),
+    articlePage.includes("prepareInlineFaq(processedContent)") && articlePage.includes("__html: articleContent"),
   {
     scope: "article layout",
     issue: "article detail needs mobile-safe tables and uninterrupted content rendering",

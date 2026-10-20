@@ -1,3 +1,4 @@
+import { november2026ScheduledPosts } from "./blog-posts-november-2026.js";
 // 블로그 글 메타데이터 - 자동 생성됨
 import { articleWriterBlogPosts } from "./blog-posts-aw-300.js";
 import { articleWriterPart12Posts } from "./blog-posts-aw-part12.js";
@@ -2204,7 +2205,7 @@ const scheduledPostSeedsPart3 = [
     id: "tennis-elbow-load-management-match-application",
     title: "실전 경기에서 팔꿈치 부담을 줄이는 선택 기준",
     excerpt:
-      "경기 중 게임 사이 휴식, 통증 신호가 있을 때 샷 선택, 그립 압력 조절로 팔꿈치 부담을 관리하는 기준을 정리했습니다.",
+      "경기 중 팔꿈치 통증이 생기면 악화시키는 동작을 줄이거나 중단하고, 증상과 기능을 확인하세요.",
     category: "건강 & 피트니스",
     tags: ["팔꿈치", "테니스 엘보", "부상 예방", "회복", "부상", "실제"],
   },
@@ -2412,7 +2413,7 @@ const scheduledPostSeedsPart3 = [
     id: "tennis-knee-footwork-load-monthly-review",
     title: "한 달마다 점검하는 무릎 부담 풋워크 리뷰 항목",
     excerpt:
-      "한 달 단위로 통증, 신발 상태, 연습량을 돌아봐야 다음 달 목표를 현실적으로 세울 수 있습니다. 월간 점검 항목을 정리했습니다.",
+      "무릎 부담 기록은 통증, 붓기, 움직임과 연습량을 함께 비교하고 상담에 활용하는 자료입니다.",
     category: "건강 & 피트니스",
     tags: ["무릎", "풋워크", "부상 예방", "테니스화", "부상", "한"],
   },
@@ -3550,6 +3551,7 @@ function applyPostOverride(post) {
 
 /** @type {import("@/types/blog").BlogPostData[]} */
 export const allBlogPosts = [
+  ...november2026ScheduledPosts,
   ...october2026ScheduledPosts,
   ...beginnerSeries2026Posts,
   ...reviewedSeptember2026Posts,

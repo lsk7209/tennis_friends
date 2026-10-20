@@ -15,6 +15,19 @@ interface Props {
   slug: string;
 }
 
+const OFFICIAL_STYLE_PROFILES: Record<string, { summary: string; url: string }> = {
+  "hubert-hurkacz": {
+    summary:
+      "후르카츠는 강한 서브로 짧은 리턴을 유도한 뒤 네트 플레이로 이어가는 장면이 특징입니다. 이 설명은 경기 스타일을 읽는 기준입니다.",
+    url: "https://www.atptour.com/en/players/hubert-hurkacz/hb71/overview",
+  },
+  "andrey-rublev": {
+    summary:
+      "루블레프는 빠른 템포의 포핸드로 랠리의 주도권을 잡는 공격형 베이스라이너입니다. 이 설명은 경기 스타일을 읽는 기준입니다.",
+    url: "https://www.atptour.com/en/players/andrey-rublev/re44/overview",
+  },
+};
+
 export default function PlayerArticlePage({ slug }: Props) {
   const player = PLAYERS_DB[slug];
   if (!player) return null;
@@ -23,6 +36,10 @@ export default function PlayerArticlePage({ slug }: Props) {
   const siteUrl = getSiteUrl();
   const canonicalUrl = `${siteUrl}/players/${slug}`;
   const tour = player.gender === "male" ? "ATP" : "WTA";
+  const officialStyleProfile = OFFICIAL_STYLE_PROFILES[slug];
+  const formHeading = officialStyleProfile
+    ? `${player.name}의 주요 대회 기록`
+    : `요즘 ${player.name}의 경기력 흐름은?`;
 
   const faqs = (dp.faq ?? []).map((f) => ({ q: f.question, a: f.answer }));
 
@@ -48,7 +65,7 @@ export default function PlayerArticlePage({ slug }: Props) {
       ? [
           {
             id: "recent-form",
-            text: `요즘 ${player.name}의 경기력 흐름은?`,
+            text: formHeading,
             depth: 2 as const,
           },
         ]
@@ -68,7 +85,7 @@ export default function PlayerArticlePage({ slug }: Props) {
 
   const rankNum = player.rankingCurrent
     ? String(player.rankingCurrent).padStart(2, "0")
-    : "01";
+    : tour;
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
@@ -200,6 +217,21 @@ export default function PlayerArticlePage({ slug }: Props) {
               </p>
             )}
 
+            {officialStyleProfile && (
+              <p className="mt-6 text-gray-700 dark:text-gray-300">
+                {officialStyleProfile.summary} 현재 랭킹과 최근 결과는{" "}
+                <a
+                  href={officialStyleProfile.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  ATP 공식 프로필
+                </a>
+                에서 확인하세요.
+              </p>
+            )}
+
             {dp.hexagonStats && dp.hexagonStats.length > 0 && (
               <PlayerHexagonStats
                 playerName={player.name}
@@ -277,7 +309,7 @@ export default function PlayerArticlePage({ slug }: Props) {
               <>
                 <h2 id="recent-form" className="flex items-center gap-2 mt-12">
                   <Zap className="w-6 h-6 text-green-500" />
-                  요즘 {player.name}의 경기력 흐름은?
+                  {formHeading}
                 </h2>
                 <div
                   className="player-content"

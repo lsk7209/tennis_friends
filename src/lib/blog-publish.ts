@@ -1,3 +1,4 @@
+import { unavailableBlogSlugs } from "../data/blog-unavailable.js";
 import type { BlogPostData } from "@/types/blog";
 
 type PublishableBlogPost = BlogPostData & {
@@ -27,6 +28,7 @@ export function isPublishedBlogPost(
 ) {
   const timestamp = toPublishTime(post);
   return (
+    !unavailableBlogSlugs.includes(post.slug) &&
     post.publicationState !== "draft" &&
     post.publicationState !== "private" &&
     timestamp !== null &&

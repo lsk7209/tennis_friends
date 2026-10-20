@@ -2,6 +2,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { loadProjectSource } from "./lib/load-project-source.mjs";
 
 const ROOT = process.cwd();
 const REPORTS_DIR = path.join(ROOT, "docs", "reports");
@@ -10,6 +11,8 @@ const FILES = [
   "src/app/players/[slug]/page.tsx",
   "src/templates/players/PlayerPageTemplate.tsx",
   "src/components/players/PlayerSearchAliasSection.tsx",
+  "src/components/players/PlayerArticlePage.tsx",
+  "src/data/players/male.ts",
 ];
 const GSC_TARGET_SLUGS = [
   "martin-landaluce",
@@ -120,13 +123,40 @@ assert(
 );
 
 assert(
-  aliasSection.includes("검색어 기준 핵심 정보") &&
-    aliasSection.includes("랭킹, 전적, 플레이스타일"),
+  aliasSection.includes("선수 이름과 프로필 안내") &&
+    aliasSection.includes("searchSeo.aliases.join") &&
+    aliasSection.includes("searchSeo.focus") &&
+    !aliasSection.includes("랭킹, 전적, 플레이스타일을 한 페이지"),
   {
     scope: "player alias section",
-    issue: "player search alias section does not expose query intent clearly",
+    issue: "player alias section must explain names and profile scope without promising live rankings",
   },
 );
+
+const { PLAYERS_DB } = loadProjectSource("src/data/players/index.ts");
+for (const [slug, expectedSource] of [
+  ["hubert-hurkacz", "https://www.atptour.com/en/news/hurkacz-sinner-miami-2021-day-12-sunday-final"],
+  ["andrey-rublev", "https://www.atptour.com/en/news/rublev-rune-monte-carlo-2023-sunday-final"],
+]) {
+  const profile = PLAYERS_DB[slug]?.detailedProfile;
+  const content = JSON.stringify(profile ?? {});
+  assert(profile && !/꾸준히 Top 10|페더러를 은퇴시킨|매 시즌 ATP 파이널스|무려 10번이나 8강/.test(content), {
+    scope: "dated player facts", slug, issue: "unsupported ongoing rank/retirement/quarterfinal claim returned",
+  });
+  assert(content.includes(expectedSource), {
+    scope: "dated player facts", slug, issue: "dated official tournament evidence missing from effective profile",
+  });
+  assert(profile?.hexagonStats?.length === 0, {
+    scope: "dated player facts", slug, issue: "unsupported numeric ability ratings returned",
+  });
+}
+const historicalPage = readProjectFile("src/components/players/PlayerArticlePage.tsx");
+assert(historicalPage.includes(": tour;") && !historicalPage.includes(': "01";'), {
+  scope: "ranking fallback", issue: "missing ranking must not render as number one",
+});
+assert(historicalPage.includes("주요 대회 기록") && historicalPage.includes("text: formHeading") && historicalPage.includes("{formHeading}"), {
+  scope: "dated player facts", issue: "dated records must use matching historical headings and table of contents",
+});
 
 const audit = {
   status: findings.length === 0 ? "ok" : "failed",

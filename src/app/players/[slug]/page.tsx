@@ -71,10 +71,11 @@ const SEARCH_METADATA_OVERRIDES: Record<
     ],
   },
   "iva-jovic": {
-    title: "이바 조비치(이바 조비크, Iva Jovic) 프로필 | 경기 기록·플레이스타일",
+    title: "이바 요비치·조비치(Iva Jovic) 프로필 | 미국 WTA 선수·플레이스타일",
     description:
-      "이바 조비크(이바 조비치, Iva Jovic) 미국 WTA 유망주 프로필입니다. 오른손 베이스라인 플레이스타일과 강점, 성장 포인트를 정리했습니다.",
+      "이바 요비치·조비치·조비크(Iva Jovic) 프로필. 미국 WTA 선수의 플레이스타일과 강점, 경기 기록을 살펴보고 공식 WTA 프로필에서 최신 결과를 확인합니다.",
     keywords: [
+      "이바 요비치",
       "이바 조비크",
       "이바 조비치",
       "Iva Jovic",
@@ -82,6 +83,10 @@ const SEARCH_METADATA_OVERRIDES: Record<
       "미국 WTA 유망주",
     ],
   },
+};
+
+const OFFICIAL_PROFILE_URLS: Record<string, string> = {
+  "iva-jovic": "https://www.wtatennis.com/players/332285/iva-jovic",
 };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -448,6 +453,12 @@ export default async function PlayerProfilePage({ params }: Props) {
                 {player.nameEn}
               </p>
 
+              {OFFICIAL_PROFILE_URLS[resolvedParams.slug] && (
+                <p className="mb-5 text-sm text-blue-100">
+                  플레이스타일 해설과 실시간 기록은 구분해 봐 주세요. 최신 랭킹·경기 결과는{" "}
+                  <a href={OFFICIAL_PROFILE_URLS[resolvedParams.slug]} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">공식 {player.gender === "male" ? "ATP" : "WTA"} 프로필</a>에서 확인할 수 있습니다.
+                </p>
+              )}
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 <Badge
                   variant="secondary"

@@ -66,13 +66,17 @@ const indexNowKeyFile = readOptionalProjectFile(
 ).trim();
 const indexNowModule = require(path.join(ROOT, "scripts", "submit-indexnow.js"));
 
-assert(script(packageJson, "publish:vercel").includes("vercel --prod"), {
+assert(!script(packageJson, "publish:vercel") && !script(packageJson, "gh-pages"), {
   scope: "package scripts",
-  issue: "publish:vercel does not deploy production",
+  issue: "legacy Vercel/Pages publishing commands must not imply OVH deployment",
 });
-assert(script(packageJson, "publish:vercel").includes("npm run search:notify"), {
-  scope: "package scripts",
-  issue: "publish:vercel is not chained to search notification",
+assert(fs.existsSync(path.join(ROOT, "scripts/migration/update-production.py")), {
+  scope: "OVH release",
+  issue: "reviewed production updater is missing",
+});
+assert(JSON.parse(readProjectFile("vercel.json")).git?.deploymentEnabled === false, {
+  scope: "redundant deployment",
+  issue: "automatic Vercel Git deployment must be disabled for the OVH site",
 });
 assert(script(packageJson, "postdeploy").includes("search:notify:postdeploy"), {
   scope: "package scripts",
