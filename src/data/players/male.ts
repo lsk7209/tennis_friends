@@ -369,7 +369,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
                     <div class="highlight-box-title">🔥 "Bweh!" 기합 소리의 주인</div>
                     <p>안드레이 루블레프는 샷을 칠 때마다 내지르는 특유의 <strong>"Bweh(붸! or 뽜!)"</strong> 기합 소리로 유명합니다. 이는 그가 매 샷에 얼마나 많은 에너지를 쏟아붓는지를 보여주는 상징과도 같습니다.</p>
                 </div>
-                <p>투어 내에서 가장 강력한 포핸드를 보유한 선수 중 한 명으로, <span class="text-red-600 font-bold">ATP 500 시리즈의 제왕</span>이라 불릴 만큼 꾸준한 성적을 자랑합니다. 코트 위에서는 자신의 무릎을 라켓으로 내리칠 정도로 격정적이지만, 경기 후에는 세상에서 가장 착하고 수줍은 소년으로 돌아가는 '반전 매력'의 소유자입니다.</p>
+                <p>루블레프의 경기를 볼 때는 포핸드로 공격을 시작하는 위치와 랠리의 템포를 살펴보세요. 우승 기록은 아래의 대회별 공식 자료에서 확인할 수 있습니다.</p>
             `,
             playStyle: `
                 <p><strong>"전력 투구 공격 테니스 (Full Power Aggression)"</strong></p>
@@ -383,17 +383,10 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
                     </ul>
                 </div>
             `,
-            hexagonStats: [
-                { name: '포핸드 (Forehand)', score: 10, description: '투어 최강의 파괴력과 스피드 (핵폭탄급).' },
-                { name: '파워 (Power)', score: 9.5, description: '체구에 비해 믿을 수 없는 볼 스피드 생성.' },
-                { name: '스피드 (Speed)', score: 9, description: '빠른 발로 포핸드 칠 공간을 부지런히 만들어냄.' },
-                { name: '서브 (Serve)', score: 8.5, description: '강력하지만 코스 예측이 비교적 쉬운 편.' },
-                { name: '백핸드 (Backhand)', score: 8, description: '안정적이지만 포핸드만큼 위협적이지 않음.' },
-                { name: '멘탈 (Mental)', score: 7, description: '자책이 심하고 감정 조절이 안 될 때가 있음.' }
-            ],
+            hexagonStats: [],
             growthStory: `
                 <p>러시아 모스크바에서 복싱 선수 출신 아버지와 테니스 코치 어머니 사이에서 태어났습니다. 테니스 레전드인 <strong>마라트 사핀</strong>을 동경하며 자랐고, 주니어 세계 랭킹 1위를 기록하며 일찍부터 재능을 인정받았습니다.</p>
-                <p>프로 전향 후 꾸준히 Top 10을 유지하며 상위권에 자리 잡았으나, 메이저 대회 8강의 벽을 넘지 못해 '8강 징크스'에 시달리기도 했습니다. 하지만 2023년 몬테카를로 마스터스 우승으로 큰 경기에서도 통할 수 있음을 증명하며 한 단계 더 도약했습니다.</p>
+                <p>2023년 4월 16일 몬테카를로 결승에서 홀게르 루네를 5-7, 6-2, 7-5로 꺾고 첫 ATP 마스터스 1000 우승을 차지했습니다. 이 기록은 해당 대회의 성적이며 현재 랭킹이나 이후 모든 시즌의 성적을 뜻하지 않습니다. <a href="https://www.atptour.com/en/news/rublev-rune-monte-carlo-2023-sunday-final" target="_blank" rel="noopener noreferrer">ATP의 2023년 결승 기록</a>에서 확인할 수 있습니다.</p>
             `,
             signatureMatch: {
                 title: '2023 몬테카를로 마스터스 결승 vs 홀게르 루네',
@@ -409,7 +402,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
             `,
             recentForm: `
                 <p><strong>"마스터스 챔피언으로 진화"</strong></p>
-                <p>기복 없이 매 시즌 ATP 파이널스에 진출할 만큼 꾸준한 성적을 내고 있습니다. 2024년 <strong>마드리드 오픈 우승</strong>을 차지하며 클레이 코트에서도 강한 면모를 보였습니다. 이제 남은 과제는 그랜드슬램 4강 이상의 성적을 내는 것입니다.</p>
+                <p>이 문단은 실시간 경기력 평가가 아니라 과거 대회 기록입니다. 2023년 몬테카를로에서 첫 ATP 마스터스 1000 우승을 거뒀습니다. 현재 랭킹과 이후 경기 결과는 <a href="https://www.atptour.com/players/andrey-rublev/re44/overview" target="_blank" rel="noopener noreferrer">ATP 공식 선수 프로필</a>에서 확인하세요.</p>
             `,
             faq: [
                 {
@@ -418,7 +411,7 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
                 },
                 {
                     question: '루블레프의 "8강 징크스"란 무엇인가요?',
-                    answer: '루블레프는 그랜드슬램 대회에서 유독 8강(Quarterfinals)의 벽을 넘지 못하는 것으로 유명합니다. 무려 10번이나 8강에 진출했지만 모두 패배하여 4강 진출에 실패했습니다. 이는 실력보다는 심리적인 부담감이 원인으로 지목되고 있습니다.'
+                    answer: '과거 메이저 대회 8강 성적을 두고 쓰인 표현입니다. 이를 선수의 현재 성적이나 심리 상태에 대한 진단으로 보지 않습니다. 최신 라운드별 기록은 ATP와 각 대회의 공식 결과를 확인해야 합니다.'
                 },
                 {
                     question: '루블레프와 메드베데프는 얼마나 친한가요?',
@@ -706,8 +699,8 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
             oneLineSummary: '코트 위의 신사, 강력한 서브와 부드러운 터치를 겸비한 폴란드의 "Hubi".',
             whyNotable: `
                 <div class="highlight-box">
-                    <div class="highlight-box-title">🤖 "서브 봇"이자 페더러를 은퇴시킨 남자</div>
-                    <p>투어에서 가장 많은 서브 에이스를 기록하는 선수 중 한 명입니다. 특히 2021년 윔블던 8강에서 '잔디의 황제' <strong>로저 페더러</strong>를 상대로 3-0 완승(마지막 세트는 6-0 베이글 스코어)을 거두며 페더러의 윔블던 마지막 상대로 역사에 남았습니다.</p>
+                    <div class="highlight-box-title">2021년 윔블던 8강에서 페더러를 꺾은 선수</div>
+                    <p>2021년 윔블던 남자 단식 8강에서 <strong>로저 페더러</strong>를 6-3, 7-6(4), 6-0으로 꺾었습니다. <a href="https://www.wimbledon.com/en_GB/scores/2021/schedule/pdf/schedulePDF17.pdf" target="_blank" rel="noopener noreferrer">윔블던의 2021년 공식 결과표</a>에서 스코어를 확인할 수 있습니다.</p>
                 </div>
                 <p>196cm의 거구지만 믿기 힘들 정도로 유연한 다이빙 발리를 선보이며, 항상 미소를 잃지 않는 선한 인성으로 동료들 사이에서 평판이 매우 좋습니다.</p>
             `,
@@ -723,17 +716,10 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
                     </ul>
                 </div>
             `,
-            hexagonStats: [
-                { name: '서브 (Serve)', score: 10, description: '현존하는 최고의 서버 중 한 명.' },
-                { name: '발리 (Volley)', score: 9, description: '부드럽고 정교한 손기술.' },
-                { name: '멘탈 (Mental)', score: 9, description: '화내는 모습을 보기 힘든 평정심.' },
-                { name: '백핸드 (Backhand)', score: 8.5, description: '안정적이고 견고함.' },
-                { name: '포핸드 (Forehand)', score: 8, description: '가끔 흔들릴 때가 있는 편.' },
-                { name: '스피드 (Speed)', score: 8, description: '큰 키를 커버하는 좋은 움직임.' }
-            ],
+            hexagonStats: [],
             growthStory: `
                 <p>폴란드 브로츠와프 출신으로, 어머니가 주니어 테니스 챔피언 출신입니다. 체조 선수였던 할아버지의 유전자를 물려받아 큰 키에도 유연한 신체를 가졌습니다.</p>
-                <p>조용히 성장하다가 2021년 마이애미 오픈(마스터스 1000) 우승으로 깜짝 스타가 되었고, 이후 꾸준히 Top 10을 유지하며 이가 시비옹테크와 함께 폴란드 테니스의 황금기를 이끌고 있습니다.</p>
+                <p>2021년 4월 4일 마이애미 결승에서 야닉 시너를 7-6(4), 6-4로 꺾고 첫 ATP 마스터스 1000 우승을 차지했습니다. 2023년 10월 15일에는 상하이에서 두 번째 마스터스 1000 우승을 거뒀습니다. <a href="https://www.atptour.com/en/news/hurkacz-sinner-miami-2021-day-12-sunday-final" target="_blank" rel="noopener noreferrer">ATP 마이애미 기록</a>과 <a href="https://www.atptour.com/en/news/hurkacz-rublev-shanghai" target="_blank" rel="noopener noreferrer">상하이 기록</a>은 각각 해당 연도의 성적입니다.</p>
             `,
             signatureMatch: {
                 title: '2021 마이애미 오픈 결승 vs 야닉 시너',
@@ -749,12 +735,12 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
             `,
             recentForm: `
                 <p><strong>"잔디와 하드의 강자"</strong></p>
-                <p>빠른 코트에서 특히 강점을 보입니다. 2023년 상하이 마스터스 우승 등 여전한 기량을 과시하고 있으며, 서브 감각조절이 잘 되는 날에는 그 누구도 그를 막을 수 없습니다. 꾸준함이 그의 최대 무기입니다.</p>
+                <p>이 문단은 실시간 경기력 평가가 아니라 과거 대회 기록입니다. 2021년 마이애미와 2023년 상하이에서 마스터스 1000 우승을 차지했습니다. 현재 랭킹과 이후 경기 결과는 <a href="https://www.atptour.com/en/players/hubert-hurkacz/hb71/overview" target="_blank" rel="noopener noreferrer">ATP 공식 선수 프로필</a>에서 확인하세요.</p>
             `,
             faq: [
                 {
                     question: '후르카츠는 왜 서브가 강한가요?',
-                    answer: '196cm의 큰 키에서 나오는 높은 타점과 유연한 신체 능력을 완벽하게 활용하기 때문입니다. 특히 눈을 감고도 코스를 맞출 수 있을 정도로 정교한 토스 메카니즘을 가지고 있어, 상대가 서브 방향을 예측하기 매우 어렵습니다.'
+                    answer: '높은 타점에서 강하게 넣는 서브와 코스 선택을 함께 살펴볼 수 있습니다. 이는 플레이스타일 해설이며, 서브 성공률이나 에이스 수 같은 수치는 대회별 공식 통계로 확인해야 합니다.'
                 },
                 {
                     question: '후르카츠와 시너는 얼마나 친한가요?',
@@ -7459,4 +7445,5 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
                 }
             ]
         }
-    },};
+    },
+};

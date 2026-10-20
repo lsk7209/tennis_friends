@@ -1,11 +1,16 @@
 const DEFAULT_BASE_URL = "https://tennisfrens.com";
-const NON_WWW_BASE_URL = `https://${"tennisfrens.com"}`;
+const WWW_BASE_URL = "https://www.tennisfrens.com";
 const INDEXNOW_KEY = "46d9a30e05e90f665fa353387fa67c4c";
 
 const args = process.argv.slice(2);
 const baseUrl = (
   readArg("--base-url") ||
   process.env.PUBLIC_AUDIT_BASE_URL ||
+  DEFAULT_BASE_URL
+).replace(/\/$/, "");
+const canonicalBaseUrl = (
+  readArg("--canonical-base-url") ||
+  process.env.PUBLIC_CANONICAL_BASE_URL ||
   DEFAULT_BASE_URL
 ).replace(/\/$/, "");
 
@@ -65,11 +70,11 @@ function validateHtml(endpoint) {
 }
 
 function validateRobots(endpoint) {
-  assert(endpoint.text.includes(`${baseUrl}/sitemap.xml`), {
+  assert(endpoint.text.includes(`${canonicalBaseUrl}/sitemap.xml`), {
     path: endpoint.path,
     issue: "robots sitemap.xml missing",
   });
-  assert(endpoint.text.includes(`${baseUrl}/sitemap-naver.xml`), {
+  assert(endpoint.text.includes(`${canonicalBaseUrl}/sitemap-naver.xml`), {
     path: endpoint.path,
     issue: "robots sitemap-naver.xml missing",
   });
@@ -90,15 +95,15 @@ function validateSitemap(endpoint) {
     issue: "sitemap loc count too low",
     locCount,
   });
-  assert(!endpoint.text.includes(NON_WWW_BASE_URL), {
+  assert(!endpoint.text.includes(WWW_BASE_URL), {
     path: endpoint.path,
-    issue: "sitemap contains non-www URL",
+    issue: "sitemap contains non-canonical www URL",
   });
-  assert(endpoint.text.includes(`${baseUrl}/utility/ntrp-test`), {
+  assert(endpoint.text.includes(`${canonicalBaseUrl}/utility/ntrp-test`), {
     path: endpoint.path,
     issue: "sitemap missing NTRP utility",
   });
-  assert(endpoint.text.includes(`${baseUrl}/players/arthur-rinderknech`), {
+  assert(endpoint.text.includes(`${canonicalBaseUrl}/players/arthur-rinderknech`), {
     path: endpoint.path,
     issue: "sitemap missing corrected Arthur Rinderknech URL",
   });
@@ -118,13 +123,17 @@ function validateRss(endpoint) {
 }
 
 function validateLlms(endpoint) {
-  assert(endpoint.text.includes(baseUrl), {
+  assert(endpoint.text.includes(canonicalBaseUrl), {
     path: endpoint.path,
     issue: "llms canonical base missing",
   });
-  assert(endpoint.text.includes("도구 64") || endpoint.text.includes("도구 (64"), {
+  const expectedTools = aiIndex?.stats?.tools;
+  const toolCounts = [...endpoint.text.matchAll(/도구\s*\(?\s*(\d+)\s*종/gu)].map((match) => Number(match[1]));
+  assert(Number.isInteger(expectedTools) && toolCounts.length > 0 && toolCounts.every((count) => count === expectedTools), {
     path: endpoint.path,
-    issue: "llms tool count missing",
+    issue: "llms tool count missing or mismatched",
+    expected: expectedTools,
+    actual: toolCounts,
   });
   assert(/블로그\s*\(?\d+/.test(endpoint.text), {
     path: endpoint.path,
@@ -138,11 +147,11 @@ function validateAiTxt(endpoint) {
     "User-agent: OAI-SearchBot",
     "User-agent: cohere-ai",
     "User-agent: Google-Extended",
-    `Sitemap: ${baseUrl}/sitemap.xml`,
-    `RSS: ${baseUrl}/rss.xml`,
-    `LLMs: ${baseUrl}/llms.txt`,
-    `LLMs-Full: ${baseUrl}/llms-full.txt`,
-    `AI-Index: ${baseUrl}/ai-index.json`,
+    `Sitemap: ${canonicalBaseUrl}/sitemap.xml`,
+    `RSS: ${canonicalBaseUrl}/rss.xml`,
+    `LLMs: ${canonicalBaseUrl}/llms.txt`,
+    `LLMs-Full: ${canonicalBaseUrl}/llms-full.txt`,
+    `AI-Index: ${canonicalBaseUrl}/ai-index.json`,
   ]) {
     assert(endpoint.text.includes(required), {
       path: endpoint.path,
@@ -161,7 +170,7 @@ function validateAiIndex(endpoint) {
     return;
   }
 
-  assert(parsed.url === baseUrl, {
+  assert(parsed.url === canonicalBaseUrl, {
     path: endpoint.path,
     issue: "ai-index base URL mismatch",
     actual: parsed.url,
@@ -175,7 +184,7 @@ function validateAiIndex(endpoint) {
   const pages = Array.isArray(parsed.pages) ? parsed.pages : [];
   const typeCount = (type) => pages.filter((page) => page.type === type).length;
 
-  assert(parsed.stats?.tools >= 60, {
+  assert(parsed.stats?.tools >= 60 && parsed.stats.tools === typeCount("tool"), {
     path: endpoint.path,
     issue: "ai-index tool count mismatch",
     actual: parsed.stats?.tools,
@@ -208,9 +217,18 @@ function validateSecurity(endpoint) {
 
 const findings = [];
 const results = [];
+let aiIndex;
+
+// Fetch once and reuse this response so all inventories share one snapshot.
+const aiIndexEndpoint = await fetchEndpoint("/ai-index.json");
+try {
+  aiIndex = JSON.parse(aiIndexEndpoint.text);
+} catch {
+  // validateAiIndex reports malformed JSON below.
+}
 
 for (const endpoint of endpoints) {
-  const result = await fetchEndpoint(endpoint.path);
+  const result = endpoint.type === "ai-index" ? aiIndexEndpoint : await fetchEndpoint(endpoint.path);
   results.push({
     path: endpoint.path,
     status: result.status,

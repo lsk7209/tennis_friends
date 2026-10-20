@@ -3,11 +3,11 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-10-05",
+  "lastUpdated": "2026-10-20",
   "stats": {
-    "totalPages": 1508,
+    "totalPages": 1484,
     "tools": 67,
-    "articles": 1172,
+    "articles": 1148,
     "playerProfiles": 259
   },
   "pages": [
@@ -532,6 +532,118 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-half-volley-basics",
+      "title": "하프 발리 기본: 발밑으로 온 공을 처리하는 법",
+      "description": "서비스 라인 근처에서 발밑으로 떨어지는 공을 바운드 직후에 처리하는 하프 발리의 준비 자세, 라켓 면, 연습 방법을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-10-19T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-mixed-doubles-etiquette",
+      "title": "혼합 복식 모임에서 서로 편하게 치는 매너",
+      "description": "혼합 복식에서 공을 보내는 방향, 파트너와의 역할 분담, 칭찬과 조언의 선을 어떻게 지킬지 정리했습니다.",
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-10-18T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-organizer-notice-template",
+      "title": "테니스 모임 공지 쓰는 법: 운영진용 체크리스트",
+      "description": "시간, 장소, 코트 수, 참가비, 준비물, 취소 기준까지 모임 공지에 빠지면 곤란한 항목과 짧은 공지 예시를 정리했습니다.",
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-10-17T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-club-ball-management",
+      "title": "모임용 테니스공 관리: 새 공은 언제 뜯을까",
+      "description": "모임에서 새 공을 여는 시점, 헌 공을 연습용으로 돌리는 기준, 공을 보관하는 방법을 정리했습니다.",
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-10-16T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-weather-cancel-policy",
+      "title": "비·폭염·한파 때 테니스 모임 취소 기준 미리 정하기",
+      "description": "날씨 때문에 모임을 취소할지 매번 고민하지 않도록 기준과 공지 시간, 예약비 처리 방식을 미리 정해 두는 방법을 정리했습니다.",
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-10-15T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-club-league-basics",
+      "title": "동호회 자체 리그 처음 운영할 때 정할 규칙",
+      "description": "소규모 동호회에서 자체 리그를 시작할 때 경기 방식, 일정, 순위 계산, 불참 처리처럼 미리 정해 둘 항목을 정리했습니다.",
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-10-14T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-court-fee-settlement",
+      "title": "코트비·공값 정산 매너: 모임 돈 문제로 서운하지 않게",
+      "description": "코트 예약비, 새 공 비용, 노쇼 비용을 어떻게 나누고 언제 공지할지 모임 운영진과 참가자 모두가 편한 방식을 정리했습니다.",
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-10-13T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-mixed-level-pairings",
+      "title": "실력 차이가 큰 모임에서 복식 조 짜는 기준",
+      "description": "상급자와 입문자가 섞인 모임에서 모두가 게임을 즐길 수 있도록 조를 짜는 방법과 로테이션 운영 팁을 정리했습니다.",
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-10-12T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-new-member-first-meetup",
+      "title": "동호회 신입 첫 모임에서 어색함을 줄이는 방법",
+      "description": "처음 나가는 테니스 모임에서 인사, 준비물, 게임 순서 기다리기, 모임 후 연락까지 신입이 알아 두면 편한 흐름을 정리했습니다.",
+      "type": "article",
+      "category": "동호회 운영",
+      "lastModified": "2026-10-11T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-score-dispute",
+      "title": "점수가 헷갈릴 때 다투지 않고 정리하는 방법",
+      "description": "게임 중 점수가 서로 다를 때 어디서부터 다시 확인할지, 합의가 안 될 때 어떻게 정할지 동호회에서 쓰기 좋은 순서로 정리했습니다.",
+      "type": "article",
+      "category": "경기 규칙",
+      "lastModified": "2026-10-10T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-no-ad-deciding-point",
+      "title": "노애드 디사이딩 포인트: 누가 어느 쪽에서 받을까",
+      "description": "40-40에서 한 포인트로 게임을 끝내는 노애드 방식의 진행, 리시브 쪽 선택, 혼합 복식에서의 규칙을 ITF 규칙 기준으로 정리했습니다.",
+      "type": "article",
+      "category": "경기 규칙",
+      "lastModified": "2026-10-09T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-match-tiebreak-guide",
+      "title": "매치 타이브레이크 진행법: 동호회 결승 전 확인할 것",
+      "description": "마지막 세트 대신 쓰는 10점 매치 타이브레이크의 승리 조건, 서브 순서, 코트 체인지를 정리하고 시작 전에 합의할 항목을 적었습니다.",
+      "type": "article",
+      "category": "경기 규칙",
+      "lastModified": "2026-10-08T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-doubles-serve-order",
+      "title": "복식 서브·리시브 순서 정하기와 틀렸을 때 바로잡는 법",
+      "description": "복식에서 세트마다 서브 순서와 리시브 코트를 정하는 방법, 순서가 틀렸다는 것을 알았을 때 어떻게 고치는지 규칙 기준으로 설명합니다.",
+      "type": "article",
+      "category": "경기 규칙",
+      "lastModified": "2026-10-07T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-change-of-ends",
+      "title": "코트 체인지는 언제 할까: 게임·세트·타이브레이크별 정리",
+      "description": "홀수 게임 뒤, 세트가 끝났을 때, 타이브레이크 6포인트마다 코트를 바꾸는 규칙과 동호회 게임에서 자주 놓치는 순간을 정리했습니다.",
+      "type": "article",
+      "category": "경기 규칙",
+      "lastModified": "2026-10-06T09:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/oct26-ball-hits-player",
@@ -1079,8 +1191,8 @@
     },
     {
       "url": "https://tennisfrens.com/blog/tf-title100-injury-recovery-076",
-      "title": "무릎이 뻐근한 날 랠리보다 발리 연습이 나을 수 있는 이유",
-      "description": "무릎이 뻐근한 기준으로 테니스 엘보, 무릎 부담, 어깨 통증를 함께 점검해 다음 경기에서 바로 쓸 판단 순서를 정리합니다.",
+      "title": "무릎이 뻐근한 날 연습 전 확인할 증상과 활동 조절",
+      "description": "무릎이 뻐근한 날에는 발리가 더 안전하다고 단정하지 말고, 증상과 움직임을 먼저 확인하세요.",
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-08-11T00:10:00+09:00"
@@ -2728,7 +2840,7 @@
     {
       "url": "https://tennisfrens.com/blog/tennis-knee-footwork-load-monthly-review",
       "title": "한 달마다 점검하는 무릎 부담 풋워크 리뷰 항목",
-      "description": "한 달 단위로 통증, 신발 상태, 연습량을 돌아봐야 다음 달 목표를 현실적으로 세울 수 있습니다. 월간 점검 항목을 정리했습니다.",
+      "description": "무릎 부담 기록은 통증, 붓기, 움직임과 연습량을 함께 비교하고 상담에 활용하는 자료입니다.",
       "type": "article",
       "category": "건강 & 피트니스",
       "lastModified": "2026-06-28T10:00:00+09:00"
@@ -2936,7 +3048,7 @@
     {
       "url": "https://tennisfrens.com/blog/tennis-elbow-load-management-match-application",
       "title": "실전 경기에서 팔꿈치 부담을 줄이는 선택 기준",
-      "description": "경기 중 게임 사이 휴식, 통증 신호가 있을 때 샷 선택, 그립 압력 조절로 팔꿈치 부담을 관리하는 기준을 정리했습니다.",
+      "description": "경기 중 팔꿈치 통증이 생기면 악화시키는 동작을 줄이거나 중단하고, 증상과 기능을 확인하세요.",
       "type": "article",
       "category": "건강 & 피트니스",
       "lastModified": "2026-06-23T00:00:00+09:00"
@@ -5974,14 +6086,6 @@
       "lastModified": "2026-05-17T01:00:00+09:00"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-etiquette-complete-guide",
-      "title": "테니스 에티켓 완전 가이드 — 코트 매너·규칙",
-      "description": "테니스 에티켓 완전 가이드 — 코트 매너·규칙에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "테니스 문화",
-      "lastModified": "2026-05-17"
-    },
-    {
       "url": "https://tennisfrens.com/blog/tennis-rainy-weather-tips",
       "title": "비 오는 날 테니스 팁 | 미끄럼·그립·전술 조정",
       "description": "비 오는 날 테니스에서 경기 여부 판단, 미끄럼 방지, 젖은 그립 관리와 전술 조정을 정리했습니다.",
@@ -6068,22 +6172,6 @@
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-16T00:00:00+09:00"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-children-beginner-guide",
-      "title": "어린이 테니스 입문 — 나이별 훈련과 장비 선택",
-      "description": "어린이 테니스 입문 — 나이별 훈련과 장비 선택에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "초보자 가이드",
-      "lastModified": "2026-05-16"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-women-beginner-guide",
-      "title": "여성 테니스 입문 가이드 — 라켓 선택·기초 기술",
-      "description": "여성 테니스 입문 가이드 — 라켓 선택·기초 기술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "초보자 가이드",
-      "lastModified": "2026-05-16"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-beginner-serve-toss-check",
@@ -7038,22 +7126,6 @@
       "lastModified": "2026-05-15"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-mixed-doubles-strategy",
-      "title": "혼합복식 전략 완전 가이드 — 포메이션·역할 분담",
-      "description": "혼합복식 전략 완전 가이드 — 포메이션·역할 분담에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "복식 전략",
-      "lastModified": "2026-05-15"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-senior-guide",
-      "title": "시니어 테니스 완전 가이드 — 부상 예방·페이스 조절",
-      "description": "시니어 테니스 완전 가이드 — 부상 예방·페이스 조절에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "시니어 가이드",
-      "lastModified": "2026-05-15"
-    },
-    {
       "url": "https://tennisfrens.com/blog/aw2-062-mixed-doubles-pact-twenty-min-routine",
       "title": "혼합복식 파트너 호흡 맞추는 20분 연습",
       "description": "혼합복식 파트너와 경기 전 20분을 어떻게 나눠 쓰면 포지션과 콜을 실전처럼 맞춰볼 수 있는지 시간대별로 안내합니다.",
@@ -7134,22 +7206,6 @@
       "lastModified": "2026-05-14T00:00:00+09:00"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-cooldown-routine-guide",
-      "title": "테니스 쿨다운 루틴 — 근육 이완·정적 스트레칭",
-      "description": "테니스 쿨다운 루틴 — 근육 이완·정적 스트레칭에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "훈련 가이드",
-      "lastModified": "2026-05-14"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-warmup-routine-guide",
-      "title": "테니스 준비운동 완전 루틴 — 동적 스트레칭·활성화",
-      "description": "테니스 준비운동 완전 루틴 — 동적 스트레칭·활성화에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "훈련 가이드",
-      "lastModified": "2026-05-14"
-    },
-    {
       "url": "https://tennisfrens.com/blog/aw2-057-doubles-i-formation-twenty-min-routine",
       "title": "복식 I 포메이션, 20분 만에 손발 맞추기",
       "description": "I 포메이션은 사인 맞추기와 갈라지는 이동을 나눠서 20분만 투자해도 실전에 바로 써볼 만큼 손발이 맞춰집니다.",
@@ -7220,22 +7276,6 @@
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-13T02:00:00+09:00"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-ankle-injury-prevention",
-      "title": "테니스 발목 부상 예방 — 테이핑·강화 운동·신발",
-      "description": "테니스 발목 부상 예방 — 테이핑·강화 운동·신발에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "부상 예방",
-      "lastModified": "2026-05-13"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-wrist-injury-prevention",
-      "title": "테니스 손목 부상 예방 — 스윙·장비·보호대",
-      "description": "테니스 손목 부상 예방 — 스윙·장비·보호대에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "부상 예방",
-      "lastModified": "2026-05-13"
     },
     {
       "url": "https://tennisfrens.com/blog/backhand-wrist-pain-posture-beginner-intermediate",
@@ -7310,22 +7350,6 @@
       "lastModified": "2026-05-12T03:00:00+09:00"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-elbow-treatment-guide",
-      "title": "테니스 엘보 치료와 예방 — 통증 원인과 재활",
-      "description": "테니스 엘보 치료와 예방 — 통증 원인과 재활에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "부상 예방",
-      "lastModified": "2026-05-12"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-string-pattern-16x19-vs-18x20",
-      "title": "스트링 패턴 16x19 vs 18x20 — 차이점과 선택법",
-      "description": "스트링 패턴 16x19 vs 18x20 — 차이점과 선택법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "장비 가이드",
-      "lastModified": "2026-05-12"
-    },
-    {
       "url": "https://tennisfrens.com/blog/tennis-travel-court-finder-guide",
       "title": "테니스 여행 코트 찾기 — 출장·휴가 중 예약 기준",
       "description": "출장이나 휴가 중 코트를 잡을 때는 거리보다 예약 확정성, 장비 이동, 샤워·주차, 취소 규정을 먼저 확인해야 합니다.",
@@ -7372,22 +7396,6 @@
       "type": "article",
       "category": "컨디션 관리",
       "lastModified": "2026-05-11T01:00:00+09:00"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-overgrip-replacement-guide",
-      "title": "오버그립 교체 주기와 선택법 — 흡수력·두께·소재",
-      "description": "오버그립 교체 주기와 선택법 — 흡수력·두께·소재에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "장비 가이드",
-      "lastModified": "2026-05-11"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-restringing-timing-guide",
-      "title": "라켓 리스트링 시기와 방법 — 언제 교체해야 하나",
-      "description": "라켓 리스트링 시기와 방법 — 언제 교체해야 하나에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "장비 가이드",
-      "lastModified": "2026-05-11"
     },
     {
       "url": "https://tennisfrens.com/blog/grip-size-check-guide",
@@ -7478,22 +7486,6 @@
       "lastModified": "2026-05-10"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-backhand-error-correction",
-      "title": "백핸드 에러 줄이기 — 교정 포인트와 드릴",
-      "description": "백핸드 에러 줄이기 — 교정 포인트와 드릴에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "기술 가이드",
-      "lastModified": "2026-05-10"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-shoe-selection-guide",
-      "title": "테니스화 선택 완전 가이드 — 코트별·발 유형별",
-      "description": "테니스화 선택 완전 가이드 — 코트별·발 유형별에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "장비 가이드",
-      "lastModified": "2026-05-10"
-    },
-    {
       "url": "https://tennisfrens.com/blog/lob-defense-transition-guide",
       "title": "로브 수비 전환 가이드 — 밀릴 때 다시 중립 만들기",
       "description": "로브는 도망가는 샷이 아니라 시간을 되찾는 샷입니다. 높이, 깊이, 회복 위치를 함께 설계해야 합니다.",
@@ -7556,22 +7548,6 @@
       "type": "article",
       "category": "컨디션 관리",
       "lastModified": "2026-05-09T04:00:00+09:00"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-forehand-error-correction",
-      "title": "포핸드 에러 줄이기 — 흔한 실수와 교정법",
-      "description": "포핸드 에러 줄이기 — 흔한 실수와 교정법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "기술 가이드",
-      "lastModified": "2026-05-09"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-serve-practice-routine",
-      "title": "서브 연습 루틴 — 50개 서브로 완성하는 구조화 훈련",
-      "description": "서브 연습 루틴 — 50개 서브로 완성하는 구조화 훈련에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "훈련 가이드",
-      "lastModified": "2026-05-09"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-shoe-court-surface-guide",
@@ -7654,22 +7630,6 @@
       "lastModified": "2026-05-08T03:00:00+09:00"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-ball-machine-drills",
-      "title": "볼머신 활용 훈련법 — 반복·패턴·실전 드릴",
-      "description": "볼머신 활용 훈련법 — 반복·패턴·실전 드릴에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "훈련 가이드",
-      "lastModified": "2026-05-08"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-wall-practice-drills",
-      "title": "벽치기 테니스 훈련 — 혼자 하는 효과적인 연습법",
-      "description": "벽치기 테니스 훈련 — 혼자 하는 효과적인 연습법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "훈련 가이드",
-      "lastModified": "2026-05-08"
-    },
-    {
       "url": "https://tennisfrens.com/blog/serve-routine-20-minute-guide",
       "title": "20분 서브 루틴 — 토스·코스·세컨드 서브 정리",
       "description": "서브 연습은 많이 치는 것보다 같은 토스와 같은 준비 동작을 유지하는 것이 먼저입니다. 20분 루틴으로 압축했습니다.",
@@ -7740,22 +7700,6 @@
       "type": "article",
       "category": "컨디션 관리",
       "lastModified": "2026-05-07T02:00:00+09:00"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-practice-planning",
-      "title": "효과적인 테니스 연습 계획 수립 — 주간·월간 플랜",
-      "description": "효과적인 테니스 연습 계획 수립 — 주간·월간 플랜에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "훈련 가이드",
-      "lastModified": "2026-05-07"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-video-analysis-guide",
-      "title": "내 경기 영상 분석법 — 포인트 패턴·약점 파악",
-      "description": "내 경기 영상 분석법 — 포인트 패턴·약점 파악에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "전략 가이드",
-      "lastModified": "2026-05-07"
     },
     {
       "url": "https://tennisfrens.com/blog/tennis-ball-selection-guide-korea",
@@ -7838,22 +7782,6 @@
       "lastModified": "2026-05-06T01:00:00+09:00"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-post-match-recovery",
-      "title": "경기 후 회복 루틴 — 쿨다운·아이싱·수면",
-      "description": "경기 후 회복 루틴 — 쿨다운·아이싱·수면에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "건강 가이드",
-      "lastModified": "2026-05-06"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-pre-match-routine",
-      "title": "경기 전 루틴 완전 가이드 — 워밍업·멘탈 준비",
-      "description": "경기 전 루틴 완전 가이드 — 워밍업·멘탈 준비에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "멘탈 트레이닝",
-      "lastModified": "2026-05-06"
-    },
-    {
       "url": "https://tennisfrens.com/blog/aw2-121-ankle-clay-slide-beginner-checklist",
       "title": "클레이 발목 슬라이드, 시작 전 체크 5가지",
       "description": "클레이 코트에서 처음 미끄러지는 동작을 시도하기 전에 신발과 코트 상태, 발목 가동성을 순서대로 점검하는 방법을 정리했습니다.",
@@ -7894,22 +7822,6 @@
       "lastModified": "2026-05-05T00:00:00+09:00"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-hydration-guide",
-      "title": "테니스 수분 보충 완전 가이드 — 경기 전·중·후",
-      "description": "테니스 수분 보충 완전 가이드 — 경기 전·중·후에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "건강 가이드",
-      "lastModified": "2026-05-05"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-nutrition-diet-guide",
-      "title": "테니스 선수를 위한 영양 식단 가이드",
-      "description": "테니스 선수를 위한 영양 식단 가이드에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "건강 가이드",
-      "lastModified": "2026-05-05"
-    },
-    {
       "url": "https://tennisfrens.com/blog/aw2-116-wrist-pronation-recovery-beginner-checklist",
       "title": "회내 동작 배우기 전 손목 준비 체크",
       "description": "포핸드나 서브에서 손목을 안쪽으로 돌리는 회내 동작을 배우기 전, 그립 압력과 라켓 밸런스를 먼저 점검하는 것이 좋습니다.",
@@ -7940,22 +7852,6 @@
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-04T04:00:00+09:00"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-core-exercise-guide",
-      "title": "테니스를 위한 코어 운동 — 회전력·안정성·파워",
-      "description": "테니스를 위한 코어 운동 — 회전력·안정성·파워에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "훈련 가이드",
-      "lastModified": "2026-05-04"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-shoulder-strengthening",
-      "title": "테니스 어깨 강화 운동 — 로테이터 커프·부상 예방",
-      "description": "테니스 어깨 강화 운동 — 로테이터 커프·부상 예방에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "부상 예방",
-      "lastModified": "2026-05-04"
     },
     {
       "url": "https://tennisfrens.com/blog/aw2-112-knee-sidestep-load-twenty-min-routine",
@@ -8003,22 +7899,6 @@
       "description": "스키 선수 출신의 완벽한 밸런스. 강력한 양쪽 스트로크로 세계 1위를 향해 질주하는 야닉 시너.",
       "type": "article",
       "category": "선수 프로필",
-      "lastModified": "2026-05-03"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-doubles-poach-strategy",
-      "title": "복식 포치 전략 완전 가이드 — 타이밍·시그널·포지션",
-      "description": "복식 포치 전략 완전 가이드 — 타이밍·시그널·포지션에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "복식 전략",
-      "lastModified": "2026-05-03"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-doubles-receive-formation",
-      "title": "복식 리시브 포메이션 — I포메이션·호주 포메이션",
-      "description": "복식 리시브 포메이션 — I포메이션·호주 포메이션에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "복식 전략",
       "lastModified": "2026-05-03"
     },
     {
@@ -8070,22 +7950,6 @@
       "lastModified": "2026-05-02T02:00:00+09:00"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-ace-serve-placement",
-      "title": "에이스 서브 코스 공략 — T존·와이드·보디 서브",
-      "description": "에이스 서브 코스 공략 — T존·와이드·보디 서브에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "기술 가이드",
-      "lastModified": "2026-05-02"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-serve-toss-technique",
-      "title": "서브 토스 완벽하게 — 높이·위치·일관성 잡기",
-      "description": "서브 토스 완벽하게 — 높이·위치·일관성 잡기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "기술 가이드",
-      "lastModified": "2026-05-02"
-    },
-    {
       "url": "https://tennisfrens.com/blog/aw2-102-tennis-elbow-early-signal-twenty-min-routine",
       "title": "팔꿈치 부담 줄이는 20분 웜업 루틴",
       "description": "본격적인 랠리 전 20분을 스트레칭과 전완 활성화, 가벼운 타구로 나누면 팔꿈치에 갑자기 실리는 부담을 줄일 수 있습니다.",
@@ -8124,22 +7988,6 @@
       "type": "article",
       "category": "부상 예방",
       "lastModified": "2026-05-01T03:00:00+09:00"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-footwork-training",
-      "title": "테니스 풋워크 훈련 — 사이드스텝·크로스스텝·리커버리",
-      "description": "테니스 풋워크 훈련 — 사이드스텝·크로스스텝·리커버리에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "훈련 가이드",
-      "lastModified": "2026-05-01"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-split-step-guide",
-      "title": "스플릿 스텝 완전 정복 — 타이밍·리듬·발 위치",
-      "description": "스플릿 스텝 완전 정복 — 타이밍·리듬·발 위치에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "기술 가이드",
-      "lastModified": "2026-05-01"
     },
     {
       "url": "https://tennisfrens.com/blog/tf-title100-equipment-069",
@@ -8590,22 +8438,6 @@
       "lastModified": "2026-04-25T01:00:00+09:00"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-match-nerves-control",
-      "title": "테니스 경기 긴장감 컨트롤 — 루틴·호흡·집중력",
-      "description": "테니스 경기 긴장감 컨트롤 — 루틴·호흡·집중력에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "멘탈 트레이닝",
-      "lastModified": "2026-04-25"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-ranking-improvement-plan",
-      "title": "테니스 랭킹 올리기 — 토너먼트 선택과 포인트 전략",
-      "description": "테니스 랭킹 올리기 — 토너먼트 선택과 포인트 전략에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "전략 가이드",
-      "lastModified": "2026-04-25"
-    },
-    {
       "url": "https://tennisfrens.com/blog/aw2-274-volley-wrist-fix-match-record",
       "title": "경기 중 발리 실수, 손목 기준으로 기록하기",
       "description": "발리 실책이 손목 흔들림 때문인지 판단하고 기록하는 기준을 정리했습니다.",
@@ -8684,14 +8516,6 @@
       "type": "article",
       "category": "경기 분석",
       "lastModified": "2026-04-24T00:00:00+09:00"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-hard-court-tactics",
-      "title": "하드 코트 전술 완전 가이드 — 바운드·포지셔닝·템포",
-      "description": "하드 코트 전술 완전 가이드 — 바운드·포지셔닝·템포에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "전술 가이드",
-      "lastModified": "2026-04-24"
     },
     {
       "url": "https://tennisfrens.com/blog/aw2-269-backhand-slice-spin-match-record",
@@ -8774,14 +8598,6 @@
       "lastModified": "2026-04-23"
     },
     {
-      "url": "https://tennisfrens.com/blog/tennis-forehand-inside-out",
-      "title": "인사이드아웃 포핸드 완전 정복 — 코스·파워·전술",
-      "description": "인사이드아웃 포핸드 완전 정복 — 코스·파워·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "기술 가이드",
-      "lastModified": "2026-04-23"
-    },
-    {
       "url": "https://tennisfrens.com/blog/tennis-kick-serve-technique",
       "title": "킥 서브 완전 마스터 가이드 — 스핀·바운드·구사법 | TennisFriends",
       "description": "킥 서브 완전 마스터 가이드 — 스핀·바운드·구사법에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
@@ -8809,14 +8625,6 @@
       "url": "https://tennisfrens.com/blog/tennis-return-of-serve-guide",
       "title": "서브 리턴 완전 가이드 — 위치·타이밍·전술 | TennisFriends",
       "description": "서브 리턴 완전 가이드 — 위치·타이밍·전술에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술과 전술을 상세히 설명합니다.",
-      "type": "article",
-      "category": "기술 가이드",
-      "lastModified": "2026-04-23"
-    },
-    {
-      "url": "https://tennisfrens.com/blog/tennis-second-serve-strategy",
-      "title": "세컨드 서브 전략 — 안정성과 파워의 균형 찾기",
-      "description": "세컨드 서브 전략 — 안정성과 파워의 균형 찾기에 대한 전문 가이드. 실전에서 바로 적용할 수 있는 테니스 기술을 상세히 설명합니다.",
       "type": "article",
       "category": "기술 가이드",
       "lastModified": "2026-04-23"

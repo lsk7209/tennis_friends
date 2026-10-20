@@ -19,6 +19,7 @@ const eslintConfig = defineConfig([
     },
   },
   globalIgnores([
+    ".goal-harness/**",
     ".next/**",
     "out/**",
     "build/**",

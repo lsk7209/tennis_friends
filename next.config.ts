@@ -4,6 +4,11 @@ import playerLegacyRedirects from "./src/data/players/legacy-redirects.json";
 const isGitHubPages =
   process.env.GITHUB_ACTIONS && process.env.GITHUB_PAGES === "true";
 const isStaticExport = isGitHubPages || process.env.STATIC_EXPORT === "true";
+const isStandalone = process.env.NEXT_STANDALONE === "true";
+const isStaging = process.env.NEXT_PUBLIC_DEPLOYMENT_STAGE === "staging";
+if (isStandalone && (isStaticExport || process.env.GITHUB_PAGES === "true")) {
+  throw new Error("Standalone VPS builds must not use GitHub Pages or static export settings");
+}
 const repositoryBasePath =
   process.env.GITHUB_PAGES_BASE_PATH !== undefined
     ? process.env.GITHUB_PAGES_BASE_PATH
@@ -33,6 +38,7 @@ const nextConfig: NextConfig = {
         trailingSlash: true, // GitHub Pages에서 정적 파일 접근 최적화
       }
     : {
+        ...(isStandalone ? { output: "standalone" as const } : {}),
         // Vercel/General Optimization
         images: {
           formats: ["image/avif", "image/webp"],
@@ -45,6 +51,7 @@ const nextConfig: NextConfig = {
 
   // 성능 최적화
   experimental: {
+    ...(isStandalone ? { cpus: 2 } : {}),
     optimizePackageImports: [
       "lucide-react",
       "framer-motion",
@@ -129,7 +136,7 @@ const nextConfig: NextConfig = {
           {
             key: "X-Robots-Tag",
             value:
-              "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+              isStaging ? "noindex, nofollow, noarchive" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
           },
           // AI 크롤러 허용, 불필요한 기기 접근 차단
           {

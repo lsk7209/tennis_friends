@@ -1,3 +1,4 @@
+import { unavailableBlogSlugs } from "../src/data/blog-unavailable.js";
 import fs from "node:fs";
 import { createRequire } from "node:module";
 import Module from "node:module";
@@ -157,7 +158,7 @@ const publishedBlogSlugs = getPublishedBlogPosts(allBlogPosts)
   .sort();
 const physicalBlogSlugs = getPhysicalBlogSlugs();
 const physicalNoindexSlugs = physicalBlogSlugs.filter(
-  (slug) => !publishedBlogSlugs.includes(slug),
+  (slug) => !publishedBlogSlugs.includes(slug) && !unavailableBlogSlugs.includes(slug),
 );
 
 assert(entries.length > 0, { issue: "sitemap has no entries" });

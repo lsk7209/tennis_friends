@@ -15,6 +15,20 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     aliases: ["도미니크 티엠", "도미니크 팀", "Dominic Thiem", "티엠", "팀"],
     focus: "US오픈 우승, 손목 부상 이후 흐름, 은퇴 배경",
   },
+  "hubert-hurkacz": {
+    title: "후베르트 후르카츠 프로필 | 서브·네트 플레이·ATP 공식 정보",
+    description:
+      "후베르트 후르카츠(Hubert Hurkacz)의 강한 서브와 네트 전환을 중심으로 플레이스타일을 살펴봅니다. 현재 랭킹과 최근 결과는 ATP 공식 프로필에서 확인하세요.",
+    aliases: ["후베르트 후르카츠", "후르카츠", "Hubert Hurkacz", "Hubi"],
+    focus: "서브와 네트 전환, 공식 ATP 프로필",
+  },
+  "andrey-rublev": {
+    title: "안드레이 루블레프 프로필 | 포핸드·공격형 플레이·ATP 공식 정보",
+    description:
+      "안드레이 루블레프(Andrey Rublev)의 빠른 포핸드와 공격형 베이스라인 플레이를 살펴봅니다. 현재 랭킹과 최근 결과는 ATP 공식 프로필에서 확인하세요.",
+    aliases: ["안드레이 루블레프", "루블레프", "Andrey Rublev"],
+    focus: "포핸드와 공격형 베이스라인, 공식 ATP 프로필",
+  },
   "carlos-alcaraz": {
     title: "카를로스 알카라스·알 카라스 프로필 | 전술·라이벌·플레이스타일",
     description:

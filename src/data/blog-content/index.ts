@@ -1,3 +1,4 @@
+import { BLOG_CONTENT_NOVEMBER_2026 } from "./part33-november-2026";
 import { BLOG_CONTENT_PART1 } from "./part1";
 import { BLOG_CONTENT_PART2 } from "./part2";
 import { BLOG_CONTENT_PART3 } from "./part3";
@@ -40,6 +41,7 @@ type BlogContentEntry = {
 };
 
 export const blogContentMap: Record<string, BlogContentEntry> = {
+  ...BLOG_CONTENT_NOVEMBER_2026,
   ...BLOG_CONTENT_OCTOBER_2026,
   ...BLOG_CONTENT_BEGINNER_SERIES_2026,
   ...BLOG_CONTENT_PART30_REVIEWED_SEPTEMBER_2026,

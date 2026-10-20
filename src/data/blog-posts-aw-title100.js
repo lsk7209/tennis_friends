@@ -2929,38 +2929,30 @@ export const articleWriterTitle100Posts = [
     "id": "tf-title100-injury-recovery-076",
     "slug": "tf-title100-injury-recovery-076",
     "tags": [
-      "무릎이 뻐근한",
-      "부상 예방",
-      "테니스 엘보",
-      "무릎 부담",
-      "어깨 통증",
-      "회복 루틴",
-      "랠리보다",
-      "발리"
+      "무릎 통증",
+      "활동 조절",
+      "증상 기록",
+      "운동 복귀"
     ],
-    "title": "무릎이 뻐근한 날 랠리보다 발리 연습이 나을 수 있는 이유",
-    "subtitle": "무릎이 뻐근한 문제를 테니스 엘보 기록과 무릎 부담 루틴으로 바꾸는 실전 해설",
-    "mainKeyword": "무릎이 뻐근한",
+    "title": "무릎이 뻐근한 날 연습 전 확인할 증상과 활동 조절",
+    "subtitle": "발리로 바꾸기 전에 확인할 무릎 증상과 진료 신호",
+    "mainKeyword": "무릎 통증",
     "relatedKeywords": [
-      "부상 예방",
-      "테니스 엘보",
-      "무릎 부담",
-      "어깨 통증",
-      "회복 루틴",
-      "랠리보다",
-      "발리",
-      "연습이"
+      "무릎 통증",
+      "활동 조절",
+      "증상 기록",
+      "운동 복귀"
     ],
     "accentColors": [
       "#ea580c",
       "#fff7ed"
     ],
-    "excerpt": "무릎이 뻐근한 기준으로 테니스 엘보, 무릎 부담, 어깨 통증를 함께 점검해 다음 경기에서 바로 쓸 판단 순서를 정리합니다.",
+    "excerpt": "무릎이 뻐근한 날에는 발리가 더 안전하다고 단정하지 말고, 증상과 움직임을 먼저 확인하세요.",
     "badge": "예약 건강",
     "category": "부상 예방",
     "date": "2026-08-11",
     "scheduledAt": "2026-08-11T00:10:00+09:00",
-    "readTime": "9분",
+    "readTime": "4분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
     "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300"
   },

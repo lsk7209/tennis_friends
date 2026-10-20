@@ -1,3 +1,4 @@
+import { unavailableBlogSlugs } from "../src/data/blog-unavailable.js";
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
@@ -36,6 +37,7 @@ async function readBlogPosts() {
   }
 
   return module.allBlogPosts
+    .filter(post => !unavailableBlogSlugs.includes(post.slug) && !["draft", "private"].includes(post.publicationState))
     .map((post) => ({
       slug: post.slug || post.id,
       title: post.title || "",
