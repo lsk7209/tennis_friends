@@ -27,7 +27,7 @@ jobs:
         shell: bash
         run: |
           node --experimental-strip-types --test scripts/audit-editorial-operations.test.mjs
-          node --experimental-strip-types scripts/audit-editorial-operations.mjs --check-urls | tee editorial-report.json
+          node --experimental-strip-types scripts/audit-editorial-operations.mjs --check-urls --check-release | tee editorial-report.json
       - name: Preserve monitor result
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
