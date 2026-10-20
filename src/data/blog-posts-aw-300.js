@@ -1,41 +1,43 @@
 // Auto-generated from out/article-writer/tennisfrens-300. Do not edit by hand.
 export const articleWriterBlogPosts = [
   {
-    "id": "aw-001-serve-5",
-    "slug": "aw-001-serve-5",
-    "tags": [
+"id": "aw-001-serve-5",
+"slug": "aw-001-serve-5",
+"tags": [
       "테니스 서브",
       "서브 토스 교정",
       "초보 서브 연습",
       "토스 흔들림"
     ],
-    "title": "테니스 서브 토스 교정 | 옆으로 새는 공 잡는 5단계",
-    "excerpt": "테니스 서브 토스가 옆으로 새는 원인을 출발 위치, 릴리스 높이, 앞발 방향, 시선, 멈춤 루틴으로 교정합니다.",
-    "badge": "서브 교정",
-    "category": "서브 기술",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
-  },
+"title": "테니스 서브 토스 교정 | 옆으로 새는 공 점검 5단계",
+"excerpt": "서브 토스가 옆이나 뒤로 흐를 때 릴리스, 팔 경로, 몸의 균형을 차례로 관찰하는 5단계. USTA 손끝 릴리스 팁과 ITF 재토스 규칙도 구분합니다.",
+"badge": "서브 교정",
+"category": "서브 기술",
+"date": "2026-05-15",
+"readTime": "5분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+"updatedAt": "2026-10-20"
+},
   {
-    "id": "aw-002-club-doubles-beginner",
-    "slug": "aw-002-club-doubles-beginner",
-    "tags": [
+"id": "aw-002-club-doubles-beginner",
+"slug": "aw-002-club-doubles-beginner",
+"tags": [
       "복식 전술",
       "테니스 복식",
       "가운데 공 처리",
       "복식 콜 플레이"
     ],
-    "title": "테니스 복식 가운데 공 처리 | 콜·우선권·커버 기준",
-    "excerpt": "테니스 복식에서 가운데 공을 누가 칠지 헷갈릴 때 쓰는 콜, 우선권, 전위·후위 커버 기준을 정리했습니다.",
-    "badge": "복식 전술",
-    "category": "복식 전술",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300"
-  },
+"title": "테니스 복식 가운데 공 처리 | 파트너 콜과 커버 약속",
+"excerpt": "가운데 공에 보편 우선권은 없습니다. ITF 복식 규칙과 USTA 파트너 소통 조언을 바탕으로 팀 합의, 콜, 다음 공간 커버를 정리합니다.",
+"badge": "복식 전술",
+"category": "복식 전술",
+"date": "2026-05-15",
+"readTime": "5분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+"updatedAt": "2026-10-20"
+},
   {
     "id": "aw-003-record",
     "slug": "aw-003-record",
@@ -55,77 +57,81 @@ export const articleWriterBlogPosts = [
     "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300"
   },
   {
-    "id": "aw-004-tennis-guide",
-    "slug": "aw-004-tennis-guide",
-    "tags": [
+"id": "aw-004-tennis-guide",
+"slug": "aw-004-tennis-guide",
+"tags": [
       "코트·환경",
       "테니스장 예약",
       "테니스 코트",
       "야간 테니스"
     ],
-    "title": "테니스장 예약 전 확인할 것 | 코트·조명·환불 기준",
-    "excerpt": "테니스장 예약 전 코트 표면, 야간 조명, 우천 취소, 주차·샤워실, 레슨 동선을 확인하는 실전 체크리스트입니다.",
-    "badge": "예약 체크",
-    "category": "코트·환경",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300"
-  },
+"title": "테니스장 예약 전 확인할 것 | 코트·조명·우천 취소",
+"excerpt": "코트 표면과 야간 조명, 우천 취소·환불 신청 경로, 주차·샤워·레슨 조건을 최신 시설 공고에서 확인하는 예약 체크리스트입니다.",
+"badge": "예약 체크",
+"category": "코트·환경",
+"date": "2026-05-15",
+"readTime": "5분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300",
+"updatedAt": "2026-10-20"
+},
   {
-    "id": "aw-005-string",
-    "slug": "aw-005-string",
-    "tags": [
+"id": "aw-005-string",
+"slug": "aw-005-string",
+"tags": [
       "스트링 텐션",
       "겨울 테니스",
       "테니스 스트링",
       "장비 가이드"
     ],
-    "title": "겨울 테니스 스트링 텐션 | 추운 날 체감 기준",
-    "excerpt": "겨울 테니스 스트링 텐션을 소재, 온도, 공 반발, 팔 부담 기준으로 조정하는 실전 체크리스트입니다.",
-    "badge": "스트링 점검",
-    "category": "장비 가이드",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
-  },
+"title": "겨울 테니스 스트링 텐션 | 소재·공·사용 기간 점검",
+"excerpt": "겨울에 타구감이 달라졌을 때 스트링 소재와 사용 기간, 공·코트 조건을 기록하세요. 고정 파운드 처방 없이 스트링어와 조정 방향을 상담합니다.",
+"badge": "스트링 점검",
+"category": "장비 가이드",
+"date": "2026-05-15",
+"readTime": "5분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
+"updatedAt": "2026-10-20"
+},
   {
-    "id": "aw-006-tennis-guide",
-    "slug": "aw-006-tennis-guide",
-    "tags": [
+"id": "aw-006-tennis-guide",
+"slug": "aw-006-tennis-guide",
+"tags": [
       "테니스 장비",
       "라켓 교체",
       "스트링 교체",
       "장비 테스트"
     ],
-    "title": "테니스 장비 교체 전 테스트 | 라켓·스트링 판단 기준",
-    "excerpt": "라켓, 스트링, 신발을 바꾸기 전 같은 공·같은 코트·같은 루틴으로 비교하는 테니스 장비 테스트 기준입니다.",
-    "badge": "장비 비교",
-    "category": "장비 가이드",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
-  },
+"title": "테니스 장비 교체 전 테스트 | 라켓 시타·스트링·신발 점검",
+"excerpt": "라켓 구매 전 시타와 그립·스트링·테니스화 상태를 비교하는 기록 예시입니다. 공·코트·시타 순서의 차이를 확인하고 통증은 별도로 평가하세요.",
+"badge": "장비 비교",
+"category": "장비 가이드",
+"date": "2026-05-15",
+"readTime": "6분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
+"updatedAt": "2026-10-20"
+},
   {
-    "id": "aw-007-doubles-20",
-    "slug": "aw-007-doubles-20",
-    "tags": [
+"id": "aw-007-doubles-20",
+"slug": "aw-007-doubles-20",
+"tags": [
       "복식 전술",
       "복식 콜 사인",
       "테니스 복식",
       "파트너 소통"
     ],
-    "title": "복식 콜 사인 정하기 | 파트너 소통 20분 루틴",
-    "excerpt": "복식 콜 사인을 내 공·네 공·스위치·스테이 기준으로 정하고 파트너와 20분 안에 맞추는 전술 루틴입니다.",
-    "badge": "복식 소통",
-    "category": "복식 전술",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300"
-  },
+"title": "복식 콜 사인 정하기 | 새 파트너와 뜻 맞추는 연습",
+"excerpt": "새 파트너와 서브·리턴·포칭 의도와 콜의 뜻을 맞추는 방법. 선택적 20분 연습 예시와 상대 방해를 피할 대화 시점을 구분합니다.",
+"badge": "복식 소통",
+"category": "복식 전술",
+"date": "2026-05-15",
+"readTime": "6분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+"updatedAt": "2026-10-20"
+},
   {
     "id": "aw-008-injury-grip",
     "slug": "aw-008-injury-grip",
@@ -141,77 +147,81 @@ export const articleWriterBlogPosts = [
     "updatedAt": "2026-10-20"
   },
   {
-    "id": "aw-009-club-match-club-match",
-    "slug": "aw-009-club-match-club-match",
-    "tags": [
+"id": "aw-009-club-match-club-match",
+"slug": "aw-009-club-match-club-match",
+"tags": [
       "동호회 경기",
       "테니스 매너",
       "첫 경기 준비",
       "입문 가이드"
     ],
-    "title": "동호회 경기 첫 매너 | 준비·콜·교대 기준",
-    "excerpt": "동호회 경기 첫날 지켜야 할 도착 시간, 워밍업, 라인콜, 공 관리, 교대 매너를 실전 순서로 정리했습니다.",
-    "badge": "첫 경기 매너",
-    "category": "입문 가이드",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300"
-  },
+"title": "동호회 첫 경기 매너 | 준비·라인콜·점수 확인",
+"excerpt": "첫 동호회 경기의 집합·워밍업·공·교대 조건을 주최자에게 확인하고, 자율 라인콜과 점수 차이·옆 코트 공 상황을 정리합니다.",
+"badge": "첫 경기 매너",
+"category": "입문 가이드",
+"date": "2026-05-15",
+"readTime": "6분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300",
+"updatedAt": "2026-10-20"
+},
   {
-    "id": "aw-010-record",
-    "slug": "aw-010-record",
-    "tags": [
+"id": "aw-010-record",
+"slug": "aw-010-record",
+"tags": [
       "코트·환경",
       "야간 로브",
       "야간 코트",
       "로브 대응 기록"
     ],
-    "title": "야간 코트 로브 대응 기록표 | 조명별 판단 기준",
-    "excerpt": "야간 코트에서 로브를 놓치는 원인을 조명 위치, 바운드 높이, 회복 동선으로 나눠 기록하는 실전 점검법입니다.",
-    "badge": "야간 로브 기록",
-    "category": "코트·환경",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300"
-  },
+"title": "야간 코트 로브 대응 기록표 | 조명·궤적·이동 점검",
+"excerpt": "야간 로브를 놓친 장면의 조명 방향, 공 추적이 끊긴 구간, 낙하지점과 뒤로 이동한 경로를 나눠 기록합니다. 위험한 시야 조건은 시설에 확인하세요.",
+"badge": "야간 로브 기록",
+"category": "코트·환경",
+"date": "2026-05-15",
+"readTime": "6분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-300",
+"updatedAt": "2026-10-20"
+},
   {
-    "id": "aw-011-record",
-    "slug": "aw-011-record",
-    "tags": [
+"id": "aw-011-record",
+"slug": "aw-011-record",
+"tags": [
       "훈련 가이드",
       "코치 피드백",
       "레슨 기록",
       "연습 노트"
     ],
-    "title": "코치 피드백 기록법 | 레슨 노트 작성 기준",
-    "excerpt": "코치 피드백을 레슨 직후 문제 장면, 수정 큐, 다음 연습 과제로 나눠 기록하는 방법과 피해야 할 함정을 정리했습니다.",
-    "badge": "레슨 기록법",
-    "category": "훈련 가이드",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300"
-  },
+"title": "코치 피드백 기록법 | 레슨 말·내 해석·다음 질문",
+"excerpt": "레슨 장면과 코치의 실제 큐, 내 해석을 분리해 적고 다음 레슨에서 확인할 질문을 만듭니다. 고정 시간·공 개수·성공률 기준은 두지 않습니다.",
+"badge": "레슨 기록법",
+"category": "훈련 가이드",
+"date": "2026-05-15",
+"readTime": "5분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300",
+"updatedAt": "2026-10-20"
+},
   {
-    "id": "aw-012-doubles",
-    "slug": "aw-012-doubles",
-    "tags": [
+"id": "aw-012-doubles",
+"slug": "aw-012-doubles",
+"tags": [
       "복식 전술",
       "네트 위치",
       "복식 전위",
       "포칭 타이밍"
     ],
-    "title": "복식 전위 발 위치 | 네트 앞 상황별 기준",
-    "excerpt": "복식 전위가 네트 앞에서 서야 할 기본 위치와 서브 방향, 리턴 코스, 로브 상황별 발 위치 조정 기준을 정리했습니다.",
-    "badge": "복식 전위 기준",
-    "category": "복식 전술",
-    "date": "2026-05-15",
-    "readTime": "8분",
-    "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300"
-  },
+"title": "복식 전위 발 위치 | 공·상대 타점에 따른 위치 판단",
+"excerpt": "복식 전위의 시작점과 포칭·로브 대응을 고정 거리 없이 판단합니다. 공의 높이, 상대 타점, 파트너 커버를 보고 위치를 조정하세요.",
+"badge": "복식 전위 기준",
+"category": "복식 전술",
+"date": "2026-05-15",
+"readTime": "6분",
+"badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
+"categoryColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+"updatedAt": "2026-10-20"
+},
   {
     "id": "aw-013-injury-injury-5",
     "slug": "aw-013-injury-injury-5",
