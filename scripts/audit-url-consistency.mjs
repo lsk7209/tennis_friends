@@ -36,6 +36,10 @@ const IGNORED_FILE_PATTERNS = [
   /(^|[\\/])public[\\/]ai-index\.json$/,
   /(^|[\\/])scripts[\\/]audit-redirect-config\.mjs$/,
   /(^|[\\/])scripts[\\/]audit-redirects\.mjs$/,
+  // These checks must name the forbidden host to detect emitted URLs/fixtures.
+  /(^|[\\/])scripts[\\/]audit-live-seo-samples\.mjs$/,
+  /(^|[\\/])scripts[\\/]audit-public-endpoints\.mjs$/,
+  /(^|[\\/])scripts[\\/]audit-public-checks\.test\.mjs$/,
   /(^|[\\/])scripts[\\/]audit-analytics-reports\.mjs$/,
 ];
 

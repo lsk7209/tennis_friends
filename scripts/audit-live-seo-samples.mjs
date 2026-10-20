@@ -1,5 +1,5 @@
 const DEFAULT_BASE_URL = "https://tennisfrens.com";
-const NON_WWW_BASE_URL = `https://${"tennisfrens.com"}`;
+const WWW_BASE_URL = "https://www.tennisfrens.com";
 
 const args = process.argv.slice(2);
 const baseUrl = (
@@ -211,9 +211,9 @@ for (const sample of samples) {
     });
   }
 
-  assert(!html.includes(NON_WWW_BASE_URL), {
+  assert(!html.includes(WWW_BASE_URL), {
     path: sample.path,
-    issue: "non-www absolute URL found",
+    issue: "non-canonical www absolute URL found",
   });
   assert(!/\uFFFD/.test(html), { path: sample.path, issue: "replacement character found" });
   assert(!/\?\?\?/.test(html), { path: sample.path, issue: "triple question mark mojibake marker found" });

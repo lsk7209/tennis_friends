@@ -17,10 +17,12 @@ import { PlayerSpotlight } from "./_components/home/player-spotlight";
 import { BlogMagazine } from "./_components/home/blog-magazine";
 import { NtrpBand } from "./_components/home/ntrp-band";
 
+const homeDescription =
+  "NTRP 비공식 자가점검과 스트링 텐션 계산기 등 무료 테니스 도구와 실전 가이드를 제공합니다. 필요한 내용을 확인하고 네이버 카페 테니스프렌즈에서 이야기를 이어가세요.";
+
 export const metadata: Metadata = {
   title: "TennisFriends - 테니스 실력 테스트",
-  description:
-    "NTRP 실력 테스트와 테니스 가이드를 확인하고 네이버 카페 테니스프렌즈에서 이야기를 이어가세요. 스트링 텐션, 부상 위험, 플레이 스타일 도구도 제공합니다.",
+  description: homeDescription,
   keywords: [
     "테니스",
     "NTRP 테스트",
@@ -33,8 +35,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "TennisFriends - 테니스 실력 테스트 & 분석 도구",
-    description:
-      "테니스 가이드와 무료 도구를 확인하고 네이버 카페 테니스프렌즈로 이동해 카페 게시판을 확인하세요.",
+    description: homeDescription,
     url: getAbsoluteUrl("/"),
     siteName: SITE_NAME,
     locale: DEFAULT_SITE_LOCALE,
@@ -51,8 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TennisFriends - 테니스 실력 테스트",
-    description:
-      "테니스 가이드와 무료 도구를 확인하고 네이버 카페 테니스프렌즈로 이동하세요.",
+    description: homeDescription,
     images: [getAbsoluteUrl("/opengraph-image")],
   },
   alternates: {

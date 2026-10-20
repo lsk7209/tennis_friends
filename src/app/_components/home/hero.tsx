@@ -43,7 +43,7 @@ export function Hero() {
 
           {/* 디스플레이 헤드라인 — LCP 요소, 즉시 렌더링 */}
           <h1
-            className="font-display-latin text-[14vw] sm:text-[10vw] md:text-[8vw] lg:text-[88px] leading-[0.88] tracking-[-0.045em] text-white mb-8"
+            className="font-display-latin text-[14vw] sm:text-[10vw] md:text-[8vw] lg:text-[88px] leading-[1.15] break-keep tracking-[-0.045em] text-white mb-8"
             aria-label="읽고 점검하고, 카페에서 이어가세요"
           >
             읽고 점검하고,

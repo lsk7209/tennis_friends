@@ -134,7 +134,7 @@ const normalizedRobotsTxt = robotsTxt.toLowerCase();
 const aiCrawlerPolicy = normalizedRobotsTxt.slice(
   normalizedRobotsTxt.indexOf("user-agent: gptbot"),
 );
-for (const privatePath of ["/private/", "/admin/", "/api/auth/"]) {
+for (const privatePath of ["/private/", "/admin/", "/api/"]) {
   if (!aiCrawlerPolicy.includes(`disallow: ${privatePath}`)) {
     throw new Error(`AI crawler policy is missing ${privatePath}`);
   }

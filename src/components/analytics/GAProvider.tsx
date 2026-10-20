@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { flushAnalyticsQueue, trackPageView } from "@/lib/analytics";
+import { flushAnalyticsQueue, getSafeCampaignParams, trackPageView } from "@/lib/analytics";
 
 /**
  * GA4 공식 gtag.js 로더 + SPA 라우트 전환 시 페이지뷰 자동 전송.
@@ -47,7 +47,22 @@ export default function GAProvider({ measurementId = "" }: GAProviderProps) {
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
           gtag('js', new Date());
+          var pageReferrer = '';
+          try {
+            var referrer = new URL(document.referrer);
+            if (referrer.protocol === 'http:' || referrer.protocol === 'https:') {
+              pageReferrer = referrer.origin + referrer.pathname;
+            }
+          } catch (_) {}
+          var pageDefaults = {
+            page_location: location.origin + location.pathname,
+            page_referrer: pageReferrer,
+            page_title: location.pathname === '/search' ? '사이트 검색' : document.title
+          };
+          gtag('set', pageDefaults);
           gtag('config', '${measurementId}', {
+            ...pageDefaults,
+            ...(${getSafeCampaignParams.toString()})(location.search),
             send_page_view: false,
             anonymize_ip: true
           });

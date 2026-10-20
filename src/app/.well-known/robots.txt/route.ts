@@ -10,6 +10,9 @@ export const revalidate = false;
  */
 export function GET() {
   const baseUrl = getSiteUrl();
+  if (process.env.NEXT_PUBLIC_DEPLOYMENT_STAGE === "staging") {
+    return new Response("User-agent: *\nDisallow: /\n", { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+  }
 
   const robotsTxt = `User-agent: Googlebot
 Allow: /

@@ -8,6 +8,9 @@ const DISALLOWED_PRIVATE_PATHS = ["/private/", "/admin/", "/api/", "/*?"];
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = getSiteUrl();
+  if (process.env.NEXT_PUBLIC_DEPLOYMENT_STAGE === "staging") {
+    return { rules: { userAgent: "*", disallow: "/" } };
+  }
 
   return {
     rules: [

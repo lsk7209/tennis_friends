@@ -51,7 +51,7 @@ import { getUtilityContract, UTILITY_CONTRACT_LABELS } from "@/lib/utility-contr
 // ============================================
 // 유틸리티 메타데이터 관리 시스템
 // ============================================
-export const utilitiesMetadata: UtilityMetadata[] = [
+const utilitiesMetadata: UtilityMetadata[] = [
   {
     id: "play-style-test",
     title: "테니스 플레이 스타일 진단",

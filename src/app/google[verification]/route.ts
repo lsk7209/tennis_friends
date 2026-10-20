@@ -1,5 +1,3 @@
-import { NextRequest } from 'next/server';
-
 export const dynamic = "force-static";
 export const revalidate = false;
 
@@ -17,17 +15,12 @@ export const revalidate = false;
  * - URL: https://tennisfrens.com/google1234567890
  * - 환경 변수: GOOGLE_SITE_VERIFICATION=1234567890
  */
-export async function GET(
-  request: NextRequest,
-  context?: { params?: Promise<{ verification?: string }> }
-) {
-  void request;
-  const params = context?.params ? await context.params : {};
-  const verification = params?.verification;
+// Embedded brackets in this folder name are literal, not a dynamic segment.
+export async function GET() {
   const envCode = process.env.GOOGLE_SITE_VERIFICATION;
 
   // 환경 변수에 설정된 코드와 일치하는지 확인
-  const code = envCode || verification || "";
+  const code = envCode || "";
 
   if (!code) {
     return new Response("Google verification code is not configured.", {

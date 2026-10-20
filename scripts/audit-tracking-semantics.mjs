@@ -207,9 +207,22 @@ assert.deepEqual(analytics.sanitizeAnalyticsEvent("test_completed", {
 {
   const sent = [];
   const setEffects = (value) => {
-    globalThis.document = { documentElement: { dataset: value ? { externalEffects: value } : {} } };
+    globalThis.document = {
+      title: "private-search-term | TennisFriends",
+      referrer: "https://tennisfrens.com/search?q=private-search-term#private-fragment",
+      documentElement: { dataset: value ? { externalEffects: value } : {} },
+    };
   };
-  globalThis.window = { location: { origin: "https://tennisfrens.com", pathname: "/" } };
+  globalThis.window = {
+    location: {
+      origin: "https://tennisfrens.com",
+      pathname: "/search",
+      search: "?q=private-search-term",
+      hash: "#private-fragment",
+      href: "https://tennisfrens.com/search?q=private-search-term#private-fragment",
+    },
+  };
+  const pageLocation = "https://tennisfrens.com/search";
   const started = { tool_slug: "ntrp-test", page_path: "/utility/ntrp-test/test", measurement_version: "v2" };
 
   setEffects(undefined);
@@ -224,11 +237,51 @@ assert.deepEqual(analytics.sanitizeAnalyticsEvent("test_completed", {
   assert.equal(analytics.flushAnalyticsQueue(), 0, "nothing is flushed while gtag is missing");
   assert.equal(analytics.getQueuedAnalyticsEventCount(), 1);
 
+  window.location.pathname = "/utility/later-page";
   window.gtag = (...args) => sent.push(args);
   assert.equal(analytics.flushAnalyticsQueue(), 1, "late gtag receives the queued start event");
-  assert.deepEqual(sent[0], ["event", "assessment_started", started]);
+  assert.deepEqual(sent[0], ["event", "assessment_started", { ...started, page_location: pageLocation }]);
+  assert.equal(JSON.stringify(sent[0]).includes("private-search-term"), false);
+  assert.equal(JSON.stringify(sent[0]).includes("private-fragment"), false);
   assert.equal(analytics.getQueuedAnalyticsEventCount(), 0);
+  window.location.pathname = "/search";
   assert.equal(analytics.trackEvent("test_completed", { test_type: "ntrp-test" }), "sent");
+  assert.deepEqual(sent[1], ["event", "test_completed", { test_type: "ntrp-test", page_location: pageLocation }]);
+  assert.equal(analytics.trackEvent("search_performed", {
+    query_length: 19, result_count: 3, search_term: "private-search-term",
+    page_location: window.location.href,
+  }), "sent");
+  assert.deepEqual(sent[2], ["event", "search_performed", {
+    query_length: 19, result_count: 3, page_location: pageLocation,
+  }]);
+  assert.equal(JSON.stringify(sent).includes("private-search-term"), false);
+  assert.equal(JSON.stringify(sent).includes("private-fragment"), false);
+  analytics.trackPageView("/search", "G-TEST");
+  const safePageDefaults = {
+    page_location: pageLocation,
+    page_referrer: pageLocation,
+    page_title: "사이트 검색",
+  };
+  assert.deepEqual(sent.slice(3), [
+    ["set", safePageDefaults],
+    ["config", "G-TEST", { ...safePageDefaults, update: true, send_page_view: false }],
+    ["event", "page_view", { page_path: "/search", ...safePageDefaults, send_to: "G-TEST" }],
+  ]);
+  assert.equal(JSON.stringify(sent).includes("private-search-term"), false);
+  assert.equal(JSON.stringify(sent).includes("private-fragment"), false);
+  window.location.pathname = "/blog/example-post";
+  document.title = "Example article";
+  analytics.trackPageView("/blog/example-post", "G-TEST");
+  const nextPageDefaults = {
+    page_location: "https://tennisfrens.com/blog/example-post",
+    page_referrer: pageLocation,
+    page_title: "Example article",
+  };
+  assert.deepEqual(sent.slice(6), [
+    ["set", nextPageDefaults],
+    ["config", "G-TEST", { ...nextPageDefaults, update: true, send_page_view: false }],
+    ["event", "page_view", { page_path: "/blog/example-post", ...nextPageDefaults, send_to: "G-TEST" }],
+  ]);
 
   delete window.gtag;
   for (let index = 0; index < analytics.ANALYTICS_QUEUE_MAX_EVENTS + 5; index += 1) {
@@ -242,5 +295,15 @@ assert.deepEqual(analytics.sanitizeAnalyticsEvent("test_completed", {
   assert.equal(analytics.getQueuedAnalyticsEventCount(), 0);
   delete window.gtag;
 }
+
+// Campaign metadata is explicit and bounded; private query/fragment values never become fields.
+assert.deepEqual(analytics.getSafeCampaignParams("?utm_source=naver&utm_medium=cafe&utm_campaign=spring&utm_id=123&utm_content=header&q=private& utm_term=private"), {
+  campaign_source: "naver", campaign_medium: "cafe", campaign_name: "spring",
+  campaign_id: "123", campaign_content: "header",
+});
+assert.deepEqual(analytics.getSafeCampaignParams("?utm_term=private&q=private&utm_source=person%40example.com&utm_campaign=010-1234-5678"), {});
+assert.equal(analytics.getSafeCampaignParams(`?utm_content=${"a".repeat(150)}`).campaign_content.length, 100);
+const inlineCampaign = new Function(`return (${analytics.getSafeCampaignParams.toString()})`)();
+assert.deepEqual(inlineCampaign("?utm_source=naver&q=private"), { campaign_source: "naver" });
 
 console.log("Tracking semantics audit passed.");
