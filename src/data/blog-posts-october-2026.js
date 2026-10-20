@@ -3,8 +3,8 @@ export const october2026ScheduledPosts = [
   {
     "id": "oct26-01",
     "slug": "oct26-line-call-basics",
-    "title": "셀프 저지 경기에서 라인 콜 하는 기본 원칙",
-    "excerpt": "심판이 없는 동호회 게임에서 인·아웃을 누가, 어떻게 부르는지 정리했습니다. 선에 닿은 공은 인이라는 규칙부터 애매할 때의 태도까지 다룹니다.",
+    "title": "셀프 저지 라인 콜: 선에 닿은 공·불확실한 판정·번복 처리",
+    "excerpt": "선에 닿은 공은 인입니다. 셀프 저지의 담당·불확실한 콜·번복 절차는 경기 적용 규정을 확인하고, USTA The Code의 예를 국내 대회 전체 규칙으로 일반화하지 마세요.",
     "badge": "규칙 가이드",
     "category": "경기 규칙",
     "date": "2026-10-01",
@@ -12,12 +12,8 @@ export const october2026ScheduledPosts = [
     "readTime": "6분",
     "badgeColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
     "categoryColor": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-    "tags": [
-      "라인 콜",
-      "셀프 저지",
-      "테니스 규칙",
-      "코트 매너"
-    ]
+    "tags": ["라인 콜", "셀프 저지", "ITF 규칙", "코트 매너"],
+    "updatedAt": "2026-10-20T15:34:30+09:00"
   },
   {
     "id": "oct26-02",

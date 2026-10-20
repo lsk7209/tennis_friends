@@ -135,7 +135,7 @@ assert(
 
 const { PLAYERS_DB } = loadProjectSource("src/data/players/index.ts");
 for (const [slug, expectedSource] of [
-  ["hubert-hurkacz", "https://www.atptour.com/en/news/hurkacz-sinner-miami-2021-day-12-sunday-final"],
+  ["hubert-hurkacz", "https://www.miamiopen.com/latest-news/hurkacz-keeps-shining-in-florida-with-miami-open-title/"],
   ["andrey-rublev", "https://www.atptour.com/en/news/rublev-rune-monte-carlo-2023-sunday-final"],
 ]) {
   const profile = PLAYERS_DB[slug]?.detailedProfile;

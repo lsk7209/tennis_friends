@@ -16,11 +16,11 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "US오픈 우승, 손목 부상 이후 흐름, 은퇴 배경",
   },
   "hubert-hurkacz": {
-    title: "후베르트 후르카츠 프로필 | 서브·네트 플레이·ATP 공식 정보",
+    title: "후베르트 후르카츠 프로필 | 마스터스 우승·윔블던 4강",
     description:
-      "후베르트 후르카츠(Hubert Hurkacz)의 강한 서브와 네트 전환을 중심으로 플레이스타일을 살펴봅니다. 현재 랭킹과 최근 결과는 ATP 공식 프로필에서 확인하세요.",
+      "후베르트 후르카츠(Hubert Hurkacz)의 2021 마이애미·2023 상하이 우승, 윔블던 4강과 두 결승의 전환 장면을 공식 대회 기록으로 살펴봅니다.",
     aliases: ["후베르트 후르카츠", "후르카츠", "Hubert Hurkacz", "Hubi"],
-    focus: "서브와 네트 전환, 공식 ATP 프로필",
+    focus: "마이애미·상하이 결승의 전환 장면과 윔블던 4강",
   },
   "andrey-rublev": {
     title: "안드레이 루블레프 프로필 | 포핸드·공격형 플레이·ATP 공식 정보",

@@ -2203,11 +2203,12 @@ const scheduledPostSeedsPart3 = [
   },
   {
     id: "tennis-elbow-load-management-match-application",
-    title: "실전 경기에서 팔꿈치 부담을 줄이는 선택 기준",
+    title: "경기 중 팔꿈치 통증: 중단 판단과 복귀 상담 기록",
     excerpt:
-      "경기 중 팔꿈치 통증이 생기면 악화시키는 동작을 줄이거나 중단하고, 증상과 기능을 확인하세요.",
+      "팔꿈치 통증을 악화시키는 활동을 줄이거나 중단하고, 위험 신호·일상 기능·활동 후 반응을 기록해 상담하세요. 샷 변경이나 통증 감소만으로 안전한 경기 지속·복귀를 판단하지 않습니다.",
     category: "건강 & 피트니스",
-    tags: ["팔꿈치", "테니스 엘보", "부상 예방", "회복", "부상", "실제"],
+    tags: ["팔꿈치 통증", "테니스 엘보", "활동 조절", "운동 복귀"],
+    updatedAt: "2026-10-20T15:34:30+09:00",
   },
   {
     id: "tennis-elbow-load-management-comparison-guide",
@@ -3485,6 +3486,7 @@ const scheduledBlogPosts = [
     tags: post.tags,
     title: post.title,
     excerpt: post.excerpt,
+    ...(post.updatedAt ? { updatedAt: post.updatedAt } : {}),
     badge: isGuide ? "예약 가이드" : "예약 글",
     category: post.category,
     date: scheduledAt.slice(0, 10),
@@ -5328,9 +5330,9 @@ export const allBlogPosts = [
   {
     id: "tennis-wall-practice-guide",
     slug: "tennis-wall-practice-guide",
-    title: "벽치기 훈련 가이드",
+    title: "벽치기 연습: 목표 구역·포핸드/백핸드 전환·기록 방법",
     excerpt:
-      "혼자서도 반복 훈련 효과를 얻을 수 있는 벽치기 루틴과 목표 설정법을 다룹니다.",
+      "벽치기는 반복 접촉을 연습하는 도구입니다. 허용된 공간에서 목표 구역과 중단·재시작 기준을 정하고, 같은 조건의 기록과 파트너 연습을 구분해 활용하세요.",
     badge: "신규",
     category: "테니스 훈련",
     date: "2026-03-07",
@@ -5339,6 +5341,8 @@ export const allBlogPosts = [
       "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
     categoryColor:
       "bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-300",
+    tags: ["벽치기", "혼자 연습", "연습 기록", "포핸드 백핸드"],
+    updatedAt: "2026-10-20T15:34:30+09:00",
   },
   {
     id: "tennis-doubles-net-player-guide",
@@ -5645,10 +5649,10 @@ export const allBlogPosts = [
   {
     id: "tennis-hybrid-string-setup",
     slug: "tennis-hybrid-string-setup",
-    tags: ["테니스 장비"],
-    title: "하이브리드 스트링 셋업 가이드 (폴리 vs 인조쉽)",
+    tags: ["하이브리드 스트링", "테니스 장비", "스트링 소재", "메인 크로스"],
+    title: "하이브리드 스트링: 소재·메인/크로스 선택과 비교 기록",
     excerpt:
-      "선수들이 사랑하는 믹스 앤 매치. 폴리 스트링과 인조쉽/천연쉽을 조합하여 내구성, 스핀, 타구감을 모두 잡는 하이브리드 세팅법.",
+      "하이브리드는 서로 다른 스트링을 세로줄과 가로줄에 조합하는 방식입니다. 현재 셋업을 기준으로 소재·배치·작업 텐션을 구분해 상담하고 비교하세요.",
     badge: "최신 글",
     category: "테니스 장비",
     date: "2026-01-24",
@@ -5656,6 +5660,7 @@ export const allBlogPosts = [
     badgeColor: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     categoryColor:
       "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
+    updatedAt: "2026-10-20T15:34:30+09:00",
   },
   {
     id: "tennis-grip-size-selection",

@@ -693,66 +693,43 @@ export const MALE_PLAYERS: Record<string, PlayerData> = {
         }
     },
     'hubert-hurkacz': {
-        name: '후베르트 후르카츠', nameEn: 'Hubert Hurkacz', country: 'Poland', countryFlag: '🇵🇱', image: '/images/players/hubert-hurkacz.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
-        longBio: '폴란드의 서브 몬스터. 큰 키에서 내리꽂는 에이스급 서브와 부드러운 발리 터치, 그리고 겸손한 성품으로 사랑받는 선수입니다.',
-        detailedProfile: {
-            oneLineSummary: '코트 위의 신사, 강력한 서브와 부드러운 터치를 겸비한 폴란드의 "Hubi".',
-            whyNotable: `
-                <div class="highlight-box">
-                    <div class="highlight-box-title">2021년 윔블던 8강에서 페더러를 꺾은 선수</div>
-                    <p>2021년 윔블던 남자 단식 8강에서 <strong>로저 페더러</strong>를 6-3, 7-6(4), 6-0으로 꺾었습니다. <a href="https://www.wimbledon.com/en_GB/scores/2021/schedule/pdf/schedulePDF17.pdf" target="_blank" rel="noopener noreferrer">윔블던의 2021년 공식 결과표</a>에서 스코어를 확인할 수 있습니다.</p>
-                </div>
-                <p>196cm의 거구지만 믿기 힘들 정도로 유연한 다이빙 발리를 선보이며, 항상 미소를 잃지 않는 선한 인성으로 동료들 사이에서 평판이 매우 좋습니다.</p>
-            `,
-            playStyle: `
-                <p><strong>"올라운드 서버 (All-round Server)"</strong></p>
-                <p>단순히 서브만 좋은 것이 아닙니다. 베이스라인 랠리, 넷 플레이, 수비력까지 모든 면에서 육각형에 가까운 능력을 보여줍니다.</p>
-                <div class="highlight-box">
-                    <div class="highlight-box-title">💎 후르카츠의 3가지 "히든 젬"</div>
-                    <ul class="list-disc pl-5 my-0 space-y-2">
-                        <li><strong>정밀 타격 서브:</strong> 속도도 빠르지만 코너를 찌르는 정확도가 예술입니다. 브레이크 포인트 위기 때마다 에이스로 삭제해 버립니다.</li>
-                        <li><strong>다이빙 발리:</strong> 잔디 코트에서 몸을 날려 공을 받아내는 다이빙 발리는 그의 시그니처 무브입니다.</li>
-                        <li><strong>부드러운 터치:</strong> 거구의 선수들이 흔히 갖지 못한 섬세한 손목 감각을 지녀 드롭샷이나 앵글 발리도 능수능란합니다.</li>
-                    </ul>
-                </div>
-            `,
-            hexagonStats: [],
-            growthStory: `
-                <p>폴란드 브로츠와프 출신으로, 어머니가 주니어 테니스 챔피언 출신입니다. 체조 선수였던 할아버지의 유전자를 물려받아 큰 키에도 유연한 신체를 가졌습니다.</p>
-                <p>2021년 4월 4일 마이애미 결승에서 야닉 시너를 7-6(4), 6-4로 꺾고 첫 ATP 마스터스 1000 우승을 차지했습니다. 2023년 10월 15일에는 상하이에서 두 번째 마스터스 1000 우승을 거뒀습니다. <a href="https://www.atptour.com/en/news/hurkacz-sinner-miami-2021-day-12-sunday-final" target="_blank" rel="noopener noreferrer">ATP 마이애미 기록</a>과 <a href="https://www.atptour.com/en/news/hurkacz-rublev-shanghai" target="_blank" rel="noopener noreferrer">상하이 기록</a>은 각각 해당 연도의 성적입니다.</p>
-            `,
-            signatureMatch: {
-                title: '2021 마이애미 오픈 결승 vs 야닉 시너',
-                date: '2021. 04. 04',
-                description: '생애 첫 마스터스 우승의 감격적인 순간. 절친한 후배이자 라이벌인 시너를 상대로 노련한 경기 운영을 보여주며 2-0 승리를 거뒀습니다. 이 우승으로 그는 세계적인 강자로 인정받게 되었습니다.'
-            },
-            fanAppeal: `
-                <div class="highlight-box">
-                    <div class="highlight-box-title">😇 투어 대표 "선한 영향력"</div>
-                    <p>심판 판정에 항의할 때조차 공손한 말투를 쓸 정도로 매너가 좋습니다. 경기 승리 후에는 카메라 렌즈에 "고마워요(Thank you)"라고 적는 등 겸손함이 몸에 배어 있습니다.</p>
-                </div>
-                <p>야닉 시너와는 투어 최고의 절친 사이로, 둘이 복식조로 출전하거나 함께 훈련하는 영상은 팬들에게 '힐링 콘텐츠'로 통합니다.</p>
-            `,
-            recentForm: `
-                <p><strong>"잔디와 하드의 강자"</strong></p>
-                <p>이 문단은 실시간 경기력 평가가 아니라 과거 대회 기록입니다. 2021년 마이애미와 2023년 상하이에서 마스터스 1000 우승을 차지했습니다. 현재 랭킹과 이후 경기 결과는 <a href="https://www.atptour.com/en/players/hubert-hurkacz/hb71/overview" target="_blank" rel="noopener noreferrer">ATP 공식 선수 프로필</a>에서 확인하세요.</p>
-            `,
-            faq: [
-                {
-                    question: '후르카츠는 왜 서브가 강한가요?',
-                    answer: '높은 타점에서 강하게 넣는 서브와 코스 선택을 함께 살펴볼 수 있습니다. 이는 플레이스타일 해설이며, 서브 성공률이나 에이스 수 같은 수치는 대회별 공식 통계로 확인해야 합니다.'
-                },
-                {
-                    question: '후르카츠와 시너는 얼마나 친한가요?',
-                    answer: '둘은 나이 차이(후르카츠가 4살 형)와 국경을 뛰어넘은 절친입니다. 함께 복식 경기에 자주 출전하며, 인터뷰에서도 서로를 "가장 친한 친구"라고 언급합니다. 팬들은 그들을 합쳐서 "Hubinner"라고 부르기도 합니다.'
-                },
-                {
-                    question: '페더러를 이겼을 때 기분이 어땠나요?',
-                    answer: '그는 경기 후 인터뷰에서 "어릴 적 우상이었던 페더러와 윔블던 센터 코트에서 경기하는 것만으로도 꿈만 같았는데, 승리까지 해서 믿을 수 없다"며 기쁨보다 존경심을 먼저 표했습니다. 이는 그의 겸손한 성품을 잘 보여줍니다.'
-                }
-            ]
-        }
+  "name": "후베르트 후르카츠",
+  "nameEn": "Hubert Hurkacz",
+  "country": "Poland",
+  "countryFlag": "🇵🇱",
+  "gender": "male",
+  "plays": "Right-handed",
+  "backhand": "Two-handed",
+  "longBio": "후베르트 후르카츠는 폴란드의 테니스 선수입니다. 2021년 마이애미·2023년 상하이 우승과 2021년 윔블던 4강을 살펴보고, 두 결승의 구체적인 전환 장면을 공식 대회 기록으로 읽습니다.",
+  "detailedProfile": {
+    "oneLineSummary": "마이애미와 상하이 결승의 전환 장면, 윔블던 4강으로 읽는 후르카츠의 주요 경력.",
+    "whyNotable": "<p>후베르트 후르카츠의 주요 경력은 마스터스급 대회 우승과 그랜드슬램 4강으로 나누어 볼 수 있습니다. 마스터스 우승을 그랜드슬램 우승으로 바꾸어 읽지 않는 것이 첫 출발입니다. 아래에서는 확인 가능한 세 대회 기록과 두 결승의 전환 장면을 연결합니다.</p><p>대회 기록은 성적을 확인하는 자료이고, 한 장면에 대한 해석은 별도입니다. 결정적인 포인트가 있었다는 사실만으로 선수의 성격이나 모든 경기에서의 위기 대응 능력을 수치화하지 않습니다.</p>",
+    "playStyle": "<p>2021년 마이애미 결승은 최종 스코어만으로는 보이지 않는 장면을 보여줍니다. <a href=\"https://www.miamiopen.com/latest-news/hurkacz-keeps-shining-in-florida-with-miami-open-title/\" target=\"_blank\" rel=\"noopener noreferrer\">대회 공식 결승 보도</a>에 따르면 첫 세트 6-5에서 시너가 세트를 마무리할 서브 게임을 맞았지만, 후르카츠가 브레이크로 6-6을 만들고 타이브레이크를 가져갔습니다.</p><p>이 기록으로 확인할 수 있는 것은 그 세트의 흐름입니다. 어떤 리턴 코스와 랠리 선택이 효과적이었는지는 해당 포인트를 직접 보아야 합니다. “강한 서브로 모든 위기를 해결했다”는 식으로 경기 전체의 특징을 덧붙이지 않습니다.</p><p>경기 영상을 볼 때는 첫 세트 5-6 리턴 게임과 뒤의 타이브레이크를 나누어 관찰해 보세요. 리턴이 들어간 위치, 다음 타구를 만난 위치, 상대 실수 또는 자신의 득점으로 끝났는지를 기록합니다. 이는 특정 장면을 다시 읽는 방법이며 이 페이지가 전체 포인트를 분석한 통계 결과는 아닙니다.</p>",
+    "hexagonStats": [],
+    "growthStory": "<div class=\"table-wrapper\" role=\"region\" aria-label=\"후르카츠 주요 대회 기록\" tabindex=\"0\"><table><caption class=\"sr-only\">확인한 주요 대회 기록</caption><thead><tr><th scope=\"col\">시기·대회</th><th scope=\"col\">확인한 성적</th><th scope=\"col\">구분할 의미</th></tr></thead><tbody><tr><th scope=\"row\">2021년 마이애미</th><td>시너와의 결승에서 7-6(4), 6-4 승리</td><td>첫 마스터스급 단식 우승</td></tr><tr><th scope=\"row\">2021년 윔블던</th><td>페더러와의 8강 통과 후 4강 진출</td><td>이 대회의 우승 경력과 구분</td></tr><tr><th scope=\"row\">2023년 상하이</th><td>루블레프와의 결승에서 6-3, 3-6, 7-6(8) 승리</td><td>당시 두 번째 마스터스 1000 단식 우승</td></tr></tbody></table></div><p><a href=\"https://www.miamiopen.com/latest-news/hurkacz-keeps-shining-in-florida-with-miami-open-title/\" target=\"_blank\" rel=\"noopener noreferrer\">마이애미 오픈 공식 보도</a>, <a href=\"https://assets.wimbledon.com/archive/draws/pdfs/draws/2021_MS_A4.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">윔블던 2021 공식 대진표</a>, <a href=\"https://en.rolexshanghaimasters.com/en/media/news/hurkacz-delayed-title-defence\" target=\"_blank\" rel=\"noopener noreferrer\">상하이 마스터스의 2023 결승 회고</a>를 대조했습니다. 이 표는 경력 전체의 목록이나 현재 보유 타이틀 수가 아니라 위 세 대회의 성적입니다.</p><p>마이애미 공식 보도는 같은 대회에서 치치파스를 8강, 루블레프를 4강에서 이긴 과정도 기록합니다. 따라서 결승 상대 한 명만 보는 대신 대진의 라운드를 나누어 읽을 수 있습니다. 서로 다른 대회에서 같은 선수를 만났다는 사실이 모든 맞대결의 우세를 의미하지는 않습니다.</p>",
+    "signatureMatch": {
+      "title": "2023 상하이 마스터스 결승 vs 안드레이 루블레프",
+      "date": "2023년 결승",
+      "description": "후르카츠가 6-3, 3-6, 7-6(8)로 이긴 결승입니다. <a href=\"https://en.rolexshanghaimasters.com/en/media/news/hurkacz-delayed-title-defence\" target=\"_blank\" rel=\"noopener noreferrer\">상하이 마스터스 공식 회고</a>는 그가 상대의 매치 포인트 한 번을 막아낸 뒤 두 번째 마스터스 1000 타이틀을 얻었다고 기록합니다. 첫 두 세트를 한 세트씩 나눈 뒤의 결승이라는 점과, 매치 포인트를 막아낸 사실을 함께 읽을 수 있습니다. 최종 승리만으로 경기 내내 우세했다고 해석하지 않도록 돕는 사례입니다."
     },
+    "fanAppeal": "<p>두 결승에서 서로 다른 전환 장면을 비교해 보는 관람 노트를 제안합니다. 마이애미에서는 첫 세트 5-6 리턴 게임, 상하이에서는 상대 매치 포인트가 있던 장면을 기준으로 잡습니다. 먼저 공식 기록으로 상황을 확인하고 영상에서 직접 본 선택만 적습니다.</p><p>노트 형식: 대회·연도 / 세트·게임 점수 / 서브 또는 리턴 / 다음 타구의 위치 / 포인트 결과 / 다시 확인할 질문. 가상 메모: “마이애미 첫 세트 5-6의 리턴 게임을 다시 보고, 리턴이 들어간 뒤 준비 위치를 확인하겠다.” 이 문장은 실제 분석 결과를 채운 것이 아니라 관찰할 질문의 예입니다. 하이라이트에 그 장면이 없으면 관찰하지 못한 것으로 남기세요.</p><p>패배 직전 장면에서 이겼다는 결과만으로 개인의 성격이나 다른 경기의 승부를 예측하기보다, 실제 포인트를 함께 보는 데 의미를 둡니다.</p>",
+    "recentForm": "<p><strong>자료 확인: 2026년 10월 20일. 경기 기록의 연도: 2021·2023년.</strong></p><p>마이애미 결승 보도와 윔블던 대진표는 2021년 기록입니다. 상하이 자료는 2026년에 게시된 글에서 2023년 결승을 회고하는 부분을 사용했습니다. 게시일과 경기 연도를 구분해 읽으세요.</p><p>현재 순위·부상 상태·출전 일정은 이 기록으로 판단할 수 없습니다. 이후 결과와 현재 정보를 확인하려면 <a href=\"https://www.atptour.com/en/players/hubert-hurkacz/hb71/overview\" target=\"_blank\" rel=\"noopener noreferrer\">ATP 공식 선수 프로필</a>을 따로 대조하세요. 이 링크는 최신 정보 확인 경로이며 위 역사 사실은 실제 읽은 대회 자료를 근거로 삼았습니다.</p>",
+    "faq": [
+      {
+        "question": "후르카츠의 마스터스 우승과 윔블던 성적은 어떻게 다른가요?",
+        "answer": "이 소개가 다루는 마스터스 우승은 2021년 마이애미와 2023년 상하이입니다. 윔블던에서는 2021년 8강을 통과해 4강에 올랐으며, 이 성적을 그랜드슬램 우승이라고 부르지 않습니다."
+      },
+      {
+        "question": "마이애미 첫 세트와 상하이 결승에서 확인할 전환 장면은?",
+        "answer": "마이애미 공식 보도는 첫 세트 6-5에서 서브하던 시너를 후르카츠가 브레이크한 과정을 기록합니다. 상하이 공식 회고는 2023년 결승에서 상대 매치 포인트 한 번을 막아낸 사실을 기록합니다. 구체적인 샷 선택은 경기 영상을 별도로 보아야 합니다."
+      },
+      {
+        "question": "이 소개로 현재 경기력과 순위를 알 수 있나요?",
+        "answer": "아니요. 여기서는 연도를 명시한 대회 결과와 그 장면을 읽는 방법을 다룹니다. 현재 순위·출전·부상 정보는 최신 공식 자료가 필요합니다."
+      }
+    ]
+  }
+},
     'holger-rune': {
         name: '홀게르 루네', nameEn: 'Holger Rune', country: 'Denmark', countryFlag: '🇩🇰', image: '/images/players/holger-rune.png', gender: 'male', plays: 'Right-handed', backhand: 'Two-handed',
         longBio: '덴마크의 악동이자 슈퍼 루키. 폭발적인 에너지와 다재다능한 기술, 그리고 거침없는 승부욕으로 단숨에 톱 랭커로 도약했습니다.',

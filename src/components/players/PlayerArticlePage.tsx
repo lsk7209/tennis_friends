@@ -5,7 +5,6 @@ import PlayerHexagonStats from "@/components/players/PlayerHexagonStats";
 import PlayerSearchAliasSection from "@/components/players/PlayerSearchAliasSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import PersonSchema from "@/components/seo/PersonSchema";
-import FAQSchema from "@/components/seo/FAQSchema";
 import { PLAYERS_DB } from "@/data/players";
 import { getSiteUrl } from "@/lib/site";
 import { Crown, Target, Zap, Star, BookOpen, ExternalLink } from "lucide-react";
@@ -18,7 +17,7 @@ interface Props {
 const OFFICIAL_STYLE_PROFILES: Record<string, { summary: string; url: string }> = {
   "hubert-hurkacz": {
     summary:
-      "후르카츠는 강한 서브로 짧은 리턴을 유도한 뒤 네트 플레이로 이어가는 장면이 특징입니다. 이 설명은 경기 스타일을 읽는 기준입니다.",
+      "아래 관찰 질문은 특정 능력의 통계 평가가 아닙니다. 공식 대회 기록과 직접 관찰한 장면을 구분해 읽으세요.",
     url: "https://www.atptour.com/en/players/hubert-hurkacz/hb71/overview",
   },
   "andrey-rublev": {
@@ -112,7 +111,6 @@ export default function PlayerArticlePage({ slug }: Props) {
           { name: player.name, item: canonicalUrl },
         ]}
       />
-      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
 
       {/* Court Energy Hero */}
       <div className="bg-court-ink text-white pt-24 pb-16 px-4 relative overflow-hidden">

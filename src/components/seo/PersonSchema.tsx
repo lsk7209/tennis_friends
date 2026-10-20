@@ -4,7 +4,7 @@ interface PersonSchemaProps {
     name: string;
     nameKo: string;
     description: string;
-    image: string;
+    image?: string;
     nationality: string;
     birthDate?: string;
     height?: string;
@@ -30,7 +30,7 @@ export default function PersonSchema({
     url,
 }: PersonSchemaProps) {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tennisfrens.com';
-    const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+    const imageUrl = image ? (image.startsWith('http') ? image : `${siteUrl}${image}`) : undefined;
 
     const schema = {
         '@context': 'https://schema.org',
@@ -38,7 +38,7 @@ export default function PersonSchema({
         name: name,
         alternateName: nameKo,
         description: description,
-        image: imageUrl,
+        ...(imageUrl && { image: imageUrl }),
         nationality: {
             '@type': 'Country',
             name: nationality,
