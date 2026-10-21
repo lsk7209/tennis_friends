@@ -388,6 +388,153 @@
   },
   "entries": [
     {
+      "slug": null,
+      "route": "/",
+      "kind": "unclassified_page_candidate",
+      "baselineCohort": "2026-10-20T06:27:47.000Z",
+      "scopeStatus": "non_editorial_scope",
+      "sourceFiles": [
+        "src/app/page.tsx"
+      ],
+      "status": "pending",
+      "author": null,
+      "readerQuestion": null,
+      "differentiation": null,
+      "before": {
+        "contentHash": "8a571218f8f5cf71403d279cbdc28ad44c647aebacb27b6ffed0ccad6b1ccc89",
+        "score": null,
+        "evidencePath": ".goal-harness/content-90-20261020/inventory.json",
+        "canonicalContentHash": "8a571218f8f5cf71403d279cbdc28ad44c647aebacb27b6ffed0ccad6b1ccc89",
+        "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
+      },
+      "after": {
+        "contentHash": "866baa90b5b5c5c0670ffbc16cb6af7ef0b6d0d5e664d9b1d08ef4c77c16da76",
+        "scores": {},
+        "score": null,
+        "vetoes": []
+      },
+      "sources": [],
+      "review": {
+        "reviewer": null,
+        "reviewedAt": null,
+        "verdict": "pending",
+        "contentHash": null,
+        "evidencePath": null
+      },
+      "checks": [],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": [
+        "Independent current-hash review and operational verification pending"
+      ]
+    },
+    {
+      "slug": null,
+      "route": "/about",
+      "kind": "unclassified_page_candidate",
+      "baselineCohort": "2026-10-20T06:27:47.000Z",
+      "scopeStatus": "non_editorial_scope",
+      "sourceFiles": [
+        "src/app/about/page.tsx"
+      ],
+      "status": "pending",
+      "author": null,
+      "readerQuestion": null,
+      "differentiation": null,
+      "before": {
+        "contentHash": "5cd2ad58945f9ec952f2db167e5aaa808c33ba26de41a4f76b4c74e893c06231",
+        "score": null,
+        "evidencePath": ".goal-harness/content-90-20261020/inventory.json",
+        "canonicalContentHash": "5cd2ad58945f9ec952f2db167e5aaa808c33ba26de41a4f76b4c74e893c06231",
+        "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
+      },
+      "after": {
+        "contentHash": "80af265b037fd1025b03a7e4cb09444052b702c325521237901f3801a5542bb2",
+        "scores": {},
+        "score": null,
+        "vetoes": []
+      },
+      "sources": [],
+      "review": {
+        "reviewer": null,
+        "reviewedAt": null,
+        "verdict": "pending",
+        "contentHash": null,
+        "evidencePath": null
+      },
+      "checks": [],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": [
+        "Independent current-hash review and operational verification pending"
+      ]
+    },
+    {
+      "slug": null,
+      "route": "/admin",
+      "kind": "unclassified_page_candidate",
+      "baselineCohort": "2026-10-20T06:27:47.000Z",
+      "scopeStatus": "non_editorial_scope",
+      "sourceFiles": [
+        "src/app/admin/page.tsx"
+      ],
+      "status": "pending",
+      "author": null,
+      "readerQuestion": null,
+      "differentiation": null,
+      "before": {
+        "contentHash": "0970a837ac3f510ac67b9e1b371082dce2ae0e2d5de2eedab125d701e42b01ce",
+        "score": null,
+        "evidencePath": ".goal-harness/content-90-20261020/inventory.json",
+        "canonicalContentHash": "0970a837ac3f510ac67b9e1b371082dce2ae0e2d5de2eedab125d701e42b01ce",
+        "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
+      },
+      "after": {
+        "contentHash": "d4f9fbccafaa5c594f02b19976befb9f74aee2eb253f17687ee51d1722223dca",
+        "scores": {},
+        "score": null,
+        "vetoes": []
+      },
+      "sources": [],
+      "review": {
+        "reviewer": null,
+        "reviewedAt": null,
+        "verdict": "pending",
+        "contentHash": null,
+        "evidencePath": null
+      },
+      "checks": [],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": [
+        "Independent current-hash review and operational verification pending"
+      ]
+    },
+    {
       "slug": "adult-beginner-first-racket-guide",
       "route": "/blog/adult-beginner-first-racket-guide",
       "kind": "blog",
@@ -70880,6 +71027,55 @@
       ]
     },
     {
+      "slug": null,
+      "route": "/contact",
+      "kind": "unclassified_page_candidate",
+      "baselineCohort": "2026-10-20T06:27:47.000Z",
+      "scopeStatus": "non_editorial_scope",
+      "sourceFiles": [
+        "src/app/contact/page.tsx"
+      ],
+      "status": "pending",
+      "author": null,
+      "readerQuestion": null,
+      "differentiation": null,
+      "before": {
+        "contentHash": "f4b29bd48530405275bc2e73301d308412246026deb44bfd1565a90f81df1dcc",
+        "score": null,
+        "evidencePath": ".goal-harness/content-90-20261020/inventory.json",
+        "canonicalContentHash": "f72cbda302f6143965af826e3ac0e8404a4884fc7a366f131fd30a39fda0368b",
+        "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
+      },
+      "after": {
+        "contentHash": "a99b397bf5d4757273f0bd56acacbacc52f0b4d481821404f7a03aeb02ac8950",
+        "scores": {},
+        "score": null,
+        "vetoes": []
+      },
+      "sources": [],
+      "review": {
+        "reviewer": null,
+        "reviewedAt": null,
+        "verdict": "pending",
+        "contentHash": null,
+        "evidencePath": null
+      },
+      "checks": [],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": [
+        "Independent current-hash review and operational verification pending"
+      ]
+    },
+    {
       "slug": "adrian-mannarino",
       "route": "/players/adrian-mannarino",
       "kind": "player",
@@ -84463,202 +84659,6 @@
       },
       "after": {
         "contentHash": "797a63e075b9febfd5955fa57ac7a7167ca3ef119effde1f7b79b1a12d140b89",
-        "scores": {},
-        "score": null,
-        "vetoes": []
-      },
-      "sources": [],
-      "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
-      },
-      "checks": [],
-      "deployment": {
-        "gitSha": null,
-        "sourceDigest": null,
-        "runtimeImage": null
-      },
-      "live": {
-        "checkedAt": null,
-        "http": null,
-        "contentMatch": null
-      },
-      "blockers": [
-        "Independent current-hash review and operational verification pending"
-      ]
-    },
-    {
-      "slug": null,
-      "route": "/",
-      "kind": "unclassified_page_candidate",
-      "baselineCohort": "2026-10-20T06:27:47.000Z",
-      "scopeStatus": "non_editorial_scope",
-      "sourceFiles": [
-        "src/app/page.tsx"
-      ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
-      "before": {
-        "contentHash": "8a571218f8f5cf71403d279cbdc28ad44c647aebacb27b6ffed0ccad6b1ccc89",
-        "score": null,
-        "evidencePath": ".goal-harness/content-90-20261020/inventory.json",
-        "canonicalContentHash": "8a571218f8f5cf71403d279cbdc28ad44c647aebacb27b6ffed0ccad6b1ccc89",
-        "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
-      },
-      "after": {
-        "contentHash": "866baa90b5b5c5c0670ffbc16cb6af7ef0b6d0d5e664d9b1d08ef4c77c16da76",
-        "scores": {},
-        "score": null,
-        "vetoes": []
-      },
-      "sources": [],
-      "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
-      },
-      "checks": [],
-      "deployment": {
-        "gitSha": null,
-        "sourceDigest": null,
-        "runtimeImage": null
-      },
-      "live": {
-        "checkedAt": null,
-        "http": null,
-        "contentMatch": null
-      },
-      "blockers": [
-        "Independent current-hash review and operational verification pending"
-      ]
-    },
-    {
-      "slug": null,
-      "route": "/about",
-      "kind": "unclassified_page_candidate",
-      "baselineCohort": "2026-10-20T06:27:47.000Z",
-      "scopeStatus": "non_editorial_scope",
-      "sourceFiles": [
-        "src/app/about/page.tsx"
-      ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
-      "before": {
-        "contentHash": "5cd2ad58945f9ec952f2db167e5aaa808c33ba26de41a4f76b4c74e893c06231",
-        "score": null,
-        "evidencePath": ".goal-harness/content-90-20261020/inventory.json",
-        "canonicalContentHash": "5cd2ad58945f9ec952f2db167e5aaa808c33ba26de41a4f76b4c74e893c06231",
-        "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
-      },
-      "after": {
-        "contentHash": "80af265b037fd1025b03a7e4cb09444052b702c325521237901f3801a5542bb2",
-        "scores": {},
-        "score": null,
-        "vetoes": []
-      },
-      "sources": [],
-      "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
-      },
-      "checks": [],
-      "deployment": {
-        "gitSha": null,
-        "sourceDigest": null,
-        "runtimeImage": null
-      },
-      "live": {
-        "checkedAt": null,
-        "http": null,
-        "contentMatch": null
-      },
-      "blockers": [
-        "Independent current-hash review and operational verification pending"
-      ]
-    },
-    {
-      "slug": null,
-      "route": "/admin",
-      "kind": "unclassified_page_candidate",
-      "baselineCohort": "2026-10-20T06:27:47.000Z",
-      "scopeStatus": "non_editorial_scope",
-      "sourceFiles": [
-        "src/app/admin/page.tsx"
-      ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
-      "before": {
-        "contentHash": "0970a837ac3f510ac67b9e1b371082dce2ae0e2d5de2eedab125d701e42b01ce",
-        "score": null,
-        "evidencePath": ".goal-harness/content-90-20261020/inventory.json",
-        "canonicalContentHash": "0970a837ac3f510ac67b9e1b371082dce2ae0e2d5de2eedab125d701e42b01ce",
-        "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
-      },
-      "after": {
-        "contentHash": "d4f9fbccafaa5c594f02b19976befb9f74aee2eb253f17687ee51d1722223dca",
-        "scores": {},
-        "score": null,
-        "vetoes": []
-      },
-      "sources": [],
-      "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
-      },
-      "checks": [],
-      "deployment": {
-        "gitSha": null,
-        "sourceDigest": null,
-        "runtimeImage": null
-      },
-      "live": {
-        "checkedAt": null,
-        "http": null,
-        "contentMatch": null
-      },
-      "blockers": [
-        "Independent current-hash review and operational verification pending"
-      ]
-    },
-    {
-      "slug": null,
-      "route": "/contact",
-      "kind": "unclassified_page_candidate",
-      "baselineCohort": "2026-10-20T06:27:47.000Z",
-      "scopeStatus": "non_editorial_scope",
-      "sourceFiles": [
-        "src/app/contact/page.tsx"
-      ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
-      "before": {
-        "contentHash": "f4b29bd48530405275bc2e73301d308412246026deb44bfd1565a90f81df1dcc",
-        "score": null,
-        "evidencePath": ".goal-harness/content-90-20261020/inventory.json",
-        "canonicalContentHash": "f72cbda302f6143965af826e3ac0e8404a4884fc7a366f131fd30a39fda0368b",
-        "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
-      },
-      "after": {
-        "contentHash": "a99b397bf5d4757273f0bd56acacbacc52f0b4d481821404f7a03aeb02ac8950",
         "scores": {},
         "score": null,
         "vetoes": []

@@ -39,6 +39,22 @@ const blogVisuals: Record<string, BlogVisual> = {
     width: 1376,
     height: 768,
   },
+  "nov26-winter-string-tension-guide": {
+    src: "/images/blog/tennis-string-tension-guide.jpg",
+    alt: "전문 테니스 스트링 머신에서 정밀하게 스트링을 작업하며 텐션을 점검하는 모습",
+    caption:
+      "기온이 급감하는 늦가을과 겨울철에는 스트링 탄성이 굳고 공 내부 압력이 떨어지므로 텐션을 2~5파운드 낮추어야 스윗스팟과 팔꿈치를 지킬 수 있습니다.",
+    width: 1376,
+    height: 768,
+  },
+  "nov26-doubles-deep-cross-return": {
+    src: "/images/blog/doubles-cross-return.jpg",
+    alt: "코트 베이스라인에서 상대 서버의 공을 향해 컴팩트한 양손 백핸드 크로스 리턴을 구사하는 테니스 선수",
+    caption:
+      "복식 리턴의 핵심은 풀 스윙이 아니라 컴팩트한 테이크백으로 네트 위 30cm를 통과시켜 상대 전위의 포칭을 피하고 서버의 발밑에 떨어뜨리는 것입니다.",
+    width: 1376,
+    height: 768,
+  },
 };
 
 export function getBlogVisual(slug: string): BlogVisual | undefined {
