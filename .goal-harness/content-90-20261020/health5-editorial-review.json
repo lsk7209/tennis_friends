@@ -1,0 +1,850 @@
+{
+  "reviewer": "Independent AI editorial reviewer (critic)",
+  "reviewedAt": "2026-10-20T17:36:12+09:00",
+  "scope": "Revision1: integrated title, excerpt, summary, highlight, article body, FAQ and contextual inline links for five existing health articles; source-level independent editorial review only",
+  "rubric": {
+    "categories": [
+      "accuracySafety",
+      "sourceFit",
+      "readerAction",
+      "distinctiveDepth",
+      "structureKorean",
+      "searchMetadataLinks",
+      "mobileAccessibility"
+    ],
+    "maximum": [
+      25,
+      15,
+      20,
+      15,
+      10,
+      10,
+      5
+    ],
+    "minimum": [
+      23,
+      14,
+      18,
+      13,
+      8,
+      8,
+      4
+    ],
+    "totalMinimum": 90
+  },
+  "evidence": {
+    "plan": "docs/plans/tennisfrens-existing-content-improvement-plan-20261020.md#3",
+    "proposal": ".goal-harness/content-90-20261020/next-health-proposals.json",
+    "integration": ".goal-harness/content-90-20261020/health5-integration.json",
+    "before": ".goal-harness/content-90-20261020/next-health-batch-before.json",
+    "sourcePacket": ".goal-harness/content-90-20261020/next-health-sources.json",
+    "currentInventory": ".goal-harness/content-90-20261020/health5-current/inventory.json",
+    "integrationStatus": "revision1: 5/5 body and metadata match; 5/5 internal blog targets pass; full tests/build and rendered desktop/mobile deferred to main",
+    "renderedEvidence": "local preview verified: 20 viewport/theme cases and 201 expected body blocks; seven representative screenshots independently inspected; no live deployment check",
+    "sourceAccessLimit": "Direct Mayo Clinic shoulder URL returned HTTP 403 in this review; the official indexed page text and recorded source packet agreed on its triage claims. The exact Mayo page should be re-opened when reachable. NHS shoulder page is live, but its next-review-due date (2026-05-22) has passed.",
+    "proposalSha256": "7298a9aa10b20b837d91a176bd04bd7da13fdaed2cd8c471d9504be1607cfb17",
+    "localBuild": ".goal-harness/content-90-20261020/health5-revision1-build.log (exit 0, see health5-local-validation.json)",
+    "localPreview": ".goal-harness/content-90-20261020/health5-preview-checks.json",
+    "limitations": [
+      "Local preview only; no OVH serving integration or public deployment proof",
+      "Direct Mayo shoulder URL returned HTTP 403 during source review; indexed official text and prior recorded direct reading agreed",
+      "NHS shoulder page next-review-due date passed; page remained available"
+    ],
+    "renderedSchema": "20/20 BlogPosting headline, original datePublished and actual dateModified PASS; no replacement-character output reported by main",
+    "lint": "health5-revision1-lint.log; main reported exit 0; log has 0 errors and 4 warnings in output/playwright scripts",
+    "typecheck": "health5-revision1-typecheck.log; main reported exit 0; log empty",
+    "tests": "health5-review-tests.log; main reported exit 0; 33 passed, 0 failed"
+  },
+  "sourcesCheckedAt": "2026-10-20T17:16:00+09:00",
+  "sources": [
+    {
+      "id": "nhs-wrist",
+      "url": "https://www.nhs.uk/symptoms/hand-pain/wrist-pain/",
+      "result": "direct page read; activity reduction, GP and urgent criteria matched"
+    },
+    {
+      "id": "mayo-wrist",
+      "url": "https://sportsmedicine.mayoclinic.org/condition/wrist-pain/page/2",
+      "result": "direct page read; pain plus swelling lasting more than a few days or worsening matched"
+    },
+    {
+      "id": "nhs-elbow",
+      "url": "https://www.nhs.uk/conditions/tennis-elbow/",
+      "result": "direct page read; symptoms, avoidance and at least two weeks of self-care matched"
+    },
+    {
+      "id": "mayo-elbow",
+      "url": "https://www.mayoclinic.org/symptoms/elbow-pain/basics/causes/sym-20050874",
+      "result": "direct page read; emergency, prompt and appointment tiers matched"
+    },
+    {
+      "id": "aaos-elbow",
+      "url": "https://www.orthoinfo.org/diseases--conditions/tennis-elbow-lateral-epicondylitis/",
+      "result": "direct page read; sport reduction and clinician-mediated equipment check matched; applies to elbow only"
+    },
+    {
+      "id": "nhs-shoulder",
+      "url": "https://www.nhs.uk/symptoms/shoulder-pain/",
+      "result": "direct page read; gentle movement, avoid aggravation, GP and urgent tiers matched; review date overdue"
+    },
+    {
+      "id": "mayo-shoulder",
+      "url": "https://www.mayoclinic.org/symptoms/shoulder-pain/basics/causes/sym-20050696",
+      "result": "direct fetch blocked 403; official indexed text and source packet agree on emergency chest/breathing/sweating, trauma and worsening criteria"
+    },
+    {
+      "id": "aaos-overhead",
+      "url": "https://www.orthoinfo.org/diseases--conditions/shoulder-injuries-in-the-throwing-athlete/",
+      "result": "direct page read; tennis is named among repetitive overhead sports; no sex-specific protocol or safe serve dose"
+    }
+  ],
+  "articles": [
+    {
+      "route": "/blog/aw-008-injury-grip",
+      "contentHash": "80f4eb128aeb86f041096f8a4ecabe971ceb36a2d39de96a16e8cc2e1fb0bc54",
+      "integrationContentSha256": "d36e40b6ce8fc0532dd64d16e5f0005ad589eeba65aaabbdcec06b886afd821a",
+      "readerQuestion": "손목이 아픈데 그립과 장비를 어떻게 확인하고 누구와 상담할까?",
+      "scores": {
+        "accuracySafety": 24,
+        "sourceFit": 14,
+        "readerAction": 18,
+        "distinctiveDepth": 14,
+        "structureKorean": 9,
+        "searchMetadataLinks": 9,
+        "mobileAccessibility": 4
+      },
+      "provisionalTotal": 92,
+      "scoreBasis": [
+        "Accuracy -1: cautious wrist triage and appropriate separation of activity from gentle movement; Korean service routing is general beyond 119 emergencies.",
+        "Source -1: NHS/Mayo directly support medical thresholds; gear changes are labelled consultation variables rather than causes.",
+        "Reader -2: two-party consultation table and example answer the question, though the article does not independently determine grip fit.",
+        "Depth -1: gear history and a concrete equipment request differentiate it from the wrist symptom memo.",
+        "Structure -1: some cause/diagnosis cautions recur, but revision1 highlight is action-led.",
+        "Search/links -1: title/excerpt fit equipment consultation and a direct contextual link to the wrist-record companion is present.",
+        "Mobile/accessibility -1 provisional: source table headers exist but narrow-screen rendering and keyboard behavior await proof."
+      ],
+      "vetoes": [],
+      "requiredFixes": [
+        "Confirm contextual link target, table layout and FAQ on rendered desktop/mobile; shorten residual disclaimer only if it improves the next edit without weakening safety."
+      ],
+      "sourceIds": [
+        "nhs-wrist",
+        "mayo-wrist"
+      ],
+      "verdict": "PASS_LOCAL_EDITORIAL; live_deployment_unverified",
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/symptoms/hand-pain/wrist-pain/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://sportsmedicine.mayoclinic.org/condition/wrist-pain/page/2",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "revision": "revision1",
+      "uiVerifiedAt": "2026-10-20T17:33:17+09:00"
+    },
+    {
+      "route": "/blog/aw-013-injury-injury-5",
+      "contentHash": "7e2a6b71069a5e67fc5cc5be6d3da20595eabdea95e727174a67fa02b39b06ed",
+      "integrationContentSha256": "38440d7bd4039a64ca26618b0a244746ebff0059e4bd9dac0fd97b733bbf7e87",
+      "readerQuestion": "팔꿈치 바깥쪽 통증을 어떤 다섯 질문으로 상담 메모에 정리할까?",
+      "scores": {
+        "accuracySafety": 24,
+        "sourceFit": 14,
+        "readerAction": 19,
+        "distinctiveDepth": 14,
+        "structureKorean": 9,
+        "searchMetadataLinks": 8,
+        "mobileAccessibility": 4
+      },
+      "provisionalTotal": 92,
+      "scoreBasis": [
+        "Accuracy -1: sudden trauma, emergency deformity/exposed bone and ordinary persistent pain are separated; no two-of-five diagnostic rule.",
+        "Source -1: NHS/Mayo/AAOS medical claims fit their respective elbow scope and the two-week criterion is explicitly not a return date.",
+        "Reader -1: five observations now turn into a short clinical handoff, with contrasting gradual and sudden-onset examples.",
+        "Depth -1: paired examples and the table give this route a distinct record-making function; further elbow-specific detail would improve it.",
+        "Structure -1: revision1 removes the prior repeated disclaimer and duplicated triage table; some safety repetition remains in FAQ.",
+        "Search/links -2: title/description fit five observations, but no deliberate same-topic internal next-step link appears in source HTML.",
+        "Mobile/accessibility -1 provisional: five-row three-column table awaits screen and keyboard check."
+      ],
+      "vetoes": [],
+      "requiredFixes": [
+        "Check table and FAQ in rendered mobile/desktop views; if a relevant published elbow route exists, add a useful next-step link in a later scoped edit."
+      ],
+      "sourceIds": [
+        "nhs-elbow",
+        "mayo-elbow",
+        "aaos-elbow"
+      ],
+      "verdict": "PASS_LOCAL_EDITORIAL; live_deployment_unverified",
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/conditions/tennis-elbow/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://www.mayoclinic.org/symptoms/elbow-pain/basics/causes/sym-20050874",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://www.orthoinfo.org/diseases--conditions/tennis-elbow-lateral-epicondylitis/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "revision": "revision1",
+      "uiVerifiedAt": "2026-10-20T17:33:17+09:00"
+    },
+    {
+      "route": "/blog/aw-036-women",
+      "contentHash": "f3464c4cb261be11d1f140634f7d48425a4b1c9fb06fbd1c6b7da0a8056f8b75",
+      "integrationContentSha256": "1b2b673905bd6ce9c503f88eb030c795bc79f63f1d33abcf2ea33b8139ca35b3",
+      "readerQuestion": "어깨 통증의 시작·일상 기능·코트 상황을 진료 전에 어떻게 정리할까?",
+      "scores": {
+        "accuracySafety": 24,
+        "sourceFit": 14,
+        "readerAction": 19,
+        "distinctiveDepth": 13,
+        "structureKorean": 9,
+        "searchMetadataLinks": 8,
+        "mobileAccessibility": 4
+      },
+      "provisionalTotal": 91,
+      "scoreBasis": [
+        "Accuracy -1: emergency chest symptoms, trauma and activity advice remain bounded; no sex-based medical prescription or guaranteed recovery.",
+        "Source -1: NHS/AAOS direct reading and recorded plus indexed Mayo shoulder text support claims, with direct Mayo 403 and overdue NHS review date noted.",
+        "Reader -1: four-part symptom/function table, timeline and clinician questions produce a usable appointment memo.",
+        "Depth -2: shoulder-specific function examples and referral questions distinguish it from the same-day serve route, though the record-template format is familiar.",
+        "Structure -1: clear record-first progression; a vestigial sentence about sex-specific equipment evidence is less relevant under the new neutral title.",
+        "Search/links -2: title and excerpt now match clinical preparation and link to same-day serve route; retained /aw-036-women slug is a mild URL-intent mismatch.",
+        "Mobile/accessibility -1 provisional: three-column table and link await screen proof."
+      ],
+      "vetoes": [],
+      "requiredFixes": [
+        "Verify the retained slug does not yield misleading rendered breadcrumbs or schema; consider trimming the sex-specific-evidence aside in a later small edit.",
+        "Check reciprocal link, table and FAQ on actual screens."
+      ],
+      "sourceIds": [
+        "nhs-shoulder",
+        "mayo-shoulder",
+        "aaos-overhead"
+      ],
+      "verdict": "PASS_LOCAL_EDITORIAL; live_deployment_unverified",
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/symptoms/shoulder-pain/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://www.mayoclinic.org/symptoms/shoulder-pain/basics/causes/sym-20050696",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "indexed_official_text_and_recorded_direct_read; current direct 403"
+        },
+        {
+          "url": "https://www.orthoinfo.org/diseases--conditions/shoulder-injuries-in-the-throwing-athlete/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "revision": "revision1",
+      "uiVerifiedAt": "2026-10-20T17:33:17+09:00"
+    },
+    {
+      "route": "/blog/aw-084-injury-serve",
+      "contentHash": "34841c87843205fd95a65598fda17302fb70e5922be521298912855c1d0620bf",
+      "integrationContentSha256": "3818861de3460bd11f0e00bebdb59404c6ddd1d20e58bbb92f785bf4784b2766",
+      "readerQuestion": "어깨가 아픈 오늘 서브와 코치·파트너와의 약속을 어떻게 조정할까?",
+      "scores": {
+        "accuracySafety": 24,
+        "sourceFit": 14,
+        "readerAction": 19,
+        "distinctiveDepth": 13,
+        "structureKorean": 9,
+        "searchMetadataLinks": 9,
+        "mobileAccessibility": 4
+      },
+      "provisionalTotal": 92,
+      "scoreBasis": [
+        "Accuracy -1: painful serving is stopped without inventing a safe substitute, fixed dose or return date; emergency tiers stay proportionate.",
+        "Source -1: NHS/AAOS direct reading and recorded plus indexed Mayo shoulder text support medical claims; appointment dialogue is clearly editorial rather than clinical guidance.",
+        "Reader -1: immediate stop decision and reusable messages to coach/partner resolve a real same-day coordination problem.",
+        "Depth -2: schedule/participation negotiation now differs substantively from the companion medical memo, while the common shoulder triage still overlaps.",
+        "Structure -1: action-led sections and example conversation work; FAQ repeats part of the main safety answer.",
+        "Search/links -1: title/excerpt/body all promise the same-day decision, and a contextual link to the medical memo is present.",
+        "Mobile/accessibility -1 provisional: decision table and FAQ await rendered inspection."
+      ],
+      "vetoes": [],
+      "requiredFixes": [
+        "Check rendered table, FAQ and internal link; preserve the explicit uncertainty around any other shot or return decision."
+      ],
+      "sourceIds": [
+        "nhs-shoulder",
+        "mayo-shoulder",
+        "aaos-overhead"
+      ],
+      "verdict": "PASS_LOCAL_EDITORIAL; live_deployment_unverified",
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/symptoms/shoulder-pain/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://www.mayoclinic.org/symptoms/shoulder-pain/basics/causes/sym-20050696",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "indexed_official_text_and_recorded_direct_read; current direct 403"
+        },
+        {
+          "url": "https://www.orthoinfo.org/diseases--conditions/shoulder-injuries-in-the-throwing-athlete/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "revision": "revision1",
+      "uiVerifiedAt": "2026-10-20T17:33:17+09:00"
+    },
+    {
+      "route": "/blog/aw-094-injury-grip-record",
+      "contentHash": "b4f385bf35f04af0ddddee6ad8773128dca24f40b845ff4339072e5729ec7323",
+      "integrationContentSha256": "99de03fea911db373d7cb66ff1ca833917dfd4aeb86cd2e2d3273b1b2221f041",
+      "readerQuestion": "손목 통증과 그립 변경을 의료 상담용 메모에 어떻게 분리해 적을까?",
+      "scores": {
+        "accuracySafety": 24,
+        "sourceFit": 14,
+        "readerAction": 19,
+        "distinctiveDepth": 13,
+        "structureKorean": 9,
+        "searchMetadataLinks": 9,
+        "mobileAccessibility": 4
+      },
+      "provisionalTotal": 92,
+      "scoreBasis": [
+        "Accuracy -1: serious wrist signs precede the log; no diagnosis or return-to-play guarantee.",
+        "Source -1: NHS/Mayo support triage and the six-field form is explicitly an editorial memo rather than a validated clinical instrument.",
+        "Reader -1: six-field template, example and clinician questions directly serve the recording intent.",
+        "Depth -2: symptom/equipment separation remains distinctive, with unavoidable wrist triage overlap against the gear page.",
+        "Structure -1: revision1 trims the repeated urgent FAQ and puts an action-led highlight up front.",
+        "Search/links -1: title/excerpt fit the memo and a contextual link to the gear-consultation companion is present.",
+        "Mobile/accessibility -1 provisional: six-row three-column form and FAQ need screen check."
+      ],
+      "vetoes": [],
+      "requiredFixes": [
+        "Verify the reciprocal contextual link and six-field table on real mobile/desktop screens."
+      ],
+      "sourceIds": [
+        "nhs-wrist",
+        "mayo-wrist"
+      ],
+      "verdict": "PASS_LOCAL_EDITORIAL; live_deployment_unverified",
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/symptoms/hand-pain/wrist-pain/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://sportsmedicine.mayoclinic.org/condition/wrist-pain/page/2",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "revision": "revision1",
+      "uiVerifiedAt": "2026-10-20T17:33:17+09:00"
+    }
+  ],
+  "batchVerdict": "PASS_EDITORIAL_LOCAL: 5/5 current full content hashes meet total >=90 and every category floor, with no identified veto in reviewed source/local rendering. OVH/public deployment and live content are unverified.",
+  "globalVetoAssessment": "No unresolved substantive veto identified in the five source texts and local rendered preview. Current hash-bound PASS applies to local editorial quality only; later effective-content/render/asset changes require re-review. OVH live serving is not evidenced.",
+  "ledgerChangeAuthorized": false,
+  "checkedAt": "2026-10-20T17:36:12+09:00",
+  "status": "final_local_editorial_pass_all_five",
+  "reviewedSnapshot": ".goal-harness/content-90-20261020/health5-current/inventory.json",
+  "reviewedSnapshotCapturedAt": "2026-10-20T06:27:47.000Z",
+  "sourcePacket": ".goal-harness/content-90-20261020/next-health-sources.json",
+  "baseline": ".goal-harness/content-90-20261020/next-health-batch-before.json",
+  "uiEvidence": [
+    ".goal-harness/content-90-20261020/health5-local-validation.json",
+    ".goal-harness/content-90-20261020/health5-preview-checks.json",
+    "output/playwright/content-90-health5-20261020/",
+    ".goal-harness/content-90-20261020/health5-rendered-schema-validation.json"
+  ],
+  "scoreStatus": "Five current full inventory content hashes match integrated revision1 and all 20 local preview results. Local revision1 build exit 0. 5 routes x 390/1440 x light/dark: HTTP 200, titles, canonicals, indexed robots, BlogPosting/FAQ schema, 201 expected body blocks, no missing blocks or broken fragments, document width no wider than viewport, FAQ Enter/Space, and focusable table region pass. Independently viewed five 390px light screenshots, aw-084 390px dark and aw-036 1440px dark. This establishes local rendered editorial quality, not OVH deployment or live content. Rendered BlogPosting headline and original/modified dates match in all 20 cases. Main reports lint/typecheck exits 0 and targeted tests 33/33 pass; lint has four warnings in output/playwright scripts.",
+  "items": [
+    {
+      "route": "/blog/aw-008-injury-grip",
+      "kind": "existing_blog",
+      "readerQuestion": "손목이 아픈데 그립과 장비를 어떻게 확인하고 누구와 상담할까?",
+      "contentHash": "80f4eb128aeb86f041096f8a4ecabe971ceb36a2d39de96a16e8cc2e1fb0bc54",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 18,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "Wrist red flags precede equipment discussion, and the equipment-versus-medical consultation table gives a concrete safe next action.",
+        "Revision1 contextual link to the separate symptom-record article is present and resolves locally in the preview."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "first wrist triage table and 119 sentence",
+          "reason": "The UK urgent-care categories are translated to general Korean care and 119 for emergencies, without a Korean clinical triage source.",
+          "fix": "Keep this conditional; add a suitable local clinical source if naming a more specific Korean pathway."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "first triage paragraph and references section",
+          "reason": "NHS and Mayo are apt primary sources, but the triage table groups several criteria rather than mapping each row to a pinpoint citation.",
+          "fix": "Add a short source cue to each triage row if revising the table."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 2,
+          "location": "equipment checklist under 장비에서 확인할 것은",
+          "reason": "It records grip variables but does not itself teach a fit assessment; the title promises a check.",
+          "fix": "Keep the title/excerpt consultation scope or add a well-supported fit method."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "equipment checklist and example",
+          "reason": "The gear information is useful but stops at what to record, with no worked contrast between two changed setups.",
+          "fix": "Show a short hypothetical before/after equipment history without assigning medical causation."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "lead and equipment section",
+          "reason": "The cause-versus-variable caveat is repeated in prose after the safe boundary is already set.",
+          "fix": "Condense the second disclaimer while keeping the triage warning."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "body companion-link paragraph",
+          "reason": "The new companion link is useful, but the page still gives no direct next step for a player seeking actual grip sizing.",
+          "fix": "Maintain a clear equipment-consultation scope in search copy; add fit guidance only with appropriate evidence."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390px table screenshots and keyboard probe",
+          "reason": "The tables scroll and focus correctly, but screen-reader reading order and measured color contrast were not checked independently.",
+          "fix": "Run a screen-reader/contrast spot check if claiming full accessibility marks."
+        }
+      ],
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/symptoms/hand-pain/wrist-pain/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://sportsmedicine.mayoclinic.org/condition/wrist-pain/page/2",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/health5-local-validation.json",
+        ".goal-harness/content-90-20261020/health5-preview-checks.json",
+        "output/playwright/content-90-health5-20261020/",
+        ".goal-harness/content-90-20261020/health5-rendered-schema-validation.json"
+      ]
+    },
+    {
+      "route": "/blog/aw-013-injury-injury-5",
+      "kind": "existing_blog",
+      "readerQuestion": "팔꿈치 바깥쪽 통증을 어떤 다섯 질문으로 상담 메모에 정리할까?",
+      "contentHash": "7e2a6b71069a5e67fc5cc5be6d3da20595eabdea95e727174a67fa02b39b06ed",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 8,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "Five specific questions now produce a one-sentence clinician handoff, with separate gradual-onset and acute-injury examples.",
+        "Urgent trauma and emergency deformity/exposed-bone tiers remain distinct from the two-week routine-care threshold."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "갑작스러운 손상은 먼저 구분하세요",
+          "reason": "The NHS/Mayo urgent categories are conveyed accurately, but applying UK/US triage to Korean local pathways remains a bounded editorial translation.",
+          "fix": "Retain broad prompt-care wording unless a Korean authority supports a specific destination."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "진료 전에 적을 다섯 질문",
+          "reason": "The five-question template is editorial synthesis rather than a validated diagnostic tool; the article labels it as such.",
+          "fix": "Keep the non-diagnostic label whenever the five-question structure is reused."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "two hypothetical examples",
+          "reason": "The examples show what to tell a clinician, but neither carries a complete change-over-time observation.",
+          "fix": "Add one optional before/after symptom sentence if later expanding the template."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "five-question table",
+          "reason": "The table is clearly elbow-specific, yet the arm-use comparison remains compact rather than exploring a wider range of non-diagnostic patterns.",
+          "fix": "Use one extra elbow-specific scenario if future search evidence warrants it."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "lead, table tail and FAQ",
+          "reason": "The no-diagnosis warning remains in several surfaces, though substantially reduced from the prior revision.",
+          "fix": "Keep the first warning and make the FAQ focus on use of the note."
+        },
+        {
+          "dimension": "intent",
+          "points": 2,
+          "location": "references section and article body",
+          "reason": "The five-question search intent is met, but no deliberate internal link to a related elbow follow-up exists.",
+          "fix": "Add one relevant published elbow link only if it provides a distinct next step."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390px five-question table screenshot",
+          "reason": "Table focus and overflow checks pass; independent screen-reader and measured contrast checks remain absent.",
+          "fix": "Spot-check reading order and color contrast to support a perfect accessibility score."
+        }
+      ],
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/conditions/tennis-elbow/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://www.mayoclinic.org/symptoms/elbow-pain/basics/causes/sym-20050874",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://www.orthoinfo.org/diseases--conditions/tennis-elbow-lateral-epicondylitis/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/health5-local-validation.json",
+        ".goal-harness/content-90-20261020/health5-preview-checks.json",
+        "output/playwright/content-90-health5-20261020/",
+        ".goal-harness/content-90-20261020/health5-rendered-schema-validation.json"
+      ]
+    },
+    {
+      "route": "/blog/aw-036-women",
+      "kind": "existing_blog",
+      "readerQuestion": "어깨 통증의 시작·일상 기능·코트 상황을 진료 전에 어떻게 정리할까?",
+      "contentHash": "f3464c4cb261be11d1f140634f7d48425a4b1c9fb06fbd1c6b7da0a8056f8b75",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 13,
+        "language": 9,
+        "intent": 8,
+        "accessibility": 4
+      },
+      "total": 91,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "The revised neutral title and four-part table now deliver an appointment note covering onset, daily function, court context and associated symptoms.",
+        "A contextual link distinguishes the same-day serve decision, and the dark desktop preview shows readable content and table layout."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "record-first warning section",
+          "reason": "The emergency signs match the reviewed medical sources, while Korean service routing beyond 119 is necessarily general.",
+          "fix": "Keep the local route broad until a Korean authoritative triage source is added."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Mayo Clinic shoulder reference",
+          "reason": "Direct access to the cited Mayo shoulder page returned 403 during this review; the official indexed text and recorded previous read matched, but current direct re-open remains unproven.",
+          "fix": "Re-open and archive the exact official page when the source allows it."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "four-row memo table and clinician questions",
+          "reason": "The memo is practical, but it does not give a blank copyable form that can be used outside this page.",
+          "fix": "Offer a concise copyable note template in a future focused revision."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "timeline and cause-inference paragraphs",
+          "reason": "Distinct daily-function content now separates this route from aw-084, though the memo format is still similar to other injury records.",
+          "fix": "Expand only with a genuinely shoulder-specific functional example if needed."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "시간 순서와 원인 추정을 분리하기",
+          "reason": "A sentence about sex-specific racket evidence survives after the title moved to a neutral clinical-preparation intent.",
+          "fix": "Remove the residual sentence if it no longer serves this page question."
+        },
+        {
+          "dimension": "intent",
+          "points": 2,
+          "location": "route slug /blog/aw-036-women and new title",
+          "reason": "The retained historical women slug is semantically distant from the new neutral title, despite correct canonical and visible title.",
+          "fix": "Preserve the route for now; assess any future redirect/consolidation separately with traffic and link evidence."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390px light and 1440px dark screenshots",
+          "reason": "The table is usable and no overflow is reported; screen-reader table association and quantitative contrast remain untested.",
+          "fix": "Run a representative assistive-technology and contrast spot check for full marks."
+        }
+      ],
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/symptoms/shoulder-pain/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://www.mayoclinic.org/symptoms/shoulder-pain/basics/causes/sym-20050696",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "indexed_official_text_and_recorded_direct_read; current direct 403"
+        },
+        {
+          "url": "https://www.orthoinfo.org/diseases--conditions/shoulder-injuries-in-the-throwing-athlete/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/health5-local-validation.json",
+        ".goal-harness/content-90-20261020/health5-preview-checks.json",
+        "output/playwright/content-90-health5-20261020/",
+        ".goal-harness/content-90-20261020/health5-rendered-schema-validation.json"
+      ]
+    },
+    {
+      "route": "/blog/aw-084-injury-serve",
+      "kind": "existing_blog",
+      "readerQuestion": "어깨가 아픈 오늘 서브와 코치·파트너와의 약속을 어떻게 조정할까?",
+      "contentHash": "34841c87843205fd95a65598fda17302fb70e5922be521298912855c1d0620bf",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "The article now answers the same-day stop decision and gives a usable dialogue for coach and partner schedule changes.",
+        "It declines to authorize substitute shots or a return dose, and links the separate medical-preparation page."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "의료 평가가 앞서는 신호",
+          "reason": "The emergency tiers are source-aligned, but the Korean local-care path is given only generically outside 119 emergencies.",
+          "fix": "Keep conditional prompt-care wording unless a local authority supports more detail."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Mayo Clinic shoulder reference",
+          "reason": "Mayo shoulder direct URL was blocked at review; official indexed text and prior source packet agreed, but direct live re-open remains a source-evidence limit.",
+          "fix": "Confirm the exact official page by direct reading when accessible."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "coach and partner dialogue",
+          "reason": "The wording helps revise an appointment, but does not offer a second example for an in-progress match versus a booked lesson.",
+          "fix": "Add a second short logistical example only if user research shows the distinction matters."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "schedule negotiation section",
+          "reason": "Same-day communication is distinct, yet the medical warning remains similar to aw-036 by necessity.",
+          "fix": "Keep future expansion on coordination decisions instead of repeating clinical notes."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "opening and FAQ",
+          "reason": "The painful-serve boundary is repeated in the answer and FAQ.",
+          "fix": "Shorten the FAQ wording while keeping the safe stop instruction."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "title and excerpt",
+          "reason": "The revised title accurately promises the decision and appointment dialogue; the historical injury-serve slug is broader than this logistical scope.",
+          "fix": "Keep metadata focused on the same-day question; evaluate route changes only separately."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390px light/dark screenshots and decision table",
+          "reason": "Table keyboard focus and FAQ keys pass, but no screen-reader pass or measured contrast audit is included.",
+          "fix": "Complete a targeted assistive-technology and contrast probe for 5/5."
+        }
+      ],
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/symptoms/shoulder-pain/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://www.mayoclinic.org/symptoms/shoulder-pain/basics/causes/sym-20050696",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "indexed_official_text_and_recorded_direct_read; current direct 403"
+        },
+        {
+          "url": "https://www.orthoinfo.org/diseases--conditions/shoulder-injuries-in-the-throwing-athlete/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/health5-local-validation.json",
+        ".goal-harness/content-90-20261020/health5-preview-checks.json",
+        "output/playwright/content-90-health5-20261020/",
+        ".goal-harness/content-90-20261020/health5-rendered-schema-validation.json"
+      ]
+    },
+    {
+      "route": "/blog/aw-094-injury-grip-record",
+      "kind": "existing_blog",
+      "readerQuestion": "손목 통증과 그립 변경을 의료 상담용 메모에 어떻게 분리해 적을까?",
+      "contentHash": "b4f385bf35f04af0ddddee6ad8773128dca24f40b845ff4339072e5729ec7323",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "The six-field symptom note and worked example separate clinical course from grip history and avoid provocative retesting.",
+        "The new contextual link directs equipment questions to aw-008 and the rendered table is keyboard focusable."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "기록보다 먼저 확인할 신호",
+          "reason": "Wrist red flags align with NHS; Korean service routing is broad rather than source-specific.",
+          "fix": "Retain conditional wording or cite a Korean triage authority for a more precise service path."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "six-field memo and reference section",
+          "reason": "NHS/Mayo support the triage but the six-field form is an editorial synthesis, not a validated instrument; this is labelled.",
+          "fix": "Keep the editorial-tool label attached to the template."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "상담 메모의 여섯 칸",
+          "reason": "The filled example is useful, but a single copyable blank note is not provided.",
+          "fix": "Add a compact reusable blank form if readers need to take the note to a clinician."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "그립과 타점은 별도 배경란에",
+          "reason": "The symptom-versus-equipment split differentiates this page, while wrist triage necessarily overlaps aw-008.",
+          "fix": "Keep the pages focused and avoid duplicating more gear explanation here."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "lead and first safety section",
+          "reason": "The purpose of recording versus diagnosis is stated more than once.",
+          "fix": "Compress one introductory caveat while keeping urgent signs prominent."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "title and companion link",
+          "reason": "The title contains grip even though the core tool is a wrist symptom log; the excerpt clarifies the relationship.",
+          "fix": "Keep symptom recording primary in future search copy and avoid implying a grip diagnosis."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390px six-row table screenshot",
+          "reason": "Mobile scrolling and table focus pass, but screen-reader and measured contrast evidence is not recorded.",
+          "fix": "Run a focused table reading-order and contrast check for full marks."
+        }
+      ],
+      "sourceChecks": [
+        {
+          "url": "https://www.nhs.uk/symptoms/hand-pain/wrist-pain/",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        },
+        {
+          "url": "https://sportsmedicine.mayoclinic.org/condition/wrist-pain/page/2",
+          "checkedAt": "2026-10-20T17:16:00+09:00",
+          "access": "direct_page_read"
+        }
+      ],
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/health5-local-validation.json",
+        ".goal-harness/content-90-20261020/health5-preview-checks.json",
+        "output/playwright/content-90-health5-20261020/",
+        ".goal-harness/content-90-20261020/health5-rendered-schema-validation.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "analytics-restoration",
+  "verdict": "approved",
+  "author": "Codex Main",
+  "reviewer": "Codex code-reviewer",
+  "reviewedAt": "2026-10-21T07:00:39.508139+00:00",
+  "reason": "Restore the exact privacy-preserving analytics implementation from the existing reviewed Git release after content commit12af11b reverted it; tool descriptions and all other render sources/assets are unchanged. This is technical review only and does not approve pending editorial content.",
+  "restoredFromCommit": "3e9657d8e7ace2e190f67dabab636d40802cd530",
+  "file": "src/lib/analytics.ts",
+  "beforeHash": "cb44a4628637766e3500c34d85b1bd9f0031a9d4d43eea4840057d1406a4d082",
+  "afterHash": "962f6cb782e2c8979da38042833df525fdb00f1e88b00429767404255954acbc",
+  "items": [
+    {
+      "route": "/utility/doubles-rotation-generator",
+      "contentHash": "d0b82501f147ebe671fc6a4e11663af963b7331d433eeb0588d4170c99080787",
+      "beforeRenderHash": "e1cfaf9c357fa59cdf54ff0576377833cc1318b65588e7a884fcc04d7bf7e1e2",
+      "afterRenderHash": "975c8121fe14d772073938e0942a80f0e944078cb921537bcac7838432b525dd"
+    },
+    {
+      "route": "/utility/tennis-scoring-quiz",
+      "contentHash": "6a18bdb4761e3e33c0ab13563fd30d26b9343447c3378b440da302fd0dbbfbc0",
+      "beforeRenderHash": "0043acb0db5fd91d55b58739d7443b2ba102ea85256b8495f6f05d6024769022",
+      "afterRenderHash": "143bd955120ab2ddea71180fe893e660a122d60aaf3b0cd8eb0da5a78a48415a"
+    },
+    {
+      "route": "/utility/tennis-terms-quiz",
+      "contentHash": "84ff8f6bdde550a3d6f9c4b67a626418b86bb0ae10582c9a4e436c4cecc2c629",
+      "beforeRenderHash": "e01dff791c9a1f82409e976a2fca0e1f87cb25a96f5e3f74276078cd65497004",
+      "afterRenderHash": "f44710576202d1e7e620fea9cc16b89f6268e4e2619d2205103841bdbf4cb5c7"
+    }
+  ]
+}

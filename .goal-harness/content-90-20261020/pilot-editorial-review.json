@@ -1,0 +1,146 @@
+{
+  "reviewer": "Independent AI editorial reviewer (critic)",
+  "checkedAt": "2026-10-20T16:34:07+09:00",
+  "status": "final_local_editorial_pass_all_five",
+  "rubric": {
+    "facts": { "max": 25, "floor": 23 },
+    "sources": { "max": 15, "floor": 14 },
+    "usefulness": { "max": 20, "floor": 18 },
+    "depth": { "max": 15, "floor": 13 },
+    "language": { "max": 10, "floor": 8 },
+    "intent": { "max": 10, "floor": 8 },
+    "accessibility": { "max": 5, "floor": 4 }
+  },
+  "reviewedSnapshot": ".goal-harness/content-90-20261020/pilot-after.json",
+  "reviewedSnapshotCapturedAt": "2026-10-20T07:29:27.707Z",
+  "sourcePacket": ".goal-harness/content-90-20261020/pilot-sources.json",
+  "baseline": ".goal-harness/content-90-20261020/pilot-before.json",
+  "scoreStatus": "Rebound after the inventory fingerprint expanded to transitive renderer sources, per-route visual values and referenced local asset bytes. All four blog comparisonContentHash values equal the previously reviewed hashes; custom route source hashes are unchanged. Player authored data, search SEO and renderer sources predate the preview. No pilot has a route visual or referenced local image asset, and all five reviewAssetHashes maps are empty without MISSING_LOCAL_ASSET. The current snapshot and current inventory agree on every full hash and renderer hash. Fresh new-build checks at 07:32 UTC cover 16 blog and four player viewport/theme cases, four keyboard routes and all five DOM body matches with no missing content. Representative current mobile screenshots were visually inspected for all five routes. This is local-preview evidence, not public deployment proof. Any subsequent effective-content, renderer, visual or asset change invalidates the affected hash-bound review.",
+  "uiEvidence": [".goal-harness/content-90-20261020/preview-checks.json", ".goal-harness/content-90-20261020/preview-keyboard-checks.json", ".goal-harness/content-90-20261020/preview-player-checks.json", ".goal-harness/content-90-20261020/preview-content-match.json", "output/playwright/content-90-20261020/"],
+  "items": [
+    {
+      "route": "/blog/tennis-hybrid-string-setup",
+      "kind": "blog_custom_route",
+      "readerQuestion": "How should a recreational player specify and compare a hybrid string setup without assuming guaranteed performance or pain relief?",
+      "contentHash": "69fda0ce7d4246243dddf4d18a7e05b074755dbbdd15fb865dcf8eab70adffe8",
+      "renderDependencyHash": "0d3b8fd0c231a803f71aadf42675623a06baa4d07a0b2735d3e79fb8e865638b",
+      "customSourceHash": "43f53db4b91fa0c308f81d723b951837687bcc526f103fbb2a1a82dbcb580f6d",
+      "scores": { "facts": 24, "sources": 14, "usefulness": 19, "depth": 14, "language": 9, "intent": 10, "accessibility": 5 },
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "The USTA hybrid definition and non-universal tension relationship are represented accurately; the article avoids one-size-fits-all tension and performance promises.",
+        "The work order table and labeled hypothetical comparison create a usable next action. The custom route renders the mapped reviewed body and adds on-topic FAQ and source link."
+      ],
+      "deductions": [
+        { "dimension": "facts", "points": 1, "location": "body, '텐션은 숫자 하나보다 기준과 단위가 중요합니다'", "reason": "Manufacturer limits are prudent advice but no specific manufacturer instruction is cited; readers must check their own frame and string instructions.", "fix": "Keep explicitly conditional, or link to a specific applicable manufacturer instruction when making a concrete limit claim." },
+        { "dimension": "sources", "points": 1, "location": "body, '팔이 아프면 셋업 실험을 해결책으로 삼지 않습니다'", "reason": "The health direction is cautious but the hybrid page directly cites only USTA; the linked elbow page carries the NHS evidence.", "fix": "Add a direct NHS reference here if retaining medical action advice, or make clear it is a pointer to the separately sourced health guide." },
+        { "dimension": "usefulness", "points": 1, "location": "body, hypothetical comparison below the work-order table", "reason": "The example does not show a completed before/after record, so readers still must infer how to log actual use.", "fix": "Show one fully filled hypothetical record with conditions and a non-causal observation." },
+        { "dimension": "depth", "points": 1, "location": "body, '메인과 크로스는 서로 바꿔 적을 수 없습니다'", "reason": "The explanation identifies placement but offers little worked contrast between two legitimate material layouts.", "fix": "Add a bounded comparison example without predicting spin, injury, or lifespan." },
+        { "dimension": "language", "points": 1, "location": "body, opening and post excerpt/summary/highlight", "reason": "The same scope sentence appears in several page surfaces and the opening restates it.", "fix": "Let the page summary carry the scope and begin body with the concrete work-order decision." }
+      ]
+    },
+    {
+      "route": "/blog/oct26-line-call-basics",
+      "kind": "blog_generic_route",
+      "readerQuestion": "How should players decide an in/out call and resolve an uncertain or reversed call in an unofficiated match?",
+      "contentHash": "1f2e07164aec849892691ec080b94339de8a0da7eedb8b0a04299b5ffe643b3a",
+      "renderDependencyHash": "ca9d86bdcd6aa3706cd29df5470a7ee2c2f8b0a00a369fdbdea5f88c26d7c350",
+      "customSourceHash": null,
+      "scores": { "facts": 25, "sources": 14, "usefulness": 19, "depth": 14, "language": 9, "intent": 9, "accessibility": 5 },
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "ITF Rule 12 is separated from USTA The Code procedures. The Code paragraphs 5-8, 12, 14-15 and the net-serve exception match the read official USTA PDF.",
+        "The pre-match questions, decision table, and labeled hypothetical doubles call give concrete steps without universalizing USTA procedure."
+      ],
+      "deductions": [
+        { "dimension": "sources", "points": 1, "location": "body, source paragraph", "reason": "The linked USTA PDF itself is dated 2014 despite a 2019 URL directory and 2026 read date; the article correctly asks readers to compare the applicable edition, so the age is a limited freshness gap.", "fix": "If this is framed as current USTA competition procedure, corroborate with the current official edition; otherwise retain the explicit historical/example boundary." },
+        { "dimension": "usefulness", "points": 1, "location": "body, '경기 전에 세 질문을 맞춥니다'", "reason": "It asks who handles disputes but does not give a concrete fallback when an informal group has no designated official.", "fix": "Give a short pre-match agreement example for informal play, identified as a voluntary house rule." },
+        { "dimension": "depth", "points": 1, "location": "body, line contact and reversal sections", "reason": "The article handles the selected scenarios well but does not walk one full call sequence through point and next-serve state.", "fix": "Add a concise worked point sequence under The Code applicability label." },
+        { "dimension": "language", "points": 1, "location": "excerpt and opening", "reason": "The same scope caution is repeated in dense legal phrasing before the first decision step.", "fix": "Shorten the lead while retaining the ITF/USTA distinction." },
+        { "dimension": "intent", "points": 1, "location": "body, links to quiz and score dispute", "reason": "The next link is relevant but the quiz is a general rules activity, not a direct self-officiating practice example.", "fix": "If possible, point to a line-call-specific exercise or label the general quiz explicitly." }
+      ]
+    },
+    {
+      "route": "/blog/tennis-elbow-load-management-match-application",
+      "kind": "blog_generic_route_health",
+      "readerQuestion": "What should a player do when elbow pain occurs in a match, and what should they record for individualized advice and gradual return?",
+      "contentHash": "0e07067fde16ebd407c392209c655853f6d07e73662c1a19e04ff93378d4745b",
+      "renderDependencyHash": "ca9d86bdcd6aa3706cd29df5470a7ee2c2f8b0a00a369fdbdea5f88c26d7c350",
+      "customSourceHash": null,
+      "scores": { "facts": 24, "sources": 14, "usefulness": 18, "depth": 13, "language": 9, "intent": 9, "accessibility": 5 },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "The two NHS sources support reduction of aggravating activity, symptom-led gradual loading and warning signs. The article rejects pain-score clearance, diagnosis, medicine instructions and fixed return timing.",
+        "The consultation table distinguishes observations from causal claims; the example is explicitly hypothetical."
+      ],
+      "deductions": [
+        { "dimension": "facts", "points": 1, "location": "body, '복귀는 날짜가 아니라 단계와 반응을 상담합니다'", "reason": "The section is suitably conditional, but mentions movement, strength and swelling together without specifying that only an individual assessment can decide readiness.", "fix": "Keep the assessment boundary prominent in this section and avoid turning the listed observations into a self-clearance checklist." },
+        { "dimension": "sources", "points": 1, "location": "FAQ, '통증이 줄면 바로 경기로 돌아가도 되나요?'", "reason": "The FAQ's imperative '점진적으로 복귀해야 합니다' is broad while the cited NHS page says progression has no universal formula.", "fix": "Phrase as '개별 평가에 따라 점진적인 활동 재개를 상담하세요' and retain the NHS no-formula qualification." },
+        { "dimension": "usefulness", "points": 2, "location": "body, match decision and consultation-record table", "reason": "It advises reducing/stopping activity and checking retirement process but leaves a player without a compact sequence for what to tell the partner or official and when to seek prompt care.", "fix": "Add a short conditional sequence: stop aggravating play, notify partner/official, check warning signs, then record observations for care." },
+        { "dimension": "depth", "points": 2, "location": "body, symptom and return sections", "reason": "Several paragraphs restate uncertainty and gradual return; the separate match-day decision context receives less development than the consultation record.", "fix": "Use one worked match-day situation to distinguish immediate withdrawal, routine consultation and later activity planning without fixed thresholds." },
+        { "dimension": "language", "points": 1, "location": "post excerpt, summary/highlight and body introduction", "reason": "The same caution is repeated across the page entry surfaces.", "fix": "Tighten one repeated sentence while keeping the safety boundary." },
+        { "dimension": "intent", "points": 1, "location": "post title and body", "reason": "'복귀 상담 기록' is covered, but the page provides no directly printable or copyable one-page template outside the HTML table.", "fix": "Make the current table easy to copy or offer a simple text template." }
+      ]
+    },
+    {
+      "route": "/blog/tennis-wall-practice-guide",
+      "kind": "blog_custom_route_noindex",
+      "readerQuestion": "How can a recreational player run a safe, comparable solo wall practice and separate it from match performance?",
+      "contentHash": "f301aa0f73d80bdcd1490f1ec3864546aa1435a606497367ee9ceac77783d0de",
+      "renderDependencyHash": "32b3bec1072af94097963cef1a708fe63b5b5667f9784c40cc7b717ba9471d1f",
+      "customSourceHash": "2c154b070cb65cf13c168c0c1c3374e27748a2227a2d90ecfd48f0cf51a54845",
+      "scores": { "facts": 24, "sources": 14, "usefulness": 19, "depth": 14, "language": 9, "intent": 10, "accessibility": 5 },
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "Both USTA sources are youth drill examples and the page expressly avoids adult performance claims. Space precautions are identified as editorial precautions.",
+        "The rendered custom route carries the specific routine, recording method, youth-source limitation, FAQ, and related planner links rather than the old boilerplate."
+      ],
+      "deductions": [
+        { "dimension": "facts", "points": 1, "location": "body/custom route, alternating stroke section", "reason": "The drill's adult adaptation is reasonable editorial design but its effects are untested; the page states this limit.", "fix": "Keep the routine labeled an example and avoid outcome claims." },
+        { "dimension": "sources", "points": 1, "location": "body/custom route, source section", "reason": "Both official sources are youth programs; neither validates this exact adult progression.", "fix": "Retain the youth/example distinction, or add direct evidence if making adult performance claims." },
+        { "dimension": "usefulness", "points": 1, "location": "custom route, next action", "reason": "The planner link is relevant, but no blank record form is provided on the page itself.", "fix": "Add a compact copyable log line if this route should stand alone." },
+        { "dimension": "depth", "points": 1, "location": "body/custom route, transfer section", "reason": "The court transfer step names a cooperative rally but offers only one target example.", "fix": "Add a second contrasting, labeled example only if it improves the reader's next session." },
+        { "dimension": "language", "points": 1, "location": "custom route summary and intro", "reason": "The same limitations are restated in adjacent summary and introduction copy.", "fix": "Trim one repetition while retaining the no-guarantee boundary." }
+      ]
+    },
+    {
+      "route": "/players/hubert-hurkacz",
+      "kind": "player_custom_route",
+      "readerQuestion": "What is verified about Hurkacz's 2021 Miami and Wimbledon results, and how can a reader observe his matches without inventing a style analysis?",
+      "contentHash": "7ca877e3844164bb35725ca9b0c32816734ea2855e9e1d34540ed1897b9f2a99",
+      "renderDependencyHash": "5a5ece6e7c0098cf244f41f5078f03c78225b14c22c2c177a017c9cf50b1dd49",
+      "customSourceHash": "c347973017210a330a6cfe2ecb1e3c859d0cf4932aa253c632198e2aa4567920",
+      "scores": { "facts": 25, "sources": 15, "usefulness": 19, "depth": 14, "language": 8, "intent": 9, "accessibility": 5 },
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "Miami final date, score, first Masters-level title and Sinner serving for the first set at 6-5 match the official tournament account; Wimbledon semifinal path is tied to the official draw. The 2023 Shanghai final score, one saved match point and second Masters title are tied to the actually read official tournament retrospective, without citing the intermittently 404 draw URL.",
+        "The new three-event timeline and comparison of two specifically sourced final turning points provide player-specific value. The revised data avoids unsupported current rank, injury and form assertions. The formerly unsupported route-specific style claim is now an editorial-observation caveat, and the unproven portrait reference has been removed from data/schema."
+      ],
+      "deductions": [
+        { "dimension": "usefulness", "points": 1, "location": "detailedProfile.playStyle and fanAppeal", "reason": "The two turning points give specific observation tasks, but the reader still must locate exact match footage independently and the page does not link to a playable segment.", "fix": "Link to a rights-safe official highlight/match record with the relevant moment only if verified; otherwise keep the instruction conditional as written." },
+        { "dimension": "depth", "points": 1, "location": "detailedProfile.playStyle and signatureMatch", "reason": "The source-backed score and pressure moments are distinct, but no shot-level observation is claimed or supplied; depth stops at match-report interpretation.", "fix": "If deeper analysis is needed, add a directly watched, timestamped point observation with source and distinguish observation from inference." },
+        { "dimension": "language", "points": 2, "location": "PlayerArticlePage section headings '이 선수는 어떤 유형...' and '팬들은 ...'; revised data text", "reason": "The headings still promise generalized player style and surveyed fan response, while the stronger body now covers two particular final turning points and a viewing exercise.", "fix": "Rename headings to match the sourced match-reading scope and avoid implying fan research." },
+        { "dimension": "intent", "points": 1, "location": "metadata profile title and historical scope paragraph", "reason": "The title's broad 'profile' label reaches beyond the three selected tournament records, although the description and body clearly bound the scope.", "fix": "Keep the visible historical scope prominent; a tighter title can be considered if the template permits it." }
+      ]
+    }
+  ],
+  "overall": {
+    "verdict": "PASS_EDITORIAL_LOCAL",
+    "editorialContentAtOrAbove90WithoutKnownVeto": 5,
+    "knownVetoRoutes": [],
+    "below90Routes": [],
+    "pending": [],
+    "resolvedTechnicalObservation": "The duplicate player FAQPage JSON-LD was removed. Fresh built preview contains exactly one FAQPage and one Person without an image in all four player viewport/theme cases.",
+    "runtimeOrDeploymentVerified": false
+  }
+}

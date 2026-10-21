@@ -1,0 +1,3828 @@
+{
+  "checkedAt": "2026-10-20T07:16:01.468696+00:00",
+  "reviewer": "Independent repository explorer /root/candidate_scope; reconciled by main",
+  "method": "259 canonical players (269 records minus10 legacy aliases),66 utility landing pages,1 quiz introduction. Runtime24utility children+2quiz children and8site/support/hub/control pages are not independent editorial documents. All360baseline candidate records retained; no original public blog removed. Source-only classification is separate from livepublication proof.",
+  "counts": {
+    "non_editorial_scope": 34,
+    "editorial_scope_confirmed_publication_unverified": 326
+  },
+  "items": [
+    {
+      "route": "/players/adrian-mannarino",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/adrian-mannarino/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/ajla-tomljanovic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alejandro-davidovich-fokina",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/alejandro-davidovich-fokina/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alejandro-tabilo",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/aleksandar-vukic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alex-blockx",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alex-de-minaur",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/alex-de-minaur/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alex-michelsen",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/alex-michelsen/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alex-ritschard",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alexander-blockx",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alexander-bublik",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/alexander-bublik/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alexander-shevchenko",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alexander-zverev",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/alexander-zverev/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alexandra-eala",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alexandre-muller",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alexei-popyrin",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/alexei-popyrin/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alibek-kachmazov",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/alycia-parks",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/amanda-anisimova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/anastasia-potapova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/andrey-rublev",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/andrey-rublev/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/andy-murray",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/andy-roddick",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/angelique-kerber",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/anhelina-kalinina",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/anna-bondar",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/anna-kalinskaya",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/arantxa-rus",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/arthur-fils",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/arthur-fils/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/arthur-rinderknech",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/arthur-rinderknech/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/aryna-sabalenka",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/ashleigh-barty",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/ashlyn-krueger",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/aslan-karatsev",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/barbora-krejcikova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/beatriz-haddad-maia",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/belinda-bencic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/ben-shelton",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/ben-shelton/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/bianca-andreescu",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/billy-harris",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/borna-coric",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/botic-van-de-zandschulp",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/brandon-nakashima",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/brandon-nakashima/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/brenda-fruhvirtova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/cameron-norrie",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/cameron-norrie/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/camila-giorgi",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/camilo-ugo-carabelli",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/carlos-alcaraz",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/carlos-alcaraz/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/carlos-taberner",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/caroline-garcia",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/caroline-wozniacki",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/casper-ruud",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/casper-ruud/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/christopher-eubanks",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/chun-hsin-tseng",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/clara-burel",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/clara-tauson",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/clervie-ngounoue",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/coco-gauff",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/coleman-wong",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/corentin-moutet",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/corentin-moutet/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/daniel-evans",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/danielle-collins",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/daniil-medvedev",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/daniil-medvedev/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/daria-kasatkina",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/david-goffin",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/dayana-yastremska",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/denis-shapovalov",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/denis-shapovalov/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/diana-shnaider",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/diane-parry",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/diego-schwartzman",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/dino-prizmic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/dominic-thiem",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/dominik-koepfer",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/donna-vekic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/duckhee-lee",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/duje-ajdukovic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/ekaterina-alexandrova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/elena-avanesyan",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/elena-rybakina",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/elina-avanesyan",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/elina-svitolina",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/elise-mertens",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/emil-ruusuvuori",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/emilio-nava",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/emina-bektas",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/emma-navarro",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/emma-raducanu",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/erika-andreeva",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/ethan-quinn",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/eva-lys",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/fabian-marozsan",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/fabio-fognini",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/federico-cina",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/felix-auger-aliassime",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/felix-auger-aliassime/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/flavio-cobolli",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/flavio-cobolli/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/frances-tiafoe",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/frances-tiafoe/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/francisco-cerundolo",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/francisco-cerundolo/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/francisco-comesana",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/gabriel-diallo",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/gael-monfils",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/gael-monfils/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/garbine-muguruza",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/giovanni-mpetshi-perricard",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/giovanni-mpetshi-perricard/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/grigor-dimitrov",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/grigor-dimitrov/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/hailey-baptiste",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/hamad-medjedovic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/harold-mayot",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/henrique-rocha",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/holger-rune",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/holger-rune/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/hubert-hurkacz",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/hubert-hurkacz/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/hugo-dellien",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/hugo-gaston",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/hyeon-chung",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/iga-swiatek",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/iva-jovic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jack-draper",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/jack-draper/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jacob-fearnley",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jakub-mensik",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/jakub-mensik/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jan-lennard-struff",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/jan-lennard-struff/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jannik-sinner",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/jannik-sinner/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jasmine-paolini",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jaume-munar",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/jaume-munar/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jelena-ostapenko",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jessica-pegula",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jiri-lehecka",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/jiri-lehecka/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jiri-vesely",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/joao-fonseca",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/joao-fonseca/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/joao-lucas-reis-da-silva",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jordan-thompson",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/jordan-thompson/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/jule-niemeier",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/juncheng-shang",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/karen-khachanov",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/karen-khachanov/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/karolina-muchova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/karolina-pliskova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/katerina-siniakova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/katie-boulter",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/kei-nishikori",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/kim-clijsters",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/laslo-djere",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/laura-siegemund",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/learner-tien",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/lesia-tsurenko",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/leylah-fernandez",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/linda-noskova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/linner-tien",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/linner-tien/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/liudmila-samsonova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/lleyton-hewitt",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/lois-boisson",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/lorenzo-musetti",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/lorenzo-musetti/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/lorenzo-sonego",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/luca-nardi",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/luca-van-assche",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/luciano-darderi",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/luciano-darderi/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/lucrezia-stefanini",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/lulu-sun",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/mackenzie-mcdonald",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/madison-keys",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/magda-linette",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/marcos-giron",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/maria-sakkari",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/maria-sharapova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/marie-bouzkova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/marie-bouzkova/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/marin-cilic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/marina-stakusic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/marketa-vondrousova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/marta-kostyuk",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/martin-landaluce",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/martin-landaluce/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/martina-hingis",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/marton-fucsovics",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/matteo-arnaldi",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/matteo-arnaldi/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/matteo-berrettini",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/matteo-berrettini/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/max-purcell",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/maya-joint",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/mccartney-kessler",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/milos-raonic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/miomir-kecmanovic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/miomir-kecmanovic/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/mirra-andreeva",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/moyuka-uchijima",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/naomi-osaka",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/narae-han",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/nick-kyrgios",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/nicolas-jarry",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/nicolas-jarry/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/nishesh-basavareddy",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/novak-djokovic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/novak-djokovic/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/nuno-borges",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/oceane-dodin",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/olga-danilovic",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/ons-jabeur",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/paula-badosa",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/pavel-kotov",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/pedro-cachin",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/pedro-martinez",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/petra-kvitova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/peyton-stearns",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/polina-kudermetova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/qinwen-zheng",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/rafael-nadal",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/rebeka-masarova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/reilly-opelka",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/renata-zarazua",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/richard-gasquet",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/rinky-hijikata",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/roberto-bautista-agut",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/roberto-carballes-baena",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/robin-montgomery",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/roger-federer",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/roman-safiullin",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sara-bejlek",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sara-errani",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sebastian-baez",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/sebastian-baez/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sebastian-korda",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/sebastian-korda/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sebastian-ofner",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/sebastian-ofner/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/seongchan-hong",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/serena-williams",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/shang-juncheng",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/simona-halep",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sloane-stephens",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sofia-kenin",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sonay-kartal",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/soonwoo-kwon",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sorana-cirstea",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/stan-wawrinka",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/stefanos-tsitsipas",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/stefanos-tsitsipas/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sujeong-jang",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/sumit-nagal",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/tallon-griekspoor",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/tallon-griekspoor/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/taro-daniel",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/tatjana-maria",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/taylah-preston",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/taylor-fritz",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/taylor-fritz/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/terence-atmane",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/thanasi-kokkinakis",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/thiago-seyboth-wild",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/timofei-skatov",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/tomas-barrios",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/tomas-machac",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/tomas-machac/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/tomas-martin-etcheverry",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/tommy-paul",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/tommy-paul/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/tseng-chun-hsin",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/ugo-humbert",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/ugo-humbert/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/valentin-vacherot",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/valentin-vacherot/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/varvara-gracheva",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/venus-williams",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/veronika-kudermetova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/victoria-azarenka",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/victoria-mboko",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/viktoriya-tomova",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/wang-xinyu",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/wang-xinyu/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/wang-xiyu",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/yannick-hanfmann",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/yannick-hanfmann/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/yibing-wu",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/yoshihito-nishioka",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/yuan-yue",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/yue-yuan",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/yulia-putintseva",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/yunchaokete-bu",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/scheduled-20.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/zheng-qinwen",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/new-30.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/zhizhen-zhang",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/app/players/zhizhen-zhang/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/zhu-lin",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/female.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/players/zizou-bergs",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Canonical PLAYERS_DB record excluding legacy aliases; static wrapper or dynamic route renders detailed profile.",
+      "sourceFiles": [
+        "src/app/players/[slug]/page.tsx",
+        "src/data/players/male.ts",
+        "src/lib/player-search-seo.ts"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Site navigation, support, legal, discovery or control surface; tracked separately from editorial article/guide scope.",
+      "sourceFiles": [
+        "src/app/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/about",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Site navigation, support, legal, discovery or control surface; tracked separately from editorial article/guide scope.",
+      "sourceFiles": [
+        "src/app/about/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/admin",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Site navigation, support, legal, discovery or control surface; tracked separately from editorial article/guide scope.",
+      "sourceFiles": [
+        "src/app/admin/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/contact",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Site navigation, support, legal, discovery or control surface; tracked separately from editorial article/guide scope.",
+      "sourceFiles": [
+        "src/app/contact/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/privacy",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Site navigation, support, legal, discovery or control surface; tracked separately from editorial article/guide scope.",
+      "sourceFiles": [
+        "src/app/privacy/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/search",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Site navigation, support, legal, discovery or control surface; tracked separately from editorial article/guide scope.",
+      "sourceFiles": [
+        "src/app/search/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/tennis-rules-quiz",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/tennis-rules-quiz/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/tennis-rules-quiz/quiz",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/tennis-rules-quiz/quiz/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/tennis-rules-quiz/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/tennis-rules-quiz/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/terms",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Site navigation, support, legal, discovery or control surface; tracked separately from editorial article/guide scope.",
+      "sourceFiles": [
+        "src/app/terms/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Site navigation, support, legal, discovery or control surface; tracked separately from editorial article/guide scope.",
+      "sourceFiles": [
+        "src/app/utility/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/adult-beginner-roadmap",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/adult-beginner-roadmap/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/apparel-recommendation",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/apparel-recommendation/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/calorie-calculator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/calorie-calculator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/coaching-match",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/coaching-match/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/cooldown-routine-builder",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/cooldown-routine-builder/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/court-booking",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/court-booking/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/court-booking/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/court-booking/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/court-booking/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/court-booking/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/court-conditions",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/court-conditions/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/court-surface-advisor",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/court-surface-advisor/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/doubles-chemistry-test",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/doubles-chemistry-test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/doubles-positioning-simulator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/doubles-positioning-simulator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/doubles-rotation-generator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/doubles-rotation-generator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/equipment-maintenance-scheduler",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/equipment-maintenance-scheduler/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/equipment-recommendation",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/equipment-recommendation/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/equipment-recommendation/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/equipment-recommendation/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/equipment-recommendation/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/equipment-recommendation/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/fitness-test",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/fitness-test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/flexibility-test",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/flexibility-test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/flexibility-test/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/flexibility-test/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/focus-training",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/focus-training/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/focus-training/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/focus-training/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/forehand-stability-test",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/forehand-stability-test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/goal-setting",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/goal-setting/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/grip-size-checker",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/grip-size-checker/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/hydration-planner",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/hydration-planner/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/injury-risk",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/injury-risk/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/injury-risk/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/injury-risk/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/injury-risk/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/injury-risk/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/junior-development-roadmap",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/junior-development-roadmap/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/match-analyzer",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/match-analyzer/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/match-analyzer/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/match-analyzer/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/match-analyzer/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/match-analyzer/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/match-recorder",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/match-recorder/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/match-recorder/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/match-recorder/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/match-video-review-template",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/match-video-review-template/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/matchday-packing-checklist",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/matchday-packing-checklist/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/mental-training",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/mental-training/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/ntrp-test",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/ntrp-test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/ntrp-test/leaderboard",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/ntrp-test/leaderboard/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/ntrp-test/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/ntrp-test/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/ntrp-test/stats",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/ntrp-test/stats/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/ntrp-test/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/ntrp-test/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/nutrition-guide",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/nutrition-guide/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/nutrition-guide/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/nutrition-guide/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/nutrition-guide/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/nutrition-guide/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/opponent-analyzer",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/opponent-analyzer/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/overgrip-replacement-reminder",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/overgrip-replacement-reminder/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/partner-compatibility-check",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/partner-compatibility-check/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/play-style-test",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/play-style-test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/play-style-test/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/play-style-test/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/play-style-test/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/play-style-test/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/practice-drill-generator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/practice-drill-generator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/practice-wall-drill-planner",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/practice-wall-drill-planner/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/price-comparison",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/price-comparison/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/rally-consistency-tracker",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/rally-consistency-tracker/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/ranking-calculator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/ranking-calculator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/reaction-test",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/reaction-test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/reaction-test/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/reaction-test/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/recovery-routine-generator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/recovery-routine-generator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/return-position-calculator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/return-position-calculator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/serve-placement-mapper",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/serve-placement-mapper/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/serve-velocity-calculator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/serve-velocity-calculator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/shoe-recommender",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/shoe-recommender/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/shoe-wear-tracker",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/shoe-wear-tracker/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/shot-selection-trainer",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/shot-selection-trainer/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/sleep-readiness-check",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/sleep-readiness-check/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/string-pattern-analyzer",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/string-pattern-analyzer/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/string-replacement-reminder",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/string-replacement-reminder/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/string-tension",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/string-tension/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/string-tension/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/string-tension/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/string-tension/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/string-tension/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/swing-analyzer",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/swing-analyzer/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tennis-dictionary",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tennis-dictionary/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tennis-diet",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tennis-diet/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tennis-goal-streak-tracker",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tennis-goal-streak-tracker/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tennis-scoring-quiz",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tennis-scoring-quiz/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tennis-terms-quiz",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tennis-terms-quiz/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tennis-time-availability-planner",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tennis-time-availability-planner/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tiebreak-pressure-simulator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tiebreak-pressure-simulator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tournament-budget-calculator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tournament-budget-calculator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/tournament-schedule",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/tournament-schedule/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/training-planner",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/training-planner/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/training-planner/result",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/training-planner/result/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/training-planner/test",
+      "scopeStatus": "non_editorial_scope",
+      "reason": "Runtime quiz/tool step; no independent editorial document.",
+      "sourceFiles": [
+        "src/app/utility/training-planner/test/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/travel-pack-planner",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/travel-pack-planner/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/unforced-error-audit",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/unforced-error-audit/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/utr-calculator",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/utr-calculator/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/warmup-routine-builder",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/warmup-routine-builder/page.tsx"
+      ],
+      "livePublicationVerified": false
+    },
+    {
+      "route": "/utility/weather-check",
+      "scopeStatus": "editorial_scope_confirmed_publication_unverified",
+      "reason": "Tool landing/introduction description; direct page or composed client renders headings and prose.",
+      "sourceFiles": [
+        "src/app/utility/weather-check/page.tsx"
+      ],
+      "livePublicationVerified": false
+    }
+  ]
+}

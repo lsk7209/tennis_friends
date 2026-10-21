@@ -383,7 +383,8 @@
     "inventoryPath": ".goal-harness/content-90-20261020/inventory.json",
     "baselineNow": "2026-10-20T06:27:47.000Z",
     "scopeEvidencePath": ".goal-harness/content-90-20261020/candidate-scope-evidence.json",
-    "renderDependencyInventoryPath": ".goal-harness/content-90-20261020/render-dependency-baseline-v2.json"
+    "renderDependencyInventoryPath": ".goal-harness/content-90-20261020/render-dependency-baseline-v2.json",
+    "technicalDependencyReviewPath": "docs/editorial/technical-reviews/analytics-restoration-20261021.json"
   },
   "entries": [
     {

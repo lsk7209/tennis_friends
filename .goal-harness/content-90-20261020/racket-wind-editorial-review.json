@@ -1,0 +1,482 @@
+{
+  "reviewer": "Independent AI editorial reviewer (critic)",
+  "checkedAt": "2026-10-20T19:22:43+09:00",
+  "reviewedAt": "2026-10-20T19:22:43+09:00",
+  "reviewStage": "integrated_local_render",
+  "scope": "Five existing racket/wind/event/lob/footwear blog routes, current integrated source and local built preview only; 5 of 1643 original published cohort",
+  "rubric": {
+    "categories": [
+      "facts",
+      "sources",
+      "usefulness",
+      "depth",
+      "language",
+      "intent",
+      "accessibility"
+    ],
+    "maximum": [
+      25,
+      15,
+      20,
+      15,
+      10,
+      10,
+      5
+    ],
+    "minimum": [
+      23,
+      14,
+      18,
+      13,
+      8,
+      8,
+      4
+    ],
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal numerical coaching rule",
+      "misleading ITF/USTA rule or Korean event policy",
+      "medical diagnosis or injury-prevention promise",
+      "manufacturer category as individual prescription"
+    ]
+  },
+  "evidence": {
+    "proposalPath": ".goal-harness/content-90-20261020/next-racket-wind-proposals.json",
+    "proposalSha256": "4ad759d93368a651d1216318bd7993496cb4e015651d54fd8516e009f52c2299",
+    "sourcesPath": ".goal-harness/content-90-20261020/next-racket-wind-sources.json",
+    "beforePath": ".goal-harness/content-90-20261020/next-racket-wind-before.json",
+    "integrationPath": ".goal-harness/content-90-20261020/racket-wind-integration.json",
+    "currentInventoryPath": ".goal-harness/content-90-20261020/racket-wind-current/inventory.json",
+    "localValidationPath": ".goal-harness/content-90-20261020/racket-wind-local-validation.json",
+    "previewChecksPath": ".goal-harness/content-90-20261020/racket-wind-preview-checks.json",
+    "screenshotsPath": "output/playwright/content-90-racket-wind-20261020/"
+  },
+  "sourceIntegrity": "Final proposal SHA and each body/metadata JSON SHA bound here. Official source packet actual-read claims and limitations inspected. ITF service toss rules in the 2026 USTA handbook are separated from USTA sanctioned-event equipment regulations; manufacturer and junior-drill sources are scoped as such. Five current inventory hashes match all 20 local rendered cases.",
+  "localRenderEvidence": "Fresh build/lint/typecheck exit 0, reviewer validation tests 22/22 pass (four pre-existing lint warnings). Five routes x 390/1440px x light/dark = 20 HTTP 200 cases, 157 unique expected body blocks, no missing blocks or broken fragments, document width=viewport, FAQ Enter/Space and table keyboard focus pass. Article schema headlines, canonical, original publication dates KST and modified 2026-10-20 pass. Main viewed five 390px light screenshots; reviewer viewed aw020 390px light and aw023 1440px dark.",
+  "batchVerdict": "PASS_EDITORIAL_LOCAL: all five current integrated content hashes score at least 90 and meet each seven-dimension floor with no identified hard veto in reviewed text/rendered local evidence.",
+  "globalVetoAssessment": "No universal 20-minute racket fit, crosswind toss relocation formula, promised double-fault change, domestic application of USTA sanctioned-event equipment rules, return-lob timing guarantee, categorical shoe injury-prevention claim, or wet-court self-clearance found in final articles.",
+  "remainingLimits": [
+    "Local editorial PASS does not prove independent tennis/medical expert review, production deployment, Google outcome, or whole-cohort completion.",
+    "Actual screen-reader reading order and measured color contrast were not checked; accessibility is 4/5.",
+    "aw021 still shares the broader pre-event preparation search space with aw018, but owns latest notice and travel reconciliation; intent 8/10 reflects remaining overlap.",
+    "Changing any reviewed contentHash, renderer or relevant asset requires renewed review."
+  ],
+  "ledgerChangeAuthorized": false,
+  "productionProof": null,
+  "fullCohortCompletion": false,
+  "status": "final_local_editorial_pass_all_five",
+  "items": [
+    {
+      "route": "/blog/aw-019-beginner-racket-20",
+      "kind": "existing_blog",
+      "readerQuestion": "첫 라켓을 빌려 칠 때 무엇을 기록하고 구매·재시타·보류 중 무엇을 선택할까?",
+      "proposalBodyJsonSha256": "29ec9d6d02abac3dab3cf24ef184649676c6768ccdfc7aa98cae7ebf7384ade8",
+      "proposalMetadataJsonSha256": "cd9a3f9c6b9671f56120823a2447587f6d6a19d12babd8bcae3d0413ff8c958c",
+      "contentHash": "495f4853e061051b90baffc25d3980ddd238bc5b622be65312a1519727cfbdb0",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "USTA의 시타 권고와 Wilson·HEAD의 제조사 설명을 실제 그립·오버그립·스트링 상태 기록으로 연결한다.",
+        "20분 합격 기준과 손목·팔꿈치 장기 위험 예측을 배제하고 정보가 없거나 비교 조건이 다르면 구매를 보류한다.",
+        "첫 대여·구매 보류 판단에 집중하며 aw006의 장비 전반 통제 비교와 역할을 분리한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "그립 크기·통증 FAQ",
+          "reason": "그립 간격과 짧은 시타 감각은 개인 적합성이나 장기 통증 위험을 확정하지 못하며 본문도 제조사 휴리스틱으로 제한한다.",
+          "fix": "새 크기·통증 표현을 넣을 때 의료·장기 적합성 단정을 피한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Wilson·HEAD 제조사 안내",
+          "reason": "제품 설계·치수 자료는 제조사 근거이며 독립적인 개인 맞춤 시험은 아니다.",
+          "fix": "특정 프레임 적합성이나 장기 효과를 주장하려면 독립 근거를 추가한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "시타 기록표와 A/B 가상 예시",
+          "reason": "판매점이 스트링 상태를 제공하지 않거나 같은 조건 재시타가 불가능하면 구매 결론이 보류된다.",
+          "fix": "정보 미확인 때 판매점에 묻는 질문과 보류 경로를 유지한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "첫 라켓 시타의 세 항목 표",
+          "reason": "그립·기본 타구·비교 조건을 다루지만 서로 다른 스트링/공/피로 조건을 실제로 맞춘 재시타 사례와 구매 후 조정은 없다.",
+          "fix": "실제 독자 사례가 생기면 재시타 조건을 맞추는 짧은 후속 예시를 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "실제 구성·비교 조건 설명",
+          "reason": "밸런스·오버그립·스트링 상태가 첫 구매 독자에게 다소 밀집해 있다.",
+          "fix": "용어 첫 사용에 간단한 뜻을 붙인다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "첫 라켓 시타 기록 제목",
+          "reason": "즉시 모델 추천을 찾는 독자에게는 구매 보류와 질문표가 중심이다.",
+          "fix": "제목·요약에서 시타 기록과 선택 보류의 범위를 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 밝음/어두움·FAQ·표 검사",
+          "reason": "표 캡션과 행·열 머리글, 키보드 포커스와 화면 넘침은 확인했지만 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비 계측을 수행한 뒤 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-beginner-racket-demo",
+        "wilson-racket-variables",
+        "head-grip-measure"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:20:31.684Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 157 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    },
+    {
+      "route": "/blog/aw-020-tennis-guide",
+      "kind": "existing_blog",
+      "readerQuestion": "측풍에 토스가 흐를 때 스윙 전 멈출지 어떻게 판단하고 다음 연습에 무엇을 기록할까?",
+      "proposalBodyJsonSha256": "af0d5739c7fb4903b340d29269598d4c5ebdcd092cedc385d2a71b9da3d59ca6",
+      "proposalMetadataJsonSha256": "bebc7dd062f543253926dc4c4867543e1a2b6781fd8fde627c68718d8324445d",
+      "contentHash": "91d3fda975e1456036f638210f1a2cd683cb5dea6e96d7ea5a323789cf07e68c",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 93,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "2026 Friend at Court에 실린 ITF 규칙 16·19 사례1을 구분해 치지 않은 토스를 잡거나 떨어뜨리는 것과 헛스윙 폴트를 정확히 설명한다.",
+        "USTA 바람 일반 조언을 릴리스 지점 공식이나 더블폴트 감소 보장으로 확대하지 않는다.",
+        "칠 공·다시 할 공·반복 조정의 선택표와 오른쪽 돌풍 가상 기록이 다음 코치 질문을 만든다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "ITF 토스 규칙과 경기 시간 문단",
+          "reason": "토스 중단 자체는 폴트가 아니어도 특정 대회의 시간·진행 절차까지 면제되지는 않으며 본문이 별개라고 밝힌다.",
+          "fix": "다른 대회 적용을 쓸 때 현재 시간 규정과 운영 지시를 별도로 확인한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Friend at Court 2026·USTA 바람 코치 글",
+          "reason": "ITF 규칙은 명확하지만 바람 코치 자료는 측풍 릴리스 위치의 실험 근거가 아니다.",
+          "fix": "측풍 처방 수치를 추가할 경우 별도 1차 근거를 확보한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "칠지 멈출지 선택표",
+          "reason": "바람과 균형 판단은 선수·코치의 실제 연습 맥락에 따라 달라 글만으로 타구 가능 위치를 정할 수 없다.",
+          "fix": "독자 사례를 추가할 때 관찰과 코치 확인 경로를 유지한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "오른쪽 돌풍 가상 기록",
+          "reason": "한 방향의 가상 관찰을 보여 주지만 다른 돌풍 조건이나 반복 기록의 변화는 다루지 않는다.",
+          "fix": "실제 기록이 확보되면 다른 바람 장면과 선택 결과를 비교한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "토스·릴리스·폴트 설명",
+          "reason": "초보자에게 릴리스와 폴트 같은 용어가 한 단락에 모인다.",
+          "fix": "릴리스는 공을 손에서 놓는 순간이라고 첫 사용에 풀어 쓴다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "측풍 서브 토스 판단 제목",
+          "reason": "토스의 정확한 시작 위치를 찾는 독자에게는 공식 대신 스윙 전 판단과 기록이 제시된다.",
+          "fix": "제목·요약에서 판단 목적과 공식 부재를 분명히 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 밝음/어두움·FAQ·표 검사",
+          "reason": "표 캡션과 행·열 머리글, 키보드 포커스와 화면 넘침은 확인했지만 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비 계측을 수행한 뒤 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-fac-2026-toss",
+        "usta-wind-coach-2021"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:20:31.684Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 157 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    },
+    {
+      "route": "/blog/aw-021-club-match",
+      "kind": "existing_blog",
+      "readerQuestion": "동호회 대회 전날 최신 공지의 어떤 변경을 확인하고 출발 계획을 어떻게 수정할까?",
+      "proposalBodyJsonSha256": "f478b6362b40e658704bdb307b81c2560849bf5acd6818457c3c594131bdd0ee",
+      "proposalMetadataJsonSha256": "d9e5acf3eb40258f6b5934d8f29c939195ec0b3bcc12a076d39384bac65f673b",
+      "contentHash": "6794bdaf0ae5551126d630f28a2c37dff442a78090b821b31d3d1a520d6e2861",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 8,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "대진·장소·시작·경기 형식·기상 공지의 발행 시각과 적용 범위를 대조하는 표와 시설 변경 가상 기록이 있다.",
+        "USTA Colorado 자료의 도착 시각·물품 목록 및 2026 USTA 승인대회 장비 조항을 한국 동호회 의무로 일반화하지 않는다.",
+        "aw018 물품 결정 및 aw009 경기 매너로 링크를 나누고 이 글은 최신 공지와 연락·이동 행동에 초점을 둔다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "USTA 2026 장비 조항 적용 범위",
+          "reason": "해당 조항은 미국 승인 대회에 한정되며 실제 국내 행사 규정은 주최자 최신 안내 없이는 알 수 없다.",
+          "fix": "국내 행사 사례를 추가할 때 그 주최자의 최신 문서와 적용 시점을 인용한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Colorado 체크리스트·Friend at Court 2026",
+          "reason": "미국 대회 자료는 일정 변경과 장비 규정의 사례이지 국내 동호회 공지의 내용이나 권한을 직접 입증하지 않는다.",
+          "fix": "실제 행사 규칙을 쓸 때 그 행사의 1차 공지와 연락 기록을 확보한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "최신 공지와 개인 계획 대조표",
+          "reason": "공지 채널이 충돌하고 주최자가 응답하지 않으면 출발 시각을 글만으로 확정할 수 없다.",
+          "fix": "미확정 상태 표시와 주최자 연락 경로를 유지한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "A시설→B시설 가상 대조 기록",
+          "reason": "장소 변경 한 사례는 선명하지만 대진 지연·경기 형식 변경의 별도 완성 사례는 없다.",
+          "fix": "실제 자료가 생기면 다른 변경 유형의 짧은 대조 예시를 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "대진·호출/체크인 표현",
+          "reason": "처음 참가하는 독자에게 호출과 체크인의 차이가 간략하다.",
+          "fix": "첫 등장에 주최자 안내에서 확인할 시각 종류를 짧게 푼다."
+        },
+        {
+          "dimension": "intent",
+          "points": 2,
+          "location": "aw018 경기 가방 글과 인접",
+          "reason": "기존 aw018은 경기 준비물, 본 글의 종전 제목은 가방 체크였다. 새 글이 공지 대조로 좁혀졌지만 대회 전날 준비 검색 의도에서 겹칠 여지는 남는다.",
+          "fix": "제목·첫 문단의 최신 공지 대조 목적과 aw018 링크 차이를 유지하고 검색 유입에서 혼동이 확인되면 더 좁힌다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 밝음/어두움·FAQ·표 검사",
+          "reason": "표 캡션과 행·열 머리글, 키보드 포커스와 화면 넘침은 확인했지만 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비 계측을 수행한 뒤 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-colorado-event-handout",
+        "usta-fac-2026-event-equipment"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:20:31.684Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 157 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    },
+    {
+      "route": "/blog/aw-022-return-record",
+      "kind": "existing_blog",
+      "readerQuestion": "복식 리턴 로브 한 포인트에서 무엇을 관찰하고 다음 코치·파트너 질문으로 바꿀까?",
+      "proposalBodyJsonSha256": "fa257680158418e885c864cd61ccb70f7ee4c84f47fae833470307edf72a9b8a",
+      "proposalMetadataJsonSha256": "4563cbb059ab9535a48aea5856c81846ec06518455a4a62fab888151c7bd27fe",
+      "contentHash": "03fea55fc368e11e0ab29d76c940301452b797faffa36996e03ba2ea9fb549e6",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 18,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 91,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "서브 전 전위 위치·서브와 접촉·로브 비행·상대 반응의 네 장면과 가상 결과를 묶어 사후 기록을 구체화한다.",
+        "USTA 그린볼·옐로볼 드릴을 가능한 로브 선택 및 깊이 구분의 예로 제한하고 성인 경기 타이밍 공식으로 만들지 않는다.",
+        "밤 시야를 다루는 aw010과 포칭 뒤 빈 공간을 다루는 aw017을 연결하면서 서브 리턴 로브의 결과 기록에 집중한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "서비스라인 부근에 떨어진 가상 로브",
+          "reason": "한 포인트의 공 깊이와 상대 반응은 실패 원인이나 다음 경기 결과를 확정하지 못하며 본문이 질문으로 남긴다.",
+          "fix": "사후 기록을 인과 진단이나 자동 선택 규칙으로 바꾸지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 그린·옐로볼 연습 계획",
+          "reason": "청소년/훈련 드릴의 특정 반환 공은 성인 복식의 성공 확률·타이밍 기준을 입증하지 않는다.",
+          "fix": "성인 일반화가 필요한 새 주장은 대상이 맞는 1차 근거를 확보한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 2,
+          "location": "한 포인트 복기 표",
+          "reason": "실제 경기 중 서브와 접촉·낙하지점을 모두 기억하기 어렵고 다음 선택은 코치·파트너 판단으로 남는다.",
+          "fix": "기억이 불확실한 칸은 미확인으로 표시하는 예시를 더해 기록 부담을 줄인다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "그린·옐로볼 근거와 가상 기록",
+          "reason": "한 번의 얕은 로브 장면은 구체적이나 깊은 로브의 대비 사례나 반복 관찰 후 질문 수정은 없다.",
+          "fix": "서로 다른 깊이의 명시적 가상 비교를 추가하되 성공 보장은 피한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "서브·접촉·로브 비행 표",
+          "reason": "접촉과 상대 반응을 설명하는 항목이 모바일 표에서 다소 길다.",
+          "fix": "짧은 표 표현과 본문 설명을 분리한다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "리턴 로브 기록 제목",
+          "reason": "즉시 타이밍 처방을 찾는 독자에게는 사후 관찰이 중심이다.",
+          "fix": "제목·요약에서 기록과 복기 목적을 계속 선명히 한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 밝음/어두움·FAQ·표 검사",
+          "reason": "표 캡션과 행·열 머리글, 키보드 포커스와 화면 넘침은 확인했지만 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비 계측을 수행한 뒤 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-lob-green-2017",
+        "usta-lob-yellow-2019"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:20:31.684Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 157 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    },
+    {
+      "route": "/blog/aw-023-shoes-court-shoes",
+      "kind": "existing_blog",
+      "readerQuestion": "클레이화와 하드화를 실제 밑창·마모·맞음새·시설 규정으로 어떻게 비교할까?",
+      "proposalBodyJsonSha256": "4360fdfe336c1d3cda17fa8b7fa824aa4bd4ee7ea4f31a807cc277c28ce50863",
+      "proposalMetadataJsonSha256": "e46ff419928a7745bc51651c2a80c5657a52fafa8ccdcbc53c99e35f8a44761d",
+      "contentHash": "e9c2192e25cf9456c8290488399342d4a2b08444d8cb97d42e5310e4688bde03",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "ASICS 제조사와 LTA 표면 안내를 밑창 패턴·흙 배출·하드 마모의 설계 의도로만 사용하고 부상 예방 근거로 부풀리지 않는다.",
+        "발목 높이와 모델 이름만으로 단정하지 않고 실제 제품 상태와 시설 허용을 비교한다.",
+        "aw018의 행사별 포장·aw015의 우천 출입 결정과 구분해 신발 제품 비교에 집중한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "밑창·맞음새·시설 허용 표",
+          "reason": "밑창 설계만으로 개인 접지·미끄러짐이나 부상 결과를 예측할 수 없으며 글도 보장하지 않는다.",
+          "fix": "제품 사례를 더할 때 안전·의료 효과 단정을 피한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "ASICS·LTA 표면 자료",
+          "reason": "제조사 설계 설명과 표면 일반 안내는 실제 모든 모델·시설의 허용 여부를 입증하지 않는다.",
+          "fix": "개별 모델 사양과 시설 공지를 추가 주장마다 직접 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "현재 상태·발 맞음새 비교표",
+          "reason": "현장 착용과 시설 규정을 확인해야 최종 한 켤레 선택이 가능하다.",
+          "fix": "구매 전 확인 질문을 유지하고 미확인일 때 보류할 수 있음을 분명히 한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "하드 주 2회·실내 클레이 가상 비교",
+          "reason": "두 제품의 비교 상황은 제시되지만 실제 특정 아웃솔 패턴·마모 정도를 사진이나 제품별 자료로 검증하지는 않는다.",
+          "fix": "검증된 제품 자료가 생기면 익명 모델의 패턴 차이 사례를 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "헤링본·접지·편마모 표현",
+          "reason": "신발을 처음 비교하는 독자에게 밑창 용어가 한꺼번에 나온다.",
+          "fix": "헤링본과 편마모의 뜻을 첫 사용에서 짧게 설명한다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "클레이화·하드화 비교 제목",
+          "reason": "모델 추천이나 의학적 안전성을 찾는 독자에게는 제품 관찰·시설 규정 확인 절차가 중심이다.",
+          "fix": "제목과 설명에서 비교 기준을 유지하고 모델 추천 글로 넓히지 않는다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 밝음/어두움·FAQ·표 검사",
+          "reason": "표 캡션과 행·열 머리글, 키보드 포커스와 화면 넘침은 확인했지만 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비 계측을 수행한 뒤 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "asics-surface-shoes-2022",
+        "lta-surface-guide",
+        "usta-fac-2026-event-equipment"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:20:31.684Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 157 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Keep reviewed SVG asset bytes identical on Windows and Linux.
+*.svg text eol=lf
+# Frozen editorial evidence must retain its exact original bytes in Git.
+.goal-harness/content-90-20261020/*.json -text whitespace=cr-at-eol

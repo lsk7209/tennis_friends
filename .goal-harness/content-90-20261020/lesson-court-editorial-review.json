@@ -1,0 +1,485 @@
+{
+  "reviewer": "Independent AI editorial reviewer (critic)",
+  "checkedAt": "2026-10-20T19:06:39+09:00",
+  "reviewedAt": "2026-10-20T19:06:39+09:00",
+  "reviewStage": "revised_integrated_local_render",
+  "scope": "Five existing lesson/court blog routes, current integrated source and local built preview only; 5 of 1643 original published cohort",
+  "rubric": {
+    "categories": [
+      "facts",
+      "sources",
+      "usefulness",
+      "depth",
+      "language",
+      "intent",
+      "accessibility"
+    ],
+    "maximum": [
+      25,
+      15,
+      20,
+      15,
+      10,
+      10,
+      5
+    ],
+    "minimum": [
+      23,
+      14,
+      18,
+      13,
+      8,
+      8,
+      4
+    ],
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis or treatment promise",
+      "unsafe wet-court self-test or player self-clearance",
+      "misleading current facility policy"
+    ]
+  },
+  "evidence": {
+    "proposalPath": ".goal-harness/content-90-20261020/next-lesson-court-proposals.json",
+    "proposalSha256": "4838805ea8162de4b32baf0bc31612d31188866ec8428d1a9d375dec499423e8",
+    "sourcesPath": ".goal-harness/content-90-20261020/next-lesson-court-sources.json",
+    "beforePath": ".goal-harness/content-90-20261020/next-lesson-court-before.json",
+    "integrationPath": ".goal-harness/content-90-20261020/lesson-court-integration.json",
+    "currentInventoryPath": ".goal-harness/content-90-20261020/lesson-court-current/inventory.json",
+    "localValidationPath": ".goal-harness/content-90-20261020/lesson-court-local-validation.json",
+    "previewChecksPath": ".goal-harness/content-90-20261020/lesson-court-preview-checks.json",
+    "screenshotsPath": "output/playwright/content-90-lesson-court-20261020/"
+  },
+  "sourceIntegrity": "Final proposal SHA and each body/metadata JSON SHA bound here. Official source packet actual-read claims and limits were inspected. Named UK/US facility policies are presented as local examples; no current Korean facility permission is inferred. Five current inventory hashes matched all 20 local rendered cases.",
+  "localRenderEvidence": "Build/lint/typecheck exit 0 (four pre-existing lint warnings). Five routes x 390/1440px x light/dark = 20 HTTP 200 cases, 167 unique expected body blocks, no missing blocks or broken fragments, document width=viewport, FAQ Enter/Space and table keyboard focus pass. Article schema headlines, canonical and original publication dates KST pass. Main viewed five 390px light screenshots; reviewer viewed aw015 390px light and aw018 1440px dark.",
+  "batchVerdict": "PASS_EDITORIAL_LOCAL: all five current integrated content hashes score at least 90 and meet each of seven floors with no identified hard veto in reviewed text/rendered local evidence.",
+  "globalVetoAssessment": "No wet-court foot-drag/pivot/bounce self-test, player self-clearance, universal facility reopening rule, invented fixed lesson timing/amount, reliable poach prediction, medical diagnosis, or compulsory event packing list found in final proposal.",
+  "remainingLimits": [
+    "Local editorial PASS does not prove independent tennis/facility expert review, production deployment, Google outcome, or whole-cohort completion.",
+    "Actual screen-reader reading order and measured color contrast were not checked; accessibility is 4/5.",
+    "aw018 still overlaps existing aw021 at the broad bag-packing search term; current article narrows to venue shoes/balls/repair and links aw021, reflected by intent 8/10.",
+    "Changing any reviewed contentHash, renderer or relevant asset requires renewed review."
+  ],
+  "ledgerChangeAuthorized": false,
+  "productionProof": null,
+  "fullCohortCompletion": false,
+  "status": "final_local_editorial_pass_all_five",
+  "items": [
+    {
+      "route": "/blog/aw-014-beginner",
+      "kind": "existing_blog",
+      "readerQuestion": "레슨 중 어떤 장면을 지금 질문하고 무엇을 다음 멈춤이나 다음 레슨으로 넘길까?",
+      "proposalBodyJsonSha256": "bed1fb040949a891a10765583e82ec265a2d926c40146796d71b45124856d97a",
+      "proposalMetadataJsonSha256": "3e5c75cc4d90fb81dcc79abe6cb68dcce23022326b95f0cfd6cfdfa46c2e9970",
+      "contentHash": "7b40ca53b091bbfa55cce5869c90c55972dc0815a45afec02d478e51cd0e5627",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "높게 튄 포핸드 공을 바탕으로 한 문장 질문을 만들고 코치와 질문 시점을 합의하는 구체적 대화가 있다.",
+        "USTA 질문·과정 목표 조언을 고정 실수 횟수나 빠른 성장 보장으로 바꾸지 않는다.",
+        "레슨 중 질문을 맡고, aw011의 정확한 코치 말 기록 및 aw016의 레슨 사이 복습과 검색 의도를 분리한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "가상 포핸드 질문과 코치 답변",
+          "reason": "선수의 늦은 준비 감각이 실제 기술 원인인지는 확인되지 않으며 글도 코치에게 묻는 형식으로 제한한다.",
+          "fix": "관찰과 원인을 계속 구분하고 개인 기술 진단을 추가하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA New England 질문 글·초보 코치 안내",
+          "reason": "공식 자료의 실제 읽은 주장과 맞지만 질문의 최적 타이밍을 검증한 연구는 아니다. 리뷰어가 외부 원문 전체를 별도 재열람하지도 않았다.",
+          "fix": "새 효과·시간 주장을 넣을 경우 직접 1차 근거를 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "지금·다음 멈춤·다음 레슨 선택 절",
+          "reason": "그룹 레슨이나 코치가 즉시 관찰하지 못한 상황의 대화 예시는 한 개 중심이다.",
+          "fix": "독자 질문에서 자주 막히는 수업 형식이 확인되면 조건별 짧은 대화 예시를 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "한 장면 질문표와 가상 대화",
+          "reason": "질문을 만들고 미루는 결정은 충분하지만 여러 공 상황에서 질문이 어떻게 달라지는지와 코치 답변 이후 복습은 인접 글로 넘긴다.",
+          "fix": "실제 혼동 사례가 확보되면 두 번째 공 상황만 추가하고 이후 복습은 aw016에 둔다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "큐·과정 목표 설명",
+          "reason": "처음 배우는 독자에게 코칭 용어가 조금 추상적이다.",
+          "fix": "큐의 첫 등장에 짧은 행동 예를 붙인다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "레슨 질문 타이밍 제목",
+          "reason": "정답 시각을 기대하는 검색자에게는 코치와 합의하는 조건부 답이다.",
+          "fix": "첫 문단에서 고정 시각이 없고 수업 형식에 따른 결정임을 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 키보드 검사",
+          "reason": "표 캡션·행/열 머리글과 화면 넘침·키보드 검사는 통과했으나 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색 순서와 색 대비를 계측해 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-questions-2026",
+        "usta-beginner-process-2022"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:03:53.751Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 167 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    },
+    {
+      "route": "/blog/aw-015-court-record",
+      "kind": "existing_blog",
+      "readerQuestion": "비 온 뒤 해당 코트의 폐쇄·재개 상태를 어떻게 확인하고 이용 결정을 기록할까?",
+      "proposalBodyJsonSha256": "66b1d3297e9197f0fbe4cdd890497dfec348225848cc20d34a35942c7b5b8569",
+      "proposalMetadataJsonSha256": "972714833751afd3b797e67b9e51f22558daf145d9af1ee1c49647d148f9d30c",
+      "contentHash": "261b565aa82d93c8af0dcb4cbe15330524b9e03d5fee3215597a1c9d1df664c4",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 93,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "젖거나 상태가 불확실한 코트에 들어가 발 끌기·제자리 회전·바운드를 시험하지 말라고 본문과 FAQ 모두 명시한다.",
+        "시설 공지·표면·밖에서 보이는 상태·운영자 답변·다음 확인을 다섯 칸으로 나누고, 폐쇄 중이면 출입을 보류한다.",
+        "미국·영국 시설 규정은 지역 사례로만 제시하며 한국 코트의 보편 재개 시간이나 선수의 자가 허가로 확대하지 않는다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "시설 재개 안내와 밖에서 보이는 물 고임",
+          "reason": "개별 코트의 실제 사용 가능 상태는 독자의 기록만으로 확인할 수 없고 시설의 현재 판단이 필요하다.",
+          "fix": "실제 시설 사례를 쓰기 전 운영자의 현재 공지와 해당 코트 지시를 확인한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Clayton·Wallington·Gravesham 시설 정책",
+          "reason": "공식 시설별 공개 규정으로 국지적 차이를 보이나 한국 시설의 운영 권한과 절차를 직접 입증하지는 않는다.",
+          "fix": "국내 시설별 예를 추가할 때 해당 운영자의 최신 공지와 적용 코트를 명시한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "운영자 답변 기록 칸",
+          "reason": "운영자가 연락되지 않을 때는 이용을 보류하도록 안내하므로 독자가 즉시 대체 장소를 결정하는 정보는 제공하지 않는다.",
+          "fix": "운영자 연락·공지를 반복 확인하는 안전 경계를 유지하고 필요하면 취소/대체 선택지를 별도 안내한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "가상 A시설 인조 클레이 기록",
+          "reason": "한 시설·표면 사례는 잘 작동하지만 다른 예약/표면의 행정 분기는 다루지 않는다.",
+          "fix": "현장 자료가 생기면 복수 표면의 서로 다른 공지 사례를 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "폐쇄·재개 안내와 기록표",
+          "reason": "다섯 칸의 기록 설명이 모바일에서 다소 길다.",
+          "fix": "표 셀의 표현을 짧게 유지하고 필수 판단은 첫 문단에 남긴다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "코트 이용 판단 제목",
+          "reason": "글의 실제 산출물은 운영자 결정의 확인·기록이며 코트 안전을 직접 판정하는 독자에게는 기대가 다를 수 있다.",
+          "fix": "제목·요약의 기록과 시설 권한 표현을 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 키보드 검사",
+          "reason": "표 캡션·행/열 머리글과 화면 넘침·키보드 검사는 통과했으나 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색 순서와 색 대비를 계측해 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "clayton-weather-policy-2025",
+        "wallington-grass-hard-policy-2026",
+        "gravesham-artificial-clay-2026",
+        "lta-surface-guide"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:03:53.751Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 167 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    },
+    {
+      "route": "/blog/aw-016-tennis-guide",
+      "kind": "existing_blog",
+      "readerQuestion": "코치와 이미 합의한 큐를 레슨 사이 연습에서 어떻게 관찰하고 다음 질문으로 이을까?",
+      "proposalBodyJsonSha256": "6356bcbef0fad2fdc3711f18eea27acf3dbd92b6a416e793c3076220b405bd37",
+      "proposalMetadataJsonSha256": "80044297818454e4b8c8eaab654f1d1675a282c7d424c62f262c9e805e24a7ae",
+      "contentHash": "42574ec4042d3b4297aa1ba93ce18811b72da6bc838a33a02080210701fe637e",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 18,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 91,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "합의된 큐의 이해 여부와 촬영 허용 여부를 나눠 행동·다음 질문을 표로 제시한다.",
+        "USTA 어린이·부모 대상 영상 글을 성인 필수 촬영 지침으로 옮기지 않고 코치·동반자·시설 허락을 확인한다.",
+        "고정 5분·1–2일 복습 기한이나 레슨비 회수 보장을 삭제하고 aw011 기록, aw014 실시간 질문과 역할을 구분한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "백핸드 준비 시점 가상 예시",
+          "reason": "한 장면의 준비 시점을 기록해도 실제 기술 원인이나 학습 효과가 증명되지는 않으며 본문이 그 한계를 명시한다.",
+          "fix": "추가 예시에서도 관찰 결과를 개인 진단이나 향상 보장으로 쓰지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 초보 코치·어린이 영상 글",
+          "reason": "영상 자료는 어린이·부모 맥락이어서 성인 적용은 제한된 편집적 전이이다.",
+          "fix": "성인 영상 효능·촬영 기준을 주장하려면 성인 대상 근거를 확보한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 2,
+          "location": "합의 큐의 연습 선택 표",
+          "reason": "큐의 뜻이 애매하면 자율 연습 기술 변경을 보류하도록 하므로 코치 확인 전 실행 범위가 좁고 예시는 한 기술 중심이다.",
+          "fix": "독자 테스트에서 반복되는 모호한 큐 사례가 있으면 확인 질문을 한 가지 더 제시한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "선택적 영상과 한 번 적용 예시",
+          "reason": "연습 관찰→질문은 보여 주지만 코치가 다음 레슨에서 답한 뒤 기록을 바꾸는 완전한 루프는 보여 주지 않는다.",
+          "fix": "실제 코치 답변 사례가 확보되면 다음 레슨 후 수정 예시를 보강한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "큐·과정 관찰 설명",
+          "reason": "한 가지 큐와 과정 목표라는 말이 초보자에게 반복되어 약간 추상적이다.",
+          "fix": "처음에 쉬운 행동 문장으로 정의하고 이후 반복을 줄인다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "레슨 복습 순서 제목",
+          "reason": "일정별 복습 계획을 찾는 독자에게 고정 시간표는 주지 않는다.",
+          "fix": "제목·첫 문단에서 합의한 큐의 적용과 선택적 영상에 초점을 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 키보드 검사",
+          "reason": "표 캡션·행/열 머리글과 화면 넘침·키보드 검사는 통과했으나 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색 순서와 색 대비를 계측해 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-beginner-process-2022",
+        "usta-youth-video-2024"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:03:53.751Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 167 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    },
+    {
+      "route": "/blog/aw-017-doubles",
+      "kind": "existing_blog",
+      "readerQuestion": "전위가 포칭 뒤 비운 공간으로 실점했을 때 파트너와 무엇을 복기하고 바꿀까?",
+      "proposalBodyJsonSha256": "952caab426ba5ba438ee5a79b0c2afab688a8809e3dead6f1bd1b66d11be69dc",
+      "proposalMetadataJsonSha256": "d5ebfd9ee085f858440454b3189621a8bfafd6a7f8834ee81db71a0bf616456e",
+      "contentHash": "5c3e2834e619e720bd68d09aff60c15effecc73a454b72fa7548473519ff4862",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 93,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "시작 배치·상대 타구·첫 이동·열린 공간·파트너 반응의 다섯 장면과 다운더라인 가상 사례가 실점 뒤 대화를 구체화한다.",
+        "상대 타점만으로 리턴 방향을 확정하거나 불확실하면 무조건 스테이라는 규칙을 만들지 않는다.",
+        "USTA 휠체어 그린볼 드릴의 페이크·스테이·포칭은 선택 예시로 한정하고 aw012의 일반 위치 및 aw007의 콜 언어와 구분한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "가상 다운더라인 실점 사례",
+          "reason": "한 포인트의 기록만으로 상대의 다음 리턴이나 파트너 커버 성과를 예측할 수 없으며 본문도 보장하지 않는다.",
+          "fix": "예시를 일반 예측 법칙이나 실점 감소 주장으로 확대하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 포칭 팁과 그린볼 지도 드릴",
+          "reason": "포칭 팁의 삽입 영상은 연구 패킷에서 시청하지 않았고 드릴 대상도 성인 동호인과 다르다. 본문은 읽은 텍스트와 선택 예시만 쓴다.",
+          "fix": "새 발 순서·동작 처방을 넣을 때 접근 가능한 원문과 대상 적합성을 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "포칭 후 열린 공간 복기 표",
+          "reason": "실제 영상 없이 포인트 기억만으로 움직인 시점과 파트너 위치를 정확히 되짚기 어려울 수 있다.",
+          "fix": "재현이 어려운 항목은 확정 사실 대신 두 선수의 다른 기억으로 표시하도록 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "다운더라인 가상 사례",
+          "reason": "한 가지 실점 패턴은 선명하지만 로브·가운데 공의 빈 공간 회복 분기는 다루지 않는다.",
+          "fix": "실제 사례가 확보되면 다른 반환 공 한 가지를 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "페이크·스테이·포칭 용어",
+          "reason": "초보 독자에게 세 영어 용어가 한 번에 제시된다.",
+          "fix": "첫 등장에 짧은 한국어 동작 풀이를 붙인다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "포칭 뒤 커버 결정",
+          "reason": "제목의 커버 결정은 파트너와 합의할 질문이며 고정 역할 배정표를 기대한 독자에게는 추가 대화가 필요하다.",
+          "fix": "첫 문단의 포인트 복기 목적을 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 키보드 검사",
+          "reason": "표 캡션·행/열 머리글과 화면 넘침·키보드 검사는 통과했으나 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색 순서와 색 대비를 계측해 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-poaching-tip-2019",
+        "usta-partner-coach-2024",
+        "usta-poach-drill-2019"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:03:53.751Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 167 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    },
+    {
+      "route": "/blog/aw-018-match",
+      "kind": "existing_blog",
+      "readerQuestion": "이번 경기의 행사·시설 조건에 따라 가방 물품을 어떻게 고를까?",
+      "proposalBodyJsonSha256": "4de80b19d67142959619646d0d73e91455dd573ef940589fd55ab40219b2d3ba",
+      "proposalMetadataJsonSha256": "053beb121b709a829d3e777e1a0ef39ffae965cf31efcf7ca86fd22859a91516",
+      "contentHash": "00767f807a797bad09c1b821acb7199c4358ad97bb8a18566b5d466e4b052af1",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 18,
+        "depth": 13,
+        "language": 9,
+        "intent": 8,
+        "accessibility": 4
+      },
+      "total": 90,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "공 제공 여부·허용 신발·대여/수리 가능성에 따라 가져갈 물품을 바꾸는 표와 야외 저녁 복식 가상 사례가 있다.",
+        "USTA Colorado 지역 대회 목록과 Wallington 신발 규정을 국내 모든 동호회 의무로 일반화하지 않고 여벌 라켓도 선택으로 둔다.",
+        "기존 aw021 대회 전날 가방 체크로 링크를 연결하고 이 글은 시설별 신발·공·수리 조건을 다룬다고 명시한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "표면별 신발·여벌 라켓 FAQ",
+          "reason": "특정 시설 허용 신발과 수리·대여 가능성은 본문의 일반 자료만으로 확인되지 않으며 개별 공지를 요구한다.",
+          "fix": "실제 시설의 요구를 사례로 제시할 때 날짜와 운영자 공지를 확인한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 지역 대회·가방 안내와 LTA 표면 자료",
+          "reason": "제시 자료는 물품 예시와 표면 차이를 뒷받침하지만 한국 동호회 공통 준비 목록을 검증하지 않는다.",
+          "fix": "국내 행사별 필수 물품은 해당 주최자의 최신 공지를 근거로 추가한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 2,
+          "location": "가방 물품 결정표",
+          "reason": "실제 행사 공지·시설 규정이 없으면 신발과 공을 최종 선택할 수 없고, 공 제공/수리 불가의 대체 경로는 한 예시 중심이다.",
+          "fix": "필요한 행사 정보가 없을 때 주최자·시설에 물을 구체 질문을 더 제시한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "야외 저녁 복식 가상 예시",
+          "reason": "표와 한 예시는 유용하지만 실내·클레이·대여 가능 행사에서 목록이 어떻게 달라지는지 비교가 없다.",
+          "fix": "현행 시설 정보로 검증 가능한 두 번째 조건 사례를 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "행사·시설·가방 조건 설명",
+          "reason": "전반적으로 읽히지만 비슷한 확인 권고가 도입부와 끝에 반복된다.",
+          "fix": "반복을 줄이고 현장 확인 질문을 하나 더 분명히 한다."
+        },
+        {
+          "dimension": "intent",
+          "points": 2,
+          "location": "aw021 대회 전날 가방 체크와 인접",
+          "reason": "aw021도 규칙·날씨·가방 물품을 다뤄 검색 의도가 여전히 일부 겹친다. 이 글은 신발 허용·공 제공·수리 조건에 초점을 좁혔지만 제목은 여전히 넓다.",
+          "fix": "제목 또는 첫 화면에서 시설별 물품 결정 목적을 더 선명히 하고 aw021 링크의 차이를 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 키보드 검사",
+          "reason": "표 캡션·행/열 머리글과 화면 넘침·키보드 검사는 통과했으나 실제 스크린리더 읽기 순서와 계측 색 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색 순서와 색 대비를 계측해 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-tournament-bag-checklist",
+        "usta-tennis-bag-2021",
+        "lta-surface-guide",
+        "wallington-grass-hard-policy-2026"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:03:53.751Z",
+      "uiEvidence": "20 current-hash-bound local preview cases across 390/1440px light/dark; 167 unique DOM body blocks, title/canonical/fragments/FAQ Enter-Space/table focus/overflow PASS"
+    }
+  ]
+}

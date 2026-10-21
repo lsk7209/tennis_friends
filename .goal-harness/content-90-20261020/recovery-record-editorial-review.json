@@ -1,0 +1,825 @@
+{
+  "reviewer": "Independent AI editorial reviewer (verifier)",
+  "checkedAt": "2026-10-20T22:21:55.093474+09:00",
+  "reviewedAt": "2026-10-20T22:21:55.093474+09:00",
+  "reviewStage": "final_current_hash_and_local_ui",
+  "scope": "aw059-aw068 final effective local content and metadata. This is a local editorial approval only; it does not establish serving, deployment, or live-site proof.",
+  "rubric": {
+    "maximum": {
+      "facts": 25,
+      "sources": 15,
+      "usefulness": 20,
+      "depth": 15,
+      "language": 10,
+      "intent": 10,
+      "accessibility": 5
+    },
+    "minimum": {
+      "facts": 23,
+      "sources": 14,
+      "usefulness": 18,
+      "depth": 13,
+      "language": 8,
+      "intent": 8,
+      "accessibility": 4
+    },
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis or treatment promise",
+      "incorrect current match rule",
+      "misleading source or metadata attribution",
+      "unusable mobile table or broken internal link"
+    ]
+  },
+  "evidence": {
+    "finalProposalPath": ".goal-harness/content-90-20261020/next-recovery-record-proposals-final.json",
+    "finalProposalSha256": "64bde1bfa9acb570f259f468e5dd8a7f80b79bdca241a387209179f912462797",
+    "sourcePacketPath": ".goal-harness/content-90-20261020/next-recovery-record-sources.json",
+    "sourcePacketSha256": "492e58efbf8a2cd019527debff299a55051a77f4465c13f8f4093de6f4df5115",
+    "inventoryPath": ".goal-harness/content-90-20261020/recovery-record-current/inventory.json",
+    "integrationPath": ".goal-harness/content-90-20261020/recovery-record-integration.json",
+    "sourceValidationPath": ".goal-harness/content-90-20261020/recovery-record-source-validation.json",
+    "localValidationPath": ".goal-harness/content-90-20261020/recovery-record-local-validation.json",
+    "previewChecksPath": ".goal-harness/content-90-20261020/recovery-record-preview-checks.json",
+    "inventorySha256": "a137beaa3d68995f38557722ae11dad00fed6efeaba4bd3e9136b8998e097786",
+    "integrationSha256": "7fb56cf9ad9335851294921b4d5b3931330b8e0d05cf9a7648e15a32d35ca4e5",
+    "sourceValidationSha256": "b459451ad5f0bc381b676f3ce632f450932c079fc3af19c1ffbe5bdebe91cb70",
+    "sourceFileAfterHashes": [
+      {
+        "file": "src/data/blog-content/part17-quality-rewrites.ts",
+        "sha256": "8cb596c8062430ae4bfa95d5aa3ce7426adc0cf578af63737be136bdd765a632"
+      },
+      {
+        "file": "src/data/blog-content/part11-article-writer-300.ts",
+        "sha256": "56280c07b8252392e542ad802dfb8ce442f787aeedc6a56e33f940af1c93176a"
+      },
+      {
+        "file": "src/data/blog-content/part16-quality-rewrites.ts",
+        "sha256": "db99c806a52e6bf1d2053bc1b2a6ee23a83b30d9e2ef4181c24ff42b70188e61"
+      },
+      {
+        "file": "src/data/blog-posts-part17-overrides.js",
+        "sha256": "9c76e6fcfa77208030473932aa10eff3339c02565a4d38ea4d77ebf5ae078752"
+      },
+      {
+        "file": "src/data/blog-posts-aw-300.js",
+        "sha256": "808675dc5cc824e7c146b77a7cfe61dd03385dcfd137fad6721a17626437b353"
+      },
+      {
+        "file": "src/data/blog-posts-part16-overrides.js",
+        "sha256": "61987fb7e875c9e69838ace28e0eaa04262489272c5a3274e5194532bd934c8a"
+      }
+    ]
+  },
+  "sourceIntegrity": "The final proposal hash matches the text-stage-reviewed revision2. Source validation records PASS for 10 bodies and 10 metadata objects, unchanged non-target bytes, backups, loader output, and original dates. The 19 actual-read sources are used only within their stated medical, coaching, rule, manufacturer, and technical limitations.",
+  "integrationEvidence": "CAS integration applied exactly 10 body and 10 metadata mutations in six source files. recovery-record-source-validation.json records PASS; nonTargetBytesUnchanged is true.",
+  "localRenderEvidence": "Local build 49989, targeted lint, and type-check stage passed. Browser session 2288 passed 40 cases and 405 unique body blocks: HTTP, title, canonical, schema original/modified dates, robots, FAQ Enter/Space, keyboard-focusable tables, fragments, and overflow. Representative screenshots independently inspected: aw059, aw063, aw066 at 390 light and aw068 at 1440 dark.",
+  "indexabilityEvidence": "Baseline policy is preserved: aw065 is noindex, follow; the other nine routes are index, follow.",
+  "batchVerdict": "PASS_LOCAL_EDITORIAL_10_OF_10",
+  "globalVetoAssessment": "No unresolved hard veto is found. Medical boundaries remain decision/support prompts rather than diagnoses; 2026 scoring claims are format-scoped; statistics and hypothetical cases are labelled editorial; equipment and doubles claims retain stated limitations; internal links and local UI checks passed.",
+  "remainingLimits": [
+    "Full npm verify is pending Main after this approval.",
+    "Local preview/build evidence is not serving or deployment proof.",
+    "No measured contrast or screen-reader test was run; accessibility score retains the one-point evidence deduction."
+  ],
+  "ledgerChangeAuthorized": true,
+  "productionProof": "NOT RUN",
+  "status": "approved_local_editorial",
+  "items": [
+    {
+      "route": "/blog/aw-059-recovery",
+      "contentHash": "964656e31f977e6047716da204057d8f99b488f83b65b06764a426258b1d845f",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "다음날 불편감에 맞춰 활동을 유지·조정·중단하고 언제 상담할지 정한다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "clinic-doms",
+        "cdc-rhabdo",
+        "aha-cooldown",
+        "afonso-stretch",
+        "cdc-hydration"
+      ],
+      "strengths": [
+        "다음날 상태와 경기 직후 행동을 분리하고 활동 선택 표를 제공한다.",
+        "각 경고 신호를 자가진단이 아닌 의료 평가 요청으로 경계 짓는다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "DOMS·가벼운 활동 설명",
+          "reason": "일반 건강 안내이며 테니스별 복귀 기준은 아니다.",
+          "fix": "고정 복귀일이나 회복 효과를 추가하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Cleveland·Afonso·CDC 적용 범위",
+          "reason": "비테니스·낮은 확실성 근거는 개인 처방을 지지하지 않는다.",
+          "fix": "현재의 일반 안내·상담 경계를 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "전반적 뻣뻣함 행",
+          "reason": "강한 연습 조정은 제시하지만 개인 활동 대안은 독자가 정해야 한다.",
+          "fix": "근거 없이 구체 운동 처방을 늘리지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "A/B 가상 사례",
+          "reason": "두 분기는 명확하지만 다양한 부위·경과 사례를 직접 입증하지 않는다.",
+          "fix": "필요할 때만 근거 있는 별도 사례를 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "Afonso 근거 단락",
+          "reason": "근거 확실성 설명이 건강 문맥의 독자에게 다소 압축돼 있다.",
+          "fix": "추가 개정 시 낮은 확실성의 뜻을 짧게 풀어 쓴다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "390px 표·FAQ·키보드 증거는 있으나 화면낭독기·측정 대비 증거는 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "390 light screenshot inspected; 4 viewport/theme cases in preview receipt pass."
+    },
+    {
+      "route": "/blog/aw-060-video",
+      "contentHash": "9c61cc16344cf96f9085ff897cbffc0ed122e4643b597bc4b7a4c78de2c92fa5",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "관찰 가능한 첫 영상 클립을 고르고 코치 질문으로 바꾼다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "usta-video",
+        "itf-goals",
+        "usta-beginner"
+      ],
+      "strengths": [
+        "질문별 화면 조건과 관찰 불가 기록을 구체화한다.",
+        "한 클립의 기술·반응 원인 진단을 명시적으로 보류한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "영상 관찰 절차",
+          "reason": "USTA 자료는 전문 분석 흐름의 설명이며 짧은 개인 영상의 원인 판정 근거는 아니다.",
+          "fix": "현재처럼 관찰과 추정을 분리한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA video·ITF goals",
+          "reason": "우선순위 설정을 지지하지만 카메라 위치의 성과 효과를 입증하지 않는다.",
+          "fix": "고정 촬영법·개선 효과를 주장하지 않는다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "두 클립 사례",
+          "reason": "첫 이동과 착지 질문은 구체적이나 다른 기술 질문은 독자가 같은 틀을 적용해야 한다.",
+          "fix": "질문별 진단 공식을 추가하지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "코치 질문으로 넘기는 단락",
+          "reason": "비교 클립의 역할은 설명하지만 코치 피드백 이후의 연습 전환은 범위 밖이다.",
+          "fix": "aw040 등 연결 글과 분리를 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "관찰 불가·해석 구분",
+          "reason": "초보 독자에게 두 기록 칸의 차이가 처음에는 다소 추상적일 수 있다.",
+          "fix": "후속 개정 시 한 줄 예를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드 표·FAQ 증거는 있으나 화면낭독기·측정 대비 증거는 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "40-case preview receipt includes this route; table/FAQ/overflow pass."
+    },
+    {
+      "route": "/blog/aw-061-5",
+      "contentHash": "dd14e9c8170f682d5a012e2e4216cfcdf434dbf5ca7e3e0c975220c158b01580",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "경기 중 보이는 변화에서 다음 포인트의 한 선택을 고른다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "usta-focus",
+        "usta-routine",
+        "itf-2026"
+      ],
+      "strengths": [
+        "4-4 세트 상황과 리시버 역할을 밝혀 관찰·선택을 연결한다.",
+        "상대 의도·심리 추측과 지연 루틴을 배제한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "다섯 질문",
+          "reason": "질문 목록은 편집적 실행 틀이며 규칙상·과학상 필수 절차는 아니다.",
+          "fix": "현재의 비처방 문구를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 집중·루틴 자료",
+          "reason": "개인 루틴 예시는 한 전술 선택의 성과를 보장하지 않는다.",
+          "fix": "효과·승리 보장을 추가하지 않는다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "4-4 사례",
+          "reason": "하나의 안전한 리턴 목표는 주지만 구체 전술은 코치·개인 맥락에 남긴다.",
+          "fix": "보편 전술 답을 덧붙이지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "변화 확인 단락",
+          "reason": "단발과 반복을 구분하지만 더 긴 경기 흐름 분석은 다루지 않는다.",
+          "fix": "경기 후 분석 글과 범위를 분리한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "한 변수·큰 목표 표현",
+          "reason": "용어가 입문자에게 다소 압축돼 있다.",
+          "fix": "후속 개정 시 짧은 풀이를 추가한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드·overflow 증거는 있으나 화면낭독기·대비 측정은 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "Preview receipt passes all route cases."
+    },
+    {
+      "route": "/blog/aw-062-serve-record-beginner",
+      "contentHash": "ae74dd116fba5f386fcdec50c71752ef4cd6a3de7e74c8f3b9ce47d20a9616ad",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "첫 서브 기록의 분자·분모·렛 처리를 정하고 원인 판단과 분리한다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 20,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-2026",
+        "usta-video",
+        "itf-goals"
+      ],
+      "strengths": [
+        "첫·둘째 서비스 렛의 재시도와 대체 형식 경계를 정확히 분리한다.",
+        "6기회 사례와 표가 기록값과 코스·기술 원인 판단을 분리한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "첫 서브 성공률 정의",
+          "reason": "규칙이 아니라 투명한 편집 기록 정의이며 승인 대체 형식에는 그대로 적용되지 않는다.",
+          "fix": "ITF 공식 성과 기준처럼 표현하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "ITF 규칙과 기록 지표",
+          "reason": "ITF는 서비스 결과를 지지하지만 제안한 통계 분모 자체를 정하지 않는다.",
+          "fix": "현재의 편집 통계 표기를 유지한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "6기회 예시",
+          "reason": "첫 서비스 렛 중심의 계산 예라 복수 형식의 기록 사례는 없다.",
+          "fix": "형식별 보편 계산 규칙을 추가하지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "적격 첫 서비스 기회",
+          "reason": "첫 사용에서 기록 범주 용어가 다소 기술적이다.",
+          "fix": "필요하면 표 머리에 짧은 정의를 더한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드 표·FAQ 증거는 있으나 화면낭독기·대비 측정은 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "40-case receipt passes; 390 light screenshot inspected."
+    },
+    {
+      "route": "/blog/aw-063-racket-285g-300g-315g-record",
+      "contentHash": "99b4cc475fa29d54a86143574765d1ccc93fb0a92185d10826bf3d0824dca6e0",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "표기 질량과 측정 조건을 구분해 재시타·구매·보류를 정한다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-rackets",
+        "head-racket-guide",
+        "itf-2018-racket",
+        "babolat-unstrung"
+      ],
+      "strengths": [
+        "unstrung/strung 비교 오류를 먼저 멈추고 조건 일치 재시타를 제시한다.",
+        "질량·밸런스·스윙웨이트와 통증 판단을 분리한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "A/B 조건 일치 재시타",
+          "reason": "가상 관찰은 제품 질량만의 효과나 개인 적합성을 증명하지 않는다.",
+          "fix": "현재의 개인 기록·보류 경계를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "ITF·HEAD·Babolat 자료",
+          "reason": "기술·제조사 자료는 정의와 표기를 지지하지만 개인 구매 처방 근거는 아니다.",
+          "fix": "무게 등급·부상 예방 주장을 추가하지 않는다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "C 보류 사례",
+          "reason": "구매 보류가 명확하지만 실제 매장별 측정 가능성은 독자 상황에 달려 있다.",
+          "fix": "검증 없는 수치 임계값을 추가하지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "질량·밸런스·스윙웨이트 구분",
+          "reason": "세 물리량을 구분하지만 측정 장비·오차는 범위 밖이다.",
+          "fix": "소비자용 측정 표준처럼 확장하지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "swingweight·unstrung 용어",
+          "reason": "영문 사양 용어가 초보자에게 다소 기술적이다.",
+          "fix": "후속 개정 시 용어 풀이를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드 표·FAQ 증거는 있으나 화면낭독기·대비 측정은 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "390 light screenshot inspected; preview table/overflow pass."
+    },
+    {
+      "route": "/blog/aw-064-match-cooldown",
+      "contentHash": "5ce7abbfe1f9653281224a820a353687f7195a8c00dd677708fbb5f6fcd90b58",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "경기 직후 안전하게 정리하고 상태·수분 접근·다음날 메모를 남긴다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "aha-cooldown",
+        "afonso-stretch",
+        "clinic-doms",
+        "cdc-hydration"
+      ],
+      "strengths": [
+        "즉시 퇴장·상태 확인을 다음날 triage와 구분한다.",
+        "쿨다운·스트레칭·음료를 DOMS 예방 처방으로 만들지 않는다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "AHA 쿨다운 적용",
+          "reason": "일반 활동 전환 안내는 테니스별 쿨다운 결과를 증명하지 않는다.",
+          "fix": "고정 시간·순서·근육통 예방을 주장하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Afonso·CDC 한계",
+          "reason": "낮은 확실성·열 맥락 근거는 개인 음료나 증상 경로를 정하지 않는다.",
+          "fix": "현재의 조건별 도움 요청 경계를 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "경기 종료 표",
+          "reason": "현장 선택은 명확하지만 시설별 도움 경로는 독자가 확인해야 한다.",
+          "fix": "근거 없는 시설 규정을 추가하지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "A/B 종료 사례",
+          "reason": "두 상태 분기는 유용하나 다양한 환경·이동 제약 사례는 없다.",
+          "fix": "필요할 때만 검증 가능한 사례를 보강한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "활동을 서서히 낮추는 전환",
+          "reason": "쿨다운 효과와 전환 목적의 차이가 독자에게 다소 압축돼 있다.",
+          "fix": "후속 개정 시 한 문장으로 풀어 쓴다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드 표·FAQ 증거는 있으나 화면낭독기·대비 측정은 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "Preview receipt passes all route cases."
+    },
+    {
+      "route": "/blog/aw-065-record",
+      "contentHash": "fcadd84f5c03e76176f5f6ce88fec42296438ce6b5172babf218a720dc6ca33b",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "noindex, follow",
+      "readerQuestion": "사실·해석·미확인을 분리한 개인 기록으로 다음 질문을 만든다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-goals",
+        "usta-beginner",
+        "usta-video"
+      ],
+      "strengths": [
+        "공식 양식이 아닌 개인 기록 예시임을 명시하고 noindex를 보존한다.",
+        "서로 다른 두 장면을 한 기술 원인으로 묶지 않게 한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "개인 기록 양식",
+          "reason": "기록 칸은 편집적 예시이며 기술·심리 원인을 판별하지 않는다.",
+          "fix": "현재의 비진단 문구를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "ITF goals·USTA 기록 자료",
+          "reason": "목표·일지 취지는 지지하지만 제시 양식을 공식 표준으로 만들지 않는다.",
+          "fix": "ITF/USTA 공식 양식이라는 표현을 추가하지 않는다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "두 가상 줄",
+          "reason": "재사용 양식은 구체적이나 기록을 실제 코칭 결정으로 옮기는 일은 독자·코치 판단에 남긴다.",
+          "fix": "고정 반복 횟수·패턴 기준을 만들지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "반복 여부 단락",
+          "reason": "비슷한 조건의 재관찰은 다루지만 장기 데이터 분석은 범위 밖이다.",
+          "fix": "통계적 진단 도구로 확장하지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "확인 근거·재관찰 질문",
+          "reason": "처음 쓰는 독자는 기록 칸이 많게 느낄 수 있다.",
+          "fix": "후속 개정 시 축약 예시를 더한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드 표·FAQ 증거는 있으나 화면낭독기·대비 측정은 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "Preview receipt preserves noindex and passes UI checks."
+    },
+    {
+      "route": "/blog/aw-066-tennis-guide",
+      "contentHash": "ab31045dde6ec988c4f25968a170b954fcaf44cd68d589bc11467cfd0a7dd768",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "매치포인트에서 형식·점수·역할을 확인하고 한 선택을 좁힌다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 20,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-2026",
+        "usta-focus",
+        "usta-routine"
+      ],
+      "strengths": [
+        "서버와 리시버의 자기 매치포인트를 완전한 3세트제 점수로 분리한다.",
+        "매치포인트를 현재 점수·형식에서 도출되는 상황으로 한정한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "표준 3세트제 사례",
+          "reason": "규칙상 정확한 사례지만 승인된 대체 형식에는 그대로 적용되지 않는다.",
+          "fix": "현재의 형식 확인 문구를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "ITF 규칙과 USTA 루틴",
+          "reason": "규칙·집중 단서는 지지하지만 특정 샷의 승률을 입증하지 않는다.",
+          "fix": "압박 관리·전환 성공을 보장하지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "서버/리시버 두 사례",
+          "reason": "두 역할은 다루지만 타이브레이크 세부는 연결 글로 남긴다.",
+          "fix": "근거 없이 타이브레이크 순서를 덧붙이지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "점수의 전체 주소",
+          "reason": "세트·게임·포인트·역할 동시 표기는 입문자에게 정보량이 많다.",
+          "fix": "후속 개정 시 표 예시를 더 단순화한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드 표·FAQ 증거는 있으나 화면낭독기·대비 측정은 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "390 light screenshot inspected; preview table/FAQ/overflow pass."
+    },
+    {
+      "route": "/blog/aw-067-serve-20",
+      "contentHash": "90feebdbe478434ab4b491999a8578e3e9ee880c078f608800cb2134a52582bf",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "제한된 시간에 한 서브 목표를 기록하고 실전 반응을 별도 확인한다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 20,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-2026",
+        "usta-serve-placement",
+        "usta-vary-serve",
+        "itf-goals"
+      ],
+      "strengths": [
+        "20분을 선택형 시간 상자로 한정하고 목표·착지·리턴을 분리한다.",
+        "빈 코트 결과를 경기 효과로 일반화하지 않는다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "20분 예시",
+          "reason": "연습 시간은 편집적 예시이며 효과량·최소 시간 근거가 아니다.",
+          "fix": "고정 공 수·성과 기준을 추가하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA serve 자료",
+          "reason": "목표·변화 선택을 지지하지만 특정 코스의 보편적 우위는 지지하지 않는다.",
+          "fix": "상대 오류·성공 보장을 주장하지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "빈 코트/파트너 분기",
+          "reason": "실전 전이를 보류하지만 다양한 리턴·점수 조건은 다음 관찰로 남는다.",
+          "fix": "한 세션으로 경기 성과를 판정하지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "선택형 예산·목표 구역",
+          "reason": "시간 상자와 착지 범주가 초보자에게 다소 추상적이다.",
+          "fix": "후속 개정 시 짧은 기록 예를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드 표·FAQ 증거는 있으나 화면낭독기·대비 측정은 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "Preview receipt passes all route cases."
+    },
+    {
+      "route": "/blog/aw-068-doubles",
+      "contentHash": "343c3f45f850a21cc283d4bd862a9894c92ce60510fcbe0d0c83a61e1ef82174",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-20",
+      "robots": "index, follow",
+      "readerQuestion": "복식 두 사람의 실제 위치와 열린 공간을 보고 한 커버 약속을 정한다.",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "sourceIds": [
+        "usta-doubles-partner",
+        "itf-2026",
+        "usta-doubles-net"
+      ],
+      "strengths": [
+        "가상 배치를 출처의 고정 이동 처방으로 오인하지 않게 명시한다.",
+        "공의 실제 결과와 열린 공간 예측을 분리하고 한 약속을 재확인한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "가상 A/B 배치",
+          "reason": "가상 랠리는 위치 관찰의 예시이며 보편적 커버 규칙을 증명하지 않는다.",
+          "fix": "고정 좌표·담당 규칙을 추가하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA partner·net 자료",
+          "reason": "소통·포지셔닝 중요성은 지지하지만 영상에 없는 상세 이동법은 지지하지 않는다.",
+          "fix": "현재의 제한된 귀속을 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "한 문장 약속",
+          "reason": "다음 공 커버를 정하지만 팀의 기존 콜·포칭 규칙은 별도 글에서 확인해야 한다.",
+          "fix": "연결된 역할 글과 범위를 유지한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "듀스 사이드 사례",
+          "reason": "한 구체 장면은 깊지만 다른 포메이션·상대 공 사례는 다루지 않는다.",
+          "fix": "근거 없는 전술 일반화를 추가하지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "열린 공간·커버 약속",
+          "reason": "공간 예측과 실제 결과를 함께 읽어야 해 초보자에게 다소 밀도가 높다.",
+          "fix": "후속 개정 시 간단 도식을 검토한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더",
+          "reason": "키보드 표·FAQ 증거는 있으나 화면낭독기·대비 측정은 없다.",
+          "fix": "후속 접근성 검사에서 보완한다."
+        }
+      ],
+      "uiVerifiedAt": "2026-10-20T22:16:42.953494+09:00",
+      "uiEvidence": "1440 dark screenshot inspected; preview receipt passes mobile/desktop table checks."
+    }
+  ]
+}

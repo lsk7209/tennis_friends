@@ -1,0 +1,170 @@
+{
+  "reviewer": "Independent AI editorial reviewer (verifier)",
+  "checkedAt": "2026-10-20T20:07:14.435+09:00",
+  "reviewedAt": "2026-10-20T20:07:14.435+09:00",
+  "reviewStage": "final_revised_integrated_local_render",
+  "scope": "Five existing weekly practice, clay slide, shared budget, body serve and overgrip routes aw029–033; final integrated local content and local preview only, not the full 1,643-item cohort.",
+  "rubric": {
+    "categories": ["facts", "sources", "usefulness", "depth", "language", "intent", "accessibility"],
+    "maximum": [25, 15, 20, 15, 10, 10, 5],
+    "minimum": [23, 14, 18, 13, 8, 8, 4],
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis or treatment promise",
+      "unsafe self-directed slide or deliberate slip test",
+      "misleading live venue price, cancellation policy or allocation rule"
+    ]
+  },
+  "evidence": {
+    "proposalPath": ".goal-harness/content-90-20261020/next-weekly-slide-budget-proposals.json",
+    "proposalSha256": "8b1343be362174f6a4bbc1bf884f32dd893dd8a6e1263b8c78ee701185de750b",
+    "sourcesPath": ".goal-harness/content-90-20261020/next-weekly-slide-budget-sources.json",
+    "sourcesSha256": "30ce19d9caec5cb4bcc7a2df7e694c5217a51abe7bb82f4f7899f0edd9f4da46",
+    "integrationPath": ".goal-harness/content-90-20261020/weekly-slide-budget-integration.json",
+    "currentInventoryPath": ".goal-harness/content-90-20261020/weekly-slide-budget-current/inventory.json",
+    "currentInventorySha256": "17d8f6571110b314519e7fbe0fc3ac5a64cd438e3df558ec9eb7866882614114",
+    "localValidationPath": ".goal-harness/content-90-20261020/weekly-slide-budget-local-validation.json",
+    "previewChecksPath": ".goal-harness/content-90-20261020/weekly-slide-budget-preview-checks.json",
+    "screenshotsPath": "output/playwright/content-90-weekly-slide-budget-20261020/"
+  },
+  "sourceIntegrity": "Reviewed the final source packet’s twelve actual-read records, route mapping, quoted claim bounds and stated gaps against all five final effective bodies. The final prose stays within those bounds: it does not turn coaching guidance, venue examples or manufacturer material into universal effectiveness, safety, price, cancellation, or medical claims. External source pages were not re-fetched in this bounded editorial pass; the packet is the recorded read evidence.",
+  "localRenderEvidence": "Fresh local build and typecheck exited 0. The hash-bound preview receipt reports 20 cases (five routes × 390/1440px × light/dark), 152 required body blocks, HTTP 200, matching title/canonical/indexability/schema headline and dates, no missing blocks, broken fragments or overflow, and FAQ Enter/Space plus table keyboard focus passing. Reviewer visually inspected all five 390px light screenshots and aw032 at 1440px dark; table content is contained and horizontally scrollable on mobile, and the dark desktop layout is readable.",
+  "batchVerdict": "PASS_EDITORIAL_LOCAL: all five final current hashes meet the total and every seven-dimension floor, and no hard veto was identified in the reviewed prose or local render evidence.",
+  "globalVetoAssessment": "No weekly-retention guarantee, fixed month cycle, novice self-slide protocol, injury-prevention mechanics, live Korean price claim, universal allocation/cancellation rule, body-target injury instruction, universal toss formula, fixed grip interval, or grip-based medical diagnosis remains.",
+  "remainingLimits": [
+    "This is a local editorial and local-render approval, not serving-source, deployment or live-site proof.",
+    "The local receipt does not prove screen-reader reading order or measured colour contrast; accessibility receives the permitted one-point deduction on every route.",
+    "The source packet contains venue-specific and manufacturer source material for aw031 and aw033; those limitations receive source-quality deductions and must remain explicit if the articles change."
+  ],
+  "ledgerChangeAuthorized": false,
+  "productionProof": "NOT RUN",
+  "fullCohortCompletion": "NOT CLAIMED: this review covers only aw029–033 of the 1,643-item editorial cohort.",
+  "status": "final_editorial_pass_local",
+  "items": [
+    {
+      "route": "/blog/aw-029-1",
+      "kind": "existing_blog",
+      "readerQuestion": "주 1회 코트에 갈 때 무엇을 기록해야 다음 주 판단에 도움이 될까?",
+      "contentHash": "6af63a3e6a35ec95000722606e3b5113889fb43c431c08c65d1892e4562a97e6",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 19, "depth": 14, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "목표 장면·조건·관찰 불가·다음 주 선택을 한 기록표와 조건 분기까지 연결해, 주 1회 독자가 수치만으로 실력 변화를 단정하지 않게 한다.",
+        "USTA의 한 개념 집중·과정 목표·기록 범위를 넘지 않고, 유지·향상·고정 기간을 약속하지 않는다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "‘가상 비교’의 10회 중 6회/4회", "reason": "분모와 결과는 잘 표시된 예시지만, 어떤 횟수가 비교에 충분한지 또는 기술 변화를 뜻하는지는 검증하지 않는다.", "fix": "현재처럼 가상 분모임을 유지하고, 효과·충분성 기준을 추가하려면 별도 근거를 확인한다."},
+        {"dimension": "sources", "points": 1, "location": "USTA 초보자 코칭 안내", "reason": "공식 코칭 자료는 집중·목표·일지를 지지하지만 주 1회 간격의 비교 신뢰도나 유지 효과를 입증하지 않는다.", "fix": "그 효과를 주장하려면 해당 질문을 직접 다룬 1차 근거를 추가한다."},
+        {"dimension": "usefulness", "points": 1, "location": "‘오늘 세션에서 보고 다음 주 선택하기’", "reason": "실행 분기는 분명하지만 한 장면 기록 예시 하나에 집중되어, 다른 목표 유형의 기록 양식은 독자가 변환해야 한다.", "fix": "반복되는 독자 질문이 확인되면 서브나 게임의 동등한 한 줄 예시를 하나만 보강한다."},
+        {"dimension": "depth", "points": 1, "location": "조건 표와 가상 비교", "reason": "조건·해석·다음 행동을 설명하지만, 코치가 없는 경우의 관찰 품질 한계는 링크로 넘긴다.", "fix": "범위를 넓힐 때는 코치 피드백 기록 글과의 역할 분리를 유지한 보조 예시를 추가한다."},
+        {"dimension": "language", "points": 1, "location": "‘코치와 합의한 큐’", "reason": "‘큐’가 초보 독자에게 짧은 동작 지시라는 설명 없이 사용된다.", "fix": "첫 사용에서 ‘코치가 준 짧은 동작 지시’처럼 풀어 쓴다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["usta-beginner-goals-2022"],
+      "uiVerifiedAt": "2026-10-20T11:00:45.054Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 34 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    },
+    {
+      "route": "/blog/aw-030-court",
+      "kind": "existing_blog",
+      "readerQuestion": "처음 클레이에서 미끄러지는 동작을 어떻게 준비하고 지도받을까?",
+      "contentHash": "b809b940ab4a2d40bbbccc22db029047204a3f9696d77c313b29aa1e88672909",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 18, "depth": 13, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "시설 개방·신발·코치 관찰·기본 이동·공 연결·앞 단계 복귀/중단을 순서가 아닌 조건부 결정으로 제시한다.",
+        "초보자의 각도·거리·속도·자가 슬라이드·부상 예방을 약속하지 않고, 젖거나 폐쇄된 코트에서는 시설 지시를 따르게 한다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "가상 코치 세션의 ‘통제할 수 있다고 보고 공을 보낸다면’", "reason": "이는 안전 기준이 아닌 코치와의 대화 예시지만, 언제 준비됐다고 볼지는 자료가 정량화하지 않는다.", "fix": "준비 판정의 보편 기준이나 자가 테스트를 추가하지 말고 코치·시설 판단으로 한정한다."},
+        {"dimension": "sources", "points": 1, "location": "LTA 선수 팁과 ITF 팬 드릴", "reason": "공식 자료지만 엘리트 선수 조언과 코치·보조자 드릴로, 초보자의 독학 안전 프로토콜 근거는 아니다.", "fix": "초보 안전 메커닉을 설명하려면 그 질문을 직접 검증한 근거가 필요하다."},
+        {"dimension": "usefulness", "points": 2, "location": "‘슬라이딩은 지도받는 상황에서 단계적으로’", "reason": "준비·중단·앞 단계 복귀의 결정을 주지만, 안전상 이유로 독자가 혼자 수행할 구체적 슬라이드 동작은 제공하지 않는다.", "fix": "코치가 있는 독자의 실제 세션 관찰표를 유지하고, 독학 동작 처방은 근거 없이 추가하지 않는다."},
+        {"dimension": "depth", "points": 2, "location": "표의 세 단계와 가상 코치 대화", "reason": "표면·신발·멈춤·회복의 구분은 유용하나 각 단계의 구체적 기술은 의도적으로 코치 범위에 남겨 깊이가 제한된다.", "fix": "안전한 범위의 코치 피드백 사례가 확보되면 사례 하나를 추가한다."},
+        {"dimension": "language", "points": 1, "location": "‘코치가 통제 가능한 드릴’", "reason": "통제 가능한 범위가 무엇인지 초보 독자에게 다소 추상적이다.", "fix": "‘코치가 다음 움직임을 보고 공을 줄지 결정하는 드릴’처럼 짧게 풀어 쓴다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["lta-clay-surface-guide", "lta-clay-player-tips", "itf-footwear-2019", "itf-fitness-drill-2019"],
+      "uiVerifiedAt": "2026-10-20T11:00:45.054Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 29 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    },
+    {
+      "route": "/blog/aw-031-20",
+      "kind": "existing_blog",
+      "readerQuestion": "주말 코트 비용을 실제 예약 시간과 합의한 인원으로 어떻게 나눌까?",
+      "contentHash": "eb7f5f25512f2a93febd85cb9e9420e5ffeab6d89227faf1a2c7318c7acf5e91",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 20, "depth": 14, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "예약별 시간×해당 시설 요금, 합의한 공동 추가비, 개인 지출, 취소 뒤 세 명/네 명 분기의 산수가 정확하고 실제 정산 결정을 돕는다.",
+        "가상 원화 금액·영국/미국 시설 사례·취소 규칙을 명확히 분리해 한국의 현재 가격이나 보편 규칙으로 오해하게 하지 않는다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "가상 ₩48,000 정산과 취소 뒤 재분담", "reason": "산수는 정확하고 가상이라고 표시됐지만, 실제 시설의 예약·환불·분담 가능 여부는 확인하지 않는다.", "fix": "실제 모임에서는 선택한 시설의 예약 조건과 사전 합의를 먼저 기록한다."},
+        {"dimension": "sources", "points": 1, "location": "Bodmin, Better, Lee CTA 사례", "reason": "각 운영자의 1차 안내이지만 영국·미국의 특정 시설·계약으로 한국 코트의 현행 요금이나 규칙을 뒷받침하지 않는다.", "fix": "한국의 실제 조건을 소개하려면 그 시설의 현행 예약·취소 문서를 별도로 확인한다."},
+        {"dimension": "depth", "points": 1, "location": "한 코트·2시간 가상 예시", "reason": "예약별 합산 공식은 여러 코트·시간에 적용되지만, 복수 코트와 서로 다른 시간 요금을 동시에 계산한 예시는 없다.", "fix": "독자 수요가 확인되면 두 예약 행을 합산하는 가상 예시를 하나만 덧붙인다."},
+        {"dimension": "language", "points": 1, "location": "첫 문단의 ‘특정 대회 비용 계산 도구’", "reason": "어떤 도구인지 식별하지 않은 채 언급해 정산 절차와 직접 관련 없는 짧은 혼동을 남긴다.", "fix": "도구 언급을 지우거나 구체적인 현재 경로와 범위를 연결한다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["better-bodmin-court-hire", "better-cancellation-terms", "lee-cta-shared-court-fee"],
+      "uiVerifiedAt": "2026-10-20T11:00:45.054Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 33 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    },
+    {
+      "route": "/blog/aw-032-serve",
+      "kind": "existing_blog",
+      "readerQuestion": "몸쪽 서브를 언제 시도하고 실제 리턴에서 무엇을 확인할까?",
+      "contentHash": "705b8a64389009dceb0e0368df8bfd06440b5692476a264244019d31f96fda4b",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 19, "depth": 14, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "합법적 서비스 박스 착지, 실제 리턴 접촉, 다음 공 커버를 분리해 몸쪽 서브의 성패를 상대의 후퇴나 약한 리턴 하나로 단정하지 않게 한다.",
+        "토스 이동·회전량·발걸음 수·몸을 맞히는 목적을 보편 규칙으로 만들지 않고, 복식 파트너의 다음 공 관찰까지 연결한다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "가상 포인트의 ‘서비스 박스 중앙 부근’", "reason": "리시버 위치에 따라 몸쪽 목표가 달라진다고 본문이 밝혔지만, 중앙 부근은 특정 독자에게 고정 몸쪽 위치처럼 읽힐 여지가 있다.", "fix": "후속 수정 때는 ‘그 리시버의 몸쪽으로 정한 구역’처럼 위치 의존성을 예시에 반복한다."},
+        {"dimension": "sources", "points": 1, "location": "USTA 기본 서브·리턴 전략", "reason": "공식 자료는 목표·회전과 몸쪽/T/와이드 구분을 지지하지만, 특정 상대에게 어느 몸쪽 타깃이 최선인지나 다음 공의 우위를 입증하지 않는다.", "fix": "상대별 효과를 주장하려면 해당 상대 조건을 다룬 근거를 새로 확인한다."},
+        {"dimension": "usefulness", "points": 1, "location": "몸쪽 서브 시도의 두 관찰 표", "reason": "관찰과 다음 선택은 명확하지만, 파트너가 없는 단식 독자가 다음 공을 기록하는 최소 방식은 직접 제시하지 않는다.", "fix": "범위를 넓힐 때 단식용 한 줄 기록 예시를 추가한다."},
+        {"dimension": "depth", "points": 1, "location": "한 개의 가상 포인트", "reason": "리턴이 예상과 달랐을 때의 조정은 설명하지만, 서로 다른 리시버 위치나 점수 상황의 추가 사례는 없다.", "fix": "근거가 있는 조건별 사례를 확보했을 때만 하나를 보강한다."},
+        {"dimension": "language", "points": 1, "location": "‘리턴 접촉’과 ‘우리 편 커버’", "reason": "테니스 초보자에게 두 표현이 다소 압축돼 있다.", "fix": "처음 사용에서 ‘상대가 공을 맞힌 위치’와 ‘다음 공을 누가 맡을지’로 풀어 쓴다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["usta-serve-basics-2017", "usta-returning-body-serve-2021"],
+      "uiVerifiedAt": "2026-10-20T11:00:45.054Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 28 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    },
+    {
+      "route": "/blog/aw-033-grip-club-match",
+      "kind": "existing_blog",
+      "readerQuestion": "오버그립이 실제로 닳았는지, 손 습기나 소재 차이인지 어떻게 구분할까?",
+      "contentHash": "2e4483b9acc7ee8e05fe529284c51a04aeb30ad5c80e1703ce0f24099a101b85",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 18, "depth": 13, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "같은 모델의 새 오버그립, 마른 손·그립 상태, 표면 마모·찢김, 소재·두께·감는 상태를 구분해 교체 판단을 구체화한다.",
+        "고정 교체 주기, 색 변화 순서, 손목 원인 진단, 경기력 보장과 일부러 미끄러뜨리는 시험을 모두 배제한다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "‘젖음이 지속되거나 닳았다면 교체 검토’", "reason": "제조사 안내는 마모·흡수 저하를 단서로 들지만, 지속 젖음의 원인이 그립인지 손·환경인지 판정하지 않는다.", "fix": "교체를 확정하거나 원인을 단정하지 말고 현재처럼 비교·검토 표현을 유지한다."},
+        {"dimension": "sources", "points": 1, "location": "HEAD 관리 안내와 Yonex AC102 제품 설명", "reason": "제조사 1차 자료는 제품 관리와 의도한 특성에는 적합하지만 독립 성능·통증·모든 제품의 마모 기준 근거는 아니다.", "fix": "보편 성능 또는 의학적 주장을 추가하려면 독립적인 적합 근거를 확보한다."},
+        {"dimension": "usefulness", "points": 2, "location": "‘새것도 다름’ 행과 가상 점검", "reason": "교체 결정을 돕지만 실제 감는 상태·기본 그립·손 습기의 기여도를 분리하는 현장 확인은 판매점·코치 문의로 남아 있다.", "fix": "검증된 제품별 관리 절차가 있을 때만 범위를 넓힌다."},
+        {"dimension": "depth", "points": 2, "location": "세 행 상태 표", "reason": "마모·습기·소재 차이는 잘 구분하지만, 제조사 자료가 제공하지 않는 제품별 마모 임계값이나 장기 사용 기록까지는 다루지 않는다.", "fix": "독립·제품별 근거가 확보될 때만 임계값이나 장기 비교를 추가한다."},
+        {"dimension": "language", "points": 1, "location": "‘기본 그립’과 ‘감은 방향·두께’", "reason": "입문자에게 오버그립 아래의 기본 그립과 감는 방법의 차이가 설명 없이 등장한다.", "fix": "첫 사용에서 두 요소가 교체 그립과 별개라는 짧은 설명을 넣는다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["head-overgrip-care", "yonex-super-grap"],
+      "uiVerifiedAt": "2026-10-20T11:00:45.054Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 28 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    }
+  ]
+}

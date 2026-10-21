@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { auditCurrentLedger as auditCurrentLedgerWithEvidence, auditLedger, findChangedRoutes, validateBaselineEvidence, validateReview } from "./audit-content-review.mjs";
+import { auditCurrentLedger as auditCurrentLedgerWithEvidence, auditLedger, findChangedRoutes, reconcileTechnicalRestoration, validateBaselineEvidence, validateReview } from "./audit-content-review.mjs";
 import { hashValue } from "./build-existing-content-inventory.mjs";
 
 const hash = "a".repeat(64);
@@ -221,4 +221,39 @@ test("published articles cannot shrink the frozen cohort by relabeling scope", (
   record.baseline.scopeEvidencePath='scope.json';
   const files={'inventory.json':{items:[{route:'/blog/test',kind:'blog',publication:'published',contentHash:hash}]},'scope.json':{items:[{route:'/blog/test',scopeStatus:'non_editorial_scope',reason:'Invented exclusion'}]}};
   assert.match(validateBaselineEvidence(record,{items:[]},{readEvidence:p=>JSON.stringify(files[p])}).errors.join(' '),/fixed editorial cohort cannot be excluded/);
+});
+
+function technicalFixture() {
+  const file="src/lib/analytics.ts", route="/utility/fixture";
+  const sources={ [file]: "b".repeat(64), "src/components/fixture.tsx": "c".repeat(64) };
+  const assets={ "public/images/fixture.svg": "d".repeat(64) };
+  const frozen={ reviewSourceHashes:sources, reviewAssetHashes:assets };
+  frozen.renderDependencyHash=hashValue(frozen);
+  const current={ route, contentHash:hash, reviewSourceHashes:{...sources,[file]:"e".repeat(64)}, reviewAssetHashes:assets };
+  current.renderDependencyHash=hashValue({reviewSourceHashes:current.reviewSourceHashes,reviewAssetHashes:assets});
+  const entry={ route, kind:"tool_description_candidate", status:"pending", before:{contentHash:hash} };
+  const proof={schemaVersion:1,kind:"analytics-restoration",verdict:"approved",author:"Main",reviewer:"Independent reviewer",reviewedAt:"2026-10-21T00:00:00Z",reason:"Restore reviewed privacy code",restoredFromCommit:"1".repeat(40),file,beforeHash:sources[file],afterHash:"e".repeat(64),items:[{route,contentHash:hash,beforeRenderHash:frozen.renderDependencyHash,afterRenderHash:current.renderDependencyHash}]};
+  return {proof,ledger:ledger([entry]),inventory:{items:[current]},frozen:new Map([[route,frozen]])};
+}
+
+test("independent analytics restoration reconciles only its exact module delta without editorial approval",()=>{
+  const f=technicalFixture();
+  assert.equal(reconcileTechnicalRestoration(f.proof,f.ledger,f.inventory,f.frozen).size,1);
+  assert.equal(f.ledger.entries[0].status,"pending");
+});
+
+test("technical restoration rejects editorial, asset, other source, identity and evidence changes",()=>{
+  const mutations=[
+    f=>f.inventory.items[0].contentHash="f".repeat(64),
+    f=>f.inventory.items[0].reviewAssetHashes={"public/images/fixture.svg":"f".repeat(64)},
+    f=>f.inventory.items[0].reviewSourceHashes["src/components/fixture.tsx"]="f".repeat(64),
+    f=>f.ledger.entries[0].kind="blog",
+    f=>f.proof.reviewer=f.proof.author,
+    f=>f.proof.verdict="pending",
+    f=>f.proof.beforeHash="f".repeat(64),
+    f=>f.proof.file="src/components/fixture.tsx",
+    f=>f.proof.items.push({...f.proof.items[0]}),
+    f=>f.proof.items[0].afterRenderHash="f".repeat(64),
+  ];
+  for(const mutate of mutations){const f=technicalFixture();mutate(f);assert.throws(()=>reconcileTechnicalRestoration(f.proof,f.ledger,f.inventory,f.frozen));}
 });

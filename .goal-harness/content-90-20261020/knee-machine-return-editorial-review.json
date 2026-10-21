@@ -1,0 +1,171 @@
+{
+  "reviewer": "Independent AI editorial reviewer (verifier)",
+  "checkedAt": "2026-10-20T20:26:53.585+09:00",
+  "reviewedAt": "2026-10-20T20:26:53.585+09:00",
+  "reviewStage": "final_revised_integrated_local_render",
+  "scope": "Five existing knee, ball-machine, court-safety, return, and beginner-string routes aw003/034/035/037/038; final integrated local content and local preview only, not the full 1,643-item cohort.",
+  "rubric": {
+    "categories": ["facts", "sources", "usefulness", "depth", "language", "intent", "accessibility"],
+    "maximum": [25, 15, 20, 15, 10, 10, 5],
+    "minimum": [23, 14, 18, 13, 8, 8, 4],
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis, treatment promise, or substitute for clinician assessment",
+      "generic ball-machine operating advice presented as model-specific instruction",
+      "unsafe self-directed traction/slip test or return-to-play formula",
+      "mandatory hybrid string, fixed tension, or equipment-based pain treatment claim"
+    ]
+  },
+  "evidence": {
+    "proposalPath": ".goal-harness/content-90-20261020/next-knee-machine-return-proposals.json",
+    "proposalSha256": "3ee8ca087932f9110380608641f576498efec9b3d1df9fa9240875e1ed9b5ee1",
+    "sourcesPath": ".goal-harness/content-90-20261020/next-knee-machine-return-sources.json",
+    "sourcesSha256": "5b7b2f4703a51acc47a59fc4425822ee5a40f1ffe0874537b96b156511d84546",
+    "integrationPath": ".goal-harness/content-90-20261020/knee-machine-return-integration.json",
+    "currentInventoryPath": ".goal-harness/content-90-20261020/knee-machine-return-current/inventory.json",
+    "currentInventorySha256": "4511537c1c51545cab022866aa1526f0b8dcd75a5bcdc594edc6a3c8a1cc3b38",
+    "localValidationPath": ".goal-harness/content-90-20261020/knee-machine-return-local-validation.json",
+    "previewChecksPath": ".goal-harness/content-90-20261020/knee-machine-return-preview-checks.json",
+    "screenshotsPath": "output/playwright/content-90-knee-machine-return-20261020/"
+  },
+  "sourceIntegrity": "Reviewed the source packet’s fourteen actual-read records, route mapping, claim bounds, and stated gaps against the five final effective bodies. The final prose remains within those bounds: it does not diagnose a knee, prescribe a fixed return timeline, turn machine controls into generic instruction, ask readers to test a wet court, infer adult return timing from youth material, or make hybrid strings mandatory. External pages were not re-fetched in this bounded editorial pass; the packet is the recorded read evidence.",
+  "localRenderEvidence": "Fresh local build and typecheck exited 0. The hash-bound preview receipt reports 20 cases (five routes × 390/1440px × light/dark), 150 required body blocks, HTTP 200, matching title/canonical/indexability/schema headline and dates, no missing blocks, broken fragments or overflow, and FAQ Enter/Space plus table keyboard focus passing. Reviewer visually inspected all five 390px light screenshots and aw038 at 1440px dark; mobile tables and cards are contained and readable, and the desktop dark layout is legible without visible clipping.",
+  "batchVerdict": "PASS_EDITORIAL_LOCAL: all five final current hashes meet the total and every seven-dimension floor, and no hard veto was found in the reviewed prose or local render evidence.",
+  "globalVetoAssessment": "No false human-review attribute remains on aw003. No knee diagnosis, 20-repetition/10-minute/four-week return formula, shoulder-width or other fixed mechanics, universal machine control recipe, self-directed wet-court test, deterministic return timing rule, mandatory hybrid switch, fixed tension, or equipment-based pain treatment claim remains.",
+  "remainingLimits": [
+    "This is local editorial and local-render approval, not serving-source, deployment, or live-site proof.",
+    "The local receipt does not prove screen-reader reading order or measured colour contrast; accessibility receives the permitted one-point deduction on every route.",
+    "The local receipt records lint and full-project verification as pending; those are outside this review and must not be inferred from the build/typecheck pass.",
+    "Manufacturer, venue, and coaching sources appropriately bound several claims but do not establish individualized medical, performance, or product outcomes."
+  ],
+  "ledgerChangeAuthorized": false,
+  "productionProof": "NOT RUN",
+  "fullCohortCompletion": "NOT CLAIMED: this review covers only aw003/034/035/037/038 of the 1,643-item editorial cohort.",
+  "status": "final_editorial_pass_local",
+  "items": [
+    {
+      "route": "/blog/aw-003-record",
+      "kind": "existing_blog",
+      "readerQuestion": "무릎 통증이 있는 테니스 초보자는 무엇을 기록하고 언제 의료진이나 코치에게 물어봐야 할까?",
+      "contentHash": "7e19db76e0c6321fb7b7e629239d137c624fe4dfa26bcdbcd92c6ea9913c00d8",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 19, "depth": 14, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "증상·상황 기록과 의료진 질문, 코치 질문을 분리해 기록이 진단이나 다음 세션 처방으로 바뀌지 않게 한다.",
+        "기존의 잘못된 human-reviewed 표기를 제거하고, 중단·상담 신호와 코치가 다룰 수 있는 관찰 범위를 구분한다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "‘가상 기록’의 복식 뒤 통증 예시", "reason": "기록 항목은 진단으로 표현하지 않지만, 해당 항목이 원인을 가르거나 임상적으로 충분한 추적이라는 근거는 없다.", "fix": "현재처럼 원인 추론을 하지 않는 기록으로 유지하고, 임상적 해석 기준은 의료진에게 남긴다."},
+        {"dimension": "sources", "points": 1, "location": "NHS·MedlinePlus·AAOS 인용 범위", "reason": "환자 안내와 일반 컨디셔닝 자료는 상담 신호와 기록 맥락을 지지하지만 테니스 복귀 메커닉이나 개인별 진행을 입증하지 않는다.", "fix": "테니스 복귀 효과나 진행 기준을 주장하려면 그 질문을 직접 다룬 근거를 추가한다."},
+        {"dimension": "usefulness", "points": 1, "location": "‘다음에 물어볼 질문’", "reason": "기록과 의뢰 경로는 분명하지만, 실제 다음 세션의 허용 범위는 독자가 의료진의 개별 조언을 받아야 한다.", "fix": "의료진 판단을 대체하는 세션 계획을 추가하지 말고, 받은 조언을 기록에 연결하는 범위를 유지한다."},
+        {"dimension": "depth", "points": 1, "location": "증상·상황·질문 표", "reason": "독자가 무엇을 적고 누구에게 물을지는 다루지만, 개인별 재활 진행은 의도적으로 제공하지 않는다.", "fix": "개인 처방을 일반화하지 말고, 별도 전문가 검토 근거가 있을 때만 진행 예시를 보강한다."},
+        {"dimension": "language", "points": 1, "location": "‘활동 범위’", "reason": "의료진이 허용한 활동을 뜻하지만 초보 독자에게 다소 압축된 표현이다.", "fix": "첫 사용에서 ‘의료진이 해도 된다고 한 활동’으로 짧게 풀어 쓴다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["nhs-knee-pain", "medline-knee-pain", "aaos-knee-conditioning"],
+      "uiVerifiedAt": "2026-10-20T11:24:27.379594+00:00",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 33 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    },
+    {
+      "route": "/blog/aw-034-record",
+      "kind": "existing_blog",
+      "readerQuestion": "볼 머신으로 연습할 때 내 모델의 설정을 어떻게 안전하게 확인하고 실제 랠리와 비교할까?",
+      "contentHash": "7d68a3dd13368e151c48f95a4aed69f6dba6eebc40735fe9a2e5ddf647232394",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 20, "depth": 14, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "전원·공급·장애물 확인을 실제 모델의 매뉴얼로 돌리고, 기계 공과 사람 공의 차이를 관찰·비교하게 해 전이를 보장하지 않는다.",
+        "설정값이 아니라 실제 낙하지점·타구·다음 공을 기록하고 파트너 확인으로 이어져 독자의 연습 판단을 직접 돕는다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "‘실제 공급과 결과를 따로 적기’", "reason": "설정과 실제 공의 차이를 관찰하도록 했지만, 관찰 한 번이 재현성이나 경기 전이를 증명하지는 않는다.", "fix": "측정 정확도나 경기 효과를 추가로 주장하지 않고 비교 기록으로 한정한다."},
+        {"dimension": "sources", "points": 1, "location": "PLAYMATE Volley 매뉴얼과 Spinshot 안내", "reason": "모델별 안전·제어·관리에는 적합하지만 모든 볼 머신의 조작법이나 테니스 전이 효과 근거는 아니다.", "fix": "다른 모델에는 해당 제품의 매뉴얼을 확인하게 하고 보편 설정값을 추가하지 않는다."},
+        {"dimension": "depth", "points": 1, "location": "가상 비교 기록", "reason": "한 번의 설정·관찰·파트너 비교는 제공하지만 모델별 프로그램이나 여러 조건의 검증 절차까지는 다루지 않는다.", "fix": "해당 모델 매뉴얼과 검증된 연습 목적이 확보될 때만 추가 조건 예시를 넣는다."},
+        {"dimension": "language", "points": 1, "location": "‘공급 조건’과 ‘실제 공급’", "reason": "설정값과 날아오는 공의 차이라는 뜻이 초보자에게 즉시 분명하지 않을 수 있다.", "fix": "첫 사용에서 ‘화면에서 고른 값’과 ‘실제로 온 공’으로 짧게 풀어 쓴다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["playmate-volley-manual-revh3", "spinshot-pro-controls", "spinshot-machine-maintenance"],
+      "uiVerifiedAt": "2026-10-20T11:24:27.379594+00:00",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 30 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    },
+    {
+      "route": "/blog/aw-035-court",
+      "kind": "existing_blog",
+      "readerQuestion": "하드코트에서 미끄러운 구역을 발견하면 무엇을 멈추고 누구에게 알려야 할까?",
+      "contentHash": "4ab8d643c7a363d85d0945cc87eaca2b9c255f5db4e0dc283cbd17014a9a0541",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 19, "depth": 14, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "젖음·이물질·배수·표면 손상에 대해 테스트 대신 중단·표시·시설 보고를 먼저 제시해 즉시 행동을 분명히 한다.",
+        "신발 확인은 시설이 안전하다고 확인한 뒤에만 다루며, 신발이 코트 안전 판정을 대신하지 않는다고 명시한다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "‘두 사람이 본 젖은 구역’ 가상 사례", "reason": "상황 예시는 중단·보고 원칙을 설명하지만, 독자가 표면 위험을 스스로 판정하거나 재개할 기준은 제공하지 않는다.", "fix": "현재처럼 시설 판단을 기다리게 하고, 자가 견인·미끄럼 시험을 추가하지 않는다."},
+        {"dimension": "sources", "points": 1, "location": "Tennis Australia 시설·코트 자료", "reason": "시설 위험과 일반 표면 정보는 지지하지만 특정 코트의 개방·재개 규칙이나 독자의 위험 판정 기준은 아니다.", "fix": "시설별 재개 절차를 소개하려면 해당 시설의 현행 안내를 확인한다."},
+        {"dimension": "usefulness", "points": 1, "location": "‘멈추고 알리기’ 결정 표", "reason": "현장 행동은 명확하지만 독자가 연락할 담당자나 시설별 기록 형식은 알 수 없다.", "fix": "반복 수요가 확인되면 시설 연락처와 현장 규칙 확인용 한 줄 체크를 추가한다."},
+        {"dimension": "depth", "points": 1, "location": "상태 구분 표와 가상 사례", "reason": "오염·젖음·손상을 나누지만, 개별 시설의 배수·청소·재개 운영은 의도적으로 다루지 않는다.", "fix": "운영사 자료가 확보될 때만 시설별 절차를 보강한다."},
+        {"dimension": "language", "points": 1, "location": "‘시설 안전 확인’", "reason": "누가 어떤 기준으로 확인하는지 초보 독자에게 약간 추상적이다.", "fix": "‘시설 직원이 다시 사용해도 된다고 알린 경우’처럼 풀어 쓴다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["tennis-australia-facility-management", "tennis-australia-courts-surfaces"],
+      "uiVerifiedAt": "2026-10-20T11:24:27.379594+00:00",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 27 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    },
+    {
+      "route": "/blog/aw-037-return-5",
+      "kind": "existing_blog",
+      "readerQuestion": "서브 리턴을 연습할 때 준비·읽기·첫 움직임을 어떻게 관찰하고 다음 연습을 고를까?",
+      "contentHash": "3b39c092ebd13ab068876c77a2e65da3f1baca840ca8b2d4d211b4dac18c0360",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 19, "depth": 14, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 94,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "서버 동작·실제 공·첫 움직임을 나눠 기록하고, 관찰이 안 되면 한 단계 뒤로 물러나거나 세션을 멈추게 해 신중한 문구를 넘는 실습 결정을 준다.",
+        "고정 타이밍, 오디오 신호, 성인 반응 시험의 효과를 주장하지 않고 코치 또는 관찰자의 피드백 범위를 명확히 한다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "서버 접촉·바운드·첫 움직임 기록표", "reason": "관찰 시점 구분은 유용하지만 기록이 반응 속도나 전술적 원인을 정확히 측정한다고 검증하지 않는다.", "fix": "정확한 시간 측정이나 인과 판정을 주장하지 않고 관찰 메모로 유지한다."},
+        {"dimension": "sources", "points": 1, "location": "LTA·USTA 리턴 자료", "reason": "준비·읽기·리턴 전술을 지지하지만 일부는 유소년 역량이나 코칭 예시라 성인의 고정 신호·시점을 뒷받침하지 않는다.", "fix": "성인용 정확한 타이밍 규칙을 추가하려면 해당 근거를 확보한다."},
+        {"dimension": "usefulness", "points": 1, "location": "관찰 불가 시 뒤로 물러나기", "reason": "코치·관찰자가 있는 세션의 다음 행동은 구체적이지만, 혼자 하는 독자는 관찰 품질을 확보하기 어렵다.", "fix": "독학용 정밀 진단을 추가하지 말고, 필요하면 관찰자와의 단순 역할 분담을 한 줄로 보강한다."},
+        {"dimension": "depth", "points": 1, "location": "한 개의 준비-읽기-첫 움직임 사례", "reason": "단계·중단·복귀를 다루지만 다양한 서브와 리턴 상황을 동시에 비교하는 사례는 없다.", "fix": "근거가 있는 조건별 사례를 확보했을 때만 하나를 추가한다."},
+        {"dimension": "language", "points": 1, "location": "‘첫 움직임’과 ‘앞으로 기울기’", "reason": "관찰할 동작을 알지만 초보자에게 어떤 장면을 보라는지 다소 압축돼 있다.", "fix": "‘발이 처음 바뀌는 순간’처럼 첫 사용에서 짧게 풀어 쓴다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["lta-return-ready-read-react", "usta-orange-competencies", "usta-first-second-serve-return"],
+      "uiVerifiedAt": "2026-10-20T11:24:27.379594+00:00",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 30 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    },
+    {
+      "route": "/blog/aw-038-string-beginner",
+      "kind": "existing_blog",
+      "readerQuestion": "입문자는 언제 단일 스트링을 유지·재스트링하고 언제 하이브리드를 스트링어와 상의할까?",
+      "contentHash": "cea55640bf32ceeac18db419c837ead5b8365f53c4df4007dd0bf423ef7891e0",
+      "scores": {"facts": 24, "sources": 14, "usefulness": 20, "depth": 14, "language": 9, "intent": 10, "accessibility": 4},
+      "total": 95,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "문제가 없으면 유지, 마모면 같은 구성 재스트링 상담, 특정 감각·내구성 질문이면 하이브리드 상담이라는 선택표가 바로 실행 가능하다.",
+        "통증은 활동 중단과 의료 상담으로 분리하고, 상세 작업 요청은 승인된 하이브리드 작업 가이드로 연결해 치료·필수 교체·우월성을 주장하지 않는다."
+      ],
+      "deductions": [
+        {"dimension": "facts", "points": 1, "location": "‘입문자 선택 갈림길’의 감각·내구성 행", "reason": "소재와 라켓 조건이 함께 작용한다는 범위는 지키지만, 개인의 사용감이나 최적 조합을 예측하지는 않는다.", "fix": "현재처럼 상담과 한 번에 한 조건 비교로 한정하고 결과를 확정하지 않는다."},
+        {"dimension": "sources", "points": 1, "location": "ITF 자료·Wilson 가이드·USTA 보조 자료", "reason": "기술적 구조와 제조사 선택지는 지지하지만 특정 프레임·사용자에게 맞는 조합이나 의료 결과 근거는 아니다.", "fix": "개인별 조합·통증 효과를 주장하려면 독립적인 해당 근거를 확보한다."},
+        {"dimension": "depth", "points": 1, "location": "유지·재스트링·하이브리드 선택표", "reason": "핵심 갈림길과 대가는 명확하지만 작업비·조합별 마모의 실제 차이는 제품·지역에 따라 달라 수치화하지 않는다.", "fix": "검증된 현재 비용 또는 모델별 근거 없이는 수치·고정 교체 주기를 추가하지 않는다."},
+        {"dimension": "language", "points": 1, "location": "게이지·텐션·스트링 베드", "reason": "전문 용어를 나열하지만 입문자에게 각 용어의 뜻을 첫 문장에서 모두 풀지는 않는다.", "fix": "후속 수정 때 게이지는 굵기, 텐션은 당김 강도로 짧게 덧붙인다."},
+        {"dimension": "accessibility", "points": 1, "location": "20개 로컬 화면 검사", "reason": "모바일·데스크톱 표, FAQ 키보드와 넘침은 확인했지만 실제 스크린리더 순서와 색 대비 계측은 없다.", "fix": "후속 접근성 검사에서 스크린리더 탐색과 대비를 계측한다."}
+      ],
+      "sourceIds": ["itf-strings-2019", "wilson-choose-string-2026", "usta-string-selection"],
+      "uiVerifiedAt": "2026-10-20T11:24:27.379594+00:00",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 30 expected body blocks, HTTP 200, canonical/robots/schema/title, FAQ Enter/Space, table keyboard and no-overflow checks pass."
+    }
+  ]
+}

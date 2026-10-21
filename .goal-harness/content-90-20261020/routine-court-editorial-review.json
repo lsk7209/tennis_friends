@@ -1,0 +1,484 @@
+{
+  "reviewer": "Independent AI editorial reviewer (critic)",
+  "checkedAt": "2026-10-20T19:42:14+09:00",
+  "reviewedAt": "2026-10-20T19:42:14+09:00",
+  "reviewStage": "final_revised_integrated_local_render",
+  "scope": "Five existing routine/court blog routes aw024–028; current integrated source and local preview only; not full 1643-page cohort",
+  "rubric": {
+    "categories": [
+      "facts",
+      "sources",
+      "usefulness",
+      "depth",
+      "language",
+      "intent",
+      "accessibility"
+    ],
+    "maximum": [
+      25,
+      15,
+      20,
+      15,
+      10,
+      10,
+      5
+    ],
+    "minimum": [
+      23,
+      14,
+      18,
+      13,
+      8,
+      8,
+      4
+    ],
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis or treatment promise",
+      "unsafe wet-court self-test or player self-clearance",
+      "misleading current facility policy or USTA rule"
+    ]
+  },
+  "evidence": {
+    "proposalPath": ".goal-harness/content-90-20261020/next-routine-court-proposals.json",
+    "proposalSha256": "b0040ce6738364671a2ab6c8a967a68b694dd5928192008ec9d9e92c290f63b3",
+    "sourcesPath": ".goal-harness/content-90-20261020/next-routine-court-sources.json",
+    "sourcesSha256": "8456f5c338eee07196d7fca4d144cff60db955573bf4b5a78afbd21c91c21ddb",
+    "beforePath": ".goal-harness/content-90-20261020/next-routine-court-before.json",
+    "integrationPath": ".goal-harness/content-90-20261020/routine-court-integration.json",
+    "currentInventoryPath": ".goal-harness/content-90-20261020/routine-court-current/inventory.json",
+    "localValidationPath": ".goal-harness/content-90-20261020/routine-court-local-validation.json",
+    "previewChecksPath": ".goal-harness/content-90-20261020/routine-court-preview-checks.json",
+    "screenshotsPath": "output/playwright/content-90-routine-court-20261020/"
+  },
+  "sourceIntegrity": "Twelve actual-read source records inspected via the packet, including the official 2026 USTA The Code §34 PDF read by main. Source claims and scopes were matched to all five final bodies; reviewer did not independently reread all external originals. Final proposal and each body/metadata JSON SHA are bound to current integrated content hashes.",
+  "localRenderEvidence": "Build and TypeScript exit 0. Five routes x 390/1440px x light/dark = 20 HTTP 200 cases, 148 unique expected body blocks, no missing blocks, broken fragments or overflow; title/canonical/indexability/schema headline/original KST publication and modified dates, FAQ Enter/Space and table keyboard focus pass. Main viewed all five 390px light screenshots; reviewer viewed aw024 390px light, aw026 and aw027 1440px dark.",
+  "batchVerdict": "PASS_EDITORIAL_LOCAL: all five current integrated hashes score at least 90, meet all seven floors, and have no identified hard veto in reviewed text and local render evidence.",
+  "globalVetoAssessment": "No fixed sufficient warmup dose, slow-equals-low bounce formula, wet-court self-clearance or slip test, universal facility refund rule, automatic point loss from every partner utterance, fixed racket/footwear medical diagnosis or guaranteed outcomes in final proposal.",
+  "remainingLimits": [
+    "Local editorial approval does not establish tennis/facility expert review, production deployment, Google outcome, or full-cohort completion.",
+    "Final-source lint and full npm verify are pending with main; only fresh build/typecheck and local UI are evidenced here.",
+    "Actual screen-reader reading order and measured color contrast were not checked; accessibility is 4/5.",
+    "Facility cancellation policies may change; readers must recheck their booked facility.",
+    "Changing any reviewed contentHash, renderer or relevant asset requires renewed review."
+  ],
+  "ledgerChangeAuthorized": false,
+  "productionProof": null,
+  "fullCohortCompletion": false,
+  "status": "final_local_editorial_pass_all_five",
+  "items": [
+    {
+      "route": "/blog/aw-024-tennis-guide",
+      "kind": "existing_blog",
+      "readerQuestion": "출근 전 남은 시간으로 무엇을 연습하고 언제 그만둘까?",
+      "proposalBodyJsonSha256": "4df7df3a40ceb38b3f5647a7b21163be2bdee202a81d035283e402b2154aebf0",
+      "proposalMetadataJsonSha256": "f1f45165efa993cbc97a98406e54da16f37566d44ef8eff051fa1f809cc72e23",
+      "contentHash": "f60a52ff8d5ac8342c7cfd529dffda59c3b191723f80cb60521c0eaae77a2fdc",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 93,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "09:00 업무 시작에서 이동·정리·지연 여유를 역산해 08:10 타구 종료, 늦은 입장 때 축소 또는 연기를 고르는 산수 예시가 실제 결정을 돕는다.",
+        "동적 준비와 한 관찰 과제를 연결하되 특정 몸풀기 시간·주당 횟수·부상 예방 효과를 약속하지 않는다.",
+        "출근 시간 제약이라는 검색 의도를 aw011 코치 피드백 기록과 aw016 일반 레슨 복습에서 분리한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "가상 09:00 역산 예시",
+          "reason": "25분 이동·15분 정리·10분 여유는 독자별로 달라지는 가정이며, 본문이 이를 임의 예시로 밝힌다.",
+          "fix": "각자의 실제 소요 시간으로 다시 계산하도록 가정 표시를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 동적 몸풀기·초보 과정 목표 링크",
+          "reason": "공식 자료의 실제 읽은 주장과 맞지만 출근 전 훈련 창의 효과나 충분한 준비 시간을 검증한 자료는 아니다. 리뷰어의 원문 전수 재열람도 없었다.",
+          "fix": "효과나 충분한 분량을 주장하려면 해당 1차 근거를 새로 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "07:55 늦은 입장 조건",
+          "reason": "축소·연기 선택은 명확하지만 시설 입장과 출근 준비가 더 자주 변하는 독자의 세부 경로는 한 예시에 머문다.",
+          "fix": "실제 반복되는 제약 사례가 모이면 조건별 계산 예를 한 개만 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "가상 시간 계산과 한 관찰 기록",
+          "reason": "역산과 다음 질문까지 설명하지만 코트 이용 불가일 때의 대체 훈련은 이 글의 범위 밖이다.",
+          "fix": "현장 이용이 불확실하면 현행 확인 경로를 유지하고 대체 루틴은 별도 글로 다룬다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "첫 문단의 코치 큐 및 가상 예시",
+          "reason": "초보 독자에게 큐라는 용어가 설명 없이 나오고 예시의 일부 문장이 평서체로 바뀐다.",
+          "fix": "큐를 코치가 준 한 동작 지시로 풀고 문장 높임을 통일한다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "출근 전 짧은 연습 제목",
+          "reason": "고정 5분 처방을 기대한 독자에게는 개인 일정에 맞춘 조건부 결정이 답이다.",
+          "fix": "첫 화면에서 충분한 고정 시간은 없고 역산으로 결정한다는 점을 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 검사",
+          "reason": "캡션·행열 머리글, 표 키보드 초점, FAQ Enter/Space, 넘침은 확인했지만 실제 스크린리더 순서와 계측 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비를 별도 계측한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-dynamic-warmup-2017",
+        "usta-beginner-process-2022"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:39:52.472Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 30 expected body blocks, HTTP 200, title/canonical/fragments/FAQ Enter-Space/table keyboard/no overflow PASS"
+    },
+    {
+      "route": "/blog/aw-025-court-5",
+      "kind": "existing_blog",
+      "readerQuestion": "낯선 코트에서 공이 실제로 어떻게 달라졌고 무엇을 먼저 조정할까?",
+      "proposalBodyJsonSha256": "4577caa24c1510007aa24b120c2dd02c89cd53d6f72d913e919677014f91b529",
+      "proposalMetadataJsonSha256": "89e99987ef12b8a0a38b965e7c520562673440e6cb3565da8afde2c8b410ae61",
+      "contentHash": "6df25ff0c60d4d908c337a430fef6f24219fd3dd7e38a8ca9eacfe59790b1edb",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 93,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "LTA의 일반 경향을 정확히 반영해 느린 클레이가 낮게 튄다는 기존 오해를 고치고 속도·높이·일정성을 따로 본다.",
+        "실제로 열린 코트의 정상 랠리에서 비슷한 깊이·회전의 공을 비교하고 준비 시점 등 한 조정만 시험하게 한다.",
+        "젖은 코트 재개는 시설 안내로 넘기고 신발 선택·표면 일반론과 다른 공 관찰 작업에 집중한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "클레이·잔디 일반 경향 단락",
+          "reason": "표면별 평균 경향은 특정 코트나 각 공의 바운드를 확정하지 않으며 글이 실제 관찰로 제한한다.",
+          "fix": "특정 시설의 속도·높이를 단정하는 수치를 추가하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "LTA 표면 안내·클레이 잔디 전환 링크",
+          "reason": "두 1차 자료가 일반 경향을 뒷받침하지만 특정 코트 판정 도구나 적응 게임 수의 근거는 아니다.",
+          "fix": "시설별 성능이나 정량 적응 주장은 별도 실측 근거가 있을 때만 추가한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "속도·높이·일정성 표",
+          "reason": "무엇을 볼지와 한 조정은 분명하나 초심자가 같은 깊이·회전을 식별하기 어려운 경우의 관찰 보조는 짧다.",
+          "fix": "반복 혼동이 확인되면 같은 랠리 상대·비슷한 공을 고르는 예를 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "가상 클레이 관찰",
+          "reason": "깊은 톱스핀과 짧은 플랫 공을 구별하지만 다른 표면의 두 번째 완결 사례까지 담지는 않는다.",
+          "fix": "검증 가능한 실제 사례가 확보되면 다른 표면 한 사례만 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "속도·높이·일정성 표와 톱스핀 예시",
+          "reason": "톱스핀·플랫 용어는 입문 독자에게 짧은 설명이 있으면 더 빠르게 읽힌다.",
+          "fix": "첫 등장에 공 회전·낮은 회전이라는 쉬운 풀이를 붙인다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "낯선 코트 바운드 제목",
+          "reason": "고정 발 위치나 몇 게임 적응법을 기대하면 관찰에 따른 조건부 선택으로 답한다.",
+          "fix": "표면 이름만으로 동작을 처방하지 않는 첫 문단을 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 검사",
+          "reason": "표 구조와 키보드·레이아웃 검사는 통과했으나 실제 스크린리더 순서와 계측 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비를 별도 계측한다."
+        }
+      ],
+      "sourceIds": [
+        "lta-surface-guide",
+        "lta-clay-grass-transition"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:39:52.472Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 28 expected body blocks, HTTP 200, title/canonical/fragments/FAQ Enter-Space/table keyboard/no overflow PASS"
+    },
+    {
+      "route": "/blog/aw-026-court-beginner",
+      "kind": "existing_blog",
+      "readerQuestion": "여행지에서 한 코트를 어떻게 확실히 예약하고 이용할까?",
+      "proposalBodyJsonSha256": "db76b7762c6a4a03a99beb44a7720549b01771ffde894e4764d55079c0bfe4cc",
+      "proposalMetadataJsonSha256": "d82c507a37244a0c012be8f9016be9ce8f73f215cb3312283d57ac03e9d1e09b",
+      "contentHash": "408dcd96ac851278204d97f45dad5dad63be18712a2700d1356d218bcc79bc64",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 93,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "방문객 자격→예약 확정 증빙→출입→변경 처리를 한 시설의 실제 예약 작업 순서로 정리한다.",
+        "Hambleden의 회원 조건, Finsbury의 6시간 절차, South Park의 12시간·재량 우천 처리를 시설별 사례로 분리해 보편 환불 규칙을 만들지 않는다.",
+        "가상 메모에서 미확인 출입 방법을 다음 연락 행동으로 연결하고 비 뒤 코트 재개를 시설 안내에 맡긴다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "영국 세 시설의 취소·우천 사례",
+          "reason": "시설 공개 규정은 바뀔 수 있으며 글이 현재 예약의 현행 문구 재확인을 명시한다.",
+          "fix": "숫자와 절차를 재사용할 때 시설 원문 날짜를 다시 확인한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "Hambleden·Finsbury·South Park 공식 시설 링크",
+          "reason": "시설별 1차 안내는 충실하지만 다른 국가·시설의 정책을 대표하지 않는다. 리뷰어의 현행 원문 전수 재열람은 하지 않았다.",
+          "fix": "국내 시설 규칙을 추가하려면 해당 운영자 원문을 별도로 읽는다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "예약 직후 확정 증빙 행",
+          "reason": "참조번호·메일을 확인시키지만 시설이 이메일 대신 앱 입장 코드를 쓰는 예시는 짧다.",
+          "fix": "실제 이용 자료가 확보되면 증빙 형식의 대체 예를 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "네 단계 예약 표와 가상 메모",
+          "reason": "방문객 첫 예약의 핵심 경로는 충분하지만 결제 오류·현장 코트 변경의 상세 복구 절차는 시설마다 달라 다루지 않는다.",
+          "fix": "특정 시설의 공식 복구 절차가 확보될 때만 덧붙인다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "확정 증빙·우천 크레딧 표현",
+          "reason": "처음 예약하는 독자에게 크레딧의 의미와 현금 환불 차이가 더 명확할 수 있다.",
+          "fix": "첫 크레딧 언급에 다음 예약용 잔액 등 시설 문구에 맞는 짧은 풀이를 붙인다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "테니스 여행 첫 코트 예약 제목",
+          "reason": "검색자가 모든 여행지에 통하는 환불 시간을 원할 수 있으나 글은 한 시설의 실제 규정 확인으로 답한다.",
+          "fix": "시설별 차이를 강조한 제목·첫 단락을 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 검사",
+          "reason": "표 캡션과 키보드·레이아웃 검사는 통과했으나 실제 스크린리더 순서와 계측 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비를 별도 계측한다."
+        }
+      ],
+      "sourceIds": [
+        "hambleden-booking",
+        "finsbury-cancellation",
+        "south-park-rain-policy"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:39:52.472Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 33 expected body blocks, HTTP 200, title/canonical/fragments/FAQ Enter-Space/table keyboard/no overflow PASS"
+    },
+    {
+      "route": "/blog/aw-027-doubles-return-record",
+      "kind": "existing_blog",
+      "readerQuestion": "리턴 전에 무엇을 합의하고 랠리 중 언제 커버 콜을 할까?",
+      "proposalBodyJsonSha256": "fb7a882c56e0c9998446e3be6fa72d44dfe0cb424f46fa198183844922858170",
+      "proposalMetadataJsonSha256": "6214301d42842a619cf3babe46d80e41a54fe05d421060d02c1e0f28c4fe93f6",
+      "contentHash": "8fe6f1ef4f69f97addb9f68b0c4a41a15918b9e848bfe79bffd025b4b87f55dc",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 18,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 91,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "리턴 전 가능한 의도, 우리 쪽으로 오는 공의 커버 콜, 포인트 사이 오류 수정을 분리해 파트너가 말할 시점과 내용을 고를 수 있다.",
+        "USTA 2026 The Code §34의 공 이동 방향별 대화 경계와 방해 행위 가능성을 분리하고 모든 발화의 자동 실점 규칙으로 오독하지 않는다.",
+        "몸쪽 서브로 원래 계획이 깨진 가상 장면에서 복잡한 새 사인보다 다음 커버 질문 하나를 도출한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "USTA 2026 The Code §33–34 단락",
+          "reason": "미국 경기 지침의 대화·방해 해석은 한국 모임의 로컬 룰을 자동 확정하지 않으며 본문이 적용 범위를 밝힌다.",
+          "fix": "대회별 로컬 룰을 말할 때는 해당 운영 규정을 별도 확인한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 코치 인터뷰·Warrior 드릴·2026 The Code",
+          "reason": "코치와 적응형 드릴은 사례 근거이며 특정 사인의 승률 개선이나 필수 사용을 검증하지 않는다.",
+          "fix": "성과 수치나 보편 전술을 추가할 경우 직접 근거를 새로 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 2,
+          "location": "포인트 전 합의 표와 몸쪽 서브 가상 장면",
+          "reason": "예상 밖 서브에서 다음 대화는 제시하지만 리시버와 전위가 동시에 움직이는 두 번째 혼선 장면의 실제 짧은 콜 예시는 제한적이다.",
+          "fix": "반복적인 커버 혼선이 확인되면 공이 우리 쪽으로 올 때 한 콜 예시를 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "사전 의도·랠리 콜·포인트 사이 복기",
+          "reason": "세 시점을 구분하되 포핸드·백핸드 별 구체 합의 예는 백핸드 중심이고, 상대 움직임별 대응은 범위 밖이다.",
+          "fix": "실제 코치 사례가 확보되면 포핸드 합의 한 장면만 추가한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "리시버·커버 콜·Switch 설명",
+          "reason": "복식 입문 독자에게 전위와 커버의 첫 등장 풀이가 더 명확할 수 있다.",
+          "fix": "전위는 네트 쪽 파트너, 커버는 빈 공간 맡기처럼 한 번 풀어 쓴다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "파트너 사인 제목",
+          "reason": "암호 같은 정해진 손 사인을 찾는 독자에게는 사전 대화와 선택 가능한 콜을 제시한다.",
+          "fix": "고정 사인 규칙이 없다는 첫 화면 안내를 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 검사",
+          "reason": "표 캡션·행열 머리글, FAQ 키보드·넘침은 확인했으나 실제 스크린리더 순서와 계측 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비를 별도 계측한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-doubles-partner-2024",
+        "usta-warrior-doubles-curriculum",
+        "usta-code-2026-talk"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:39:52.472Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 28 expected body blocks, HTTP 200, title/canonical/fragments/FAQ Enter-Space/table keyboard/no overflow PASS"
+    },
+    {
+      "route": "/blog/aw-028-shoes",
+      "kind": "existing_blog",
+      "readerQuestion": "지금 쓰는 신발의 좌우 밑창이 어떻게 변했고 무엇을 확인할까?",
+      "proposalBodyJsonSha256": "f08d69ad34b5af5f002e8ba19715604567885f1041a3d217afc69948ab1e9a72",
+      "proposalMetadataJsonSha256": "90ec8e2ddb39861b46e779ac8b2274e64f9ab04783ba40735c9e84c8af7f7e99",
+      "contentHash": "7dd8e4a7b7383af773a327b824aea3f07af4e5bd717a9aff88ef136bfaf2d580",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "지금 쓰는 한 켤레를 같은 조명·각도와 과거 사진으로 비교해 앞·중앙·뒤의 홈·찢김·착용감 변화를 기록하게 한다.",
+        "New Balance의 일반 신발 관리와 ASICS 밑창 설계를 테니스화의 고정 교체 주기나 의학적 진단으로 확대하지 않는다.",
+        "젖은 코트의 미끄러짐 시험을 배제하고 제품 점검·교체 검토와 통증 상담을 다른 결정으로 나눈다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "좌우 밑창 상태 관찰",
+          "reason": "마모 차이만으로 보행이나 통증 원인을 확정할 수 없으며 본문이 그 한계를 지킨다.",
+          "fix": "좌우 패턴을 손잡이·질환 신호로 연결하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "ASICS 테니스화 안내·New Balance 신발 관리 FAQ",
+          "reason": "제조사 안내는 밑창 설계와 일반 교체 신호를 뒷받침하지만 객관적 접지 역치나 테니스화 전용 주기를 제공하지 않는다.",
+          "fix": "수치 기준을 넣으려면 제조사 해당 모델 문서나 직접 연구를 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "좌우 상태 기록 표",
+          "reason": "제품 점검·교체 검토는 명확하지만 모델별 원래 패턴 사진을 구하지 못한 독자의 비교 기준은 제한적이다.",
+          "fix": "모델 정보가 없을 때는 같은 신발의 이전 사진·명백한 손상 중심으로 본다는 문장을 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "location": "한 켤레 가상 기록과 점검 결정",
+          "reason": "홈·찢김·착용감의 분류와 다음 행동은 충분하나 시간 경과에 따른 두 번째 기록 비교 예시는 없다.",
+          "fix": "실제 사진 기반 사례가 확보되면 전후 기록 한 쌍만 보강한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "밑창 홈·접지 표현",
+          "reason": "초보자에게 접지와 홈 기능의 관계가 생략되어 일부 문장이 제품 설명처럼 읽힌다.",
+          "fix": "접지는 바닥을 잡는 느낌이라는 짧은 풀이를 첫 등장에 붙인다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "location": "좌우 밑창 마모 제목",
+          "reason": "한쪽만 닳는 원인을 찾는 독자에게 원인 진단 대신 상태 점검과 제품 문의로 답한다.",
+          "fix": "원인 추론을 피하고 관찰 가능한 상태 중심 제목을 유지한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "390/1440px 화면·FAQ·표 검사",
+          "reason": "표 캡션·키보드·레이아웃 검사는 통과했으나 실제 스크린리더 순서와 계측 대비는 확인하지 않았다.",
+          "fix": "스크린리더 탐색과 색 대비를 별도 계측한다."
+        }
+      ],
+      "sourceIds": [
+        "asics-tennis-outsoles",
+        "new-balance-shoe-care"
+      ],
+      "uiVerifiedAt": "2026-10-20T10:39:52.472Z",
+      "uiEvidence": "4 current-hash-bound cases at 390/1440px light/dark; 29 expected body blocks, HTTP 200, title/canonical/fragments/FAQ Enter-Space/table keyboard/no overflow PASS"
+    }
+  ]
+}

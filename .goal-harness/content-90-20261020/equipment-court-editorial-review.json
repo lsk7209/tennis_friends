@@ -1,0 +1,520 @@
+{
+  "reviewer": "Independent AI editorial reviewer (critic)",
+  "reviewedAt": "2026-10-20T18:26:00+09:00",
+  "reviewStage": "revision2_integrated_local_render",
+  "scope": "Five existing equipment/court blog routes, current integrated source and local built preview only; 5 of the 1643 original published cohort, not the whole-goal completion audit",
+  "rubric": {
+    "categories": [
+      "facts",
+      "sources",
+      "usefulness",
+      "depth",
+      "language",
+      "intent",
+      "accessibility"
+    ],
+    "maximum": [
+      25,
+      15,
+      20,
+      15,
+      10,
+      10,
+      5
+    ],
+    "minimum": [
+      23,
+      14,
+      18,
+      13,
+      8,
+      8,
+      4
+    ],
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material factual or rule claim",
+      "medical diagnosis or treatment promise",
+      "misleading current facility policy or manufacturer prescription"
+    ]
+  },
+  "evidence": {
+    "proposal": ".goal-harness/content-90-20261020/next-equipment-court-proposals.json",
+    "proposalSha256": "fa22105ffc82d43a5105e662b6b5cb272565b61451415f5d69e2ca75f5c596a0",
+    "revision0ReviewSnapshot": [
+      ".goal-harness/content-90-20261020/source-backups/equipment-court-editorial-review-revision0.json",
+      ".goal-harness/content-90-20261020/source-backups/equipment-court-editorial-review-revision0.md"
+    ],
+    "revision0ReviewSha256": [
+      "73919e8e334268b55d339c186bfe08b1ace16a90a45269577f830b6badeb8640",
+      "1281b8ca2548c37a45c5a09a177452d026f7662e858a7de94f74ac9515d8b4fd"
+    ],
+    "baseline": ".goal-harness/content-90-20261020/next-equipment-court-before.json",
+    "sourcePacket": ".goal-harness/content-90-20261020/next-equipment-court-sources.json",
+    "sourcePacketCheckedAtUtc": "2026-10-20T08:52:05Z",
+    "sourceAccess": "This reviewer compared claims with the researcher packet of actual primary-source reads; no separate external source re-read or expert/medical review was performed.",
+    "integration": ".goal-harness/content-90-20261020/equipment-court-integration.json",
+    "currentInventory": ".goal-harness/content-90-20261020/equipment-court-current/inventory.json",
+    "previewChecks": ".goal-harness/content-90-20261020/equipment-court-preview-checks.json",
+    "localValidation": ".goal-harness/content-90-20261020/equipment-court-local-validation.json",
+    "screenshots": "output/playwright/content-90-equipment-court-20261020/",
+    "independentScreenshotsViewed": [
+      "aw-005-string-390-light.png",
+      "aw-002-club-doubles-beginner-1440-dark.png"
+    ],
+    "hashMethod": "Proposal SHA-256 is exact file bytes. Body/metadata JSON SHA-256 uses UTF-8 sorted-key JSON with ensure_ascii=false and separators=(comma,colon). contentHash is the inventory full review hash, matched to all four local preview cases per route."
+  },
+  "sourceIntegrity": "Both integrated source-file SHA-256 values match equipment-court-integration.json; recorded non-target bytes unchanged. Five current inventory hashes match all 20 preview-case hashes. Five internal links resolve to renderable inventory routes.",
+  "localRenderEvidence": "Build/lint/typecheck exit 0. 5 routes x 390/1440 px x light/dark = 20 HTTP 200 cases; 184 expected DOM blocks, 0 missing, 0 broken fragments, document width=viewport in all cases, FAQ Enter/Space pass, table wrapper keyboard checks pass. All tables have topical caption and col/row th scopes. Original publication dates, new schema headlines, canonical and existing noindex policy checked; main viewed five mobile screenshots, reviewer viewed two representative images.",
+  "batchVerdict": "PASS_EDITORIAL_LOCAL: all five current integrated content hashes score at least 90 and meet all seven floors with no identified hard veto in reviewed text/rendered local evidence.",
+  "globalVetoAssessment": "No unsupported material fixed training/string value, invented doubles rule, generalized expired facility policy, manufacturer-as-personal-prescription, or medical diagnosis/treatment promise found in these five reviewed articles.",
+  "remainingLimits": [
+    "Local editorial PASS does not establish independent expert medical review, Google ranking/approval, production deploy, or live serving content.",
+    "Actual screen-reader reading order and measured color contrast were not tested; accessibility 4/5.",
+    "Related target routes were checked for existence/renderability, not re-reviewed for their own factual quality.",
+    "Any change to a reviewed contentHash, renderer or relevant assets requires renewed review."
+  ],
+  "ledgerChangeAuthorized": false,
+  "productionProof": null,
+  "fullCohortCompletion": false,
+  "status": "final_local_editorial_pass_all_five",
+  "items": [
+    {
+      "route": "/blog/aw-001-serve-5",
+      "kind": "existing_blog",
+      "readerQuestion": "옆이나 뒤로 새는 서브 토스를 어떤 순서로 관찰하고 다음 연습을 정할까?",
+      "proposalBodyJsonSha256": "d5193ff44a7441fa4d6fe6776a1c8994b073bd1b6fc5a3a11041d8500c7dad3c",
+      "proposalMetadataJsonSha256": "32844ec5db8e36fb96bf201b9452086f8dcb5c0fa9942dc66a3b2aaf5bf143e0",
+      "contentHash": "1f366fc3a808ab035c46ca8f3fc864d718840f9f90e6b1c8a9b8f6642fabeec3",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 18,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "기존 임의 cm·초·성공률·주차 처방 대신 방향, 릴리스, 팔 경로, 균형, 스윙 연결을 관찰한다.",
+        "USTA 손끝 릴리스 조언과 ITF 재토스 경기 규칙을 구분한다. 가상 관찰→한 요소 조정→다음 기록 사례가 5단계의 적용을 보여 준다.",
+        "관련 세컨드 서브 글로 다음 연습 경로를 제공한다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "reason": "토스와 몸 움직임의 동시 발생은 원인을 입증하지 않으므로 본문도 그 한계를 유지한다.",
+          "location": "셋째 단계: 팔 경로와 몸의 균형",
+          "fix": "수정 시에도 인과·결과 단정을 피하고 실제 조건 확인 또는 전문가 판단의 경계를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "reason": "공식 USTA·ITF 링크의 적용은 출처 패킷과 일치하지만 이 재검토에서 원문을 독립 재열람하지 않았다.",
+          "location": "둘째·넷째 단계의 USTA 링크",
+          "fix": "더 구체적 수치나 권고를 추가할 때 해당 1차 자료의 문장·적용 범위를 다시 직접 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 2,
+          "reason": "영상 또는 파트너 관찰과 가상 기록은 실행 가능하나 개인별 교정 동작은 코치 점검에 남겨 둔다.",
+          "location": "다섯째 단계: 토스와 스윙 연결",
+          "fix": "향후 독자 테스트에서 자주 막히는 조건이 확인되면 그 조건의 가상 선택 예시를 추가한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "reason": "하나의 가상 전후 관찰 사례가 추가됐지만 여러 실패 패턴별 교정 결과까지 제시하지 않는다.",
+          "location": "관찰에서 다음 연습으로 넘어가는 가상 예시",
+          "fix": "새 근거가 확보되면 서로 다른 조건의 추가 예시를 넣되 관찰을 측정 결과처럼 쓰지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "reason": "코치·기록 권고가 후반에 약간 반복된다.",
+          "location": "다섯째 단계와 마지막 기록 문단",
+          "fix": "중복되는 경계 문구를 압축하고 필요한 안전 안내 한 번은 남긴다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "reason": "관련 링크는 적절하지만 실제 릴리스 동작을 더 세밀하게 찾는 독자에게는 후속 자료가 필요하다.",
+          "location": "세컨드 서브 관련 글 연결 문단",
+          "fix": "연결 대상의 실제 내용과 색인 상태를 재확인하고 독자가 찾는 세부 과제에 맞는 안내를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "reason": "390/1440px·밝음/어두움·FAQ 키보드·넘침을 확인했으나 스크린리더 읽기 순서와 계측 대비는 독립 점검하지 않았다.",
+          "location": "390px 모바일 화면과 FAQ 키보드 검사",
+          "fix": "스크린리더 읽기 순서와 측정 대비를 추가 점검한 뒤 만점 여부를 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-toss",
+        "usta-serve-basics",
+        "itf-rules-2026"
+      ],
+      "uiVerifiedAt": "2026-10-20T09:21:35.260530+00:00",
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/equipment-court-local-validation.json",
+        ".goal-harness/content-90-20261020/equipment-court-preview-checks.json",
+        "output/playwright/content-90-equipment-court-20261020/"
+      ]
+    },
+    {
+      "route": "/blog/aw-002-club-doubles-beginner",
+      "kind": "existing_blog",
+      "readerQuestion": "가운데 공에서 파트너의 콜, 타구, 다음 커버를 어떻게 합의할까?",
+      "proposalBodyJsonSha256": "33903e7418b1c700ec9475b9fcd666a5681a0d2584d4bb976da4c357bf441403",
+      "proposalMetadataJsonSha256": "028df14b77f01a68b531fbd79a63902ca5103b3aa29f75794a8453617e352a8a",
+      "contentHash": "053deafa850f202a3970b6b9b0844f0daaf67e1210b4845bc34c55f491dac23d",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "ITF 규칙의 타구 가능 범위와 팀이 선택하는 포핸드·전위·로브 약속을 분리한다.",
+        "세 가지 장면마다 담당 약속과 충돌/다음 공간 확인을 짝지어 경기 전·포인트 사이 대화로 연결한다.",
+        "표의 주제별 caption·행/열 header scope와 복식 소통 글의 문맥 링크가 추가됐다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "reason": "실전 위치·도달 가능성은 상황별 판단이며 보편 전술 결과로 보장할 수 없다.",
+          "location": "규칙과 팀의 전술 약속 구분 문단",
+          "fix": "수정 시에도 인과·결과 단정을 피하고 실제 조건 확인 또는 전문가 판단의 경계를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "reason": "ITF/USTA 근거는 적합하나 재검토자는 연구자 출처 패킷을 사용했고 외부 원문을 별도로 다시 열지 않았다.",
+          "location": "ITF 2026 규칙 15·USTA 새 파트너 링크",
+          "fix": "더 구체적 수치나 권고를 추가할 때 해당 1차 자료의 문장·적용 범위를 다시 직접 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "reason": "일찍 콜하고 커버를 정하는 방법은 실용적이나 포지션별 실전 도해는 없다.",
+          "location": "중앙 공 상황별 팀 약속 표",
+          "fix": "향후 독자 테스트에서 자주 막히는 조건이 확인되면 그 조건의 가상 선택 예시를 추가한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "reason": "중앙 낮은 공·전위 공·로브 예시는 구분되지만 상대 진형별 후속 패턴까지 다루지 않는다.",
+          "location": "중앙 공 상황별 팀 약속 표와 포인트 사이 수정 단락",
+          "fix": "새 근거가 확보되면 서로 다른 조건의 추가 예시를 넣되 관찰을 측정 결과처럼 쓰지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "reason": "마지막 약속 재조정 권고가 앞선 단락과 일부 겹친다.",
+          "location": "포인트 사이 수정과 마지막 결론 문단",
+          "fix": "중복되는 경계 문구를 압축하고 필요한 안전 안내 한 번은 남긴다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "reason": "특정 포칭 신호의 자세한 해설은 연결된 별도 글에 맡긴다.",
+          "location": "복식 신호와 소통 가이드 연결 문단",
+          "fix": "연결 대상의 실제 내용과 색인 상태를 재확인하고 독자가 찾는 세부 과제에 맞는 안내를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "reason": "표·FAQ의 시각 및 키보드 점검은 통과했으나 실제 스크린리더 순서·계측 대비는 미확인이다.",
+          "location": "중앙 공 표의 캡션·행/열 머리글 및 FAQ 키보드 검사",
+          "fix": "스크린리더 읽기 순서와 측정 대비를 추가 점검한 뒤 만점 여부를 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "itf-rules-2026",
+        "usta-doubles-communication"
+      ],
+      "uiVerifiedAt": "2026-10-20T09:21:35.260530+00:00",
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/equipment-court-local-validation.json",
+        ".goal-harness/content-90-20261020/equipment-court-preview-checks.json",
+        "output/playwright/content-90-equipment-court-20261020/"
+      ]
+    },
+    {
+      "route": "/blog/aw-004-tennis-guide",
+      "kind": "existing_blog",
+      "readerQuestion": "코트 예약 직전 조명·표면·우천 취소와 편의시설에서 무엇을 확인할까?",
+      "proposalBodyJsonSha256": "7a4ec3dafcb8318df08ce4598ce4acb76ea1b43561dc491c7b6f9bc7350ca0e3",
+      "proposalMetadataJsonSha256": "3cbe9bfb27a083cf438647813f3d03b01c5f8bd2b77773482cc13b895af7ec72",
+      "contentHash": "5e536af89cf7f027246317cc1958a98f52bb40a9b7547c96e3a4b92f031aca4d",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 93,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "2026년 2월 종료된 현저 공고를 명시적 과거 사례로 표시하고, 올림픽 조건도 해당 시설의 사례로 한정한다.",
+        "예약할 현재 시설의 판단 주체, 신청 경로/시한, 부분 사용, 조명 요금과 이용 목적을 적을 메모를 제공한다.",
+        "취소 표에 caption·scope가 있고 실내 예약 글을 연결한다. 기존 noindex 정책을 보존했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "reason": "시설 정책은 변동 가능해 예약 직전 최신 공고 확인이 필수이며 원고도 이를 명시한다.",
+          "location": "3. 취소와 우천을 따로 읽기: 두 시설 사례",
+          "fix": "수정 시에도 인과·결과 단정을 피하고 실제 조건 확인 또는 전문가 판단의 경계를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "reason": "공식 시설/ITF 링크를 출처 패킷과 대조했으며 재검토 시점의 현재 시설 운영조건을 독립 조회하지 않았다.",
+          "location": "ITF 코트 페이스·현저·올림픽 시설 링크",
+          "fix": "더 구체적 수치나 권고를 추가할 때 해당 1차 자료의 문장·적용 범위를 다시 직접 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "reason": "공고에 없는 조건은 운영자에게 물어야 하는 일반 체크리스트이며 특정 시설의 결론을 대신하지 않는다.",
+          "location": "예약 직전 복사해 둘 메모",
+          "fix": "향후 독자 테스트에서 자주 막히는 조건이 확인되면 그 조건의 가상 선택 예시를 추가한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "reason": "두 시설의 차이를 사례로 보여 주지만 예약 서비스별 실제 신청 화면 절차는 다루지 않는다.",
+          "location": "취소·우천 표와 종료 공고 사례",
+          "fix": "새 근거가 확보되면 서로 다른 조건의 추가 예시를 넣되 관찰을 측정 결과처럼 쓰지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "reason": "최신 공고 확인 안내가 본문에서 여러 번 나온다.",
+          "location": "예약 서두, 과거 공고 뒤, 마지막 메모의 최신 공고 안내",
+          "fix": "중복되는 경계 문구를 압축하고 필요한 안전 안내 한 번은 남긴다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "reason": "시설별 즉시 예약 정보보다는 예약 전 확인법에 집중한다.",
+          "location": "실내 테니스장 예약 팁 연결 문단",
+          "fix": "연결 대상의 실제 내용과 색인 상태를 재확인하고 독자가 찾는 세부 과제에 맞는 안내를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "reason": "표 모바일 스크롤·포커스와 FAQ 키보드는 통과했지만 스크린리더·계측 대비는 미확인이다.",
+          "location": "취소·우천 표와 390px 모바일·FAQ 검사",
+          "fix": "스크린리더 읽기 순서와 측정 대비를 추가 점검한 뒤 만점 여부를 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "itf-court-pace",
+        "seoul-hyeonjeo-booking",
+        "kspo-olympic-booking"
+      ],
+      "uiVerifiedAt": "2026-10-20T09:21:35.260530+00:00",
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/equipment-court-local-validation.json",
+        ".goal-harness/content-90-20261020/equipment-court-preview-checks.json",
+        "output/playwright/content-90-equipment-court-20261020/"
+      ]
+    },
+    {
+      "route": "/blog/aw-005-string",
+      "kind": "existing_blog",
+      "readerQuestion": "겨울에 타구감이 달라질 때 장력 변경, 기존 세팅 확인, 조정 보류 중 무엇을 선택할까?",
+      "proposalBodyJsonSha256": "568d1b528e2b9583ac49e984216d9a66160516d6ca602b75aa85b34d8d00bca7",
+      "proposalMetadataJsonSha256": "3bcbcd5535e4036fa536f2eea5c196c7a5a2b77f54043dfeae84bd823d64d0ec",
+      "contentHash": "b5dd73598acd9b5b51e9a53c212386e3ac9516d8cc3543ef959f8f28f5d104fb",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 8,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 92,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "임의 겨울 1–2 lb·5 lb 금지·실내외 일률 처방을 모두 제거하고 Wilson 정성 가이드와 ITF 기술 자료의 한계를 밝힌다.",
+        "공·코트 차이에는 변경 보류, 스트링 이력 불명에는 기존 세팅 확인, 반복 불편에는 스트링어 상담, 지속/악화 통증에는 의료 평가라는 조건별 선택표가 있다.",
+        "네 항목 기록이 실제 스트링어 질문으로 바뀌는 가상 대화가 추가됐고 일반 장비 구매 글과 의도를 구분한다. 두 표에 caption·scope가 있다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "reason": "제조사 하향 방향은 정성 조언이며 개별 장력 결과나 통증 원인을 보장하지 않는다.",
+          "location": "Wilson Korea 정성 팁과 통증 주의 문단",
+          "fix": "수정 시에도 인과·결과 단정을 피하고 실제 조건 확인 또는 전문가 판단의 경계를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "reason": "ITF 2019 기술 자료·Wilson Korea·ITF 부상 글을 연구자 출처 패킷과 대조했으며 원문 독립 재열람은 하지 않았다.",
+          "location": "ITF 스트링·공 시험, Wilson Korea 및 ITF 팔꿈치 링크",
+          "fix": "더 구체적 수치나 권고를 추가할 때 해당 1차 자료의 문장·적용 범위를 다시 직접 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "reason": "결정표는 선택지를 좁히지만 특정 제품·장력 결론은 실제 세팅과 스트링어 확인에 맡긴다.",
+          "location": "기록 뒤 선택할 다음 행동 표",
+          "fix": "향후 독자 테스트에서 자주 막히는 조건이 확인되면 그 조건의 가상 선택 예시를 추가한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "reason": "한 개의 가상 상담 대화가 적용을 설명하나 여러 소재별 실제 비교값은 제시하지 않는다.",
+          "location": "스트링어에게 가져갈 메모 예시",
+          "fix": "새 근거가 확보되면 서로 다른 조건의 추가 예시를 넣되 관찰을 측정 결과처럼 쓰지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 2,
+          "reason": "두 표와 상담 예시가 생기면서 고정 수치/진단 아님이라는 경계 문구가 다소 반복된다.",
+          "location": "본문의 고정 처방 아님·개인 상담 한계 문구",
+          "fix": "중복되는 경계 문구를 압축하고 필요한 안전 안내 한 번은 남긴다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "reason": "겨울 장력 판단에 충실하지만 개별 라켓 권장 범위의 실제 값은 독자가 제품별로 확인해야 한다.",
+          "location": "겨울 장력 제목과 일반 장비 구매 글 연결 문단",
+          "fix": "연결 대상의 실제 내용과 색인 상태를 재확인하고 독자가 찾는 세부 과제에 맞는 안내를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "reason": "두 표의 caption·scope, 모바일 포커스/스크롤, FAQ 키보드는 확인했으나 스크린리더 순서·계측 대비는 미확인이다.",
+          "location": "두 스트링 표와 390px 모바일·FAQ 검사",
+          "fix": "스크린리더 읽기 순서와 측정 대비를 추가 점검한 뒤 만점 여부를 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "itf-strings",
+        "itf-ball-climate",
+        "wilson-korea-string-guide",
+        "itf-elbow-equipment"
+      ],
+      "uiVerifiedAt": "2026-10-20T09:21:35.260530+00:00",
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/equipment-court-local-validation.json",
+        ".goal-harness/content-90-20261020/equipment-court-preview-checks.json",
+        "output/playwright/content-90-equipment-court-20261020/"
+      ]
+    },
+    {
+      "route": "/blog/aw-006-tennis-guide",
+      "kind": "existing_blog",
+      "readerQuestion": "라켓·스트링·테니스화를 구매하기 전 무엇을 시타·점검하고 어떻게 결론을 보류할까?",
+      "proposalBodyJsonSha256": "ff2a50523999f5ba06e12ae293b6495f7ea8b24dd28dcd8baa94827ba5962b16",
+      "proposalMetadataJsonSha256": "6c5f1223aa39189e01b2b01c4427f92aca2879750fd9704b93c20aafa9bb06e6",
+      "contentHash": "88b216dfafd95a61fc5c30e8d35e58f3b78b6eb98aca48f00b86ea66dc5b5ca0",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 18,
+        "depth": 13,
+        "language": 9,
+        "intent": 9,
+        "accessibility": 4
+      },
+      "total": 91,
+      "verdict": "PASS",
+      "vetoes": [],
+      "strengths": [
+        "라켓 시타·스트링·신발 점검으로 제목을 바로잡고, 고정 30분·샷 수·반복 횟수를 공식 최소 조건으로 만들지 않는다.",
+        "기존 장비와 후보의 스트링, 공, 코트, 워밍업·피로 순서 차이를 기록하고 비교 불가 시 구매 결론을 보류한다.",
+        "겨울 장력만 문제인 독자에게 별도 글을 안내하고, 통증은 구매 시험으로 진단하지 않는다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "reason": "장비 체감의 여러 변수를 나열하지만 각 원인의 크기는 이 글로 확정하지 않는다.",
+          "location": "시타 조건 설명과 통증 경계 문단",
+          "fix": "수정 시에도 인과·결과 단정을 피하고 실제 조건 확인 또는 전문가 판단의 경계를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "reason": "USTA/ITF 근거는 출처 패킷과 맞지만 이번 편집 재검토에서 공식 원문을 재열람하지 않았다.",
+          "location": "USTA 시작·ITF 스트링/공/팔꿈치 링크",
+          "fix": "더 구체적 수치나 권고를 추가할 때 해당 1차 자료의 문장·적용 범위를 다시 직접 확인한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 2,
+          "reason": "조건 기록과 보류 기준은 실행 가능하나 예산·시타 대여 제한별 구매 분기까지 구체화하지 않는다.",
+          "location": "시타 비교 예시와 구매 결론 보류 단락",
+          "fix": "향후 독자 테스트에서 자주 막히는 조건이 확인되면 그 조건의 가상 선택 예시를 추가한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 2,
+          "reason": "한 번에 한 조건을 보려는 비교법은 적절하지만 두 실제 후보의 완결된 비교 사례는 없다.",
+          "location": "선택 가능한 비교 기록 예시",
+          "fix": "새 근거가 확보되면 서로 다른 조건의 추가 예시를 넣되 관찰을 측정 결과처럼 쓰지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "reason": "조건 차이 기록과 단정 금지 설명이 후반에 일부 되풀이된다.",
+          "location": "시타 비교와 구매 결론 보류 단락",
+          "fix": "중복되는 경계 문구를 압축하고 필요한 안전 안내 한 번은 남긴다."
+        },
+        {
+          "dimension": "intent",
+          "points": 1,
+          "reason": "범용 장비 구매 결정에 맞지만 신발 종류별 코트 적합성 세부 비교는 별도 자료가 필요하다.",
+          "location": "겨울 스트링 텐션 점검 연결 문단",
+          "fix": "연결 대상의 실제 내용과 색인 상태를 재확인하고 독자가 찾는 세부 과제에 맞는 안내를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "reason": "표·FAQ의 화면 및 키보드 점검은 통과했지만 스크린리더·계측 대비는 독립 확인하지 않았다.",
+          "location": "시타 전 조건 표와 390px 모바일·FAQ 검사",
+          "fix": "스크린리더 읽기 순서와 측정 대비를 추가 점검한 뒤 만점 여부를 재평가한다."
+        }
+      ],
+      "sourceIds": [
+        "usta-racket-demo",
+        "itf-strings",
+        "itf-ball-climate",
+        "itf-elbow-equipment"
+      ],
+      "uiVerifiedAt": "2026-10-20T09:21:35.260530+00:00",
+      "uiEvidence": [
+        ".goal-harness/content-90-20261020/equipment-court-local-validation.json",
+        ".goal-harness/content-90-20261020/equipment-court-preview-checks.json",
+        "output/playwright/content-90-equipment-court-20261020/"
+      ]
+    }
+  ],
+  "checkedAt": "2026-10-20T18:26:00+09:00"
+}

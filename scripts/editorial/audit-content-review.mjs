@@ -186,6 +186,48 @@ export function findChangedRoutes(ledger, inventory, { baselineRenderHashes = ne
 
 // Original raw hashes remain tied to the frozen inventory. A newline migration
 // can only use the separate exact-match reconciliation, never an editable override.
+// A technical restoration does not approve editorial content. It can reconcile
+// one independently reviewed analytics module only when every other source,
+// asset and editorial content hash remains identical to the frozen baseline.
+export function reconcileTechnicalRestoration(proof, ledger, inventory, frozenRenderItems) {
+  if (proof?.schemaVersion !== 1 || proof?.kind !== "analytics-restoration"
+    || proof?.verdict !== "approved" || !isText(proof.author) || !isText(proof.reviewer)
+    || proof.author.trim().toLowerCase() === proof.reviewer.trim().toLowerCase()
+    || !isDate(proof.reviewedAt) || !isText(proof.reason)
+    || !/^[a-f0-9]{40}$/.test(proof.restoredFromCommit ?? "")
+    || proof.file !== "src/lib/analytics.ts" || !isHash(proof.beforeHash)
+    || !isHash(proof.afterHash) || proof.beforeHash === proof.afterHash
+    || !Array.isArray(proof.items) || proof.items.length === 0
+    || new Set(proof.items.map(item => item.route)).size !== proof.items.length) {
+    throw new Error("invalid independent technical restoration review");
+  }
+  const reconciled = new Map();
+  for (const item of proof.items) {
+    const entry = ledger.entries.find(entry => entry.route === item.route);
+    const current = inventory.items.find(entry => entry.route === item.route);
+    const frozen = frozenRenderItems.get(item.route);
+    const contentHash = current?.comparisonContentHash ?? current?.contentHash ?? current?.sourceHash;
+    const originalContentHash = entry?.before?.canonicalContentHash ?? entry?.before?.contentHash;
+    if (entry?.kind !== "tool_description_candidate" || !current || !frozen
+      || !isHash(originalContentHash) || contentHash !== originalContentHash
+      || item.contentHash !== contentHash || frozen.reviewSourceHashes?.[proof.file] !== proof.beforeHash
+      || item.beforeRenderHash !== frozen.renderDependencyHash
+      || item.afterRenderHash !== current.renderDependencyHash) {
+      throw new Error(`${item.route}: technical restoration content or preimage mismatch`);
+    }
+    const sources = { ...frozen.reviewSourceHashes, [proof.file]: proof.afterHash };
+    const expected = { reviewSourceHashes: sources, reviewAssetHashes: frozen.reviewAssetHashes };
+    if (hashValue({ reviewSourceHashes: frozen.reviewSourceHashes, reviewAssetHashes: frozen.reviewAssetHashes }) !== frozen.renderDependencyHash
+      || hashValue(sources) !== hashValue(current.reviewSourceHashes)
+      || hashValue(frozen.reviewAssetHashes) !== hashValue(current.reviewAssetHashes)
+      || hashValue(expected) !== current.renderDependencyHash) {
+      throw new Error(`${item.route}: technical restoration exceeds reviewed module delta`);
+    }
+    reconciled.set(item.route, current.renderDependencyHash);
+  }
+  return reconciled;
+}
+
 export function validateBaselineEvidence(ledger, inventory, { readEvidence } = {}) {
   const errors = [];
   const renderHashes = new Map();
@@ -231,9 +273,14 @@ export function validateBaselineEvidence(ledger, inventory, { readEvidence } = {
       }
     }
     if (inventory.items.some(item => item.renderDependencyHash)) {
-      for (const [route, item] of indexEvidence(ledger.baseline.renderDependencyInventoryPath)) {
+      const frozenRenderItems = indexEvidence(ledger.baseline.renderDependencyInventoryPath);
+      for (const [route, item] of frozenRenderItems) {
         if (!isHash(item.renderDependencyHash)) errors.push(`${route}: invalid frozen render dependency hash`);
         else renderHashes.set(route, item.renderDependencyHash);
+      }
+      if (ledger.baseline.technicalDependencyReviewPath) {
+        const reviewed = reconcileTechnicalRestoration(read(ledger.baseline.technicalDependencyReviewPath), ledger, inventory, frozenRenderItems);
+        for (const [route, hash] of reviewed) renderHashes.set(route, hash);
       }
     }
   } catch (error) {
