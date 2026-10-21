@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-21T01:55:00+09:00",
+  "result": "PASS",
+  "scope": "Current local source only; no serving integration or production deployment proof",
+  "fullVerifyExitCode": 0,
+  "lintExitCode": 0,
+  "typecheckExitCode": 0,
+  "buildExitCode": 0,
+  "lintWarnings": 4,
+  "npmAuditProduction": {
+    "high": 0,
+    "critical": 0,
+    "moderate": 1,
+    "low": 2
+  },
+  "reviewSha256": "df6fc1401f01c4f7ef7373449502b921742a7ad7df5f3fb5eec328ce2f12fe31",
+  "reviewProposalAndSourceHashes": "PASS",
+  "production": "pending"
+}

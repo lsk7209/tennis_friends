@@ -51,22 +51,6 @@ const EVENT_PARAMETER_ALLOWLIST: Record<string, ReadonlySet<string>> = {
 
 const SENSITIVE_VALUE_PATTERN = /@|(?:^|\D)01[016789][^0-9]*\d{3,4}[^0-9]*\d{4}(?:\D|$)/;
 
-/** Preserve inbound campaign attribution without sending search terms or the raw URL. */
-export function getSafeCampaignParams(search: string): Record<string, string> {
-  const fields: Record<string, string> = {
-    utm_source: "campaign_source", utm_medium: "campaign_medium",
-    utm_campaign: "campaign_name", utm_id: "campaign_id", utm_content: "campaign_content",
-  };
-  const sensitive = /@|(?:^|\D)01[016789][^0-9]*\d{3,4}[^0-9]*\d{4}(?:\D|$)/;
-  const query = new URLSearchParams(search);
-  const campaign: Record<string, string> = {};
-  for (const [key, field] of Object.entries(fields)) {
-    const value = query.get(key)?.trim();
-    if (value && !sensitive.test(value)) campaign[field] = value.slice(0, 100);
-  }
-  return campaign;
-}
-
 export function sanitizeAnalyticsEvent(
   eventName: string,
   params: GtagParams = {},
@@ -149,30 +133,8 @@ export function getQueuedAnalyticsEventCount(): number {
 export function trackEvent(eventName: string, params: GtagParams = {}): TrackEventResult {
   const sanitizedParams = sanitizeAnalyticsEvent(eventName, params);
   if (!sanitizedParams) return "dropped";
-  if (typeof window === "undefined") return "dropped";
-  const eventParams = {
-    ...sanitizedParams,
-    page_location: `${window.location.origin}${window.location.pathname}`,
-  };
-  if (!isGAEnabled()) return enqueue(eventName, eventParams, Date.now());
-  return dispatch(eventName, eventParams);
-}
-
-function getSafePageDefaults() {
-  let pageReferrer = "";
-  try {
-    const referrer = new URL(document.referrer);
-    if (referrer.protocol === "http:" || referrer.protocol === "https:") {
-      pageReferrer = `${referrer.origin}${referrer.pathname}`;
-    }
-  } catch {
-    // No valid HTTP referrer.
-  }
-  return {
-    page_location: `${window.location.origin}${window.location.pathname}`,
-    page_referrer: pageReferrer,
-    page_title: window.location.pathname === "/search" ? "사이트 검색" : document.title,
-  };
+  if (!isGAEnabled()) return enqueue(eventName, sanitizedParams, Date.now());
+  return dispatch(eventName, sanitizedParams);
 }
 
 /**
@@ -181,12 +143,11 @@ function getSafePageDefaults() {
 export function trackPageView(url: string, measurementId: string): void {
   if (!isGAEnabled()) return;
   try {
-    const pageDefaults = getSafePageDefaults();
-    window.gtag("set", pageDefaults);
-    window.gtag("config", measurementId, { ...pageDefaults, update: true, send_page_view: false });
+    const pageLocation = `${window.location.origin}${window.location.pathname}`;
     window.gtag("event", "page_view", {
       page_path: url,
-      ...pageDefaults,
+      page_location: pageLocation,
+      page_title: document.title,
       send_to: measurementId,
     });
   } catch {

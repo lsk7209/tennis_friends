@@ -565,5 +565,25 @@ export const october2026ScheduledPosts = [
       "목표 설정",
       "테니스 입문"
     ]
+  },
+  {
+    "id": "oct26-31",
+    "slug": "oct26-pre-serve-routine",
+    "title": "서브 직전 5초 프리서브 루틴: 호흡·바운드·타깃 정하기",
+    "excerpt": "중요한 포인트에서 서브 성공률을 지키려면 공을 튀기는 횟수, 타깃 확인, 호흡을 일정한 순서로 정해 두어야 합니다.",
+    "badge": "실전 루틴",
+    "category": "멘탈 트레이닝",
+    "date": "2026-10-31",
+    "scheduledAt": "2026-10-31T09:00:00+09:00",
+    "readTime": "7분",
+    "badgeColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+    "categoryColor": "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+    "tags": [
+      "서브 루틴",
+      "테니스 멘탈",
+      "프리서브",
+      "서브 성공률"
+    ],
+    "publicationState": "published"
   }
 ];

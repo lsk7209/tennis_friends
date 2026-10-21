@@ -3559,6 +3559,19 @@ export const allBlogPosts = [
   ...reviewedSeptember2026Posts,
   ...approvedAugust2026Posts,
   {
+    "id": "racket-grip-size-and-overgrip-guide",
+    "slug": "racket-grip-size-and-overgrip-guide",
+    "tags": ["그립 사이즈", "오버그립", "라켓 관리", "테니스 엘보", "장비 가이드"],
+    "title": "라켓 그립 사이즈 측정법과 오버그립 교체 주기: 손바닥 피로와 엘보 줄이기",
+    "excerpt": "그립이 너무 굵거나 얇으면 손목과 팔꿈치에 무리가 옵니다. 손가락 한 마디(Index Finger) 검사법, 둘레 규격표, 원그립과 오버그립의 구분, 사용 시간별 교체 주기를 체계적으로 정리했습니다.",
+    "badge": "장비 관리",
+    "category": "장비 가이드",
+    "date": "2026-10-20",
+    "readTime": "8분",
+    "badgeColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    "categoryColor": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+  },
+  {
     "id": "tennis-western-grip-advantages",
     "slug": "tennis-western-grip-advantages",
     "tags": ["웨스턴 그립","그립","탑스핀","클레이코트"],

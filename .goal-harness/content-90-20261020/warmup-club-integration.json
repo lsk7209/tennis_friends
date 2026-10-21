@@ -1,0 +1,58 @@
+{
+  "appliedAt": "2026-10-20T16:39:25.633Z",
+  "proposalHash": "df6fc1401f01c4f7ef7373449502b921742a7ad7df5f3fb5eec328ce2f12fe31",
+  "routes": [
+    "/blog/aw-069-warmup-10-club-match",
+    "/blog/aw-070-record",
+    "/blog/aw-071-tennis-guide",
+    "/blog/aw-072-serve",
+    "/blog/aw-073-doubles-5"
+  ],
+  "allowedBodyObjects": 5,
+  "allowedMetadataObjects": 5,
+  "nonTargetBytesUnchanged": true,
+  "files": [
+    {
+      "file": "src/data/blog-content/part11-article-writer-300.ts",
+      "backup": ".goal-harness/content-90-20261020/source-backups/warmup-club-src_data_blog-content_part11-article-writer-300.ts-56280c07b825.txt",
+      "beforeHash": "56280c07b8252392e542ad802dfb8ce442f787aeedc6a56e33f940af1c93176a",
+      "afterHash": "39c65e1d1c3ed946d0d26f80050ca0a3fcff4145888f6f65239577f696411a80",
+      "targetSlugs": [
+        "aw-069-warmup-10-club-match"
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-aw-300.js",
+      "backup": ".goal-harness/content-90-20261020/source-backups/warmup-club-src_data_blog-posts-aw-300.js-808675dc5cc8.txt",
+      "beforeHash": "808675dc5cc824e7c146b77a7cfe61dd03385dcfd137fad6721a17626437b353",
+      "afterHash": "2b2564d4a4d22a99b1ebe14c0115e4da03bb4dfecaaecf53363941d1da620915",
+      "targetSlugs": [
+        "aw-069-warmup-10-club-match"
+      ]
+    },
+    {
+      "file": "src/data/blog-content/part16-quality-rewrites.ts",
+      "backup": ".goal-harness/content-90-20261020/source-backups/warmup-club-src_data_blog-content_part16-quality-rewrites.ts-db99c806a52e.txt",
+      "beforeHash": "db99c806a52e6bf1d2053bc1b2a6ee23a83b30d9e2ef4181c24ff42b70188e61",
+      "afterHash": "3ee8a338c873ea0a08512c1a09f71f8bd51bfeea4edb88bb4cdc28544f0d389a",
+      "targetSlugs": [
+        "aw-070-record",
+        "aw-071-tennis-guide",
+        "aw-072-serve",
+        "aw-073-doubles-5"
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part16-overrides.js",
+      "backup": ".goal-harness/content-90-20261020/source-backups/warmup-club-src_data_blog-posts-part16-overrides.js-61987fb7e875.txt",
+      "beforeHash": "61987fb7e875c9e69838ace28e0eaa04262489272c5a3274e5194532bd934c8a",
+      "afterHash": "d6667f14a150520ede2ab7ccf067ea72e8f3add148c47468766a4499c7eebbcf",
+      "targetSlugs": [
+        "aw-070-record",
+        "aw-071-tennis-guide",
+        "aw-072-serve",
+        "aw-073-doubles-5"
+      ]
+    }
+  ]
+}

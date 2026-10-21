@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-10-20T18:02:05.997Z",
+  "scope": "Local source/build/targeted lint/UI only; final independent review and full project verification verified",
+  "buildExitCode": 0,
+  "targetedLintExitCode": 0,
+  "typecheckExitCode": 0,
+  "typecheckEvidence": "Successful Next build TypeScript stage; standalone full-project typecheck passed exit 0",
+  "cases": 20,
+  "bodyBlocks": 40,
+  "schemaHeadlinesAndOriginalDates": "PASS(original publication 2026-05-15 and updatedAt 2026-10-21 KST)",
+  "indexabilityPreserved": {
+    "indexFollowRoutes": 4,
+    "noindexFollowRoutes": [
+      "/blog/aw-069-warmup-10-club-match"
+    ],
+    "baseline": ".goal-harness/content-90-20261020/warmup-club-indexability-baseline.json"
+  },
+  "integration": ".goal-harness/content-90-20261020/warmup-club-integration.json",
+  "limits": [
+    "Local proof only; serving/live pending",
+    "No screen-reader or measured contrast verification",
+    "Full npm verify passed exit 0"
+  ]
+}

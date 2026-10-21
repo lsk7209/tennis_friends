@@ -1,0 +1,31 @@
+{
+  "source": "src/lib/blog-quality.ts",
+  "sourceSha256": "407384f96a087c61222113f121c94663aebd3f8a4e8c2814913230fac964e1b7",
+  "items": [
+    {
+      "route": "/blog/aw-069-warmup-10-club-match",
+      "effectiveIndexable": false,
+      "robots": "noindex, follow"
+    },
+    {
+      "route": "/blog/aw-070-record",
+      "effectiveIndexable": true,
+      "robots": "index, follow"
+    },
+    {
+      "route": "/blog/aw-071-tennis-guide",
+      "effectiveIndexable": true,
+      "robots": "index, follow"
+    },
+    {
+      "route": "/blog/aw-072-serve",
+      "effectiveIndexable": true,
+      "robots": "index, follow"
+    },
+    {
+      "route": "/blog/aw-073-doubles-5",
+      "effectiveIndexable": true,
+      "robots": "index, follow"
+    }
+  ]
+}

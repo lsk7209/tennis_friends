@@ -1,0 +1,305 @@
+{
+  "checkedAtUtc": "2026-10-20T13:02:58Z",
+  "purpose": "Actual-read official primary source packet for frozen aw069–078 titles and effective bodies; claim boundaries for writer, not content approval.",
+  "routeMappings": [
+    {
+      "route": "/blog/aw-069-warmup-10-club-match",
+      "sourceIds": [
+        "usta-warmup10",
+        "aha-warmup",
+        "itf-rules2026"
+      ]
+    },
+    {
+      "route": "/blog/aw-070-record",
+      "sourceIds": [
+        "usta-fac2026",
+        "usta-scoring",
+        "itf-rules2026"
+      ]
+    },
+    {
+      "route": "/blog/aw-071-tennis-guide",
+      "sourceIds": [
+        "usta-routine",
+        "usta-focus",
+        "itf-rules2026"
+      ]
+    },
+    {
+      "route": "/blog/aw-072-serve",
+      "sourceIds": [
+        "usta-return-first-second",
+        "itf-rules2026"
+      ]
+    },
+    {
+      "route": "/blog/aw-073-doubles-5",
+      "sourceIds": [
+        "usta-warrior-doubles",
+        "usta-school-doubles",
+        "usta-partner-coach",
+        "itf-rules2026"
+      ]
+    },
+    {
+      "route": "/blog/aw-074-court-beginner",
+      "sourceIds": [
+        "nhs-ankle",
+        "newcastle-ankle"
+      ]
+    },
+    {
+      "route": "/blog/aw-075-club-record",
+      "sourceIds": [
+        "usta-adult-league",
+        "usta-flex-guidelines",
+        "usta-fac2026"
+      ]
+    },
+    {
+      "route": "/blog/aw-076-mental",
+      "sourceIds": [
+        "usta-routine",
+        "usta-focus",
+        "itf-rules2026"
+      ]
+    },
+    {
+      "route": "/blog/aw-077-serve-return",
+      "sourceIds": [
+        "usta-lefty-return",
+        "usta-return-first-second",
+        "itf-rules2026"
+      ]
+    },
+    {
+      "route": "/blog/aw-078-doubles-serve",
+      "sourceIds": [
+        "usta-warrior-doubles",
+        "usta-partner-coach",
+        "usta-netgen-yellow",
+        "itf-rules2026"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "usta-warmup10",
+      "type": "national-federation-coaching-example",
+      "title": "USTA: Improve Your Game, The 10-minute Warm-up",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/improve-your-tennis-game--the-10-minute-warm-up.html",
+      "actualReadClaim": "USTA offers a ten-part, one-minute-each pre-play hitting example: mini-tennis, baseline directions, volley transition, and serve–return–next shot.",
+      "routeMappings": [
+        "/blog/aw-069-warmup-10-club-match"
+      ],
+      "limits": "This is an optional coaching drill, not an ITF warm-up entitlement, universal preparation duration, injury-prevention trial, or postmatch cooldown.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "aha-warmup",
+      "type": "professional-health-organization-guidance",
+      "title": "American Heart Association: Warm Up, Cool Down",
+      "url": "https://www.heart.org/en/healthy-living/exercise-and-physical-activity/fitness-basics/warm-up-cool-down",
+      "actualReadClaim": "A gradual low-intensity start raises heart rate and breathing before moderate or vigorous activity; the AHA gives slower versions of the planned activity as examples.",
+      "routeMappings": [
+        "/blog/aw-069-warmup-10-club-match"
+      ],
+      "limits": "General exercise advice; 5–10 minutes is illustrative, not a tennis-club prescription or guaranteed injury prevention. Do not confuse gradual warm-up with aw064 postmatch cooldown.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "itf-rules2026",
+      "type": "international-federation-current-rules",
+      "title": "ITF: 2026 Rules of Tennis",
+      "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+      "actualReadClaim": "Rule 5 scores standard games with server score first; Rules 8, 14–17 govern server/receiver and service position/order; Rules 19–20/24 cover second-service fault and point loss; Rule 29 says continuous play with up to 25 seconds between points and limited official warm-up. Appendix VI permits approved alternative scoring.",
+      "routeMappings": [
+        "/blog/aw-069-warmup-10-club-match",
+        "/blog/aw-070-record",
+        "/blog/aw-071-tennis-guide",
+        "/blog/aw-072-serve",
+        "/blog/aw-073-doubles-5",
+        "/blog/aw-076-mental",
+        "/blog/aw-077-serve-return",
+        "/blog/aw-078-doubles-serve"
+      ],
+      "limits": "Current 2026 standard rules, but event-approved alternatives and local regulations can differ. Rule 29's official on-court warm-up maximum is distinct from a separate pre-court personal warm-up; do not promise extra recovery time or advise routine length equal to the whole interval.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-fac2026",
+      "type": "national-federation-current-self-officiating-code",
+      "title": "USTA: Friend at Court 2026, The Code §§31–32",
+      "url": "https://www.usta.com/content/dam/usta/2026-pdfs/2026-friend-at-court.pdf",
+      "actualReadClaim": "In USTA unofficiated play, the server announces game score before its first point and point score before later points. For score disputes, The Code prefers counting agreed points/games and replaying only disputed ones, then mutually agreed score, then racket spin/coin toss; special uncertain service-side cases are also detailed.",
+      "routeMappings": [
+        "/blog/aw-070-record",
+        "/blog/aw-075-club-record"
+      ],
+      "limits": "US/USTA self-officiated code, not universal Korean club adjudication or authority to order an opponent. Adapt as a transparent agreed procedure and follow event rules/official when present.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-scoring",
+      "type": "national-federation-rules-explainer",
+      "title": "USTA Officiating: Tennis Scoring, Points, Sets & Games",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/tennis-scoring-rules.html",
+      "actualReadClaim": "USTA explains love/15/30/40, deuce/advantage and that server-side score is stated first; point, game, set and match are separate counting levels.",
+      "routeMappings": [
+        "/blog/aw-070-record"
+      ],
+      "limits": "Explainer includes event-specific examples; check agreed format and current ITF/competition rules rather than universalizing one tie-break convention.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-routine",
+      "type": "national-federation-mental-skills-coaching",
+      "title": "USTA: Green Light, Yellow Light, Routines to Succeed on the Tennis Court",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/green-light--yellow-light--routines-to-succeed-on-the-tennis-cou.html",
+      "actualReadClaim": "USTA mental-skills specialist describes individualized between-point respond/recover/refocus/ready and brief recovery after mistakes or anxiety before choosing the next point plan.",
+      "routeMappings": [
+        "/blog/aw-071-tennis-guide",
+        "/blog/aw-076-mental"
+      ],
+      "limits": "Coaching framework, not a medical breathing dose, extra permitted time, physiological recovery proof, or guaranteed cure after a double fault or long rally.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-focus",
+      "type": "national-federation-mental-skills-coaching",
+      "title": "USTA: How to Stay Focused During a Match",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/how-to-stay-focused-during-a-match.html",
+      "actualReadClaim": "USTA recommends a clear game plan, one-point-at-a-time/process cues and a consistent between-point routine, including planning serve/return plus one.",
+      "routeMappings": [
+        "/blog/aw-071-tennis-guide",
+        "/blog/aw-076-mental"
+      ],
+      "limits": "Mental-skills examples; no fixed breath count, point-win probability, or prescribed five-step recovery sequence.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-return-first-second",
+      "type": "national-federation-coaching-tip",
+      "title": "USTA: Tennis Strategy, Returning First and Second Serves",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/tennis-strategy--returning-first-and-second-serves.html",
+      "actualReadClaim": "USTA differentiates higher-percentage first-serve returns from a second-serve opportunity to step in and hit with depth/spin; wide/body/T placement changes suggested target.",
+      "routeMappings": [
+        "/blog/aw-072-serve",
+        "/blog/aw-077-serve-return"
+      ],
+      "limits": "Second serve is not always short, slow, or attackable. Step-in and aggression are situational coaching suggestions, not automatic winners or mandatory court coordinates.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-warrior-doubles",
+      "type": "national-federation-curriculum",
+      "title": "USTA Foundation: Warrior Tennis Curriculum, All Positions Doubles (p.40)",
+      "url": "https://www.usta.com/content/dam/usta/pdfs/20180302_WoundedWarriorCurricula.pdf",
+      "actualReadClaim": "USTA curriculum separates server, server's partner, returner and returner's partner; in doubles, cover the area of the current position and call a switch when a partner is better placed for a shot.",
+      "routeMappings": [
+        "/blog/aw-073-doubles-5",
+        "/blog/aw-078-doubles-serve"
+      ],
+      "limits": "Adapted-program training material, not a rule giving permanent ownership of middle balls or a universal exact formation. Its illustrated coordinates should not be prescribed for all players.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-school-doubles",
+      "type": "national-federation-education-curriculum",
+      "title": "USTA Net Generation School Manual Grades 7–12, Lesson 8 doubles",
+      "url": "https://www.usta.com/content/dam/usta/content-fragments/tennis-service-center/assets/pdfs/Net-Generation-Schools-Manual-Grade-7-to-12.pdf",
+      "actualReadClaim": "In a school doubles activity, partners are encouraged to call 'mine' or 'yours' when moving toward the same ball; serving/returning roles are represented.",
+      "routeMappings": [
+        "/blog/aw-073-doubles-5"
+      ],
+      "limits": "Youth education activity, not a legal collision protocol or guaranteed injury prevention. Yielding/stopping to avoid collision is an editorial safety judgment, not a named ITF rule.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-partner-coach",
+      "type": "national-federation-coach-interview",
+      "title": "USTA Texas: Ask a Coach, Competing with a New Doubles Partner",
+      "url": "https://www.usta.com/en/home/stay-current/texas/ask-a-coach-brandi-bratek.html",
+      "actualReadClaim": "Coach Bratek recommends communicating expected serve/return and choosing partner positioning accordingly; she gives an example of asking a partner to move back when a return or serve may expose them.",
+      "routeMappings": [
+        "/blog/aw-073-doubles-5",
+        "/blog/aw-078-doubles-serve"
+      ],
+      "limits": "Contextual coach interview, not a fixed court map, serve-and-volley mandate, or formal rule of shot ownership.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "nhs-ankle",
+      "type": "public-health-medical-guidance",
+      "title": "NHS: Ankle Pain",
+      "url": "https://www.nhs.uk/symptoms/foot-pain/ankle-pain/",
+      "actualReadClaim": "NHS warns against self-diagnosis; worsening/recurrent pain or impaired activity merits clinician review, and severe pain, deformity, popping injury or inability to walk warrants urgent help.",
+      "routeMappings": [
+        "/blog/aw-074-court-beginner"
+      ],
+      "limits": "UK care pathways and phone numbers are jurisdiction-specific; transfer the clinical red flags, not NHS service instructions or exact self-treatment/return-to-play schedule.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "newcastle-ankle",
+      "type": "public-hospital-medical-guidance",
+      "title": "Newcastle Hospitals NHS Foundation Trust: Ankle Pain",
+      "url": "https://www.newcastle-hospitals.nhs.uk/services/newcastle-occupational-health-service/information-for-staff/physiotherapy/self-help-leaflets/ankle-pain-2/",
+      "actualReadClaim": "NHS hospital leaflet specifically lists ankle giving way during use, inability to move it, deformity, and severe pain with inability to bear weight after injury as reasons for immediate medical attention.",
+      "routeMappings": [
+        "/blog/aw-074-court-beginner"
+      ],
+      "limits": "Occupational-health leaflet, not tennis-specific diagnosis or rehabilitation; do not infer a safe pain threshold or prescribe stability drills for recurrent giving-way.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-adult-league",
+      "type": "national-federation-program-guidance",
+      "title": "USTA: About USTA League",
+      "url": "https://www.usta.com/en/home/play/adult-tennis/programs/national/about-usta-league.html?intloc=adultleftnav",
+      "actualReadClaim": "USTA states local leagues vary by level, age and offered format, and advises contacting a local league coordinator for fit; formats can vary locally.",
+      "routeMappings": [
+        "/blog/aw-075-club-record"
+      ],
+      "limits": "US USTA league illustration, not proof of availability, eligibility, rating equivalence or fee at any Korean club.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-flex-guidelines",
+      "type": "national-federation-program-operations",
+      "title": "USTA Flex League: Match Guidelines Explained (July 2026)",
+      "url": "https://customercare.usta.com/hc/en-us/articles/39736129466772-USTA-Flex-League-Match-Guidelines-Explained",
+      "actualReadClaim": "USTA Flex asks players to coordinate time/location, agree scoring format unless league rules prescribe it, and handle court booking fees; it distinguishes reporting format.",
+      "routeMappings": [
+        "/blog/aw-075-club-record"
+      ],
+      "limits": "Specific to USTA Flex in the US. Use to justify questions to an organizer, not to assert actual local fees, venue policy, ball supply or legal obligations.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-lefty-return",
+      "type": "national-federation-coaching-example",
+      "title": "USTA: Improve Your Game, Returning a Lefty Serve",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/improve-your-tennis-game--returning-a-lefty-serve.html",
+      "actualReadClaim": "USTA says a left-handed slice serve can move toward the returner's left and gives a lefty-specific starting-position/return example.",
+      "routeMappings": [
+        "/blog/aw-077-serve-return"
+      ],
+      "limits": "This is the already-covered lefty case (aw052), not a direction rule for every slice serve. For aw077 observe actual curve, bounce and landing spot before adjusting.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    },
+    {
+      "id": "usta-netgen-yellow",
+      "type": "national-federation-practice-plan",
+      "title": "USTA Net Generation Yellow Ball Practice Plan, One Side Attack",
+      "url": "https://www.usta.com/content/dam/usta/content-fragments/tennis-service-center/assets/pdfs/Net-Generation-Practice-Plan-Yellow.pdf",
+      "actualReadClaim": "A doubles practice game deliberately contrasts server following a first serve to net with server staying back after a second serve, and explicitly permits a two-back progression.",
+      "routeMappings": [
+        "/blog/aw-078-doubles-serve"
+      ],
+      "limits": "A constrained drill for youth/coaching, not a universal first-serve/second-serve law or proof that either formation always works. Use only to show tactical options.",
+      "checkedAtUtc": "2026-10-20T13:02:58Z"
+    }
+  ]
+}

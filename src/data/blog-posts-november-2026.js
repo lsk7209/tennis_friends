@@ -1,6 +1,21 @@
 // 2026-11 주간 편집 원고. 독립 코드·내용 검토 통과 후 예약 공개 (09:00 KST).
 export const november2026ScheduledPosts = [
   {
+    id: "nov26-00",
+    slug: "nov26-forehand-direction-selection",
+    title: "포핸드 크로스 vs 다운더라인: 선택의 3대 조건과 네트 마진",
+    excerpt: "크로스와 다운더라인 중 어디로 칠지 고민될 때 공의 높이, 타점 위치, 네트 중앙 높이 차이를 기준으로 판단하는 방법입니다.",
+    badge: "전술 판단",
+    category: "기술 가이드",
+    date: "2026-11-01",
+    scheduledAt: "2026-11-01T09:00:00+09:00",
+    publicationState: "published",
+    readTime: "8분",
+    badgeColor: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    categoryColor: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+    tags: ["포핸드", "크로스코트", "다운더라인", "테니스 전술"],
+  },
+  {
     id: "nov26-01",
     slug: "nov26-ntrp-observation-plan",
     title: "NTRP 자가점검 뒤 4주: 점수 대신 경기 장면을 관찰하는 계획",
@@ -14,6 +29,21 @@ export const november2026ScheduledPosts = [
     badgeColor: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     categoryColor: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     tags: ["NTRP 자가점검", "경기 관찰", "연습 계획", "동호회 테니스"],
+  },
+  {
+    id: "nov26-05",
+    slug: "nov26-doubles-poaching-timing",
+    title: "복식 전위의 포칭 타이밍: 서버의 코스와 상대 리시버 시선 읽기",
+    excerpt: "무작정 네트 중앙으로 뛰어들기 전에 서버의 코스, 리시버의 준비 자세, 출발 시점을 맞추는 복식 전위의 포칭 기준입니다.",
+    badge: "복식 전술",
+    category: "복식 전략",
+    date: "2026-11-03",
+    scheduledAt: "2026-11-03T09:00:00+09:00",
+    publicationState: "published",
+    readTime: "8분",
+    badgeColor: "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+    categoryColor: "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+    tags: ["복식 전술", "포칭 발리", "네트 플레이", "동호회 복식"],
   },
   {
     id: "nov26-02",

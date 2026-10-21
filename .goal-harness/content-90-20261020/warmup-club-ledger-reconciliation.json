@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-20T16:59:04.965Z",
+  "routes": [
+    "/blog/aw-069-warmup-10-club-match",
+    "/blog/aw-070-record",
+    "/blog/aw-071-tennis-guide",
+    "/blog/aw-072-serve",
+    "/blog/aw-073-doubles-5"
+  ],
+  "backup": ".goal-harness/content-90-20261020/source-backups/ledger-before-warmup-club-approval-a80eaaac08f0.json",
+  "entriesPreserved": 1677,
+  "dailyArticlesPreserved": 4,
+  "approved": 80,
+  "pending": 1597,
+  "servingDeployment": "pending"
+}
