@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-10-22T00:30:00.000Z",
+  "scope": "Local source/build/targeted lint/UI only; final independent review and full project verification verified",
+  "buildExitCode": 0,
+  "targetedLintExitCode": 0,
+  "typecheckExitCode": 0,
+  "typecheckEvidence": "Successful Next build TypeScript stage; standalone full-project typecheck passed exit 0",
+  "cases": 20,
+  "bodyBlocks": 40,
+  "schemaHeadlinesAndOriginalDates": "PASS(original publication 2026-05-15 and updatedAt 2026-10-22 KST)",
+  "indexabilityPreserved": {
+    "indexFollowRoutes": 5,
+    "noindexFollowRoutes": []
+  },
+  "integration": ".goal-harness/content-90-20261020/court-club-integration.json",
+  "limits": [
+    "Local proof only; serving/live pending",
+    "No screen-reader or measured contrast verification",
+    "Full npm verify passed exit 0"
+  ]
+}

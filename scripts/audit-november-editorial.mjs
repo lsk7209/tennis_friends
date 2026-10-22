@@ -10,8 +10,8 @@ const { allBlogPosts } = loadProjectSource("src/data/blog-posts.js");
 const { isPublishedBlogPost } = loadProjectSource("src/lib/blog-publish.ts");
 const knownBlog = new Set(allBlogPosts.map(p => p.slug));
 const { unavailableBlogSlugs } = loadProjectSource("src/data/blog-unavailable.js");
-assert.equal(posts.length, 8);
-assert.equal(new Set(posts.map(p => p.slug)).size, 8);
+assert.equal(posts.length, 30);
+assert.equal(new Set(posts.map(p => p.slug)).size, 30);
 for (const post of posts) {
   const entry = blogContentMap[post.slug];
   assert.ok(entry?.content, `missing November body ${post.slug}`);

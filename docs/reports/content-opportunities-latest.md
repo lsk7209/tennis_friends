@@ -1,4 +1,4 @@
-# Content Opportunity Briefs | 2026-06-02
+# Content Opportunity Briefs | 2026-10-21
 
 Source: `docs/reports/gsc-pages-2026-06-01.csv`
 

@@ -1,0 +1,412 @@
+{
+  "reviewer": "Independent AI editorial reviewer (verifier)",
+  "checkedAt": "2026-10-22T09:30:00+09:00",
+  "reviewedAt": "2026-10-22T09:30:00+09:00",
+  "reviewStage": "final_current_hash_and_local_ui",
+  "scope": "aw074-aw078 final effective local content and metadata. This is a local editorial approval only; it does not establish serving, deployment, or live-site proof.",
+  "rubric": {
+    "maximum": {
+      "facts": 25,
+      "sources": 15,
+      "usefulness": 20,
+      "depth": 15,
+      "language": 10,
+      "intent": 10,
+      "accessibility": 5
+    },
+    "minimum": {
+      "facts": 23,
+      "sources": 14,
+      "usefulness": 18,
+      "depth": 13,
+      "language": 8,
+      "intent": 8,
+      "accessibility": 4
+    },
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis or treatment promise",
+      "incorrect current match rule",
+      "misleading source or metadata attribution",
+      "broken internal links or unusable table / mobile layout"
+    ]
+  },
+  "evidence": {
+    "finalProposalPath": ".goal-harness/content-90-20261020/next-court-club-proposals.json",
+    "finalProposalSha256": "26b1da93b2968e51ce4c30d30c1eb8023c465ceebfaf307ded9cb0cacc57179a",
+    "sourcePacketPath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json",
+    "sourcePacketSha256": "7b0aea811853e5b6b6f0f57889e054208f0faf730382c525e59dd9244c3e300a"
+  },
+  "sourceIntegrity": "All 5 proposals cite verified official primary sources (NHS, Newcastle Hospitals NHS, USTA, ITF) within strictly bounded claims. No universal coaching promises or medical treatment claims are present.",
+  "globalVetoAssessment": "Zero hard vetoes found across all 5 draft proposals. Ankle injury guidance in aw-074 strictly directs to professional medical care with no treatment promises; rules conform to ITF 2026 and USTA The Code §§31-32; all internal links exist; tables feature captions and scope headers.",
+  "batchVerdict": "PASS_LOCAL_EDITORIAL_5_OF_5",
+  "status": "approved_local_editorial",
+  "items": [
+    {
+      "route": "/blog/aw-074-court-beginner",
+      "contentHash": "813527920ed4177ac73dbfd39b3ed01123e313b62ce5db4c3145327a4cfc1e14",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-22",
+      "robots": "index, follow",
+      "readerQuestion": "발목에 힘이 빠지거나 불안정한 날, 무리한 테이핑 대신 코트를 즉각 떠나야 하는 기준(Red Flags)과 안전한 활동 제한 수칙은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "nhs-ankle",
+        "newcastle-ankle"
+      ],
+      "strengths": [
+        "영국 NHS 및 뉴캐슬 병원의 임상적 적신호(Red Flags: 4걸음 이상 체중 부하 불가, 덜컥거리는 불안정감, 급격한 부종/저림)를 테니스 동호인의 코트 퇴장 및 경기 중단 기준으로 엄격하게 적용했다.",
+        "테이핑이나 진통제를 통한 무리한 경기 강행의 위험성을 명확히 경고하고, 치료 약속이나 임의의 재활 운동 처방 없이 전문의 진료 연계와 활동 제한 수칙에 집중했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "즉각 코트를 떠나야 하는 3대 위험 신호 및 경미한 뻐근함 단락",
+          "reason": "4걸음 체중 부하 불가(Ottawa Ankle Rules 기반 NHS 지침)는 골절 의심 선별 기준이나, 테니스 특유의 잔여 미세 염좌 정도를 정밀하게 분류하는 기준은 아니다.",
+          "fix": "일반 응급 선별 기준으로서의 성격을 유지하고 테니스 맞춤형 의학 진단으로 확대하지 않는다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "NHS 및 뉴캐슬 병원 공공보건 지침 인용",
+          "reason": "영국 보건의료 지침은 신뢰도 높은 임상 기준이나, 한국 테니스 코트 환경(우레탄 하드코트, 모래 인조잔디)의 구체적 마찰 특성을 직접 다룬 연구는 아니다.",
+          "fix": "코트 표면 주의사항은 시설 안전 권고사항으로 범위를 제한해 서술한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "조건별 판단표",
+          "reason": "급성 위험 신호와 미끄러운 바닥 대처는 실전적이나, 만성 발목 불안정증(과거 잦은 염좌 병력) 보유자의 보호대 선택 가이드는 독자의 추가 판단에 맡겨져 있다.",
+          "fix": "보호대에 대한 과도한 의존 금지 경고를 유지하되 의학적 제품 추천으로 확대하지 않는다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "가상 사례 A/B 대조",
+          "reason": "즉시 중단한 B와 테이핑 후 강행한 A의 1차적 결과 대조는 뚜렷하나, 점진적 복귀 과정(까치발, 가벼운 제자리 뛰기 등)의 구체적 단계별 검증은 요약 제시되었다.",
+          "fix": "전문의 확인 후 복귀라는 안전 원칙을 유지하며 임의의 일정 처방을 추가하지 않는다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "커팅 스텝 및 고유수용성 감각 서술",
+          "reason": "고유수용성 감각, 커팅 스텝 등 전문 운동생리학·스포츠 용어가 초보자에게 다소 압축적으로 설명되었다.",
+          "fix": "추후 개정 시 신체 위치 감각, 급격한 방향 전환 등 쉬운 한글 표현을 추가 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "마크업 및 테이블 구조",
+          "reason": "시맨틱 표 구조(caption, th scope)와 details 태그는 표준을 준수했으나, 스크린리더 음성 출력 및 고대비 색상 대비율의 정밀 측정 데이터는 부재하다.",
+          "fix": "후속 브라우저 및 기기 렌더링 검사 단계에서 접근성 실측을 지속한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-075-club-record",
+      "contentHash": "2a3510839ee6a563284d56336b87a7a0bfef8936f2dc50f1230725ca9ecd2b3f",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-22",
+      "robots": "index, follow",
+      "readerQuestion": "새로운 테니스 동호회나 게스트 모임에 처음 방문할 때, 경기 방식과 에티켓 트러블을 방지하기 위해 사전에 운영자에게 확인해야 할 핵심 항목은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "usta-adult-league",
+        "usta-flex-guidelines",
+        "usta-fac2026"
+      ],
+      "strengths": [
+        "USTA 성인 리그 및 플렉스 리그의 사전 조율 원칙을 국내 동호회 게스트 참가 현실에 맞게 5대 체크포인트(포맷, 실력, 비용/공, 전용화, 로테이션)로 체계화했다.",
+        "USTA Friend at Court 2026 The Code §§31–32의 셀프 저지 규정을 인용하여 서브 전 점수 호명, 인/아웃 판정, 점수 분쟁 해결 원칙을 실전적 에티켓으로 연결했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "사전 확인 5대 체크포인트 단락",
+          "reason": "USTA 리그 운영 지침은 체계적 질문 항목을 제공하지만, 한국 생활체육 테니스 동호회의 다양한 자체 운영 방식(선착순 랠리, 클럽 회칙 등)을 규정하는 공식 법규는 아니다.",
+          "fix": "로컬 클럽의 자체 회칙이 최우선임을 밝히고 사전 질의 표준 예시로 한정한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 성인 리그 및 플렉스 리그 출처",
+          "reason": "미국 USTA의 리그 가이드라인에 기반한 참조이므로 한국 지역별 사설 클럽의 관행과 완벽히 1:1로 일치하지는 않는다.",
+          "fix": "해외 협회의 검증된 운영 원리를 국내 실정에 맞게 준용함을 명확히 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "조건별 판단표",
+          "reason": "실력대, 경기 포맷, 테니스화 규정 질문은 매우 유용하나, 실내외 코트 예약 취소 규정이나 우천 시 환불 규정 등 돌발 변수 대처 질문은 개괄적으로만 다루어졌다.",
+          "fix": "현장 매너와 사전 확인 기본기에 집중하며 예외적 행정 규정은 운영자 안내에 맡긴다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "가상 사례 A/B",
+          "reason": "러닝화 착용 및 노애드 미숙지 사례는 직관적이나, 구력 과장이나 복식 파트너십 내 갈등 해결 시나리오는 간략하게 요약되었다.",
+          "fix": "복식 콜 합의(aw-002) 등 연계 아티클과의 역할 분담을 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "조건별 판단표 내 로컬 로컬 룰 중복 표현",
+          "reason": "본문 표에서 로컬 로컬 룰에 맞게 빠른 적응이라는 단어 중복이 발견되어 문장 다듬기가 필요하다.",
+          "fix": "클럽 로컬 룰 또는 모임 자체 규칙으로 단어를 정돈한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 테이블 및 FAQ 구조",
+          "reason": "마크업 규격은 충실하나 모바일 기기에서의 표 셀 간 터치 포커스 및 스크린리더 이동 순서에 대한 정량적 계측 데이터가 누락되어 있다.",
+          "fix": "후속 렌더링 품질 감사에서 모바일 스크린리더 지원을 측정한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-076-mental",
+      "contentHash": "ad7b1c2982d49408974aacbfb35be2eb50585de237e7514c53887d71d3ca9d34",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-22",
+      "robots": "index, follow",
+      "readerQuestion": "결정적인 순간 더블폴트를 범했을 때, 조급함을 억제하고 ITF 25초 규칙 내에서 차분하게 멘탈을 리셋하는 4단계 루틴은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-rules2026",
+        "usta-routine",
+        "usta-focus"
+      ],
+      "strengths": [
+        "ITF Rule 29의 25초 연속 플레이 규정을 엄격한 상한선으로 명시하며, 경기 지연 경고를 받지 않는 15~18초 실전형 4단계 루틴으로 현실화했다.",
+        "더블폴트 후 흔히 범하는 감정적 조급함(5초 만에 서브 재시도)을 시각 차단과 단 하나의 프로세스 큐(Process cue) 설정으로 통제할 수 있게 구체적으로 설계했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "4단계 리셋 프로토콜 초 단위 구간 (1~3초, 4~8초 등)",
+          "reason": "초 단위 구간 배분은 25초 규정에 맞춘 코칭 예시일 뿐이며, 선수 개인의 심박수 회복 속도에 따른 생리학적 절대 기준은 아니다.",
+          "fix": "개인의 리듬과 경기 템포에 맞춰 탄력적으로 조율하는 실전 지침임을 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 심리 훈련 자료 적용 범위",
+          "reason": "스포츠 심리학적 프레임워크에 기반했으나, 특정 호흡 기법이 서브 성공률 향상으로 직결된다는 임상적 대조 시험 결과를 지니지는 않는다.",
+          "fix": "결과 보장이 아닌 인지적 집중 회복 도구로서의 한계를 엄격히 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "조건별 판단표",
+          "reason": "브레이크 포인트나 타이브레이크 상황별 프로세스 큐는 매우 유용하나, 강풍이나 야외 햇빛 등 외생적 환경 변수에서의 멘탈 루틴 조정은 포함되지 않았다.",
+          "fix": "심리적 리셋 본연의 범위에 집중하고 기상 조건은 별도 환경 문서의 영역으로 둔다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "세컨드 서브 기술 팁 FAQ",
+          "reason": "더블폴트 후 서브 스핀 브러싱 팁을 언급했으나, 그립 변형이나 스탠스 조정 등 세부 역학적 설명은 간략한 수준에 머물렀다.",
+          "fix": "서브 역학의 심화 분석은 기술 전문 아티클의 역할로 분리한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "물리적 방화벽, 프로세스 큐 표현",
+          "reason": "물리적 방화벽, 프로세스 큐(Process Cue) 등 IT/심리학 차용 용어가 동호인 독자에게 약간 생소할 수 있다.",
+          "fix": "추후 개정 시 시선 차단 행동, 실행 약속 등 친숙한 일상 언어로 해설을 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "조건별 판단표 및 FAQ details 태그",
+          "reason": "표 제목과 헤더 스코프는 올바르나, 모바일 뷰포트에서의 텍스트 가독성 대비율 및 터치 반응성에 대한 기기별 측정 기록이 없다.",
+          "fix": "후속 브라우저 프리뷰 감사 단계에서 정밀 측정을 보완한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-077-serve-return",
+      "contentHash": "2a647642916960a0977618987f62e86c986279193dbb033ca45565fafa8f0934",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-22",
+      "robots": "index, follow",
+      "readerQuestion": "바깥으로 예리하게 휘어 나가는 슬라이스 서브를 뒤로 물러서지 않고 사전에 위치를 조정해 서버 발밑으로 안전하게 리턴하는 방법은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-rules2026",
+        "usta-lefty-return",
+        "usta-return-first-second"
+      ],
+      "strengths": [
+        "슬라이스 서브의 바운드 후 사이드라인 바깥으로 도망가는 물리적 특성을 설명하고, 뒤로 물러나는 본능적 실수를 대각선 앞쪽 반 보 전진을 통한 각도 차단(Cut off the angle)으로 논리적으로 교정했다.",
+        "서버의 주 손잡이(오른손/왼손)와 코트(듀스/애드)별 공의 궤적 및 사전 위치 조정 기준을 3개 핵심 시나리오로 명확히 구분했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "사전 준비 위치 반 보 전진 및 45도 착지 설명",
+          "reason": "반 보 전진 및 45도 전진 착지는 와이드 슬라이스 서브 대처의 코칭 가이드라인이며, 서버의 회전량과 구속에 따라 최적 거리는 가변적이다.",
+          "fix": "고정된 발걸음 수가 아닌 상황별 위치 조율 원칙임을 지속적으로 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 서브 리턴 전술 출처",
+          "reason": "협회 코칭 팁은 실전 경험에 기반한 합리적 지침이나, 리시버 전진 위치에 따른 통계적 득점 성공 확률 연구 자료를 포함하지는 않는다.",
+          "fix": "확률 높은 전술적 선택이라는 본문의 성격을 명확히 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "조건별 판단표",
+          "reason": "오른손 듀스/애드 및 왼손 애드 코트 대응은 명쾌하나, 왼손잡이 서버가 듀스 코트에서 몸쪽으로 파고드는 슬라이스 서브 시나리오는 표에서 생략되었다.",
+          "fix": "가장 빈번한 3대 궤적에 집중하되 필요 시 왼손 듀스 코트 참조를 연계 글(aw-052)과 조율한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "백스윙 축소와 블록 타법 단락",
+          "reason": "테이크백 축소와 면 안정성을 강조했으나, 상대 구속이 느린 슬라이스 서브에서의 드라이브 어프로치 전환은 다루지 않았다.",
+          "fix": "빠른 1서브 슬라이스 대처라는 본래 범위에 집중하고 공격형 어프로치는 별도 주제로 둔다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "오픈 피벗 스텝, 역모션 표현",
+          "reason": "오픈 피벗 스텝(Open pivot step) 등 특수 스텝 용어가 초보자에게 구체적 동작 묘사 없이 다소 압축적으로 서술되었다.",
+          "fix": "추후 개정 시 뒷발을 비스듬히 빼며 몸을 트는 동작 등 동작 중심 설명을 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 마크업 및 테이블",
+          "reason": "표 시맨틱 태그는 완전하나 저시력자를 위한 색상 반전 모드나 스크린리더 표 탐색성에 대한 정밀 실측이 부재하다.",
+          "fix": "후속 프리뷰 및 UI 감사에서 스크린리더 지원성을 점검한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-078-doubles-serve",
+      "contentHash": "2b83c0a596bb58d40e0410aecd3005122e1b40515cd6605b15ee421f9e8943af",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-22",
+      "robots": "index, follow",
+      "readerQuestion": "복식 경기에서 서브를 넣은 직후 제자리에 멈춰 서서 실점하지 않고, 서브 코스와 전위 움직임에 맞춰 첫 발을 올바르게 이동하는 방법은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-rules2026",
+        "usta-warrior-doubles",
+        "usta-partner-coach",
+        "usta-netgen-yellow"
+      ],
+      "strengths": [
+        "복식 서브가 임팩트로 끝나는 것이 아니라 첫 발의 착지와 포지션 회복까지가 1회 동작이라는 점을 통찰력 있게 규정했다.",
+        "서브 코스(T존 전진 vs 와이드 중앙 복귀 vs 세컨드 서브 원업원백 수비)에 따라 서버의 첫 스텝을 세분화하고, 전위 포칭 시의 스위치 커버(Switch cover)를 체계적으로 연결했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "T존 서브 1~2걸음 전진 및 와이드 2보 사이드 스텝",
+          "reason": "보폭 수치(1~2걸음, 2보)는 실전 이해를 돕는 코칭 모델이며 코트 규격에 따른 물리적으로 고정된 강제 보폭은 아니다.",
+          "fix": "권장 이동 거리로서의 성격을 명시하고 개인 신체 조건에 따른 조율 여지를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "USTA 넷 제너레이션 훈련안 및 코치 인터뷰 출처",
+          "reason": "연습 드릴 및 지도자 인터뷰에 기초한 전술 조언으로, 동호인 복식 경기에서의 실점률 감소에 대한 정량 통계 근거는 아니다.",
+          "fix": "팀 호흡을 위한 전술적 가이드라인으로 서술 한계를 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "조건별 판단표",
+          "reason": "코스별 첫 발 이동과 3구 대비는 매우 실용적이나, 상대 리시버가 기습적인 로브를 올렸을 때 서버와 전위의 역할 분담은 표에서 다루지 않았다.",
+          "fix": "지상 스트로크 및 발리 리턴 대비에 집중하고 로브 처리는 중앙 볼 처리(aw-073)와의 연계로 분리한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "파트너 전위와의 사전 신호 단락",
+          "reason": "손가락 신호와 코스 전달을 권장했으나, 혼합복식이나 파트너 기량차에 따른 맞춤형 포메이션(예: 호주형 포메이션) 변형은 개요에 머물렀다.",
+          "fix": "기본 전술의 완성도에 집중하며 특수 대형은 상급 전술 주제로 보존한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "원업원백, 스위치 커버 용어",
+          "reason": "원업원백(One-up One-back), 스위치 커버 등 외래 전술 용어가 다수 사용되어 우리말 보충 설명이 더 풍부할 필요가 있다.",
+          "fix": "추후 개정 시 전위-후위 기본 대형, 빈자리 교차 커버 등 한글 용어를 적극 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전체 렌더링 검증",
+          "reason": "표 및 FAQ 마크업 구조는 표준적이나 기기별 스크린리더 낭독 순서 및 키보드 탐색성에 대한 물리적 계측 데이터가 누락되어 있다.",
+          "fix": "후속 브라우저 프리뷰 감사 단계에서 정밀 측정을 보완한다."
+        }
+      ]
+    }
+  ]
+}

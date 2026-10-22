@@ -1,12 +1,12 @@
-# Content Link Coverage Audit | 2026-09-30
+# Content Link Coverage Audit | 2026-10-22
 
 ## Summary
 
-- Effective posts: 726
+- Effective posts: 727
 - Posts with body content: 719
-- Body internal links below 2: 268
-- Body external links below 1: 358
-- Strong body link coverage: 50.2%
+- Body internal links below 2: 264
+- Body external links below 1: 308
+- Strong body link coverage: 52.3%
 
 ## Operating Note
 
@@ -16,22 +16,6 @@ This is a report-only audit. The rendered article page already adds related arti
 
 | slug | topic | body internal | recommended insertion | first utility | title |
 |---|---|---:|---|---|---|
-| `aw-048-string` | equipment | 0 | equipment selection or maintenance paragraph | /utility/equipment-recommendation | 느린 스트링 팔 부담 줄이기 |
-| `aw-049-court-5` | court | 0 | court condition or pre-match adjustment paragraph | /utility/court-conditions | 겨울 실내 코트 준비 5가지 |
-| `aw-050-beginner` | practice | 0 | practice routine or weekly planning paragraph | /utility/training-planner | 브레이크 포인트 복기법 |
-| `aw-051-beginner-90-record` | practice | 0 | practice routine or weekly planning paragraph | /utility/training-planner | 성인 입문 90일 계획 기록 |
-| `aw-052-serve` | serve | 0 | serve/return decision paragraph | /utility/serve-placement-mapper | 왼손잡이 서브 받는 위치 |
-| `aw-053-string` | equipment | 0 | equipment selection or maintenance paragraph | /utility/equipment-recommendation | 스트링 텐션 낮출 시점 |
-| `aw-055-20` | practice | 0 | practice routine or weekly planning paragraph | /utility/training-planner | 언포스드 에러 분류 20분 |
-| `aw-056-tennis-guide` | practice | 0 | practice routine or weekly planning paragraph | /utility/training-planner | 첫 세 포인트 전술 수정 |
-| `aw-057-serve-beginner-club-match` | serve | 0 | serve/return decision paragraph | /utility/serve-placement-mapper | 서브 앤 발리 초보 실수 |
-| `aw-058-racket-record` | equipment | 0 | equipment selection or maintenance paragraph | /utility/equipment-recommendation | 라켓 밸런스 기록법 |
-| `aw-059-recovery` | injury | 0 | risk signal, recovery, or safety disclaimer paragraph | /utility/injury-risk | 다음날 근육통 줄이는 회복 |
-| `aw-060-video` | practice | 0 | practice routine or weekly planning paragraph | /utility/training-planner | 영상 분석 첫 장면 고르기 |
-| `aw-061-5` | practice | 0 | practice routine or weekly planning paragraph | /utility/training-planner | 상대 작전 흔들림 수정 5가지 |
-| `aw-062-serve-record-beginner` | serve | 0 | serve/return decision paragraph | /utility/serve-placement-mapper | 첫 서브 성공 기록법 |
-| `aw-063-racket-285g-300g-315g-record` | equipment | 0 | equipment selection or maintenance paragraph | /utility/equipment-recommendation | 라켓 285g 300g 315g 차이 |
-| `aw-064-match-cooldown` | injury | 0 | risk signal, recovery, or safety disclaimer paragraph | /utility/injury-risk | 경기 후 쿨다운 순서 |
 | `aw-297-30-club-match` | strategy | 0 | shot-selection, error pattern, or point review paragraph | /utility/shot-selection-trainer | 혼자 연습 30분 동호회 적용 |
 | `aw2-021-post-serve-recovery-beginner-checklist` | serve | 0 | serve/return decision paragraph | /utility/serve-placement-mapper | 서브 넣은 직후, 회복 스텝 시작 전 체크리스트 |
 | `aw2-082-hybrid-string-setup-twenty-min-routine` | equipment | 0 | equipment selection or maintenance paragraph | /utility/equipment-recommendation | 새 하이브리드 스트링 20분 적응 점검법 |
@@ -87,12 +71,28 @@ This is a report-only audit. The rendered article page already adds related arti
 | `aw2-298-split-step-timing-level-gap` | practice | 0 | practice routine or weekly planning paragraph | /utility/training-planner | 초보와 중급, 스플릿 스텝 활용이 다릅니다 |
 | `aw2-299-split-step-timing-match-record` | strategy | 0 | shot-selection, error pattern, or point review paragraph | /utility/shot-selection-trainer | 경기 중 스플릿 스텝 타이밍, 무엇을 기록할까 |
 | `aw2-300-split-step-timing-common-mistakes` | practice | 0 | practice routine or weekly planning paragraph | /utility/training-planner | 스플릿 스텝 하는 사람들의 흔한 실수 |
-| `aw-014-beginner` | practice | 1 | practice routine or weekly planning paragraph | /utility/training-planner | 레슨 질문 타이밍 잡기 |
-| `aw-015-court-record` | court | 1 | court condition or pre-match adjustment paragraph | /utility/court-conditions | 비 오는 날 코트 판단 기록법 |
-| `aw-016-tennis-guide` | practice | 1 | practice routine or weekly planning paragraph | /utility/training-planner | 레슨비 아깝지 않은 복습 순서 |
-| `aw-017-doubles` | doubles | 1 | partner communication or court-position paragraph | /utility/doubles-positioning-simulator | 복식 전위 자리 비우기 줄이기 |
-| `aw-018-match` | strategy | 1 | shot-selection, error pattern, or point review paragraph | /utility/shot-selection-trainer | 경기 가방 준비 순서 |
-| `aw-019-beginner-racket-20` | equipment | 1 | equipment selection or maintenance paragraph | /utility/equipment-recommendation | 첫 라켓 감각 20분 점검 |
-| `aw-020-tennis-guide` | practice | 1 | practice routine or weekly planning paragraph | /utility/training-planner | 측풍에서 서브 토스 시작점 좁히기 |
-| `aw-021-club-match` | strategy | 1 | shot-selection, error pattern, or point review paragraph | /utility/shot-selection-trainer | 대회 전날 가방 체크 |
-| `aw-023-shoes-court-shoes` | equipment | 1 | equipment selection or maintenance paragraph | /utility/equipment-recommendation | 클레이화와 하드화 차이 판단 |
+| `aw-298-match-record` | strategy | 1 | shot-selection, error pattern, or point review paragraph | /utility/shot-selection-trainer | 경기 후 다음 연습 기록법 |
+| `aw2-003-first-serve-in-ratio-level-gap` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 첫 서브 인 비율, 초보와 중급은 기준이 다릅니다 |
+| `aw2-010-second-serve-spin-common-mistakes` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 세컨드 서브 회전, 자주 하는 실수와 교정법 |
+| `aw2-022-post-serve-recovery-twenty-min-routine` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 서브 후 회복 스텝, 20분 연습으로 구성하기 |
+| `aw2-023-post-serve-recovery-level-gap` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 서브 후 회복, 초보와 중급은 우선순위가 다릅니다 |
+| `aw2-024-post-serve-recovery-match-record` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 서브 후 회복, 경기 중엔 무엇을 남겨야 할까 |
+| `aw2-025-post-serve-recovery-common-mistakes` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 서브 후 회복에서 흔히 저지르는 실수 3가지 |
+| `aw2-027-deep-return-contact-twenty-min-routine` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 깊은 리턴 타점, 20분 루틴으로 다듬기 |
+| `aw2-028-deep-return-contact-level-gap` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 깊은 리턴 타점, 초보와 중급의 우선순위 차이 |
+| `aw2-029-deep-return-contact-match-record` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 깊은 리턴, 경기 중엔 이렇게 기록해보세요 |
+| `aw2-030-deep-return-contact-common-mistakes` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 깊은 리턴에서 자주 나오는 실수 세 가지 |
+| `aw2-031-attack-second-serve-beginner-checklist` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 세컨드 서브 공격 리턴, 시작 전 체크리스트 |
+| `aw2-032-attack-second-serve-twenty-min-routine` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 세컨드 서브 공격 리턴, 20분 루틴 구성 |
+| `aw2-033-attack-second-serve-level-gap` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 세컨드 서브 공격, 초보와 중급의 접근이 다릅니다 |
+| `aw2-034-attack-second-serve-match-record` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 세컨드 서브 공격, 경기 중 기록 기준 |
+| `aw2-035-attack-second-serve-common-mistakes` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 세컨드 서브 공격 리턴, 자주 하는 실수 |
+| `aw2-036-return-plus-one-beginner-checklist` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 리턴 다음 공까지 미리 그려보는 체크리스트 |
+| `aw2-037-return-plus-one-twenty-min-routine` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 리턴+다음 공, 20분 연결 루틴 |
+| `aw2-038-return-plus-one-level-gap` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 리턴 다음 공 설계, 초보와 중급은 다르게 접근 |
+| `aw2-039-return-plus-one-match-record` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 리턴 다음 공, 경기 중 기록해두면 좋은 것 |
+| `aw2-040-return-plus-one-common-mistakes` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 리턴 다음 공 설계에서 자주 하는 실수 |
+| `aw2-041-chase-return-control-beginner-checklist` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 체이스 리턴, 처음 연습 전 확인할 체크리스트 |
+| `aw2-042-chase-return-control-twenty-min-routine` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 체이스 리턴 20분 루틴, 시간대별 구성법 |
+| `aw2-043-chase-return-control-level-gap` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 체이스 리턴, 초보와 중급은 판단 기준이 다릅니다 |
+| `aw2-044-chase-return-control-match-record` | serve | 1 | serve/return decision paragraph | /utility/serve-placement-mapper | 체이스 리턴, 경기 후 남겨야 할 기록 기준 |

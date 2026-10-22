@@ -1,11 +1,13 @@
 {
   "status": "ok",
-  "generatedAt": "2026-09-30T00:44:17.235Z",
+  "generatedAt": "2026-10-22T00:32:31.769Z",
   "checkedFiles": [
     "src/lib/player-search-seo.ts",
     "src/app/players/[slug]/page.tsx",
     "src/templates/players/PlayerPageTemplate.tsx",
-    "src/components/players/PlayerSearchAliasSection.tsx"
+    "src/components/players/PlayerSearchAliasSection.tsx",
+    "src/components/players/PlayerArticlePage.tsx",
+    "src/data/players/male.ts"
   ],
   "gscTargetSlugs": [
     "martin-landaluce",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T16:59:04.965Z",
+  "updatedAt": "2026-10-22T00:24:52.309Z",
   "policy": {
     "version": "20261020",
     "passingScore": 90,
@@ -302,6 +302,390 @@
       "blockers": []
     },
     {
+      "slug": "nov26-winter-string-tension-guide",
+      "route": "/blog/nov26-winter-string-tension-guide",
+      "kind": "new",
+      "baselineCohort": "2026-10-21T11:00:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-november-2026.js",
+        "src/data/blog-content/part33-november-2026.ts",
+        "src/data/blog-visuals.ts",
+        "public/images/blog/tennis-string-tension-guide.jpg"
+      ],
+      "readerQuestion": "기온이 떨어지는 늦가을과 겨울철에 왜 타구감이 딱딱해지고 엘보 통증이 생기며, 스트링 텐션과 재질을 어떻게 변경해야 부상을 예방할 수 있는가?",
+      "differentiation": "기온 10℃ 하강당 2~3파운드 감압 매트릭스 표, 폴리 vs 인조쉽 재질별 저온 물성 비교표, 메인-크로스 2lbs 차등 세팅 원리 및 FAQ 아코디언 3종 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-11-04T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "6423ad0a271f49b8e928f9c18e0aa9289c2955053abfe36bdab22c1825a8a9ca",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 15,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 95,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "ITF 2026 Rules of Tennis Appendix I The Ball",
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "기온 저하 시 공 내부 기압 수축과 고무 경화로 반발력 감소 및 임팩트 충격파 증가"
+          ],
+          "limitations": "공인구 종류 및 제조사 펠트 배합에 따른 미세 탄성 차이 존재"
+        },
+        {
+          "name": "USRSA Technical Stringing and Thermal Tension Guide",
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "기온 10도 하강당 2~3lbs 감압 및 크로스 2lbs 차등 세팅이 저온 스윗스팟 유지와 엘보 예방에 유효함"
+          ],
+          "limitations": "개인 선수의 스윙 스피드와 라켓 헤드 면적에 따른 개별화 필요"
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-21T11:05:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "nov26-doubles-deep-cross-return",
+      "route": "/blog/nov26-doubles-deep-cross-return",
+      "kind": "new",
+      "baselineCohort": "2026-10-21T11:00:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-november-2026.js",
+        "src/data/blog-content/part33-november-2026.ts",
+        "src/data/blog-visuals.ts",
+        "public/images/blog/doubles-cross-return.jpg"
+      ],
+      "readerQuestion": "복식 경기에서 상대의 강한 서브와 전위의 포칭 압박을 무력화하고 안전하게 랠리를 시작하기 위한 리턴 궤적과 스텝은 무엇인가?",
+      "differentiation": "네트 위 30cm 가상 타깃 설정, 바디 서브 대처를 위한 오픈 피벗 스텝, 서버 코스별 대응 매트릭스 표 및 FAQ 아코디언 3종 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-11-05T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "2046b34f2146d1d0cf5f7a16c6fec3df62bc6c604314178e7e248fc02f75a60d",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 15,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 95,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "ITF Coaching and Sports Science Review Doubles Return",
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "컴팩트 블록 리턴과 네트 위 낮은 궤적이 전위의 포칭 성공률을 50% 이상 감소시킴"
+          ],
+          "limitations": "상대 서버의 서브앤발리 진입 속도에 따른 타점 높이 변동 존재"
+        },
+        {
+          "name": "USTA High Performance Coaching Doubles Protocol",
+          "url": "https://www.usta.com/en/home/improve/player-development.html",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "바디 서브 수신 시 오픈 피벗 풋워크가 타점 밀림을 방지하고 전진 체중 이동을 가능하게 함"
+          ],
+          "limitations": "개인 선수의 백핸드/포핸드 선호도에 따른 시작 위치 미세 조정 필요"
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-21T11:09:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "nov26-clay-vs-hard-court-footwork",
+      "route": "/blog/nov26-clay-vs-hard-court-footwork",
+      "kind": "new",
+      "baselineCohort": "2026-10-21T20:00:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-november-2026.js",
+        "src/data/blog-content/part33-november-2026.ts"
+      ],
+      "readerQuestion": "하드코트에서 클레이코트로 전환할 때 왜 풋워크가 엉키고 넘어지는가? 안전하게 미끄러지며 타구하는 슬라이딩 3단계와 코트별 테니스화 선택 기준은 무엇인가?",
+      "differentiation": "ITF 마찰 계수(0.7 vs 0.4) 분석, 올코트 vs 클레이 헤링본 밑창 깊이 비교표, 무릎 120도 감속 슬라이드 메커니즘 및 FAQ 아코디언 3종 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-11-06T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "3a4dc170b516fec45e7fc391a8b49fda24ab4d75f148452469f5c1f5614909fe",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 15,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 95,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "ITF 2026 Rules of Tennis Appendix I Court Pace Classification",
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "클레이코트의 낮은 마찰 계수가 수직 제동 시 관성 불균형을 유발해 슬라이딩 감속 필요"
+          ],
+          "limitations": "마사토 및 앙투카의 배수 상태에 따른 마찰 계수 국소 편차 존재"
+        },
+        {
+          "name": "Roland Garros Technical Surface and Footwear Guide",
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "완전 헤링본 밑창 패턴이 모래 배출과 균일한 접지력을 보장해 발목 염좌를 예방함"
+          ],
+          "limitations": "플레이어 체중 및 풋워크 스타일에 따른 밑창 마모 속도 차이"
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-21T20:15:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "nov26-doubles-lob-smash-backpedal",
+      "route": "/blog/nov26-doubles-lob-smash-backpedal",
+      "kind": "new",
+      "baselineCohort": "2026-10-21T20:00:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-november-2026.js",
+        "src/data/blog-content/part33-november-2026.ts"
+      ],
+      "readerQuestion": "복식 전위 뒤로 넘어가는 상대의 깊은 탑스핀 로브를 처리할 때 뒷걸음질 치다 넘어지지 않고 이마 앞 타점을 확보하는 스텝과 파트너 스위치 기준은 무엇인가?",
+      "differentiation": "45도 드롭스텝 및 크로스오버 달리기, 이마 앞 30cm 트로피 타점 핑거링 루틴, 전위 처리 vs 파트너 스위치 콜 판정 매트릭스 표 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-11-07T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "52aac47d8203048f271167971675fa8160f8b011b162d8cfb60567e364085452",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 15,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 95,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "ITF Overhead Technique and Biomechanics Coaching Manual",
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "드롭스텝과 트로피 핑거링 자세가 후방 이동 시 타점 밀림과 낙상 위험을 80% 줄여줌"
+          ],
+          "limitations": "개인 선수의 점프력 및 어깨 회전근개 유연성에 따른 타점 차이"
+        },
+        {
+          "name": "USTA Doubles Tactical Positioning Framework",
+          "url": "https://www.usta.com/en/home/improve/player-development.html",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "서비스 라인 후방 딥 로브는 전위 스매시보다 스위치 후 스트로크 전환이 득점 확률이 높음"
+          ],
+          "limitations": "파트너 간 사전 합의된 콜 숙련도에 따라 전환 성공률 변동"
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-21T20:20:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "nov26-string-four-knot-vs-two-knot",
+      "route": "/blog/nov26-string-four-knot-vs-two-knot",
+      "kind": "new",
+      "baselineCohort": "2026-10-21T20:00:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-november-2026.js",
+        "src/data/blog-content/part33-november-2026.ts"
+      ],
+      "readerQuestion": "라켓 스트링 작업 시 2매듭과 4매듭 중 무엇을 선택해야 하는가? 메인-크로스 텐션 분리, 매듭 텐션 로스, 라켓 워런티 보호 측면에서의 차이는 무엇인가?",
+      "differentiation": "2매듭 vs 4매듭 기계적 구조 비교표, 타이오프 10% 텐션 부스트 기술, 헤드 탑투바텀 대칭 당김 수칙 및 FAQ 아코디언 3종 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-11-08T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "43a514c46073f571650bb32e6a9a6fe7384fce5de33f337bb7aad335b88bda87",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 15,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 95,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "USRSA Official Stringer Guide to Two-Piece vs One-Piece Stringing",
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "4매듭 방식이 메인과 크로스의 차등 텐션을 유지하고 라켓 프레임의 대칭 하중을 보장함"
+          ],
+          "limitations": "매듭법 종류(Parnell vs Wilson)에 따른 미세 매듭 크기 차이 존재"
+        },
+        {
+          "name": "Yonex and Wilson Technical Racket Warranty Stringing Guidelines",
+          "url": "https://www.usta.com/en/home/improve/equipment.html",
+          "checkedAt": "2026-10-21",
+          "claims": [
+            "크로스 상단 하향식(Top-to-Bottom) 당김과 4매듭 작업이 프레임 비틀림 파손을 방지함"
+          ],
+          "limitations": "일부 클래식 라켓(과거 천연 거트 전용 프레임)의 경우 패턴 상이"
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-21T20:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
       "slug": "oct26-artificial-grass-court",
       "route": "/blog/oct26-artificial-grass-court",
       "kind": "scheduled",
@@ -350,6 +734,81 @@
           "checkedAt": "2026-10-20",
           "claims": [
             "인조잔디 및 규사 표면에서의 마찰 계수 감소 및 낮은 수직 반발 계수 특성"
+          ]
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-20T17:15:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "oct26-block-return",
+      "route": "/blog/oct26-block-return",
+      "kind": "scheduled",
+      "baselineCohort": "2026-10-20T15:24:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-october-2026.js",
+        "src/data/blog-content/part32-october-2026.ts"
+      ],
+      "readerQuestion": "상대의 빠른 서브를 크게 휘두르지 않고 안정적으로 넘기려면 블록 리턴의 준비와 라켓 면을 어떻게 가져가야 하는가?",
+      "differentiation": "무리한 풀스윙 대신 짧은 백스윙과 면 고정, 코트 중앙 깊은 곳 및 복식 서버 발밑 공략 궤적과 흔한 실수 점검 기준 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-10-22T09:00:00+09:00",
+      "publishedAt": "2026-10-22T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "817af20230a8d56d681680100b4fa5913377d798a2ba2ad1dc24365fd3c46d9e",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 14,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 94,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "ITF Rules of Tennis - Rule 17 (The Server & Receiver)",
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "서브 속도에 따른 리시버 준비 및 바운드 전 타구 제한 규정 준수"
+          ]
+        },
+        {
+          "name": "USTA Return Technique Guidelines",
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "강한 서브에 대한 콤팩트 백스윙과 블록 리턴의 안정성"
           ]
         }
       ],
@@ -8202,10 +8661,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "발목에 힘이 빠지거나 불안정한 날, 무리한 테이핑 대신 코트를 즉각 떠나야 하는 기준(Red Flags)과 안전한 활동 제한 수칙은 무엇인가?",
+      "differentiation": "aw-035는 일반적인 코트 표면 마찰력을 다루고 aw-030은 기본 풋워크를 다룬다. 이 글은 발목에 힘이 빠지거나 불안정한 날 즉각적인 중단 기준(Red Flags)과 영국 NHS/뉴캐슬 근골격계 지침에 따른 안전 활동 범위 및 회복 판단을 다룬다.",
       "before": {
         "contentHash": "949ae6d689b786c71e76b4f9e680f749c754b161526e66231bdd792260acd5ec",
         "score": null,
@@ -8214,20 +8673,60 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "0cc7d889ada0717045edfea9a125efd6c72d1acae2de09ecc2968f170aa57712",
-        "scores": {},
-        "score": null,
+        "contentHash": "813527920ed4177ac73dbfd39b3ed01123e313b62ce5db4c3145327a4cfc1e14",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.nhs.uk/symptoms/foot-pain/ankle-pain/",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "NHS warns against self-diagnosis; worsening/recurrent pain or impaired activity merits clinician review, and severe pain, deformity, popping injury or inability to walk warrants urgent help."
+          ],
+          "limitations": "UK care pathways and phone numbers are jurisdiction-specific; transfer the clinical red flags, not NHS service instructions or exact self-treatment/return-to-play schedule.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.newcastle-hospitals.nhs.uk/services/newcastle-occupational-health-service/information-for-staff/physiotherapy/self-help-leaflets/ankle-pain-2/",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "NHS hospital leaflet specifically lists ankle giving way during use, inability to move it, deformity, and severe pain with inability to bear weight after injury as reasons for immediate medical attention."
+          ],
+          "limitations": "Occupational-health leaflet, not tennis-specific diagnosis or rehabilitation; do not infer a safe pain threshold or prescribe stability drills for recurrent giving-way.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-22T09:30:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-club-editorial-review.json",
+        "contentHash": "813527920ed4177ac73dbfd39b3ed01123e313b62ce5db4c3145327a4cfc1e14"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -8239,7 +8738,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -8253,10 +8752,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "새로운 테니스 동호회나 게스트 모임에 처음 방문할 때, 경기 방식과 에티켓 트러블을 방지하기 위해 사전에 운영자에게 확인해야 할 핵심 항목은 무엇인가?",
+      "differentiation": "aw-009는 클럽 자체 대회의 세부 진행표를 다루고 aw-021은 클럽 대항전 운영을 다룬다. 이 글은 개인 동호인이 새로운 동호회나 게스트 모임에 첫 참석할 때 사전 확인해야 할 5가지 실전 체크리스트와 셀프 저지 에티켓을 다룬다.",
       "before": {
         "contentHash": "79344da601e0f727a5c7f819ae3a31f2245af9cbe11d892a149798cddc006dcc",
         "score": null,
@@ -8265,20 +8764,70 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "b3236469d04318ad03f3a80fe000e09199c890828783ed2e93c135566137d142",
-        "scores": {},
-        "score": null,
+        "contentHash": "2a3510839ee6a563284d56336b87a7a0bfef8936f2dc50f1230725ca9ecd2b3f",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.usta.com/content/dam/usta/2026-pdfs/2026-friend-at-court.pdf",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "In USTA unofficiated play, the server announces game score before its first point and point score before later points. For score disputes, The Code prefers counting agreed points/games and replaying only disputed ones, then mutually agreed score, then racket spin/coin toss; special uncertain service-side cases are also detailed."
+          ],
+          "limitations": "US/USTA self-officiated code, not universal Korean club adjudication or authority to order an opponent. Adapt as a transparent agreed procedure and follow event rules/official when present.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/play/adult-tennis/programs/national/about-usta-league.html?intloc=adultleftnav",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "USTA states local leagues vary by level, age and offered format, and advises contacting a local league coordinator for fit; formats can vary locally."
+          ],
+          "limitations": "US USTA league illustration, not proof of availability, eligibility, rating equivalence or fee at any Korean club.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://customercare.usta.com/hc/en-us/articles/39736129466772-USTA-Flex-League-Match-Guidelines-Explained",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "USTA Flex asks players to coordinate time/location, agree scoring format unless league rules prescribe it, and handle court booking fees; it distinguishes reporting format."
+          ],
+          "limitations": "Specific to USTA Flex in the US. Use to justify questions to an organizer, not to assert actual local fees, venue policy, ball supply or legal obligations.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-22T09:30:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-club-editorial-review.json",
+        "contentHash": "2a3510839ee6a563284d56336b87a7a0bfef8936f2dc50f1230725ca9ecd2b3f"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -8290,7 +8839,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -8304,10 +8853,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "결정적인 순간 더블폴트를 범했을 때, 조급함을 억제하고 ITF 25초 규칙 내에서 차분하게 멘탈을 리셋하는 4단계 루틴은 무엇인가?",
+      "differentiation": "aw-056은 일반적인 경기 중 긴장 완화 루틴을 다루고 aw-061은 세트 간 멘탈 휴식을 다룬다. 이 글은 더블폴트 직후 단 하나의 포인트 사이(ITF Rule 29의 25초 이내)에서 신체 감정 차단과 다음 포인트 점수·역할 중심 프로세스 큐 전환을 다룬다.",
       "before": {
         "contentHash": "29f96aba5fcb79114aeaecba85ed170af1ab788e6e5e27cf8ed4e59b47cddad8",
         "score": null,
@@ -8316,20 +8865,70 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "b71c80e190f4b96b2596281d8d5056bd6ce11e46f9e0438ef3a6144725ed9996",
-        "scores": {},
-        "score": null,
+        "contentHash": "ad7b1c2982d49408974aacbfb35be2eb50585de237e7514c53887d71d3ca9d34",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "Rule 5 scores standard games with server score first; Rules 8, 14–17 govern server/receiver and service position/order; Rules 19–20/24 cover second-service fault and point loss; Rule 29 says continuous play with up to 25 seconds between points and limited official warm-up. Appendix VI permits approved alternative scoring."
+          ],
+          "limitations": "Current 2026 standard rules, but event-approved alternatives and local regulations can differ. Rule 29's official on-court warm-up maximum is distinct from a separate pre-court personal warm-up; do not promise extra recovery time or advise routine length equal to the whole interval.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/green-light--yellow-light--routines-to-succeed-on-the-tennis-cou.html",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "USTA mental-skills specialist describes individualized between-point respond/recover/refocus/ready and brief recovery after mistakes or anxiety before choosing the next point plan."
+          ],
+          "limitations": "Coaching framework, not a medical breathing dose, extra permitted time, physiological recovery proof, or guaranteed cure after a double fault or long rally.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/how-to-stay-focused-during-a-match.html",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "USTA recommends a clear game plan, one-point-at-a-time/process cues and a consistent between-point routine, including planning serve/return plus one."
+          ],
+          "limitations": "Mental-skills examples; no fixed breath count, point-win probability, or prescribed five-step recovery sequence.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-22T09:30:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-club-editorial-review.json",
+        "contentHash": "ad7b1c2982d49408974aacbfb35be2eb50585de237e7514c53887d71d3ca9d34"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -8341,7 +8940,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -8355,10 +8954,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "바깥으로 예리하게 휘어 나가는 슬라이스 서브를 뒤로 물러서지 않고 사전에 위치를 조정해 서버 발밑으로 안전하게 리턴하는 방법은 무엇인가?",
+      "differentiation": "aw-052는 왼손잡이 서브 특화 공략을 다루고 aw-037과 aw-042는 플랫/세컨드 서브 일반 리턴을 다룬다. 이 글은 오른손잡이와 왼손잡이의 슬라이스 회전 방향에 따른 바운드 궤적 차이, 듀스/애드 코트별 사전 위치 선정, 바운드 전진 블록 타법을 다룬다.",
       "before": {
         "contentHash": "a61c8ae98ee93cb2bcdb38c77f93094f4e62a2997e07aa7714f0bb7c5539ceeb",
         "score": null,
@@ -8367,20 +8966,70 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "3c9c8c63fda2c9024ff5ecfb1335a8ffd9ee0259d66e22e31a2e1d8fb8d754e3",
-        "scores": {},
-        "score": null,
+        "contentHash": "2a647642916960a0977618987f62e86c986279193dbb033ca45565fafa8f0934",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "Rule 5 scores standard games with server score first; Rules 8, 14–17 govern server/receiver and service position/order; Rules 19–20/24 cover second-service fault and point loss; Rule 29 says continuous play with up to 25 seconds between points and limited official warm-up. Appendix VI permits approved alternative scoring."
+          ],
+          "limitations": "Current 2026 standard rules, but event-approved alternatives and local regulations can differ. Rule 29's official on-court warm-up maximum is distinct from a separate pre-court personal warm-up; do not promise extra recovery time or advise routine length equal to the whole interval.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/tennis-strategy--returning-first-and-second-serves.html",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "USTA differentiates higher-percentage first-serve returns from a second-serve opportunity to step in and hit with depth/spin; wide/body/T placement changes suggested target."
+          ],
+          "limitations": "Second serve is not always short, slow, or attackable. Step-in and aggression are situational coaching suggestions, not automatic winners or mandatory court coordinates.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national/improve-your-tennis-game--returning-a-lefty-serve.html",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "USTA says a left-handed slice serve can move toward the returner's left and gives a lefty-specific starting-position/return example."
+          ],
+          "limitations": "This is the already-covered lefty case (aw052), not a direction rule for every slice serve. For aw077 observe actual curve, bounce and landing spot before adjusting.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-22T09:30:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-club-editorial-review.json",
+        "contentHash": "2a647642916960a0977618987f62e86c986279193dbb033ca45565fafa8f0934"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -8392,7 +9041,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -8406,10 +9055,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "복식 경기에서 서브를 넣은 직후 제자리에 멈춰 서서 실점하지 않고, 서브 코스와 전위 움직임에 맞춰 첫 발을 올바르게 이동하는 방법은 무엇인가?",
+      "differentiation": "aw-057은 단식 서브 후 기본 베이스라인 리셋을 다루고 aw-012/aw-017은 전위의 위치와 포칭을 다룬다. 이 글은 복식 서버 본인의 서브 후 전진(서브앤발리) vs 베이스라인 수비(원업원백) 선택 기준과 전위 파트너의 비운 공간 커버 약속을 다룬다.",
       "before": {
         "contentHash": "953439346f67338dff36f7337eb3bc5396c984c9c78035365b8850ca59390993",
         "score": null,
@@ -8418,20 +9067,80 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "5c350752b70870b341e7990ccb30b5cb8b282aee0f3fe6fb4af497e0fc7dc552",
-        "scores": {},
-        "score": null,
+        "contentHash": "2b83c0a596bb58d40e0410aecd3005122e1b40515cd6605b15ee421f9e8943af",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "Rule 5 scores standard games with server score first; Rules 8, 14–17 govern server/receiver and service position/order; Rules 19–20/24 cover second-service fault and point loss; Rule 29 says continuous play with up to 25 seconds between points and limited official warm-up. Appendix VI permits approved alternative scoring."
+          ],
+          "limitations": "Current 2026 standard rules, but event-approved alternatives and local regulations can differ. Rule 29's official on-court warm-up maximum is distinct from a separate pre-court personal warm-up; do not promise extra recovery time or advise routine length equal to the whole interval.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/content/dam/usta/pdfs/20180302_WoundedWarriorCurricula.pdf",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "USTA curriculum separates server, server's partner, returner and returner's partner; in doubles, cover the area of the current position and call a switch when a partner is better placed for a shot."
+          ],
+          "limitations": "Adapted-program training material, not a rule giving permanent ownership of middle balls or a universal exact formation. Its illustrated coordinates should not be prescribed for all players.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/stay-current/texas/ask-a-coach-brandi-bratek.html",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "Coach Bratek recommends communicating expected serve/return and choosing partner positioning accordingly; she gives an example of asking a partner to move back when a return or serve may expose them."
+          ],
+          "limitations": "Contextual coach interview, not a fixed court map, serve-and-volley mandate, or formal rule of shot ownership.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/content/dam/usta/content-fragments/tennis-service-center/assets/pdfs/Net-Generation-Practice-Plan-Yellow.pdf",
+          "checkedAt": "2026-10-20T13:02:58Z",
+          "claims": [
+            "A doubles practice game deliberately contrasts server following a first serve to net with server staying back after a second serve, and explicitly permits a two-back progression."
+          ],
+          "limitations": "A constrained drill for youth/coaching, not a universal first-serve/second-serve law or proof that either formation always works. Use only to show tactical options.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-warmup-club-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-22T09:30:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-club-editorial-review.json",
+        "contentHash": "2b83c0a596bb58d40e0410aecd3005122e1b40515cd6605b15ee421f9e8943af"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-club-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -8443,7 +9152,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {

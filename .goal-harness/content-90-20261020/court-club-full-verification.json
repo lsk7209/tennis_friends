@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-22T09:30:00+09:00",
+  "result": "PASS",
+  "scope": "Current local source only; no serving integration or production deployment proof",
+  "fullVerifyExitCode": 0,
+  "lintExitCode": 0,
+  "typecheckExitCode": 0,
+  "buildExitCode": 0,
+  "reviewProposalAndSourceHashes": "PASS",
+  "production": "pending"
+}

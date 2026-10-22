@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generatedAt": "2026-09-30T00:44:08.526Z",
+  "generatedAt": "2026-10-22T00:32:21.344Z",
   "scannedRoots": [
     "src/app",
     "src/components",
@@ -15,6 +15,6 @@
     "node_modules",
     ".next"
   ],
-  "scannedFiles": 673,
+  "scannedFiles": 675,
   "findings": []
 }

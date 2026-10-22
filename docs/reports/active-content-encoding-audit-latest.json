@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generatedAt": "2026-09-30T00:44:09.699Z",
+  "generatedAt": "2026-10-22T00:32:22.668Z",
   "entryFiles": [
     "src/data/blog-content/index.ts",
     "src/data/blog-posts.js"
@@ -31,6 +31,7 @@
     "src/data/blog-content/part30-reviewed-september-2026.ts",
     "src/data/blog-content/part31-beginner-series-2026.ts",
     "src/data/blog-content/part32-october-2026.ts",
+    "src/data/blog-content/part33-november-2026.ts",
     "src/data/blog-content/part4-new30.ts",
     "src/data/blog-content/part5-scheduled.ts",
     "src/data/blog-content/part6-generated.ts",
@@ -45,6 +46,7 @@
     "src/data/blog-posts-aw-part12.js",
     "src/data/blog-posts-aw-title100.js",
     "src/data/blog-posts-beginner-series-2026.js",
+    "src/data/blog-posts-november-2026.js",
     "src/data/blog-posts-october-2026.js",
     "src/data/blog-posts-part16-overrides.js",
     "src/data/blog-posts-part17-overrides.js",

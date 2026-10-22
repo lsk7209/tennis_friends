@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generatedAt": "2026-06-02T04:23:07.417Z",
+  "generatedAt": "2026-10-21T14:58:39.805Z",
   "source": "docs/reports/gsc-pages-2026-06-01.csv",
   "criteria": {
     "minImpressions": 20,
@@ -31,7 +31,7 @@
   "findings": [],
   "opportunities": [
     {
-      "page": "https://www.tennisfrens.com/players/martin-landaluce",
+      "page": "https://tennisfrens.com/players/martin-landaluce",
       "type": "player",
       "slug": "martin-landaluce",
       "title": "마르틴 란달루세",
@@ -46,7 +46,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/miomir-kecmanovic",
+      "page": "https://tennisfrens.com/players/miomir-kecmanovic",
       "type": "player",
       "slug": "miomir-kecmanovic",
       "title": "미오미르 케크마노비치",
@@ -61,7 +61,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/marie-bouzkova",
+      "page": "https://tennisfrens.com/players/marie-bouzkova",
       "type": "player",
       "slug": "marie-bouzkova",
       "title": "마리 부즈코바",
@@ -76,7 +76,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/arthur-rinderknech",
+      "page": "https://tennisfrens.com/players/arthur-rinderknech",
       "type": "player",
       "slug": "arthur-rinderknech",
       "title": "아르튀르 랑데르크네슈",
@@ -91,7 +91,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/daniel-evans",
+      "page": "https://tennisfrens.com/players/daniel-evans",
       "type": "player",
       "slug": "daniel-evans",
       "title": "다니엘 에반스",
@@ -106,7 +106,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/alexandre-muller",
+      "page": "https://tennisfrens.com/players/alexandre-muller",
       "type": "player",
       "slug": "alexandre-muller",
       "title": "알렉상드르 뮐러",
@@ -121,7 +121,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/jiri-lehecka",
+      "page": "https://tennisfrens.com/players/jiri-lehecka",
       "type": "player",
       "slug": "jiri-lehecka",
       "title": "이리 레헤츠카",
@@ -136,7 +136,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/blog/tennis-lesson-cost-guide",
+      "page": "https://tennisfrens.com/blog/tennis-lesson-cost-guide",
       "type": "blog",
       "slug": "tennis-lesson-cost-guide",
       "title": "2026년 테니스 레슨 비용 완전 정복 — 실내 vs 실외 가격 비교",
@@ -151,7 +151,7 @@
       "action": "Prepare a non-template title/subtitle, first-answer, FAQ, and internal-link rewrite brief."
     },
     {
-      "page": "https://www.tennisfrens.com/players/laslo-djere",
+      "page": "https://tennisfrens.com/players/laslo-djere",
       "type": "player",
       "slug": "laslo-djere",
       "title": "라슬로 제레",
@@ -166,7 +166,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/hamad-medjedovic",
+      "page": "https://tennisfrens.com/players/hamad-medjedovic",
       "type": "player",
       "slug": "hamad-medjedovic",
       "title": "하마드 메제도비치",
@@ -181,7 +181,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/francisco-comesana",
+      "page": "https://tennisfrens.com/players/francisco-comesana",
       "type": "player",
       "slug": "francisco-comesana",
       "title": "프란시스코 코메사냐",
@@ -196,7 +196,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/tallon-griekspoor",
+      "page": "https://tennisfrens.com/players/tallon-griekspoor",
       "type": "player",
       "slug": "tallon-griekspoor",
       "title": "탈론 크리에크스푸르",
@@ -211,7 +211,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/ethan-quinn",
+      "page": "https://tennisfrens.com/players/ethan-quinn",
       "type": "player",
       "slug": "ethan-quinn",
       "title": "이선 퀸",
@@ -226,7 +226,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/polina-kudermetova",
+      "page": "https://tennisfrens.com/players/polina-kudermetova",
       "type": "player",
       "slug": "polina-kudermetova",
       "title": "폴리나 쿠데르메토바",
@@ -241,7 +241,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/yannick-hanfmann",
+      "page": "https://tennisfrens.com/players/yannick-hanfmann",
       "type": "player",
       "slug": "yannick-hanfmann",
       "title": "야닉 한프만",
@@ -256,7 +256,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/yannick-hanfmann",
+      "page": "https://tennisfrens.com/players/yannick-hanfmann",
       "type": "player",
       "slug": "yannick-hanfmann",
       "title": "야닉 한프만",
@@ -271,7 +271,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/tomas-machac",
+      "page": "https://tennisfrens.com/players/tomas-machac",
       "type": "player",
       "slug": "tomas-machac",
       "title": "토마스 마하츠",
@@ -286,7 +286,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/dino-prizmic",
+      "page": "https://tennisfrens.com/players/dino-prizmic",
       "type": "player",
       "slug": "dino-prizmic",
       "title": "디노 프리즈미치",
@@ -301,7 +301,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/camilo-ugo-carabelli",
+      "page": "https://tennisfrens.com/players/camilo-ugo-carabelli",
       "type": "player",
       "slug": "camilo-ugo-carabelli",
       "title": "카밀로 우고 카라벨리",
@@ -316,7 +316,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/linda-noskova",
+      "page": "https://tennisfrens.com/players/linda-noskova",
       "type": "player",
       "slug": "linda-noskova",
       "title": "린다 노스코바",
@@ -331,7 +331,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/alejandro-davidovich-fokina",
+      "page": "https://tennisfrens.com/players/alejandro-davidovich-fokina",
       "type": "player",
       "slug": "alejandro-davidovich-fokina",
       "title": "알레한드로 다비도비치 포키나",
@@ -346,7 +346,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/jakub-mensik",
+      "page": "https://tennisfrens.com/players/jakub-mensik",
       "type": "player",
       "slug": "jakub-mensik",
       "title": "야쿠프 멘시크",
@@ -361,7 +361,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/blog/tennis-error-reduction-guide",
+      "page": "https://tennisfrens.com/blog/tennis-error-reduction-guide",
       "type": "blog",
       "slug": "tennis-error-reduction-guide",
       "title": "Tennis Error Reduction Guide",
@@ -376,7 +376,7 @@
       "action": "Prepare a non-template title/subtitle, first-answer, FAQ, and internal-link rewrite brief."
     },
     {
-      "page": "https://www.tennisfrens.com/players/karen-khachanov",
+      "page": "https://tennisfrens.com/players/karen-khachanov",
       "type": "player",
       "slug": "karen-khachanov",
       "title": "카렌 하차노프",
@@ -391,7 +391,7 @@
       "action": "Improve profile title framing, Korean name clarity, schema-visible summary, and related player/article paths."
     },
     {
-      "page": "https://www.tennisfrens.com/players/luciano-darderi",
+      "page": "https://tennisfrens.com/players/luciano-darderi",
       "type": "player",
       "slug": "luciano-darderi",
       "title": "루치아노 다르데리",

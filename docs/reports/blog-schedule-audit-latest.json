@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "generatedAt": "2026-09-30T00:44:17.575Z",
+  "generatedAt": "2026-10-22T00:32:32.189Z",
   "defaultExpectedIntervalHours": 5,
   "intervalOverrides": {
     "src/data/blog-posts-reviewed-september-2026.js": 12,
     "src/data/blog-posts-october-2026.js": 24
   },
   "files": 18,
-  "rawPosts": 1295,
-  "effectivePosts": 789,
-  "scheduledPosts": 565,
+  "rawPosts": 1297,
+  "effectivePosts": 791,
+  "scheduledPosts": 566,
   "fileSummaries": [
     {
       "file": "src/data/blog-posts.js",
-      "posts": 26,
+      "posts": 27,
       "scheduled": 0,
       "firstScheduledAt": null,
       "lastScheduledAt": null,
@@ -44,10 +44,10 @@
     },
     {
       "file": "src/data/blog-posts-october-2026.js",
-      "posts": 30,
-      "scheduled": 30,
+      "posts": 31,
+      "scheduled": 31,
       "firstScheduledAt": "2026-10-01T09:00:00+09:00",
-      "lastScheduledAt": "2026-10-30T09:00:00+09:00",
+      "lastScheduledAt": "2026-10-31T09:00:00+09:00",
       "intervalHours": [
         24
       ],
