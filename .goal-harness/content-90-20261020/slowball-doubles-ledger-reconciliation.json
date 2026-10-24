@@ -1,0 +1,34 @@
+{
+  "reconciledAt": "2026-10-24T03:44:42.648Z",
+  "batchId": "slowball-doubles-5",
+  "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-editorial-review.json",
+  "approvedCount": 90,
+  "pendingCount": 1587,
+  "routesApprovedToday": [
+    {
+      "route": "/blog/aw-079-20",
+      "score": 94,
+      "contentHash": "12fc370a51b39cfbc1dca8247d5991d4b1c6ed2f10f5585e9fa4e807c366bd43"
+    },
+    {
+      "route": "/blog/aw-080-tennis-guide",
+      "score": 94,
+      "contentHash": "8d5b3a2f576d8373c8f312cca9638f0028d7fe55ef23cdae59f56ba133f3c6d0"
+    },
+    {
+      "route": "/blog/aw-081-club-match",
+      "score": 94,
+      "contentHash": "c15697956fec104c44dc7f84828791b557d3429675c19025529fe99352733c63"
+    },
+    {
+      "route": "/blog/aw-082-serve-record",
+      "score": 94,
+      "contentHash": "42bcaa782aade7bc82f5d94bfe0eedc60e4ff1336dccb52917d00d219bf66442"
+    },
+    {
+      "route": "/blog/aw-083-doubles",
+      "score": 94,
+      "contentHash": "c6ebb7b6526e67a194a8fa6c08dd3029e00fbdfce5b4d4ecfa4a6a6ce8285abf"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "integratedAt": "2026-10-24T03:38:22.161Z",
+  "batchId": "slowball-doubles-5",
+  "filesChanged": [
+    {
+      "file": "src/data/blog-content/part16-quality-rewrites.ts",
+      "backup": ".goal-harness/content-90-20261020/source-backups/slowball-doubles-src_data_blog-content_part16-quality-rewrites.ts-a8201c6c449a.txt",
+      "beforeHash": "a8201c6c449ae1d53ee3c3d90b271bd6a4096e5fcb0054354b9dd8c6f552b3d3",
+      "afterHash": "a8d08433cb3304bdb14fee4e00a3eead98909d9b997a4efb17f13ad60665b765",
+      "targetSlugs": [
+        "aw-079-20",
+        "aw-080-tennis-guide",
+        "aw-081-club-match",
+        "aw-082-serve-record",
+        "aw-083-doubles"
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part16-overrides.js",
+      "backup": ".goal-harness/content-90-20261020/source-backups/slowball-doubles-src_data_blog-posts-part16-overrides.js-5c2c7db30923.txt",
+      "beforeHash": "5c2c7db3092374148cb8f5d7f41d5e3bf25abb50b9e7d24105a3be87942b5c49",
+      "afterHash": "27d1001f80f8ddd3f25af74c95ba2aad529fae5bd5db198b9cfe99822f035cc0",
+      "targetSlugs": [
+        "aw-079-20",
+        "aw-080-tennis-guide",
+        "aw-081-club-match",
+        "aw-082-serve-record",
+        "aw-083-doubles"
+      ]
+    }
+  ],
+  "targetSlugs": [
+    "aw-079-20",
+    "aw-080-tennis-guide",
+    "aw-081-club-match",
+    "aw-082-serve-record",
+    "aw-083-doubles"
+  ]
+}

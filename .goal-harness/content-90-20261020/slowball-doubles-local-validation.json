@@ -1,0 +1,22 @@
+{
+  "validatedAt": "2026-10-24T12:35:00.000Z",
+  "batchId": "slowball-doubles-5",
+  "routes": [
+    "/blog/aw-079-20",
+    "/blog/aw-080-tennis-guide",
+    "/blog/aw-081-club-match",
+    "/blog/aw-082-serve-record",
+    "/blog/aw-083-doubles"
+  ],
+  "viewports": [
+    "mobile-390px",
+    "desktop-1280px"
+  ],
+  "accessibility": {
+    "tableCaptions": true,
+    "tableScopes": true,
+    "detailsSummaryFaq": true,
+    "keyboardNavigation": true
+  },
+  "status": "passed"
+}

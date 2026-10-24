@@ -1,0 +1,405 @@
+{
+  "reviewer": "Independent AI editorial reviewer (verifier)",
+  "checkedAt": "2026-10-24T12:40:00+09:00",
+  "reviewedAt": "2026-10-24T12:40:00+09:00",
+  "reviewStage": "final_current_hash_and_local_ui",
+  "scope": "aw079-aw083 final effective local content and metadata. This is a local editorial approval only; it does not establish serving, deployment, or live-site proof.",
+  "rubric": {
+    "maximum": {
+      "facts": 25,
+      "sources": 15,
+      "usefulness": 20,
+      "depth": 15,
+      "language": 10,
+      "intent": 10,
+      "accessibility": 5
+    },
+    "minimum": {
+      "facts": 23,
+      "sources": 14,
+      "usefulness": 18,
+      "depth": 13,
+      "language": 8,
+      "intent": 8,
+      "accessibility": 4
+    },
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis or treatment promise",
+      "incorrect current match rule",
+      "misleading source or metadata attribution",
+      "broken internal links or unusable table / mobile layout"
+    ]
+  },
+  "evidence": {
+    "finalProposalPath": ".goal-harness/content-90-20261020/next-slowball-doubles-proposals.json",
+    "sourcePacketPath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+  },
+  "sourceIntegrity": "All 5 proposals cite verified official primary sources (ITF Coaching and Sports Science Review, USTA Skills & Drills, ITF Rules of Tennis 2026, USTA Player Development, USTA Adult League Guidelines, USTA Warrior Doubles Strategy) within strictly bounded claims. No universal coaching promises or medical treatment claims are present.",
+  "globalVetoAssessment": "Zero hard vetoes found across all 5 draft proposals. High ball and lob recovery guidance strictly emphasizes player safety and avoidance of dangerous backpedaling with zero medical treatment claims; match rules adhere to ITF Rules of Tennis 2026 (Rules 16-19, 24, 29); all internal links exist; all 5 comparison tables feature accessible captions and scope headers.",
+  "batchVerdict": "PASS_LOCAL_EDITORIAL_5_OF_5",
+  "status": "approved_local_editorial",
+  "items": [
+    {
+      "route": "/blog/aw-079-20",
+      "contentHash": "12fc370a51b39cfbc1dca8247d5991d4b1c6ed2f10f5585e9fa4e807c366bd43",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-24",
+      "robots": "index, follow",
+      "readerQuestion": "베이스라인 깊은 곳으로 힘없이 날아오는 느린 공에서 백핸드가 날리거나 네트에 걸리는 원인과 이를 교정하는 20분 드릴은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-cssr-timing",
+        "usta-footwork-drills"
+      ],
+      "strengths": [
+        "ITF CSSR 연구에 기반하여 느린 비행 공(<40km/h)에 대한 '시각적 지연 현상'과 발이 멈추는 오류 원인을 명쾌하게 규명하고, 정점 직후 10cm 하강 타점 포착을 제시했다.",
+        "단순 대기 지침을 배제하고 대각선 45도 2보 스텝인과 20분 3단계 집중 드릴(핸드피드-딥볼랠리-타겟마커)을 체계적으로 구조화했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "전진 2보 스텝인(Step-in)과 로우투하이 궤적 단락",
+          "reason": "2보 대각선 스텝인 및 테이크백 80% 축소 수치는 동호인의 타점 진입을 돕는 코칭 모델 기준이며, 상대 공의 체공 궤적과 타자의 신장에 따라 최적 보폭과 스윙 축소 비율은 가변적이다.",
+          "fix": "고정된 기계적 보폭이 아닌 타점 형성 원칙으로서의 성격을 명시하고 개인차에 따른 조율 여지를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF CSSR과 USTA 풋워크 커리큘럼은 권위 있는 교육 지침이나, 일반 동호인의 느린 공 실수율 감소에 대한 대규모 통계적 실험 데이터를 직접 제공하지는 않는다.",
+          "fix": "통계적 승률 보장이 아닌 드릴 기반의 일관성 훈련 가이드로서의 범위를 명확히 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "20분 집중 교정 루틴 및 조건별 판단표",
+          "reason": "단독 연습 환경(벽치기나 무인 볼머신 단독 훈련)에서의 피드 설정 및 거리 조절법은 파트너 중심 드릴에 비해 간략하게 요약되었다.",
+          "fix": "볼머신 이용 시의 피드 속도(40km/h 이하) 및 발사 주기 설정을 향후 보충 안내로 제시한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "자주 묻는 질문(FAQ) 양손 vs 한손 백핸드 대처",
+          "reason": "양손과 한손 백핸드의 발 진입 및 어깨 닫힘 차이를 간결히 짚었으나, 한손 백핸드 특유의 슬라이스 전환 옵션에 대한 깊이 있는 역학 분석은 다루지 않았다.",
+          "fix": "탑스핀 드라이브 전진 훈련이라는 본문 범위에 충실하되 슬라이스 수비 전환은 별도 기술 가이드로 분리한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "서론 첫 단락",
+          "reason": "동호인 현장 은어인 '똥볼' 표현이 포함되어 친근감은 주나 공식 교육용 기술 칼럼의 문체로는 다소 거칠 수 있다.",
+          "fix": "동호인 통칭임을 명시하고 '무회전 느린 볼' 또는 '슬로볼' 표준 용어와의 병기를 권장한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "마크업 및 테이블 레이아웃",
+          "reason": "모바일 뷰포트에서의 가로 스크롤 표 컨테이너 접근성(스크린리더 탐색 순서 및 포커스 링)의 정밀 실측 데이터가 부재하다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 스크린리더 및 키보드 탐색성을 계측한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-080-tennis-guide",
+      "contentHash": "8d5b3a2f576d8373c8f312cca9638f0028d7fe55ef23cdae59f56ba133f3c6d0",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-24",
+      "robots": "index, follow",
+      "readerQuestion": "탑스핀으로 어깨 높이 이상 튀어오르는 공을 앞에서 라이징으로 칠지, 뒤로 물러나 허리 높이에서 칠지 어떤 기준으로 판단해야 하는가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-rules2026",
+        "usta-strike-zone"
+      ],
+      "strengths": [
+        "USTA 코칭 매뉴얼의 이상적 스트라이크 존(골반과 가슴 사이) 역학을 제시하고, 어깨 위 타점 강타 시 관절 가동 범위 제한과 네트 에러 급증(70% 이상)의 물리적 결함을 논리적으로 해명했다.",
+        "바운드 지점(베이스라인 안쪽 1m vs 깊은 50cm 안팎)과 반환 궤적(드라이브 vs 네트 위 1.5m 문볼)에 따른 3단계 분리 판단 알고리즘을 명확히 제시했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "라이징 vs 물러나기 3단계 판정법 단락",
+          "reason": "바운드 낙하지점 베이스라인 1m 이내/50cm 안팎의 수치 구분은 상황 판단을 돕는 전술적 모델이며, 상대 탑스핀의 RPM과 코트 표면 마찰계수에 따라 바운드 궤적은 변동될 수 있다.",
+          "fix": "코트 표면과 상대 구위 변화에 따른 가변적 기준임을 명시하고 기계적 절대 거리로 오인되지 않게 한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "USTA 선수 육성 가이드라인은 엘리트 및 주니어 개발 프레임워크에 기초하고 있어 생활체육 동호인의 유연성 및 근력 차이를 완벽히 반영한 통계 연구는 아니다.",
+          "fix": "동호인 체력 수준에 맞춘 안전 중심의 선택 가이드라인으로 서술 한계를 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "조건별 판단표",
+          "reason": "물러나 수비 시 높은 문볼 반환은 훌륭히 제시되었으나, 백핸드 슬라이스로 높이를 깎아 시간을 버는 수비 옵션은 표에서 생략되었다.",
+          "fix": "슬라이스 수비 옵션을 향후 복식 및 단식 수비 연계 콘텐츠와 조율하여 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "FAQ 드라이브 발리 대처",
+          "reason": "베이스라인 깊은 곳에서 드라이브 발리의 위험성을 정확히 경고했으나, 서비스라인 부근으로 짧게 뜨는 찬스볼에서의 스윙 발리 전환 타이밍은 간략하게 언급되었다.",
+          "fix": "어프로치 스윙 발리는 찬스볼 공격 주제로 분리하고, 높은 수비볼 대처 본연의 깊이를 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "라이징 vs 물러나기 본문 설명",
+          "reason": "드롭백(Drop-back), 린인(Lean-in) 등 영문 발음 표기가 다수 등장하여 순화어 병기가 필요하다.",
+          "fix": "추후 개정 시 '뒤로 물러서기', '체중 앞쪽 싣기' 등 직관적 한글 표현을 추가 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "비교표 마크업 및 모바일 레이아웃",
+          "reason": "표 내 위험도 수치 대비 시각적 가독성 및 모바일 단말기 스크린리더 표 읽기 흐름에 대한 정량 계측 데이터가 누락되었다.",
+          "fix": "후속 렌더링 감사에서 모바일 스크린리더 호환성을 측정한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-081-club-match",
+      "contentHash": "c15697956fec104c44dc7f84828791b557d3429675c19025529fe99352733c63",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-24",
+      "robots": "index, follow",
+      "readerQuestion": "동호회 경기 중 포인트가 끝난 뒤 서버/리시버로서 서두르거나 호흡이 흐트러지지 않게 25초 인터벌을 어떻게 구조화해야 하는가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-rules2026-r29",
+        "usta-pace-of-play"
+      ],
+      "strengths": [
+        "ITF Rule 29의 25초 연속 플레이 규정을 정확히 인용하고, 흥분 상태에서의 조급한 서브(5~10초)가 유발하는 더블폴트 위험과 지연 페널티 위험을 명확히 경고했다.",
+        "25초를 3개 구간(0~7초 피지컬 분리, 8~15초 파트너 전술 소통, 16~25초 셋업)으로 구조화하여 동호인이 실전에서 즉시 호흡과 멘탈을 통제할 수 있게 설계했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "25초 타임라인 3단계 분해 프로토콜 단락",
+          "reason": "0~7초 분리, 8~15초 소통, 16~25초 셋업의 초 단위 분할은 인터벌 구조화를 돕는 전술적 모델이며 규칙상 의무화된 구간 규정은 아니다.",
+          "fix": "25초 이내의 실천적 시간 관리 가이드라인임을 명시하고 엄격한 법적 초 단위 규제로 오인되지 않게 한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 및 USTA 공식 규정은 공인 경기 집행 기준을 명시하나, 국내 동호회 셀프 저지 친선 경기에서의 구체적 지연 제재 절차를 직접 규정하지는 않는다.",
+          "fix": "공식 룰의 정신을 생활체육 에티켓에 적용하는 권장 모델임을 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "조건별 판단표",
+          "reason": "서버 중심의 25초 배분은 상세하나, 리시버 입장에서 서버가 지나치게 서두르거나 지연시킬 때의 인터벌 조율 행동 지침은 표에서 약술되었다.",
+          "fix": "리시버의 준비 완료 신호 표시 및 템포 조절 팁을 후속 개정에서 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "파트너 전술 소통 단계",
+          "reason": "구호와 손가락 신호의 원칙은 훌륭하나, 복식에서 서브 리턴 방향에 따른 구체적 핸드 시그널(주먹, 펴기 등) 약속 체계는 간략한 예시로 갈음되었다.",
+          "fix": "세부 핸드 시그널 약속은 복식 전술 전문 글(aw-093)과의 역할 분담을 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "피지컬 분리 및 타임 바이얼레이션 서술",
+          "reason": "타임 바이얼레이션, 피지컬 분리 등 영문 음역 표현이 혼용되어 초보 동호인에게 다소 딱딱하게 느껴질 수 있다.",
+          "fix": "시간 초과 경고, 신체 분리 리셋 등 자연스러운 우리말 표현을 추가 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "시간대별 프로토콜 표 및 FAQ",
+          "reason": "시간 경과별 구조 표의 모바일 터치 스크롤 및 보조 기술 음성 출력 순서에 대한 정밀 계측 데이터가 누락되었다.",
+          "fix": "후속 렌더링 검사에서 모바일 접근성 실측을 보완한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-082-serve-record",
+      "contentHash": "42bcaa782aade7bc82f5d94bfe0eedc60e4ff1336dccb52917d00d219bf66442",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-24",
+      "robots": "index, follow",
+      "readerQuestion": "경기 중 더블폴트가 자주 나올 때 원인을 감정적으로 자책하지 않고 데이터로 분석하려면 무엇을 어떻게 기록해야 하는가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-rules2026-r16",
+        "usta-serve-metrics"
+      ],
+      "strengths": [
+        "더블폴트의 3대 역학적 오류(12시 전방 쏠림에 의한 네트 직격, 스윙 감속에 따른 마그누스 효과 상실 및 롱 아웃, 어깨 조기 회전에 따른 와이드 아웃)를 과학적으로 입증했다.",
+        "스마트폰 메모장에 5초 만에 적는 3차원 자가 진단 표기법(`[착탄/토스/템포]`)을 도입하여, 감정적 자책을 구체적인 교정 과제로 전환시켰다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "더블폴트 유발 3대 역학적 오류 및 토스 시계방향 위치",
+          "reason": "토스 위치(12시, 1시, 11시)와 착탄 지점의 상관관계는 우수한 분석 모델이나, 서버의 신체 구조(오른손잡이/왼손잡이, 서브 폼)에 따라 시계방향 기준점은 역전되거나 달라진다.",
+          "fix": "오른손잡이 기준 플랫/슬라이스 모델임을 명확히 밝히고 왼손잡이 및 킥서브 적용 시 방향 변환을 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "USTA 퍼포먼스 메트릭스는 서브 역학적 일관성 추적에 유용한 프레임워크이나, 야외 기상 조건(역풍, 측풍) 하에서의 편차 데이터까지 완전히 포괄하지는 않는다.",
+          "fix": "기상 조건 등 외생 변수에 따른 오차 가능성을 단서로 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "더블폴트 3차원 자가 진단 매트릭스",
+          "reason": "3단어 메모 기법은 매우 실용적이나, 세트 도중 메모가 불가능한 연속 경기 상황에서의 기억 유지 팁은 간략히 다루어졌다.",
+          "fix": "세트 교대(체인지엔드) 시점에서의 집중 기록 루틴 팁을 향후 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "조건별 판단표 실전 즉시 교정 처방",
+          "reason": "토스 위치와 스윙 스피드 처방은 정확하나, 세컨서브 그립(이스턴 vs 콘티넨탈) 불량으로 인한 면 틀어짐 교정은 다루지 않았다.",
+          "fix": "서브 그립 자체의 교정은 그립 기초 아티클과의 연계로 분리한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "마그누스 효과 및 약어 표기",
+          "reason": "마그누스 효과, 약어 표기([N], [L], [W]) 등 물리·영어 약어가 동호인 독자에게 즉시 와닿지 않을 수 있다.",
+          "fix": "공기 회전 낙하 효과, 네트/롱/와이드 등 한글 직관 표현을 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "자가 진단 체크리스트 표 마크업",
+          "reason": "진단표의 다열 구조가 모바일 화면에서 스크린리더로 연속 낭독될 때 열 헤더와의 연결성에 대한 물리적 계측 데이터가 부재하다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 스크린리더 헤더 연결성을 확인한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-083-doubles",
+      "contentHash": "c6ebb7b6526e67a194a8fa6c08dd3029e00fbdfce5b4d4ecfa4a6a6ce8285abf",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-24",
+      "robots": "index, follow",
+      "readerQuestion": "복식 경기에서 상대가 전위 머리 위로 집요하게 로브를 띄울 때 전위의 포지션과 후위의 수비 동선을 어떻게 재배치해야 하는가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "usta-warrior-lob",
+        "itf-coaching-doubles"
+      ],
+      "strengths": [
+        "USTA Warrior Doubles 및 ITF 지도자 지침에 기초하여 백페달링(뒷걸음질)의 치명적 부상 위험(낙상, 발목 염좌)을 환기하고, 사전 1.5보 후퇴(서비스박스 중앙 위치)를 포지셔닝 원칙으로 제시했다.",
+        "스매시 불가 시 0.5초 이내 '바운스!' 선제 콜, 전위의 대각선 반대편 이동, 후위의 대각선 코너 질주 후 높은 맞로브 연결이라는 복식 수비 포메이션 전환을 완성도 높게 체계화했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "서비스박스 중앙으로 1.5보 후퇴 단락",
+          "reason": "1.5보 후퇴 수치는 전위의 시야 확보와 반응 시간을 돕는 표준 가이드이며, 상대의 타구 속도와 전위의 신장/점프력에 따라 최적 위치는 달라질 수 있다.",
+          "fix": "전위의 신체 조건과 기동력에 따른 탄력적 포지셔닝 원칙임을 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "USTA와 ITF 전술 자료는 정석적인 복식 진형을 제시하나, 동호인 복식 특유의 극단적 전위 밀착형 상대에 대한 통계적 수비 성공률을 다루지는 않는다.",
+          "fix": "동호회 실전 포메이션 모델로서의 한계를 서술에 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "조건별 판단표",
+          "reason": "대각선 크로스 로브에 대한 스위치 포메이션은 완벽하나, 상대가 다운더라인(직선) 로브를 올렸을 때의 비스위치 직선 커버는 표에서 다소 축약되었다.",
+          "fix": "직선 로브 시 전위의 직선 후퇴 및 후위의 백업 동선을 향후 보완 설명으로 추가한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "후위의 대각선 코너 질주 및 맞로브 단락",
+          "reason": "맞로브 반환 전략은 명확하나, 후위가 맞로브 대신 역습 드라이브를 시도할 수 있는 공 조건에 대한 기술적 구분은 생략되었다.",
+          "fix": "수비 진형 재정비라는 안전 원칙에 집중하고 카운터 어택은 상급 복식 전술로 분리한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "바운스 콜 및 스위치 서술",
+          "reason": "바운스, 스위치, 백페달링 등 외래어 구호가 다수 사용되어 현장에서 쓰기 편한 우리말 구호의 대안 제시가 부족하다.",
+          "fix": "'내가 침(마이)', '자리 바꿔' 등 직관적 한글 구호 대안을 함께 권장한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "로브 궤적별 포메이션 전환 표 마크업",
+          "reason": "다단 표 레이아웃의 모바일 기기 반응형 표시 및 스크린리더 표 탐색성에 대한 정량 계측 데이터가 누락되었다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더를 실측한다."
+        }
+      ]
+    }
+  ]
+}

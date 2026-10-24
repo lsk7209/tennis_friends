@@ -23,34 +23,6 @@ export default function AdminPage() {
     lastUpdate: null,
     error: null,
   });
-  // 이 화면은 현재 브라우저의 localStorage 통계만 보여준다.
-  // 서버 권한이 없는 화면에 클라이언트 비밀번호를 두면 비밀값처럼 오인되므로
-  // 별도 로그인 없이 로컬 통계를 불러온다.
-  useEffect(() => {
-    fetchStats();
-
-    const interval = setInterval(() => {
-      fetchStats();
-    }, 30000); // 30초마다 업데이트
-
-    return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const fetchStats = async () => {
-    setLoading(true);
-    try {
-      await loadStatsFromLocalStorage();
-    } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.error('Failed to load local analytics:', error);
-      }
-      setStats({ ...EMPTY_STATS_DATA });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const loadStatsFromLocalStorage = async (): Promise<StatsData | null> => {
     try {
       const rawData = localStorage.getItem('visitorData');
@@ -101,6 +73,34 @@ export default function AdminPage() {
       return null;
     }
   };
+
+  const fetchStats = async () => {
+    setLoading(true);
+    try {
+      await loadStatsFromLocalStorage();
+    } catch (error) {
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Failed to load local analytics:', error);
+      }
+      setStats({ ...EMPTY_STATS_DATA });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // 이 화면은 현재 브라우저의 localStorage 통계만 보여준다.
+  // 서버 권한이 없는 화면에 클라이언트 비밀번호를 두면 비밀값처럼 오인되므로
+  // 별도 로그인 없이 로컬 통계를 불러온다.
+  useEffect(() => {
+    fetchStats();
+
+    const interval = setInterval(() => {
+      fetchStats();
+    }, 30000); // 30초마다 업데이트
+
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // 헬퍼 함수들은 이미 helpers에서 import됨
 

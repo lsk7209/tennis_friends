@@ -1,0 +1,9 @@
+{
+  "verifiedAt": "2026-10-24T12:35:00.000Z",
+  "batchId": "slowball-doubles-5",
+  "testContentReview": "PASS",
+  "auditContentReview": "PASS",
+  "preverify": "PASS",
+  "verify": "PASS",
+  "status": "passed"
+}

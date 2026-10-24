@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T00:24:52.309Z",
+  "updatedAt": "2026-10-24T03:44:42.648Z",
   "policy": {
     "version": "20261020",
     "passingScore": 90,
@@ -809,6 +809,156 @@
           "checkedAt": "2026-10-20",
           "claims": [
             "강한 서브에 대한 콤팩트 백스윙과 블록 리턴의 안정성"
+          ]
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-20T17:15:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "oct26-doubles-switch-call",
+      "route": "/blog/oct26-doubles-switch-call",
+      "kind": "scheduled",
+      "baselineCohort": "2026-10-20T15:24:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-october-2026.js",
+        "src/data/blog-content/part32-october-2026.ts"
+      ],
+      "readerQuestion": "복식 경기 중 전위 머리 위로 로브가 넘어갔을 때 파트너와 어떤 신호와 동선으로 스위치해야 하는가?",
+      "differentiation": "뒤에서 쫓는 후위의 선제 콜 원칙, 전위의 대각선 반대 사이드 빈자리 커버 및 스위치 실패 시 중앙 방어 약속 체계화",
+      "status": "integrated",
+      "scheduledAt": "2026-10-23T09:00:00+09:00",
+      "publishedAt": "2026-10-23T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "0feb7665e3d437944852d614b61f5807dbb5e8d6d7cff1e3758a794ed0f98a29",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 14,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 94,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "USTA Warrior Doubles Strategy & Movement",
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "로브 상황에서의 스위치 콜 및 파트너 간 대각 이동 커버 원칙"
+          ]
+        },
+        {
+          "name": "ITF Coaching Doubles Communication Guide",
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "파트너 간 사전 합의된 음성 신호와 공간 분할 전략"
+          ]
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-20T17:15:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "oct26-drop-shot-defense",
+      "route": "/blog/oct26-drop-shot-defense",
+      "kind": "scheduled",
+      "baselineCohort": "2026-10-20T15:24:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-october-2026.js",
+        "src/data/blog-content/part32-october-2026.ts"
+      ],
+      "readerQuestion": "상대 드롭샷을 전진해 처리한 후 다음 공에 대비해 어떤 코스로 넘기고 어디로 포지션을 회복해야 하는가?",
+      "differentiation": "첫 스텝의 폭발적 반응, 2차 바운드 전 낮은 타점 리프팅 각도와 타구 직후 네트 대시 또는 코트 중앙 회복 스텝 분해",
+      "status": "integrated",
+      "scheduledAt": "2026-10-24T09:00:00+09:00",
+      "publishedAt": "2026-10-24T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "ae2e95fea48f023c903a697033a3299253890df1fe3ff106b63c64c955f933ab",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 14,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 94,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "USTA Footwork and Drop Shot Response Guide",
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "드롭샷 접근 풋워크 및 네트 앞 타구 후 리커버리 포지션 기준"
+          ]
+        },
+        {
+          "name": "ITF Rules of Tennis - Rule 24 (Player Loses Point)",
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "네트 접촉 및 2바운드 전 타구 규정 준수"
           ]
         }
       ],
@@ -9166,10 +9316,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "베이스라인 깊은 곳으로 힘없이 날아오는 느린 공에서 백핸드가 날리거나 네트에 걸리는 원인과 이를 교정하는 20분 드릴은 무엇인가?",
+      "differentiation": "단순히 '기다려서 쳐라'는 추상적 조언을 배제하고, 공의 정점(Apex) 직후 바운드 판단, 뒤로 물러서지 않고 대각선 앞으로 2보 전진하는 스텝인(Step-in), 가슴 높이 아래 라켓면 닫힘 유지와 20분 구간별(5분 핸드피드-10분 랠리-5분 타겟 지정) 드릴 제공",
       "before": {
         "contentHash": "7a0128d9cda1b9eef434202fed48f7106f557b2e3085b22851fa49542402dc99",
         "score": null,
@@ -9178,20 +9328,60 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "2fdebce702f975622cde402102ede6c0c965051041eb7b7dd150b99eca10b1c1",
-        "scores": {},
-        "score": null,
+        "contentHash": "12fc370a51b39cfbc1dca8247d5991d4b1c6ed2f10f5585e9fa4e807c366bd43",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "ITF CSSR studies identify visual delay on slow balls (<40km/h) and specify impact zone forward momentum transfer."
+          ],
+          "limitations": "Coaching biomechanics principles; individual player height and grip affect exact contact height.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "USTA coaching curricula emphasize step-in footwork and maintaining racquet head acceleration through contact."
+          ],
+          "limitations": "Standard drill progressions; not a universal timing prescription for every incoming trajectory.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-24T12:40:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-editorial-review.json",
+        "contentHash": "12fc370a51b39cfbc1dca8247d5991d4b1c6ed2f10f5585e9fa4e807c366bd43"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -9203,7 +9393,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -9217,10 +9407,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "탑스핀으로 어깨 높이 이상 튀어오르는 공을 앞에서 라이징으로 칠지, 뒤로 물러나 허리 높이에서 칠지 어떤 기준으로 판단해야 하는가?",
+      "differentiation": "타점의 물리적 높이(스트라이크 존: 허리와 가슴 사이 vs 어깨 위)와 네트 중앙(0.914m) 마진, 상대의 공 속도/스핀량에 따른 3단계 분리 판단 알고리즘 및 유효 베이스라인 거리 변화 수치 분석 제공",
       "before": {
         "contentHash": "99c240ae137245996560a09db3787e7210363dba7a9585958fcadf2550c2adf5",
         "score": null,
@@ -9229,20 +9419,60 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "10b595d6604ec59acc4ef50c59c21cd160bc0e4624d04c622b223c291f7bc7d2",
-        "scores": {},
-        "score": null,
+        "contentHash": "8d5b3a2f576d8373c8f312cca9638f0028d7fe55ef23cdae59f56ba133f3c6d0",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "ITF Rule 24 specifies point loss conditions, net height standard of 0.914m at center, and boundary dimensions."
+          ],
+          "limitations": "Official governing match rule; does not prescribe individual tactical choices.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "USTA development guides define optimal strike zone between hip and chest and delineate rising versus drop-back tactics."
+          ],
+          "limitations": "Biomechanic development framework; surface friction alters bounce speed and height.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-24T12:40:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-editorial-review.json",
+        "contentHash": "8d5b3a2f576d8373c8f312cca9638f0028d7fe55ef23cdae59f56ba133f3c6d0"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -9254,7 +9484,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -9268,10 +9498,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "동호회 경기 중 포인트가 끝난 뒤 서버/리시버로서 서두르거나 호흡이 흐트러지지 않게 25초 인터벌을 어떻게 구조화해야 하는가?",
+      "differentiation": "ITF Rule 29 25초 규정에 맞춘 타임라인 분해: 0~7초 피지컬 리셋(시선 차단 및 줄 정돈), 8~15초 파트너 사인 교환 및 호흡 조절, 16~25초 서브/리턴 셋업. 페널티 방지 및 파트너 간 불필요한 서두름 방지 가이드 제시",
       "before": {
         "contentHash": "8f9d773d222e089b2b58ed1b4e2cc6083130bfd84f7b8c27a103c2547e9da2e9",
         "score": null,
@@ -9280,20 +9510,60 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "501bb2c6bab8ae8050483908f59d8b880e90984fd411913663ee039d8e9d8746",
-        "scores": {},
-        "score": null,
+        "contentHash": "c15697956fec104c44dc7f84828791b557d3429675c19025529fe99352733c63",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "ITF Rule 29 mandates continuous play with a maximum of 25 seconds between points."
+          ],
+          "limitations": "Match rule timing ceiling; umpire discretion governs enforcement nuances.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "USTA Adult League rules require steady pace of play and brief concise non-verbal/verbal signaling between partners."
+          ],
+          "limitations": "League regulation framework; non-officiated recreational matches adapt by mutual agreement.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-24T12:40:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-editorial-review.json",
+        "contentHash": "c15697956fec104c44dc7f84828791b557d3429675c19025529fe99352733c63"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -9305,7 +9575,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -9319,10 +9589,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "경기 중 더블폴트가 자주 나올 때 원인을 감정적으로 자책하지 않고 데이터로 분석하려면 무엇을 어떻게 기록해야 하는가?",
+      "differentiation": "단순 횟수 집계가 아닌 3차원 분해: 1) 토스 편차(앞/뒤/좌/우 시계 방향), 2) 스윙 템포(세컨서브 감속 여부), 3) 타겟 코스(T존/와이드). 매 세트 후 5개 항목으로 원인을 분류하고 다음 경기 연습 과제를 도출하는 자가 진단표 제공",
       "before": {
         "contentHash": "0528659c551e510990f81c93ed2ff8f9d84d0318b2cb49b83e9528bcbd557144",
         "score": null,
@@ -9331,20 +9601,60 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "6919736a4094ba204465b2ce89506d5098b7324be49086b291a766757aa99b4e",
-        "scores": {},
-        "score": null,
+        "contentHash": "42bcaa782aade7bc82f5d94bfe0eedc60e4ff1336dccb52917d00d219bf66442",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "ITF Rules 16-19 govern legal service delivery, toss restrictions, and foot fault/service fault definitions."
+          ],
+          "limitations": "Rule definitions; technical mechanics and consistency drills are training applications.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "USTA coaching analytics isolate toss location variance and second-serve racquet speed deceleration as primary double fault drivers."
+          ],
+          "limitations": "Self-tracking protocol; wind and environmental factors introduce toss deviation.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-24T12:40:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-editorial-review.json",
+        "contentHash": "42bcaa782aade7bc82f5d94bfe0eedc60e4ff1336dccb52917d00d219bf66442"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -9356,7 +9666,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -9370,10 +9680,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "복식 경기에서 상대가 전위 머리 위로 집요하게 로브를 띄울 때 전위의 포지션과 후위의 수비 동선을 어떻게 재배치해야 하는가?",
+      "differentiation": "3단계 포메이션 조정 체계화: 1) 전위 위치를 네트에서 1.5보 후퇴(서비스박스 중앙선 위치), 2) 스매시 불가 시 무리한 백페달링 대신 '바운스' 선제 콜 및 후위 크로스 커버, 3) 상대 로브 타점 관찰(무릎 아래 타구 시 드롭/로브 확률 80% 이상 판정)",
       "before": {
         "contentHash": "f88530138b51b78b00a6d02826e846823d3dfeb6e0d29389a8924d78db59c4c6",
         "score": null,
@@ -9382,20 +9692,60 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "4f5bba9f57873a4d89d9e430bb75127955ae074145497fdb93c929d20f65e3a1",
-        "scores": {},
-        "score": null,
+        "contentHash": "c6ebb7b6526e67a194a8fa6c08dd3029e00fbdfce5b4d4ecfa4a6a6ce8285abf",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "USTA Warrior Doubles outlines net player depth adjustment and baseline partner diagonal cover protocols against offensive lobs."
+          ],
+          "limitations": "Recreational and club doubles tactics; mobility differences between partners require customized depth.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-24T12:35:00Z",
+          "claims": [
+            "ITF coaching guides advise against dangerous backpedaling and recommend lateral turn-and-run recovery for overhead defense."
+          ],
+          "limitations": "Safety and biomechanics guidance; court surface traction affects safe retreat speed.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-slowball-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-24T12:40:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-editorial-review.json",
+        "contentHash": "c6ebb7b6526e67a194a8fa6c08dd3029e00fbdfce5b4d4ecfa4a6a6ce8285abf"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/slowball-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -9407,7 +9757,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {

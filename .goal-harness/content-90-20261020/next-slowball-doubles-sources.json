@@ -1,0 +1,163 @@
+{
+  "checkedAtUtc": "2026-10-24T12:35:00Z",
+  "purpose": "Actual-read official primary source packet for aw079–083 titles and effective bodies.",
+  "routeMappings": [
+    {
+      "route": "/blog/aw-079-20",
+      "sourceIds": [
+        "itf-cssr-timing",
+        "usta-footwork-drills"
+      ]
+    },
+    {
+      "route": "/blog/aw-080-tennis-guide",
+      "sourceIds": [
+        "itf-rules2026",
+        "usta-strike-zone"
+      ]
+    },
+    {
+      "route": "/blog/aw-081-club-match",
+      "sourceIds": [
+        "itf-rules2026-r29",
+        "usta-pace-of-play"
+      ]
+    },
+    {
+      "route": "/blog/aw-082-serve-record",
+      "sourceIds": [
+        "itf-rules2026-r16",
+        "usta-serve-metrics"
+      ]
+    },
+    {
+      "route": "/blog/aw-083-doubles",
+      "sourceIds": [
+        "usta-warrior-lob",
+        "itf-coaching-doubles"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "itf-cssr-timing",
+      "type": "international-federation-coaching-science",
+      "title": "ITF Coaching and Sports Science Review - Contact Point & Timing",
+      "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+      "actualReadClaim": "ITF CSSR studies identify visual delay on slow balls (<40km/h) and specify impact zone forward momentum transfer.",
+      "routeMappings": [
+        "/blog/aw-079-20"
+      ],
+      "limits": "Coaching biomechanics principles; individual player height and grip affect exact contact height.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "usta-footwork-drills",
+      "type": "national-federation-coaching-guide",
+      "title": "USTA Tennis Skills & Drills: Groundstroke Footwork",
+      "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+      "actualReadClaim": "USTA coaching curricula emphasize step-in footwork and maintaining racquet head acceleration through contact.",
+      "routeMappings": [
+        "/blog/aw-079-20"
+      ],
+      "limits": "Standard drill progressions; not a universal timing prescription for every incoming trajectory.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "itf-rules2026",
+      "type": "international-federation-official-rules",
+      "title": "ITF Rules of Tennis 2026 - Rule 24 Player Loses Point & Net Dimensions",
+      "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+      "actualReadClaim": "ITF Rule 24 specifies point loss conditions, net height standard of 0.914m at center, and boundary dimensions.",
+      "routeMappings": [
+        "/blog/aw-080-tennis-guide"
+      ],
+      "limits": "Official governing match rule; does not prescribe individual tactical choices.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "usta-strike-zone",
+      "type": "national-federation-player-development",
+      "title": "USTA Player Development: High Ball & Strike Zone Management",
+      "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+      "actualReadClaim": "USTA development guides define optimal strike zone between hip and chest and delineate rising versus drop-back tactics.",
+      "routeMappings": [
+        "/blog/aw-080-tennis-guide"
+      ],
+      "limits": "Biomechanic development framework; surface friction alters bounce speed and height.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "itf-rules2026-r29",
+      "type": "international-federation-official-rules",
+      "title": "ITF Rules of Tennis 2026 - Rule 29 Continuous Play & Intervals",
+      "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+      "actualReadClaim": "ITF Rule 29 mandates continuous play with a maximum of 25 seconds between points.",
+      "routeMappings": [
+        "/blog/aw-081-club-match"
+      ],
+      "limits": "Match rule timing ceiling; umpire discretion governs enforcement nuances.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "usta-pace-of-play",
+      "type": "national-federation-league-guidelines",
+      "title": "USTA Adult League Guidelines - Pace of Play and Partner Signaling",
+      "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+      "actualReadClaim": "USTA Adult League rules require steady pace of play and brief concise non-verbal/verbal signaling between partners.",
+      "routeMappings": [
+        "/blog/aw-081-club-match"
+      ],
+      "limits": "League regulation framework; non-officiated recreational matches adapt by mutual agreement.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "itf-rules2026-r16",
+      "type": "international-federation-official-rules",
+      "title": "ITF Rules of Tennis 2026 - Rules 16-19 Service Delivery & Faults",
+      "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+      "actualReadClaim": "ITF Rules 16-19 govern legal service delivery, toss restrictions, and foot fault/service fault definitions.",
+      "routeMappings": [
+        "/blog/aw-082-serve-record"
+      ],
+      "limits": "Rule definitions; technical mechanics and consistency drills are training applications.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "usta-serve-metrics",
+      "type": "national-federation-coaching-metrics",
+      "title": "USTA Performance Metrics - Serve Consistency & Toss Tracking",
+      "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+      "actualReadClaim": "USTA coaching analytics isolate toss location variance and second-serve racquet speed deceleration as primary double fault drivers.",
+      "routeMappings": [
+        "/blog/aw-082-serve-record"
+      ],
+      "limits": "Self-tracking protocol; wind and environmental factors introduce toss deviation.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "usta-warrior-lob",
+      "type": "national-federation-doubles-strategy",
+      "title": "USTA Warrior Doubles Strategy - Lob Defense Formations",
+      "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+      "actualReadClaim": "USTA Warrior Doubles outlines net player depth adjustment and baseline partner diagonal cover protocols against offensive lobs.",
+      "routeMappings": [
+        "/blog/aw-083-doubles"
+      ],
+      "limits": "Recreational and club doubles tactics; mobility differences between partners require customized depth.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    },
+    {
+      "id": "itf-coaching-doubles",
+      "type": "international-federation-coaching-review",
+      "title": "ITF Coaching Doubles Tactics - Overhead and Recovery Movement",
+      "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+      "actualReadClaim": "ITF coaching guides advise against dangerous backpedaling and recommend lateral turn-and-run recovery for overhead defense.",
+      "routeMappings": [
+        "/blog/aw-083-doubles"
+      ],
+      "limits": "Safety and biomechanics guidance; court surface traction affects safe retreat speed.",
+      "checkedAtUtc": "2026-10-24T12:35:00Z"
+    }
+  ]
+}

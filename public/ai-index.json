@@ -3,11 +3,11 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-10-22",
+  "lastUpdated": "2026-10-24",
   "stats": {
-    "totalPages": 1488,
+    "totalPages": 1490,
     "tools": 67,
-    "articles": 1152,
+    "articles": 1154,
     "playerProfiles": 259
   },
   "pages": [
@@ -532,6 +532,22 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-drop-shot-defense",
+      "title": "상대 드롭샷에 대응하는 첫걸음과 다음 공",
+      "description": "짧은 드롭샷을 따라갔을 때 공을 어디로 보내고, 그다음 어디에 서야 하는지 동호인 경기 기준으로 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-10-24T09:00:00+09:00"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-doubles-switch-call",
+      "title": "복식에서 로브가 넘어갔을 때 스위치 콜 하는 법",
+      "description": "전위 머리 위로 로브가 넘어갈 때 누가 공을 쫓고 누가 자리를 바꿀지, 어떤 말로 신호할지 복식 파트너와 맞추는 방법을 정리했습니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-10-23T09:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/oct26-block-return",
@@ -6855,40 +6871,40 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-079-20",
-      "title": "느린 볼 백핸드 20분 훈련",
-      "description": "느린 볼에서 백핸드가 흔들리는 원인을 타점과 준비 루틴으로 교정합니다.",
+      "title": "느린 공 백핸드 공략: 전진 스텝과 임팩트 타이밍 20분 훈련법",
+      "description": "베이스라인 깊은 곳으로 힘없이 날아오는 느린 공에서 백핸드가 날리거나 네트에 걸리지 않도록 대각선 전진 스텝과 임팩트 높이를 안정시키는 20분 집중 훈련법을 정리합니다.",
       "type": "article",
       "category": "기술 교정",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-080-tennis-guide",
-      "title": "높은 공 분리 판단법",
-      "description": "높은 공을 공격할지 넘길지 결정하는 타점, 균형, 코스 기준입니다.",
+      "title": "어깨 위로 튀어오르는 높은 공 처리: 라이징 타구 vs 물러나기 3단계 판단 기준",
+      "description": "상대의 깊은 탑스핀으로 어깨 높이 이상 튀어오르는 까다로운 공을 무리하게 누르려다 실수하지 않고, 라이징 공략과 물러나기 수비를 구분하는 3단계 판단 기준을 제시합니다.",
       "type": "article",
       "category": "기술 교정",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-081-club-match",
-      "title": "사인 사이 인터벌 루틴",
-      "description": "동호회 경기에서 사인과 포인트 사이 시간을 짧고 명확하게 쓰는 방법입니다.",
+      "title": "포인트 사이 25초 인터벌 관리: 호흡·사인 소통과 페이스 조절 가이드",
+      "description": "동호회 경기 중 서두르거나 호흡이 흐트러져 연속 실점하지 않도록, ITF 25초 규정에 맞춘 시간대별 신체 정렬, 파트너 사인 교환, 멘탈 셋업 루틴을 체계화합니다.",
       "type": "article",
       "category": "경기 운영",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-082-serve-record",
-      "title": "서브 더블폴트 기록법",
-      "description": "더블폴트 원인을 토스, 템포, 코스 선택으로 나눠 기록합니다.",
+      "title": "서브 더블폴트 패턴 분석과 기록법: 토스 위치·속도·코스별 자가 진단표",
+      "description": "더블폴트가 반복될 때 단순한 횟수 집계를 넘어 토스 편차, 스윙 템포 감속, 코스 선택의 3차원 원인을 진단하고 다음 경기 교정 과제를 도출하는 실전 기록법을 정리합니다.",
       "type": "article",
       "category": "서브 전략",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-083-doubles",
-      "title": "상대 로브 많은 복식 대응",
-      "description": "상대 로브가 많을 때 전위 위치와 후위 커버를 함께 조정합니다.",
+      "title": "상대 로브 집중 공략 대응: 복식 전위 위치 조정과 후위 커버 포메이션",
+      "description": "복식 경기에서 전위 머리 위로 넘어오는 로브에 당황해 실점하지 않도록 전위의 위치 1.5보 후퇴, 스매시 불가 시 즉각 바운스 콜, 후위의 크로스 커버 포메이션을 체계화합니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-15"
