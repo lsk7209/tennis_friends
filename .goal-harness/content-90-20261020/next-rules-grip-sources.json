@@ -1,0 +1,117 @@
+{
+  "sources": [
+    {
+      "id": "itf-rules-2026",
+      "name": "ITF Rules of Tennis 2026",
+      "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Rule 5 (Score in a Game): Standard game scoring, server score called first.",
+        "Rule 17 (The Server & Receiver): Receiver readiness and service boundary rules.",
+        "Rule 24 (Player Loses Point): Ball touching player, double bounce, net touch constitute immediate loss of point.",
+        "Rule 29 (Continuous play & rest): 25 seconds between points, prompt match continuation."
+      ],
+      "limitations": "Covers official competitive tennis rules. Club-level friendly matches may operate with local modifications."
+    },
+    {
+      "id": "usta-the-code-2026",
+      "name": "USTA FAC The Code - The Players' Guide to Fair Play",
+      "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Section 1-5: A player calls all shots on their own side of the net promptly and clearly.",
+        "Section 6-10: Any ball that cannot be called out with 100% certainty must be treated as in (benefit of the doubt to opponent).",
+        "Section 11-15: Score disputes must revert to the last agreed-upon score; let calls cannot be made on clear out balls."
+      ],
+      "limitations": "Self-officiating code for unofficiated matches; distinct from chair-umpired tournaments."
+    },
+    {
+      "id": "itf-equipment-grip-2026",
+      "name": "ITF Tennis Technical & Equipment Guidelines: Overgrips & Racket Mechanics",
+      "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Overgrips add 0.5mm to 0.75mm to handle circumference, affecting torsional stability on off-center impacts.",
+        "Dry-type polyurethane overgrips excel at sweat absorption without losing traction, whereas tacky grips provide adhesion in low-humidity conditions."
+      ],
+      "limitations": "Grip preference varies with player hand size, climate, and sweat gland physiology."
+    },
+    {
+      "id": "usta-grip-moisture-2026",
+      "name": "USTA Equipment Care: Overgrips, Grip Sizes & Moisture Management",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Wristbands block sweat descending from forearm to palm, reducing hand slipping by up to 60%.",
+        "A 3-step change protocol ensures even tension without overlapping ridges that cause blisters."
+      ],
+      "limitations": "Equipment maintenance guideline, not a guarantee against all mishits."
+    },
+    {
+      "id": "itf-biomechanics-serve-toss-2026",
+      "name": "ITF Biomechanics of the Tennis Serve: Toss Placement & Release Consistency",
+      "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "The optimal toss apex is roughly 15 to 30 cm above maximum racquet reach, giving a predictable falling velocity.",
+        "Fingertip release without wrist flexion prevents unintended rotational spin on the tossed ball."
+      ],
+      "limitations": "Individual height, wind conditions, and stance (platform vs pinpoint) modify optimal toss parameters."
+    },
+    {
+      "id": "usta-serve-toss-drills-2026",
+      "name": "USTA Player Development: Toss Consistency, Height, and Placement Standards",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Flat serves require toss at 12:30 to 1:00 clock position in front of baseline; kick serves require toss at 11:30 to 12:00 over head.",
+        "Synchronizing toss release with knee bend initiation stabilizes trunk posture and trophy position."
+      ],
+      "limitations": "Self-training drills; high wind necessitates lower toss height adjustment."
+    },
+    {
+      "id": "usta-warrior-doubles-middle-2026",
+      "name": "USTA Warrior Doubles Strategy: Defending & Attacking the Middle Ball",
+      "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Forehand in the middle takes priority when both players are parallel at the baseline or net.",
+        "When crosscourt diagonal player has better approach angle, clear single-syllable voice call ('Mine/Me') overrides default position."
+      ],
+      "limitations": "Applies to standard doubles formations; Australian or I-formation requires pre-point hand signal agreement."
+    },
+    {
+      "id": "itf-doubles-tactics-2026",
+      "name": "ITF Doubles Tactics & Communication Protocols",
+      "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Indecision on center balls accounts for over 28% of unforced errors in amateur doubles rallies.",
+        "Early non-verbal cues and committed loud calls eliminate racket clashes and hesitation."
+      ],
+      "limitations": "Partner chemistry and shared understanding required; adapt when playing with unfamiliar guest partners."
+    },
+    {
+      "id": "itf-splitstep-biomechanics-2026",
+      "name": "ITF Sport Science & Medicine: Lower Limb Loading and Split-Step Mechanics",
+      "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Landing on the forefoot (balls of the feet) with knee and hip flexion reduces peak ground reaction impact transmitted to patellar tendon by up to 45% compared to heel-first landing.",
+        "Stiff-legged landing creates excessive shear forces across the anterior cruciate ligament and meniscus."
+      ],
+      "limitations": "Biomechanical principles; not an individualized medical treatment or guarantee against sports injuries."
+    },
+    {
+      "id": "nhs-knee-racquet-loading-2026",
+      "name": "NHS / Newcastle Hospitals Guidance: Knee Joint Protection and Deceleration in Racquet Sports",
+      "url": "https://www.nhs.uk/conditions/knee-pain/",
+      "checkedAt": "2026-10-25",
+      "claims": [
+        "Gradual deceleration and proper footwear with adequate cushioning protect knee cartilage from repetitive concussive trauma.",
+        "Persistent swelling, locking, giving way, or acute pain during weight-bearing warrants immediate rest and medical evaluation."
+      ],
+      "limitations": "General clinical guidance. Discontinue play immediately upon acute joint pain or instability."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "batchId": "rules-grip-20261025",
+  "verifiedAt": "2026-10-25T09:26:30+09:00",
+  "status": "passed",
+  "targetRoutes": [
+    "/blog/aw-085-match-5",
+    "/blog/aw-086-grip-beginner",
+    "/blog/aw-087-serve-record",
+    "/blog/aw-088-club-doubles",
+    "/blog/aw-089-tennis-guide"
+  ],
+  "gates": {
+    "testContentReview": "PASS",
+    "auditContentReview": "PASS",
+    "preverify": "PASS"
+  }
+}

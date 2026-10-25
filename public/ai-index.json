@@ -3,11 +3,11 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-10-24",
+  "lastUpdated": "2026-10-25",
   "stats": {
-    "totalPages": 1490,
+    "totalPages": 1491,
     "tools": 67,
-    "articles": 1154,
+    "articles": 1155,
     "playerProfiles": 259
   },
   "pages": [
@@ -532,6 +532,14 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-beginner-month-four",
+      "title": "테니스 입문 4개월 차: 레슨과 게임 비율 정하기",
+      "description": "레슨만 받을지 게임을 늘릴지 고민되는 4개월 차에 주간 연습을 나누는 기준과 게임에서 확인할 목표를 정리했습니다.",
+      "type": "article",
+      "category": "입문 가이드",
+      "lastModified": "2026-10-25T09:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/oct26-drop-shot-defense",
@@ -6919,32 +6927,32 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-085-match-5",
-      "title": "경기 중 규칙 확인 기준",
-      "description": "경기 규칙 논쟁을 줄이기 위한 확인 기준과 대화 순서 5가지입니다.",
+      "title": "경기 중 규칙 논쟁을 줄이는 판정 기준과 5단계 소통 순서",
+      "description": "셀프 저지 경기에서 라인 콜·스코어 분쟁·신체 접촉 논쟁이 발생했을 때 USTA The Code 및 ITF 룰에 기반한 5단계 소통 순서와 판정 기준을 정리했습니다.",
       "type": "article",
       "category": "경기 규칙",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-086-grip-beginner",
-      "title": "땀 많은 날 그립 관리",
-      "description": "더운 날 그립 미끄러짐을 줄이는 오버그립 교체와 손 관리 기준입니다.",
+      "title": "땀 많은 날 그립 미끄러짐 방지: 드라이 vs 택키 선택과 4단계 손 관리법",
+      "description": "더운 날이나 땀이 많을 때 라켓이 돌아가는 현상을 막기 위한 드라이/택키 오버그립 특성 비교, 손목 밴드와 타월링 루틴, 교체 주기 기준표를 정리했습니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-087-serve-record",
-      "title": "서브 토스 교정 체크리스트",
-      "description": "서브 토스가 무너질 때 높이, 앞뒤 위치, 반복성을 기록하는 방법입니다.",
+      "title": "서브 토스 흔들림 자가 진단과 교정: 높이·위치·릴리스 3대 체크리스트",
+      "description": "서브 성공률을 떨어뜨리는 들쭉날쭉한 토스를 바로잡기 위한 12시~1시 방향 릴리스 위치, 라켓 길이 기준 최적 높이, 무릎 굽힘과의 타이밍 기록법을 정리했습니다.",
       "type": "article",
-      "category": "서브 전략",
+      "category": "서브 기술",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-088-club-doubles",
-      "title": "동호회 복식 센터볼 처리",
-      "description": "센터볼에서 망설임을 줄이기 위한 콜과 우선권 기준을 정리합니다.",
+      "title": "동호회 복식 센터볼 처리 원칙: 포핸드 우선권과 3대 콜 소통 기준",
+      "description": "복식 경기 중앙으로 깊게 오는 공에서 두 선수가 양보하거나 부딪히는 실수를 없애기 위한 포핸드 우선권, 크로스 서버 위치 우선, '마이/유어스' 음성 콜 원칙을 정리했습니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-15"

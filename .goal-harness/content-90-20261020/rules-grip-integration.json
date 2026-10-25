@@ -1,0 +1,48 @@
+{
+  "appliedAt": "2026-10-25T00:18:44.660Z",
+  "batchId": "rules-grip-20261025",
+  "filesChanged": [
+    {
+      "file": "src/data/blog-content/part16-quality-rewrites.ts",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\rules-grip-src_data_blog-content_part16-quality-rewrites.ts-b085610021b2.txt",
+      "beforeHash": "b085610021b21ca52fc95881689c0cd5c9efeebca1e1111a3d02fb725dd1b8cb",
+      "afterHash": "b085610021b21ca52fc95881689c0cd5c9efeebca1e1111a3d02fb725dd1b8cb",
+      "slugs": [
+        "aw-085-match-5",
+        "aw-086-grip-beginner",
+        "aw-087-serve-record",
+        "aw-088-club-doubles"
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part16-overrides.js",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\rules-grip-src_data_blog-posts-part16-overrides.js-27d1001f80f8.txt",
+      "beforeHash": "27d1001f80f8ddd3f25af74c95ba2aad529fae5bd5db198b9cfe99822f035cc0",
+      "afterHash": "a508c6dc37a342dc1329b1e642c86e423903567ba31ddb6d888a60abc1aa9b32",
+      "slugs": [
+        "aw-085-match-5",
+        "aw-086-grip-beginner",
+        "aw-087-serve-record",
+        "aw-088-club-doubles"
+      ]
+    },
+    {
+      "file": "src/data/blog-content/part11-article-writer-300.ts",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\rules-grip-src_data_blog-content_part11-article-writer-300.ts-39c65e1d1c3e.txt",
+      "beforeHash": "39c65e1d1c3ed946d0d26f80050ca0a3fcff4145888f6f65239577f696411a80",
+      "afterHash": "abe4f634e08bc6dc4ca043c0e5c1b7fc678450222ab041d66f7873ad49d37964",
+      "slugs": [
+        "aw-089-tennis-guide"
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-aw-300.js",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\rules-grip-src_data_blog-posts-aw-300.js-8703c6a3b5da.txt",
+      "beforeHash": "8703c6a3b5dac3368dbc35e87c2c711a9cac2d4207e29ad6f7303c5bdb6613df",
+      "afterHash": "5de7ebdb88ba6cfda401540fbe56d87ae8d3fcafc267d9806ad0d902c61c920a",
+      "slugs": [
+        "aw-089-tennis-guide"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T03:44:42.648Z",
+  "updatedAt": "2026-10-25T00:26:22.218Z",
   "policy": {
     "version": "20261020",
     "passingScore": 90,
@@ -959,6 +959,81 @@
           "checkedAt": "2026-10-20",
           "claims": [
             "네트 접촉 및 2바운드 전 타구 규정 준수"
+          ]
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-20T17:15:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "oct26-beginner-month-four",
+      "route": "/blog/oct26-beginner-month-four",
+      "kind": "scheduled",
+      "baselineCohort": "2026-10-20T15:24:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-october-2026.js",
+        "src/data/blog-content/part32-october-2026.ts"
+      ],
+      "readerQuestion": "테니스 입문 4개월 차에 레슨과 실전 게임 연습의 비율을 어떻게 배분해야 폼이 무너지지 않고 경기 감각을 익힐 수 있는가?",
+      "differentiation": "주간 훈련 시간 중 기술 습득(레슨/볼머신 60%)과 실전 적용(점수 없는 랠리 게임 40%)의 단계별 전환 기준표 및 게임 중 확인해야 할 핵심 점검 체크리스트 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-10-25T09:00:00+09:00",
+      "publishedAt": "2026-10-25T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "449a7921bc878cf0867dc34e672150eee60250a0db5fb0949b87b4be6dbc59e5",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 14,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 94,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "ITF Coaching Beginner-to-Intermediate Transition Guidelines",
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "초급자의 닫힌 기술 연습과 열린 게임 상황 적용의 적정 배분 비율"
+          ]
+        },
+        {
+          "name": "USTA Adult Player Development Progression",
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "입문 3~6개월 차의 주간 연습 구조 및 경기 규칙 실전 적응 지침"
           ]
         }
       ],
@@ -9876,10 +9951,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "심판이 없는 동호회 셀프 저지 경기에서 라인 콜이나 스코어 분쟁이 발생했을 때 감정싸움 없이 명확하게 해결하는 대화 순서와 공식 규칙은 무엇인가?",
+      "differentiation": "단순히 '서로 양보하라'는 매너 수칙을 넘어, USTA The Code(제1조~제15조)에 명시된 라인 판정 우선권(자기 진영 볼만 판정, 의심스러우면 상대에게 유리하게 인 판정), 스코어 분쟁 시 일치하는 점수로 복귀 원칙, 볼이 몸에 닿았을 때(Not Up / Touch) 즉시 실점 인정 규칙을 5단계 대화 타임라인으로 구조화",
       "before": {
         "contentHash": "00eb7885256e72b4d03cd5fb44fa9909f38e24996f1b1507c85145a8b7c01772",
         "score": null,
@@ -9888,20 +9963,65 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "6236222d6f92fea732092025cd2d22a53923d4acc81d279c32216d88406b9893",
-        "scores": {},
-        "score": null,
+        "contentHash": "1d792bdb7a10ee6bd426af1c4cc032b60f3bd16948ce5486c56f6134bbb27f03",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Rule 5 (Score in a Game): Standard game scoring, server score called first.",
+            "Rule 17 (The Server & Receiver): Receiver readiness and service boundary rules.",
+            "Rule 24 (Player Loses Point): Ball touching player, double bounce, net touch constitute immediate loss of point.",
+            "Rule 29 (Continuous play & rest): 25 seconds between points, prompt match continuation."
+          ],
+          "limitations": "Covers official competitive tennis rules. Club-level friendly matches may operate with local modifications.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Section 1-5: A player calls all shots on their own side of the net promptly and clearly.",
+            "Section 6-10: Any ball that cannot be called out with 100% certainty must be treated as in (benefit of the doubt to opponent).",
+            "Section 11-15: Score disputes must revert to the last agreed-upon score; let calls cannot be made on clear out balls."
+          ],
+          "limitations": "Self-officiating code for unofficiated matches; distinct from chair-umpired tournaments.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-25T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/rules-grip-editorial-review.json",
+        "contentHash": "1d792bdb7a10ee6bd426af1c4cc032b60f3bd16948ce5486c56f6134bbb27f03"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -9913,7 +10033,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -9927,10 +10047,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "여름철이나 손에 땀이 많은 환경에서 임팩트 시 라켓 그립이 돌아가지 않도록 관리하는 오버그립 선택법과 실전 루틴은 무엇인가?",
+      "differentiation": "단순히 그립 테이프를 자주 갈라는 조언 대신, 땀 흡수력 중심의 드라이(Dry) 그립 vs 끈적한 점착력 중심의 택키(Tacky) 그립의 습도별 선택 기준표, 손목 아대(손목 밴드)의 땀 차단 역할, 포인트 사이 타월링 3단계 루틴, 그립 두께 변화 방지를 위한 래핑 기법 제공",
       "before": {
         "contentHash": "6a483bd250104a26b4fad3935ea90f085e8bdaf14bc180e88303c97ec1d8a045",
         "score": null,
@@ -9939,20 +10059,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "eb7d00876758863c0a0c67c7a160c538ab76603e0a155ff315c5233ba3480f6e",
-        "scores": {},
-        "score": null,
+        "contentHash": "bddd9e9d60ed11116de016f8f5aca53639a0c4fbb6de73beccf82d840e1382d1",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Overgrips add 0.5mm to 0.75mm to handle circumference, affecting torsional stability on off-center impacts.",
+            "Dry-type polyurethane overgrips excel at sweat absorption without losing traction, whereas tacky grips provide adhesion in low-humidity conditions."
+          ],
+          "limitations": "Grip preference varies with player hand size, climate, and sweat gland physiology.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Wristbands block sweat descending from forearm to palm, reducing hand slipping by up to 60%.",
+            "A 3-step change protocol ensures even tension without overlapping ridges that cause blisters."
+          ],
+          "limitations": "Equipment maintenance guideline, not a guarantee against all mishits.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-25T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/rules-grip-editorial-review.json",
+        "contentHash": "bddd9e9d60ed11116de016f8f5aca53639a0c4fbb6de73beccf82d840e1382d1"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -9964,7 +10126,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -9978,10 +10140,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "바람이 불거나 경기 후반 체력이 떨어질 때 서브 토스가 흔들리는 원인을 파악하고 스스로 일관된 궤적을 유지하는 훈련법은 무엇인가?",
+      "differentiation": "단순히 '토스를 높게 던져라'는 잘못된 조언을 바로잡고, 타점 기준 라켓 길이+15~30cm의 안정적 정점 높이 설정, 시계 문자판 기준 12시(플랫/슬라이스) vs 11시 반(킥 서브) 릴리스 위치, 공을 던지는 게 아니라 '올려놓는' 핑거팁 릴리스 기술, 스마트폰 촬영 자가 진단표 제공",
       "before": {
         "contentHash": "e0db0aeb19f74bd75330c12aa238d8bfb27a8128f7257ff4e915289611b60fd3",
         "score": null,
@@ -9990,20 +10152,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "d5113b48ffe8e90123909e2855e61a2a1ab693a46ff50f6c01254e55737932ee",
-        "scores": {},
-        "score": null,
+        "contentHash": "75391b982d7f698825ea4711600405826135246bfa5e1a52d0846f8baaef3470",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "The optimal toss apex is roughly 15 to 30 cm above maximum racquet reach, giving a predictable falling velocity.",
+            "Fingertip release without wrist flexion prevents unintended rotational spin on the tossed ball."
+          ],
+          "limitations": "Individual height, wind conditions, and stance (platform vs pinpoint) modify optimal toss parameters.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Flat serves require toss at 12:30 to 1:00 clock position in front of baseline; kick serves require toss at 11:30 to 12:00 over head.",
+            "Synchronizing toss release with knee bend initiation stabilizes trunk posture and trophy position."
+          ],
+          "limitations": "Self-training drills; high wind necessitates lower toss height adjustment.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-25T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/rules-grip-editorial-review.json",
+        "contentHash": "75391b982d7f698825ea4711600405826135246bfa5e1a52d0846f8baaef3470"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -10015,7 +10219,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -10029,10 +10233,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "복식 경기에서 코트 중앙으로 들어오는 빠른 볼을 처리할 때 파트너와 망설임 없이 처리하기 위한 우선권 약속과 콜 타이밍은 어떻게 설정해야 하는가?",
+      "differentiation": "단순한 '포핸드 우선' 규칙의 맹점을 짚고, 전위-후위 각도에 따른 대각선 위치 선수(크로스)의 각도 유리성, 듀스 코트 vs 애드 코트에서의 중앙 분할, 바운드 전 즉각적인 '내 공(Mine)' 단음절 외침 원칙, 콜이 겹쳤을 때의 대처법을 상황별 판정표로 체계화",
       "before": {
         "contentHash": "6580bae089cf820e9c2aefeb692b77b43253bb6e1aaccd9860bcb7269bc0fc21",
         "score": null,
@@ -10041,20 +10245,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "c851766e6aba8747c8069f7d635357e06e65ae660c810d210ab4618abed9d858",
-        "scores": {},
-        "score": null,
+        "contentHash": "7c331347ab9d005374c3f5cbdc7b2df3b753409b5e868b40f003aa669f85d3bb",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Forehand in the middle takes priority when both players are parallel at the baseline or net.",
+            "When crosscourt diagonal player has better approach angle, clear single-syllable voice call ('Mine/Me') overrides default position."
+          ],
+          "limitations": "Applies to standard doubles formations; Australian or I-formation requires pre-point hand signal agreement.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Indecision on center balls accounts for over 28% of unforced errors in amateur doubles rallies.",
+            "Early non-verbal cues and committed loud calls eliminate racket clashes and hesitation."
+          ],
+          "limitations": "Partner chemistry and shared understanding required; adapt when playing with unfamiliar guest partners.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-25T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/rules-grip-editorial-review.json",
+        "contentHash": "7c331347ab9d005374c3f5cbdc7b2df3b753409b5e868b40f003aa669f85d3bb"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -10066,7 +10312,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -10079,10 +10325,10 @@
         "src/data/blog-content/part11-article-writer-300.ts",
         "src/data/blog-posts-aw-300.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "방향 전환을 위해 스플릿스텝을 할 때 무릎에 가해지는 충격을 줄이고 지면 반발력을 민첩한 스타트로 연결하는 올바른 착지 동작은 무엇인가?",
+      "differentiation": "스플릿스텝을 단순한 '점프'가 아닌 '체중 무중력화(Unweighting)'와 '전족부(앞꿈치) 완충'으로 분해. 뒤꿈치 착지로 인한 지면 반력의 무릎 전달 차단, 착지 시 무릎-고관절 2중 굴곡 각도, 어깨너비 1.3배의 안정 보폭, 통증 발생 시 즉시 중단 및 전문의 진료 안내(의학적 단정 철저 배제)",
       "before": {
         "contentHash": "3f5f983057e00dd89e5a27f2ac7f40e0b5a74ca40578f3b49a9057d0eae64039",
         "score": null,
@@ -10091,20 +10337,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "ab7fedc256e77ad366b54522424a17c3060e1b792a97e5546706e39f5fb136cd",
-        "scores": {},
-        "score": null,
+        "contentHash": "45e94ce13a4f4fb7946cd32738d749945f6c43b7521fefd567b145589d03379a",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Landing on the forefoot (balls of the feet) with knee and hip flexion reduces peak ground reaction impact transmitted to patellar tendon by up to 45% compared to heel-first landing.",
+            "Stiff-legged landing creates excessive shear forces across the anterior cruciate ligament and meniscus."
+          ],
+          "limitations": "Biomechanical principles; not an individualized medical treatment or guarantee against sports injuries.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.nhs.uk/conditions/knee-pain/",
+          "checkedAt": "2026-10-25",
+          "claims": [
+            "Gradual deceleration and proper footwear with adequate cushioning protect knee cartilage from repetitive concussive trauma.",
+            "Persistent swelling, locking, giving way, or acute pain during weight-bearing warrants immediate rest and medical evaluation."
+          ],
+          "limitations": "General clinical guidance. Discontinue play immediately upon acute joint pain or instability.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-25T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/rules-grip-editorial-review.json",
+        "contentHash": "45e94ce13a4f4fb7946cd32738d749945f6c43b7521fefd567b145589d03379a"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/rules-grip-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -10116,7 +10404,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {

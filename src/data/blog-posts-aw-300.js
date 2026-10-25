@@ -1586,19 +1586,21 @@ export const articleWriterBlogPosts = [
     "id": "aw-089-tennis-guide",
     "slug": "aw-089-tennis-guide",
     "tags": [
-      "부상 예방",
-      "무릎 부담",
-      "부상 예방 무릎",
-      "테니스프렌즈"
+          "스플릿스텝",
+          "무릎 부담",
+          "부상 예방",
+          "테니스 풋워크",
+          "착지법"
     ],
-    "title": "무릎 부담 줄이는 스플릿스텝 자주 나오는 실수",
-    "excerpt": "'강도 조절과 중단 기준' 기준으로 코트에서 바로 점검하는 부상 예방 실전 가이드.",
-    "badge": "신규 가이드",
+    "title": "무릎 부담 줄이는 스플릿스텝: 앞꿈치 착지와 3대 착지 실수 교정",
+    "excerpt": "빠른 반응을 위해 뛰는 스플릿스텝에서 무릎 관절에 충격이 쌓이는 원인인 뒤꿈치 쿵 착지, 뻣뻣한 착지, 과도한 보폭을 바로잡는 3단계 완충 기법을 정리했습니다.",
+    "badge": "부상 예방",
     "category": "부상 예방",
     "date": "2026-05-15",
     "readTime": "8분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
-    "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300"
+    "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300",
+    "updatedAt": "2026-10-25"
   },
   {
     "id": "aw-090-tennis-guide",

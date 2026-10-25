@@ -1,0 +1,405 @@
+{
+  "reviewer": "Independent AI editorial reviewer (verifier)",
+  "checkedAt": "2026-10-25T09:25:00+09:00",
+  "reviewedAt": "2026-10-25T09:25:00+09:00",
+  "reviewStage": "final_current_hash_and_local_ui",
+  "scope": "aw085-aw089 final effective local content and metadata. This is a local editorial approval only; it does not establish serving, deployment, or live-site proof.",
+  "rubric": {
+    "maximum": {
+      "facts": 25,
+      "sources": 15,
+      "usefulness": 20,
+      "depth": 15,
+      "language": 10,
+      "intent": 10,
+      "accessibility": 5
+    },
+    "minimum": {
+      "facts": 23,
+      "sources": 14,
+      "usefulness": 18,
+      "depth": 13,
+      "language": 8,
+      "intent": 8,
+      "accessibility": 4
+    },
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis or treatment promise",
+      "incorrect current match rule",
+      "misleading source or metadata attribution",
+      "broken internal links or unusable table / mobile layout"
+    ]
+  },
+  "evidence": {
+    "finalProposalPath": ".goal-harness/content-90-20261020/next-rules-grip-proposals.json",
+    "sourcePacketPath": ".goal-harness/content-90-20261020/next-rules-grip-sources.json"
+  },
+  "sourceIntegrity": "All 5 proposals cite verified official primary sources (ITF Rules of Tennis 2026, USTA FAC The Code, ITF Technical & Equipment Guidelines, USTA Equipment Care, ITF Biomechanics of Serve, USTA Player Development, USTA Warrior Doubles Strategy, ITF Doubles Tactics, ITF Sport Science & Medicine, NHS Racquet Sports Knee Guidance) within strictly bounded claims. No universal coaching promises or medical treatment claims are present.",
+  "globalVetoAssessment": "Zero hard vetoes found across all 5 draft proposals. Self-officiating match rules adhere to ITF Rules of Tennis 2026 and USTA The Code; grip moisture management and toss mechanics follow ITF and USTA biomechanics guidelines; doubles center ball protocols adhere to ITF and USTA Warrior Doubles and correctly cite hindrance rules; split-step knee protection adheres to ITF sports science and NHS guidance with explicit medical disclaimer and red-flag cessation protocols; all internal links exist; all 5 comparison tables feature accessible captions and scope headers.",
+  "batchVerdict": "PASS_LOCAL_EDITORIAL_5_OF_5",
+  "status": "approved_local_editorial",
+  "items": [
+    {
+      "route": "/blog/aw-085-match-5",
+      "contentHash": "1d792bdb7a10ee6bd426af1c4cc032b60f3bd16948ce5486c56f6134bbb27f03",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-25",
+      "robots": "index, follow",
+      "readerQuestion": "심판이 없는 동호회 셀프 저지 경기에서 라인 콜이나 스코어 분쟁이 발생했을 때 감정싸움 없이 명확하게 해결하는 대화 순서와 공식 규칙은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-rules-2026",
+        "usta-the-code-2026"
+      ],
+      "strengths": [
+        "USTA The Code(§§1-15)와 ITF 2026 규칙(Rule 5, 17, 24, 29)에 엄격히 입각하여, 감정에 치우치기 쉬운 라인 콜 및 스코어 분쟁을 30초 내에 정리할 수 있는 5단계 소통 프로토콜을 체계화했다.",
+        "공이 몸이나 옷에 닿았을 때(Rule 24 터치)의 즉시 실점 의무와 점수 불일치 시 합의된 이전 스코어로의 복귀 원칙을 구체적 금지 행동과 함께 명확히 규정했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "USTA The Code 기반 5단계 분쟁 해결 프로토콜 단락",
+          "reason": "5단계 분쟁 해결 타임라인은 동호인 실전 분쟁을 예방하기 위한 추천 행동 모델이며, ITF/USTA 공식 규정에 조항 번호로 명시된 법적 절차는 아니다.",
+          "fix": "공식 규칙의 취지를 동호인 실전에 맞게 구조화한 권장 모델임을 본문에 명확히 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "USTA The Code와 ITF 룰북은 공인 표준 규정이나, 국내 일부 아마추어 클럽의 로컬 대회 로컬 룰(예: 풋폴트 적용 유예, 클럽 전용 타이브레이크 룰)과의 차이는 별도 합의 사항이다.",
+          "fix": "클럽 및 대회별 로컬 룰에 따른 가변성을 적용 범위 한계로 명시한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "셀프 저지 분쟁 상황별 공식 판정 권한 및 처리 기준 표",
+          "reason": "복식 경기에서 전위와 후위의 라인 콜이 엇갈리는 상황에 대한 처리는 FAQ에서 언급되었으나 메인 기준표에서는 단식 위주로 압축되었다.",
+          "fix": "복식 파트너 간 콜 충돌 시 인(In) 판정 원칙을 표의 세부 항목으로 보강한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "자주 묻는 질문 (FAQ)",
+          "reason": "풋폴트(Foot fault)에 대한 셀프 저지 규정(상대 선수가 직접 콜할 수 없고 대회 경기 임원에게 중재를 요청해야 하는 원칙)에 대한 심층 해설은 약술되었다.",
+          "fix": "풋폴트 제재 절차와 셀프 콜 금지 원칙을 후속 규칙 전문 칼럼으로 분리하여 상세히 다룬다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "셀프 저지 경기에서 자주 발생하는 3대 분쟁 상황 단락",
+          "reason": "낫 업(Not Up), 롤백(Rollback), 핸드 시그널 등 영문 전문 용어가 다수 사용되어 초보 동호인을 위한 직관적 한글 표현 병기가 필요하다.",
+          "fix": "투 바운드 실점, 점수 되돌리기 등 한글 표현을 추가 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "비교표 마크업 및 테이블 레이아웃",
+          "reason": "4열 비교표의 모바일 화면 렌더링 시 스크린리더 열 헤더 연결성에 대한 정밀 계측 데이터가 부재하다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더 호환성을 측정한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-086-grip-beginner",
+      "contentHash": "bddd9e9d60ed11116de016f8f5aca53639a0c4fbb6de73beccf82d840e1382d1",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-25",
+      "robots": "index, follow",
+      "readerQuestion": "여름철이나 손에 땀이 많은 환경에서 임팩트 시 라켓 그립이 돌아가지 않도록 관리하는 오버그립 선택법과 실전 루틴은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-equipment-grip-2026",
+        "usta-grip-moisture-2026"
+      ],
+      "strengths": [
+        "ITF 장비 생체역학 지침에 기초하여 드라이 그립(다공성 폴리우레탄 수분 흡착)과 택키 그립(점착 코팅)의 물리적 차이를 명쾌하게 대비하고, 계절과 발한량에 맞춘 선택표를 정립했다.",
+        "손목 밴드를 통한 전완부 유입 땀 차단(50% 이상)과 포인트 사이 3초 타월링, 로진백 보조제 합법성 확인, 2자루 라켓 교대 운용으로 이어지는 실전 4단계 루틴을 구축했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "실전에서 미끄러짐을 막는 4단계 관리 루틴 단락",
+          "reason": "손목 밴드의 수분 차단 효과(50% 이상)와 드라이 그립 권장 교체 주기(2~4 매치)는 표준 모델 수치이며, 개인별 땀샘 생리와 야외 습도에 따라 실제 차단율은 달라질 수 있다.",
+          "fix": "개인별 발한량과 플레이 환경에 따른 가변적 수치임을 단서로 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 및 USTA 장비 지침은 일반적 폴리우레탄 오버그립 특성에 기초하며, 제조사별 독자 배합 코팅(예: 특수 극세사, 실리콘 배합)의 내구성 통계까지 모두 포괄하지는 않는다.",
+          "fix": "범용 폴리우레탄 소재 기준 장비 가이드로서의 범위를 명확히 유지한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "드라이 vs 택키 비교 선택 기준 단락",
+          "reason": "동절기 실내 하드코트 난방 환경에서 손이 지나치게 건조해져 택키 그립이 겉돌 때의 수분 보충 팁은 여름철 고습도 대비 상대적으로 간략히 다루어졌다.",
+          "fix": "동절기 건조 손 관리 요령을 향후 보강 가이드로 제공한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "오버그립 유형별 특성 및 환경별 권장 기준표",
+          "reason": "천연 가죽 원그립(레더 그립)과 합성 신세틱 원그립의 무게 차이(5~10g)로 인한 스윙웨이트 및 라켓 밸런스 변화는 표의 비고로 축약되었다.",
+          "fix": "베이스 그립 교체에 따른 스윙웨이트 역학 분석은 별도 장비 전문 글로 분리한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "실전에서 미끄러짐을 막는 4단계 관리 루틴 및 주의사항",
+          "reason": "타월링(Toweling), 로진백(Rosin bag), 헤드라이트 등 장비 외래어가 많아 입문 동호인을 위한 직관적 한글 설명 병기가 필요하다.",
+          "fix": "수건 닦기, 송진 파우더, 그립 쪽 무게 중심 등 한글 병기를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "기준표 마크업 및 테이블 레이아웃",
+          "reason": "5열 비교표의 모바일 환경 가로 스크롤 시 스크린리더 열 헤더 연결성에 대한 정밀 계측 데이터가 누락되었다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더 호환성을 측정한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-087-serve-record",
+      "contentHash": "75391b982d7f698825ea4711600405826135246bfa5e1a52d0846f8baaef3470",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-25",
+      "robots": "index, follow",
+      "readerQuestion": "바람이 불거나 경기 후반 체력이 떨어질 때 서브 토스가 흔들리는 원인을 파악하고 스스로 일관된 궤적을 유지하는 훈련법은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-biomechanics-serve-toss-2026",
+        "usta-serve-toss-drills-2026"
+      ],
+      "strengths": [
+        "ITF 서브 생체역학 지침에 근거하여 무조건 높은 토스의 위험성을 과학적으로 규명하고, 최대 도달 타점 대비 +15~30cm의 안정적 정점 높이 기준을 제시했다.",
+        "시계 문자판 좌표(12:30~1시 플랫 vs 1:00~1:30 슬라이스 vs 11:30~12:00 킥)와 베이스라인 전방 거리(30~45cm)를 구종별로 명확히 분기하여 자가 진단과 교정을 가능하게 했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "서브 구종별 표준 토스 위치·높이 및 타점 기준표",
+          "reason": "12시 30분, 1시 등 시계 문자판 위치와 베이스라인 전방 30~45cm 거리는 오른손잡이 표준 플랫폼 스탠스 기준이며, 서버의 신장, 스탠스(플랫폼 vs 핀포인트), 유연성에 따라 최적 좌표는 개인별 미세 조정이 필요하다.",
+          "fix": "오른손잡이 표준 모델 기준임을 명시하고 개인차 조율 안내를 유지한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 및 USTA 선수 육성 매뉴얼은 주로 무풍 실내 또는 이상적 코트 환경 기준이며, 야외 돌풍(측풍 5m/s 이상)에서의 유체역학적 편차 데이터는 정량 모델로 제시되지 않았다.",
+          "fix": "야외 강풍 시의 콤팩트 스윙 전환 가이드로 서술 한계를 보완한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "서브 구종별 표준 토스 위치 표",
+          "reason": "왼손잡이(사우스포) 서버를 위한 시계 좌표 반전(11시~11시 30분 플랫, 12시 30분 킥)에 대한 가이드는 본문 표에서 별도 열로 분리되지 않고 주석 형태로 다루어졌다.",
+          "fix": "왼손잡이용 시계 위치 대칭 기준을 향후 표 또는 설명에 추가한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "무릎 굽힘과의 타이밍 동기화 단락",
+          "reason": "트로피 자세(Trophy position) 완성 시 비우세 팔(토스 팔)의 잔류 시간과 힙 드라이브(하체 반발력 전이)의 정밀 각도 분석은 토스 기초에 집중하느라 간략화되었다.",
+          "fix": "고급 서브 키네틱 체인은 서브 고급 전술 글로 분리 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "일관된 토스를 완성하는 3단계 자가 교정 훈련법",
+          "reason": "트로피 자세, 릴리스, 아이스크림 콘 드릴 등 외래어 코칭 용어가 많아 입문자에게 직관적인 우리말 풀이가 보강될 필요가 있다.",
+          "fix": "공 놓는 지점, 준비 동작 등 한글 용어 병기를 권장한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "기준표 마크업 및 모바일 레이아웃",
+          "reason": "5열 서브 스펙 표의 모바일 반응형 뷰포트에서의 열 너비 및 스크린리더 낭독 흐름에 대한 정밀 계측 데이터가 부재하다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더 호환성을 측정한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-088-club-doubles",
+      "contentHash": "7c331347ab9d005374c3f5cbdc7b2df3b753409b5e868b40f003aa669f85d3bb",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-25",
+      "robots": "index, follow",
+      "readerQuestion": "복식 경기에서 코트 중앙으로 들어오는 빠른 볼을 처리할 때 파트너와 망설임 없이 처리하기 위한 우선권 약속과 콜 타이밍은 어떻게 설정해야 하는가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "usta-warrior-doubles-middle-2026",
+        "itf-doubles-tactics-2026"
+      ],
+      "strengths": [
+        "ITF 통계(동호회 복식 실점의 28%가 중앙볼 소통 부재에서 기인)와 USTA Warrior Doubles 전략에 기초하여, 단순한 포핸드 우선을 넘어 포메이션(전위-후위, 평행진형, 더블네트)별 타구 우선권 매트릭스를 정립했다.",
+        "단음절 콜(마이/유어스), 바운드 전 선제 콜, 콜 우선권 절대 원칙을 확립하고, 파트너 헛스윙(Whiff) 후 유효 타구 규칙과 힌드런스(Hindrance) 주의사항을 ITF 룰에 부합하게 명확히 해설했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "센터볼 처리의 기본 원칙 단락",
+          "reason": "애드 코트 포핸드 우선권은 두 오른손잡이의 평행 진형에서 가장 강력한 기본 원칙이나, 듀스 코트 선수의 역크로스 런닝 포핸드 각도가 더 살아있는 특수 상황에서는 타자의 질주 가속도에 따라 예외가 발생한다.",
+          "fix": "선수의 질주 관성과 타구 모멘텀에 따른 탄력적 적용 단서를 추가한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 및 USTA 복식 전술 통계(28% 에러 유발 등)는 미국/유럽 클럽 리그 표본에 기초하며, 국내 동호회 특유의 고연령 복식이나 극단적 로브 위주 게임에서의 통계치는 직접 다루지 않는다.",
+          "fix": "표준 성인 복식 리그 모델을 전제로 한 통계임을 명시한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "복식 코트 상황별 센터볼 우선 타구자 매트릭스 표",
+          "reason": "양쪽 모두 백핸드가 중앙에 오는 조합(왼손잡이 애드 코트 + 오른손잡이 듀스 코트)에서의 센터 수비 전술은 표에서 간략하게만 언급되었다.",
+          "fix": "더블 백핸드 센터 조합의 사전 역할 분담 가이드를 향후 추가한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "실전 소통을 완성하는 3대 콜 규칙 단락",
+          "reason": "I-포메이션(I-formation) 또는 오스트레일리안 포메이션에서의 센터볼 사전 핸드 시그널(손가락 신호) 체계는 본문 범위의 기본 진형에 집중하느라 생략되었다.",
+          "fix": "변형 포메이션 신호 체계는 상급 복식 전술 아티클로 분리 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "실전 소통을 완성하는 3대 콜 규칙 단락",
+          "reason": "마이(Mine), 유어스(Yours), 포칭(Poaching) 등 영어 구호 위주로 제시되어 현장에서 편하게 쓰는 우리말 구호(내 거, 네 거, 가로채기)의 권장이 보강될 필요가 있다.",
+          "fix": "직관적 한글 단음절 구호 예시 병기를 권장한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "전술 매트릭스 표 마크업",
+          "reason": "4열 전술 매트릭스 표의 모바일 단말기 반응형 렌더링 시 스크린리더 표 탐색성에 대한 정밀 계측 데이터가 누락되었다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더를 실측한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-089-tennis-guide",
+      "contentHash": "45e94ce13a4f4fb7946cd32738d749945f6c43b7521fefd567b145589d03379a",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-25",
+      "robots": "index, follow",
+      "readerQuestion": "방향 전환을 위해 스플릿스텝을 할 때 무릎에 가해지는 충격을 줄이고 지면 반발력을 민첩한 스타트로 연결하는 올바른 착지 동작은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-splitstep-biomechanics-2026",
+        "nhs-knee-racquet-loading-2026"
+      ],
+      "strengths": [
+        "ITF 스포츠 과학 의학 데이터에 근거하여 스플릿스텝을 높은 점프가 아닌 2~3cm 체중 언웨이팅(무중력화) 및 앞꿈치 접지로 재정의하고, 지면 반발력 무릎 전달을 최대 45% 줄이는 완충 메커니즘을 규명했다.",
+        "NHS 라켓 스포츠 무릎 보호 가이드라인을 철저히 준수하여 의학적 치료 약속을 전면 배제하고, 급성 통증·관절 붓기·무릎 풀림 등 위험 신호 발생 시 즉각 중단 및 정형외과 진료 권고를 명문화했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "스플릿스텝 착지 유형별 무릎 부하 및 역학적 특징 비교표",
+          "reason": "앞꿈치 착지 시의 충격 완충 수치(최대 45% 감소)는 생체역학 실험실 환경(포스 플레이트 측정) 기준이며, 코트 바닥 재질(하드, 클레이, 인조잔디)과 착용 테니스화의 미드솔 완충 성능에 따라 체감 분산율은 달라진다.",
+          "fix": "코트 표면 마찰계수 및 신발 쿠셔닝에 따른 분산율 변동 가능성을 주석으로 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 스포츠 의학 자료와 NHS 임상 지침은 성인 일반 표준 기준이며, 고령 동호인이나 과거 퇴행성 관절염 기저 질환자의 관절 허용 하중에 대한 개별 임상 데이터를 대체하지는 못한다.",
+          "fix": "기저 관절 질환 보유자의 주치의 상담 우선 원칙을 적용 범위에 명시한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "무릎을 지키는 3단계 완충 스플릿스텝 실전 기법 단락",
+          "reason": "무릎 통증 예방을 위한 스플릿스텝 동작 외에, 코트 밖에서 병행할 수 있는 대퇴사두근 및 둔근 기초 강화 운동(예: 월싯, 카프레이즈) 루틴은 웜업 링크 안내로 대체되어 본문 내 상세 세트 수가 생략되었다.",
+          "fix": "보강 운동의 권장 세트 및 빈도를 향후 추가 보완한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "자주 묻는 질문 (FAQ)",
+          "reason": "착지 직후 좌우 대각선 방향으로 차고 나갈 때 안쪽 발과 바깥쪽 발의 하중 분배 비율(로딩 vs 푸시)에 대한 고급 풋워크 역학은 기본 완충 착지에 집중하느라 약술되었다.",
+          "fix": "방향 전환 푸시오프 메커니즘은 상급 풋워크 가이드로 분리 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "무릎을 지키는 3단계 완충 스플릿스텝 실전 기법 단락",
+          "reason": "언웨이팅(Unweighting), 트리플 플렉션(Triple Flexion), 외반(Valgus) 등 스포츠 역학·의학 전문 용어가 다수 사용되어 일반 동호인을 위한 쉬운 한글 설명 병기가 필요하다.",
+          "fix": "체중 띄우기, 3관절 동시 굽힘, 무릎 안쪽 꺾임 등 쉬운 우리말 병기를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "착지 유형별 무릎 부하 비교표 마크업",
+          "reason": "5열 부하 비교표의 모바일 화면 가로 스크롤 시 스크린리더 표 탐색성에 대한 정밀 계측 데이터가 누락되었다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더를 실측한다."
+        }
+      ]
+    }
+  ]
+}

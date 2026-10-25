@@ -1,0 +1,62 @@
+{
+  "validatedAt": "2026-10-25T00:19:19.710Z",
+  "batchId": "rules-grip-20261025",
+  "allPassed": true,
+  "results": [
+    {
+      "route": "/blog/aw-085-match-5",
+      "slug": "aw-085-match-5",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-086-grip-beginner",
+      "slug": "aw-086-grip-beginner",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-087-serve-record",
+      "slug": "aw-087-serve-record",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-088-club-doubles",
+      "slug": "aw-088-club-doubles",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-089-tennis-guide",
+      "slug": "aw-089-tennis-guide",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    }
+  ]
+}
