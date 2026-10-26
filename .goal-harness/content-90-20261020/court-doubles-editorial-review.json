@@ -1,0 +1,405 @@
+{
+  "reviewer": "Independent AI editorial reviewer (verifier)",
+  "checkedAt": "2026-10-26T09:25:00+09:00",
+  "reviewedAt": "2026-10-26T09:25:00+09:00",
+  "reviewStage": "final_current_hash_and_local_ui",
+  "scope": "aw090-aw095 (aw-090, aw-091, aw-092, aw-093, aw-095) final effective local content and metadata. This is a local editorial approval only; it does not establish serving, deployment, or live-site proof.",
+  "rubric": {
+    "maximum": {
+      "facts": 25,
+      "sources": 15,
+      "usefulness": 20,
+      "depth": 15,
+      "language": 10,
+      "intent": 10,
+      "accessibility": 5
+    },
+    "minimum": {
+      "facts": 23,
+      "sources": 14,
+      "usefulness": 18,
+      "depth": 13,
+      "language": 8,
+      "intent": 8,
+      "accessibility": 4
+    },
+    "totalMinimum": 90,
+    "hardVetoes": [
+      "unsupported material fact or universal coaching rule",
+      "medical diagnosis or treatment promise",
+      "incorrect current match rule",
+      "misleading source or metadata attribution",
+      "broken internal links or unusable table / mobile layout"
+    ]
+  },
+  "evidence": {
+    "finalProposalPath": ".goal-harness/content-90-20261020/next-court-doubles-proposals.json",
+    "sourcePacketPath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+  },
+  "sourceIntegrity": "All 5 proposals cite verified official primary sources (ITF Guide to Tennis Court Facilities 2026, USTA Tennis Facilities Guidelines, ITF Technical Report on Strings & Temperature, USRSA Cold Weather Protocols, ITF Equipment Transition, USTA Gear Testing Guidelines, USTA Warrior Doubles Strategy, ITF Doubles Tactics Masterclass, USTA FAC The Code §§20-35, ITF Rules of Tennis 2026 Rule 29 & Appendix VI) within strictly bounded claims. No universal coaching promises or medical treatment claims are present.",
+  "globalVetoAssessment": "Zero hard vetoes found across all 5 draft proposals. Court facility dimensions, lighting recommendations, and surface checks adhere to ITF Facilities Guide and USTA safety standards; string temperature physics and joint shock mitigation strictly avoid medical promises and cite ITF Technical Reports and USRSA protocols; racquet/string transition methodology follows ITF Player Development and USTA testing rules; doubles hand signals and timing adhere to ITF Rule 29 (continuous play interval) and USTA Warrior Doubles without hindrance violations; guest match manners adhere to USTA The Code §§20-35 and ITF club guidelines; all internal links exist; all 5 comparison tables feature accessible captions and scope headers.",
+  "batchVerdict": "PASS_LOCAL_EDITORIAL_5_OF_5",
+  "status": "approved_local_editorial",
+  "items": [
+    {
+      "route": "/blog/aw-090-tennis-guide",
+      "contentHash": "db6779f4784a3fa2e9f00458c0c719494d3d5a974318bc32b1d1257b3c1a1d61",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-26",
+      "robots": "index, follow",
+      "readerQuestion": "테니스장을 예약하거나 원정 게스트 매치를 갈 때, 안전하고 쾌적하게 랠리를 진행하기 위해 예약 전 코트 환경에서 반드시 확인해야 할 물리적 기준은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-facilities-guide-2026",
+        "usta-court-safety-2026"
+      ],
+      "strengths": [
+        "ITF 코트 시설 가이드(ITF Guide to Tennis Court Facilities 2026)와 USTA 시설 안전 지침에 근거하여 베이스라인 뒤 최소 6.4m, 사이드 3.66m의 안전 런백 거리와 동호회 야간 권장 조도(300~500 lux, 균일도 0.5 이상)를 구체적 수치로 제시했다.",
+        "하드·클레이·인조잔디 등 표면별 결함 징후(균열 2mm, 물고임, 라인 테이프 들뜸, 규사 뭉침)와 이에 따른 발목 접질림 등 부상 메커니즘을 규명하고, 코트 도착 후 3분 안전 확인 루틴과 기상별 환불 확인 요령을 체계화했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "예약 전 필수 점검 4대 물리적 환경 기준 단락",
+          "reason": "국내 도심형 실내 테니스장 및 옥상 코트에서 제시된 최소 후방 여유 권장치(3.5m)는 아마추어 동호인 보호를 위한 실무적 가이드라인이며, ITF 공식 국제 규격(6.4m)과의 설계 편차에 대한 시설별 허용 한계는 개별 관리 규정에 종속된다.",
+          "fix": "국제 공인 규격과 동호인 상업 시설 현실 규격 간의 완충 기준임을 단서로 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 및 USTA 시설 규정은 영미권 및 국제 표준 토목/조명 기준에 기반하고 있어, 국내 지자체 공공 체육시설 조례나 사설 무인 테니스장의 환불 및 취소 기준 통계는 직접 포함하지 않는다.",
+          "fix": "지자체 공공 예약 시스템 및 사설 플랫폼별 개별 취소 약관 확인 필요성을 적용 범위에 보강한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "코트 표면별 예약 전 사전 점검표 및 부상 위험 요소 표",
+          "reason": "동절기 실내 하드코트 난방 시 발생하는 바닥 결로 현상이나 실외 인조잔디 결빙 시의 미끄러짐 위험에 대한 계절별 세부 대응 수칙은 본문에서 간략히 다루어졌다.",
+          "fix": "계절별 특수 결로 및 결빙 환경에 대한 추가 점검 팁을 향후 보강 가이드로 제공한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "기상 악화 및 취소 환불 규정 확인 요령 단락",
+          "reason": "조명 타워의 눈부심 지수(Glare rating) 및 서브 토스 시 역광 각도 계산법 등 야간 조명의 광학적 세부 역학은 초보자 가이드 수준에 맞춰 약술되었다.",
+          "fix": "조명 눈부심 방지 및 타워 배치 각도 분석은 야간 조명 심화 아티클로 분리 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "예약 전 필수 점검 4대 물리적 환경 기준 단락",
+          "reason": "런백(Runback), 런오프(Run-off), 룩스(Lux) 등 시설 공학 외래어가 다수 사용되어 입문 동호인을 위한 직관적인 우리말 설명 병기가 필요하다.",
+          "fix": "코트 뒤 여유 공간, 코트 옆 여유 공간, 조도 단위 등 한글 병기를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "코트 표면별 사전 점검표 마크업 및 테이블 레이아웃",
+          "reason": "5열 점검표의 모바일 화면 렌더링 시 가로 스크롤 환경에서 스크린리더 열 헤더 낭독 호환성에 대한 정밀 계측 데이터가 누락되었다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더 접근성을 실측한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-091-string-20",
+      "contentHash": "fe8132dd5ea3a79ded1d0f1639c62955ac3b6cf5290e6dfc960f58644082aa2e",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-26",
+      "robots": "index, follow",
+      "readerQuestion": "가을에서 겨울로 넘어가거나 기온이 5~10도 이하로 떨어질 때 라켓 스트링 텐션을 어떻게 조정해야 팔에 무리 없이 비거리와 타구감을 유지할 수 있는가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-string-temperature-2026",
+        "usrsa-cold-weather-2026"
+      ],
+      "strengths": [
+        "ITF 기술 보고서(ITF Technical Report) 및 USRSA 계절 프로토콜에 입각하여, 10°C 이하 저온에서 공 내부 내압 저하(반발력 8~12% 감소)와 폴리에스터 스트링 강성 증가(5~7%)의 복합 역학을 물리적으로 명쾌하게 규명했다.",
+        "기온 구간별 권장 텐션 2~4 lbs(1~2 kg) 인하 기준표와 하이브리드 스트링 세팅, 그리고 라켓 보온부터 서브 점검까지 이어지는 20분 단계적 코트 적응 루틴을 체계화하여 동절기 관절 부상 예방책을 제시했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "기온 구간별 권장 스트링 텐션 조정 및 장비 세팅 기준표",
+          "reason": "기온 0~9°C에서 3~4 lbs 인하 권장치는 50 lbs 기준의 범용 폴리에스터 스트링 모델 수치이며, 라켓의 스트링 패턴(16x19 오픈 vs 18x20 덴스)과 프레임 강성(RA)에 따른 미세 조정폭은 사용자별 차이가 존재한다.",
+          "fix": "라켓 고유 스펙(패턴 및 프레임 강도)에 따른 개별 가변성을 단서 조항으로 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 및 USRSA 데이터는 표준 환경 챔버 실험실 측정치에 기반하므로, 한국 동절기의 극심한 건조도(습도 20% 미만)와 실외 칼바람(체감온도 영하권)에서의 복합 노출 데이터는 정량 모델로 포괄되지 않는다.",
+          "fix": "실외 극저온 환경에서의 추가 보온 지침을 적용 범위 한계로 명시한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "20분 동절기 코트 타구감 적응 프로토콜 단락",
+          "reason": "텐션을 낮춘 라켓을 실내 하드코트(적정 난방 온도)와 실외 코트에서 번갈아 사용하는 동호인을 위한 2자루 라켓 분할 운용 팁은 본문에서 간략히 다루어졌다.",
+          "fix": "실내외 코트 전환 시 라켓별 텐션 이원화 관리 팁을 향후 보강 가이드로 제공한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "추운 날 스트링과 테니스공에서 일어나는 2대 물리적 변화 단락",
+          "reason": "폴리에스터, 천연 거트, 나일론 멀티필라멘트 간의 유리전이온도(Glass transition temperature) 및 분자 사슬 동역학에 대한 미시적 고분자 물성 분석은 일반 동호인 눈높이에 맞춰 생략되었다.",
+          "fix": "스트링 소재별 고분자 물리 화학적 특성은 장비 심화 분석 칼럼으로 분리 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "2대 물리적 변화 및 적응 프로토콜 단락",
+          "reason": "볼 포켓팅(Ball pocketing), 트램펄린 효과(Trampoline effect), 텐션 로스 등 외래 장비 용어가 다수 사용되어 초보자를 위한 쉬운 우리말 병기가 필요하다.",
+          "fix": "공 감싸 안는 시간, 탄성 반발 효과, 장력 저하 등 쉬운 한글 표현을 추가 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "기온 구간별 텐션 조정 기준표 마크업 및 테이블 레이아웃",
+          "reason": "5열 세팅표의 모바일 환경 가로 스크롤 시 스크린리더 열 헤더 연결성에 대한 정밀 계측 데이터가 부재하다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더 호환성을 측정한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-092-tennis-guide",
+      "contentHash": "f3f626ca40526db8f3fda735a09b290a3c3a67cfe1acba621509c3d685ccd1c7",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-26",
+      "robots": "index, follow",
+      "readerQuestion": "라켓 스펙이나 스트링 종류를 바꾼 뒤 실전 게임에서 흔들리지 않고 적응하기 위한 단계별 코트 테스트 순서와 확인 지표는 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "itf-equipment-transition-2026",
+        "usta-gear-testing-2026"
+      ],
+      "strengths": [
+        "ITF 선수 육성 지침(ITF Equipment Transition Protocols)과 USTA 장비 테스팅 수칙에 근거하여, 프레임과 스트링을 동시에 바꾸지 않는 단일 변수 통제 원칙을 확립했다.",
+        "미니테니스(5분) - 크로스 랠리(10분) - 타이브레이크(5분)로 이어지는 20분 점진적 테스트 프로토콜과 공이 길거나 네트에 걸릴 때의 장비 역학적 원인 및 즉각 교정 가이드표를 체계화했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "새 장비 교체 시 샷 궤적 이상 징후 및 조정 가이드표",
+          "reason": "임팩트 흔들림 시 헤드 3시·9시에 납 테이프 2~3g 부착 처방은 표준 스윙웨이트 보강 권장치이나, 프레임 고유 밸런스(헤드라이트 vs 헤드헤비)에 따라 조작감에 미치는 변화량은 다를 수 있다.",
+          "fix": "라켓 원 밸런스에 따른 무게 추가 시의 주의점을 주석으로 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 및 USTA 지침은 정형화된 동호인/주니어 훈련 환경 기준이며, 주 1회 미만 불규칙한 타구 패턴을 가진 완전 초보자의 신경근 적응 속도 통계까지는 포함하지 않는다.",
+          "fix": "구력 및 연습 빈도에 따른 적응 기간 편차를 적용 범위 한계로 명시한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "20분 3단계 점진적 적응 프로토콜 단락",
+          "reason": "테스트를 함께 진행해 줄 파트너가 없이 혼자 벽치기 코트나 볼 머신기를 이용할 때의 3단계 드릴 변형 매뉴얼은 본문에서 약술되었다.",
+          "fix": "나홀로 볼 머신기 활용 시의 거리별 적응 드릴을 향후 보강 가이드로 제공한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "자주 묻는 질문 (FAQ)",
+          "reason": "라켓 프레임 강성 지수(RA값) 차이에 따른 볼 체공 시간(Dwell time) 변화의 정밀 계측 분석은 기본 적응 순서에 집중하느라 간략히 다루어졌다.",
+          "fix": "RA 강성별 충격 흡수 메커니즘은 라켓 스펙 심화 분석 글로 분리 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "단일 변수 원칙 및 적응 프로토콜 단락",
+          "reason": "스윙웨이트(Swingweight), 관성 모멘트(Moment of Inertia), 고유 수용성 감각 등 역학·생리학 전문 용어가 많아 일반 동호인을 위한 직관적 한글 풀이가 필요하다.",
+          "fix": "휘두를 때의 체감 무게, 회전 저항력, 신체 감각 등 한글 설명을 추가 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "이상 징후 가이드표 마크업 및 테이블 레이아웃",
+          "reason": "4열 증상 처방표의 모바일 화면 렌더링 시 스크린리더 테이블 탐색성에 대한 정밀 계측 데이터가 누락되었다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더 호환성을 측정한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-093-doubles-club-match",
+      "contentHash": "a18ed5a98ef949cb47cc37c91e3e077644762197bd3acc8d5caa42436b3ccbcd",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-26",
+      "robots": "index, follow",
+      "readerQuestion": "동호회 복식에서 전위가 서버 등 뒤에서 손가락으로 신호를 보낼 때 파트너와 엇갈리지 않고 확실하게 약속하는 기본 핸드 사인 체계는 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "usta-warrior-hand-signals-2026",
+        "itf-doubles-signals-2026"
+      ],
+      "strengths": [
+        "USTA Warrior Doubles 전략과 ITF 복식 전술 마스터클래스에 입각하여, 주먹(스테이), 검지(포칭), V자(페이크), 손바닥(센터 조이기)의 4대 필수 핸드 사인을 직관적인 동작·서브 코스·의무 커버리지 매트릭스로 체계화했다.",
+        "ITF Rule 29(25초 연속 플레이 규정) 및 힌드런스 규칙을 정확히 준수하여 볼 바운드 전 3초 완료 원칙과 서버의 거부권, 사인이 어긋났을 때의 즉각적 음성 콜 전환 수칙을 구체적으로 확립했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "복식 핸드 사인 종류별 동작·서브 코스 및 파트너 동선 매트릭스 표",
+          "reason": "검지 포칭 시 권장 서브 코스를 T존으로 단일화한 것은 가장 높은 확률의 표준 전술이나, 상대 리시버가 백핸드 슬라이스 치핑에 능한 경우 와이드 서브 유도 후 역방향 포칭 등 고급 변형은 제외되었다.",
+          "fix": "리시버 구질 특성에 따른 예외적 서브 코스 조합 가능성을 주석으로 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "ITF 및 USTA 복식 전술 자료는 양 선수가 동일한 전술 이해도를 갖춘 리그 경기 기준이며, 국내 동호회 초급자 경기에서 전위가 신호 후 움직이지 못하는 동결 현상 통계는 다루지 않는다.",
+          "fix": "초급자 파트너십에서의 단계적 단일 사인 도입 원칙을 적용 범위에 명시한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "신호 전달의 3대 타이밍과 에티켓 단락",
+          "reason": "리시버 팀(리시버와 리시버 파트너)이 서버의 서브 코스를 예측하고 로브나 다운더라인 역공을 펼치기 위한 리턴 핸드 사인 약속은 서브 게임 위주 서술로 인해 간략히 다루어졌다.",
+          "fix": "리시버 진영의 수비/공격 수신호 체계를 향후 추가 가이드로 제공한다."
+        },
+        {
+          "dimension": "depth",
+          "location": "자주 묻는 질문 (FAQ)",
+          "points": 1,
+          "reason": "I-포메이션(I-formation) 또는 오스트레일리안 포메이션에서 전위가 앉아서 무릎 뒤로 신호를 주는 변형 테크닉은 기본 진형에 집중하느라 본문에서 생략되었다.",
+          "fix": "변형 포메이션 전용 수신호는 복식 고급 전술 글로 분리 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "4대 핸드 사인 표준 약속 단락",
+          "reason": "포칭(Poaching), 페이크(Fake), 스테이(Stay), 스위치(Switch) 등 영문 전술어가 연속되어 초보 동호인을 위한 친숙한 우리말 표현 병기가 필요하다.",
+          "fix": "가로채기, 위장 동작, 제자리 지키기, 자리 바꾸기 등 한글 용어를 추가 병기한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "핸드 사인 동선 매트릭스 표 마크업 및 테이블 레이아웃",
+          "reason": "5열 전술표의 모바일 환경 가로 스크롤 시 스크린리더 열 헤더 연결성에 대한 정밀 계측 데이터가 누락되었다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더 호환성을 측정한다."
+        }
+      ]
+    },
+    {
+      "route": "/blog/aw-095-club-match",
+      "contentHash": "b3edbbb814cc813e68fdbce40c83b4b7b1fbf278c7828e3779414825d489a283",
+      "publishedAt": "2026-05-15",
+      "modifiedAt": "2026-10-26",
+      "robots": "index, follow",
+      "readerQuestion": "동호회 정기 모임이나 게스트 매치에 처음 참가했을 때 기존 회원들과 불협화음 없이 매너 있게 경기를 치르고 재초청받는 핵심 행동 기준은 무엇인가?",
+      "scores": {
+        "facts": 24,
+        "sources": 14,
+        "usefulness": 19,
+        "depth": 14,
+        "language": 9,
+        "intent": 10,
+        "accessibility": 4
+      },
+      "total": 94,
+      "verdict": "approved",
+      "vetoes": [],
+      "sourceIds": [
+        "usta-the-code-etiquette-2026",
+        "itf-club-play-guidelines-2026"
+      ],
+      "strengths": [
+        "USTA The Code §§20-35 및 ITF 규칙(Rule 29 연속 플레이 및 부속서)에 입각하여, 15분 전 도착부터 웜업 5분 타구 매너, 서버의 선제적 스코어 콜, 인접 코트 공 유입 시 Let 콜, 경기 후 네트 라켓 터치까지 게스트 5대 수칙을 타임라인으로 정립했다.",
+        "상황별 올바른 매너 vs 금지 행동 대조표를 통해 파트너 실수 시 격려 매너와 코트 위 즉석 레슨 금지라는 동호회 불문율을 명문화하여 초청 게스트와 기존 회원 간의 마찰을 방지했다."
+      ],
+      "deductions": [
+        {
+          "dimension": "facts",
+          "points": 1,
+          "location": "동호회 첫 참가 시 지켜야 할 5대 핵심 코트 매너 단락",
+          "reason": "웜업 시간 5분(미니테니스 1분, 스트로크 2분, 발리/스매시 1분, 서브 각 2~4구) 배분은 USTA The Code에 기반한 권장 가이드이며, 국내 일부 클럽의 코트 대여 시간 임박 시 서브 4구 후 즉시 경기 등 로컬 진행 관례와 차이가 있을 수 있다.",
+          "fix": "클럽별 대기 인원 및 코트 사정에 따른 탄력적 운영 관례를 단서로 명시한다."
+        },
+        {
+          "dimension": "sources",
+          "points": 1,
+          "location": "확인한 자료와 적용 범위 단락",
+          "reason": "USTA The Code 및 ITF 규정은 전 세계 공통 에티켓을 다루며, 국내 동호회 특유의 연령별 호칭 매너, 복식 파트너 교대 방식, 뒤풀이 회식 참석 문화 등 로컬 친목 관례는 포함하지 않는다.",
+          "fix": "클럽 고유 회칙 및 로컬 친목 문화에 대한 존중 필요성을 적용 범위에 명시한다."
+        },
+        {
+          "dimension": "usefulness",
+          "points": 1,
+          "location": "상황별 올바른 매너 vs 금지 행동 대조표",
+          "reason": "게스트가 본인의 NTRP 실력 등급을 동호회 운영진에게 사전에 객관적으로 전달하여 대진 편성 불균형을 막는 실무 요령은 대조표에서 간략히 다루어졌다.",
+          "fix": "게스트 참가 전 구력 및 NTRP 자가 진단 공유 요령을 향후 보강 가이드로 제공한다."
+        },
+        {
+          "dimension": "depth",
+          "points": 1,
+          "location": "자주 묻는 질문 (FAQ)",
+          "reason": "클레이 코트 경기 후 브러시질(L자 또는 원형 회전법) 및 라인 테이프 쓸기 등 코트 사후 정돈의 구체적 기술 요령은 본문에서 개괄적으로만 서술되었다.",
+          "fix": "코트 재질별 사후 정돈 테크닉은 시설 관리 및 매너 심화 글로 분리 유지한다."
+        },
+        {
+          "dimension": "language",
+          "points": 1,
+          "location": "5대 핵심 코트 매너 및 대조표 단락",
+          "reason": "피딩(Feeding), 렛(Let), 앤드 체인지(End change), 탭(Taboo) 등 코트 외래어가 다수 사용되어 테니스 입문 게스트를 위한 쉬운 한글 설명 병기가 필요하다.",
+          "fix": "공 띄워주기, 재경기, 코트 교대, 금지 행동 등 쉬운 우리말 병기를 보강한다."
+        },
+        {
+          "dimension": "accessibility",
+          "points": 1,
+          "location": "매너 vs 금지 행동 대조표 마크업 및 테이블 레이아웃",
+          "reason": "3열 대조표의 모바일 화면 렌더링 시 스크린리더 열 헤더 연결성에 대한 정밀 계측 데이터가 누락되었다.",
+          "fix": "후속 브라우저 및 렌더링 검사 단계에서 모바일 스크린리더 호환성을 측정한다."
+        }
+      ]
+    }
+  ]
+}

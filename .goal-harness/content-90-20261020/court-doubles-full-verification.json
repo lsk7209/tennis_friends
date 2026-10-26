@@ -1,0 +1,18 @@
+{
+  "batchId": "court-doubles-20261026",
+  "verifiedAt": "2026-10-26T09:26:15+09:00",
+  "status": "passed",
+  "targetRoutes": [
+    "/blog/aw-090-tennis-guide",
+    "/blog/aw-091-string-20",
+    "/blog/aw-092-tennis-guide",
+    "/blog/aw-093-doubles-club-match",
+    "/blog/aw-095-club-match"
+  ],
+  "gates": {
+    "testContentReview": "PASS",
+    "auditContentReview": "PASS",
+    "preverify": "PASS",
+    "verify": "PASS"
+  }
+}

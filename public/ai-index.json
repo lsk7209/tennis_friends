@@ -3,11 +3,11 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-10-25",
+  "lastUpdated": "2026-10-26",
   "stats": {
-    "totalPages": 1491,
+    "totalPages": 1492,
     "tools": 67,
-    "articles": 1155,
+    "articles": 1156,
     "playerProfiles": 259
   },
   "pages": [
@@ -532,6 +532,14 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-beginner-month-five",
+      "title": "테니스 입문 5개월 차: 첫 라켓을 산 뒤 적응하는 법",
+      "description": "새 라켓을 산 뒤 첫 몇 주 동안 스윙, 스트링, 오버그립을 어떻게 맞춰 가고 무엇을 기록할지 정리했습니다.",
+      "type": "article",
+      "category": "입문 가이드",
+      "lastModified": "2026-10-26T09:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/oct26-beginner-month-four",
@@ -6959,32 +6967,32 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-090-tennis-guide",
-      "title": "테니스장 예약 전 확인 기준",
-      "description": "테니스장 예약 전 코트 상태, 조명, 이동 동선을 함께 확인합니다.",
+      "title": "테니스장 예약 전 코트 환경 체크리스트: 바닥 상태·조명 조도·동선 확인법",
+      "description": "코트 예약 전 부상 방지와 정상 랠리를 위해 하드·클레이·인조잔디 바닥 상태, 야간 LED 조명 조도, 코트 뒤 런백(Runback) 여유 거리를 점검하는 기준표를 정리했습니다.",
       "type": "article",
       "category": "코트 환경",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-091-string-20",
-      "title": "추운 날 스트링 텐션 감각",
-      "description": "추운 날 텐션 체감을 기록하고 무리한 교체를 피하는 20분 점검법입니다.",
+      "title": "기온 급락 시 테니스 스트링 텐션 조정: 동절기 수축과 20분 적응 점검법",
+      "description": "기온이 떨어질 때 스트링 폴리머 수축과 볼 탄성 저하로 팔꿈치에 가해지는 충격을 막기 위한 2~4파운드 다운 텐션 설정과 20분 코트 체감 점검법을 정리했습니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-092-tennis-guide",
-      "title": "장비 교체 테스트 순서",
-      "description": "라켓과 스트링 교체 전 경기 감각을 잃지 않는 테스트 순서입니다.",
+      "title": "라켓·스트링 교체 후 경기 감각 유지하는 3단계 테스트 순서",
+      "description": "새 라켓이나 다른 스트링으로 교체한 후 샷 감각을 잃지 않고 빠르게 적응하기 위한 미니테니스 5분, 베이스라인 랠리 10분, 포인트 게임 5분의 체계적 테스트 절차를 정리했습니다.",
       "type": "article",
       "category": "장비 가이드",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-093-doubles-club-match",
-      "title": "복식 센터 사인 정하기",
-      "description": "동호회 복식에서 센터 사인을 정하고 경기 중 혼선을 줄이는 기준입니다.",
+      "title": "동호회 복식 핸드 사인 정하기: 서브 코스와 전위 포칭 약속 4가지",
+      "description": "복식 경기에서 서버와 전위가 등 뒤로 주고받는 4가지 기본 핸드 사인(T존/와이드/바디 서브 + 스테이/포칭/페이크)과 콜 사인 실수 방지 규칙을 정리했습니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-15"
@@ -6999,8 +7007,8 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-095-club-match",
-      "title": "동호회 첫 경기 매너",
-      "description": "첫 동호회 경기에서 점수, 콜, 대기 시간을 자연스럽게 맞추는 기준입니다.",
+      "title": "동호회 첫 게스트 경기 매너: 코트 입장부터 스코어 콜까지 5대 수칙",
+      "description": "새로운 테니스 클럽에 게스트로 참석했을 때 어색함과 오해를 피하기 위한 웜업 5분 규칙 준수, 명확한 스코어 콜, 볼 체인지 및 코트 정리 매너를 정리했습니다.",
       "type": "article",
       "category": "동호회 운영",
       "lastModified": "2026-05-15"

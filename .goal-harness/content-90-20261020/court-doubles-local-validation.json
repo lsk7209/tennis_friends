@@ -1,0 +1,62 @@
+{
+  "validatedAt": "2026-10-26T00:17:05.884Z",
+  "batchId": "court-doubles-20261026",
+  "allPassed": true,
+  "results": [
+    {
+      "route": "/blog/aw-090-tennis-guide",
+      "slug": "aw-090-tennis-guide",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-091-string-20",
+      "slug": "aw-091-string-20",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-092-tennis-guide",
+      "slug": "aw-092-tennis-guide",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-093-doubles-club-match",
+      "slug": "aw-093-doubles-club-match",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-095-club-match",
+      "slug": "aw-095-club-match",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    }
+  ]
+}

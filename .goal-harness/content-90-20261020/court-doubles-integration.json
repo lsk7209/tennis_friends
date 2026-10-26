@@ -1,0 +1,32 @@
+{
+  "appliedAt": "2026-10-26T00:16:36.348Z",
+  "batchId": "court-doubles-20261026",
+  "filesChanged": [
+    {
+      "file": "src/data/blog-content/part16-quality-rewrites.ts",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\court-doubles-src_data_blog-content_part16-quality-rewrites.ts-b085610021b2.txt",
+      "beforeHash": "b085610021b21ca52fc95881689c0cd5c9efeebca1e1111a3d02fb725dd1b8cb",
+      "afterHash": "af2ea056877aa40b766bf2c741984b16a413f77ee76afc1c8c0c006c689f26a7",
+      "slugs": [
+        "aw-090-tennis-guide",
+        "aw-091-string-20",
+        "aw-092-tennis-guide",
+        "aw-093-doubles-club-match",
+        "aw-095-club-match"
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part16-overrides.js",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\court-doubles-src_data_blog-posts-part16-overrides.js-a508c6dc37a3.txt",
+      "beforeHash": "a508c6dc37a342dc1329b1e642c86e423903567ba31ddb6d888a60abc1aa9b32",
+      "afterHash": "07daa26a041d89222d8611a011f5cf6dc1d6c8a9688ea5f6229a929542ae3cda",
+      "slugs": [
+        "aw-090-tennis-guide",
+        "aw-091-string-20",
+        "aw-092-tennis-guide",
+        "aw-093-doubles-club-match",
+        "aw-095-club-match"
+      ]
+    }
+  ]
+}

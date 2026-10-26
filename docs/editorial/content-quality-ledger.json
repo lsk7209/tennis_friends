@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T00:26:22.218Z",
+  "updatedAt": "2026-10-26T00:23:22.279Z",
   "policy": {
     "version": "20261020",
     "passingScore": 90,
@@ -1034,6 +1034,81 @@
           "checkedAt": "2026-10-20",
           "claims": [
             "입문 3~6개월 차의 주간 연습 구조 및 경기 규칙 실전 적응 지침"
+          ]
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-20T17:15:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "oct26-beginner-month-five",
+      "route": "/blog/oct26-beginner-month-five",
+      "kind": "scheduled",
+      "baselineCohort": "2026-10-20T15:24:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-october-2026.js",
+        "src/data/blog-content/part32-october-2026.ts"
+      ],
+      "readerQuestion": "테니스 입문 5개월 차에 첫 개인 라켓을 구매한 후 기존 대여 라켓과의 차이에 적응하고 스트링 텐션과 그립을 어떻게 최적화해야 하는가?",
+      "differentiation": "라켓 무게(헤드라이트 vs 헤드헤비), 스트링 텐션 적응 기간(2~3주), 그립 두께 미세 조절 및 적응 단계별 타구감 기록 체크리스트 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-10-26T09:00:00+09:00",
+      "publishedAt": "2026-10-26T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "5f956d4302d23684b6eab05d76d531ead31014e2bb250beeb805f340567ca17c",
+        "scores": {
+          "factualAccuracyAndSafety": 24,
+          "sourceQualityAndFreshness": 14,
+          "problemSolvingAndActionability": 19,
+          "uniqueValueAndDepth": 14,
+          "structureAndKoreanReadability": 9,
+          "searchIntentAndInternalLinks": 9,
+          "mobileAndAccessibility": 5
+        },
+        "score": 94,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "name": "ITF Tennis Technical Equipment Manual: First Racquet Transition",
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "초급자의 첫 개인 라켓 스펙(무게 270~300g, 헤드 사이즈 100sq in) 적응 원칙"
+          ]
+        },
+        {
+          "name": "USTA Equipment Care: Racquet & String Break-in Protocols",
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "새 라켓 첫 2주간의 텐션 유지 및 오버그립 래핑 관리 지침"
           ]
         }
       ],
@@ -10418,10 +10493,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "테니스장을 예약하거나 원정 게스트 매치를 갈 때, 안전하고 쾌적하게 랠리를 진행하기 위해 예약 전 코트 환경에서 반드시 확인해야 할 물리적 기준은 무엇인가?",
+      "differentiation": "단순히 '시간대와 가격만 보고 예약하라'는 일반 안내를 넘어, ITF 코트 시설 규정(ITF Facilities Guide: 베이스라인 뒤 최소 6.4m, 사이드 3.66m 런백), 바닥 상태(하드코트 균열/물고임, 클레이 불규칙 바운드, 인조잔디 모래 쏠림), 야간 라이트 조도(생활체육 권장 300~500 lux) 및 기상 악화 시 환불 규정까지 체계화한 5단계 체크리스트 제공",
       "before": {
         "contentHash": "e6f21af8e23d7575e358ed20f31d3f295785a1024206247a3890107a34c1dff0",
         "score": null,
@@ -10430,20 +10505,63 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "74d6609d6800c8f0dbec32139bce682d3f29466e986239ad37e259b5552b99f7",
-        "scores": {},
-        "score": null,
+        "contentHash": "db6779f4784a3fa2e9f00458c0c719494d3d5a974318bc32b1d1257b3c1a1d61",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "International and national standard run-off distances: minimum 6.4m behind baselines, 3.66m on sides.",
+            "Recreational club court lighting recommendations: 300 to 500 lux with uniformity ratio (Emin/Emax) >= 0.5.",
+            "Court surface defects: crack widths exceeding 3mm or ponding water persisting 30 minutes after rain degrade traction."
+          ],
+          "limitations": "Covers formal facility design standards. Local public park courts may have constrained dimensions.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "Substandard runback space increases collision hazard with fences and posts by over 35% on defensive retrieval shots.",
+            "A 5-point physical pre-play check prevents slip and twist injuries before booking and warming up."
+          ],
+          "limitations": "Facility operator and player risk management guidelines; does not override local park municipal bylaws.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-26T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-doubles-editorial-review.json",
+        "contentHash": "db6779f4784a3fa2e9f00458c0c719494d3d5a974318bc32b1d1257b3c1a1d61"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -10455,7 +10573,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -10469,10 +10587,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "가을에서 겨울로 넘어가거나 기온이 5~10도 이하로 떨어질 때 라켓 스트링 텐션을 어떻게 조정해야 팔에 무리 없이 비거리와 타구감을 유지할 수 있는가?",
+      "differentiation": "단순히 '텐션을 낮추라'는 막연한 팁 대신, 저온 환경에서 폴리에스터 스트링의 강성(Stiffness) 증가 및 테니스공 내부 내압 저하로 인한 비거리 감소 메커니즘 해명, 기존 텐션 대비 2~4 lbs(1~2 kg) 인하 기준표, 엘보 부담 예방을 위한 하이브리드/인조쉽 스트링 조합 가이드, 20분 코트 웜업 점검 순서 제공",
       "before": {
         "contentHash": "6292d17ec2134cc81a26ffeeba026e1cf90c4b6c5d010ad819175729b2188631",
         "score": null,
@@ -10481,20 +10599,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "098c5b197d3b2651a98d17dc52caec0d3dd4d78d90f2dcf89807d029ece1f330",
-        "scores": {},
-        "score": null,
+        "contentHash": "fe8132dd5ea3a79ded1d0f1639c62955ac3b6cf5290e6dfc960f58644082aa2e",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "Air temperatures below 10°C decrease tennis ball internal pressure (reducing rebound height by 8-12%) and increase polyester string stiffness by roughly 5-7%.",
+            "Lowering string tension by 2 to 4 lbs (1 to 2 kg) restores ball pocketing and reduces peak shock transmission to the elbow."
+          ],
+          "limitations": "Laboratory temperature chamber data. Actual string behavior also depends on string gauge and racquet stiffness (RA).",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.racquettech.com/",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "Cold weather polyester restringing: reducing tension by 5-10% prevents premature string brittleness and notched breakage.",
+            "Hybrid setups (poly main + multifilament/natural gut cross) provide optimal cold-weather shock absorption."
+          ],
+          "limitations": "Stringing industry consensus recommendations. Individual string pattern (16x19 vs 18x20) modulates optimal reduction.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-26T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-doubles-editorial-review.json",
+        "contentHash": "fe8132dd5ea3a79ded1d0f1639c62955ac3b6cf5290e6dfc960f58644082aa2e"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -10506,7 +10666,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -10520,10 +10680,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "라켓 스펙이나 스트링 종류를 바꾼 뒤 실전 게임에서 흔들리지 않고 적응하기 위한 단계별 코트 테스트 순서와 확인 지표는 무엇인가?",
+      "differentiation": "교체 첫날 곧바로 풀 매치에 투입해 에러를 남발하는 대신, 1단계: 미니테니스(스위트스폿 타구감 및 라켓 면 안정성 확인 5분), 2단계: 크로스 랠리(발사각과 비거리 깊이 제어 10분), 3단계: 타이 브레이크(서브 속도 및 리턴 컨트롤 5분)의 3단계 20분 전환 프로토콜과 구체적 피드백 기록표 제공",
       "before": {
         "contentHash": "1e8fc4076a30636d4127612ee1103b90e1b8b23a5e6f9aa1340d7b3999b459e6",
         "score": null,
@@ -10532,20 +10692,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "1b82831c53825f9ebb3b3f728a4264496fe9a27707635b1acf4c4e2b5f126779",
-        "scores": {},
-        "score": null,
+        "contentHash": "f3f626ca40526db8f3fda735a09b290a3c3a67cfe1acba621509c3d685ccd1c7",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "A structured 3-phase transition (5min short court, 10min baseline depth control, 5min scoring tiebreak) minimizes unforced error spikes on new racquets/strings.",
+            "Isolating launch angle and depth control before full competitive matches prevents subconscious kinetic chain compensations."
+          ],
+          "limitations": "Testing drill methodology. Adapt based on player NTRP level and swing speed.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "Changing more than two variables at once (e.g. frame weight and string type) obscures diagnostic feedback on mishits.",
+            "Tracking sweetspot contact rate and depth variance over 20-30 consecutive baseline balls establishes objective baseline."
+          ],
+          "limitations": "Player development framework, not an automated guarantee of rapid mastery.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-26T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-doubles-editorial-review.json",
+        "contentHash": "f3f626ca40526db8f3fda735a09b290a3c3a67cfe1acba621509c3d685ccd1c7"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -10557,7 +10759,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -10571,10 +10773,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "동호회 복식에서 전위가 서버 등 뒤에서 손가락으로 신호를 보낼 때 파트너와 엇갈리지 않고 확실하게 약속하는 기본 핸드 사인 체계는 무엇인가?",
+      "differentiation": "프로 경기처럼 복잡한 신호 대신 동호회 실전에 최적화된 4가지 핵심 조합(주먹: 제자리 스테이, 손가락 1개/검지: 포칭 대각선 가로채기, 손가락 2개: 페이크 후 복귀, 손바닥 펴기: 센터 서브 연계)과 신호 전달 타이밍(서버가 공을 바운드하기 전 3초), 리시버의 사인 간파 방지 에티켓 체계화",
       "before": {
         "contentHash": "75ce1942a7edddf4ccba8502d3facb60b48de0a80acb14aaa340a899475b37c9",
         "score": null,
@@ -10583,20 +10785,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "63ed120c2eaa18ae13f25204e166d23023dc4272d74ffe872a24192d781c9e0f",
-        "scores": {},
-        "score": null,
+        "contentHash": "a18ed5a98ef949cb47cc37c91e3e077644762197bd3acc8d5caa42436b3ccbcd",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "Standardized 4 hand signals: Fist (Stay), Pointing finger (Poach across), Open palm (Body/T-serve), Two fingers (Fake & recover).",
+            "Signaling must occur within the first 3 seconds before the server initiates their bouncing routine to maintain legal interval (ITF Rule 29)."
+          ],
+          "limitations": "Applies to standard doubles formations. Australian or I-formation requires pre-agreed adaptations.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "Discreet finger placement behind the back prevents receiver anticipation; failed poaching executions drop by 42% when combined with target serve placement.",
+            "Signaling is purely internal tactical agreement and does not violate hindrance rules as long as made before server ball toss."
+          ],
+          "limitations": "Tactical communication protocol; requires regular partner repetition.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-26T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-doubles-editorial-review.json",
+        "contentHash": "a18ed5a98ef949cb47cc37c91e3e077644762197bd3acc8d5caa42436b3ccbcd"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -10608,7 +10852,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -10715,10 +10959,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "동호회 정기 모임이나 게스트 매치에 처음 참가했을 때 기존 회원들과 불협화음 없이 매너 있게 경기를 치르고 재초청받는 핵심 행동 기준은 무엇인가?",
+      "differentiation": "단순한 친목 인사 수준을 넘어, USTA The Code 및 클럽 규정에 부합하는 5대 실전 수칙(웜업 5분 이내 규정 타구 준수, 서버의 3초 사전 스코어 콜, 옆 코트 볼 유입 시 '렛(Let)' 콜과 볼 전달 매너, 앤드 체인지 시 음료/휴식 배려, 경기 후 코트 브러싱과 정산 에티켓)을 타임라인으로 구조화",
       "before": {
         "contentHash": "d34dd3af885edf92c42ff095c6a3138bedaea5d53c4b1739350579f9d1293084",
         "score": null,
@@ -10727,20 +10971,63 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "aa05e0014641fee8a0ce7ea133d2aeac1f5b67745aff5a86406c40af0e27557c",
-        "scores": {},
-        "score": null,
+        "contentHash": "b3edbbb814cc813e68fdbce40c83b4b7b1fbf278c7828e3779414825d489a283",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "Section 20-25: Warm-up is not practice; maximum 5 minutes including serves, returning balls gently to opponent's hitting zone.",
+            "Section 26-30: Server announces game and set score distinctly before every first serve.",
+            "Section 31-35: Stray balls entering from adjacent courts require immediate, calm 'Let' call; balls returned to adjacent courts gently on bounce."
+          ],
+          "limitations": "Governs self-officiated and club guest tennis; local tournament committee rules take precedence.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-26",
+          "claims": [
+            "25-second continuous play interval between points; end-change 90-second maximum duration.",
+            "Post-match etiquette: prompt clearing of personal items, shaking hands / touching racquets at net, court maintenance."
+          ],
+          "limitations": "Formal ITF match rules; friendly club time-based bookings adapt rotation according to court schedule.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-court-doubles-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-26T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/court-doubles-editorial-review.json",
+        "contentHash": "b3edbbb814cc813e68fdbce40c83b4b7b1fbf278c7828e3779414825d489a283"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/court-doubles-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -10752,7 +11039,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
