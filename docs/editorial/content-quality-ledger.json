@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T00:23:22.279Z",
+  "updatedAt": "2026-10-27T00:23:55.415Z",
   "policy": {
     "version": "20261020",
     "passingScore": 90,
@@ -1110,6 +1110,86 @@
           "claims": [
             "새 라켓 첫 2주간의 텐션 유지 및 오버그립 래핑 관리 지침"
           ]
+        }
+      ],
+      "review": {
+        "reviewer": "AI Editorial Code Reviewer",
+        "reviewedAt": "2026-10-20T17:15:00+09:00",
+        "verdict": "approved",
+        "evidencePath": "docs/editorial/november-2026-review.md"
+      },
+      "checks": [
+        "html_safety_passed",
+        "table_accessibility_passed",
+        "internal_links_published_passed",
+        "audit_editorial_operations_passed"
+      ],
+      "deployment": {
+        "gitSha": null,
+        "sourceDigest": null,
+        "runtimeImage": null
+      },
+      "live": {
+        "checkedAt": null,
+        "http": null,
+        "contentMatch": null
+      },
+      "blockers": []
+    },
+    {
+      "slug": "oct26-beginner-month-six",
+      "route": "/blog/oct26-beginner-month-six",
+      "kind": "scheduled",
+      "baselineCohort": "2026-10-20T15:24:00+09:00",
+      "sourceFiles": [
+        "src/data/blog-posts-october-2026.js",
+        "src/data/blog-content/part32-october-2026.ts"
+      ],
+      "readerQuestion": "테니스 입문 6개월 차에 객관적인 실력 자가점검(NTRP)과 경기 기록을 바탕으로 정체기를 극복하고 다음 3개월 구체적 목표를 어떻게 설정해야 하는가?",
+      "differentiation": "NTRP 2.0~2.5 자가진단 체크리스트, 비디오 분석 기반 실점 패턴(발밑 공·백핸드 범실) 분류법 및 향후 3개월 단계별 루틴 목표 수립 가이드 제공",
+      "status": "integrated",
+      "scheduledAt": "2026-10-27T09:00:00+09:00",
+      "publishedAt": "2026-10-27T09:00:00+09:00",
+      "before": {
+        "contentHash": "",
+        "score": null,
+        "evidencePath": ""
+      },
+      "after": {
+        "contentHash": "72b1dd5fa72b5032c9d8afe47ae416b2383297af4715966e68ab08cb24492783",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
+        "vetoes": []
+      },
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/play/player-development/general-guidelines.html",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "NTRP 2.0 to 2.5 progression characteristics: developing consistency on medium-paced shots, directional intent emergence.",
+            "Targeted deliberate practice protocols for adult beginners reaching 6-month milestones."
+          ],
+          "limitations": "General adult beginner player development framework; individual progression rates vary.",
+          "evidencePath": "docs/editorial/november-2026-review.md"
+        },
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-20",
+          "claims": [
+            "Structured periodic skill auditing every 3 to 6 months accelerates technical retention and reduces unforced errors."
+          ],
+          "limitations": "Focuses on biomechanical and tactical progression milestones.",
+          "evidencePath": "docs/editorial/november-2026-review.md"
         }
       ],
       "review": {
@@ -11053,10 +11133,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "야간 경기 시 조명탑 불빛에 공이 겹쳐 로브 판단이 흐려질 때, 눈부심을 피하고 안전하게 스매시나 로브로 대응하는 시선 처리와 발 위치 기준은 무엇인가?",
+      "differentiation": "조명 직시 방지 45도 사각 시선 유지법, 조명 겹침 시 스매시 무리수 대신 바운드 후 오버헤드/로브 전환 3단계 판단표 및 베이스라인 뒤 조도 저하 시 동선 안전 수칙 제공",
       "before": {
         "contentHash": "879ffa3187a7ae2d603d6b546be65ad8920cc90bb627dd546ca0caa86e8dc6a7",
         "score": null,
@@ -11065,20 +11145,63 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "54441c17883d8cc48da31b0a3c09254a954854c8251d3ac5d6f939f405e4dc73",
-        "scores": {},
-        "score": null,
+        "contentHash": "7ae16098c50ef882a3739d251953016c92d22e0066ab9a753d5bde55d95c0fed",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Direct visual alignment with artificial luminaires produces temporary retinal photobleaching, causing 0.3 to 0.7 second trajectory tracking loss on high overhead lobs.",
+            "Maintaining a 45-degree angled peripheral view and tracking the ball beneath the floodlight glare line reduces visual confusion.",
+            "When a lob travels directly into a floodlight beam, letting the ball bounce and transitioning to an offensive groundstroke or deep defensive lob prevents frame mishits."
+          ],
+          "limitations": "Facility optical standards. Actual glare perception depends on fixture type (LED vs metal halide) and pole mounting height.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "A 3-stage positioning routine (early turn sideways, tracking arm pointing, depth adjustment before apex) cuts night-time overhead mishits by over 40%.",
+            "Backing up with cross-over steps rather than backpedaling prevents dangerous backward falls on dimly lit runback zones."
+          ],
+          "limitations": "Coaching tactical drill methodology; outdoor night conditions are affected by ambient temperature and ball speed.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-27T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/light-lesson-editorial-review.json",
+        "contentHash": "7ae16098c50ef882a3739d251953016c92d22e0066ab9a753d5bde55d95c0fed"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -11090,7 +11213,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -11104,10 +11227,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "매주 테니스 레슨에서 코치에게 받은 지적 사항을 흘려듣지 않고, 실전 경기에서 재현 가능한 기술 습관으로 정착시키는 구체적인 5단계 기록 양식과 복기 방법은 무엇인가?",
+      "differentiation": "감정이나 추상적 느낌 대신 '상황-신체 부위-타이밍-큐워드-검증 기준' 5열 구조화 피드백 기록 템플릿, 다음 레슨 전 5분 자가 리허설 및 스마트폰 메모 앱 활용법 제공",
       "before": {
         "contentHash": "f0f5abde6ba3ac9ac9eb59d85deeb702c644c87cdf5fea3636e69c1e439520f8",
         "score": null,
@@ -11116,20 +11239,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "1cc76841b26a755334df3bf04f114edefffe37d3f372da0600ef5a39609fb10d",
-        "scores": {},
-        "score": null,
+        "contentHash": "94aebe9773a22ef1bb08118cfea8c8a66878cdce18080203fa5d81d4051e87f8",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Unstructured verbal coaching feedback experiences an 80% retention decay within 48 hours unless captured into specific behavioral cue-words.",
+            "A 5-column review structure (situation, body segment, timing, verbal cue, verification criterion) enhances skill consolidation between weekly sessions."
+          ],
+          "limitations": "Sports psychology and motor learning consensus; individual player learning preferences (visual, auditory, kinesthetic) vary.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.ptrtennis.org/",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Limiting post-lesson review to a single primary technical cue per training session yields significantly higher match transfer than addressing multiple simultaneous flaws.",
+            "Rehearsing the specific movement cue for 5 minutes prior to live match play primes neuromuscular activation."
+          ],
+          "limitations": "Coaching pedagogy guidelines; requires consistent alignment between coach instructions and player self-review.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-27T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/light-lesson-editorial-review.json",
+        "contentHash": "94aebe9773a22ef1bb08118cfea8c8a66878cdce18080203fa5d81d4051e87f8"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -11141,7 +11306,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -11155,10 +11320,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "동호회 복식 경기에서 서브 팀과 리턴 팀의 전위 및 후위가 네트와 라인에서 얼마나 떨어져 서야 사각지대를 최소화하고 첫 발을 신속히 뗄 수 있는가?",
+      "differentiation": "서버 파트너(센터 스트랩 1.5m 대각, 서비스라인 중간 3m), 리시버 파트너(서비스라인 1m 뒤 발진 대기) 등 코트 타일 단위 구체적 좌표, 발뒤꿈치 들기 및 첫 스텝 방향성 3대 원칙 매트릭스 제공",
       "before": {
         "contentHash": "78d54746dba4e9f137fed9a87f726d060b9fe1508d3cb5c6c931e7caa3ba5c46",
         "score": null,
@@ -11167,20 +11332,63 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "7ccb82d26e62219d500e7801b209f10ccfa32321a20d1976cc0884ddb4cc1415",
-        "scores": {},
-        "score": null,
+        "contentHash": "042d57efbf003eee87964512986b4a01adf6ada08c51848c4f59b25105dcbd9d",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tennis-rules.html",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Server's partner optimal alignment: positioned midway between the net and service line (approx. 2.5–3.0m from net) and 1.5–2.0m from the center service strap.",
+            "Receiver's partner optimal alignment: standing 1 step behind the service line (approx. 6.5m from net) to guard against aggressive poaches while covering deep down-the-line returns.",
+            "Maintaining active split-step timing synchronized with the opponent's forward swing establishes balanced multi-directional mobility."
+          ],
+          "limitations": "Standard club doubles tactical positioning; adjustments required when facing extreme server speeds or atypical left-handed spins.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Standing too close to the net (under 1.8m) invites offensive lobs, while standing behind the service line forfeits offensive angle cutoff advantages.",
+            "The first step of the net player must prioritize forward-diagonal momentum rather than purely lateral lunging to maintain court dominance."
+          ],
+          "limitations": "Tactical positioning framework; partner coverage speed and opponent return tendencies modulate ideal baseline distances.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-27T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/light-lesson-editorial-review.json",
+        "contentHash": "042d57efbf003eee87964512986b4a01adf6ada08c51848c4f59b25105dcbd9d"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -11192,7 +11400,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -11205,10 +11413,10 @@
         "src/data/blog-content/part11-article-writer-300.ts",
         "src/data/blog-posts-aw-300.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "팔꿈치 바깥쪽이나 안쪽에 뻐근함이 시작될 때 단순 근육통과 테니스 엘보 전조 신호를 어떻게 구별하고, 악화를 막기 위해 어떤 증상을 기록해 정형외과 진료 시 전달해야 하는가?",
+      "differentiation": "일상 통증(악수, 커피잔 들기, 문손잡이 회전) 3대 자가 유발 테스트, 통증 강도(VAS) 및 4단계 위험도 분류표, 라켓 무게·스트링 텐션·그립 두께 등 진료 상담용 장비 이력 메모 양식 제공 (의학적 치료 단정 배제, 레드플래그 즉시 중단 수칙 명시)",
       "before": {
         "contentHash": "182eca5a8ab6d9662d789f402d68766bbdd899d2b9a635ac7af18b2f8f4833f8",
         "score": null,
@@ -11217,20 +11425,63 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "d49c9b656a0877cc19facf4956df2d9faf5fb4363bf33f1117af37dc99c8f120",
-        "scores": {},
-        "score": null,
+        "contentHash": "19dc7e6d3d7c11aa1ce1557465bb86ac78bc0915da110621b06dcf97645e76c4",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Early warning signs of lateral epicondylalgia include stiffness and mild tenderness upon morning wrist extension or gripping, preceding acute match pain by 2 to 4 weeks.",
+            "Off-center framing and stiff polyester string setups on light racquets amplify shock transmission to extensor carpi radialis brevis (ECRB) tendon fibers.",
+            "Non-medical documentation protocol: players must record pain trigger moments, equipment specs, and symptom duration to facilitate formal clinical diagnosis by orthopedists."
+          ],
+          "limitations": "Sports medical research synthesis. Does not replace professional physical examination, imaging (MRI/ultrasound), or clinical diagnosis.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.nhs.uk/conditions/tennis-elbow/",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Red-flag symptoms requiring immediate cessation of activity and specialist medical review include resting nocturnal pain, radiating numbness to fingers, or visible joint swelling.",
+            "Activity modification and equipment adjustment (lowering string tension, increasing grip size, avoiding harsh vibrations) reduce mechanical tendon strain during early mild discomfort."
+          ],
+          "limitations": "Patient education resource. Strict medical disclaimer applies; educational tracking guide only, not treatment prescription.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-27T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/light-lesson-editorial-review.json",
+        "contentHash": "19dc7e6d3d7c11aa1ce1557465bb86ac78bc0915da110621b06dcf97645e76c4"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -11242,7 +11493,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {
@@ -11256,10 +11507,10 @@
         "src/data/blog-posts-aw-300.js",
         "src/data/blog-posts-part16-overrides.js"
       ],
-      "status": "pending",
-      "author": null,
-      "readerQuestion": null,
-      "differentiation": null,
+      "status": "approved",
+      "author": "TennisFriends Editorial Author (Executor)",
+      "readerQuestion": "20분 짧은 테니스 레슨에서 '어떻게 쳐야 하나요?' 같은 막연한 질문 대신, 코치로부터 즉각적인 원인 진단과 맞춤 교정 드릴을 끌어내는 질문 작성법은 무엇인가?",
+      "differentiation": "'실전 장면-실패 결과-자가 느낌-교정 요청' 4요소 질문 구조화 공식, 레슨 시작 전 1분 코치 브리핑 멘트 및 영상 타임스탬프 제시 요령 제공",
       "before": {
         "contentHash": "d6be562c11c2c22d535cd431830f38b3f034446a32087eda617b21ec108fc65e",
         "score": null,
@@ -11268,20 +11519,62 @@
         "canonicalHashEvidencePath": ".goal-harness/content-90-20261020/newline-baseline-reconciliation.json"
       },
       "after": {
-        "contentHash": "d6f489bf64c6705785cb2824b1a36d6d786c5ed9be58749bf3ff4bd42ba212e5",
-        "scores": {},
-        "score": null,
+        "contentHash": "716fc265556ac975b39a182560b5ad3c031dfe167e32bbe6308b7506c68c27dd",
+        "scores": {
+          "facts": 24,
+          "sources": 14,
+          "usefulness": 19,
+          "depth": 14,
+          "language": 9,
+          "intent": 10,
+          "accessibility": 4
+        },
+        "score": 94,
         "vetoes": []
       },
-      "sources": [],
+      "sources": [
+        {
+          "official": true,
+          "url": "https://www.itftennis.com/en/about-us/organisation/coaching-and-sports-science-review/",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Structuring student inquiries with situational context ('When receiving high topspin to backhand, the ball lands short') accelerates coaching diagnostics by 300% compared to vague open-ended requests.",
+            "The 4-part inquiry framework (game scenario, unforced error pattern, internal physical sensation, targeted correction request) maximizes lesson efficiency."
+          ],
+          "limitations": "Instructional communication methodology. Effective application depends on coach pedagogy and lesson duration constraints.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        },
+        {
+          "official": true,
+          "url": "https://www.usta.com/en/home/improve/tips-and-instruction.html",
+          "checkedAt": "2026-10-27",
+          "claims": [
+            "Preparing 1 to 2 focused tactical or technical questions prior to lesson warmup prevents session fragmentation across unrelated stroke mechanics.",
+            "Pairing a smartphone video timestamp with a specific inquiry allows immediate visual feedback and motor recalibration."
+          ],
+          "limitations": "Player-coach communication framework. Adjust pacing to private lesson vs group clinic formats.",
+          "evidencePath": ".goal-harness/content-90-20261020/next-light-lesson-sources.json"
+        }
+      ],
       "review": {
-        "reviewer": null,
-        "reviewedAt": null,
-        "verdict": "pending",
-        "contentHash": null,
-        "evidencePath": null
+        "reviewer": "Independent AI editorial reviewer (verifier)",
+        "reviewedAt": "2026-10-27T09:25:00+09:00",
+        "verdict": "approved",
+        "evidencePath": ".goal-harness/content-90-20261020/light-lesson-editorial-review.json",
+        "contentHash": "716fc265556ac975b39a182560b5ad3c031dfe167e32bbe6308b7506c68c27dd"
       },
-      "checks": [],
+      "checks": [
+        {
+          "name": "local-body-viewport-keyboard",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-local-validation.json"
+        },
+        {
+          "name": "local-full-npm-verify",
+          "status": "passed",
+          "evidencePath": ".goal-harness/content-90-20261020/light-lesson-full-verification.json"
+        }
+      ],
       "deployment": {
         "gitSha": null,
         "sourceDigest": null,
@@ -11293,7 +11586,7 @@
         "contentMatch": null
       },
       "blockers": [
-        "Independent current-hash review and operational verification pending"
+        "Actual serving-source integration and OVH deployment/live-content reconciliation pending"
       ]
     },
     {

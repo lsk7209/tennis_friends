@@ -3,11 +3,11 @@
   "url": "https://tennisfrens.com",
   "language": "ko-KR",
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
-  "lastUpdated": "2026-10-26",
+  "lastUpdated": "2026-10-27",
   "stats": {
-    "totalPages": 1492,
+    "totalPages": 1493,
     "tools": 67,
-    "articles": 1156,
+    "articles": 1157,
     "playerProfiles": 259
   },
   "pages": [
@@ -532,6 +532,14 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/oct26-beginner-month-six",
+      "title": "테니스 입문 6개월 차: 자가점검으로 다음 목표 정하기",
+      "description": "반년이 지난 시점에 NTRP 자가점검과 경기 기록으로 현재 상태를 보고 다음 3개월 목표를 정하는 방법을 정리했습니다.",
+      "type": "article",
+      "category": "입문 가이드",
+      "lastModified": "2026-10-27T09:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/oct26-beginner-month-five",
@@ -7015,32 +7023,32 @@
     },
     {
       "url": "https://tennisfrens.com/blog/aw-096-tennis-guide",
-      "title": "야간 조명 로브 대응",
-      "description": "야간 조명 아래 로브 판단을 시선, 발 위치, 안전 코스로 나눠 정리합니다.",
+      "title": "야간 조명 테니스 로브 판단: 눈부심 방지 시선 처리와 3단계 스매시 포지셔닝",
+      "description": "야간 경기 시 조명탑 불빛에 공이 겹칠 때 눈부심을 피하고, 3단계 포지셔닝과 바운드 후 대처로 오버헤드 실수를 줄이는 실전 가이드입니다.",
       "type": "article",
       "category": "코트 환경",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-097-record-5",
-      "title": "코치 피드백 기록 기준",
-      "description": "코치 피드백을 다음 연습에 연결하는 기록 기준 5가지를 정리합니다.",
+      "title": "테니스 레슨 코치 피드백 기록법: 5단계 복기 노트와 실전 적용 점검표",
+      "description": "레슨 중 코치의 핵심 지적을 흘려듣지 않고 실전 동작으로 정착시키는 5열 구조화 기록 양식과 일주일 복기 루틴입니다.",
       "type": "article",
       "category": "훈련 가이드",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-098-doubles-beginner",
-      "title": "복식 스타트 위치 기준",
-      "description": "복식 초보가 시작 위치와 첫 이동을 헷갈리지 않게 정리한 기준입니다.",
+      "title": "동호회 복식 서브·리턴 스타트 포지션: 전위·후위 거리 배치와 첫 스텝 3원칙",
+      "description": "복식 경기에서 서브·리턴 시 전위와 후위의 네트·라인 기준 좌표와 첫 발 떼는 타이밍 3대 원칙을 정리한 실전 가이드입니다.",
       "type": "article",
       "category": "복식 전술",
       "lastModified": "2026-05-15"
     },
     {
       "url": "https://tennisfrens.com/blog/aw-100-tennis-guide",
-      "title": "레슨 질문 목록 만드는 법",
-      "description": "레슨에서 같은 지적을 반복하지 않도록 질문 목록과 복습 기준을 만듭니다.",
+      "title": "테니스 레슨 효과를 2배 높이는 코치 질문법: 실전 오류 중심 4단계 질문 템플릿",
+      "description": "20분 개인 레슨에서 막연한 질문 대신 코치의 즉각적이고 정밀한 교정 드릴을 이끌어내는 4단계 질문 구조화 공식입니다.",
       "type": "article",
       "category": "레슨 가이드",
       "lastModified": "2026-05-15"

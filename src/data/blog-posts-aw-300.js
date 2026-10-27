@@ -1763,18 +1763,13 @@ export const articleWriterBlogPosts = [
   {
     "id": "aw-099-injury-injury-record",
     "slug": "aw-099-injury-injury-record",
-    "tags": [
-      "부상 예방",
-      "엘보 통증",
-      "부상 예방 엘보",
-      "테니스프렌즈"
-    ],
-    "title": "엘보 통증 전조 신호 체크리스트와 기록법",
-    "excerpt": "'통증 위치와 반복 시점' 기준으로 코트에서 바로 점검하는 부상 예방 실전 가이드.",
+    "tags": ["테니스 엘보","부상 예방","팔꿈치 통증","체크리스트","병원 진료"],
+    "title": "테니스 엘보 전조 신호 자가 점검표: 통증 단계별 체크리스트와 병원 상담 기록법",
+    "excerpt": "팔꿈치 바깥쪽 통증 전조 증상을 자가 진단하고, 악화를 막기 위한 4단계 관리 수칙과 전문의 진료 상담용 기록 양식입니다.",
     "badge": "신규 가이드",
     "category": "부상 예방",
     "date": "2026-05-15",
-    "readTime": "8분",
+    "readTime": "9분",
     "badgeColor": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300",
     "categoryColor": "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300"
   },

@@ -1,0 +1,18 @@
+{
+  "batchId": "light-lesson-20261027",
+  "verifiedAt": "2026-10-27T09:29:30+09:00",
+  "status": "passed",
+  "targetRoutes": [
+    "/blog/aw-096-tennis-guide",
+    "/blog/aw-097-record-5",
+    "/blog/aw-098-doubles-beginner",
+    "/blog/aw-099-injury-injury-record",
+    "/blog/aw-100-tennis-guide"
+  ],
+  "gates": {
+    "testContentReview": "PASS",
+    "auditContentReview": "PASS",
+    "preverify": "PASS",
+    "verify": "PASS"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "validatedAt": "2026-10-27T00:15:58.057Z",
+  "batchId": "light-lesson-20261027",
+  "allPassed": true,
+  "results": [
+    {
+      "route": "/blog/aw-096-tennis-guide",
+      "slug": "aw-096-tennis-guide",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-097-record-5",
+      "slug": "aw-097-record-5",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-098-doubles-beginner",
+      "slug": "aw-098-doubles-beginner",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-099-injury-injury-record",
+      "slug": "aw-099-injury-injury-record",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    },
+    {
+      "route": "/blog/aw-100-tennis-guide",
+      "slug": "aw-100-tennis-guide",
+      "checks": {
+        "htmlSafety": true,
+        "tableAccessibility": true,
+        "internalLinksValid": true,
+        "headingsStructured": true
+      },
+      "errors": []
+    }
+  ]
+}

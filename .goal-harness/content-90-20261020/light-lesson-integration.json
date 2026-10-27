@@ -1,0 +1,48 @@
+{
+  "appliedAt": "2026-10-27T00:15:36.257Z",
+  "batchId": "light-lesson-20261027",
+  "filesChanged": [
+    {
+      "file": "src/data/blog-content/part16-quality-rewrites.ts",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\light-lesson-src_data_blog-content_part16-quality-rewrites.ts-af2ea056877a.txt",
+      "beforeHash": "af2ea056877aa40b766bf2c741984b16a413f77ee76afc1c8c0c006c689f26a7",
+      "afterHash": "e3aaf87f07b2b83c719d832b0c39786c5857ac117e3098d5f114306cb841c340",
+      "slugs": [
+        "aw-096-tennis-guide",
+        "aw-097-record-5",
+        "aw-098-doubles-beginner",
+        "aw-100-tennis-guide"
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-part16-overrides.js",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\light-lesson-src_data_blog-posts-part16-overrides.js-07daa26a041d.txt",
+      "beforeHash": "07daa26a041d89222d8611a011f5cf6dc1d6c8a9688ea5f6229a929542ae3cda",
+      "afterHash": "fd3e870e72014b3e9ceb9019c21cfc4dc52b84bb0697b86e26975238a2e94478",
+      "slugs": [
+        "aw-096-tennis-guide",
+        "aw-097-record-5",
+        "aw-098-doubles-beginner",
+        "aw-100-tennis-guide"
+      ]
+    },
+    {
+      "file": "src/data/blog-content/part11-article-writer-300.ts",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\light-lesson-src_data_blog-content_part11-article-writer-300.ts-abe4f634e08b.txt",
+      "beforeHash": "abe4f634e08bc6dc4ca043c0e5c1b7fc678450222ab041d66f7873ad49d37964",
+      "afterHash": "dfc59a9a238e133c28727a0428610b962a9918c837d50d3a968730cbeed16bf3",
+      "slugs": [
+        "aw-099-injury-injury-record"
+      ]
+    },
+    {
+      "file": "src/data/blog-posts-aw-300.js",
+      "backup": ".goal-harness\\content-90-20261020\\source-backups\\light-lesson-src_data_blog-posts-aw-300.js-5de7ebdb88ba.txt",
+      "beforeHash": "5de7ebdb88ba6cfda401540fbe56d87ae8d3fcafc267d9806ad0d902c61c920a",
+      "afterHash": "b3770d91d38481391cf71178144b38b0c1a1361d2dd924b697c0ff28863e39ba",
+      "slugs": [
+        "aw-099-injury-injury-record"
+      ]
+    }
+  ]
+}
