@@ -42,25 +42,25 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "드롭샷, 폭발적인 전환, 시너 라이벌리",
   },
   "martin-landaluce": {
-    title: "마르틴 란달루세(Martin Landaluce) 프로필 | 플레이스타일·강점",
+    title: "마르틴 란달루세 프로필 | US오픈 주니어 우승·스페인 차세대 기대주",
     description:
-      "마르틴 란달루세(Martin Landaluce)의 ATP 프로필입니다. 플레이스타일, 강점과 약점, 성장 포인트를 한눈에 정리했습니다.",
-    aliases: ["마르틴 란달루세", "란달루세", "Martin Landaluce"],
+      "스페인 차세대 테니스 기대주 마르틴 란달루세(Martin Landaluce) 프로필. US오픈 주니어 챔피언 출신이자 라파 나달 아카데미 출신으로 강력한 서브와 공격형 베이스라인 전술을 분석했습니다.",
+    aliases: ["마르틴 란달루세", "란달루세", "Martin Landaluce", "란달루체", "스페인 테니스 유망주"],
     focus: "스페인 유망주의 경기 스타일과 성장 포인트",
   },
   "marie-bouzkova": {
-    title: "마리 부즈코바(Marie Bouzkova) 프로필 | 수비형 플레이스타일",
+    title: "마리 부즈코바 프로필 | 끈질긴 수비력과 체코 WTA 에이스",
     description:
-      "마리 부즈코바(Marie Bouzkova)의 WTA 프로필입니다. 수비력과 경기 운영, 강점과 약점, 팬들이 자주 찾는 핵심 정보를 모았습니다.",
-    aliases: ["마리 부즈코바", "부즈코바", "Marie Bouzkova"],
+      "체코 출신 마리 부즈코바(Marie Bouzkova)의 WTA 프로필입니다. 코트를 폭넓게 커버하는 견고한 수비력, 경기 운영 전술, 서브와 스트로크 강점을 정리했습니다.",
+    aliases: ["마리 부즈코바", "부즈코바", "Marie Bouzkova", "부츠코바"],
     focus: "안정적인 수비형 플레이와 경기 운영",
   },
   "miomir-kecmanovic": {
-    title: "미오미르 케크마노비치 프로필 | 플레이스타일·관전 포인트",
+    title: "미오미르 케크마노비치 프로필 | 세르비아 국가대표·견고한 양손 백핸드",
     description:
-      "미오미르 케크마노비치(Miomir Kecmanovic)의 ATP 선수 정보입니다. 기본기 중심 플레이스타일과 강점, 관전 포인트를 정리했습니다.",
-    aliases: ["미오미르 케크마노비치", "케크마노비치", "Miomir Kecmanovic"],
-    focus: "세르비아 선수의 안정적인 경기 운영",
+      "세르비아 테니스 국가대표 미오미르 케크마노비치(Miomir Kecmanovic) 프로필. 견고한 양손 백핸드와 정교한 카운터 펀치, ATP 투어 우승 이력과 전술 특징을 정리했습니다.",
+    aliases: ["미오미르 케크마노비치", "케크마노비치", "Miomir Kecmanovic", "케츠마노비치"],
+    focus: "세르비아 선수의 안정적인 경기 운영과 카운터 펀치",
   },
   "sebastian-ofner": {
     title: "제바스티안 오프너 프로필 | 세바스찬 오프너·플레이스타일",
@@ -83,9 +83,9 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
   },
   "arthur-rinderknech": {
     title:
-      "아르튀르 랭데르크네슈(Arthur Rinderknech) 프로필 | 서브·플레이스타일",
+      "아르튀르 랑데르크네슈(Arthur Rinderknech) 프로필 | 196cm 빅서브·프랑스 에이스",
     description:
-      "아르튀르 랭데르크네슈(Arthur Rinderknech)의 장신 빅서브와 플레이스타일, 강점과 약점을 정리했습니다.",
+      "프랑스 장신 테니스 스타 아르튀르 랑데르크네슈(Arthur Rinderknech) 프로필. 196cm에서 내리꽂는 220km/h대 빅서브와 네트 대시, 단식과 복식을 아우르는 실전 플레이스타일을 정리했습니다.",
     aliases: [
       "아르튀르 랭데르크네슈",
       "아르튀르 랑데르크네슈",
@@ -93,12 +93,12 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
       "랑데르크네슈",
       "Arthur Rinderknech",
     ],
-    focus: "프랑스 선수의 서브 강점과 경기 흐름",
+    focus: "프랑스 선수의 196cm 빅서브 강점과 네트 플레이",
   },
   "arthur-landercknech": {
-    title: "아르튀르 랑데르크네슈 프로필 | 서브·플레이스타일",
+    title: "아르튀르 랑데르크네슈 프로필 | 196cm 빅서브·프랑스 테니스 스타",
     description:
-      "아르튀르 랑데르크네슈의 장신 빅서브와 프랑스 투어 선수 특징, 플레이스타일을 정리했습니다.",
+      "아르튀르 랑데르크네슈의 196cm 장신 빅서브와 프랑스 투어 선수 특징, 단복식 올라운드 플레이스타일을 정리했습니다.",
     aliases: ["아르튀르 랑데르크네슈", "랭데르크네슈", "Arthur Rinderknech"],
     focus: "프랑스 ATP 선수, 빅서브, 장신 플레이어",
   },
@@ -183,9 +183,9 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "청각 장애 극복, 빅서버, 독일 ATP 선수",
   },
   "daniel-evans": {
-    title: "다니엘 에반스 프로필 | 슬라이스·전술 스타일",
+    title: "다니엘 에반스(댄 에반스) 프로필 | 원핸드 백핸드 슬라이스·영국 베테랑",
     description:
-      "다니엘 에반스(Daniel Evans)의 ATP 선수 정보입니다. 슬라이스와 네트 플레이 중심의 경기 운영, 강점과 약점을 정리했습니다.",
+      "영국 테니스의 지능형 테크니션 다니엘 에반스(Dan Evans) 프로필. 까다로운 원핸드 백핸드 백스핀 슬라이스, 올라운드 네트 대시, ATP 투어 우승 이력과 전술 노하우를 정리했습니다.",
     aliases: ["다니엘 에반스", "댄 에반스", "Daniel Evans", "Dan Evans"],
     focus: "영국 테크니션의 슬라이스와 전술 운영",
   },
@@ -197,9 +197,9 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "프랑스 선수의 스트로크 운영",
   },
   "jiri-lehecka": {
-    title: "이리 레헤츠카 프로필 | 공격 스타일·성장 포인트",
+    title: "이리 레헤츠카 프로필 | 호주오픈 8강·체코 차세대 거포·플레이스타일",
     description:
-      "이리 레헤츠카(Jiri Lehecka)의 ATP 선수 정보입니다. 공격적인 스트로크와 강점, 성장 포인트를 정리했습니다.",
+      "체코 테니스의 차세대 간판 이리 레헤츠카(Jiri Lehecka) 프로필. 호주오픈 8강 진출과 시속 210km대 플랫 서브, 강력한 양날 스트로크 파워와 주요 경기 전술을 정리했습니다.",
     aliases: ["이리 레헤츠카", "레헤츠카", "Jiri Lehecka"],
     focus: "체코 선수의 플랫 스트로크와 성장세",
   },
