@@ -225,32 +225,32 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "2024 윔블던 1회전 이변, 헤비 톱스핀 포핸드, 아르헨티나 투어 신성",
   },
   "ethan-quinn": {
-    title: "이선 퀸 프로필 | 플레이스타일·미국 ATP 유망주",
+    title: "이선 퀸 프로필 | 2023 NCAA 싱글스 챔피언·미국 ATP 차세대 거포·플레이스타일",
     description:
-      "이선 퀸(Ethan Quinn)의 ATP 선수 정보입니다. 미국 유망주로서의 성장 흐름과 공격 전개, 강점을 정리했습니다.",
+      "조지아대 출신이자 2023 NCAA 디비전 1 단식 챔피언 이선 퀸(Ethan Quinn) 프로필. 시속 210km대 서브와 폭발적인 포핸드 화력, 미국 테니스 차세대 유망주로서의 성장세를 정리했습니다.",
     aliases: ["이선 퀸", "에단 퀸", "Ethan Quinn"],
-    focus: "미국 유망주의 공격 전개",
+    focus: "2023 NCAA 챔피언, 미국 ATP 유망주, 공격형 하드히터",
   },
   "polina-kudermetova": {
-    title: "폴리나 쿠데르메토바 프로필 | 플레이스타일·WTA",
+    title: "폴리나 쿠데르메토바 프로필 | 공격형 플랫 스트로크·쿠데르메토바 자매·WTA 라이징스타",
     description:
-      "폴리나 쿠데르메토바(Polina Kudermetova)의 WTA 프로필입니다. 경기 스타일과 성장 포인트, 강점을 정리했습니다.",
+      "WTA 투어의 떠오르는 신성 폴리나 쿠데르메토바(Polina Kudermetova) 프로필. 베로니카 쿠데르메토바의 동생으로, 빠른 라이징 볼 공략과 날카로운 플랫 백핸드 강점을 정리했습니다.",
     aliases: ["폴리나 쿠데르메토바", "쿠데르메토바", "Polina Kudermetova"],
-    focus: "WTA 성장세와 안정적인 스트로크 운영",
+    focus: "쿠데르메토바 자매, WTA 라이징스타, 공격형 플랫 스트로크",
   },
   "dino-prizmic": {
-    title: "디노 프리즈미치 프로필 | 플레이스타일·크로아티아 유망주",
+    title: "디노 프리즈미치 프로필 | 롤랑가로스 주니어 우승·호주오픈 조코비치전 혈투·크로아티아 에이스",
     description:
-      "디노 프리즈미치(Dino Prizmic)의 ATP 프로필입니다. 주니어 롤랑가로스 이후의 성장 흐름과 경기 강점을 정리했습니다.",
+      "크로아티아 테니스의 차세대 간판 디노 프리즈미치(Dino Prizmic) 프로필. 2023 롤랑가로스 주니어 단식 우승, 2024 호주오픈 조코비치와의 4시간 명승부 및 끈질긴 베이스라인 방어력을 분석했습니다.",
     aliases: ["디노 프리즈미치", "프리즈미치", "Dino Prizmic"],
-    focus: "크로아티아 유망주의 끈질긴 랠리와 성장세",
+    focus: "2023 주니어 롤랑가로스 우승, 호주오픈 조코비치전, 크로아티아 신성",
   },
   "camilo-ugo-carabelli": {
-    title: "카밀로 우고 카라벨리 프로필 | 클레이 플레이스타일",
+    title: "카밀로 우고 카라벨리 프로필 | 클레이 코트 스페셜리스트·챌린저 다관왕·아르헨티나 투어러",
     description:
-      "카밀로 우고 카라벨리(Camilo Ugo Carabelli)의 ATP 프로필입니다. 클레이 코트 경기 운영과 강점, 관전 포인트를 정리했습니다.",
+      "아르헨티나 클레이 코트의 강자 카밀로 우고 카라벨리(Camilo Ugo Carabelli) 프로필. 끈질긴 카운터 펀치와 클레이 코트 전술 운영, 투어 무대에서의 경쟁력 포인트를 정리했습니다.",
     aliases: ["카밀로 우고 카라벨리", "카라벨리", "Camilo Ugo Carabelli"],
-    focus: "아르헨티나 클레이 코트형 선수의 경기 운영",
+    focus: "클레이 코트 스페셜리스트, 아르헨티나 ATP, 카운터 펀처",
   },
   "linda-noskova": {
     title: "린다 노스코바 프로필 | 호주오픈 시비옹테크 격파 8강·체코 하드코트 하드히터·WTA 라이징스타",
@@ -260,15 +260,16 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "2024 호주오픈 8강, 시비옹테크 격파, 체코 차세대 하드히터",
   },
   "alejandro-davidovich-fokina": {
-    title: "알레한드로 다비도비치 포키나 프로필 | 플레이스타일·강점",
+    title: "알레한드로 다비도비치 포키나 프로필 | 몬테카를로 결승·언더핸드 서브·스페인 테크니션",
     description:
-      "알레한드로 다비도비치 포키나(Alejandro Davidovich Fokina)의 ATP 프로필입니다. 역동적인 수비와 전환 플레이, 약점을 정리했습니다.",
+      "스페인 테니스의 역동적인 테크니션 알레한드로 다비도비치 포키나(Alejandro Davidovich Fokina) 프로필. 몬테카를로 마스터스 결승 진출, 깜짝 언더핸드 서브와 다이빙 발리, 폭발적인 코트 커버리지를 분석했습니다.",
     aliases: [
       "알레한드로 다비도비치 포키나",
       "다비도비치 포키나",
       "Alejandro Davidovich Fokina",
+      "포키나",
     ],
-    focus: "스페인 선수의 수비 전환과 활동량",
+    focus: "몬테카를로 준우승, 스페인 테크니션, 언더핸드 서브와 다이빙 발리",
   },
   "jakub-mensik": {
     title: "야쿠프 멘시크 프로필 | 플레이스타일·체코 ATP 유망주",
