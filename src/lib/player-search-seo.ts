@@ -63,16 +63,16 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "세르비아 선수의 안정적인 경기 운영과 카운터 펀치",
   },
   "sebastian-ofner": {
-    title: "제바스티안 오프너 프로필 | 세바스찬 오프너·플레이스타일",
+    title: "제바스티안 오프너 프로필 | 롤랑가로스 16강·191cm 오스트리아 에이스·플레이스타일",
     description:
-      "제바스티안 오프너와 세바스찬 오프너 검색자를 위해 공격적인 베이스라인 플레이와 강점, 경기 흐름을 정리했습니다.",
+      "오스트리아 테니스의 간판 제바스티안 오프너(Sebastian Ofner) 프로필. 2023 프랑스 오픈 롤랑가로스 16강 진출, 191cm 장신에서 뿜어져 나오는 강한 서브와 공격적인 플랫 스트로크 스타일을 분석했습니다.",
     aliases: [
       "제바스티안 오프너",
       "세바스찬 오프너",
       "오프너",
       "Sebastian Ofner",
     ],
-    focus: "오스트리아 ATP 선수, 공격형 베이스라인",
+    focus: "롤랑가로스 16강, 오스트리아 에이스, 191cm 장신 빅서브",
   },
   "arthur-fils": {
     title: "아서 필스 프로필 | 함부르크·도쿄 ATP 500 2관왕·폭발적 포핸드·프랑스 차세대 에이스",
@@ -138,16 +138,16 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "영국 ATP 유망주, 왼손잡이 서브, 공격형 베이스라인",
   },
   "tallon-griekspoor": {
-    title: "탈론 그리에크스푸르 프로필 | 플레이스타일·네덜란드 ATP",
+    title: "탈론 그리에크스푸르 프로필 | ATP 투어 2회 우승·네덜란드 1위 거포·플레이스타일",
     description:
-      "탈론 그리에크스푸르의 서브와 포핸드 강점, 네덜란드 대표 선수로서의 경기 스타일을 정리했습니다.",
+      "네덜란드 랭킹 1위 탈론 그리에크스푸르(Tallon Griekspoor) 프로필. 푸네 오픈과 로스말렌 투어 우승 기록, 시속 215km를 넘나드는 킥 서브와 헤비 포핸드 공격 전술을 정리했습니다.",
     aliases: [
       "탈론 그리에크스푸르",
       "탈론 크리에크스푸르",
       "Tallon Griekspoor",
       "그리에크스푸르",
     ],
-    focus: "네덜란드 ATP 선수, 강한 서브, 하드코트 전개",
+    focus: "ATP 투어 2회 우승, 네덜란드 1위, 킥 서브와 헤비 포핸드",
   },
   "rafael-nadal": {
     title: "라파엘 나달 프로필 | 은퇴·그랜드슬램·클레이 황제",
@@ -190,11 +190,11 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "영국 테크니션의 슬라이스와 전술 운영",
   },
   "alexandre-muller": {
-    title: "알렉상드르 뮐러 프로필 | 경기 스타일·강점",
+    title: "알렉상드르 뮐러 프로필 | 로마 마스터스 루블레프전 승리 16강·프랑스 테크니션",
     description:
-      "알렉상드르 뮐러(Alexandre Muller)의 ATP 프로필입니다. 스트로크 기반 경기 운영과 강점, 약점을 정리했습니다.",
-    aliases: ["알렉상드르 뮐러", "뮐러", "Alexandre Muller"],
-    focus: "프랑스 선수의 스트로크 운영",
+      "프랑스 테니스의 끈질긴 테크니션 알렉상드르 뮐러(Alexandre Muller) 프로필. 2024 로마 마스터스 루블레프 격파 16강 진출, 모로코 오픈 결승 및 정교한 베이스라인 카운터 펀치 스타일을 분석했습니다.",
+    aliases: ["알렉상드르 뮐러", "뮐러", "Alexandre Muller", "알렉산드르 뮐러"],
+    focus: "로마 마스터스 16강, 루블레프 격파, 프랑스 카운터 펀처",
   },
   "jiri-lehecka": {
     title: "이리 레헤츠카 프로필 | 호주오픈 8강·체코 차세대 거포·플레이스타일",
@@ -204,11 +204,11 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "체코 선수의 플랫 스트로크와 성장세",
   },
   "laslo-djere": {
-    title: "라슬로 제레 프로필 | 클레이 스타일·강점",
+    title: "라슬로 제레 프로필 | ATP 500 리우 오픈 우승·세르비아 클레이 강자·경기스타일",
     description:
-      "라슬로 제레(Laslo Djere)의 ATP 프로필입니다. 클레이 코트 강점과 끈질긴 경기 운영, 약점을 정리했습니다.",
+      "세르비아 테니스의 베테랑 라슬로 제레(Laslo Djere) 프로필. ATP 500 리우 오픈 챔피언이자 투어 2회 우승, 지치지 않는 체력과 클레이 코트 마라톤 랠리 장악력을 정리했습니다.",
     aliases: ["라슬로 제레", "제레", "Laslo Djere"],
-    focus: "클레이 기반 경기력",
+    focus: "ATP 500 리우 오픈 우승, 세르비아 국가대표, 클레이 코트 마라토너",
   },
   "hamad-medjedovic": {
     title: "하마드 메제도비치 프로필 | 넥스트젠 ATP 파이널스 우승·시속 220km 광속 서브·세르비아 거포",
