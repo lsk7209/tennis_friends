@@ -110,11 +110,11 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "중국 WTA 선수, 공격형 스트로크, 복식 경쟁력",
   },
   "tomas-machac": {
-    title: "토마시 마하치 프로필 | 플레이스타일·체코 ATP 선수",
+    title: "토마시 마하치 프로필 | 2024 파리올림픽 혼복 금메달·초고속 템포 플랫 스트로크·체코 에이스",
     description:
-      "토마시 마하치의 빠른 템포의 공격형 플레이, 체코 대표 선수로서의 강점과 경기 흐름을 정리했습니다.",
-    aliases: ["토마시 마하치", "토마스 마하츠", "Tomas Machac"],
-    focus: "빠른 템포, 체코 ATP 선수, 공격형 베이스라인",
+      "체코 테니스의 핵심 토마시 마하치(Tomas Machac) 프로필. 2024 파리 올림픽 혼합복식 금메달 획득, 라이징 볼을 빠르게 공략하는 초고속 템포 플랫 스트로크와 투어 활약상을 정리했습니다.",
+    aliases: ["토마시 마하치", "토마스 마하츠", "Tomas Machac", "마하치"],
+    focus: "체코 국가대표, 2024 파리 올림픽 금메달, 초고속 템포 플랫 스트로크",
   },
   "tommy-paul": {
     title: "토미 폴 프로필 | 플레이스타일·미국 테니스 대표 선수",
@@ -176,11 +176,11 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "2023 호주 오픈 나달전, UCLA 출신, 미국 ATP 선수",
   },
   "yannick-hanfmann": {
-    title: "야닉 한프만 프로필 | 청각 장애 극복·빅서버 스타일",
+    title: "야닉 한프만 프로필 | 청각 장애 극복 스토리·193cm 파워 서브·로마 마스터스 8강",
     description:
-      "야닉 한프만의 청각 장애 극복 스토리, 로마 마스터스 8강 경험과 빅서버 플레이를 정리했습니다.",
-    aliases: ["야닉 한프만", "Yannick Hanfmann", "한프만"],
-    focus: "청각 장애 극복, 빅서버, 독일 ATP 선수",
+      "독일 베테랑 야닉 한프만(Yannick Hanfmann)의 인간 승리 프로필. 선천적 청각 장애를 극복하고 ATP 투어에 자리잡은 과정, 193cm 장신에서 나오는 강력한 킥 서브와 로마 마스터스 8강 성과를 정리했습니다.",
+    aliases: ["야닉 한프만", "Yannick Hanfmann", "한프만", "얀니크 한프만"],
+    focus: "청각 장애 극복 스토리, 193cm 장신 파워 서브, 로마 마스터스 8강",
   },
   "daniel-evans": {
     title: "다니엘 에반스(댄 에반스) 프로필 | 원핸드 백핸드 슬라이스·영국 베테랑",
@@ -211,18 +211,18 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "클레이 기반 경기력",
   },
   "hamad-medjedovic": {
-    title: "하마드 메제도비치 프로필 | 파워 스타일·성장세",
+    title: "하마드 메제도비치 프로필 | 넥스트젠 ATP 파이널스 우승·시속 220km 광속 서브·세르비아 거포",
     description:
-      "하마드 메제도비치(Hamad Medjedovic)의 ATP 선수 정보입니다. 파워형 플레이와 차세대 성장 포인트, 약점을 정리했습니다.",
-    aliases: ["하마드 메제도비치", "메제도비치", "Hamad Medjedovic"],
-    focus: "세르비아 유망주의 파워와 성장 흐름",
+      "조코비치의 후계자로 꼽히는 세르비아 거포 하마드 메제도비치(Hamad Medjedovic) 프로필. 2023 Next Gen ATP 파이널스 무패 우승, 시속 220km를 넘나드는 폭발적인 서브와 강력한 포핸드 화력을 분석했습니다.",
+    aliases: ["하마드 메제도비치", "메제도비치", "Hamad Medjedovic", "메제도비치 서브"],
+    focus: "2023 Next Gen ATP 파이널스 우승, 시속 220km 서브, 세르비아 파워 히터",
   },
   "francisco-comesana": {
-    title: "프란시스코 코메사냐 프로필 | 클레이 플레이스타일",
+    title: "프란시스코 코메사냐 프로필 | 윔블던 루블레프 격파 대이변·헤비 톱스핀 포핸드·아르헨티나 에이스",
     description:
-      "프란시스코 코메사냐(Francisco Comesana)의 ATP 프로필입니다. 클레이 기반 경기 운영과 성장 가능성, 강점을 정리했습니다.",
+      "2024 윔블던에서 안드레이 루블레프를 꺾고 메이저 대이변을 쓴 아르헨티나의 프란시스코 코메사냐(Francisco Comesana) 프로필. 클레이에서 다져진 헤비 톱스핀과 과감한 네트 플레이를 분석했습니다.",
     aliases: ["프란시스코 코메사냐", "코메사냐", "Francisco Comesana"],
-    focus: "아르헨티나 선수의 클레이 기반 경기 운영",
+    focus: "2024 윔블던 1회전 이변, 헤비 톱스핀 포핸드, 아르헨티나 투어 신성",
   },
   "ethan-quinn": {
     title: "이선 퀸 프로필 | 플레이스타일·미국 ATP 유망주",
@@ -253,11 +253,11 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus: "아르헨티나 클레이 코트형 선수의 경기 운영",
   },
   "linda-noskova": {
-    title: "린다 노스코바 프로필 | 플레이스타일·WTA 유망주",
+    title: "린다 노스코바 프로필 | 호주오픈 시비옹테크 격파 8강·체코 하드코트 하드히터·WTA 라이징스타",
     description:
-      "린다 노스코바(Linda Noskova)의 WTA 선수 정보입니다. 공격적인 스트로크와 체코 테니스 유망주로서의 성장세, 강점을 정리했습니다.",
-    aliases: ["린다 노스코바", "노스코바", "Linda Noskova"],
-    focus: "체코 WTA 유망주의 공격형 스트로크",
+      "체코 여자 테니스의 돌풍 린다 노스코바(Linda Noskova) 프로필. 2024 호주오픈에서 세계 1위 시비옹테크를 꺾고 8강에 오른 결정력 높은 양손 백핸드와 직선 플랫 스트로크 강점을 정리했습니다.",
+    aliases: ["린다 노스코바", "노스코바", "Linda Noskova", "린다 노스코바 서브"],
+    focus: "2024 호주오픈 8강, 시비옹테크 격파, 체코 차세대 하드히터",
   },
   "alejandro-davidovich-fokina": {
     title: "알레한드로 다비도비치 포키나 프로필 | 플레이스타일·강점",

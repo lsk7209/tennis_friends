@@ -3,16 +3,16 @@
 ## 현재 작업
 
 - 11월 30일치(11/1~11/30) 매일 1편 연속 예약 공개 큐(30편) 가동 상태 확인.
-- GSC 고노출 0클릭 타겟 선수 8인(후르카츠, 루블레프, 란달루세, 부즈코바, 케크마노비치, 랑데르크네슈, 에반스, 레헤츠카)의 검색 메타/스니펫 개선 완료.
-- 본문 내부 링크 부족 글(`aw-297`, `aw2-082`, `aw2-087`, `aw2-088`)에 유틸리티 도구(샷 선택, 훈련 계획, 텐션 계산기, 장비 추천, 부상 자가점검, NTRP 테스트) 인라인 링크 연결 완료.
-- 6시간 주기 자동 컨텐츠 개선 데몬(`tennis-content-improvement-6hour`) 등록 및 GitHub 푸시 기반 자동 배포 체계 연동.
+- GSC 고노출 0클릭 타겟 선수 13인(후르카츠, 루블레프, 란달루세, 부즈코바, 케크마노비치, 랑데르크네슈, 에반스, 레헤츠카, 마하치, 한프만, 메제도비치, 코메사냐, 노스코바)의 검색 메타/스니펫 개선 완료.
+- 본문 내부 링크 부족 글(`aw-297`, `aw2-082`, `aw2-087`, `aw2-088`, `aw2-092`, `aw2-097`)에 유틸리티 도구(샷 선택, 훈련 계획, 텐션 계산기, 장비 추천, 부상 자가점검, NTRP 테스트, 코트 상태 분석기) 인라인 링크 연결 완료.
+- 6시간 주기 자동 컨텐츠 개선 데몬(`tennis-content-improvement-6hour`) 등록 및 GitHub 푸시 기반 자동 배포 가동 중.
 
 ## 최근 변경
 
-- `src/lib/player-search-seo.ts`: 고노출 0클릭 선수 8인 대상 타이틀/디스크립션/스니펫 클릭률(CTR) 개선.
-- `src/data/blog-content/part20-quality-rewrites.ts`: `aw-297-30-club-match` 유틸리티 도구 링크 연결.
-- `src/data/blog-content/part21-quality-rewrites.ts`: `aw2-082`, `aw2-087`, `aw2-088` 유틸리티 도구 인라인 링크 삽입.
-- 커밋 `04ed397`, `9f37baa` origin/main 푸시 완료.
+- `src/lib/player-search-seo.ts`: 토마시 마하치, 야닉 한프만, 하마드 메제도비치, 프란시스코 코메사냐, 린다 노스코바 5인 검색 스니펫/CTR 최적화.
+- `src/data/blog-content/part21-quality-rewrites.ts`: `aw2-092`(오버그립 20분 루틴), `aw2-097`(테니스화 아웃솔 20분 루틴)에 유틸리티 도구 연결.
+- AI 색인 파일(`public/ai-index.json`, `public/llms.txt`, `public/llms-full.txt`) 최신 빌드 동기화.
+- 커밋 `04ed397`, `9f37baa`, `7e5f5aa` origin/main 푸시 완료.
 
 ## TODO
 
