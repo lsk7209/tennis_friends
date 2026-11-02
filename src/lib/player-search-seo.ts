@@ -292,6 +292,59 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     aliases: ["루치아노 다르데리", "다르데리", "Luciano Darderi"],
     focus: "2024 코르도바 오픈 우승, 이탈리아 ATP 라이징스타, 헤비 톱스핀 포핸드",
   },
+  "novak-djokovic": {
+    title: "노박 조코비치 프로필 | 그랜드슬램 24회 우승·올림픽 금메달·GOAT 플레이스타일",
+    description:
+      "역사상 가장 위대한 테니스 선수 노박 조코비치(Novak Djokovic) 프로필. 그랜드슬램 24회 우승, 2024 파리 올림픽 금메달로 커리어 골든 그랜드슬램을 완성한 GOAT의 전술, 리턴과 백핸드 강점을 분석했습니다.",
+    aliases: [
+      "노박 조코비치",
+      "조코비치",
+      "Novak Djokovic",
+      "Djokovic",
+      "조코비치 우승",
+      "조코비치 올림픽",
+    ],
+    focus: "그랜드슬램 24회 우승, 골든 그랜드슬램, GOAT 플레이스타일, 정교한 백핸드와 리턴",
+  },
+  "daniil-medvedev": {
+    title: "다닐 메드베데프 프로필 | US오픈 우승·변칙 문어 스트로크·ATP 하드코트 마스터",
+    description:
+      "하드코트의 지배자 다닐 메드베데프(Daniil Medvedev) 프로필. 2021 US오픈 우승, 예측 불가능한 플랫 스트로크와 깊은 베이스라인 수비, 강력한 198cm 서브 및 경기 운영 전술을 정리했습니다.",
+    aliases: [
+      "다닐 메드베데프",
+      "메드베데프",
+      "Daniil Medvedev",
+      "Medvedev",
+      "메드베데프 서브",
+    ],
+    focus: "US오픈 우승, 하드코트 마스터, 198cm 플랫 서브, 깊은 베이스라인 수비",
+  },
+  "alexander-zverev": {
+    title: "알렉산더 츠베레프 프로필 | 올림픽 금메달·198cm 백핸드 거포·ATP 마스터스 우승",
+    description:
+      "독일 테니스 에이스 알렉산더 츠베레프(Alexander Zverev) 프로필. 도쿄 올림픽 금메달, 마스터스 1000 다관왕, 198cm 장신에서 뿜어져 나오는 시속 225km 서브와 투어 최강의 양손 백핸드를 분석했습니다.",
+    aliases: [
+      "알렉산더 츠베레프",
+      "츠베레프",
+      "Alexander Zverev",
+      "Sascha Zverev",
+      "츠베레프 백핸드",
+    ],
+    focus: "도쿄 올림픽 금메달, 마스터스 1000 6회 우승, 투어 최강 백핸드와 빅서브",
+  },
+  "stefanos-tsitsipas": {
+    title: "스테파노스 치치파스 프로필 | 몬테카를로 마스터스 3회 우승·원핸드 백핸드·그리스 에이스",
+    description:
+      "그리스 테니스의 간판 스테파노스 치치파스(Stefanos Tsitsipas) 프로필. 몬테카를로 마스터스 3회 우승, 우아한 원핸드 백핸드와 공격적인 포핸드 런어라운드, 클레이 코트 전술을 정리했습니다.",
+    aliases: [
+      "스테파노스 치치파스",
+      "치치파스",
+      "Stefanos Tsitsipas",
+      "Tsitsipas",
+      "치치파스 원핸드",
+    ],
+    focus: "몬테카를로 마스터스 3회 우승, 원핸드 백핸드, 공격적인 포핸드",
+  },
 };
 
 function titleizeSlug(slug: string) {
