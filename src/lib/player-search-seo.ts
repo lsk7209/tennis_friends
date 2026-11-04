@@ -397,6 +397,59 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     ],
     focus: "파리 마스터스 우승, 덴마크 에이스, 공격형 올라운더와 드롭샷",
   },
+  "grigor-dimitrov": {
+    title: "그리고르 디미트로프 프로필 | ATP 파이널스 챔피언·원핸드 백핸드 예술가·플레이스타일",
+    description:
+      "불가리아 테니스의 자존심 그리고르 디미트로프(Grigor Dimitrov) 프로필. ATP 파이널스 무패 우승, 마이애미 마스터스 결승, 페더러를 연상시키는 우아한 원핸드 백핸드와 올라운드 슬라이스 전술을 정리했습니다.",
+    aliases: [
+      "그리고르 디미트로프",
+      "디미트로프",
+      "Grigor Dimitrov",
+      "Dimitrov",
+      "디미트로프 백핸드",
+    ],
+    focus: "ATP 파이널스 우승, 원핸드 백핸드, 마이애미 마스터스 결승, 불가리아 에이스",
+  },
+  "ben-shelton": {
+    title: "벤 쉘튼 프로필 | 시속 240km 광속 서브·US오픈 4강·미국 테니스 차세대 폭격기",
+    description:
+      "ATP 투어 최고의 폭발력을 지닌 미국 왼손잡이 거포 벤 쉘튼(Ben Shelton) 프로필. US오픈 4강 진출, 시속 240km를 넘나드는 서브 폭격과 역동적인 점프 스매시 화력을 분석했습니다.",
+    aliases: [
+      "벤 쉘튼",
+      "쉘튼",
+      "Ben Shelton",
+      "Shelton",
+      "벤 셸턴",
+      "쉘튼 서브",
+    ],
+    focus: "시속 240km 빅서브, US오픈 4강, 미국 왼손잡이 거포, 점프 스매시",
+  },
+  "frances-tiafoe": {
+    title: "프란시스 티아포 프로필 | US오픈 4강 2회·쇼맨십과 네트 대시·미국 올라운더",
+    description:
+      "미국 테니스의 스타 프란시스 티아포(Frances Tiafoe) 프로필. 2022 및 2024 US오픈 4강 신화, 독창적인 포핸드 메커니즘과 네트를 장악하는 올라운드 전환 플레이스타일을 정리했습니다.",
+    aliases: [
+      "프란시스 티아포",
+      "티아포",
+      "Frances Tiafoe",
+      "Tiafoe",
+      "프랜시스 티아포",
+    ],
+    focus: "US오픈 4강 2회, 네트 대시, 미국 올라운더, 독창적인 포핸드",
+  },
+  "ugo-humbert": {
+    title: "위고 움베르 프로필 | 파리 마스터스 결승·ATP 투어 6회 우승·프랑스 왼손 에이스",
+    description:
+      "프랑스 남자 테니스의 간판 위고 움베르(Ugo Humbert) 프로필. 2024 파리 마스터스 준우승 및 ATP 투어 결승 승률 85% 이상의 클러치 능력, 빠른 플랫 드라이브 스트로크를 분석했습니다.",
+    aliases: [
+      "위고 움베르",
+      "움베르",
+      "Ugo Humbert",
+      "Humbert",
+      "위고 움베르트",
+    ],
+    focus: "파리 마스터스 결승, ATP 투어 6회 우승, 프랑스 왼손잡이 에이스, 빠른 플랫 샷",
+  },
 };
 
 function titleizeSlug(slug: string) {
