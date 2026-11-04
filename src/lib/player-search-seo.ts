@@ -450,6 +450,58 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     ],
     focus: "파리 마스터스 결승, ATP 투어 6회 우승, 프랑스 왼손잡이 에이스, 빠른 플랫 샷",
   },
+  "sebastian-baez": {
+    title: "세바스티안 바에스 프로필 | ATP 투어 6회 우승·클레이 지배자·아르헨티나 에이스",
+    description:
+      "아르헨티나 테니스의 작은 거인 세바스티안 바에스(Sebastian Baez) 프로필. ATP 투어 6회 우승, 170cm 단신을 극복하는 폭발적인 풋워크와 무거운 클레이 코트 베이스라인 스트로크 전술을 정리했습니다.",
+    aliases: [
+      "세바스티안 바에스",
+      "바에스",
+      "Sebastian Baez",
+      "Baez",
+      "세바스찬 바에즈",
+    ],
+    focus: "ATP 투어 6회 우승, 아르헨티나 에이스, 170cm 단신 극복 풋워크, 클레이 스페셜리스트",
+  },
+  "lorenzo-musetti": {
+    title: "로렌초 무세티 프로필 | 파리올림픽 동메달·윔블던 4강·예술적 원핸드 백핸드",
+    description:
+      "이탈리아 테니스의 마법사 로렌초 무세티(Lorenzo Musetti) 프로필. 2024 파리 올림픽 단식 동메달 획득, 윔블던 4강 진출, 투어에서 가장 유려한 원핸드 백핸드와 정교한 드롭샷 경기 운영을 분석했습니다.",
+    aliases: [
+      "로렌초 무세티",
+      "무세티",
+      "Lorenzo Musetti",
+      "Musetti",
+      "로렌조 무세티",
+    ],
+    focus: "파리 올림픽 동메달, 윔블던 4강, 예술적 원핸드 백핸드, 이탈리아 테크니션",
+  },
+  "cameron-norrie": {
+    title: "카메론 노리 프로필 | 인디언웰스 마스터스 우승·플랫 백핸드·영국 국가대표",
+    description:
+      "영국 남자 테니스의 전 1위 카메론 노리(Cameron Norrie) 프로필. 인디언웰스 마스터스 1000 우승, 까다로운 왼손잡이 헤비 톱스핀 포핸드와 낮은 궤적의 플랫 백핸드, 지치지 않는 체력전을 정리했습니다.",
+    aliases: [
+      "카메론 노리",
+      "노리",
+      "Cameron Norrie",
+      "Norrie",
+      "카메론 노리스",
+    ],
+    focus: "인디언웰스 우승, 영국 전 1위, 왼손잡이 톱스핀과 플랫 백핸드",
+  },
+  "nicolas-jarry": {
+    title: "니콜라스 자리 프로필 | 로마 마스터스 결승·201cm 광속 빅서브·칠레 에이스",
+    description:
+      "칠레 테니스의 거포 니콜라스 자리(Nicolas Jarry) 프로필. 2024 로마 마스터스 결승 진출, 201cm 피지컬에서 내리꽂는 시속 230km대 서브 폭격과 묵직한 포핸드 한 방 전술을 분석했습니다.",
+    aliases: [
+      "니콜라스 자리",
+      "자리",
+      "Nicolas Jarry",
+      "Jarry",
+      "니콜라스 하리",
+    ],
+    focus: "로마 마스터스 결승, 201cm 빅서버, 시속 230km 서브, 칠레 에이스",
+  },
 };
 
 function titleizeSlug(slug: string) {
