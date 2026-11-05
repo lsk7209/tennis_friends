@@ -554,6 +554,59 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     ],
     focus: "워싱턴 500 준우승, AS 로마 유스 출신, 폭발적인 풋워크와 포핸드 역습, 이탈리아 황금세대",
   },
+  "iga-swiatek": {
+    title: "이가 스비옹텍 프로필 | 롤랑가로스 3연패·3000RPM 탑스핀·클레이 여제",
+    description:
+      "여자 테니스 세계 1위 이가 스비옹텍(Iga Swiatek) 프로필. 프랑스 오픈 3연패 및 그랜드슬램 5회 우승, 남자 선수급 3000RPM 헤비 탑스핀 포핸드와 코트 커버리지, 무결점 베이글 스코어 승리 공식을 분석했습니다.",
+    aliases: [
+      "이가 스비옹텍",
+      "스비옹텍",
+      "시비옹테크",
+      "Iga Swiatek",
+      "Swiatek",
+      "이가 시비옹테크",
+    ],
+    focus: "롤랑가로스 3연패, 그랜드슬램 5회 우승, 3000RPM 탑스핀 포핸드, 세계 1위 클레이 여제",
+  },
+  "aryna-sabalenka": {
+    title: "아리나 사발렌카 프로필 | 호주 오픈 2연패·US 오픈 우승·시속 190km 서브",
+    description:
+      "세계 정상의 빅히터 아리나 사발렌카(Aryna Sabalenka) 프로필. 호주 오픈 2연패와 US 오픈 우승, 시속 190km대 강속구 서브와 투어 최고의 파괴적인 포핸드 파워, 멘탈 극복 스토리를 분석했습니다.",
+    aliases: [
+      "아리나 사발렌카",
+      "사발렌카",
+      "Aryna Sabalenka",
+      "Sabalenka",
+      "아리나 사발렌카 서브",
+    ],
+    focus: "호주 오픈 2연패, US 오픈 우승, 시속 190km 광속 서브, 투어 최강 빅히터",
+  },
+  "coco-gauff": {
+    title: "코코 고프 프로필 | US 오픈 챔피언·경이로운 풋워크·미국 차세대 간판",
+    description:
+      "미국 여자 테니스의 슈퍼스타 코코 고프(Coco Gauff) 프로필. US 오픈 단식 우승 및 복식 세계 1위, 투어 최정상급 스피드와 철벽 수비, 날카로운 백핸드와 카운터어택 스타일을 분석했습니다.",
+    aliases: [
+      "코코 고프",
+      "고프",
+      "Coco Gauff",
+      "Gauff",
+      "코리 고프",
+    ],
+    focus: "US 오픈 챔피언, 프랑스 오픈 복식 우승, 독보적인 코트 커버리지와 수비 전환 카운터",
+  },
+  "elena-rybakina": {
+    title: "엘레나 리바키나 프로필 | 윔블던 우승·184cm 에이스 퀸·침착한 아이스 퀸",
+    description:
+      "카자흐스탄의 테니스 여제 엘레나 리바키나(Elena Rybakina) 프로필. 2022 윔블던 챔피언, 184cm 큰 키에서 꽂아넣는 WTA 최다 에이스와 간결하고 묵직한 플랫 스트로크, 포커페이스 경기 운영을 분석했습니다.",
+    aliases: [
+      "엘레나 리바키나",
+      "리바키나",
+      "Elena Rybakina",
+      "Rybakina",
+      "엘레나 르바키나",
+    ],
+    focus: "2022 윔블던 챔피언, WTA 에이스 퀸, 시속 190km 플랫 서브, 침착한 아이스 퀸",
+  },
 };
 
 function titleizeSlug(slug: string) {
