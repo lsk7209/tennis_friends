@@ -5,9 +5,9 @@
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
   "lastUpdated": "2026-11-06",
   "stats": {
-    "totalPages": 1502,
+    "totalPages": 1503,
     "tools": 67,
-    "articles": 1166,
+    "articles": 1167,
     "playerProfiles": 259
   },
   "pages": [
@@ -532,6 +532,14 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/nov26-clay-vs-hard-court-footwork",
+      "title": "하드코트 vs 클레이코트 풋워크: 표면별 마찰력 차이와 슬라이딩 부상 방지법",
+      "description": "하드코트와 클레이코트는 지면 마찰 계수가 달라 브레이킹 방식이 완전히 다릅니다. 올코트용 vs 헤링본 밑창 차이, 클레이 감속 슬라이드 3단계, 발목 염좌 예방법을 정리합니다.",
+      "type": "article",
+      "category": "훈련 가이드",
+      "lastModified": "2026-11-06T09:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/nov26-doubles-deep-cross-return",
