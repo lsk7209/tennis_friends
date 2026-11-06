@@ -886,6 +886,62 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     ],
     focus: "20파운드 초저텐션 스트링 장인, 독보적인 컴팩트 플랫 타법, 프랑스 백전노장 베테랑, 재야의 테니스 고수",
   },
+  "giovanni-mpetshi-perricard": {
+    title: "지오반니 음페치 페리카르 프로필 | 203cm 240km/h 광속 서브·바젤 500 우승·원핸드 백핸드",
+    description:
+      "프랑스의 차세대 에이스 폭격기 지오반니 음페치 페리카르(Giovanni Mpetshi Perricard) 프로필. 203cm 타점에서 내리꽂는 240km/h 초광속 서브와 강력한 원핸드 백핸드, 2024 바젤 500 및 리옹 오픈 우승 돌풍을 완벽 분석했습니다.",
+    aliases: [
+      "지오반니 음페치 페리카르",
+      "음페치 페리카르",
+      "페리카르",
+      "Giovanni Mpetshi Perricard",
+      "Mpetshi Perricard",
+      "음페치 서브속도",
+    ],
+    focus: "203cm 프랑스 광속 서브 거인, 240km/h 서브 에이스 폭격기, 2024 ATP 바젤 500 우승, 파워 원핸드 백핸드",
+  },
+  "andy-murray": {
+    title: "앤디 머레이 프로필 | BIG 4 레전드·올림픽 단식 2연패·윔블던 2회 우승·수비의 신",
+    description:
+      "영국 테니스의 살아있는 전설 앤디 머레이(Andy Murray) 프로필. 페더러·나달·조코비치와 시대를 양분한 BIG 4, 런던/리우 올림픽 단식 사상 최초 2연패, 윔블던 2회·US오픈 우승 및 세계 1위를 달성한 수비와 전술의 마스터를 분석했습니다.",
+    aliases: [
+      "앤디 머레이",
+      "머레이",
+      "Andy Murray",
+      "Murray",
+      "머레이 올림픽",
+      "앤디 머레이 윔블던",
+    ],
+    focus: "BIG 4 레전드, 사상 최초 올림픽 단식 2연패, 윔블던 2회 챔피언, 세계 1위 출신 전술 마스터",
+  },
+  "stan-wawrinka": {
+    title: "스탄 바브린카 프로필 | 역사상 최강의 원핸드 백핸드·그랜드슬램 3회 우승·Stanimal",
+    description:
+      "테니스 역사상 가장 파괴적인 원핸드 백핸드의 소유자 스탄 바브린카(Stan Wawrinka) 프로필. BIG 4 전성기 시절 호주 오픈·롤랑가로스·US 오픈을 정복한 그랜드슬램 3회 우승자, 멘탈과 파워를 겸비한 '스태니멀'의 모든 것을 분석했습니다.",
+    aliases: [
+      "스탄 바브린카",
+      "바브린카",
+      "Stan Wawrinka",
+      "Wawrinka",
+      "바브린카 백핸드",
+      "스태니멀",
+    ],
+    focus: "역사상 최강의 원핸드 백핸드, 그랜드슬램 3회 챔피언, BIG 4를 무너뜨린 괴물 Stanimal, 스위스 테니스 영웅",
+  },
+  "felix-auger-aliassime": {
+    title: "펠릭스 오제-알리아심 프로필 | 캐나다 테니스 간판·193cm 우월한 피지컬·ATP 5회 우승",
+    description:
+      "캐나다 남자 테니스의 에이스 펠릭스 오제-알리아심(Felix Auger-Aliassime, FA2) 프로필. 193cm 탄력 넘치는 피지컬과 폭발적인 서브 & 포핸드, 토니 나달 코치의 지도로 완성된 견고한 멘탈과 ATP 투어 5회 우승 커리어를 분석했습니다.",
+    aliases: [
+      "펠릭스 오제 알리아심",
+      "오제 알리아심",
+      "펠릭스",
+      "Felix Auger-Aliassime",
+      "Auger-Aliassime",
+      "오제알리아심 랭킹",
+    ],
+    focus: "캐나다 에이스, 193cm 우월한 운동신경, 투어 5회 우승 챔피언, 폭발적인 포핸드와 빅서브",
+  },
 };
 
 function titleizeSlug(slug: string) {
