@@ -1107,6 +1107,61 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     ],
     focus: "헝가리 에이스 아이언맨, 윔블던 8강, ATP 투어 2회 우승, 압도적인 근력과 묵직한 베이스라인 파워 스트로크",
   },
+  "alexander-bublik": {
+    title: "알렉산더 부블릭 프로필 | 언더암 서브 마술사·할레오픈 우승·변칙 천재 플레이스타일",
+    description:
+      "카자흐스탄의 천재 트릭스터 알렉산더 부블릭(Alexander Bublik) 프로필. 투어 최강의 언더암 서브, 220km/h 서브 폭격, 2023 할레 오픈 우승, 예측 불허의 드롭샷과 트릭 플레이를 전격 해부했습니다.",
+    aliases: [
+      "알렉산더 부블릭",
+      "알렉산더 버블릭",
+      "부블릭",
+      "버블릭",
+      "Alexander Bublik",
+      "Bublik",
+      "부블릭 서브",
+    ],
+    focus: "언더암 서브 달인, 2023 할레 오픈 우승, 220km/h 서브 폭격, 드롭샷과 예측 불허의 트릭 플레이",
+  },
+  "botic-van-de-zandschulp": {
+    title: "보틱 반 데 잔드스휠프 프로필 | US오픈 알카라스 격파·8강 돌풍·묵직한 플랫 스트로커",
+    description:
+      "네덜란드의 실력파 에이스 보틱 반 데 잔드스휠프(Botic van de Zandschulp) 프로필. 2024 US 오픈에서 카를로스 알카라스를 3-0 완파한 대이변의 주역, 2021 US오픈 8강, 묵직하고 냉철한 스트로크 전술을 분석했습니다.",
+    aliases: [
+      "보틱 반 데 잔드스휠프",
+      "보틱 반 더 잔츠슐프",
+      "반 데 잔드스휠프",
+      "Botic van de Zandschulp",
+      "van de Zandschulp",
+      "반더잔츠슐프",
+    ],
+    focus: "2024 US오픈 알카라스 셧아웃 격파, 2021 US오픈 8강, 냉철한 포커페이스, 투어 정상급 플랫 스트로크",
+  },
+  "aslan-karatsev": {
+    title: "아슬란 카라체프 프로필 | 호주오픈 4강 신화·ATP 3회 우승·폭발적인 양손 백핸드",
+    description:
+      "러시아의 하드히터 아슬란 카라체프(Aslan Karatsev) 프로필. 예선 통과자 신분으로 호주오픈 4강에 오른 기적의 주인공, ATP 투어 3회 우승, 강철 피지컬에서 뿜어져 나오는 레이저 스트로크를 분석했습니다.",
+    aliases: [
+      "아슬란 카라체프",
+      "카라체프",
+      "Aslan Karatsev",
+      "Karatsev",
+      "카라체프 백핸드",
+    ],
+    focus: "2021 호주오픈 4강 신화, ATP 투어 3회 우승, 강력한 종아리 피지컬, 투어 최강의 양손 백핸드 레이저 샷",
+  },
+  "thanasi-kokkinakis": {
+    title: "타나시 코키나키스 프로필 | 호주오픈 복식 우승·페더러 격파 대이변·빅 서브 & 헤비 포핸드",
+    description:
+      "호주의 재능 타나시 코키나키스(Thanasi Kokkinakis) 프로필. 2022 호주오픈 복식 우승(스페셜 K), 세계 1위 로저 페더러 격파 신화, 시속 210km 빅 서브와 헤비 탑스핀 포핸드 원투 펀치를 정리했습니다.",
+    aliases: [
+      "타나시 코키나키스",
+      "코키나키스",
+      "Thanasi Kokkinakis",
+      "Kokkinakis",
+      "스페셜 K 코키나키스",
+    ],
+    focus: "2022 호주오픈 복식 챔피언(스페셜 K), 로저 페더러 제압, 210km/h 빅 서브와 헤비 탑스핀 포핸드",
+  },
 };
 
 function titleizeSlug(slug: string) {
