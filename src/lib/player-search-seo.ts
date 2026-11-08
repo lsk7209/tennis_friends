@@ -1268,6 +1268,65 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     ],
     focus: "노박 조코비치 격파 신화, ATP 이스탄불 오픈 우승, 191cm 피지컬, 스페인 스타일의 견고한 베이스라인 랠리",
   },
+  "shang-juncheng": {
+    title: "상 쥔청 프로필 | 2024 ATP 청두 우승·중국 최초 투어 챔피언·왼손 올라운더",
+    description:
+      "중국 테니스의 역사적 신성 상 쥔청(Jerry Shang, Shang Juncheng) 프로필. 2024 ATP 청두 오픈 우승으로 중국 남자 테니스 최초의 투어 챔피언에 오른 10대 슈퍼 루키의 왼손 올라운드 전술과 랭킹 정보를 확인하세요.",
+    aliases: [
+      "상 쥔청",
+      "상쥔청",
+      "샹쥔청",
+      "Shang Juncheng",
+      "Jerry Shang",
+      "상 쥔청 랭킹",
+      "상 쥔청 우승",
+    ],
+    focus:
+      "2024 ATP 청두 오픈 우승, 중국 남자 최초 투어 타이틀, 왼손 올라운더, 주니어 세계 1위 출신 차세대 에이스",
+  },
+  "sumit-nagal": {
+    title: "수밋 나갈 프로필 | 2024 호주오픈 부블릭 격파·인도 테니스 에이스·클레이코트 스페셜리스트",
+    description:
+      "인도 테니스의 희망 수밋 나갈(Sumit Nagal) 프로필. 2024 호주오픈 메인 드로에서 알렉산더 부블릭을 완파하며 세계적인 주목을 받은 인도 No.1의 강력한 탑스핀 포핸드와 끈질긴 클레이코트 랠리 전술을 확인하세요.",
+    aliases: [
+      "수밋 나갈",
+      "수미트 나갈",
+      "Sumit Nagal",
+      "Nagal",
+      "수밋 나갈 랭킹",
+      "인도 테니스 나갈",
+    ],
+    focus:
+      "2024 호주오픈 부블릭 제압, 인도 테니스 랭킹 1위, 올림픽 단식 승리, 강력한 탑스핀 포핸드 베이스라이너",
+  },
+  "roberto-carballes-baena": {
+    title: "로베르토 카르바예스 바에나 프로필 | ATP 투어 2회 우승·스페인 흙신 수비의 정석",
+    description:
+      "스페인 클레이코트 스페셜리스트 로베르토 카르바예스 바에나(Roberto Carballes Baena) 프로필. 키토 및 마라케시 ATP 투어 2회 우승 경력, 지치지 않는 기동력과 상대를 지치게 만드는 끈질긴 베이스라인 방어 전술을 확인하세요.",
+    aliases: [
+      "로베르토 카르바예스 바에나",
+      "카르바예스 바에나",
+      "Roberto Carballes Baena",
+      "Carballes Baena",
+      "바에나",
+    ],
+    focus:
+      "ATP 투어 2회 우승(키토·마라케시), 스페인 정통 클레이코트 스페셜리스트, 무결점 베이스라인 방어력",
+  },
+  "alexander-shevchenko": {
+    title: "알렉산더 셰브첸코 프로필 | ATP 메스 오픈 준우승·카자흐스탄 차세대 거포·하드코트 파이터",
+    description:
+      "카자흐스탄의 신예 알렉산더 셰브첸코(Alexander Shevchenko) 프로필. ATP 메스 오픈 결승 진출 및 톱 50 진입, 폭발적인 플랫 포핸드와 강력한 퍼스트 서브를 앞세운 공격형 하드코트 플레이스타일을 확인하세요.",
+    aliases: [
+      "알렉산더 셰브첸코",
+      "셰브첸코",
+      "Alexander Shevchenko",
+      "Shevchenko",
+      "셰브첸코 테니스",
+    ],
+    focus:
+      "ATP 메스 오픈 결승 진출, Top 50 진입 차세대 에이스, 강력한 서브와 플랫 포핸드 하드코트 공격수",
+  },
 };
 
 function titleizeSlug(slug: string) {
