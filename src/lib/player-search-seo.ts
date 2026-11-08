@@ -1386,6 +1386,66 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus:
       "2024 WTA 마이애미 오픈 우승, 2022 호주오픈 준우승, 강력한 백핸드 공격과 투지 넘치는 베이스라인 파이터",
   },
+  "reilly-opelka": {
+    title: "라일리 오펠카 프로필 | 211cm 최장신 서브 폭격기·ATP 4회 우승 거인",
+    description:
+      "미국의 211cm 빅서버 라일리 오펠카(Reilly Opelka) 프로필. 2층에서 내리꽂는 최고 시속 240km대의 압도적인 서브와 폭발적인 포핸드, ATP 투어 4회 우승에 빛나는 하드코트 파워 플레이스타일을 확인하세요.",
+    aliases: [
+      "라일리 오펠카",
+      "오펠카",
+      "Reilly Opelka",
+      "Opelka",
+      "오펠카 서브",
+      "오펠카 키",
+    ],
+    focus:
+      "211cm 투어 최장신 서브 폭격기, ATP 투어 4회 우승, 시속 240km 광속 서브와 파워 베이스라인",
+  },
+  "david-goffin": {
+    title: "다비드 고핀 프로필 | ATP 파이널스 준우승·벨기에 테크니션·정교한 라이징 샷",
+    description:
+      "벨기에 테니스의 영웅 다비드 고핀(David Goffin, 다비드 고팡) 프로필. ATP 파이널스 준우승, 세계 랭킹 7위 출신 베테랑으로 빠른 템포의 라이징 스트로크와 빈틈없는 코트 커버력을 자랑하는 스마트 테니스를 확인하세요.",
+    aliases: [
+      "다비드 고핀",
+      "다비드 고팡",
+      "고핀",
+      "고팡",
+      "David Goffin",
+      "Goffin",
+    ],
+    focus:
+      "ATP 파이널스 준우승, 톱 10 베테랑, 빠른 타이밍의 라이징 샷과 지능적인 올코트 테크니션",
+  },
+  "diego-schwartzman": {
+    title: "디에고 슈와르츠만 프로필 | 170cm 작은 거인·롤랑가로스 4강·투어 최강 리턴 머신",
+    description:
+      "아르헨티나의 작은 거인 디에고 슈와르츠만(Diego Schwartzman) 프로필. 170cm 단신의 신체적 한계를 극복한 롤랑가로스 4강 및 Top 8 진입 신화, 투어 최고의 리턴 능력과 지치지 않는 기동력을 확인하세요.",
+    aliases: [
+      "디에고 슈와르츠만",
+      "슈와르츠만",
+      "Diego Schwartzman",
+      "Schwartzman",
+      "El Peque",
+      "슈바르츠만",
+    ],
+    focus:
+      "롤랑가로스 4강 진출, 세계 랭킹 8위 신화, 투어 최정상급 리턴률, 170cm 인간 승리의 아이콘",
+  },
+  "beatriz-haddad-maia": {
+    title: "베아트리스 하다드 마이아 프로필 | 롤랑가로스 4강·WTA 톱10·브라질 왼손 거포",
+    description:
+      "브라질 여자 테니스의 자존심 베아트리스 하다드 마이아(Beatriz Haddad Maia) 프로필. 롤랑가로스 준결승 진출, WTA 톱 10 랭커로 왼손잡이 특유의 각도 깊은 서브와 묵직한 포핸드 파워 스트로크를 확인하세요.",
+    aliases: [
+      "베아트리스 하다드 마이아",
+      "하다드 마이아",
+      "하다드마이아",
+      "Beatriz Haddad Maia",
+      "Haddad Maia",
+      "하다드",
+    ],
+    focus:
+      "2023 프랑스오픈 4강 진출, WTA Top 10 진입, 브라질 에이스, 강력한 왼손 탑스핀 포핸드",
+  },
 };
 
 function titleizeSlug(slug: string) {
