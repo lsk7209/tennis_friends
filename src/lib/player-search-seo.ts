@@ -1626,6 +1626,63 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus:
       "2020 도쿄 올림픽 단식 금메달·복식 은메달, 전 WTA 세계 랭킹 4위, 상대 박자를 빼앗는 천재적 라이징 샷 메이커",
   },
+  "andy-roddick": {
+    title: "앤디 로딕 프로필 | 최고 시속 249km 광속 서브·US 오픈 챔피언·미국 마지막 1위",
+    description:
+      "미국 남자 테니스의 마지막 세계 1위 앤디 로딕(Andy Roddick) 프로필. 최고 시속 249.4km 미사일 광속 서브, 2003 US 오픈 우승, 강력한 포핸드 역크로스와 바볼랏 퓨어 드라이브 라켓 스펙을 확인하세요.",
+    aliases: [
+      "앤디 로딕",
+      "로딕",
+      "Andy Roddick",
+      "Roddick",
+      "로딕 서브",
+      "로딕 라켓",
+    ],
+    focus:
+      "2003 US 오픈 단식 우승, 전 ATP 세계 랭킹 1위, 최고 시속 249km 광속 서브의 대명사",
+  },
+  "lorenzo-sonego": {
+    title: "로렌초 소네고 프로필 | 이탈리아 파이팅 열정가·ATP 투어 우승·빠른 템포 공격",
+    description:
+      "이탈리아 테니스의 열정적인 전사 로렌초 소네고(Lorenzo Sonego) 프로필. ATP 투어 단식 우승, 데이비스컵 승리의 주역, 빠른 코트에서 에너지를 끌어올리는 공격 전개와 끈질긴 경기 운영 스타일을 확인하세요.",
+    aliases: [
+      "로렌초 소네고",
+      "소네고",
+      "Lorenzo Sonego",
+      "Sonego",
+      "소네고 테니스",
+    ],
+    focus:
+      "ATP 투어 단식 통산 3회 우승, 이탈리아 데이비스컵 대표, 지치지 않는 에너지와 빠른 템포 공격 베이스라이너",
+  },
+  "madison-keys": {
+    title: "매디슨 키스 프로필 | US 오픈 준우승·WTA 최고의 헤비볼 빅 히터·미국 파워 테니스",
+    description:
+      "WTA 최고의 헤비볼 파워 히터 매디슨 키스(Madison Keys) 프로필. US 오픈 단식 준우승, 투어 정상급 광속 플랫 서브와 묵직한 포핸드 위너, 요넥스 라켓 장비 스펙 및 공격적인 플레이스타일을 확인하세요.",
+    aliases: [
+      "매디슨 키스",
+      "키스",
+      "Madison Keys",
+      "Keys",
+      "매디슨 키스 서브",
+    ],
+    focus:
+      "US 오픈 단식 준우승, 호주오픈·프랑스오픈 4강, WTA 투어 8회 우승, WTA 최고의 파괴력을 지닌 헤비볼 히터",
+  },
+  "bianca-andreescu": {
+    title: "비앙카 안드레스쿠 프로필 | 2019 US 오픈 챔피언·세레나 격파·캐나다 여전사",
+    description:
+      "10대에 세레나 윌리엄스를 꺾고 그랜드슬램을 정복한 비앙카 안드레스쿠(Bianca Andreescu) 프로필. 캐나다인 최초의 US 오픈 단식 우승, 파워와 슬라이스·드롭샷을 자유자재로 섞는 다재다능한 플레이를 확인하세요.",
+    aliases: [
+      "비앙카 안드레스쿠",
+      "안드레스쿠",
+      "Bianca Andreescu",
+      "Andreescu",
+      "안드레스쿠 US오픈",
+    ],
+    focus:
+      "2019 US 오픈 단식 우승, 캐나다 최초 그랜드슬램 챔피언, 강력한 파워와 다채로운 샷 메이킹을 겸비한 올라운더",
+  },
 };
 
 function titleizeSlug(slug: string) {
