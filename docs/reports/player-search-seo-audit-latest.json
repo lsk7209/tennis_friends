@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generatedAt": "2026-11-10T01:11:50.308Z",
+  "generatedAt": "2026-11-10T07:16:12.052Z",
   "checkedFiles": [
     "src/lib/player-search-seo.ts",
     "src/app/players/[slug]/page.tsx",
