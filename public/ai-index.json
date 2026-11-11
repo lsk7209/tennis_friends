@@ -5,9 +5,9 @@
   "description": "한국어 테니스 실력 향상 도구와 전문 가이드 플랫폼",
   "lastUpdated": "2026-11-11",
   "stats": {
-    "totalPages": 1507,
+    "totalPages": 1508,
     "tools": 67,
-    "articles": 1171,
+    "articles": 1172,
     "playerProfiles": 259
   },
   "pages": [
@@ -532,6 +532,14 @@
       "description": "오늘 날씨가 테니스 치기에 적합한지 빠르게 판단하세요. 기온, 습도, 바람, 자외선 등을 종합 분석합니다.",
       "type": "tool",
       "category": "utility"
+    },
+    {
+      "url": "https://tennisfrens.com/blog/nov26-one-handed-vs-two-handed-backhand",
+      "title": "원핸드 vs 투핸드 백핸드: 어깨 회전과 리치, 타점 안정성 비교 분석",
+      "description": "백핸드 선택의 고민을 해결하기 위해 원핸드의 리치와 슬라이스 전환, 투핸드의 높은 공 대처와 비우타 손(왼손) 가속 메커니즘을 객관적으로 비교합니다.",
+      "type": "article",
+      "category": "기술 가이드",
+      "lastModified": "2026-11-11T09:00:00+09:00"
     },
     {
       "url": "https://tennisfrens.com/blog/nov26-serve-toss-consistency",

@@ -1913,6 +1913,64 @@ const PLAYER_SEARCH_SEO: Record<string, PlayerSearchSeo> = {
     focus:
       "WTA 투어 단식 4회 우승(2022 코리아 오픈 챔피언), 전 WTA 세계 15위, 투어 최정상급 플랫 서브와 속사포 스트로크",
   },
+  "liudmila-samsonova": {
+    title: "류드밀라 삼소노바 프로필 | WTA 파워 히터·시속 180km 광속 서브·투어 챔피언",
+    description:
+      "WTA 최강의 원투 펀치(서브+포핸드)를 자랑하는 류드밀라 삼소노바(Liudmila Samsonova) 프로필. 182cm 장신에서 꽂히는 광속 서브와 파괴적인 포핸드 탑스핀, 이탈리아 감성의 창의적 플레이스타일을 확인하세요.",
+    aliases: [
+      "류드밀라 삼소노바",
+      "삼소노바",
+      "류다 삼소노바",
+      "Liudmila Samsonova",
+      "Samsonova",
+      "삼소노바 테니스",
+    ],
+    focus:
+      "WTA 투어 다수 우승, 최고 랭킹 12위, 180km/h대 서브와 압도적 포핸드 화력의 올라운더",
+  },
+  "veronika-kudermetova": {
+    title: "베로니카 쿠데르메토바 프로필 | WTA 단복식 탑10·완성형 육각형 올라운더·투어 챔피언",
+    description:
+      "단식 최고 9위 및 복식 WTA 파이널스 챔피언에 오른 베로니카 쿠데르메토바(Veronika Kudermetova) 프로필. 정교한 다운더라인 백핸드와 견고한 서브앤발리 네트 플레이, 아르마니 스폰서십 스타일을 확인하세요.",
+    aliases: [
+      "베로니카 쿠데르메토바",
+      "쿠데르메토바",
+      "Veronika Kudermetova",
+      "Kudermetova",
+      "쿠데르메토바 테니스",
+    ],
+    focus:
+      "단식 세계 9위·복식 세계 2위, WTA 투어 우승, 서브와 발리 콤비네이션이 뛰어난 완성형 올라운더",
+  },
+  "jacob-fearnley": {
+    title: "제이콥 펀리 프로필 | 영국 테니스의 신성·윔블던 조코비치 세트 획득·챌린저 돌풍",
+    description:
+      "2024년 챌린저 연속 우승과 윔블던에서 노박 조코비치를 상대로 세트를 따내며 급부상한 영국의 신성 제이콥 펀리(Jacob Fearnley) 프로필. 균형 잡힌 올라운드 스트로크와 침착한 경기 운영을 확인하세요.",
+    aliases: [
+      "제이콥 펀리",
+      "제이컵 펀리",
+      "펀리",
+      "Jacob Fearnley",
+      "Fearnley",
+      "제이콥 펀리 테니스",
+    ],
+    focus:
+      "ATP 챌린저 4회 우승, 2024 윔블던 조코비치 상대 세트 획득, 정교한 코스 선택과 탄탄한 올라운더",
+  },
+  "billy-harris": {
+    title: "빌리 해리스 프로필 | 밴을 타고 질주한 늦깎이 영국 스타·ATP 투어 돌풍·강철 서브",
+    description:
+      "캠핑 밴을 타고 유럽 전역을 돌며 투어에 입성한 인간 승리의 주인공 빌리 해리스(Billy Harris) 프로필. 193cm 장신에서 뿜어 나오는 강력한 서브와 지치지 않는 코트 커버리지, 투어 4강 돌풍의 비결을 확인하세요.",
+    aliases: [
+      "빌리 해리스",
+      "해리스",
+      "Billy Harris",
+      "Harris",
+      "빌리 해리스 테니스",
+    ],
+    focus:
+      "영국 늦깎이 투어 스타, 퀸즈 클럽 8강 및 이스트본 4강 진출, 강력한 서브와 끈질긴 실전형 베이스라이너",
+  },
 };
 
 function titleizeSlug(slug: string) {
